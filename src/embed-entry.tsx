@@ -8,7 +8,7 @@ function restoreNativeDom(): void {
   const frame = document.createElement("iframe");
   frame.style.cssText = "display:none;width:0;height:0;border:0;position:absolute";
   document.documentElement.appendChild(frame);
-  const native = frame.contentWindow;
+  const native = frame.contentWindow as (Window & { Node: typeof Node }) | null;
   if (native?.Node) {
     Node.prototype.insertBefore = native.Node.prototype.insertBefore;
     Node.prototype.appendChild = native.Node.prototype.appendChild;

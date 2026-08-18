@@ -1,4 +1,4 @@
-:root {
+:root, :host {
   color-scheme: light;
   --yte-bg: #f4efe6;
   --yte-ink: #17141c;
@@ -13,7 +13,7 @@
   --yte-font: "Sora", "Segoe UI", sans-serif;
 }
 
-[data-yte-theme="dark"] {
+[data-yte-theme="dark"], :host([data-yte-theme="dark"]) {
   color-scheme: dark;
   --yte-bg: #110f14;
   --yte-ink: #f6f1ea;
@@ -193,5 +193,5 @@
 }
 @keyframes ytePulse { 50% { opacity: 0.55; } }
 
-html, body, #root { margin: 0; min-height: 100%; }
+html, body, #root, :host, #yte-mount { margin: 0; min-height: 100%; display: block; }
 body { background: var(--yte-bg, #f4efe6); }

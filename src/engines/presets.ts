@@ -10,7 +10,6 @@ export interface QualityPreset {
 
 export const QUALITY_PRESETS: QualityPreset[] = [
   { quality: "maxres", expectedWidth: 1280, expectedHeight: 720, tier: "best", filename: "maxresdefault.jpg" },
-  { quality: "maxres-webp", expectedWidth: 1280, expectedHeight: 720, tier: "best", filename: "maxresdefault.webp" },
   { quality: "hq720", expectedWidth: 1280, expectedHeight: 720, tier: "best", filename: "hq720.jpg" },
   { quality: "sd", expectedWidth: 640, expectedHeight: 480, tier: "high", filename: "sddefault.jpg" },
   { quality: "hq", expectedWidth: 480, expectedHeight: 360, tier: "standard", filename: "hqdefault.jpg" },

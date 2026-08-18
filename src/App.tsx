@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
@@ -32,8 +32,9 @@ export default function App() {
   const parsed = useMemo(() => (input.trim() ? normalizeYouTubeUrl(input) : null), [input]);
 
   useEffect(() => {
-    const root = document.documentElement;
-    root.dataset.yteTheme = resolvedTheme(theme);
+    const mode = resolvedTheme(theme);
+    document.documentElement.dataset.yteTheme = mode;
+    document.getElementById("yte-root")?.setAttribute("data-yte-theme", mode);
     saveTheme(theme);
   }, [theme]);
 
@@ -79,7 +80,9 @@ export default function App() {
     setError("");
     analytics.track("extraction_started");
     try {
-      const extracted = await extractThumbnails(parsedUrl, controller.signal, setResult);
+      const extracted = await extractThumbnails(parsedUrl, controller.signal, (next) => {
+        startTransition(() => setResult(next));
+      });
       if (!extracted.bestThumbnail) {
         setError(userMessage("THUMBNAIL_NOT_FOUND"));
         analytics.track("extraction_failure");
@@ -184,10 +187,11 @@ export default function App() {
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 onPaste={(event) => {
-                  const text = event.clipboardData.getData("text");
-                  if (isLikelyYouTubeUrl(text)) {
-                    window.setTimeout(() => void runOne(text), 0);
-                  }
+                  const text = event.clipboardData.getData("text").trim();
+                  if (!isLikelyYouTubeUrl(text)) return;
+                  event.preventDefault();
+                  setInput(text);
+                  void runOne(text);
                 }}
                 placeholder="Paste your YouTube video URL"
                 aria-label="YouTube URL"

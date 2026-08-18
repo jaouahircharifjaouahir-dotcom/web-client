@@ -27,7 +27,7 @@ If you are not replacing the full theme, paste this in HTML view. Still no ifram
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://jaouahircharifjaouahir-dotcom.github.io/youtube-thumbnail-extractor/blogger-app.css">
 <div id="yte-root"></div>
-<script src="https://jaouahircharifjaouahir-dotcom.github.io/youtube-thumbnail-extractor/blogger-app.js"></script>
+<script src="https://jaouahircharifjaouahir-dotcom.github.io/youtube-thumbnail-extractor/blogger-app.js?v=3"></script>
 ```
 
 ## DNS

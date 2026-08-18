@@ -135,12 +135,16 @@
   background: #111;
   aspect-ratio: 16 / 9;
 }
-.yte-preview img {
+.yte-thumb {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  display: block;
+  min-height: 120px;
+  background-color: #111;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+.yte-card .yte-thumb { aspect-ratio: 16/9; background-size: cover; min-height: 0; }
 .yte-meta { display: flex; justify-content: space-between; gap: 8px; margin: 12px 0; color: var(--yte-muted); flex-wrap: wrap; }
 .yte-cards {
   display: grid;
@@ -153,7 +157,6 @@
   overflow: hidden;
   background: var(--yte-paper);
 }
-.yte-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #111; }
 .yte-card-body { padding: 10px; display: grid; gap: 8px; }
 .yte-card-body strong { font-size: 12px; }
 

@@ -1,5 +1,6 @@
 import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
+import { ThumbnailPreview } from "./components/ThumbnailPreview";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
@@ -216,7 +217,7 @@ export default function App() {
           <section className="yte-panel yte-best">
             <p className="yte-kicker">BEST AVAILABLE</p>
             <div className="yte-preview">
-              <img src={result.bestThumbnail.url} alt={`Best thumbnail for ${result.videoId}`} />
+              <ThumbnailPreview url={result.bestThumbnail.url} label={`Best thumbnail for ${result.videoId}`} />
             </div>
             <div className="yte-meta">
               <span>{formatSize(result.bestThumbnail.width, result.bestThumbnail.height)}</span>
@@ -249,7 +250,7 @@ export default function App() {
             <div className="yte-cards">
               {result.thumbnails.map((item) => (
                 <article className="yte-card" key={item.url}>
-                  <img src={item.url} alt={`${item.quality} thumbnail`} />
+                  <ThumbnailPreview url={item.url} label={`${item.quality} thumbnail`} />
                   <div className="yte-card-body">
                     <strong>{item.tier.toUpperCase()} · {formatSize(item.width, item.height)}</strong>
                     <button
@@ -285,7 +286,9 @@ export default function App() {
             <div className="yte-cards" style={{ marginTop: 12 }}>
               {bulkResults.map((item) => (
                 <article className="yte-card" key={item.videoId}>
-                  {item.bestThumbnail ? <img src={item.bestThumbnail.url} alt={item.videoId} /> : null}
+                  {item.bestThumbnail ? (
+                    <ThumbnailPreview url={item.bestThumbnail.url} label={item.videoId} />
+                  ) : null}
                   <div className="yte-card-body">
                     <strong>{item.videoId}</strong>
                   </div>

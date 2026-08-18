@@ -15,22 +15,19 @@ export function installDomGuards(): void {
   const removeChild = native.prototype.removeChild;
   const appendChild = native.prototype.appendChild;
 
-  const safeInsertBefore: typeof Node.prototype.insertBefore = function (this: Node, newNode, refNode) {
+  Node.prototype.insertBefore = function (this: Node, newNode, refNode) {
     const reference = refNode && (refNode as Node).parentNode === this ? refNode : null;
     try {
       return insertBefore.call(this, newNode, reference);
     } catch {
       return appendChild.call(this, newNode);
     }
-  };
+  } as typeof Node.prototype.insertBefore;
 
-  const safeRemoveChild: typeof Node.prototype.removeChild = function (this: Node, child) {
+  Node.prototype.removeChild = function (this: Node, child) {
     if (child.parentNode !== this) return child;
     return removeChild.call(this, child);
-  };
-
-  Node.prototype.insertBefore = safeInsertBefore;
-  Node.prototype.removeChild = safeRemoveChild;
+  } as typeof Node.prototype.removeChild;
 }
 
 export function keepDomGuards(): void {

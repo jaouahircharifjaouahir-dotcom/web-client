@@ -119,7 +119,7 @@
 .yte-hint.ok { color: var(--yte-ok); }
 .yte-hint.bad { color: var(--yte-accent); }
 
-.yte-best, .yte-grid, .yte-history, .yte-power, .yte-ad {
+.yte-best, .yte-grid, .yte-history, .yte-power, .yte-ad, .yte-stack-wrap {
   margin-top: 18px;
 }
 .yte-kicker {
@@ -129,36 +129,32 @@
   color: var(--yte-accent);
   margin: 0 0 10px;
 }
+.yte-stack { display: grid; gap: 28px; }
+.yte-shot { display: grid; gap: 10px; }
 .yte-preview {
   overflow: hidden;
   border-radius: 18px;
   background: #111;
   aspect-ratio: 16 / 9;
+  width: 100%;
 }
 .yte-thumb {
   width: 100%;
   height: 100%;
-  min-height: 120px;
+  min-height: 160px;
   background-color: #111;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.yte-card .yte-thumb { aspect-ratio: 16/9; background-size: cover; min-height: 0; }
-.yte-meta { display: flex; justify-content: space-between; gap: 8px; margin: 12px 0; color: var(--yte-muted); flex-wrap: wrap; }
-.yte-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+.yte-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--yte-muted);
+  flex-wrap: wrap;
+  font-weight: 700;
 }
-.yte-card {
-  border: 1px solid var(--yte-line);
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--yte-paper);
-}
-.yte-card-body { padding: 10px; display: grid; gap: 8px; }
-.yte-card-body strong { font-size: 12px; }
 
 .yte-history button.yte-item, .yte-item {
   width: 100%;

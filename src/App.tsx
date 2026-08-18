@@ -213,52 +213,41 @@ export default function App() {
           </form>
         </section>
 
-        {result?.bestThumbnail ? (
-          <section className="yte-panel yte-best">
-            <p className="yte-kicker">BEST AVAILABLE</p>
-            <div className="yte-preview">
-              <ThumbnailPreview url={result.bestThumbnail.url} label={`Best thumbnail for ${result.videoId}`} />
-            </div>
-            <div className="yte-meta">
-              <span>{formatSize(result.bestThumbnail.width, result.bestThumbnail.height)}</span>
-              <span>{result.bestThumbnail.tier.toUpperCase()} · {result.bestThumbnail.quality}</span>
-            </div>
-            <div className="yte-row">
-              <button
-                className="yte-btn"
-                type="button"
-                onClick={() => {
-                  analytics.track("download_clicked");
-                  void downloadManager.download(result.videoId, result.bestThumbnail!).catch(() => setError(userMessage("DOWNLOAD_FAILED")));
-                }}
-              >
-                Download
-              </button>
-              <button className="yte-ghost" type="button" onClick={() => void showCopied("Copied!", result.bestThumbnail!.url)}>
-                Copy image URL
-              </button>
-              <button className="yte-ghost" type="button" onClick={() => openFullImage(result.bestThumbnail!.url)}>
-                Open full resolution
-              </button>
-            </div>
-          </section>
-        ) : null}
-
-        {result && result.thumbnails.length > 1 ? (
-          <section className="yte-panel yte-grid">
-            <p className="yte-kicker">QUALITY COMPARISON</p>
-            <div className="yte-cards">
-              {result.thumbnails.map((item) => (
-                <article className="yte-card" key={item.url}>
-                  <ThumbnailPreview url={item.url} label={`${item.quality} thumbnail`} />
-                  <div className="yte-card-body">
-                    <strong>{item.tier.toUpperCase()} · {formatSize(item.width, item.height)}</strong>
+        {result?.thumbnails.length ? (
+          <section className="yte-panel yte-stack-wrap">
+            <p className="yte-kicker">THUMBNAILS</p>
+            <div className="yte-stack">
+              {result.thumbnails.map((item, index) => (
+                <article className="yte-shot" key={item.url}>
+                  <div
+                    className="yte-preview"
+                    style={item.width && item.height ? { aspectRatio: `${item.width} / ${item.height}` } : undefined}
+                  >
+                    <ThumbnailPreview url={item.url} label={`${item.quality} thumbnail`} />
+                  </div>
+                  <div className="yte-meta">
+                    <span>{formatSize(item.width, item.height)}</span>
+                    <span>
+                      {index === 0 ? "BEST · " : ""}
+                      {item.tier.toUpperCase()} · {item.quality}
+                    </span>
+                  </div>
+                  <div className="yte-row">
                     <button
-                      className="yte-ghost"
+                      className="yte-btn"
                       type="button"
-                      onClick={() => void downloadManager.download(result.videoId, item).catch(() => setError(userMessage("DOWNLOAD_FAILED")))}
+                      onClick={() => {
+                        analytics.track("download_clicked");
+                        void downloadManager.download(result.videoId, item).catch(() => setError(userMessage("DOWNLOAD_FAILED")));
+                      }}
                     >
                       Download
+                    </button>
+                    <button className="yte-ghost" type="button" onClick={() => void showCopied("Copied!", item.url)}>
+                      Copy image URL
+                    </button>
+                    <button className="yte-ghost" type="button" onClick={() => openFullImage(item.url)}>
+                      Open full resolution
                     </button>
                   </div>
                 </article>
@@ -283,14 +272,24 @@ export default function App() {
                 Download all
               </button>
             </div>
-            <div className="yte-cards" style={{ marginTop: 12 }}>
+            <div className="yte-stack" style={{ marginTop: 12 }}>
               {bulkResults.map((item) => (
-                <article className="yte-card" key={item.videoId}>
+                <article className="yte-shot" key={item.videoId}>
                   {item.bestThumbnail ? (
-                    <ThumbnailPreview url={item.bestThumbnail.url} label={item.videoId} />
+                    <div
+                      className="yte-preview"
+                      style={
+                        item.bestThumbnail.width && item.bestThumbnail.height
+                          ? { aspectRatio: `${item.bestThumbnail.width} / ${item.bestThumbnail.height}` }
+                          : undefined
+                      }
+                    >
+                      <ThumbnailPreview url={item.bestThumbnail.url} label={item.videoId} />
+                    </div>
                   ) : null}
-                  <div className="yte-card-body">
-                    <strong>{item.videoId}</strong>
+                  <div className="yte-meta">
+                    <span>{formatSize(item.bestThumbnail?.width ?? null, item.bestThumbnail?.height ?? null)}</span>
+                    <span>{item.videoId}</span>
                   </div>
                 </article>
               ))}

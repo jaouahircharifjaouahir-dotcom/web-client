@@ -2,6 +2,7 @@ import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
 import { GUIDE_POSTS } from "./content/posts";
+import { DEFAULT_HERO, findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
@@ -52,6 +53,7 @@ export default function App() {
   const [theme, setTheme] = useState<ThemeMode>(() => readTheme());
   const [input, setInput] = useState("");
   const [postsOpen, setPostsOpen] = useState(false);
+  const [keywordSlug, setKeywordSlug] = useState(() => readKeywordSlug());
   const [bulk, setBulk] = useState(false);
   const [power, setPower] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -81,6 +83,25 @@ export default function App() {
   }, [postsOpen]);
 
   useEffect(() => startEmbedResize(), []);
+
+  useEffect(() => {
+    const sync = () => setKeywordSlug(readKeywordSlug());
+    window.addEventListener("popstate", sync);
+    return () => window.removeEventListener("popstate", sync);
+  }, []);
+
+  const landing = findKeywordLanding(keywordSlug);
+  const heroTitle = landing?.title ?? DEFAULT_HERO.title;
+  const heroIntro = landing?.intro ?? DEFAULT_HERO.intro;
+
+  const openKeyword = (slug: string) => {
+    const url = new URL(location.href);
+    url.searchParams.set("k", slug);
+    url.searchParams.delete("m");
+    history.pushState({ k: slug }, "", `${url.pathname}${url.search}${url.hash}`);
+    setKeywordSlug(slug);
+    setPostsOpen(false);
+  };
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -230,8 +251,23 @@ export default function App() {
         ) : (
           <>
         <section className="yte-hero">
-          <h1>YouTube Thumbnail Extractor</h1>
-          <p>Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD, high-resolution thumbnail images from any YouTube video, Shorts, or supported YouTube URL with just one click. Our fast and powerful YouTube Thumbnail Extractor automatically finds the best available public thumbnail — simply paste your video URL below, click “Get Thumbnail Image,” and download your YouTube thumbnail in seconds.</p>
+          <h1>{heroTitle}</h1>
+          <p>{heroIntro}</p>
+          <nav aria-label="Keyword links" className="yte-kw">
+            {KEYWORD_LANDINGS.map((item) => (
+              <a
+                className={item.slug === keywordSlug ? "is-on" : undefined}
+                href={`/?k=${item.slug}`}
+                key={item.slug}
+                onClick={(event) => {
+                  event.preventDefault();
+                  openKeyword(item.slug);
+                }}
+              >
+                {item.keyword}
+              </a>
+            ))}
+          </nav>
         </section>
 
         <section className="yte-panel">

@@ -12,6 +12,8 @@ describe("preferred public URL", () => {
     expect(SITE.ogWidth).toBe(1200);
     expect(SITE.ogHeight).toBe(630);
   });
+
+  it("keeps the hosted favicon identity", () => {
     expect(SITE.icons.png32).toContain("/s32/favicon-2.png");
     expect(SITE.icons.png16).toContain("/s16/favicon-1.png");
     expect(SITE.icons.apple180).toContain("/s180/apple-touch-icon.png");

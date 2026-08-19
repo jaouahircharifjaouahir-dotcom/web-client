@@ -82,7 +82,21 @@ a.yte-brand:focus-visible {
   line-height: 0.95;
   letter-spacing: -0.04em;
 }
-.yte-hero p { margin: 0 0 22px; color: var(--yte-muted); max-width: 68ch; }
+.yte-hero p { margin: 0 0 16px; color: var(--yte-muted); max-width: 68ch; }
+.yte-kw { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.yte-kw a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--yte-line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--yte-ink);
+  text-decoration: none;
+  background: var(--yte-paper);
+}
+.yte-kw a:hover { border-color: var(--yte-accent); }
+.yte-kw a.is-on { background: var(--yte-ink); color: var(--yte-bg); border-color: var(--yte-ink); }
 
 .yte-panel {
   background: var(--yte-paper);

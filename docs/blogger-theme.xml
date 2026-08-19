@@ -33,7 +33,7 @@
     <b:if cond='data:view.isSearch or data:view.isArchive or data:view.isError'>
       <meta content='noindex,follow' name='robots'/>
     <b:else/>
-      <meta content='index,follow' name='robots'/>
+      <meta content='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' name='robots'/>
     </b:if>
     <b:if cond='data:view.isHomepage'>
       <link href='https://www.11tik.com/' rel='canonical'/>
@@ -60,12 +60,17 @@
       <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
     <b:else/>
       <link expr:href='data:view.url' rel='canonical'/>
+      <meta content='article' property='og:type'/>
+      <meta expr:content='data:view.title.escaped' property='og:title'/>
+      <meta expr:content='data:view.url.canonical' property='og:url'/>
+      <meta content='summary_large_image' name='twitter:card'/>
+      <meta expr:content='data:view.title.escaped' name='twitter:title'/>
       <b:if cond='data:view.featuredImage'>
         <meta expr:content='data:view.featuredImage' property='og:image'/>
         <meta expr:content='data:view.featuredImage' name='twitter:image'/>
       </b:if>
     </b:if>
-    <meta content='11tik-theme-v19' name='yte-build'/>
+    <meta content='11tik-theme-v20' name='yte-build'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
@@ -127,7 +132,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 .yte-seo a,.yte-seo-nav a,.yte-static a{color:#c2410c}
 .yte-seo-nav{display:flex;flex-wrap:wrap;gap:10px 16px;padding:20px 0 8px;font-size:14px}
 .yte-seo-foot{padding:24px 0 56px;font-size:14px;color:#5c5666}
-.yte-indexnow{margin:0;padding:24px;font:20px/1.5 ui-monospace,Consolas,monospace;color:#111;background:#fff}
+.yte-static img{display:block;max-width:min(100%,1200px);height:auto;margin:12px 0;border-radius:12px}
     ]]></b:skin>
   </head>
   <body>
@@ -260,6 +265,24 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
                 <div class='yte-static'>
                   <data:post.body/>
                 </div>
+                <b:if cond='data:view.isPost'>
+                  <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "<data:post.title.jsonEscaped/>",
+  "url": "<data:post.url.canonical.jsonEscaped/>",
+  "mainEntityOfPage": "<data:post.url.canonical.jsonEscaped/>",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "author": {"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},
+  "publisher": {"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"}
+  <b:if cond='data:post.featuredImage'>
+  ,"image": "<data:post.featuredImage.jsonEscaped/>"
+  </b:if>
+}
+                  </script>
+                </b:if>
               </b:loop>
             </b:if>
           </b:includable>

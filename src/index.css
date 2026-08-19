@@ -133,12 +133,15 @@ a.yte-brand:focus-visible {
 .yte-post-list { display: grid; gap: 16px; margin-top: 12px; }
 .yte-post p { margin: 6px 0 0; color: var(--yte-muted); line-height: 1.6; }
 .yte-post-title {
-  color: inherit;
+  display: inline;
+  color: var(--yte-accent);
   font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-.yte-post-title:hover { color: var(--yte-accent); border-bottom-color: var(--yte-accent); }
+.yte-post-title:hover { color: var(--yte-accent-2); }
 .yte-post-title:focus-visible {
   outline: 3px solid var(--yte-accent-2);
   outline-offset: 2px;

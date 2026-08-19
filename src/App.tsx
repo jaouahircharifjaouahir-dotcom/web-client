@@ -71,6 +71,15 @@ export default function App() {
     saveTheme(theme);
   }, [theme]);
 
+  useEffect(() => {
+    document.body.dataset.ytePosts = postsOpen ? "1" : "";
+    document.getElementById("yte-root")?.toggleAttribute("data-yte-posts", postsOpen);
+    return () => {
+      delete document.body.dataset.ytePosts;
+      document.getElementById("yte-root")?.removeAttribute("data-yte-posts");
+    };
+  }, [postsOpen]);
+
   useEffect(() => startEmbedResize(), []);
 
   useEffect(() => {
@@ -218,8 +227,8 @@ export default function App() {
               ))}
             </div>
           </section>
-        ) : null}
-
+        ) : (
+          <>
         <section className="yte-hero">
           <h1>YouTube Thumbnail Extractor</h1>
           <p>Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD, high-resolution thumbnail images from any YouTube video, Shorts, or supported YouTube URL with just one click. Our fast and powerful YouTube Thumbnail Extractor automatically finds the best available public thumbnail — simply paste your video URL below, click “Get Thumbnail Image,” and download your YouTube thumbnail in seconds.</p>
@@ -475,6 +484,8 @@ export default function App() {
         <p className="yte-foot">
           Public YouTube thumbnails only. No accounts, no video download, no tracking of pasted URLs.
         </p>
+          </>
+        )}
       </div>
     </div>
   );

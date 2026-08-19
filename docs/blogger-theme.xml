@@ -102,6 +102,10 @@ a[href*="blogger.com/profile"],a[href="https://www.blogger.com"],a[href="https:/
 margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:none;width:100%
 }
 #yte-root{display:block;min-height:70vh}
+#yte-root[data-yte-posts="1"]{min-height:0}
+body[data-yte-posts="1"] .yte-seo,
+body[data-yte-posts="1"] .yte-seo-nav,
+body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 .yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:min(920px,calc(100% - 24px));margin:0 auto}
 .yte-seo{padding:8px 0 12px}
 .yte-seo h1{font-size:1.7rem;line-height:1.2;margin:24px 0 12px}
@@ -266,7 +270,7 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=12' type='text/javascript'><![CDATA[ ]]></script>
+      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=13' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

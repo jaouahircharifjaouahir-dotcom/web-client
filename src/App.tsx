@@ -1,6 +1,7 @@
 import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
+import { GUIDE_POSTS } from "./content/posts";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
@@ -50,7 +51,7 @@ export default function App() {
   const embed = isEmbedMode();
   const [theme, setTheme] = useState<ThemeMode>(() => readTheme());
   const [input, setInput] = useState("");
-  const [bulk, setBulk] = useState(false);
+  const [postsOpen, setPostsOpen] = useState(false);
   const [power, setPower] = useState(false);
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState("");
@@ -190,6 +191,9 @@ export default function App() {
             <span>{config.siteName}</span>
           </a>
           <div className="yte-actions">
+            <button className="yte-chip" type="button" aria-expanded={postsOpen} aria-pressed={postsOpen} onClick={() => setPostsOpen((v) => !v)}>
+              Posts
+            </button>
             <button className="yte-chip" type="button" aria-pressed={bulk} onClick={() => setBulk((v) => !v)}>
               Bulk
             </button>
@@ -198,6 +202,22 @@ export default function App() {
             </button>
           </div>
         </header>
+
+        {postsOpen ? (
+          <section className="yte-panel yte-posts" aria-label="Guides">
+            <p className="yte-kicker">POSTS</p>
+            <div className="yte-post-list">
+              {GUIDE_POSTS.map((post) => (
+                <article className="yte-post" key={post.href}>
+                  <a className="yte-post-title" href={post.href}>
+                    {post.title}
+                  </a>
+                  <p>{post.summary}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="yte-hero">
           <h1>YouTube Thumbnail Extractor</h1>

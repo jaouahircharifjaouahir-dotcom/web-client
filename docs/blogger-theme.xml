@@ -9,7 +9,8 @@
     <b:else/>
       <title><data:view.title.escaped/> | 11tik</title>
     </b:if>
-    <b:include data='blog' name='all-head-content'/>
+    <link href='https://www.11tik.com/feeds/posts/default' rel='alternate' title='11tik Atom' type='application/atom+xml'/>
+    <link href='https://www.11tik.com/feeds/posts/default?alt=rss' rel='alternate' title='11tik RSS' type='application/rss+xml'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png' rel='shortcut icon' sizes='32x32' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png' rel='icon' sizes='32x32' type='image/png'/>
     <b:if cond='data:view.isSearch or data:view.isArchive or data:view.isError'>
@@ -215,12 +216,18 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
 
     <script type='text/javascript'>
 (function () {
-  var nodes = document.querySelectorAll('a[href*="blogger.com/profile"], a[href="https://www.blogger.com"], a[href="https://www.blogger.com/"]');
-  for (var i = 0; i &lt; nodes.length; i++) {
-    var el = nodes[i];
-    var box = el.closest ? (el.closest('.widget') || el.closest('.copyright') || el.parentNode) : el.parentNode;
-    if (box &amp;&amp; box !== document.body &amp;&amp; box.parentNode) box.parentNode.removeChild(box);
-    else if (el.parentNode) el.parentNode.removeChild(el);
+  function strip() {
+    var nodes = document.querySelectorAll('link[rel=&quot;me&quot;], link[href*=&quot;blogger.com/profile&quot;], link[href*=&quot;blogger.com/feeds&quot;], a[href*=&quot;blogger.com/profile&quot;], a[href=&quot;https://www.blogger.com&quot;], a[href=&quot;https://www.blogger.com/&quot;]');
+    for (var i = 0; i &lt; nodes.length; i++) {
+      var el = nodes[i];
+      if (el.parentNode) el.parentNode.removeChild(el);
+    }
+    var att = document.getElementById('Attribution1');
+    if (att) att.innerHTML = '';
+  }
+  strip();
+  if (document.documentElement &amp;&amp; window.MutationObserver) {
+    new MutationObserver(strip).observe(document.documentElement, {childList: true, subtree: true});
   }
 })();
     </script>

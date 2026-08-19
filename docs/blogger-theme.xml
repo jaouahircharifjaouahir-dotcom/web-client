@@ -3,7 +3,26 @@
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.3' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <meta charset='utf-8'/>
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
+    <script type='text/javascript'>
+(function () {
+  try {
+    var u = new URL(location.href);
+    if (u.searchParams.has('m')) {
+      u.searchParams.delete('m');
+      var q = u.searchParams.toString();
+      location.replace(u.pathname + (q ? '?' + q : '') + u.hash);
+      return;
+    }
+  } catch (e) {}
+  try { document.cookie = 'blogger_mobile=false;path=/;max-age=31536000;SameSite=Lax'; } catch (e2) {}
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.getRegistrations().then(function (list) {
+      for (var i = 0; i &lt; list.length; i++) list[i].unregister();
+    });
+  }
+})();
+    </script>
     <b:if cond='data:view.isHomepage'>
       <title>YouTube Thumbnail Extractor – Download HD YouTube Thumbnails</title>
     <b:else/>
@@ -49,7 +68,7 @@
       <link href='https://fonts.googleapis.com' rel='preconnect'/>
       <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
       <link href='https://jaouahircharifjaouahir-dotcom.github.io' rel='preconnect'/>
-      <link href='https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;display=swap' rel='stylesheet'/>
+      <link href='https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;display=swap' media='(min-width: 701px)' rel='stylesheet'/>
       <link href='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.css' rel='stylesheet'/>
       <script type='application/ld+json'>
 {"@context":"https://schema.org","@graph":[
@@ -72,7 +91,7 @@
       </script>
     </b:if>
     <b:skin><![CDATA[
-html,body{margin:0;background:#f4efe6;color:#17141c;font-family:"Sora","Segoe UI",sans-serif}
+html,body{margin:0;background:#f4efe6;color:#17141c;font-family:"Sora","Segoe UI",system-ui,sans-serif;overflow-x:clip;-webkit-text-size-adjust:100%}
 #header,#search_top,#page_list_top,#ads,#footer,#sidebar_top,#sidebar_bottom,
 .hamburger-menu,.search,.blog-name,.widget.Attribution,.widget.AdSense,.widget.Profile,
 #Attribution1,#Profile1,.copyright,.blog-feeds,
@@ -83,7 +102,7 @@ a[href*="blogger.com/profile"],a[href="https://www.blogger.com"],a[href="https:/
 margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:none;width:100%
 }
 #yte-root{display:block;min-height:70vh}
-.yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:min(920px,calc(100% - 32px));margin:0 auto}
+.yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:min(920px,calc(100% - 24px));margin:0 auto}
 .yte-seo{padding:8px 0 12px}
 .yte-seo h1{font-size:1.7rem;line-height:1.2;margin:24px 0 12px}
 .yte-seo h2{font-size:1.35rem;margin:28px 0 10px}
@@ -247,7 +266,7 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=11' type='text/javascript'><![CDATA[ ]]></script>
+      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=12' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

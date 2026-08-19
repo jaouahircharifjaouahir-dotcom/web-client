@@ -1,7 +1,10 @@
+import { bootLite } from "./boot/lite";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { keepDomGuards } from "./embed/dom-guard";
 import "./index.css";
+
+bootLite();
 
 const embedScript = document.currentScript as HTMLScriptElement | null;
 

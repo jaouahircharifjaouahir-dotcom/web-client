@@ -97,7 +97,7 @@ if (!urlList.length) {
 const body = JSON.stringify({
   host: HOST,
   key: KEY,
-  keyLocation: `https://jaouahircharifjaouahir-dotcom.github.io/web-client/${KEY}.txt`,
+  keyLocation: `https://${HOST}/${KEY}.txt`,
   urlList,
 });
 

@@ -1,13 +1,13 @@
 # IndexNow on Blogger
 
-The job collects homepage, legal pages, Blogger posts, Blogger pages, and sitemap URLs, then submits them to IndexNow (Bing and partners).
+Pings go to Bing and IndexNow partners. Google does not use IndexNow.
 
-**Google does not use IndexNow.** For Google, keep the sitemap in Search Console.
+`keyLocation` must be on `www.11tik.com` (same host as the URLs). The job uses:
 
-- Every **10 minutes**: submit only if a feed changed.
-- Every day at **08:00 UTC**: submit the full URL list.
+`https://www.11tik.com/9f3a7c1e4b8d2f06a5c9e3b7d1f48a26.txt`
+
+Blogger still serves that path as HTML. After you restore the theme, that URL must show only the key. If Bing later rejects the file as not `text/plain`, IndexNow cannot fully verify on Blogger.
 
 ```bash
-node scripts/search-engines-ping.mjs
-node scripts/search-engines-ping.mjs --all
+npm run search:ping
 ```

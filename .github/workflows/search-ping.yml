@@ -32,8 +32,10 @@ jobs:
         with:
           node-version: 22
       - name: Submit URLs
+        env:
+          SUBMIT_ALL: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.all != 'false' || github.event.schedule == '0 8 * * *' || github.event_name == 'workflow_run' }}
         run: |
-          if [ "${{ github.event.schedule }}" = "0 8 * * *" ] || [ "${{ github.event.inputs.all }}" = "true" ]; then
+          if [ "$SUBMIT_ALL" = "true" ]; then
             node scripts/search-engines-ping.mjs --all
           else
             node scripts/search-engines-ping.mjs

@@ -6,16 +6,6 @@
     <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
     <script type='text/javascript'>
 (function () {
-  try {
-    var u = new URL(location.href);
-    if (u.searchParams.has('m')) {
-      u.searchParams.delete('m');
-      var q = u.searchParams.toString();
-      location.replace(u.pathname + (q ? '?' + q : '') + u.hash);
-      return;
-    }
-  } catch (e) {}
-  try { document.cookie = 'blogger_mobile=false;path=/;max-age=31536000;SameSite=Lax'; } catch (e2) {}
   if (navigator.serviceWorker) {
     navigator.serviceWorker.getRegistrations().then(function (list) {
       for (var i = 0; i &lt; list.length; i++) list[i].unregister();
@@ -102,6 +92,11 @@ a[href*="blogger.com/profile"],a[href="https://www.blogger.com"],a[href="https:/
 margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:none;width:100%
 }
 #yte-root{display:block;min-height:70vh}
+@media (max-width:700px){
+#yte-root{min-height:0}
+.yte-seo h1{font-size:1.35rem}
+.yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:calc(100% - 24px)}
+}
 #yte-root[data-yte-posts="1"]{min-height:0}
 body[data-yte-posts="1"] .yte-seo,
 body[data-yte-posts="1"] .yte-seo-nav,
@@ -270,7 +265,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=13' type='text/javascript'><![CDATA[ ]]></script>
+      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=14' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

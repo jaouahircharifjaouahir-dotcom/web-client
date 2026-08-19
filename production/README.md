@@ -1,3 +1,1 @@
-Production is the GitHub Pages build of `src/`, not a second copy of the application.
-
-See `.github/workflows/pages.yml`.
+Production build output lives in `dist/` after `npm run build`.

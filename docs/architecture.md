@@ -1,17 +1,17 @@
 # Architecture
 
 ```text
-                 11tik.com
+                 https://www.11tik.com/
                       │
                       ▼
                    Blogger
                 Main website
                       │
-             ┌────────┴────────┐
-             │                 │
-        SEO / Content      Tool page
-             │                 │
-             └────────┬────────┘
+    ┌─────────────────┴─────────────────┐
+    │                                   │
+SEO / crawlable HTML              #yte-root app
+    │                                   │
+    └─────────────────┬─────────────────┘
                       ▼
                GitHub repository
                       │
@@ -29,7 +29,7 @@
 
 | Layer | Role |
 | --- | --- |
-| Blogger + `11tik.com` | Public site, SEO, articles, navigation, legal pages, branded shell |
+| Blogger + `https://www.11tik.com/` | Public site, SEO, articles, navigation, legal pages, branded shell |
 | GitHub | Source of truth for application code, tests, CI, documentation |
 | GitHub Pages | Static hosting for the built app |
 | Browser | URL parsing, thumbnail discovery, validation, ranking, download, history |
@@ -60,4 +60,4 @@ No backend is required for the core product.
 
 ## Custom domain
 
-`11tik.com` stays on Blogger DNS. Do not point the root domain at GitHub Pages while Blogger owns the site. The app is embedded from GitHub Pages into a Blogger page.
+`11tik.com` stays on Blogger DNS. Do not point the root domain at GitHub Pages while Blogger owns the site. The public canonical is `https://www.11tik.com/`. The app is loaded from GitHub Pages into the Blogger homepage (no iframe).

@@ -8,7 +8,7 @@ import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
 import { historyStore } from "./history/store";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "./hooks/theme";
-import { isLikelyYouTubeUrl, normalizeYouTubeUrl, parseMany } from "./parsers/youtubeUrl";
+import { isLikelyMediaUrl, mediaSharePath, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { userMessage } from "./types/errors";
@@ -61,10 +61,11 @@ export default function App() {
   const [error, setError] = useState("");
   const [result, setResult] = useState<ThumbnailExtractionResult | null>(null);
   const [bulkResults, setBulkResults] = useState<ThumbnailExtractionResult[]>([]);
-  const [history, setHistory] = useState<HistoryEntry[]>(() => historyStore.list());
+  const [recentHistory, setRecentHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
-  const parsed = useMemo(() => (input.trim() ? normalizeYouTubeUrl(input) : null), [input]);
-  const bulkParsed = useMemo(() => (bulk ? parseMany(input).filter((item) => item.valid) : []), [bulk, input]);
+  const parsed = useMemo(() => (input.trim() ? normalizeMediaUrl(input) : null), [input]);
+  const bulkParsed = useMemo(() => (bulk ? parseMediaMany(input).filter((item) => item.valid) : []), [bulk, input]);
+  const deepLinkBoot = useRef(false);
 
   useEffect(() => {
     const mode = resolvedTheme(theme);
@@ -98,10 +99,38 @@ export default function App() {
     const url = new URL(location.href);
     url.searchParams.set("k", slug);
     url.searchParams.delete("m");
+    url.searchParams.delete("v");
+    url.searchParams.delete("vimeo");
     history.pushState({ k: slug }, "", `${url.pathname}${url.search}${url.hash}`);
     setKeywordSlug(slug);
     setPostsOpen(false);
     analytics.pageView();
+  };
+
+  const syncShareUrl = (platform: "youtube" | "vimeo", videoId: string) => {
+    try {
+      const url = new URL(location.href);
+      url.searchParams.delete("k");
+      url.searchParams.delete("m");
+      if (platform === "vimeo") {
+        url.searchParams.delete("v");
+        url.searchParams.set("vimeo", videoId);
+      } else {
+        url.searchParams.delete("vimeo");
+        url.searchParams.set("v", videoId);
+      }
+      history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
+      setKeywordSlug(null);
+    } catch {
+      /* ignore */
+    }
+  };
+
+  const sharePageUrl = () => {
+    const platform = result?.meta?.platform ?? "youtube";
+    const id = result?.videoId;
+    if (!id) return `${config.publicSiteUrl}/`;
+    return `${config.publicSiteUrl}${mediaSharePath(platform, id)}`;
   };
 
   useEffect(() => {
@@ -118,7 +147,7 @@ export default function App() {
   }, []);
 
   const remember = (entry: ThumbnailExtractionResult) => {
-    setHistory(
+    setRecentHistory(
       historyStore.save({
         videoId: entry.videoId,
         normalizedUrl: entry.normalizedUrl,
@@ -134,7 +163,7 @@ export default function App() {
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
-    const parsedUrl = normalizeYouTubeUrl(raw);
+    const parsedUrl = normalizeMediaUrl(raw);
     if (!parsedUrl.valid) {
       setError(userMessage(parsedUrl.errorCode ?? "INVALID_URL"));
       analytics.track("extraction_failure");
@@ -153,6 +182,7 @@ export default function App() {
         return;
       }
       remember(extracted);
+      syncShareUrl(extracted.meta?.platform ?? parsedUrl.platform, extracted.videoId);
       analytics.track("extraction_success");
     } catch {
       if (!controller.signal.aborted) {
@@ -164,8 +194,19 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    if (deepLinkBoot.current || embed) return;
+    const deep = readDeepLink();
+    if (!deep) return;
+    deepLinkBoot.current = true;
+    const raw = deep.platform === "vimeo" ? `https://vimeo.com/${deep.videoId}` : `https://www.youtube.com/watch?v=${deep.videoId}`;
+    setInput(raw);
+    void runOne(raw);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- boot once from deep link
+  }, [embed]);
+
   const runBulk = async () => {
-    const items = parseMany(input).filter((item) => item.valid);
+    const items = parseMediaMany(input).filter((item) => item.valid);
     if (!items.length) {
       setError(userMessage("INVALID_URL"));
       return;
@@ -197,15 +238,15 @@ export default function App() {
 
   const hint = !input.trim()
     ? bulk
-      ? "Paste one YouTube URL or video ID per line."
-      : "Paste a YouTube video, Shorts, live, or youtu.be URL."
+      ? "Paste one YouTube or Vimeo URL per line."
+      : "Paste a YouTube or Vimeo URL (Shorts, live, youtu.be, and vimeo.com)."
     : bulk
       ? bulkParsed.length
         ? `${bulkParsed.length} valid video ID${bulkParsed.length === 1 ? "" : "s"} ✓`
-        : "No YouTube video IDs found yet."
+        : "No video IDs found yet."
       : parsed?.valid
-        ? "Valid video ID ✓"
-        : "No YouTube video ID found in that text.";
+        ? `Valid ${parsed.platform} ID ✓`
+        : "No supported video ID found in that text.";
 
   const showCopied = async (label: string, value: string) => {
     const ok = await copyText(value);
@@ -254,6 +295,13 @@ export default function App() {
         <section className="yte-hero">
           <h1>{heroTitle}</h1>
           <p>{heroIntro}</p>
+          {result?.meta?.title ? (
+            <p className="yte-video-meta">
+              {result.meta.platform === "vimeo" ? "Vimeo" : "YouTube"}
+              {result.meta.authorName ? ` · ${result.meta.authorName}` : ""}
+              {` · ${result.meta.title}`}
+            </p>
+          ) : null}
           <nav aria-label="Keyword links" className="yte-kw">
             {KEYWORD_LANDINGS.map((item) => (
               <a
@@ -301,12 +349,12 @@ export default function App() {
                 }}
                 onPaste={(event) => {
                   const text = event.clipboardData.getData("text").trim();
-                  if (!isLikelyYouTubeUrl(text)) return;
+                  if (!isLikelyMediaUrl(text)) return;
                   event.preventDefault();
                   setInput(text);
                   void runOne(text);
                 }}
-                placeholder="Paste your YouTube video URL"
+                placeholder="Paste YouTube or Vimeo URL"
                 aria-label="YouTube URL"
                 autoComplete="off"
                 inputMode="url"
@@ -317,6 +365,27 @@ export default function App() {
               <button className="yte-btn" type="submit" disabled={busy || !input.trim()}>
                 {busy ? "Finding thumbnail…" : bulk ? "Extract all" : "Get Thumbnail Image"}
               </button>
+              {result?.bestThumbnail ? (
+                <>
+                  <button className="yte-ghost" type="button" onClick={() => void showCopied("Link copied!", sharePageUrl())}>
+                    Copy share link
+                  </button>
+                  <button
+                    className="yte-ghost"
+                    type="button"
+                    onClick={() => {
+                      const url = sharePageUrl();
+                      if (navigator.share) {
+                        void navigator.share({ title: "11tik thumbnail", url }).catch(() => undefined);
+                      } else {
+                        void showCopied("Link copied!", url);
+                      }
+                    }}
+                  >
+                    Share
+                  </button>
+                </>
+              ) : null}
               {copied ? <span className="yte-hint ok">{copied}</span> : null}
             </div>
             <p className={`yte-hint${(bulk ? bulkParsed.length > 0 : parsed?.valid) ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
@@ -336,7 +405,7 @@ export default function App() {
                     className="yte-preview"
                     style={item.width && item.height ? { aspectRatio: `${item.width} / ${item.height}` } : undefined}
                   >
-                    <ThumbnailPreview url={item.url} label={`${item.quality} thumbnail`} />
+                    <ThumbnailPreview url={item.url} label={`${item.quality} thumbnail`} priority={index === 0} />
                   </div>
                   <div className="yte-meta">
                     <span>{formatSize(item.width, item.height)}</span>
@@ -458,16 +527,16 @@ export default function App() {
 
         <aside className="yte-ad" aria-label="Advertisement">Ad space</aside>
 
-        {history.length ? (
+        {recentHistory.length ? (
           <section className="yte-panel yte-history">
             <div className="yte-row" style={{ justifyContent: "space-between" }}>
               <p className="yte-kicker" style={{ margin: 0 }}>LOCAL HISTORY</p>
-              <button className="yte-ghost" type="button" onClick={() => setHistory(historyStore.clear())}>
+              <button className="yte-ghost" type="button" onClick={() => setRecentHistory(historyStore.clear())}>
                 Clear history
               </button>
             </div>
             <div className="yte-list" style={{ marginTop: 12 }}>
-              {history.map((item) => (
+              {recentHistory.map((item) => (
                 <button
                   className="yte-item"
                   type="button"

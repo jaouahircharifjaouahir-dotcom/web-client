@@ -11,9 +11,10 @@ const STATIC_URLS = [
   "https://www.11tik.com/p/about.html",
   "https://www.11tik.com/p/privacy.html",
   "https://www.11tik.com/p/contact.html",
-  "https://www.11tik.com/p/keyword-tools.html",
+  "https://www.11tik.com/p/embed.html",
 ];
 
+/** UX-only keyword chips. Do not IndexNow / sitemap these as ranking URLs (doorway risk). */
 export function keywordLandingUrls() {
   const source = readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../src/content/keywordLandings.ts"), "utf8");
   return [...source.matchAll(/slug:\s*"([^"]+)"/g)].map((match) => `https://${HOST}/?k=${match[1]}`);
@@ -23,10 +24,12 @@ function cleanHostUrl(raw) {
   try {
     const url = new URL(raw);
     if (url.hostname !== HOST || url.searchParams.has("m")) return null;
+    // Drop thin query variants from crawl submissions
+    if (url.searchParams.has("k") || url.searchParams.has("v") || url.searchParams.has("vimeo") || url.searchParams.has("embed")) {
+      return null;
+    }
     url.hash = "";
-    const keyword = url.searchParams.get("k");
     url.search = "";
-    if (keyword) url.searchParams.set("k", keyword);
     return url.toString();
   } catch {
     return null;
@@ -67,13 +70,7 @@ export async function collectSiteUrls() {
   const pagesXml = await readXml(`https://${HOST}/feeds/pages/default?alt=atom&max-results=50`);
   const sitemapXml = await readXml(`https://${HOST}/sitemap.xml`);
   const urlList = [
-    ...new Set([
-      ...STATIC_URLS,
-      ...keywordLandingUrls(),
-      ...entryUrls(postsXml),
-      ...entryUrls(pagesXml),
-      ...sitemapUrls(sitemapXml),
-    ]),
+    ...new Set([...STATIC_URLS, ...entryUrls(postsXml), ...entryUrls(pagesXml), ...sitemapUrls(sitemapXml)]),
   ].slice(0, 1000);
   return {
     urlList,

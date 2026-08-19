@@ -6,7 +6,15 @@ export const config = {
   get publicAppUrl() {
     return "https://www.11tik.com/";
   },
-  allowedImageHosts: ["i.ytimg.com", "i1.ytimg.com", "i2.ytimg.com", "i3.ytimg.com", "i9.ytimg.com", "img.youtube.com"],
+  allowedImageHosts: [
+    "i.ytimg.com",
+    "i1.ytimg.com",
+    "i2.ytimg.com",
+    "i3.ytimg.com",
+    "i9.ytimg.com",
+    "img.youtube.com",
+    "i.vimeocdn.com",
+  ],
   gaMeasurementId: "G-FW7B8NDZZ5",
   requestTimeoutMs: 8000,
   maxBulkUrls: 25,

@@ -1,9 +1,9 @@
 import type { AppError, AppErrorCode } from "../types";
 
 const USER_MESSAGES: Record<AppErrorCode, string> = {
-  INVALID_URL: "This doesn't look like a valid YouTube video URL.",
-  UNSUPPORTED_HOST: "This doesn't look like a valid YouTube video URL.",
-  INVALID_VIDEO_ID: "This doesn't look like a valid YouTube video URL.",
+  INVALID_URL: "Paste a public YouTube or Vimeo URL (TikTok/Instagram thumbnails are not supported yet).",
+  UNSUPPORTED_HOST: "Only YouTube and Vimeo public URLs are supported right now.",
+  INVALID_VIDEO_ID: "Could not find a valid video ID in that link.",
   THUMBNAIL_NOT_FOUND: "No public thumbnail was found for this video.",
   NETWORK_ERROR: "A network error stopped thumbnail discovery. Try again.",
   TIMEOUT: "Thumbnail discovery timed out. Try again.",

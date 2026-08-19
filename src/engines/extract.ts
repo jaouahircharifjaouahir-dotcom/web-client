@@ -3,14 +3,21 @@ import { thumbnailDiscoveryEngine } from "../engines/discovery";
 import { resultCache } from "../cache/memory";
 import type { ParsedYouTubeUrl } from "../types";
 import { createAppError } from "../types/errors";
+import type { ParsedMediaUrl } from "../parsers/mediaUrl";
+import { extractVimeoThumbnails } from "./vimeoExtract";
 
 export async function extractThumbnails(
-  parsed: ParsedYouTubeUrl,
+  parsed: ParsedYouTubeUrl | ParsedMediaUrl,
   signal: AbortSignal,
   onProgress?: (result: ThumbnailExtractionResult) => void,
 ): Promise<ThumbnailExtractionResult> {
   if (!parsed.valid || !parsed.videoId || !parsed.normalizedUrl) {
     throw createAppError(parsed.errorCode ?? "INVALID_URL");
+  }
+
+  const platform = "platform" in parsed ? parsed.platform : "youtube";
+  if (platform === "vimeo") {
+    return extractVimeoThumbnails(parsed, signal, onProgress);
   }
 
   const cacheKey = parsed.videoId;
@@ -74,6 +81,10 @@ export async function extractThumbnails(
     },
   };
 
-  if (result.bestThumbnail) resultCache.set(cacheKey, result);
-  return result;
+  const withMeta: ThumbnailExtractionResult = {
+    ...result,
+    meta: { platform: "youtube", title: null, authorName: null },
+  };
+  if (withMeta.bestThumbnail) resultCache.set(cacheKey, withMeta);
+  return withMeta;
 }

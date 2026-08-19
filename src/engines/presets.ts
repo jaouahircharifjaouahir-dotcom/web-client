@@ -9,6 +9,7 @@ export interface QualityPreset {
 }
 
 export const QUALITY_PRESETS: QualityPreset[] = [
+  { quality: "maxres-webp", expectedWidth: 1280, expectedHeight: 720, tier: "best", filename: "maxresdefault.webp" },
   { quality: "maxres", expectedWidth: 1280, expectedHeight: 720, tier: "best", filename: "maxresdefault.jpg" },
   { quality: "hq720", expectedWidth: 1280, expectedHeight: 720, tier: "best", filename: "hq720.jpg" },
   { quality: "sd", expectedWidth: 640, expectedHeight: 480, tier: "high", filename: "sddefault.jpg" },
@@ -18,6 +19,9 @@ export const QUALITY_PRESETS: QualityPreset[] = [
 ];
 
 export function candidateUrl(videoId: string, filename: string): string {
+  if (filename.endsWith(".webp")) {
+    return `https://i.ytimg.com/vi_webp/${encodeURIComponent(videoId)}/${filename}`;
+  }
   return `https://i.ytimg.com/vi/${encodeURIComponent(videoId)}/${filename}`;
 }
 

@@ -53,6 +53,12 @@ export interface ExtractionTimings {
   totalMs: number;
 }
 
+export interface ExtractionMeta {
+  platform: "youtube" | "vimeo";
+  title: string | null;
+  authorName: string | null;
+}
+
 export interface ThumbnailExtractionResult {
   videoId: string;
   normalizedUrl: string;
@@ -65,6 +71,7 @@ export interface ThumbnailExtractionResult {
   cached: boolean;
   failedCandidates: ThumbnailCandidate[];
   candidateUrls: string[];
+  meta?: ExtractionMeta;
 }
 
 export interface HistoryEntry {

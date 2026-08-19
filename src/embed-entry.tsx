@@ -6,10 +6,15 @@ import "./index.css";
 
 bootLite();
 
-const embedScript = document.currentScript as HTMLScriptElement | null;
-
 function cssHref(): string {
-  if (embedScript?.src) return new URL("blogger-app.css", embedScript.src).href;
+  const scripts = document.querySelectorAll("script[src]");
+  for (let i = 0; i < scripts.length; i++) {
+    const src = (scripts[i] as HTMLScriptElement).src;
+    if (!src.includes("blogger-app.js")) continue;
+    const css = new URL("blogger-app.css", src);
+    css.search = new URL(src).search;
+    return css.href;
+  }
   return "blogger-app.css";
 }
 

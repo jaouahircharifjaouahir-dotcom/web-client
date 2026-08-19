@@ -67,8 +67,10 @@
 html,body{margin:0;background:#f4efe6;color:#17141c;font-family:"Sora","Segoe UI",sans-serif}
 #header,#search_top,#page_list_top,#ads,#footer,#sidebar_top,#sidebar_bottom,
 .hamburger-menu,.search,.blog-name,.widget.Attribution,.widget.AdSense,.widget.Profile,
+#Attribution1,#Profile1,.copyright,.blog-feeds,
 .widget.BlogSearch,.widget.Header,.widget.PageList,.widget.ReportAbuse,.widget.FeaturedPost,.widget.PopularPosts,.no-posts-message,
-.blog-pager,.comments,.comment-form,.post-footer,.feed-links,.skip-navigation,.return_link{display:none!important}
+.blog-pager,.comments,.comment-form,.post-footer,.feed-links,.skip-navigation,.return_link,
+a[href*="blogger.com/profile"],a[href="https://www.blogger.com"],a[href="https://www.blogger.com/"]{display:none!important}
 .page,.page_body,.widget.Blog,.blog-posts,.post-outer,.post,.widget,.widget-content{
 margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:none;width:100%
 }
@@ -197,12 +199,12 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
 
     <b:section id='footer' name='Footer' showaddelement='false'>
       <b:widget id='Attribution1' locked='true' title='' type='Attribution' version='2' visible='false'>
-        <b:includable id='main'><b:include name='super.main'/></b:includable>
+        <b:includable id='main'/>
       </b:widget>
     </b:section>
     <b:section id='sidebar_top' name='Sidebar (Top)'>
       <b:widget id='Profile1' locked='true' title='About Me' type='Profile' visible='false'>
-        <b:includable id='main'><b:include name='super.main'/></b:includable>
+        <b:includable id='main'/>
       </b:widget>
     </b:section>
     <b:section id='sidebar_bottom' name='Sidebar (Bottom)' preferred='yes'>
@@ -211,6 +213,17 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
       </b:widget>
     </b:section>
 
+    <script type='text/javascript'>
+(function () {
+  var nodes = document.querySelectorAll('a[href*="blogger.com/profile"], a[href="https://www.blogger.com"], a[href="https://www.blogger.com/"]');
+  for (var i = 0; i &lt; nodes.length; i++) {
+    var el = nodes[i];
+    var box = el.closest ? (el.closest('.widget') || el.closest('.copyright') || el.parentNode) : el.parentNode;
+    if (box &amp;&amp; box !== document.body &amp;&amp; box.parentNode) box.parentNode.removeChild(box);
+    else if (el.parentNode) el.parentNode.removeChild(el);
+  }
+})();
+    </script>
     <b:if cond='data:view.isHomepage'>
       <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=10' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>

@@ -1,55 +1,91 @@
 /**
- * Signal search engines after a real publish, at most once per hour.
- * Never call this from the public page on each visitor load.
+ * WordPress-style IndexNow: ping when the Blogger feed shows a new or edited post.
+ * Google does not consume IndexNow. Never run this in the visitor browser.
  */
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 
-const MIN_INTERVAL_MS = 60 * 60 * 1000;
 const KEY = process.env.INDEXNOW_KEY || "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26";
 const HOST = "www.11tik.com";
 const STAMP = process.env.SEARCH_PING_STAMP || ".search-ping-stamp";
-const URLS = [
-  "https://www.11tik.com/",
-  "https://www.11tik.com/sitemap.xml",
-  "https://www.11tik.com/p/about.html",
-  "https://www.11tik.com/p/privacy.html",
-  "https://www.11tik.com/p/contact.html",
-];
+const FEED = "https://www.11tik.com/feeds/posts/default?alt=atom&max-results=25";
+const ENDPOINTS = ["https://api.indexnow.org/indexnow", "https://www.bing.com/indexnow"];
 
 const force = process.argv.includes("--force");
 
-function lastPingMs() {
-  if (!existsSync(STAMP)) return 0;
-  const n = Number(readFileSync(STAMP, "utf8").trim());
-  return Number.isFinite(n) ? n : 0;
+function readState() {
+  if (!existsSync(STAMP)) return { feedUpdated: "", urls: [] };
+  try {
+    return JSON.parse(readFileSync(STAMP, "utf8"));
+  } catch {
+    return { feedUpdated: "", urls: [] };
+  }
 }
 
-const now = Date.now();
-const elapsed = now - lastPingMs();
-if (!force && elapsed < MIN_INTERVAL_MS) {
-  const waitMin = Math.ceil((MIN_INTERVAL_MS - elapsed) / 60000);
-  console.log(`Skip search ping (${waitMin} min left in the 1-hour cap).`);
+function feedUpdated(xml) {
+  const match = xml.match(/<updated>([^<]+)<\/updated>/);
+  return match?.[1] ?? "";
+}
+
+function entryUrls(xml) {
+  const found = new Set();
+  const re = /<link[^>]*rel=['"]alternate['"][^>]*href=['"]([^'"]+)['"]/gi;
+  for (const match of xml.matchAll(re)) {
+    try {
+      const url = new URL(match[1]);
+      if (url.hostname === HOST && !url.searchParams.has("m")) {
+        url.hash = "";
+        found.add(url.toString());
+      }
+    } catch {
+      /* skip */
+    }
+  }
+  return [...found];
+}
+
+const feedResponse = await fetch(FEED, { headers: { accept: "application/atom+xml,application/xml,text/xml" } });
+if (!feedResponse.ok) {
+  console.error(`Feed ${feedResponse.status}`);
+  process.exit(1);
+}
+const xml = await feedResponse.text();
+const updated = feedUpdated(xml);
+const posts = entryUrls(xml);
+const prev = readState();
+
+if (!force && updated && updated === prev.feedUpdated) {
+  console.log("No new or edited Blogger posts. Skip IndexNow.");
   process.exit(0);
 }
 
+const urlList = [...new Set(["https://www.11tik.com/", ...posts])].slice(0, 10);
 const body = JSON.stringify({
   host: HOST,
   key: KEY,
   keyLocation: `https://${HOST}/${KEY}.txt`,
-  urlList: URLS,
+  urlList,
 });
 
-const response = await fetch("https://api.indexnow.org/indexnow", {
-  method: "POST",
-  headers: { "content-type": "application/json; charset=utf-8" },
-  body,
-});
+let ok = 0;
+for (const endpoint of ENDPOINTS) {
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: { "content-type": "application/json; charset=utf-8" },
+    body,
+  });
+  const text = await response.text();
+  if (response.ok || response.status === 202) {
+    ok += 1;
+    console.log(`${endpoint} → ${response.status}`);
+  } else {
+    console.error(`${endpoint} → ${response.status} ${text.slice(0, 300)}`);
+  }
+}
 
-const text = await response.text();
-if (!response.ok && response.status !== 202) {
-  console.error(`IndexNow ${response.status}: ${text.slice(0, 500)}`);
+if (!ok) {
+  console.error("IndexNow rejected every endpoint. Host the key file at https://www.11tik.com/" + KEY + ".txt");
   process.exit(1);
 }
 
-writeFileSync(STAMP, String(now));
-console.log(`IndexNow accepted (${response.status}). Next ping after 1 hour.`);
+writeFileSync(STAMP, JSON.stringify({ feedUpdated: updated, urls: urlList, at: Date.now() }, null, 2));
+console.log(`Submitted ${urlList.length} URL(s).`);

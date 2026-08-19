@@ -1,24 +1,24 @@
-# IndexNow (hourly cap)
+# IndexNow (Blogger publish signal)
 
-This repo sends a crawl signal to IndexNow (Bing and other IndexNow engines). **Google does not use IndexNow.** Google still discovers pages from the sitemap, links, and Search Console.
+This works like a WordPress IndexNow plugin: when the Blogger post feed changes, GitHub Actions submits those URLs to IndexNow (Bing and other IndexNow engines).
 
-Pings never run in the visitor’s browser. A public page-view ping would be spam.
+**Google does not use IndexNow.** No plugin can force Google to index “at lightning speed.” Google still uses the sitemap, internal links, and Search Console. Bing can pick up IndexNow quickly once the key file is live.
 
-## Rate limit
+Checks run about every **10 minutes**, only if the Atom feed `<updated>` value changed. Nothing runs in the visitor’s browser.
 
-At most **one ping per hour**, even if you deploy twice. GitHub Actions also runs about once an hour.
-
-## Key file on 11tik.com
-
-IndexNow only accepts URLs for `www.11tik.com` if this file exists and returns the key as plain text:
+## Key file (required)
 
 `https://www.11tik.com/9f3a7c1e4b8d2f06a5c9e3b7d1f48a26.txt`
 
-Blogger does not host arbitrary `.txt` files at the domain root. Until that file is reachable on 11tik.com, IndexNow will reject the ping. The same file is in `public/` for GitHub Pages only; that host cannot verify `11tik.com` URLs.
+The file must be plain text containing only:
+
+`9f3a7c1e4b8d2f06a5c9e3b7d1f48a26`
+
+Blogger usually cannot host that path. Until it returns 200, IndexNow will fail.
 
 ## Manual run
 
 ```bash
-node scripts/search-engines-ping.mjs
+npm run search:ping
 node scripts/search-engines-ping.mjs --force
 ```

@@ -101,6 +101,7 @@ export default function App() {
     history.pushState({ k: slug }, "", `${url.pathname}${url.search}${url.hash}`);
     setKeywordSlug(slug);
     setPostsOpen(false);
+    analytics.pageView();
   };
 
   useEffect(() => {

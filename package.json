@@ -11,7 +11,7 @@
     "lint": "oxlint src",
     "typecheck": "tsc -b --pretty false",
     "seo:audit": "node scripts/seo-audit.mjs",
-    "search:ping": "node scripts/search-engines-ping.mjs"
+    "search:ping": "node scripts/search-engines-ping.mjs --all"
   },
   "dependencies": {
     "fflate": "^0.8.3",

@@ -3,10 +3,16 @@ name: search-ping
 on:
   schedule:
     - cron: "*/10 * * * *"
+    - cron: "0 8 * * *"
   workflow_run:
     workflows: [pages]
     types: [completed]
   workflow_dispatch:
+    inputs:
+      all:
+        description: Submit every collected URL
+        type: boolean
+        default: true
 
 concurrency:
   group: search-ping
@@ -25,4 +31,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/search-engines-ping.mjs
+      - name: Submit URLs
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 8 * * *" ] || [ "${{ github.event.inputs.all }}" = "true" ]; then
+            node scripts/search-engines-ping.mjs --all
+          else
+            node scripts/search-engines-ping.mjs
+          fi

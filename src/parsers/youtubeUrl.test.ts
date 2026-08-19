@@ -31,13 +31,43 @@ describe("normalizeYouTubeUrl", () => {
     expect(normalizeYouTubeUrl("not a url").valid).toBe(false);
   });
 
+  it("reads only the video ID and ignores extra query params", () => {
+    const parsed = normalizeYouTubeUrl(
+      "https://www.youtube.com/watch?v=8_hIsRHotRg&pp=ugUHEgVlbi-VUw%3D%3D",
+    );
+    expect(parsed.valid).toBe(true);
+    expect(parsed.videoId).toBe("8_hIsRHotRg");
+  });
+
+  it("extracts IDs from bulk lines without treating the whole box as one URL", () => {
+    const parsed = parseMany(`
+      https://www.youtube.com/watch?v=8_hIsRHotRg&pp=ugUHEgVlbi-VUw%3D%3D
+      https://youtu.be/dQw4w9WgXcQ?si=noise
+    `);
+    expect(parsed.filter((item) => item.valid).map((item) => item.videoId)).toEqual([
+      "8_hIsRHotRg",
+      "dQw4w9WgXcQ",
+    ]);
+  });
+
+  it("finds the same IDs regardless of URL order", () => {
+    const withPp =
+      "https://www.youtube.com/watch?v=8_hIsRHotRg&pp=ugUHEgVlbi-VUw%3D%3D";
+    const clean = "https://www.youtube.com/watch?v=IqRGfuXUuQY";
+    const idsA = parseMany(`${withPp}\n${clean}`).map((item) => item.videoId);
+    const idsB = parseMany(`${clean}\n${withPp}`).map((item) => item.videoId);
+    expect(idsA).toEqual(["8_hIsRHotRg", "IqRGfuXUuQY"]);
+    expect(idsB).toEqual(["IqRGfuXUuQY", "8_hIsRHotRg"]);
+    expect(normalizeYouTubeUrl(`${clean}\n${withPp}`).valid).toBe(true);
+    expect(normalizeYouTubeUrl(`${withPp}\n${clean}`).valid).toBe(true);
+  });
+
   it("deduplicates bulk input", () => {
     const parsed = parseMany(`
       https://youtu.be/dQw4w9WgXcQ
       https://www.youtube.com/watch?v=dQw4w9WgXcQ
       https://example.com/x
     `);
-    expect(parsed.filter((item) => item.valid)).toHaveLength(1);
-    expect(parsed.some((item) => !item.valid)).toBe(true);
+    expect(parsed.map((item) => item.videoId)).toEqual(["dQw4w9WgXcQ"]);
   });
 });

@@ -2,6 +2,8 @@ import { createAppError } from "../types/errors";
 import type { ParsedYouTubeUrl, YouTubeUrlType } from "../types";
 
 const VIDEO_ID_RE = /^[A-Za-z0-9_-]{11}$/;
+const VIDEO_ID_IN_TEXT_RE =
+  /(?:youtube\.com\/watch\?(?:[^ \n]*?[&?])?v=|youtube\.com\/(?:shorts|embed|live)\/|youtu\.be\/|youtube-nocookie\.com\/embed\/)([A-Za-z0-9_-]{11})/i;
 
 const HOSTS = new Set([
   "youtube.com",
@@ -21,13 +23,48 @@ function withProtocol(input: string): string {
   return `https://${trimmed}`;
 }
 
+function parsedFromId(videoId: string, originalInput: string): ParsedYouTubeUrl {
+  return {
+    valid: true,
+    videoId,
+    type: "watch",
+    host: "www.youtube.com",
+    normalizedUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    originalInput,
+    errorCode: null,
+  };
+}
+
+/** Collect every 11-character YouTube video ID; ignore extra query params and URL order. */
+export function extractVideoIds(raw: string): string[] {
+  const seen = new Set<string>();
+  const ids: string[] = [];
+  const globalRe = new RegExp(VIDEO_ID_IN_TEXT_RE.source, "gi");
+
+  for (const match of raw.matchAll(globalRe)) {
+    const id = match[1] ?? "";
+    if (!VIDEO_ID_RE.test(id) || seen.has(id)) continue;
+    seen.add(id);
+    ids.push(id);
+  }
+
+  for (const line of raw.split(/[\n,;]+/)) {
+    const trimmed = line.trim();
+    if (!VIDEO_ID_RE.test(trimmed) || seen.has(trimmed)) continue;
+    seen.add(trimmed);
+    ids.push(trimmed);
+  }
+
+  return ids;
+}
+
 function extractVideoId(url: URL, type: YouTubeUrlType): string | null {
   if (type === "short-url") {
     const id = url.pathname.split("/").filter(Boolean)[0] ?? "";
     return VIDEO_ID_RE.test(id) ? id : null;
   }
 
-  const v = url.searchParams.get("v");
+  const v = url.searchParams.get("v")?.split("&")[0] ?? "";
   if (v && VIDEO_ID_RE.test(v)) return v;
 
   const parts = url.pathname.split("/").filter(Boolean);
@@ -80,7 +117,27 @@ export function normalizeYouTubeUrl(input: string): ParsedYouTubeUrl {
 
   if (!originalInput) return empty;
 
-  let url: URL;
+  const firstId = extractVideoIds(originalInput)[0];
+  if (firstId) {
+    const firstLine = originalInput.split(/[\n\r]+/).find((line) => line.includes(firstId)) ?? originalInput;
+    try {
+      const url = new URL(withProtocol(firstLine.trim().split(/\s+/)[0] ?? firstLine));
+      const type = HOSTS.has(url.hostname.toLowerCase()) ? classify(url) : "watch";
+      return {
+        ...parsedFromId(firstId, originalInput),
+        type: type === "unknown" ? "watch" : type,
+        host: url.hostname.toLowerCase(),
+      };
+    } catch {
+      return parsedFromId(firstId, originalInput);
+    }
+  }
+
+  if (originalInput.includes("\n") || originalInput.includes("\r")) {
+    return { ...empty, errorCode: "INVALID_URL" };
+  }
+
+  let url: URL | null = null;
   try {
     url = new URL(withProtocol(originalInput));
   } catch {
@@ -115,24 +172,7 @@ export function normalizeYouTubeUrl(input: string): ParsedYouTubeUrl {
 }
 
 export function parseMany(raw: string): ParsedYouTubeUrl[] {
-  const parts = raw
-    .split(/[\n,;\s]+/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-
-  const seen = new Set<string>();
-  const results: ParsedYouTubeUrl[] = [];
-
-  for (const part of parts) {
-    const parsed = normalizeYouTubeUrl(part);
-    if (parsed.valid && parsed.videoId) {
-      if (seen.has(parsed.videoId)) continue;
-      seen.add(parsed.videoId);
-    }
-    results.push(parsed);
-  }
-
-  return results;
+  return extractVideoIds(raw).map((id) => parsedFromId(id, raw));
 }
 
 export function invalidReason(parsed: ParsedYouTubeUrl): string {

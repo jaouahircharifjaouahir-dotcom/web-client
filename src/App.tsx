@@ -31,6 +31,7 @@ export default function App() {
   const [history, setHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
   const parsed = useMemo(() => (input.trim() ? normalizeYouTubeUrl(input) : null), [input]);
+  const bulkParsed = useMemo(() => (bulk ? parseMany(input).filter((item) => item.valid) : []), [bulk, input]);
 
   useEffect(() => {
     const mode = resolvedTheme(theme);
@@ -133,10 +134,16 @@ export default function App() {
   };
 
   const hint = !input.trim()
-    ? "Paste a YouTube video, Shorts, live, or youtu.be URL."
-    : parsed?.valid
-      ? "Valid YouTube URL ✓"
-      : "This doesn't look like a valid YouTube video URL.";
+    ? bulk
+      ? "Paste one YouTube URL or video ID per line."
+      : "Paste a YouTube video, Shorts, live, or youtu.be URL."
+    : bulk
+      ? bulkParsed.length
+        ? `${bulkParsed.length} valid video ID${bulkParsed.length === 1 ? "" : "s"} ✓`
+        : "No YouTube video IDs found yet."
+      : parsed?.valid
+        ? "Valid video ID ✓"
+        : "No YouTube video ID found in that text.";
 
   const showCopied = async (label: string, value: string) => {
     const ok = await copyText(value);
@@ -149,10 +156,10 @@ export default function App() {
     <div className={`yte-app${embed ? " yte-embed" : ""}`}>
       <div className="yte-shell">
         <header className="yte-top">
-          <div className="yte-brand">
+          <a className="yte-brand" href="https://www.11tik.com/">
             <span className="yte-mark" aria-hidden="true">11</span>
             <span>{config.siteName}</span>
-          </div>
+          </a>
           <div className="yte-actions">
             <button className="yte-chip" type="button" aria-pressed={bulk} onClick={() => setBulk((v) => !v)}>
               Bulk
@@ -165,7 +172,7 @@ export default function App() {
 
         <section className="yte-hero">
           <h1>YouTube Thumbnail Extractor</h1>
-          <p>Paste a YouTube URL. The best public thumbnail is identified, validated, and ready to download in the browser.</p>
+          <p>Get the highest available public thumbnail from any YouTube video, Shorts, or supported YouTube URL.</p>
         </section>
 
         <section className="yte-panel">
@@ -179,14 +186,23 @@ export default function App() {
             {bulk ? (
               <textarea
                 value={input}
-                onChange={(event) => setInput(event.target.value)}
+                onChange={(event) => {
+                  setError("");
+                  setInput(event.target.value);
+                }}
                 placeholder="Paste one YouTube URL per line"
                 aria-label="YouTube URLs"
+                spellCheck={false}
+                autoCorrect="off"
+                autoCapitalize="off"
               />
             ) : (
               <input
                 value={input}
-                onChange={(event) => setInput(event.target.value)}
+                onChange={(event) => {
+                  setError("");
+                  setInput(event.target.value);
+                }}
                 onPaste={(event) => {
                   const text = event.clipboardData.getData("text").trim();
                   if (!isLikelyYouTubeUrl(text)) return;
@@ -198,6 +214,7 @@ export default function App() {
                 aria-label="YouTube URL"
                 autoComplete="off"
                 inputMode="url"
+                spellCheck={false}
               />
             )}
             <div className="yte-row">
@@ -206,7 +223,7 @@ export default function App() {
               </button>
               {copied ? <span className="yte-hint ok">{copied}</span> : null}
             </div>
-            <p className={`yte-hint${parsed?.valid ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
+            <p className={`yte-hint${(bulk ? bulkParsed.length > 0 : parsed?.valid) ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
             <div className="yte-status" role="status" aria-live="polite">
               {busy ? "Extracting thumbnails" : result?.bestThumbnail ? "Thumbnail ready" : error}
             </div>

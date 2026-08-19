@@ -10,6 +10,8 @@
       <title><data:view.title.escaped/> | 11tik</title>
     </b:if>
     <b:include data='blog' name='all-head-content'/>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png' rel='shortcut icon' sizes='32x32' type='image/png'/>
+    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png' rel='icon' sizes='32x32' type='image/png'/>
     <b:if cond='data:view.isSearch or data:view.isArchive or data:view.isError'>
       <meta content='noindex,follow' name='robots'/>
     <b:else/>
@@ -34,7 +36,6 @@
       <link expr:href='data:view.url' rel='canonical'/>
     </b:if>
     <meta content='#c2410c' name='theme-color'/>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png' rel='icon' sizes='32x32' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
@@ -211,7 +212,7 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
     </b:section>
 
     <b:if cond='data:view.isHomepage'>
-      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=7' type='text/javascript'><![CDATA[ ]]></script>
+      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=8' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

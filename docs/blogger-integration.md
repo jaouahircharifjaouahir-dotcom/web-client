@@ -19,6 +19,6 @@ C:\Users\ADMIN\Downloads\theme-4072124001762126765.xml
 
 Blogger → Theme → Restore.
 
-Homepage loads `#yte-root` plus `blogger-app.js?v=7` from the static host path `/web-client/`.
+Homepage loads `#yte-root` plus `blogger-app.js?v=8` from the static host path `/web-client/`.
 
 Keep DNS on Blogger. Do not point `11tik.com` at GitHub Pages.

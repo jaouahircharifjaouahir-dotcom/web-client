@@ -1,5 +1,5 @@
 {
-  "name": "youtube-thumbnail-extractor",
+  "name": "web-client",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "oxlint src",
-    "typecheck": "tsc -b --pretty false"
+    "typecheck": "tsc -b --pretty false",
+    "seo:audit": "node scripts/seo-audit.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

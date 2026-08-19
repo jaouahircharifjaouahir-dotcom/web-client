@@ -1,35 +1,24 @@
 # Blogger integration
 
-The public site is **https://11tik.com** on Blogger. The tool is the GitHub Pages build, injected **directly into the theme** (no iframe).
+Public site: **https://www.11tik.com/**  
+The theme is a **minimal custom template** (not Indie). It does not include Blogger search, ads, hamburger, attribution, sidebars, or “Powered by Blogger” chrome.
 
-## Recommended: upload the theme
+## Restore
 
-Use the edited file:
+Upload:
 
 ```text
-c:\Users\ADMIN\Downloads\theme-4072124001762126765.xml
+C:\Users\ADMIN\Desktop\seo\docs\blogger-theme.xml
 ```
 
-In Blogger: **Theme → Backup → Restore** and upload that XML.
+or
 
-The homepage then contains `#yte-root` and loads:
-
-- `blogger-app.css`
-- `blogger-app.js`
-
-from GitHub Pages. Blogger chrome (hamburger, search, empty posts, Powered by Blogger) stays hidden.
-
-## Alternative: HTML gadget / page
-
-If you are not replacing the full theme, paste this in HTML view. Still no iframe:
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://jaouahircharifjaouahir-dotcom.github.io/youtube-thumbnail-extractor/blogger-app.css">
-<div id="yte-root"></div>
-<script src="https://jaouahircharifjaouahir-dotcom.github.io/youtube-thumbnail-extractor/blogger-app.js?v=3"></script>
+```text
+C:\Users\ADMIN\Downloads\theme-4072124001762126765.xml
 ```
 
-## DNS
+Blogger → Theme → Restore.
 
-Keep `11tik.com` pointed at Blogger. Do not point the root domain at GitHub Pages.
+Homepage loads `#yte-root` plus `blogger-app.js?v=7` from the static host path `/web-client/`.
+
+Keep DNS on Blogger. Do not point `11tik.com` at GitHub Pages.

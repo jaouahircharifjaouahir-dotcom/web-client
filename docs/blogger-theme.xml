@@ -19,18 +19,18 @@
     </b:if>
     <b:if cond='data:view.isHomepage'>
       <link href='https://www.11tik.com/' rel='canonical'/>
-      <meta content='Extract HD YouTube thumbnails in your browser. Paste a video or Shorts URL to preview public sizes and download the highest available image in seconds.' name='description'/>
+      <meta content='Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any YouTube video or Shorts URL.' name='description'/>
       <meta content='website' property='og:type'/>
       <meta content='11tik' property='og:site_name'/>
       <meta content='YouTube Thumbnail Extractor – Download HD YouTube Thumbnails' property='og:title'/>
-      <meta content='Extract HD YouTube thumbnails in your browser. Paste a video or Shorts URL to preview public sizes and download the highest available image in seconds.' property='og:description'/>
+      <meta content='Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any YouTube video or Shorts URL.' property='og:description'/>
       <meta content='https://www.11tik.com/' property='og:url'/>
       <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' property='og:image'/>
       <meta content='1200' property='og:image:width'/>
       <meta content='630' property='og:image:height'/>
       <meta content='summary_large_image' name='twitter:card'/>
       <meta content='YouTube Thumbnail Extractor – Download HD YouTube Thumbnails' name='twitter:title'/>
-      <meta content='Extract HD YouTube thumbnails in your browser. Paste a video or Shorts URL to preview public sizes and download the highest available image in seconds.' name='twitter:description'/>
+      <meta content='Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any YouTube video or Shorts URL.' name='twitter:description'/>
       <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' name='twitter:image'/>
     <b:else/>
       <link expr:href='data:view.url' rel='canonical'/>
@@ -212,7 +212,7 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
     </b:section>
 
     <b:if cond='data:view.isHomepage'>
-      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=9' type='text/javascript'><![CDATA[ ]]></script>
+      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=10' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

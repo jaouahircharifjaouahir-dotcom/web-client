@@ -81,7 +81,7 @@ a.yte-brand:focus-visible {
   line-height: 0.95;
   letter-spacing: -0.04em;
 }
-.yte-hero p { margin: 0 0 22px; color: var(--yte-muted); max-width: 46ch; }
+.yte-hero p { margin: 0 0 22px; color: var(--yte-muted); max-width: 68ch; }
 
 .yte-panel {
   background: var(--yte-paper);

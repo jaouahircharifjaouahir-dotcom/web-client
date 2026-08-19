@@ -201,7 +201,7 @@ export default function App() {
 
         <section className="yte-hero">
           <h1>YouTube Thumbnail Extractor</h1>
-          <p>Get the highest available public thumbnail from any YouTube video, Shorts, or supported YouTube URL.</p>
+          <p>Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD, high-resolution thumbnail images from any YouTube video, Shorts, or supported YouTube URL with just one click. Our fast and powerful YouTube Thumbnail Extractor automatically finds the best available public thumbnail — simply paste your video URL below, click “Get Thumbnail Image,” and download your YouTube thumbnail in seconds.</p>
         </section>
 
         <section className="yte-panel">
@@ -248,7 +248,7 @@ export default function App() {
             )}
             <div className="yte-row">
               <button className="yte-btn" type="submit" disabled={busy || !input.trim()}>
-                {busy ? "Finding thumbnail…" : bulk ? "Extract all" : "Get Thumbnail"}
+                {busy ? "Finding thumbnail…" : bulk ? "Extract all" : "Get Thumbnail Image"}
               </button>
               {copied ? <span className="yte-hint ok">{copied}</span> : null}
             </div>

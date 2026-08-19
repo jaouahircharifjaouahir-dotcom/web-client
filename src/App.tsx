@@ -10,11 +10,40 @@ import { isLikelyYouTubeUrl, normalizeYouTubeUrl, parseMany } from "./parsers/yo
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { userMessage } from "./types/errors";
-import type { HistoryEntry, ThumbnailExtractionResult } from "./types";
+import { QUALITY_PRESETS } from "./engines/presets";
+import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
+
+const QUALITY_ORDER = QUALITY_PRESETS.map((item) => item.quality);
 
 function formatSize(width: number | null, height: number | null): string {
   if (!width || !height) return "Unknown size";
   return `${width} × ${height}`;
+}
+
+function bulkLowerQualityRows(results: ThumbnailExtractionResult[]) {
+  const qualities = new Set<string>();
+  for (const result of results) {
+    const bestUrl = result.bestThumbnail?.url;
+    for (const thumb of result.thumbnails) {
+      if (thumb.url !== bestUrl) qualities.add(thumb.quality);
+    }
+  }
+
+  return [...qualities]
+    .sort((a, b) => {
+      const ia = QUALITY_ORDER.indexOf(a);
+      const ib = QUALITY_ORDER.indexOf(b);
+      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+    })
+    .map((quality) => ({
+      quality,
+      items: results.flatMap((result, index) => {
+        const bestUrl = result.bestThumbnail?.url;
+        const candidate = result.thumbnails.find((thumb) => thumb.quality === quality && thumb.url !== bestUrl);
+        return candidate ? [{ videoNumber: index + 1, videoId: result.videoId, candidate }] : [];
+      }),
+    }))
+    .filter((row) => row.items.length);
 }
 
 export default function App() {
@@ -230,7 +259,7 @@ export default function App() {
           </form>
         </section>
 
-        {result?.thumbnails.length ? (
+        {!bulk && result?.thumbnails.length ? (
           <section className="yte-panel yte-stack-wrap">
             <p className="yte-kicker">THUMBNAILS</p>
             <div className="yte-stack">
@@ -273,24 +302,11 @@ export default function App() {
           </section>
         ) : null}
 
-        {bulkResults.length > 1 ? (
+        {bulk && bulkResults.length ? (
           <section className="yte-panel">
-            <p className="yte-kicker">BULK RESULTS</p>
-            <div className="yte-row">
-              <button
-                className="yte-btn"
-                type="button"
-                onClick={() =>
-                  void downloadManager
-                    .downloadBulkZip(bulkResults.map((item) => ({ videoId: item.videoId, candidates: item.bestThumbnail ? [item.bestThumbnail] : [] })))
-                    .catch(() => setError(userMessage("DOWNLOAD_FAILED")))
-                }
-              >
-                Download all
-              </button>
-            </div>
-            <div className="yte-stack" style={{ marginTop: 12 }}>
-              {bulkResults.map((item) => (
+            <p className="yte-kicker">HIGHEST QUALITY</p>
+            <div className="yte-stack">
+              {bulkResults.map((item, index) => (
                 <article className="yte-shot" key={item.videoId}>
                   {item.bestThumbnail ? (
                     <div
@@ -301,16 +317,75 @@ export default function App() {
                           : undefined
                       }
                     >
-                      <ThumbnailPreview url={item.bestThumbnail.url} label={item.videoId} />
+                      <ThumbnailPreview url={item.bestThumbnail.url} label={`Video ${index + 1} best thumbnail`} />
                     </div>
                   ) : null}
                   <div className="yte-meta">
-                    <span>{formatSize(item.bestThumbnail?.width ?? null, item.bestThumbnail?.height ?? null)}</span>
-                    <span>{item.videoId}</span>
+                    <span>Video {index + 1}</span>
+                    <span>
+                      {formatSize(item.bestThumbnail?.width ?? null, item.bestThumbnail?.height ?? null)} ·{" "}
+                      {item.bestThumbnail?.quality ?? "best"}
+                    </span>
                   </div>
+                  {item.bestThumbnail ? (
+                    <div className="yte-row">
+                      <button
+                        className="yte-btn"
+                        type="button"
+                        onClick={() => {
+                          analytics.track("download_clicked");
+                          void downloadManager
+                            .download(item.videoId, item.bestThumbnail as ThumbnailCandidate)
+                            .catch(() => setError(userMessage("DOWNLOAD_FAILED")));
+                        }}
+                      >
+                        Download thumbnail video {index + 1} {item.bestThumbnail.quality}
+                      </button>
+                    </div>
+                  ) : null}
                 </article>
               ))}
             </div>
+            <div className="yte-row" style={{ marginTop: 16 }}>
+              <button
+                className="yte-btn"
+                type="button"
+                onClick={() =>
+                  void downloadManager
+                    .downloadBulkZip(
+                      bulkResults.map((item) => ({
+                        videoId: item.videoId,
+                        candidates: item.bestThumbnail ? [item.bestThumbnail] : [],
+                      })),
+                    )
+                    .catch(() => setError(userMessage("DOWNLOAD_FAILED")))
+                }
+              >
+                Download all highest quality
+              </button>
+            </div>
+            {bulkLowerQualityRows(bulkResults).map((row) => (
+              <div className="yte-bulk-quality" key={row.quality}>
+                <p className="yte-kicker">{row.quality.toUpperCase()}</p>
+                <div className="yte-bulk-dl">
+                  {row.items.map((item) => (
+                    <button
+                      className="yte-ghost"
+                      type="button"
+                      key={`${item.videoId}-${row.quality}`}
+                      onClick={() => {
+                        analytics.track("download_clicked");
+                        void downloadManager
+                          .download(item.videoId, item.candidate)
+                          .catch(() => setError(userMessage("DOWNLOAD_FAILED")));
+                      }}
+                    >
+                      Download thumbnail video {item.videoNumber} {row.quality}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
           </section>
         ) : null}
 

@@ -212,7 +212,7 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
     </b:section>
 
     <b:if cond='data:view.isHomepage'>
-      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=8' type='text/javascript'><![CDATA[ ]]></script>
+      <script src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=9' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

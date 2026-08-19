@@ -1,0 +1,28 @@
+name: search-ping
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_run:
+    workflows: [pages]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: search-ping
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .search-ping-stamp
+          key: search-ping-v1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/search-engines-ping.mjs

@@ -52,6 +52,7 @@ export default function App() {
   const [theme, setTheme] = useState<ThemeMode>(() => readTheme());
   const [input, setInput] = useState("");
   const [postsOpen, setPostsOpen] = useState(false);
+  const [bulk, setBulk] = useState(false);
   const [power, setPower] = useState(false);
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState("");

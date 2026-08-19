@@ -62,7 +62,7 @@ const urlList = [...new Set(["https://www.11tik.com/", ...posts])].slice(0, 10);
 const body = JSON.stringify({
   host: HOST,
   key: KEY,
-  keyLocation: `https://${HOST}/${KEY}.txt`,
+  keyLocation: `https://jaouahircharifjaouahir-dotcom.github.io/web-client/${KEY}.txt`,
   urlList,
 });
 
@@ -83,7 +83,7 @@ for (const endpoint of ENDPOINTS) {
 }
 
 if (!ok) {
-  console.error("IndexNow rejected every endpoint. Host the key file at https://www.11tik.com/" + KEY + ".txt");
+  console.error("IndexNow rejected every endpoint.");
   process.exit(1);
 }
 

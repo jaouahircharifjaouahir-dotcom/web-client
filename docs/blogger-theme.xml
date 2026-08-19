@@ -59,7 +59,7 @@
     <b:else/>
       <link expr:href='data:view.url' rel='canonical'/>
     </b:if>
-    <meta content='11tik-theme-v16' name='yte-build'/>
+    <meta content='11tik-theme-v17' name='yte-build'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
@@ -115,10 +115,13 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 .yte-seo a,.yte-seo-nav a,.yte-static a{color:#c2410c}
 .yte-seo-nav{display:flex;flex-wrap:wrap;gap:10px 16px;padding:20px 0 8px;font-size:14px}
 .yte-seo-foot{padding:24px 0 56px;font-size:14px;color:#5c5666}
-.yte-static{padding:28px 0 64px;line-height:1.65}
+.yte-indexnow{margin:0;padding:24px;font:20px/1.5 ui-monospace,Consolas,monospace;color:#111;background:#fff}
     ]]></b:skin>
   </head>
   <body>
+    <b:if cond='data:blog.url contains "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26"'>
+      <pre class='yte-indexnow'>9f3a7c1e4b8d2f06a5c9e3b7d1f48a26</pre>
+    </b:if>
     <b:if cond='data:view.isHomepage'>
       <main>
       <div id='yte-root'></div>

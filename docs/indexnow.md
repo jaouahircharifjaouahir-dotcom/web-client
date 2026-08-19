@@ -1,20 +1,16 @@
-# IndexNow (Blogger publish signal)
+# IndexNow on Blogger
 
-This works like a WordPress IndexNow plugin: when the Blogger post feed changes, GitHub Actions submits those URLs to IndexNow (Bing and other IndexNow engines).
+GitHub cannot put a `.txt` file on `www.11tik.com`. Blogger always answers that path as **HTML**, so the official IndexNow “plain text key file” check often fails. The key still lives on GitHub Pages:
 
-**Google does not use IndexNow.** No plugin can force Google to index “at lightning speed.” Google still uses the sitemap, internal links, and Search Console. Bing can pick up IndexNow quickly once the key file is live.
+`https://jaouahircharifjaouahir-dotcom.github.io/web-client/9f3a7c1e4b8d2f06a5c9e3b7d1f48a26.txt`
 
-Checks run about every **10 minutes**, only if the Atom feed `<updated>` value changed. Nothing runs in the visitor’s browser.
+The ping job uses that as `keyLocation`. Bing may still require the same host as `www.11tik.com`.
 
-## Key file (required)
+After you restore the theme, opening
 
 `https://www.11tik.com/9f3a7c1e4b8d2f06a5c9e3b7d1f48a26.txt`
 
-The file must be plain text containing only:
-
-`9f3a7c1e4b8d2f06a5c9e3b7d1f48a26`
-
-Blogger usually cannot host that path. Until it returns 200, IndexNow will fail.
+should show the key in black text on white (not a blank page). That is for you to confirm; it does not turn Blogger into a `.txt` server.
 
 ## Manual run
 

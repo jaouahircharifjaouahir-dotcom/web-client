@@ -1,20 +1,18 @@
 /**
  * Periodically submit all public 11tik URLs to IndexNow (Bing and partners).
  * Google does not use IndexNow. Never run this in the visitor browser.
+ *
+ * Blogger cannot serve a raw .txt file. After you add a Custom redirect from
+ * /{key}.txt to the GitHub raw key file, this job can verify the site.
  */
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
+import { collectSiteUrls, SITE_HOST } from "./site-urls.mjs";
 
 const KEY = process.env.INDEXNOW_KEY || "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26";
-const HOST = "www.11tik.com";
+const KEY_LOCATION = `https://${SITE_HOST}/${KEY}.txt`;
+const KEY_FILE_RAW = `https://raw.githubusercontent.com/jaouahircharifjaouahir-dotcom/web-client/main/${KEY}.txt`;
 const STAMP = process.env.SEARCH_PING_STAMP || ".search-ping-stamp";
 const ENDPOINTS = ["https://api.indexnow.org/indexnow", "https://www.bing.com/indexnow"];
-const STATIC_URLS = [
-  "https://www.11tik.com/",
-  "https://www.11tik.com/sitemap.xml",
-  "https://www.11tik.com/p/about.html",
-  "https://www.11tik.com/p/privacy.html",
-  "https://www.11tik.com/p/contact.html",
-];
 
 const force = process.argv.includes("--force");
 const submitAll = process.argv.includes("--all") || force;
@@ -28,51 +26,42 @@ function readState() {
   }
 }
 
-function cleanHostUrl(raw) {
-  try {
-    const url = new URL(raw);
-    if (url.hostname !== HOST || url.searchParams.has("m")) return null;
-    url.hash = "";
-    url.search = "";
-    return url.toString();
-  } catch {
-    return null;
+function looksLikeHtml(text) {
+  return /<!DOCTYPE|<html[\s>]/i.test(text);
+}
+
+function printRedirectHelp() {
+  console.error(`
+IndexNow cannot verify ${KEY_LOCATION}
+Blogger is serving HTML, not a plain-text key file.
+
+In Blogger → Settings → Search preferences → Custom redirects:
+  From: /${KEY}.txt
+  To:   ${KEY_FILE_RAW}
+  Type: 302 (keep enabled), then Save
+
+Confirm in a browser that ${KEY_LOCATION}
+redirects and shows only:
+  ${KEY}
+
+Then re-run the search-ping workflow.
+`);
+}
+
+async function assertKeyFile() {
+  const response = await fetch(KEY_LOCATION, { redirect: "follow" });
+  const text = await response.text();
+  const type = response.headers.get("content-type") || "";
+  const body = text.trim();
+  console.log(`Key check ${KEY_LOCATION} → ${response.status} ${type} final=${response.url}`);
+
+  if (looksLikeHtml(text) || !body.startsWith(KEY) || body.includes("<")) {
+    printRedirectHelp();
+    throw new Error("IndexNow key file is not plain text on www.11tik.com.");
   }
 }
 
-function entryUrls(xml) {
-  const found = [];
-  const re = /<link[^>]*rel=['"]alternate['"][^>]*href=['"]([^'"]+)['"]/gi;
-  for (const match of xml.matchAll(re)) {
-    const url = cleanHostUrl(match[1]);
-    if (url) found.push(url);
-  }
-  return found;
-}
-
-function sitemapUrls(xml) {
-  const found = [];
-  for (const match of xml.matchAll(/<loc>\s*([^<]+)\s*<\/loc>/gi)) {
-    const url = cleanHostUrl(match[1].trim());
-    if (url) found.push(url);
-  }
-  return found;
-}
-
-function feedUpdated(xml) {
-  return xml.match(/<updated>([^<]+)<\/updated>/)?.[1] ?? "";
-}
-
-async function readXml(url) {
-  const response = await fetch(url, { headers: { accept: "application/xml,text/xml,application/atom+xml" } });
-  if (!response.ok) return "";
-  return response.text();
-}
-
-const postsXml = await readXml(`https://${HOST}/feeds/posts/default?alt=atom&max-results=150`);
-const pagesXml = await readXml(`https://${HOST}/feeds/pages/default?alt=atom&max-results=50`);
-const sitemapXml = await readXml(`https://${HOST}/sitemap.xml`);
-const updated = `${feedUpdated(postsXml)}|${feedUpdated(pagesXml)}`;
+const { urlList, updated } = await collectSiteUrls();
 const prev = readState();
 
 if (!submitAll && updated && updated === prev.feedUpdated) {
@@ -80,24 +69,22 @@ if (!submitAll && updated && updated === prev.feedUpdated) {
   process.exit(0);
 }
 
-const urlList = [
-  ...new Set([
-    ...STATIC_URLS,
-    ...entryUrls(postsXml),
-    ...entryUrls(pagesXml),
-    ...sitemapUrls(sitemapXml),
-  ]),
-].slice(0, 1000);
-
 if (!urlList.length) {
   console.error("No URLs collected.");
   process.exit(1);
 }
 
+try {
+  await assertKeyFile();
+} catch (error) {
+  console.error(error instanceof Error ? error.message : error);
+  process.exit(1);
+}
+
 const body = JSON.stringify({
-  host: HOST,
+  host: SITE_HOST,
   key: KEY,
-  keyLocation: `https://${HOST}/${KEY}.txt`,
+  keyLocation: KEY_LOCATION,
   urlList,
 });
 
@@ -114,6 +101,9 @@ for (const endpoint of ENDPOINTS) {
     console.log(`${endpoint} → ${response.status}`);
   } else {
     console.error(`${endpoint} → ${response.status} ${text.slice(0, 300)}`);
+    if (text.includes("UserForbiddedToAccessSite") || text.includes("Keylocation")) {
+      printRedirectHelp();
+    }
   }
 }
 

@@ -18,12 +18,16 @@ export default {
       return new Response("Not found", { status: 404 });
     }
 
+    const isAsset = /\.(js|css|map|svg|png|ico|woff2?)$/i.test(url.pathname);
     const upstream = await fetch(GITHUB + url.pathname + url.search, {
-      cf: { cacheEverything: true, cacheTtl: 86400 },
+      cf: { cacheEverything: true, cacheTtl: isAsset ? 60 : 300 },
     });
 
     const response = new Response(upstream.body, upstream);
-    response.headers.set("Cache-Control", "public, max-age=86400");
+    response.headers.set(
+      "Cache-Control",
+      isAsset ? "public, max-age=60, must-revalidate" : "public, max-age=300",
+    );
     return response;
   },
 };

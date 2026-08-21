@@ -28,8 +28,19 @@ function formatSize(width: number | null, height: number | null): string {
 
 function ShareUrlLine({ url }: { url: string }) {
   return (
-    <p className="yte-shareline">
-      <a href={url} target="_blank" rel="noopener noreferrer">
+    <p
+      className="yte-shareline"
+      style={{
+        margin: "12px 0 0",
+        padding: "12px 14px",
+        border: "2px solid #0f766e",
+        borderRadius: "14px",
+        background: "rgba(15, 118, 110, 0.12)",
+        wordBreak: "break-all",
+      }}
+    >
+      <span style={{ display: "block", fontWeight: 800, marginBottom: 6, fontSize: 12, letterSpacing: "0.08em" }}>SHARE LINK</span>
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f766e", fontWeight: 800, fontSize: "1rem" }}>
         {url}
       </a>
     </p>
@@ -416,6 +427,7 @@ export default function App() {
               {copied ? <span className="yte-hint ok">{copied}</span> : null}
             </div>
             <p className={`yte-hint${(bulk ? bulkParsed.length > 0 : parsed?.valid) ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
+            {result?.bestThumbnail && !bulk ? <ShareUrlLine url={sharePageUrl()} /> : null}
             <div className="yte-status" role="status" aria-live="polite">
               {busy ? "Extracting thumbnails" : result?.bestThumbnail ? "Thumbnail ready" : error}
             </div>

@@ -12,7 +12,7 @@ Source plan: `thumbnail-tool-growth-plan.md` (Downloads). Host constraint: **Blo
 | Copy URL / share | Done | Copy image URL + share permalink `?v=` / `?vimeo=` |
 | Dark mode | Done (existing) | |
 | Schema SoftwareApplication + FAQ | Done (existing) | **No fake AggregateRating** |
-| IndexNow clean | Done | Query doorways (`?k=`, `?v=`) removed from ping list |
+| Google Indexing API | Done | Sitemap URLs submitted with `npm run google:index` |
 | Embed widget | Done | `/p/embed.html` + `embed.js` |
 | PWA | Partial | Manifest `standalone` + link from theme. Full SW cannot run on Blogger origin |
 | Programmatic video pages | Product deep links | `?v=` / `?vimeo=` auto-extract + share. Not thin SEO farms |

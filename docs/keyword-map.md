@@ -20,7 +20,7 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 
 - Do **not** publish `/youtube-thumbnail-downloader` as a second tool clone.
 - Do **not** recreate `/p/youtube-thumbnail-extractor.html` while the homepage is the canonical tool.
-- `?k=` chips are **UX only**. Do not submit them to IndexNow or treat them as ranking URLs (doorway risk).
+- `?k=` chips are **UX only**. Do not treat them as ranking URLs (doorway risk).
 - Legal pages (about, privacy, contact, terms) must not target thumbnail queries.
 - Deep links `?v=` / `?vimeo=` are shareable product URLs; canonical ranking stays on `/` and real articles.
 

@@ -166,9 +166,6 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
     <script>/*<![CDATA[*/ cookieChoices = {}; /*]]>*/</script>
   </head>
   <body>
-    <b:if cond='data:blog.url contains "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26"'>
-      <pre class='yte-indexnow'>9f3a7c1e4b8d2f06a5c9e3b7d1f48a26</pre>
-    </b:if>
     <b:if cond='data:view.isError'>
       <main class='yte-404'>
         <div class='yte-404-card'>
@@ -427,8 +424,6 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
       </script>
     </b:if>
-    <b:if cond='data:blog.url contains "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26"'>
-    <b:else/>
       <script type='text/javascript'><![CDATA[
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -443,6 +438,5 @@ window.addEventListener("load", function () {
   document.head.appendChild(s);
 });
 ]]></script>
-    </b:if>
   </body>
 </html>

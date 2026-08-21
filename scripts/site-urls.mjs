@@ -14,7 +14,7 @@ const STATIC_URLS = [
   "https://www.11tik.com/p/embed.html",
 ];
 
-/** UX-only keyword chips. Do not IndexNow / sitemap these as ranking URLs (doorway risk). */
+/** UX-only keyword chips. Do not treat them as ranking URLs (doorway risk). */
 export function keywordLandingUrls() {
   const source = readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../src/content/keywordLandings.ts"), "utf8");
   return [...source.matchAll(/slug:\s*"([^"]+)"/g)].map((match) => `https://${HOST}/?k=${match[1]}`);

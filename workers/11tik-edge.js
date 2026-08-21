@@ -1,4 +1,3 @@
-const KEY = "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26";
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
 const YT_ID = /^[A-Za-z0-9_-]{11}$/;
@@ -295,15 +294,6 @@ export default {
   },
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-
-    if (url.pathname === `/${KEY}.txt`) {
-      return new Response(KEY, {
-        headers: {
-          "content-type": "text/plain; charset=utf-8",
-          "cache-control": "public, max-age=3600",
-        },
-      });
-    }
 
     if (url.pathname === "/sitemap.xml") {
       return handleSitemapGet(request, env);

@@ -1,3 +1,11 @@
+import {
+  ISO6391_CODES,
+  RTL_CODES,
+  hreflangLinks,
+  langName,
+  localeSitemapLocs,
+} from "./iso6391.js";
+
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
 const YT_ID = /^[A-Za-z0-9_-]{11}$/;
@@ -251,6 +259,9 @@ async function buildSitemapXml(env) {
   }
   if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
   blogger.set(`${SITE}/`, newest);
+  for (const loc of localeSitemapLocs()) {
+    if (!blogger.has(loc)) blogger.set(loc, newest);
+  }
   const parts = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
   for (const [loc, lastmod] of blogger) {
     parts.push(urlEntry(loc, lastmod || newest));
@@ -288,40 +299,49 @@ async function handleSitemapGet(request, env) {
   });
 }
 
-function localeCopy(host) {
-  if (host === "es.11tik.com") {
-    return {
-      lang: "es",
-      locale: "es_ES",
-      title: "Extractor de miniaturas de YouTube – Descargar miniaturas HD",
-      description:
-        "Descarga gratis la miniatura de YouTube de mayor calidad disponible. Extrae imágenes HD de cualquier URL de YouTube o Shorts.",
-    };
-  }
+function localeCopy(code) {
+  const name = langName(code);
+  const titles = {
+    ar: "مستخرج صور يوتيوب – تحميل صور مصغرة عالية الدقة",
+    de: "YouTube-Thumbnail-Extraktor – HD-Thumbnails herunterladen",
+    pt: "Extrator de miniaturas do YouTube – Baixar miniaturas em HD",
+    ru: "Экстрактор превью YouTube – скачать миниатюры в HD",
+    zh: "YouTube 缩略图提取器 – 下载高清缩略图",
+    ja: "YouTubeサムネイル抽出 – HDサムネイルをダウンロード",
+    fr: "Extracteur de miniatures YouTube – Télécharger des miniatures HD",
+    es: "Extractor de miniaturas de YouTube – Descargar miniaturas HD",
+  };
+  const descriptions = {
+    ar: "حمّل مجانا أعلى صورة مصغرة عامة متاحة من يوتيوب أو فيميو.",
+    de: "Laden Sie kostenlos das beste öffentliche YouTube- oder Vimeo-Thumbnail herunter.",
+    pt: "Baixe grátis a melhor miniatura pública disponível do YouTube ou Vimeo.",
+    ru: "Бесплатно скачайте лучшую публичную миниатюру YouTube или Vimeo.",
+    zh: "免费下载 YouTube 或 Vimeo 已发布的最高清公开缩略图。",
+    ja: "YouTubeまたはVimeoの公開サムネイルを最高画質で無料ダウンロード。",
+    fr: "Téléchargez gratuitement la miniature YouTube de plus haute qualité disponible.",
+    es: "Descarga gratis la miniatura de YouTube de mayor calidad disponible.",
+  };
   return {
-    lang: "fr",
-    locale: "fr_FR",
-    title: "Extracteur de miniatures YouTube – Télécharger des miniatures HD",
-    description:
-      "Téléchargez gratuitement la miniature YouTube de plus haute qualité disponible. Extrayez des images HD depuis une URL YouTube ou Shorts.",
+    lang: code,
+    locale: `${code}_${code.toUpperCase()}`,
+    dir: RTL_CODES.has(code) ? "rtl" : "ltr",
+    title: titles[code] || `${name} · 11tik YouTube Thumbnail Extractor`,
+    description: descriptions[code] || `Free YouTube thumbnail extractor in ${name}. Paste a public video URL and download the highest public still.`,
   };
 }
 
-function localeAppPage(host) {
-  const copy = localeCopy(host);
+function localeAppPage(code, host) {
+  const copy = localeCopy(code);
   const origin = `https://${host}/`;
   const html = `<!DOCTYPE html>
-<html lang="${copy.lang}">
+<html lang="${copy.lang}" dir="${copy.dir}">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>${copy.title}</title>
   <meta name="description" content="${copy.description}"/>
   <link rel="canonical" href="${origin}"/>
-  <link rel="alternate" hreflang="en" href="https://www.11tik.com/"/>
-  <link rel="alternate" hreflang="fr" href="https://fr.11tik.com/"/>
-  <link rel="alternate" hreflang="es" href="https://es.11tik.com/"/>
-  <link rel="alternate" hreflang="x-default" href="https://www.11tik.com/"/>
+  ${hreflangLinks()}
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="${copy.locale}"/>
   <meta property="og:site_name" content="11tik"/>
@@ -331,12 +351,12 @@ function localeAppPage(host) {
   <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=33" as="style"/>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=33" as="script"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=34" as="style"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=34" as="script"/>
 </head>
 <body>
   <div id="yte-root"></div>
-  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=33"></script>
+  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=34"></script>
 </body>
 </html>`;
   return new Response(html, {
@@ -347,6 +367,14 @@ function localeAppPage(host) {
   });
 }
 
+function localeHostCode(host) {
+  const match = /^([a-z]{2})\.11tik\.com$/i.exec(host || "");
+  if (!match) return "";
+  const code = match[1].toLowerCase();
+  if (!ISO6391_CODES.has(code)) return "";
+  return code;
+}
+
 export default {
   async scheduled(_event, env, ctx) {
     ctx.waitUntil(hourlyExtract(env));
@@ -355,13 +383,20 @@ export default {
     const url = new URL(request.url);
 
     const host = url.hostname;
-    if (host === "fr.11tik.com" || host === "es.11tik.com") {
+    const lang = localeHostCode(host);
+    if (lang) {
+      if (lang === "en") {
+        return Response.redirect("https://www.11tik.com/" + url.search + url.hash, 301);
+      }
       if (url.pathname === "/robots.txt") {
-        return new Response("User-agent: *\nAllow: /\n", {
+        return new Response("User-agent: *\nAllow: /\nSitemap: https://www.11tik.com/sitemap.xml\n", {
           headers: { "content-type": "text/plain; charset=utf-8" },
         });
       }
-      return localeAppPage(host);
+      if (url.pathname === "/sitemap.xml") {
+        return handleSitemapGet(request, env);
+      }
+      return localeAppPage(lang, host);
     }
 
     if (url.pathname === "/sitemap.xml") {

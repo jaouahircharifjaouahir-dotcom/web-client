@@ -6,6 +6,7 @@ on:
     paths:
       - workers/**
       - wrangler.jsonc
+      - scripts/ensure-locale-dns.mjs
       - .github/workflows/cloudflare-edge.yml
   workflow_dispatch:
 
@@ -19,6 +20,10 @@ jobs:
           node-version: 22
       - run: npm install -g wrangler@4
       - run: wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: f9da186fc6cbf157fd99d88fe700d0c4
+      - run: node scripts/ensure-locale-dns.mjs
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: f9da186fc6cbf157fd99d88fe700d0c4

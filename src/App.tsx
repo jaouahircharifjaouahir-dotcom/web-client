@@ -27,6 +27,16 @@ function formatSize(width: number | null, height: number | null): string {
   return `${width} × ${height}`;
 }
 
+function ShareUrlLine({ url }: { url: string }) {
+  return (
+    <p className="yte-shareline">
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>
+    </p>
+  );
+}
+
 function bulkLowerQualityRows(results: ThumbnailExtractionResult[]) {
   const qualities = new Set<string>();
   for (const result of results) {
@@ -66,7 +76,7 @@ export default function App() {
   const [error, setError] = useState("");
   const [result, setResult] = useState<ThumbnailExtractionResult | null>(null);
   const [bulkResults, setBulkResults] = useState<ThumbnailExtractionResult[]>([]);
-  const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [compareItems, setCompareItems] = useState<ThumbnailExtractionResult[]>([]);
   const [thumbScore, setThumbScore] = useState<{ score: number; notes: string[] } | null>(null);
   const [recentHistory, setRecentHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
@@ -223,7 +233,6 @@ export default function App() {
     abortRef.current = controller;
     setBusy(true);
     setBulkResults([]);
-    setCompareIds([]);
     setResult(null);
     setError("");
     analytics.track("bulk_mode_used");
@@ -277,6 +286,11 @@ export default function App() {
     return () => script.remove();
   }, [result]);
 
+  useEffect(() => {
+    if (compareItems.length !== 2) return;
+    document.getElementById("yte-compare")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, [compareItems]);
+
   const hint = !input.trim()
     ? bulk
       ? "Paste one YouTube or Vimeo URL per line."
@@ -288,6 +302,15 @@ export default function App() {
       : parsed?.valid
         ? `Valid ${parsed.platform} ID ✓`
         : "No supported video ID found in that text.";
+
+  const toggleCompare = (item: ThumbnailExtractionResult) => {
+    setCompareItems((current) => {
+      if (current.some((row) => row.videoId === item.videoId)) {
+        return current.filter((row) => row.videoId !== item.videoId);
+      }
+      return [...current.filter((row) => row.videoId !== item.videoId), item].slice(-2);
+    });
+  };
 
   const showCopied = async (label: string, value: string) => {
     const ok = await copyText(value);
@@ -425,16 +448,56 @@ export default function App() {
                   >
                     Share
                   </button>
+                  <button
+                    className="yte-ghost"
+                    type="button"
+                    aria-pressed={compareItems.some((row) => row.videoId === result.videoId)}
+                    onClick={() => toggleCompare(result)}
+                  >
+                    Compare
+                  </button>
                 </>
               ) : null}
               {copied ? <span className="yte-hint ok">{copied}</span> : null}
             </div>
             <p className={`yte-hint${(bulk ? bulkParsed.length > 0 : parsed?.valid) ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
+            {result?.bestThumbnail && !bulk ? <ShareUrlLine url={sharePageUrl()} /> : null}
             <div className="yte-status" role="status" aria-live="polite">
               {busy ? "Extracting thumbnails" : result?.bestThumbnail ? "Thumbnail ready" : error}
             </div>
           </form>
         </section>
+
+        {compareItems.length ? (
+          <section className="yte-panel" id="yte-compare">
+            <p className="yte-kicker">COMPARE</p>
+            {compareItems.length === 1 ? (
+              <p className="yte-hint">One video selected. Extract another, then press Compare again for a side-by-side view.</p>
+            ) : null}
+            <div className={`yte-compare${compareItems.length === 2 ? " is-on" : ""}`}>
+              {compareItems.map((item) =>
+                item.bestThumbnail ? (
+                  <article className="yte-shot" key={item.videoId}>
+                    <ThumbnailPreview url={item.bestThumbnail.url} label={item.meta?.title || item.videoId} />
+                    <p className="yte-video-meta">{item.meta?.title || item.videoId}</p>
+                    {item.bestThumbnail ? (
+                      <ul className="yte-tags">
+                        {tagsForThumbnail(item, item.bestThumbnail, true).map((tag) => (
+                          <li key={`cmp-${item.videoId}-${tag}`}>
+                            <a href={item.bestThumbnail!.url} target="_blank" rel="noopener noreferrer">
+                              {tag}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                    <ShareUrlLine url={shareUrlFor(item)} />
+                  </article>
+                ) : null,
+              )}
+            </div>
+          </section>
+        ) : null}
 
         {!bulk && result?.thumbnails.length ? (
           <section className="yte-panel yte-stack-wrap">
@@ -458,7 +521,11 @@ export default function App() {
                   {index === 0 && thumbScore ? <p className="yte-score">Packaging score {thumbScore.score}/100</p> : null}
                   <ul className="yte-tags">
                     {tagsForThumbnail(result, item, index === 0).map((tag) => (
-                      <li key={`${item.url}-${tag}`}>{tag}</li>
+                      <li key={`${item.url}-${tag}`}>
+                        <a href={item.url} target="_blank" rel="noopener noreferrer">
+                          {tag}
+                        </a>
+                      </li>
                     ))}
                   </ul>
                   <div className="yte-row">
@@ -514,11 +581,15 @@ export default function App() {
                   {item.bestThumbnail ? (
                     <ul className="yte-tags">
                       {tagsForThumbnail(item, item.bestThumbnail, true).map((tag) => (
-                        <li key={`${item.videoId}-${tag}`}>{tag}</li>
+                        <li key={`${item.videoId}-${tag}`}>
+                          <a href={item.bestThumbnail!.url} target="_blank" rel="noopener noreferrer">
+                            {tag}
+                          </a>
+                        </li>
                       ))}
                     </ul>
                   ) : null}
-                  <p className="yte-hint ok">{shareUrlFor(item)}</p>
+                  <ShareUrlLine url={shareUrlFor(item)} />
                   {item.bestThumbnail ? (
                     <div className="yte-row">
                       <button
@@ -553,13 +624,8 @@ export default function App() {
                       <button
                         className="yte-ghost"
                         type="button"
-                        aria-pressed={compareIds.includes(item.videoId)}
-                        onClick={() =>
-                          setCompareIds((current) => {
-                            if (current.includes(item.videoId)) return current.filter((id) => id !== item.videoId);
-                            return [...current, item.videoId].slice(-2);
-                          })
-                        }
+                        aria-pressed={compareItems.some((row) => row.videoId === item.videoId)}
+                        onClick={() => toggleCompare(item)}
                       >
                         Compare
                       </button>
@@ -593,22 +659,6 @@ export default function App() {
                 Export CSV
               </button>
             </div>
-            {compareIds.length === 2 ? (
-              <div className="yte-compare" style={{ marginTop: 16 }}>
-                {compareIds.map((id) => {
-                  const item = bulkResults.find((row) => row.videoId === id);
-                  if (!item?.bestThumbnail) return null;
-                  return (
-                    <article className="yte-shot" key={id}>
-                      <ThumbnailPreview url={item.bestThumbnail.url} label={item.meta?.title || id} />
-                      <p>{item.meta?.title || id}</p>
-                    </article>
-                  );
-                })}
-              </div>
-            ) : (
-              <p className="yte-hint">Select Compare on two videos for a side-by-side view.</p>
-            )}
             {bulkLowerQualityRows(bulkResults).map((row) => (
               <div className="yte-bulk-quality" key={row.quality}>
                 <p className="yte-kicker">{row.quality.toUpperCase()}</p>

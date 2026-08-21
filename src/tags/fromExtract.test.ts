@@ -18,20 +18,29 @@ const thumb = {
   expectedHeight: 720,
 } as ThumbnailCandidate;
 
-const result = {
-  videoId: "dQw4w9WgXcQ",
-  type: "watch",
-  meta: { platform: "youtube", title: "Never Gonna Give You Up", authorName: "Rick" },
-} as ThumbnailExtractionResult;
+function result(id: string, title: string, author: string): ThumbnailExtractionResult {
+  return {
+    videoId: id,
+    type: "watch",
+    meta: { platform: "youtube", title, authorName: author },
+  } as ThumbnailExtractionResult;
+}
 
 describe("tagsForThumbnail", () => {
-  it("labels quality, hd, best, and title words on each still", () => {
-    const tags = tagsForThumbnail(result, thumb, true);
-    expect(tags).toContain("youtube");
-    expect(tags).toContain("best");
-    expect(tags).toContain("maxresdefault");
-    expect(tags).toContain("hd");
-    expect(tags).toContain("1280x720");
-    expect(tags).toContain("never");
+  it("uses title, author, and video id so two videos do not share the same chips", () => {
+    const a = tagsForThumbnail(result("dQw4w9WgXcQ", "Never Gonna Give You Up", "Rick Astley"), thumb, true);
+    const b = tagsForThumbnail(result("jNQXAC9IVRw", "Me at the zoo", "jawed"), thumb, true);
+    expect(a).toContain("never");
+    expect(a).toContain("dQw4w9WgXcQ");
+    expect(a).toContain("rick");
+    expect(b).toContain("zoo");
+    expect(b).toContain("jNQXAC9IVRw");
+    expect(a.join(" ")).not.toBe(b.join(" "));
+  });
+
+  it("keeps non-latin title words", () => {
+    const tags = tagsForThumbnail(result("MtnYBHslkKw", "وثائقي عن الصحراء", "قناة تجريبية"), thumb, true);
+    expect(tags.some((tag) => tag.includes("وثائق") || tag === "وثائقي")).toBe(true);
+    expect(tags).toContain("MtnYBHslkKw");
   });
 });

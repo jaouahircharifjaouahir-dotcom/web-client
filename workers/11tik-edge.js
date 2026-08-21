@@ -176,7 +176,7 @@ async function hourlyExtract(env) {
   const loc = locFor("youtube", videoId);
   await Promise.allSettled([
     fetch(loc, { headers: HOURLY_UA, redirect: "follow", cf: { cacheTtl: 0 } }),
-    fetch(`${SITE}/web-client/blogger-app.js?v=31`, { headers: HOURLY_UA, cf: { cacheTtl: 60 } }),
+    fetch(`${SITE}/web-client/blogger-app.js?v=32`, { headers: HOURLY_UA, cf: { cacheTtl: 60 } }),
     fetch(`${SITE}/sitemap.xml`, { headers: HOURLY_UA, cf: { cacheTtl: 0 } }),
     fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`, {
       headers: HOURLY_UA,

@@ -4,25 +4,47 @@
 .yte-page h2{font-size:1.2rem;margin:28px 0 8px}
 .yte-page p,.yte-page li{color:#5c5666}
 .yte-page a{color:#c2410c}
-.yte-byline,.yte-updated{font-size:14px;color:#5c5666;margin:0 0 8px}
-.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 20px;border-radius:12px}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
 .yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
 </style>
-<article class="yte-page">
-  <h1>maxresdefault explained: when HD YouTube thumbnails exist</h1>
-  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html">11tik</a></p>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">What is maxresdefault.jpg? When YouTube actually publishes an HD thumbnail</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
   <p class="yte-updated">Last updated: 21 August 2026</p>
-  <p>maxresdefault.jpg is YouTube’s common 1280×720 public still. It is not guaranteed. Some uploads only publish hq or sd derivatives. 11tik checks WebP and JPEG maxres first, then falls back to the next valid public file.</p>
-  <img alt="11tik ranking public YouTube thumbnail files including maxresdefault" class="yte-hero" height="630" src="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" width="1200"/>
+  <p itemprop="description">maxresdefault.jpg is YouTube’s common 1280×720 public still. It is not guaranteed for every video. This guide explains when the file exists, what to download instead, and how 11tik checks real image hosts instead of guessing filenames.</p>
+  <img alt="Public YouTube maxresdefault thumbnail example at 1280 by 720" class="yte-hero" height="720" itemprop="image" src="https://i.ytimg.com/vi/kJQP7kiw5Fk/maxresdefault.jpg" width="1280"/>
+  <p class="yte-caption">Example of a public maxresdefault still hosted on i.ytimg.com. Your video may only publish a smaller size.</p>
   <h2>What is maxresdefault?</h2>
-  <p>It is a filename on YouTube’s image hosts, usually 1280×720 when the file exists. It is not a 4K master and it is not the video file.</p>
-  <h2>How does 11tik handle a missing maxres file?</h2>
-  <p>The extractor lists only files that exist. Open <a href="https://www.11tik.com/">11tik</a>, paste a public watch URL, and download the top result. Missing maxres is YouTube’s catalog, not a failed extract.</p>
-  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
+  <p>maxresdefault.jpg is a filename on YouTube’s public image CDN. When the file exists it is usually 1280×720. It is not the video, not a 4K master, and not a private Studio download.</p>
+  <h2>Does every YouTube video have maxresdefault?</h2>
+  <p>No. Older uploads, some Shorts, and videos whose source still was smaller often stop at hqdefault or sddefault. A 404 on maxresdefault is normal. The honest HD file is the largest public still that returns an image.</p>
+  <h2>How do I download the highest public thumbnail?</h2>
+  <ol>
+    <li>Copy a public watch, youtu.be, or Shorts URL.</li>
+    <li>Open <a href="https://www.11tik.com/">11tik</a> and paste it.</li>
+    <li>Click Get Thumbnail Image.</li>
+    <li>Download the first listed size. 11tik already ranked existing files, including WebP maxres when YouTube published it.</li>
+  </ol>
+  <h2>What URL pattern should I expect?</h2>
+  <p>JPEG stills use <code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>. WebP stills use <code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>. Guessing those URLs without a check produces broken images. Related: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">YouTube thumbnail URL guide</a> and <a href="https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html">highest quality thumbnail</a>.</p>
+  <h2>Why do some tools show a thumbnail that 404s?</h2>
+  <p>They print a filename without requesting the file. 11tik only lists sizes that respond as images in your browser. That is why a missing maxres does not appear as a fake 1280×720 card.</p>
+  <p><a href="https://www.11tik.com/">Extract a public thumbnail on 11tik →</a></p>
+  <p class="yte-bio">Written by 11tik. Public stills only. No video download. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"maxresdefault explained: when HD YouTube thumbnails exist","datePublished":"2026-08-20","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
-  {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is maxresdefault?","acceptedAnswer":{"@type":"Answer","text":"A public YouTube still filename, usually 1280x720 when published."}}]}
+  {"@type":"Article","headline":"What is maxresdefault.jpg? When YouTube actually publishes an HD thumbnail","datePublished":"2026-08-21","dateModified":"2026-08-21","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://i.ytimg.com/vi/kJQP7kiw5Fk/maxresdefault.jpg","width":1280,"height":720}},
+  {"@type":"HowTo","name":"Download the highest public YouTube thumbnail","totalTime":"PT1M","step":[
+    {"@type":"HowToStep","position":1,"name":"Copy a public URL","text":"Copy a public YouTube watch, youtu.be, or Shorts URL."},
+    {"@type":"HowToStep","position":2,"name":"Paste into 11tik","text":"Open https://www.11tik.com/ and paste the URL."},
+    {"@type":"HowToStep","position":3,"name":"Download the first size","text":"Click Get Thumbnail Image and download the first listed public still."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is maxresdefault?","acceptedAnswer":{"@type":"Answer","text":"maxresdefault.jpg is a filename on YouTube’s public image CDN. When the file exists it is usually 1280×720. It is not the video file."}},
+    {"@type":"Question","name":"Does every YouTube video have maxresdefault?","acceptedAnswer":{"@type":"Answer","text":"No. Many videos only publish smaller public stills such as hqdefault or sddefault. A 404 on maxresdefault is normal."}},
+    {"@type":"Question","name":"How do I download the highest public thumbnail?","acceptedAnswer":{"@type":"Answer","text":"Paste a public YouTube URL into 11tik and download the first listed size. The tool ranks files that actually exist, including WebP maxres when published."}}
+  ]}
 ]}
   </script>
 </article>

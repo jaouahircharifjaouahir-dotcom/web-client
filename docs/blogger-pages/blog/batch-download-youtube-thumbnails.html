@@ -1,18 +1,54 @@
 <style>
-.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:Segoe UI,Tahoma,sans-serif;color:#17141c;line-height:1.65}
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
 .yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
-.yte-page h2{font-size:1.25rem;margin:28px 0 8px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
 .yte-page p,.yte-page li{color:#5c5666}
 .yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
 </style>
-<article class="yte-page">
-  <h1>Batch Download YouTube Thumbnails for Research</h1>
-  <p>When you audit a niche, you need many stills fast. 11tik Bulk mode accepts one URL per line, shows each video’s best public thumbnail, and can zip the highest-quality set.</p>
-  <h2>Workflow</h2>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">How to batch download YouTube thumbnails (up to 25 public URLs)</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html">11tik</a></p>
+  <p class="yte-updated">Last updated: 21 August 2026</p>
+  <p itemprop="description">Bulk extract public YouTube or Vimeo thumbnails in the browser. Paste one URL per line, download each best still, or zip the highest-quality set. No account and no video files.</p>
+  <img alt="11tik bulk thumbnail extractor with several YouTube URLs ready to download" class="yte-hero" height="630" itemprop="image" src="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" width="1200"/>
+  <p class="yte-caption">Bulk mode on 11tik lists each video’s best public still first, then lower sizes that exist.</p>
+  <h2>How do I batch download YouTube thumbnails?</h2>
+  <p>Open <a href="https://www.11tik.com/">11tik</a>, turn on Bulk, paste one public URL per line, click Extract all, then download each best still or the zip of highest quality. The cap is 25 URLs per run so the browser stays responsive.</p>
+  <h2>What belongs in the list?</h2>
+  <ul>
+    <li>youtube.com/watch?v= IDs</li>
+    <li>youtu.be short links</li>
+    <li>youtube.com/shorts/ IDs</li>
+    <li>vimeo.com numeric IDs</li>
+  </ul>
+  <p>Private, unlisted-without-public-thumbs, or age-gated videos will not return a still. That is expected. See also <a href="https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html">Shorts thumbnails</a>.</p>
+  <h2>How to run a bulk extract</h2>
   <ol>
-    <li>Open <a href="https://www.11tik.com/">11tik</a> and enable Bulk.</li>
-    <li>Paste up to 25 public YouTube or Vimeo links.</li>
-    <li>Extract, then download individually or as a zip of best stills.</li>
+    <li>On the homepage, click Bulk.</li>
+    <li>Paste up to 25 public links, one per line.</li>
+    <li>Click Extract all and wait until each card shows a preview.</li>
+    <li>Download thumbnail video N for each best still, or Download all highest quality as a zip.</li>
+    <li>Optional: Export CSV for research logs (video id, title, share URL, image URL).</li>
   </ol>
-  <p>Use results for moodboards and competitive research. Do not republish others’ art without rights.</p>
+  <h2>Can I use this for competitor research?</h2>
+  <p>Yes, for studying public packaging. Do not republish another creator’s thumbnail as your own upload. Copyright stays with the rights holder. 11tik only fetches files YouTube or Vimeo already host publicly.</p>
+  <p><a href="https://www.11tik.com/">Open bulk extract on 11tik →</a></p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"How to batch download YouTube thumbnails (up to 25 public URLs)","datePublished":"2026-08-21","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
+  {"@type":"HowTo","name":"Batch download public YouTube thumbnails","totalTime":"PT2M","step":[
+    {"@type":"HowToStep","position":1,"name":"Enable Bulk","text":"Open https://www.11tik.com/ and click Bulk."},
+    {"@type":"HowToStep","position":2,"name":"Paste URLs","text":"Paste one public YouTube or Vimeo URL per line, up to 25."},
+    {"@type":"HowToStep","position":3,"name":"Extract and save","text":"Click Extract all, then download each best still or the highest-quality zip."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How do I batch download YouTube thumbnails?","acceptedAnswer":{"@type":"Answer","text":"Use Bulk on 11tik, paste one public URL per line, extract, then download stills or a zip of the highest public quality. Maximum 25 URLs per run."}},
+    {"@type":"Question","name":"Can I use this for competitor research?","acceptedAnswer":{"@type":"Answer","text":"Yes for studying public packaging. Do not republish another creator’s thumbnail as your own. Copyright stays with the rights holder."}}
+  ]}
+]}
+  </script>
 </article>

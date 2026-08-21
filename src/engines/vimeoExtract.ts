@@ -1,7 +1,7 @@
 import type { ThumbnailCandidate, ThumbnailExtractionResult, ParsedYouTubeUrl } from "../types";
 import { createAppError } from "../types/errors";
 import { resultCache } from "../cache/memory";
-import { config } from "../config";
+import { validateThumbnail } from "../validators/thumbnail";
 
 interface VimeoOEmbed {
   title?: string;
@@ -11,7 +11,16 @@ interface VimeoOEmbed {
   thumbnail_height?: number;
 }
 
+const VIMEO_SIZES: { token: string; quality: string; width: number; height: number }[] = [
+  { token: "1920x1080", quality: "x-large", width: 1920, height: 1080 },
+  { token: "1920", quality: "1920", width: 1920, height: 1080 },
+  { token: "1280x720", quality: "large", width: 1280, height: 720 },
+  { token: "1280", quality: "1280", width: 1280, height: 720 },
+  { token: "640", quality: "medium", width: 640, height: 360 },
+];
+
 function vimeoCandidate(url: string, quality: string, width: number | null, height: number | null): ThumbnailCandidate {
+  const w = width ?? 0;
   return {
     url,
     quality,
@@ -22,55 +31,49 @@ function vimeoCandidate(url: string, quality: string, width: number | null, heig
     mimeType: "image/jpeg",
     valid: true,
     placeholder: false,
-    score: (width ?? 0) * (height ?? 0),
-    tier: (width ?? 0) >= 1280 ? "best" : (width ?? 0) >= 640 ? "high" : "standard",
-    strategy: "vimeo-oembed",
+    score: w * (height ?? 0),
+    tier: w >= 1920 ? "best" : w >= 1280 ? "high" : w >= 640 ? "standard" : "preview",
+    strategy: "vimeo-cdn",
     failureReason: null,
   };
 }
 
-/** Larger Vimeo CDN thumbs often use _1000x / _640 variants derived from the oEmbed URL. */
-function expandVimeoThumbs(baseUrl: string, width: number | null, height: number | null): ThumbnailCandidate[] {
-  const list: ThumbnailCandidate[] = [vimeoCandidate(baseUrl, "oembed", width, height)];
-  const bigger = baseUrl.replace(/_\d+x\d+(?=\.\w+$)/, "_1280x720");
-  if (bigger !== baseUrl) list.unshift(vimeoCandidate(bigger, "large", 1280, 720));
-  const mid = baseUrl.replace(/_\d+x\d+(?=\.\w+$)/, "_640x360");
-  if (mid !== baseUrl && mid !== bigger) list.push(vimeoCandidate(mid, "medium", 640, 360));
+export function withVimeoSize(url: string, token: string): string {
+  const [path, query] = url.split("?");
+  let next = path.replace(/-d_\d+(x\d+)?$/i, `-d_${token}`);
+  if (next === path) {
+    next = path.replace(/_\d+x\d+(?=\.\w+$)/, `_${token}`);
+  }
+  return query ? `${next}?${query}` : next;
+}
+
+/** Prefer 1920×1080 (X-Large) then other public Vimeo CDN sizes derived from oEmbed. */
+export function expandVimeoThumbs(baseUrl: string): ThumbnailCandidate[] {
+  const seen = new Set<string>();
+  const list: ThumbnailCandidate[] = [];
+  for (const size of VIMEO_SIZES) {
+    const url = withVimeoSize(baseUrl, size.token);
+    if (seen.has(url)) continue;
+    seen.add(url);
+    list.push(vimeoCandidate(url, size.quality, size.width, size.height));
+  }
+  if (!seen.has(baseUrl)) {
+    list.push(vimeoCandidate(baseUrl, "oembed", null, null));
+  }
   return list;
 }
 
 async function validateRemote(candidate: ThumbnailCandidate, signal: AbortSignal): Promise<ThumbnailCandidate | null> {
-  return await new Promise((resolve) => {
-    const image = new Image();
-    let settled = false;
-    const done = (value: ThumbnailCandidate | null) => {
-      if (settled) return;
-      settled = true;
-      clearTimeout(timer);
-      signal.removeEventListener("abort", onAbort);
-      resolve(value);
-    };
-    const onAbort = () => {
-      image.src = "";
-      done(null);
-    };
-    const timer = window.setTimeout(() => {
-      image.src = "";
-      done(null);
-    }, config.requestTimeoutMs);
-    signal.addEventListener("abort", onAbort, { once: true });
-    image.onload = () =>
-      done({
-        ...candidate,
-        valid: true,
-        width: image.naturalWidth || candidate.width,
-        height: image.naturalHeight || candidate.height,
-        score: (image.naturalWidth || 1) * (image.naturalHeight || 1),
-      });
-    image.onerror = () => done(null);
-    image.referrerPolicy = "no-referrer";
-    image.src = candidate.url;
-  });
+  const checked = await validateThumbnail(candidate, signal);
+  if (!checked.valid || !checked.width) return null;
+  const w = checked.width;
+  const h = checked.height ?? 0;
+  return {
+    ...checked,
+    score: w * (h || 1),
+    tier: w >= 1920 ? "best" : w >= 1280 ? "high" : w >= 640 ? "standard" : "preview",
+    quality: w >= 1920 ? "x-large" : w >= 1280 ? "large" : checked.quality,
+  };
 }
 
 export async function extractVimeoThumbnails(
@@ -82,7 +85,7 @@ export async function extractVimeoThumbnails(
     throw createAppError(parsed.errorCode ?? "INVALID_URL");
   }
 
-  const cacheKey = `vimeo:${parsed.videoId}`;
+  const cacheKey = `vimeo:xl:${parsed.videoId}`;
   const cached = resultCache.get<ThumbnailExtractionResult>(cacheKey);
   if (cached) {
     const hit = { ...cached, cached: true };
@@ -91,19 +94,17 @@ export async function extractVimeoThumbnails(
   }
 
   const started = performance.now();
-  const oembed = `https://vimeo.com/api/oembed.json?url=${encodeURIComponent(parsed.normalizedUrl)}`;
+  const oembed = `https://vimeo.com/api/oembed.json?url=${encodeURIComponent(parsed.normalizedUrl)}&width=1920`;
   const response = await fetch(oembed, { signal, headers: { accept: "application/json" } });
   if (!response.ok) throw createAppError("THUMBNAIL_NOT_FOUND");
   const data = (await response.json()) as VimeoOEmbed;
   if (!data.thumbnail_url) throw createAppError("THUMBNAIL_NOT_FOUND");
 
-  const candidates = expandVimeoThumbs(data.thumbnail_url, data.thumbnail_width ?? null, data.thumbnail_height ?? null);
-  const valid: ThumbnailCandidate[] = [];
-  for (const candidate of candidates) {
-    if (signal.aborted) break;
-    const checked = await validateRemote(candidate, signal);
-    if (checked) valid.push(checked);
-  }
+  const candidates = expandVimeoThumbs(data.thumbnail_url);
+  const checked = await Promise.all(candidates.map((candidate) => validateRemote(candidate, signal)));
+  const valid = checked
+    .filter((item): item is ThumbnailCandidate => Boolean(item))
+    .filter((item, index, all) => all.findIndex((other) => other.width === item.width && other.height === item.height) === index);
   valid.sort((a, b) => b.score - a.score);
 
   const result: ThumbnailExtractionResult = {
@@ -112,7 +113,7 @@ export async function extractVimeoThumbnails(
     type: parsed.type,
     thumbnails: valid,
     bestThumbnail: valid[0] ?? null,
-    extractionMethod: "vimeo-oembed",
+    extractionMethod: "vimeo-cdn",
     extractionTimeMs: Math.round(performance.now() - started),
     timings: {
       parseMs: 0,

@@ -11,12 +11,6 @@ Upload:
 C:\Users\ADMIN\Desktop\seo\docs\blogger-theme.xml
 ```
 
-or
-
-```text
-C:\Users\ADMIN\Downloads\theme-4072124001762126765.xml
-```
-
 Blogger → Theme → Restore.
 
 Homepage loads `#yte-root` plus `blogger-app.js?v=16` from the static host path `/web-client/`.

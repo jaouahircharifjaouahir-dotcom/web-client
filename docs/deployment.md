@@ -3,7 +3,7 @@
 ## Public site (Blogger)
 
 1. Publish the HTML in `docs/blogger-pages/` as Blogger **Pages** using the exact slugs in `docs/keyword-map.md`.
-2. Restore `docs/blogger-theme.xml` (a copy is also written to Downloads as `theme-4072124001762126765.xml`).
+2. Restore `docs/blogger-theme.xml` from this repo (keep any Blog ID copies only in local Downloads, not in git).
 3. Blogger → Theme → Restore.
 4. Settings → HTTPS → **Redirect to HTTPS** (required: `http://www.11tik.com/` currently returns 200).
 5. Settings → Basic → rename the blog title to `YouTube Thumbnail Extractor` so feeds stop using `وثائقيات اميرة`.

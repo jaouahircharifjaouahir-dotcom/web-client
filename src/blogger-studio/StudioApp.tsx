@@ -84,7 +84,7 @@ export function StudioApp() {
   return (
     <main className="studio">
       <h1>Blogger Studio</h1>
-      <p className="studio-lead">Local operator tool. Uses Google OAuth and Blogger API v3. Not part of the public 11tik site.</p>
+      <p className="studio-lead">Local operator tool. Uses Google OAuth and Blogger API v3. Credentials stay in gitignored .env. Not part of the public 11tik site.</p>
 
       {banner ? <p className="studio-banner">{banner}</p> : null}
 

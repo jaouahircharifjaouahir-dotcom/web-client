@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { shareUrlFor } from "./url";
+import { shareUrlFor, shareUrlForIds } from "./url";
 import type { ThumbnailExtractionResult } from "../types";
 
 describe("shareUrlFor", () => {
@@ -9,5 +9,9 @@ describe("shareUrlFor", () => {
     expect(shareUrlFor(a)).toContain("aaaaaaaaaaa");
     expect(shareUrlFor(b)).toContain("bbbbbbbbbbb");
     expect(shareUrlFor(a)).not.toBe(shareUrlFor(b));
+  });
+
+  it("builds a share URL from a pasted video id", () => {
+    expect(shareUrlForIds("youtube", "PKuXqCCZWJ4")).toBe("https://www.11tik.com/?v=PKuXqCCZWJ4");
   });
 });

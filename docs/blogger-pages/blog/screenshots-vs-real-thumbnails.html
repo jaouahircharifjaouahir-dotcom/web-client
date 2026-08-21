@@ -1,13 +1,45 @@
 <style>
-.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:Segoe UI,Tahoma,sans-serif;color:#17141c;line-height:1.65}
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
 .yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
-.yte-page h2{font-size:1.25rem;margin:28px 0 8px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
 .yte-page p,.yte-page li{color:#5c5666}
 .yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
 </style>
-<article class="yte-page">
-  <h1>Why Screenshots Are Worse Than Real YouTube Thumbnails</h1>
-  <p>Screenshots include browser chrome, player controls, and compression artifacts. Public thumbnail files are the images YouTube actually serves in feeds.</p>
-  <h2>Better workflow</h2>
-  <p>Paste the video URL into <a href="https://www.11tik.com/">11tik</a>, preview every public size, then download or copy the image URL. Share a ready link with <code>?v=VIDEO_ID</code>.</p>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">Screenshot vs real YouTube thumbnail: which file should you save?</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html">11tik</a></p>
+  <p class="yte-updated">Last updated: 21 August 2026</p>
+  <p itemprop="description">A phone screenshot of the player is not the thumbnail YouTube hosts. The real public still lives on i.ytimg.com. Use it for blogs, Open Graph, and research—screenshots add UI chrome, compression, and the wrong aspect ratio.</p>
+  <img alt="Comparison of a player screenshot versus a real public YouTube thumbnail file" class="yte-hero" height="630" itemprop="image" src="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" width="1200"/>
+  <p class="yte-caption">Search and social cards expect the CDN still, not a cropped screenshot of the watch page.</p>
+  <h2>What is the difference between a screenshot and a real thumbnail?</h2>
+  <p>A screenshot captures your screen, including player chrome, captions, and device scaling. A real thumbnail is the JPEG or WebP file YouTube published for that video ID. Only the CDN file has a stable URL and known pixel size.</p>
+  <h2>Why do screenshots fail in Google images and social previews?</h2>
+  <p>They are often the wrong aspect ratio, include UI, and compress twice. Open Graph and many CMS fields want a 16:9 still around 1280×720. That matches maxresdefault when it exists—see <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">thumbnail size guide</a>.</p>
+  <h2>How do I save the real thumbnail instead?</h2>
+  <ol>
+    <li>Copy the public video URL, not a screenshot.</li>
+    <li>Paste it into <a href="https://www.11tik.com/">11tik</a>.</li>
+    <li>Download the first listed public file or copy the image URL.</li>
+  </ol>
+  <h2>When is a screenshot still useful?</h2>
+  <p>Use a screenshot only to document a UI bug or a moment inside the video. Do not use it as the official thumbnail, a blog hero, or a share image if a public still exists.</p>
+  <p><a href="https://www.11tik.com/">Get the real public thumbnail →</a></p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"Screenshot vs real YouTube thumbnail: which file should you save?","datePublished":"2026-08-21","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
+  {"@type":"HowTo","name":"Save a real YouTube thumbnail instead of a screenshot","totalTime":"PT1M","step":[
+    {"@type":"HowToStep","position":1,"name":"Copy the video URL","text":"Copy a public YouTube URL, not a screenshot of the player."},
+    {"@type":"HowToStep","position":2,"name":"Extract on 11tik","text":"Paste the URL at https://www.11tik.com/ and download the first public still."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the difference between a screenshot and a real thumbnail?","acceptedAnswer":{"@type":"Answer","text":"A screenshot captures your screen and player chrome. A real thumbnail is the JPEG or WebP file YouTube hosts on i.ytimg.com for that video ID."}},
+    {"@type":"Question","name":"Why do screenshots fail in Google images and social previews?","acceptedAnswer":{"@type":"Answer","text":"They often have the wrong aspect ratio, extra UI, and extra compression. CMS and Open Graph fields expect a clean 16:9 public still."}}
+  ]}
+]}
+  </script>
 </article>

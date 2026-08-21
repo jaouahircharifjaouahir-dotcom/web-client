@@ -27,6 +27,7 @@ loadDotEnv(join(root, ".env"));
 const PORT = Number(process.env.BLOGGER_STUDIO_PORT || 8788);
 const CLIENT_ID = process.env.GOOGLE_CLIENT_ID || "";
 const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || "";
+const DEFAULT_BLOG_ID = String(process.env.BLOGGER_BLOG_ID || "").trim();
 const REDIRECT_URI = process.env.GOOGLE_OAUTH_REDIRECT_URI || "http://localhost:5173/blogger-api/oauth/callback";
 const STATE_SECRET = process.env.GOOGLE_OAUTH_STATE_SECRET || CLIENT_SECRET || "dev-only-change-me";
 const SESSION_DIR = join(root, "secrets");
@@ -188,13 +189,13 @@ async function handle(req, res) {
     const { session } = sessionFrom(req);
     return json(res, 200, {
       connected: Boolean(session?.access_token || session?.refresh_token),
-      blogId: session?.blogId || "",
+      blogId: session?.blogId || DEFAULT_BLOG_ID,
       oauthConfigured: Boolean(CLIENT_ID && CLIENT_SECRET),
     });
   }
 
   if (req.method === "GET" && path === "/auth/start") {
-    const blogId = url.searchParams.get("blogId") || "";
+    const blogId = url.searchParams.get("blogId") || DEFAULT_BLOG_ID;
     if (!isValidBlogId(blogId)) {
       return json(res, 400, { error: "Invalid Blog ID. Use the numeric ID from Blogger settings." });
     }

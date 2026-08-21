@@ -14,8 +14,8 @@ import { isLikelyMediaUrl, normalizeMediaUrl, parseMediaMany, readDeepLink } fro
 import { scorePublicThumbnail } from "./score/readImage";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
-import { shareUrlFor } from "./share/url";
-import { submitShareToSitemap } from "./sitemap/submit";
+import { shareUrlFor, shareUrlForIds } from "./share/url";
+import { submitShareToSitemap, submitVideoToSitemap } from "./sitemap/submit";
 import { userMessage } from "./types/errors";
 import { QUALITY_PRESETS } from "./engines/presets";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
@@ -90,8 +90,14 @@ export default function App() {
   const [thumbScore, setThumbScore] = useState<{ score: number; notes: string[] } | null>(null);
   const [recentHistory, setRecentHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
+  const syncedShareKey = useRef("");
   const parsed = useMemo(() => (input.trim() ? normalizeMediaUrl(input) : null), [input]);
   const bulkParsed = useMemo(() => (bulk ? parseMediaMany(input).filter((item) => item.valid) : []), [bulk, input]);
+  const liveShareUrls = useMemo(() => {
+    if (bulk) return bulkParsed.map((item) => shareUrlForIds(item.platform, item.videoId));
+    if (parsed?.valid && parsed.videoId) return [shareUrlForIds(parsed.platform, parsed.videoId)];
+    return [];
+  }, [bulk, bulkParsed, parsed]);
   const deepLinkBoot = useRef(false);
 
   useEffect(() => {
@@ -153,10 +159,18 @@ export default function App() {
     }
   };
 
-  const sharePageUrl = () => {
-    if (!result) return `${config.publicSiteUrl}/`;
-    return shareUrlFor(result);
-  };
+  useEffect(() => {
+    if (bulk) {
+      for (const item of bulkParsed) submitVideoToSitemap(item.platform, item.videoId);
+      return;
+    }
+    if (!parsed?.valid || !parsed.videoId) return;
+    submitVideoToSitemap(parsed.platform, parsed.videoId);
+    const key = `${parsed.platform}:${parsed.videoId}`;
+    if (embed || syncedShareKey.current === key) return;
+    syncedShareKey.current = key;
+    syncShareUrl(parsed.platform, parsed.videoId);
+  }, [bulk, bulkParsed, parsed, embed]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -198,6 +212,11 @@ export default function App() {
     }
     setBusy(true);
     setError("");
+    submitVideoToSitemap(parsedUrl.platform, parsedUrl.videoId);
+    if (!embed) {
+      syncedShareKey.current = `${parsedUrl.platform}:${parsedUrl.videoId}`;
+      syncShareUrl(parsedUrl.platform, parsedUrl.videoId);
+    }
     analytics.track("extraction_started");
     try {
       const extracted = await extractThumbnails(parsedUrl, controller.signal, (next) => {
@@ -246,6 +265,9 @@ export default function App() {
     setBulkResults([]);
     setResult(null);
     setError("");
+    for (const item of items.slice(0, config.maxBulkUrls)) {
+      submitVideoToSitemap(item.platform, item.videoId);
+    }
     analytics.track("bulk_mode_used");
     const next: ThumbnailExtractionResult[] = [];
     for (const item of items.slice(0, config.maxBulkUrls)) {
@@ -314,6 +336,21 @@ export default function App() {
     setCopied(ok ? label : "");
     if (ok) analytics.track("copy_clicked");
     window.setTimeout(() => setCopied(""), 1400);
+  };
+
+  const shareNow = async (urls: string[]) => {
+    const first = urls[0];
+    if (!first) return;
+    try {
+      if (urls.length === 1 && navigator.share) {
+        await navigator.share({ url: first, title: config.siteName });
+        analytics.track("copy_clicked");
+        return;
+      }
+    } catch {
+      /* fall through to copy */
+    }
+    await showCopied(urls.length > 1 ? "Share links copied" : "Share link copied", urls.join("\n"));
   };
 
   return (
@@ -395,6 +432,15 @@ export default function App() {
                   setError("");
                   setInput(event.target.value);
                 }}
+                onPaste={(event) => {
+                  const text = event.clipboardData.getData("text");
+                  if (!text.trim()) return;
+                  window.setTimeout(() => {
+                    const next = (event.target as HTMLTextAreaElement).value;
+                    const items = parseMediaMany(next).filter((item) => item.valid);
+                    for (const item of items) submitVideoToSitemap(item.platform, item.videoId);
+                  }, 0);
+                }}
                 placeholder="Paste one YouTube URL per line"
                 aria-label="YouTube URLs"
                 spellCheck={false}
@@ -426,10 +472,24 @@ export default function App() {
               <button className="yte-btn" type="submit" disabled={busy || !input.trim()}>
                 {busy ? "Finding thumbnail…" : bulk ? "Extract all" : "Get Thumbnail Image"}
               </button>
+              {liveShareUrls.length ? (
+                <>
+                  <button
+                    className="yte-ghost"
+                    type="button"
+                    onClick={() => void showCopied(liveShareUrls.length > 1 ? "Share links copied" : "Share link copied", liveShareUrls.join("\n"))}
+                  >
+                    Copy share link
+                  </button>
+                  <button className="yte-ghost" type="button" onClick={() => void shareNow(liveShareUrls)}>
+                    Share
+                  </button>
+                </>
+              ) : null}
               {copied ? <span className="yte-hint ok">{copied}</span> : null}
             </div>
             <p className={`yte-hint${(bulk ? bulkParsed.length > 0 : parsed?.valid) ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
-            {result?.bestThumbnail && !bulk ? <ShareUrlLine url={sharePageUrl()} /> : null}
+            {liveShareUrls.length ? liveShareUrls.map((url) => <ShareUrlLine url={url} key={url} />) : null}
             <div className="yte-status" role="status" aria-live="polite">
               {busy ? "Extracting thumbnails" : result?.bestThumbnail ? "Thumbnail ready" : error}
             </div>
@@ -456,7 +516,7 @@ export default function App() {
                     </span>
                   </div>
                   {index === 0 && thumbScore ? <p className="yte-score">Packaging score {thumbScore.score}/100</p> : null}
-                  {index === 0 ? <ShareUrlLine url={sharePageUrl()} /> : null}
+                  {index === 0 && liveShareUrls[0] ? <ShareUrlLine url={liveShareUrls[0]} /> : null}
                   <div className="yte-row">
                     <button
                       className="yte-btn"

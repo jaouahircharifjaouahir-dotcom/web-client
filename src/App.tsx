@@ -94,7 +94,7 @@ export default function App() {
   const parsed = useMemo(() => (input.trim() ? normalizeMediaUrl(input) : null), [input]);
   const bulkParsed = useMemo(() => (bulk ? parseMediaMany(input).filter((item) => item.valid) : []), [bulk, input]);
   const liveShareUrls = useMemo(() => {
-    if (bulk) return bulkParsed.map((item) => shareUrlForIds(item.platform, item.videoId));
+    if (bulk) return bulkParsed.flatMap((item) => (item.videoId ? [shareUrlForIds(item.platform, item.videoId)] : []));
     if (parsed?.valid && parsed.videoId) return [shareUrlForIds(parsed.platform, parsed.videoId)];
     return [];
   }, [bulk, bulkParsed, parsed]);
@@ -161,7 +161,9 @@ export default function App() {
 
   useEffect(() => {
     if (bulk) {
-      for (const item of bulkParsed) submitVideoToSitemap(item.platform, item.videoId);
+      for (const item of bulkParsed) {
+        if (item.videoId) submitVideoToSitemap(item.platform, item.videoId);
+      }
       return;
     }
     if (!parsed?.valid || !parsed.videoId) return;
@@ -205,7 +207,7 @@ export default function App() {
     const controller = new AbortController();
     abortRef.current = controller;
     const parsedUrl = normalizeMediaUrl(raw);
-    if (!parsedUrl.valid) {
+    if (!parsedUrl.valid || !parsedUrl.videoId) {
       setError(userMessage(parsedUrl.errorCode ?? "INVALID_URL"));
       analytics.track("extraction_failure");
       return;
@@ -266,7 +268,7 @@ export default function App() {
     setResult(null);
     setError("");
     for (const item of items.slice(0, config.maxBulkUrls)) {
-      submitVideoToSitemap(item.platform, item.videoId);
+      if (item.videoId) submitVideoToSitemap(item.platform, item.videoId);
     }
     analytics.track("bulk_mode_used");
     const next: ThumbnailExtractionResult[] = [];
@@ -438,7 +440,9 @@ export default function App() {
                   const text = event.clipboardData.getData("text");
                   if (!text.trim()) return;
                   const items = parseMediaMany(text).filter((item) => item.valid);
-                  for (const item of items) submitVideoToSitemap(item.platform, item.videoId);
+                  for (const item of items) {
+                    if (item.videoId) submitVideoToSitemap(item.platform, item.videoId);
+                  }
                 }}
                 spellCheck={false}
                 autoCorrect="off"

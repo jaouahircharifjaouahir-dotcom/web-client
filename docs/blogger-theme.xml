@@ -73,7 +73,7 @@
       <meta content='11tik YouTube Thumbnail Extractor' property='og:image:alt'/>
       <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
     </b:if>
-    <meta content='11tik-theme-v36' name='yte-build'/>
+    <meta content='11tik-theme-v39' name='yte-build'/>
     <link href='https://www.11tik.com/web-client/site.webmanifest' rel='manifest'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
@@ -110,7 +110,9 @@ html,body{margin:0;background:#f4efe6;color:#17141c;font-family:system-ui,"Segoe
 #Attribution1,#Profile1,.copyright,.blog-feeds,
 .widget.BlogSearch,.widget.Header,.widget.PageList,.widget.ReportAbuse,.widget.FeaturedPost,.widget.PopularPosts,.no-posts-message,
 .blog-pager,.comments,.comment-form,.post-footer,.feed-links,.skip-navigation,.return_link,
-a[href*="blogger.com/profile"],a[href="https://www.blogger.com"],a[href="https://www.blogger.com/"]{display:none!important}
+a[href*="blogger.com/profile"],a[href="https://www.blogger.com"],a[href="https://www.blogger.com/"],
+#cookieChoiceInfo,#cookieChoiceDismiss,.cookie-choices-info,#cookieBar,.cookieBar,
+div[id*="cookieChoice"],iframe[src*="cookiechoices"]{display:none!important;height:0!important;overflow:hidden!important;visibility:hidden!important}
 .page,.page_body,.widget.Blog,.blog-posts,.post-outer,.post,.widget,.widget-content{
 margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:none;width:100%
 }
@@ -303,15 +305,27 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 
     <script type='text/javascript'>
 (function () {
+  function killCookies() {
+    var nodes = document.querySelectorAll('#cookieChoiceInfo,#cookieChoiceDismiss,.cookie-choices-info,#cookieBar,.cookieBar,div[id*=&quot;cookieChoice&quot;]');
+    for (var i = 0; i &lt; nodes.length; i++) {
+      var el = nodes[i];
+      if (el.parentNode) el.parentNode.removeChild(el);
+    }
+    try { document.cookie = 'displayCookieConsent=y; path=/; max-age=31536000; SameSite=Lax'; } catch (e) {}
+  }
   function strip() {
     var nodes = document.querySelectorAll('link[rel=&quot;me&quot;], a[href*=&quot;blogger.com/profile&quot;]');
     for (var i = 0; i &lt; nodes.length; i++) {
       var el = nodes[i];
       if (el.parentNode) el.parentNode.removeChild(el);
     }
+    killCookies();
   }
   strip();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', strip, {once: true});
+  setTimeout(killCookies, 0);
+  setTimeout(killCookies, 400);
+  setTimeout(killCookies, 1500);
 })();
     </script>
     <b:if cond='data:view.isHomepage'>

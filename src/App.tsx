@@ -3,7 +3,7 @@ import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
 import { GUIDE_POSTS } from "./content/posts";
 import { relatedGuides } from "./content/related";
-import { DEFAULT_HERO, findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
+import { findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
@@ -16,14 +16,15 @@ import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { submitShareToSitemap, submitVideoToSitemap } from "./sitemap/submit";
-import { userMessage } from "./types/errors";
 import { QUALITY_PRESETS } from "./engines/presets";
+import { localeHomeUrl, publicOrigin, t } from "./i18n/ui";
+import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
 
 const QUALITY_ORDER = QUALITY_PRESETS.map((item) => item.quality);
 
 function formatSize(width: number | null, height: number | null): string {
-  if (!width || !height) return "Unknown size";
+  if (!width || !height) return t("unknownSize");
   return `${width} × ${height}`;
 }
 
@@ -40,7 +41,7 @@ function ShareUrlLine({ url }: { url: string }) {
         wordBreak: "break-all",
       }}
     >
-      <span style={{ display: "block", fontWeight: 800, marginBottom: 6, fontSize: 12, letterSpacing: "0.08em" }}>SHARE LINK</span>
+      <span style={{ display: "block", fontWeight: 800, marginBottom: 6, fontSize: 12, letterSpacing: "0.08em" }}>{t("shareLink")}</span>
       <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: "#0f766e", fontWeight: 800, fontSize: "1rem" }}>
         {url}
       </a>
@@ -94,8 +95,8 @@ export default function App() {
   const parsed = useMemo(() => (input.trim() ? normalizeMediaUrl(input) : null), [input]);
   const bulkParsed = useMemo(() => (bulk ? parseMediaMany(input).filter((item) => item.valid) : []), [bulk, input]);
   const liveShareUrls = useMemo(() => {
-    if (bulk) return bulkParsed.flatMap((item) => (item.videoId ? [shareUrlForIds(item.platform, item.videoId)] : []));
-    if (parsed?.valid && parsed.videoId) return [shareUrlForIds(parsed.platform, parsed.videoId)];
+    if (bulk) return bulkParsed.flatMap((item) => (item.videoId ? [shareUrlForIds(item.platform, item.videoId, publicOrigin())] : []));
+    if (parsed?.valid && parsed.videoId) return [shareUrlForIds(parsed.platform, parsed.videoId, publicOrigin())];
     return [];
   }, [bulk, bulkParsed, parsed]);
   const deepLinkBoot = useRef(false);
@@ -125,8 +126,8 @@ export default function App() {
   }, []);
 
   const landing = findKeywordLanding(keywordSlug);
-  const heroTitle = landing?.title ?? DEFAULT_HERO.title;
-  const heroIntro = landing?.intro ?? DEFAULT_HERO.intro;
+  const heroTitle = landing?.title ?? t("heroTitle");
+  const heroIntro = landing?.intro ?? t("heroIntro");
 
   const openKeyword = (slug: string) => {
     const url = new URL(location.href);
@@ -323,15 +324,15 @@ export default function App() {
 
   const hint = !input.trim()
     ? bulk
-      ? "Paste one YouTube or Vimeo URL per line."
-      : "Paste a YouTube or Vimeo URL (Shorts, live, youtu.be, and vimeo.com)."
+      ? t("pasteBulk")
+      : t("pasteOne")
     : bulk
       ? bulkParsed.length
-        ? `${bulkParsed.length} valid video ID${bulkParsed.length === 1 ? "" : "s"} ✓`
-        : "No video IDs found yet."
+        ? `${bulkParsed.length} ${bulkParsed.length === 1 ? t("idsOk") : t("idsOkPlural")} ✓`
+        : t("noIds")
       : parsed?.valid
-        ? `Valid ${parsed.platform} ID ✓`
-        : "No supported video ID found in that text.";
+        ? `${t("validId")} ${parsed.platform} ID ✓`
+        : t("noId");
 
   const showCopied = async (label: string, value: string) => {
     const ok = await copyText(value);
@@ -359,19 +360,19 @@ export default function App() {
     <div className={`yte-app${embed ? " yte-embed" : ""}`}>
       <div className="yte-shell">
         <header className="yte-top">
-          <a className="yte-brand" href="https://www.11tik.com/">
+          <a className="yte-brand" href={localeHomeUrl()}>
             <span className="yte-mark" aria-hidden="true">11</span>
             <span>{config.siteName}</span>
           </a>
           <div className="yte-actions">
             <button className="yte-chip" type="button" aria-expanded={postsOpen} aria-pressed={postsOpen} onClick={() => setPostsOpen((v) => !v)}>
-              Posts
+              {t("posts")}
             </button>
             <button className="yte-chip" type="button" aria-pressed={bulk} onClick={() => setBulk((v) => !v)}>
-              Bulk
+              {t("bulk")}
             </button>
             <button className="yte-chip" type="button" onClick={() => setTheme(theme === "dark" ? "light" : theme === "light" ? "system" : "dark")}>
-              Theme: {theme}
+              {t("theme")}: {theme}
             </button>
           </div>
         </header>
@@ -434,7 +435,7 @@ export default function App() {
                   setError("");
                   setInput(event.target.value);
                 }}
-    placeholder="Paste one YouTube or Vimeo URL per line"
+                placeholder={t("pasteBulkPh")}
                 aria-label="YouTube or Vimeo URLs"
                 onPaste={(event) => {
                   const text = event.clipboardData.getData("text");
@@ -462,7 +463,7 @@ export default function App() {
                   setInput(text);
                   void runOne(text);
                 }}
-                placeholder="Paste YouTube or Vimeo URL"
+                placeholder={t("pasteOnePh")}
                 aria-label="YouTube URL"
                 autoComplete="off"
                 inputMode="url"
@@ -471,7 +472,7 @@ export default function App() {
             )}
             <div className="yte-row">
               <button className="yte-btn" type="submit" disabled={busy || !input.trim()}>
-                {busy ? "Finding thumbnail…" : bulk ? "Extract all" : "Get Thumbnail Image"}
+                {busy ? t("finding") : bulk ? t("extractAll") : t("getThumb")}
               </button>
               {liveShareUrls.length ? (
                 <>
@@ -480,10 +481,10 @@ export default function App() {
                     type="button"
                     onClick={() => void showCopied(liveShareUrls.length > 1 ? "Share links copied" : "Share link copied", liveShareUrls.join("\n"))}
                   >
-                    Copy share link
+                    {t("copyShare")}
                   </button>
                   <button className="yte-ghost" type="button" onClick={() => void shareNow(liveShareUrls)}>
-                    Share
+                    {t("share")}
                   </button>
                 </>
               ) : null}
@@ -492,7 +493,7 @@ export default function App() {
             <p className={`yte-hint${(bulk ? bulkParsed.length > 0 : parsed?.valid) ? " ok" : input.trim() ? " bad" : ""}`}>{error || hint}</p>
             {liveShareUrls.length ? liveShareUrls.map((url) => <ShareUrlLine url={url} key={url} />) : null}
             <div className="yte-status" role="status" aria-live="polite">
-              {busy ? "Extracting thumbnails" : result?.bestThumbnail ? "Thumbnail ready" : error}
+              {busy ? t("extracting") : result?.bestThumbnail ? t("ready") : error}
             </div>
           </form>
         </section>
@@ -512,7 +513,7 @@ export default function App() {
                   <div className="yte-meta">
                     <span>{formatSize(item.width, item.height)}</span>
                     <span>
-                      {index === 0 ? "BEST · " : ""}
+                      {index === 0 ? t("best") : ""}
                       {item.tier.toUpperCase()} · {item.quality}
                     </span>
                   </div>
@@ -527,13 +528,13 @@ export default function App() {
                         void downloadManager.download(result.videoId, item).catch(() => setError(userMessage("DOWNLOAD_FAILED")));
                       }}
                     >
-                      Download
+                      {t("download")}
                     </button>
                     <button className="yte-ghost" type="button" onClick={() => void showCopied("Copied!", item.url)}>
-                      Copy image URL
+                      {t("copyImage")}
                     </button>
                     <button className="yte-ghost" type="button" onClick={() => openFullImage(item.url)}>
-                      Open full resolution
+                      {t("openFull")}
                     </button>
                   </div>
                 </article>
@@ -701,7 +702,7 @@ export default function App() {
         ) : null}
 
         <p className="yte-foot">
-          Public YouTube thumbnails only. No accounts, no video download, no tracking of pasted URLs.
+          {t("foot")}
         </p>
         <nav className="yte-kw" aria-label="Related guides">
           {relatedGuides("").map((post) => (

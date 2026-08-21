@@ -12,6 +12,7 @@
     "typecheck": "tsc -b --pretty false",
     "seo:audit": "node scripts/seo-audit.mjs",
     "google:index": "node scripts/google-indexing.mjs",
+    "themes:locales": "node scripts/build-locale-themes.mjs",
     "sitemap:keywords": "node scripts/build-keyword-sitemap.mjs",
     "blogger:studio": "node scripts/blogger-studio-server.mjs --with-ui",
     "blogger:studio:api": "node scripts/blogger-studio-server.mjs"

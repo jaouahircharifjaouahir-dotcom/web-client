@@ -23,10 +23,15 @@
   }
 })();
     </script>
-    <b:if cond='data:view.isHomepage'>
-      <title>YouTube Thumbnail Extractor – Download HD YouTube Thumbnails</title>
+    <b:if cond='data:view.isError'>
+      <title>Page not found | 11tik</title>
+      <meta content='5;url=https://www.11tik.com/' http-equiv='refresh'/>
     <b:else/>
-      <title><data:view.title.escaped/> | 11tik</title>
+      <b:if cond='data:view.isHomepage'>
+        <title>YouTube Thumbnail Extractor – Download HD YouTube Thumbnails</title>
+      <b:else/>
+        <title><data:view.title.escaped/> | 11tik</title>
+      </b:if>
     </b:if>
     <link href='https://www.11tik.com/feeds/posts/default' rel='alternate' title='11tik Atom' type='application/atom+xml'/>
     <link href='https://www.11tik.com/feeds/posts/default?alt=rss' rel='alternate' title='11tik RSS' type='application/rss+xml'/>
@@ -74,7 +79,7 @@
       <meta content='11tik YouTube Thumbnail Extractor' property='og:image:alt'/>
       <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
     </b:if>
-    <meta content='11tik-theme-v42' name='yte-build'/>
+    <meta content='11tik-theme-v43' name='yte-build'/>
     <link href='https://www.11tik.com/web-client/site.webmanifest' rel='manifest'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
@@ -140,12 +145,51 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 .yte-seo-nav{display:flex;flex-wrap:wrap;gap:10px 16px;padding:20px 0 8px;font-size:14px}
 .yte-seo-foot{padding:24px 0 56px;font-size:14px;color:#5c5666}
 .yte-static img{display:block;max-width:min(100%,1200px);height:auto;margin:12px 0;border-radius:12px}
+.yte-404{min-height:72vh;display:flex;align-items:center;justify-content:center;padding:48px 20px 80px}
+.yte-404-card{width:min(520px,100%);text-align:center;background:#fff;border-radius:20px;padding:40px 28px 36px;box-shadow:0 16px 48px rgba(23,20,28,.08)}
+.yte-404-code{margin:0;font-size:4rem;line-height:1;font-weight:700;letter-spacing:-.04em;color:#c2410c}
+.yte-404 h1{font-size:1.45rem;margin:12px 0 8px}
+.yte-404 p{margin:0 auto;max-width:40ch;color:#5c5666;line-height:1.6}
+.yte-404-btn{display:inline-block;margin-top:22px;background:#c2410c;color:#fff!important;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:600}
+.yte-404-btn:hover{background:#9a3412}
+.yte-404-bar{height:4px;margin:28px 0 10px;background:#ece7e0;border-radius:999px;overflow:hidden}
+.yte-404-bar span{display:block;height:100%;width:0;background:#c2410c;animation:yte404fill 5s linear forwards}
+@keyframes yte404fill{to{width:100%}}
+@media (prefers-reduced-motion:reduce){.yte-404-bar span{animation:none;width:100%}}
     ]]></b:skin>
     <script>/*<![CDATA[*/ cookieChoices = {}; /*]]>*/</script>
   </head>
   <body>
     <b:if cond='data:blog.url contains "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26"'>
       <pre class='yte-indexnow'>9f3a7c1e4b8d2f06a5c9e3b7d1f48a26</pre>
+    </b:if>
+    <b:if cond='data:view.isError'>
+      <main class='yte-404'>
+        <div class='yte-404-card'>
+          <p class='yte-404-code'>404</p>
+          <h1>This page is not on 11tik</h1>
+          <p>The link is broken or the page was removed. You will be taken to the thumbnail extractor in <span id='yte-404-count'>5</span> seconds.</p>
+          <a class='yte-404-btn' href='https://www.11tik.com/'>Go to 11tik now</a>
+          <div aria-hidden='true' class='yte-404-bar'><span></span></div>
+        </div>
+      </main>
+      <script type='text/javascript'>
+      /*<![CDATA[*/
+      (function () {
+        var seconds = 5;
+        var home = 'https://www.11tik.com/';
+        var el = document.getElementById('yte-404-count');
+        var timer = setInterval(function () {
+          seconds -= 1;
+          if (el) el.textContent = String(Math.max(seconds, 0));
+          if (seconds &lt;= 0) {
+            clearInterval(timer);
+            location.replace(home);
+          }
+        }, 1000);
+      })();
+      /*]]>*/
+      </script>
     </b:if>
     <b:if cond='data:view.isHomepage'>
       <main>
@@ -256,12 +300,6 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
           <b:includable id='main'>
             <b:if cond='data:view.isHomepage'>
             <b:else/>
-              <b:if cond='data:view.isError'>
-                <div class='yte-static'>
-                  <h1>Page not found</h1>
-                  <p>This URL is not a published 11tik guide. <a href='https://www.11tik.com/'>Return to the extractor</a>.</p>
-                </div>
-              </b:if>
               <b:loop values='data:posts' var='post'>
                 <div class='yte-static'>
                   <data:post.body/>

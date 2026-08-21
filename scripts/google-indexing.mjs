@@ -1,6 +1,7 @@
 /**
  * Local-only Google Indexing API notify. Do not commit the service-account JSON.
- * Officially this API is for JobPosting / BroadcastEvent pages; other URLs often get errors.
+ * Reads every <loc> from https://www.11tik.com/sitemap.xml (and sitemap-pages.xml)
+ * and notifies Google Indexing API. Local only.
  *
  *   set GOOGLE_INDEXING_JSON=C:\Users\ADMIN\Desktop\secrets\google-indexing.json
  *   npm run google:index
@@ -10,7 +11,8 @@ import { createSign } from "node:crypto";
 import { readFileSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { collectSiteUrls } from "./site-urls.mjs";
+
+const SITEMAP_URLS = ["https://www.11tik.com/sitemap.xml", "https://www.11tik.com/sitemap-pages.xml"];
 
 const DEFAULT_JSON = join(homedir(), "Desktop", "secrets", "google-indexing.json");
 const jsonPath = process.env.GOOGLE_INDEXING_JSON || DEFAULT_JSON;
@@ -59,6 +61,51 @@ async function accessToken() {
   return data.access_token;
 }
 
+function decodeXml(value) {
+  return value
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&apos;", "'");
+}
+
+function locsFromXml(xml) {
+  return [...xml.matchAll(/<loc>\s*([^<]+)\s*<\/loc>/gi)].map((match) => decodeXml(match[1].trim()));
+}
+
+async function fetchXml(url) {
+  const response = await fetch(url, { headers: { accept: "application/xml,text/xml,*/*" } });
+  if (!response.ok) throw new Error(`${url} HTTP ${response.status}`);
+  return response.text();
+}
+
+async function collectSitemapUrls() {
+  const seen = new Set();
+  const queue = [...SITEMAP_URLS];
+  while (queue.length) {
+    const sitemapUrl = queue.shift();
+    let xml;
+    try {
+      xml = await fetchXml(sitemapUrl);
+    } catch (error) {
+      console.warn(`Skip ${sitemapUrl}: ${error.message}`);
+      continue;
+    }
+    const locs = locsFromXml(xml);
+    const isIndex = /<sitemapindex[\s>]/i.test(xml);
+    for (const loc of locs) {
+      if (!loc.startsWith("https://www.11tik.com")) continue;
+      if (isIndex) {
+        if (!queue.includes(loc) && loc !== sitemapUrl) queue.push(loc);
+        continue;
+      }
+      seen.add(loc);
+    }
+  }
+  return [...seen];
+}
+
 async function notify(token, url) {
   const response = await fetch("https://indexing.googleapis.com/v3/urlNotifications:publish", {
     method: "POST",
@@ -72,9 +119,9 @@ async function notify(token, url) {
   return { status: response.status, text: text.slice(0, 400) };
 }
 
-const { urlList } = oneUrl ? { urlList: [oneUrl] } : await collectSiteUrls();
+const urlList = oneUrl ? [oneUrl] : await collectSitemapUrls();
 if (!urlList.length) {
-  console.error("No URLs collected.");
+  console.error("No URLs found in sitemap.xml.");
   process.exit(1);
 }
 
@@ -84,7 +131,10 @@ const dailyCap = 200;
 const batch = urlList.slice(0, dailyCap);
 
 console.log(`Using ${sa.client_email}`);
-console.log(`Submitting ${batch.length} URL(s) from this PC only.`);
+console.log(`Sitemap URLs: ${urlList.length}. Submitting ${batch.length} (Google Indexing API daily cap ${dailyCap}).`);
+if (urlList.length > dailyCap) {
+  console.warn(`${urlList.length - dailyCap} URL(s) left for a later run after quota resets.`);
+}
 
 for (const url of batch) {
   const result = await notify(token, url);

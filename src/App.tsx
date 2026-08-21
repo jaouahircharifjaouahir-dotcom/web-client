@@ -15,6 +15,7 @@ import { scorePublicThumbnail } from "./score/readImage";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor } from "./share/url";
+import { submitShareToSitemap } from "./sitemap/submit";
 import { userMessage } from "./types/errors";
 import { QUALITY_PRESETS } from "./engines/presets";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
@@ -182,6 +183,7 @@ export default function App() {
         title: entry.meta?.title ?? null,
       }),
     );
+    submitShareToSitemap(entry);
   };
 
   const runOne = async (raw: string) => {

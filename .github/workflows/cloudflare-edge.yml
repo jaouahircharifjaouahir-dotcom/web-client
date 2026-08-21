@@ -1,0 +1,21 @@
+name: cloudflare-edge
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - workers/**
+      - wrangler.jsonc
+      - .github/workflows/cloudflare-edge.yml
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: f9da186fc6cbf157fd99d88fe700d0c4
+          command: deploy

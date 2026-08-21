@@ -288,12 +288,81 @@ async function handleSitemapGet(request, env) {
   });
 }
 
+function localeCopy(host) {
+  if (host === "es.11tik.com") {
+    return {
+      lang: "es",
+      locale: "es_ES",
+      title: "Extractor de miniaturas de YouTube – Descargar miniaturas HD",
+      description:
+        "Descarga gratis la miniatura de YouTube de mayor calidad disponible. Extrae imágenes HD de cualquier URL de YouTube o Shorts.",
+    };
+  }
+  return {
+    lang: "fr",
+    locale: "fr_FR",
+    title: "Extracteur de miniatures YouTube – Télécharger des miniatures HD",
+    description:
+      "Téléchargez gratuitement la miniature YouTube de plus haute qualité disponible. Extrayez des images HD depuis une URL YouTube ou Shorts.",
+  };
+}
+
+function localeAppPage(host) {
+  const copy = localeCopy(host);
+  const origin = `https://${host}/`;
+  const html = `<!DOCTYPE html>
+<html lang="${copy.lang}">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>${copy.title}</title>
+  <meta name="description" content="${copy.description}"/>
+  <link rel="canonical" href="${origin}"/>
+  <link rel="alternate" hreflang="en" href="https://www.11tik.com/"/>
+  <link rel="alternate" hreflang="fr" href="https://fr.11tik.com/"/>
+  <link rel="alternate" hreflang="es" href="https://es.11tik.com/"/>
+  <link rel="alternate" hreflang="x-default" href="https://www.11tik.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="${copy.locale}"/>
+  <meta property="og:site_name" content="11tik"/>
+  <meta property="og:title" content="${copy.title}"/>
+  <meta property="og:description" content="${copy.description}"/>
+  <meta property="og:url" content="${origin}"/>
+  <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=33" as="style"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=33" as="script"/>
+</head>
+<body>
+  <div id="yte-root"></div>
+  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=33"></script>
+</body>
+</html>`;
+  return new Response(html, {
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "public, max-age=300",
+    },
+  });
+}
+
 export default {
   async scheduled(_event, env, ctx) {
     ctx.waitUntil(hourlyExtract(env));
   },
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    const host = url.hostname;
+    if (host === "fr.11tik.com" || host === "es.11tik.com") {
+      if (url.pathname === "/robots.txt") {
+        return new Response("User-agent: *\nAllow: /\n", {
+          headers: { "content-type": "text/plain; charset=utf-8" },
+        });
+      }
+      return localeAppPage(host);
+    }
 
     if (url.pathname === "/sitemap.xml") {
       return handleSitemapGet(request, env);

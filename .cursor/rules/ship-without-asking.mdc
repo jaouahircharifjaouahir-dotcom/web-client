@@ -1,0 +1,18 @@
+---
+description: Apply 11tik site and GitHub changes without asking permission
+alwaysApply: true
+---
+
+# Ship without asking
+
+For this repo (`11tik` / `web-client`), do not ask for permission to go live.
+
+When a change is meant for the public site or GitHub:
+
+- Commit it (skip secrets: `.env`, `secrets/`, `*credentials*.json`, `test-11tik.png`).
+- Push the branch and **merge/push `main`**. GitHub Pages deploys from `main` only (`VITE_BASE=/web-client/`).
+- Do not wait for the user to say “commit” or “push”.
+
+Blogger theme XML is not updated by GitHub. After editing `docs/blogger-theme.xml`, copy it to Downloads and remind once that they must **Blogger → Theme → Restore**. Everything else that lives on GitHub or the Worker, ship yourself.
+
+Never force-push `main` or skip git hooks unless the user explicitly asks.

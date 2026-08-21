@@ -312,7 +312,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
       var el = nodes[i];
       if (el.parentNode) el.parentNode.removeChild(el);
     }
-    try { document.cookie = 'displayCookieConsent=y; path=/; max-age=31536000; SameSite=Lax'; } catch (e) {}
+    try { document.cookie = 'displayCookieNotice=y; path=/; max-age=31536000; SameSite=Lax'; } catch (e) {}
   }
   function strip() {
     var nodes = document.querySelectorAll('link[rel=&quot;me&quot;], a[href*=&quot;blogger.com/profile&quot;]');

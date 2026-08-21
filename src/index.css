@@ -224,15 +224,6 @@ a.yte-brand:focus-visible {
   padding: 10px 12px;
   cursor: pointer;
 }
-.yte-compare {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-.yte-compare.is-on {
-  grid-template-columns: 1fr 1fr;
-}
-@media (max-width:700px){ .yte-compare.is-on { grid-template-columns: 1fr; } }
 .yte-score { font-weight: 700; color: var(--yte-ok); }
 .yte-shareline {
   margin: 10px 0 0;
@@ -241,40 +232,6 @@ a.yte-brand:focus-visible {
 .yte-shareline a {
   color: var(--yte-accent-2);
   font-weight: 700;
-}
-.yte-ghost[aria-pressed="true"] {
-  background: var(--yte-accent-2);
-  color: #04110f;
-  border-color: transparent;
-}
-.yte-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 8px 0 10px;
-  padding: 0;
-  list-style: none;
-}
-.yte-tags li {
-  margin: 0;
-}
-.yte-tags a {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 4px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--yte-line);
-  background: rgba(15, 118, 110, 0.08);
-  color: var(--yte-ink);
-  text-decoration: none;
-}
-.yte-tags a:hover,
-.yte-tags a:focus-visible {
-  color: var(--yte-accent-2);
-  outline: 2px solid var(--yte-accent-2);
-  outline-offset: 2px;
 }
 .yte-power pre {
   overflow: auto;

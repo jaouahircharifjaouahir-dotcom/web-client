@@ -256,6 +256,12 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
           <b:includable id='main'>
             <b:if cond='data:view.isHomepage'>
             <b:else/>
+              <b:if cond='data:view.isError'>
+                <div class='yte-static'>
+                  <h1>Page not found</h1>
+                  <p>This URL is not a published 11tik guide. <a href='https://www.11tik.com/'>Return to the extractor</a>.</p>
+                </div>
+              </b:if>
               <b:loop values='data:posts' var='post'>
                 <div class='yte-static'>
                   <data:post.body/>

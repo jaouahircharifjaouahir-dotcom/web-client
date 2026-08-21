@@ -53,4 +53,16 @@ export const GUIDE_POSTS = [
     summary:
       "A player screenshot is not the thumbnail YouTube hosts. The public JPEG or WebP on i.ytimg.com is the file to save for blogs, Open Graph, and research.",
   },
+  {
+    title: "Thumbnail extractor vs maker",
+    href: "https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html",
+    summary:
+      "An extractor saves the public still YouTube already hosts. A maker creates original art you upload in Studio. 11tik is an extractor only.",
+  },
+  {
+    title: "YouTube Studio thumbnail 2026",
+    href: "https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html",
+    summary:
+      "How custom thumbnails work in YouTube Studio in 2026, and how to confirm the public files with 11tik after processing.",
+  },
 ] as const;

@@ -4,29 +4,44 @@
 .yte-page h2{font-size:1.2rem;margin:28px 0 8px}
 .yte-page p,.yte-page li{color:#5c5666}
 .yte-page a{color:#c2410c}
-.yte-byline,.yte-updated{font-size:14px;color:#5c5666;margin:0 0 8px}
-.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 20px;border-radius:12px}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
 .yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
 </style>
 <article class="yte-page">
-  <h1>YouTube Studio custom thumbnails in 2026</h1>
+  <h1>YouTube Studio thumbnail 2026</h1>
   <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html">11tik</a></p>
   <p class="yte-updated">Last updated: 21 August 2026</p>
-  <p>YouTube Studio still lets eligible channels upload a custom thumbnail on a video’s Details page. Layout labels move, but the job is the same: YouTube hosts a new public still. 11tik does not upload that file; it only reads public image URLs after they exist.</p>
+  <p>In 2026, eligible YouTube channels still upload a custom thumbnail from Studio on a video’s Details page. Menu labels move, but the result is the same: YouTube hosts a new public still. 11tik does not upload that file. It only reads public image URLs after they exist.</p>
   <img alt="11tik used to verify a public thumbnail after a YouTube Studio upload" class="yte-hero" height="630" src="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" width="1200"/>
+  <p class="yte-caption">Studio publishes the custom still. 11tik checks which public sizes YouTube actually serves.</p>
+  <h2>How do I upload a custom thumbnail in YouTube Studio?</h2>
+  <ol>
+    <li>Open YouTube Studio and select the video.</li>
+    <li>On Details, upload a 16:9 image (YouTube’s common target is 1280×720).</li>
+    <li>Save and wait until processing finishes.</li>
+  </ol>
+  <p>Exact button names can change. If your account is not eligible for custom thumbnails, Studio will not offer the upload. 11tik cannot bypass that.</p>
   <h2>How do I check a thumbnail after I change it in Studio?</h2>
-  <p>Wait until YouTube finishes processing, then paste the watch URL into <a href="https://www.11tik.com/">11tik</a>. If maxres is missing, the extractor shows the next public size. That is YouTube’s publish state, not a Studio bug inside 11tik.</p>
+  <p>Paste the watch URL into <a href="https://www.11tik.com/">11tik</a>. Download or copy the first listed size. If maxresdefault is missing, the next public file is the honest maximum. That is YouTube’s catalog, not a failed extract. See also <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault explained</a>.</p>
   <h2>Does 11tik replace YouTube Studio?</h2>
-  <p>No. Studio is where you upload and A/B test when YouTube offers tests. 11tik is for downloading or copying the public stills that already exist.</p>
+  <p>No. Studio is where you upload, schedule, and use tests when YouTube offers them. 11tik is for previewing and saving public stills that already exist, including after a Studio change.</p>
   <h2>What should I do when the image looks old?</h2>
-  <p>Caches on image hosts can lag. Recheck later, or copy the URL 11tik confirms exists. Do not assume a 4K master; public maxres is usually 1280×720.</p>
-  <p class="yte-bio">11tik maintains the extractor and these notes when YouTube’s public files or Studio labels change. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
-  <p><a href="https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html">Extractor vs maker</a> · <a href="https://www.11tik.com/">Extractor</a></p>
+  <p>Image CDNs can lag. Recheck later, hard-refresh, or copy the URL 11tik confirms. Do not assume a 4K master; public maxres is usually 1280×720. A screenshot of Studio is not the public thumbnail file.</p>
+  <p>Related: <a href="https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html">extractor vs maker</a>.</p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
+  <p><a href="https://www.11tik.com/">Open the extractor</a></p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"YouTube Studio custom thumbnails in 2026","datePublished":"2026-08-21","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
-  {"@type":"HowTo","name":"How do I check a thumbnail after I change it in Studio?","step":[{"@type":"HowToStep","position":1,"text":"Upload or replace the custom thumbnail in YouTube Studio."},{"@type":"HowToStep","position":2,"text":"Wait for processing."},{"@type":"HowToStep","position":3,"text":"Paste the watch URL into 11tik and confirm the public files."}]},
-  {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does 11tik replace YouTube Studio?","acceptedAnswer":{"@type":"Answer","text":"No. Studio uploads custom art. 11tik only reads public thumbnail files."}}]}
+  {"@type":"Article","headline":"YouTube Studio thumbnail 2026","datePublished":"2026-08-21","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
+  {"@type":"HowTo","name":"How do I check a thumbnail after I change it in Studio?","step":[
+    {"@type":"HowToStep","position":1,"text":"Upload or replace the custom thumbnail in YouTube Studio."},
+    {"@type":"HowToStep","position":2,"text":"Wait for processing."},
+    {"@type":"HowToStep","position":3,"text":"Paste the watch URL into 11tik and confirm the public files."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does 11tik replace YouTube Studio?","acceptedAnswer":{"@type":"Answer","text":"No. Studio uploads custom art. 11tik only reads public thumbnail files."}}
+  ]}
 ]}
   </script>
 </article>

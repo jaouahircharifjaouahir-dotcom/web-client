@@ -4,6 +4,7 @@ const SITE = "https://www.11tik.com";
 const YT_ID = /^[A-Za-z0-9_-]{11}$/;
 const VIMEO_ID = /^\d{6,12}$/;
 const MAX_URLS = 45000;
+const CACHE_REQ = new Request(`${SITE}/web-client/__extracts.json`);
 
 function corsHeaders(extra = {}) {
   return {
@@ -32,13 +33,95 @@ function urlEntry(loc, lastmod) {
   return `<url><loc>${xmlEscape(loc)}</loc>${mod}</url>`;
 }
 
+function decodeXml(value) {
+  return value
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll(">", "&gt;")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&apos;", "'");
+}
+
+function parseIds(platform, videoId) {
+  const p = platform === "vimeo" ? "vimeo" : "youtube";
+  const id = String(videoId || "").trim();
+  if (p === "youtube" && !YT_ID.test(id)) return null;
+  if (p === "vimeo" && !VIMEO_ID.test(id)) return null;
+  return { platform: p, videoId: id };
+}
+
+async function loadCacheMap() {
+  const hit = await caches.default.match(CACHE_REQ);
+  if (!hit) return {};
+  try {
+    return await hit.json();
+  } catch {
+    return {};
+  }
+}
+
+async function saveCacheMap(map) {
+  await caches.default.put(
+    CACHE_REQ,
+    new Response(JSON.stringify(map), {
+      headers: {
+        "content-type": "application/json",
+        "cache-control": "public, max-age=31536000",
+      },
+    }),
+  );
+}
+
+async function saveExtract(env, platform, videoId) {
+  const loc = locFor(platform, videoId);
+  const lastmod = new Date().toISOString();
+  const row = { loc, lastmod };
+  const map = await loadCacheMap();
+  map[`${platform}:${videoId}`] = row;
+  await saveCacheMap(map);
+  if (env?.SITEMAP_URLS) {
+    await env.SITEMAP_URLS.put(`u:${platform}:${videoId}`, JSON.stringify(row));
+  }
+  return loc;
+}
+
+async function listExtracts(env) {
+  const out = [];
+  const seen = new Set();
+  const cacheMap = await loadCacheMap();
+  for (const row of Object.values(cacheMap)) {
+    if (row?.loc && !seen.has(row.loc)) {
+      seen.add(row.loc);
+      out.push(row);
+    }
+  }
+  if (env?.SITEMAP_URLS) {
+    let cursor;
+    do {
+      const page = await env.SITEMAP_URLS.list({ prefix: "u:", cursor, limit: 1000 });
+      for (const key of page.keys) {
+        const raw = await env.SITEMAP_URLS.get(key.name);
+        if (!raw) continue;
+        try {
+          const row = JSON.parse(raw);
+          if (row?.loc && !seen.has(row.loc)) {
+            seen.add(row.loc);
+            out.push(row);
+          }
+        } catch {
+          /* skip */
+        }
+      }
+      cursor = page.list_complete ? "" : page.cursor;
+    } while (cursor);
+  }
+  return out.slice(0, MAX_URLS);
+}
+
 async function bloggerLocs() {
   const locs = new Map();
   locs.set(`${SITE}/`, new Date().toISOString());
-  const feeds = [
-    `${SITE}/feeds/posts/default?alt=rss&max-results=150`,
-    `${SITE}/sitemap-pages.xml`,
-  ];
+  const feeds = [`${SITE}/feeds/posts/default?alt=rss&max-results=150`, `${SITE}/sitemap-pages.xml`];
   for (const feed of feeds) {
     try {
       const res = await fetch(feed, { cf: { cacheTtl: 300 } });
@@ -59,62 +142,33 @@ async function bloggerLocs() {
   return locs;
 }
 
-function decodeXml(value) {
-  return value
-    .replaceAll("&amp;", "&")
-    .replaceAll("&lt;", "<")
-    .replaceAll("&gt;", ">")
-    .replaceAll("&quot;", '"')
-    .replaceAll("&apos;", "'");
-}
-
-async function listExtracts(kv) {
-  const out = [];
-  let cursor;
-  do {
-    const page = await kv.list({ prefix: "u:", cursor, limit: 1000 });
-    for (const key of page.keys) {
-      const loc = await kv.get(key.name);
-      if (loc) out.push(loc);
-    }
-    cursor = page.list_complete ? "" : page.cursor;
-  } while (cursor);
-  return out.slice(0, MAX_URLS);
-}
-
 async function handleSitemapAdd(request, env) {
-  if (!env?.SITEMAP_URLS) {
-    return new Response(JSON.stringify({ ok: false, error: "kv_unbound" }), {
-      status: 503,
-      headers: { "content-type": "application/json", ...corsHeaders() },
-    });
+  let platform = "youtube";
+  let videoId = "";
+  if (request.method === "GET") {
+    const url = new URL(request.url);
+    platform = url.searchParams.get("platform") || "youtube";
+    videoId = url.searchParams.get("videoId") || "";
+  } else {
+    try {
+      const body = await request.json();
+      platform = body.platform;
+      videoId = body.videoId;
+    } catch {
+      return new Response(JSON.stringify({ ok: false, error: "invalid_json" }), {
+        status: 400,
+        headers: { "content-type": "application/json", ...corsHeaders() },
+      });
+    }
   }
-  let body;
-  try {
-    body = await request.json();
-  } catch {
-    return new Response(JSON.stringify({ ok: false, error: "invalid_json" }), {
-      status: 400,
-      headers: { "content-type": "application/json", ...corsHeaders() },
-    });
-  }
-  const platform = body.platform === "vimeo" ? "vimeo" : "youtube";
-  const videoId = String(body.videoId || "").trim();
-  if (platform === "youtube" && !YT_ID.test(videoId)) {
+  const parsed = parseIds(platform, videoId);
+  if (!parsed) {
     return new Response(JSON.stringify({ ok: false, error: "invalid_id" }), {
       status: 400,
       headers: { "content-type": "application/json", ...corsHeaders() },
     });
   }
-  if (platform === "vimeo" && !VIMEO_ID.test(videoId)) {
-    return new Response(JSON.stringify({ ok: false, error: "invalid_id" }), {
-      status: 400,
-      headers: { "content-type": "application/json", ...corsHeaders() },
-    });
-  }
-  const loc = locFor(platform, videoId);
-  const lastmod = new Date().toISOString();
-  await env.SITEMAP_URLS.put(`u:${platform}:${videoId}`, JSON.stringify({ loc, lastmod }));
+  const loc = await saveExtract(env, parsed.platform, parsed.videoId);
   return new Response(JSON.stringify({ ok: true, loc }), {
     headers: { "content-type": "application/json", ...corsHeaders() },
   });
@@ -122,19 +176,13 @@ async function handleSitemapAdd(request, env) {
 
 async function handleSitemapGet(env) {
   const blogger = await bloggerLocs();
-  const extracts = env?.SITEMAP_URLS ? await listExtracts(env.SITEMAP_URLS) : [];
+  const extracts = await listExtracts(env);
   const seen = new Set(blogger.keys());
   const parts = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
   for (const [loc, lastmod] of blogger) {
     parts.push(urlEntry(loc, lastmod));
   }
-  for (const raw of extracts) {
-    let row;
-    try {
-      row = JSON.parse(raw);
-    } catch {
-      continue;
-    }
+  for (const row of extracts) {
     if (!row?.loc || seen.has(row.loc)) continue;
     seen.add(row.loc);
     parts.push(urlEntry(row.loc, row.lastmod));
@@ -143,7 +191,7 @@ async function handleSitemapGet(env) {
   return new Response(parts.join(""), {
     headers: {
       "content-type": "application/xml; charset=utf-8",
-      "cache-control": "public, max-age=300",
+      "cache-control": "public, max-age=60",
     },
   });
 }
@@ -169,7 +217,9 @@ export default {
       if (request.method === "OPTIONS") {
         return new Response(null, { status: 204, headers: corsHeaders() });
       }
-      if (request.method === "POST") return handleSitemapAdd(request, env);
+      if (request.method === "POST" || request.method === "GET") {
+        return handleSitemapAdd(request, env);
+      }
       return new Response("Method not allowed", { status: 405, headers: corsHeaders() });
     }
 

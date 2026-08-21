@@ -15,6 +15,8 @@ describe("media router", () => {
   it("routes youtube and vimeo", () => {
     expect(normalizeMediaUrl("https://youtu.be/dQw4w9WgXcQ").platform).toBe("youtube");
     expect(normalizeMediaUrl("https://vimeo.com/22439234").platform).toBe("vimeo");
+    expect(normalizeMediaUrl("https://player.vimeo.com/video/1191500052").platform).toBe("vimeo");
+    expect(normalizeMediaUrl("https://vimeo.com/1191500052").videoId).toBe("1191500052");
     expect(parseMediaMany("https://youtu.be/dQw4w9WgXcQ\nhttps://vimeo.com/22439234").length).toBe(2);
   });
 

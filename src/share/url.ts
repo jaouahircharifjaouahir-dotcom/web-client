@@ -8,6 +8,7 @@ export function shareUrlForIds(platform: MediaPlatform | string, videoId: string
 }
 
 export function shareUrlFor(result: ThumbnailExtractionResult): string {
-  const platform = result.meta?.platform ?? "youtube";
+  const fromMeta = result.meta?.platform;
+  const platform = fromMeta === "vimeo" || fromMeta === "youtube" ? fromMeta : /^\d{6,12}$/.test(result.videoId) ? "vimeo" : "youtube";
   return shareUrlForIds(platform, result.videoId);
 }

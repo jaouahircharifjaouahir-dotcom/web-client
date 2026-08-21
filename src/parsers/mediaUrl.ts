@@ -15,11 +15,7 @@ export function isLikelyMediaUrl(raw: string): boolean {
 
 export function normalizeMediaUrl(raw: string): ParsedMediaUrl {
   const trimmed = raw.trim();
-  if (isLikelyVimeoUrl(trimmed) && !isLikelyYouTubeUrl(trimmed)) {
-    const vimeo = normalizeVimeoUrl(trimmed);
-    return { ...vimeo, platform: "vimeo" };
-  }
-  if (isLikelyVimeoUrl(trimmed) && /vimeo\.com/i.test(trimmed)) {
+  if (/vimeo\.com/i.test(trimmed) || /^\d{6,12}$/.test(trimmed)) {
     const vimeo = normalizeVimeoUrl(trimmed);
     if (vimeo.valid) return { ...vimeo, platform: "vimeo" };
   }

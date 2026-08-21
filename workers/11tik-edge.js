@@ -43,8 +43,9 @@ function decodeXml(value) {
 }
 
 function parseIds(platform, videoId) {
-  const p = platform === "vimeo" ? "vimeo" : "youtube";
   const id = String(videoId || "").trim();
+  let p = platform === "vimeo" ? "vimeo" : "youtube";
+  if (p === "youtube" && !YT_ID.test(id) && VIMEO_ID.test(id)) p = "vimeo";
   if (p === "youtube" && !YT_ID.test(id)) return null;
   if (p === "vimeo" && !VIMEO_ID.test(id)) return null;
   return { platform: p, videoId: id };
@@ -175,7 +176,7 @@ async function hourlyExtract(env) {
   const loc = locFor("youtube", videoId);
   await Promise.allSettled([
     fetch(loc, { headers: HOURLY_UA, redirect: "follow", cf: { cacheTtl: 0 } }),
-    fetch(`${SITE}/web-client/blogger-app.js?v=30`, { headers: HOURLY_UA, cf: { cacheTtl: 60 } }),
+    fetch(`${SITE}/web-client/blogger-app.js?v=31`, { headers: HOURLY_UA, cf: { cacheTtl: 60 } }),
     fetch(`${SITE}/sitemap.xml`, { headers: HOURLY_UA, cf: { cacheTtl: 0 } }),
     fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`, {
       headers: HOURLY_UA,

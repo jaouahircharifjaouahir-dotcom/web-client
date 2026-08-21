@@ -13,5 +13,14 @@ describe("shareUrlFor", () => {
 
   it("builds a share URL from a pasted video id", () => {
     expect(shareUrlForIds("youtube", "PKuXqCCZWJ4")).toBe("https://www.11tik.com/?v=PKuXqCCZWJ4");
+    expect(shareUrlForIds("vimeo", "1191500052")).toBe("https://www.11tik.com/?vimeo=1191500052");
+  });
+
+  it("does not treat a Vimeo id as a YouTube watch link", () => {
+    const vimeo = {
+      videoId: "1191500052",
+      meta: { platform: "vimeo" as const, title: "NY", authorName: null },
+    } as ThumbnailExtractionResult;
+    expect(shareUrlFor(vimeo)).toBe("https://www.11tik.com/?vimeo=1191500052");
   });
 });

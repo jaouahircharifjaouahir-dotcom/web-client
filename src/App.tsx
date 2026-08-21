@@ -432,17 +432,14 @@ export default function App() {
                   setError("");
                   setInput(event.target.value);
                 }}
+    placeholder="Paste one YouTube or Vimeo URL per line"
+                aria-label="YouTube or Vimeo URLs"
                 onPaste={(event) => {
                   const text = event.clipboardData.getData("text");
                   if (!text.trim()) return;
-                  window.setTimeout(() => {
-                    const next = (event.target as HTMLTextAreaElement).value;
-                    const items = parseMediaMany(next).filter((item) => item.valid);
-                    for (const item of items) submitVideoToSitemap(item.platform, item.videoId);
-                  }, 0);
+                  const items = parseMediaMany(text).filter((item) => item.valid);
+                  for (const item of items) submitVideoToSitemap(item.platform, item.videoId);
                 }}
-                placeholder="Paste one YouTube URL per line"
-                aria-label="YouTube URLs"
                 spellCheck={false}
                 autoCorrect="off"
                 autoCapitalize="off"
@@ -567,7 +564,7 @@ export default function App() {
                     </span>
                   </div>
                   <p className="yte-video-meta">{item.meta?.title || item.videoId}</p>
-                  {item.bestThumbnail ? <ShareUrlLine url={shareUrlFor(item)} /> : null}
+                  <ShareUrlLine url={shareUrlFor(item)} />
                   {item.bestThumbnail ? (
                     <div className="yte-row">
                       <button

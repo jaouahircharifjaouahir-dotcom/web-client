@@ -4,6 +4,7 @@ import { resultCache } from "../cache/memory";
 import type { ParsedYouTubeUrl } from "../types";
 import { createAppError } from "../types/errors";
 import type { ParsedMediaUrl } from "../parsers/mediaUrl";
+import { fetchYouTubePublicMeta } from "../meta/youtubeOembed";
 import { extractVimeoThumbnails } from "./vimeoExtract";
 
 export async function extractThumbnails(
@@ -22,8 +23,14 @@ export async function extractThumbnails(
 
   const cacheKey = parsed.videoId;
   const cached = resultCache.get<ThumbnailExtractionResult>(cacheKey);
-  if (cached) {
-    const hit = { ...cached, cached: true };
+  if (cached?.bestThumbnail) {
+    let meta = cached.meta ?? { platform: "youtube" as const, title: null, authorName: null };
+    if (!meta.title) {
+      const publicMeta = await fetchYouTubePublicMeta(parsed.videoId, signal).catch(() => ({ title: null, authorName: null }));
+      meta = { platform: "youtube", title: publicMeta.title, authorName: publicMeta.authorName };
+    }
+    const hit = { ...cached, meta, cached: true };
+    resultCache.set(cacheKey, hit);
     onProgress?.(hit);
     return hit;
   }
@@ -31,6 +38,7 @@ export async function extractThumbnails(
   const started = performance.now();
   const parseMs = 0;
   const discoveryStarted = performance.now();
+  const metaPromise = fetchYouTubePublicMeta(parsed.videoId, signal);
 
   let latest: ThumbnailExtractionResult = {
     videoId: parsed.videoId,
@@ -81,10 +89,12 @@ export async function extractThumbnails(
     },
   };
 
+  const publicMeta = await metaPromise.catch(() => ({ title: null, authorName: null }));
   const withMeta: ThumbnailExtractionResult = {
     ...result,
-    meta: { platform: "youtube", title: null, authorName: null },
+    meta: { platform: "youtube", title: publicMeta.title, authorName: publicMeta.authorName },
   };
+  onProgress?.(withMeta);
   if (withMeta.bestThumbnail) resultCache.set(cacheKey, withMeta);
   return withMeta;
 }

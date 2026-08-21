@@ -1,5 +1,5 @@
 /**
- * Periodically submit all public 11tik URLs to IndexNow (Bing and partners).
+ * Manual IndexNow submit for Bing and partners. Not scheduled.
  * Google does not use IndexNow. Never run this in the visitor browser.
  *
  * Blogger cannot serve a raw .txt file. After you add a Custom redirect from
@@ -7,6 +7,7 @@
  */
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { collectSiteUrls, SITE_HOST } from "./site-urls.mjs";
+import { filterIndexNowUrls } from "./url-quality-gate.mjs";
 
 const KEY = process.env.INDEXNOW_KEY || "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26";
 const KEY_LOCATION = `https://${SITE_HOST}/${KEY}.txt`;
@@ -61,7 +62,11 @@ async function assertKeyFile() {
   }
 }
 
-const { urlList, updated } = await collectSiteUrls();
+const { urlList: collected, updated } = await collectSiteUrls();
+const { eligible: urlList, hold } = filterIndexNowUrls(collected);
+if (hold.length) {
+  console.log(`Quality gate held ${hold.length} URL(s).`);
+}
 const prev = readState();
 
 if (!submitAll && updated && updated === prev.feedUpdated) {

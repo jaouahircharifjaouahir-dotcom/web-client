@@ -149,6 +149,17 @@ export function normalizeYouTubeUrl(input: string): ParsedYouTubeUrl {
     return { ...empty, host, errorCode: "UNSUPPORTED_HOST" };
   }
 
+  const path = url.pathname.toLowerCase();
+  if (
+    path.startsWith("/channel/") ||
+    path.startsWith("/c/") ||
+    path.startsWith("/user/") ||
+    path.startsWith("/playlist") ||
+    path.startsWith("/@")
+  ) {
+    return { ...empty, host, type: "unknown", errorCode: "CHANNEL_OR_PLAYLIST" };
+  }
+
   const type = classify(url);
   const videoId = extractVideoId(url, type);
   if (!videoId) {

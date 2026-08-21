@@ -12,6 +12,8 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 | youtube thumbnail size / resolution / dimensions / quality | Informational | `/p/youtube-thumbnail-size.html` | homepage | Explain maxres vs hq vs missing files. |
 | youtube shorts thumbnail | Informational + tool | `/p/youtube-shorts-thumbnail.html` | homepage | Shorts-specific URL patterns. |
 | how to download / get / find a youtube thumbnail | Tutorial | `/p/how-to-download-youtube-thumbnail.html` | homepage | Steps, then CTA to the tool. |
+| thumbnail extractor vs maker | Comparison | `/2026/08/thumbnail-extractor-vs-maker.html` | homepage | Extractor is not Canva/Studio upload. |
+| YouTube Studio custom thumbnail 2026 | Freshness | `/2026/08/youtube-studio-thumbnail-2026.html` | homepage | Confirm public files after Studio upload. |
 | youtube thumbnail image / original image | Tool | `https://www.11tik.com/` | size guide | Do not claim 4K if maxres is 1280×720. |
 
 ## Cannibalization rules

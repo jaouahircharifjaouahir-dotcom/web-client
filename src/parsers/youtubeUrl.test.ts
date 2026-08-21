@@ -70,4 +70,10 @@ describe("normalizeYouTubeUrl", () => {
     `);
     expect(parsed.map((item) => item.videoId)).toEqual(["dQw4w9WgXcQ"]);
   });
+
+  it("rejects channel URLs without a video ID", () => {
+    const parsed = normalizeYouTubeUrl("https://www.youtube.com/@mkbhd");
+    expect(parsed.valid).toBe(false);
+    expect(parsed.errorCode).toBe("CHANNEL_OR_PLAYLIST");
+  });
 });

@@ -1,12 +1,7 @@
 name: search-ping
 
+# Manual only. No cron and no run after Pages deploy.
 on:
-  schedule:
-    - cron: "*/10 * * * *"
-    - cron: "0 8 * * *"
-  workflow_run:
-    workflows: [pages]
-    types: [completed]
   workflow_dispatch:
     inputs:
       all:
@@ -20,23 +15,11 @@ concurrency:
 
 jobs:
   ping:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache@v4
-        with:
-          path: .search-ping-stamp
-          key: search-ping-v1
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Submit URLs
-        env:
-          SUBMIT_ALL: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.all != 'false' || github.event.schedule == '0 8 * * *' || github.event_name == 'workflow_run' }}
-        run: |
-          if [ "$SUBMIT_ALL" = "true" ]; then
-            node scripts/search-engines-ping.mjs --all
-          else
-            node scripts/search-engines-ping.mjs
-          fi
+        run: node scripts/search-engines-ping.mjs --all

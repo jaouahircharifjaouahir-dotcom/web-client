@@ -2,15 +2,20 @@ import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
 import { GUIDE_POSTS } from "./content/posts";
+import { relatedGuides } from "./content/related";
 import { DEFAULT_HERO, findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
+import { bulkResultsCsv, downloadCsv } from "./export/csv";
 import { historyStore } from "./history/store";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "./hooks/theme";
-import { isLikelyMediaUrl, mediaSharePath, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
+import { isLikelyMediaUrl, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
+import { scorePublicThumbnail } from "./score/readImage";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
+import { shareUrlFor } from "./share/url";
+import { tagsForThumbnail } from "./tags/fromExtract";
 import { userMessage } from "./types/errors";
 import { QUALITY_PRESETS } from "./engines/presets";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
@@ -61,6 +66,8 @@ export default function App() {
   const [error, setError] = useState("");
   const [result, setResult] = useState<ThumbnailExtractionResult | null>(null);
   const [bulkResults, setBulkResults] = useState<ThumbnailExtractionResult[]>([]);
+  const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [thumbScore, setThumbScore] = useState<{ score: number; notes: string[] } | null>(null);
   const [recentHistory, setRecentHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
   const parsed = useMemo(() => (input.trim() ? normalizeMediaUrl(input) : null), [input]);
@@ -127,10 +134,8 @@ export default function App() {
   };
 
   const sharePageUrl = () => {
-    const platform = result?.meta?.platform ?? "youtube";
-    const id = result?.videoId;
-    if (!id) return `${config.publicSiteUrl}/`;
-    return `${config.publicSiteUrl}${mediaSharePath(platform, id)}`;
+    if (!result) return `${config.publicSiteUrl}/`;
+    return shareUrlFor(result);
   };
 
   useEffect(() => {
@@ -155,6 +160,7 @@ export default function App() {
         bestThumbnailUrl: entry.bestThumbnail?.url ?? null,
         bestWidth: entry.bestThumbnail?.width ?? null,
         bestHeight: entry.bestThumbnail?.height ?? null,
+        title: entry.meta?.title ?? null,
       }),
     );
   };
@@ -181,6 +187,7 @@ export default function App() {
         analytics.track("extraction_failure");
         return;
       }
+      setResult(extracted);
       remember(extracted);
       syncShareUrl(extracted.meta?.platform ?? parsedUrl.platform, extracted.videoId);
       analytics.track("extraction_success");
@@ -216,6 +223,8 @@ export default function App() {
     abortRef.current = controller;
     setBusy(true);
     setBulkResults([]);
+    setCompareIds([]);
+    setResult(null);
     setError("");
     analytics.track("bulk_mode_used");
     const next: ThumbnailExtractionResult[] = [];
@@ -233,8 +242,40 @@ export default function App() {
       }
     }
     setBusy(false);
-    if (next[0]) setResult(next[0]);
   };
+
+  useEffect(() => {
+    if (!result?.bestThumbnail) {
+      setThumbScore(null);
+      return;
+    }
+    let cancelled = false;
+    void scorePublicThumbnail(result.bestThumbnail.url, result.bestThumbnail.width, result.bestThumbnail.height).then((next) => {
+      if (!cancelled) setThumbScore(next);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [result]);
+
+  useEffect(() => {
+    const existing = document.getElementById("yte-video-jsonld");
+    existing?.remove();
+    if (!result?.bestThumbnail || !result.meta?.title) return;
+    const script = document.createElement("script");
+    script.id = "yte-video-jsonld";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: result.meta.title,
+      thumbnailUrl: result.bestThumbnail.url,
+      url: shareUrlFor(result),
+      embedUrl: result.normalizedUrl,
+    });
+    document.head.appendChild(script);
+    return () => script.remove();
+  }, [result]);
 
   const hint = !input.trim()
     ? bulk
@@ -295,11 +336,11 @@ export default function App() {
         <section className="yte-hero">
           <h1>{heroTitle}</h1>
           <p>{heroIntro}</p>
-          {result?.meta?.title ? (
+          {result?.bestThumbnail && !bulk ? (
             <p className="yte-video-meta">
-              {result.meta.platform === "vimeo" ? "Vimeo" : "YouTube"}
-              {result.meta.authorName ? ` · ${result.meta.authorName}` : ""}
-              {` · ${result.meta.title}`}
+              {result.meta?.platform === "vimeo" ? "Vimeo" : "YouTube"}
+              {result.meta?.authorName ? ` · ${result.meta.authorName}` : ""}
+              {` · ${result.meta?.title || result.videoId}`}
             </p>
           ) : null}
           <nav aria-label="Keyword links" className="yte-kw">
@@ -365,7 +406,7 @@ export default function App() {
               <button className="yte-btn" type="submit" disabled={busy || !input.trim()}>
                 {busy ? "Finding thumbnail…" : bulk ? "Extract all" : "Get Thumbnail Image"}
               </button>
-              {result?.bestThumbnail ? (
+              {result?.bestThumbnail && !bulk ? (
                 <>
                   <button className="yte-ghost" type="button" onClick={() => void showCopied("Link copied!", sharePageUrl())}>
                     Copy share link
@@ -376,7 +417,7 @@ export default function App() {
                     onClick={() => {
                       const url = sharePageUrl();
                       if (navigator.share) {
-                        void navigator.share({ title: "11tik thumbnail", url }).catch(() => undefined);
+                        void navigator.share({ title: result.meta?.title || "11tik thumbnail", url }).catch(() => undefined);
                       } else {
                         void showCopied("Link copied!", url);
                       }
@@ -414,6 +455,12 @@ export default function App() {
                       {item.tier.toUpperCase()} · {item.quality}
                     </span>
                   </div>
+                  {index === 0 && thumbScore ? <p className="yte-score">Packaging score {thumbScore.score}/100</p> : null}
+                  <ul className="yte-tags">
+                    {tagsForThumbnail(result, item, index === 0).map((tag) => (
+                      <li key={`${item.url}-${tag}`}>{tag}</li>
+                    ))}
+                  </ul>
                   <div className="yte-row">
                     <button
                       className="yte-btn"
@@ -463,6 +510,15 @@ export default function App() {
                       {item.bestThumbnail?.quality ?? "best"}
                     </span>
                   </div>
+                  <p className="yte-video-meta">{item.meta?.title || item.videoId}</p>
+                  {item.bestThumbnail ? (
+                    <ul className="yte-tags">
+                      {tagsForThumbnail(item, item.bestThumbnail, true).map((tag) => (
+                        <li key={`${item.videoId}-${tag}`}>{tag}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  <p className="yte-hint ok">{shareUrlFor(item)}</p>
                   {item.bestThumbnail ? (
                     <div className="yte-row">
                       <button
@@ -476,6 +532,36 @@ export default function App() {
                         }}
                       >
                         Download thumbnail video {index + 1} {item.bestThumbnail.quality}
+                      </button>
+                      <button className="yte-ghost" type="button" onClick={() => void showCopied("Link copied!", shareUrlFor(item))}>
+                        Copy share link
+                      </button>
+                      <button
+                        className="yte-ghost"
+                        type="button"
+                        onClick={() => {
+                          const url = shareUrlFor(item);
+                          if (navigator.share) {
+                            void navigator.share({ title: item.meta?.title || "11tik thumbnail", url }).catch(() => undefined);
+                          } else {
+                            void showCopied("Link copied!", url);
+                          }
+                        }}
+                      >
+                        Share
+                      </button>
+                      <button
+                        className="yte-ghost"
+                        type="button"
+                        aria-pressed={compareIds.includes(item.videoId)}
+                        onClick={() =>
+                          setCompareIds((current) => {
+                            if (current.includes(item.videoId)) return current.filter((id) => id !== item.videoId);
+                            return [...current, item.videoId].slice(-2);
+                          })
+                        }
+                      >
+                        Compare
                       </button>
                     </div>
                   ) : null}
@@ -499,7 +585,30 @@ export default function App() {
               >
                 Download all highest quality
               </button>
+              <button
+                className="yte-ghost"
+                type="button"
+                onClick={() => downloadCsv("11tik-bulk-thumbnails.csv", bulkResultsCsv(bulkResults))}
+              >
+                Export CSV
+              </button>
             </div>
+            {compareIds.length === 2 ? (
+              <div className="yte-compare" style={{ marginTop: 16 }}>
+                {compareIds.map((id) => {
+                  const item = bulkResults.find((row) => row.videoId === id);
+                  if (!item?.bestThumbnail) return null;
+                  return (
+                    <article className="yte-shot" key={id}>
+                      <ThumbnailPreview url={item.bestThumbnail.url} label={item.meta?.title || id} />
+                      <p>{item.meta?.title || id}</p>
+                    </article>
+                  );
+                })}
+              </div>
+            ) : (
+              <p className="yte-hint">Select Compare on two videos for a side-by-side view.</p>
+            )}
             {bulkLowerQualityRows(bulkResults).map((row) => (
               <div className="yte-bulk-quality" key={row.quality}>
                 <p className="yte-kicker">{row.quality.toUpperCase()}</p>
@@ -546,7 +655,7 @@ export default function App() {
                     void runOne(item.normalizedUrl);
                   }}
                 >
-                  {item.normalizedUrl}
+                  {item.title || item.normalizedUrl}
                 </button>
               ))}
             </div>
@@ -590,6 +699,13 @@ export default function App() {
         <p className="yte-foot">
           Public YouTube thumbnails only. No accounts, no video download, no tracking of pasted URLs.
         </p>
+        <nav className="yte-kw" aria-label="Related guides">
+          {relatedGuides("").map((post) => (
+            <a href={post.href} key={post.href}>
+              {post.title}
+            </a>
+          ))}
+        </nav>
           </>
         )}
       </div>

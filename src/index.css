@@ -224,7 +224,31 @@ a.yte-brand:focus-visible {
   padding: 10px 12px;
   cursor: pointer;
 }
-.yte-list { display: grid; gap: 8px; }
+.yte-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width:700px){ .yte-compare { grid-template-columns: 1fr; } }
+.yte-score { font-weight: 700; color: var(--yte-ok); }
+.yte-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.yte-tags li {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--yte-line);
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--yte-ink);
+}
 .yte-power pre {
   overflow: auto;
   font-size: 12px;

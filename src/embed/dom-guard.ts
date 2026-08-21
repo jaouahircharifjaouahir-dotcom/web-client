@@ -32,7 +32,4 @@ export function installDomGuards(): void {
 
 export function keepDomGuards(): void {
   installDomGuards();
-  document.addEventListener("DOMContentLoaded", installDomGuards);
-  window.addEventListener("load", installDomGuards);
-  [50, 250, 1000, 2500].forEach((ms) => window.setTimeout(installDomGuards, ms));
 }

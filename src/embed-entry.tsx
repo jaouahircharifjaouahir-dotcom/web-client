@@ -39,7 +39,6 @@ function mount(): void {
   createRoot(mountPoint).render(<App />);
 }
 
-keepDomGuards();
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", mount, { once: true });
 } else {

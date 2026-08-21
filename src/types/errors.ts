@@ -9,6 +9,8 @@ const USER_MESSAGES: Record<AppErrorCode, string> = {
   TIMEOUT: "Thumbnail discovery timed out. Try again.",
   IMAGE_VALIDATION_FAILED: "The thumbnail could not be verified as a valid image.",
   DOWNLOAD_FAILED: "The file could not be downloaded. Try opening the image instead.",
+  CHANNEL_OR_PLAYLIST:
+    "Paste video URLs, not a channel or playlist link. The browser cannot list a channel’s videos without a YouTube API.",
 };
 
 export function createAppError(code: AppErrorCode): AppError {

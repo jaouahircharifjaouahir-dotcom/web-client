@@ -4,6 +4,7 @@
   <head>
     <meta charset='utf-8'/>
     <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
+    <meta content='097E992407C1ECCFA89DCCE434CE1278' name='msvalidate.01'/>
     <script type='text/javascript'>
 (function () {
   try {
@@ -47,8 +48,8 @@
       <meta content='Download YouTube thumbnails instantly in the highest available quality, free. Extract HD images from any YouTube video or Shorts URL.' property='og:description'/>
       <meta content='https://www.11tik.com/' property='og:url'/>
       <meta content='2026-08-19T00:00:00Z' property='article:published_time'/>
-      <meta content='2026-08-19T00:00:00Z' property='article:modified_time'/>
-      <meta content='2026-08-19T00:00:00Z' property='og:updated_time'/>
+      <meta content='2026-08-21T00:00:00Z' property='article:modified_time'/>
+      <meta content='2026-08-21T00:00:00Z' property='og:updated_time'/>
       <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' property='og:image'/>
       <meta content='1200' property='og:image:width'/>
       <meta content='630' property='og:image:height'/>
@@ -72,44 +73,32 @@
       <meta content='11tik YouTube Thumbnail Extractor' property='og:image:alt'/>
       <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
     </b:if>
-    <meta content='11tik-theme-v26' name='yte-build'/>
-    <link href='https://jaouahircharifjaouahir-dotcom.github.io/web-client/site.webmanifest' rel='manifest'/>
+    <meta content='11tik-theme-v31' name='yte-build'/>
+    <link href='https://www.11tik.com/web-client/site.webmanifest' rel='manifest'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
-    <b:if cond='data:blog.url contains "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26"'>
-    <b:else/>
-      <link href='https://www.googletagmanager.com' rel='preconnect'/>
-      <script async='async' src='https://www.googletagmanager.com/gtag/js?id=G-FW7B8NDZZ5'></script>
-      <script type='text/javascript'><![CDATA[
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-FW7B8NDZZ5');
-]]></script>
-    </b:if>
     <b:if cond='data:view.isHomepage'>
-      <link href='https://jaouahircharifjaouahir-dotcom.github.io' rel='preconnect'/>
-      <link href='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=19' rel='preload' as='script'/>
+      <link href='https://www.11tik.com' rel='preconnect'/>
+      <link href='https://i.ytimg.com' rel='dns-prefetch'/>
+      <link href='https://i.vimeocdn.com' rel='dns-prefetch'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.css?v=22' rel='preload' as='style'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.js?v=22' rel='preload' as='script'/>
       <script type='application/ld+json'>
 {"@context":"https://schema.org","@graph":[
   {"@type":"Organization","@id":"https://www.11tik.com/#org","name":"11tik","url":"https://www.11tik.com/","logo":{"@type":"ImageObject","url":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png"},"sameAs":["https://github.com/jaouahircharifjaouahir-dotcom/web-client"]},
   {"@type":"WebSite","@id":"https://www.11tik.com/#website","name":"11tik","url":"https://www.11tik.com/","inLanguage":"en","publisher":{"@id":"https://www.11tik.com/#org"}},
-  {"@type":"WebPage","@id":"https://www.11tik.com/#webpage","url":"https://www.11tik.com/","name":"YouTube Thumbnail Extractor – Download HD YouTube Thumbnails","inLanguage":"en","datePublished":"2026-08-19","dateModified":"2026-08-19","isPartOf":{"@id":"https://www.11tik.com/#website"},"about":{"@id":"https://www.11tik.com/#app"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png","width":1200,"height":630},"breadcrumb":{"@id":"https://www.11tik.com/#crumbs"}},
+  {"@type":"WebPage","@id":"https://www.11tik.com/#webpage","url":"https://www.11tik.com/","name":"YouTube Thumbnail Extractor – Download HD YouTube Thumbnails","inLanguage":"en","datePublished":"2026-08-19","dateModified":"2026-08-21","isPartOf":{"@id":"https://www.11tik.com/#website"},"about":{"@id":"https://www.11tik.com/#app"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630},"breadcrumb":{"@id":"https://www.11tik.com/#crumbs"}},
   {"@type":"BreadcrumbList","@id":"https://www.11tik.com/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.11tik.com/"},{"@type":"ListItem","position":2,"name":"YouTube Thumbnail Extractor","item":"https://www.11tik.com/"}]},
-  {"@type":["WebApplication","SoftwareApplication"],"@id":"https://www.11tik.com/#app","name":"YouTube Thumbnail Extractor","applicationCategory":"MultimediaApplication","operatingSystem":"Any","url":"https://www.11tik.com/","image":"https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png","screenshot":"https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png","description":"Download YouTube and Vimeo thumbnails instantly in the highest available quality, free.","isAccessibleForFree":true,"featureList":["Paste a YouTube, Shorts, or Vimeo URL","Preview public thumbnail sizes including WebP when available","Batch extract and zip downloads","Copy image URL or share a deep link","Embeddable extractor widget"],"datePublished":"2026-08-19","dateModified":"2026-08-20","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://www.11tik.com/#org"}},
-  {"@type":"HowTo","name":"Download a YouTube thumbnail","description":"Use the 11tik extractor to find and download a public YouTube thumbnail in the browser.","totalTime":"PT1M","step":[{"@type":"HowToStep","position":1,"name":"Paste a public YouTube URL","text":"Paste a watch, youtu.be, Shorts, or embed URL that contains a public video ID."},{"@type":"HowToStep","position":2,"name":"Wait for available sizes","text":"The page checks public thumbnail files and lists only the sizes that exist for that video."},{"@type":"HowToStep","position":3,"name":"Download or copy","text":"Download the highest available image, pick another size, or copy the public image URL."}]},
-  {"@type":"ItemList","name":"11tik thumbnail guides","itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html"},{"@type":"ListItem","position":2,"url":"https://www.11tik.com/2026/08/youtube-thumbnail-url.html"},{"@type":"ListItem","position":3,"url":"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html"},{"@type":"ListItem","position":4,"url":"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html"},{"@type":"ListItem","position":5,"url":"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html"},{"@type":"ListItem","position":6,"url":"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html"},{"@type":"ListItem","position":7,"url":"https://www.11tik.com/p/embed.html"}]},
+  {"@type":["WebApplication","SoftwareApplication"],"@id":"https://www.11tik.com/#app","name":"YouTube Thumbnail Extractor","applicationCategory":"MultimediaApplication","operatingSystem":"Any","url":"https://www.11tik.com/","image":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","screenshot":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","description":"Download YouTube and Vimeo thumbnails instantly in the highest available quality, free.","isAccessibleForFree":true,"featureList":["Paste a YouTube, Shorts, or Vimeo URL","Preview public thumbnail sizes including WebP when available","Batch extract and zip downloads","Copy image URL or share a deep link","Embeddable extractor widget"],"datePublished":"2026-08-19","dateModified":"2026-08-21","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://www.11tik.com/#org"}},
+  {"@type":"Article","@id":"https://www.11tik.com/#article","headline":"YouTube Thumbnail Extractor","inLanguage":"en","datePublished":"2026-08-19","dateModified":"2026-08-21","author":{"@id":"https://www.11tik.com/#org"},"publisher":{"@id":"https://www.11tik.com/#org"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630},"mainEntityOfPage":{"@id":"https://www.11tik.com/#webpage"}},
+  {"@type":"HowTo","name":"How do I download a YouTube thumbnail in HD?","description":"Paste a public YouTube URL into 11tik and download the highest public still that exists.","totalTime":"PT1M","step":[{"@type":"HowToStep","position":1,"name":"Copy a public URL","text":"Copy the video or Shorts URL from YouTube."},{"@type":"HowToStep","position":2,"name":"Paste it into 11tik","text":"Paste a watch, youtu.be, Shorts, or embed URL that contains a public video ID."},{"@type":"HowToStep","position":3,"name":"Download or copy","text":"Download the highest available public image, pick another size, or copy the image URL."}]},
+  {"@type":"ItemList","name":"11tik thumbnail guides","itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html"},{"@type":"ListItem","position":2,"url":"https://www.11tik.com/2026/08/youtube-thumbnail-url.html"},{"@type":"ListItem","position":3,"url":"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html"},{"@type":"ListItem","position":4,"url":"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html"},{"@type":"ListItem","position":5,"url":"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html"},{"@type":"ListItem","position":6,"url":"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html"},{"@type":"ListItem","position":7,"url":"https://www.11tik.com/p/embed.html"},{"@type":"ListItem","position":8,"url":"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html"},{"@type":"ListItem","position":9,"url":"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html"}]},
   {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is a YouTube thumbnail?","acceptedAnswer":{"@type":"Answer","text":"A YouTube thumbnail is the preview image shown for a video or Short. This tool finds the publicly available image files YouTube hosts for that video."}},
-    {"@type":"Question","name":"How do I download a YouTube thumbnail?","acceptedAnswer":{"@type":"Answer","text":"Paste a public YouTube URL, wait for the available sizes to appear, then choose Download. Processing happens in your browser."}},
-    {"@type":"Question","name":"What is the highest available YouTube thumbnail resolution?","acceptedAnswer":{"@type":"Answer","text":"When YouTube published a maxres file, it is usually 1280x720. If that file is missing, the extractor selects the next valid public size."}},
-    {"@type":"Question","name":"How do I get a YouTube thumbnail URL?","acceptedAnswer":{"@type":"Answer","text":"After extraction, use Copy image URL on the size you want. That copies the direct image address from YouTube public image hosts."}},
-    {"@type":"Question","name":"Can I download thumbnails from YouTube Shorts?","acceptedAnswer":{"@type":"Answer","text":"Yes. Shorts URLs are supported the same way as regular video URLs, as long as the thumbnail files are public."}},
-    {"@type":"Question","name":"What thumbnail sizes are available?","acceptedAnswer":{"@type":"Answer","text":"Common public files include default, mqdefault, hqdefault, sddefault, and maxresdefault. The tool only lists sizes that actually exist for that video."}},
-    {"@type":"Question","name":"Do I need to install software?","acceptedAnswer":{"@type":"Answer","text":"No. The extractor runs in the browser. You do not install an app or browser extension."}},
-    {"@type":"Question","name":"Does the tool store my YouTube links?","acceptedAnswer":{"@type":"Answer","text":"Pasted URLs are processed in the browser. They are not sent to an 11tik server. Optional local history stays on your device until you clear it."}},
-    {"@type":"Question","name":"Is the thumbnail extractor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no account and no paid download of the thumbnail files."}},
-    {"@type":"Question","name":"How does the thumbnail extractor work?","acceptedAnswer":{"@type":"Answer","text":"It reads the video ID from a supported YouTube URL, checks public thumbnail image URLs, validates which files exist, and ranks the highest available image."}}
+    {"@type":"Question","name":"How do I download a YouTube thumbnail in HD?","acceptedAnswer":{"@type":"Answer","text":"Paste a public YouTube URL into 11tik, then download the first listed size. That file is the highest public still YouTube published for the video."}},
+    {"@type":"Question","name":"What thumbnail sizes does YouTube actually publish?","acceptedAnswer":{"@type":"Answer","text":"Common public files include default, mqdefault, hqdefault, sddefault, and maxresdefault. A maxres file is usually 1280x720 when it exists. The tool only lists sizes that exist."}},
+    {"@type":"Question","name":"How do I copy a working YouTube thumbnail URL?","acceptedAnswer":{"@type":"Answer","text":"After extraction, use Copy image URL. That copies the direct image address from YouTube public image hosts, not the watch page."}},
+    {"@type":"Question","name":"Can I extract a YouTube Shorts thumbnail?","acceptedAnswer":{"@type":"Answer","text":"Yes. Shorts URLs work the same way as watch URLs when the thumbnail files are public."}},
+    {"@type":"Question","name":"Is the thumbnail extractor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no account and no paid download of the public thumbnail files."}}
   ]}
 ]}
       </script>
@@ -135,9 +124,10 @@ margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:non
 body[data-yte-posts="1"] .yte-seo,
 body[data-yte-posts="1"] .yte-seo-nav,
 body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
-.yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:min(920px,calc(100% - 24px));margin:0 auto}
+.yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:min(920px,calc(100% - 24px));margin:0 auto;content-visibility:auto;contain-intrinsic-size:auto 800px}
 .yte-crumbs{padding:16px 0 0;font-size:13px;color:#5c5666}
 .yte-crumbs a{color:#c2410c}
+.yte-byline,.yte-updated{font-size:14px;color:#5c5666;margin:0 0 8px}
 .yte-seo h1{font-size:1.7rem;line-height:1.2;margin:24px 0 12px}
 .yte-preview{display:block;width:min(100%,640px);height:auto;margin:8px 0 20px;border-radius:14px}
 .yte-seo h2{font-size:1.35rem;margin:28px 0 10px}
@@ -162,52 +152,35 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
       <article class='yte-seo'>
         <nav aria-label='Breadcrumb' class='yte-crumbs'><a href='https://www.11tik.com/'>Home</a> / YouTube Thumbnail Extractor</nav>
         <h1>YouTube Thumbnail Extractor</h1>
-        <img alt='11tik YouTube Thumbnail Extractor – paste a URL and download an HD thumbnail' class='yte-preview' height='630' src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' width='1200'/>
-        <h2>How the thumbnail extractor works</h2>
+        <p class='yte-byline'>By <a href='https://www.11tik.com/p/about.html'>11tik</a></p>
+        <p class='yte-updated'>Last updated: 21 August 2026</p>
+        <p>Paste a public YouTube or Vimeo URL to download the highest available public thumbnail in your browser. 11tik checks real image files, lists only sizes that exist, and does not upload your link to an 11tik server.</p>
+        <img alt='11tik extractor showing a pasted YouTube URL and HD public thumbnail preview' class='yte-preview' decoding='async' fetchpriority='low' height='630' loading='lazy' src='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' width='1200'/>
+        <h2>How do I download a YouTube thumbnail in HD?</h2>
+        <p>Paste a watch, youtu.be, Shorts, or embed URL that contains a public video ID, then download the first listed size. That file is the highest public still YouTube actually published.</p>
         <ol>
-          <li>Paste a watch, youtu.be, Shorts, or embed URL that contains a public video ID.</li>
-          <li>The page checks public thumbnail files and lists only the sizes that exist for that video.</li>
-          <li>Download the highest available image, pick another size, or copy the public image URL.</li>
+          <li>Copy the public video or Shorts URL from YouTube.</li>
+          <li>Paste it into the extractor on this page. Extraction starts when the ID is valid.</li>
+          <li>Download the top result, pick another surviving size, or copy the image URL.</li>
         </ol>
-        <p>Paste a supported YouTube or Vimeo URL. The page reads the video ID in your browser, checks public thumbnail image URLs, and lists every size that actually exists. Nothing is uploaded to an 11tik server. TikTok and Instagram are not supported yet because their public thumbnail endpoints are blocked for third-party sites.</p>
-        <h2>What you can do</h2>
-        <ul>
-          <li>Paste a YouTube or Shorts URL</li>
-          <li>Preview public thumbnail sizes</li>
-          <li>Download the highest available public image</li>
-          <li>Copy the public thumbnail URL</li>
-        </ul>
-        <h2>Supported URL types</h2>
-        <ul>
-          <li>Standard watch URLs: youtube.com/watch?v=</li>
-          <li>Short links: youtu.be/</li>
-          <li>YouTube Shorts: youtube.com/shorts/</li>
-          <li>Vimeo: vimeo.com/ID and player.vimeo.com/video/ID</li>
-          <li>Embedded and live YouTube URLs that still contain a public video ID</li>
-        </ul>
-        <h2>Thumbnail quality and sizes</h2>
-        <p>YouTube hosts several public stills for most videos. A maxres file, when published, is usually 1280×720. If that file is missing, the extractor ranks the next valid public size. Details are in the <a href='https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html'>thumbnail size guide</a> and the <a href='https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html'>highest quality thumbnail</a> page.</p>
-        <h2>FAQ</h2>
+        <p>Nothing is uploaded to an 11tik server. TikTok and Instagram are not supported because their public thumbnail endpoints are blocked for third-party sites.</p>
+        <h2>What thumbnail sizes does YouTube actually publish?</h2>
+        <p>YouTube hosts several public stills for most videos. A maxres file, when published, is usually 1280×720. If that file is missing, the extractor ranks the next valid public size instead of inventing pixels.</p>
+        <p>Details are in the <a href='https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html'>thumbnail size guide</a> and the <a href='https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html'>highest quality thumbnail</a> page.</p>
+        <h2>How do I copy a working YouTube thumbnail URL?</h2>
+        <p>After the valid sizes appear, use Copy image URL on the size you need. That copies the direct address on YouTube’s public image hosts, not the watch page.</p>
+        <h2>Can I extract a YouTube Shorts thumbnail?</h2>
+        <p>Yes. Shorts URLs work the same way as watch URLs when the stills are public. The tool shows the real pixel size of each file instead of forcing a vertical export.</p>
+        <h2>What URL types are supported?</h2>
+        <p>Standard watch URLs, youtu.be short links, youtube.com/shorts/, Vimeo watch and player URLs, and embedded or live YouTube URLs that still contain a public video ID.</p>
+        <h2>Is the thumbnail extractor free?</h2>
+        <p>Yes. There is no account and no paid download of the public thumbnail files. Processing stays in the browser.</p>
         <h3>What is a YouTube thumbnail?</h3>
         <p>A YouTube thumbnail is the preview image shown for a video or Short. This tool finds the publicly available image files YouTube hosts for that video.</p>
-        <h3>How do I download a YouTube thumbnail?</h3>
-        <p>Paste a public YouTube URL, wait for the available sizes to appear, then choose Download. Processing happens in your browser.</p>
-        <h3>What is the highest available YouTube thumbnail resolution?</h3>
-        <p>When YouTube published a maxres file, it is usually 1280×720. If that file is missing, the extractor selects the next valid public size.</p>
-        <h3>How do I get a YouTube thumbnail URL?</h3>
-        <p>After extraction, use Copy image URL on the size you want. That copies the direct image address from YouTube public image hosts.</p>
-        <h3>Can I download thumbnails from YouTube Shorts?</h3>
-        <p>Yes. Shorts URLs are supported the same way as regular video URLs, as long as the thumbnail files are public.</p>
-        <h3>What thumbnail sizes are available?</h3>
-        <p>Common public files include default, mqdefault, hqdefault, sddefault, and maxresdefault. The tool only lists sizes that actually exist for that video.</p>
         <h3>Do I need to install software?</h3>
         <p>No. The extractor runs in the browser. You do not install an app or browser extension.</p>
         <h3>Does the tool store my YouTube links?</h3>
         <p>Pasted URLs are processed in the browser. They are not sent to an 11tik server. Optional local history stays on your device until you clear it.</p>
-        <h3>Is the thumbnail extractor free?</h3>
-        <p>Yes. There is no account and no paid download of the thumbnail files.</p>
-        <h3>How does the thumbnail extractor work?</h3>
-        <p>It reads the video ID from a supported YouTube URL, checks public thumbnail image URLs, validates which files exist, and ranks the highest available image.</p>
       </article>
       <nav aria-label='Site' class='yte-seo-nav'>
         <a href='https://www.11tik.com/'>YouTube Thumbnail Extractor</a>
@@ -221,6 +194,8 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
         <a href='https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html'>Highest quality thumbnail</a>
         <a href='https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html'>Original thumbnail image</a>
         <a href='https://www.11tik.com/p/embed.html'>Embed the extractor</a>
+        <a href='https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html'>Extractor vs thumbnail maker</a>
+        <a href='https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html'>YouTube Studio thumbnail notes 2026</a>
       </nav>
       <p class='yte-seo-foot'>Public YouTube thumbnails only. No accounts, no video download, and no server-side storage of pasted URLs.</p>
       </main>
@@ -291,11 +266,12 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
   "mainEntityOfPage": "<data:post.url.canonical.jsonEscaped/>",
   "inLanguage": "en",
   "isAccessibleForFree": true,
-  "author": {"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},
+  "author": {"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},
   "publisher": {"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},
+  "datePublished": "<data:post.date.iso8601.jsonEscaped/>",
   "image": {
     "@type": "ImageObject",
-    "url": "https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png",
+    "url": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
     "width": 1200,
     "height": 630
   }
@@ -328,48 +304,64 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
     <script type='text/javascript'>
 (function () {
   function strip() {
-    var nodes = document.querySelectorAll('link[rel=&quot;me&quot;], link[href*=&quot;blogger.com/profile&quot;], link[href*=&quot;blogger.com/feeds&quot;], a[href*=&quot;blogger.com/profile&quot;], a[href=&quot;https://www.blogger.com&quot;], a[href=&quot;https://www.blogger.com/&quot;]');
+    var nodes = document.querySelectorAll('link[rel=&quot;me&quot;], a[href*=&quot;blogger.com/profile&quot;]');
     for (var i = 0; i &lt; nodes.length; i++) {
       var el = nodes[i];
       if (el.parentNode) el.parentNode.removeChild(el);
     }
-    var att = document.getElementById('Attribution1');
-    if (att) att.innerHTML = '';
   }
   strip();
-  if (document.documentElement &amp;&amp; window.MutationObserver) {
-    new MutationObserver(strip).observe(document.documentElement, {childList: true, subtree: true});
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', strip, {once: true});
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script defer='defer' src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/blogger-app.js?v=19' type='text/javascript'><![CDATA[ ]]></script>
+      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=22' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {
     var host = document.getElementById('yte-root');
-    if (!host) return;
-    var root = host.shadowRoot;
-    if (!root) return;
-    var brand = root.querySelector('.yte-brand');
-    if (!brand) return;
-    if (brand.tagName === 'A') {
+    if (!host || !host.shadowRoot) return false;
+    var brand = host.shadowRoot.querySelector('.yte-brand');
+    if (!brand) return false;
+    if (brand.tagName !== 'A') {
+      var a = document.createElement('a');
+      a.className = brand.className;
+      a.setAttribute('href', 'https://www.11tik.com/');
+      while (brand.firstChild) a.appendChild(brand.firstChild);
+      if (brand.parentNode) brand.parentNode.replaceChild(a, brand);
+    } else {
       brand.setAttribute('href', 'https://www.11tik.com/');
-      return;
     }
-    var a = document.createElement('a');
-    a.className = brand.className;
-    a.setAttribute('href', 'https://www.11tik.com/');
-    while (brand.firstChild) {
-      a.appendChild(brand.firstChild);
-    }
-    if (brand.parentNode) brand.parentNode.replaceChild(a, brand);
+    return true;
   }
-  setTimeout(wire, 500);
-  setTimeout(wire, 1500);
-  setTimeout(wire, 3000);
+  if (wire()) return;
+  var host = document.getElementById('yte-root');
+  if (!host || !window.MutationObserver) {
+    setTimeout(wire, 400);
+    return;
+  }
+  var obs = new MutationObserver(function () { if (wire()) obs.disconnect(); });
+  obs.observe(host, {childList: true, subtree: true});
+  setTimeout(function () { obs.disconnect(); }, 4000);
 })();
       </script>
+    </b:if>
+    <b:if cond='data:blog.url contains "9f3a7c1e4b8d2f06a5c9e3b7d1f48a26"'>
+    <b:else/>
+      <script type='text/javascript'><![CDATA[
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.addEventListener("load", function () {
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-FW7B8NDZZ5";
+  s.onload = function () {
+    gtag("js", new Date());
+    gtag("config", "G-FW7B8NDZZ5");
+  };
+  document.head.appendChild(s);
+});
+]]></script>
     </b:if>
   </body>
 </html>

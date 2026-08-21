@@ -10,7 +10,8 @@ export type AppErrorCode =
   | "NETWORK_ERROR"
   | "TIMEOUT"
   | "IMAGE_VALIDATION_FAILED"
-  | "DOWNLOAD_FAILED";
+  | "DOWNLOAD_FAILED"
+  | "CHANNEL_OR_PLAYLIST";
 
 export interface ParsedYouTubeUrl {
   valid: boolean;
@@ -81,6 +82,7 @@ export interface HistoryEntry {
   bestThumbnailUrl: string | null;
   bestWidth: number | null;
   bestHeight: number | null;
+  title?: string | null;
 }
 
 export interface AppError {

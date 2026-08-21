@@ -1,21 +1,36 @@
-<!doctype html>
-<html lang="en">
-<body>
-  <article>
-    <h1>YouTube thumbnail size and resolution</h1>
-    <p>YouTube does not give every video the same still. Public files are named by size. The <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a> lists only the files that exist for that video ID.</p>
-    <h2>Typical public sizes</h2>
-    <ul>
-      <li><strong>maxresdefault</strong> — highest common public still, usually 1280×720 when present</li>
-      <li><strong>sddefault</strong> — 640×480 class file when published</li>
-      <li><strong>hqdefault</strong> — 480×360 class file</li>
-      <li><strong>mqdefault</strong> — smaller medium file</li>
-      <li><strong>default</strong> — smallest standard still</li>
-    </ul>
-    <h2>Missing maxres is normal</h2>
-    <p>If a video never received a maxres file, the extractor ranks the next valid image. That is expected behavior, not a failed download of the video itself.</p>
-    <h2>Related</h2>
-    <p><a href="https://www.11tik.com/">Extract HD YouTube thumbnails</a> · <a href="https://www.11tik.com/p/youtube-shorts-thumbnail.html">Shorts thumbnails</a></p>
-  </article>
-</body>
-</html>
+<style>
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
+.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
+.yte-page p,.yte-page li{color:#5c5666}
+.yte-page a{color:#c2410c}
+.yte-byline,.yte-updated{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 20px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
+</style>
+<article class="yte-page">
+  <h1>YouTube thumbnail size and resolution</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html">11tik</a></p>
+  <p class="yte-updated">Last updated: 21 August 2026</p>
+  <p>YouTube does not give every video the same still. Public files are named by size. The <a href="https://www.11tik.com/">11tik extractor</a> lists only the files that exist for that video ID, including WebP when YouTube published it.</p>
+  <img alt="Public YouTube thumbnail size options shown in the 11tik extractor" class="yte-hero" height="630" src="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" width="1200"/>
+  <h2>What thumbnail sizes does YouTube actually publish?</h2>
+  <p>Typical public names are default, mqdefault, hqdefault, sddefault, and maxresdefault. Maxres, when present, is usually 1280×720. The extractor never invents a larger file than YouTube stored.</p>
+  <ul>
+    <li><strong>maxresdefault</strong> — highest common public still, usually 1280×720 when present</li>
+    <li><strong>sddefault</strong> — 640×480 class file when published</li>
+    <li><strong>hqdefault</strong> — 480×360 class file</li>
+    <li><strong>mqdefault</strong> — smaller medium file</li>
+    <li><strong>default</strong> — smallest standard still</li>
+  </ul>
+  <h2>Why is maxres sometimes missing?</h2>
+  <p>Some uploads never received a maxres file. 11tik then ranks the next valid image. That is expected, not a failed video download.</p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
+  <p><a href="https://www.11tik.com/">Extract HD thumbnails</a> · <a href="https://www.11tik.com/p/youtube-shorts-thumbnail.html">Shorts thumbnails</a></p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"YouTube thumbnail size and resolution","datePublished":"2026-08-19","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
+  {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What thumbnail sizes does YouTube actually publish?","acceptedAnswer":{"@type":"Answer","text":"Public files are named default, mq, hq, sd, and maxres. Maxres is usually 1280x720 when it exists."}},{"@type":"Question","name":"Why is maxres sometimes missing?","acceptedAnswer":{"@type":"Answer","text":"YouTube did not publish that file for the video. The extractor uses the next valid size."}}]}
+]}
+  </script>
+</article>

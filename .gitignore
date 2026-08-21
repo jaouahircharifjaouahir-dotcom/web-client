@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 .search-ping-stamp
+.env
+secrets/
+*credentials*.json
+*-sa.json
+google-indexing.json
 
 # Editor directories and files
 .vscode/*

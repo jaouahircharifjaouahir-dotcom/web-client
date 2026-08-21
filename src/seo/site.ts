@@ -1,6 +1,7 @@
 export const SITE = {
   brand: "11tik",
   name: "YouTube Thumbnail Extractor",
+  author: "11tik",
   origin: "https://www.11tik.com",
   canonicalHome: "https://www.11tik.com/",
   title: "YouTube Thumbnail Extractor – Download HD YouTube Thumbnails",

@@ -87,14 +87,14 @@
       <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     </b:if>
-    <meta content='11tik-theme-v51' name='yte-build'/>
+    <meta content='11tik-theme-v52' name='yte-build'/>
     <link href='https://www.11tik.com/web-client/site.webmanifest' rel='manifest'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
       <link href='https://www.googletagmanager.com' rel='dns-prefetch'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.css?v=42' rel='preload' as='style'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.js?v=44' rel='preload' as='script'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.css?v=45' rel='preload' as='style'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.js?v=45' rel='preload' as='script'/>
       <script type='application/ld+json'>
 {"@context":"https://schema.org","@graph":[
   {"@type":"Organization","@id":"https://www.11tik.com/#org","name":"11tik","url":"https://www.11tik.com/","logo":{"@type":"ImageObject","url":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png"},"sameAs":["https://www.11tik.com/"]},
@@ -128,9 +128,8 @@ div[id*="cookieChoice"],iframe[src*="cookiechoices"]{display:none!important;heig
 .page,.page_body,.widget.Blog,.blog-posts,.post-outer,.post,.widget,.widget-content{
 margin:0;padding:0;border:0;background:transparent;box-shadow:none;max-width:none;width:100%
 }
-#yte-root{display:block;min-height:70vh}
+#yte-root{display:block;min-height:100svh;min-height:100vh;contain:layout}
 @media (max-width:700px){
-#yte-root{min-height:0}
 .yte-seo h1{font-size:1.35rem}
 .yte-seo,.yte-seo-nav,.yte-seo-foot,.yte-static{width:calc(100% - 24px)}
 }
@@ -395,7 +394,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=44' type='text/javascript'></script>
+      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=45' type='text/javascript'></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

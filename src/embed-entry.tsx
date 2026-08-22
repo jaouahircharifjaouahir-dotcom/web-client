@@ -19,6 +19,44 @@ function cssHref(): string {
   return "blogger-app.css";
 }
 
+const CRITICAL_SHADOW_CSS = `:host{display:block;min-height:100svh;min-height:100vh}
+.yte-app{min-height:100svh;min-height:100vh}
+.yte-shell{width:min(920px,calc(100% - 24px));margin:0 auto;padding:16px 0 40px}
+.yte-lang,.yte-lang select{max-width:200px}
+.yte-ad{min-height:90px}`;
+
+function paintApp(rootNode: ParentNode): void {
+  const mountPoint = document.createElement("div");
+  mountPoint.id = "yte-mount";
+  rootNode.appendChild(mountPoint);
+  createRoot(mountPoint).render(<App />);
+  window.setTimeout(() => stampSeoImages(), 50);
+}
+
+async function applyShadowCss(rootNode: ShadowRoot): Promise<void> {
+  const boot = document.createElement("style");
+  boot.textContent = CRITICAL_SHADOW_CSS;
+  rootNode.appendChild(boot);
+  try {
+    const res = await fetch(cssHref());
+    if (!res.ok) return;
+    const css = await res.text();
+    const full = document.createElement("style");
+    full.textContent = css;
+    rootNode.appendChild(full);
+  } catch {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssHref();
+    await new Promise<void>((resolve) => {
+      link.onload = () => resolve();
+      link.onerror = () => resolve();
+      window.setTimeout(resolve, 800);
+      rootNode.appendChild(link);
+    });
+  }
+}
+
 function mount(): void {
   const host = document.getElementById("yte-root") || document.getElementById("root");
   if (!host || host.getAttribute("data-yte-mounted") === "1") return;
@@ -28,17 +66,11 @@ function mount(): void {
   const useShadow = "attachShadow" in host && host.id === "yte-root";
   const rootNode = useShadow ? host.shadowRoot ?? host.attachShadow({ mode: "open" }) : host;
   if (useShadow) {
-    const styles = document.createElement("link");
-    styles.rel = "stylesheet";
-    styles.href = cssHref();
-    rootNode.appendChild(styles);
+    void applyShadowCss(rootNode as ShadowRoot).then(() => paintApp(rootNode));
+    return;
   }
 
-  const mountPoint = document.createElement("div");
-  mountPoint.id = "yte-mount";
-  rootNode.appendChild(mountPoint);
-  createRoot(mountPoint).render(<App />);
-  window.setTimeout(() => stampSeoImages(), 50);
+  paintApp(rootNode);
 }
 
 if (document.readyState === "loading") {

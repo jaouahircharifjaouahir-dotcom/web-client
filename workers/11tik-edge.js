@@ -613,7 +613,7 @@ function rewriteGithubAsset(el, attr) {
 }
 
 function bloggerRuntimeStubs() {
-  return `<script>window.cookieChoices=window.cookieChoices||{};window._WidgetManager=window._WidgetManager||{_Init:function(){},_SetDataContext:function(){},_RegisterWidget:function(){return{_SetWidget:function(){return this;},display:function(){}};}};</script>`;
+  return `<script>window.cookieChoices=window.cookieChoices||{};function _WidgetInfo(){return this;}window._WidgetInfo=window._WidgetInfo||_WidgetInfo;window._WidgetManager=window._WidgetManager||new Proxy({},{get:function(t,p){if(p==="then")return;return function(){return t;}}});</script>`;
 }
 
 function polishBloggerHtml(response) {

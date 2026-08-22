@@ -583,7 +583,7 @@ function fetchBlogger(request) {
   const headers = new Headers(request.headers);
   headers.set("x-11tik-pass", "1");
   return fetch(new Request(request.url, { method: "GET", headers }), {
-    cf: { resolveOverride: "ghs.googlehosted.com", cacheEverything: true, cacheTtl: 120 },
+    cf: { resolveOverride: "ghs.googlehosted.com", cacheEverything: true, cacheTtl: 0 },
   });
 }
 
@@ -600,19 +600,9 @@ function polishBloggerHtml(response) {
     .on("script[src]", {
       element(el) {
         const src = el.getAttribute("src") || "";
-        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/") || src.includes("cookienotice.js") || src.includes("googletagmanager.com/gtag/js")) {
+        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/") || src.includes("cookienotice.js")) {
           el.remove();
         }
-      },
-    })
-    .on("script", {
-      text(text) {
-        if (text.text.includes("googletagmanager.com/gtag/js")) text.replace("", { html: false });
-      },
-    })
-    .on("body", {
-      element(el) {
-        el.append(gaSnippet(), { html: true });
       },
     })
     .on("link[rel]", {

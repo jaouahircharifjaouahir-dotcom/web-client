@@ -427,7 +427,6 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
       </script>
     </b:if>
       <script type='text/javascript'>
-//<![CDATA[
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 function loadGtag(){
@@ -446,24 +445,25 @@ function loadGtag(){
   window.addEventListener(ev, loadGtag, { once: true, passive: true });
 });
 window.setTimeout(loadGtag, 8000);
+      </script>
+      <script type='text/javascript'>
 (function stampImages() {
   function visit(root) {
     if (!root || !root.querySelectorAll) return;
     var imgs = root.querySelectorAll("img");
-    for (var i = 0; i < imgs.length; i++) {
+    for (var i = 0; i &lt; imgs.length; i++) {
       var img = imgs[i];
       var alt = (img.getAttribute("alt") || "").trim() || document.title || "11tik YouTube thumbnail";
       img.setAttribute("alt", alt);
       if (!(img.getAttribute("title") || "").trim()) img.setAttribute("title", alt);
     }
     var all = root.querySelectorAll("*");
-    for (var j = 0; j < all.length; j++) if (all[j].shadowRoot) visit(all[j].shadowRoot);
+    for (var j = 0; j &lt; all.length; j++) if (all[j].shadowRoot) visit(all[j].shadowRoot);
   }
   function run() { visit(document); }
   run();
   if (window.MutationObserver) new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
 })();
-//]]>
       </script>
   </body>
 </html>

@@ -9,7 +9,9 @@ import {
   allPublicSitemapUrls,
   childSitemapUrls,
   chunkEntries,
+  originFromHost,
   parseSitemapPath,
+  rewriteLoc,
   robotsTxt,
   sitemapIndexXml,
   urlsetXml,
@@ -37,7 +39,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "48";
+const APP_ASSET_V = "49";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -395,18 +397,19 @@ async function handleSitemapAdd(request, env, ctx) {
   const loc = await saveExtract(env, parsed.platform, parsed.videoId, extra);
   const stored = await readLibraryRow(env, parsed.platform, parsed.videoId);
   const gate = stored?.gate || qualityForVideo(stored || {});
-  ctx?.waitUntil(
-    gate.decision === "INDEX"
-      ? pingCrawlers([`${SITE}/sitemap.xml`, `${SITE}/sitemap-images.xml`])
-      : Promise.resolve(),
-  );
+  const requestOrigin = originFromHost(new URL(request.url).hostname);
+  const pingList = [`${SITE}/sitemap.xml`, `${SITE}/image-sitemap.xml`];
+  if (requestOrigin !== SITE) {
+    pingList.push(`${requestOrigin}/sitemap.xml`, `${requestOrigin}/image-sitemap.xml`);
+  }
+  ctx?.waitUntil(gate.decision === "INDEX" ? pingCrawlers(pingList) : Promise.resolve());
   return new Response(JSON.stringify({ ok: true, loc, pinged: gate.decision === "INDEX", gate }), {
     headers: { "content-type": "application/json", ...corsHeaders() },
   });
 }
 
-async function collectPageEntries(env) {
-  const blogger = await bloggerLocs();
+async function collectPageEntries(env, origin = SITE) {
+  const blogger = origin === SITE ? await bloggerLocs() : new Map();
   const extracts = await listExtracts(env);
   const seen = new Set(blogger.keys());
   let newest = "1970-01-01T00:00:00.000Z";
@@ -417,38 +420,42 @@ async function collectPageEntries(env) {
     if (lastmod && lastmod > newest) newest = lastmod;
   }
   if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
-  blogger.set(`${SITE}/`, newest);
-  blogger.set(`${SITE}/trending-tags`, newest);
-  blogger.set(`${SITE}/stats`, newest);
-  blogger.set(`${SITE}/copyright`, newest);
-  blogger.set(`${SITE}/guide/youtube-thumbnails`, newest);
-  for (const loc of localeSitemapLocs()) {
-    if (!blogger.has(loc)) blogger.set(loc, newest);
+  blogger.set(`${origin}/`, newest);
+  blogger.set(`${origin}/trending-tags`, newest);
+  blogger.set(`${origin}/stats`, newest);
+  blogger.set(`${origin}/copyright`, newest);
+  blogger.set(`${origin}/guide/youtube-thumbnails`, newest);
+  if (origin === SITE) {
+    for (const loc of localeSitemapLocs()) {
+      if (!blogger.has(loc)) blogger.set(loc, newest);
+    }
   }
   const indexedTags = await listIndexedTags(env);
   for (const tag of indexedTags) {
-    blogger.set(`${SITE}/tag/${tag.slug}`, tag.updated || newest);
+    blogger.set(`${origin}/tag/${tag.slug}`, tag.updated || newest);
   }
   const entries = [];
   for (const [loc, lastmod] of blogger) {
-    entries.push({ loc, lastmod: lastmod || newest });
+    entries.push({ loc: rewriteLoc(loc, origin), lastmod: lastmod || newest });
   }
   for (const row of extracts) {
     if (row?.gate && row.gate.decision !== "INDEX") continue;
-    if (!row?.loc || seen.has(row.loc)) continue;
-    seen.add(row.loc);
-    entries.push({ loc: row.loc, lastmod: row.lastmod || newest });
+    if (!row?.loc) continue;
+    const loc = rewriteLoc(row.loc, origin);
+    if (seen.has(loc)) continue;
+    seen.add(loc);
+    entries.push({ loc, lastmod: row.lastmod || newest });
   }
   return { entries, newest };
 }
 
-async function collectImageEntries(env) {
+async function collectImageEntries(env, origin = SITE) {
   const rows = await listIndexedExtracts(env, MAX_URLS);
   const entries = [];
   let newest = "1970-01-01T00:00:00.000Z";
   for (const row of rows) {
     if (!row?.loc || !row?.thumb) continue;
-    entries.push(row);
+    entries.push({ ...row, loc: rewriteLoc(row.loc, origin) });
     if (row.lastmod && row.lastmod > newest) newest = row.lastmod;
   }
   if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
@@ -479,7 +486,9 @@ function sitemapResponse(xml, newest, request) {
 }
 
 async function handleSitemapRoute(request, env, parsed) {
-  const data = parsed.kind === "images" ? await collectImageEntries(env) : await collectPageEntries(env);
+  const origin = originFromHost(new URL(request.url).hostname);
+  const data =
+    parsed.kind === "images" ? await collectImageEntries(env, origin) : await collectPageEntries(env, origin);
   const pages = chunkEntries(data.entries);
   await announceIfNewShards(
     env,
@@ -492,7 +501,7 @@ async function handleSitemapRoute(request, env, parsed) {
       if (parsed.kind === "images") return sitemapResponse(imageSitemapXml(only), data.newest, request);
       return sitemapResponse(urlsetXml(only), data.newest, request);
     }
-    const locs = childSitemapUrls(parsed.kind === "images" ? "images" : "pages", pages.length);
+    const locs = childSitemapUrls(parsed.kind === "images" ? "images" : "pages", pages.length, origin);
     return sitemapResponse(sitemapIndexXml(locs, data.newest), data.newest, request);
   }
   const page = parsed.role === "legacy" ? 1 : parsed.page;
@@ -510,6 +519,7 @@ async function handleRobots(request, env) {
     urlShards: meta.urlShards,
     imageShards: meta.imageShards,
     host: request.headers.get("host") || "www.11tik.com",
+    origin: originFromHost(new URL(request.url).hostname),
   });
   return new Response(body, {
     headers: {
@@ -759,11 +769,22 @@ export default {
       return Response.redirect(legal, 301);
     }
 
+    if (url.pathname === "/web-client/sitemap-add") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, { status: 204, headers: corsHeaders() });
+      }
+      if (request.method === "POST" || request.method === "GET") {
+        return handleSitemapAdd(request, env, ctx);
+      }
+      return new Response("Method not allowed", { status: 405, headers: corsHeaders() });
+    }
+
     if (url.pathname === "/robots.txt") {
       return handleRobots(request, env);
     }
     if (url.pathname === "/sitemap-pages.xml") {
-      return fetchBlogger(request);
+      if (host === "www.11tik.com") return fetchBlogger(request);
+      return new Response("Not found", { status: 404 });
     }
     const sitemapPath = parseSitemapPath(url.pathname);
     if (sitemapPath) {
@@ -782,16 +803,6 @@ export default {
 
     if (isAppShellPath(url.pathname)) {
       return localeAppPage("en", "www.11tik.com");
-    }
-
-    if (url.pathname === "/web-client/sitemap-add") {
-      if (request.method === "OPTIONS") {
-        return new Response(null, { status: 204, headers: corsHeaders() });
-      }
-      if (request.method === "POST" || request.method === "GET") {
-        return handleSitemapAdd(request, env, ctx);
-      }
-      return new Response("Method not allowed", { status: 405, headers: corsHeaders() });
     }
 
     if (!url.pathname.startsWith("/web-client/") || url.pathname.includes("..")) {

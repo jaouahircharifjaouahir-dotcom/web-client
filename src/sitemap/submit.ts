@@ -2,7 +2,7 @@ import { shareUrlForIds } from "../share/url";
 import { tagsForResult } from "../tags/fromExtract";
 import type { ThumbnailExtractionResult } from "../types";
 
-const ENDPOINT = "https://www.11tik.com/web-client/sitemap-add";
+const ENDPOINT = "/web-client/sitemap-add";
 const sent = new Set<string>();
 
 export function submitVideoToSitemap(platform: string, videoId: string): void {

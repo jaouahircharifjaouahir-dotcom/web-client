@@ -42,6 +42,14 @@ describe("robots.txt", () => {
     expect(allPublicSitemapUrls(2, 1).every((loc) => body.includes(`Sitemap: ${loc}`) || body.includes(loc))).toBe(true);
   });
 
+  it("lists locale sitemaps on the same host", () => {
+    const body = robotsTxt({ urlShards: 1, imageShards: 1, host: "fr.11tik.com", origin: "https://fr.11tik.com" });
+    expect(body).toContain("Sitemap: https://fr.11tik.com/sitemap.xml");
+    expect(body).toContain("Sitemap: https://fr.11tik.com/image-sitemap.xml");
+    expect(body).toContain("Host: fr.11tik.com");
+    expect(body).not.toContain("Sitemap: https://www.11tik.com/sitemap.xml");
+  });
+
   it("parses sitemap paths used by the worker", () => {
     expect(parseSitemapPath("/sitemap.xml")).toEqual({ kind: "pages", role: "index" });
     expect(parseSitemapPath("/sitemap-3.xml")).toEqual({ kind: "pages", role: "page", page: 3 });

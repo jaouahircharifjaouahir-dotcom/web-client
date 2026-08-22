@@ -34,25 +34,40 @@ export function sitemapIndexXml(locs, lastmod) {
   return parts.join("");
 }
 
-export function childSitemapUrls(kind, count) {
+export function originFromHost(host) {
+  const name = String(host || "").toLowerCase().split(":")[0];
+  if (!name || name === "www.11tik.com" || name === "11tik.com") return SITE_ORIGIN;
+  if (name.endsWith(".11tik.com")) return `https://${name}`;
+  return SITE_ORIGIN;
+}
+
+export function rewriteLoc(loc, origin = SITE_ORIGIN) {
+  const href = String(loc || "");
+  if (!origin || origin === SITE_ORIGIN) return href;
+  return href.replace("https://www.11tik.com", origin).replace("http://www.11tik.com", origin);
+}
+
+export function childSitemapUrls(kind, count, origin = SITE_ORIGIN) {
   const prefix = kind === "images" ? "sitemap-images" : "sitemap";
   const n = Math.max(1, count);
   const urls = [];
-  for (let i = 1; i <= n; i += 1) urls.push(`${SITE_ORIGIN}/${prefix}-${i}.xml`);
+  for (let i = 1; i <= n; i += 1) urls.push(`${origin}/${prefix}-${i}.xml`);
   return urls;
 }
 
-export function allPublicSitemapUrls(urlShards = 1, imageShards = 1) {
-  const urls = [`${SITE_ORIGIN}/sitemap.xml`, `${SITE_ORIGIN}/image-sitemap.xml`, `${SITE_ORIGIN}/sitemap-pages.xml`];
-  if (urlShards > 1) urls.push(...childSitemapUrls("pages", urlShards));
+export function allPublicSitemapUrls(urlShards = 1, imageShards = 1, origin = SITE_ORIGIN) {
+  const urls = [`${origin}/sitemap.xml`, `${origin}/image-sitemap.xml`];
+  if (origin === SITE_ORIGIN) urls.push(`${SITE_ORIGIN}/sitemap-pages.xml`);
+  if (urlShards > 1) urls.push(...childSitemapUrls("pages", urlShards, origin));
   if (imageShards > 1) {
-    urls.push(`${SITE_ORIGIN}/sitemap-images.xml`, ...childSitemapUrls("images", imageShards));
+    urls.push(`${origin}/sitemap-images.xml`, ...childSitemapUrls("images", imageShards, origin));
   }
   return urls;
 }
 
-export function robotsTxt({ urlShards = 1, imageShards = 1, host = "www.11tik.com" } = {}) {
-  const sitemaps = [...new Set(allPublicSitemapUrls(urlShards, imageShards))];
+export function robotsTxt({ urlShards = 1, imageShards = 1, host = "www.11tik.com", origin } = {}) {
+  const site = origin || originFromHost(host);
+  const sitemaps = [...new Set(allPublicSitemapUrls(urlShards, imageShards, site))];
   const sitemapLines = sitemaps.map((loc) => `Sitemap: ${loc}`).join("\n");
   return `# 11tik robots.txt
 # https://www.11tik.com/

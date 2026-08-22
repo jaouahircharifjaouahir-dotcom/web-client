@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.3' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
-    <script src='https://www.11tik.com/web-client/rights-boot.js?v=48' type='text/javascript'></script>
+    <script src='https://www.11tik.com/web-client/rights-boot.js?v=49' type='text/javascript'></script>
     <script type='text/javascript'>cookieChoices={};function _WidgetInfo(){return this;}window._WidgetInfo=window._WidgetInfo||_WidgetInfo;window._WidgetManager=window._WidgetManager||{_Init:function(){},_SetDataContext:function(){},_RegisterWidget:function(){return{_SetWidget:function(){return this;},display:function(){}};}};</script>
     <meta charset='utf-8'/>
     <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
@@ -94,8 +94,8 @@
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
       <link href='https://www.googletagmanager.com' rel='dns-prefetch'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.css?v=48' rel='preload' as='style'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.js?v=48' rel='preload' as='script'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.css?v=49' rel='preload' as='style'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.js?v=49' rel='preload' as='script'/>
       <script type='application/ld+json'>
 {"@context":"https://schema.org","@graph":[
   {"@type":"Organization","@id":"https://www.11tik.com/#org","name":"11tik","url":"https://www.11tik.com/","logo":{"@type":"ImageObject","url":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png"},"sameAs":["https://www.11tik.com/"]},
@@ -395,7 +395,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=48' type='text/javascript'></script>
+      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=49' type='text/javascript'></script>
       <script type='text/javascript'>
 (function () {
   function wire() {
@@ -426,7 +426,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
       </script>
     </b:if>
-      <script defer='defer' src='https://www.11tik.com/web-client/ga-boot.js?v=48' type='text/javascript'></script>
+      <script defer='defer' src='https://www.11tik.com/web-client/ga-boot.js?v=49' type='text/javascript'></script>
       <script type='text/javascript'>
 (function stampImages() {
   function visit(root) {

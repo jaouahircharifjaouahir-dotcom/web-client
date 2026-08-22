@@ -249,6 +249,7 @@ export default function App() {
     try {
       const extracted = await extractThumbnails(parsedUrl, controller.signal, (next) => {
         startTransition(() => setResult(next));
+        if (next.bestThumbnail) submitShareToSitemap(next);
       });
       if (!extracted.bestThumbnail) {
         setError(userMessage("THUMBNAIL_NOT_FOUND"));

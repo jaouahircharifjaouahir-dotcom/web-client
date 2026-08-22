@@ -21,6 +21,13 @@ const STOP = new Set([
   "watch",
 ]);
 
+export function displayTag(value: string): string {
+  return String(value || "")
+    .trim()
+    .replace(/^#+/, "")
+    .trim();
+}
+
 function slugWords(value: string | null | undefined, limit: number): string[] {
   if (!value) return [];
   const seen = new Set<string>();
@@ -36,7 +43,7 @@ function slugWords(value: string | null | undefined, limit: number): string[] {
 
 /** Prefer the video's published YouTube tags; fall back to title words only if none exist. */
 export function tagsForThumbnail(result: ThumbnailExtractionResult, thumb: ThumbnailCandidate, _isBest: boolean): string[] {
-  const published = (result.meta?.tags || []).map((tag) => tag.trim()).filter(Boolean);
+  const published = (result.meta?.tags || []).map(displayTag).filter(Boolean);
   if (published.length) {
     const tags = [...published];
     if (result.type === "shorts" && !tags.some((tag) => tag.toLowerCase() === "shorts")) tags.push("shorts");
@@ -54,7 +61,7 @@ export function tagsForThumbnail(result: ThumbnailExtractionResult, thumb: Thumb
 }
 
 export function tagsForResult(result: ThumbnailExtractionResult): string[] {
-  const published = (result.meta?.tags || []).map((tag) => tag.trim()).filter(Boolean);
+  const published = (result.meta?.tags || []).map(displayTag).filter(Boolean);
   if (published.length) return [...new Set(published)].slice(0, 40);
   const best = result.bestThumbnail;
   if (!best) return slugWords(result.meta?.title, 6);

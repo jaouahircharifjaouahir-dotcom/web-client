@@ -39,6 +39,18 @@ describe("tagsForThumbnail", () => {
     expect(published).toEqual(["Luis Fonsi", "Despacito", "Official Music Video"]);
   });
 
+  it("strips leading hashtags from published tags", () => {
+    const published = tagsForThumbnail(
+      {
+        ...result("kJQP7kiw5Fk", "Despacito", "Luis Fonsi"),
+        meta: { platform: "youtube", title: "Despacito", authorName: "Luis Fonsi", tags: ["#Luis", "##Despacito"] },
+      } as ThumbnailExtractionResult,
+      thumb,
+      true,
+    );
+    expect(published).toEqual(["Luis", "Despacito"]);
+  });
+
   it("uses title, author, and video id so two videos do not share the same chips", () => {
     const a = tagsForThumbnail(result("dQw4w9WgXcQ", "Never Gonna Give You Up", "Rick Astley"), thumb, true);
     const b = tagsForThumbnail(result("jNQXAC9IVRw", "Me at the zoo", "jawed"), thumb, true);

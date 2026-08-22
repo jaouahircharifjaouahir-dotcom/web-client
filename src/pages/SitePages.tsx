@@ -118,7 +118,7 @@ function Trending({ origin }: { origin: string }) {
         <div className="yte-list">
           {tags.map((tag) => (
             <a className="yte-item" href={`${origin.replace(/\/$/, "")}/tag/${tag.slug}`} key={tag.slug}>
-              #{tag.name} · {tag.count}
+              {tag.name} · {tag.count}
             </a>
           ))}
         </div>

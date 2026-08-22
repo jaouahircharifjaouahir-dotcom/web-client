@@ -103,7 +103,7 @@ async function saveExtract(env, platform, videoId, extra = {}) {
   const loc = locFor(platform, videoId);
   const lastmod = new Date().toISOString();
   let tags = Array.isArray(extra.tags)
-    ? extra.tags.map((tag) => String(tag || "").trim()).filter(Boolean).slice(0, 40)
+    ? extra.tags.map((tag) => String(tag || "").trim().replace(/^#+/, "").trim()).filter(Boolean).slice(0, 40)
     : [];
   let title = String(extra.title || "").slice(0, 180);
   if (platform === "youtube" && (!tags.length || !title)) {
@@ -391,12 +391,12 @@ function localeAppPage(code, host) {
   <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=37" as="style"/>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=37" as="script"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=38" as="style"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=38" as="script"/>
 </head>
 <body>
   <div id="yte-root"></div>
-  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=37"></script>
+  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=38"></script>
 </body>
 </html>`;
   return new Response(html, {

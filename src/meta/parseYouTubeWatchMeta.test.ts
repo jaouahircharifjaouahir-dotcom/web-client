@@ -12,6 +12,11 @@ describe("parseYouTubeWatchMeta", () => {
     });
   });
 
+  it("strips leading hashtags from keywords", () => {
+    const html = `<meta name="keywords" content="#Luis, ##Despacito">`;
+    expect(parseYouTubeWatchMeta(html).tags).toEqual(["Luis", "Despacito"]);
+  });
+
   it("reads ytInitialData keywords array", () => {
     const html = `"keywords":["one","two","three"]`;
     expect(parseYouTubeWatchMeta(html).tags).toEqual(["one", "two", "three"]);

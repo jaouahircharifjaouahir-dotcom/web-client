@@ -95,7 +95,13 @@ async function collectSitemapUrls() {
     const locs = locsFromXml(xml);
     const isIndex = /<sitemapindex[\s>]/i.test(xml);
     for (const loc of locs) {
-      if (!loc.startsWith("https://www.11tik.com")) continue;
+      let host = "";
+      try {
+        host = new URL(loc).hostname;
+      } catch {
+        continue;
+      }
+      if (host !== "11tik.com" && !host.endsWith(".11tik.com")) continue;
       if (isIndex) {
         if (!queue.includes(loc) && loc !== sitemapUrl) queue.push(loc);
         continue;
@@ -103,7 +109,11 @@ async function collectSitemapUrls() {
       seen.add(loc);
     }
   }
-  return [...seen];
+  return [...seen].sort((a, b) => {
+    const aw = a.includes("://www.11tik.com") ? 0 : 1;
+    const bw = b.includes("://www.11tik.com") ? 0 : 1;
+    return aw - bw || a.localeCompare(b);
+  });
 }
 
 async function notify(token, url) {

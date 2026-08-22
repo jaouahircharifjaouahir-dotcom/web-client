@@ -8,7 +8,10 @@ export function parseYouTubeWatchMeta(html) {
   const tags = [];
   const seen = new Set();
   const push = (value) => {
-    const tag = String(value || "").trim();
+    const tag = String(value || "")
+      .trim()
+      .replace(/^#+/, "")
+      .trim();
     if (!tag || seen.has(tag.toLowerCase())) return;
     seen.add(tag.toLowerCase());
     tags.push(tag);
@@ -95,7 +98,10 @@ async function fetchInnertubeMeta(videoId) {
     const tags = [];
     const seen = new Set();
     for (const item of details.keywords || []) {
-      const tag = String(item || "").trim();
+      const tag = String(item || "")
+        .trim()
+        .replace(/^#+/, "")
+        .trim();
       if (!tag || seen.has(tag.toLowerCase())) continue;
       seen.add(tag.toLowerCase());
       tags.push(tag);

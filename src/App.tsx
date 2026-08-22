@@ -568,7 +568,7 @@ export default function App() {
                     <p className="yte-tags">
                       {tagsForResult(result).map((tag) => (
                         <a className="yte-chip" href={`/tag/${encodeURIComponent(tag)}`} key={tag}>
-                          #{tag}
+                          {tag}
                         </a>
                       ))}
                     </p>

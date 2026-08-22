@@ -27,7 +27,9 @@ export async function fetchYouTubePublicMeta(videoId: string, signal: AbortSigna
     });
     if (response.ok) {
       const data = (await response.json()) as { title?: string; authorName?: string; tags?: string[] };
-      const tags = Array.isArray(data.tags) ? data.tags.map((tag) => String(tag).trim()).filter(Boolean) : [];
+      const tags = Array.isArray(data.tags)
+        ? data.tags.map((tag) => String(tag).trim().replace(/^#+/, "").trim()).filter(Boolean)
+        : [];
       if (tags.length || data.title) {
         return {
           title: data.title?.trim() || null,

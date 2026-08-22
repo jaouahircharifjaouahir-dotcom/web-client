@@ -1,4 +1,5 @@
 {
+  // Workers Builds: first automatic deploy after GitHub connect.
   "name": "11tik-edge",
   "account_id": "f9da186fc6cbf157fd99d88fe700d0c4",
   "main": "workers/11tik-edge.js",

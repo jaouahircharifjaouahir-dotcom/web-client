@@ -43,14 +43,12 @@ export function childSitemapUrls(kind, count) {
 }
 
 export function allPublicSitemapUrls(urlShards = 1, imageShards = 1) {
-  return [
-    `${SITE_ORIGIN}/sitemap.xml`,
-    ...childSitemapUrls("pages", urlShards),
-    `${SITE_ORIGIN}/sitemap-images.xml`,
-    ...childSitemapUrls("images", imageShards),
-    `${SITE_ORIGIN}/image-sitemap.xml`,
-    `${SITE_ORIGIN}/sitemap-pages.xml`,
-  ];
+  const urls = [`${SITE_ORIGIN}/sitemap.xml`, `${SITE_ORIGIN}/image-sitemap.xml`, `${SITE_ORIGIN}/sitemap-pages.xml`];
+  if (urlShards > 1) urls.push(...childSitemapUrls("pages", urlShards));
+  if (imageShards > 1) {
+    urls.push(`${SITE_ORIGIN}/sitemap-images.xml`, ...childSitemapUrls("images", imageShards));
+  }
+  return urls;
 }
 
 export function robotsTxt({ urlShards = 1, imageShards = 1, host = "www.11tik.com" } = {}) {

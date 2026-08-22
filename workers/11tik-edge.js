@@ -487,6 +487,11 @@ async function handleSitemapRoute(request, env, parsed) {
     parsed.kind === "images" ? pages.length : (await readShardMeta(env)).imageShards,
   );
   if (parsed.role === "index") {
+    if (pages.length <= 1) {
+      const only = pages[0] || [];
+      if (parsed.kind === "images") return sitemapResponse(imageSitemapXml(only), data.newest, request);
+      return sitemapResponse(urlsetXml(only), data.newest, request);
+    }
     const locs = childSitemapUrls(parsed.kind === "images" ? "images" : "pages", pages.length);
     return sitemapResponse(sitemapIndexXml(locs, data.newest), data.newest, request);
   }

@@ -26,6 +26,12 @@ describe("sitemap sharding", () => {
 });
 
 describe("robots.txt", () => {
+  it("keeps a single sitemap.xml when the file is not full", () => {
+    const body = robotsTxt({ urlShards: 1, imageShards: 1 });
+    expect(body).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
+    expect(body).not.toContain("sitemap-1.xml");
+  });
+
   it("lists the index and every current child sitemap", () => {
     const body = robotsTxt({ urlShards: 2, imageShards: 1, host: "www.11tik.com" });
     expect(body).toContain("User-agent: Googlebot");
@@ -33,7 +39,7 @@ describe("robots.txt", () => {
     expect(body).not.toMatch(/^Disallow: \/$/m);
     expect(body).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
     expect(body).toContain("Sitemap: https://www.11tik.com/sitemap-2.xml");
-    expect(allPublicSitemapUrls(2, 1).every((loc) => body.includes(loc))).toBe(true);
+    expect(allPublicSitemapUrls(2, 1).every((loc) => body.includes(`Sitemap: ${loc}`) || body.includes(loc))).toBe(true);
   });
 
   it("parses sitemap paths used by the worker", () => {

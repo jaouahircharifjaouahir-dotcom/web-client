@@ -61,14 +61,17 @@ export function localeHostUrl(code) {
   return `https://${code}.11tik.com/`;
 }
 
-export function hreflangLinks() {
+export function hreflangLinks(pathname = "/") {
+  const suffix = !pathname || pathname === "/" ? "/" : pathname.replace(/\/+$/, "") || "/";
+  const en = suffix === "/" ? "https://www.11tik.com/" : `https://www.11tik.com${suffix}`;
   const lines = [
-    `<link rel="alternate" hreflang="en" href="https://www.11tik.com/"/>`,
-    `<link rel="alternate" hreflang="x-default" href="https://www.11tik.com/"/>`,
+    `<link rel="alternate" hreflang="en" href="${en}"/>`,
+    `<link rel="alternate" hreflang="x-default" href="${en}"/>`,
   ];
   for (const [code] of ISO6391) {
     if (code === "en") continue;
-    lines.push(`<link rel="alternate" hreflang="${code}" href="https://${code}.11tik.com/"/>`);
+    const href = suffix === "/" ? `https://${code}.11tik.com/` : `https://${code}.11tik.com${suffix}`;
+    lines.push(`<link rel="alternate" hreflang="${code}" href="${href}"/>`);
   }
   return lines.join("\n  ");
 }

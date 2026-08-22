@@ -39,7 +39,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "50";
+const APP_ASSET_V = "51";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -425,6 +425,18 @@ async function collectPageEntries(env, origin = SITE) {
   blogger.set(`${origin}/stats`, newest);
   blogger.set(`${origin}/copyright`, newest);
   blogger.set(`${origin}/guide/youtube-thumbnails`, newest);
+  if (origin !== SITE) {
+    for (const page of [
+      "/p/about.html",
+      "/p/privacy.html",
+      "/p/terms-of-use.html",
+      "/p/contact.html",
+      "/p/embed.html",
+      "/p/keyword-tools.html",
+    ]) {
+      blogger.set(`${origin}${page}`, newest);
+    }
+  }
   if (origin === SITE) {
     for (const loc of localeSitemapLocs()) {
       if (!blogger.has(loc)) blogger.set(loc, newest);
@@ -549,15 +561,28 @@ function legalPageRedirect(pathname) {
   return "";
 }
 
+function localeLegalPath(pathname) {
+  const path = pathname.replace(/\/+$/, "") || "/";
+  if (path === "/about") return "/p/about.html";
+  if (path === "/privacy") return "/p/privacy.html";
+  if (path === "/contact") return "/p/contact.html";
+  if (path === "/terms") return "/p/terms-of-use.html";
+  if (path === "/embed") return "/p/embed.html";
+  if (path === "/keyword-tools") return "/p/keyword-tools.html";
+  return "";
+}
+
 function isAppShellPath(pathname) {
-  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$)/.test(
+  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/p\/embed\.html$|\/p\/keyword-tools\.html$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$)/.test(
     pathname,
   );
 }
 
-function localeAppPage(code, host) {
+function localeAppPage(code, host, pathname = "/") {
   const copy = localeCopy(code);
   const origin = `https://${host}/`;
+  const path = (pathname || "/").replace(/\/+$/, "") || "/";
+  const pageUrl = path === "/" ? origin : `https://${host}${path}`;
   const css = assetUrl("blogger-app.css");
   const js = assetUrl("blogger-app.js");
   const html = `<!DOCTYPE html>
@@ -568,14 +593,14 @@ function localeAppPage(code, host) {
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>${copy.title}</title>
   <meta name="description" content="${copy.description}"/>
-  <link rel="canonical" href="${origin}"/>
-  ${hreflangLinks()}
+  <link rel="canonical" href="${pageUrl}"/>
+  ${hreflangLinks(path)}
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="${copy.locale}"/>
   <meta property="og:site_name" content="11tik"/>
   <meta property="og:title" content="${copy.title}"/>
   <meta property="og:description" content="${copy.description}"/>
-  <meta property="og:url" content="${origin}"/>
+  <meta property="og:url" content="${pageUrl}"/>
   ${brandHead(copy)}
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
@@ -797,14 +822,18 @@ export default {
       if (lang === "en") {
         return Response.redirect("https://www.11tik.com/" + url.pathname + url.search + url.hash, 301);
       }
+      const legalPath = localeLegalPath(url.pathname);
+      if (legalPath) {
+        return Response.redirect(`https://${host}${legalPath}${url.search}`, 301);
+      }
       if (url.pathname.startsWith("/web-client/") && !url.pathname.includes("..")) {
         return proxyGithub(url.pathname, url.search);
       }
-      return localeAppPage(lang, host);
+      return localeAppPage(lang, host, url.pathname);
     }
 
     if (isAppShellPath(url.pathname)) {
-      return localeAppPage("en", "www.11tik.com");
+      return localeAppPage("en", "www.11tik.com", url.pathname);
     }
 
     if (!url.pathname.startsWith("/web-client/") || url.pathname.includes("..")) {

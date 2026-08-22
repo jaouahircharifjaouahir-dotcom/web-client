@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { tx } from "../i18n/extra";
+import { KEYWORD_LANDINGS } from "../content/keywordLandings";
 import { pageString } from "../i18n/pages";
 import { guidePosts, localeHomeUrl, readLocale } from "../i18n/ui";
 import type { AppRoute } from "../routing/path";
@@ -28,6 +29,8 @@ export function SitePages({ route }: { route: Exclude<AppRoute, { name: "home" }
   if (route.name === "privacy") return <Article title={pageString(locale, "privacyTitle")} body={pageString(locale, "privacyBody")} origin={origin} />;
   if (route.name === "terms") return <Article title={pageString(locale, "termsTitle")} body={pageString(locale, "termsBody")} origin={origin} />;
   if (route.name === "contact") return <Article title={pageString(locale, "contactTitle")} body={pageString(locale, "contactBody")} origin={origin} />;
+  if (route.name === "embed") return <Article title={pageString(locale, "embedTitle")} body={pageString(locale, "embedBody")} origin={origin} />;
+  if (route.name === "keywords") return <KeywordTools origin={origin} />;
   if (route.name === "trending") return <Trending origin={origin} />;
   if (route.name === "hold") return <Hold origin={origin} />;
   if (route.name === "stats") return <Stats origin={origin} />;
@@ -105,6 +108,34 @@ function TagPage({ slug, origin }: { slug: string; origin: string }) {
             </a>
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function KeywordTools({ origin }: { origin: string }) {
+  const locale = readLocale();
+  const home = origin.replace(/\/$/, "");
+  useEffect(() => {
+    document.title = `${pageString(locale, "keywordsTitle")} · 11tik`;
+  }, [locale]);
+  return (
+    <div className="yte-app">
+      <div className="yte-shell">
+        <p className="yte-kicker">
+          <a href={origin}>11tik</a>
+        </p>
+        <h1>{pageString(locale, "keywordsTitle")}</h1>
+        <section className="yte-panel">
+          <p>{pageString(locale, "keywordsBody")}</p>
+          <div className="yte-list">
+            {KEYWORD_LANDINGS.map((item) => (
+              <a className="yte-item" href={`${home}/?k=${item.slug}`} key={item.slug}>
+                {item.keyword}
+              </a>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

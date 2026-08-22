@@ -9,7 +9,7 @@ import { expandChannelVideos, looksLikeChannelUrl } from "./channels/feed";
 import { bulkResultsCsv, downloadCsv } from "./export/csv";
 import { bulkResultsJson, downloadText } from "./export/json";
 import { tx } from "./i18n/extra";
-import { legalHrefs } from "./i18n/pages";
+import { legalHrefs, pageString } from "./i18n/pages";
 import { SitePages } from "./pages/SitePages";
 import { parseAppRoute } from "./routing/path";
 import { calculateConsistencyScore } from "./score/consistency";
@@ -835,6 +835,8 @@ export default function App() {
           <a href={legalHrefs(locale).privacy}>{tx(locale, "trustPrivacy")}</a>
           <a href={legalHrefs(locale).terms}>{tx(locale, "trustTerms")}</a>
           <a href={legalHrefs(locale).contact}>{tx(locale, "trustContact")}</a>
+          <a href={legalHrefs(locale).embed}>{pageString(locale, "embedTitle")}</a>
+          <a href={legalHrefs(locale).keywords}>{pageString(locale, "keywordsTitle")}</a>
           <a href={legalHrefs(locale).copyright}>{tx(locale, "legalTitle")}</a>
           {guidePosts().slice(0, 6).map((post) => (
             <a href={post.href} key={post.href}>

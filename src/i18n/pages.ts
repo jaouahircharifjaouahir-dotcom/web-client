@@ -27,7 +27,11 @@ export type PageKey =
   | "statsBody"
   | "guideTitle"
   | "guideBody"
-  | "trendingIntro";
+  | "trendingIntro"
+  | "embedTitle"
+  | "embedBody"
+  | "keywordsTitle"
+  | "keywordsBody";
 
 type Pack = Partial<Record<PageKey, string>>;
 
@@ -66,6 +70,11 @@ const EN: Record<PageKey, string> = {
   guideBody:
     "A YouTube thumbnail is the public still viewers see before they press play. 11tik only reads files YouTube already hosts on i.ytimg.com. Start with a public watch, Shorts, live, or youtu.be link. The tool keeps files that are real images and ranks the highest published size. Bulk mode accepts one URL per line or a channel URL for the latest public uploads.",
   trendingIntro: "Tags collected from public extractions that passed the quality gate.",
+  embedTitle: "Embed the 11tik Thumbnail Extractor",
+  embedBody:
+    "Add a free YouTube thumbnail extractor to your blog, docs, or creator toolkit. The widget loads from 11tik and resizes itself. No API key.\n\nKeep id=\"yte-app\" on the iframe so height sync works. Do not wrap the iframe in a fixed height that clips the download buttons. Linking back to the 11tik homepage helps users open the full tool.\n\nShare a ready extraction with /?v=VIDEO_ID for YouTube or /?vimeo=ID for Vimeo.",
+  keywordsTitle: "Keyword tools",
+  keywordsBody: "Each link opens the YouTube Thumbnail Extractor with an intro for that topic.",
 };
 
 const PACKS: Record<string, Pack> = {
@@ -101,6 +110,11 @@ const PACKS: Record<string, Pack> = {
     guideBody:
       "الصورة المصغرة هي اللقطة العامة التي يراها المشاهد قبل التشغيل. 11tik يقرأ فقط الملفات التي يستضيفها يوتيوب على i.ytimg.com. ابدأ برابط عام ثم تُرتّب أعلى جودة منشورة فعلا.",
     trendingIntro: "وسوم جُمعت من استخراجات عامة اجتازت بوابة الجودة.",
+    embedTitle: "تضمين مستخرج الصور المصغرة 11tik",
+    embedBody:
+      "أضف مستخرج صور يوتيوب المصغرة إلى مدونتك أو أدواتك. الويدجت يُحمَّل من 11tik ويضبط ارتفاعه. لا مفتاح API.\n\nأبقِ id=\"yte-app\" على الإطار. لا تحصره بارتفاع ثابت يقطع أزرار التنزيل.\n\nشارك استخراجا جاهزا عبر /?v=VIDEO_ID أو /?vimeo=ID.",
+    keywordsTitle: "أدوات الكلمات المفتاحية",
+    keywordsBody: "كل رابط يفتح المستخرج بمقدمة عن ذلك الموضوع.",
   },
   fr: {
     trendingTags: "Tags tendance",
@@ -136,6 +150,11 @@ const PACKS: Record<string, Pack> = {
     guideBody:
       "La miniature est l’image publique avant lecture. 11tik ne lit que les fichiers déjà hébergés sur i.ytimg.com. Collez un lien public ; l’outil conserve les images réelles et classe la plus grande taille publiée.",
     trendingIntro: "Tags issus d’extractions publiques validées.",
+    embedTitle: "Intégrer l’extracteur de miniatures 11tik",
+    embedBody:
+      "Ajoutez un extracteur YouTube gratuit à votre blog ou vos docs. Le widget se charge depuis 11tik et s’ajuste. Pas de clé API.\n\nGardez id=\"yte-app\" sur l’iframe. N’imposez pas une hauteur fixe qui coupe les boutons.\n\nPartagez une extraction avec /?v=VIDEO_ID ou /?vimeo=ID.",
+    keywordsTitle: "Outils de mots-clés",
+    keywordsBody: "Chaque lien ouvre l’extracteur avec une intro pour ce sujet.",
   },
   es: {
     trendingTags: "Etiquetas en tendencia",
@@ -169,6 +188,11 @@ const PACKS: Record<string, Pack> = {
     guideBody:
       "La miniatura es la imagen pública antes de reproducir. 11tik solo lee archivos que YouTube ya publica en i.ytimg.com. Empieza con un enlace público; se conserva el tamaño más alto publicado.",
     trendingIntro: "Etiquetas de extracciones públicas validadas.",
+    embedTitle: "Insertar el extractor de miniaturas 11tik",
+    embedBody:
+      "Añade un extractor de miniaturas YouTube a tu blog o herramientas. El widget carga desde 11tik y se redimensiona. Sin clave API.\n\nMantén id=\"yte-app\" en el iframe. No uses una altura fija que recorte los botones.\n\nComparte una extracción con /?v=VIDEO_ID o /?vimeo=ID.",
+    keywordsTitle: "Herramientas de palabras clave",
+    keywordsBody: "Cada enlace abre el extractor con una intro de ese tema.",
   },
   de: {
     trendingTags: "Trending-Tags",
@@ -513,6 +537,8 @@ export function pageString(locale: string, key: PageKey): string {
     termsTitle: "trustTerms",
     contactTitle: "trustContact",
     guideTitle: "guidePillar",
+    embedTitle: "embedTitle",
+    keywordsTitle: "keywordsTitle",
   };
   const alias = titles[key];
   if (alias) {
@@ -527,28 +553,21 @@ export function legalHrefs(locale: string): {
   privacy: string;
   terms: string;
   contact: string;
+  embed: string;
+  keywords: string;
   copyright: string;
   trending: string;
   guide: string;
   stats: string;
 } {
-  if (locale === "en") {
-    return {
-      about: "https://www.11tik.com/p/about.html",
-      privacy: "https://www.11tik.com/p/privacy.html",
-      terms: "https://www.11tik.com/p/terms-of-use.html",
-      contact: "https://www.11tik.com/p/contact.html",
-      copyright: "/copyright",
-      trending: "/trending-tags",
-      guide: "/guide/youtube-thumbnails",
-      stats: "/stats",
-    };
-  }
+  const root = locale === "en" ? "https://www.11tik.com" : "";
   return {
-    about: "/about",
-    privacy: "/privacy",
-    terms: "/terms",
-    contact: "/contact",
+    about: `${root}/p/about.html`,
+    privacy: `${root}/p/privacy.html`,
+    terms: `${root}/p/terms-of-use.html`,
+    contact: `${root}/p/contact.html`,
+    embed: `${root}/p/embed.html`,
+    keywords: `${root}/p/keyword-tools.html`,
     copyright: "/copyright",
     trending: "/trending-tags",
     guide: "/guide/youtube-thumbnails",

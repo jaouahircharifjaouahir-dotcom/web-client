@@ -15,6 +15,7 @@ import { parseAppRoute } from "./routing/path";
 import { calculateConsistencyScore } from "./score/consistency";
 import { buildShareUrls } from "./share/social";
 import { imageSeoAttrs, stampSeoImages } from "./seo/imageAttrs";
+import { tagsForResult } from "./tags/fromExtract";
 import { historyStore } from "./history/store";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "./hooks/theme";
 import { isLikelyMediaUrl, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";

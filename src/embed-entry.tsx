@@ -1,5 +1,6 @@
 import { bootLite } from "./boot/lite";
 import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
 import { stampSeoImages } from "./seo/imageAttrs";
 import { keepDomGuards } from "./embed/dom-guard";
 import "./index.css";

@@ -27,7 +27,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "45";
+const APP_ASSET_V = "46";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -80,24 +80,7 @@ function assetUrl(file) {
 }
 
 function gaSnippet() {
-  return `<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-function loadGtag(){
-  if(window.__yteGtag) return;
-  window.__yteGtag=1;
-  var s=document.createElement("script");
-  s.async=true;
-  s.src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}";
-  s.onload=function(){
-    gtag("js",new Date());
-    gtag("config","${GA_ID}",{cookie_domain:"11tik.com"});
-  };
-  document.head.appendChild(s);
-}
-["pointerdown","keydown"].forEach(function(ev){window.addEventListener(ev,loadGtag,{once:true,passive:true});});
-window.setTimeout(loadGtag,8000);
-</script>`;
+  return `<script defer src="${assetUrl("ga-boot.js")}"></script>`;
 }
 
 const EMPTY_SOURCEMAP = JSON.stringify({

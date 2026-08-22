@@ -11,12 +11,17 @@ export default defineConfig({
   define: {
     "process.env.NODE_ENV": JSON.stringify("production"),
   },
+  esbuild: {
+    drop: ["debugger"],
+    legalComments: "none",
+  },
   build: {
     emptyOutDir: false,
     cssCodeSplit: false,
     target: "es2022",
     cssMinify: true,
-    sourcemap: true,
+    minify: "esbuild",
+    sourcemap: false,
     lib: {
       entry: resolve(root, "src/embed-entry.tsx"),
       name: "YTE",
@@ -27,6 +32,7 @@ export default defineConfig({
       output: {
         assetFileNames: "blogger-app.css",
         inlineDynamicImports: true,
+        banner: "/*! 11tik (c) 2026 https://www.11tik.com/p/terms-of-use.html */\n",
       },
     },
   },

@@ -7,8 +7,13 @@ export default defineConfig({
   build: {
     target: "es2022",
     cssMinify: true,
-    sourcemap: true,
+    minify: "esbuild",
+    sourcemap: false,
     modulePreload: { polyfill: false },
+  },
+  esbuild: {
+    drop: ["debugger"],
+    legalComments: "none",
   },
   server: {
     proxy: {

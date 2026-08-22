@@ -27,7 +27,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "41";
+const APP_ASSET_V = "42";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -101,7 +101,8 @@ window.setTimeout(loadGtag,8000);
 }
 
 async function proxyGithub(pathname, search) {
-  const isAsset = /\.(?:js|css|map|svg|png|ico|webp|woff2?|json|webmanifest)$/i.test(pathname);
+  if (/\.map$/i.test(pathname)) return new Response("Not found", { status: 404 });
+  const isAsset = /\.(?:js|css|svg|png|ico|webp|woff2?|json|webmanifest)$/i.test(pathname);
   const ttl = isAsset ? 2592000 : 600;
   const upstream = await fetch(GITHUB + pathname + search, {
     cf: {

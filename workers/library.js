@@ -52,19 +52,69 @@ function decodeHtml(value) {
     .replaceAll("&gt;", ">");
 }
 
+const YT_HEADERS = {
+  "user-agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  "accept-language": "en-US,en;q=0.8",
+  accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+};
+
+async function fetchWatchHtml(videoId) {
+  const urls = [
+    `https://www.youtube.com/watch?v=${videoId}`,
+    `https://m.youtube.com/watch?v=${videoId}`,
+  ];
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { headers: YT_HEADERS, cf: { cacheTtl: 120 } });
+      if (!res.ok) continue;
+      const parsed = parseYouTubeWatchMeta(await res.text());
+      if (parsed.tags.length || parsed.title) {
+        return { ok: true, videoId, ...parsed };
+      }
+    } catch {
+      /* try next host */
+    }
+  }
+  return null;
+}
+
+async function fetchInnertubeMeta(videoId) {
+  try {
+    const res = await fetch("https://www.youtube.com/youtubei/v1/player?prettyPrint=false", {
+      method: "POST",
+      headers: { ...YT_HEADERS, "content-type": "application/json" },
+      body: JSON.stringify({
+        context: { client: { clientName: "WEB", clientVersion: "2.20240821.01.00", hl: "en" } },
+        videoId,
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const details = data?.videoDetails || {};
+    const tags = [];
+    const seen = new Set();
+    for (const item of details.keywords || []) {
+      const tag = String(item || "").trim();
+      if (!tag || seen.has(tag.toLowerCase())) continue;
+      seen.add(tag.toLowerCase());
+      tags.push(tag);
+    }
+    const title = String(details.title || "").trim();
+    const authorName = String(details.author || "").trim();
+    if (!tags.length && !title) return null;
+    return { ok: true, videoId, title, authorName, tags: tags.slice(0, 40) };
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchYouTubeWatchMeta(videoId) {
   if (!YT_ID.test(videoId || "")) return { ok: false, tags: [], title: "", authorName: "" };
-  const res = await fetch(`https://www.youtube.com/watch?v=${videoId}`, {
-    headers: {
-      "user-agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-      "accept-language": "en-US,en;q=0.8",
-    },
-    cf: { cacheTtl: 300 },
-  });
-  if (!res.ok) return { ok: false, tags: [], title: "", authorName: "" };
-  const parsed = parseYouTubeWatchMeta(await res.text());
-  return { ok: parsed.tags.length > 0 || Boolean(parsed.title), videoId, ...parsed };
+  return (
+    (await fetchWatchHtml(videoId)) ||
+    (await fetchInnertubeMeta(videoId)) || { ok: false, tags: [], title: "", authorName: "" }
+  );
 }
 
 export function slugTag(value) {

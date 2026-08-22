@@ -83,7 +83,9 @@ function gaSnippet() {
   return `<script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
-window.addEventListener("load",function(){
+function loadGtag(){
+  if(window.__yteGtag) return;
+  window.__yteGtag=1;
   var s=document.createElement("script");
   s.async=true;
   s.src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}";
@@ -92,7 +94,9 @@ window.addEventListener("load",function(){
     gtag("config","${GA_ID}",{cookie_domain:"11tik.com"});
   };
   document.head.appendChild(s);
-});
+}
+["pointerdown","keydown"].forEach(function(ev){window.addEventListener(ev,loadGtag,{once:true,passive:true});});
+window.setTimeout(loadGtag,8000);
 </script>`;
 }
 
@@ -596,9 +600,19 @@ function polishBloggerHtml(response) {
     .on("script[src]", {
       element(el) {
         const src = el.getAttribute("src") || "";
-        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/") || src.includes("cookienotice.js")) {
+        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/") || src.includes("cookienotice.js") || src.includes("googletagmanager.com/gtag/js")) {
           el.remove();
         }
+      },
+    })
+    .on("script", {
+      text(text) {
+        if (text.text.includes("googletagmanager.com/gtag/js")) text.replace("", { html: false });
+      },
+    })
+    .on("body", {
+      element(el) {
+        el.append(gaSnippet(), { html: true });
       },
     })
     .on("link[rel]", {
@@ -611,6 +625,18 @@ function polishBloggerHtml(response) {
     .on("img[src]", {
       element(el) {
         rewriteGithubAsset(el, "src");
+      },
+    })
+    .on("img.yte-preview", {
+      element(el) {
+        el.setAttribute("src", `${EDGE_ASSETS}images/social/og-image-640x336.webp`);
+        el.setAttribute(
+          "srcset",
+          `${EDGE_ASSETS}images/social/og-image-640x336.webp 640w, ${EDGE_ASSETS}images/social/og-image-1200x630.png 1200w`,
+        );
+        el.setAttribute("sizes", "(max-width: 640px) 100vw, 640px");
+        el.setAttribute("width", "640");
+        el.setAttribute("height", "336");
       },
     })
     .on("meta[content]", {

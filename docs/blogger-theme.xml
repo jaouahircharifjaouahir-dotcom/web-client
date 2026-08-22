@@ -206,7 +206,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
         <p class='yte-byline'>By <a href='https://www.11tik.com/p/about.html'>11tik</a></p>
         <p class='yte-updated'>Last updated: 21 August 2026</p>
         <p>Paste a public YouTube or Vimeo URL to download the highest available public thumbnail in your browser. 11tik checks real image files, lists only sizes that exist, and does not upload your link to an 11tik server.</p>
-        <img alt='11tik extractor showing a pasted YouTube URL and HD public thumbnail preview' title='11tik YouTube Thumbnail Extractor, HD thumbnail download, YouTube Shorts' class='yte-preview' decoding='async' fetchpriority='low' height='630' loading='lazy' src='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' width='1200'/>
+        <img alt='11tik extractor showing a pasted YouTube URL and HD public thumbnail preview' title='11tik YouTube Thumbnail Extractor, HD thumbnail download, YouTube Shorts' class='yte-preview' decoding='async' fetchpriority='low' height='336' loading='lazy' sizes='(max-width: 640px) 100vw, 640px' src='https://www.11tik.com/web-client/images/social/og-image-640x336.webp' srcset='https://www.11tik.com/web-client/images/social/og-image-640x336.webp 640w, https://www.11tik.com/web-client/images/social/og-image-1200x630.png 1200w' width='640'/>
         <h2>How do I download a YouTube thumbnail in HD?</h2>
         <p>Paste a watch, youtu.be, Shorts, or embed URL that contains a public video ID, then download the first listed size. That file is the highest public still YouTube actually published.</p>
         <ol>
@@ -430,7 +430,9 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 //<![CDATA[
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-window.addEventListener("load", function () {
+function loadGtag(){
+  if (window.__yteGtag) return;
+  window.__yteGtag = 1;
   var s = document.createElement("script");
   s.async = true;
   s.src = "https://www.googletagmanager.com/gtag/js?id=G-FW7B8NDZZ5";
@@ -439,7 +441,11 @@ window.addEventListener("load", function () {
     gtag("config", "G-FW7B8NDZZ5", { cookie_domain: "11tik.com" });
   };
   document.head.appendChild(s);
+}
+["pointerdown","keydown"].forEach(function (ev) {
+  window.addEventListener(ev, loadGtag, { once: true, passive: true });
 });
+window.setTimeout(loadGtag, 8000);
 (function stampImages() {
   function visit(root) {
     if (!root || !root.querySelectorAll) return;

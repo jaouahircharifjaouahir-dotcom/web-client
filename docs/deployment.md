@@ -34,17 +34,52 @@ Do **not** point `11tik.com` DNS at GitHub Pages. GitHub Pages is not a producti
 
 ## Production deploy (Workers Builds)
 
-Connect this repo to Worker `11tik-edge` in the Cloudflare dashboard: **Workers & Pages → 11tik-edge → Settings → Builds → Connect**.
+This cannot be finished from the repository. Connect GitHub in the Cloudflare dashboard (Cloudflare creates the deploy token; do not paste one into the repo).
 
-Recommended dashboard settings:
+1. Open [Workers & Pages](https://dash.cloudflare.com/?to=/:account/workers-and-pages) → **11tik-edge** → **Settings** → **Builds** → **Connect**.
+2. Authorize GitHub if asked, then pick `jaouahircharifjaouahir-dotcom/web-client`.
+3. Save these build settings ([official docs](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)):
 
-- Production branch: `main`
-- Build command: `npm run build`
-- Deploy command: `npx wrangler deploy`
-- Build watch paths include: `src`, `public`, `workers`, `wrangler.jsonc`, `package.json`, `package-lock.json`, `vite.config.ts`, `vite.embed.config.ts`, `scripts`
-- Exclude: `docs`, `README.md`, `.cursor`
+| Setting | Value |
+| --- | --- |
+| Root directory | `/` (repository root) |
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Non-production branch builds | Off (do not deploy PRs to production) |
 
-GitHub Actions `ci.yml` only verifies; it does not deploy.
+4. Under **Build watch paths** ([official docs](https://developers.cloudflare.com/workers/ci-cd/builds/build-watch-paths/)), set include/exclude (API names: `path_includes` / `path_excludes`):
+
+Include:
+
+```text
+src/**
+public/**
+workers/**
+scripts/**
+wrangler.jsonc
+package.json
+package-lock.json
+vite.config.ts
+vite.embed.config.ts
+index.html
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+```
+
+Exclude:
+
+```text
+docs/**
+.cursor/**
+README.md
+**/*.md
+```
+
+5. Save. Cloudflare should start a first build from `main`. After that succeeds, GitHub Pages can be disabled (Settings → Pages) because production no longer uses github.io.
+
+GitHub Actions `ci.yml` only verifies; it does not deploy. There is no `pages.yml` or `cloudflare-edge.yml`.
 
 ## Local QA
 

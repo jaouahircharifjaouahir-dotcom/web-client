@@ -647,6 +647,7 @@ function isWorkerOwnedPath(pathname) {
   return (
     pathname.startsWith("/web-client/") ||
     pathname === "/robots.txt" ||
+    pathname === "/sitemap-pages.xml" ||
     Boolean(parseSitemapPath(pathname)) ||
     pathname.startsWith("/tag/") ||
     pathname === "/trending-tags" ||
@@ -755,6 +756,9 @@ export default {
 
     if (url.pathname === "/robots.txt") {
       return handleRobots(request, env);
+    }
+    if (url.pathname === "/sitemap-pages.xml") {
+      return fetchBlogger(request);
     }
     const sitemapPath = parseSitemapPath(url.pathname);
     if (sitemapPath) {

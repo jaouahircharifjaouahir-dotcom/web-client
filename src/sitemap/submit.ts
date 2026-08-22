@@ -1,4 +1,5 @@
 import { shareUrlForIds } from "../share/url";
+import { tagsForResult } from "../tags/fromExtract";
 import type { ThumbnailExtractionResult } from "../types";
 
 const ENDPOINT = "https://www.11tik.com/web-client/sitemap-add";
@@ -27,5 +28,26 @@ export function submitVideoToSitemap(platform: string, videoId: string): void {
 export function submitShareToSitemap(result: ThumbnailExtractionResult): void {
   if (!result.videoId) return;
   const platform = result.meta?.platform === "vimeo" ? "vimeo" : "youtube";
-  submitVideoToSitemap(platform, result.videoId);
+  const p = platform;
+  const id = result.videoId;
+  const key = `${p}:${id}`;
+  if (sent.has(key)) return;
+  sent.add(key);
+  const loc = shareUrlForIds(p, id);
+  void fetch(ENDPOINT, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      platform: p,
+      videoId: id,
+      loc,
+      title: result.meta?.title || "",
+      tags: tagsForResult(result),
+      thumb: result.bestThumbnail?.url || "",
+      source: "user",
+    }),
+    keepalive: true,
+    mode: "cors",
+    cache: "no-store",
+  }).catch(() => undefined);
 }

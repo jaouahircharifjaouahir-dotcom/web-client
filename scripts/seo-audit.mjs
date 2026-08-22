@@ -180,7 +180,7 @@ if (live) {
     "https://11tik.com/",
     "https://www.11tik.com/robots.txt",
     "https://www.11tik.com/sitemap.xml",
-    "https://www.11tik.com/p/about.html",
+    "https://www.11tik.com/about",
   ];
   for (const url of urls) {
     try {
@@ -216,7 +216,7 @@ const report = {
   metadata: findings.some((f) => ["title", "description", "og-image"].includes(f.id) && f.level === "ERROR") ? 50 : 96,
   images: findings.some((f) => f.id.startsWith("icon") && f.level === "ERROR") ? 60 : 94,
   structuredData: findings.some((f) => f.id.includes("jsonld") || f.id === "theme-schema" ? f.level === "ERROR" : false) ? 50 : 100,
-  internalLinking: theme.includes("/p/about.html") && theme.includes("/p/privacy.html") ? 90 : 60,
+  internalLinking: theme.includes("/about") && theme.includes("/privacy") ? 90 : 60,
 };
 
 console.log("SEO AUDIT");

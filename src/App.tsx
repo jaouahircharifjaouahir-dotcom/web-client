@@ -6,7 +6,15 @@ import { findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
+import { expandChannelVideos, looksLikeChannelUrl } from "./channels/feed";
 import { bulkResultsCsv, downloadCsv } from "./export/csv";
+import { bulkResultsJson, downloadText } from "./export/json";
+import { tx } from "./i18n/extra";
+import { SitePages } from "./pages/SitePages";
+import { parseAppRoute } from "./routing/path";
+import { calculateConsistencyScore } from "./score/consistency";
+import { buildShareUrls } from "./share/social";
+import { tagsForResult } from "./tags/fromExtract";
 import { historyStore } from "./history/store";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "./hooks/theme";
 import { isLikelyMediaUrl, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
@@ -14,7 +22,7 @@ import { scorePublicThumbnail } from "./score/readImage";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
-import { submitShareToSitemap, submitVideoToSitemap } from "./sitemap/submit";
+import { submitShareToSitemap } from "./sitemap/submit";
 import { QUALITY_PRESETS } from "./engines/presets";
 import { guidePosts, isRtl, languageOptions, localeHomeUrl, publicOrigin, readLocale, switchLocale, t } from "./i18n/ui";
 import { userMessage } from "./types/errors";
@@ -88,6 +96,9 @@ export default function App() {
   const [result, setResult] = useState<ThumbnailExtractionResult | null>(null);
   const [bulkResults, setBulkResults] = useState<ThumbnailExtractionResult[]>([]);
   const [thumbScore, setThumbScore] = useState<{ score: number; notes: string[] } | null>(null);
+  const [brandScore, setBrandScore] = useState<number | null>(null);
+  const [compareOn, setCompareOn] = useState(false);
+  const [route, setRoute] = useState(() => parseAppRoute());
   const [recentHistory, setRecentHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
   const syncedShareKey = useRef("");
@@ -117,6 +128,12 @@ export default function App() {
       document.getElementById("yte-root")?.removeAttribute("data-yte-posts");
     };
   }, [postsOpen]);
+
+  useEffect(() => {
+    const sync = () => setRoute(parseAppRoute());
+    window.addEventListener("popstate", sync);
+    return () => window.removeEventListener("popstate", sync);
+  }, []);
 
   useEffect(() => startEmbedResize(), []);
 
@@ -164,19 +181,13 @@ export default function App() {
   };
 
   useEffect(() => {
-    if (bulk) {
-      for (const item of bulkParsed) {
-        if (item.videoId) submitVideoToSitemap(item.platform, item.videoId);
-      }
-      return;
-    }
+    if (bulk) return;
     if (!parsed?.valid || !parsed.videoId) return;
-    submitVideoToSitemap(parsed.platform, parsed.videoId);
     const key = `${parsed.platform}:${parsed.videoId}`;
     if (embed || syncedShareKey.current === key) return;
     syncedShareKey.current = key;
     syncShareUrl(parsed.platform, parsed.videoId);
-  }, [bulk, bulkParsed, parsed, embed]);
+  }, [bulk, parsed, embed]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -207,6 +218,11 @@ export default function App() {
   };
 
   const runOne = async (raw: string) => {
+    if (looksLikeChannelUrl(raw)) {
+      setBulk(true);
+      await runBulk(raw);
+      return;
+    }
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
@@ -218,7 +234,6 @@ export default function App() {
     }
     setBusy(true);
     setError("");
-    submitVideoToSitemap(parsedUrl.platform, parsedUrl.videoId);
     if (!embed) {
       syncedShareKey.current = `${parsedUrl.platform}:${parsedUrl.videoId}`;
       syncShareUrl(parsedUrl.platform, parsedUrl.videoId);
@@ -258,8 +273,21 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- boot once from deep link
   }, [embed]);
 
-  const runBulk = async () => {
-    const items = parseMediaMany(input).filter((item) => item.valid);
+  const runBulk = async (source = input) => {
+    let raw = source;
+    if (looksLikeChannelUrl(source)) {
+      setBusy(true);
+      const urls = await expandChannelVideos(source.trim().split(/[\s\n]+/)[0] || source, 20);
+      if (!urls.length) {
+        setBusy(false);
+        setError(userMessage("CHANNEL_OR_PLAYLIST"));
+        return;
+      }
+      raw = urls.join("\n");
+      setBulk(true);
+      setInput(raw);
+    }
+    const items = parseMediaMany(raw).filter((item) => item.valid);
     if (!items.length) {
       setError(userMessage("INVALID_URL"));
       return;
@@ -271,9 +299,6 @@ export default function App() {
     setBulkResults([]);
     setResult(null);
     setError("");
-    for (const item of items.slice(0, config.maxBulkUrls)) {
-      if (item.videoId) submitVideoToSitemap(item.platform, item.videoId);
-    }
     analytics.track("bulk_mode_used");
     const next: ThumbnailExtractionResult[] = [];
     for (const item of items.slice(0, config.maxBulkUrls)) {
@@ -290,6 +315,8 @@ export default function App() {
       }
     }
     setBusy(false);
+    const thumbs = next.map((item) => item.bestThumbnail?.url).filter(Boolean) as string[];
+    void calculateConsistencyScore(thumbs).then((row) => setBrandScore(row?.score ?? null));
   };
 
   useEffect(() => {
@@ -358,6 +385,10 @@ export default function App() {
     }
     await showCopied(urls.length > 1 ? t("copiedShares") : t("copiedShare"), urls.join("\n"));
   };
+
+  if (route.name !== "home") {
+    return <SitePages route={route} />;
+  }
 
   return (
     <div className={`yte-app${embed ? " yte-embed" : ""}`}>
@@ -452,16 +483,8 @@ export default function App() {
                   setError("");
                   setInput(event.target.value);
                 }}
-                placeholder={t("pasteBulkPh")}
+                placeholder={t("pasteBulkPh") + " · " + tx(locale, "channelHint")}
                 aria-label="YouTube or Vimeo URLs"
-                onPaste={(event) => {
-                  const text = event.clipboardData.getData("text");
-                  if (!text.trim()) return;
-                  const items = parseMediaMany(text).filter((item) => item.valid);
-                  for (const item of items) {
-                    if (item.videoId) submitVideoToSitemap(item.platform, item.videoId);
-                  }
-                }}
                 spellCheck={false}
                 autoCorrect="off"
                 autoCapitalize="off"
@@ -534,8 +557,22 @@ export default function App() {
                       {item.tier.toUpperCase()} · {item.quality}
                     </span>
                   </div>
-                  {index === 0 && thumbScore ? <p className="yte-score">Packaging score {thumbScore.score}/100</p> : null}
+                  {index === 0 && thumbScore ? (
+                    <p className="yte-score">
+                      {tx(readLocale(), "packagingScore")} {thumbScore.score}/100
+                    </p>
+                  ) : null}
                   {index === 0 && liveShareUrls[0] ? <ShareUrlLine url={liveShareUrls[0]} /> : null}
+                  {index === 0 ? <SocialRow title={result.meta?.title || t("heroTitle")} url={shareUrlFor(result)} /> : null}
+                  {index === 0 ? (
+                    <p className="yte-tags">
+                      {tagsForResult(result).map((tag) => (
+                        <a className="yte-chip" href={`/tag/${encodeURIComponent(tag)}`} key={tag}>
+                          #{tag}
+                        </a>
+                      ))}
+                    </p>
+                  ) : null}
                   <div className="yte-row">
                     <button
                       className="yte-btn"
@@ -587,6 +624,7 @@ export default function App() {
                   </div>
                   <p className="yte-video-meta">{item.meta?.title || item.videoId}</p>
                   <ShareUrlLine url={shareUrlFor(item)} />
+                  <SocialRow title={item.meta?.title || item.videoId} url={shareUrlFor(item)} />
                   {item.bestThumbnail ? (
                     <div className="yte-row">
                       <button
@@ -606,6 +644,26 @@ export default function App() {
                 </article>
               ))}
             </div>
+            {brandScore != null ? (
+              <p className="yte-score">
+                {tx(locale, "brandScore")}: {brandScore}/100
+              </p>
+            ) : null}
+            {bulkResults.length >= 2 ? (
+              <button className="yte-ghost" type="button" onClick={() => setCompareOn((value) => !value)}>
+                {tx(locale, "compare")}
+              </button>
+            ) : null}
+            {compareOn && bulkResults.length >= 2 ? (
+              <div className="yte-compare">
+                {bulkResults.slice(0, 2).map((item) => (
+                  <article key={item.videoId}>
+                    {item.bestThumbnail ? <ThumbnailPreview url={item.bestThumbnail.url} label={item.meta?.title || item.videoId} /> : null}
+                    <p>{item.meta?.title || item.videoId}</p>
+                  </article>
+                ))}
+              </div>
+            ) : null}
             <div className="yte-row" style={{ marginTop: 16 }}>
               <button
                 className="yte-btn"
@@ -629,6 +687,13 @@ export default function App() {
                 onClick={() => downloadCsv("11tik-bulk-thumbnails.csv", bulkResultsCsv(bulkResults))}
               >
                 {t("exportCsv")}
+              </button>
+              <button
+                className="yte-ghost"
+                type="button"
+                onClick={() => downloadText("11tik-bulk-thumbnails.json", bulkResultsJson(bulkResults), "application/json")}
+              >
+                {tx(locale, "exportJson")}
               </button>
             </div>
             {bulkLowerQualityRows(bulkResults).map((row) => (
@@ -721,7 +786,24 @@ export default function App() {
         <p className="yte-foot">
           {t("foot")}
         </p>
-        <nav className="yte-kw" aria-label="Related guides">
+        <details className="yte-panel">
+          <summary>{tx(locale, "legalTitle")}</summary>
+          <h3>{tx(locale, "legalQ1")}</h3>
+          <p>{tx(locale, "legalA1")}</p>
+          <h3>{tx(locale, "legalQ2")}</h3>
+          <p>{tx(locale, "legalA2")}</p>
+          <h3>{tx(locale, "legalQ3")}</h3>
+          <p>{tx(locale, "legalA3")}</p>
+        </details>
+        <nav className="yte-kw" aria-label={tx(locale, "relatedAlso")}>
+          <a href="/trending-tags">{tx(locale, "trendingTags")}</a>
+          <a href="/guide/youtube-thumbnails">{tx(locale, "guidePillar")}</a>
+          <a href="/stats">{tx(locale, "statsTitle")}</a>
+          <a href="/about">{tx(locale, "trustAbout")}</a>
+          <a href="/privacy">{tx(locale, "trustPrivacy")}</a>
+          <a href="/terms">{tx(locale, "trustTerms")}</a>
+          <a href="/contact">{tx(locale, "trustContact")}</a>
+          <a href="/copyright">{tx(locale, "legalTitle")}</a>
           {relatedGuides("").map((post) => (
             <a href={post.href} key={post.href}>
               {post.title}
@@ -732,5 +814,28 @@ export default function App() {
         )}
       </div>
     </div>
+  );
+}
+
+function SocialRow({ title, url }: { title: string; url: string }) {
+  const locale = readLocale();
+  const urls = buildShareUrls(url, title);
+  return (
+    <p className="yte-social">
+      <span className="yte-kicker">{tx(locale, "socialShare")}</span>{" "}
+      <a href={urls.facebook} target="_blank" rel="noopener noreferrer">
+        {tx(locale, "shareFacebook")}
+      </a>{" "}
+      <a href={urls.twitter} target="_blank" rel="noopener noreferrer">
+        {tx(locale, "shareTwitter")}
+      </a>{" "}
+      <a href={urls.whatsapp} target="_blank" rel="noopener noreferrer">
+        {tx(locale, "shareWhatsapp")}
+      </a>{" "}
+      <a href={urls.telegram} target="_blank" rel="noopener noreferrer">
+        {tx(locale, "shareTelegram")}
+      </a>{" "}
+      <a href={urls.email}>{tx(locale, "shareEmail")}</a>
+    </p>
   );
 }

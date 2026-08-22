@@ -17,7 +17,7 @@ export const config = {
   ],
   gaMeasurementId: "G-FW7B8NDZZ5",
   requestTimeoutMs: 8000,
-  maxBulkUrls: 25,
+  maxBulkUrls: 50,
 } as const;
 
 export function isEmbedMode(): boolean {

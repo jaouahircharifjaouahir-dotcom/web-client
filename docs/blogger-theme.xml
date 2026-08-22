@@ -93,8 +93,8 @@
       <link href='https://www.11tik.com' rel='preconnect'/>
       <link href='https://i.ytimg.com' rel='dns-prefetch'/>
       <link href='https://i.vimeocdn.com' rel='dns-prefetch'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.css?v=35' rel='preload' as='style'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.js?v=35' rel='preload' as='script'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.css?v=36' rel='preload' as='style'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.js?v=36' rel='preload' as='script'/>
       <script type='application/ld+json'>
 {"@context":"https://schema.org","@graph":[
   {"@type":"Organization","@id":"https://www.11tik.com/#org","name":"11tik","url":"https://www.11tik.com/","logo":{"@type":"ImageObject","url":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png"},"sameAs":["https://github.com/jaouahircharifjaouahir-dotcom/web-client"]},
@@ -393,7 +393,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=35' type='text/javascript'><![CDATA[ ]]></script>
+      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=36' type='text/javascript'><![CDATA[ ]]></script>
       <script type='text/javascript'>
 (function () {
   function wire() {

@@ -174,7 +174,11 @@ a.yte-brand:focus-visible {
   cursor: pointer;
 }
 .yte-lang select:focus { outline: none; }
-.yte-posts { margin: 0 0 22px; }
+.yte-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.yte-social { margin: 10px 0 0; }
+.yte-social a { margin-right: 8px; }
+.yte-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.yte-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
 .yte-post-list { display: grid; gap: 16px; margin-top: 12px; }
 .yte-post p { margin: 6px 0 0; color: var(--yte-muted); line-height: 1.6; }
 .yte-post-title {

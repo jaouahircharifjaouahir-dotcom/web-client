@@ -5,6 +5,24 @@ import {
   localeSitemapLocs,
 } from "./iso6391.js";
 import localeMeta from "./locale-meta.json";
+import {
+  embedWidgetHtml,
+  imageSitemapXml,
+  jsonResponse,
+  listHoldQueue,
+  listIndexedExtracts,
+  listIndexedTags,
+  pickTrendingSeedId,
+  qualityForVideo,
+  rateLimitOk,
+  readLibraryRow,
+  readTag,
+  resolveChannelVideos,
+  saveLibraryRow,
+  seedBudgetOk,
+  slugTag,
+  thumbnailApiPayload,
+} from "./library.js";
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
@@ -80,16 +98,24 @@ async function saveCacheMap(map) {
   );
 }
 
-async function saveExtract(env, platform, videoId) {
+async function saveExtract(env, platform, videoId, extra = {}) {
   const loc = locFor(platform, videoId);
   const lastmod = new Date().toISOString();
-  const row = { loc, lastmod };
+  const tags = Array.isArray(extra.tags) ? extra.tags.map(slugTag).filter(Boolean).slice(0, 12) : [];
+  const row = {
+    loc,
+    lastmod,
+    platform,
+    videoId,
+    title: String(extra.title || "").slice(0, 180),
+    tags,
+    thumb: String(extra.thumb || extra.thumbnail || ""),
+    source: extra.source === "seed" ? "seed" : "user",
+  };
   const map = await loadCacheMap();
-  map[`${platform}:${videoId}`] = row;
+  map[`${platform}:${videoId}`] = { loc, lastmod };
   await saveCacheMap(map);
-  if (env?.SITEMAP_URLS) {
-    await env.SITEMAP_URLS.put(`u:${platform}:${videoId}`, JSON.stringify(row));
-  }
+  await saveLibraryRow(env, row);
   return loc;
 }
 
@@ -179,27 +205,41 @@ async function pickHourlyVideoId(env) {
 }
 
 async function hourlyExtract(env) {
-  const videoId = await pickHourlyVideoId(env);
-  const loc = locFor("youtube", videoId);
-  await Promise.allSettled([
-    fetch(loc, { headers: HOURLY_UA, redirect: "follow", cf: { cacheTtl: 0 } }),
-    fetch(`${SITE}/web-client/blogger-app.js?v=32`, { headers: HOURLY_UA, cf: { cacheTtl: 60 } }),
-    fetch(`${SITE}/sitemap.xml`, { headers: HOURLY_UA, cf: { cacheTtl: 0 } }),
-    fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`, {
-      headers: HOURLY_UA,
-    }),
-  ]);
+  if (!(await seedBudgetOk(env))) return;
+  const videoId = (await pickTrendingSeedId()) || (await pickHourlyVideoId(env));
+  if (!videoId) return;
+  let title = "";
+  try {
+    const oembed = await fetch(
+      `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`,
+      { headers: HOURLY_UA },
+    );
+    if (oembed.ok) {
+      const data = await oembed.json();
+      title = String(data.title || "");
+    }
+  } catch {
+    /* title optional until gate */
+  }
+  let thumb = "";
   for (const file of THUMB_FILES) {
     const host = file.endsWith(".webp") ? "vi_webp" : "vi";
-    const thumb = `https://i.ytimg.com/${host}/${videoId}/${file}`;
+    const url = `https://i.ytimg.com/${host}/${videoId}/${file}`;
     try {
-      const res = await fetch(thumb, { headers: HOURLY_UA, cf: { cacheTtl: 300 } });
-      if (res.ok) break;
+      const res = await fetch(url, { headers: HOURLY_UA, cf: { cacheTtl: 300 } });
+      if (res.ok) {
+        thumb = url;
+        break;
+      }
     } catch {
-      /* try next size */
+      /* next */
     }
   }
-  await saveExtract(env, "youtube", videoId);
+  const tags = title
+    .toLowerCase()
+    .match(/[a-z0-9]{3,}/g)
+    ?.slice(0, 6) || ["youtube", "thumbnail"];
+  await saveExtract(env, "youtube", videoId, { title, tags, thumb, source: "seed" });
   await pingCrawlers();
 }
 
@@ -214,22 +254,17 @@ async function pingCrawlers() {
 }
 
 async function handleSitemapAdd(request, env, ctx) {
-  let platform = "youtube";
-  let videoId = "";
-  if (request.method === "GET") {
-    const url = new URL(request.url);
-    platform = url.searchParams.get("platform") || "youtube";
-    videoId = url.searchParams.get("videoId") || "";
-  } else {
-    const url = new URL(request.url);
-    platform = url.searchParams.get("platform") || "youtube";
-    videoId = url.searchParams.get("videoId") || "";
+  const url = new URL(request.url);
+  let platform = url.searchParams.get("platform") || "youtube";
+  let videoId = url.searchParams.get("videoId") || "";
+  let extra = {};
+  if (request.method !== "GET") {
     try {
-      const body = await request.json();
-      if (body?.platform) platform = body.platform;
-      if (body?.videoId) videoId = body.videoId;
+      extra = await request.json();
+      if (extra?.platform) platform = extra.platform;
+      if (extra?.videoId) videoId = extra.videoId;
     } catch {
-      /* query string is enough (sendBeacon / empty POST) */
+      extra = {};
     }
   }
   const parsed = parseIds(platform, videoId);
@@ -239,9 +274,15 @@ async function handleSitemapAdd(request, env, ctx) {
       headers: { "content-type": "application/json", ...corsHeaders() },
     });
   }
-  const loc = await saveExtract(env, parsed.platform, parsed.videoId);
-  ctx?.waitUntil(pingCrawlers());
-  return new Response(JSON.stringify({ ok: true, loc, pinged: true }), {
+  const ip = request.headers.get("cf-connecting-ip") || "";
+  if (!(await rateLimitOk(env, ip))) {
+    return jsonResponse({ ok: false, error: "rate_limited" }, 429);
+  }
+  const loc = await saveExtract(env, parsed.platform, parsed.videoId, extra);
+  const stored = await readLibraryRow(env, parsed.platform, parsed.videoId);
+  const gate = stored?.gate || qualityForVideo(stored || {});
+  ctx?.waitUntil(gate.decision === "INDEX" ? pingCrawlers() : Promise.resolve());
+  return new Response(JSON.stringify({ ok: true, loc, pinged: gate.decision === "INDEX", gate }), {
     headers: { "content-type": "application/json", ...corsHeaders() },
   });
 }
@@ -259,14 +300,27 @@ async function buildSitemapXml(env) {
   }
   if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
   blogger.set(`${SITE}/`, newest);
+  blogger.set(`${SITE}/trending-tags`, newest);
+  blogger.set(`${SITE}/about`, newest);
+  blogger.set(`${SITE}/privacy`, newest);
+  blogger.set(`${SITE}/terms`, newest);
+  blogger.set(`${SITE}/contact`, newest);
+  blogger.set(`${SITE}/stats`, newest);
+  blogger.set(`${SITE}/copyright`, newest);
+  blogger.set(`${SITE}/guide/youtube-thumbnails`, newest);
   for (const loc of localeSitemapLocs()) {
     if (!blogger.has(loc)) blogger.set(loc, newest);
+  }
+  const indexedTags = await listIndexedTags(env);
+  for (const tag of indexedTags) {
+    blogger.set(`${SITE}/tag/${tag.slug}`, tag.updated || newest);
   }
   const parts = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
   for (const [loc, lastmod] of blogger) {
     parts.push(urlEntry(loc, lastmod || newest));
   }
   for (const row of extracts) {
+    if (row?.gate && row.gate.decision !== "INDEX") continue;
     if (!row?.loc || seen.has(row.loc)) continue;
     seen.add(row.loc);
     parts.push(urlEntry(row.loc, row.lastmod || newest));
@@ -310,6 +364,12 @@ function localeCopy(code) {
   };
 }
 
+function isAppShellPath(pathname) {
+  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$)/.test(
+    pathname,
+  );
+}
+
 function localeAppPage(code, host) {
   const copy = localeCopy(code);
   const origin = `https://${host}/`;
@@ -331,12 +391,12 @@ function localeAppPage(code, host) {
   <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=35" as="style"/>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=35" as="script"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=36" as="style"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=36" as="script"/>
 </head>
 <body>
   <div id="yte-root"></div>
-  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=35"></script>
+  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=36"></script>
 </body>
 </html>`;
   return new Response(html, {
@@ -355,18 +415,75 @@ function localeHostCode(host) {
   return code;
 }
 
+async function handleLibraryApi(url, request, env) {
+  if (url.pathname === "/image-sitemap.xml") {
+    const rows = await listIndexedExtracts(env, 10000);
+    return new Response(imageSitemapXml(rows), {
+      headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=300" },
+    });
+  }
+  if (url.pathname === "/embed" || url.pathname === "/embed/") {
+    return new Response(embedWidgetHtml(url.searchParams.get("v") || ""), {
+      headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" },
+    });
+  }
+  if (url.pathname === "/api/thumbnail" || url.pathname === "/web-client/api/thumbnail") {
+    const target = url.searchParams.get("url") || "";
+    const yt = target.match(/([A-Za-z0-9_-]{11})/);
+    const vimeo = target.match(/vimeo\.com\/(?:video\/)?(\d{6,12})/i);
+    if (vimeo) return jsonResponse(thumbnailApiPayload("vimeo", vimeo[1]));
+    if (yt && /youtu/i.test(target)) return jsonResponse(thumbnailApiPayload("youtube", yt[1]));
+    if (url.searchParams.get("v") && YT_ID.test(url.searchParams.get("v"))) {
+      return jsonResponse(thumbnailApiPayload("youtube", url.searchParams.get("v")));
+    }
+    return jsonResponse({ ok: false, error: "url required, example ?url=https://www.youtube.com/watch?v=ID" }, 400);
+  }
+  if (url.pathname === "/web-client/channel-videos") {
+    const data = await resolveChannelVideos(url.searchParams.get("url") || "", url.searchParams.get("limit") || 20);
+    return jsonResponse(data, data.ok ? 200 : 422);
+  }
+  if (url.pathname === "/web-client/tags/trending.json" || url.pathname === "/trending-tags.json") {
+    const tags = await listIndexedTags(env);
+    return jsonResponse({ ok: true, tags: tags.slice(0, 80).map((row) => ({ slug: row.slug, name: row.name, count: row.count })) });
+  }
+  if (url.pathname.startsWith("/web-client/tags/") && url.pathname.endsWith(".json")) {
+    const slug = url.pathname.slice("/web-client/tags/".length, -".json".length);
+    const pack = await readTag(env, slug);
+    if (!pack) return jsonResponse({ ok: false, error: "not_found" }, 404);
+    const videos = [];
+    for (const key of (pack.videos || []).slice(-48).reverse()) {
+      const raw = await env.SITEMAP_URLS?.get(key);
+      if (!raw) continue;
+      try {
+        videos.push(JSON.parse(raw));
+      } catch {
+        /* skip */
+      }
+    }
+    return jsonResponse({ ok: true, tag: pack, videos, robots: pack.gate?.decision === "INDEX" ? "index,follow" : "noindex,follow" });
+  }
+  if (url.pathname === "/web-client/hold-queue.json" || url.pathname === "/hold-queue.json") {
+    const hold = await listHoldQueue(env);
+    return jsonResponse({ ok: true, hold: hold.slice(0, 200) });
+  }
+  return null;
+}
+
 export default {
   async scheduled(_event, env, ctx) {
     ctx.waitUntil(hourlyExtract(env));
   },
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-
     const host = url.hostname;
     const lang = localeHostCode(host);
+
+    const api = await handleLibraryApi(url, request, env);
+    if (api) return api;
+
     if (lang) {
       if (lang === "en") {
-        return Response.redirect("https://www.11tik.com/" + url.search + url.hash, 301);
+        return Response.redirect("https://www.11tik.com/" + url.pathname + url.search + url.hash, 301);
       }
       if (url.pathname === "/robots.txt") {
         return new Response("User-agent: *\nAllow: /\nSitemap: https://www.11tik.com/sitemap.xml\n", {
@@ -376,11 +493,22 @@ export default {
       if (url.pathname === "/sitemap.xml") {
         return handleSitemapGet(request, env);
       }
+      if (url.pathname.startsWith("/web-client/") && !url.pathname.includes("..")) {
+        const isAsset = /\.(js|css|map|svg|png|ico|woff2?)$/i.test(url.pathname);
+        const upstream = await fetch(GITHUB + url.pathname + url.search, {
+          cf: { cacheEverything: true, cacheTtl: isAsset ? 60 : 300 },
+        });
+        return new Response(upstream.body, upstream);
+      }
       return localeAppPage(lang, host);
     }
 
     if (url.pathname === "/sitemap.xml") {
       return handleSitemapGet(request, env);
+    }
+
+    if (isAppShellPath(url.pathname)) {
+      return localeAppPage("en", "www.11tik.com");
     }
 
     if (url.pathname === "/web-client/sitemap-add") {

@@ -854,10 +854,12 @@ async function polishBloggerHtml(response, pathname = "/") {
   if (path !== "/") {
     const html = await response.text();
     const desc = resolvePageDescription(path, html, descriptionForPath(path));
+    const headers = new Headers(response.headers);
+    headers.set("Cache-Control", "public, max-age=120, must-revalidate");
     input = new Response(desc ? upsertHeadDescription(html, desc) : html, {
       status: response.status,
       statusText: response.statusText,
-      headers: response.headers,
+      headers,
     });
   }
   return new HTMLRewriter()

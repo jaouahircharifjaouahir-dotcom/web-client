@@ -2,7 +2,7 @@ const HOME_BLURB = /Download YouTube thumbnails instantly|highest available qual
 
 export function applyDocumentMeta(title: string, description: string) {
   if (typeof document === "undefined") return;
-  const desc = description.replace(/\s+/g, " ").trim().slice(0, 160);
+  const desc = description.replace(/\s+/g, " ").trim().slice(0, 150);
   if (title) document.title = title.includes("11tik") ? title : `${title} · 11tik`;
   const pairs: Array<[string, string, string]> = [
     ["meta[name='description']", "name", "description"],

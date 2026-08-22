@@ -1,4 +1,5 @@
 const HOME_BLURB = /Download YouTube thumbnails instantly|highest available quality, free|Paste a video or Shorts URL/i;
+const GARBAGE = /Last updated:|By 11tik|\bBy\s+11tik\b/i;
 
 export function clipDescription(value) {
   return String(value || "")
@@ -9,23 +10,19 @@ export function clipDescription(value) {
     .replace(/&#39;|&apos;/g, "'")
     .replace(/\s+/g, " ")
     .trim()
-    .slice(0, 160);
+    .slice(0, 150);
+}
+
+export function isGarbageDescription(value) {
+  const text = String(value || "");
+  return GARBAGE.test(text) || HOME_BLURB.test(text);
 }
 
 export function extractBodyDescription(html) {
   const item = String(html || "").match(/itemprop=["']description["'][^>]*>([\s\S]*?)<\/p>/i);
   if (item?.[1]) {
     const text = clipDescription(item[1]);
-    if (text.length > 40) return text;
-  }
-  const paras = String(html || "").matchAll(/<p(?![^>]*class=['"][^'"]*yte-(?:byline|updated|caption|kicker))[^>]*>([\s\S]*?)<\/p>/gi);
-  for (const match of paras) {
-    const text = clipDescription(match[1]);
-    if (text.length > 60 && !HOME_BLURB.test(text)) return text.slice(0, 160);
-  }
-  const h1 = String(html || "").match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
-  if (h1?.[1]) {
-    return clipDescription(`${h1[1]}. Public YouTube thumbnail guide on 11tik. Stills only; no video download.`);
+    if (text.length > 40 && !isGarbageDescription(text)) return text;
   }
   return "";
 }
@@ -41,7 +38,7 @@ export function metaEscape(value) {
 
 export function upsertHeadDescription(html, description) {
   const desc = metaEscape(description);
-  if (!desc) return html;
+  if (!desc || isGarbageDescription(description)) return html;
   const block = `<meta content='${desc}' name='description'/>
     <meta content='${desc}' property='og:description'/>
     <meta content='${desc}' name='twitter:description'/>`;
@@ -56,6 +53,6 @@ export function upsertHeadDescription(html, description) {
 
 export function resolvePageDescription(pathname, html, mapped) {
   const fromMap = clipDescription(mapped || "");
-  if (fromMap.length > 40) return fromMap;
+  if (fromMap.length > 40 && !isGarbageDescription(fromMap)) return fromMap;
   return extractBodyDescription(html);
 }

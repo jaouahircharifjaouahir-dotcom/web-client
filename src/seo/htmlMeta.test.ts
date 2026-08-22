@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { resolvePageDescription, upsertHeadDescription } from "../../workers/html-meta.js";
-import { descriptionForPath } from "../../workers/post-descriptions.js";
+import { descriptionForPath, POST_DESCRIPTIONS } from "../../workers/post-descriptions.js";
 
 describe("article head descriptions", () => {
   it("injects a unique description after the title", () => {
@@ -19,5 +19,26 @@ describe("article head descriptions", () => {
     const html = `<p itemprop="description">Channel extract is for recent public uploads only, not private videos.</p>`;
     const desc = resolvePageDescription("/2026/08/unknown-post.html", html, "");
     expect(desc).toContain("Channel extract");
+  });
+
+  it("never uses title byline date scrapes", () => {
+    const html = `<p>How to Download a YouTube Shorts Thumbnail in HD By 11tik Last updated: 21 August 2026 Shorts use a different watch URL</p>`;
+    const desc = resolvePageDescription("/2026/08/unknown-post.html", html, "");
+    expect(desc).toBe("");
+  });
+
+  it("keeps every mapped description at or under 150 characters", () => {
+    for (const [path, text] of Object.entries(POST_DESCRIPTIONS)) {
+      expect(descriptionForPath(path).length, path).toBeLessThanOrEqual(150);
+      expect(descriptionForPath(path).length, path).toBeGreaterThan(40);
+      expect(text).not.toMatch(/Last updated|By 11tik/i);
+    }
+  });
+
+  it("maps shorts by filename", () => {
+    const desc = descriptionForPath("/2026/08/youtube-shorts-thumbnail-download.html");
+    expect(desc.toLowerCase()).toContain("shorts");
+    expect(desc).not.toMatch(/Last updated|By 11tik/i);
+    expect(desc.length).toBeLessThanOrEqual(150);
   });
 });

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.3' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
-    <script src='https://www.11tik.com/web-client/rights-boot.js?v=53' type='text/javascript'></script>
+    <script src='https://www.11tik.com/web-client/rights-boot.js?v=54' type='text/javascript'></script>
     <script type='text/javascript'>cookieChoices={};function _WidgetInfo(){return this;}window._WidgetInfo=window._WidgetInfo||_WidgetInfo;window._WidgetManager=window._WidgetManager||{_Init:function(){},_SetDataContext:function(){},_RegisterWidget:function(){return{_SetWidget:function(){return this;},display:function(){}};}};</script>
     <meta charset='utf-8'/>
     <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
@@ -78,15 +78,9 @@
       <meta content='article' property='og:type'/>
       <meta expr:content='data:view.title.escaped' property='og:title'/>
       <meta expr:content='data:view.url.canonical' property='og:url'/>
-      <b:if cond='data:view.description != &quot;&quot;'>
-        <meta expr:content='data:view.description' name='description'/>
-        <meta expr:content='data:view.description' property='og:description'/>
-        <meta expr:content='data:view.description' name='twitter:description'/>
-      <b:else/>
-        <meta expr:content='data:view.title + &quot;. Public YouTube thumbnail guide on 11tik. Stills only; no video download.&quot;' name='description'/>
-        <meta expr:content='data:view.title + &quot;. Public YouTube thumbnail guide on 11tik. Stills only; no video download.&quot;' property='og:description'/>
-        <meta expr:content='data:view.title + &quot;. Public YouTube thumbnail guide on 11tik. Stills only; no video download.&quot;' name='twitter:description'/>
-      </b:if>
+      <meta content='Public YouTube thumbnail guide on 11tik. Stills only; no video download.' name='description'/>
+      <meta content='Public YouTube thumbnail guide on 11tik. Stills only; no video download.' property='og:description'/>
+      <meta content='Public YouTube thumbnail guide on 11tik. Stills only; no video download.' name='twitter:description'/>
       <meta content='summary_large_image' name='twitter:card'/>
       <meta expr:content='data:view.title.escaped' name='twitter:title'/>
       <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' property='og:image'/>
@@ -435,7 +429,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
       </script>
     </b:if>
-      <script defer='defer' src='https://www.11tik.com/web-client/ga-boot.js?v=53' type='text/javascript'></script>
+      <script defer='defer' src='https://www.11tik.com/web-client/ga-boot.js?v=54' type='text/javascript'></script>
       <script type='text/javascript'>
 (function stampImages() {
   function visit(root) {
@@ -459,22 +453,23 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
       <script type='text/javascript'>
 (function () {
   function clip(value) {
-    return String(value || "").replace(/\s+/g, " ").trim().slice(0, 160);
+    return String(value || "").replace(/\s+/g, " ").trim().slice(0, 150);
+  }
+  function isJunk(value) {
+    return /Last updated:|By 11tik|Download YouTube thumbnails instantly|Paste a video or Shorts URL/i.test(value || "");
   }
   function fromPage() {
     var p = document.querySelector("[itemprop='description']");
     if (p) {
       var d = clip(p.textContent);
-      if (d.length &gt; 40) return d;
+      if (d.length &gt; 40 &amp;&amp; !isJunk(d)) return d;
     }
-    var h1 = document.querySelector("h1");
-    if (h1) return clip(h1.textContent + ". Public YouTube thumbnail guide on 11tik. Stills only; no video download.");
     return "";
   }
-  function isHomeBlurb(value) {
-    return /Download YouTube thumbnails instantly|highest available quality, free|Paste a video or Shorts URL/i.test(value || "");
-  }
   function apply() {
+    var head = document.querySelector("meta[name='description']");
+    var curHead = head &amp;&amp; head.getAttribute("content") || "";
+    if (curHead &amp;&amp; !isJunk(curHead) &amp;&amp; curHead.length &gt; 40) return;
     var next = fromPage();
     if (!next) return;
     var sels = ["meta[name='description']", "meta[property='og:description']", "meta[name='twitter:description']"];
@@ -487,7 +482,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
         document.head.appendChild(el);
       }
       var cur = el.getAttribute("content") || "";
-      if (!cur || isHomeBlurb(cur)) el.setAttribute("content", next);
+      if (!cur || isJunk(cur)) el.setAttribute("content", next);
     }
   }
   apply();

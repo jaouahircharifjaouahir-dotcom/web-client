@@ -1,3 +1,5 @@
+import { descriptionForPath } from "./post-descriptions.js";
+
 const PAGES = {
   "/p/about.html": {
     title: "About 11tik",
@@ -68,8 +70,10 @@ export function viewMeta(homeTitle, homeDescription, pathname) {
       description: `Public YouTube thumbnail extracts tagged ${slug} that passed the 11tik quality gate.`,
     };
   }
+  const mapped = descriptionForPath(path);
   const hit = PAGES[path];
-  if (hit) return { title: `${hit.title}`, description: hit.description };
+  if (hit) return { title: `${hit.title}`, description: mapped || hit.description };
+  if (mapped) return { title: homeTitle, description: mapped };
   return {
     title: homeTitle,
     description: `${homeTitle}. Page on 11tik — public YouTube and Vimeo stills only.`,

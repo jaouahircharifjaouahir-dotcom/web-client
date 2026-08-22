@@ -1,4 +1,6 @@
-/** Unique search snippets for www posts and static pages. Home stays in the theme. */
+import { clipDescription } from "./html-meta.js";
+
+/** Unique search snippets (≤150 chars) for www posts and static pages. Home stays in the theme. */
 export const POST_DESCRIPTIONS = {
   "/p/about.html":
     "11tik publishes the free in-browser YouTube and Vimeo thumbnail extractor. Public stills only. No account and no video download.",
@@ -21,23 +23,23 @@ export const POST_DESCRIPTIONS = {
   "/p/youtube-shorts-thumbnail.html":
     "Download a public YouTube Shorts thumbnail in the browser. Same image hosts as watch URLs. No video download.",
   "/2026/08/how-to-download-youtube-thumbnail.html":
-    "How to download a public YouTube thumbnail in HD: paste a watch, Shorts, or youtu.be URL into 11tik and save the largest still that exists.",
+    "Download a public YouTube thumbnail in HD: paste a watch, Shorts, or youtu.be URL into 11tik and save the largest still that exists.",
   "/2026/08/youtube-thumbnail-url.html":
-    "A YouTube thumbnail URL is the image on i.ytimg.com, not the watch page. Learn the size filenames and how 11tik copies a working HTTPS link.",
+    "A YouTube thumbnail URL is the image on i.ytimg.com, not the watch page. Copy a working HTTPS link after 11tik confirms the file.",
   "/2026/08/youtube-thumbnail-size-resolution.html":
-    "Public YouTube thumbnail sizes from 120×90 to 1280×720 maxresdefault. This 2026 guide lists what exists and what 11tik will not invent.",
+    "Public YouTube thumbnail sizes from 120×90 to 1280×720 maxresdefault. 11tik lists files that exist and will not invent 4K.",
   "/2026/08/youtube-shorts-thumbnail-download.html":
-    "How to download a YouTube Shorts thumbnail. Shorts use the same public stills as watch URLs. The file is often landscape.",
+    "Download a YouTube Shorts thumbnail in the browser. Shorts use the same public stills as watch URLs. The file is often landscape.",
   "/2026/08/highest-quality-youtube-thumbnail.html":
     "Highest quality means the largest public JPEG or WebP YouTube actually returns, not a guessed 4K filename.",
   "/2026/08/original-youtube-thumbnail-image.html":
-    "How to get the original public YouTube thumbnail YouTube already hosts. Not a frame ripped from the video.",
+    "Get the original public YouTube thumbnail YouTube already hosts. This is the CDN still, not a frame ripped from the video.",
   "/2026/08/what-is-maxresdefaultjpg-when-youtube.html":
-    "maxresdefault.jpg is usually 1280×720 when YouTube published it. Many videos never have that file.",
+    "maxresdefault.jpg is usually 1280×720 when YouTube published it. Many videos never have that file. 11tik checks before you save.",
   "/2026/08/how-to-batch-download-youtube.html":
     "Batch download public YouTube thumbnails: up to 25 URLs per run on 11tik Bulk, then zip or save each best still.",
   "/2026/08/screenshot-vs-real-youtube-thumbnail.html":
-    "A player screenshot is not the YouTube thumbnail. Save the public still on i.ytimg.com instead.",
+    "A player screenshot is not the YouTube thumbnail. Save the public still on i.ytimg.com instead of a phone capture.",
   "/2026/08/thumbnail-extractor-vs-maker.html":
     "An extractor saves the public still YouTube hosts. A maker creates original art. 11tik is an extractor only.",
   "/2026/08/youtube-studio-thumbnail-2026.html":
@@ -52,5 +54,11 @@ export const POST_DESCRIPTIONS = {
 
 export function descriptionForPath(pathname) {
   const path = String(pathname || "").replace(/\/+$/, "") || "/";
-  return POST_DESCRIPTIONS[path] || "";
+  if (POST_DESCRIPTIONS[path]) return clipDescription(POST_DESCRIPTIONS[path]);
+  const base = path.split("/").pop();
+  if (!base) return "";
+  for (const [key, value] of Object.entries(POST_DESCRIPTIONS)) {
+    if (key.endsWith(`/${base}`)) return clipDescription(value);
+  }
+  return "";
 }

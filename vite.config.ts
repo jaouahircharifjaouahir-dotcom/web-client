@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     target: "es2022",
     cssMinify: true,
+    sourcemap: true,
     modulePreload: { polyfill: false },
   },
   server: {

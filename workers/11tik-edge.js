@@ -2,9 +2,9 @@ import {
   ISO6391_CODES,
   RTL_CODES,
   hreflangLinks,
-  langName,
   localeSitemapLocs,
 } from "./iso6391.js";
+import localeMeta from "./locale-meta.json";
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
@@ -300,33 +300,13 @@ async function handleSitemapGet(request, env) {
 }
 
 function localeCopy(code) {
-  const name = langName(code);
-  const titles = {
-    ar: "مستخرج صور يوتيوب – تحميل صور مصغرة عالية الدقة",
-    de: "YouTube-Thumbnail-Extraktor – HD-Thumbnails herunterladen",
-    pt: "Extrator de miniaturas do YouTube – Baixar miniaturas em HD",
-    ru: "Экстрактор превью YouTube – скачать миниатюры в HD",
-    zh: "YouTube 缩略图提取器 – 下载高清缩略图",
-    ja: "YouTubeサムネイル抽出 – HDサムネイルをダウンロード",
-    fr: "Extracteur de miniatures YouTube – Télécharger des miniatures HD",
-    es: "Extractor de miniaturas de YouTube – Descargar miniaturas HD",
-  };
-  const descriptions = {
-    ar: "حمّل مجانا أعلى صورة مصغرة عامة متاحة من يوتيوب أو فيميو.",
-    de: "Laden Sie kostenlos das beste öffentliche YouTube- oder Vimeo-Thumbnail herunter.",
-    pt: "Baixe grátis a melhor miniatura pública disponível do YouTube ou Vimeo.",
-    ru: "Бесплатно скачайте лучшую публичную миниатюру YouTube или Vimeo.",
-    zh: "免费下载 YouTube 或 Vimeo 已发布的最高清公开缩略图。",
-    ja: "YouTubeまたはVimeoの公開サムネイルを最高画質で無料ダウンロード。",
-    fr: "Téléchargez gratuitement la miniature YouTube de plus haute qualité disponible.",
-    es: "Descarga gratis la miniatura de YouTube de mayor calidad disponible.",
-  };
+  const meta = localeMeta[code] || localeMeta.en;
   return {
     lang: code,
     locale: `${code}_${code.toUpperCase()}`,
-    dir: RTL_CODES.has(code) ? "rtl" : "ltr",
-    title: titles[code] || `${name} · 11tik YouTube Thumbnail Extractor`,
-    description: descriptions[code] || `Free YouTube thumbnail extractor in ${name}. Paste a public video URL and download the highest public still.`,
+    dir: RTL_CODES.has(code) ? "rtl" : meta.dir || "ltr",
+    title: xmlEscape(meta.title),
+    description: xmlEscape(meta.description),
   };
 }
 
@@ -351,12 +331,12 @@ function localeAppPage(code, host) {
   <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=34" as="style"/>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=34" as="script"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=35" as="style"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=35" as="script"/>
 </head>
 <body>
   <div id="yte-root"></div>
-  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=34"></script>
+  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=35"></script>
 </body>
 </html>`;
   return new Response(html, {

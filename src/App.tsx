@@ -1,7 +1,6 @@
 import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
-import { GUIDE_POSTS } from "./content/posts";
 import { relatedGuides } from "./content/related";
 import { findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
 import { config, isEmbedMode } from "./config";
@@ -17,7 +16,7 @@ import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { submitShareToSitemap, submitVideoToSitemap } from "./sitemap/submit";
 import { QUALITY_PRESETS } from "./engines/presets";
-import { localeHomeUrl, publicOrigin, t } from "./i18n/ui";
+import { guidePosts, isRtl, languageOptions, localeHomeUrl, publicOrigin, readLocale, switchLocale, t } from "./i18n/ui";
 import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
 
@@ -104,6 +103,8 @@ export default function App() {
   useEffect(() => {
     const mode = resolvedTheme(theme);
     document.documentElement.dataset.yteTheme = mode;
+    document.documentElement.lang = readLocale();
+    document.documentElement.dir = isRtl() ? "rtl" : "ltr";
     document.getElementById("yte-root")?.setAttribute("data-yte-theme", mode);
     saveTheme(theme);
   }, [theme]);
@@ -125,9 +126,11 @@ export default function App() {
     return () => window.removeEventListener("popstate", sync);
   }, []);
 
-  const landing = findKeywordLanding(keywordSlug);
+  const landing = readLocale() === "en" ? findKeywordLanding(keywordSlug) : undefined;
   const heroTitle = landing?.title ?? t("heroTitle");
   const heroIntro = landing?.intro ?? t("heroIntro");
+  const locale = readLocale();
+  const themeLabel = theme === "dark" ? t("themeDark") : theme === "light" ? t("themeLight") : t("themeSystem");
 
   const openKeyword = (slug: string) => {
     const url = new URL(location.href);
@@ -353,7 +356,7 @@ export default function App() {
     } catch {
       /* fall through to copy */
     }
-    await showCopied(urls.length > 1 ? "Share links copied" : "Share link copied", urls.join("\n"));
+    await showCopied(urls.length > 1 ? t("copiedShares") : t("copiedShare"), urls.join("\n"));
   };
 
   return (
@@ -372,16 +375,30 @@ export default function App() {
               {t("bulk")}
             </button>
             <button className="yte-chip" type="button" onClick={() => setTheme(theme === "dark" ? "light" : theme === "light" ? "system" : "dark")}>
-              {t("theme")}: {theme}
+              {t("theme")}: {themeLabel}
             </button>
+            <label className="yte-chip yte-lang">
+              <span className="yte-sr">{t("language")}</span>
+              <select
+                aria-label={t("language")}
+                value={locale}
+                onChange={(event) => switchLocale(event.target.value)}
+              >
+                {languageOptions().map((item) => (
+                  <option key={item.code} value={item.code}>
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+            </label>
           </div>
         </header>
 
         {postsOpen ? (
-          <section className="yte-panel yte-posts" aria-label="Guides">
-            <p className="yte-kicker">POSTS</p>
+          <section className="yte-panel yte-posts" aria-label={t("kicker")}>
+            <p className="yte-kicker">{t("kicker")}</p>
             <div className="yte-post-list">
-              {GUIDE_POSTS.map((post) => (
+              {guidePosts().map((post) => (
                 <article className="yte-post" key={post.href}>
                   <a className="yte-post-title" href={post.href}>
                     {post.title}
@@ -611,7 +628,7 @@ export default function App() {
                 type="button"
                 onClick={() => downloadCsv("11tik-bulk-thumbnails.csv", bulkResultsCsv(bulkResults))}
               >
-                Export CSV
+                {t("exportCsv")}
               </button>
             </div>
             {bulkLowerQualityRows(bulkResults).map((row) => (

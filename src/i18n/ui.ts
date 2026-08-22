@@ -1,309 +1,92 @@
-import { ISO6391_CODES } from "../../workers/iso6391.js";
+import catalog from "./catalog.json";
+import nativeNames from "./native-names.json";
+import { ISO6391, ISO6391_CODES, RTL_CODES } from "../../workers/iso6391.js";
+import { GUIDE_POSTS } from "../content/posts";
 
-export function readLocale(): string {
-  if (typeof window === "undefined") return "en";
+export type UiKey = keyof (typeof catalog)["en"]["ui"];
+
+function hostLocale(): string {
+  if (typeof window === "undefined") return "";
   const host = window.location.hostname;
   const match = /^([a-z]{2})\.11tik\.com$/i.exec(host);
-  if (!match) return "en";
-  const code = match[1].toLowerCase();
-  if (code === "en" || !ISO6391_CODES.has(code)) return "en";
-  return code;
+  if (match) {
+    const code = match[1].toLowerCase();
+    if (code === "en") return "en";
+    if (ISO6391_CODES.has(code)) return code;
+  }
+  if (host === "www.11tik.com" || host === "11tik.com") return "en";
+  return "";
 }
 
-export function localeHomeUrl(): string {
-  const locale = readLocale();
-  if (locale === "en") return "https://www.11tik.com/";
-  return `https://${locale}.11tik.com/`;
+export function readLocale(): string {
+  const fromHost = hostLocale();
+  if (fromHost) return fromHost;
+  if (typeof window === "undefined") return "en";
+  const query = new URLSearchParams(window.location.search).get("lang")?.toLowerCase() || "";
+  if (query && ISO6391_CODES.has(query)) return query;
+  try {
+    const stored = localStorage.getItem("yte-lang") || "";
+    if (stored && ISO6391_CODES.has(stored)) return stored;
+  } catch {
+    /* ignore */
+  }
+  return "en";
+}
+
+export function localeHomeUrl(code = readLocale()): string {
+  if (code === "en") return "https://www.11tik.com/";
+  return `https://${code}.11tik.com/`;
 }
 
 export function publicOrigin(): string {
   return localeHomeUrl().replace(/\/$/, "");
 }
 
-const UI = {
-  en: {
-    posts: "Posts",
-    bulk: "Bulk",
-    theme: "Theme",
-    pasteOne: "Paste a YouTube or Vimeo URL (Shorts, live, youtu.be, and vimeo.com).",
-    pasteBulk: "Paste one YouTube or Vimeo URL per line.",
-    pasteBulkPh: "Paste one YouTube or Vimeo URL per line",
-    pasteOnePh: "Paste YouTube or Vimeo URL",
-    finding: "Finding thumbnail…",
-    extractAll: "Extract all",
-    getThumb: "Get Thumbnail Image",
-    copyShare: "Copy share link",
-    share: "Share",
-    extracting: "Extracting thumbnails",
-    ready: "Thumbnail ready",
-    download: "Download",
-    copyImage: "Copy image URL",
-    openFull: "Open full resolution",
-    unknownSize: "Unknown size",
-    best: "BEST · ",
-    shareLink: "SHARE LINK",
-    idsOk: "valid video ID",
-    idsOkPlural: "valid video IDs",
-    noIds: "No video IDs found yet.",
-    validId: "Valid",
-    noId: "No supported video ID found in that text.",
-    foot: "Public YouTube thumbnails only. No accounts, no video download, no tracking of pasted URLs.",
-    heroTitle: "YouTube Thumbnail Extractor",
-    heroIntro:
-      "Download YouTube and Vimeo thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any public YouTube video, Shorts, or Vimeo URL with one click. Paste a link below, click Get Thumbnail Image, then download or share a ready link.",
-    INVALID_URL: "Paste a public YouTube or Vimeo URL (TikTok/Instagram thumbnails are not supported yet).",
-    UNSUPPORTED_HOST: "Only YouTube and Vimeo public URLs are supported right now.",
-    INVALID_VIDEO_ID: "Could not find a valid video ID in that link.",
-    THUMBNAIL_NOT_FOUND: "No public thumbnail was found for this video.",
-    NETWORK_ERROR: "A network error stopped thumbnail discovery. Try again.",
-    TIMEOUT: "Thumbnail discovery timed out. Try again.",
-    IMAGE_VALIDATION_FAILED: "The thumbnail could not be verified as a valid image.",
-    DOWNLOAD_FAILED: "The file could not be downloaded. Try opening the image instead.",
-    CHANNEL_OR_PLAYLIST:
-      "Paste video URLs, not a channel or playlist link. The browser cannot list a channel’s videos without a YouTube API.",
-  },
-  fr: {
-    posts: "Articles",
-    bulk: "Lot",
-    theme: "Thème",
-    pasteOne: "Collez une URL YouTube ou Vimeo (Shorts, live, youtu.be et vimeo.com).",
-    pasteBulk: "Collez une URL YouTube ou Vimeo par ligne.",
-    pasteBulkPh: "Une URL YouTube ou Vimeo par ligne",
-    pasteOnePh: "Collez une URL YouTube ou Vimeo",
-    finding: "Recherche de la miniature…",
-    extractAll: "Tout extraire",
-    getThumb: "Obtenir la miniature",
-    copyShare: "Copier le lien de partage",
-    share: "Partager",
-    extracting: "Extraction des miniatures",
-    ready: "Miniature prête",
-    download: "Télécharger",
-    copyImage: "Copier l’URL de l’image",
-    openFull: "Ouvrir en pleine résolution",
-    unknownSize: "Taille inconnue",
-    best: "MEILLEURE · ",
-    shareLink: "LIEN DE PARTAGE",
-    idsOk: "ID vidéo valide",
-    idsOkPlural: "ID vidéo valides",
-    noIds: "Aucun ID vidéo pour l’instant.",
-    validId: "ID",
-    noId: "Aucun ID vidéo pris en charge dans ce texte.",
-    foot: "Miniatures YouTube publiques uniquement. Pas de compte, pas de téléchargement vidéo, pas de suivi des URL collées.",
-    heroTitle: "Extracteur de miniatures YouTube",
-    heroIntro:
-      "Téléchargez gratuitement la miniature YouTube ou Vimeo publique de plus haute qualité disponible. Collez un lien, cliquez sur Obtenir la miniature, puis enregistrez ou partagez.",
-    INVALID_URL: "Collez une URL YouTube ou Vimeo publique (TikTok et Instagram ne sont pas pris en charge).",
-    UNSUPPORTED_HOST: "Seules les URL publiques YouTube et Vimeo sont prises en charge.",
-    INVALID_VIDEO_ID: "Impossible de trouver un ID vidéo valide dans ce lien.",
-    THUMBNAIL_NOT_FOUND: "Aucune miniature publique n’a été trouvée pour cette vidéo.",
-    NETWORK_ERROR: "Une erreur réseau a interrompu la découverte. Réessayez.",
-    TIMEOUT: "Délai dépassé. Réessayez.",
-    IMAGE_VALIDATION_FAILED: "L’image n’a pas pu être vérifiée.",
-    DOWNLOAD_FAILED: "Le fichier n’a pas pu être téléchargé. Ouvrez l’image à la place.",
-    CHANNEL_OR_PLAYLIST: "Collez des URL de vidéos, pas une chaîne ou une playlist.",
-  },
-  es: {
-    posts: "Artículos",
-    bulk: "Lote",
-    theme: "Tema",
-    pasteOne: "Pega una URL de YouTube o Vimeo (Shorts, en directo, youtu.be y vimeo.com).",
-    pasteBulk: "Pega una URL de YouTube o Vimeo por línea.",
-    pasteBulkPh: "Una URL de YouTube o Vimeo por línea",
-    pasteOnePh: "Pega una URL de YouTube o Vimeo",
-    finding: "Buscando la miniatura…",
-    extractAll: "Extraer todo",
-    getThumb: "Obtener miniatura",
-    copyShare: "Copiar enlace para compartir",
-    share: "Compartir",
-    extracting: "Extrayendo miniaturas",
-    ready: "Miniatura lista",
-    download: "Descargar",
-    copyImage: "Copiar URL de la imagen",
-    openFull: "Abrir a resolución completa",
-    unknownSize: "Tamaño desconocido",
-    best: "MEJOR · ",
-    shareLink: "ENLACE PARA COMPARTIR",
-    idsOk: "ID de vídeo válido",
-    idsOkPlural: "IDs de vídeo válidos",
-    noIds: "Aún no hay IDs de vídeo.",
-    validId: "ID",
-    noId: "No hay un ID de vídeo compatible en ese texto.",
-    foot: "Solo miniaturas públicas de YouTube. Sin cuentas, sin descarga de vídeo y sin seguimiento de las URL pegadas.",
-    heroTitle: "Extractor de miniaturas de YouTube",
-    heroIntro:
-      "Descarga gratis la miniatura pública de YouTube o Vimeo de mayor calidad disponible. Pega un enlace, pulsa Obtener miniatura y guarda o comparte.",
-    INVALID_URL: "Pega una URL pública de YouTube o Vimeo (TikTok e Instagram no están admitidos).",
-    UNSUPPORTED_HOST: "Ahora mismo solo se admiten URL públicas de YouTube y Vimeo.",
-    INVALID_VIDEO_ID: "No se encontró un ID de vídeo válido en ese enlace.",
-    THUMBNAIL_NOT_FOUND: "No se encontró una miniatura pública para este vídeo.",
-    NETWORK_ERROR: "Un error de red detuvo la búsqueda. Inténtalo de nuevo.",
-    TIMEOUT: "Se agotó el tiempo. Inténtalo de nuevo.",
-    IMAGE_VALIDATION_FAILED: "No se pudo comprobar la imagen.",
-    DOWNLOAD_FAILED: "No se pudo descargar el archivo. Abre la imagen en su lugar.",
-    CHANNEL_OR_PLAYLIST: "Pega URL de vídeos, no un canal o una lista.",
-  },
-  ar: {
-    posts: "مقالات",
-    bulk: "دفعة",
-    theme: "المظهر",
-    pasteOne: "الصق رابط يوتيوب أو فيميو.",
-    pasteBulk: "الصق رابط يوتيوب أو فيميو في كل سطر.",
-    pasteBulkPh: "رابط واحد في كل سطر",
-    pasteOnePh: "الصق رابط يوتيوب أو فيميو",
-    finding: "جاري البحث عن الصورة…",
-    extractAll: "استخراج الكل",
-    getThumb: "جلب الصورة المصغرة",
-    copyShare: "نسخ رابط المشاركة",
-    share: "مشاركة",
-    extracting: "جاري استخراج الصور",
-    ready: "الصورة جاهزة",
-    download: "تنزيل",
-    copyImage: "نسخ رابط الصورة",
-    openFull: "فتح بالحجم الكامل",
-    unknownSize: "حجم غير معروف",
-    best: "الأفضل · ",
-    shareLink: "رابط المشاركة",
-    idsOk: "معرف فيديو صالح",
-    idsOkPlural: "معرفات فيديو صالحة",
-    noIds: "لا يوجد معرف فيديو بعد.",
-    validId: "صالح",
-    noId: "لا يوجد معرف فيديو مدعوم في هذا النص.",
-    foot: "صور يوتيوب العامة فقط. بلا حساب وبلا تنزيل للفيديو.",
-    heroTitle: "مستخرج صور يوتيوب المصغرة",
-    heroIntro: "حمّل مجانا أعلى صورة مصغرة عامة من يوتيوب أو فيميو. الصق الرابط ثم نزّل أو شارك.",
-    INVALID_URL: "الصق رابط يوتيوب أو فيميو عام.",
-    UNSUPPORTED_HOST: "يُدعم يوتيوب وفيميو فقط.",
-    INVALID_VIDEO_ID: "تعذر إيجاد معرف فيديو صالح.",
-    THUMBNAIL_NOT_FOUND: "لا توجد صورة مصغرة عامة لهذا الفيديو.",
-    NETWORK_ERROR: "خطأ في الشبكة. أعد المحاولة.",
-    TIMEOUT: "انتهت المهلة. أعد المحاولة.",
-    IMAGE_VALIDATION_FAILED: "تعذر التحقق من الصورة.",
-    DOWNLOAD_FAILED: "تعذر تنزيل الملف.",
-    CHANNEL_OR_PLAYLIST: "الصق روابط فيديوهات، ليس قناة أو قائمة.",
-  },
-  de: {
-    posts: "Beiträge",
-    bulk: "Stapel",
-    theme: "Design",
-    pasteOne: "Fügen Sie eine YouTube- oder Vimeo-URL ein.",
-    pasteBulk: "Eine YouTube- oder Vimeo-URL pro Zeile.",
-    pasteBulkPh: "Eine URL pro Zeile",
-    pasteOnePh: "YouTube- oder Vimeo-URL einfügen",
-    finding: "Miniatur wird gesucht…",
-    extractAll: "Alle extrahieren",
-    getThumb: "Thumbnail holen",
-    copyShare: "Share-Link kopieren",
-    share: "Teilen",
-    extracting: "Miniaturen werden extrahiert",
-    ready: "Thumbnail bereit",
-    download: "Herunterladen",
-    copyImage: "Bild-URL kopieren",
-    openFull: "In voller Auflösung öffnen",
-    unknownSize: "Unbekannte Größe",
-    best: "BESTE · ",
-    shareLink: "SHARE-LINK",
-    idsOk: "gültige Video-ID",
-    idsOkPlural: "gültige Video-IDs",
-    noIds: "Noch keine Video-ID.",
-    validId: "Gültig",
-    noId: "Keine unterstützte Video-ID in diesem Text.",
-    foot: "Nur öffentliche YouTube-Thumbnails. Kein Konto, kein Video-Download.",
-    heroTitle: "YouTube-Thumbnail-Extraktor",
-    heroIntro: "Laden Sie kostenlos das beste öffentliche YouTube- oder Vimeo-Thumbnail herunter.",
-    INVALID_URL: "Fügen Sie eine öffentliche YouTube- oder Vimeo-URL ein.",
-    UNSUPPORTED_HOST: "Nur YouTube und Vimeo.",
-    INVALID_VIDEO_ID: "Keine gültige Video-ID gefunden.",
-    THUMBNAIL_NOT_FOUND: "Kein öffentliches Thumbnail gefunden.",
-    NETWORK_ERROR: "Netzwerkfehler. Erneut versuchen.",
-    TIMEOUT: "Zeitüberschreitung. Erneut versuchen.",
-    IMAGE_VALIDATION_FAILED: "Bild konnte nicht geprüft werden.",
-    DOWNLOAD_FAILED: "Datei konnte nicht geladen werden.",
-    CHANNEL_OR_PLAYLIST: "Video-URLs einfügen, keinen Kanal.",
-  },
-  pt: {
-    posts: "Artigos",
-    bulk: "Lote",
-    theme: "Tema",
-    pasteOne: "Cole um URL do YouTube ou Vimeo.",
-    pasteBulk: "Um URL do YouTube ou Vimeo por linha.",
-    pasteBulkPh: "Um URL por linha",
-    pasteOnePh: "Cole um URL do YouTube ou Vimeo",
-    finding: "A procurar a miniatura…",
-    extractAll: "Extrair tudo",
-    getThumb: "Obter miniatura",
-    copyShare: "Copiar link de partilha",
-    share: "Partilhar",
-    extracting: "A extrair miniaturas",
-    ready: "Miniatura pronta",
-    download: "Descarregar",
-    copyImage: "Copiar URL da imagem",
-    openFull: "Abrir em resolução total",
-    unknownSize: "Tamanho desconhecido",
-    best: "MELHOR · ",
-    shareLink: "LINK DE PARTILHA",
-    idsOk: "ID de vídeo válido",
-    idsOkPlural: "IDs de vídeo válidos",
-    noIds: "Ainda sem IDs de vídeo.",
-    validId: "Válido",
-    noId: "Nenhum ID de vídeo suportado neste texto.",
-    foot: "Apenas miniaturas públicas do YouTube. Sem conta e sem download de vídeo.",
-    heroTitle: "Extrator de miniaturas do YouTube",
-    heroIntro: "Descarregue grátis a melhor miniatura pública do YouTube ou Vimeo.",
-    INVALID_URL: "Cole um URL público do YouTube ou Vimeo.",
-    UNSUPPORTED_HOST: "Apenas YouTube e Vimeo.",
-    INVALID_VIDEO_ID: "Não foi encontrado um ID de vídeo válido.",
-    THUMBNAIL_NOT_FOUND: "Não há miniatura pública para este vídeo.",
-    NETWORK_ERROR: "Erro de rede. Tente de novo.",
-    TIMEOUT: "Tempo esgotado. Tente de novo.",
-    IMAGE_VALIDATION_FAILED: "Não foi possível validar a imagem.",
-    DOWNLOAD_FAILED: "Não foi possível descarregar o ficheiro.",
-    CHANNEL_OR_PLAYLIST: "Cole URLs de vídeos, não um canal.",
-  },
-  ru: {
-    posts: "Статьи",
-    bulk: "Пакет",
-    theme: "Тема",
-    pasteOne: "Вставьте ссылку YouTube или Vimeo.",
-    pasteBulk: "Одна ссылка YouTube или Vimeo в строке.",
-    pasteBulkPh: "Одна ссылка в строке",
-    pasteOnePh: "Вставьте ссылку YouTube или Vimeo",
-    finding: "Поиск превью…",
-    extractAll: "Извлечь все",
-    getThumb: "Получить превью",
-    copyShare: "Копировать ссылку",
-    share: "Поделиться",
-    extracting: "Извлечение превью",
-    ready: "Превью готово",
-    download: "Скачать",
-    copyImage: "Копировать URL картинки",
-    openFull: "Открыть в полном размере",
-    unknownSize: "Неизвестный размер",
-    best: "ЛУЧШЕЕ · ",
-    shareLink: "ССЫЛКА",
-    idsOk: "верный ID видео",
-    idsOkPlural: "верных ID видео",
-    noIds: "ID видео пока нет.",
-    validId: "Верный",
-    noId: "В этом тексте нет поддерживаемого ID видео.",
-    foot: "Только публичные превью YouTube. Без аккаунта и без скачивания видео.",
-    heroTitle: "Экстрактор превью YouTube",
-    heroIntro: "Бесплатно скачайте лучшее публичное превью YouTube или Vimeo.",
-    INVALID_URL: "Вставьте публичную ссылку YouTube или Vimeo.",
-    UNSUPPORTED_HOST: "Только YouTube и Vimeo.",
-    INVALID_VIDEO_ID: "Не найден верный ID видео.",
-    THUMBNAIL_NOT_FOUND: "Публичное превью не найдено.",
-    NETWORK_ERROR: "Ошибка сети. Повторите.",
-    TIMEOUT: "Время вышло. Повторите.",
-    IMAGE_VALIDATION_FAILED: "Не удалось проверить изображение.",
-    DOWNLOAD_FAILED: "Не удалось скачать файл.",
-    CHANNEL_OR_PLAYLIST: "Вставляйте ссылки на видео, не канал.",
-  },
-} as const;
-
-export type UiKey = keyof typeof UI.en;
-
 export function t(key: UiKey): string {
   const locale = readLocale();
-  const pack = (UI as Record<string, Record<UiKey, string>>)[locale] || UI.en;
-  return pack[key] || UI.en[key];
+  const pack = catalog[locale as keyof typeof catalog] || catalog.en;
+  return pack.ui[key] || catalog.en.ui[key];
+}
+
+export function languageOptions(): { code: string; label: string }[] {
+  return ISO6391.map(([code, english]) => ({
+    code,
+    label: (nativeNames as Record<string, string>)[code] || english,
+  }));
+}
+
+export function isRtl(code = readLocale()): boolean {
+  return RTL_CODES.has(code);
+}
+
+export function guidePosts() {
+  const locale = readLocale();
+  const pack = catalog[locale as keyof typeof catalog] || catalog.en;
+  return GUIDE_POSTS.map((post, index) => ({
+    ...post,
+    title: pack.posts[index]?.title || post.title,
+    summary: pack.posts[index]?.summary || post.summary,
+  }));
+}
+
+export function switchLocale(code: string): void {
+  if (!ISO6391_CODES.has(code)) return;
+  try {
+    localStorage.setItem("yte-lang", code);
+  } catch {
+    /* ignore */
+  }
+  if (typeof window === "undefined") return;
+  const here = new URL(window.location.href);
+  const onProduct = /(^|\.)11tik\.com$/i.test(here.hostname);
+  if (onProduct) {
+    const dest = new URL(localeHomeUrl(code));
+    dest.search = here.search;
+    dest.hash = here.hash;
+    dest.searchParams.delete("lang");
+    window.location.assign(dest.href);
+    return;
+  }
+  here.searchParams.set("lang", code);
+  window.location.assign(here.href);
 }

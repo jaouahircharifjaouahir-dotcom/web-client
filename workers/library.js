@@ -388,7 +388,7 @@ export function imageSitemapXml(rows) {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
   ];
-  for (const row of rows.slice(0, 10000)) {
+  for (const row of rows) {
     if (!row.loc || !row.thumb) continue;
     parts.push(
       `<url><loc>${escapeXml(row.loc)}</loc><image:image><image:loc>${escapeXml(row.thumb)}</image:loc><image:title>${escapeXml(row.title || "YouTube thumbnail")}</image:title><image:caption>${escapeXml([row.title, ...(row.tags || [])].filter(Boolean).join(" – ") || "11tik YouTube thumbnail")}</image:caption></image:image></url>`,

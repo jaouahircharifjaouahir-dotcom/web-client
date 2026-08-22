@@ -12,7 +12,11 @@ import { readFileSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const SITEMAP_URLS = ["https://www.11tik.com/sitemap.xml", "https://www.11tik.com/sitemap-pages.xml"];
+const SITEMAP_URLS = [
+  "https://www.11tik.com/sitemap.xml",
+  "https://www.11tik.com/sitemap-images.xml",
+  "https://www.11tik.com/sitemap-pages.xml",
+];
 
 const DEFAULT_JSON = join(homedir(), "Desktop", "secrets", "google-indexing.json");
 const jsonPath = process.env.GOOGLE_INDEXING_JSON || DEFAULT_JSON;

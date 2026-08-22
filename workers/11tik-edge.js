@@ -4,6 +4,16 @@ import {
   hreflangLinks,
   localeSitemapLocs,
 } from "./iso6391.js";
+import {
+  SITEMAP_PAGE_SIZE,
+  allPublicSitemapUrls,
+  childSitemapUrls,
+  chunkEntries,
+  parseSitemapPath,
+  robotsTxt,
+  sitemapIndexXml,
+  urlsetXml,
+} from "./sitemaps.js";
 import localeMeta from "./locale-meta.json";
 import {
   embedWidgetHtml,
@@ -38,7 +48,7 @@ const ICON_APPLE =
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png";
 const YT_ID = /^[A-Za-z0-9_-]{11}$/;
 const VIMEO_ID = /^\d{6,12}$/;
-const MAX_URLS = 45000;
+const MAX_URLS = SITEMAP_PAGE_SIZE * 20;
 const CACHE_REQ = new Request(`${SITE}/web-client/__extracts.json`);
 
 function corsHeaders(extra = {}) {
@@ -134,11 +144,6 @@ async function proxyGithub(pathname, search) {
 function locFor(platform, videoId) {
   if (platform === "vimeo") return `${SITE}/?vimeo=${encodeURIComponent(videoId)}`;
   return `${SITE}/?v=${encodeURIComponent(videoId)}`;
-}
-
-function urlEntry(loc, lastmod) {
-  const mod = lastmod ? `<lastmod>${xmlEscape(lastmod)}</lastmod>` : "";
-  return `<url><loc>${xmlEscape(loc)}</loc>${mod}</url>`;
 }
 
 function decodeXml(value) {
@@ -320,14 +325,46 @@ async function hourlyExtract(env) {
   await pingCrawlers();
 }
 
-async function pingCrawlers() {
-  const sitemap = encodeURIComponent(`${SITE}/sitemap.xml`);
-  const targets = [
+function pingEndpoints(sitemapUrl) {
+  const sitemap = encodeURIComponent(sitemapUrl);
+  return [
     `https://www.google.com/ping?sitemap=${sitemap}`,
     `https://www.bing.com/ping?sitemap=${sitemap}`,
     `https://webmaster.yandex.com/ping?sitemap=${sitemap}`,
   ];
+}
+
+async function pingCrawlers(sitemapUrls = [`${SITE}/sitemap.xml`]) {
+  const targets = [...new Set(sitemapUrls)].flatMap(pingEndpoints);
   await Promise.allSettled(targets.map((target) => fetch(target, { method: "GET", redirect: "follow" })));
+}
+
+async function readShardMeta(env) {
+  const raw = await env?.SITEMAP_URLS?.get("meta:sitemap-shards");
+  if (!raw) return { urlShards: 1, imageShards: 1 };
+  try {
+    const parsed = JSON.parse(raw);
+    return {
+      urlShards: Math.max(1, Number(parsed.urlShards) || 1),
+      imageShards: Math.max(1, Number(parsed.imageShards) || 1),
+    };
+  } catch {
+    return { urlShards: 1, imageShards: 1 };
+  }
+}
+
+async function announceIfNewShards(env, urlShards, imageShards) {
+  const next = { urlShards: Math.max(1, urlShards), imageShards: Math.max(1, imageShards) };
+  const prev = await readShardMeta(env);
+  const changed = next.urlShards !== prev.urlShards || next.imageShards !== prev.imageShards;
+  const grew = next.urlShards > prev.urlShards || next.imageShards > prev.imageShards;
+  if (changed && env?.SITEMAP_URLS) {
+    await env.SITEMAP_URLS.put("meta:sitemap-shards", JSON.stringify(next));
+  }
+  if (grew) {
+    await pingCrawlers(allPublicSitemapUrls(next.urlShards, next.imageShards));
+  }
+  return grew;
 }
 
 async function handleSitemapAdd(request, env, ctx) {
@@ -358,13 +395,17 @@ async function handleSitemapAdd(request, env, ctx) {
   const loc = await saveExtract(env, parsed.platform, parsed.videoId, extra);
   const stored = await readLibraryRow(env, parsed.platform, parsed.videoId);
   const gate = stored?.gate || qualityForVideo(stored || {});
-  ctx?.waitUntil(gate.decision === "INDEX" ? pingCrawlers() : Promise.resolve());
+  ctx?.waitUntil(
+    gate.decision === "INDEX"
+      ? pingCrawlers([`${SITE}/sitemap.xml`, `${SITE}/sitemap-images.xml`])
+      : Promise.resolve(),
+  );
   return new Response(JSON.stringify({ ok: true, loc, pinged: gate.decision === "INDEX", gate }), {
     headers: { "content-type": "application/json", ...corsHeaders() },
   });
 }
 
-async function buildSitemapXml(env) {
+async function collectPageEntries(env) {
   const blogger = await bloggerLocs();
   const extracts = await listExtracts(env);
   const seen = new Set(blogger.keys());
@@ -388,22 +429,33 @@ async function buildSitemapXml(env) {
   for (const tag of indexedTags) {
     blogger.set(`${SITE}/tag/${tag.slug}`, tag.updated || newest);
   }
-  const parts = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
+  const entries = [];
   for (const [loc, lastmod] of blogger) {
-    parts.push(urlEntry(loc, lastmod || newest));
+    entries.push({ loc, lastmod: lastmod || newest });
   }
   for (const row of extracts) {
     if (row?.gate && row.gate.decision !== "INDEX") continue;
     if (!row?.loc || seen.has(row.loc)) continue;
     seen.add(row.loc);
-    parts.push(urlEntry(row.loc, row.lastmod || newest));
+    entries.push({ loc: row.loc, lastmod: row.lastmod || newest });
   }
-  parts.push("</urlset>");
-  return { xml: parts.join(""), newest };
+  return { entries, newest };
 }
 
-async function handleSitemapGet(request, env) {
-  const { xml, newest } = await buildSitemapXml(env);
+async function collectImageEntries(env) {
+  const rows = await listIndexedExtracts(env, MAX_URLS);
+  const entries = [];
+  let newest = "1970-01-01T00:00:00.000Z";
+  for (const row of rows) {
+    if (!row?.loc || !row?.thumb) continue;
+    entries.push(row);
+    if (row.lastmod && row.lastmod > newest) newest = row.lastmod;
+  }
+  if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
+  return { entries, newest };
+}
+
+function sitemapResponse(xml, newest, request) {
   const etag = sitemapEtag(xml);
   if (request.headers.get("if-none-match") === etag) {
     return new Response(null, {
@@ -411,17 +463,53 @@ async function handleSitemapGet(request, env) {
       headers: {
         etag,
         "last-modified": new Date(newest).toUTCString(),
-        "cache-control": "public, max-age=0, must-revalidate",
+        "cache-control": "public, max-age=300, must-revalidate",
       },
     });
   }
   return new Response(xml, {
     headers: {
       "content-type": "application/xml; charset=utf-8",
-      "cache-control": "public, max-age=0, must-revalidate",
+      "cache-control": "public, max-age=300, must-revalidate",
       etag,
       "last-modified": new Date(newest).toUTCString(),
       "x-robots-tag": "noarchive",
+    },
+  });
+}
+
+async function handleSitemapRoute(request, env, parsed) {
+  const data = parsed.kind === "images" ? await collectImageEntries(env) : await collectPageEntries(env);
+  const pages = chunkEntries(data.entries);
+  await announceIfNewShards(
+    env,
+    parsed.kind === "pages" ? pages.length : (await readShardMeta(env)).urlShards,
+    parsed.kind === "images" ? pages.length : (await readShardMeta(env)).imageShards,
+  );
+  if (parsed.role === "index") {
+    const locs = childSitemapUrls(parsed.kind === "images" ? "images" : "pages", pages.length);
+    return sitemapResponse(sitemapIndexXml(locs, data.newest), data.newest, request);
+  }
+  const page = parsed.role === "legacy" ? 1 : parsed.page;
+  const slice = pages[page - 1];
+  if (!slice) return new Response("Not found", { status: 404 });
+  if (parsed.kind === "images") {
+    return sitemapResponse(imageSitemapXml(slice), data.newest, request);
+  }
+  return sitemapResponse(urlsetXml(slice), data.newest, request);
+}
+
+async function handleRobots(request, env) {
+  const meta = await readShardMeta(env);
+  const body = robotsTxt({
+    urlShards: meta.urlShards,
+    imageShards: meta.imageShards,
+    host: request.headers.get("host") || "www.11tik.com",
+  });
+  return new Response(body, {
+    headers: {
+      "content-type": "text/plain; charset=utf-8",
+      "cache-control": "public, max-age=300",
     },
   });
 }
@@ -503,12 +591,6 @@ function localeHostCode(host) {
 }
 
 async function handleLibraryApi(url, request, env) {
-  if (url.pathname === "/image-sitemap.xml") {
-    const rows = await listIndexedExtracts(env, 10000);
-    return new Response(imageSitemapXml(rows), {
-      headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=300" },
-    });
-  }
   if (url.pathname === "/embed" || url.pathname === "/embed/") {
     return new Response(embedWidgetHtml(url.searchParams.get("v") || ""), {
       headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" },
@@ -564,8 +646,8 @@ async function handleLibraryApi(url, request, env) {
 function isWorkerOwnedPath(pathname) {
   return (
     pathname.startsWith("/web-client/") ||
-    pathname === "/sitemap.xml" ||
-    pathname === "/image-sitemap.xml" ||
+    pathname === "/robots.txt" ||
+    Boolean(parseSitemapPath(pathname)) ||
     pathname.startsWith("/tag/") ||
     pathname === "/trending-tags" ||
     pathname === "/stats" ||
@@ -671,26 +753,22 @@ export default {
       return Response.redirect(legal, 301);
     }
 
+    if (url.pathname === "/robots.txt") {
+      return handleRobots(request, env);
+    }
+    const sitemapPath = parseSitemapPath(url.pathname);
+    if (sitemapPath) {
+      return handleSitemapRoute(request, env, sitemapPath);
+    }
+
     if (lang) {
       if (lang === "en") {
         return Response.redirect("https://www.11tik.com/" + url.pathname + url.search + url.hash, 301);
-      }
-      if (url.pathname === "/robots.txt") {
-        return new Response("User-agent: *\nAllow: /\nSitemap: https://www.11tik.com/sitemap.xml\n", {
-          headers: { "content-type": "text/plain; charset=utf-8" },
-        });
-      }
-      if (url.pathname === "/sitemap.xml") {
-        return handleSitemapGet(request, env);
       }
       if (url.pathname.startsWith("/web-client/") && !url.pathname.includes("..")) {
         return proxyGithub(url.pathname, url.search);
       }
       return localeAppPage(lang, host);
-    }
-
-    if (url.pathname === "/sitemap.xml") {
-      return handleSitemapGet(request, env);
     }
 
     if (isAppShellPath(url.pathname)) {

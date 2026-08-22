@@ -799,10 +799,10 @@ export default function App() {
           <a href="/trending-tags">{tx(locale, "trendingTags")}</a>
           <a href="/guide/youtube-thumbnails">{tx(locale, "guidePillar")}</a>
           <a href="/stats">{tx(locale, "statsTitle")}</a>
-          <a href="/about">{tx(locale, "trustAbout")}</a>
-          <a href="/privacy">{tx(locale, "trustPrivacy")}</a>
-          <a href="/terms">{tx(locale, "trustTerms")}</a>
-          <a href="/contact">{tx(locale, "trustContact")}</a>
+          <a href="https://www.11tik.com/p/about.html">{tx(locale, "trustAbout")}</a>
+          <a href="https://www.11tik.com/p/privacy.html">{tx(locale, "trustPrivacy")}</a>
+          <a href="https://www.11tik.com/p/terms-of-use.html">{tx(locale, "trustTerms")}</a>
+          <a href="https://www.11tik.com/p/contact.html">{tx(locale, "trustContact")}</a>
           <a href="/copyright">{tx(locale, "legalTitle")}</a>
           {relatedGuides("").map((post) => (
             <a href={post.href} key={post.href}>

@@ -21,10 +21,10 @@ export const SITE = {
     shorts: "https://www.11tik.com/p/youtube-shorts-thumbnail.html",
     sizes: "https://www.11tik.com/p/youtube-thumbnail-size.html",
     urlGuide: "https://www.11tik.com/p/youtube-thumbnail-url.html",
-    about: "https://www.11tik.com/about",
-    privacy: "https://www.11tik.com/privacy",
-    contact: "https://www.11tik.com/contact",
-    terms: "https://www.11tik.com/terms",
+    about: "https://www.11tik.com/p/about.html",
+    privacy: "https://www.11tik.com/p/privacy.html",
+    contact: "https://www.11tik.com/p/contact.html",
+    terms: "https://www.11tik.com/p/terms-of-use.html",
   },
   icons: {
     png16:

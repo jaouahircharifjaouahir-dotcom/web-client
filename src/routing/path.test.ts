@@ -6,8 +6,8 @@ describe("parseAppRoute", () => {
     expect(parseAppRoute("/tag/shorts")).toEqual({ name: "tag", slug: "shorts" });
   });
 
-  it("reads trust pages", () => {
-    expect(parseAppRoute("/about")).toEqual({ name: "about" });
+  it("reads copyright and tags", () => {
+    expect(parseAppRoute("/about")).toEqual({ name: "home" });
     expect(parseAppRoute("/copyright")).toEqual({ name: "copyright" });
   });
 });

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PILLAR_GUIDE, TRUST_PAGES } from "../content/trust";
+import { PILLAR_GUIDE } from "../content/trust";
 import { relatedGuides } from "../content/related";
 import { tx } from "../i18n/extra";
 import { localeHomeUrl, readLocale } from "../i18n/ui";
@@ -15,10 +15,6 @@ type TagPayload = {
 export function SitePages({ route }: { route: Exclude<AppRoute, { name: "home" }> }) {
   const locale = readLocale();
   const origin = localeHomeUrl();
-  if (route.name === "about") return <Article title={TRUST_PAGES.about.title} body={TRUST_PAGES.about.body} origin={origin} />;
-  if (route.name === "privacy") return <Article title={TRUST_PAGES.privacy.title} body={TRUST_PAGES.privacy.body} origin={origin} />;
-  if (route.name === "terms") return <Article title={TRUST_PAGES.terms.title} body={TRUST_PAGES.terms.body} origin={origin} />;
-  if (route.name === "contact") return <Article title={TRUST_PAGES.contact.title} body={TRUST_PAGES.contact.body} origin={origin} />;
   if (route.name === "copyright") {
     return (
       <Article

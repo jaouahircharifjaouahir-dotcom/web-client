@@ -301,10 +301,6 @@ async function buildSitemapXml(env) {
   if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
   blogger.set(`${SITE}/`, newest);
   blogger.set(`${SITE}/trending-tags`, newest);
-  blogger.set(`${SITE}/about`, newest);
-  blogger.set(`${SITE}/privacy`, newest);
-  blogger.set(`${SITE}/terms`, newest);
-  blogger.set(`${SITE}/contact`, newest);
   blogger.set(`${SITE}/stats`, newest);
   blogger.set(`${SITE}/copyright`, newest);
   blogger.set(`${SITE}/guide/youtube-thumbnails`, newest);
@@ -364,8 +360,17 @@ function localeCopy(code) {
   };
 }
 
+function legalPageRedirect(pathname) {
+  const path = pathname.replace(/\/+$/, "") || "/";
+  if (path === "/about") return `${SITE}/p/about.html`;
+  if (path === "/privacy") return `${SITE}/p/privacy.html`;
+  if (path === "/contact") return `${SITE}/p/contact.html`;
+  if (path === "/terms") return `${SITE}/p/terms-of-use.html`;
+  return "";
+}
+
 function isAppShellPath(pathname) {
-  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$)/.test(
+  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$)/.test(
     pathname,
   );
 }
@@ -480,6 +485,11 @@ export default {
 
     const api = await handleLibraryApi(url, request, env);
     if (api) return api;
+
+    const legal = legalPageRedirect(url.pathname);
+    if (legal) {
+      return Response.redirect(legal, 301);
+    }
 
     if (lang) {
       if (lang === "en") {

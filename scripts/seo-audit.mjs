@@ -180,7 +180,7 @@ if (live) {
     "https://11tik.com/",
     "https://www.11tik.com/robots.txt",
     "https://www.11tik.com/sitemap.xml",
-    "https://www.11tik.com/about",
+    "https://www.11tik.com/p/about.html",
   ];
   for (const url of urls) {
     try {

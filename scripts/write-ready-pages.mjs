@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const outDir = "C:/Users/ADMIN/Downloads/11tik-pages-ready";
@@ -443,3 +443,7 @@ writeFileSync(
 );
 
 console.log("wrote all ready pages to", outDir);
+copyFileSync("docs/blogger-pages/about.html", join(outDir, "about.html"));
+copyFileSync("docs/blogger-pages/privacy.html", join(outDir, "privacy.html"));
+copyFileSync("docs/blogger-pages/contact.html", join(outDir, "contact.html"));
+copyFileSync("docs/blogger-pages/terms.html", join(outDir, "terms.html"));

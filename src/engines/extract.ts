@@ -26,8 +26,17 @@ export async function extractThumbnails(
   if (cached?.bestThumbnail) {
     let meta = cached.meta ?? { platform: "youtube" as const, title: null, authorName: null };
     if (!meta.title) {
-      const publicMeta = await fetchYouTubePublicMeta(parsed.videoId, signal).catch(() => ({ title: null, authorName: null }));
-      meta = { platform: "youtube", title: publicMeta.title, authorName: publicMeta.authorName };
+      const publicMeta = await fetchYouTubePublicMeta(parsed.videoId, signal).catch(() => ({
+        title: null,
+        authorName: null,
+        tags: [] as string[],
+      }));
+      meta = {
+        platform: "youtube",
+        title: publicMeta.title,
+        authorName: publicMeta.authorName,
+        tags: publicMeta.tags || [],
+      };
     }
     const hit = { ...cached, meta, cached: true };
     resultCache.set(cacheKey, hit);
@@ -89,10 +98,15 @@ export async function extractThumbnails(
     },
   };
 
-  const publicMeta = await metaPromise.catch(() => ({ title: null, authorName: null }));
+  const publicMeta = await metaPromise.catch(() => ({ title: null, authorName: null, tags: [] as string[] }));
   const withMeta: ThumbnailExtractionResult = {
     ...result,
-    meta: { platform: "youtube", title: publicMeta.title, authorName: publicMeta.authorName },
+    meta: {
+      platform: "youtube",
+      title: publicMeta.title,
+      authorName: publicMeta.authorName,
+      tags: publicMeta.tags || [],
+    },
   };
   onProgress?.(withMeta);
   if (withMeta.bestThumbnail) resultCache.set(cacheKey, withMeta);

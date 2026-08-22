@@ -17,6 +17,7 @@ import {
   rateLimitOk,
   readLibraryRow,
   readTag,
+  fetchYouTubeWatchMeta,
   resolveChannelVideos,
   saveLibraryRow,
   seedBudgetOk,
@@ -101,13 +102,21 @@ async function saveCacheMap(map) {
 async function saveExtract(env, platform, videoId, extra = {}) {
   const loc = locFor(platform, videoId);
   const lastmod = new Date().toISOString();
-  const tags = Array.isArray(extra.tags) ? extra.tags.map(slugTag).filter(Boolean).slice(0, 12) : [];
+  let tags = Array.isArray(extra.tags)
+    ? extra.tags.map((tag) => String(tag || "").trim()).filter(Boolean).slice(0, 40)
+    : [];
+  let title = String(extra.title || "").slice(0, 180);
+  if (platform === "youtube" && (!tags.length || !title)) {
+    const watch = await fetchYouTubeWatchMeta(videoId);
+    if (!tags.length) tags = watch.tags;
+    if (!title && watch.title) title = String(watch.title).slice(0, 180);
+  }
   const row = {
     loc,
     lastmod,
     platform,
     videoId,
-    title: String(extra.title || "").slice(0, 180),
+    title,
     tags,
     thumb: String(extra.thumb || extra.thumbnail || ""),
     source: extra.source === "seed" ? "seed" : "user",
@@ -208,19 +217,9 @@ async function hourlyExtract(env) {
   if (!(await seedBudgetOk(env))) return;
   const videoId = (await pickTrendingSeedId()) || (await pickHourlyVideoId(env));
   if (!videoId) return;
-  let title = "";
-  try {
-    const oembed = await fetch(
-      `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`,
-      { headers: HOURLY_UA },
-    );
-    if (oembed.ok) {
-      const data = await oembed.json();
-      title = String(data.title || "");
-    }
-  } catch {
-    /* title optional until gate */
-  }
+  const watch = await fetchYouTubeWatchMeta(videoId);
+  const title = watch.title || "";
+  const tags = watch.tags.length ? watch.tags : ["youtube"];
   let thumb = "";
   for (const file of THUMB_FILES) {
     const host = file.endsWith(".webp") ? "vi_webp" : "vi";
@@ -235,10 +234,6 @@ async function hourlyExtract(env) {
       /* next */
     }
   }
-  const tags = title
-    .toLowerCase()
-    .match(/[a-z0-9]{3,}/g)
-    ?.slice(0, 6) || ["youtube", "thumbnail"];
   await saveExtract(env, "youtube", videoId, { title, tags, thumb, source: "seed" });
   await pingCrawlers();
 }
@@ -396,12 +391,12 @@ function localeAppPage(code, host) {
   <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=36" as="style"/>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=36" as="script"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=37" as="style"/>
+  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=37" as="script"/>
 </head>
 <body>
   <div id="yte-root"></div>
-  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=36"></script>
+  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=37"></script>
 </body>
 </html>`;
   return new Response(html, {
@@ -442,6 +437,11 @@ async function handleLibraryApi(url, request, env) {
       return jsonResponse(thumbnailApiPayload("youtube", url.searchParams.get("v")));
     }
     return jsonResponse({ ok: false, error: "url required, example ?url=https://www.youtube.com/watch?v=ID" }, 400);
+  }
+  if (url.pathname === "/web-client/youtube-meta") {
+    const videoId = url.searchParams.get("v") || "";
+    const data = await fetchYouTubeWatchMeta(videoId);
+    return jsonResponse(data, data.ok ? 200 : 422);
   }
   if (url.pathname === "/web-client/channel-videos") {
     const data = await resolveChannelVideos(url.searchParams.get("url") || "", url.searchParams.get("limit") || 20);

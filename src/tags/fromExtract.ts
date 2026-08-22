@@ -34,8 +34,15 @@ function slugWords(value: string | null | undefined, limit: number): string[] {
   return out;
 }
 
-/** Video-specific labels first so two extracts never look like the same chip row. */
+/** Prefer the video's published YouTube tags; fall back to title words only if none exist. */
 export function tagsForThumbnail(result: ThumbnailExtractionResult, thumb: ThumbnailCandidate, _isBest: boolean): string[] {
+  const published = (result.meta?.tags || []).map((tag) => tag.trim()).filter(Boolean);
+  if (published.length) {
+    const tags = [...published];
+    if (result.type === "shorts" && !tags.some((tag) => tag.toLowerCase() === "shorts")) tags.push("shorts");
+    if (result.type === "live" && !tags.some((tag) => tag.toLowerCase() === "live")) tags.push("live");
+    return [...new Set(tags)].slice(0, 40);
+  }
   const tags: string[] = [];
   tags.push(...slugWords(result.meta?.title, 5));
   tags.push(...slugWords(result.meta?.authorName, 2));
@@ -47,6 +54,8 @@ export function tagsForThumbnail(result: ThumbnailExtractionResult, thumb: Thumb
 }
 
 export function tagsForResult(result: ThumbnailExtractionResult): string[] {
+  const published = (result.meta?.tags || []).map((tag) => tag.trim()).filter(Boolean);
+  if (published.length) return [...new Set(published)].slice(0, 40);
   const best = result.bestThumbnail;
   if (!best) return slugWords(result.meta?.title, 6);
   return tagsForThumbnail(result, best, true);

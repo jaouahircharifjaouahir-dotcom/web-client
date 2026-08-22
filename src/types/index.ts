@@ -58,6 +58,7 @@ export interface ExtractionMeta {
   platform: "youtube" | "vimeo";
   title: string | null;
   authorName: string | null;
+  tags?: string[];
 }
 
 export interface ThumbnailExtractionResult {

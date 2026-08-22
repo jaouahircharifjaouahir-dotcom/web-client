@@ -4,6 +4,69 @@ const MAX_ADD_PER_HOUR = 80;
 const MAX_SEED_PER_DAY = 12;
 const TAG_INDEX_MIN = 6;
 
+export function parseYouTubeWatchMeta(html) {
+  const tags = [];
+  const seen = new Set();
+  const push = (value) => {
+    const tag = String(value || "").trim();
+    if (!tag || seen.has(tag.toLowerCase())) return;
+    seen.add(tag.toLowerCase());
+    tags.push(tag);
+  };
+  const meta = String(html || "").match(/<meta name="keywords" content="([^"]*)"/i);
+  if (meta?.[1]) {
+    for (const part of meta[1].split(",")) push(part);
+  }
+  if (!tags.length) {
+    const idx = String(html || "").indexOf('"keywords":[');
+    if (idx >= 0) {
+      const slice = String(html).slice(idx + '"keywords":'.length, idx + 12000);
+      const raw = slice.match(/^\[[\s\S]*?\]/);
+      if (raw) {
+        try {
+          const list = JSON.parse(raw[0]);
+          if (Array.isArray(list)) for (const item of list) push(item);
+        } catch {
+          /* keep empty */
+        }
+      }
+    }
+  }
+  const title =
+    String(html || "").match(/<meta name="title" content="([^"]+)"/i)?.[1] ||
+    String(html || "").match(/"title":{"runs":\[{"text":"([^"]+)"/)?.[1] ||
+    "";
+  const author =
+    String(html || "").match(/<link itemprop="name" content="([^"]+)"/i)?.[1] ||
+    String(html || "").match(/"ownerChannelName":"([^"]+)"/)?.[1] ||
+    "";
+  return { title: decodeHtml(title), authorName: decodeHtml(author), tags: tags.slice(0, 40) };
+}
+
+function decodeHtml(value) {
+  return String(value || "")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">");
+}
+
+export async function fetchYouTubeWatchMeta(videoId) {
+  if (!YT_ID.test(videoId || "")) return { ok: false, tags: [], title: "", authorName: "" };
+  const res = await fetch(`https://www.youtube.com/watch?v=${videoId}`, {
+    headers: {
+      "user-agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "accept-language": "en-US,en;q=0.8",
+    },
+    cf: { cacheTtl: 300 },
+  });
+  if (!res.ok) return { ok: false, tags: [], title: "", authorName: "" };
+  const parsed = parseYouTubeWatchMeta(await res.text());
+  return { ok: parsed.tags.length > 0 || Boolean(parsed.title), videoId, ...parsed };
+}
+
 export function slugTag(value) {
   return String(value || "")
     .toLowerCase()

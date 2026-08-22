@@ -58,7 +58,7 @@
       <meta content='2026-08-19T00:00:00Z' property='article:published_time'/>
       <meta content='2026-08-21T00:00:00Z' property='article:modified_time'/>
       <meta content='2026-08-21T00:00:00Z' property='og:updated_time'/>
-      <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' property='og:image'/>
+      <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' property='og:image'/>
       <meta content='1200' property='og:image:width'/>
       <meta content='630' property='og:image:height'/>
       <meta content='image/png' property='og:image:type'/>
@@ -66,7 +66,7 @@
       <meta content='summary_large_image' name='twitter:card'/>
       <meta content='YouTube Thumbnail Extractor – Download HD YouTube Thumbnails' name='twitter:title'/>
       <meta content='Download YouTube thumbnails instantly in the highest available quality, free. Extract HD images from any YouTube video or Shorts URL.' name='twitter:description'/>
-      <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
+      <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     <b:else/>
       <link href='https://www.11tik.com/' hreflang='en' rel='alternate'/>
@@ -79,12 +79,12 @@
       <meta expr:content='data:view.url.canonical' property='og:url'/>
       <meta content='summary_large_image' name='twitter:card'/>
       <meta expr:content='data:view.title.escaped' name='twitter:title'/>
-      <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' property='og:image'/>
+      <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' property='og:image'/>
       <meta content='1200' property='og:image:width'/>
       <meta content='630' property='og:image:height'/>
       <meta content='image/png' property='og:image:type'/>
       <meta content='11tik YouTube Thumbnail Extractor' property='og:image:alt'/>
-      <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
+      <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     </b:if>
     <meta content='11tik-theme-v48' name='yte-build'/>
@@ -99,7 +99,7 @@
 {"@context":"https://schema.org","@graph":[
   {"@type":"Organization","@id":"https://www.11tik.com/#org","name":"11tik","url":"https://www.11tik.com/","logo":{"@type":"ImageObject","url":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png"},"sameAs":["https://github.com/jaouahircharifjaouahir-dotcom/web-client"]},
   {"@type":"WebSite","@id":"https://www.11tik.com/#website","name":"11tik","url":"https://www.11tik.com/","inLanguage":"en","publisher":{"@id":"https://www.11tik.com/#org"}},
-  {"@type":"WebPage","@id":"https://www.11tik.com/#webpage","url":"https://www.11tik.com/","name":"YouTube Thumbnail Extractor – Download HD YouTube Thumbnails","inLanguage":"en","datePublished":"2026-08-19","dateModified":"2026-08-21","isPartOf":{"@id":"https://www.11tik.com/#website"},"about":{"@id":"https://www.11tik.com/#app"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png","width":1200,"height":630},"breadcrumb":{"@id":"https://www.11tik.com/#crumbs"}},
+  {"@type":"WebPage","@id":"https://www.11tik.com/#webpage","url":"https://www.11tik.com/","name":"YouTube Thumbnail Extractor – Download HD YouTube Thumbnails","inLanguage":"en","datePublished":"2026-08-19","dateModified":"2026-08-21","isPartOf":{"@id":"https://www.11tik.com/#website"},"about":{"@id":"https://www.11tik.com/#app"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630},"breadcrumb":{"@id":"https://www.11tik.com/#crumbs"}},
   {"@type":"BreadcrumbList","@id":"https://www.11tik.com/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.11tik.com/"},{"@type":"ListItem","position":2,"name":"YouTube Thumbnail Extractor","item":"https://www.11tik.com/"}]},
   {"@type":["WebApplication","SoftwareApplication"],"@id":"https://www.11tik.com/#app","name":"YouTube Thumbnail Extractor","applicationCategory":"MultimediaApplication","operatingSystem":"Any","url":"https://www.11tik.com/","image":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","screenshot":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","description":"Download YouTube and Vimeo thumbnails instantly in the highest available quality, free.","isAccessibleForFree":true,"featureList":["Paste a YouTube, Shorts, or Vimeo URL","Preview public thumbnail sizes including WebP when available","Batch extract and zip downloads","Copy image URL or share a deep link","Embeddable extractor widget"],"datePublished":"2026-08-19","dateModified":"2026-08-21","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://www.11tik.com/#org"}},
   {"@type":"Article","@id":"https://www.11tik.com/#article","headline":"YouTube Thumbnail Extractor","inLanguage":"en","datePublished":"2026-08-19","dateModified":"2026-08-21","author":{"@id":"https://www.11tik.com/#org"},"publisher":{"@id":"https://www.11tik.com/#org"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630},"mainEntityOfPage":{"@id":"https://www.11tik.com/#webpage"}},
@@ -206,7 +206,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
         <p class='yte-byline'>By <a href='https://www.11tik.com/p/about.html'>11tik</a></p>
         <p class='yte-updated'>Last updated: 21 August 2026</p>
         <p>Paste a public YouTube or Vimeo URL to download the highest available public thumbnail in your browser. 11tik checks real image files, lists only sizes that exist, and does not upload your link to an 11tik server.</p>
-        <img alt='11tik extractor showing a pasted YouTube URL and HD public thumbnail preview' title='11tik YouTube Thumbnail Extractor, HD thumbnail download, YouTube Shorts' class='yte-preview' decoding='async' fetchpriority='low' height='630' loading='lazy' src='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' width='1200'/>
+        <img alt='11tik extractor showing a pasted YouTube URL and HD public thumbnail preview' title='11tik YouTube Thumbnail Extractor, HD thumbnail download, YouTube Shorts' class='yte-preview' decoding='async' fetchpriority='low' height='630' loading='lazy' src='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' width='1200'/>
         <h2>How do I download a YouTube thumbnail in HD?</h2>
         <p>Paste a watch, youtu.be, Shorts, or embed URL that contains a public video ID, then download the first listed size. That file is the highest public still YouTube actually published.</p>
         <ol>

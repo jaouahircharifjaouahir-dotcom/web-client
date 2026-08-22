@@ -560,12 +560,22 @@ function fetchBlogger(request) {
   });
 }
 
+const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
+const EDGE_ASSETS = "https://www.11tik.com/web-client/";
+
+function rewriteGithubAsset(el, attr) {
+  const value = el.getAttribute(attr) || "";
+  if (value.startsWith(GH_PAGES)) el.setAttribute(attr, EDGE_ASSETS + value.slice(GH_PAGES.length));
+}
+
 function polishBloggerHtml(response) {
   return new HTMLRewriter()
     .on("script[src]", {
       element(el) {
         const src = el.getAttribute("src") || "";
-        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/")) el.remove();
+        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/") || src.includes("cookienotice.js")) {
+          el.remove();
+        }
       },
     })
     .on("link[rel]", {
@@ -573,6 +583,16 @@ function polishBloggerHtml(response) {
         if ((el.getAttribute("rel") || "").toLowerCase() !== "preconnect") return;
         const href = el.getAttribute("href") || "";
         if (href.includes("www.11tik.com") || href.includes("i.ytimg.com")) el.remove();
+      },
+    })
+    .on("img[src]", {
+      element(el) {
+        rewriteGithubAsset(el, "src");
+      },
+    })
+    .on("meta[content]", {
+      element(el) {
+        rewriteGithubAsset(el, "content");
       },
     })
     .transform(response);

@@ -310,7 +310,7 @@ export function thumbnailApiPayload(platform, videoId) {
       platform,
       videoId,
       note: "Vimeo sizes are discovered in the browser extractor.",
-      share: `${SITE}/?vimeo=${encodeURIComponent(videoId)}`,
+      share: `${SITE}/thumb/vimeo/${encodeURIComponent(videoId)}`,
     };
   }
   const files = ["maxresdefault.jpg", "hq720.jpg", "sddefault.jpg", "hqdefault.jpg", "mqdefault.jpg", "default.jpg"];
@@ -318,7 +318,7 @@ export function thumbnailApiPayload(platform, videoId) {
     ok: true,
     platform: "youtube",
     videoId,
-    share: `${SITE}/?v=${encodeURIComponent(videoId)}`,
+    share: `${SITE}/thumb/${encodeURIComponent(videoId)}`,
     thumbnails: files.map((file) => ({
       file,
       url: `https://i.ytimg.com/vi/${videoId}/${file}`,
@@ -409,7 +409,7 @@ function escapeXml(value) {
 export function embedWidgetHtml(videoId) {
   const id = YT_ID.test(videoId || "") ? videoId : "dQw4w9WgXcQ";
   const img = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-  const share = `${SITE}/?v=${id}`;
+  const share = `${SITE}/thumb/${id}`;
   const alt = `YouTube thumbnail ${id} | 11tik`;
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" type="image/png" sizes="32x32" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png"/>

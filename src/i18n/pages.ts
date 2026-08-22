@@ -31,7 +31,13 @@ export type PageKey =
   | "embedTitle"
   | "embedBody"
   | "keywordsTitle"
-  | "keywordsBody";
+  | "keywordsBody"
+  | "thumbHeading"
+  | "thumbLead"
+  | "thumbBody"
+  | "thumbRights"
+  | "thumbSizes"
+  | "thumbCta";
 
 type Pack = Partial<Record<PageKey, string>>;
 
@@ -75,6 +81,15 @@ const EN: Record<PageKey, string> = {
     "Add a free YouTube thumbnail extractor to your blog, docs, or creator toolkit. The widget loads from 11tik and resizes itself. No API key.\n\nKeep id=\"yte-app\" on the iframe so height sync works. Do not wrap the iframe in a fixed height that clips the download buttons. Linking back to the 11tik homepage helps users open the full tool.\n\nShare a ready extraction with /?v=VIDEO_ID for YouTube or /?vimeo=ID for Vimeo.",
   keywordsTitle: "Keyword tools",
   keywordsBody: "Each link opens the YouTube Thumbnail Extractor with an intro for that topic.",
+  thumbHeading: "{title} thumbnail",
+  thumbLead:
+    "Public still for “{title}”. 11tik only lists image files the host already publishes. Nothing is ripped from the video stream and the original upload is not stored on 11tik.",
+  thumbBody:
+    "Use the extractor on this page to preview every public size that actually returns an image, then download the largest valid file. Typical YouTube names are maxresdefault, hq720, sddefault, hqdefault, mqdefault, and default.",
+  thumbRights:
+    "The thumbnail stays the copyrighted work of the uploader. Personal reference, research, and fair study are typical uses. Do not republish it as your own cover art or merchandise.",
+  thumbSizes: "Checked public sizes: maxresdefault, hq720, sddefault, hqdefault, mqdefault, default.",
+  thumbCta: "Extract another thumbnail",
 };
 
 const PACKS: Record<string, Pack> = {
@@ -115,6 +130,14 @@ const PACKS: Record<string, Pack> = {
       "أضف مستخرج صور يوتيوب المصغرة إلى مدونتك أو أدواتك. الويدجت يُحمَّل من 11tik ويضبط ارتفاعه. لا مفتاح API.\n\nأبقِ id=\"yte-app\" على الإطار. لا تحصره بارتفاع ثابت يقطع أزرار التنزيل.\n\nشارك استخراجا جاهزا عبر /?v=VIDEO_ID أو /?vimeo=ID.",
     keywordsTitle: "أدوات الكلمات المفتاحية",
     keywordsBody: "كل رابط يفتح المستخرج بمقدمة عن ذلك الموضوع.",
+    thumbHeading: "صورة «{title}» المصغرة",
+    thumbLead:
+      "الصورة العامة المنشورة لـ «{title}». 11tik يعرض ملفات يستضيفها المنصة مسبقاً. لا يُستخرج إطار من الفيديو ولا تُخزَّن النسخة الأصلية هنا.",
+    thumbBody:
+      "استخدم المستخرج في هذه الصفحة لمعاينة كل حجم عام يعيد صورة حقيقية، ثم نزّل أكبر ملف صالح.",
+    thumbRights: "حقوق الصورة تبقى لصاحبها. للاطلاع والبحث عادة. لا تعِد نشرها كغلافك.",
+    thumbSizes: "الأحجام العامة: maxresdefault وhq720 وsddefault وhqdefault وmqdefault وdefault.",
+    thumbCta: "استخرج صورة أخرى",
   },
   fr: {
     trendingTags: "Tags tendance",
@@ -155,6 +178,15 @@ const PACKS: Record<string, Pack> = {
       "Ajoutez un extracteur YouTube gratuit à votre blog ou vos docs. Le widget se charge depuis 11tik et s’ajuste. Pas de clé API.\n\nGardez id=\"yte-app\" sur l’iframe. N’imposez pas une hauteur fixe qui coupe les boutons.\n\nPartagez une extraction avec /?v=VIDEO_ID ou /?vimeo=ID.",
     keywordsTitle: "Outils de mots-clés",
     keywordsBody: "Chaque lien ouvre l’extracteur avec une intro pour ce sujet.",
+    thumbHeading: "Miniature de {title}",
+    thumbLead:
+      "Image publique de « {title} ». 11tik liste seulement les fichiers déjà hébergés. Aucune image n’est extraite du flux vidéo ni stockée sur 11tik.",
+    thumbBody:
+      "Utilisez l’extracteur sur cette page pour prévisualiser chaque taille publique valide, puis télécharger le plus grand fichier réel.",
+    thumbRights:
+      "La miniature reste l’œuvre de l’auteur. Usage typique : référence et recherche. Ne la republiez pas comme votre propre miniature.",
+    thumbSizes: "Tailles publiques : maxresdefault, hq720, sddefault, hqdefault, mqdefault, default.",
+    thumbCta: "Extraire une autre miniature",
   },
   es: {
     trendingTags: "Etiquetas en tendencia",
@@ -193,6 +225,15 @@ const PACKS: Record<string, Pack> = {
       "Añade un extractor de miniaturas YouTube a tu blog o herramientas. El widget carga desde 11tik y se redimensiona. Sin clave API.\n\nMantén id=\"yte-app\" en el iframe. No uses una altura fija que recorte los botones.\n\nComparte una extracción con /?v=VIDEO_ID o /?vimeo=ID.",
     keywordsTitle: "Herramientas de palabras clave",
     keywordsBody: "Cada enlace abre el extractor con una intro de ese tema.",
+    thumbHeading: "Miniatura de {title}",
+    thumbLead:
+      "Imagen pública de “{title}”. 11tik solo lista archivos que el host ya publica. No extrae fotogramas ni guarda el original.",
+    thumbBody:
+      "Usa el extractor en esta página para ver cada tamaño público real y descargar el archivo más grande que exista.",
+    thumbRights:
+      "La miniatura sigue siendo del autor. Uso típico: consulta e investigación. No la republices como tu propia portada.",
+    thumbSizes: "Tamaños públicos: maxresdefault, hq720, sddefault, hqdefault, mqdefault, default.",
+    thumbCta: "Extraer otra miniatura",
   },
   de: {
     trendingTags: "Trending-Tags",
@@ -546,6 +587,14 @@ export function pageString(locale: string, key: PageKey): string {
     if (nav) return nav;
   }
   return EN[key];
+}
+
+export function pageFill(locale: string, key: PageKey, vars: Record<string, string>): string {
+  let text = pageString(locale, key);
+  for (const [name, value] of Object.entries(vars)) {
+    text = text.replaceAll(`{${name}}`, value);
+  }
+  return text;
 }
 
 export function legalHrefs(locale: string): {

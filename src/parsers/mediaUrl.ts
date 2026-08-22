@@ -1,3 +1,4 @@
+import { parseThumbPath, thumbPath } from "../routing/thumb";
 import type { AppErrorCode, ParsedYouTubeUrl, YouTubeUrlType } from "../types";
 import { createAppError } from "../types/errors";
 import { normalizeYouTubeUrl, parseMany as parseYouTubeMany, isLikelyYouTubeUrl } from "./youtubeUrl";
@@ -39,14 +40,18 @@ export function parseMediaMany(raw: string): ParsedMediaUrl[] {
 }
 
 export function mediaSharePath(platform: MediaPlatform, videoId: string): string {
-  if (platform === "vimeo") return `/?vimeo=${encodeURIComponent(videoId)}`;
-  return `/?v=${encodeURIComponent(videoId)}`;
+  return thumbPath(platform, videoId);
 }
 
-export function readDeepLink(search = typeof location === "undefined" ? "" : location.search): {
+export function readDeepLink(
+  search = typeof location === "undefined" ? "" : location.search,
+  pathname = typeof location === "undefined" ? "/" : location.pathname,
+): {
   platform: MediaPlatform;
   videoId: string;
 } | null {
+  const fromPath = parseThumbPath(pathname);
+  if (fromPath) return fromPath;
   try {
     const params = new URLSearchParams(search);
     const youtube = params.get("v");

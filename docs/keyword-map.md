@@ -22,7 +22,7 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 - Do **not** recreate `/p/youtube-thumbnail-extractor.html` while the homepage is the canonical tool.
 - `?k=` chips are **UX only**. Do not treat them as ranking URLs (doorway risk).
 - Legal pages (about, privacy, contact, terms) must not target thumbnail queries.
-- Deep links `?v=` / `?vimeo=` are shareable product URLs; canonical ranking stays on `/` and real articles.
+- Deep links `?v=` / `?vimeo=` 301 to `/thumb/{id}` (or `/thumb/vimeo/{id}`). Those pages may index only when the quality gate is INDEX (title, tags, live thumb).
 
 ## Internal links
 

@@ -15,5 +15,7 @@ describe("parseAppRoute", () => {
     expect(parseAppRoute("/p/embed.html")).toEqual({ name: "embed" });
     expect(parseAppRoute("/p/keyword-tools.html")).toEqual({ name: "keywords" });
     expect(parseAppRoute("/copyright")).toEqual({ name: "copyright" });
+    expect(parseAppRoute("/thumb/dQw4w9WgXcQ")).toEqual({ name: "thumb", platform: "youtube", videoId: "dQw4w9WgXcQ" });
+    expect(parseAppRoute("/thumb/vimeo/1191500052")).toEqual({ name: "thumb", platform: "vimeo", videoId: "1191500052" });
   });
 });

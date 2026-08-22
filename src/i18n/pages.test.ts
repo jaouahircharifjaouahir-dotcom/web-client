@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { legalHrefs, pageString } from "./pages";
+import { legalHrefs, pageFill, pageString } from "./pages";
 
 describe("page translations", () => {
   it("uses Arabic nav and legal copy on ar", () => {
@@ -15,6 +15,7 @@ describe("page translations", () => {
     expect(legalHrefs("fr").about).toBe("/p/about.html");
     expect(legalHrefs("ch").privacy).toBe("/p/privacy.html");
     expect(legalHrefs("en").terms).toBe("https://www.11tik.com/p/terms-of-use.html");
+    expect(pageFill("en", "thumbHeading", { title: "Demo clip" })).toBe("Demo clip thumbnail");
   });
 
   it("falls back to catalog copy for locales without a full pack", () => {

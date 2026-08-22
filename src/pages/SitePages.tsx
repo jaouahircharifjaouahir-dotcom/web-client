@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { tx } from "../i18n/extra";
 import { KEYWORD_LANDINGS } from "../content/keywordLandings";
-import { pageString } from "../i18n/pages";
+import { pageFill, pageString } from "../i18n/pages";
 import { guidePosts, localeHomeUrl, readLocale } from "../i18n/ui";
 import type { AppRoute } from "../routing/path";
+import { thumbPath } from "../routing/thumb";
 
 type TagPayload = {
   ok: boolean;
@@ -35,6 +36,7 @@ export function SitePages({ route }: { route: Exclude<AppRoute, { name: "home" }
   if (route.name === "hold") return <Hold origin={origin} />;
   if (route.name === "stats") return <Stats origin={origin} />;
   if (route.name === "tag") return <TagPage slug={route.slug} origin={origin} />;
+  if (route.name === "thumb") return <ThumbPage platform={route.platform} videoId={route.videoId} origin={origin} />;
   return <Article title="11tik" body="" origin={origin} />;
 }
 
@@ -95,7 +97,7 @@ function TagPage({ slug, origin }: { slug: string; origin: string }) {
         <p>{data?.tag?.gate?.reason || ""}</p>
         <div className="yte-grid">
           {videos.map((video) => (
-            <a className="yte-shot" href={video.loc || `${origin}/?v=${video.videoId}`} key={video.videoId || video.loc}>
+            <a className="yte-shot" href={video.loc || `${origin.replace(/\/$/, "")}${thumbPath(video.videoId && /^\d{6,12}$/.test(video.videoId) ? "vimeo" : "youtube", video.videoId || "")}`} key={video.videoId || video.loc}>
               {video.thumb ? (
                 <img
                   alt={`${video.title || video.videoId || "YouTube"} thumbnail | 11tik`}
@@ -108,6 +110,101 @@ function TagPage({ slug, origin }: { slug: string; origin: string }) {
             </a>
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+type ExtractPayload = {
+  ok?: boolean;
+  title?: string;
+  tags?: string[];
+  thumb?: string;
+  loc?: string;
+  gate?: { decision?: string };
+  platform?: string;
+  videoId?: string;
+};
+
+export function ThumbArticle({
+  platform,
+  videoId,
+  origin,
+}: {
+  platform: "youtube" | "vimeo";
+  videoId: string;
+  origin: string;
+}) {
+  const locale = readLocale();
+  const [data, setData] = useState<ExtractPayload | null>(null);
+  useEffect(() => {
+    void fetch(`/web-client/extracts/${platform}/${encodeURIComponent(videoId)}.json`)
+      .then((res) => res.json())
+      .then(setData)
+      .catch(() => setData({}));
+  }, [platform, videoId]);
+  const title = data?.title || videoId;
+  const heading = pageFill(locale, "thumbHeading", { title });
+  useEffect(() => {
+    document.title = `${heading} · 11tik`;
+  }, [heading]);
+  const home = origin.replace(/\/$/, "");
+  const thumb =
+    data?.thumb ||
+    (platform === "youtube" ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : "");
+  const tags = data?.tags || [];
+  return (
+    <section className="yte-panel" aria-labelledby="yte-thumb-h">
+      <h1 id="yte-thumb-h">{heading}</h1>
+      {thumb ? (
+        <p>
+          <img
+            alt={`${title} thumbnail | 11tik`}
+            title={heading}
+            src={thumb}
+            width={640}
+            height={360}
+            style={{ width: "100%", maxWidth: 640, height: "auto", borderRadius: 12 }}
+          />
+        </p>
+      ) : null}
+      <p>{pageFill(locale, "thumbLead", { title })}</p>
+      <p>{pageFill(locale, "thumbBody", { title })}</p>
+      <p>{pageString(locale, "thumbSizes")}</p>
+      <p>{pageString(locale, "thumbRights")}</p>
+      {tags.length ? (
+        <nav className="yte-kw">
+          {tags.slice(0, 12).map((tag) => (
+            <a href={`${home}/tag/${encodeURIComponent(tag.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "").slice(0, 48))}`} key={tag}>
+              {tag}
+            </a>
+          ))}
+        </nav>
+      ) : null}
+    </section>
+  );
+}
+
+function ThumbPage({
+  platform,
+  videoId,
+  origin,
+}: {
+  platform: "youtube" | "vimeo";
+  videoId: string;
+  origin: string;
+}) {
+  const locale = readLocale();
+  return (
+    <div className="yte-app">
+      <div className="yte-shell">
+        <p className="yte-kicker">
+          <a href={origin}>11tik</a>
+        </p>
+        <ThumbArticle platform={platform} videoId={videoId} origin={origin} />
+        <p>
+          <a href={origin}>{pageString(locale, "thumbCta")}</a>
+        </p>
       </div>
     </div>
   );

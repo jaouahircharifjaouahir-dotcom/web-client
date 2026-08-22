@@ -11,10 +11,15 @@ export type AppRoute =
   | { name: "terms" }
   | { name: "contact" }
   | { name: "embed" }
-  | { name: "keywords" };
+  | { name: "keywords" }
+  | { name: "thumb"; platform: "youtube" | "vimeo"; videoId: string };
 
 export function parseAppRoute(pathname = typeof location === "undefined" ? "/" : location.pathname): AppRoute {
   const path = pathname.replace(/\/+$/, "") || "/";
+  const vimeoThumb = path.match(/^\/thumb\/vimeo\/(\d{6,12})$/);
+  if (vimeoThumb) return { name: "thumb", platform: "vimeo", videoId: vimeoThumb[1] };
+  const youtubeThumb = path.match(/^\/thumb\/([A-Za-z0-9_-]{11})$/);
+  if (youtubeThumb) return { name: "thumb", platform: "youtube", videoId: youtubeThumb[1] };
   const tag = path.match(/\/tag\/([^/]+)$/);
   if (tag) return { name: "tag", slug: decodeURIComponent(tag[1]) };
   if (path.endsWith("/trending-tags")) return { name: "trending" };

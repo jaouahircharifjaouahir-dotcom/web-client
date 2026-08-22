@@ -42,9 +42,22 @@ export function originFromHost(host) {
 }
 
 export function rewriteLoc(loc, origin = SITE_ORIGIN) {
-  const href = String(loc || "");
+  const href = migrateExtractLoc(String(loc || ""));
   if (!origin || origin === SITE_ORIGIN) return href;
   return href.replace("https://www.11tik.com", origin).replace("http://www.11tik.com", origin);
+}
+
+function migrateExtractLoc(loc) {
+  try {
+    const url = new URL(loc);
+    const youtube = url.searchParams.get("v");
+    const vimeo = url.searchParams.get("vimeo");
+    if (youtube && /^[A-Za-z0-9_-]{11}$/.test(youtube)) return `${url.origin}/thumb/${youtube}`;
+    if (vimeo && /^\d{6,12}$/.test(vimeo)) return `${url.origin}/thumb/vimeo/${vimeo}`;
+    return loc;
+  } catch {
+    return loc;
+  }
 }
 
 export function childSitemapUrls(kind, count, origin = SITE_ORIGIN) {

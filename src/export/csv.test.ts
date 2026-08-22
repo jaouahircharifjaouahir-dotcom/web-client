@@ -13,7 +13,7 @@ describe("bulkResultsCsv", () => {
   it("includes a unique share URL per video id", () => {
     const csv = bulkResultsCsv([sample]);
     expect(csv).toContain("dQw4w9WgXcQ");
-    expect(csv).toContain("https://www.11tik.com/?v=dQw4w9WgXcQ");
+    expect(csv).toContain("https://www.11tik.com/thumb/dQw4w9WgXcQ");
     expect(csv).toContain("Demo");
   });
 });

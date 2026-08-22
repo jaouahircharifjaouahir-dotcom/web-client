@@ -16,6 +16,7 @@ import {
   sitemapIndexXml,
   urlsetXml,
 } from "./sitemaps.js";
+import { parseThumbPath, thumbPath } from "./thumb-url.js";
 import localeMeta from "./locale-meta.json";
 import {
   embedWidgetHtml,
@@ -39,7 +40,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "51";
+const APP_ASSET_V = "52";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -144,8 +145,7 @@ async function proxyGithub(pathname, search) {
 }
 
 function locFor(platform, videoId) {
-  if (platform === "vimeo") return `${SITE}/?vimeo=${encodeURIComponent(videoId)}`;
-  return `${SITE}/?v=${encodeURIComponent(videoId)}`;
+  return `${SITE}${thumbPath(platform, videoId)}`;
 }
 
 function decodeXml(value) {
@@ -561,6 +561,23 @@ function legalPageRedirect(pathname) {
   return "";
 }
 
+function queryThumbRedirect(url) {
+  if (url.searchParams.get("embed") === "1") return "";
+  const path = url.pathname.replace(/\/+$/, "") || "/";
+  if (path !== "/") return "";
+  const youtube = url.searchParams.get("v");
+  const vimeo = url.searchParams.get("vimeo");
+  let dest = "";
+  if (youtube && YT_ID.test(youtube)) dest = thumbPath("youtube", youtube);
+  else if (vimeo && VIMEO_ID.test(vimeo)) dest = thumbPath("vimeo", vimeo);
+  if (!dest) return "";
+  const next = new URL(`${url.origin}${dest}`);
+  url.searchParams.delete("v");
+  url.searchParams.delete("vimeo");
+  next.search = url.searchParams.toString();
+  return next.href;
+}
+
 function localeLegalPath(pathname) {
   const path = pathname.replace(/\/+$/, "") || "/";
   if (path === "/about") return "/p/about.html";
@@ -573,7 +590,7 @@ function localeLegalPath(pathname) {
 }
 
 function isAppShellPath(pathname) {
-  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/p\/embed\.html$|\/p\/keyword-tools\.html$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$)/.test(
+  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/p\/embed\.html$|\/p\/keyword-tools\.html$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$|\/thumb\/(?:vimeo\/\d{6,12}|[A-Za-z0-9_-]{11})\/?$)/.test(
     pathname,
   );
 }
@@ -617,6 +634,83 @@ function localeAppPage(code, host, pathname = "/") {
     headers: {
       "content-type": "text/html; charset=utf-8",
       "cache-control": "public, max-age=600, stale-while-revalidate=86400",
+      link: `<${css}>; rel=preload; as=style, <${js}>; rel=preload; as=script`,
+    },
+  });
+}
+
+async function thumbAppPage(code, host, parsed, env) {
+  const copy = localeCopy(code);
+  const row = env ? await readLibraryRow(env, parsed.platform, parsed.videoId) : null;
+  let title = String(row?.title || "").trim();
+  if (!title && parsed.platform === "youtube") {
+    const watch = await fetchYouTubeWatchMeta(parsed.videoId);
+    title = String(watch.title || "").trim();
+  }
+  if (!title) title = parsed.platform === "vimeo" ? `Vimeo ${parsed.videoId}` : `YouTube ${parsed.videoId}`;
+  const thumb =
+    String(row?.thumb || "") ||
+    (parsed.platform === "youtube" ? `https://i.ytimg.com/vi/${parsed.videoId}/hqdefault.jpg` : OG_IMAGE);
+  const tags = Array.isArray(row?.tags) ? row.tags.filter(Boolean) : [];
+  const gate = row?.gate || qualityForVideo({ title, tags, thumb });
+  const indexable = gate.decision === "INDEX" && Boolean(row?.title) && Boolean(row?.thumb);
+  const path = thumbPath(parsed.platform, parsed.videoId);
+  const pageUrl = `https://${host}${path}`;
+  const pageTitle = xmlEscape(`${title} thumbnail · 11tik`);
+  const description = xmlEscape(
+    `Public thumbnail for ${title}. Preview and download the largest image file the host already publishes.`,
+  );
+  const robots = indexable ? "index,follow" : "noindex,follow";
+  const schema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    name: `${title} thumbnail`,
+    contentUrl: thumb,
+    url: pageUrl,
+    creditText: "Public CDN still. Copyright remains with the uploader.",
+    isPartOf: { "@type": "WebSite", name: "11tik", url: SITE },
+  });
+  const css = assetUrl("blogger-app.css");
+  const js = assetUrl("blogger-app.js");
+  const html = `<!DOCTYPE html>
+<html lang="${copy.lang}" dir="${copy.dir}">
+<head>
+  ${rightsSnippet()}
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>${pageTitle}</title>
+  <meta name="description" content="${description}"/>
+  <meta name="robots" content="${robots}"/>
+  <link rel="canonical" href="${pageUrl}"/>
+  ${hreflangLinks(path)}
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="${copy.locale}"/>
+  <meta property="og:site_name" content="11tik"/>
+  <meta property="og:title" content="${pageTitle}"/>
+  <meta property="og:description" content="${description}"/>
+  <meta property="og:url" content="${pageUrl}"/>
+  <meta property="og:image" content="${xmlEscape(thumb)}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="${pageTitle}"/>
+  <meta name="twitter:description" content="${description}"/>
+  <meta name="twitter:image" content="${xmlEscape(thumb)}"/>
+  <script type="application/ld+json">${schema}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="${ICON_32}"/>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
+  <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
+  <link rel="preload" href="${css}" as="style"/>
+  <link rel="preload" href="${js}" as="script"/>
+</head>
+<body>
+  <div id="yte-root"></div>
+  <script defer fetchpriority="high" src="${js}"></script>
+  ${gaSnippet()}
+</body>
+</html>`;
+  return new Response(html, {
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "public, max-age=300, stale-while-revalidate=86400",
       link: `<${css}>; rel=preload; as=style, <${js}>; rel=preload; as=script`,
     },
   });
@@ -669,7 +763,9 @@ async function handleLibraryApi(url, request, env) {
       const raw = await env.SITEMAP_URLS?.get(key);
       if (!raw) continue;
       try {
-        videos.push(JSON.parse(raw));
+        const row = JSON.parse(raw);
+        if (row.platform && row.videoId) row.loc = `${SITE}${thumbPath(row.platform, row.videoId)}`;
+        videos.push(row);
       } catch {
         /* skip */
       }
@@ -679,6 +775,25 @@ async function handleLibraryApi(url, request, env) {
   if (url.pathname === "/web-client/hold-queue.json" || url.pathname === "/hold-queue.json") {
     const hold = await listHoldQueue(env);
     return jsonResponse({ ok: true, hold: hold.slice(0, 200) });
+  }
+  const extract = url.pathname.match(/^\/web-client\/extracts\/(youtube|vimeo)\/([^/]+)\.json$/);
+  if (extract) {
+    const platform = extract[1];
+    const videoId = decodeURIComponent(extract[2]);
+    const row = await readLibraryRow(env, platform, videoId);
+    const thumb =
+      row?.thumb ||
+      (platform === "youtube" && YT_ID.test(videoId) ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : "");
+    return jsonResponse({
+      ok: Boolean(row),
+      platform,
+      videoId,
+      title: row?.title || "",
+      tags: row?.tags || [],
+      thumb,
+      loc: row?.loc || `${SITE}${thumbPath(platform, videoId)}`,
+      gate: row?.gate || null,
+    });
   }
   return null;
 }
@@ -703,7 +818,8 @@ function isWorkerOwnedPath(pathname) {
     pathname === "/about" ||
     pathname === "/privacy" ||
     pathname === "/terms" ||
-    pathname === "/contact"
+    pathname === "/contact" ||
+    pathname.startsWith("/thumb/")
   );
 }
 
@@ -782,6 +898,8 @@ export default {
     const url = new URL(request.url);
     const host = url.hostname;
     if (host === "www.11tik.com" && request.headers.get("x-11tik-pass") !== "1" && !isWorkerOwnedPath(url.pathname)) {
+      const fromQuery = queryThumbRedirect(url);
+      if (fromQuery) return Response.redirect(fromQuery, 301);
       return polishBloggerHtml(await fetchBlogger(request));
     }
     const lang = localeHostCode(host);
@@ -818,9 +936,13 @@ export default {
       return handleSitemapRoute(request, env, sitemapPath);
     }
 
+    const fromQuery = queryThumbRedirect(url);
+    if (fromQuery) return Response.redirect(fromQuery, 301);
+
+    const thumb = parseThumbPath(url.pathname);
     if (lang) {
       if (lang === "en") {
-        return Response.redirect("https://www.11tik.com/" + url.pathname + url.search + url.hash, 301);
+        return Response.redirect("https://www.11tik.com" + url.pathname + url.search + url.hash, 301);
       }
       const legalPath = localeLegalPath(url.pathname);
       if (legalPath) {
@@ -829,8 +951,11 @@ export default {
       if (url.pathname.startsWith("/web-client/") && !url.pathname.includes("..")) {
         return proxyGithub(url.pathname, url.search);
       }
+      if (thumb) return thumbAppPage(lang, host, thumb, env);
       return localeAppPage(lang, host, url.pathname);
     }
+
+    if (thumb) return thumbAppPage("en", "www.11tik.com", thumb, env);
 
     if (isAppShellPath(url.pathname)) {
       return localeAppPage("en", "www.11tik.com", url.pathname);

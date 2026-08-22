@@ -10,7 +10,7 @@ import { bulkResultsCsv, downloadCsv } from "./export/csv";
 import { bulkResultsJson, downloadText } from "./export/json";
 import { tx } from "./i18n/extra";
 import { legalHrefs, pageString } from "./i18n/pages";
-import { SitePages } from "./pages/SitePages";
+import { SitePages, ThumbArticle } from "./pages/SitePages";
 import { parseAppRoute } from "./routing/path";
 import { calculateConsistencyScore } from "./score/consistency";
 import { buildShareUrls } from "./share/social";
@@ -18,7 +18,7 @@ import { imageSeoAttrs, stampSeoImages } from "./seo/imageAttrs";
 import { tagsForResult } from "./tags/fromExtract";
 import { historyStore } from "./history/store";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "./hooks/theme";
-import { isLikelyMediaUrl, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
+import { isLikelyMediaUrl, mediaSharePath, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
 import { scorePublicThumbnail } from "./score/readImage";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
@@ -173,14 +173,22 @@ export default function App() {
       const url = new URL(location.href);
       url.searchParams.delete("k");
       url.searchParams.delete("m");
-      if (platform === "vimeo") {
-        url.searchParams.delete("v");
-        url.searchParams.set("vimeo", videoId);
+      if (embed) {
+        if (platform === "vimeo") {
+          url.searchParams.delete("v");
+          url.searchParams.set("vimeo", videoId);
+        } else {
+          url.searchParams.delete("vimeo");
+          url.searchParams.set("v", videoId);
+        }
+        history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
       } else {
-        url.searchParams.delete("vimeo");
-        url.searchParams.set("v", videoId);
+        const next = new URL(`${url.origin}${mediaSharePath(platform, videoId)}`);
+        const lang = url.searchParams.get("lang");
+        if (lang) next.searchParams.set("lang", lang);
+        history.replaceState({}, document.title, `${next.pathname}${next.search}${url.hash}`);
+        setRoute(parseAppRoute(next.pathname));
       }
-      history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
       setKeywordSlug(null);
     } catch {
       /* ignore */
@@ -394,7 +402,7 @@ export default function App() {
     await showCopied(urls.length > 1 ? t("copiedShares") : t("copiedShare"), urls.join("\n"));
   };
 
-  if (route.name !== "home") {
+  if (route.name !== "home" && route.name !== "thumb") {
     return <SitePages route={route} />;
   }
 
@@ -450,8 +458,14 @@ export default function App() {
         ) : (
           <>
         <section className="yte-hero">
-          <h1>{heroTitle}</h1>
-          <p>{heroIntro}</p>
+          {route.name === "thumb" ? (
+            <ThumbArticle platform={route.platform} videoId={route.videoId} origin={localeHomeUrl()} />
+          ) : (
+            <>
+              <h1>{heroTitle}</h1>
+              <p>{heroIntro}</p>
+            </>
+          )}
           {result?.bestThumbnail && !bulk ? (
             <p className="yte-video-meta">
               {result.meta?.platform === "vimeo" ? "Vimeo" : "YouTube"}

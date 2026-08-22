@@ -21,9 +21,10 @@ describe("media router", () => {
   });
 
   it("builds deep links", () => {
-    expect(mediaSharePath("youtube", "dQw4w9WgXcQ")).toBe("/?v=dQw4w9WgXcQ");
-    expect(mediaSharePath("vimeo", "22439234")).toBe("/?vimeo=22439234");
+    expect(mediaSharePath("youtube", "dQw4w9WgXcQ")).toBe("/thumb/dQw4w9WgXcQ");
+    expect(mediaSharePath("vimeo", "22439234")).toBe("/thumb/vimeo/22439234");
     expect(readDeepLink("?v=dQw4w9WgXcQ")).toEqual({ platform: "youtube", videoId: "dQw4w9WgXcQ" });
     expect(readDeepLink("?vimeo=22439234")).toEqual({ platform: "vimeo", videoId: "22439234" });
+    expect(readDeepLink("", "/thumb/dQw4w9WgXcQ")).toEqual({ platform: "youtube", videoId: "dQw4w9WgXcQ" });
   });
 });

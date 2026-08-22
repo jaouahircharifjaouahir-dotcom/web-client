@@ -3,10 +3,20 @@ import {
   allPublicSitemapUrls,
   chunkEntries,
   parseSitemapPath,
+  rewriteLoc,
   robotsTxt,
   SITEMAP_PAGE_SIZE,
   sitemapIndexXml,
 } from "../../workers/sitemaps.js";
+
+describe("extract loc migration", () => {
+  it("rewrites query share URLs to /thumb pages on each host", () => {
+    expect(rewriteLoc("https://www.11tik.com/?v=dQw4w9WgXcQ")).toBe("https://www.11tik.com/thumb/dQw4w9WgXcQ");
+    expect(rewriteLoc("https://www.11tik.com/?vimeo=1191500052", "https://fr.11tik.com")).toBe(
+      "https://fr.11tik.com/thumb/vimeo/1191500052",
+    );
+  });
+});
 
 describe("sitemap sharding", () => {
   it("opens a new file when the current one is full", () => {

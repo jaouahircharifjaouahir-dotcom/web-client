@@ -623,13 +623,6 @@ function polishBloggerHtml(response) {
         el.prepend(bloggerRuntimeStubs(), { html: true });
       },
     })
-    .on("script", {
-      text(chunk) {
-        if (chunk.text.includes("_WidgetManager._") && !chunk.text.includes("function")) {
-          chunk.replace("");
-        }
-      },
-    })
     .on("script[src]", {
       element(el) {
         const src = el.getAttribute("src") || "";

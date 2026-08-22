@@ -8,7 +8,7 @@ export const SITE = {
   description:
     "Extract HD YouTube thumbnails in your browser. Paste a video or Shorts URL to preview public sizes and download the highest available image in seconds.",
   ogImage:
-    "https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png",
+    "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
   ogImageAlt: "11tik YouTube Thumbnail Extractor – paste a URL to get an HD thumbnail",
   ogWidth: 1200,
   ogHeight: 630,

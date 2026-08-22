@@ -319,6 +319,21 @@ body { background: var(--yte-bg, #f4efe6); }
   .yte-post-title { font-size: 1.05rem; }
 }
 
+.yte-copy-notice {
+  position: fixed;
+  z-index: 2147483646;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  max-width: min(92vw, 420px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #17141c;
+  color: #f6f1ea;
+  font: 14px/1.4 system-ui, sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .yte-app * { animation: none !important; transition: none !important; }
 }

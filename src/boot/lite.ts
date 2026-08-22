@@ -1,3 +1,5 @@
+import { enforceHomeHost, watchCopyNotice } from "../rights/hostGuard";
+
 /** Hide Blogger ?m=1 in the address bar without reloading (replaceState only). */
 
 type CookieChoices = {
@@ -13,6 +15,8 @@ declare global {
 }
 
 export function bootLite(): void {
+  enforceHomeHost();
+  watchCopyNotice();
   hideBloggerMobileParam();
   dropServiceWorkers();
   disableBloggerCookieNotice();

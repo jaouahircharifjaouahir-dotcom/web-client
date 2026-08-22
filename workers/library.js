@@ -413,9 +413,9 @@ export function embedWidgetHtml(videoId) {
   const alt = `YouTube thumbnail ${id} | 11tik`;
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" type="image/png" sizes="32x32" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png"/>
-<meta property="og:image" content="https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png"/>
+<meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png"/>
+<meta name="twitter:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
 <title>11tik thumbnail</title>
 <style>body{margin:0;font:14px/1.4 system-ui;background:#111;color:#f6f1ea}a{color:#fb923c}img{width:100%;display:block}</style></head>
 <body><a href="${share}" target="_blank" rel="noopener"><img alt="${alt}" title="${alt}" src="${img}"/></a>

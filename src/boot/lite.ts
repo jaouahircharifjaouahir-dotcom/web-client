@@ -11,6 +11,7 @@ declare global {
   interface Window {
     cookieChoices?: CookieChoices;
     cookieOptions?: Record<string, unknown>;
+    __yteRights?: number;
   }
 }
 

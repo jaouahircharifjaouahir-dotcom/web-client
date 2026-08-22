@@ -27,7 +27,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "46";
+const APP_ASSET_V = "47";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -77,6 +77,10 @@ function brandHead(copy) {
 
 function assetUrl(file) {
   return `/web-client/${file}?v=${APP_ASSET_V}`;
+}
+
+function rightsSnippet() {
+  return `<script src="${assetUrl("rights-boot.js")}"></script>`;
 }
 
 function gaSnippet() {
@@ -456,6 +460,7 @@ function localeAppPage(code, host) {
   const html = `<!DOCTYPE html>
 <html lang="${copy.lang}" dir="${copy.dir}">
 <head>
+  ${rightsSnippet()}
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>${copy.title}</title>

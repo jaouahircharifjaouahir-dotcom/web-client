@@ -15,6 +15,7 @@ export function enforceHomeHost(): void {
 
 export function watchCopyNotice(): void {
   if (typeof document === "undefined") return;
+  if (typeof window !== "undefined" && window.__yteRights) return;
   document.addEventListener("copy", (event) => {
     const selected = window.getSelection()?.toString() || "";
     const notice = "\n\n© 11tik — https://www.11tik.com/  Content is protected. See https://www.11tik.com/p/terms-of-use.html";

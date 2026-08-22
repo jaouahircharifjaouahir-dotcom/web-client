@@ -416,6 +416,7 @@ export function embedWidgetHtml(videoId) {
 <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
+<script src="https://www.11tik.com/web-client/rights-boot.js"></script>
 <title>11tik thumbnail</title>
 <style>body{margin:0;font:14px/1.4 system-ui;background:#111;color:#f6f1ea}a{color:#fb923c}img{width:100%;display:block}</style></head>
 <body><a href="${share}" target="_blank" rel="noopener"><img alt="${alt}" title="${alt}" src="${img}"/></a>

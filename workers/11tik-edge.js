@@ -27,7 +27,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "47";
+const APP_ASSET_V = "48";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =

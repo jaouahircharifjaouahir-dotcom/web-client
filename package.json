@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && vite build --config vite.embed.config.ts",
+    "build": "tsc -b && vite build && vite build --config vite.embed.config.ts && node scripts/obfuscate-public.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "oxlint src",
@@ -27,6 +27,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "javascript-obfuscator": "^5.5.1",
     "jsdom": "^27.0.1",
     "oxlint": "^1.75.0",
     "typescript": "~6.0.2",

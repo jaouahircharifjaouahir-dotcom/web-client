@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.3' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
-    <script src='https://www.11tik.com/web-client/rights-boot.js?v=52' type='text/javascript'></script>
+    <script src='https://www.11tik.com/web-client/rights-boot.js?v=53' type='text/javascript'></script>
     <script type='text/javascript'>cookieChoices={};function _WidgetInfo(){return this;}window._WidgetInfo=window._WidgetInfo||_WidgetInfo;window._WidgetManager=window._WidgetManager||{_Init:function(){},_SetDataContext:function(){},_RegisterWidget:function(){return{_SetWidget:function(){return this;},display:function(){}};}};</script>
     <meta charset='utf-8'/>
     <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
@@ -78,6 +78,15 @@
       <meta content='article' property='og:type'/>
       <meta expr:content='data:view.title.escaped' property='og:title'/>
       <meta expr:content='data:view.url.canonical' property='og:url'/>
+      <b:if cond='data:view.description != &quot;&quot;'>
+        <meta expr:content='data:view.description' name='description'/>
+        <meta expr:content='data:view.description' property='og:description'/>
+        <meta expr:content='data:view.description' name='twitter:description'/>
+      <b:else/>
+        <meta expr:content='data:view.title + &quot;. Public YouTube thumbnail guide on 11tik. Stills only; no video download.&quot;' name='description'/>
+        <meta expr:content='data:view.title + &quot;. Public YouTube thumbnail guide on 11tik. Stills only; no video download.&quot;' property='og:description'/>
+        <meta expr:content='data:view.title + &quot;. Public YouTube thumbnail guide on 11tik. Stills only; no video download.&quot;' name='twitter:description'/>
+      </b:if>
       <meta content='summary_large_image' name='twitter:card'/>
       <meta expr:content='data:view.title.escaped' name='twitter:title'/>
       <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' property='og:image'/>
@@ -88,14 +97,14 @@
       <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     </b:if>
-    <meta content='11tik-theme-v55' name='yte-build'/>
+    <meta content='11tik-theme-v56' name='yte-build'/>
     <link href='https://www.11tik.com/web-client/site.webmanifest' rel='manifest'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
       <link href='https://www.googletagmanager.com' rel='dns-prefetch'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.css?v=52' rel='preload' as='style'/>
-      <link href='https://www.11tik.com/web-client/blogger-app.js?v=52' rel='preload' as='script'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.css?v=53' rel='preload' as='style'/>
+      <link href='https://www.11tik.com/web-client/blogger-app.js?v=53' rel='preload' as='script'/>
       <script type='application/ld+json'>
 {"@context":"https://schema.org","@graph":[
   {"@type":"Organization","@id":"https://www.11tik.com/#org","name":"11tik","url":"https://www.11tik.com/","logo":{"@type":"ImageObject","url":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png"},"sameAs":["https://www.11tik.com/"]},
@@ -395,7 +404,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=52' type='text/javascript'></script>
+      <script defer='defer' fetchpriority='high' src='https://www.11tik.com/web-client/blogger-app.js?v=53' type='text/javascript'></script>
       <script type='text/javascript'>
 (function () {
   function wire() {
@@ -426,7 +435,7 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
 })();
       </script>
     </b:if>
-      <script defer='defer' src='https://www.11tik.com/web-client/ga-boot.js?v=52' type='text/javascript'></script>
+      <script defer='defer' src='https://www.11tik.com/web-client/ga-boot.js?v=53' type='text/javascript'></script>
       <script type='text/javascript'>
 (function stampImages() {
   function visit(root) {
@@ -446,5 +455,45 @@ body[data-yte-posts="1"] .yte-seo-foot{display:none!important}
   if (window.MutationObserver) new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
 })();
       </script>
+    <b:if cond='not data:view.isHomepage'>
+      <script type='text/javascript'>
+(function () {
+  function clip(value) {
+    return String(value || "").replace(/\s+/g, " ").trim().slice(0, 160);
+  }
+  function fromPage() {
+    var p = document.querySelector("[itemprop='description']");
+    if (p) {
+      var d = clip(p.textContent);
+      if (d.length &gt; 40) return d;
+    }
+    var h1 = document.querySelector("h1");
+    if (h1) return clip(h1.textContent + ". Public YouTube thumbnail guide on 11tik. Stills only; no video download.");
+    return "";
+  }
+  function isHomeBlurb(value) {
+    return /Download YouTube thumbnails instantly|highest available quality, free|Paste a video or Shorts URL/i.test(value || "");
+  }
+  function apply() {
+    var next = fromPage();
+    if (!next) return;
+    var sels = ["meta[name='description']", "meta[property='og:description']", "meta[name='twitter:description']"];
+    for (var i = 0; i &lt; sels.length; i++) {
+      var el = document.querySelector(sels[i]);
+      if (!el) {
+        el = document.createElement("meta");
+        if (sels[i].indexOf("og:") &gt;= 0) el.setAttribute("property", "og:description");
+        else el.setAttribute("name", sels[i].indexOf("twitter") &gt;= 0 ? "twitter:description" : "description");
+        document.head.appendChild(el);
+      }
+      var cur = el.getAttribute("content") || "";
+      if (!cur || isHomeBlurb(cur)) el.setAttribute("content", next);
+    }
+  }
+  apply();
+  document.addEventListener("DOMContentLoaded", apply);
+})();
+      </script>
+    </b:if>
   </body>
 </html>

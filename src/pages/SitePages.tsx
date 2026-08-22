@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { tx } from "../i18n/extra";
 import { KEYWORD_LANDINGS } from "../content/keywordLandings";
+import { applyDocumentMeta } from "../seo/documentMeta";
 import { pageFill, pageString } from "../i18n/pages";
 import { guidePosts, localeHomeUrl, readLocale } from "../i18n/ui";
 import type { AppRoute } from "../routing/path";
@@ -42,8 +43,9 @@ export function SitePages({ route }: { route: Exclude<AppRoute, { name: "home" }
 
 function Article({ title, body, origin }: { title: string; body: string; origin: string }) {
   useEffect(() => {
-    document.title = `${title} · 11tik`;
-  }, [title]);
+    const desc = body.split("\n").map((line) => line.trim()).find((line) => line.length > 40) || body.slice(0, 160);
+    applyDocumentMeta(`${title} · 11tik`, desc);
+  }, [title, body]);
   return (
     <div className="yte-app">
       <div className="yte-shell">
@@ -75,6 +77,12 @@ function TagPage({ slug, origin }: { slug: string; origin: string }) {
       .then((res) => res.json())
       .then(setData)
       .catch(() => setData({ ok: false }));
+  }, [slug]);
+  useEffect(() => {
+    applyDocumentMeta(
+      `#${slug} · 11tik`,
+      `Public YouTube thumbnail extracts tagged ${slug} that passed the 11tik quality gate.`,
+    );
   }, [slug]);
   useEffect(() => {
     if (data?.robots?.includes("noindex")) {
@@ -146,8 +154,8 @@ export function ThumbArticle({
   const title = data?.title || videoId;
   const heading = pageFill(locale, "thumbHeading", { title });
   useEffect(() => {
-    document.title = `${heading} · 11tik`;
-  }, [heading]);
+    applyDocumentMeta(`${heading} · 11tik`, pageFill(locale, "thumbLead", { title }));
+  }, [heading, locale, title]);
   const home = origin.replace(/\/$/, "");
   const thumb =
     data?.thumb ||
@@ -214,7 +222,7 @@ function KeywordTools({ origin }: { origin: string }) {
   const locale = readLocale();
   const home = origin.replace(/\/$/, "");
   useEffect(() => {
-    document.title = `${pageString(locale, "keywordsTitle")} · 11tik`;
+    applyDocumentMeta(`${pageString(locale, "keywordsTitle")} · 11tik`, pageString(locale, "keywordsBody"));
   }, [locale]);
   return (
     <div className="yte-app">
@@ -240,6 +248,9 @@ function KeywordTools({ origin }: { origin: string }) {
 
 function Trending({ origin }: { origin: string }) {
   const [tags, setTags] = useState<Array<{ slug: string; name: string; count: number }>>([]);
+  useEffect(() => {
+    applyDocumentMeta(`${pageString(readLocale(), "trendingTags")} · 11tik`, pageString(readLocale(), "trendingIntro"));
+  }, []);
   useEffect(() => {
     void fetch("https://www.11tik.com/web-client/tags/trending.json")
       .then((res) => res.json())

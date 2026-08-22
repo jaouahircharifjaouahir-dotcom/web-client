@@ -17,6 +17,7 @@ import {
   urlsetXml,
 } from "./sitemaps.js";
 import { parseThumbPath, thumbPath } from "./thumb-url.js";
+import { viewMeta } from "./page-meta.js";
 import localeMeta from "./locale-meta.json";
 import {
   embedWidgetHtml,
@@ -40,7 +41,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "52";
+const APP_ASSET_V = "53";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -600,6 +601,8 @@ function localeAppPage(code, host, pathname = "/") {
   const origin = `https://${host}/`;
   const path = (pathname || "/").replace(/\/+$/, "") || "/";
   const pageUrl = path === "/" ? origin : `https://${host}${path}`;
+  const view = viewMeta(copy.title, copy.description, path);
+  const head = { ...copy, title: xmlEscape(view.title), description: xmlEscape(view.description) };
   const css = assetUrl("blogger-app.css");
   const js = assetUrl("blogger-app.js");
   const html = `<!DOCTYPE html>
@@ -608,17 +611,17 @@ function localeAppPage(code, host, pathname = "/") {
   ${rightsSnippet()}
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>${copy.title}</title>
-  <meta name="description" content="${copy.description}"/>
+  <title>${head.title}</title>
+  <meta name="description" content="${head.description}"/>
   <link rel="canonical" href="${pageUrl}"/>
   ${hreflangLinks(path)}
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="${copy.locale}"/>
   <meta property="og:site_name" content="11tik"/>
-  <meta property="og:title" content="${copy.title}"/>
-  <meta property="og:description" content="${copy.description}"/>
+  <meta property="og:title" content="${head.title}"/>
+  <meta property="og:description" content="${head.description}"/>
   <meta property="og:url" content="${pageUrl}"/>
-  ${brandHead(copy)}
+  ${brandHead(head)}
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
   <link rel="preload" href="${css}" as="style"/>

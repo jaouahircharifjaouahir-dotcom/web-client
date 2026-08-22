@@ -27,6 +27,8 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
+const APP_ASSET_V = "39";
+const GA_ID = "G-FW7B8NDZZ5";
 const YT_ID = /^[A-Za-z0-9_-]{11}$/;
 const VIMEO_ID = /^\d{6,12}$/;
 const MAX_URLS = 45000;
@@ -47,6 +49,54 @@ function xmlEscape(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function assetUrl(file) {
+  return `/web-client/${file}?v=${APP_ASSET_V}`;
+}
+
+function gaSnippet() {
+  return `<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.addEventListener("load",function(){
+  var s=document.createElement("script");
+  s.async=true;
+  s.src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}";
+  s.onload=function(){
+    gtag("js",new Date());
+    gtag("config","${GA_ID}",{cookie_domain:"11tik.com"});
+  };
+  document.head.appendChild(s);
+});
+</script>`;
+}
+
+async function proxyGithub(pathname, search) {
+  const isAsset = /\.(?:js|css|map|svg|png|ico|webp|woff2?|json|webmanifest)$/i.test(pathname);
+  const ttl = isAsset ? 2592000 : 600;
+  const upstream = await fetch(GITHUB + pathname + search, {
+    cf: {
+      cacheEverything: true,
+      cacheTtl: ttl,
+      cacheTtlByStatus: { "200-299": ttl, "404": 30, "500-599": 0 },
+    },
+  });
+  const headers = new Headers(upstream.headers);
+  headers.set(
+    "cache-control",
+    isAsset
+      ? "public, max-age=31536000, immutable"
+      : "public, max-age=300, stale-while-revalidate=86400",
+  );
+  headers.set("cdn-cache-control", isAsset ? "max-age=2592000" : "max-age=600");
+  headers.set("x-content-type-options", "nosniff");
+  if (!headers.has("access-control-allow-origin")) headers.set("access-control-allow-origin", "*");
+  return new Response(upstream.body, {
+    status: upstream.status,
+    statusText: upstream.statusText,
+    headers,
+  });
 }
 
 function locFor(platform, videoId) {
@@ -373,6 +423,8 @@ function isAppShellPath(pathname) {
 function localeAppPage(code, host) {
   const copy = localeCopy(code);
   const origin = `https://${host}/`;
+  const css = assetUrl("blogger-app.css");
+  const js = assetUrl("blogger-app.js");
   const html = `<!DOCTYPE html>
 <html lang="${copy.lang}" dir="${copy.dir}">
 <head>
@@ -390,19 +442,23 @@ function localeAppPage(code, host) {
   <meta property="og:url" content="${origin}"/>
   <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="preconnect" href="https://i.ytimg.com"/>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.css?v=38" as="style"/>
-  <link rel="preload" href="https://www.11tik.com/web-client/blogger-app.js?v=38" as="script"/>
+  <link rel="preload" href="${css}" as="style"/>
+  <link rel="preload" href="${js}" as="script"/>
 </head>
 <body>
   <div id="yte-root"></div>
-  <script defer src="https://www.11tik.com/web-client/blogger-app.js?v=38"></script>
+  <script defer fetchpriority="high" src="${js}"></script>
+  ${gaSnippet()}
 </body>
 </html>`;
   return new Response(html, {
     headers: {
       "content-type": "text/html; charset=utf-8",
-      "cache-control": "public, max-age=300",
+      "cache-control": "public, max-age=600, stale-while-revalidate=86400",
+      link: `<${css}>; rel=preload; as=style, <${js}>; rel=preload; as=script`,
     },
   });
 }
@@ -504,11 +560,7 @@ export default {
         return handleSitemapGet(request, env);
       }
       if (url.pathname.startsWith("/web-client/") && !url.pathname.includes("..")) {
-        const isAsset = /\.(js|css|map|svg|png|ico|woff2?)$/i.test(url.pathname);
-        const upstream = await fetch(GITHUB + url.pathname + url.search, {
-          cf: { cacheEverything: true, cacheTtl: isAsset ? 60 : 300 },
-        });
-        return new Response(upstream.body, upstream);
+        return proxyGithub(url.pathname, url.search);
       }
       return localeAppPage(lang, host);
     }
@@ -535,16 +587,6 @@ export default {
       return new Response("Not found", { status: 404 });
     }
 
-    const isAsset = /\.(js|css|map|svg|png|ico|woff2?)$/i.test(url.pathname);
-    const upstream = await fetch(GITHUB + url.pathname + url.search, {
-      cf: { cacheEverything: true, cacheTtl: isAsset ? 60 : 300 },
-    });
-
-    const response = new Response(upstream.body, upstream);
-    response.headers.set(
-      "Cache-Control",
-      isAsset ? "public, max-age=60, must-revalidate" : "public, max-age=300",
-    );
-    return response;
+    return proxyGithub(url.pathname, url.search);
   },
 };

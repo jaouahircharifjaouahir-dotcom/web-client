@@ -14,6 +14,8 @@ export default defineConfig({
   build: {
     emptyOutDir: false,
     cssCodeSplit: false,
+    target: "es2022",
+    cssMinify: true,
     lib: {
       entry: resolve(root, "src/embed-entry.tsx"),
       name: "YTE",

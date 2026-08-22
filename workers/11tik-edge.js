@@ -552,6 +552,29 @@ async function handleLibraryApi(url, request, env) {
   return null;
 }
 
+function isWorkerOwnedPath(pathname) {
+  return (
+    pathname.startsWith("/web-client/") ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/image-sitemap.xml" ||
+    pathname.startsWith("/tag/") ||
+    pathname === "/trending-tags" ||
+    pathname === "/stats" ||
+    pathname === "/copyright" ||
+    pathname === "/p/copyright.html" ||
+    pathname === "/embed" ||
+    pathname.startsWith("/embed/") ||
+    pathname === "/guide" ||
+    pathname.startsWith("/guide/") ||
+    pathname.startsWith("/api/") ||
+    pathname === "/hold-queue" ||
+    pathname === "/about" ||
+    pathname === "/privacy" ||
+    pathname === "/terms" ||
+    pathname === "/contact"
+  );
+}
+
 function fetchBlogger(request) {
   const headers = new Headers(request.headers);
   headers.set("x-11tik-pass", "1");
@@ -605,7 +628,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const host = url.hostname;
-    if (host === "www.11tik.com" && url.pathname === "/" && request.headers.get("x-11tik-pass") !== "1") {
+    if (host === "www.11tik.com" && request.headers.get("x-11tik-pass") !== "1" && !isWorkerOwnedPath(url.pathname)) {
       return polishBloggerHtml(await fetchBlogger(request));
     }
     const lang = localeHostCode(host);

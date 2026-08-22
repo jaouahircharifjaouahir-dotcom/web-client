@@ -13,6 +13,7 @@
     }
   ],
   "routes": [
+    { "pattern": "www.11tik.com/", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/sitemap.xml", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/image-sitemap.xml", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/web-client/*", "zone_name": "11tik.com" },

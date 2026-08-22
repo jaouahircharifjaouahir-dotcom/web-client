@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.3' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.3' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <script type='text/javascript'>cookieChoices={};</script>
     <meta charset='utf-8'/>
@@ -87,15 +87,12 @@
       <meta content='https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     </b:if>
-    <meta content='11tik-theme-v47' name='yte-build'/>
+    <meta content='11tik-theme-v48' name='yte-build'/>
     <link href='https://www.11tik.com/web-client/site.webmanifest' rel='manifest'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png' rel='icon' sizes='16x16' type='image/png'/>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'/>
     <b:if cond='data:view.isHomepage'>
-      <link href='https://www.11tik.com' rel='preconnect'/>
-      <link href='https://i.ytimg.com' rel='preconnect' crossorigin='anonymous'/>
       <link href='https://www.googletagmanager.com' rel='dns-prefetch'/>
-      <link href='https://i.vimeocdn.com' rel='dns-prefetch'/>
       <link href='https://www.11tik.com/web-client/blogger-app.css?v=41' rel='preload' as='style'/>
       <link href='https://www.11tik.com/web-client/blogger-app.js?v=41' rel='preload' as='script'/>
       <script type='application/ld+json'>

@@ -465,7 +465,6 @@ function localeAppPage(code, host) {
   <meta property="og:description" content="${copy.description}"/>
   <meta property="og:url" content="${origin}"/>
   ${brandHead(copy)}
-  <link rel="preconnect" href="https://i.ytimg.com"/>
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
   <link rel="preload" href="${css}" as="style"/>
@@ -553,6 +552,32 @@ async function handleLibraryApi(url, request, env) {
   return null;
 }
 
+function fetchBlogger(request) {
+  const headers = new Headers(request.headers);
+  headers.set("x-11tik-pass", "1");
+  return fetch(new Request(request.url, { method: "GET", headers }), {
+    cf: { resolveOverride: "ghs.googlehosted.com", cacheEverything: true, cacheTtl: 120 },
+  });
+}
+
+function polishBloggerHtml(response) {
+  return new HTMLRewriter()
+    .on("script[src]", {
+      element(el) {
+        const src = el.getAttribute("src") || "";
+        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/")) el.remove();
+      },
+    })
+    .on("link[rel]", {
+      element(el) {
+        if ((el.getAttribute("rel") || "").toLowerCase() !== "preconnect") return;
+        const href = el.getAttribute("href") || "";
+        if (href.includes("www.11tik.com") || href.includes("i.ytimg.com")) el.remove();
+      },
+    })
+    .transform(response);
+}
+
 export default {
   async scheduled(_event, env, ctx) {
     ctx.waitUntil(hourlyExtract(env));
@@ -560,6 +585,9 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const host = url.hostname;
+    if (host === "www.11tik.com" && url.pathname === "/" && request.headers.get("x-11tik-pass") !== "1") {
+      return polishBloggerHtml(await fetchBlogger(request));
+    }
     const lang = localeHostCode(host);
 
     const api = await handleLibraryApi(url, request, env);

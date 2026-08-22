@@ -1,6 +1,6 @@
 import { bootLite } from "./boot/lite";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import { stampSeoImages } from "./seo/imageAttrs";
 import { keepDomGuards } from "./embed/dom-guard";
 import "./index.css";
 
@@ -37,6 +37,7 @@ function mount(): void {
   mountPoint.id = "yte-mount";
   rootNode.appendChild(mountPoint);
   createRoot(mountPoint).render(<App />);
+  window.setTimeout(() => stampSeoImages(), 50);
 }
 
 if (document.readyState === "loading") {

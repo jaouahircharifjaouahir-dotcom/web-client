@@ -9,6 +9,8 @@ describe("preferred public URL", () => {
 
   it("points Open Graph at a 1200x630 share image", () => {
     expect(SITE.ogImage).toContain("og-image-1200x630.png");
+    expect(SITE.ogImage).toContain("github.io");
+    expect(SITE.ogImageAlt).toContain("11tik");
     expect(SITE.ogWidth).toBe(1200);
     expect(SITE.ogHeight).toBe(630);
   });

@@ -14,7 +14,7 @@ import { SitePages } from "./pages/SitePages";
 import { parseAppRoute } from "./routing/path";
 import { calculateConsistencyScore } from "./score/consistency";
 import { buildShareUrls } from "./share/social";
-import { tagsForResult } from "./tags/fromExtract";
+import { imageSeoAttrs, stampSeoImages } from "./seo/imageAttrs";
 import { historyStore } from "./history/store";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "./hooks/theme";
 import { isLikelyMediaUrl, normalizeMediaUrl, parseMediaMany, readDeepLink } from "./parsers/mediaUrl";
@@ -136,6 +136,12 @@ export default function App() {
   }, []);
 
   useEffect(() => startEmbedResize(), []);
+
+  useEffect(() => {
+    stampSeoImages();
+    const timer = window.setTimeout(() => stampSeoImages(), 400);
+    return () => window.clearTimeout(timer);
+  }, [result, bulkResults, route]);
 
   useEffect(() => {
     const sync = () => setKeywordSlug(readKeywordSlug());
@@ -548,7 +554,15 @@ export default function App() {
                     className="yte-preview"
                     style={item.width && item.height ? { aspectRatio: `${item.width} / ${item.height}` } : undefined}
                   >
-                    <ThumbnailPreview url={item.url} label={`${item.quality} thumbnail`} priority={index === 0} />
+                    <ThumbnailPreview
+                      url={item.url}
+                      {...imageSeoAttrs({
+                        title: result.meta?.title,
+                        quality: item.quality,
+                        tags: tagsForResult(result),
+                      })}
+                      priority={index === 0}
+                    />
                   </div>
                   <div className="yte-meta">
                     <span>{formatSize(item.width, item.height)}</span>
@@ -612,7 +626,14 @@ export default function App() {
                           : undefined
                       }
                     >
-                      <ThumbnailPreview url={item.bestThumbnail.url} label={`Video ${index + 1} best thumbnail`} />
+                      <ThumbnailPreview
+                        url={item.bestThumbnail.url}
+                        {...imageSeoAttrs({
+                          title: item.meta?.title || `Video ${index + 1}`,
+                          quality: item.bestThumbnail.quality,
+                          tags: tagsForResult(item),
+                        })}
+                      />
                     </div>
                   ) : null}
                   <div className="yte-meta">
@@ -658,7 +679,16 @@ export default function App() {
               <div className="yte-compare">
                 {bulkResults.slice(0, 2).map((item) => (
                   <article key={item.videoId}>
-                    {item.bestThumbnail ? <ThumbnailPreview url={item.bestThumbnail.url} label={item.meta?.title || item.videoId} /> : null}
+                    {item.bestThumbnail ? (
+                      <ThumbnailPreview
+                        url={item.bestThumbnail.url}
+                        {...imageSeoAttrs({
+                          title: item.meta?.title || item.videoId,
+                          quality: item.bestThumbnail.quality,
+                          tags: tagsForResult(item),
+                        })}
+                      />
+                    ) : null}
                     <p>{item.meta?.title || item.videoId}</p>
                   </article>
                 ))}

@@ -27,8 +27,15 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "39";
+const APP_ASSET_V = "40";
 const GA_ID = "G-FW7B8NDZZ5";
+const OG_IMAGE = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/images/social/og-image-1200x630.png";
+const ICON_32 =
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png";
+const ICON_16 =
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png";
+const ICON_APPLE =
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png";
 const YT_ID = /^[A-Za-z0-9_-]{11}$/;
 const VIMEO_ID = /^\d{6,12}$/;
 const MAX_URLS = 45000;
@@ -49,6 +56,23 @@ function xmlEscape(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function brandHead(copy) {
+  return `<link rel="icon" type="image/png" sizes="32x32" href="${ICON_32}"/>
+  <link rel="shortcut icon" href="${ICON_32}"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="${ICON_16}"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="${ICON_APPLE}"/>
+  <meta property="og:image" content="${OG_IMAGE}"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:alt" content="${copy.title}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="${copy.title}"/>
+  <meta name="twitter:description" content="${copy.description}"/>
+  <meta name="twitter:image" content="${OG_IMAGE}"/>
+  <meta name="twitter:image:alt" content="${copy.title}"/>`;
 }
 
 function assetUrl(file) {
@@ -440,8 +464,7 @@ function localeAppPage(code, host) {
   <meta property="og:title" content="${copy.title}"/>
   <meta property="og:description" content="${copy.description}"/>
   <meta property="og:url" content="${origin}"/>
-  <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  ${brandHead(copy)}
   <link rel="preconnect" href="https://i.ytimg.com"/>
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>

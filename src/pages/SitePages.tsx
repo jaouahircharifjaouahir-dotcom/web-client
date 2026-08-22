@@ -90,7 +90,14 @@ function TagPage({ slug, origin }: { slug: string; origin: string }) {
         <div className="yte-grid">
           {videos.map((video) => (
             <a className="yte-shot" href={video.loc || `${origin}/?v=${video.videoId}`} key={video.videoId || video.loc}>
-              {video.thumb ? <img alt="" src={video.thumb} style={{ width: "100%", borderRadius: 12 }} /> : null}
+              {video.thumb ? (
+                <img
+                  alt={`${video.title || video.videoId || "YouTube"} thumbnail | 11tik`}
+                  title={`${video.title || "YouTube thumbnail"}${video.tags?.length ? ` – ${video.tags.slice(0, 8).join(", ")}` : ""}`}
+                  src={video.thumb}
+                  style={{ width: "100%", borderRadius: 12 }}
+                />
+              ) : null}
               <p>{video.title || video.videoId}</p>
             </a>
           ))}

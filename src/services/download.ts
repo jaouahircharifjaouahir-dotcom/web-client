@@ -27,6 +27,29 @@ function allowedUrl(url: string): boolean {
   }
 }
 
+function jpegWithComment(bytes: Uint8Array, comment: string): Uint8Array {
+  if (bytes.length < 4 || bytes[0] !== 0xff || bytes[1] !== 0xd8) return bytes;
+  const text = new TextEncoder().encode(comment.slice(0, 180));
+  const com = new Uint8Array(4 + text.length);
+  com[0] = 0xff;
+  com[1] = 0xfe;
+  const len = text.length + 2;
+  com[2] = (len >> 8) & 0xff;
+  com[3] = len & 0xff;
+  com.set(text, 4);
+  const out = new Uint8Array(2 + com.length + (bytes.length - 2));
+  out.set(bytes.subarray(0, 2), 0);
+  out.set(com, 2);
+  out.set(bytes.subarray(2), 2 + com.length);
+  return out;
+}
+
+async function seoBlob(blob: Blob, videoId: string, quality: string): Promise<Blob> {
+  if (!blob.type.includes("jpeg") && !blob.type.includes("jpg")) return blob;
+  const stamped = jpegWithComment(new Uint8Array(await blob.arrayBuffer()), `11tik ${videoId} ${quality} youtube thumbnail`);
+  return new Blob([stamped as BlobPart], { type: blob.type || "image/jpeg" });
+}
+
 async function blobFromUrl(url: string, signal?: AbortSignal): Promise<Blob> {
   if (!allowedUrl(url)) throw createAppError("DOWNLOAD_FAILED");
   const response = await fetch(url, { signal, mode: "cors", credentials: "omit" });
@@ -51,7 +74,7 @@ function triggerDownload(blob: Blob, filename: string): void {
 export const downloadManager = {
   async download(videoId: string, candidate: ThumbnailCandidate, signal?: AbortSignal): Promise<void> {
     try {
-      const blob = await blobFromUrl(candidate.url, signal);
+      const blob = await seoBlob(await blobFromUrl(candidate.url, signal), videoId, candidate.quality);
       triggerDownload(blob, thumbnailFilename(videoId, candidate.quality, blob.type, candidate.url));
     } catch {
       throw createAppError("DOWNLOAD_FAILED");
@@ -63,7 +86,7 @@ export const downloadManager = {
     for (const candidate of candidates) {
       if (signal?.aborted) break;
       try {
-        const blob = await blobFromUrl(candidate.url, signal);
+        const blob = await seoBlob(await blobFromUrl(candidate.url, signal), videoId, candidate.quality);
         files[`${sanitizeId(videoId)}/${thumbnailFilename(videoId, candidate.quality, blob.type, candidate.url)}`] =
           new Uint8Array(await blob.arrayBuffer());
       } catch {
@@ -84,7 +107,7 @@ export const downloadManager = {
       for (const candidate of group.candidates) {
         if (signal?.aborted) return;
         try {
-          const blob = await blobFromUrl(candidate.url, signal);
+          const blob = await seoBlob(await blobFromUrl(candidate.url, signal), group.videoId, candidate.quality);
           files[thumbnailFilename(group.videoId, candidate.quality, blob.type, candidate.url)] = new Uint8Array(
             await blob.arrayBuffer(),
           );

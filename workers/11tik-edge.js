@@ -41,7 +41,6 @@ import {
   thumbnailApiPayload,
 } from "./library.js";
 
-const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
 const APP_ASSET_V = "54";
 const GA_ID = "G-FW7B8NDZZ5";
@@ -111,7 +110,7 @@ const EMPTY_SOURCEMAP = JSON.stringify({
   mappings: "",
 });
 
-async function proxyGithub(pathname, search) {
+function missingAsset(pathname) {
   if (/\.map$/i.test(pathname)) {
     return new Response(EMPTY_SOURCEMAP, {
       status: 200,
@@ -121,30 +120,7 @@ async function proxyGithub(pathname, search) {
       },
     });
   }
-  const isAsset = /\.(?:js|css|svg|png|ico|webp|woff2?|json|webmanifest)$/i.test(pathname);
-  const ttl = isAsset ? 2592000 : 600;
-  const upstream = await fetch(GITHUB + pathname + search, {
-    cf: {
-      cacheEverything: true,
-      cacheTtl: ttl,
-      cacheTtlByStatus: { "200-299": ttl, "404": 30, "500-599": 0 },
-    },
-  });
-  const headers = new Headers(upstream.headers);
-  headers.set(
-    "cache-control",
-    isAsset
-      ? "public, max-age=31536000, immutable"
-      : "public, max-age=300, stale-while-revalidate=86400",
-  );
-  headers.set("cdn-cache-control", isAsset ? "max-age=2592000" : "max-age=600");
-  headers.set("x-content-type-options", "nosniff");
-  if (!headers.has("access-control-allow-origin")) headers.set("access-control-allow-origin", "*");
-  return new Response(upstream.body, {
-    status: upstream.status,
-    statusText: upstream.statusText,
-    headers,
-  });
+  return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });
 }
 
 function locFor(platform, videoId) {
@@ -391,6 +367,16 @@ async function handleSitemapAdd(request, env, ctx) {
     return new Response(JSON.stringify({ ok: false, error: "invalid_id" }), {
       status: 400,
       headers: { "content-type": "application/json", ...corsHeaders() },
+    });
+  }
+  const existing = await readLibraryRow(env, parsed.platform, parsed.videoId);
+  if (existing?.videoId) {
+    return jsonResponse({
+      ok: true,
+      loc: existing.loc || locFor(parsed.platform, parsed.videoId),
+      pinged: false,
+      gate: existing.gate || qualityForVideo(existing),
+      deduped: true,
     });
   }
   const ip = request.headers.get("cf-connecting-ip") || "";
@@ -967,7 +953,7 @@ export default {
         return Response.redirect(`https://${host}${legalPath}${url.search}`, 301);
       }
       if (url.pathname.startsWith("/web-client/") && !url.pathname.includes("..")) {
-        return proxyGithub(url.pathname, url.search);
+        return missingAsset(url.pathname);
       }
       if (thumb) return thumbAppPage(lang, host, thumb, env);
       return localeAppPage(lang, host, url.pathname);
@@ -983,6 +969,6 @@ export default {
       return new Response("Not found", { status: 404 });
     }
 
-    return proxyGithub(url.pathname, url.search);
+    return missingAsset(url.pathname);
   },
 };

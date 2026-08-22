@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: process.env.VITE_BASE || "/",
+  base: process.env.VITE_BASE || (command === "build" ? "/web-client/" : "/"),
   build: {
     target: "es2022",
     cssMinify: true,
@@ -22,4 +22,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));

@@ -3,6 +3,21 @@
   "account_id": "f9da186fc6cbf157fd99d88fe700d0c4",
   "main": "workers/11tik-edge.js",
   "compatibility_date": "2026-08-21",
+  "assets": {
+    "directory": "./dist-assets",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": [
+      "/web-client/youtube-meta",
+      "/web-client/channel-videos",
+      "/web-client/sitemap-add",
+      "/web-client/api/*",
+      "/web-client/tags/*",
+      "/web-client/extracts/*",
+      "/web-client/hold-queue.json",
+      "/api/*"
+    ]
+  },
   "triggers": {
     "crons": ["7 * * * *"]
   },

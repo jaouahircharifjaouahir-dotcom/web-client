@@ -7,7 +7,7 @@ const root = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE || "/",
+  base: process.env.VITE_BASE || "/web-client/",
   define: {
     "process.env.NODE_ENV": JSON.stringify("production"),
   },

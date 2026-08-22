@@ -24,15 +24,27 @@ Sitemap: https://www.11tik.com/sitemap-pages.xml
 
 7. Hard refresh `https://www.11tik.com/` (Ctrl+F5). Confirm title, HTTPS canonical, favicons, H1 in view-source, and the extractor still works.
 
-Do **not** point `11tik.com` DNS at GitHub Pages.
+Do **not** point `11tik.com` DNS at GitHub Pages. GitHub Pages is not a production origin.
 
-## Application assets (GitHub Pages)
+## Application assets (Workers Static Assets)
 
-`main` deploys `dist/` with `VITE_BASE=/youtube-thumbnail-extractor/`.
+`npm run build` writes Vite output into `dist/`, then `scripts/stage-worker-assets.mjs` copies it to `dist-assets/web-client/` so public URLs stay `/web-client/…`.
 
-The shell is `noindex` and canonicalizes to `https://www.11tik.com/`. It exists so Blogger can load `blogger-app.js` and `blogger-app.css`.
+`11tik-edge` serves those files as Cloudflare Workers Static Assets. Matching files do not invoke Worker code. Dynamic paths under `run_worker_first` in `wrangler.jsonc` still run the Worker.
 
-After a Pages deploy, the theme uses `blogger-app.js?v=4`. Raise that query if the browser caches an old bundle.
+## Production deploy (Workers Builds)
+
+Connect this repo to Worker `11tik-edge` in the Cloudflare dashboard: **Workers & Pages → 11tik-edge → Settings → Builds → Connect**.
+
+Recommended dashboard settings:
+
+- Production branch: `main`
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- Build watch paths include: `src`, `public`, `workers`, `wrangler.jsonc`, `package.json`, `package-lock.json`, `vite.config.ts`, `vite.embed.config.ts`, `scripts`
+- Exclude: `docs`, `README.md`, `.cursor`
+
+GitHub Actions `ci.yml` only verifies; it does not deploy.
 
 ## Local QA
 

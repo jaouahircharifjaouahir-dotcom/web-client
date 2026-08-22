@@ -65,4 +65,22 @@ export const GUIDE_POSTS = [
     summary:
       "How custom thumbnails work in YouTube Studio in 2026, and how to confirm the public files with 11tik after processing.",
   },
+  {
+    title: "How to save a YouTube thumbnail on iPhone and Android (2026)",
+    href: "https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html",
+    summary:
+      "Save the public YouTube still on iPhone or Android in Safari or Chrome. No app store downloader. Paste a public URL into 11tik and keep the largest file that exists.",
+  },
+  {
+    title: "How to use a YouTube thumbnail as a blog featured image or Open Graph preview",
+    href: "https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html",
+    summary:
+      "Confirm the public still exists, then host a copy for WordPress or og:image. Do not hotlink a guessed maxresdefault URL.",
+  },
+  {
+    title: "How to extract thumbnails from a YouTube channel URL",
+    href: "https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html",
+    summary:
+      "Paste a public channel URL into 11tik Bulk to expand recent public uploads and download each best still. Research only; do not clone another channel’s art.",
+  },
 ] as const;

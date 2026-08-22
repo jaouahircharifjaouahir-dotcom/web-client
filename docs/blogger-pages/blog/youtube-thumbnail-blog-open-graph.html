@@ -1,0 +1,70 @@
+<style>
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
+.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
+.yte-page p,.yte-page li{color:#5c5666}
+.yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
+</style>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">How to use a YouTube thumbnail as a blog featured image or Open Graph preview</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-updated">Last updated: 22 August 2026</p>
+  <p itemprop="description">Use YouTube’s public still as a WordPress featured image or og:image only after you confirm the file exists, host a copy you are allowed to use, and write honest alt text. Hotlinking a guessed maxresdefault URL is how cards break.</p>
+  <img alt="YouTube thumbnail as a blog featured image and Open Graph 1200 by 630 preview — 11tik" class="yte-hero" height="630" itemprop="image" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-blog-open-graph.png" width="1200"/>
+  <p class="yte-caption">A blog card needs a file that exists. 11tik lists public sizes before you copy a URL or download.</p>
+
+  <h2>Should I hotlink i.ytimg.com in my theme?</h2>
+  <p>You can, but it is fragile. YouTube may change cache headers, the filename may 404, and you do not control crop. For a post you own, download the confirmed public still, keep a local copy in your media library, and point <code>og:image</code> at <em>your</em> HTTPS URL. For a research note, a confirmed i.ytimg.com URL is acceptable if you disclose the source and do not imply you designed the art.</p>
+  <p>Never invent pixels. If maxresdefault is missing, do not stretch hqdefault to 1200×630 and call it HD. Record the real width and height 11tik shows. Size reference: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">thumbnail size guide</a>.</p>
+
+  <h2>How do I get a working image URL for Open Graph?</h2>
+  <ol>
+    <li>Copy a public YouTube URL (watch, Shorts, or youtu.be).</li>
+    <li>Paste it on <a href="https://www.11tik.com/">11tik</a> and extract.</li>
+    <li>Copy image URL on the first listed size. That address already returned an image.</li>
+    <li>In your CMS, either upload the downloaded file or paste the copied URL into the featured-image / social-preview field.</li>
+    <li>Set og:image:width and og:image:height to the real pixels, not a hoped-for 1280×720.</li>
+  </ol>
+  <p>Facebook and Slack caches are sticky. After you replace a broken URL, use each platform’s debugger. A 404 on day one stays in cache until you re-scrape.</p>
+
+  <h2>What Open Graph size should I target?</h2>
+  <p>Platforms recommend about 1200×630 for large link cards. YouTube’s maxres still is usually 1280×720 (16:9). That is close enough; most scrapers letterbox or center-crop. Do not add fake UI. If you only have 480×360 hqdefault, say so in the caption and accept a softer card rather than upscaling artifacts.</p>
+  <p>Alt text should name the video and that the file is a YouTube public thumbnail, for example: “Public YouTube thumbnail for [title] | 11tik check”. Keyword stuffing in alt is a policy risk and helps nobody.</p>
+
+  <h2>WordPress, Blogger, and static sites</h2>
+  <p>WordPress: Media → Add → upload the downloaded still → set as Featured image. Yoast / Rank Math social tabs should reuse that attachment. Do not paste a raw <code>https://i.ytimg.com/vi/ID/maxresdefault.jpg</code> until 11tik proved that path exists.</p>
+  <p>Blogger: Upload the image into the post, then use the same file for any custom search / social snippet if your theme supports it. 11tik itself is published on Blogger; the extractor is a separate browser tool on the homepage.</p>
+  <p>Static generators: put the file in your repo or CDN, then set <code>og:image</code> to the canonical asset URL. Copying only the YouTube URL into front matter is fine for drafts, not for a launch you cannot debug on the weekend.</p>
+
+  <h2>Copyright when a blog reuses a thumbnail</h2>
+  <p>Embedding a YouTube player is not the same as copying the still into your article hero. The still is a separate copyrighted image. Fair use is fact-specific; 11tik is not your lawyer. Safer pattern: use the still to illustrate a critique of that video, credit the channel, link the watch page, and do not sell the image. Do not use another creator’s thumbnail as your channel art. Official custom-thumbnail help: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">YouTube custom thumbnails</a>. Site terms: <a href="https://www.11tik.com/p/terms-of-use.html">Terms of use</a>.</p>
+
+  <h2>Common failures</h2>
+  <ul>
+    <li>Guessing maxresdefault for every id. Many videos never publish it. <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault explained</a>.</li>
+    <li>Using a player screenshot as og:image. <a href="https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html">Screenshot vs real still</a>.</li>
+    <li>HTTP image URLs. Scrapers drop mixed content. 11tik copies HTTPS only.</li>
+    <li>Hotlinking then complaining when the CDN path changes. Keep your own copy for posts you rank.</li>
+  </ul>
+  <p>Need the URL pattern itself? <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">How to get a YouTube thumbnail URL</a>. Need the file on a phone first? <a href="https://www.11tik.com/">Open the extractor</a>.</p>
+  <p><a href="https://www.11tik.com/">Confirm a public still on 11tik →</a></p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a>.</p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"How to use a YouTube thumbnail as a blog featured image or Open Graph preview","datePublished":"2026-08-22","dateModified":"2026-08-22","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-blog-open-graph.png","width":1200,"height":630}},
+  {"@type":"HowTo","name":"Use a confirmed YouTube thumbnail as og:image","totalTime":"PT3M","step":[
+    {"@type":"HowToStep","position":1,"name":"Extract a public URL","text":"Paste a public YouTube URL into https://www.11tik.com/ and extract."},
+    {"@type":"HowToStep","position":2,"name":"Copy a real image URL","text":"Copy image URL on the first listed size, or download that file."},
+    {"@type":"HowToStep","position":3,"name":"Host and tag","text":"Upload the file to your CMS when you can, set og:image to an HTTPS URL, and use the real pixel dimensions."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Should I hotlink i.ytimg.com in my theme?","acceptedAnswer":{"@type":"Answer","text":"You can for drafts. For a lasting post, download the confirmed still and host it on your site so the card does not die if the filename 404s."}},
+    {"@type":"Question","name":"How do I get a working image URL for Open Graph?","acceptedAnswer":{"@type":"Answer","text":"Extract the video on 11tik, copy the first listed image URL, then set og:image to that HTTPS address or to your uploaded copy."}},
+    {"@type":"Question","name":"What Open Graph size should I target?","acceptedAnswer":{"@type":"Answer","text":"About 1200×630 for large cards. YouTube maxres is usually 1280×720. Use the real size 11tik reports; do not invent a 4K file."}}
+  ]}
+]}
+  </script>
+</article>

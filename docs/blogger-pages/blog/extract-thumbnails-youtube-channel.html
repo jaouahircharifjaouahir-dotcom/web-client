@@ -1,0 +1,73 @@
+<style>
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
+.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
+.yte-page p,.yte-page li{color:#5c5666}
+.yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
+</style>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">How to extract thumbnails from a YouTube channel URL</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-updated">Last updated: 22 August 2026</p>
+  <p itemprop="description">Paste a public YouTube channel URL into 11tik Bulk to expand recent public uploads, then download each best still. This is for research on packaging, not for cloning another channel’s custom art.</p>
+  <img alt="Extract thumbnails from a YouTube channel URL — latest public uploads on 11tik" class="yte-hero" height="630" itemprop="image" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png" width="1200"/>
+  <p class="yte-caption">A channel link becomes a short list of public video ids. Each card is a real still, not a guessed filename.</p>
+
+  <h2>Can I get thumbnails from a whole YouTube channel?</h2>
+  <p>You can get stills for the latest <em>public</em> uploads that expose a video id. 11tik does not scrape every video a channel ever posted and does not bypass memberships. On the homepage, turn on Bulk, paste a channel URL such as <code>youtube.com/@handle</code> or <code>/channel/UC…</code>, and let the tool expand the public RSS-style list. Then extract as you would a typed list. Cap remains 25 URLs per run so the browser stays usable.</p>
+  <p>This is different from saving one watch link. The single-URL flow is in <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">how to download a YouTube thumbnail</a>. Line-by-line bulk without a channel is in <a href="https://www.11tik.com/2026/08/how-to-batch-download-youtube.html">batch download</a>.</p>
+
+  <h2>Which channel URLs work?</h2>
+  <ul>
+    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>
+    <li><code>https://www.youtube.com/@handle</code> when the public page exposes a channel id</li>
+    <li>Legacy <code>/user/name</code> paths that still resolve</li>
+  </ul>
+  <p>A /playlist URL is not a channel. Paste the playlist’s individual watch links instead. A handle that never resolves to a UC id returns no videos; open the channel in a normal browser and copy the canonical channel URL from the address bar.</p>
+
+  <h2>How to extract channel thumbnails on 11tik</h2>
+  <ol>
+    <li>Open <a href="https://www.11tik.com/">11tik</a> and click Bulk.</li>
+    <li>Paste one public channel URL. You can add more watch links on following lines.</li>
+    <li>Start extract. Wait until the tool replaces the channel line with recent public watch URLs, then pulls stills.</li>
+    <li>Download each best still, or download the highest-quality zip, or export CSV (id, title, share URL, image URL) for a research log.</li>
+  </ol>
+  <p>Share links after a successful extract use <code>/thumb/VIDEO_ID</code> when the quality gate has a title, tags, and a live thumb. Those pages are for the unique still, not a second homepage.</p>
+
+  <h2>What 11tik will not do</h2>
+  <ul>
+    <li>Download the videos or audio. Stills only.</li>
+    <li>List unlisted or private uploads.</li>
+    <li>Guarantee maxresdefault for every recent video. Older or small sources stop at hq or sd. <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault</a>.</li>
+    <li>Grant rights to reuse the art. Studying a grid of public packaging is the intended research use. Re-uploading a competitor’s still as your custom thumbnail is a copyright and policy problem. <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>.</li>
+  </ul>
+
+  <h2>How this helps research without doorway pages</h2>
+  <p>A channel extract is one job: recent public stills in one sitting. It is not a generated page per competitor brand. You stay on the tool, you keep a zip or CSV, and you write your own notes. If you publish commentary, credit the channels and link their watch pages. YouTube’s thumbnail upload rules for <em>your</em> channel are in <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">custom video thumbnails</a>.</p>
+  <p>Vimeo user pages are not expanded the same way. Paste numeric Vimeo video URLs one per line instead.</p>
+
+  <h2>Troubleshooting</h2>
+  <p>Empty list: the channel feed did not return public ids (terminated channel, or a handle the resolver could not map). Try the UC channel URL from YouTube’s desktop layout.</p>
+  <p>Some cards missing: those uploads have no public still yet, or the gate rejected an incomplete extract. Re-run a single watch URL. Privacy of pasted links: <a href="https://www.11tik.com/p/privacy.html">Privacy</a>.</p>
+  <p>Extractor vs design tool: 11tik does not create cover art. <a href="https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html">Extractor vs maker</a>.</p>
+  <p><a href="https://www.11tik.com/">Extract public channel stills on 11tik →</a></p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/contact.html">Contact</a>.</p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"How to extract thumbnails from a YouTube channel URL","datePublished":"2026-08-22","dateModified":"2026-08-22","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png","width":1200,"height":630}},
+  {"@type":"HowTo","name":"Extract thumbnails from a YouTube channel URL","totalTime":"PT3M","step":[
+    {"@type":"HowToStep","position":1,"name":"Open Bulk","text":"Open https://www.11tik.com/ and click Bulk."},
+    {"@type":"HowToStep","position":2,"name":"Paste a channel URL","text":"Paste a public youtube.com/@handle or /channel/UC… URL."},
+    {"@type":"HowToStep","position":3,"name":"Extract and save","text":"Run extract, then download each best public still, a zip, or a CSV log."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Can I get thumbnails from a whole YouTube channel?","acceptedAnswer":{"@type":"Answer","text":"Yes for recent public uploads. Paste the channel URL into 11tik Bulk. Private and members-only videos are not listed."}},
+    {"@type":"Question","name":"Which channel URLs work?","acceptedAnswer":{"@type":"Answer","text":"Public /channel/UC… URLs, many @handle URLs, and some legacy /user/ paths. Playlists are not channels."}},
+    {"@type":"Question","name":"Does this download the videos?","acceptedAnswer":{"@type":"Answer","text":"No. 11tik only lists public stills YouTube already hosts."}}
+  ]}
+]}
+  </script>
+</article>

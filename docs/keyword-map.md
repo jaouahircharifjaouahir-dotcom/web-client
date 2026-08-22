@@ -14,6 +14,9 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 | how to download / get / find a youtube thumbnail | Tutorial | `/p/how-to-download-youtube-thumbnail.html` | homepage | Steps, then CTA to the tool. |
 | thumbnail extractor vs maker | Comparison | `/2026/08/thumbnail-extractor-vs-maker.html` | homepage | Extractor is not Canva/Studio upload. |
 | YouTube Studio custom thumbnail 2026 | Freshness | `/2026/08/youtube-studio-thumbnail-2026.html` | homepage | Confirm public files after Studio upload. |
+| save youtube thumbnail iphone / android | Tutorial | `/2026/08/how-to-save-youtube-thumbnail-on-iphone.html` | homepage | Phone browser, not a second tool. |
+| youtube thumbnail featured image / open graph | Webmaster | `/2026/08/how-to-use-youtube-thumbnail-as-blog.html` | URL guide | Confirm file, then host a copy. |
+| youtube channel thumbnail extract | Tool support | `/2026/08/how-to-extract-thumbnails-from-youtube.html` | batch guide | Channel URL in Bulk, recent public uploads. |
 | youtube thumbnail image / original image | Tool | `https://www.11tik.com/` | size guide | Do not claim 4K if maxres is 1280×720. |
 
 ## Cannibalization rules

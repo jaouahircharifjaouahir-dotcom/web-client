@@ -1,0 +1,17 @@
+---
+description: How to write and publish 11tik Blogger articles without asking
+alwaysApply: true
+---
+
+# Blogger articles (always)
+
+When the user asks for articles, posts, or blog content:
+
+- Write them. Do not wait for another “publish” or “do everything” prompt.
+- Research gaps in `docs/keyword-map.md` and existing `docs/blogger-pages/blog/` first. Never clone the homepage tool intent or duplicate an existing H1.
+- English, people-first, long enough to answer the job. Honest claims only: public stills, no 4K invention, no video/audio download, copyright stays with the uploader.
+- Include: unique H1, dated byline, original hero image with on-topic text (generate it), descriptive alt, H2s that match visible FAQ, HowTo + Article + FAQ JSON-LD that copies on-page wording, internal links to `/`, sibling guides, About/Privacy/Terms, one useful official YouTube Help link when relevant.
+- Save HTML under `docs/blogger-pages/blog/`. Host heroes at `public/images/blog/` and use `https://www.11tik.com/web-client/images/blog/…`.
+- Add the post to `src/content/posts.ts` and the keyword map.
+- Publish live with the existing Blogger session (`scripts/publish-queued-posts.mjs` pattern). Then put the real Blogger URL into `posts.ts`.
+- Ship GitHub `main`. Do not commit `.env` or `secrets/`.

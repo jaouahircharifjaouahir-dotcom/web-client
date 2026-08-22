@@ -16,19 +16,19 @@ const BLOG_ID = String(process.env.BLOGGER_BLOG_ID || "").trim();
 
 const POSTS = [
   {
-    title: "What is maxresdefault.jpg? When YouTube actually publishes an HD thumbnail",
-    file: "docs/blogger-pages/blog/maxresdefault-explained.html",
-    labels: ["guide", "youtube", "maxresdefault"],
+    title: "How to save a YouTube thumbnail on iPhone and Android (2026)",
+    file: "docs/blogger-pages/blog/save-youtube-thumbnail-iphone-android.html",
+    labels: ["guide", "youtube", "mobile"],
   },
   {
-    title: "How to batch download YouTube thumbnails (up to 25 public URLs)",
-    file: "docs/blogger-pages/blog/batch-download-youtube-thumbnails.html",
-    labels: ["guide", "youtube", "bulk"],
-  },
-  {
-    title: "Screenshot vs real YouTube thumbnail: which file should you save?",
-    file: "docs/blogger-pages/blog/screenshots-vs-real-thumbnails.html",
+    title: "How to use a YouTube thumbnail as a blog featured image or Open Graph preview",
+    file: "docs/blogger-pages/blog/youtube-thumbnail-blog-open-graph.html",
     labels: ["guide", "youtube", "seo"],
+  },
+  {
+    title: "How to extract thumbnails from a YouTube channel URL",
+    file: "docs/blogger-pages/blog/extract-thumbnails-youtube-channel.html",
+    labels: ["guide", "youtube", "channel"],
   },
 ];
 

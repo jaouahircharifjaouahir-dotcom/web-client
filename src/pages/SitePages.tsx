@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { PILLAR_GUIDE } from "../content/trust";
-import { relatedGuides } from "../content/related";
 import { tx } from "../i18n/extra";
-import { localeHomeUrl, readLocale } from "../i18n/ui";
+import { pageString } from "../i18n/pages";
+import { guidePosts, localeHomeUrl, readLocale } from "../i18n/ui";
 import type { AppRoute } from "../routing/path";
 
 type TagPayload = {
@@ -24,7 +23,11 @@ export function SitePages({ route }: { route: Exclude<AppRoute, { name: "home" }
       />
     );
   }
-  if (route.name === "guide") return <Article title={PILLAR_GUIDE.title} body={PILLAR_GUIDE.body} origin={origin} />;
+  if (route.name === "guide") return <Article title={pageString(locale, "guideTitle")} body={pageString(locale, "guideBody")} origin={origin} />;
+  if (route.name === "about") return <Article title={pageString(locale, "aboutTitle")} body={pageString(locale, "aboutBody")} origin={origin} />;
+  if (route.name === "privacy") return <Article title={pageString(locale, "privacyTitle")} body={pageString(locale, "privacyBody")} origin={origin} />;
+  if (route.name === "terms") return <Article title={pageString(locale, "termsTitle")} body={pageString(locale, "termsBody")} origin={origin} />;
+  if (route.name === "contact") return <Article title={pageString(locale, "contactTitle")} body={pageString(locale, "contactBody")} origin={origin} />;
   if (route.name === "trending") return <Trending origin={origin} />;
   if (route.name === "hold") return <Hold origin={origin} />;
   if (route.name === "stats") return <Stats origin={origin} />;
@@ -49,7 +52,7 @@ function Article({ title, body, origin }: { title: string; body: string; origin:
           ))}
         </section>
         <nav className="yte-kw">
-          {relatedGuides("").map((post) => (
+          {guidePosts().slice(0, 6).map((post) => (
             <a href={post.href} key={post.href}>
               {post.title}
             </a>
@@ -121,7 +124,8 @@ function Trending({ origin }: { origin: string }) {
         <p className="yte-kicker">
           <a href={origin}>11tik</a>
         </p>
-        <h1>Trending tags</h1>
+        <h1>{pageString(readLocale(), "trendingTags")}</h1>
+        <p>{pageString(readLocale(), "trendingIntro")}</p>
         <div className="yte-list">
           {tags.map((tag) => (
             <a className="yte-item" href={`${origin.replace(/\/$/, "")}/tag/${tag.slug}`} key={tag.slug}>
@@ -161,8 +165,8 @@ function Stats({ origin }: { origin: string }) {
   }, []);
   return (
     <Article
-      title="YouTube Thumbnail Statistics 2026"
-      body={`Indexed public extracts currently associated with qualifying tags: ${count}.\nThese counts grow only from real extractions and capped trending seeds that pass the quality gate (complete title, tags, and a live thumbnail).`}
+      title={pageString(readLocale(), "statsTitle")}
+      body={`${pageString(readLocale(), "statsBody")}\n${count}`}
       origin={origin}
     />
   );

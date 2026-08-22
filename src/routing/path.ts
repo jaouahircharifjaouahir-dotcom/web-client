@@ -5,7 +5,11 @@ export type AppRoute =
   | { name: "stats" }
   | { name: "copyright" }
   | { name: "guide"; slug: string }
-  | { name: "hold" };
+  | { name: "hold" }
+  | { name: "about" }
+  | { name: "privacy" }
+  | { name: "terms" }
+  | { name: "contact" };
 
 export function parseAppRoute(pathname = typeof location === "undefined" ? "/" : location.pathname): AppRoute {
   const path = pathname.replace(/\/+$/, "") || "/";
@@ -15,6 +19,10 @@ export function parseAppRoute(pathname = typeof location === "undefined" ? "/" :
   if (path.endsWith("/stats")) return { name: "stats" };
   if (path.endsWith("/copyright") || path.endsWith("/p/copyright.html")) return { name: "copyright" };
   if (path.endsWith("/hold-queue")) return { name: "hold" };
+  if (path.endsWith("/about") || path.endsWith("/p/about.html")) return { name: "about" };
+  if (path.endsWith("/privacy") || path.endsWith("/p/privacy.html")) return { name: "privacy" };
+  if (path.endsWith("/terms") || path.endsWith("/p/terms-of-use.html") || path.endsWith("/terms-of-use.html")) return { name: "terms" };
+  if (path.endsWith("/contact") || path.endsWith("/p/contact.html")) return { name: "contact" };
   const guide = path.match(/\/guide\/([^/]+)$/) || (path.endsWith("/guide") ? ["", "youtube-thumbnails"] : null);
   if (guide) return { name: "guide", slug: guide[1] || "youtube-thumbnails" };
   return { name: "home" };

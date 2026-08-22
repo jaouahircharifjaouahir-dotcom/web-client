@@ -39,7 +39,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "49";
+const APP_ASSET_V = "50";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -550,7 +550,7 @@ function legalPageRedirect(pathname) {
 }
 
 function isAppShellPath(pathname) {
-  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$)/.test(
+  return /^(?:\/tag\/[^/]+\/?$|\/trending-tags\/?$|\/stats\/?$|\/copyright\/?$|\/p\/copyright\.html$|\/embed\/?$|\/guide(?:\/[\w-]+)?\/?$|\/hold-queue\/?$|\/about\/?$|\/privacy\/?$|\/terms\/?$|\/contact\/?$)/.test(
     pathname,
   );
 }
@@ -764,9 +764,11 @@ export default {
     const api = await handleLibraryApi(url, request, env);
     if (api) return api;
 
-    const legal = legalPageRedirect(url.pathname);
-    if (legal) {
-      return Response.redirect(legal, 301);
+    if (host === "www.11tik.com") {
+      const legal = legalPageRedirect(url.pathname);
+      if (legal) {
+        return Response.redirect(legal, 301);
+      }
     }
 
     if (url.pathname === "/web-client/sitemap-add") {

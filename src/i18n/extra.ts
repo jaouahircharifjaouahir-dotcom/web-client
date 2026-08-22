@@ -1,3 +1,5 @@
+import { pageString } from "./pages";
+
 export type ExtraKey =
   | "language"
   | "legalTitle"
@@ -167,5 +169,8 @@ const PACKS: Record<string, Partial<Record<ExtraKey, string>>> = {
 };
 
 export function tx(locale: string, key: ExtraKey): string {
+  if (key === "legalTitle" || key === "legalQ1" || key === "legalA1" || key === "legalQ2" || key === "legalA2" || key === "legalQ3" || key === "legalA3" || key === "trustAbout" || key === "trustPrivacy" || key === "trustTerms" || key === "trustContact" || key === "trendingTags" || key === "guidePillar" || key === "statsTitle") {
+    return pageString(locale, key);
+  }
   return PACKS[locale]?.[key] || EN[key];
 }

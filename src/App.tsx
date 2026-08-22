@@ -1,7 +1,6 @@
 import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
-import { relatedGuides } from "./content/related";
 import { findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
@@ -10,6 +9,7 @@ import { expandChannelVideos, looksLikeChannelUrl } from "./channels/feed";
 import { bulkResultsCsv, downloadCsv } from "./export/csv";
 import { bulkResultsJson, downloadText } from "./export/json";
 import { tx } from "./i18n/extra";
+import { legalHrefs } from "./i18n/pages";
 import { SitePages } from "./pages/SitePages";
 import { parseAppRoute } from "./routing/path";
 import { calculateConsistencyScore } from "./score/consistency";
@@ -828,15 +828,15 @@ export default function App() {
           <p>{tx(locale, "legalA3")}</p>
         </details>
         <nav className="yte-kw" aria-label={tx(locale, "relatedAlso")}>
-          <a href="/trending-tags">{tx(locale, "trendingTags")}</a>
-          <a href="/guide/youtube-thumbnails">{tx(locale, "guidePillar")}</a>
-          <a href="/stats">{tx(locale, "statsTitle")}</a>
-          <a href="https://www.11tik.com/p/about.html">{tx(locale, "trustAbout")}</a>
-          <a href="https://www.11tik.com/p/privacy.html">{tx(locale, "trustPrivacy")}</a>
-          <a href="https://www.11tik.com/p/terms-of-use.html">{tx(locale, "trustTerms")}</a>
-          <a href="https://www.11tik.com/p/contact.html">{tx(locale, "trustContact")}</a>
-          <a href="/copyright">{tx(locale, "legalTitle")}</a>
-          {relatedGuides("").map((post) => (
+          <a href={legalHrefs(locale).trending}>{tx(locale, "trendingTags")}</a>
+          <a href={legalHrefs(locale).guide}>{tx(locale, "guidePillar")}</a>
+          <a href={legalHrefs(locale).stats}>{tx(locale, "statsTitle")}</a>
+          <a href={legalHrefs(locale).about}>{tx(locale, "trustAbout")}</a>
+          <a href={legalHrefs(locale).privacy}>{tx(locale, "trustPrivacy")}</a>
+          <a href={legalHrefs(locale).terms}>{tx(locale, "trustTerms")}</a>
+          <a href={legalHrefs(locale).contact}>{tx(locale, "trustContact")}</a>
+          <a href={legalHrefs(locale).copyright}>{tx(locale, "legalTitle")}</a>
+          {guidePosts().slice(0, 6).map((post) => (
             <a href={post.href} key={post.href}>
               {post.title}
             </a>

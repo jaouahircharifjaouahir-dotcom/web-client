@@ -27,7 +27,7 @@ import {
 
 const GITHUB = "https://jaouahircharifjaouahir-dotcom.github.io";
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "43";
+const APP_ASSET_V = "44";
 const GA_ID = "G-FW7B8NDZZ5";
 const OG_IMAGE = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
 const ICON_32 =
@@ -100,8 +100,24 @@ window.setTimeout(loadGtag,8000);
 </script>`;
 }
 
+const EMPTY_SOURCEMAP = JSON.stringify({
+  version: 3,
+  file: "blogger-app.js",
+  sources: ["blogger-app.js"],
+  names: [],
+  mappings: "",
+});
+
 async function proxyGithub(pathname, search) {
-  if (/\.map$/i.test(pathname)) return new Response("Not found", { status: 404 });
+  if (/\.map$/i.test(pathname)) {
+    return new Response(EMPTY_SOURCEMAP, {
+      status: 200,
+      headers: {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "public, max-age=86400",
+      },
+    });
+  }
   const isAsset = /\.(?:js|css|svg|png|ico|webp|woff2?|json|webmanifest)$/i.test(pathname);
   const ttl = isAsset ? 2592000 : 600;
   const upstream = await fetch(GITHUB + pathname + search, {
@@ -596,8 +612,24 @@ function rewriteGithubAsset(el, attr) {
   if (value.startsWith(GH_PAGES)) el.setAttribute(attr, EDGE_ASSETS + value.slice(GH_PAGES.length));
 }
 
+function bloggerRuntimeStubs() {
+  return `<script>window.cookieChoices=window.cookieChoices||{};window._WidgetManager=window._WidgetManager||{_Init:function(){},_SetDataContext:function(){},_RegisterWidget:function(){return{_SetWidget:function(){return this;},display:function(){}};}};</script>`;
+}
+
 function polishBloggerHtml(response) {
   return new HTMLRewriter()
+    .on("head", {
+      element(el) {
+        el.prepend(bloggerRuntimeStubs(), { html: true });
+      },
+    })
+    .on("script", {
+      text(chunk) {
+        if (chunk.text.includes("_WidgetManager._") && !chunk.text.includes("function")) {
+          chunk.replace("");
+        }
+      },
+    })
     .on("script[src]", {
       element(el) {
         const src = el.getAttribute("src") || "";

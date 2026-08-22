@@ -32,7 +32,7 @@ export default defineConfig({
       output: {
         assetFileNames: "blogger-app.css",
         inlineDynamicImports: true,
-        banner: "/*! 11tik (c) 2026 https://www.11tik.com/p/terms-of-use.html */\n",
+        banner: "/*! 11tik (c) 2026 https://www.11tik.com/p/terms-of-use.html */\n//# sourceMappingURL=blogger-app.js.map\n",
       },
     },
   },

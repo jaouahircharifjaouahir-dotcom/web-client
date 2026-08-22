@@ -18,6 +18,8 @@ import {
 } from "./sitemaps.js";
 import { parseThumbPath, thumbPath } from "./thumb-url.js";
 import { viewMeta } from "./page-meta.js";
+import { descriptionForPath } from "./post-descriptions.js";
+import { resolvePageDescription, upsertHeadDescription } from "./html-meta.js";
 import localeMeta from "./locale-meta.json";
 import {
   embedWidgetHtml,
@@ -846,7 +848,18 @@ function bloggerRuntimeStubs() {
   return `<script>window.cookieChoices=window.cookieChoices||{};function _WidgetInfo(){return this;}window._WidgetInfo=window._WidgetInfo||_WidgetInfo;window._WidgetManager=window._WidgetManager||new Proxy({},{get:function(t,p){if(p==="then")return;return function(){return t;}}});</script>`;
 }
 
-function polishBloggerHtml(response) {
+async function polishBloggerHtml(response, pathname = "/") {
+  const path = String(pathname || "/").replace(/\/+$/, "") || "/";
+  let input = response;
+  if (path !== "/") {
+    const html = await response.text();
+    const desc = resolvePageDescription(path, html, descriptionForPath(path));
+    input = new Response(desc ? upsertHeadDescription(html, desc) : html, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: response.headers,
+    });
+  }
   return new HTMLRewriter()
     .on("head", {
       element(el) {
@@ -890,7 +903,7 @@ function polishBloggerHtml(response) {
         rewriteGithubAsset(el, "content");
       },
     })
-    .transform(response);
+    .transform(input);
 }
 
 export default {
@@ -903,7 +916,7 @@ export default {
     if (host === "www.11tik.com" && request.headers.get("x-11tik-pass") !== "1" && !isWorkerOwnedPath(url.pathname)) {
       const fromQuery = queryThumbRedirect(url);
       if (fromQuery) return Response.redirect(fromQuery, 301);
-      return polishBloggerHtml(await fetchBlogger(request));
+      return polishBloggerHtml(await fetchBlogger(request), url.pathname);
     }
     const lang = localeHostCode(host);
 

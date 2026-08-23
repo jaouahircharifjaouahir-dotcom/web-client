@@ -64,22 +64,12 @@ export function localeHostUrl(code) {
 export function hreflangLinks(pathname = "/") {
   const suffix = !pathname || pathname === "/" ? "/" : pathname.replace(/\/+$/, "") || "/";
   const en = suffix === "/" ? "https://www.11tik.com/" : `https://www.11tik.com${suffix}`;
-  const lines = [
+  return [
     `<link rel="alternate" hreflang="en" href="${en}"/>`,
     `<link rel="alternate" hreflang="x-default" href="${en}"/>`,
-  ];
-  for (const [code] of ISO6391) {
-    if (code === "en") continue;
-    const href = suffix === "/" ? `https://${code}.11tik.com/` : `https://${code}.11tik.com${suffix}`;
-    lines.push(`<link rel="alternate" hreflang="${code}" href="${href}"/>`);
-  }
-  return lines.join("\n  ");
+  ].join("\n  ");
 }
 
 export function localeSitemapLocs() {
-  const locs = ["https://www.11tik.com/"];
-  for (const [code] of ISO6391) {
-    locs.push(`https://${code}.11tik.com/`);
-  }
-  return locs;
+  return ["https://www.11tik.com/"];
 }

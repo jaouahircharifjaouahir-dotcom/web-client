@@ -13,7 +13,7 @@ describe("extract loc migration", () => {
   it("rewrites query share URLs to /thumb pages on each host", () => {
     expect(rewriteLoc("https://www.11tik.com/?v=dQw4w9WgXcQ")).toBe("https://www.11tik.com/thumb/dQw4w9WgXcQ");
     expect(rewriteLoc("https://www.11tik.com/?vimeo=1191500052", "https://fr.11tik.com")).toBe(
-      "https://fr.11tik.com/thumb/vimeo/1191500052",
+      "https://www.11tik.com/thumb/vimeo/1191500052",
     );
   });
 });
@@ -52,12 +52,12 @@ describe("robots.txt", () => {
     expect(allPublicSitemapUrls(2, 1).every((loc) => body.includes(`Sitemap: ${loc}`) || body.includes(loc))).toBe(true);
   });
 
-  it("lists locale sitemaps on the same host", () => {
+  it("always advertises www sitemaps", () => {
     const body = robotsTxt({ urlShards: 1, imageShards: 1, host: "fr.11tik.com", origin: "https://fr.11tik.com" });
-    expect(body).toContain("Sitemap: https://fr.11tik.com/sitemap.xml");
-    expect(body).toContain("Sitemap: https://fr.11tik.com/image-sitemap.xml");
-    expect(body).toContain("Host: fr.11tik.com");
-    expect(body).not.toContain("Sitemap: https://www.11tik.com/sitemap.xml");
+    expect(body).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
+    expect(body).toContain("Sitemap: https://www.11tik.com/image-sitemap.xml");
+    expect(body).toContain("Host: www.11tik.com");
+    expect(body).not.toContain("Sitemap: https://fr.11tik.com/sitemap.xml");
   });
 
   it("parses sitemap paths used by the worker", () => {

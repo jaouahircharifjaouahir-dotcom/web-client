@@ -34,17 +34,15 @@ export function sitemapIndexXml(locs, lastmod) {
   return parts.join("");
 }
 
-export function originFromHost(host) {
-  const name = String(host || "").toLowerCase().split(":")[0];
-  if (!name || name === "www.11tik.com" || name === "11tik.com") return SITE_ORIGIN;
-  if (name.endsWith(".11tik.com")) return `https://${name}`;
+export function originFromHost(_host) {
   return SITE_ORIGIN;
 }
 
-export function rewriteLoc(loc, origin = SITE_ORIGIN) {
+export function rewriteLoc(loc, _origin = SITE_ORIGIN) {
   const href = migrateExtractLoc(String(loc || ""));
-  if (!origin || origin === SITE_ORIGIN) return href;
-  return href.replace("https://www.11tik.com", origin).replace("http://www.11tik.com", origin);
+  return href
+    .replace(/^https?:\/\/(?:[a-z0-9-]+\.)?11tik\.com/i, SITE_ORIGIN)
+    .replace("http://www.11tik.com", SITE_ORIGIN);
 }
 
 function migrateExtractLoc(loc) {
@@ -78,9 +76,8 @@ export function allPublicSitemapUrls(urlShards = 1, imageShards = 1, origin = SI
   return urls;
 }
 
-export function robotsTxt({ urlShards = 1, imageShards = 1, host = "www.11tik.com", origin } = {}) {
-  const site = origin || originFromHost(host);
-  const sitemaps = [...new Set(allPublicSitemapUrls(urlShards, imageShards, site))];
+export function robotsTxt({ urlShards = 1, imageShards = 1 } = {}) {
+  const sitemaps = [...new Set(allPublicSitemapUrls(urlShards, imageShards, SITE_ORIGIN))];
   const sitemapLines = sitemaps.map((loc) => `Sitemap: ${loc}`).join("\n");
   return `# 11tik robots.txt
 # https://www.11tik.com/
@@ -116,9 +113,19 @@ Disallow: /hold-queue
 Disallow: /web-client/hold-queue.json
 Disallow: /web-client/__extracts.json
 
-Host: ${host}
+Host: www.11tik.com
 
 ${sitemapLines}
+`;
+}
+
+export function localeHostRobotsTxt() {
+  return `# Language hosts are UI only. Index https://www.11tik.com/
+User-agent: *
+Disallow: /
+
+Host: www.11tik.com
+Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;
 }
 

@@ -2,14 +2,12 @@ import {
   ISO6391_CODES,
   RTL_CODES,
   hreflangLinks,
-  localeSitemapLocs,
 } from "./iso6391.js";
 import {
   SITEMAP_PAGE_SIZE,
-  allPublicSitemapUrls,
   childSitemapUrls,
   chunkEntries,
-  originFromHost,
+  localeHostRobotsTxt,
   parseSitemapPath,
   rewriteLoc,
   robotsTxt,
@@ -229,13 +227,21 @@ async function listExtracts(env) {
   return out.slice(0, MAX_URLS);
 }
 
+function fetchBloggerUrl(pathAndQuery) {
+  const path = pathAndQuery.startsWith("/") ? pathAndQuery : `/${pathAndQuery}`;
+  return fetch(`${SITE}${path}`, {
+    headers: { "x-11tik-pass": "1" },
+    cf: { resolveOverride: "ghs.googlehosted.com", cacheEverything: true, cacheTtl: 300 },
+  });
+}
+
 async function bloggerLocs() {
   const locs = new Map();
   locs.set(`${SITE}/`, null);
-  const feeds = [`${SITE}/feeds/posts/default?alt=rss&max-results=150`, `${SITE}/sitemap-pages.xml`];
+  const feeds = ["/feeds/posts/default?alt=rss&max-results=150", "/sitemap-pages.xml"];
   for (const feed of feeds) {
     try {
-      const res = await fetch(feed, { cf: { cacheTtl: 300 } });
+      const res = await fetchBloggerUrl(feed);
       if (!res.ok) continue;
       const text = await res.text();
       for (const match of text.matchAll(/<loc>\s*([^<]+)\s*<\/loc>/gi)) {
@@ -303,21 +309,6 @@ async function hourlyExtract(env) {
     }
   }
   await saveExtract(env, "youtube", videoId, { title, tags, thumb, source: "seed" });
-  await pingCrawlers();
-}
-
-function pingEndpoints(sitemapUrl) {
-  const sitemap = encodeURIComponent(sitemapUrl);
-  return [
-    `https://www.google.com/ping?sitemap=${sitemap}`,
-    `https://www.bing.com/ping?sitemap=${sitemap}`,
-    `https://webmaster.yandex.com/ping?sitemap=${sitemap}`,
-  ];
-}
-
-async function pingCrawlers(sitemapUrls = [`${SITE}/sitemap.xml`]) {
-  const targets = [...new Set(sitemapUrls)].flatMap(pingEndpoints);
-  await Promise.allSettled(targets.map((target) => fetch(target, { method: "GET", redirect: "follow" })));
 }
 
 async function readShardMeta(env) {
@@ -342,13 +333,10 @@ async function announceIfNewShards(env, urlShards, imageShards) {
   if (changed && env?.SITEMAP_URLS) {
     await env.SITEMAP_URLS.put("meta:sitemap-shards", JSON.stringify(next));
   }
-  if (grew) {
-    await pingCrawlers(allPublicSitemapUrls(next.urlShards, next.imageShards));
-  }
   return grew;
 }
 
-async function handleSitemapAdd(request, env, ctx) {
+async function handleSitemapAdd(request, env, _ctx) {
   const url = new URL(request.url);
   let platform = url.searchParams.get("platform") || "youtube";
   let videoId = url.searchParams.get("videoId") || "";
@@ -386,19 +374,14 @@ async function handleSitemapAdd(request, env, ctx) {
   const loc = await saveExtract(env, parsed.platform, parsed.videoId, extra);
   const stored = await readLibraryRow(env, parsed.platform, parsed.videoId);
   const gate = stored?.gate || qualityForVideo(stored || {});
-  const requestOrigin = originFromHost(new URL(request.url).hostname);
-  const pingList = [`${SITE}/sitemap.xml`, `${SITE}/image-sitemap.xml`];
-  if (requestOrigin !== SITE) {
-    pingList.push(`${requestOrigin}/sitemap.xml`, `${requestOrigin}/image-sitemap.xml`);
-  }
-  ctx?.waitUntil(gate.decision === "INDEX" ? pingCrawlers(pingList) : Promise.resolve());
-  return new Response(JSON.stringify({ ok: true, loc, pinged: gate.decision === "INDEX", gate }), {
+  return new Response(JSON.stringify({ ok: true, loc, pinged: false, gate }), {
     headers: { "content-type": "application/json", ...corsHeaders() },
   });
 }
 
-async function collectPageEntries(env, origin = SITE) {
-  const blogger = origin === SITE ? await bloggerLocs() : new Map();
+async function collectPageEntries(env) {
+  const origin = SITE;
+  const blogger = await bloggerLocs();
   const extracts = await listExtracts(env);
   const seen = new Set(blogger.keys());
   let newest = "1970-01-01T00:00:00.000Z";
@@ -414,35 +397,18 @@ async function collectPageEntries(env, origin = SITE) {
   blogger.set(`${origin}/stats`, newest);
   blogger.set(`${origin}/copyright`, newest);
   blogger.set(`${origin}/guide/youtube-thumbnails`, newest);
-  if (origin !== SITE) {
-    for (const page of [
-      "/p/about.html",
-      "/p/privacy.html",
-      "/p/terms-of-use.html",
-      "/p/contact.html",
-      "/p/embed.html",
-      "/p/keyword-tools.html",
-    ]) {
-      blogger.set(`${origin}${page}`, newest);
-    }
-  }
-  if (origin === SITE) {
-    for (const loc of localeSitemapLocs()) {
-      if (!blogger.has(loc)) blogger.set(loc, newest);
-    }
-  }
   const indexedTags = await listIndexedTags(env);
   for (const tag of indexedTags) {
     blogger.set(`${origin}/tag/${tag.slug}`, tag.updated || newest);
   }
   const entries = [];
   for (const [loc, lastmod] of blogger) {
-    entries.push({ loc: rewriteLoc(loc, origin), lastmod: lastmod || newest });
+    entries.push({ loc: rewriteLoc(loc), lastmod: lastmod || newest });
   }
   for (const row of extracts) {
     if (row?.gate && row.gate.decision !== "INDEX") continue;
     if (!row?.loc) continue;
-    const loc = rewriteLoc(row.loc, origin);
+    const loc = rewriteLoc(row.loc);
     if (seen.has(loc)) continue;
     seen.add(loc);
     entries.push({ loc, lastmod: row.lastmod || newest });
@@ -450,13 +416,13 @@ async function collectPageEntries(env, origin = SITE) {
   return { entries, newest };
 }
 
-async function collectImageEntries(env, origin = SITE) {
+async function collectImageEntries(env) {
   const rows = await listIndexedExtracts(env, MAX_URLS);
   const entries = [];
   let newest = "1970-01-01T00:00:00.000Z";
   for (const row of rows) {
     if (!row?.loc || !row?.thumb) continue;
-    entries.push({ ...row, loc: rewriteLoc(row.loc, origin) });
+    entries.push({ ...row, loc: rewriteLoc(row.loc) });
     if (row.lastmod && row.lastmod > newest) newest = row.lastmod;
   }
   if (newest === "1970-01-01T00:00:00.000Z") newest = new Date().toISOString();
@@ -487,9 +453,8 @@ function sitemapResponse(xml, newest, request) {
 }
 
 async function handleSitemapRoute(request, env, parsed) {
-  const origin = originFromHost(new URL(request.url).hostname);
-  const data =
-    parsed.kind === "images" ? await collectImageEntries(env, origin) : await collectPageEntries(env, origin);
+  const origin = SITE;
+  const data = parsed.kind === "images" ? await collectImageEntries(env) : await collectPageEntries(env);
   const pages = chunkEntries(data.entries);
   await announceIfNewShards(
     env,
@@ -514,13 +479,11 @@ async function handleSitemapRoute(request, env, parsed) {
   return sitemapResponse(urlsetXml(slice), data.newest, request);
 }
 
-async function handleRobots(request, env) {
+async function handleRobots(_request, env) {
   const meta = await readShardMeta(env);
   const body = robotsTxt({
     urlShards: meta.urlShards,
     imageShards: meta.imageShards,
-    host: request.headers.get("host") || "www.11tik.com",
-    origin: originFromHost(new URL(request.url).hostname),
   });
   return new Response(body, {
     headers: {
@@ -586,9 +549,8 @@ function isAppShellPath(pathname) {
 
 function localeAppPage(code, host, pathname = "/") {
   const copy = localeCopy(code);
-  const origin = `https://${host}/`;
   const path = (pathname || "/").replace(/\/+$/, "") || "/";
-  const pageUrl = path === "/" ? origin : `https://${host}${path}`;
+  const pageUrl = path === "/" ? `${SITE}/` : `${SITE}${path}`;
   const view = viewMeta(copy.title, copy.description, path);
   const head = { ...copy, title: xmlEscape(view.title), description: xmlEscape(view.description) };
   const css = assetUrl("blogger-app.css");
@@ -601,8 +563,9 @@ function localeAppPage(code, host, pathname = "/") {
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>${head.title}</title>
   <meta name="description" content="${head.description}"/>
+  <meta name="robots" content="${host === "www.11tik.com" ? "index,follow" : "noindex,follow"}"/>
   <link rel="canonical" href="${pageUrl}"/>
-  ${hreflangLinks(path)}
+  ${host === "www.11tik.com" ? hreflangLinks(path) : ""}
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="${copy.locale}"/>
   <meta property="og:site_name" content="11tik"/>
@@ -646,12 +609,12 @@ async function thumbAppPage(code, host, parsed, env) {
   const gate = row?.gate || qualityForVideo({ title, tags, thumb });
   const indexable = gate.decision === "INDEX" && Boolean(row?.title) && Boolean(row?.thumb);
   const path = thumbPath(parsed.platform, parsed.videoId);
-  const pageUrl = `https://${host}${path}`;
+  const pageUrl = `${SITE}${path}`;
   const pageTitle = xmlEscape(`${title} thumbnail · 11tik`);
   const description = xmlEscape(
     `Public thumbnail for ${title}. Preview and download the largest image file the host already publishes.`,
   );
-  const robots = indexable ? "index,follow" : "noindex,follow";
+  const robots = indexable && host === "www.11tik.com" ? "index,follow" : "noindex,follow";
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -673,7 +636,7 @@ async function thumbAppPage(code, host, parsed, env) {
   <meta name="description" content="${description}"/>
   <meta name="robots" content="${robots}"/>
   <link rel="canonical" href="${pageUrl}"/>
-  ${hreflangLinks(path)}
+  ${host === "www.11tik.com" ? hreflangLinks(path) : ""}
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="${copy.locale}"/>
   <meta property="og:site_name" content="11tik"/>
@@ -864,9 +827,15 @@ async function polishBloggerHtml(response, pathname = "/") {
     })
     .on("link[rel]", {
       element(el) {
-        if ((el.getAttribute("rel") || "").toLowerCase() !== "preconnect") return;
+        const rel = (el.getAttribute("rel") || "").toLowerCase();
         const href = el.getAttribute("href") || "";
-        if (href.includes("www.11tik.com") || href.includes("i.ytimg.com")) el.remove();
+        if (rel === "preconnect") {
+          if (href.includes("www.11tik.com") || href.includes("i.ytimg.com")) el.remove();
+          return;
+        }
+        if (rel.includes("alternate") && el.getAttribute("hreflang")) {
+          if (!href.startsWith("https://www.11tik.com")) el.remove();
+        }
       },
     })
     .on("img[src]", {
@@ -900,14 +869,17 @@ export default {
   },
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const host = url.hostname;
+    const host = url.hostname.toLowerCase();
+    const lang = localeHostCode(host);
+    const primary = host === "www.11tik.com" || host === "11tik.com";
+    if (!primary && !lang) {
+      return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });
+    }
     if (host === "www.11tik.com" && request.headers.get("x-11tik-pass") !== "1" && !isWorkerOwnedPath(url.pathname)) {
       const fromQuery = queryThumbRedirect(url);
       if (fromQuery) return Response.redirect(fromQuery, 301);
       return polishBloggerHtml(await fetchBlogger(request), url.pathname);
     }
-    const lang = localeHostCode(host);
-
     const api = await handleLibraryApi(url, request, env);
     if (api) return api;
 
@@ -929,14 +901,25 @@ export default {
     }
 
     if (url.pathname === "/robots.txt") {
+      if (lang && host !== "www.11tik.com") {
+        return new Response(localeHostRobotsTxt(), {
+          headers: {
+            "content-type": "text/plain; charset=utf-8",
+            "cache-control": "public, max-age=300",
+          },
+        });
+      }
       return handleRobots(request, env);
     }
     if (url.pathname === "/sitemap-pages.xml") {
       if (host === "www.11tik.com") return fetchBlogger(request);
-      return new Response("Not found", { status: 404 });
+      return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });
     }
     const sitemapPath = parseSitemapPath(url.pathname);
     if (sitemapPath) {
+      if (host !== "www.11tik.com") {
+        return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });
+      }
       return handleSitemapRoute(request, env, sitemapPath);
     }
 

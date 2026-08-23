@@ -599,15 +599,6 @@ export default function App() {
                   ) : null}
                   {index === 0 && liveShareUrls[0] ? <ShareUrlLine url={liveShareUrls[0]} /> : null}
                   {index === 0 ? <SocialRow title={result.meta?.title || t("heroTitle")} url={shareUrlFor(result)} /> : null}
-                  {index === 0 ? (
-                    <p className="yte-tags">
-                      {tagsForResult(result).map((tag) => (
-                        <a className="yte-chip" href={`/tag/${encodeURIComponent(tag)}`} key={tag}>
-                          {tag}
-                        </a>
-                      ))}
-                    </p>
-                  ) : null}
                   <div className="yte-row" ref={index === 0 ? bestThumbControlsRef : undefined}>
                     <button
                       className="yte-btn"

@@ -35,7 +35,7 @@ export const POST_DESCRIPTIONS = {
   "/2026/08/original-youtube-thumbnail-image.html":
     "Get the original public YouTube thumbnail YouTube already hosts. This is the CDN still, not a frame ripped from the video.",
   "/2026/08/what-is-maxresdefaultjpg-when-youtube.html":
-    "maxresdefault.jpg is usually 1280×720 when YouTube published it. Many videos never have that file. 11tik checks before you save.",
+    "maxresdefault.jpg is usually 1280×720 when published. A 404 is normal—use the next real public still 11tik validates.",
   "/2026/08/how-to-batch-download-youtube.html":
     "Batch download public YouTube thumbnails: up to 25 URLs per run on 11tik Bulk, then zip or save each best still.",
   "/2026/08/screenshot-vs-real-youtube-thumbnail.html":
@@ -47,9 +47,11 @@ export const POST_DESCRIPTIONS = {
   "/2026/08/how-to-save-youtube-thumbnail-on-iphone.html":
     "Save a public YouTube thumbnail on iPhone or Android in Safari or Chrome. No app store downloader.",
   "/2026/08/how-to-use-youtube-thumbnail-as-blog.html":
-    "Use a confirmed YouTube thumbnail as a blog featured image or Open Graph preview. Do not hotlink a guessed maxres URL.",
+    "Confirm a YouTube still, then host it for WordPress, Blogger, or og:image. Avoid hotlinking a guessed maxres URL.",
   "/2026/08/how-to-extract-thumbnails-from-youtube.html":
     "Paste a public YouTube channel URL into 11tik Bulk to extract recent public thumbnails. Research only; do not clone art.",
+  "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html":
+    "Choose JPEG or WebP for YouTube thumbnails based on what 11tik validates. WebP is optional; downloads keep the source format.",
 };
 
 export function descriptionForPath(pathname) {

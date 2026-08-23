@@ -1,0 +1,116 @@
+<style>
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
+.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
+.yte-page h3{font-size:1.05rem;margin:18px 0 6px}
+.yte-page p,.yte-page li,.yte-page td,.yte-page th{color:#5c5666}
+.yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
+.yte-page table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:15px}
+.yte-page th,.yte-page td{border:1px solid #d9d3dc;padding:10px 12px;text-align:left;vertical-align:top}
+.yte-page th{background:#f6f1ea;color:#17141c;font-weight:700}
+.yte-page code{font-size:0.92em;background:#f6f1ea;padding:0.1em 0.35em;border-radius:4px}
+.yte-page pre{background:#17141c;color:#f6f1ea;padding:14px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.45}
+</style>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">WebP vs JPEG YouTube Thumbnails: Which Format Should You Use?</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-updated"><time datetime="2026-08-23" itemprop="datePublished">Published 23 August 2026</time> · <time datetime="2026-08-23" itemprop="dateModified">Updated 23 August 2026</time></p>
+  <p itemprop="description">YouTube may publish JPEG and WebP thumbnail files. Prefer the format 11tik validates for your use case—WebP is not always available.</p>
+
+  <h2>Quick answer</h2>
+  <p>For most downloads and CMS uploads, keep the <strong>validated file 11tik lists first</strong>. JPEG remains the common public still on <code>i.ytimg.com/vi/…</code>. WebP appears for some videos as <code>maxresdefault.webp</code> under <code>/vi_webp/</code>. WebP is often smaller at similar visual quality, but it is not published for every ID. 11tik does <strong>not</strong> convert WebP into JPEG on download—it saves the bytes YouTube already hosts (JPEG downloads only get a small metadata comment stamp).</p>
+
+  <img alt="Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com" class="yte-hero" height="630" itemprop="image" loading="eager" src="https://www.11tik.com/web-client/images/blog/webp-vs-jpeg-youtube-thumbnails-which-compare.png" width="1200"/>
+  <p class="yte-caption">Same video ID, different containers and paths—only when YouTube published both.</p>
+
+  <h2>How YouTube thumbnail formats show up in 11tik</h2>
+  <p>11tik’s quality presets include:</p>
+  <ul>
+    <li><code>maxresdefault.webp</code> → <code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code> (mime <code>image/webp</code>)</li>
+    <li><code>maxresdefault.jpg</code>, <code>hq720.jpg</code>, <code>sddefault.jpg</code>, <code>hqdefault.jpg</code>, <code>mqdefault.jpg</code>, <code>default.jpg</code> → under <code>/vi/</code> (mime <code>image/jpeg</code>)</li>
+  </ul>
+  <p>Candidates are loaded in the browser. Failures and placeholders are dropped. Ranking uses tier, pixel area, expected-size match, and a small <strong>−8 score penalty for <code>.webp</code> URLs</strong> so JPEG and WebP of the same tier do not thrash unpredictably—JPEG can win ties when both validate. Details on sizes: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">thumbnail size guide</a>. Missing maxres behavior: <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault 404 guide</a>.</p>
+
+  <h2>JPEG vs WebP in plain language</h2>
+  <table>
+    <thead>
+      <tr><th>Format</th><th>Best for</th><th>Strength</th><th>Limitation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>JPEG</td><td>Downloads, WordPress uploads, widest compatibility</td><td>Near-universal support; most CDN stills</td><td>Larger files at similar quality</td></tr>
+      <tr><td>WebP</td><td>Modern sites that already serve WebP</td><td>Often smaller for the same resolution tier</td><td>Not published for every video; some older tools balk</td></tr>
+    </tbody>
+  </table>
+  <p>Neither format invents resolution. A 480×360 WebP is still 480×360.</p>
+
+  <h2>What happens when you download</h2>
+  <p>The download filename keeps the real extension (<code>.jpg</code> or <code>.webp</code>) from the mime type / URL. For JPEG blobs, 11tik may insert a short JPEG comment such as <code>11tik VIDEO_ID quality youtube thumbnail</code>. WebP and non-JPEG blobs are saved without that re-encode step. There is no quality “upgrade” and no forced conversion between formats.</p>
+
+  <h2>When to prefer JPEG</h2>
+  <ul>
+    <li>You are uploading to a CMS that expects JPG in the media library.</li>
+    <li>You need maximum compatibility with email clients or older browsers.</li>
+    <li>Only JPEG sizes validated for that video.</li>
+    <li>You are printing or handing the file to a designer who standardized on JPG.</li>
+  </ul>
+
+  <h2>When WebP is convenient</h2>
+  <ul>
+    <li>11tik listed a validated WebP maxres and your site already serves WebP.</li>
+    <li>You want a smaller file for the same ~1280×720 tier.</li>
+    <li>You control the stack and can fall back to JPEG if needed.</li>
+  </ul>
+  <p>If your theme cannot use WebP, download JPEG instead—or convert locally after download. 11tik will not convert for you.</p>
+
+  <img alt="Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png" width="1200"/>
+  <p class="yte-caption">Pick the validated format that matches your pipeline—not a guessed extension.</p>
+
+  <h2>Direct links and websites</h2>
+  <p>Copy image URL returns the HTTPS CDN address of the validated candidate. Hotlinking WebP or JPEG has the same fragility discussed in the <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">blog / Open Graph guide</a>: prefer hosting your own copy for lasting posts. URL patterns: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+
+  <h2>Browser and CMS compatibility notes</h2>
+  <p>Modern Chromium, Firefox, and Safari versions handle WebP images in pages. Some legacy plugins, email templates, or print workflows still prefer JPEG. WordPress core can serve WebP when configured, but many teams still standardize featured images as JPG for predictability. Official WordPress media docs are the source of truth for your version—do not assume every plugin accepts WebP uploads.</p>
+
+  <h2>Practical decision tree</h2>
+  <ol>
+    <li>Extract on <a href="https://www.11tik.com/">11tik</a>.</li>
+    <li>If you need a CMS featured image and see both formats, pick JPEG unless your stack is WebP-first.</li>
+    <li>If only WebP maxres validated at the top tier, use it—or take the next JPEG size if you must stay on JPG.</li>
+    <li>For archives, keep the original extension from the download.</li>
+  </ol>
+  <p>Download walkthrough: <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">download a YouTube thumbnail</a>.</p>
+
+  <h2>FAQ</h2>
+  <h3>Does every YouTube video have a WebP thumbnail?</h3>
+  <p>No. WebP maxres is optional. Many videos only expose JPEG sizes.</p>
+  <h3>Is WebP always sharper than JPEG?</h3>
+  <p>No. Format does not raise resolution. Compare equal pixel sizes.</p>
+  <h3>Why might JPEG rank above WebP in 11tik?</h3>
+  <p>Validated WebP URLs receive a small score penalty (−8) relative to otherwise similar candidates, so JPEG can surface first when both exist at the same tier.</p>
+  <h3>Does downloading convert WebP to JPEG?</h3>
+  <p>No. The saved file keeps the source format. Only JPEG may get a metadata comment.</p>
+  <h3>Which format should I hotlink?</h3>
+  <p>Neither, for production pages you care about. Host a copy. If you must hotlink temporarily, use a URL 11tik already validated.</p>
+  <h3>Can hq720 be WebP?</h3>
+  <p>In the current 11tik preset list, the dedicated WebP candidate is maxres WebP. Other sizes are requested as JPEG filenames under <code>/vi/</code>.</p>
+
+  <h2>Next step</h2>
+  <p>Paste a public URL into the <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a>, note whether the top result is <code>.jpg</code> or <code>.webp</code>, and choose based on your CMS—not based on the longer filename.</p>
+  <p class="yte-bio">Written by 11tik based on the current in-browser extractor behavior. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"WebP vs JPEG YouTube Thumbnails: Which Format Should You Use?","description":"YouTube may publish JPEG and WebP thumbnail files. Prefer the format 11tik validates for your use case—WebP is not always available.","datePublished":"2026-08-23","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/webp-vs-jpeg-youtube-thumbnails-which-compare.png","width":1200,"height":630}},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does every YouTube video have a WebP thumbnail?","acceptedAnswer":{"@type":"Answer","text":"No. WebP maxres is optional. Many videos only expose JPEG sizes."}},
+    {"@type":"Question","name":"Is WebP always sharper than JPEG?","acceptedAnswer":{"@type":"Answer","text":"No. Format does not raise resolution. Compare equal pixel sizes."}},
+    {"@type":"Question","name":"Why might JPEG rank above WebP in 11tik?","acceptedAnswer":{"@type":"Answer","text":"Validated WebP URLs receive a small score penalty (−8) relative to otherwise similar candidates, so JPEG can surface first when both exist at the same tier."}},
+    {"@type":"Question","name":"Does downloading convert WebP to JPEG?","acceptedAnswer":{"@type":"Answer","text":"No. The saved file keeps the source format. Only JPEG may get a metadata comment."}},
+    {"@type":"Question","name":"Which format should I hotlink?","acceptedAnswer":{"@type":"Answer","text":"Neither, for production pages you care about. Host a copy. If you must hotlink temporarily, use a URL 11tik already validated."}},
+    {"@type":"Question","name":"Can hq720 be WebP?","acceptedAnswer":{"@type":"Answer","text":"In the current 11tik preset list, the dedicated WebP candidate is maxres WebP. Other sizes are requested as JPEG filenames under /vi/."}}
+  ]}
+]}
+  </script>
+</article>

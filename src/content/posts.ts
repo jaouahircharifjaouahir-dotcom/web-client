@@ -36,10 +36,10 @@ export const GUIDE_POSTS = [
       "Creators upload one source thumbnail; viewers and tools only receive the public derivatives YouTube stores on its image CDN. This full-quality guide explains how to recover that original public image at the best available resolution, how filenames map to those derivatives, and why “original” never means extracting frames from the video stream. You will learn the difference between the custom upload and auto-generated stills, how to copy the direct image URL, and how to download without logging in. Restricted videos without public thumbs cannot be forced. Use 11tik for a fast client-side check, then keep the file for design, archiving, or posts—still images only, never the video or audio.",
   },
   {
-    title: "What is maxresdefault.jpg? When YouTube actually publishes an HD thumbnail",
+    title: "What is maxresdefault.jpg? Why It 404s and What to Download Instead",
     href: "https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
     summary:
-      "maxresdefault.jpg is YouTube’s common 1280×720 public still, not a guaranteed file for every video. This article explains when the filename exists, what to download instead, and how 11tik lists only real image responses.",
+      "maxresdefault.jpg is usually 1280×720 when YouTube published it. A 404 is normal. This guide explains fallbacks (hq720, sd, hq), how 11tik validates real files, and how to stop hard-coding guessed URLs.",
   },
   {
     title: "How to batch download YouTube thumbnails (up to 25 public URLs)",
@@ -72,15 +72,21 @@ export const GUIDE_POSTS = [
       "Save the public YouTube still on iPhone or Android in Safari or Chrome. No app store downloader. Paste a public URL into 11tik and keep the largest file that exists.",
   },
   {
-    title: "How to use a YouTube thumbnail as a blog featured image or Open Graph preview",
+    title: "How to Use a YouTube Thumbnail as a Blog Featured Image or Open Graph Preview",
     href: "https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html",
     summary:
-      "Confirm the public still exists, then host a copy for WordPress or og:image. Do not hotlink a guessed maxresdefault URL.",
+      "Confirm the public still exists, then host a copy for WordPress, Blogger, or og:image. Covers HTML examples, hotlinking risks, alt text, and cautious reuse notes.",
   },
   {
     title: "How to extract thumbnails from a YouTube channel URL",
     href: "https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html",
     summary:
       "Paste a public channel URL into 11tik Bulk to expand recent public uploads and download each best still. Research only; do not clone another channel’s art.",
+  },
+  {
+    title: "WebP vs JPEG YouTube Thumbnails: Which Format Should You Use?",
+    href: "https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
+    summary:
+      "YouTube may publish JPEG and WebP stills. Learn how 11tik discovers /vi_webp/ maxres WebP, how ranking treats formats, and when to keep JPEG for CMS uploads.",
   },
 ] as const;

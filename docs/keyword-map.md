@@ -18,6 +18,9 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 | youtube thumbnail featured image / open graph | Webmaster | `/2026/08/how-to-use-youtube-thumbnail-as-blog.html` | URL guide | Confirm file, then host a copy. |
 | youtube channel thumbnail extract | Tool support | `/2026/08/how-to-extract-thumbnails-from-youtube.html` | batch guide | Channel URL in Bulk, recent public uploads. |
 | youtube thumbnail image / original image | Tool | `https://www.11tik.com/` | size guide | Do not claim 4K if maxres is 1280×720. |
+| maxresdefault / maxres 404 / missing HD still | Informational | `/2026/08/what-is-maxresdefaultjpg-when-youtube.html` | size + URL guides | Troubleshooting missing maxres; do not duplicate. |
+| YouTube thumbnail WebP vs JPEG | Informational | `/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html` | size guide | Format choice for validated public stills. |
+| YouTube thumbnail as blog / OG / WordPress | Tutorial | `/2026/08/how-to-use-youtube-thumbnail-as-blog.html` | URL + download guides | Host a confirmed copy; cautious reuse. |
 
 ## Cannibalization rules
 

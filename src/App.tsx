@@ -102,6 +102,8 @@ export default function App() {
   const [recentHistory, setRecentHistory] = useState<HistoryEntry[]>(() => historyStore.list());
   const abortRef = useRef<AbortController | null>(null);
   const syncedShareKey = useRef("");
+  const bestThumbControlsRef = useRef<HTMLDivElement | null>(null);
+  const scrolledToBestKeyRef = useRef("");
   const parsed = useMemo(() => (input.trim() ? normalizeMediaUrl(input) : null), [input]);
   const bulkParsed = useMemo(() => (bulk ? parseMediaMany(input).filter((item) => item.valid) : []), [bulk, input]);
   const liveShareUrls = useMemo(() => {
@@ -138,7 +140,20 @@ export default function App() {
   useEffect(() => startEmbedResize(), []);
 
   useEffect(() => {
-    stampSeoImages();
+    if (route.name !== "thumb") {
+      scrolledToBestKeyRef.current = "";
+      return;
+    }
+    if (busy || bulk || !result?.thumbnails.length) return;
+    const key = `${result.videoId}:${result.thumbnails[0]?.url ?? ""}`;
+    if (scrolledToBestKeyRef.current === key) return;
+    scrolledToBestKeyRef.current = key;
+    requestAnimationFrame(() => {
+      bestThumbControlsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }, [route.name, busy, bulk, result?.videoId, result?.thumbnails]);
+
+  useEffect(() => {
     const timer = window.setTimeout(() => stampSeoImages(), 400);
     return () => window.clearTimeout(timer);
   }, [result, bulkResults, route]);
@@ -593,7 +608,7 @@ export default function App() {
                       ))}
                     </p>
                   ) : null}
-                  <div className="yte-row">
+                  <div className="yte-row" ref={index === 0 ? bestThumbControlsRef : undefined}>
                     <button
                       className="yte-btn"
                       type="button"

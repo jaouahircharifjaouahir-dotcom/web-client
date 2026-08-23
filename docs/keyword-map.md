@@ -21,6 +21,8 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 | maxresdefault / maxres 404 / missing HD still | Informational | `/2026/08/what-is-maxresdefaultjpg-when-youtube.html` | size + URL guides | Troubleshooting missing maxres; do not duplicate. |
 | YouTube thumbnail WebP vs JPEG | Informational | `/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html` | size guide | Format choice for validated public stills. |
 | YouTube thumbnail as blog / OG / WordPress | Tutorial | `/2026/08/how-to-use-youtube-thumbnail-as-blog.html` | URL + download guides | Host a confirmed copy; cautious reuse. |
+| youtube thumbnail not appearing / private / age-restricted / processing | Troubleshooting | `/2026/08/youtube-thumbnail-not-appearing-private.html` | maxres + download guides | Video-level unavailability; do not duplicate maxres 404 intent. |
+| 11tik share link /thumb vs watch URL | Product education | `/2026/08/11tik-share-links-thumb-vs-youtube.html` | URL guide | `/thumb/{id}` is a result page, not a CDN image. |
 
 ## Cannibalization rules
 

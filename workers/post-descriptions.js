@@ -52,6 +52,10 @@ export const POST_DESCRIPTIONS = {
     "Paste a public YouTube channel URL into 11tik Bulk to extract recent public thumbnails. Research only; do not clone art.",
   "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html":
     "Choose JPEG or WebP for YouTube thumbnails based on what 11tik validates. WebP is optional; downloads keep the source format.",
+  "/2026/08/youtube-thumbnail-not-appearing-private.html":
+    "When no public YouTube still loads, the video may be private, restricted, processing, or deleted—not merely a missing maxres filename.",
+  "/2026/08/11tik-share-links-thumb-vs-youtube.html":
+    "11tik /thumb/{id} is a share result page. It is not a YouTube watch URL and not a direct i.ytimg.com image file.",
 };
 
 export function descriptionForPath(pathname) {

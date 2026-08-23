@@ -89,4 +89,16 @@ export const GUIDE_POSTS = [
     summary:
       "YouTube may publish JPEG and WebP stills. Learn how 11tik discovers /vi_webp/ maxres WebP, how ranking treats formats, and when to keep JPEG for CMS uploads.",
   },
+  {
+    title: "Why a YouTube Thumbnail Won’t Appear: Private, Age-Restricted, or Processing Videos",
+    href: "https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html",
+    summary:
+      "When no public still validates, the cause is often private, restricted, processing, or deleted packaging—not a missing maxres filename. 11tik reports availability only; it does not classify the exact access reason.",
+  },
+  {
+    title: "How 11tik Share Links Work: /thumb/{VIDEO_ID} vs YouTube Watch URLs",
+    href: "https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html",
+    summary:
+      "11tik /thumb/{id} is a share result page for one video ID. It is not a YouTube watch URL and not a direct i.ytimg.com image file. Learn when to share each.",
+  },
 ] as const;

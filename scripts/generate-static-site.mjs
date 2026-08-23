@@ -121,36 +121,19 @@ function sitemapXml() {
 
 function robotsTxt() {
   return `# 11tik robots.txt
-User-agent: Googlebot
-Allow: /
-Disallow: /search
-Disallow: /search?
-Disallow: /hold-queue
-Disallow: /web-client/hold-queue.json
-Disallow: /web-client/__extracts.json
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Video
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-Disallow: /search
-Disallow: /search?
-Disallow: /hold-queue
-Disallow: /web-client/hold-queue.json
+# https://www.11tik.com/
+# YouTube Thumbnail Extractor — allow public pages and render assets.
+# Do not Disallow /web-client/ broadly (JS/CSS required for rendering).
+# Do not Disallow /thumb/ (share/result SPA; use page-level noindex/canonical if needed).
 
 User-agent: *
 Allow: /
 Disallow: /search
-Disallow: /search?
+Disallow: /feeds/
 Disallow: /hold-queue
 Disallow: /web-client/hold-queue.json
 Disallow: /web-client/__extracts.json
 
-Host: www.11tik.com
 Sitemap: ${SITE}/sitemap.xml
 `;
 }

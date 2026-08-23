@@ -2,7 +2,13 @@ import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { GUIDE_POSTS } from "../content/posts";
 import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import {
+  INDEXABLE_UTILITY_PATHS,
+  LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP,
+  parseSitemapLocs,
+} from "../../workers/sitemap-canonicals.js";
 
 describe("build-time static site", () => {
   it("writes locale shells, robots, and sitemap without thumb redirects", () => {
@@ -14,6 +20,7 @@ describe("build-time static site", () => {
       const fr = readFileSync(join(dir, "l", "fr", "index.html"), "utf8");
       const robots = readFileSync(join(dir, "robots.txt"), "utf8");
       const sitemap = readFileSync(join(dir, "sitemap.xml"), "utf8");
+      const locs = parseSitemapLocs(sitemap);
       expect(home).toContain('lang="en"');
       expect(home).toContain('rel="canonical" href="https://www.11tik.com/"');
       expect(ar).toContain('lang="ar"');
@@ -27,6 +34,10 @@ describe("build-time static site", () => {
       expect(robots).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
       expect(sitemap).toContain("https://www.11tik.com/");
       expect(sitemap).not.toContain("https://ar.11tik.com/");
+      expect(locs).toHaveLength(1 + GUIDE_POSTS.length + INDEXABLE_UTILITY_PATHS.length);
+      for (const path of LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP) {
+        expect(sitemap).not.toContain(path);
+      }
       expect(existsSync(join(dir, "_redirects"))).toBe(false);
       expect(existsSync(join(dir, "thumb", "index.html"))).toBe(false);
       expect(existsSync(join(dir, "utility", "thumb", "index.html"))).toBe(false);

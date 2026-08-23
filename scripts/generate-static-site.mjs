@@ -1,8 +1,16 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { ISO6391, RTL_CODES, hreflangLinks } from "../workers/iso6391.js";
 import localeMeta from "../workers/locale-meta.json" with { type: "json" };
-import { POST_DESCRIPTIONS } from "../workers/post-descriptions.js";
+import {
+  buildSitemapXml,
+  collectCanonicalSitemapLocs,
+  loadGuidePostHrefsFromFile,
+} from "../workers/sitemap-canonicals.js";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
 
 const SITE = "https://www.11tik.com";
 const APP_ASSET_V = "55";
@@ -103,16 +111,12 @@ function writeFile(path, contents) {
 }
 
 function sitemapXml() {
-  const locs = new Set([`${SITE}/`]);
-  for (const path of Object.keys(POST_DESCRIPTIONS)) {
-    locs.add(`${SITE}${path}`);
+  const postHrefs = loadGuidePostHrefsFromFile(readFileSync(POSTS_TS, "utf8"));
+  if (!postHrefs.length) {
+    throw new Error("sitemap: no GUIDE_POSTS hrefs found in src/content/posts.ts");
   }
-  const urls = [...locs].sort().map((loc) => `  <url><loc>${xmlEscape(loc)}</loc></url>`).join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
-`;
+  const locs = collectCanonicalSitemapLocs({ postHrefs });
+  return buildSitemapXml(locs);
 }
 
 function robotsTxt() {

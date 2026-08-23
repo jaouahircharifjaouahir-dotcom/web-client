@@ -1,11 +1,11 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
 
 describe("build-time static site", () => {
-  it("writes locale shells, robots, sitemap, and thumb rewrite", () => {
+  it("writes locale shells, robots, and sitemap without thumb redirects", () => {
     const dir = mkdtempSync(join(tmpdir(), "11tik-static-"));
     try {
       generateStaticSite(dir);
@@ -14,7 +14,6 @@ describe("build-time static site", () => {
       const fr = readFileSync(join(dir, "l", "fr", "index.html"), "utf8");
       const robots = readFileSync(join(dir, "robots.txt"), "utf8");
       const sitemap = readFileSync(join(dir, "sitemap.xml"), "utf8");
-      const redirects = readFileSync(join(dir, "_redirects"), "utf8");
       expect(home).toContain('lang="en"');
       expect(home).toContain('rel="canonical" href="https://www.11tik.com/"');
       expect(ar).toContain('lang="ar"');
@@ -28,11 +27,9 @@ describe("build-time static site", () => {
       expect(robots).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
       expect(sitemap).toContain("https://www.11tik.com/");
       expect(sitemap).not.toContain("https://ar.11tik.com/");
-      const thumb = readFileSync(join(dir, "utility", "thumb", "index.html"), "utf8");
-      expect(thumb).toContain("Public video thumbnail");
-      expect(thumb).toContain('name="robots" content="noindex,follow"');
-      expect(redirects).toContain("/thumb/* /utility/thumb/index.html 200");
-      expect(redirects).not.toContain("/thumb/* /thumb/index.html");
+      expect(existsSync(join(dir, "_redirects"))).toBe(false);
+      expect(existsSync(join(dir, "thumb", "index.html"))).toBe(false);
+      expect(existsSync(join(dir, "utility", "thumb", "index.html"))).toBe(false);
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }

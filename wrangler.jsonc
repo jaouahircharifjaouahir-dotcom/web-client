@@ -6,7 +6,19 @@
   "assets": {
     "directory": "./dist-assets",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "none"
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/2026/*",
+      "/p/*",
+      "/feeds/*",
+      "/sitemap-pages.xml",
+      "/search",
+      "/search/*",
+      "/about",
+      "/privacy",
+      "/terms",
+      "/contact"
+    ]
   },
   "routes": [
     { "pattern": "www.11tik.com/", "zone_name": "11tik.com" },

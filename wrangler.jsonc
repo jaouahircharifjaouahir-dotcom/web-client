@@ -1,64 +1,28 @@
 {
-  // Workers Builds: first automatic deploy after GitHub connect.
   "name": "11tik-edge",
   "account_id": "f9da186fc6cbf157fd99d88fe700d0c4",
   "main": "workers/11tik-edge.js",
   "compatibility_date": "2026-08-21",
   "assets": {
     "directory": "./dist-assets",
-    "html_handling": "none",
-    "not_found_handling": "none",
-    "run_worker_first": [
-      "/web-client/youtube-meta",
-      "/web-client/channel-videos",
-      "/web-client/sitemap-add",
-      "/web-client/api/*",
-      "/web-client/tags/*",
-      "/web-client/extracts/*",
-      "/web-client/hold-queue.json",
-      "/api/*"
-    ]
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
   },
-  "triggers": {
-    "crons": ["7 * * * *"]
-  },
-  "kv_namespaces": [
-    {
-      "binding": "SITEMAP_URLS",
-      "id": "3cb495138cb148d1b6f2df88baf93ca5"
-    }
-  ],
   "routes": [
     { "pattern": "www.11tik.com/", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/sitemap.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-1.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-2.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-3.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-4.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-5.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-images.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-images-1.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/sitemap-images-2.xml", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/image-sitemap.xml", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/robots.txt", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/web-client/*", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/2026/*", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/p/*", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/tag/*", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/trending-tags", "zone_name": "11tik.com" },
+    { "pattern": "www.11tik.com/feeds/*", "zone_name": "11tik.com" },
+    { "pattern": "www.11tik.com/sitemap-pages.xml", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/about", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/privacy", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/terms", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/contact", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/stats", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/copyright", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/p/copyright.html", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/embed", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/guide", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/guide/*", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/api/*", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/hold-queue", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/thumb/*", "zone_name": "11tik.com" },
+    { "pattern": "www.11tik.com/l/*", "zone_name": "11tik.com" },
     { "pattern": "*.11tik.com/*", "zone_name": "11tik.com" },
     { "pattern": "fr.11tik.com", "custom_domain": true, "zone_name": "11tik.com" },
     { "pattern": "es.11tik.com", "custom_domain": true, "zone_name": "11tik.com" }

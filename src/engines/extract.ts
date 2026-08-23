@@ -4,7 +4,6 @@ import { resultCache } from "../cache/memory";
 import type { ParsedYouTubeUrl } from "../types";
 import { createAppError } from "../types/errors";
 import type { ParsedMediaUrl } from "../parsers/mediaUrl";
-import { fetchYouTubePublicMeta } from "../meta/youtubeOembed";
 import { extractVimeoThumbnails } from "./vimeoExtract";
 
 export async function extractThumbnails(
@@ -24,20 +23,7 @@ export async function extractThumbnails(
   const cacheKey = parsed.videoId;
   const cached = resultCache.get<ThumbnailExtractionResult>(cacheKey);
   if (cached?.bestThumbnail) {
-    let meta = cached.meta ?? { platform: "youtube" as const, title: null, authorName: null };
-    if (!meta.title) {
-      const publicMeta = await fetchYouTubePublicMeta(parsed.videoId, signal).catch(() => ({
-        title: null,
-        authorName: null,
-        tags: [] as string[],
-      }));
-      meta = {
-        platform: "youtube",
-        title: publicMeta.title,
-        authorName: publicMeta.authorName,
-        tags: publicMeta.tags || [],
-      };
-    }
+    const meta = cached.meta ?? { platform: "youtube" as const, title: null, authorName: null, tags: [] };
     const hit = { ...cached, meta, cached: true };
     resultCache.set(cacheKey, hit);
     onProgress?.(hit);
@@ -47,8 +33,6 @@ export async function extractThumbnails(
   const started = performance.now();
   const parseMs = 0;
   const discoveryStarted = performance.now();
-  const metaPromise = fetchYouTubePublicMeta(parsed.videoId, signal);
-
   let latest: ThumbnailExtractionResult = {
     videoId: parsed.videoId,
     normalizedUrl: parsed.normalizedUrl,
@@ -98,14 +82,13 @@ export async function extractThumbnails(
     },
   };
 
-  const publicMeta = await metaPromise.catch(() => ({ title: null, authorName: null, tags: [] as string[] }));
   const withMeta: ThumbnailExtractionResult = {
     ...result,
     meta: {
       platform: "youtube",
-      title: publicMeta.title,
-      authorName: publicMeta.authorName,
-      tags: publicMeta.tags || [],
+      title: null,
+      authorName: null,
+      tags: [],
     },
   };
   onProgress?.(withMeta);

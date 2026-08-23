@@ -1,5 +1,6 @@
 import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { generateStaticSite } from "./generate-static-site.mjs";
 
 const root = join(import.meta.dirname, "..");
 const dist = join(root, "dist");
@@ -30,3 +31,5 @@ writeFileSync(
 **/.DS_Store
 `,
 );
+
+generateStaticSite(staged);

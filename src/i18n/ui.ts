@@ -35,11 +35,18 @@ export function readLocale(): string {
 
 export function localeHomeUrl(code = readLocale()): string {
   if (code === "en") return "https://www.11tik.com/";
-  return `https://${code}.11tik.com/`;
+  return `https://${code}.11tik.com/l/${code}/`;
 }
 
 export function publicOrigin(): string {
-  return localeHomeUrl().replace(/\/$/, "");
+  if (typeof window !== "undefined" && /(^|\.)11tik\.com$/i.test(window.location.hostname)) {
+    const host = window.location.hostname.toLowerCase();
+    if (host === "11tik.com") return "https://www.11tik.com";
+    return `https://${host}`;
+  }
+  const code = readLocale();
+  if (code === "en") return "https://www.11tik.com";
+  return `https://${code}.11tik.com`;
 }
 
 export function t(key: UiKey): string {

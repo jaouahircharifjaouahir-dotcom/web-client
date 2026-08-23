@@ -58,16 +58,19 @@ export function langName(code) {
 
 export function localeHostUrl(code) {
   if (code === "en") return "https://www.11tik.com/";
-  return `https://${code}.11tik.com/`;
+  return `https://${code}.11tik.com/l/${code}/`;
 }
 
-export function hreflangLinks(pathname = "/") {
-  const suffix = !pathname || pathname === "/" ? "/" : pathname.replace(/\/+$/, "") || "/";
-  const en = suffix === "/" ? "https://www.11tik.com/" : `https://www.11tik.com${suffix}`;
-  return [
-    `<link rel="alternate" hreflang="en" href="${en}"/>`,
-    `<link rel="alternate" hreflang="x-default" href="${en}"/>`,
-  ].join("\n  ");
+export function hreflangLinks(_pathname = "/") {
+  const lines = [
+    `<link rel="alternate" hreflang="en" href="https://www.11tik.com/"/>`,
+    `<link rel="alternate" hreflang="x-default" href="https://www.11tik.com/"/>`,
+  ];
+  for (const [code] of ISO6391) {
+    if (code === "en") continue;
+    lines.push(`<link rel="alternate" hreflang="${code}" href="https://${code}.11tik.com/l/${code}/"/>`);
+  }
+  return lines.join("\n  ");
 }
 
 export function localeSitemapLocs() {

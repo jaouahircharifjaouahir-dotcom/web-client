@@ -71,13 +71,7 @@ function Article({ title, body, origin }: { title: string; body: string; origin:
 }
 
 function TagPage({ slug, origin }: { slug: string; origin: string }) {
-  const [data, setData] = useState<TagPayload | null>(null);
-  useEffect(() => {
-    void fetch(`https://www.11tik.com/web-client/tags/${encodeURIComponent(slug)}.json`)
-      .then((res) => res.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }));
-  }, [slug]);
+  const data: TagPayload = { ok: false };
   useEffect(() => {
     applyDocumentMeta(
       `#${slug} · 11tik`,
@@ -144,13 +138,7 @@ export function ThumbArticle({
   origin: string;
 }) {
   const locale = readLocale();
-  const [data, setData] = useState<ExtractPayload | null>(null);
-  useEffect(() => {
-    void fetch(`/web-client/extracts/${platform}/${encodeURIComponent(videoId)}.json`)
-      .then((res) => res.json())
-      .then(setData)
-      .catch(() => setData({}));
-  }, [platform, videoId]);
+  const [data] = useState<ExtractPayload>({});
   const title = data?.title || videoId;
   const heading = pageFill(locale, "thumbHeading", { title });
   useEffect(() => {
@@ -247,15 +235,9 @@ function KeywordTools({ origin }: { origin: string }) {
 }
 
 function Trending({ origin }: { origin: string }) {
-  const [tags, setTags] = useState<Array<{ slug: string; name: string; count: number }>>([]);
+  const tags: Array<{ slug: string; name: string; count: number }> = [];
   useEffect(() => {
     applyDocumentMeta(`${pageString(readLocale(), "trendingTags")} · 11tik`, pageString(readLocale(), "trendingIntro"));
-  }, []);
-  useEffect(() => {
-    void fetch("https://www.11tik.com/web-client/tags/trending.json")
-      .then((res) => res.json())
-      .then((data) => setTags(data.tags || []))
-      .catch(() => setTags([]));
   }, []);
   return (
     <div className="yte-app">
@@ -278,13 +260,7 @@ function Trending({ origin }: { origin: string }) {
 }
 
 function Hold({ origin }: { origin: string }) {
-  const [hold, setHold] = useState<Array<{ slug: string; count: number; gate?: { reason: string } }>>([]);
-  useEffect(() => {
-    void fetch("https://www.11tik.com/web-client/hold-queue.json")
-      .then((res) => res.json())
-      .then((data) => setHold(data.hold || []))
-      .catch(() => setHold([]));
-  }, []);
+  const hold: Array<{ slug: string; count: number; gate?: { reason: string } }> = [];
   return (
     <Article
       title="Hold queue"
@@ -295,13 +271,7 @@ function Hold({ origin }: { origin: string }) {
 }
 
 function Stats({ origin }: { origin: string }) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    void fetch("https://www.11tik.com/web-client/tags/trending.json")
-      .then((res) => res.json())
-      .then((data) => setCount((data.tags || []).reduce((sum: number, row: { count: number }) => sum + (row.count || 0), 0)))
-      .catch(() => setCount(0));
-  }, []);
+  const count = 0;
   return (
     <Article
       title={pageString(readLocale(), "statsTitle")}

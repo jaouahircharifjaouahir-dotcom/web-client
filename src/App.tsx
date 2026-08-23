@@ -23,7 +23,6 @@ import { scorePublicThumbnail } from "./score/readImage";
 import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
-import { submitShareToSitemap } from "./sitemap/submit";
 import { QUALITY_PRESETS } from "./engines/presets";
 import { guidePosts, isRtl, languageOptions, localeHomeUrl, publicOrigin, readLocale, switchLocale, t } from "./i18n/ui";
 import { userMessage } from "./types/errors";
@@ -229,7 +228,6 @@ export default function App() {
         title: entry.meta?.title ?? null,
       }),
     );
-    submitShareToSitemap(entry);
   };
 
   const runOne = async (raw: string) => {
@@ -257,7 +255,6 @@ export default function App() {
     try {
       const extracted = await extractThumbnails(parsedUrl, controller.signal, (next) => {
         startTransition(() => setResult(next));
-        if (next.bestThumbnail) submitShareToSitemap(next);
       });
       if (!extracted.bestThumbnail) {
         setError(userMessage("THUMBNAIL_NOT_FOUND"));
@@ -842,9 +839,6 @@ export default function App() {
           <p>{tx(locale, "legalA3")}</p>
         </details>
         <nav className="yte-kw" aria-label={tx(locale, "relatedAlso")}>
-          <a href={legalHrefs(locale).trending}>{tx(locale, "trendingTags")}</a>
-          <a href={legalHrefs(locale).guide}>{tx(locale, "guidePillar")}</a>
-          <a href={legalHrefs(locale).stats}>{tx(locale, "statsTitle")}</a>
           <a href={legalHrefs(locale).about}>{tx(locale, "trustAbout")}</a>
           <a href={legalHrefs(locale).privacy}>{tx(locale, "trustPrivacy")}</a>
           <a href={legalHrefs(locale).terms}>{tx(locale, "trustTerms")}</a>

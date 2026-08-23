@@ -15,7 +15,11 @@
     "themes:locales": "node scripts/build-locale-themes.mjs",
     "sitemap:keywords": "node scripts/build-keyword-sitemap.mjs",
     "blogger:studio": "node scripts/blogger-studio-server.mjs --with-ui",
-    "blogger:studio:api": "node scripts/blogger-studio-server.mjs"
+    "blogger:studio:api": "node scripts/blogger-studio-server.mjs",
+    "extension:test": "node --test extensions/11tik-youtube-thumbnail/shared/extension.test.js && vitest run --config extensions/11tik-youtube-thumbnail/vitest.config.ts",
+    "extension:build": "node scripts/build-extension.mjs",
+    "extension:build:chrome": "node scripts/build-extension.mjs chrome",
+    "extension:build:firefox": "node scripts/build-extension.mjs firefox"
   },
   "dependencies": {
     "fflate": "^0.8.3",

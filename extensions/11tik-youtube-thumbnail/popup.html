@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>11tik — YouTube Thumbnail Extractor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="icons/icon.svg" alt="" class="mark" width="32" height="32" />
+    <div>
+      <p class="brand">11tik</p>
+      <h1 class="title">YouTube Thumbnail Extractor</h1>
+    </div>
+  </header>
+
+  <main id="app">
+    <p id="status" class="status" aria-live="polite">Reading the current YouTube tab…</p>
+
+    <figure id="preview-wrap" class="preview-wrap hidden" hidden>
+      <img id="preview" class="preview" alt="YouTube thumbnail preview" />
+      <figcaption id="quality" class="quality"></figcaption>
+    </figure>
+
+    <p id="video-id" class="video-id hidden" hidden></p>
+
+    <div id="actions" class="actions hidden" hidden>
+      <button type="button" id="btn-download" class="btn primary">Download</button>
+      <button type="button" id="btn-copy-url" class="btn">Copy image URL</button>
+      <button type="button" id="btn-copy-share" class="btn">Copy 11tik link</button>
+      <button type="button" id="btn-open-11tik" class="btn">Open in 11tik</button>
+      <button type="button" id="btn-open-full" class="btn ghost">Open full resolution</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="https://www.11tik.com/" target="_blank" rel="noopener noreferrer">www.11tik.com</a>
+    <span>·</span>
+    <span>YouTube only · client-side</span>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

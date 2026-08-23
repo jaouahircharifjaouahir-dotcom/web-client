@@ -1,21 +1,21 @@
 export const GUIDE_POSTS = [
   {
-    title: "How to Download a YouTube Thumbnail in HD – Free & Fast",
+    title: "How to Download a YouTube Thumbnail in HD",
     href: "https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html",
     summary:
-      "This guide walks through the full path from a public YouTube watch link, Shorts URL, or youtu.be short link to an HD still you can save on any device. You will see how the video ID is read in the browser, why extra query parameters such as pp= do not matter, and how the extractor checks maxresdefault, hq720, sddefault, and smaller public files. If YouTube never published a 1280×720 still for that upload, the article shows how the next valid size is chosen so you still download the sharpest real image instead of a broken filename. It also covers copy-image-URL, opening full resolution, and what the tool will not do: no video or audio download, no private files, and no account.",
+      "Practical download guide for public YouTube thumbnails. Paste watch, Shorts, youtu.be, embed, or live URLs into 11tik, then save the largest still that exists. Covers direct i.ytimg.com URLs, quality choice, troubleshooting, and what the tool will not do: no video or audio download.",
   },
   {
-    title: "How to Get a YouTube Thumbnail URL – Easy, Fast & Free",
+    title: "How to Get a YouTube Thumbnail URL Directly From a Video",
     href: "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
     summary:
-      "A YouTube thumbnail URL is the direct address of an image on i.ytimg.com or img.youtube.com, not the watch page you share with viewers. This article explains how those URLs are built from the 11-character video ID, which filenames map to default, mq, hq, sd, and maxres, and how to copy a working link into a blog, thumbnail mockup, or social preview. You will learn why some guessed URLs 404, why the extractor only lists files that actually return an image, and how to keep the address HTTPS. Use it when you need the image location itself rather than a downloaded file, including for CMS featured images and design tools.",
+      "Learn how YouTube thumbnail URLs are built from the video ID on i.ytimg.com, how to find the ID in common URL formats, and how to copy a working HTTPS image link after the file is confirmed—not a guessed maxres address that 404s.",
   },
   {
-    title: "YouTube Thumbnail Size & Resolution: Complete 2026 Guide",
+    title: "YouTube Thumbnail Size & Resolution: Complete Guide",
     href: "https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html",
     summary:
-      "YouTube does not serve one thumbnail size. Public stills commonly include 120×90 default, 320×180 mqdefault, 480×360 hqdefault, 640×480 sddefault, and 1280×720 maxresdefault when the uploader’s source allowed it. This 2026 guide lists those resolutions, how they relate to the 16:9 player, and what happens on Shorts where the player is vertical but the stored still is often landscape. It also explains ranking: the extractor prefers the largest file that validates as a real image, so a missing maxres file does not invent pixels. Use this when you need exact pixel sizes for thumbnails, embeds, or Open Graph previews.",
+      "Public YouTube thumbnail sizes from 120×90 to 1280×720, including maxresdefault and hq720. Explains 16:9 uploads, why some variants are missing, and how 11tik ranks only files that actually load.",
   },
   {
     title: "How to Download a YouTube Shorts Thumbnail in HD – Free & Fast",

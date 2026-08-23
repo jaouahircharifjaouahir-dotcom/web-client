@@ -6,12 +6,12 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 | --- | --- | --- | --- | --- |
 | youtube thumbnail extractor | Tool | `https://www.11tik.com/` | — | Homepage is the tool. Do not create a second extractor URL. |
 | youtube thumbnail downloader | Tool (same) | `https://www.11tik.com/` | how-to page | Same intent as extractor. Do not split into a near-duplicate page. |
-| youtube thumbnail download | Tool / how-to | `https://www.11tik.com/` | `/p/how-to-download-youtube-thumbnail.html` | Tutorial supports the verb “download”. |
+| youtube thumbnail download | Tool / how-to | `https://www.11tik.com/` | `/2026/08/how-to-download-youtube-thumbnail.html` | Tutorial supports the verb “download”. |
 | youtube thumbnail | Mixed | `https://www.11tik.com/` | size + URL guides | Keep the homepage as the default. |
-| youtube thumbnail url | Informational | `/p/youtube-thumbnail-url.html` | homepage | How the public image URL is built / copied. |
-| youtube thumbnail size / resolution / dimensions / quality | Informational | `/p/youtube-thumbnail-size.html` | homepage | Explain maxres vs hq vs missing files. |
-| youtube shorts thumbnail | Informational + tool | `/p/youtube-shorts-thumbnail.html` | homepage | Shorts-specific URL patterns. |
-| how to download / get / find a youtube thumbnail | Tutorial | `/p/how-to-download-youtube-thumbnail.html` | homepage | Steps, then CTA to the tool. |
+| youtube thumbnail url | Informational | `/2026/08/youtube-thumbnail-url.html` | homepage | How the public image URL is built / copied. |
+| youtube thumbnail size / resolution / dimensions / quality | Informational | `/2026/08/youtube-thumbnail-size-resolution.html` | homepage | Explain maxres vs hq vs missing files. |
+| youtube shorts thumbnail | Informational + tool | `/2026/08/youtube-shorts-thumbnail-download.html` | homepage | Shorts-specific URL patterns. |
+| how to download / get / find a youtube thumbnail | Tutorial | `/2026/08/how-to-download-youtube-thumbnail.html` | homepage | Steps, then CTA to the tool. |
 | thumbnail extractor vs maker | Comparison | `/2026/08/thumbnail-extractor-vs-maker.html` | homepage | Extractor is not Canva/Studio upload. |
 | YouTube Studio custom thumbnail 2026 | Freshness | `/2026/08/youtube-studio-thumbnail-2026.html` | homepage | Confirm public files after Studio upload. |
 | save youtube thumbnail iphone / android | Tutorial | `/2026/08/how-to-save-youtube-thumbnail-on-iphone.html` | homepage | Phone browser, not a second tool. |

@@ -1,0 +1,134 @@
+<style>
+.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
+.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
+.yte-page h3{font-size:1.05rem;margin:18px 0 6px}
+.yte-page p,.yte-page li,.yte-page td,.yte-page th{color:#5c5666}
+.yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
+.yte-page table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:15px}
+.yte-page th,.yte-page td{border:1px solid #d9d3dc;padding:10px 12px;text-align:left;vertical-align:top}
+.yte-page th{background:#f6f1ea;color:#17141c;font-weight:700}
+.yte-page code{font-size:0.92em;background:#f6f1ea;padding:0.1em 0.35em;border-radius:4px}
+</style>
+<article class="yte-page" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="headline">How to Download a YouTube Thumbnail in HD</h1>
+  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-updated"><time datetime="2026-08-19" itemprop="datePublished">Published 19 August 2026</time> · <time datetime="2026-08-23" itemprop="dateModified">Updated 23 August 2026</time></p>
+  <p itemprop="description">Save a public YouTube thumbnail still: paste watch, Shorts, youtu.be, or embed URLs into 11tik and download the largest file that exists.</p>
+
+  <h2>Quick answer</h2>
+  <p>Copy a public YouTube link, paste it into <a href="https://www.11tik.com/">11tik</a>, wait for validated previews, then download the first listed file. That file is the highest public JPEG or WebP YouTube already hosts for the video ID—often 1280×720 when maxres or hq720 exists. This saves a <strong>thumbnail still</strong>, not the video or audio.</p>
+
+  <img alt="Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still" class="yte-hero" height="630" itemprop="image" loading="eager" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png" width="1200"/>
+  <p class="yte-caption">Practical path: public URL → extract → preview real sizes → download or copy the image URL.</p>
+
+  <h2>Fastest method with 11tik</h2>
+  <ol>
+    <li>Copy a public watch, Shorts, live, embed, or youtu.be URL (or a bare 11-character video ID).</li>
+    <li>Open <a href="https://www.11tik.com/">https://www.11tik.com/</a> in your browser.</li>
+    <li>Paste the URL. Extraction starts when the ID is valid.</li>
+    <li>Download the first result (best available), or pick another surviving size.</li>
+  </ol>
+  <p>Optional: use <strong>Copy image URL</strong> if you need the address for a CMS instead of a file. That flow is covered in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+
+  <h2>Supported YouTube URL formats</h2>
+  <p>11tik reads the video ID from the same patterns its website parser accepts:</p>
+  <table>
+    <thead>
+      <tr><th>Format</th><th>Example pattern</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Watch</td><td><code>youtube.com/watch?v=ID</code></td><td>Extra query params ignored</td></tr>
+      <tr><td>Short link</td><td><code>youtu.be/ID</code></td><td>Mobile shares often use this</td></tr>
+      <tr><td>Shorts</td><td><code>youtube.com/shorts/ID</code></td><td>Same public still hosts</td></tr>
+      <tr><td>Embed</td><td><code>youtube.com/embed/ID</code></td><td>From iframe src</td></tr>
+      <tr><td>Live</td><td><code>youtube.com/live/ID</code></td><td>When a public ID is present</td></tr>
+      <tr><td>nocookie embed</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Treated like embed</td></tr>
+      <tr><td>Bare ID</td><td><code>dQw4w9WgXcQ</code></td><td>11 characters only</td></tr>
+    </tbody>
+  </table>
+  <p>Channel or playlist URLs without a video ID will not yield a single thumbnail. For many links at once, use Bulk (up to 25) — see <a href="https://www.11tik.com/2026/08/how-to-batch-download-youtube.html">batch download</a>. Channel expansion: <a href="https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html">extract from a channel URL</a>.</p>
+
+  <h2>Direct URL method (no extractor UI)</h2>
+  <p>If you already know the ID, you can open a candidate still directly:</p>
+  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>
+  <p>When it loads, use the browser’s save-image command. When it fails, step down to <code>hq720.jpg</code>, <code>sddefault.jpg</code>, or <code>hqdefault.jpg</code>. This manual path is slower and error-prone compared with 11tik’s validated list, but it works offline from any browser once you have a good address.</p>
+
+  <h2>Choosing quality when you download</h2>
+  <p>Download the first listed size unless you have a reason to keep a smaller preview. “HD” here means the largest public still that exists—commonly 1280×720—not a 4K master. Pixel expectations and missing-size behavior are explained in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">size and resolution guide</a>.</p>
+  <p>If you only care about the absolute top public file, also see <a href="https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html">highest quality thumbnail</a>.</p>
+
+  <img alt="Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png" width="1200"/>
+  <p class="yte-caption">When a guessed size is unavailable, skip it and keep the next real public file.</p>
+
+  <h2>Troubleshooting downloads</h2>
+  <table>
+    <thead>
+      <tr><th>Symptom</th><th>Likely cause</th><th>What to do</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>No preview after paste</td><td>Invalid URL, no video ID, or private/restricted video</td><td>Paste a public watch/Shorts/youtu.be link</td></tr>
+      <tr><td>Maxres missing</td><td>YouTube never published that file</td><td>Download the first listed size instead</td></tr>
+      <tr><td>Grey / placeholder image from a hand-built URL</td><td>Guessed filename</td><td>Use 11tik’s validated list</td></tr>
+      <tr><td>Phone save awkward</td><td>Browser download UI differs</td><td>See <a href="https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html">iPhone / Android save guide</a></td></tr>
+      <tr><td>Looks like a UI capture</td><td>You screenshot the player</td><td>Save the CDN still, not the screen — <a href="https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html">screenshot vs real</a></td></tr>
+    </tbody>
+  </table>
+
+  <h2>What you are (and are not) downloading</h2>
+  <p>You save a public still YouTube already hosts. You do not unlock private videos, members-only files, or the MP4/WebM stream. 11tik is an extractor, not a maker and not a video downloader — comparison: <a href="https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html">extractor vs maker</a>.</p>
+  <p>Copyright remains with the uploader. Saving for research or personal reference is the typical use; republishing as your own custom thumbnail without rights is not. YouTube Help: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">custom video thumbnails</a>. Site rules: <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+
+  <h2>Method comparison</h2>
+  <table>
+    <thead>
+      <tr><th>Method</th><th>Speed</th><th>Best for</th><th>Needs 11tik?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>11tik download</td><td>Fast</td><td>Validated best still</td><td>Yes</td></tr>
+      <tr><td>11tik copy URL</td><td>Fast</td><td>CMS / embeds</td><td>Yes</td></tr>
+      <tr><td>Hand-built i.ytimg.com URL</td><td>Medium</td><td>Quick tests when you know the ID</td><td>No</td></tr>
+      <tr><td>Player screenshot</td><td>Fast but low quality</td><td>Avoid for blogs / OG</td><td>No</td></tr>
+    </tbody>
+  </table>
+
+  <h2>FAQ</h2>
+  <h3>Can I download a thumbnail from a Short?</h3>
+  <p>Yes, when the Short is public and stills exist for that ID. Paste the <code>/shorts/</code> URL into 11tik. The still may be landscape even though playback is vertical.</p>
+  <h3>What if the best thumbnail does not load?</h3>
+  <p>Download the next listed size. Missing maxres is common and not a tool failure.</p>
+  <h3>Can I download the original public thumbnail image?</h3>
+  <p>Yes—that is what the top validated file is. “Original” means the public CDN still, not a frame ripped from the video stream. See <a href="https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html">original public thumbnail</a>.</p>
+  <h3>Can I copy the image URL instead of downloading it?</h3>
+  <p>Yes. Use Copy image URL on 11tik, or copy a verified address from the browser after the image loads.</p>
+  <h3>Does this download the YouTube video file?</h3>
+  <p>No. Only the public thumbnail still.</p>
+  <h3>Will every video offer a 1280×720 file?</h3>
+  <p>No. Keep whatever largest public file validates for that ID.</p>
+
+  <h2>Next step</h2>
+  <p>Open the <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a>, paste a public link, and save the first validated still. Need the link only? Read the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">URL guide</a>. Choosing between sizes? Use the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">resolution guide</a>.</p>
+
+  <p class="yte-bio">Written by 11tik, publisher of the in-browser extractor. Public stills only. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","headline":"How to Download a YouTube Thumbnail in HD","description":"Save a public YouTube thumbnail still: paste watch, Shorts, youtu.be, or embed URLs into 11tik and download the largest file that exists.","datePublished":"2026-08-19","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png","width":1200,"height":630}},
+  {"@type":"HowTo","name":"How to download a YouTube thumbnail in HD","totalTime":"PT1M","step":[
+    {"@type":"HowToStep","position":1,"name":"Copy a public YouTube URL","text":"Copy a public watch, Shorts, live, embed, or youtu.be URL."},
+    {"@type":"HowToStep","position":2,"name":"Paste into 11tik","text":"Open https://www.11tik.com/ and paste the URL."},
+    {"@type":"HowToStep","position":3,"name":"Download the best still","text":"Download the first listed public still, or pick another surviving size."}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Can I download a thumbnail from a Short?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the Short is public and stills exist for that ID. Paste the /shorts/ URL into 11tik."}},
+    {"@type":"Question","name":"What if the best thumbnail does not load?","acceptedAnswer":{"@type":"Answer","text":"Download the next listed size. Missing maxres is common and not a tool failure."}},
+    {"@type":"Question","name":"Can I download the original public thumbnail image?","acceptedAnswer":{"@type":"Answer","text":"Yes—that is what the top validated file is. Original means the public CDN still, not a frame ripped from the video stream."}},
+    {"@type":"Question","name":"Can I copy the image URL instead of downloading it?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use Copy image URL on 11tik, or copy a verified address from the browser after the image loads."}},
+    {"@type":"Question","name":"Does this download the YouTube video file?","acceptedAnswer":{"@type":"Answer","text":"No. Only the public thumbnail still."}},
+    {"@type":"Question","name":"Will every video offer a 1280×720 file?","acceptedAnswer":{"@type":"Answer","text":"No. Keep whatever largest public file validates for that ID."}}
+  ]}
+]}
+  </script>
+</article>

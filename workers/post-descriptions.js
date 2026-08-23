@@ -23,11 +23,11 @@ export const POST_DESCRIPTIONS = {
   "/p/youtube-shorts-thumbnail.html":
     "Download a public YouTube Shorts thumbnail in the browser. Same image hosts as watch URLs. No video download.",
   "/2026/08/how-to-download-youtube-thumbnail.html":
-    "Download a public YouTube thumbnail in HD: paste a watch, Shorts, or youtu.be URL into 11tik and save the largest still that exists.",
+    "Save a public YouTube thumbnail still: paste watch, Shorts, youtu.be, or embed URLs into 11tik and download the largest file that exists.",
   "/2026/08/youtube-thumbnail-url.html":
-    "A YouTube thumbnail URL is the image on i.ytimg.com, not the watch page. Copy a working HTTPS link after 11tik confirms the file.",
+    "Build or copy a working YouTube thumbnail URL from the video ID on i.ytimg.com. Confirm the size exists before you hotlink it.",
   "/2026/08/youtube-thumbnail-size-resolution.html":
-    "Public YouTube thumbnail sizes from 120×90 to 1280×720 maxresdefault. 11tik lists files that exist and will not invent 4K.",
+    "Compare YouTube thumbnail sizes from 120×90 to 1280×720. Maxres and hq720 are optional—use the largest public file that loads.",
   "/2026/08/youtube-shorts-thumbnail-download.html":
     "Download a YouTube Shorts thumbnail in the browser. Shorts use the same public stills as watch URLs. The file is often landscape.",
   "/2026/08/highest-quality-youtube-thumbnail.html":

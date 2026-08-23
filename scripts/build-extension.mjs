@@ -91,6 +91,23 @@ export async function buildExtension(targetBrowsers = ["chrome", "firefox"]) {
   if (targetBrowsers.includes("chrome")) {
     const chromeDir = join(OUT, "chrome");
     copyExtension(chromeDir);
+    // Chrome ignores gecko settings; strip Firefox-only AMO metadata so the
+    // Chrome package stays free of Firefox-specific declaration fields.
+    const chromeManifestPath = join(chromeDir, "manifest.json");
+    const chromeManifest = JSON.parse(readFileSync(chromeManifestPath, "utf8"));
+    if (chromeManifest.browser_specific_settings?.gecko) {
+      delete chromeManifest.browser_specific_settings.gecko.data_collection_permissions;
+    }
+    if (chromeManifest.browser_specific_settings?.gecko_android) {
+      delete chromeManifest.browser_specific_settings.gecko_android;
+    }
+    if (
+      chromeManifest.browser_specific_settings &&
+      Object.keys(chromeManifest.browser_specific_settings).length === 0
+    ) {
+      delete chromeManifest.browser_specific_settings;
+    }
+    writeFileSync(chromeManifestPath, `${JSON.stringify(chromeManifest, null, 2)}\n`);
     results.chrome = validateManifest(chromeDir, "chrome");
     zipDirectory(chromeDir, join(OUT, "11tik-chrome.zip"));
   }
@@ -99,8 +116,33 @@ export async function buildExtension(targetBrowsers = ["chrome", "firefox"]) {
     const firefoxDir = join(OUT, "firefox");
     copyExtension(firefoxDir);
     const manifest = validateManifest(firefoxDir, "firefox");
-    if (!manifest.browser_specific_settings?.gecko?.id) {
+    const gecko = manifest.browser_specific_settings?.gecko;
+    if (!gecko?.id) {
       throw new Error("firefox: missing gecko extension id");
+    }
+    if (gecko.strict_min_version !== "140.0") {
+      throw new Error('firefox: gecko.strict_min_version must be "140.0"');
+    }
+    const required = gecko.data_collection_permissions?.required;
+    if (!Array.isArray(required) || required.length !== 1 || required[0] !== "none") {
+      throw new Error('firefox: data_collection_permissions.required must be ["none"]');
+    }
+    if (gecko.data_collection_permissions?.optional) {
+      throw new Error("firefox: optional data_collection_permissions must not be declared");
+    }
+    const android = manifest.browser_specific_settings?.gecko_android;
+    if (!android) {
+      throw new Error("firefox: gecko_android is required for AMO data_collection_permissions lint");
+    }
+    if (android.strict_min_version !== "142.0") {
+      throw new Error('firefox: gecko_android.strict_min_version must be "142.0"');
+    }
+    const androidRequired = android.data_collection_permissions?.required;
+    if (!Array.isArray(androidRequired) || androidRequired.length !== 1 || androidRequired[0] !== "none") {
+      throw new Error('firefox: gecko_android.data_collection_permissions.required must be ["none"]');
+    }
+    if (android.data_collection_permissions?.optional) {
+      throw new Error("firefox: gecko_android optional data_collection_permissions must not be declared");
     }
     results.firefox = manifest;
     zipDirectory(firefoxDir, join(OUT, "11tik-firefox.zip"));

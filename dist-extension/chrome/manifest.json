@@ -21,15 +21,19 @@
       "48": "icons/icon-48.png"
     }
   },
-  "permissions": ["activeTab"],
-  "host_permissions": ["https://i.ytimg.com/*"],
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://i.ytimg.com/*"
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'self';"
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "11tik-youtube-thumbnail@11tik.com",
-      "strict_min_version": "109.0"
+      "strict_min_version": "140.0"
     }
   }
 }

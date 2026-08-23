@@ -13,7 +13,7 @@ describe("extract loc migration", () => {
   it("rewrites query share URLs to /thumb pages on each host", () => {
     expect(rewriteLoc("https://www.11tik.com/?v=dQw4w9WgXcQ")).toBe("https://www.11tik.com/thumb/dQw4w9WgXcQ");
     expect(rewriteLoc("https://www.11tik.com/?vimeo=1191500052", "https://fr.11tik.com")).toBe(
-      "https://www.11tik.com/thumb/vimeo/1191500052",
+      "https://www.11tik.com/?vimeo=1191500052",
     );
   });
 });

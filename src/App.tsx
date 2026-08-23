@@ -160,26 +160,19 @@ export default function App() {
     url.searchParams.set("k", slug);
     url.searchParams.delete("m");
     url.searchParams.delete("v");
-    url.searchParams.delete("vimeo");
     history.pushState({ k: slug }, "", `${url.pathname}${url.search}${url.hash}`);
     setKeywordSlug(slug);
     setPostsOpen(false);
     analytics.pageView();
   };
 
-  const syncShareUrl = (platform: "youtube" | "vimeo", videoId: string) => {
+  const syncShareUrl = (platform: "youtube", videoId: string) => {
     try {
       const url = new URL(location.href);
       url.searchParams.delete("k");
       url.searchParams.delete("m");
       if (embed) {
-        if (platform === "vimeo") {
-          url.searchParams.delete("v");
-          url.searchParams.set("vimeo", videoId);
-        } else {
-          url.searchParams.delete("vimeo");
-          url.searchParams.set("v", videoId);
-        }
+        url.searchParams.set("v", videoId);
         history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
       } else {
         const next = new URL(`${url.origin}${mediaSharePath(platform, videoId)}`);
@@ -280,7 +273,7 @@ export default function App() {
     const deep = readDeepLink();
     if (!deep) return;
     deepLinkBoot.current = true;
-    const raw = deep.platform === "vimeo" ? `https://vimeo.com/${deep.videoId}` : `https://www.youtube.com/watch?v=${deep.videoId}`;
+    const raw = `https://www.youtube.com/watch?v=${deep.videoId}`;
     setInput(raw);
     void runOne(raw);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- boot once from deep link
@@ -465,7 +458,7 @@ export default function App() {
           )}
           {result?.bestThumbnail && !bulk ? (
             <p className="yte-video-meta">
-              {result.meta?.platform === "vimeo" ? "Vimeo" : "YouTube"}
+              YouTube
               {result.meta?.authorName ? ` · ${result.meta.authorName}` : ""}
               {` · ${result.meta?.title || result.videoId}`}
             </p>
@@ -503,7 +496,7 @@ export default function App() {
                   setInput(event.target.value);
                 }}
                 placeholder={t("pasteBulkPh") + " · " + tx(locale, "channelHint")}
-                aria-label="YouTube or Vimeo URLs"
+                aria-label="YouTube URLs"
                 spellCheck={false}
                 autoCorrect="off"
                 autoCapitalize="off"

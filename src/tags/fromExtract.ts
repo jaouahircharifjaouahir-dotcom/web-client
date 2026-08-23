@@ -17,7 +17,6 @@ const STOP = new Set([
   "feat",
   "ft",
   "youtube",
-  "vimeo",
   "watch",
 ]);
 

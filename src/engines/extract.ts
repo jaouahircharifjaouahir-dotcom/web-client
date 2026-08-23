@@ -4,7 +4,6 @@ import { resultCache } from "../cache/memory";
 import type { ParsedYouTubeUrl } from "../types";
 import { createAppError } from "../types/errors";
 import type { ParsedMediaUrl } from "../parsers/mediaUrl";
-import { extractVimeoThumbnails } from "./vimeoExtract";
 
 export async function extractThumbnails(
   parsed: ParsedYouTubeUrl | ParsedMediaUrl,
@@ -13,11 +12,6 @@ export async function extractThumbnails(
 ): Promise<ThumbnailExtractionResult> {
   if (!parsed.valid || !parsed.videoId || !parsed.normalizedUrl) {
     throw createAppError(parsed.errorCode ?? "INVALID_URL");
-  }
-
-  const platform = "platform" in parsed ? parsed.platform : "youtube";
-  if (platform === "vimeo") {
-    return extractVimeoThumbnails(parsed, signal, onProgress);
   }
 
   const cacheKey = parsed.videoId;

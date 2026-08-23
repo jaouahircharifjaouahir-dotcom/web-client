@@ -8,14 +8,14 @@ Source plan: `thumbnail-tool-growth-plan.md` (Downloads). Host constraint: **Blo
 | --- | --- | --- |
 | Instant preview | Done | Client discovery + `<img loading>` |
 | Batch + zip | Done (existing) | Bulk mode |
-| Multi-platform | Partial | **YouTube + Vimeo oEmbed**. TikTok/IG blocked by platform policy |
-| Copy URL / share | Done | Copy image URL + share permalink `?v=` / `?vimeo=` |
+| Platform | Done | **YouTube only**. TikTok/IG blocked by platform policy |
+| Copy URL / share | Done | Copy image URL + share permalink `?v=` |
 | Dark mode | Done (existing) | |
 | Schema SoftwareApplication + FAQ | Done (existing) | **No fake AggregateRating** |
 | Google Indexing API | Done | Sitemap URLs submitted with `npm run google:index` |
 | Embed widget | Done | `/p/embed.html` + `embed.js` |
 | PWA | Partial | Manifest `standalone` + link from theme. Full SW cannot run on Blogger origin |
-| Programmatic video pages | Product deep links | `?v=` / `?vimeo=` auto-extract + share. Not thin SEO farms |
+| Programmatic video pages | Product deep links | `?v=` auto-extract + share. Not thin SEO farms |
 | Blog content pack | Drafts ready | `docs/blogger-pages/blog/*.html` — publish in Blogger |
 
 ## Explicitly deferred (plan §5 / architecture)

@@ -99,7 +99,7 @@ function TagPage({ slug, origin }: { slug: string; origin: string }) {
         <p>{data?.tag?.gate?.reason || ""}</p>
         <div className="yte-grid">
           {videos.map((video) => (
-            <a className="yte-shot" href={video.loc || `${origin.replace(/\/$/, "")}${thumbPath(video.videoId && /^\d{6,12}$/.test(video.videoId) ? "vimeo" : "youtube", video.videoId || "")}`} key={video.videoId || video.loc}>
+            <a className="yte-shot" href={video.loc || `${origin.replace(/\/$/, "")}${thumbPath("youtube", video.videoId || "")}`} key={video.videoId || video.loc}>
               {video.thumb ? (
                 <img
                   alt={`${video.title || video.videoId || "YouTube"} thumbnail | 11tik`}
@@ -133,7 +133,7 @@ export function ThumbArticle({
   videoId,
   origin,
 }: {
-  platform: "youtube" | "vimeo";
+  platform: "youtube";
   videoId: string;
   origin: string;
 }) {
@@ -186,7 +186,7 @@ function ThumbPage({
   videoId,
   origin,
 }: {
-  platform: "youtube" | "vimeo";
+  platform: "youtube";
   videoId: string;
   origin: string;
 }) {

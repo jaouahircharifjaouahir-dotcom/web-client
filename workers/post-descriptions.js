@@ -3,7 +3,7 @@ import { clipDescription } from "./html-meta.js";
 /** Unique search snippets (≤150 chars) for www posts and static pages. Home stays in the theme. */
 export const POST_DESCRIPTIONS = {
   "/p/about.html":
-    "11tik publishes the free in-browser YouTube and Vimeo thumbnail extractor. Public stills only. No account and no video download.",
+    "11tik publishes the free in-browser YouTube thumbnail extractor. Public stills only. No account and no video download.",
   "/p/privacy.html":
     "11tik processes pasted URLs in your browser. Optional analytics use the 11tik.com cookie domain. Original thumbnail files are not stored.",
   "/p/terms-of-use.html":

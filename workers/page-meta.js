@@ -4,7 +4,7 @@ const PAGES = {
   "/p/about.html": {
     title: "About 11tik",
     description:
-      "11tik is a free in-browser YouTube and Vimeo thumbnail extractor. Public stills only. No account and no video download.",
+      "11tik is a free in-browser YouTube thumbnail extractor. Public stills only. No account and no video download.",
   },
   "/p/privacy.html": {
     title: "Privacy · 11tik",
@@ -76,6 +76,6 @@ export function viewMeta(homeTitle, homeDescription, pathname) {
   if (mapped) return { title: homeTitle, description: mapped };
   return {
     title: homeTitle,
-    description: `${homeTitle}. Page on 11tik — public YouTube and Vimeo stills only.`,
+    description: `${homeTitle}. Page on 11tik — public YouTube stills only.`,
   };
 }

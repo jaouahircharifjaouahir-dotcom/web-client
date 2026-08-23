@@ -55,7 +55,7 @@ export interface ExtractionTimings {
 }
 
 export interface ExtractionMeta {
-  platform: "youtube" | "vimeo";
+  platform: "youtube";
   title: string | null;
   authorName: string | null;
   tags?: string[];

@@ -12,12 +12,10 @@ export type AppRoute =
   | { name: "contact" }
   | { name: "embed" }
   | { name: "keywords" }
-  | { name: "thumb"; platform: "youtube" | "vimeo"; videoId: string };
+  | { name: "thumb"; platform: "youtube"; videoId: string };
 
 export function parseAppRoute(pathname = typeof location === "undefined" ? "/" : location.pathname): AppRoute {
   const path = pathname.replace(/\/+$/, "") || "/";
-  const vimeoThumb = path.match(/^\/thumb\/vimeo\/(\d{6,12})$/);
-  if (vimeoThumb) return { name: "thumb", platform: "vimeo", videoId: vimeoThumb[1] };
   const youtubeThumb = path.match(/^\/thumb\/([A-Za-z0-9_-]{11})$/);
   if (youtubeThumb) return { name: "thumb", platform: "youtube", videoId: youtubeThumb[1] };
   const tag = path.match(/\/tag\/([^/]+)$/);

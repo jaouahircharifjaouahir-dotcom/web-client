@@ -13,7 +13,6 @@ export const config = {
     "i3.ytimg.com",
     "i9.ytimg.com",
     "img.youtube.com",
-    "i.vimeocdn.com",
   ],
   gaMeasurementId: "G-FW7B8NDZZ5",
   requestTimeoutMs: 8000,

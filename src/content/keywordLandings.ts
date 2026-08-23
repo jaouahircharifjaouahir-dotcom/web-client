@@ -8,7 +8,7 @@ export type KeywordLanding = {
 export const DEFAULT_HERO = {
   title: "YouTube Thumbnail Extractor",
   intro:
-    "Download YouTube and Vimeo thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any public YouTube video, Shorts, or Vimeo URL with one click. Paste a link below, click Get Thumbnail Image, then download or share a ready link.",
+    "Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any public YouTube video or Shorts URL with one click. Paste a link below, click Get Thumbnail Image, then download or share a ready link.",
 } as const;
 
 export const KEYWORD_LANDINGS: KeywordLanding[] = [

@@ -49,9 +49,7 @@ function migrateExtractLoc(loc) {
   try {
     const url = new URL(loc);
     const youtube = url.searchParams.get("v");
-    const vimeo = url.searchParams.get("vimeo");
     if (youtube && /^[A-Za-z0-9_-]{11}$/.test(youtube)) return `${url.origin}/thumb/${youtube}`;
-    if (vimeo && /^\d{6,12}$/.test(vimeo)) return `${url.origin}/thumb/vimeo/${vimeo}`;
     return loc;
   } catch {
     return loc;

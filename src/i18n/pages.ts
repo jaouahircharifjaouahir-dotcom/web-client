@@ -61,7 +61,7 @@ const EN: Record<PageKey, string> = {
     "No. 11tik does not store, host, or claim rights to any thumbnail. Images are fetched directly from YouTube's public CDN in your browser and are never uploaded to or cached on 11tik servers as original media files.",
   aboutTitle: "About 11tik",
   aboutBody:
-    "11tik is a free YouTube and Vimeo thumbnail extractor. Paste a public video URL to preview real public stills and download the highest file that exists. Nothing is uploaded to an 11tik server.",
+    "11tik is a free YouTube thumbnail extractor. Paste a public video URL to preview real public stills and download the highest file that exists. Nothing is uploaded to an 11tik server.",
   privacyTitle: "Privacy",
   privacyBody:
     "Pasted URLs are processed in your browser. 11tik does not require an account and does not store the original thumbnail files. Optional local history stays on your device until you clear it. Analytics, when loaded, use the 11tik.com cookie domain.",
@@ -78,7 +78,7 @@ const EN: Record<PageKey, string> = {
   trendingIntro: "Tags collected from public extractions that passed the quality gate.",
   embedTitle: "Embed the 11tik Thumbnail Extractor",
   embedBody:
-    "Add a free YouTube thumbnail extractor to your blog, docs, or creator toolkit. The widget loads from 11tik and resizes itself. No API key.\n\nKeep id=\"yte-app\" on the iframe so height sync works. Do not wrap the iframe in a fixed height that clips the download buttons. Linking back to the 11tik homepage helps users open the full tool.\n\nShare a ready extraction with /?v=VIDEO_ID for YouTube or /?vimeo=ID for Vimeo.",
+    "Add a free YouTube thumbnail extractor to your blog, docs, or creator toolkit. The widget loads from 11tik and resizes itself. No API key.\n\nKeep id=\"yte-app\" on the iframe so height sync works. Do not wrap the iframe in a fixed height that clips the download buttons. Linking back to the 11tik homepage helps users open the full tool.\n\nShare a ready extraction with /?v=VIDEO_ID.",
   keywordsTitle: "Keyword tools",
   keywordsBody: "Each link opens the YouTube Thumbnail Extractor with an intro for that topic.",
   thumbHeading: "{title} thumbnail",
@@ -111,7 +111,7 @@ const PACKS: Record<string, Pack> = {
     legalA3: "لا. لا نخزن الصور ولا ندعي ملكيتها. تُجلب من شبكة يوتيوب العامة في متصفحك.",
     aboutTitle: "عن 11tik",
     aboutBody:
-      "11tik أداة مجانية لاستخراج صور يوتيوب وVimeo المصغرة. الصق رابط فيديو عام لمعاينة الملفات العامة الحقيقية وتنزيل أعلى جودة متاحة. لا يُرفع شيء إلى خادم 11tik.",
+      "11tik أداة مجانية لاستخراج صور يوتيوب  المصغرة. الصق رابط فيديو عام لمعاينة الملفات العامة الحقيقية وتنزيل أعلى جودة متاحة. لا يُرفع شيء إلى خادم 11tik.",
     privacyTitle: "الخصوصية",
     privacyBody:
       "الروابط تُعالج في متصفحك. لا حساب مطلوب ولا نخزن ملفات الصور الأصلية. السجل الاختياري يبقى على جهازك. التحليلات تستخدم نطاق 11tik.com.",
@@ -127,7 +127,7 @@ const PACKS: Record<string, Pack> = {
     trendingIntro: "وسوم جُمعت من استخراجات عامة اجتازت بوابة الجودة.",
     embedTitle: "تضمين مستخرج الصور المصغرة 11tik",
     embedBody:
-      "أضف مستخرج صور يوتيوب المصغرة إلى مدونتك أو أدواتك. الويدجت يُحمَّل من 11tik ويضبط ارتفاعه. لا مفتاح API.\n\nأبقِ id=\"yte-app\" على الإطار. لا تحصره بارتفاع ثابت يقطع أزرار التنزيل.\n\nشارك استخراجا جاهزا عبر /?v=VIDEO_ID أو /?vimeo=ID.",
+      "أضف مستخرج صور يوتيوب المصغرة إلى مدونتك أو أدواتك. الويدجت يُحمَّل من 11tik ويضبط ارتفاعه. لا مفتاح API.\n\nأبقِ id=\"yte-app\" على الإطار. لا تحصره بارتفاع ثابت يقطع أزرار التنزيل.\n\nشارك استخراجا جاهزا عبر /?v=VIDEO_ID.",
     keywordsTitle: "أدوات الكلمات المفتاحية",
     keywordsBody: "كل رابط يفتح المستخرج بمقدمة عن ذلك الموضوع.",
     thumbHeading: "صورة «{title}» المصغرة",
@@ -158,7 +158,7 @@ const PACKS: Record<string, Pack> = {
     legalA3: "Non. Les images viennent du CDN public YouTube dans votre navigateur. 11tik ne les héberge pas.",
     aboutTitle: "À propos de 11tik",
     aboutBody:
-      "11tik est un extracteur gratuit de miniatures YouTube et Vimeo. Collez une URL publique pour prévisualiser les fichiers réels et télécharger la plus haute qualité disponible. Rien n’est envoyé sur un serveur 11tik.",
+      "11tik est un extracteur gratuit de miniatures YouTube. Collez une URL publique pour prévisualiser les fichiers réels et télécharger la plus haute qualité disponible. Rien n’est envoyé sur un serveur 11tik.",
     privacyTitle: "Confidentialité",
     privacyBody:
       "Les URL sont traitées dans votre navigateur. Pas de compte. L’historique local reste sur votre appareil. L’analytics utilise le domaine 11tik.com.",
@@ -175,7 +175,7 @@ const PACKS: Record<string, Pack> = {
     trendingIntro: "Tags issus d’extractions publiques validées.",
     embedTitle: "Intégrer l’extracteur de miniatures 11tik",
     embedBody:
-      "Ajoutez un extracteur YouTube gratuit à votre blog ou vos docs. Le widget se charge depuis 11tik et s’ajuste. Pas de clé API.\n\nGardez id=\"yte-app\" sur l’iframe. N’imposez pas une hauteur fixe qui coupe les boutons.\n\nPartagez une extraction avec /?v=VIDEO_ID ou /?vimeo=ID.",
+      "Ajoutez un extracteur YouTube gratuit à votre blog ou vos docs. Le widget se charge depuis 11tik et s’ajuste. Pas de clé API.\n\nGardez id=\"yte-app\" sur l’iframe. N’imposez pas une hauteur fixe qui coupe les boutons.\n\nPartagez une extraction avec /?v=VIDEO_ID.",
     keywordsTitle: "Outils de mots-clés",
     keywordsBody: "Chaque lien ouvre l’extracteur avec une intro pour ce sujet.",
     thumbHeading: "Miniature de {title}",
@@ -206,7 +206,7 @@ const PACKS: Record<string, Pack> = {
     legalA3: "No. Se obtienen del CDN público de YouTube en tu navegador.",
     aboutTitle: "Acerca de 11tik",
     aboutBody:
-      "11tik es un extractor gratuito de miniaturas de YouTube y Vimeo. Pega una URL pública para ver los archivos reales y descargar la mayor calidad disponible. Nada se sube a un servidor de 11tik.",
+      "11tik es un extractor gratuito de miniaturas de YouTube. Pega una URL pública para ver los archivos reales y descargar la mayor calidad disponible. Nada se sube a un servidor de 11tik.",
     privacyTitle: "Privacidad",
     privacyBody:
       "Las URL se procesan en el navegador. No hace falta cuenta. El historial local permanece en tu dispositivo. Analytics usa el dominio 11tik.com.",
@@ -222,7 +222,7 @@ const PACKS: Record<string, Pack> = {
     trendingIntro: "Etiquetas de extracciones públicas validadas.",
     embedTitle: "Insertar el extractor de miniaturas 11tik",
     embedBody:
-      "Añade un extractor de miniaturas YouTube a tu blog o herramientas. El widget carga desde 11tik y se redimensiona. Sin clave API.\n\nMantén id=\"yte-app\" en el iframe. No uses una altura fija que recorte los botones.\n\nComparte una extracción con /?v=VIDEO_ID o /?vimeo=ID.",
+      "Añade un extractor de miniaturas YouTube a tu blog o herramientas. El widget carga desde 11tik y se redimensiona. Sin clave API.\n\nMantén id=\"yte-app\" en el iframe. No uses una altura fija que recorte los botones.\n\nComparte una extracción con /?v=VIDEO_ID.",
     keywordsTitle: "Herramientas de palabras clave",
     keywordsBody: "Cada enlace abre el extractor con una intro de ese tema.",
     thumbHeading: "Miniatura de {title}",
@@ -253,7 +253,7 @@ const PACKS: Record<string, Pack> = {
     legalA3: "Nein. Dateien kommen vom öffentlichen YouTube-CDN in Ihrem Browser.",
     aboutTitle: "Über 11tik",
     aboutBody:
-      "11tik ist ein kostenloser YouTube- und Vimeo-Thumbnail-Extractor. Fügen Sie eine öffentliche URL ein, um echte Dateien zu prüfen und die höchste vorhandene Qualität zu laden. Nichts wird auf einen 11tik-Server hochgeladen.",
+      "11tik ist ein kostenloser YouTube-Thumbnail-Extractor. Fügen Sie eine öffentliche URL ein, um echte Dateien zu prüfen und die höchste vorhandene Qualität zu laden. Nichts wird auf einen 11tik-Server hochgeladen.",
     privacyTitle: "Datenschutz",
     privacyBody:
       "URLs werden im Browser verarbeitet. Kein Konto. Die lokale Historie bleibt auf Ihrem Gerät. Analytics nutzt die Domain 11tik.com.",
@@ -286,7 +286,7 @@ const PACKS: Record<string, Pack> = {
     legalA3: "Não. Vêm do CDN público do YouTube no seu browser.",
     aboutTitle: "Sobre a 11tik",
     aboutBody:
-      "A 11tik é um extrator gratuito de miniaturas YouTube e Vimeo. Cole um URL público para ver os ficheiros reais e transferir a maior qualidade disponível. Nada é enviado para um servidor 11tik.",
+      "A 11tik é um extrator gratuito de miniaturas YouTube. Cole um URL público para ver os ficheiros reais e transferir a maior qualidade disponível. Nada é enviado para um servidor 11tik.",
     privacyTitle: "Privacidade",
     privacyBody: "Os URLs são processados no browser. Sem conta. O histórico local fica no dispositivo. A analytics usa o domínio 11tik.com.",
     termsTitle: "Termos de utilização",
@@ -317,7 +317,7 @@ const PACKS: Record<string, Pack> = {
     legalA3: "Нет. Файлы берутся с публичного CDN YouTube в браузере.",
     aboutTitle: "О 11tik",
     aboutBody:
-      "11tik — бесплатный экстрактор превью YouTube и Vimeo. Вставьте публичную ссылку, чтобы увидеть настоящие файлы и скачать максимальный размер. На сервер 11tik ничего не загружается.",
+      "11tik — бесплатный экстрактор превью YouTube. Вставьте публичную ссылку, чтобы увидеть настоящие файлы и скачать максимальный размер. На сервер 11tik ничего не загружается.",
     privacyTitle: "Конфиденциальность",
     privacyBody: "Ссылки обрабатываются в браузере. Аккаунт не нужен. Локальная история остаётся на устройстве.",
     termsTitle: "Условия использования",
@@ -341,7 +341,7 @@ const PACKS: Record<string, Pack> = {
     legalTitle: "Copyright e uso",
     aboutTitle: "Informazioni su 11tik",
     aboutBody:
-      "11tik è un estrattore gratuito di miniature YouTube e Vimeo. Incolla un URL pubblico per vedere i file reali e scaricare la qualità più alta disponibile.",
+      "11tik è un estrattore gratuito di miniature YouTube. Incolla un URL pubblico per vedere i file reali e scaricare la qualità più alta disponibile.",
     privacyTitle: "Privacy",
     privacyBody: "Gli URL sono elaborati nel browser. Nessun account. La cronologia locale resta sul dispositivo.",
     termsTitle: "Termini di utilizzo",
@@ -369,7 +369,7 @@ const PACKS: Record<string, Pack> = {
     trustContact: "İletişim",
     legalTitle: "Telif ve kullanım",
     aboutTitle: "11tik hakkında",
-    aboutBody: "11tik ücretsiz bir YouTube ve Vimeo küçük resim çıkarıcıdır. Genel bir URL yapıştırın; en yüksek gerçek dosyayı indirin.",
+    aboutBody: "11tik ücretsiz bir YouTube küçük resim çıkarıcıdır. Genel bir URL yapıştırın; en yüksek gerçek dosyayı indirin.",
     privacyTitle: "Gizlilik",
     privacyBody: "URL’ler tarayıcıda işlenir. Hesap gerekmez. Yerel geçmiş cihazınızda kalır.",
     termsTitle: "Kullanım şartları",
@@ -397,7 +397,7 @@ const PACKS: Record<string, Pack> = {
     trustContact: "联系",
     legalTitle: "版权与使用",
     aboutTitle: "关于 11tik",
-    aboutBody: "11tik 是免费的 YouTube / Vimeo 缩略图提取工具。粘贴公开链接即可预览真实文件并下载最高可用清晰度。文件不会上传到 11tik 服务器。",
+    aboutBody: "11tik 是免费的 YouTube 缩略图提取工具。粘贴公开链接即可预览真实文件并下载最高可用清晰度。文件不会上传到 11tik 服务器。",
     privacyTitle: "隐私",
     privacyBody: "链接在浏览器中处理。无需账户。本地历史保留在您的设备上。",
     termsTitle: "使用条款",
@@ -425,7 +425,7 @@ const PACKS: Record<string, Pack> = {
     trustContact: "お問い合わせ",
     legalTitle: "著作権と利用",
     aboutTitle: "11tikについて",
-    aboutBody: "11tikは無料のYouTube / Vimeoサムネイル抽出ツールです。公開URLを貼ると実在する画像を確認し、最も高い公開解像度を保存できます。",
+    aboutBody: "11tikは無料のYouTubeサムネイル抽出ツールです。公開URLを貼ると実在する画像を確認し、最も高い公開解像度を保存できます。",
     privacyTitle: "プライバシー",
     privacyBody: "URLはブラウザ内で処理されます。アカウントは不要です。",
     termsTitle: "利用規約",
@@ -453,7 +453,7 @@ const PACKS: Record<string, Pack> = {
     trustContact: "문의",
     legalTitle: "저작권과 이용",
     aboutTitle: "11tik 소개",
-    aboutBody: "11tik은 무료 YouTube/Vimeo 썸네일 추출기입니다. 공개 URL을 붙여 실제 파일을 확인하고 가장 높은 공개 화질을 저장하세요.",
+    aboutBody: "11tik은 무료 YouTube 썸네일 추출기입니다. 공개 URL을 붙여 실제 파일을 확인하고 가장 높은 공개 화질을 저장하세요.",
     privacyTitle: "개인정보",
     privacyBody: "URL은 브라우저에서 처리됩니다. 계정이 필요 없습니다.",
     termsTitle: "이용약관",
@@ -481,7 +481,7 @@ const PACKS: Record<string, Pack> = {
     trustContact: "संपर्क",
     legalTitle: "कॉपीराइट और उपयोग",
     aboutTitle: "11tik के बारे में",
-    aboutBody: "11tik मुफ़्त YouTube और Vimeo थंबनेल निकालने वाला उपकरण है। सार्वजनिक लिंक चिपकाएँ और सबसे ऊँची उपलब्ध फ़ाइल डाउनलोड करें।",
+    aboutBody: "11tik मुफ़्त YouTube थंबनेल निकालने वाला उपकरण है। सार्वजनिक लिंक चिपकाएँ और सबसे ऊँची उपलब्ध फ़ाइल डाउनलोड करें।",
     privacyTitle: "गोपनीयता",
     privacyBody: "लिंक ब्राउज़र में प्रोसेस होते हैं। खाता नहीं चाहिए।",
     termsTitle: "उपयोग की शर्तें",
@@ -509,7 +509,7 @@ const PACKS: Record<string, Pack> = {
     trustContact: "Contact",
     legalTitle: "Auteursrecht en gebruik",
     aboutTitle: "Over 11tik",
-    aboutBody: "11tik is een gratis YouTube- en Vimeo-thumbnailextractor. Plak een openbare URL en download het hoogste echte bestand.",
+    aboutBody: "11tik is een gratis YouTube- en-thumbnailextractor. Plak een openbare URL en download het hoogste echte bestand.",
     privacyTitle: "Privacy",
     privacyBody: "URL’s worden in de browser verwerkt. Geen account nodig.",
     termsTitle: "Gebruiksvoorwaarden",

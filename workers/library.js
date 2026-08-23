@@ -304,15 +304,6 @@ export function jsonResponse(data, status = 200, extra = {}) {
 }
 
 export function thumbnailApiPayload(platform, videoId) {
-  if (platform === "vimeo") {
-    return {
-      ok: true,
-      platform,
-      videoId,
-      note: "Vimeo sizes are discovered in the browser extractor.",
-      share: `${SITE}/thumb/vimeo/${encodeURIComponent(videoId)}`,
-    };
-  }
   const files = ["maxresdefault.jpg", "hq720.jpg", "sddefault.jpg", "hqdefault.jpg", "mqdefault.jpg", "default.jpg"];
   return {
     ok: true,

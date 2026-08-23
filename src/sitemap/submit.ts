@@ -5,8 +5,8 @@ import type { ThumbnailExtractionResult } from "../types";
 const ENDPOINT = "/web-client/sitemap-add";
 const sent = new Set<string>();
 
-export function submitVideoToSitemap(platform: string, videoId: string): void {
-  const p = platform === "vimeo" ? "vimeo" : "youtube";
+export function submitVideoToSitemap(videoId: string): void {
+  const p = "youtube";
   const id = String(videoId || "").trim();
   if (!id) return;
   const key = `${p}:${id}`;
@@ -27,8 +27,7 @@ export function submitVideoToSitemap(platform: string, videoId: string): void {
 
 export function submitShareToSitemap(result: ThumbnailExtractionResult): void {
   if (!result.videoId) return;
-  const platform = result.meta?.platform === "vimeo" ? "vimeo" : "youtube";
-  const p = platform;
+  const p = "youtube";
   const id = result.videoId;
   const key = `${p}:${id}`;
   if (sent.has(key)) return;

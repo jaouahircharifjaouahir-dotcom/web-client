@@ -45,7 +45,7 @@ export const GUIDE_POSTS = [
     title: "How to batch download YouTube thumbnails (up to 25 public URLs)",
     href: "https://www.11tik.com/2026/08/how-to-batch-download-youtube.html",
     summary:
-      "Bulk mode on 11tik accepts one public YouTube or Vimeo URL per line, extracts each best still in the browser, and can zip the highest-quality set. Cap is 25 URLs per run.",
+      "Bulk mode on 11tik accepts one public YouTube URL per line, extracts each best still in the browser, and can zip the highest-quality set. Cap is 25 URLs per run.",
   },
   {
     title: "Screenshot vs real YouTube thumbnail: which file should you save?",

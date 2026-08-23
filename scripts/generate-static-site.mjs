@@ -169,22 +169,23 @@ export function generateStaticSite(staged) {
       }),
     );
   }
-  writeFile(
-    join(staged, "thumb", "index.html"),
-    appShellHtml({
-      code: "en",
-      canonical: `${SITE}/`,
-      title: "Public video thumbnail · 11tik",
-      description: "Preview and download the public YouTube or Vimeo thumbnail for this video ID in your browser.",
-      robots: "noindex,follow",
-    }),
-  );
+  const thumbShell = appShellHtml({
+    code: "en",
+    canonical: `${SITE}/`,
+    title: "Public video thumbnail · 11tik",
+    description: "Preview and download the public YouTube or Vimeo thumbnail for this video ID in your browser.",
+    robots: "noindex,follow",
+  });
+  writeFile(join(staged, "thumb", "index.html"), thumbShell);
+  writeFile(join(staged, "utility", "thumb", "index.html"), thumbShell);
   writeFile(join(staged, "robots.txt"), robotsTxt());
   writeFile(join(staged, "sitemap.xml"), sitemapXml());
   writeFile(
     join(staged, "_redirects"),
     `# https://developers.cloudflare.com/workers/static-assets/redirects/
-/thumb/* /thumb/index.html 200
+# Destination must stay outside /thumb/* — rewriting to /thumb/index.html
+# loops after html_handling strips .html / index (Cloudflare 100324).
+/thumb/* /utility/thumb/index.html 200
 `,
   );
 }

@@ -28,7 +28,11 @@ describe("build-time static site", () => {
       expect(robots).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
       expect(sitemap).toContain("https://www.11tik.com/");
       expect(sitemap).not.toContain("https://ar.11tik.com/");
-      expect(redirects).toContain("/thumb/* /thumb/index.html 200");
+      const thumb = readFileSync(join(dir, "utility", "thumb", "index.html"), "utf8");
+      expect(thumb).toContain("Public video thumbnail");
+      expect(thumb).toContain('name="robots" content="noindex,follow"');
+      expect(redirects).toContain("/thumb/* /utility/thumb/index.html 200");
+      expect(redirects).not.toContain("/thumb/* /thumb/index.html");
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }

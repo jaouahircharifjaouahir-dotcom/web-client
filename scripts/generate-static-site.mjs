@@ -7,7 +7,15 @@ import {
   buildSitemapXml,
   collectCanonicalSitemapLocs,
   loadGuidePostHrefsFromFile,
+  normalizeTrustedLocaleSitemapLoc,
 } from "../workers/sitemap-canonicals.js";
+import {
+  collectPublishableLocaleArticleLocs,
+  readEnglishSourceHash,
+  writePublishableLocaleArticles,
+  writePocFrReadinessManifest,
+  assertLocaleSitemapLocsHaveFiles,
+} from "./article-i18n.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
@@ -110,13 +118,19 @@ function writeFile(path, contents) {
   writeFileSync(path, contents);
 }
 
-function sitemapXml() {
+function sitemapXml(extraLocaleLocs = []) {
   const postHrefs = loadGuidePostHrefsFromFile(readFileSync(POSTS_TS, "utf8"));
   if (!postHrefs.length) {
     throw new Error("sitemap: no GUIDE_POSTS hrefs found in src/content/posts.ts");
   }
   const locs = collectCanonicalSitemapLocs({ postHrefs });
-  return buildSitemapXml(locs);
+  const trustedLocale = [];
+  for (const raw of extraLocaleLocs) {
+    const loc = normalizeTrustedLocaleSitemapLoc(raw);
+    if (!loc) throw new Error(`Invalid locale sitemap loc: ${raw}`);
+    trustedLocale.push(loc);
+  }
+  return buildSitemapXml([...new Set([...locs, ...trustedLocale])].sort());
 }
 
 function robotsTxt() {
@@ -156,6 +170,14 @@ export function generateStaticSite(staged) {
       }),
     );
   }
+  const sourceHash = readEnglishSourceHash();
+  const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged, sourceHash);
+  // Sitemap only includes locs that were actually written (ready + hash match).
+  const publishable = collectPublishableLocaleArticleLocs(sourceHash).filter((loc) =>
+    localeArticleLocs.includes(loc),
+  );
+  assertLocaleSitemapLocsHaveFiles(staged, publishable);
+  writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, sourceHash);
   writeFile(join(staged, "robots.txt"), robotsTxt());
-  writeFile(join(staged, "sitemap.xml"), sitemapXml());
+  writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
 }

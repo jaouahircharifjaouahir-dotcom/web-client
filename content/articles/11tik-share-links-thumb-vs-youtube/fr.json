@@ -1,0 +1,106 @@
+{
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "fr",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Comment fonctionnent les liens de partage 11tik : /thumb/{VIDEO_ID} vs URL YouTube | 11tik",
+  "description": "Le lien 11tik /thumb/{id} est une page de résultat. Ce n’est pas une URL YouTube ni un fichier image i.ytimg.com.",
+  "h1": "Comment fonctionnent les liens de partage 11tik : /thumb/{VIDEO_ID} vs URL YouTube",
+  "ogTitle": "Comment fonctionnent les liens de partage 11tik : /thumb/{VIDEO_ID} vs URL YouTube",
+  "ogDescription": "Le lien 11tik /thumb/{id} est une page de résultat. Ce n’est pas une URL YouTube ni un fichier image i.ytimg.com.",
+  "imageAlt": "Schéma comparant une URL YouTube, une URL de partage miniature 11tik et une URL d’image miniature YouTube directe",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Schéma comparant une URL YouTube, une URL de partage miniature 11tik et une URL d’image miniature YouTube directe",
+      "captionHtml": "Même identifiant vidéo, trois rôles : regarder la vidéo, ouvrir la page de résultat 11tik, ou demander une image CDN."
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Parcours extraction, aperçu, copie du lien de partage 11tik, puis ouverture de la page résultat par le destinataire",
+      "captionHtml": "Parcours de partage : extraire → prévisualiser → copier <code>/thumb/{id}</code> → le destinataire ouvre la page de résultat."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Réponse rapide",
+      "html": "<p>Trois URL différentes peuvent partager le même identifiant vidéo YouTube. Une seule d’entre elles est un fichier image.</p>\n<ol>\n<li><strong>URL YouTube (watch)</strong> — ouvre la vidéo sur YouTube.</li>\n<li><strong>URL de partage 11tik</strong> — ouvre la page de résultat de l’extracteur 11tik pour cet ID (<code>/thumb/{VIDEO_ID}</code>). C’est une page web, pas un fichier JPEG/WebP.</li>\n<li><strong>URL CDN de miniature directe</strong> — pointe vers une image publique sur l’hébergeur d’images YouTube (par exemple <code>i.ytimg.com</code>).</li>\n</ol>\n<p>Avec l’ID de démo public <code>dQw4w9WgXcQ</code> :</p>\n<pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n<p>La troisième adresse est un exemple de motif d’URL d’image directe. Ce fichier maxres précis n’est pas garanti pour chaque vidéo — confirmez les tailles réelles avec <a href=\"https://www.11tik.com/\">11tik</a> ou le <a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">guide maxresdefault</a>.</p>\n<img alt=\"Schéma comparant une URL YouTube, une URL de partage miniature 11tik et une URL d’image miniature YouTube directe\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\"/>\n<p class=\"yte-caption\">Même identifiant vidéo, trois rôles : regarder la vidéo, ouvrir la page de résultat 11tik, ou demander une image CDN.</p>"
+    },
+    {
+      "heading": "Ce qu’est /thumb/{VIDEO_ID}",
+      "html": "<p>Sur 11tik, une extraction réussie d’une seule vidéo met à jour l’adresse du navigateur vers un chemin de la forme :</p>\n<pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n<p>Ce chemin est l’URL de partage/résultat du produit. Il est généré à partir de l’identifiant vidéo et sert à rouvrir l’extracteur centré sur cet ID. Les anciens liens de type requête comme <code>?v=VIDEO_ID</code> sont traités comme des liens profonds vers la même idée et peuvent être réécrits vers la forme <code>/thumb/</code>.</p>\n<p><code>/thumb/…</code> n’est <strong>pas</strong> hébergé sur le CDN d’images YouTube. L’ouvrir ne télécharge jamais une image tout seul ; cela charge la route de l’application 11tik pour cet ID.</p>"
+    },
+    {
+      "heading": "Pourquoi cette page existe",
+      "html": "<p>Les gens ont besoin d’un moyen stable de rouvrir ou d’envoyer « le résultat miniature de cette vidéo sur 11tik » sans coller une longue URL watch dans un chat en espérant que le destinataire sache quoi faire. La page de partage garde la conversation sur l’extracteur : même ID, même flux d’images publiques, actions de téléchargement et de copie au même endroit.</p>\n<p>Elle garde aussi l’URL de l’outil d’accueil propre. La page d’accueil marketing reste l’extracteur général ; <code>/thumb/{id}</code> est le lien profond pour un ID précis.</p>"
+    },
+    {
+      "heading": "Ce que voit un utilisateur en l’ouvrant",
+      "html": "<p>Ouvrir <code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code> charge l’application monopage 11tik sur la route thumb. L’app lit l’ID de 11 caractères dans le chemin, initialise l’extracteur avec l’URL watch correspondante, et lance la découverte des miniatures publiques pour cet ID. Quand des images publiques existent, l’aperçu habituel, la liste des qualités, les actions de téléchargement et les contrôles de partage apparaissent. Sinon, vous obtenez le même résultat vide / non trouvé qu’avec un collage manuel.</p>\n<p>Vous pouvez aussi voir un court titre et un texte d’introduction de la route thumb pour cet ID au-dessus de l’interface. Ce contenu décrit la page de résultat ; il fait toujours partie de l’expérience du site, pas d’une réponse image brute.</p>"
+    },
+    {
+      "heading": "Comment copier le lien 11tik",
+      "html": "<ol>\n<li>Ouvrez <a href=\"https://www.11tik.com/\">11tik</a> et collez une URL YouTube publique (ou ouvrez un lien <code>/thumb/</code> existant).</li>\n<li>Attendez la fin de l’extraction et l’affichage de la meilleure image publique.</li>\n<li>Utilisez le contrôle de partage de la page pour copier le lien de partage. La valeur ressemble à <code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n<li>Envoyez cette URL. Le destinataire arrive sur la page de résultat et peut relancer le même contrôle public.</li>\n</ol>\n<p>Les extractions en lot peuvent exposer une URL de partage par ID vidéo réussi (y compris dans les colonnes d’export CSV). Chaque ID conserve son propre chemin <code>/thumb/</code> pour que les liens ne s’effondrent pas sur le premier résultat.</p>\n<img alt=\"Parcours extraction, aperçu, copie du lien de partage 11tik, puis ouverture de la page résultat par le destinataire\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\"/>\n<p class=\"yte-caption\">Parcours de partage : extraire → prévisualiser → copier <code>/thumb/{id}</code> → le destinataire ouvre la page de résultat.</p>"
+    },
+    {
+      "heading": "Tableau de comparaison des URL",
+      "html": "<table>\n<thead>\n<tr><th>Type d’URL</th><th>Exemple</th><th>Ce qui s’ouvre</th><th>Est-ce un fichier image ?</th></tr>\n</thead>\n<tbody>\n<tr><td>YouTube watch</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>Lecteur / page watch YouTube</td><td>Non</td></tr>\n<tr><td>Partage 11tik</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>Résultat extracteur 11tik pour cet ID</td><td>Non</td></tr>\n<tr><td>Image CDN directe</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Octets image (quand le fichier existe)</td><td>Oui</td></tr>\n</tbody>\n</table>"
+    },
+    {
+      "heading": "Comment les trois URL diffèrent en pratique",
+      "html": "<h3>URL watch vs URL de partage 11tik</h3>\n<p>Partagez l’URL watch quand l’objectif est de regarder ou discuter la vidéo sur YouTube. Partagez l’URL 11tik quand l’objectif est de rouvrir le résultat d’extraction de miniature — aperçus, téléchargements et tailles publiques validées — sans demander à quelqu’un de trouver d’abord l’extracteur.</p>\n<h3>URL de partage 11tik vs URL d’image directe</h3>\n<p>L’URL d’image directe est ce que vous collez dans <code>&lt;img src&gt;</code>, les bibliothèques média CMS ou les outils de design après avoir confirmé que le fichier existe. La construction de ces URL CDN à partir de l’ID est le sujet du <a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">guide des URL de miniatures</a>. L’URL de partage 11tik ne remplace jamais cette adresse image : les destinataires utilisent encore Télécharger ou Copier l’URL d’image dans l’outil quand ils ont besoin du fichier lui-même.</p>\n<h3>URL watch vs URL d’image directe</h3>\n<p>L’URL watch identifie la vidéo. L’URL d’image identifie un dérivé public. Elles ne sont pas interchangeables, c’est pourquoi deviner <code>maxresdefault.jpg</code> échoue souvent même quand la page watch fonctionne.</p>"
+    },
+    {
+      "heading": "Quand partager quel lien",
+      "html": "<ul>\n<li><strong>Partagez l’URL YouTube watch</strong> pour visionner, commenter ou citer la vidéo.</li>\n<li><strong>Partagez l’URL 11tik <code>/thumb/</code></strong> pour des collaborateurs qui ont besoin du résultat de l’extracteur, de la liste des qualités, ou d’un re-téléchargement rapide de l’image publique.</li>\n<li><strong>Partagez ou hébergez l’URL d’image directe / le fichier téléchargé</strong> pour les images à la une de blog, Open Graph et maquettes — après confirmation. Voir le <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">guide de téléchargement</a> et le <a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide taille et résolution</a>.</li>\n</ul>"
+    },
+    {
+      "heading": "Comment l’identifiant vidéo relie les trois",
+      "html": "<p>Tout repose sur le même ID de 11 caractères. Les URL watch le portent dans <code>v=</code> (ou les segments Shorts/embed/live). 11tik le place dans <code>/thumb/{id}</code>. Les images CDN le placent entre <code>/vi/</code> (ou <code>/vi_webp/</code>) et le nom de fichier de taille. Si l’ID est faux, les trois se cassent différemment : mauvaise vidéo, mauvaise page de résultat, ou image incorrecte/manquante.</p>"
+    },
+    {
+      "heading": "Comment cela s’inscrit dans le flux de l’extracteur",
+      "html": "<pre>Coller une URL watch/Shorts/embed\n→ analyser l’identifiant vidéo\n→ découvrir les candidats d’images publiques\n→ afficher les résultats classés\n→ l’adresse du navigateur devient /thumb/{id}\n→ copier le lien de partage ou télécharger les URL d’image</pre>\n<p>Le lien de partage est un signet dans ce flux. Il ne saute pas la validation, n’invente pas de 4K, et ne transforme pas les vidéos privées en images publiques.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "https://www.11tik.com/thumb/VIDEO_ID est-il une image directe ?",
+      "answer": "Non. C’est une page de résultat 11tik pour cet identifiant vidéo. Les images directes vivent sur des hôtes comme i.ytimg.com.",
+      "answerHtml": "Non. C’est une page de résultat 11tik pour cet identifiant vidéo. Les images directes vivent sur des hôtes comme <code>i.ytimg.com</code>."
+    },
+    {
+      "question": "Que se passe-t-il après l’ouverture de mon lien de partage ?",
+      "answer": "11tik charge la route thumb, lit l’ID, lance le contrôle de miniature publique pour cet ID, et affiche l’interface de l’extracteur avec les résultats lorsque des images publiques existent.",
+      "answerHtml": "11tik charge la route thumb, lit l’ID, lance le contrôle de miniature publique pour cet ID, et affiche l’interface de l’extracteur avec les résultats lorsque des images publiques existent."
+    },
+    {
+      "question": "Puis-je hotlinker /thumb/ dans une balise img ?",
+      "answer": "Non. Utilisez une URL d’image CDN confirmée ou un fichier que vous avez téléchargé. Le chemin de partage renvoie une coquille HTML d’application, pas des octets image.",
+      "answerHtml": "Non. Utilisez une URL d’image CDN confirmée ou un fichier que vous avez téléchargé. Le chemin de partage renvoie une coquille HTML d’application, pas des octets image."
+    },
+    {
+      "question": "Pourquoi la barre d’adresse a-t-elle changé après l’extraction d’une miniature ?",
+      "answer": "Après une extraction d’une seule vidéo, 11tik synchronise le chemin de partage vers /thumb/{VIDEO_ID} pour que le résultat actuel soit facile à copier et à rouvrir.",
+      "answerHtml": "Après une extraction d’une seule vidéo, 11tik synchronise le chemin de partage vers <code>/thumb/{VIDEO_ID}</code> pour que le résultat actuel soit facile à copier et à rouvrir."
+    },
+    {
+      "question": "Les Shorts utilisent-ils un chemin de partage différent ?",
+      "answer": "Non. Les Shorts se résolvent toujours en un ID de 11 caractères. L’URL de partage reste /thumb/{id} ; seule la forme de l’URL YouTube d’origine différait.",
+      "answerHtml": "Non. Les Shorts se résolvent toujours en un ID de 11 caractères. L’URL de partage reste <code>/thumb/{id}</code> ; seule la forme de l’URL YouTube d’origine différait."
+    },
+    {
+      "question": "/thumb/{id} est-il la même chose que copier l’URL maxres ?",
+      "answer": "Non. Maxres (lorsqu’il est présent) est un fichier CDN possible. La page de partage liste les tailles publiques validées et peut inclure d’autres niveaux lorsque maxres est absent.",
+      "answerHtml": "Non. Maxres (lorsqu’il est présent) est un fichier CDN possible. La page de partage liste les tailles publiques validées et peut inclure d’autres niveaux lorsque maxres est absent."
+    },
+    {
+      "question": "Où les URL watch et les URL d’image sont-elles expliquées plus en détail ?",
+      "answer": "Utilisez l’article sur les URL de miniatures pour la construction ID → CDN, et l’article de téléchargement pour enregistrer les fichiers.",
+      "answerHtml": "Utilisez l’<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">article sur les URL de miniatures</a> pour la construction ID → CDN, et l’article de téléchargement pour enregistrer les fichiers."
+    }
+  ],
+  "conclusionHtml": "<h2>Conclusion</h2>\n<p>Traitez <code>/thumb/{VIDEO_ID}</code> comme l’adresse de partage/résultat de 11tik : utile pour rouvrir et envoyer une extraction, jamais comme substitut d’un lien watch YouTube ou d’une image directe <code>i.ytimg.com</code>. Gardez les trois types d’URL distincts et vos téléchargements, embeds et liens collaborateurs restent exacts.</p>\n<p><a href=\"https://www.11tik.com/\">Extraire une miniature publique et copier son lien de partage 11tik →</a></p>",
+  "bioHtml": "Rédigé par 11tik. <a href=\"https://www.11tik.com/p/about.html\">À propos</a> · <a href=\"https://www.11tik.com/p/privacy.html\">Confidentialité</a> · <a href=\"https://www.11tik.com/p/terms-of-use.html\">Conditions</a>. Référence créateur : <a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Importer des miniatures vidéo personnalisées</a>."
+}

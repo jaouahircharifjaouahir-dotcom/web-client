@@ -99,6 +99,28 @@ export function collectCanonicalSitemapLocs(input = {}) {
   return [...locs].sort();
 }
 
+/**
+ * Allow only https://{xx}.11tik.com/l/{xx}/2026/08/{slug}.html (xx ≠ en).
+ * Rejects www, apex, arbitrary hosts, and non-article locale paths.
+ */
+export function normalizeTrustedLocaleSitemapLoc(raw) {
+  try {
+    const url = new URL(String(raw || ""));
+    if (url.protocol !== "https:") return null;
+    if (url.search || url.hash) return null;
+    const host = url.hostname.toLowerCase();
+    const match = /^([a-z]{2})\.11tik\.com$/.exec(host);
+    if (!match) return null;
+    const code = match[1];
+    if (code === "en") return null;
+    const path = url.pathname.replace(/\/+$/, "") || "/";
+    if (!new RegExp(`^/l/${code}/2026/08/[a-z0-9-]+\\.html$`).test(path)) return null;
+    return `https://${code}.11tik.com${path}`;
+  } catch {
+    return null;
+  }
+}
+
 export function buildSitemapXml(locs) {
   const urls = locs.map((loc) => `  <url><loc>${xmlEscape(loc)}</loc></url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>

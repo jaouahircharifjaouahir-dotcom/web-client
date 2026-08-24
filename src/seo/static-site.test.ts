@@ -50,8 +50,12 @@ describe("build-time static site", () => {
       expect(robots).not.toContain("sitemap-pages.xml");
       expect([...robots.matchAll(/^Sitemap:/gm)]).toHaveLength(1);
       expect(sitemap).toContain("https://www.11tik.com/");
+      expect(sitemap).toContain("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
       expect(sitemap).not.toContain("https://ar.11tik.com/");
-      expect(locs).toHaveLength(1 + GUIDE_POSTS.length + INDEXABLE_UTILITY_PATHS.length);
+      expect(locs).toHaveLength(1 + GUIDE_POSTS.length + INDEXABLE_UTILITY_PATHS.length + 1);
+      expect(existsSync(join(dir, "l", "fr", "2026", "08", "11tik-share-links-thumb-vs-youtube.html"))).toBe(
+        true,
+      );
       for (const path of LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP) {
         expect(sitemap).not.toContain(path);
       }

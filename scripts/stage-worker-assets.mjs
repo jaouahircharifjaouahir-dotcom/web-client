@@ -1,6 +1,12 @@
 import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { generateStaticSite } from "./generate-static-site.mjs";
+import {
+  readEnglishSourceHash,
+  resolveLocalePublishState,
+  SHARE_LINKS_ARTICLE_ID,
+  syncBloggerThemePoc,
+} from "./article-i18n.mjs";
 
 const root = join(import.meta.dirname, "..");
 const dist = join(root, "dist");
@@ -33,3 +39,7 @@ writeFileSync(
 );
 
 generateStaticSite(staged);
+
+const sourceHash = readEnglishSourceHash();
+const frenchReady = resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", sourceHash).publishable;
+syncBloggerThemePoc(join(root, "docs", "blogger-theme.xml"), frenchReady);

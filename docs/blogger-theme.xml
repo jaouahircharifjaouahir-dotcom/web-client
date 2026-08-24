@@ -70,10 +70,44 @@
       <meta content='https://www.11tik.com/web-client/images/social/og-image-1200x630.png' name='twitter:image'/>
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     <b:else/>
-      <link href='https://www.11tik.com/' hreflang='en' rel='alternate'/>
-      <link href='https://fr.11tik.com/' hreflang='fr' rel='alternate'/>
-      <link href='https://es.11tik.com/' hreflang='es' rel='alternate'/>
-      <link href='https://www.11tik.com/' hreflang='x-default' rel='alternate'/>
+      <!-- YTE-POC-SHARE-LINKS-I18N:BEGIN -->
+      <b:if cond='data:view.url contains "11tik-share-links-thumb-vs-youtube"'>
+        <link href='https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html' hreflang='en' rel='alternate'/>
+        <link href='https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html' hreflang='fr' rel='alternate'/>
+        <link href='https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html' hreflang='x-default' rel='alternate'/>
+        <script type='text/javascript'>
+(function () {
+  try {
+    var path = location.pathname.replace(/\/+$/, '') || '/';
+    if (path !== '/2026/08/11tik-share-links-thumb-vs-youtube.html') return;
+    if (localStorage.getItem('yte-lang')) return;
+    if (sessionStorage.getItem('yte-poc-share-links-fr-redir')) return;
+    if (/Googlebot|Google-InspectionTool|bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i.test(navigator.userAgent || '')) return;
+    var langs = navigator.languages || (navigator.language ? [navigator.language] : []);
+    var preferFr = false;
+    for (var i = 0; i &lt; langs.length; i++) {
+      if (/^fr\b/i.test(String(langs[i] || ''))) { preferFr = true; break; }
+    }
+    if (!preferFr) return;
+    sessionStorage.setItem('yte-poc-share-links-fr-redir', '1');
+    fetch('https://www.11tik.com/web-client/i18n/poc-share-links-fr.json', { credentials: 'omit', cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : { ready: false }; })
+      .then(function (meta) {
+        if (!meta || meta.ready !== true || !meta.url) return;
+        localStorage.setItem('yte-lang', 'fr');
+        location.replace(String(meta.url));
+      })
+      .catch(function () {});
+  } catch (e) {}
+})();
+        </script>
+      <b:else/>
+        <link href='https://www.11tik.com/' hreflang='en' rel='alternate'/>
+        <link href='https://fr.11tik.com/' hreflang='fr' rel='alternate'/>
+        <link href='https://es.11tik.com/' hreflang='es' rel='alternate'/>
+        <link href='https://www.11tik.com/' hreflang='x-default' rel='alternate'/>
+      </b:if>
+      <!-- YTE-POC-SHARE-LINKS-I18N:END -->
       <link expr:href='data:view.url' rel='canonical'/>
       <meta content='article' property='og:type'/>
       <meta expr:content='data:view.title.escaped' property='og:title'/>

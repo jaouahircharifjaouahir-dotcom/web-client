@@ -13,6 +13,7 @@ import {
   collectCanonicalSitemapLocs,
   loadGuidePostHrefsFromFile,
   normalizeSitemapLoc,
+  normalizeTrustedLocaleSitemapLoc,
   parseSitemapLocs,
 } from "../../workers/sitemap-canonicals.js";
 
@@ -34,6 +35,16 @@ describe("sitemap canonical inventory", () => {
     expect(normalizeSitemapLoc("https://ar.11tik.com/l/ar/")).toBeNull();
     expect(normalizeSitemapLoc("https://www.11tik.com/p/about.html?x=1")).toBeNull();
     expect(normalizeSitemapLoc("https://www.11tik.com/p/about.html#x")).toBeNull();
+  });
+
+  it("normalizes trusted locale article locs only", () => {
+    expect(
+      normalizeTrustedLocaleSitemapLoc(
+        "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html",
+      ),
+    ).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
+    expect(normalizeTrustedLocaleSitemapLoc("https://fr.11tik.com/l/fr/")).toBeNull();
+    expect(normalizeTrustedLocaleSitemapLoc("https://example.com/l/fr/2026/08/x.html")).toBeNull();
   });
 
   it("does not treat POST_DESCRIPTIONS keys as sitemap membership", () => {
@@ -68,13 +79,18 @@ describe("sitemap canonical inventory", () => {
     expect(locs).toContain(`${SITE_ORIGIN}/p/keyword-tools.html`);
   });
 
-  it("has no duplicates, no locale hosts, and no query strings", () => {
+  it("has no duplicates; allows only the ready French POC locale article host", () => {
     const locs = locsFromGeneratedSite();
     expect(new Set(locs).size).toBe(locs.length);
+    const localeLocs = locs.filter((loc) => /^https:\/\/[a-z]{2}\.11tik\.com\//.test(loc));
+    expect(localeLocs).toEqual([
+      "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html",
+    ]);
     for (const loc of locs) {
-      expect(loc.startsWith("https://www.11tik.com")).toBe(true);
       expect(loc.includes("?")).toBe(false);
-      expect(loc).not.toMatch(/^https:\/\/[a-z]{2}\.11tik\.com/);
+      if (!loc.startsWith("https://www.11tik.com")) {
+        expect(loc).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
+      }
     }
   });
 

@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "tr",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Ekran görüntüsü mü yoksa gerçek YouTube küçük resmi mi: Hangi dosyayı kaydetmelisiniz? | 11tik",
+  "description": "Oynatıcının telefon ekran görüntüsü, YouTube'un barındırdığı küçük resim değildir. Gerçek kitle hala i.ytimg.com'de yaşıyor. Bunu bloglar, Open Graph ve araştırmalar için kullanın; ekran görüntüleri kullanıcı arayüzü öğeleri, sıkıştırma ve yanlış en boy oranı ekler.",
+  "h1": "Ekran görüntüsü mü yoksa gerçek YouTube küçük resmi mi: Hangi dosyayı kaydetmelisiniz?",
+  "ogTitle": "Ekran görüntüsü mü yoksa gerçek YouTube küçük resmi mi: Hangi dosyayı kaydetmelisiniz?",
+  "ogDescription": "Oynatıcının telefon ekran görüntüsü, YouTube'un barındırdığı küçük resim değildir. Gerçek kitle hala i.ytimg.com'de yaşıyor. Bunu bloglar, Open Graph ve araştırmalar için kullanın; ekran görüntüleri kullanıcı arayüzü öğeleri, sıkıştırma ve yanlış en boy oranı ekler.",
+  "imageAlt": "Bir oyuncunun ekran görüntüsü ile gerçek bir herkese açık YouTube küçük resim dosyasının karşılaştırılması",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Bir oyuncunun ekran görüntüsü ile gerçek bir herkese açık YouTube küçük resim dosyasının karşılaştırılması",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ekran görüntüsü ile gerçek bir küçük resim arasındaki fark nedir?",
+      "html": "<p>Ekran görüntüsü, oynatıcı çerçevesi, altyazılar ve cihaz ölçeklendirmesi de dahil olmak üzere ekranınızın bir görüntüsünü alır. Gerçek bir küçük resim ise YouTube'un o video kimliği için yayınladığı JPEG veya WebP dosyasıdır. Yalnızca CDN dosyasının sabit bir URL'si ve bilinen piksel boyutu vardır.</p>"
+    },
+    {
+      "heading": "Google Görseller ve sosyal medya önizlemelerinde ekran görüntüleri neden başarısız oluyor?",
+      "html": "<p>Genellikle yanlış en boy oranına sahipler, kullanıcı arayüzü içeriyorlar ve iki kez sıkıştırıyorlar. Open Graph ve birçok CMS alanı, 1280x720 civarında 16:9 oranını istiyor. Bu, mevcut olduğunda maxresdefault ile eşleşiyor—bkz.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">küçük resim boyutu kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Gerçek küçük resmi nasıl kaydedebilirim?",
+      "html": "<ol>\n    <li>Herkese açık videonun URL'sini kopyalayın, ekran görüntüsünü değil.</li>\n    <li>Bunu yapıştırın<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Listelenen ilk herkese açık dosyayı indirin veya resmin URL'sini kopyalayın.</li>\n  </ol>"
+    },
+    {
+      "heading": "Ekran görüntüsü ne zaman hala kullanışlıdır?",
+      "html": "<p>Ekran görüntüsünü yalnızca kullanıcı arayüzü hatasını veya videonun içindeki bir anı belgelemek için kullanın. Resmi küçük resim, blog başlık resmi veya herkese açık bir paylaşım görseli olarak kullanmayın.</p>\n  <p><a href=\"https://www.11tik.com/\">Gerçek herkese açık küçük resmi alın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ekran görüntüsü ile gerçek bir küçük resim arasındaki fark nedir?",
+      "answer": "Ekran görüntüsü, ekranınızı ve oynatıcı arayüzünü yakalar. Gerçek bir küçük resim ise YouTube'un o video kimliği için i.ytimg.com'de barındırdığı JPEG veya WebP dosyasıdır.",
+      "answerHtml": "Ekran görüntüsü, ekranınızı ve oynatıcı arayüzünü yakalar. Gerçek bir küçük resim ise YouTube'un o video kimliği için i.ytimg.com'de barındırdığı JPEG veya WebP dosyasıdır."
+    },
+    {
+      "question": "Google Görseller ve sosyal medya önizlemelerinde ekran görüntüleri neden başarısız oluyor?",
+      "answer": "Genellikle yanlış en boy oranına, fazladan kullanıcı arayüzüne ve fazladan sıkıştırmaya sahipler. CMS ve Open Graph alanları hala temiz bir 16:9 genel görünüm bekliyor.",
+      "answerHtml": "Genellikle yanlış en boy oranına, fazladan kullanıcı arayüzüne ve fazladan sıkıştırmaya sahipler. CMS ve Open Graph alanları hala temiz bir 16:9 genel görünüm bekliyor."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+}

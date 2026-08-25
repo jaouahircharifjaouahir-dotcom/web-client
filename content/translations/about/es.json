@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "es",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "Acerca de 11tik | 11tik",
+  "description": "11tik es el editor del Extractor de miniaturas de YouTube en www.11tik.com . El sitio está dirigido a personas que necesitan la imagen de vista previa pública de un video de YouTube sin instalar software ni subir el enlace a un servidor de procesamiento.",
+  "h1": "Acerca de 11tik",
+  "ogTitle": "Acerca de 11tik",
+  "ogDescription": "11tik es el editor del Extractor de miniaturas de YouTube en www.11tik.com . El sitio está dirigido a personas que necesitan la imagen de vista previa pública de un video de YouTube sin instalar software ni subir el enlace a un servidor de procesamiento.",
+  "imageAlt": "11tik Vista previa del producto Extractor de miniaturas de YouTube a 1200 x 630 píxeles",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Vista previa del producto Extractor de miniaturas de YouTube a 1200 x 630 píxeles",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "¿Quién publica este sitio?",
+      "html": "<p>El contenido y el extractor se publican bajo el nombre 11tik. No hay ninguna personalidad de experto inventada ni puntuaciones de reseñas fabricadas. Las páginas editoriales explican cómo funcionan los archivos de miniaturas públicas; no afirman ser YouTube ni Google.</p>"
+    },
+    {
+      "heading": "¿Qué hace 11tik?",
+      "html": "<p>La herramienta lee un ID de vídeo público en el navegador, comprueba qué archivos de miniaturas existen en los servidores de imágenes de YouTube y te permite descargar o copiar esas imágenes fijas. El análisis y la clasificación se realizan en tu dispositivo. Puedes trabajar con una URL, una lista de URLs o un canal público con las últimas subidas.</p>"
+    },
+    {
+      "heading": "¿Qué no hace 11tik?",
+      "html": "<ul>\n    <li>No descarga vídeos ni audio de YouTube.</li>\n    <li>No permite eludir los vídeos privados, con restricción de edad o bloqueados por región.</li>\n    <li>No requiere cuenta.</li>\n    <li>No reclama derechos de autor sobre la miniatura de ninguna otra persona.</li>\n  </ul>"
+    },
+    {
+      "heading": "Versiones en idioma",
+      "html": "<p>La interfaz de usuario del extractor está disponible en hosts de lenguaje como<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>y<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>Estas páginas legales permanecen en www.11tik.com, por lo que hay una URL canónica para Acerca de, Privacidad, Contacto y Términos.</p>"
+    },
+    {
+      "heading": "¿Cómo puedo contactar con la editorial?",
+      "html": "<p>Correo electrónico<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>o utilice el<a href=\"https://www.11tik.com/p/contact.html\">formulario de contacto</a>. Lea el<a href=\"https://www.11tik.com/p/privacy.html\">política de privacidad</a>para detalles de análisis y alojamiento, y el<a href=\"https://www.11tik.com/p/terms-of-use.html\">condiciones de uso</a>para uso aceptable.</p>\n  <p class=\"yte-bio\">11tik publica guías prácticas sobre miniaturas públicas de YouTube y mantiene el extractor gratuito para navegadores. Se agradecen las correcciones por correo electrónico o a través del formulario de contacto.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extractor de miniaturas de YouTube</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik publica guías prácticas sobre miniaturas públicas de YouTube y mantiene el extractor gratuito para navegadores. Se agradecen las correcciones por correo electrónico o a través del formulario de contacto.</p>"
+}

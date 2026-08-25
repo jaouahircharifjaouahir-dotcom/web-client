@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "cs",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Vložte nástroj pro extrakci miniatur 11tik | 11tik",
+  "description": "Přidejte si na svůj blog, do dokumentace nebo do tvůrčí sady bezplatný extraktor miniatur z YouTube. Widget se načte z 11tik a sám změní velikost. Žádný klíč API.",
+  "h1": "Vložte nástroj pro extrakci miniatur 11tik",
+  "ogTitle": "Vložte nástroj pro extrakci miniatur 11tik",
+  "ogDescription": "Přidejte si na svůj blog, do dokumentace nebo do tvůrčí sady bezplatný extraktor miniatur z YouTube. Widget se načte z 11tik a sám změní velikost. Žádný klíč API.",
+  "imageAlt": "",
+  "faqHeading": "Často kladené otázky",
+  "images": [],
+  "sections": [
+    {
+      "heading": "úryvek kódu iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Pravidla",
+      "html": "<ul>\n    <li>Udržujte<code>id=\"yte-app\"</code>atribut, aby synchronizace výšky fungovala.</li>\n    <li>Neobalujte prvek iframe do pevné výšky, která by ořezávala tlačítka pro stahování.</li>\n    <li>Zpětné propojení s<a href=\"https://www.11tik.com/\">www.11tik.com</a>pomáhá uživatelům otevřít celý nástroj.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hluboké odkazy",
+      "html": "<p>Sdílejte připravenou extrakci s<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otevřete extraktor</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

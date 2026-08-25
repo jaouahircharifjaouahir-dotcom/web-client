@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "fr",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Comment enregistrer une miniature YouTube sur iPhone et Android (2026) | 11tik",
+  "description": "Enregistrez une image YouTube publique sur iPhone ou Android sans capture d'écran ni application de téléchargement. Collez l'URL d'une vidéo ou d'une Short publique dans 11tik dans Safari ou Chrome, puis téléchargez le fichier image le plus volumineux hébergé par YouTube.",
+  "h1": "Comment enregistrer une miniature YouTube sur iPhone et Android (2026)",
+  "ogTitle": "Comment enregistrer une miniature YouTube sur iPhone et Android (2026)",
+  "ogDescription": "Enregistrez une image YouTube publique sur iPhone ou Android sans capture d'écran ni application de téléchargement. Collez l'URL d'une vidéo ou d'une Short publique dans 11tik dans Safari ou Chrome, puis téléchargez le fichier image le plus volumineux hébergé par YouTube.",
+  "imageAlt": "Enregistrez une miniature YouTube sur iPhone et Android avec 11tik — image publique, pas d'application.",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Enregistrez une miniature YouTube sur iPhone et Android avec 11tik — image publique, pas d'application.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Puis-je enregistrer une miniature YouTube sur mon téléphone ?",
+      "html": "<p>Oui, si la vidéo est publique et que YouTube a publié une capture d'écran. Vous n'avez pas besoin d'un ordinateur, ni d'une application APK ou TestFlight. Ouvrez<a href=\"https://www.11tik.com/\">11tik</a>Dans le navigateur de votre téléphone, collez le lien, appuyez sur «&nbsp;Obtenir l’image miniature&nbsp;», puis enregistrez le premier fichier affiché. Il s’agit du fichier JPEG ou WebP public le plus récent qui ait effectivement renvoyé une image.</p>\n  <p>Une capture d'écran obtenue par appui long sur le lecteur est différente. La capture d'écran inclut l'interface, les barres de sécurité et une compression supplémentaire. Le public est toujours connecté à i.ytimg.com. Voir<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Capture d'écran vs miniature réelle</a>si vous avez besoin de cette distinction pour un blog ou une balise Open Graph.</p>"
+    },
+    {
+      "heading": "Ce dont vous avez besoin avant de commencer",
+      "html": "<ul>\n    <li>URL publique YouTube (visionnage, Shorts, live ou youtu.be). Paramètres de requête supplémentaires tels que&nbsp;:<code>pp=</code>ou un identifiant de playlist n'a pas d'importance ; 11tik lit l'identifiant vidéo de 11 caractères.</li>\n    <li>Safari sur iPhone ou iPad, ou Chrome, Firefox ou Samsung Internet sur Android.</li>\n    <li>Autorisation d'enregistrer les photos si le navigateur le demande. 11tik ne télécharge jamais l'image sur un serveur 11tik en tant que média original.</li>\n  </ul>\n  <p>Les vidéos privées, réservées aux membres ou soumises à une restriction d'âge qui ne publient pas d'image fixe publique ne seront pas disponibles au téléchargement. Il s'agit d'une règle de la plateforme, et non d'une limitation du téléphone. Les vignettes personnalisées en cours de traitement dans Studio peuvent également être temporairement indisponibles&nbsp;; veuillez vérifier ultérieurement avec la même URL. À lire également&nbsp;:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatures de YouTube Studio en 2026</a>.</p>"
+    },
+    {
+      "heading": "Comment enregistrer une miniature YouTube sur iPhone",
+      "html": "<ol>\n    <li>Dans l'application YouTube ou Safari, copiez le lien de la vidéo ou de Shorts (Partager → Copier le lien).</li>\n    <li>Ouvrir<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>Dans Safari. Vous n'avez rien à installer.</li>\n    <li>Collez l'URL et appuyez sur «&nbsp;Obtenir l'image miniature&nbsp;». Attendez que l'aperçu s'affiche. Les cases grises vides indiquent que cette taille n'a jamais été publiée.</li>\n    <li>Touchez le premier bouton de téléchargement. Safari vous proposera Ouvrir ou Télécharger. Choisissez Télécharger, puis enregistrez l'image dans Fichiers ou dans Photos depuis le menu de partage.</li>\n    <li>Si vous avez uniquement besoin de l'adresse pour un CMS, utilisez «&nbsp;Copier l'URL de l'image&nbsp;» au lieu de la télécharger. Cela copie un lien HTTPS i.ytimg.com ou vi_webp. Guide&nbsp;:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL de la miniature YouTube</a>.</li>\n  </ol>\n  <p>Si iOS bloque le téléchargement inter-domaines, ouvrez l’URL de l’image dans un nouvel onglet, puis appuyez longuement sur l’image → Ajouter à Photos. Vous enregistrez toujours le fichier public de YouTube, et non une capture d’écran de la page 11tik.</p>"
+    },
+    {
+      "heading": "Comment enregistrer une miniature YouTube sur Android",
+      "html": "<ol>\n    <li>Copiez l'URL de la vidéo publique ou de la vidéo Shorts depuis l'application YouTube.</li>\n    <li>Ouvrez 11tik dans Chrome (ou votre navigateur par défaut).</li>\n    <li>Collez le fichier, extrayez-le, puis appuyez sur le premier téléchargement. Chrome l'enregistre généralement dans le dossier Téléchargements.</li>\n    <li>Ouvrez la notification de téléchargements et déplacez l'image vers la Galerie si vous souhaitez l'ajouter à vos Photos.</li>\n  </ol>\n  <p>Android peut vous demander quelle application ouvrir le fichier JPEG. Choisissez Galerie ou Fichiers. N’utilisez pas une application de téléchargement vidéo promettant le format MP4&nbsp;; 11tik ne fournit ni vidéo ni audio.</p>"
+    },
+    {
+      "heading": "Quelle taille dois-je choisir pour mon téléphone ?",
+      "html": "<p>Conservez la première taille indiquée. 11tik Fichiers déjà classés. Lorsque YouTube publie maxresdefault, la résolution est généralement de 1280×720. Si ce nom de fichier renvoie une erreur 404, la résolution maximale correcte est celle du prochain fichier disponible (souvent hq720, sddefault ou hqdefault). L'absence d'un fichier maxres est normale. Détails&nbsp;:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ce que maxresdefault.jpg est</a>et<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Tailles des vignettes en 2026</a>.</p>\n  <p>Les vidéos courtes sont souvent diffusées verticalement alors que l'image fixe enregistrée est au format paysage. Le fichier reste la vignette publique officielle. Voir<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">vignettes courtes</a>.</p>"
+    },
+    {
+      "heading": "Est-il légal d'enregistrer une miniature sur mon téléphone ?",
+      "html": "<p>L'utilisation typique d'une image fixe hébergée publiquement est de la sauvegarder à des fins de référence personnelle, de recherche ou d'éducation. L'image reste la propriété de son auteur et est protégée par le droit d'auteur. Il est interdit de la réimporter comme vignette personnalisée, de l'imprimer sur des produits dérivés ou d'utiliser 11tik comme une licence. L'aide de YouTube concernant les vignettes personnalisées est disponible ici&nbsp;:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Télécharger des vignettes vidéo personnalisées</a>Règles de 11tik :<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termes</a>et<a href=\"https://www.11tik.com/copyright\">Droits d'auteur et utilisation</a>.</p>"
+    },
+    {
+      "heading": "Pourquoi les applications de vignettes pour téléphones échouent-elles ?",
+      "html": "<p>De nombreuses annonces de magasins intègrent une page de publicités autour d'un article supposé<code>maxresdefault.jpg</code>URL. Si YouTube n'a jamais publié ce fichier, l'image sera cassée ou grise par défaut. 11tik vérifie les réponses de votre navigateur et masque les fichiers qui ne sont pas des images. Aucune inscription n'est requise. Confidentialité&nbsp;: les URL collées restent dans le navigateur&nbsp;; voir<a href=\"https://www.11tik.com/p/privacy.html\">Confidentialité</a>.</p>"
+    },
+    {
+      "heading": "Enregistrer plusieurs liens depuis un téléphone",
+      "html": "<p>Utilisez le mode groupé sur la même page d'accueil&nbsp;: une URL publique par ligne, jusqu'à 25. L'URL d'une chaîne peut s'afficher avec les dernières publications publiques sur un écran plus grand&nbsp;; sur un téléphone, collez les liens individuellement si l'affichage de la chaîne est trop petit. Guide du mode groupé&nbsp;:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">téléchargement par lots</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Enregistrer une miniature publique sur 11tik →</a></p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur intégré au navigateur.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Puis-je enregistrer une miniature YouTube sur mon téléphone ?",
+      "answer": "Oui. Ouvrez 11tik dans Safari ou Chrome, collez une URL YouTube publique, extrayez-la et téléchargez la première image fixe publique de la liste. Aucun gestionnaire d'applications n'est requis.",
+      "answerHtml": "Oui. Ouvrez 11tik dans Safari ou Chrome, collez une URL YouTube publique, extrayez-la et téléchargez la première image fixe publique listée. Aucun gestionnaire d'applications n'est requis."
+    },
+    {
+      "question": "Comment enregistrer une miniature YouTube sur iPhone ?",
+      "answer": "Copiez le lien, ouvrez https://www.11tik.com/ dans Safari, collez, extrayez, puis téléchargez ou appuyez longuement sur l'URL de l'image et ajoutez-la à Photos.",
+      "answerHtml": "Copiez le lien, ouvrez https://www.11tik.com/ dans Safari, collez, extrayez, puis téléchargez ou appuyez longuement sur l'URL de l'image et ajoutez-la à Photos."
+    },
+    {
+      "question": "Comment enregistrer une miniature YouTube sur Android ?",
+      "answer": "Copiez le lien, ouvrez 11tik dans Chrome, extrayez et enregistrez le premier téléchargement dans Téléchargements ou Galerie.",
+      "answerHtml": "Copiez le lien, ouvrez 11tik dans Chrome, extrayez et enregistrez le premier téléchargement dans Téléchargements ou Galerie."
+    },
+    {
+      "question": "Est-il légal d'enregistrer une miniature sur mon téléphone ?",
+      "answer": "Il est courant de sauvegarder une image publique à des fins personnelles ou de recherche. Ne la republiez pas comme illustration de couverture. Les droits d'auteur restent la propriété de la personne qui l'a mise en ligne.",
+      "answerHtml": "Il est courant de sauvegarder une image publique à des fins personnelles ou de recherche. Ne la republiez pas comme illustration de couverture. Les droits d'auteur restent la propriété de la personne qui l'a mise en ligne."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur intégré au navigateur.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

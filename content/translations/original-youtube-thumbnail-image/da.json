@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "da",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Sådan får du det originale YouTube-miniaturebillede | 11tik",
+  "description": "Hent det originale offentlige YouTube-miniaturebillede, som YouTube allerede hoster. Dette er CDN-billedet, ikke et billede, der er kopieret fra videoen.",
+  "h1": "Sådan får du det originale YouTube-miniaturebillede",
+  "ogTitle": "Sådan får du det originale YouTube-miniaturebillede",
+  "ogDescription": "Hent det originale offentlige YouTube-miniaturebillede, som YouTube allerede hoster. Dette er CDN-billedet, ikke et billede, der er kopieret fra videoen.",
+  "imageAlt": "Original offentlig YouTube-miniaturefil vist i 11tik-udtrækkeren",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Original offentlig YouTube-miniaturefil vist i 11tik-udtrækkeren",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hvad er det originale YouTube-miniaturebillede?",
+      "html": "<p>Det er det forhåndsvisningsbillede, som YouTube allerede gemmer på sine billedhosts. Det er den fil, der bruges i søgninger og foreslåede hylder, ikke et billede, du optager med Print Screen.</p>"
+    },
+    {
+      "heading": "Hvordan er det anderledes end et skærmbillede?",
+      "html": "<p>Et skærmbillede indeholder afspillerens Chrome, browserens brugergrænseflade og ekstra komprimering. Den originale fil er et rent stillbillede med den pixelstørrelse, som YouTube har offentliggjort.</p>"
+    },
+    {
+      "heading": "Hvordan finder jeg det originale miniaturebillede?",
+      "html": "<p>Indsæt URL'en for visning, Shorts, live eller youtu.be i<a href=\"https://www.11tik.com/\">11tik</a>Værktøjet læser video-ID'et, kontrollerer offentlige filer og rangerer det højeste eksisterende.</p>"
+    },
+    {
+      "heading": "Hvordan fungerer YouTube-miniature-URL'er?",
+      "html": "<p>De bruger video-ID'et plus et størrelsesnavn såsom maxresdefault.jpg eller hqdefault.jpg på i.ytimg.com. Gætning af en størrelse, der aldrig blev offentliggjort, returnerer en fejl eller en pladsholder.</p>"
+    },
+    {
+      "heading": "Hvad er maxresdefault.jpg?",
+      "html": "<p>Det er det almindelige, højeste offentlige filnavn, normalt 1280×720, da YouTube oprettede det. Det er ikke en 4K-master, og det er ikke videofilen.</p>"
+    },
+    {
+      "heading": "Betyder original altid 1280&#2157;720?",
+      "html": "<p>Nej. Hvis maxres aldrig blev offentliggjort, er det originale offentlige billede hq, sd eller en anden overlevende fil. 11tik viser den reelle pixelstørrelse i stedet for at opfinde pixels.</p>"
+    },
+    {
+      "heading": "Kan jeg få det originale stillbillede fra Shorts, Live eller youtu.be?",
+      "html": "<p>Ja, når disse URL'er indeholder et offentligt video-ID og YouTube-hostede offentlige stillbilleder. Udtrækkeren behandler dem på samme måde som en standard visnings-URL.</p>"
+    },
+    {
+      "heading": "Hvordan kan jeg tjekke, om jeg virkelig har fået den originale fil?",
+      "html": "<p>Brug størrelses- og dimensionslisterne 11tik, når filen er blevet valideret. Hvis billedet ligner et skærmbillede fra afspilleren, har du ikke downloadet det hostede miniaturebillede.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udsugningsapparat</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Højeste kvalitet</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hvad er det originale YouTube-miniaturebillede?",
+      "answer": "Den offentlige billedfil, som YouTube hoster for video-ID'et, f.eks. maxresdefault, når den findes. Det er ikke et skærmbillede af afspilningssiden.",
+      "answerHtml": "Den offentlige billedfil, som YouTube hoster for video-ID'et, f.eks. maxresdefault, når den findes. Det er ikke et skærmbillede af afspilningssiden."
+    },
+    {
+      "question": "Betyder original altid 1280&#2157;720?",
+      "answer": "Nej. Maks. opløsning er normalt 1280×720 ved publicering. Hvis den fil mangler, er den oprindelige offentlige fil stadig den næste størrelse, som YouTube gemmer.",
+      "answerHtml": "Nej. Maksimal opløsning er normalt 1280×720 ved publicering. Hvis den fil mangler, er den oprindelige offentlige fil stadig den næste størrelse, som YouTube gemmer."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+}

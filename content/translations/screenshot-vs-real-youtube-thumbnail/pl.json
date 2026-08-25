@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "pl",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Zrzut ekranu a prawdziwa miniatura z YouTube: który plik powinieneś zapisać? | 11tik",
+  "description": "Zrzut ekranu odtwarzacza z telefonu to nie miniatura hostowana przez YouTube. Prawdziwa publiczność wciąż żyje na i.ytimg.com. Używaj go do blogów, Open Graph i badań – zrzuty ekranu dodają chromatyczny interfejs, kompresję i niewłaściwy współczynnik proporcji.",
+  "h1": "Zrzut ekranu czy prawdziwa miniatura YouTube: który plik lepiej zapisać?",
+  "ogTitle": "Zrzut ekranu czy prawdziwa miniatura YouTube: który plik lepiej zapisać?",
+  "ogDescription": "Zrzut ekranu odtwarzacza z telefonu to nie miniatura hostowana przez YouTube. Prawdziwa publiczność wciąż żyje na i.ytimg.com. Używaj go do blogów, Open Graph i badań – zrzuty ekranu dodają chromatyczny interfejs, kompresję i niewłaściwy współczynnik proporcji.",
+  "imageAlt": "Porównanie zrzutu ekranu gracza z prawdziwym, publicznym plikiem miniatury YouTube",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Porównanie zrzutu ekranu gracza z prawdziwym, publicznym plikiem miniatury YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jaka jest różnica między zrzutem ekranu a prawdziwą miniaturą?",
+      "html": "<p>Zrzut ekranu przedstawia ekran, w tym ustawienia odtwarzacza, napisy i skalowanie urządzenia. Prawdziwa miniatura to plik JPEG lub WebP opublikowany przez YouTube dla tego identyfikatora wideo. Tylko plik CDN ma stabilny adres URL i znany rozmiar pikseli.</p>"
+    },
+    {
+      "heading": "Dlaczego zrzuty ekranu nie działają w Google Grafika i podglądach w mediach społecznościowych?",
+      "html": "<p>Często mają niewłaściwy współczynnik proporcji, zawierają interfejs użytkownika i są kompresowane dwukrotnie. Open Graph i wiele systemów CMS wymaga formatu 16:9, który nadal mieści się w granicach 1280×720. To pasuje do wartości maxresdefault, jeśli istnieje — patrz<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">przewodnik po rozmiarach miniatur</a>.</p>"
+    },
+    {
+      "heading": "Jak mogę zapisać prawdziwą miniaturę?",
+      "html": "<ol>\n    <li>Skopiuj publiczny adres URL filmu, a nie zrzut ekranu.</li>\n    <li>Wklej to do<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Pobierz pierwszy wymieniony plik publiczny lub skopiuj adres URL obrazu.</li>\n  </ol>"
+    },
+    {
+      "heading": "Kiedy zrzut ekranu jest nadal przydatny?",
+      "html": "<p>Zrzut ekranu należy używać wyłącznie do udokumentowania błędu interfejsu użytkownika lub fragmentu filmu. Nie należy go używać jako oficjalnej miniatury, bohatera bloga ani obrazu do udostępnienia, jeśli nadal istnieje.</p>\n  <p><a href=\"https://www.11tik.com/\">Pobierz prawdziwą publiczną miniaturę →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jaka jest różnica między zrzutem ekranu a prawdziwą miniaturą?",
+      "answer": "Zrzut ekranu przedstawia ekran i Chrome odtwarzacza. Prawdziwa miniatura to plik JPEG lub WebP, który YouTube hostuje na i.ytimg.com dla tego identyfikatora wideo.",
+      "answerHtml": "Zrzut ekranu przedstawia ekran i Chrome odtwarzacza. Prawdziwa miniatura to plik JPEG lub WebP, który YouTube hostuje na i.ytimg.com dla tego identyfikatora wideo."
+    },
+    {
+      "question": "Dlaczego zrzuty ekranu nie działają w Google Grafika i podglądach w mediach społecznościowych?",
+      "answer": "Często mają niewłaściwy współczynnik proporcji, dodatkowy interfejs użytkownika i dodatkową kompresję. Pola CMS i Open Graph wymagają czystego, publicznego obrazu w formacie 16:9.",
+      "answerHtml": "Często mają niewłaściwy współczynnik proporcji, dodatkowy interfejs użytkownika i dodatkową kompresję. Pola CMS i Open Graph wymagają czystego, publicznego obrazu w formacie 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+}

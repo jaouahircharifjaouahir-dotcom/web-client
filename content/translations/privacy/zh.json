@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "zh",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "隐私政策 | 11tik",
+  "description": "本政策适用于 https://www.11tik.com/ 处的 YouTube 缩略图提取器以及加载同一提取器的语言主机。",
+  "h1": "隐私政策",
+  "ogTitle": "隐私政策",
+  "ogDescription": "本政策适用于 https://www.11tik.com/ 处的 YouTube 缩略图提取器以及加载同一提取器的语言主机。",
+  "imageAlt": "",
+  "faqHeading": "常问问题",
+  "images": [],
+  "sections": [
+    {
+      "heading": "浏览器中的处理",
+      "html": "<p>当您粘贴 YouTube 网址时，页面会读取视频 ID 并检查浏览器中公开的缩略图网址。这些粘贴的链接不会作为个人帐户存储在 11tik 应用服务器上。提取链接无需登录。</p>"
+    },
+    {
+      "heading": "可选的共享页面索引",
+      "html": "<p>成功提取视频后，浏览器可能只会向我们的 Cloudflare Worker 发送公开的视频 ID、标题、从公开元数据中提取的标签以及公开的缩略图 URL，以便视频能够显示在分享页面上，如果通过质量检查，还会显示在站点地图中。我们不会要求您上传图像文件。如果您的浏览器阻止了该请求，您可以在不使用图像文件的情况下使用提取器。</p>"
+    },
+    {
+      "heading": "地方历史",
+      "html": "<p>提取器可能会将最近使用的网址保存到浏览器的本地存储中，以便您再次打开。该副本会保留在您的设备上。您可以使用页面内的历史记录控件或在浏览器中清除此网站的数据来清除它。这不是云帐户。</p>"
+    },
+    {
+      "heading": "主机日志",
+      "html": "<p>网站、语言服务器和静态文件均由 11tik.com 使用的托管服务提供商（包括 Cloudflare 和 GitHub Pages）提供服务。根据各自的政策，这些托管服务提供商可以保留常规的网络日志，例如 IP 地址、浏览器类型和请求的页面。</p>"
+    },
+    {
+      "heading": "第三方",
+      "html": "<p>本网站会从 YouTube 的公共图片托管服务请求缩略图文件。本网站使用 Google Analytics 4（衡量 ID：G-FW7B8NDZZ5）来统计访问量和页面内操作，例如提取和下载。Google 可能会设置 Cookie 或类似标识符。粘贴的 YouTube 网址不会作为分析事件参数发送。字体或脚本也可能从用于显示页面的 CDN 加载。</p>\n  <p>联系表单由 FormSubmit 发送到客服人员的邮箱。FormSubmit 可以看到您提交的姓名、邮箱地址和留言。</p>"
+    },
+    {
+      "heading": "接触",
+      "html": "<p>有关此政策的问题：请发送电子邮件<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>或者使用<a href=\"https://www.11tik.com/p/contact.html\">接触</a>形式。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>·<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "sk",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Ako hromadne sťahovať miniatúry z YouTube (až 25 verejných URL adries) | 11tik",
+  "description": "Hromadne extrahujte verejné miniatúry z YouTube v prehliadači. Vložte jednu URL adresu na riadok, stiahnite si každý najlepší statický obrázok alebo skomprimujte súbor najvyššej kvality. Bez účtu a video súborov.",
+  "h1": "Ako hromadne sťahovať miniatúry z YouTube (až 25 verejných URL adries)",
+  "ogTitle": "Ako hromadne sťahovať miniatúry z YouTube (až 25 verejných URL adries)",
+  "ogDescription": "Hromadne extrahujte verejné miniatúry z YouTube v prehliadači. Vložte jednu URL adresu na riadok, stiahnite si každý najlepší statický obrázok alebo skomprimujte súbor najvyššej kvality. Bez účtu a video súborov.",
+  "imageAlt": "11tik hromadný extraktor miniatúr s niekoľkými URL adresami YouTube pripravenými na stiahnutie",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik hromadný extraktor miniatúr s niekoľkými URL adresami YouTube pripravenými na stiahnutie",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ako môžem hromadne sťahovať miniatúry z YouTube?",
+      "html": "<p>OTVORENÉ<a href=\"https://www.11tik.com/\">11tik</a>, zapnite hromadnú možnosť, vložte jednu verejnú URL adresu na riadok, kliknite na Extrahovať všetko a potom stiahnite každý najlepší statický súbor alebo zip súbor najvyššej kvality. Limit je 25 URL adries na spustenie, aby prehliadač zostal responzívny.</p>"
+    },
+    {
+      "heading": "Čo patrí do zoznamu?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be krátke odkazy</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>Súkromné, neuvedené videá bez verejných miniatúr alebo videá s vekovým obmedzením nevrátia statický obrázok. To sa očakáva. Pozrite si tiež<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatúry krátkych videí</a>.</p>"
+    },
+    {
+      "heading": "Ako spustiť hromadnú extrakciu",
+      "html": "<ol>\n    <li>Na domovskej stránke kliknite na Hromadne.</li>\n    <li>Vložte maximálne 25 verejných odkazov, jeden na riadok.</li>\n    <li>Kliknite na Extrahovať všetko a počkajte, kým sa pri každej karte zobrazí ukážka.</li>\n    <li>Stiahnite si miniatúru videa N pre každý najlepší záber alebo si stiahnite všetky videá v najvyššej kvalite ako zip súbor.</li>\n    <li>Voliteľné: Export CSV pre výskumné záznamy (ID videa, názov, URL adresa zdieľania, URL adresa obrázka).</li>\n  </ol>"
+    },
+    {
+      "heading": "Môžem to použiť na prieskum konkurencie?",
+      "html": "<p>Áno, na štúdium verejných obalov. Nepublikujte miniatúru iného tvorcu ako svoj vlastný obrázok. Autorské práva zostávajú u držiteľa práv. 11tik načíta iba súbory, ktoré YouTube už verejne hostuje.</p>\n  <p><a href=\"https://www.11tik.com/\">Otvoriť hromadný výpis na 11tik →</a></p>\n  <p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ako môžem hromadne sťahovať miniatúry z YouTube?",
+      "answer": "Použite hromadné nastavenie na 11tik, vložte jednu verejnú URL adresu na riadok, extrahujte a potom stiahnite statické obrázky alebo zip súbor v najvyššej verejnej kvalite. Maximálne 25 URL adries na spustenie.",
+      "answerHtml": "Použite hromadné nastavenie na 11tik, vložte jednu verejnú URL adresu na riadok, extrahujte a potom stiahnite statické obrázky alebo zip súbor v najvyššej verejnej kvalite. Maximálne 25 URL adries na spustenie."
+    },
+    {
+      "question": "Môžem to použiť na prieskum konkurencie?",
+      "answer": "Áno, pre štúdium verejných obalov. Nezverejňujte miniatúru iného tvorcu ako svoju vlastnú. Autorské práva zostávajú u držiteľa práv.",
+      "answerHtml": "Áno, pre štúdium verejných obalov. Nezverejňujte miniatúru iného tvorcu ako svoju vlastnú. Autorské práva zostávajú u držiteľa práv."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>.</p>"
+}

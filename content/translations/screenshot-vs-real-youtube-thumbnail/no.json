@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "no",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Skjermbilde kontra ekte YouTube-miniatyrbilde: hvilken fil bør du lagre? | 11tik",
+  "description": "Et skjermbilde av spilleren på telefonen er ikke miniatyrbildet til YouTube-vertene. Den virkelige offentligheten lever fortsatt på i.ytimg.com. Bruk den til blogger, Open Graph og forskning – skjermbilder legger til UI-krom, komprimering og feil sideforhold.",
+  "h1": "Skjermbilde kontra ekte YouTube-miniatyrbilde: hvilken fil bør du lagre?",
+  "ogTitle": "Skjermbilde kontra ekte YouTube-miniatyrbilde: hvilken fil bør du lagre?",
+  "ogDescription": "Et skjermbilde av spilleren på telefonen er ikke miniatyrbildet til YouTube-vertene. Den virkelige offentligheten lever fortsatt på i.ytimg.com. Bruk den til blogger, Open Graph og forskning – skjermbilder legger til UI-krom, komprimering og feil sideforhold.",
+  "imageAlt": "Sammenligning av et skjermbilde av en spiller kontra en ekte offentlig YouTube-miniatyrfil",
+  "faqHeading": "Vanlige spørsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Sammenligning av et skjermbilde av en spiller kontra en ekte offentlig YouTube-miniatyrfil",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hva er forskjellen på et skjermbilde og et ekte miniatyrbilde?",
+      "html": "<p>Et skjermbilde tar opp skjermen din, inkludert spillerens Chrome, teksting og enhetsskalering. Et ekte miniatyrbilde er JPEG- eller WebP-filen YouTube publiserte for den video-ID-en. Bare CDN-filen har en stabil URL og kjent pikselstørrelse.</p>"
+    },
+    {
+      "heading": "Hvorfor feiler skjermbilder i Google-bilder og forhåndsvisninger på sosiale medier?",
+      "html": "<p>De har ofte feil sideforhold, inkluderer brukergrensesnitt og komprimeres to ganger. Open Graph og mange CMS-felt ønsker et 16:9-stillbilde rundt 1280×720. Det samsvarer med maxresdefault når det finnes – se<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">størrelsesguide for miniatyrbilder</a>.</p>"
+    },
+    {
+      "heading": "Hvordan lagrer jeg det virkelige miniatyrbildet i stedet?",
+      "html": "<ol>\n    <li>Kopier den offentlige video-URL-en, ikke et skjermbilde.</li>\n    <li>Lim det inn i<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Last ned den første offentlige filen som er oppført, eller kopier URL-adressen til bildet.</li>\n  </ol>"
+    },
+    {
+      "heading": "Når er et skjermbilde fortsatt nyttig?",
+      "html": "<p>Bruk kun et skjermbilde for å dokumentere en feil i brukergrensesnittet eller et øyeblikk i videoen. Ikke bruk det som et offisielt miniatyrbilde, en blogghelt eller et delingsbilde hvis det fortsatt finnes et offentlig bilde.</p>\n  <p><a href=\"https://www.11tik.com/\">Få det virkelige offentlige miniatyrbildet →</a></p>\n  <p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hva er forskjellen på et skjermbilde og et ekte miniatyrbilde?",
+      "answer": "Et skjermbilde tar bilde av skjermen og spillerens Chrome. Et ekte miniatyrbilde er JPEG- eller WebP-filen YouTube er vert for på i.ytimg.com for den video-ID-en.",
+      "answerHtml": "Et skjermbilde tar bilde av skjermen og spillerens Chrome. Et ekte miniatyrbilde er JPEG- eller WebP-filen YouTube er vert for på i.ytimg.com for den video-ID-en."
+    },
+    {
+      "question": "Hvorfor feiler skjermbilder i Google-bilder og forhåndsvisninger på sosiale medier?",
+      "answer": "De har ofte feil sideforhold, ekstra brukergrensesnitt og ekstra komprimering. CMS- og Open Graph-felt forventer et rent offentlig stillbilde i 16:9-format.",
+      "answerHtml": "De har ofte feil sideforhold, ekstra brukergrensesnitt og ekstra komprimering. CMS- og Open Graph-felt forventer et rent offentlig stillbilde i 16:9-format."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "nl",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Hoe krijg je de beste kwaliteit YouTube-thumbnail? | 11tik",
+  "description": "De hoogste kwaliteit betekent het grootste openbare JPEG- of WebP-bestand dat YouTube daadwerkelijk retourneert, en niet een willekeurig gekozen 4K-bestandsnaam.",
+  "h1": "Hoe krijg je de beste kwaliteit YouTube-thumbnail?",
+  "ogTitle": "Hoe krijg je de beste kwaliteit YouTube-thumbnail?",
+  "ogDescription": "De hoogste kwaliteit betekent het grootste openbare JPEG- of WebP-bestand dat YouTube daadwerkelijk retourneert, en niet een willekeurig gekozen 4K-bestandsnaam.",
+  "imageAlt": "Hoogst beschikbare openbare YouTube-thumbnail geselecteerd in 11tik",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Hoogst beschikbare openbare YouTube-thumbnail geselecteerd in 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hoe krijg ik de beste thumbnail voor mijn YouTube-kanaal?",
+      "html": "<p>Plak een openbare URL in<a href=\"https://www.11tik.com/\">11tik</a>en download het eerstgenoemde formaat. De extractor rangschikt de overgebleven openbare bestanden; het vergroot een kleine stilstaande afbeelding niet tot een nep-HD-bestand.</p>"
+    },
+    {
+      "heading": "Wat is de maximale resolutie die het publiek kan accepteren?",
+      "html": "<p>Wanneer YouTube maxresdefault publiceert, is dat meestal 1280×720. Als dat bestand ontbreekt, is de hoogste kwaliteit de eerstvolgende geldige resolutie, zoals sd of hq.</p>"
+    },
+    {
+      "heading": "Is WebP belangrijk?",
+      "html": "<p>Sommige video's hebben ook WebP-varianten met dezelfde bestandsgrootte. 11tik kan deze weergeven als ze bestaan. Kies het bestand dat de tool heeft gevalideerd, niet een willekeurige URL.</p>"
+    },
+    {
+      "heading": "Waarom ziet 'HD' er soms onscherp uit?",
+      "html": "<p>De resolutie kan nog steeds 1280×720 zijn met compressie, of je kijkt mogelijk naar hqdefault. Controleer de pixelgrootte 11tik-rapporten voordat je ervan uitgaat dat de download is mislukt.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Maattabel</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hoe krijg ik de beste thumbnail voor mijn YouTube-kanaal?",
+      "answer": "Plak de openbare URL in 11tik en download het eerst vermelde formaat. Dat is het grootste openbare bestand dat YouTube heeft opgeslagen.",
+      "answerHtml": "Plak de openbare URL in 11tik en download het eerst vermelde formaat. Dat is het grootste openbare bestand dat YouTube heeft opgeslagen."
+    },
+    {
+      "question": "Is het bestand van de hoogste kwaliteit 4K?",
+      "answer": "Meestal niet. De maximale publieke resolutie is doorgaans 1280x720. 11tik schaalt niet op en creëert geen grotere master.",
+      "answerHtml": "Meestal niet. De maximale publieke resolutie is doorgaans 1280×720. 11tik schaalt niet op en creëert geen grotere master."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

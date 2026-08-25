@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "uk",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Контакт | 11tik",
+  "description": "Скористайтеся цією формою для запитань щодо інструменту вилучення мініатюр YouTube. Повідомлення надсилаються оператору 11tik електронною поштою. Не надсилайте відео- чи аудіофайли. Інструмент працює лише з загальнодоступними мініатюрами зображень.",
+  "h1": "Контакти",
+  "ogTitle": "Контакти",
+  "ogDescription": "Скористайтеся цією формою для запитань щодо інструменту вилучення мініатюр YouTube. Повідомлення надсилаються оператору 11tik електронною поштою. Не надсилайте відео- чи аудіофайли. Інструмент працює лише з загальнодоступними мініатюрами зображень.",
+  "imageAlt": "",
+  "faqHeading": "Найчастіші запитання",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Контакти",
+      "html": "<h1>Контакти</h1>\n  <p class=\"yte-updated\">Останнє оновлення: 22 серпня 2026 р.</p>\n  <p itemprop=\"description\">Скористайтеся цією формою для запитань щодо інструменту вилучення мініатюр YouTube. Повідомлення надсилаються оператору 11tik електронною поштою. Не надсилайте відео- чи аудіофайли. Інструмент працює лише з загальнодоступними мініатюрами зображень.</p>\n  <p>Пряма електронна пошта:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">джауахіршаріфджауахір@gmail.com</a></p>\n  <p>Щоб повідомити про конкретне відео, вкажіть публічну URL-адресу YouTube. 11tik не містить файлу мініатюр; зображення запитується з публічної CDN платформи.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Ім'я<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>Електронна пошта<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Повідомлення<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Надіслати повідомлення</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Вилучення мініатюр YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Про нас</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Політика конфіденційності</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Умови</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

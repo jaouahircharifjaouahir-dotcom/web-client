@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "zh",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "如何获取 YouTube 视频的原始缩略图 | 11tik",
+  "description": "获取 YouTube 官方提供的原始公开缩略图。这是 CDN 的静态图片，并非从视频中提取的帧。",
+  "h1": "如何获取 YouTube 原始缩略图",
+  "ogTitle": "如何获取 YouTube 原始缩略图",
+  "ogDescription": "获取 YouTube 官方提供的原始公开缩略图。这是 CDN 的静态图片，并非从视频中提取的帧。",
+  "imageAlt": "11tik 提取器中显示的原始公开 YouTube 缩略图文件",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 提取器中显示的原始公开 YouTube 缩略图文件",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "YouTube 原图缩略图是什么？",
+      "html": "<p>这是 YouTube 已经存储在其图片服务器上的预览图。它是用于搜索和推荐内容的图片文件，而不是您使用 Print Screen 键截取的画面。</p>"
+    },
+    {
+      "heading": "这和屏幕截图有什么区别？",
+      "html": "<p>截图包含了播放器窗口、浏览器界面以及额外的压缩内容。原始文件是 YouTube 发布时像素尺寸的干净静帧图像。</p>"
+    },
+    {
+      "heading": "如何找到原始缩略图？",
+      "html": "<p>将手表、短线、直播或 youtu.be URL 粘贴到<a href=\"https://www.11tik.com/\">11tik</a>该工具读取视频 ID，检查公开文件，并对存在的最佳视频进行排名。</p>"
+    },
+    {
+      "heading": "YouTube缩略图URL是如何运作的？",
+      "html": "<p>它们使用视频 ID 加上尺寸名称，例如 maxresdefault.jpg 或 hqdefault.jpg 到 i.ytimg.com。猜测从未发布过的尺寸会返回错误或占位符。</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg是什么？",
+      "html": "<p>这是常见的最高公开文件名，通常是 YouTube 创建时使用的最高分辨率 1280×720。它不是 4K 母版，也不是视频文件本身。</p>"
+    },
+    {
+      "heading": "原图总是指 1280#720 吗？",
+      "html": "<p>不。如果 maxres 从未发布过，那么原始的公开图像是 hq、sd 或其他现存文件。11tik 显示的是实际像素大小，而不是人为设定的像素值。</p>"
+    },
+    {
+      "heading": "我可以获取 Shorts、Live 或 youtu.be 中的原始剧照吗？",
+      "html": "<p>是的，当这些 URL 包含公开视频 ID 和 YouTube 托管的公开图片时，提取器会将它们视为标准的观看 URL。</p>"
+    },
+    {
+      "heading": "如何确认我确实获得了原始文件？",
+      "html": "<p>文件验证完成后，请使用 11tik 列表中列出的尺寸和规格。如果图像看起来像玩家截图，则说明您没有下载托管的缩略图。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品质</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "YouTube 原图缩略图是什么？",
+      "answer": "YouTube 为该视频 ID 托管的公开图像文件，例如 maxresdefault（如果存在）。它不是观看页面的屏幕截图。",
+      "answerHtml": "YouTube 为该视频 ID 托管的公开图像文件，例如 maxresdefault（如果存在）。它不是观看页面的屏幕截图。"
+    },
+    {
+      "question": "原图总是指 1280#720 吗？",
+      "answer": "不。最大分辨率通常是 1280×720。如果该文件丢失，则原始公开版本仍然是 YouTube 存储的次高分辨率版本。",
+      "answerHtml": "不。Maxres 通常发布时分辨率为 1280×720。如果该文件丢失，则原始公开版本仍然是 YouTube 存储的次高分辨率版本。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

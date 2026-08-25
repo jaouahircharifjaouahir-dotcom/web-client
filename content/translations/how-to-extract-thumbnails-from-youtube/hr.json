@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "hr",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Kako izdvojiti minijature iz URL-a YouTube kanala | 11tik",
+  "description": "Zalijepite URL javnog YouTube kanala u 11tik Bulk kako biste proširili nedavne javne prijenose, a zatim preuzmite svaku najbolju sliku. Ovo služi za istraživanje pakiranja, a ne za kloniranje prilagođene umjetnosti drugog kanala.",
+  "h1": "Kako izdvojiti minijature iz URL-a YouTube kanala",
+  "ogTitle": "Kako izdvojiti minijature iz URL-a YouTube kanala",
+  "ogDescription": "Zalijepite URL javnog YouTube kanala u 11tik Bulk kako biste proširili nedavne javne prijenose, a zatim preuzmite svaku najbolju sliku. Ovo služi za istraživanje pakiranja, a ne za kloniranje prilagođene umjetnosti drugog kanala.",
+  "imageAlt": "Izdvajanje minijatura iz URL-a YouTube kanala — najnoviji javni prijenosi na 11tik",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Izdvajanje minijatura iz URL-a YouTube kanala — najnoviji javni prijenosi na 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mogu li dobiti minijature s cijelog YouTube kanala?",
+      "html": "<p>Možete dobiti fotografije za najnovije<em>javnost</em>prijenosi koji otkrivaju ID videozapisa. 11tik ne prikuplja podatke sa svakog videozapisa koji je kanal ikada objavio i ne zaobilazi članstva. Na početnoj stranici uključite Skupno, zalijepite URL kanala kao što je<code>youtube.com/@handle</code>ili<code>/channel/UC…</code>i pustite alat da proširi javni popis u stilu RSS-a. Zatim izdvojite kao što biste izdvojili tipkani popis. Ograničenje ostaje 25 URL-ova po pokretanju kako bi preglednik ostao upotrebljiv.</p>\n  <p>Ovo se razlikuje od spremanja jedne poveznice za praćenje. Tijek jednog URL-a je u<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kako preuzeti minijaturu s YouTubea</a>Skupni rad redak po redak bez kanala je u<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">preuzimanje u seriji</a>.</p>"
+    },
+    {
+      "heading": "Koji URL-ovi kanala funkcioniraju?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>kada javna stranica otkrije ID kanala</li>\n    <li>Naslijeđe<code>/user/name</code>putevi koji se još uvijek rješavaju</li>\n  </ul>\n  <p>URL /playliste nije kanal. Umjesto toga zalijepite pojedinačne poveznice za gledanje popisa za reprodukciju. Nadređeni znak koji se nikada ne rješava kao UC ID ne vraća videozapise; otvorite kanal u normalnom pregledniku i kopirajte kanonski URL kanala iz adresne trake.</p>"
+    },
+    {
+      "heading": "Kako izdvojiti sličice kanala na 11tik",
+      "html": "<ol>\n    <li>Otvoriti<a href=\"https://www.11tik.com/\">11tik</a>i kliknite Skupno.</li>\n    <li>Zalijepite jedan javni URL kanala. Možete dodati više poveznica za gledanje u sljedećim retcima.</li>\n    <li>Započni izdvajanje. Pričekaj dok alat ne zamijeni liniju kanala nedavnim javnim URL-ovima za gledanje, a zatim izvlači fotografije.</li>\n    <li>Preuzmite svaku najbolju fotografiju ili preuzmite zip datoteku najviše kvalitete ili izvezite CSV (id, naslov, URL za dijeljenje, URL slike) za istraživački dnevnik.</li>\n  </ol>\n  <p>Dijeljenje poveznica nakon uspješne upotrebe izdvajanja<code>/thumb/VIDEO_ID</code>kada vrata kvalitete imaju naslov, oznake i aktivnu sličicu. Te stranice su za jedinstvenu fotografiju, a ne za drugu početnu stranicu.</p>"
+    },
+    {
+      "heading": "Što 11tik neće učiniti",
+      "html": "<ul>\n    <li>Preuzmite videozapise ili audiozapise. Samo fotografije.</li>\n    <li>Navedite nenavedene ili privatne prijenose.</li>\n    <li>Zajamčena maxresdefault vrijednost za svaki noviji videozapis. Stariji ili mali izvori zaustavljaju se na visokoj ili standardnoj rezoluciji.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maksimalna_zadana_vrijednost</a>.</li>\n    <li>Dodijelite prava za ponovnu upotrebu umjetničkog djela. Proučavanje mreže javne ambalaže je namjeravana istraživačka upotreba. Ponovno učitavanje fotografije konkurenta kao vaše prilagođene minijature predstavlja problem s autorskim pravima i pravilima.<a href=\"https://www.11tik.com/copyright\">Autorska prava i korištenje</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Kako ovo pomaže u istraživanju bez ulaznih stranica",
+      "html": "<p>Izvadak kanala je jedan posao: nedavne javne fotografije odjednom. Ne radi se o generiranoj stranici za svaki konkurentski brend. Ostajete na alatu, čuvate zip ili CSV datoteku i pišete vlastite bilješke. Ako objavljujete komentar, navedite kanale i povežite njihove stranice za gledanje. Pravila prijenosa minijatura na YouTubeu za<em>tvoj</em>kanal je u<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">prilagođene minijature videozapisa</a>.</p>"
+    },
+    {
+      "heading": "Rješavanje problema",
+      "html": "<p>Prazan popis: feed kanala nije vratio javne ID-ove (kanal je prekinut ili identifikator koji resolver nije mogao mapirati). Pokušajte s URL-om UC kanala iz YouTubeovog rasporeda za stolna računala.</p>\n  <p>Neke kartice nedostaju: ti prijenosi još nisu javno dostupni ili je vrata odbacila nepotpuni izvadak. Ponovno pokrenite jedan URL za praćenje. Privatnost zalijepljenih poveznica:<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>.</p>\n  <p>Alat za izdvajanje u odnosu na alat za dizajn: 11tik ne stvara naslovnicu albuma.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Ekstraktor vs. proizvođač</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Izdvoji fotografije javnog kanala na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mogu li dobiti minijature s cijelog YouTube kanala?",
+      "answer": "Da za nedavne javne prijenose. Zalijepite URL kanala u 11tik Bulk. Privatni videozapisi i videozapisi samo za članove nisu navedeni.",
+      "answerHtml": "Da za nedavne javne prijenose. Zalijepite URL kanala u 11tik Bulk. Privatni videozapisi i videozapisi samo za članove nisu navedeni."
+    },
+    {
+      "question": "Koji URL-ovi kanala funkcioniraju?",
+      "answer": "Javni /channel/UC… URL-ovi, mnogi @handle URL-ovi i neki naslijeđeni /user/ putovi. Popisi za reprodukciju nisu kanali.",
+      "answerHtml": "Javni /channel/UC… URL-ovi, mnogi @handle URL-ovi i neki naslijeđeni /user/ putovi. Popisi za reprodukciju nisu kanali."
+    },
+    {
+      "question": "Preuzima li ovo videozapise?",
+      "answer": "Ne. 11tik prikazuje samo javne fotografije koje YouTube već hostira.",
+      "answerHtml": "Ne. 11tik prikazuje samo javne fotografije koje YouTube već hostira."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

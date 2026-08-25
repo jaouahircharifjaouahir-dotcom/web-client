@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "de",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "So lädst du ein YouTube-Thumbnail in HD herunter | 11tik",
+  "description": "Speichern Sie ein öffentliches YouTube-Thumbnail: Fügen Sie watch, Shorts, youtu.be oder embed URLs in 11tik ein und laden Sie die größte vorhandene Datei herunter.",
+  "h1": "So laden Sie ein YouTube-Thumbnail in HD herunter",
+  "ogTitle": "So laden Sie ein YouTube-Thumbnail in HD herunter",
+  "ogDescription": "Speichern Sie ein öffentliches YouTube-Thumbnail: Fügen Sie watch, Shorts, youtu.be oder embed URLs in 11tik ein und laden Sie die größte vorhandene Datei herunter.",
+  "imageAlt": "Vierstufiger Workflow vom Kopieren einer YouTube-URL bis zum Herunterladen eines validierten öffentlichen Thumbnails (Standbild)",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Vierstufiger Workflow vom Kopieren einer YouTube-URL bis zum Herunterladen eines validierten öffentlichen Thumbnails (Standbild)",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Diagramm zur Fehlerbehebung, das zeigt, dass eine fehlende maxresdefault-Datei übersprungen wurde, damit die nächste tatsächliche Miniaturansichtsgröße heruntergeladen werden kann.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kurze Antwort",
+      "html": "<p>Kopieren Sie einen öffentlichen YouTube-Link und fügen Sie ihn ein in<a href=\"https://www.11tik.com/\">11tik</a>Warten Sie auf die Bestätigung der Vorschau und laden Sie dann die erste aufgelistete Datei herunter. Diese Datei ist das höchstauflösende öffentliche JPEG- oder WebP-Format, das YouTube bereits für die Video-ID bereitstellt – oft 1280×720, falls maxres oder hq720 verfügbar ist. Dadurch wird Speicherplatz gespart.<strong>Miniaturansicht</strong>, nicht das Video oder der Ton.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktischer Ablauf: öffentliche URL → extrahieren → Vorschau der tatsächlichen Größen → Herunterladen oder Kopieren der Bild-URL.</p>"
+    },
+    {
+      "heading": "Schnellste Methode mit 11tik",
+      "html": "<ol>\n    <li>Kopieren Sie eine öffentliche Watch-, Shorts-, Live-, Embed- oder youtu.be-URL (oder eine einfache 11-stellige Video-ID).</li>\n    <li>Offen<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>in Ihrem Browser.</li>\n    <li>Fügen Sie die URL ein. Die Extraktion beginnt, sobald die ID gültig ist.</li>\n    <li>Laden Sie das erste Ergebnis (das beste verfügbare) herunter oder wählen Sie eine andere verfügbare Größe.</li>\n  </ol>\n  <p>Optional: verwenden<strong>Bild-URL kopieren</strong>Falls Sie die Adresse eines CMS anstelle einer Datei benötigen, wird dieser Ablauf im Folgenden beschrieben.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Die</p>"
+    },
+    {
+      "heading": "Unterstützte YouTube-URL-Formate",
+      "html": "<p>11tik liest die Video-ID aus denselben Mustern, die auch der Website-Parser akzeptiert:</p>\n  <table>\n    <thead>\n      <tr><th>Format</th><th>Beispielmuster</th><th>Anmerkungen</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Betrachten</td><td><code>youtube.com/watch?v=ID</code></td><td>Zusätzliche Abfrageparameter werden ignoriert</td></tr>\n      <tr><td>Kurzlink</td><td><code>youtu.be/ID</code></td><td>Mobile Shares nutzen dies häufig.</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/ID</code></td><td>Dieselbe Öffentlichkeit beherbergt immer noch</td></tr>\n      <tr><td>Einbetten</td><td><code>youtube.com/embed/ID</code></td><td>Von der iframe-Quelle</td></tr>\n      <tr><td>Live</td><td><code>youtube.com/live/ID</code></td><td>Wenn ein öffentlicher Ausweis vorhanden ist</td></tr>\n      <tr><td>nocookie embed</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Wird wie eine Einbettung behandelt.</td></tr>\n      <tr><td>Bare ID</td><td><code>dQw4w9WgXcQ</code></td><td>Nur 11 Zeichen</td></tr>\n    </tbody>\n  </table>\n  <p>Kanal- oder Playlist-URLs ohne Video-ID liefern kein einzelnes Vorschaubild. Für mehrere Links gleichzeitig verwenden Sie die Funktion „Massenverarbeitung“ (bis zu 25 Links) – siehe<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">Stapel-Download</a>Kanalerweiterung:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">Auszug aus einer Kanal-URL</a>Die</p>"
+    },
+    {
+      "heading": "Direkte URL-Methode (ohne Extraktor-UI)",
+      "html": "<p>Wenn Sie die ID bereits kennen, können Sie einen Kandidaten direkt öffnen:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Wenn das Bild geladen ist, verwenden Sie den Befehl „save-image“ des Browsers. Wenn dies fehlschlägt, fahren Sie mit der vorherigen Methode fort.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, oder<code>hqdefault.jpg</code>Dieser manuelle Weg ist langsamer und fehleranfälliger als die validierte Liste von 11tik, funktioniert aber offline von jedem Browser aus, sobald man eine gültige Adresse hat.</p>"
+    },
+    {
+      "heading": "Qualität beim Herunterladen auswählen",
+      "html": "<p>Laden Sie die zuerst aufgeführte Größe herunter, es sei denn, Sie benötigen eine kleinere Vorschau. „HD“ bedeutet hier die größte öffentlich verfügbare Auflösung – üblicherweise 1280×720 – und nicht ein 4K-Master. Informationen zu Pixelanzahl und dem Verhalten bei fehlenden Größen finden Sie in der Dokumentation.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Größen- und Auflösungsleitfaden</a>Die</p>\n  <p>Wenn Sie sich nur für die oberste öffentliche Datei interessieren, siehe auch<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Miniaturansicht in höchster Qualität</a>Die</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Wenn keine geschätzte Größe verfügbar ist, wird diese übersprungen und die nächste tatsächliche öffentliche Datei beibehalten.</p>"
+    },
+    {
+      "heading": "Fehlerbehebung bei Downloads",
+      "html": "<table>\n    <thead>\n      <tr><th>Symptom</th><th>Wahrscheinliche Ursache</th><th>Was zu tun</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Keine Vorschau nach dem Einfügen</td><td>Ungültige URL, keine Video-ID oder privates/eingeschränktes Video</td><td>Füge einen öffentlichen Watch/Shorts/youtu.be-Link ein</td></tr>\n      <tr><td>Maxres fehlt</td><td>YouTube hat diese Datei nie veröffentlicht.</td><td>Laden Sie stattdessen die erste aufgeführte Größe herunter.</td></tr>\n      <tr><td>Graues Platzhalterbild von einer manuell erstellten URL</td><td>Vermuteter Dateiname</td><td>Verwenden Sie die validierte Liste von 11tik.</td></tr>\n      <tr><td>Telefon speichern peinlich</td><td>Die Benutzeroberfläche für Browser-Downloads unterscheidet sich</td><td>Sehen<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">Speicheranleitung für iPhone/Android</a></td></tr>\n      <tr><td>Sieht aus wie eine Benutzeroberflächenaufnahme.</td><td>Du hast einen Screenshot vom Spieler gemacht.</td><td>Speichern Sie trotzdem das CDN, nicht den Bildschirm —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Screenshot vs. Realität</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Was Sie herunterladen (und was nicht).",
+      "html": "<p>Sie speichern ein öffentliches Video, das bereits auf YouTube gehostet wird. Sie entsperren keine privaten Videos, Dateien, die nur Mitgliedern zugänglich sind, oder den MP4/WebM-Stream. 11tik ist ein Extraktor, kein Ersteller und kein Video-Downloader – Vergleich:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extraktor vs. Hersteller</a>Die</p>\n  <p>Das Urheberrecht verbleibt beim Uploader. Üblicherweise wird das Speichern für Forschungszwecke oder den persönlichen Gebrauch gestattet; die Veröffentlichung als eigenes Vorschaubild ohne entsprechende Rechte ist nicht zulässig. YouTube-Hilfe:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">benutzerdefinierte Video-Thumbnails</a>Website-Regeln:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>Die</p>"
+    },
+    {
+      "heading": "Methodenvergleich",
+      "html": "<table>\n    <thead>\n      <tr><th>Verfahren</th><th>Geschwindigkeit</th><th>Am besten geeignet für</th><th>Benötigt 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik herunterladen</td><td>Schnell</td><td>Bestätigt bestes Stillleben</td><td>Ja</td></tr>\n      <tr><td>11tik URL kopieren</td><td>Schnell</td><td>CMS / Einbettungen</td><td>Ja</td></tr>\n      <tr><td>Handgefertigte i.ytimg.com URL</td><td>Medium</td><td>Schnelltests, wenn Sie die ID kennen</td><td>NEIN</td></tr>\n      <tr><td>Spieler-Screenshot</td><td>Schnell, aber von geringer Qualität</td><td>Für Blogs/OG meiden</td><td>NEIN</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Nächster Schritt",
+      "html": "<p>Öffne die<a href=\"https://www.11tik.com/\">YouTube-Thumbnail-Extraktor</a>Fügen Sie einen öffentlichen Link ein und speichern Sie das erste bestätigte Standbild. Benötigen Sie nur den Link? Lesen Sie die...<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-Leitfaden</a>Sie möchten die richtige Größe wählen? Nutzen Sie die<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Lösungsleitfaden</a>Die</p>\n\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des Browser-Extraktors. Nur öffentliche Standbilder.<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutz</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>Die</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kann ich ein Vorschaubild von einem Kurzfilm herunterladen?",
+      "answer": "Ja, wenn der Kurzfilm öffentlich ist und Standbilder für diese ID existieren. Fügen Sie die URL /shorts/ in 11tik ein. Das Standbild kann im Querformat sein, obwohl die Wiedergabe im Hochformat erfolgt.",
+      "answerHtml": "<p>Ja, wenn der Short öffentlich ist und die ID noch existiert. Füge die<code>/shorts/</code>URL in 11tik. Das Standbild kann im Querformat sein, obwohl die Wiedergabe im Hochformat erfolgt.</p>"
+    },
+    {
+      "question": "Was passiert, wenn das beste Vorschaubild nicht geladen wird?",
+      "answer": "Laden Sie die nächste aufgeführte Größe herunter. Das Fehlen der Angabe „maxres“ ist ein häufiges Problem und kein Fehler des Tools.",
+      "answerHtml": "<p>Laden Sie die nächste aufgeführte Größe herunter. Das Fehlen der Angabe „maxres“ ist ein häufiges Problem und kein Fehler des Tools.</p>"
+    },
+    {
+      "question": "Kann ich das ursprüngliche öffentliche Vorschaubild herunterladen?",
+      "answer": "Ja – das ist die oberste validierte Datei. „Original“ bedeutet das öffentliche CDN-Standbild, nicht ein aus dem Videostream extrahiertes Einzelbild. Siehe Original-Thumbnail.",
+      "answerHtml": "<p>Ja – das ist die oberste validierte Datei. „Original“ bedeutet das öffentliche CDN-Standbild, nicht ein aus dem Videostream extrahiertes Einzelbild. Siehe<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">Originales öffentliches Vorschaubild</a>Die</p>"
+    },
+    {
+      "question": "Kann ich die Bild-URL kopieren, anstatt das Bild herunterzuladen?",
+      "answer": "Ja. Verwenden Sie „Bild-URL kopieren“ auf 11tik oder kopieren Sie eine verifizierte Adresse aus dem Browser, nachdem das Bild geladen wurde.",
+      "answerHtml": "<p>Ja. Verwenden Sie „Bild-URL kopieren“ auf 11tik oder kopieren Sie eine verifizierte Adresse aus dem Browser, nachdem das Bild geladen wurde.</p>"
+    },
+    {
+      "question": "Wird dadurch die YouTube-Videodatei heruntergeladen?",
+      "answer": "Nein. Nur das öffentliche Vorschaubild ist weiterhin sichtbar.",
+      "answerHtml": "<p>Nein. Nur das öffentliche Vorschaubild ist weiterhin sichtbar.</p>"
+    },
+    {
+      "question": "Wird jedes Video eine 1280×720-Datei anbieten?",
+      "answer": "Nein. Bewahren Sie die größte öffentliche Datei auf, die für diese ID gültig ist.",
+      "answerHtml": "<p>Nein. Bewahren Sie die größte öffentliche Datei auf, die für diese ID gültig ist.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des Browser-Extraktors. Nur öffentliche Standbilder.<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutz</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>Die</p>"
+}

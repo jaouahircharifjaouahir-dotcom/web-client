@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "fr",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Comment obtenir l'image miniature originale de YouTube | 11tik",
+  "description": "Récupérez la miniature YouTube publique originale, déjà hébergée par YouTube. Il s'agit d'une image fixe du CDN, et non d'une image extraite de la vidéo.",
+  "h1": "Comment obtenir l'image miniature originale de YouTube",
+  "ogTitle": "Comment obtenir l'image miniature originale de YouTube",
+  "ogDescription": "Récupérez la miniature YouTube publique originale, déjà hébergée par YouTube. Il s'agit d'une image fixe du CDN, et non d'une image extraite de la vidéo.",
+  "imageAlt": "Fichier miniature YouTube public original affiché dans l'extracteur 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Fichier miniature YouTube public original affiché dans l'extracteur 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Quelle est la miniature originale de YouTube ?",
+      "html": "<p>Il s'agit de l'image de prévisualisation que YouTube stocke déjà sur ses serveurs d'images. C'est le fichier utilisé pour la recherche et les suggestions de lecture, et non une capture d'écran.</p>"
+    },
+    {
+      "heading": "En quoi est-ce différent d'une capture d'écran ?",
+      "html": "<p>La capture d'écran inclut l'interface du lecteur, l'interface du navigateur et une compression supplémentaire. Le fichier original est une image fixe nette à la résolution en pixels publiée par YouTube.</p>"
+    },
+    {
+      "heading": "Comment trouver la miniature originale ?",
+      "html": "<p>Collez l'URL de la montre, des shorts, du live ou youtu.be dans<a href=\"https://www.11tik.com/\">11tik</a>L'outil lit l'identifiant de la vidéo, vérifie les fichiers publics et classe le meilleur fichier existant.</p>"
+    },
+    {
+      "heading": "Comment fonctionnent les URL des miniatures YouTube ?",
+      "html": "<p>Ils utilisent l'identifiant vidéo ainsi qu'un nom de taille tel que maxresdefault.jpg ou hqdefault.jpg sur i.ytimg.com. Toute tentative de deviner une taille jamais publiée renvoie une erreur ou un espace réservé.</p>"
+    },
+    {
+      "heading": "Qu'est-ce que maxresdefault.jpg ?",
+      "html": "<p>Il s'agit du nom de fichier public le plus récent, généralement en 1280×720 lors de sa création par YouTube. Ce n'est pas un master 4K et ce n'est pas le fichier vidéo.</p>"
+    },
+    {
+      "heading": "Est-ce que « original » signifie toujours 1280&215;720 ?",
+      "html": "<p>Non. Si maxres n'a jamais été publié, l'image publique originale est en haute qualité (hq), en basse définition (sd) ou dans un autre format existant. 11tik indique la taille réelle des pixels au lieu d'en inventer.</p>"
+    },
+    {
+      "heading": "Puis-je obtenir l'image fixe originale de Shorts, Live ou youtu.be ?",
+      "html": "<p>Oui, lorsque ces URL contiennent un identifiant vidéo public et des images fixes publiques hébergées sur YouTube. L'extracteur les traite comme une URL de visionnage standard.</p>"
+    },
+    {
+      "heading": "Comment puis-je vérifier que j'ai bien reçu le fichier original ?",
+      "html": "<p>Utilisez les indications de taille et de dimensions 11tik après la validation du fichier. Si l'image ressemble à une capture d'écran d'un lecteur, vous n'avez pas téléchargé la miniature hébergée.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Qualité supérieure</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quelle est la miniature originale de YouTube ?",
+      "answer": "Le fichier image public hébergé par YouTube pour l'identifiant de la vidéo, tel que maxresdefault lorsqu'il existe. Il ne s'agit pas d'une capture d'écran de la page de visionnage.",
+      "answerHtml": "Le fichier image public hébergé par YouTube pour l'identifiant de la vidéo, tel que maxresdefault lorsqu'il existe. Il ne s'agit pas d'une capture d'écran de la page de visionnage."
+    },
+    {
+      "question": "Est-ce que « original » signifie toujours 1280&215;720 ?",
+      "answer": "Non. La résolution maximale est généralement de 1280 x 720 pixels lors de la publication. Si ce fichier est manquant, la version publique originale conserve la résolution immédiatement inférieure stockée par YouTube.",
+      "answerHtml": "Non. La résolution maximale est généralement de 1280×720 lors de la publication. Si ce fichier est manquant, la version publique originale correspond à la résolution immédiatement supérieure disponible sur YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

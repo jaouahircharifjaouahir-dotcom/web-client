@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "he",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "איך להשיג כתובת URL של תמונה ממוזערת ביוטיוב ישירות מסרטון | 11tik",
+  "description": "בנה או העתק כתובת URL של תמונה ממוזערת ביוטיוב תקינה ממזהה הסרטון ב-i.ytimg.com. ודא שהגודל קיים לפני שאתה יוצר קישור חם אליו.",
+  "h1": "כיצד לקבל כתובת URL של תמונה ממוזערת ביוטיוב ישירות מסרטון",
+  "ogTitle": "כיצד לקבל כתובת URL של תמונה ממוזערת ביוטיוב ישירות מסרטון",
+  "ogDescription": "בנה או העתק כתובת URL של תמונה ממוזערת ביוטיוב תקינה ממזהה הסרטון ב-i.ytimg.com. ודא שהגודל קיים לפני שאתה יוצר קישור חם אליו.",
+  "imageAlt": "תרשים המציג כתובת URL לצפייה ביוטיוב שהומרה למזהה וידאו ולאחר מכן כתובת URL של תמונה ממוזערת",
+  "faqHeading": "שאלות נפוצות",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "תרשים המציג כתובת URL לצפייה ביוטיוב שהומרה למזהה וידאו ולאחר מכן כתובת URL של תמונה ממוזערת",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "אנטומיה מתויגת של כתובת URL של תמונה ממוזערת ביוטיוב המציגה מארח, נתיב, מזהה וידאו ושם קובץ",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "תשובה מהירה",
+      "html": "<p>כדי לקבל כתובת URL של תמונה ממוזערת ביוטיוב: מצא את מזהה הסרטון בן 11 התווים, לאחר מכן פתח כתובת תמונה ציבורית מאושרת כגון<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>כתובת ה-URL של דף הצפייה אינה התמונה. הדבק את קישור הסרטון לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>, המתן לגדלים שנטענים בפועל, ואז השתמש<strong>העתקת כתובת האתר של התמונה</strong>אז אתה שומר על קישור HTTPS פעיל במקום שם קובץ ניחוש שמציג 404s.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">זרימה בשימוש על ידי מחלצים: כתובת URL ציבורית לצפייה → מזהה וידאו → כתובת URL ציבורית לתמונה ממוזערת במארח התמונות של YouTube.</p>"
+    },
+    {
+      "heading": "מהי כתובת URL של תמונה ממוזערת ביוטיוב",
+      "html": "<p>כתובת URL של תמונה ממוזערת ביוטיוב מפנה לקובץ תמונה סטילס, לא לנגן הווידאו. היא נמצאת ב-CDN הציבורי של YouTube (בדרך כלל...)<code>i.ytimg.com</code>כאשר הכתובת פועלת, הדפדפן שלך מוריד קובץ JPEG או WebP. כאשר הוא לא עושה זאת, אתה מקבל קובץ חסר או placeholder אפור - לא \"HD\" שהומצא משום מקום.</p>\n  <p>זה חשוב לבלוגים, תצוגות מקדימות של Open Graph, מודלים של עיצוב ושדות תמונות נבחרות ב-CMS: מערכות אלו צריכות כתובת URL של תמונה, לא<code>youtube.com/watch?v=…</code>אם אתה זקוק לקובץ רק בדיסק, השתמש ב<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">מדריך להורדה</a>במקום דף זה המתמקד בכתובות URL.</p>"
+    },
+    {
+      "heading": "כיצד כתובת האתר קשורה למזהה הסרטון",
+      "html": "<p>יוטיוב מפריד תמונות סטילס ציבוריות לפי מזהה וידאו. דפוס JPEG הרגיל הוא:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>חלק מהסרטונים מפרסמים גם תאומי WebP תחת<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>הוא בדיוק 11 תווים מהקבוצה<code>A–Z a–z 0–9 _ -</code>שינוי המזהה יצביע על תמונות סטילס של סרטון אחר. שינוי שם הקובץ יבקש גרסה ציבורית שונה של אותו סרטון.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">אנטומיה של כתובת URL של תמונה ממוזערת ציבורית: מארח, נתיב, מזהה וידאו וגודל שם הקובץ.</p>"
+    },
+    {
+      "heading": "איך למצוא את מזהה הסרטון ביוטיוב",
+      "html": "<p>אתה צריך רק את המזהה. פרמטרים נוספים של שאילתה כגון מזהי פלייליסט או<code>pp=</code>אל תשנה את נתיב המארח של התמונות הממוזערות.</p>\n  <table>\n    <thead>\n      <tr><th>פורמט כתובת URL של יוטיוב</th><th>דוּגמָה</th><th>היכן נמצאת תעודת הזהות</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>לִצְפּוֹת</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>ערך השאילתה</td></tr>\n      <tr><td>קישור קצר</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>קטע נתיב ראשון</td></tr>\n      <tr><td>מִכְנָסַיִים קְצָרִים</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>נתיב אחרי<code>/shorts/</code></td></tr>\n      <tr><td>לְשַׁבֵּץ</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>נתיב אחרי<code>/embed/</code></td></tr>\n      <tr><td>לִחיוֹת</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>נתיב אחרי<code>/live/</code></td></tr>\n      <tr><td>הטמעת עוגיות</td><td><code>youtube-nocookie.com/embed/…</code></td><td>זהה להטמעה</td></tr>\n    </tbody>\n  </table>\n  <p>המנתח של 11tik מקבל את הצורות הללו (ומזהים בני 11 תווים בלבד). כתובת URL של ערוץ או רשימת השמעה ללא מזהה וידאו אינה מספיקה עבור כתובת URL של תמונה ממוזערת בודדת.</p>"
+    },
+    {
+      "heading": "שמות קבצים ציבוריים נפוצים של תמונות ממוזערות",
+      "html": "<p>שמות קבצים מתארים רמות גודל שיוטיוב עשויה לפרסם או לא לפרסם עבור העלאה נתונה. שמות אינם מבטיחים שהקובץ קיים.</p>\n  <table>\n    <thead>\n      <tr><th>שם הקובץ</th><th>פיקסלים אופייניים כאשר קיימים</th><th>הערות</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>הציבור הנפוץ ביותר עדיין כאשר פורסם</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 מחלקה</td><td>עוד רמה גבוהה שחלק מהסרטונים חושפים</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>זמין לעתים קרובות כאשר חסר רזולוציה מקסימלית</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>גודל בינוני נפוץ מאוד</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>תצוגה מקדימה קטנה</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>הסטנדרט הקטן ביותר עדיין</td></tr>\n    </tbody>\n  </table>\n  <p>לפרטים ברמת הפיקסלים ומתי להעדיף גודל אחד על פני אחר, עיינו ב<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך לגודל ורזולוציה של תמונות ממוזערות</a>למה<code>maxresdefault.jpg</code>לעתים קרובות חסר, ראה<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">מה זה maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "דוגמה מעשית עם מזהה וידאו ציבורי",
+      "html": "<p>קח את מזהה ההדגמה הציבורי<code>dQw4w9WgXcQ</code>כתובת URL לצפייה היא:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>כתובת אתר JPEG מקסימלית מועמדת היא:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>פתח את הכתובת הזו בכרטיסייה חדשה. אם התמונה נטענת, יש לך כתובת URL של תמונה ממוזערת שעובדת. אם זה נכשל, נסה את שם הקובץ הבא (לדוגמה<code>hqdefault.jpg</code>) או הדבק את קישור הצפייה ב-11tik כך שרק הקבצים ששרדו יופיעו. לעולם אל תניחו שלכל סרטון יש רזולוציה מקסימלית.</p>"
+    },
+    {
+      "heading": "שלוש דרכים לאחזור כתובת ה-URL של התמונה",
+      "html": "<h3>1. הכי מהיר: העתק מ-11tik</h3>\n  <ol>\n    <li>העתק כתובת URL של צפייה ציבורית, Shorts, שידור חי, הטמעה או youtu.be.</li>\n    <li>לִפְתוֹחַ<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>הדבק את כתובת האתר והמתן עד שיופיעו תצוגות מקדימות.</li>\n    <li>לִבחוֹר<strong>העתקת כתובת האתר של התמונה</strong>על הגודל שאתה צריך.</li>\n  </ol>\n  <p>11tik בודק תגובות בדפדפן שלך ומציג רק גדלים שמחזירים תמונה אמיתית. זה ההבדל בין קישור CMS שמיש לבין קישור שבור<code>maxresdefault</code>לְנַחֵשׁ.</p>\n\n  <h3>2. שיטת דפדפן</h3>\n  <p>אחרי שיהיה לך מועמד<code>i.ytimg.com</code>כתובת, פתח אותה בכרטיסייה חדשה. אם התמונה עדיין מוצגת, העתק את שורת הכתובת. אם אתה רואה שגיאה או אריח ריק/מציין מיקום, גודל זה מעולם לא פורסם עבור מזהה זה - אל תיצור קישור חם אליו.</p>\n\n  <h3>3. בנה את כתובת האתר באופן ידני</h3>\n  <p>ניתן לשרשר host +<code>/vi/</code>+ מזהה + שם קובץ בעצמך. כתובות URL שנבנו ידנית בסדר לבדיקה, אך לא בטוחות להדביק אותן ב-HTML של הייצור עד שתאמתו את התגובה. הזמינות משתנה בהתאם לגיל ההעלאה, גרפיקת המקור ומצב העיבוד ב-YouTube Studio.</p>"
+    },
+    {
+      "heading": "בחירת כתובת האתר הזמינה הטובה ביותר",
+      "html": "<p>\"הכי טוב\" פירושו הקובץ הציבורי הגדול ביותר שקיים בפועל, לא שם הקובץ הארוך ביותר שניתן להקליד. עדיף קישור מאומת של maxres או hq720 כאשר קיים. אם אלה נכשלים, יש להוריד ל-sd, hq, mq או default. שדרוג תמונה בגודל 480×360 ל-1280×720 בעורך אינו יוצר כתובת URL אמיתית של maxres.</p>\n  <p>יוצרים שמעלים גרפיקה מותאמת אישית צריכים עדיין לאשר את הגרסאים הציבוריים החיים לאחר מכן - עיבוד הגרפיקה בסטודיו יכול להתעכב. קשור:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">תמונות ממוזערות של YouTube Studio בשנת 2026</a>.</p>"
+    },
+    {
+      "heading": "שימוש בכתובת האתר באתר אחר",
+      "html": "<p>אתה יכול להדביק קובץ עבודה<code>i.ytimg.com</code>כתובת URL לשדות CMS רבים, אך קישורים חמים טומנים בחובם סיכונים: YouTube יכול לשנות נתיבי CDN, וחלק מהרשתות חוסמות מארחים של צד שלישי. לקבלת תמונה מוצגת עמידה בבלוג או תגית Open Graph, הורידו את הסטיל שאושר ואחסנו עותק בדומיין שלכם. מדריך:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">תמונה ממוזערת של יוטיוב כתמונה בבלוג / תמונה ב-Open Graph</a>.</p>\n  <p>זכויות היוצרים נשארות אצל מעלה הסרטון. כתובת URL ציבורית אינה רישיון לפרסם מחדש את היצירה כעטיפה משלך. עיין בעזרה של YouTube בנושא<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">תמונות ממוזערות של סרטונים מותאמות אישית</a>ו-11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    },
+    {
+      "heading": "פתרון בעיות של כתובות URL ממוזערות שבורות",
+      "html": "<ul>\n    <li><strong>404 או מציין מיקום:</strong>גודל זה מעולם לא פורסם. נסה שם קובץ אחר או השתמש ברשימה המאומתת של 11tik.</li>\n    <li><strong>סרטון שגוי:</strong>מזהה שהוקלד בצורה שגויה. העתק מחדש מכתובת האתר של הצפייה.</li>\n    <li><strong>פרטי / מוגבל גיל / נמחק:</strong>אין עדיין קישור ציבורי.</li>\n    <li><strong>תוכן מעורב של HTTP:</strong>תמיד להשתמש<code>https://</code>כתובות URL של תמונות באתרי HTTPS.</li>\n    <li><strong>מכנסיים קצרים נראים כמו תיבות אותיות:</strong>סרטונים קצרים רבים עדיין מאחסנים קבצים ציבוריים במצב אופקי. כתובת ה-URL היא עדיין הקבצים הציבוריים הרשמיים.</li>\n  </ul>"
+    },
+    {
+      "heading": "השלב הבא",
+      "html": "<p>הדבק כתובת URL ציבורית של YouTube לתוך<a href=\"https://www.11tik.com/\">מחלץ תמונות ממוזערות של יוטיוב</a>, העתק את קישור התמונה המאומת, או<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">הורד את הסטילס</a>אם אתה זקוק לקובץ מקומי. לאפשרויות רזולוציה, פתח את<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך גודל ואיכות</a>.</p>\n\n  <p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של כלי החילוץ בדפדפן. תמונות סטילס ציבוריות בלבד - אין להוריד וידאו או אודיו.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "האם ניתן להעתיק את כתובת ה-URL הישירה של התמונה הממוזערת מבלי להוריד את הקובץ?",
+      "answer": "כן. ב-11tik, השתמש באפשרות \"העתק כתובת URL של תמונה\". פעולה זו מעתיקה את כתובת התמונה ב-HTTPS עבור גודל שכבר אומת בדפדפן שלך.",
+      "answerHtml": "<p>כן. ב-11tik, השתמש באפשרות \"העתק כתובת URL של תמונה\". פעולה זו מעתיקה את כתובת התמונה ב-HTTPS עבור גודל שכבר אומת בדפדפן שלך.</p>"
+    },
+    {
+      "question": "האם אני יכול לקבל כתובת URL של תמונה ממוזערת מסרטון קצר ביוטיוב?",
+      "answer": "כן, כאשר הסרטון הקצר ציבורי ו-YouTube פרסם תמונות סטילס עבור מזהה זה. הדבק קישור /shorts/ באותו אופן שבו אתה מדביק כתובת URL לצפייה. ראה גם תמונות ממוזערות של סרטונים קצרים.",
+      "answerHtml": "<p>כן, כאשר הסרטון הקצר ציבורי ו-YouTube פרסם תמונות סטילס עבור מזהה זה. הדבק<code>/shorts/</code>קישור באותו אופן שבו מדביקים כתובת URL לצפייה. ראה גם<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">תמונות ממוזערות של סרטונים קצרים</a>.</p>"
+    },
+    {
+      "question": "מדוע כתובת URL אחת של תמונה ממוזערת עובדת בעוד שאחרת מחזירה שגיאה?",
+      "answer": "שמות קבצים הם נגזרות ציבוריות אופציונליות. hqdefault.jpg עשוי להתקיים כאשר maxresdefault.jpg אינו קיים. כתובת URL בגודל בינוני תקינה אינה מרמזת על כתובת URL מקסימלית תקינה.",
+      "answerHtml": "<p>שמות קבצים הם נגזרות ציבוריות אופציונליות.<code>hqdefault.jpg</code>עשוי להתקיים כאשר<code>maxresdefault.jpg</code>לא. כתובת URL בגודל בינוני תקינה אינה מרמזת על כתובת URL מקסימלית תקינה.</p>"
+    },
+    {
+      "question": "האם אני יכול להשתמש בכתובת ה-URL הישירה של התמונה באתר שלי?",
+      "answer": "טכנית כן אם הקובץ קיים, אבל אירוח עותק משלך אמין יותר עבור תמונות נבחרות ותצוגות מקדימות ברשתות חברתיות. אל תפרסם מחדש אמנות של מישהו אחר כעטיפה לערוץ שלך ללא זכויות.",
+      "answerHtml": "<p>טכנית כן אם הקובץ קיים, אבל אירוח עותק משלך אמין יותר עבור תמונות נבחרות ותצוגות מקדימות ברשתות חברתיות. אל תפרסם מחדש אמנות של מישהו אחר כעטיפה לערוץ שלך ללא זכויות.</p>"
+    },
+    {
+      "question": "האם כתובת ה-URL של הצפייה היא אי פעם כתובת ה-URL של התמונות הממוזערות?",
+      "answer": "לא. כתובת ה-URL לצפייה מזהה את הסרטון. כתובת ה-URL של התמונה הממוזערת מזהה קובץ תמונה ב-CDN של התמונה.",
+      "answerHtml": "<p>לא. כתובת ה-URL לצפייה מזהה את הסרטון. כתובת ה-URL של התמונה הממוזערת מזהה קובץ תמונה ב-CDN של התמונה.</p>"
+    },
+    {
+      "question": "האם 11tik ממציא כתובת URL ברזולוציה גבוהה יותר?",
+      "answer": "לא. הוא מציג רק קבצים ציבוריים שמגיבים כתמונות. חסרות גובה-רוחב פירושן שאין להעתיק את כתובת ה-URL.",
+      "answerHtml": "<p>לא. הוא מציג רק קבצים ציבוריים שמגיבים כתמונות. חסרות גובה-רוחב פירושן שאין להעתיק את כתובת ה-URL.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של כלי החילוץ בדפדפן. תמונות סטילס ציבוריות בלבד - אין להוריד וידאו או אודיו.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+}

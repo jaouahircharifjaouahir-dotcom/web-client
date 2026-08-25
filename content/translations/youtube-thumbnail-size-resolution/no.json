@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "no",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Størrelse og oppløsning på YouTube-miniatyrbilder: Komplett guide | 11tik",
+  "description": "Sammenlign størrelsene på YouTube-miniatyrbilder fra 120×90 til 1280×720. Maksres og hq720 er valgfrie – bruk den største offentlige filen som lastes inn.",
+  "h1": "Størrelse og oppløsning på YouTube-miniatyrbilder: Komplett guide",
+  "ogTitle": "Størrelse og oppløsning på YouTube-miniatyrbilder: Komplett guide",
+  "ogDescription": "Sammenlign størrelsene på YouTube-miniatyrbilder fra 120×90 til 1280×720. Maksres og hq720 er valgfrie – bruk den største offentlige filen som lastes inn.",
+  "imageAlt": "Sammenligningstabell over størrelser på offentlige YouTube-miniatyrbilder fra maxresdefault 1280 x 720 ned til standard 120 x 90",
+  "faqHeading": "Vanlige spørsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Sammenligningstabell over størrelser på offentlige YouTube-miniatyrbilder fra maxresdefault 1280 x 720 ned til standard 120 x 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Side-ved-side-sammenligning som viser en video med maxresdefault tilgjengelig kontra en video der bare en mindre hqdefault-fil finnes",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Raskt svar",
+      "html": "<p>For en tilpasset opplasting fokuserer YouTubes hjelp fortsatt på en<strong>16:9</strong>bilde – vanligvis<strong>1280×720</strong>For filer du kan laste ned fra en eksisterende video, varierer offentlige CDN-derivater. Når de er tilgjengelige,<code>maxresdefault</code>/<code>hq720</code>er vanligvis 1280×720. Mange videoer stopper ved<code>sddefault</code>(640×480) eller<code>hqdefault</code>(480×360). Et høyere filnavn oppfinner aldri piksler. Lim inn URL-adressen for visning i<a href=\"https://www.11tik.com/\">11tik</a>å bare liste opp størrelser som returnerer et ekte bilde.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Relative offentlige størrelser. Ikke alle videoer publiserer alle trinnene på denne rangstigen.</p>"
+    },
+    {
+      "heading": "Anbefalte dimensjoner for innholdsskapere",
+      "html": "<p>Hvis du designer et tilpasset miniatyrbilde i Studio, følg gjeldende YouTube-hjelp: sikt mot en<strong>16:9</strong>fortsatt. Den mye brukte arbeidsstørrelsen er<strong>1280×720</strong>piksler. Som samsvarer med spillerens widescreen-ramme og er den samme pikselklassen som en publisert<code>maxresdefault</code>når YouTube oppretter en.</p>\n  <p>Offisiell referanse:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Last opp egendefinerte videominiatyrbilder</a>Etter at Studio er ferdig med behandlingen, bekreft de aktive offentlige filene med 11tik i stedet for å anta at alle avledninger dukket opp umiddelbart. Studio-fokuserte notater:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatyrbilder i 2026</a>.</p>"
+    },
+    {
+      "heading": "Offentlige CDN-størrelser som seere faktisk kan hente",
+      "html": "<p>Nedlastere og blogger henter ikke Photoshop-masteren din. De henter offentlige derivater fra YouTube-verter for video-ID-en. 11tiks uttrekksprogram sjekker disse filnavnene (JPEG og, når det finnes, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Variant</th><th>Typisk oppløsning</th><th>Nivå</th><th>Tilgjengelighet</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Beste</td><td>Bare hvis YouTube publiserte WebP-maksverdier</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Beste</td><td>Vanlig på nyere/opplastinger av høy kvalitet; mangler ofte på eldre</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720-klasse</td><td>Beste</td><td>Finnes på noen videoer som en alternativ høy fil</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Høy</td><td>Ofte tilgjengelig når maksres er fraværende</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Standard</td><td>Svært vanlig</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Forhåndsvisning</td><td>Små forhåndsvisninger / lister</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Forhåndsvisning</td><td>Minste standard fortsatt</td></tr>\n    </tbody>\n  </table>\n  <p>Disse forventede breddene og høydene samsvarer med kvalitetsforhåndsinnstillingene for 11tik. Reelle svar kan fortsatt avvike hvis YouTube bruker en plassholder eller utelater en fil helt – valider alltid.</p>"
+    },
+    {
+      "heading": "Hvorfor 16:9 er viktig selv når filene er forskjellige",
+      "html": "<p>Watch-avspilleren er i bredformat. Tilpasset grafikk designet i 16:9 forblir lesbar i søk, foreslåtte hyller og innebygde filer. Noen offentlige filer (spesielt<code>hqdefault</code>/<code>sddefault</code>) er ikke strenge 16:9-bokser; de er eldre CDN-størrelser. Foretrekk et ekte 1280×720 offentlig stillbilde når du trenger et rent 16:9-ressurs for Open Graph eller en bloggoverskrift.</p>\n  <p>Korte videoer spilles vertikalt, men den lagrede offentlige delen er fortsatt ofte liggende. Det er vertsadferd, ikke en mislykket nedlasting. Detaljer:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Last ned miniatyrbilder av shorts</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs. hq720 vs. «HD»",
+      "html": "<p><code>maxresdefault</code>er det kjente HD-filnavnet på<code>i.ytimg.com</code>Når filen finnes, er den vanligvis 1280×720 – ikke 4K.<code>hq720</code>er et annet navn på høyt nivå som noen videoer eksponerer i samme oppløsningsklasse. Ingen av navnene garanterer filen. Verktøy som skriver ut en maks oppløsnings-URL uten å sjekke produserer ødelagte bilder.</p>\n  <p>Dypere filnavnnotater:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">hva maxresdefault.jpg er</a>og<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">offentlige miniatyrbilder av høyeste kvalitet</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Samme forespørselsmønster, forskjellige resultater: et høyere filnavn oppfinner ikke piksler når filen mangler.</p>"
+    },
+    {
+      "heading": "Hvorfor én video har flere størrelser enn en annen",
+      "html": "<ul>\n    <li>Eldre opplastinger har kanskje aldri mottatt en maksres-derivat.</li>\n    <li>Kildebildet var mindre enn 1280×720.</li>\n    <li>Tilpassede miniatyrbilder behandles fortsatt i Studio.</li>\n    <li>Private videoer, videoer kun for medlemmer eller videoer med aldersbegrensning kan ikke eksponere offentlige stillbilder.</li>\n    <li>WebP-varianter vises bare når YouTube har publisert dem for den ID-en.</li>\n  </ul>\n  <p>Tilgjengeligheten er per video. Bruk aldri en konkurrents fungerende maks-URL som bevis på at din finnes.</p>"
+    },
+    {
+      "heading": "Hvordan 11tik velger den «beste» størrelsen",
+      "html": "<p>11tik undersøker offentlige kandidater i en fast kvalitetsrekkefølge (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). Den beholder filer som validerer som bilder og rangerer den høyeste overlevende først. Den oppskalerer ikke. Hvis maxres mangler, kan det første kortet være hq720 eller sd – det er det ærlige maksimumet for den ID-en.</p>\n  <p>For å kopiere adressen til en valgt størrelse, bruk<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Veiledning for miniatyr-URL-er</a>For å lagre filen, bruk<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">nedlastingsguide</a>.</p>"
+    },
+    {
+      "heading": "Hvilken størrelse bør du bruke?",
+      "html": "<table>\n    <thead>\n      <tr><th>Brukstilfelle</th><th>Foretrekk</th><th>Hvorfor</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Bloggfremhevet bilde / Open Graph</td><td>Største validerte ~1280×720</td><td>Samsvarer med vanlige sosiale avlinger; host din egen kopi</td></tr>\n      <tr><td>Designmockup / miniatyrundersøkelse</td><td>Beste tilgjengelige offentlige fortsatt</td><td>Ekte emballasje, ikke et skjermbilde av spilleren</td></tr>\n      <tr><td>Hurtig forhåndsvisning av chat</td><td>hq eller mq</td><td>Mindre filer lastes inn raskere</td></tr>\n      <tr><td>Tilpasset opplasting i Studio</td><td>Din original i 16:9-format, 1280 × 720 (eller høyere)</td><td>Du skaper kunst; CDN-derivater kommer senere</td></tr>\n    </tbody>\n  </table>\n  <p>Ikke strekk hqdefault til 1280×720 og kall det maxres. For tips om CMS-hosting:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">fremhevet bilde / Open Graph-arbeidsflyt</a>Skjermbilder av spilleren er en annen (verre) ressurs:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skjermbilde kontra ekte miniatyrbilde</a>.</p>"
+    },
+    {
+      "heading": "Neste steg",
+      "html": "<p>Sjekk en livevideo på<a href=\"https://www.11tik.com/\">11tik ekstraktor</a>, så enten<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">kopier bilde-URL-en</a>eller<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">last ned det beste som fortsatt er tilgjengelig</a>.</p>\n\n  <p class=\"yte-bio\">Skrevet av 11tik. Kun offentlige CDN-størrelser; ingen oppskalering og ingen videonedlasting.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Er maxresdefault alltid tilgjengelig?",
+      "answer": "Nei. Mange offentlige videoer publiserer aldri den filen. En 404 på maks oppløsning er normalt.",
+      "answerHtml": "<p>Nei. Mange offentlige videoer publiserer aldri den filen. En 404 på maks oppløsning er normalt.</p>"
+    },
+    {
+      "question": "Er hq720 bedre enn andre miniatyrvarianter?",
+      "answer": "Når det finnes, er hq720 på samme høye nivå som maxres (omtrent 1280×720). Det er ikke automatisk «bedre» enn en validert maxres-fil, og det er ikke garantert.",
+      "answerHtml": "<p>Når det finnes, er hq720 på samme høye nivå som maxres (omtrent 1280×720). Det er ikke automatisk «bedre» enn en validert maxres-fil, og det er ikke garantert.</p>"
+    },
+    {
+      "question": "Hvilken størrelse er best for en nettside?",
+      "answer": "Bruk det største validerte offentlige stillbildet på ~16:9 (ofte 1280×720), og lag deretter en kopi på nettstedet ditt for stabile Open Graph- og utvalgte bildetagger.",
+      "answerHtml": "<p>Bruk det største validerte offentlige stillbildet på ~16:9 (ofte 1280×720), og lag deretter en kopi på nettstedet ditt for stabile Open Graph- og utvalgte bildetagger.</p>"
+    },
+    {
+      "question": "Hvorfor klarer ikke et miniatyrbilde med høy oppløsning å lastes inn noen ganger?",
+      "answer": "Filnavnet ble gjettet. YouTube publiserte ikke den avledede filen for video-ID-en. Last inn en mindre eksisterende størrelse i stedet.",
+      "answerHtml": "<p>Filnavnet ble gjettet. YouTube publiserte ikke den avledede filen for video-ID-en. Last inn en mindre eksisterende størrelse i stedet.</p>"
+    },
+    {
+      "question": "Betyr «HD-miniatyrbilde» 4K?",
+      "answer": "Nei. Offentlig maksoppløsning er vanligvis 1280×720. 11tik vil ikke finne opp et 4K-stillbilde.",
+      "answerHtml": "<p>Nei. Offentlig maksoppløsning er vanligvis 1280×720. 11tik vil ikke finne opp et 4K-stillbilde.</p>"
+    },
+    {
+      "question": "Er WebP-miniatyrbilder av høyere kvalitet enn JPEG?",
+      "answer": "WebP er en annen beholder for samme størrelsesnivå når den publiseres. Foretrekk filen 11tik validert; ikke anta at WebP alltid eksisterer.",
+      "answerHtml": "<p>WebP er en annen beholder for samme størrelsesnivå når den publiseres. Foretrekk filen 11tik validert; ikke anta at WebP alltid eksisterer.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik. Kun offentlige CDN-størrelser; ingen oppskalering og ingen videonedlasting.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+}

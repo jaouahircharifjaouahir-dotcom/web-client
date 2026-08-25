@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "no",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Personvernerklæring | 11tik",
+  "description": "Denne policyen gjelder for YouTube Thumbnail Extractor på https://www.11tik.com/ og språkvertene som laster inn det samme ekstraktorprogrammet.",
+  "h1": "Personvernerklæring",
+  "ogTitle": "Personvernerklæring",
+  "ogDescription": "Denne policyen gjelder for YouTube Thumbnail Extractor på https://www.11tik.com/ og språkvertene som laster inn det samme ekstraktorprogrammet.",
+  "imageAlt": "",
+  "faqHeading": "Vanlige spørsmål",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Behandling i nettleseren",
+      "html": "<p>Når du limer inn en YouTube-URL, leser siden video-ID-en og sjekker URL-er for offentlige miniatyrbilder i nettleseren din. Disse innlimte lenkene lagres ikke som en personlig konto på en 11tik-applikasjonsserver. Uttrekking krever ikke pålogging.</p>"
+    },
+    {
+      "heading": "Valgfri indeks for delte sider",
+      "html": "<p>Etter en vellykket uttrekking kan nettleseren bare sende en offentlig video-ID, tittel, tagger hentet fra offentlige metadata og en URL for et offentlig miniatyrbilde til Cloudflare Worker, slik at videoen kan vises på en delingsside og, hvis den består en kvalitetskontroll, i nettstedskartet. Vi ber deg ikke om å laste opp bildefilen. Du kan bruke uttrekksprogrammet uten den indeksen hvis forespørselen er blokkert av nettleseren din.</p>"
+    },
+    {
+      "heading": "Lokal historie",
+      "html": "<p>Uttrekkeren kan lagre nylige nettadresser i nettleserens lokale lagring, slik at du kan åpne dem på nytt. Den kopien forblir på enheten din. Fjern den med historikkkontrollen på siden, eller ved å slette nettstedets data i nettleseren. Det er ikke en skykonto.</p>"
+    },
+    {
+      "heading": "Hostinglogger",
+      "html": "<p>Nettstedet, språkvertene og statiske filer betjenes av hostingleverandørene som brukes for 11tik.com (inkludert Cloudflare og GitHub Pages). Disse vertene kan oppbevare vanlige nettlogger som IP-adresse, nettlesertype og hvilken side som forespurtes, i henhold til sine egne retningslinjer.</p>"
+    },
+    {
+      "heading": "Tredjeparter",
+      "html": "<p>Miniatyrbilder blir forespurt fra YouTubes offentlige bildeverter. Nettstedet bruker Google Analytics 4 (måle-ID G-FW7B8NDZZ5) for å telle besøk og handlinger på siden, som uttrekk og nedlasting. Google kan angi informasjonskapsler eller lignende identifikatorer. Innlimte YouTube-nettadresser sendes ikke som analysehendelsesparametere. Skrifter eller skript kan også lastes inn fra CDN-er som brukes til å vise siden.</p>\n  <p>Kontaktskjemaet leveres av FormSubmit til operatørens e-postadresse. FormSubmit kan se navnet, e-postadressen og meldingen du sender inn.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Spørsmål om denne policyen: e-post<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>eller bruk<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>skjema.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-miniatyruttrekker</a>·<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

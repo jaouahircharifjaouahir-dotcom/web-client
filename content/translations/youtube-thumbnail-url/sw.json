@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "sw",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Jinsi ya Kupata URL ya Kijipicha cha YouTube Moja kwa Moja Kutoka kwa Video | 11tik",
+  "description": "Jenga au nakili URL ya kijipicha cha YouTube kinachofanya kazi kutoka kwa kitambulisho cha video kwenye i.ytimg.com. Thibitisha ukubwa upo kabla ya kuuunganisha.",
+  "h1": "Jinsi ya Kupata URL ya Kijipicha cha YouTube Moja kwa Moja Kutoka kwa Video",
+  "ogTitle": "Jinsi ya Kupata URL ya Kijipicha cha YouTube Moja kwa Moja Kutoka kwa Video",
+  "ogDescription": "Jenga au nakili URL ya kijipicha cha YouTube kinachofanya kazi kutoka kwa kitambulisho cha video kwenye i.ytimg.com. Thibitisha ukubwa upo kabla ya kuuunganisha.",
+  "imageAlt": "Mchoro unaoonyesha URL ya saa ya YouTube iliyobadilishwa kuwa kitambulisho cha video na kisha URL ya picha ndogo",
+  "faqHeading": "Maswali Yanayoulizwa Mara kwa Mara",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Mchoro unaoonyesha URL ya saa ya YouTube iliyobadilishwa kuwa kitambulisho cha video na kisha URL ya picha ndogo",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Anatomia yenye lebo ya URL ya kijipicha cha YouTube inayoonyesha mwenyeji, njia, kitambulisho cha video, na jina la faili",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jibu la haraka",
+      "html": "<p>Ili kupata URL ya kijipicha cha YouTube: tafuta kitambulisho cha video chenye herufi 11, kisha fungua anwani ya picha ya umma iliyothibitishwa kama vile<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>. URL ya ukurasa wa kutazama si picha. Bandika kiungo cha video kwenye<a href=\"https://www.11tik.com/\">11tik</a>, subiri saizi zinazopakia, kisha tumia<strong>Nakili URL ya picha</strong>kwa hivyo unaweka kiungo cha HTTPS kinachofanya kazi badala ya jina la faili lililokadiriwa kuwa 404s.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Mtiririko unaotumiwa na vichochezi: URL ya kutazama hadharani → Kitambulisho cha video → URL ya kijipicha cha umma kwenye mwenyeji wa picha wa YouTube.</p>"
+    },
+    {
+      "heading": "URL ya kijipicha cha YouTube ni nini?",
+      "html": "<p>URL ya kijipicha cha YouTube inaelekeza kwenye faili ya picha tuli, si kwenye kicheza video. Inapatikana kwenye CDN ya picha ya umma ya YouTube (kawaida<code>i.ytimg.com</code>). Anwani inapofanya kazi, kivinjari chako hupakua JPEG au WebP. Isipofanya kazi, unapata faili inayokosekana au kishikilia nafasi cha kijivu—sio \"HD\" kilichobuniwa ghafla.</p>\n  <p>Hilo ni muhimu kwa blogu, hakikisho za Grafu Huria, mockups za muundo, na sehemu za picha zilizoangaziwa za CMS: mifumo hiyo inahitaji URL ya picha, si<code>youtube.com/watch?v=…</code>Ikiwa unahitaji faili kwenye diski pekee, tumia<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">mwongozo wa kupakua</a>badala ya ukurasa huu unaolenga URL.</p>"
+    },
+    {
+      "heading": "Jinsi URL inavyohusiana na Kitambulisho cha video",
+      "html": "<p>YouTube huweka funguo za picha za umma kwa kutumia kitambulisho cha video. Muundo wa kawaida wa JPEG ni:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Baadhi ya video pia huchapisha mapacha wa WebP chini ya<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>ni herufi 11 haswa kutoka kwa seti<code>A–Z a–z 0–9 _ -</code>. Badilisha kitambulisho na unaelekeza kwenye picha za video tofauti. Badilisha jina la faili na unaomba derivative tofauti ya umma ya video hiyo hiyo.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatomia ya URL ya kijipicha cha umma: seva mwenyeji, njia, kitambulisho cha video, na jina la faili la ukubwa.</p>"
+    },
+    {
+      "heading": "Jinsi ya kupata kitambulisho cha video cha YouTube",
+      "html": "<p>Unahitaji kitambulisho pekee. Vigezo vya ziada vya hoja kama vile vitambulisho vya orodha ya nyimbo au<code>pp=</code>usibadilishe njia ya mwenyeji wa kijipicha.</p>\n  <table>\n    <thead>\n      <tr><th>Muundo wa URL ya YouTube</th><th>Mfano</th><th>Kitambulisho kiko wapi</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Tazama</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>thamani ya hoja</td></tr>\n      <tr><td>Kiungo kifupi</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Sehemu ya njia ya kwanza</td></tr>\n      <tr><td>Kaptura</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Njia baada ya<code>/shorts/</code></td></tr>\n      <tr><td>Ingiza</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Njia baada ya<code>/embed/</code></td></tr>\n      <tr><td>Moja kwa Moja</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Njia baada ya<code>/live/</code></td></tr>\n      <tr><td>kipachiko cha nokiki</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Sawa na kupachika</td></tr>\n    </tbody>\n  </table>\n  <p>Kichanganuzi cha 11tik kinakubali maumbo hayo (na vitambulisho vya herufi 11). URL ya kituo au orodha ya nyimbo isiyo na kitambulisho cha video haitoshi kwa URL moja ya kijipicha.</p>"
+    },
+    {
+      "heading": "Majina ya faili ya kawaida ya vijipicha vya umma",
+      "html": "<p>Majina ya faili yanaelezea viwango vya ukubwa ambavyo YouTube inaweza kuchapisha au kutochapisha kwa upakiaji fulani. Majina hayahakikishi faili ipo.</p>\n  <table>\n    <thead>\n      <tr><th>Jina la Faili</th><th>Pikseli za kawaida zinapokuwapo</th><th>Vidokezo</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Umma wa kawaida zaidi bado ulipochapishwa</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Darasa la 1280×720</td><td>Video zingine za kiwango cha juu zinafichua</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Mara nyingi hupatikana wakati maxres haipo</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Ukubwa wa kati wa kawaida sana</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Onyesho dogo la awali</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Kiwango kidogo zaidi cha kawaida</td></tr>\n    </tbody>\n  </table>\n  <p>Kwa maelezo ya kiwango cha pikseli na wakati wa kupendelea ukubwa mmoja kuliko mwingine, tazama<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Ukubwa wa kijipicha na mwongozo wa ubora</a>Kwa nini<code>maxresdefault.jpg</code>mara nyingi hukosekana, tazama<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault ni nini</a>.</p>"
+    },
+    {
+      "heading": "Mfano uliofanya kazi na kitambulisho cha video cha umma",
+      "html": "<p>Chukua kitambulisho cha onyesho la umma<code>dQw4w9WgXcQ</code>URL ya saa ni:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>URL ya JPEG ya kiwango cha juu ni:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Fungua anwani hiyo kwenye kichupo kipya. Ikiwa picha itapakiwa, una URL ya kijipicha inayofanya kazi. Ikiwa itashindwa, jaribu jina la faili linalofuata (kwa mfano<code>hqdefault.jpg</code>) au bandika kiungo cha saa kwenye [[P2] ili faili zilizosalia pekee ndizo ziorodheshwe. Usidhani kamwe kila video ina maxres.</p>"
+    },
+    {
+      "heading": "Njia tatu za kupata URL ya picha",
+      "html": "<h3>1. Haraka zaidi: nakala kutoka 11tik</h3>\n  <ol>\n    <li>Nakili saa ya umma, Shorts, moja kwa moja, pachika, au URL ya youtu.be.</li>\n    <li>Fungua<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Bandika URL na usubiri hadi hakikisho zionekane.</li>\n    <li>Chagua<strong>Nakili URL ya picha</strong>kwa ukubwa unaohitaji.</li>\n  </ol>\n  <p>11tik huangalia majibu katika kivinjari chako na ukubwa wa nyuso pekee ndio unaorudisha picha halisi. Hiyo ndiyo tofauti kati ya kiungo cha CMS kinachotumika na kiungo kilichovunjika.<code>maxresdefault</code>nadhani.</p>\n\n  <h3>2. Mbinu ya kivinjari</h3>\n  <p>Baada ya kuwa na mgombea<code>i.ytimg.com</code>anwani, ifungue kwenye kichupo kipya. Ikiwa bado inaonyeshwa, nakili upau wa anwani. Ukiona hitilafu au kigae tupu/kishika nafasi, ukubwa huo haukuchapishwa kamwe kwa ajili ya kitambulisho hicho—usikiunganishe kwa hotlink.</p>\n\n  <h3>3. Jenga URL kwa mkono</h3>\n  <p>Unaweza kuunganisha mwenyeji +<code>/vi/</code>+ Kitambulisho + jina la faili mwenyewe. URL zilizotengenezwa kwa mkono zinafaa kwa majaribio, lakini si salama kubandika kwenye HTML ya uzalishaji hadi uthibitishe jibu. Upatikanaji hutofautiana kulingana na umri wa kupakia, kazi ya sanaa chanzo, na hali ya usindikaji katika Studio ya YouTube.</p>"
+    },
+    {
+      "heading": "Kuchagua URL bora zaidi inayopatikana",
+      "html": "<p>\"Bora\" inamaanisha faili kubwa zaidi ya umma ambayo ipo, sio jina la faili refu zaidi unaloweza kuandika. Pendelea kiungo cha maxres au hq720 kilichothibitishwa kinapokuwepo. Ikiwa hizo zitashindwa, shuka hadi sd, hq, mq, au chaguo-msingi. Kuongeza ukubwa wa 480×360 still hadi 1280×720 katika kihariri hakuumbi URL halisi ya maxres.</p>\n  <p>Waumbaji wanaopakia sanaa maalum bado wanapaswa kuthibitisha vielelezo vya umma vya moja kwa moja baadaye—Usindikaji wa studio unaweza kuchelewa. Kuhusiana:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Vijipicha vya Studio ya YouTube mnamo 2026</a>.</p>"
+    },
+    {
+      "heading": "Kutumia URL kwenye tovuti nyingine",
+      "html": "<p>Unaweza kubandika kazi<code>i.ytimg.com</code>URL katika sehemu nyingi za CMS, lakini uunganishaji wa mtandao una hatari: YouTube inaweza kubadilisha njia za CDN, na baadhi ya mitandao huzuia wapangishaji wengine. Kwa picha ya blogu inayodumu au lebo ya Open Graph, pakua picha iliyothibitishwa na upangishe nakala kwenye kikoa chako mwenyewe. Mwongozo:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Kijipicha cha YouTube kama blogu / Picha ya Grafu Iliyofunguliwa</a>.</p>\n  <p>Hakimiliki inabaki na mpakiaji. URL ya umma si leseni ya kuchapisha tena sanaa kama jalada lako mwenyewe. Tazama usaidizi wa YouTube kwenye<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">vijipicha vya video maalum</a>na 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+    },
+    {
+      "heading": "Kutatua matatizo ya URL za vijipicha vilivyoharibika",
+      "html": "<ul>\n    <li><strong>404 au kishikilia nafasi:</strong>Ukubwa huo haukuchapishwa kamwe. Jaribu jina lingine la faili au tumia orodha iliyothibitishwa ya 11tik.</li>\n    <li><strong>Video isiyo sahihi:</strong>Kitambulisho kilichoandikwa vibaya. Nakili tena kutoka kwa URL ya saa.</li>\n    <li><strong>Binafsi / Imezuiliwa kwa umri / Imefutwa:</strong>hakuna umma bado wa kuunganisha.</li>\n    <li><strong>Maudhui mchanganyiko ya HTTP:</strong>tumia kila wakati<code>https://</code>URL za picha kwenye tovuti za HTTPS.</li>\n    <li><strong>Kaptura zinaonekana kama zimeandikwa kwa herufi:</strong>Shorts nyingi bado huhifadhi faili za umma zenye mandhari. URL bado ni rasmi kwa umma.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hatua inayofuata",
+      "html": "<p>Bandika URL ya YouTube ya umma kwenye<a href=\"https://www.11tik.com/\">Kitoa Picha Ndogo cha YouTube</a>, nakili kiungo cha picha kilichothibitishwa, au<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">pakua picha ya still</a>ikiwa unahitaji faili ya ndani. Kwa chaguo za ubora, fungua<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">mwongozo wa ukubwa na ubora</a>.</p>\n\n  <p class=\"yte-bio\">Imeandikwa na 11tik, mchapishaji wa kifaa cha kuchimba visima ndani ya kivinjari. Picha za umma pekee—hakuna video au upakuaji wa sauti.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je, ninaweza kunakili URL ya kijipicha cha moja kwa moja bila kupakua faili?",
+      "answer": "Ndiyo. Kwenye 11tik, tumia Nakili URL ya picha. Hiyo inakili anwani ya picha ya HTTPS kwa ukubwa ambao tayari umethibitishwa kwenye kivinjari chako.",
+      "answerHtml": "<p>Ndiyo. Kwenye 11tik, tumia Nakili URL ya picha. Hiyo inakili anwani ya picha ya HTTPS kwa ukubwa ambao tayari umethibitishwa kwenye kivinjari chako.</p>"
+    },
+    {
+      "question": "Je, ninaweza kupata URL ya kijipicha kutoka kwa YouTube Short?",
+      "answer": "Ndiyo, wakati Fupi ni ya umma na YouTube ikichapisha picha za kitambulisho hicho. Bandika kiungo cha /shorts/ kwa njia ile ile unayobandika URL ya saa. Tazama pia vijipicha vya Fupi.",
+      "answerHtml": "<p>Ndiyo, wakati Fupi ni ya umma na YouTube ikichapisha picha za kitambulisho hicho. Bandika<code>/shorts/</code>kiungo kama vile unavyobandika URL ya saa. Tazama pia<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Vijipicha vifupi vya picha fupi</a>.</p>"
+    },
+    {
+      "question": "Kwa nini URL moja ya kijipicha hufanya kazi huku nyingine ikirudisha hitilafu?",
+      "answer": "Majina ya faili ni viambato vya umma vya hiari. hqdefault.jpg vinaweza kuwepo wakati maxresdefault.jpg havipo. URL ya ukubwa wa kati inayofanya kazi haimaanishi URL ya upeo wa juu inayofanya kazi.",
+      "answerHtml": "<p>Majina ya faili ni viambato vya umma vya hiari.<code>hqdefault.jpg</code>inaweza kuwepo wakati<code>maxresdefault.jpg</code>haifanyi hivyo. URL ya ukubwa wa kati inayofanya kazi haimaanishi URL ya kiwango cha juu kinachofanya kazi.</p>"
+    },
+    {
+      "question": "Je, ninaweza kutumia URL ya picha ya moja kwa moja kwenye tovuti yangu?",
+      "answer": "Kitaalamu ndiyo ikiwa faili ipo, lakini kuhifadhi nakala yako mwenyewe kunaaminika zaidi kwa picha zilizoangaziwa na hakikisho za kijamii. Usichapishe tena sanaa ya mtu mwingine kama jalada la kituo chako bila haki.",
+      "answerHtml": "<p>Kitaalamu ndiyo ikiwa faili ipo, lakini kuhifadhi nakala yako mwenyewe kunaaminika zaidi kwa picha zilizoangaziwa na hakikisho za kijamii. Usichapishe tena sanaa ya mtu mwingine kama jalada la kituo chako bila haki.</p>"
+    },
+    {
+      "question": "Je, URL ya saa huwa URL ya kijipicha?",
+      "answer": "Hapana. URL ya saa inatambua video. URL ya kijipicha inatambua faili ya picha kwenye CDN ya picha.",
+      "answerHtml": "<p>Hapana. URL ya saa inatambua video. URL ya kijipicha inatambua faili ya picha kwenye CDN ya picha.</p>"
+    },
+    {
+      "question": "Je, 11tik hubuni URL yenye ubora wa juu zaidi?",
+      "answer": "Hapana. Inaorodhesha faili za umma zinazojibu kama picha pekee. Kukosa maxres kunamaanisha kuwa URL haipaswi kunakiliwa.",
+      "answerHtml": "<p>Hapana. Inaorodhesha faili za umma zinazojibu kama picha pekee. Kukosa maxres kunamaanisha kuwa URL haipaswi kunakiliwa.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik, mchapishaji wa kifaa cha kuchimba visima ndani ya kivinjari. Picha za umma pekee—hakuna video au upakuaji wa sauti.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+}

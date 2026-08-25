@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "pl",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Osadź 11tik Ekstraktor miniatur | 11tik",
+  "description": "Dodaj darmowy program do ekstrakcji miniatur z YouTube do swojego bloga, dokumentów lub zestawu narzędzi dla twórców. Widget ładuje się z 11tik i sam się skaluje. Brak klucza API.",
+  "h1": "Osadź 11tik Ekstraktor miniatur",
+  "ogTitle": "Osadź 11tik Ekstraktor miniatur",
+  "ogDescription": "Dodaj darmowy program do ekstrakcji miniatur z YouTube do swojego bloga, dokumentów lub zestawu narzędzi dla twórców. Widget ładuje się z 11tik i sam się skaluje. Brak klucza API.",
+  "imageAlt": "",
+  "faqHeading": "Często zadawane pytania",
+  "images": [],
+  "sections": [
+    {
+      "heading": "fragment kodu iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Zasady",
+      "html": "<ul>\n    <li>Zachowaj<code>id=\"yte-app\"</code>atrybut, dzięki któremu synchronizacja wysokości działa.</li>\n    <li>Nie umieszczaj ramki iframe na stałej wysokości, która przycina przyciski pobierania.</li>\n    <li>Powrót do linku<a href=\"https://www.11tik.com/\">www.11tik.com</a>pomaga użytkownikom otworzyć pełne narzędzie.</li>\n  </ul>"
+    },
+    {
+      "heading": "Głębokie linki",
+      "html": "<p>Udostępnij gotowy wyciąg z<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otwórz ekstraktor</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

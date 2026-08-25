@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "ms",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Benamkan Pengekstrak Gambar Kecil 11tik | 11tik",
+  "description": "Tambahkan pengekstrak lakaran kecil YouTube percuma pada blog, dokumen atau toolkit pencipta anda. Widget dimuatkan dari 11tik dan mengubah saiznya sendiri. Tiada kunci API.",
+  "h1": "Benamkan Pengekstrak Gambar Kecil 11tik",
+  "ogTitle": "Benamkan Pengekstrak Gambar Kecil 11tik",
+  "ogDescription": "Tambahkan pengekstrak lakaran kecil YouTube percuma pada blog, dokumen atau toolkit pencipta anda. Widget dimuatkan dari 11tik dan mengubah saiznya sendiri. Tiada kunci API.",
+  "imageAlt": "",
+  "faqHeading": "Soalan Lazim",
+  "images": [],
+  "sections": [
+    {
+      "heading": "coretan iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Peraturan",
+      "html": "<ul>\n    <li>Simpan<code>id=\"yte-app\"</code>atribut supaya penyegerakan ketinggian berfungsi.</li>\n    <li>Jangan balut iframe pada ketinggian tetap yang menggunting butang muat turun.</li>\n    <li>Menghubungkan kembali ke<a href=\"https://www.11tik.com/\">www.11tik.com</a>membantu pengguna membuka alat penuh.</li>\n  </ul>"
+    },
+    {
+      "heading": "Pautan dalam",
+      "html": "<p>Kongsikan pengekstrakan yang sedia ada dengan<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buka pengekstrak</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "fi",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Upota 11tik Pikkukuvien poimija | 11tik",
+  "description": "Lisää ilmainen YouTube-pikkukuvien poimija blogiisi, dokumentteihisi tai sisällöntuottajan työkalupakkiisi. Widget latautuu 11tik:stä ja muuttaa kokoaan itse. Ei API-avainta.",
+  "h1": "Upota 11tik-pikkukuvien poimija",
+  "ogTitle": "Upota 11tik-pikkukuvien poimija",
+  "ogDescription": "Lisää ilmainen YouTube-pikkukuvien poimija blogiisi, dokumentteihisi tai sisällöntuottajan työkalupakkiisi. Widget latautuu 11tik:stä ja muuttaa kokoaan itse. Ei API-avainta.",
+  "imageAlt": "",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe-koodinpätkä",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Säännöt",
+      "html": "<ul>\n    <li>Pidä<code>id=\"yte-app\"</code>attribuutti, jotta korkeuden synkronointi toimii.</li>\n    <li>Älä kiedo iframe-kehystä kiinteään korkeuteen, joka leikkaa latauspainikkeet pois.</li>\n    <li>Linkitetään takaisin kohteeseen<a href=\"https://www.11tik.com/\">www.11tik.com</a>auttaa käyttäjiä avaamaan koko työkalun.</li>\n  </ul>"
+    },
+    {
+      "heading": "Syvälinkit",
+      "html": "<p>Jaa valmis uutto<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Avaa liesituuletin</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

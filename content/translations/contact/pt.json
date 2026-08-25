@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "pt",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Contato | 11tik",
+  "description": "Use este formulário para perguntas sobre o Extrator de Miniaturas do YouTube. As mensagens serão enviadas ao operador do 11tik por e-mail. Não envie arquivos de vídeo ou áudio. A ferramenta funciona apenas com miniaturas públicas.",
+  "h1": "Contato",
+  "ogTitle": "Contato",
+  "ogDescription": "Use este formulário para perguntas sobre o Extrator de Miniaturas do YouTube. As mensagens serão enviadas ao operador do 11tik por e-mail. Não envie arquivos de vídeo ou áudio. A ferramenta funciona apenas com miniaturas públicas.",
+  "imageAlt": "",
+  "faqHeading": "Perguntas frequentes",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Contato",
+      "html": "<h1>Contato</h1>\n  <p class=\"yte-updated\">Última atualização: 22 de agosto de 2026</p>\n  <p itemprop=\"description\">Use este formulário para perguntas sobre o Extrator de Miniaturas do YouTube. As mensagens serão enviadas ao operador do 11tik por e-mail. Não envie arquivos de vídeo ou áudio. A ferramenta funciona apenas com miniaturas públicas.</p>\n  <p>E-mail direto:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Para um relatório sobre um vídeo específico, inclua o URL público do YouTube. 11tik não hospeda o arquivo de miniatura; a imagem é solicitada da CDN pública da plataforma.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Nome<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Mensagem<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Enviar mensagem</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extrator de miniaturas do YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">política de Privacidade</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termos</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

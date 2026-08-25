@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "hr",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Kako preuzeti minijaturu YouTube Shortsa u HD-u | 11tik",
+  "description": "Preuzmite minijaturu YouTube Shorts videozapisa u pregledniku. Shorts videozapisi koriste iste javne fotografije kao i URL-ovi za gledanje. Datoteka je često u vodoravnom položaju.",
+  "h1": "Kako preuzeti minijaturu YouTube Shortsa u HD rezoluciji",
+  "ogTitle": "Kako preuzeti minijaturu YouTube Shortsa u HD rezoluciji",
+  "ogDescription": "Preuzmite minijaturu YouTube Shorts videozapisa u pregledniku. Shorts videozapisi koriste iste javne fotografije kao i URL-ovi za gledanje. Datoteka je često u vodoravnom položaju.",
+  "imageAlt": "Preuzimanje javne minijature YouTube Shortsa u 11tik",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Preuzimanje javne minijature YouTube Shortsa u 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kako mogu preuzeti minijaturu YouTube Shortsa?",
+      "html": "<p>Kopirajte URL koji sadrži /shorts/ plus ID videozapisa i zalijepite ga u<a href=\"https://www.11tik.com/\">11tik</a>i preuzmite navedenu veličinu. Ekstrakcija počinje kada je ID valjan.</p>"
+    },
+    {
+      "heading": "Jesu li Shorts datoteke iste kao i datoteke stranice za gledanje?",
+      "html": "<p>Koriste iste javne nazive veličina označene ID-om videozapisa. Slika može izgledati uokvireno ako je YouTube pohranio derivat širokog zaslona.</p>"
+    },
+    {
+      "heading": "Što ako se slika ne pojavi?",
+      "html": "<p>Kratki video može biti privatan, izbrisan ili bez javnih fotografija. Alat za izdvajanje ne može zaobići ta ograničenja.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Kako preuzeti</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mogu li preuzeti minijaturu YouTube Shortsa?",
+      "answer": "Da, kada je YouTube objavio javne fotografije za taj ID Shorts videozapisa.",
+      "answerHtml": "Da, kada je YouTube objavio javne fotografije za taj ID Shorts videozapisa."
+    },
+    {
+      "question": "Zašto i dalje izgleda kao da je uokvireno?",
+      "answer": "YouTube može pohraniti 16:9 derivat čak i za vertikalni kratki video. 11tik prikazuje hostanu datoteku umjesto izmišljanja obrezivanja.",
+      "answerHtml": "YouTube može pohraniti 16:9 derivat čak i za vertikalni kratki video. 11tik prikazuje hostanu datoteku umjesto izmišljanja obrezivanja."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

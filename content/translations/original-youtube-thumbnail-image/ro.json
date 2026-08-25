@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "ro",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Cum să obții imaginea miniaturală originală de pe YouTube | 11tik",
+  "description": "Obțineți miniatura publică originală de pe YouTube pe care YouTube o găzduiește deja. Aceasta este o imagine statică din CDN, nu un cadru extras din videoclip.",
+  "h1": "Cum să obții imaginea miniaturală originală de pe YouTube",
+  "ogTitle": "Cum să obții imaginea miniaturală originală de pe YouTube",
+  "ogDescription": "Obțineți miniatura publică originală de pe YouTube pe care YouTube o găzduiește deja. Aceasta este o imagine statică din CDN, nu un cadru extras din videoclip.",
+  "imageAlt": "Fișierul miniatură YouTube public original afișat în extractorul 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Fișierul miniatură YouTube public original afișat în extractorul 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Care este miniatura originală de pe YouTube?",
+      "html": "<p>Este imaginea de previzualizare pe care YouTube o stochează deja pe gazdele sale de imagini. Este fișierul folosit în căutare și pe rafturile sugerate, nu un cadru pe care îl capturați cu Print Screen.</p>"
+    },
+    {
+      "heading": "Cum diferă asta de o captură de ecran?",
+      "html": "<p>O captură de ecran include playerul Chrome, interfața browserului și compresie suplimentară. Fișierul original este o imagine statică curată la dimensiunea în pixeli publicată de YouTube.</p>"
+    },
+    {
+      "heading": "Cum găsesc miniatura originală?",
+      "html": "<p>Lipiți adresa URL a ceasului, a videoclipului Shorts, a videoclipului live sau a URL-ului youtu.be în<a href=\"https://www.11tik.com/\">11tik</a>Instrumentul citește ID-ul videoclipului, verifică fișierele publice și îl clasifică pe cel mai bun dintre cele existente.</p>"
+    },
+    {
+      "heading": "Cum funcționează adresele URL pentru miniaturile YouTube?",
+      "html": "<p>Acestea folosesc ID-ul videoclipului plus un nume de dimensiune, cum ar fi maxresdefault.jpg sau hqdefault.jpg pe i.ytimg.com. Ghicirea unei dimensiuni care nu a fost niciodată publicată returnează o eroare sau un provizoriu.</p>"
+    },
+    {
+      "heading": "Ce este maxresdefault.jpg?",
+      "html": "<p>Este numele de fișier public cel mai comun, de obicei 1280×720 când YouTube l-a creat. Nu este o versiune master 4K și nu este fișierul video.</p>"
+    },
+    {
+      "heading": "Originalul înseamnă întotdeauna 1280 × 720?",
+      "html": "<p>Nu. Dacă maxres nu a fost publicat niciodată, imaginea publică originală este hq, sd sau un alt fișier supraviețuitor. 11tik arată dimensiunea reală a pixelilor în loc să inventeze pixeli.</p>"
+    },
+    {
+      "heading": "Pot obține fotografia originală de la Shorts, Live sau youtu.be?",
+      "html": "<p>Da, când acele adrese URL conțin un ID public al videoclipului și imagini statice publice găzduite de YouTube. Extractorul le tratează la fel ca o adresă URL standard de vizionare.</p>"
+    },
+    {
+      "heading": "Cum verific dacă am primit într-adevăr fișierul original?",
+      "html": "<p>Folosește listele de dimensiuni și dimensiuni 11tik după ce fișierul este validat. Dacă imaginea arată ca o captură de ecran a playerului, nu ai descărcat miniatura găzduită.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Cea mai înaltă calitate</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Care este miniatura originală de pe YouTube?",
+      "answer": "Fișierul de imagine public găzduit de YouTube pentru ID-ul videoclipului, cum ar fi maxresdefault atunci când există. Nu este o captură de ecran a paginii de vizionare.",
+      "answerHtml": "Fișierul de imagine public găzduit de YouTube pentru ID-ul videoclipului, cum ar fi maxresdefault atunci când există. Nu este o captură de ecran a paginii de vizionare."
+    },
+    {
+      "question": "Originalul înseamnă întotdeauna 1280 × 720?",
+      "answer": "Nu. Maxres este de obicei 1280×720 la publicare. Dacă fișierul respectiv lipsește, fișierul public original are în continuare următoarea dimensiune stocată de YouTube.",
+      "answerHtml": "Nu. Rezoluția Maxres este de obicei de 1280×720 la publicare. Dacă fișierul respectiv lipsește, fișierul public original are în continuare următoarea dimensiune stocată pe YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "hr",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Kako funkcioniraju poveznice za dijeljenje 11tik: /thumb/{VIDEO_ID} u odnosu na URL-ove za gledanje na YouTubeu | 11tik",
+  "description": "11tik /thumb/{id} je stranica s rezultatima dijeljenja. Nije URL za gledanje na YouTubeu niti je izravna i.ytimg.com slikovna datoteka.",
+  "h1": "Kako funkcioniraju poveznice za dijeljenje 11tik: /thumb/{VIDEO_ID} u odnosu na URL-ove za gledanje na YouTubeu",
+  "ogTitle": "Kako funkcioniraju poveznice za dijeljenje 11tik: /thumb/{VIDEO_ID} u odnosu na URL-ove za gledanje na YouTubeu",
+  "ogDescription": "11tik /thumb/{id} je stranica s rezultatima dijeljenja. Nije URL za gledanje na YouTubeu niti je izravna i.ytimg.com slikovna datoteka.",
+  "imageAlt": "Dijagram koji uspoređuje URL za gledanje na YouTubeu, URL za dijeljenje minijature 11tik i URL izravne slike minijature na YouTubeu",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Dijagram koji uspoređuje URL za gledanje na YouTubeu, URL za dijeljenje minijature 11tik i URL izravne slike minijature na YouTubeu",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Tijek rada koji prikazuje izdvajanje, pregled, kopiranje poveznice za dijeljenje 11tik i otvaranje stranice s minijaturnim rezultatima od strane primatelja",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p>Tri različita URL-a mogu dijeliti isti ID YouTube videa. Samo jedan od njih je slikovna datoteka.</p>\n  <ol>\n    <li><strong>URL za gledanje na YouTubeu</strong>— otvara video na YouTubeu.</li>\n    <li><strong>11tik URL za dijeljenje</strong>— otvara stranicu s rezultatima ekstrakcije 11tik za taj ID (<code>/thumb/{VIDEO_ID}</code>). Ovo je web stranica, a ne JPEG/WebP datoteka.</li>\n    <li><strong>Izravni URL CDN-a za minijature</strong>— pokazuje na javnu fotografiju na YouTubeovoj platformi za glavnu sliku (na primjer<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Korištenje javnog demo ID-a<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Treća adresa je primjer izravnog uzorka URL-a slike. Ta specifična maxres datoteka nije zajamčena za svaki videozapis - provjerite stvarne veličine s<a href=\"https://www.11tik.com/\">11tik</a>ili<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">vodič za maxresdefault</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Isti ID videozapisa, tri zadatka: gledanje videozapisa, otvaranje stranice s rezultatima 11tik ili zahtjev za CDN fotografiju.</p>"
+    },
+    {
+      "heading": "Što je /thumb/{VIDEO_ID}",
+      "html": "<p>Na 11tik, uspješno izvlačenje jednog videozapisa ažurira adresu preglednika u putanju oblikovanu poput:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Taj put je URL dijeljenja/rezultata proizvoda. Generira se iz ID-a videozapisa (pogledajte pomoćne alate za dijeljenje web-mjesta) i namijenjen je ponovnom otvaranju alata za izdvajanje usmjerenog na taj ID. Starije veze u stilu upita kao što su<code>?v=VIDEO_ID</code>tretiraju se kao duboke poveznice na istu ideju i mogu se prepisati u<code>/thumb/</code>oblik.</p>\n  <p><code>/thumb/…</code>je<strong>ne</strong>hostirano na YouTubeovoj CDN mreži za slike. Njegovo otvaranje nikada ne preuzima sliku samostalno; učitava rutu aplikacije 11tik za taj ID.</p>"
+    },
+    {
+      "heading": "Zašto stranica postoji",
+      "html": "<p>Ljudima je potreban stabilan način ponovnog otvaranja ili slanja \"rezultata minijature ovog videa na 11tik\" bez lijepljenja dugog URL-a za gledanje u chat i nadanja da primatelj zna što dalje učiniti. Stranica za dijeljenje drži razgovor na stranici za izdvajanje: isti ID, isti tijek rada za javne fotografije, radnje preuzimanja i kopiranja na jednom mjestu.</p>\n  <p>Također održava URL početne stranice čistim. Početna stranica marketinga ostaje opći alat za izdvajanje;<code>/thumb/{id}</code>je dubinska poveznica za određeni ID.</p>"
+    },
+    {
+      "heading": "Što korisnik vidi kada ga otvori",
+      "html": "<p>Otvor<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>učitava 11tik jednostraničnu aplikaciju na ruti sličica. Aplikacija čita 11-znakovni ID iz putanje, ubacuje odgovarajući URL za praćenje u ekstraktor i pokreće prolaz za otkrivanje javnih sličica za taj ID. Kada postoje javne sličice, pojavljuju se uobičajeni pregled, popis kvalitete, radnje preuzimanja i kontrole dijeljenja. Kada ne postoje, dobivate isti rezultat \"prazno/javno-nije-pronađeno\" kao i kod ručnog lijepljenja.</p>\n  <p>Iznad korisničkog sučelja alata možete vidjeti i kratki zaglavlje s thumb-routeom i uvodni tekst za taj ID. Taj sadržaj opisuje stranicu s rezultatima; i dalje je dio iskustva web-mjesta, a ne neobrađena slika.</p>"
+    },
+    {
+      "heading": "Kako kopirati poveznicu 11tik",
+      "html": "<ol>\n    <li>Otvoriti<a href=\"https://www.11tik.com/\">11tik</a>i zalijepite javni YouTube URL (ili otvorite postojeći<code>/thumb/</code>link).</li>\n    <li>Pričekajte dok se ekstrakcija ne završi i ne prikaže se najbolja javna fotografija.</li>\n    <li>Koristite kontrolu dijeljenja na stranici označenu za vezu za dijeljenje (kopiraj vezu za dijeljenje). Vrijednost izgleda ovako<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Pošaljite taj URL. Primatelj se otvara na stranici s rezultatima i može ponovno pokrenuti istu javnu provjeru.</li>\n  </ol>\n  <p>Skupni ekstrakti mogu otkriti jedan URL za dijeljenje po uspješnom ID-u videozapisa (uključujući i stupce izvoza CSV-a). Svaki ID zadržava svoj vlastiti<code>/thumb/</code>put kako se poveznice ne bi sažele na prvi rezultat.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dijeljenje tijeka rada: izdvajanje → pregled → kopiranje<code>/thumb/{id}</code>→ primatelj otvara stranicu s rezultatima.</p>"
+    },
+    {
+      "heading": "Tablica usporedbe URL-ova",
+      "html": "<table>\n    <thead>\n      <tr><th>Vrsta URL-a</th><th>Primjer</th><th>Što se otvara</th><th>Je li to slikovna datoteka?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Gledanje na YouTubeu</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube player / stranica za gledanje</td><td>Ne</td></tr>\n      <tr><td>11tik dijeljenje</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik rezultat ekstrakcije za taj ID</td><td>Ne</td></tr>\n      <tr><td>Izravna CDN i dalje</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Bajtovi slike (kada datoteka postoji)</td><td>Da</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Kako se tri URL-a razlikuju u praksi",
+      "html": "<h3>URL za gledanje u odnosu na URL za dijeljenje 11tik</h3>\n  <p>Podijelite URL za gledanje kada je cilj gledanje ili rasprava o videozapisu na YouTubeu. Podijelite URL 11tik kada je cilj ponovno otvaranje rezultata izdvajanja minijatura - pregleda, preuzimanja i provjerenih javnih veličina - bez traženja od nekoga da prvo pronađe alat za izdvajanje.</p>\n  <h3>11tik URL za dijeljenje u odnosu na izravni URL slike</h3>\n  <p>Izravni URL slike je ono što zalijepite u<code>&lt;img src&gt;</code>, CMS medijske biblioteke ili alate za dizajn nakon što potvrdite da datoteka postoji. Kako se ti CDN URL-ovi grade iz ID-a je zadatak<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura</a>URL za dijeljenje 11tik nikada ne zamjenjuje tu adresu slike: primatelji i dalje koriste alat za preuzimanje ili kopiranje URL-a slike unutar alata kada im je potrebna sama datoteka.</p>\n  <h3>URL za gledanje u odnosu na izravni URL slike</h3>\n  <p>URL za gledanje identificira videozapis. URL slike identificira jedan javni derivat. Nisu zamjenjivi, zbog čega nagađanje<code>maxresdefault.jpg</code>često ne uspije čak i kada stranica za gledanje radi.</p>"
+    },
+    {
+      "heading": "Kada podijeliti koju poveznicu",
+      "html": "<ul>\n    <li><strong>Podijelite URL za gledanje na YouTubeu</strong>za pregledavanje, komentiranje ili citiranje videa.</li>\n    <li><strong>Podijelite 11tik<code>/thumb/</code>URL</strong>za suradnike kojima je potreban rezultat ekstrakcije, popis kvalitete ili brzo ponovno preuzimanje javne fotografije.</li>\n    <li><strong>Podijelite ili hostirajte izravni URL slike / preuzetu datoteku</strong>za istaknute slike na blogu, Open Graph i dizajnerske kombinacije - nakon potvrde. Pogledajte<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzimanje vodiča</a>i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu i rezoluciju</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Kako ID videozapisa povezuje sva tri",
+      "html": "<p>Sve ovisi o istom 11-znamenkastom ID-u. URL-ovi za gledanje ga nose<code>v=</code>(ili segmente puta kratkih videozapisa/ugrađenih videozapisa/umetnutih videozapisa uživo). 11tik ga stavlja u<code>/thumb/{id}</code>CDN fotografije stavljaju ga između<code>/vi/</code>(ili<code>/vi_webp/</code>) i naziv datoteke veličine. Ako je ID pogrešan, sva tri se prekidaju na različite načine: pogrešan videozapis, pogrešna stranica s rezultatima ili pogrešna/nedostajuća slika.</p>"
+    },
+    {
+      "heading": "Kako se ovo uklapa u tijek rada ekstraktora",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Veza za dijeljenje je oznaka u tom tijeku rada. Ne preskače validaciju, ne izmišlja 4K niti pretvara privatne videozapise u javne fotografije.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je li https://www.11tik.com/thumb/VIDEO_ID izravna slika?",
+      "answer": "Ne. To je stranica s rezultatima 11tik za taj ID videozapisa. Izravne slike uživo se nalaze na hostovima kao što je i.ytimg.com.",
+      "answerHtml": "<p>Ne. To je stranica s rezultatima 11tik za taj ID videozapisa. Izravne slike uživo na hostovima kao što su<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Što se događa nakon što netko otvori moju poveznicu za dijeljenje?",
+      "answer": "11tik učitava rutu sličice, čita ID, pokreće provjeru javne sličice za taj ID i prikazuje korisničko sučelje za izdvajanje s rezultatima kada postoje javne sličice.",
+      "answerHtml": "<p>11tik učitava rutu sličice, čita ID, pokreće provjeru javne sličice za taj ID i prikazuje korisničko sučelje za izdvajanje s rezultatima kada postoje javne sličice.</p>"
+    },
+    {
+      "question": "Mogu li dodati vruću poveznicu /thumb/ unutar img taga?",
+      "answer": "Nemojte. Koristite potvrđeni URL CDN slike ili datoteku koju ste preuzeli. Put dijeljenja vraća HTML ljusku aplikacije, a ne bajtove slike.",
+      "answerHtml": "<p>Nemojte. Koristite potvrđeni URL CDN slike ili datoteku koju ste preuzeli. Put dijeljenja vraća HTML ljusku aplikacije, a ne bajtove slike.</p>"
+    },
+    {
+      "question": "Zašto se moja adresna traka promijenila nakon što sam izdvojio/la minijaturu?",
+      "answer": "Nakon izdvajanja jednog videozapisa, 11tik sinkronizira putanju dijeljenja s /thumb/{VIDEO_ID} tako da je trenutni rezultat lako kopirati i ponovno otvoriti.",
+      "answerHtml": "<p>Nakon izvlačenja jednog videozapisa, 11tik sinkronizira putanju dijeljenja s<code>/thumb/{VIDEO_ID}</code>tako da je trenutni rezultat lako kopirati i ponovno otvoriti.</p>"
+    },
+    {
+      "question": "Koriste li Shorts videozapisi drugačiji put dijeljenja?",
+      "answer": "Ne. Kratki videozapisi se i dalje rješavaju ID-om od 11 znakova. URL za dijeljenje ostaje /thumb/{id}; promijenio se samo izvorni oblik URL-a za YouTube.",
+      "answerHtml": "<p>Ne. Kratki videozapisi se i dalje rješavaju ID-om od 11 znakova. URL za dijeljenje ostaje.<code>/thumb/{id}</code>; razlikovao se samo izvorni oblik URL-a YouTubea.</p>"
+    },
+    {
+      "question": "Je li /thumb/{id} isto što i kopiranje maxres URL-a?",
+      "answer": "Ne. Maxres (ako postoji) je jedna moguća CDN datoteka. Stranica za dijeljenje navodi provjerene javne veličine i može uključivati ​​druge razine kada maxres nedostaje.",
+      "answerHtml": "<p>Ne. Maxres (ako postoji) je jedna moguća CDN datoteka. Stranica za dijeljenje navodi provjerene javne veličine i može uključivati ​​druge razine kada maxres nedostaje.</p>"
+    },
+    {
+      "question": "Gdje se detaljnije objašnjavaju URL-ovi za praćenje i URL-ovi slika?",
+      "answer": "Za izradu ID-a → CDN-a koristite članak o URL-u sličica, a za spremanje datoteka članak o preuzimanju.",
+      "answerHtml": "<p>Koristite<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL minijature članka</a>za ID → konstrukciju CDN-a i članak za preuzimanje za spremanje datoteka.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Zaključak</h2>\n<p>Liječiti<code>/thumb/{VIDEO_ID}</code>kao adresa za dijeljenje/rezultat 11tik: korisno za ponovno otvaranje i slanje isječka, nikada kao zamjena za poveznicu za gledanje na YouTubeu ili izravnu<code>i.ytimg.com</code>i dalje. Zadržite tri vrste URL-ova ispravnima i vaši preuzimanja, ugrađivanja i veze suradnika ostat će točne.</p>\n  <p><a href=\"https://www.11tik.com/\">Izdvoji javnu sličicu i kopiraj njezinu poveznicu za dijeljenje 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>Referenca autora:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prenesite prilagođene minijature videozapisa</a>.</p>"
+}

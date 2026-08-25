@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "it",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Informativa sulla privacy | 11tik",
+  "description": "Questa politica si applica all'estrattore di miniature di YouTube all'indirizzo https://www.11tik.com/ e agli host di lingua che caricano lo stesso estrattore.",
+  "h1": "politica sulla riservatezza",
+  "ogTitle": "politica sulla riservatezza",
+  "ogDescription": "Questa politica si applica all'estrattore di miniature di YouTube all'indirizzo https://www.11tik.com/ e agli host di lingua che caricano lo stesso estrattore.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Monitoraggio nel browser",
+      "html": "<p>Quando incolli un URL di YouTube, la pagina legge l'ID del video e controlla gli URL delle immagini di anteprima pubbliche nel tuo browser. I link incollati non vengono memorizzati come account personale su un server applicativo 11tik. L'estrazione non richiede l'accesso.</p>"
+    },
+    {
+      "heading": "Indice facoltativo della pagina di condivisione",
+      "html": "<p>Dopo un'estrazione riuscita, il browser potrebbe inviare al nostro Cloudflare Worker solo un ID video pubblico, il titolo, i tag derivati ​​dai metadati pubblici e l'URL di un'anteprima pubblica, in modo che il video possa apparire su una pagina di condivisione e, se supera un controllo di qualità, nella sitemap. Non ti chiediamo di caricare il file immagine. Puoi utilizzare l'estrattore anche senza tale indice se la richiesta viene bloccata dal tuo browser.</p>"
+    },
+    {
+      "heading": "Storia locale",
+      "html": "<p>L'estrattore potrebbe salvare gli URL recenti nella memoria locale del browser per consentirne la riapertura. Tale copia rimane sul dispositivo. È possibile cancellarla tramite la cronologia presente nella pagina o eliminando i dati di questo sito nel browser. Non si tratta di un account cloud.</p>"
+    },
+    {
+      "heading": "Registri di hosting",
+      "html": "<p>Il sito web, gli host linguistici e i file statici sono forniti dai provider di hosting utilizzati per 11tik.com (tra cui Cloudflare e GitHub Pages). Tali host possono conservare normali log web come l'indirizzo IP, il tipo di browser e la pagina richiesta, secondo le proprie politiche.</p>"
+    },
+    {
+      "heading": "terze parti",
+      "html": "<p>I file delle miniature vengono richiesti dagli host di immagini pubbliche di YouTube. Il sito utilizza Google Analytics 4 (ID di misurazione G-FW7B8NDZZ5) per contare le visite e le azioni sulla pagina, come l'estrazione e il download. Google potrebbe impostare cookie o identificatori simili. Gli URL di YouTube incollati non vengono inviati come parametri degli eventi di analisi. Font o script potrebbero essere caricati anche da CDN utilizzate per visualizzare la pagina.</p>\n  <p>Il modulo di contatto viene inviato da FormSubmit all'indirizzo email dell'operatore. FormSubmit può visualizzare il nome, l'indirizzo email e il messaggio inviato.</p>"
+    },
+    {
+      "heading": "Contatto",
+      "html": "<p>Domande su questa informativa: inviare un'e-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>oppure utilizzare il<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>modulo.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Estrattore di miniature di YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Di</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Informazioni</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

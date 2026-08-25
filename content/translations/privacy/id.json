@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "id",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Kebijakan Privasi | 11tik",
+  "description": "Kebijakan ini berlaku untuk YouTube Thumbnail Extractor di https://www.11tik.com/ dan host bahasa yang memuat extractor yang sama.",
+  "h1": "Kebijakan Privasi",
+  "ogTitle": "Kebijakan Privasi",
+  "ogDescription": "Kebijakan ini berlaku untuk YouTube Thumbnail Extractor di https://www.11tik.com/ dan host bahasa yang memuat extractor yang sama.",
+  "imageAlt": "",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Pemrosesan di browser",
+      "html": "<p>Saat Anda menempelkan URL YouTube, halaman tersebut membaca ID video dan memeriksa URL gambar thumbnail publik di browser Anda. Tautan yang ditempelkan tersebut tidak disimpan sebagai akun pribadi di server aplikasi 11tik. Ekstraksi tidak memerlukan login.</p>"
+    },
+    {
+      "heading": "Indeks halaman berbagi opsional",
+      "html": "<p>Setelah ekstraksi berhasil, browser mungkin hanya mengirimkan ID video publik, judul, tag yang berasal dari metadata publik, dan URL thumbnail publik ke Cloudflare Worker kami agar video dapat muncul di halaman berbagi dan, jika lolos pemeriksaan kualitas, di sitemap. Kami tidak meminta Anda untuk mengunggah file gambar. Anda dapat menggunakan ekstraktor tanpa indeks tersebut jika permintaan diblokir oleh browser Anda.</p>"
+    },
+    {
+      "heading": "Sejarah lokal",
+      "html": "<p>Aplikasi ekstraktor mungkin menyimpan URL terbaru di penyimpanan lokal browser ini sehingga Anda dapat membukanya kembali. Salinan tersebut tetap ada di perangkat Anda. Hapus dengan kontrol riwayat di halaman, atau dengan menghapus data situs ini di browser. Ini bukan akun cloud.</p>"
+    },
+    {
+      "heading": "Log hosting",
+      "html": "<p>Situs web, penyedia bahasa, dan file statis disajikan oleh penyedia hosting yang digunakan untuk 11tik.com (termasuk Cloudflare dan GitHub Pages). Penyedia hosting tersebut dapat menyimpan log web biasa seperti alamat IP, jenis browser, dan halaman yang diminta, sesuai dengan kebijakan mereka sendiri.</p>"
+    },
+    {
+      "heading": "Pihak ketiga",
+      "html": "<p>File thumbnail diminta dari host gambar publik YouTube. Situs ini menggunakan Google Analytics 4 (ID pengukuran G-FW7B8NDZZ5) untuk menghitung kunjungan dan tindakan di halaman seperti ekstrak dan unduh. Google dapat mengatur cookie atau pengidentifikasi serupa. URL YouTube yang disalin tidak dikirim sebagai parameter peristiwa analitik. Font atau skrip juga dapat dimuat dari CDN yang digunakan untuk menampilkan halaman.</p>\n  <p>Formulir kontak dikirimkan oleh FormSubmit ke email operator. FormSubmit dapat melihat nama, email, dan pesan yang Anda kirimkan.</p>"
+    },
+    {
+      "heading": "Kontak",
+      "html": "<p>Pertanyaan tentang kebijakan ini: email<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>atau gunakan<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>membentuk.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Ekstraktor Thumbnail YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ketentuan</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

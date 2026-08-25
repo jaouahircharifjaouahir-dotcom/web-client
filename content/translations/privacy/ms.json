@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "ms",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Dasar Privasi | 11tik",
+  "description": "Dasar ini terpakai kepada Pengekstrak Gambar Kecil YouTube di https://www.11tik.com/ dan hos bahasa yang memuatkan pengekstrak yang sama.",
+  "h1": "Dasar Privasi",
+  "ogTitle": "Dasar Privasi",
+  "ogDescription": "Dasar ini terpakai kepada Pengekstrak Gambar Kecil YouTube di https://www.11tik.com/ dan hos bahasa yang memuatkan pengekstrak yang sama.",
+  "imageAlt": "",
+  "faqHeading": "Soalan Lazim",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Pemprosesan dalam pelayar",
+      "html": "<p>Apabila anda menampal URL YouTube, halaman tersebut akan membaca ID video dan menyemak URL imej kecil awam dalam pelayar anda. Pautan yang ditampal tersebut tidak disimpan sebagai akaun peribadi pada pelayan aplikasi 11tik. Pengekstrakan tidak memerlukan log masuk.</p>"
+    },
+    {
+      "heading": "Indeks halaman kongsi pilihan",
+      "html": "<p>Selepas pengekstrakan berjaya, pelayar mungkin hanya menghantar ID video awam, tajuk, tag yang diperoleh daripada metadata awam dan URL lakaran kecil awam kepada Cloudflare Worker kami supaya video tersebut boleh dipaparkan pada halaman kongsi dan, jika ia lulus pemeriksaan kualiti, dalam peta laman. Kami tidak meminta anda memuat naik fail imej. Anda boleh menggunakan pengekstrak tanpa indeks tersebut jika permintaan disekat oleh pelayar anda.</p>"
+    },
+    {
+      "heading": "Sejarah tempatan",
+      "html": "<p>Pengekstrak mungkin menyimpan URL terkini dalam storan setempat pelayar ini supaya anda boleh membukanya semula. Salinan itu kekal pada peranti anda. Kosongkannya dengan kawalan sejarah dalam halaman atau dengan mengosongkan data tapak ini dalam pelayar. Ia bukan akaun awan.</p>"
+    },
+    {
+      "heading": "Log pengehosan",
+      "html": "<p>Laman web, hos bahasa dan fail statik dilayan oleh penyedia hos yang digunakan untuk 11tik.com (termasuk Cloudflare dan GitHub Pages). Hos tersebut boleh menyimpan log web biasa seperti alamat IP, jenis pelayar dan halaman yang diminta, mengikut dasar mereka sendiri.</p>"
+    },
+    {
+      "heading": "Pihak ketiga",
+      "html": "<p>Fail imej kecil diminta daripada hos imej awam YouTube. Laman ini menggunakan Google Analytics 4 (ID pengukuran G-FW7B8NDZZ5) untuk mengira lawatan dan tindakan dalam halaman seperti ekstrak dan muat turun. Google mungkin menetapkan kuki atau pengecam yang serupa. URL YouTube yang ditampal tidak dihantar sebagai parameter peristiwa analitik. Fon atau skrip juga mungkin dimuatkan daripada CDN yang digunakan untuk memaparkan halaman.</p>\n  <p>Borang hubungan dihantar melalui FormSubmit ke emel pengendali. FormSubmit boleh melihat nama, emel dan mesej yang anda serahkan.</p>"
+    },
+    {
+      "heading": "Hubungi",
+      "html": "<p>Soalan tentang dasar ini: emel<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>atau gunakan<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>borang.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Pengekstrak Gambar Kecil YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

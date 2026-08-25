@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "ro",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Cum funcționează 11tik linkurile de partajare: /thumb/{VIDEO_ID} vs. URL-urile de vizionare YouTube | 11tik",
+  "description": "11tik /thumb/{id} este o pagină cu rezultate de partajare. Nu este o adresă URL de vizionare pe YouTube și nici un fișier de imagine direct i.ytimg.com.",
+  "h1": "Cum funcționează linkurile de partajare 11tik: /thumb/{VIDEO_ID} vs. URL-uri de vizionare YouTube",
+  "ogTitle": "Cum funcționează linkurile de partajare 11tik: /thumb/{VIDEO_ID} vs. URL-uri de vizionare YouTube",
+  "ogDescription": "11tik /thumb/{id} este o pagină cu rezultate de partajare. Nu este o adresă URL de vizionare pe YouTube și nici un fișier de imagine direct i.ytimg.com.",
+  "imageAlt": "Diagramă care compară o adresă URL de vizionare pe YouTube, o adresă URL de partajare a miniaturii 11tik și o adresă URL directă a unei imagini miniatură pe YouTube",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Diagramă care compară o adresă URL de vizionare pe YouTube, o adresă URL de partajare a miniaturii 11tik și o adresă URL directă a unei imagini miniatură pe YouTube",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Flux de lucru care afișează extragerea, previzualizarea, copierea linkului de partajare 11tik și deschiderea paginii cu rezultate în miniatură a destinatarului",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Răspuns rapid",
+      "html": "<p>Trei adrese URL diferite pot avea același ID de videoclip YouTube. Doar una dintre ele este un fișier imagine.</p>\n  <ol>\n    <li><strong>Adresa URL de vizionare YouTube</strong>— deschide videoclipul pe YouTube.</li>\n    <li><strong>URL de partajare 11tik</strong>— deschide pagina cu rezultatele extractorului 11tik pentru ID-ul respectiv (<code>/thumb/{VIDEO_ID}</code>Aceasta este o pagină web, nu un fișier JPEG/WebP.</li>\n    <li><strong>Adresă URL CDN directă pentru miniatură</strong>— indică o imagine publică de pe site-ul YouTube (de exemplu<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Utilizarea ID-ului public demo<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>A treia adresă este un exemplu de model URL direct pentru imagine. Fișierul maxres respectiv nu este garantat pentru fiecare videoclip - confirmați dimensiunile reale cu<a href=\"https://www.11tik.com/\">11tik</a>sau<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ghid maxresdefault</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Același ID video, trei sarcini: vizionarea videoclipului, deschiderea paginii de rezultate 11tik sau solicitarea unei imagini statice CDN.</p>"
+    },
+    {
+      "heading": "Ce este /thumb/{VIDEO_ID}",
+      "html": "<p>Pe 11tik, o extragere reușită a unui singur videoclip actualizează adresa browserului la o cale de genul:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Calea respectivă este adresa URL de partajare/rezultat a produsului. Este generată din ID-ul videoclipului (consultați instrumentele de asistență pentru partajare ale site-ului) și are scopul de a redeschide extractorul concentrat pe ID-ul respectiv. Link-uri mai vechi, de tip interogare, cum ar fi<code>?v=VIDEO_ID</code>sunt tratate ca linkuri directe către aceeași idee și se pot rescrie la<code>/thumb/</code>formă.</p>\n  <p><code>/thumb/…</code>este<strong>nu</strong>găzduit pe CDN-ul de imagini al YouTube. Deschiderea acestuia nu descarcă niciodată o imagine de la sine; încarcă ruta aplicației 11tik pentru ID-ul respectiv.</p>"
+    },
+    {
+      "heading": "De ce există pagina",
+      "html": "<p>Oamenii au nevoie de o modalitate stabilă de a redeschide sau de a trimite „rezultatul miniaturii acestui videoclip pe 11tik” fără a lipi o adresă URL lungă de vizionare în chat și a spera că destinatarul știe ce să facă în continuare. Pagina de partajare păstrează conversația în extractor: același ID, același flux de lucru pentru imagini statice publice, acțiuni de descărcare și copiere într-un singur loc.</p>\n  <p>De asemenea, menține adresa URL a instrumentului paginii principale curată. Pagina principală de marketing rămâne extractorul general;<code>/thumb/{id}</code>este linkul direct pentru un anumit ID.</p>"
+    },
+    {
+      "heading": "Ce vede un utilizator când îl deschide",
+      "html": "<p>Deschidere<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>încarcă aplicația 11tik cu o singură pagină pe ruta miniaturilor. Aplicația citește ID-ul de 11 caractere din cale, introduce URL-ul de urmărire corespunzător în extractor și execută procesul de descoperire a miniaturilor publice pentru ID-ul respectiv. Când există imagini statice publice, apar previzualizarea obișnuită, lista de calitate, acțiunile de descărcare și controalele de partajare. Când nu apar, obțineți același rezultat gol/public-negăsit ca în cazul unei lipiri manuale.</p>\n  <p>De asemenea, este posibil să vedeți un scurt titlu de ghidare și un text introductiv pentru ID-ul respectiv deasupra interfeței instrumentului. Conținutul respectiv descrie pagina de rezultate; face parte în continuare din experiența site-ului, nu este un răspuns de tip imagine brută.</p>"
+    },
+    {
+      "heading": "Cum se copiază linkul 11tik",
+      "html": "<ol>\n    <li>Deschide<a href=\"https://www.11tik.com/\">11tik</a>și lipiți o adresă URL publică de pe YouTube (sau deschideți una existentă<code>/thumb/</code>legătură).</li>\n    <li>Așteptați până când extracția se termină și este afișată o imagine publică excelentă.</li>\n    <li>Folosește controlul de partajare de pe pagină etichetat pentru linkul de partajare (copiază linkul de partajare). Valoarea arată astfel<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Trimiteți adresa URL respectivă. Destinatarul ajunge pe pagina de rezultate și poate relua aceeași verificare publică.</li>\n  </ol>\n  <p>Extragerile în bloc pot expune o adresă URL de partajare pentru fiecare ID de videoclip partajat cu succes (inclusiv în coloanele de export CSV). Fiecare ID își păstrează propriul ID.<code>/thumb/</code>cale, astfel încât linkurile să nu se prăbușească peste primul rezultat.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Flux de lucru partajat: extragere → previzualizare → copiere<code>/thumb/{id}</code>→ destinatarul deschide pagina cu rezultate.</p>"
+    },
+    {
+      "heading": "Tabel comparativ URL",
+      "html": "<table>\n    <thead>\n      <tr><th>Tipul URL-ului</th><th>Exemplu</th><th>Ce se deschide</th><th>Este un fișier de imagine?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Vizionare pe YouTube</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>Player YouTube / pagină de vizionare</td><td>Nu</td></tr>\n      <tr><td>11tik partajare</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>Rezultatul extractorului 11tik pentru ID-ul respectiv</td><td>Nu</td></tr>\n      <tr><td>CDN direct</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Octeți de imagine (când fișierul există)</td><td>Da</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Cum diferă cele trei adrese URL în practică",
+      "html": "<h3>URL-ul de urmărire vs. URL-ul de partajare 11tik</h3>\n  <p>Distribuiți adresa URL de vizionare atunci când scopul este să vizionați sau să discutați despre videoclip pe YouTube. Distribuiți adresa URL 11tik atunci când scopul este să redeschideți rezultatul extragerii miniaturilor - previzualizări, descărcări și dimensiuni publice validate - fără a cere cuiva să găsească mai întâi extractorul.</p>\n  <h3>11tik URL de partajare vs. URL direct al imaginii</h3>\n  <p>URL-ul direct al imaginii este cel pe care îl lipiți în<code>&lt;img src&gt;</code>, biblioteci media CMS sau instrumente de design după ce confirmați existența fișierului. Modul în care sunt construite acele adrese URL CDN din ID este sarcina utilizatorului<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>Adresa URL de partajare 11tik nu înlocuiește niciodată adresa imaginii: destinatarii folosesc în continuare opțiunea „Descărcare” sau „Copiere” a adresei URL din cadrul instrumentului atunci când au nevoie de fișierul în sine.</p>\n  <h3>URL-ul vizionat vs. URL-ul direct al imaginii</h3>\n  <p>Adresa URL pentru vizionare identifică videoclipul. Adresa URL a imaginii identifică un derivat public. Nu sunt interschimbabile, motiv pentru care ghicirea<code>maxresdefault.jpg</code>adesea eșuează chiar și atunci când pagina de vizionare funcționează.</p>"
+    },
+    {
+      "heading": "Când să partajezi ce link",
+      "html": "<ul>\n    <li><strong>Distribuie adresa URL de vizionare YouTube</strong>pentru vizionarea, comentarea sau citarea videoclipului.</li>\n    <li><strong>Distribuiți 11tik<code>/thumb/</code>URL-ul</strong>pentru colaboratorii care au nevoie de rezultatul extractorului, lista de calitate sau o redescărcare rapidă a imaginii publice.</li>\n    <li><strong>Partajați sau găzduiți adresa URL directă a imaginii / fișierul descărcat</strong>pentru imaginile prezentate pe blog, Open Graph și compozițiile de design - după confirmare. Consultați<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">descărcați ghidul</a>şi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de dimensiuni și rezoluție</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Cum conectează ID-ul video toate cele trei",
+      "html": "<p>Totul se bazează pe același ID de 11 caractere. URL-urile de pe Watch îl conțin.<code>v=</code>(sau segmente Shorts/embed/live path). 11tik îl introduce în<code>/thumb/{id}</code>CDN-ul îl plasează totuși între<code>/vi/</code>(sau<code>/vi_webp/</code>) și dimensiunea numelui fișierului. Dacă ID-ul este greșit, toate trei se întrerup în moduri diferite: videoclip greșit, pagină de rezultate greșită sau imagine greșită/lipsă.</p>"
+    },
+    {
+      "heading": "Cum se potrivește acest lucru fluxului de lucru al extractorului",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Linkul de partajare este o marcaj în acel flux de lucru. Nu omite validarea, nu inventează 4K și nu transformă videoclipurile private în imagini statice publice.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Este https://www.11tik.com/thumb/VIDEO_ID o imagine directă?",
+      "answer": "Nu. Este o pagină de rezultate 11tik pentru acel ID video. Imaginile directe sunt disponibile pe gazde precum i.ytimg.com.",
+      "answerHtml": "<p>Nu. Este o pagină de rezultate 11tik pentru acel ID de videoclip. Imaginile directe sunt disponibile pe gazde precum<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Ce se întâmplă după ce cineva deschide linkul meu de partajare?",
+      "answer": "11tik încarcă ruta miniaturilor, citește ID-ul, execută verificarea miniaturilor publice pentru ID-ul respectiv și afișează interfața extractorului cu rezultatele atunci când există imagini publice.",
+      "answerHtml": "<p>11tik încarcă ruta miniaturilor, citește ID-ul, execută verificarea miniaturilor publice pentru ID-ul respectiv și afișează interfața extractorului cu rezultatele atunci când există imagini publice.</p>"
+    },
+    {
+      "question": "Pot adăuga un link direct la /thumb/ în interiorul unei etichete img?",
+      "answer": "Nu faceți asta. Folosiți o adresă URL de imagine CDN confirmată sau un fișier descărcat. Calea de partajare returnează o shell de aplicație HTML, nu octeți de imagine.",
+      "answerHtml": "<p>Nu faceți asta. Folosiți o adresă URL de imagine CDN confirmată sau un fișier descărcat. Calea de partajare returnează o shell de aplicație HTML, nu octeți de imagine.</p>"
+    },
+    {
+      "question": "De ce s-a schimbat bara de adrese după ce am extras o miniatură?",
+      "answer": "După un extras dintr-un singur videoclip, 11tik sincronizează calea de partajare cu /thumb/{VIDEO_ID}, astfel încât rezultatul curent să fie ușor de copiat și redeschis.",
+      "answerHtml": "<p>După un extras dintr-un singur videoclip, 11tik sincronizează calea de partajare cu<code>/thumb/{VIDEO_ID}</code>deci rezultatul curent este ușor de copiat și redeschis.</p>"
+    },
+    {
+      "question": "Folosesc Shorts o cale de partajare diferită?",
+      "answer": "Nu. Short-urile se rezolvă în continuare într-un ID de 11 caractere. Adresa URL de partajare rămâne /thumb/{id}; doar forma originală a adresei URL YouTube a diferit.",
+      "answerHtml": "<p>Nu. Short-urile se rezolvă totuși într-un ID de 11 caractere. Adresa URL de partajare rămâne.<code>/thumb/{id}</code>; doar forma originală a adresei URL de pe YouTube era diferită.</p>"
+    },
+    {
+      "question": "Este /thumb/{id} același lucru cu copierea adresei URL maxres?",
+      "answer": "Nu. Maxres (când este prezent) este un fișier CDN posibil. Pagina de partajare listează dimensiunile publice validate și poate include alte niveluri atunci când maxres lipsește.",
+      "answerHtml": "<p>Nu. Maxres (când este prezent) este un fișier CDN posibil. Pagina de partajare listează dimensiunile publice validate și poate include alte niveluri atunci când maxres lipsește.</p>"
+    },
+    {
+      "question": "Unde sunt explicate mai detaliat adresele URL ale vizionărilor și adresele URL ale imaginilor?",
+      "answer": "Folosește articolul URL miniatură pentru ID → construcția CDN și articolul de descărcare pentru salvarea fișierelor.",
+      "answerHtml": "<p>Folosește<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-ul miniaturii articolului</a>pentru ID → construcția CDN și articolul de descărcare pentru salvarea fișierelor.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Concluzie</h2>\n<p>Trata<code>/thumb/{VIDEO_ID}</code>ca adresă de partajare/rezultat a lui 11tik: utilă pentru redeschiderea și trimiterea unei extrageri, niciodată ca înlocuitor pentru un link de vizionare YouTube sau o adresă directă<code>i.ytimg.com</code>totuși. Păstrați cele trei tipuri de adrese URL corecte și descărcările, încorporările și linkurile către colaboratori vor rămâne corecte.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrage o miniatură publică și copiază linkul de partajare 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>Referință creator:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Încărcați miniaturi video personalizate</a>.</p>"
+}

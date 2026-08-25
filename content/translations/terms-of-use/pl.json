@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "pl",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "Warunki korzystania | 11tik",
+  "description": "Narzędzie YouTube Thumbnail Extractor dostępne pod adresem https://www.11tik.com/ jest udostępniane w stanie „tak jak jest” w celu wyszukiwania i zapisywania publicznie dostępnych miniatur YouTube.",
+  "h1": "Warunki użytkowania",
+  "ogTitle": "Warunki użytkowania",
+  "ogDescription": "Narzędzie YouTube Thumbnail Extractor dostępne pod adresem https://www.11tik.com/ jest udostępniane w stanie „tak jak jest” w celu wyszukiwania i zapisywania publicznie dostępnych miniatur YouTube.",
+  "imageAlt": "",
+  "faqHeading": "Często zadawane pytania",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Co robi narzędzie",
+      "html": "<p>Identyfikuje publiczne adresy URL miniatur dla danego identyfikatora wideo i umożliwia podgląd, kopiowanie lub pobieranie tych obrazów w przeglądarce. Tryb zbiorczy akceptuje jeden publiczny adres URL w każdym wierszu. Publiczny adres URL kanału może zostać rozszerzony o ostatnio przesłane materiały za pośrednictwem publicznego kanału YouTube.</p>"
+    },
+    {
+      "heading": "Czego narzędzie nie robi",
+      "html": "<ul>\n    <li>Nie pobiera filmów ani dźwięków z YouTube.</li>\n    <li>Nie omija on treści prywatnych, objętych ograniczeniami wiekowymi lub w inny sposób niepublicznych.</li>\n    <li>Nie daje to praw do miniatury. Ponosisz odpowiedzialność za sposób wykorzystania obrazu, w tym za prawa autorskie i warunki YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "Dopuszczalne użycie",
+      "html": "<p>Nie używaj 11tik do pobierania zbyt dużej głośności, podszywania się pod inny kanał ani do publikowania miniaturki jako własnej okładki bez zgody właściciela praw. Automatyczny dostęp może być ograniczony.</p>"
+    },
+    {
+      "heading": "Udostępnij strony i publiczny interfejs API",
+      "html": "<p>Udostępnij linki takie jak<code>/?v=</code>Interfejs API miniatur opisuje publiczne zdjęcia. Nie stanowią one licencji na komercyjne wykorzystanie dzieła. Widget osadzony musi zachować atrybut „Powered by 11tik.com”, jeśli wyświetlasz go na innej stronie.</p>"
+    },
+    {
+      "heading": "Dostępność",
+      "html": "<p>Strona może ulec zmianie, ulec awarii lub zostać wyłączona. Nie obowiązuje żadna umowa o poziomie usług ani gwarancja nieprzerwanego dostępu, przydatności do określonego celu ani bezbłędnych wyników.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Pytania:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>lub<a href=\"https://www.11tik.com/p/contact.html\">formularz kontaktowy</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">Polityka prywatności</a>·<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/\">Narzędzie do ekstrakcji miniatur YouTube</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

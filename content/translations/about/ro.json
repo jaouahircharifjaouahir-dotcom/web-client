@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "ro",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "Despre 11tik | 11tik",
+  "description": "11tik este editorul YouTube Thumbnail Extractor la adresa www.11tik.com. Site-ul este destinat persoanelor care au nevoie de imaginea publică de previzualizare a unui videoclip YouTube fără a instala software sau a încărca linkul pe un server de procesare.",
+  "h1": "Despre 11tik",
+  "ogTitle": "Despre 11tik",
+  "ogDescription": "11tik este editorul YouTube Thumbnail Extractor la adresa www.11tik.com. Site-ul este destinat persoanelor care au nevoie de imaginea publică de previzualizare a unui videoclip YouTube fără a instala software sau a încărca linkul pe un server de procesare.",
+  "imageAlt": "11tik Previzualizare produs YouTube Thumbnail Extractor la 1200 pe 630 pixeli",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Previzualizare produs YouTube Thumbnail Extractor la 1200 pe 630 pixeli",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Cine publică acest site?",
+      "html": "<p>Conținutul și extractorul sunt publicate sub numele 11tik. Nu există personaje de expert inventate și nici scoruri de recenzie fabricate. Paginile editoriale explică modul în care funcționează fișierele publice de miniaturi; nu pretind a fi YouTube, Google.</p>"
+    },
+    {
+      "heading": "Ce face 11tik?",
+      "html": "<p>Instrumentul citește un ID public al unui videoclip în browser, verifică ce fișiere miniatură există pe gazdele de imagini YouTube și vă permite să descărcați sau să copiați acele imagini statice. Analiza și clasarea rămân pe dispozitivul dvs. Puteți lucra cu o singură adresă URL, o listă de adrese URL sau un flux de canal public cu încărcări recente.</p>"
+    },
+    {
+      "heading": "Ce nu face 11tik?",
+      "html": "<ul>\n    <li>Nu descarcă videoclipuri sau audio de pe YouTube.</li>\n    <li>Nu ocolește videoclipurile private, restricționate în funcție de vârstă sau blocate în funcție de regiune.</li>\n    <li>Nu necesită un cont.</li>\n    <li>Nu revendică drepturi de autor asupra miniaturii altcuiva.</li>\n  </ul>"
+    },
+    {
+      "heading": "Versiuni lingvistice",
+      "html": "<p>Interfața de utilizare a extractorului este disponibilă pe gazde lingvistice precum<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>şi<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>Aceste pagini legale rămân pe www.11tik.com, deci există o singură adresă URL canonică pentru secțiunile Despre, Confidențialitate, Contact și Termeni.</p>"
+    },
+    {
+      "heading": "Cum pot contacta editorul?",
+      "html": "<p>E-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>sau folosiți<a href=\"https://www.11tik.com/p/contact.html\">formular de contact</a>Citește<a href=\"https://www.11tik.com/p/privacy.html\">Politica de confidențialitate</a>pentru detalii de analiză și găzduire și<a href=\"https://www.11tik.com/p/terms-of-use.html\">termeni de utilizare</a>pentru o utilizare acceptabilă.</p>\n  <p class=\"yte-bio\">11tik publică ghiduri practice despre miniaturile publice de pe YouTube și întreține extractorul gratuit în browser. Corecțiile sunt binevenite prin e-mail sau prin formularul de contact.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik publică ghiduri practice despre miniaturile publice de pe YouTube și întreține extractorul gratuit în browser. Corecțiile sunt binevenite prin e-mail sau prin formularul de contact.</p>"
+}

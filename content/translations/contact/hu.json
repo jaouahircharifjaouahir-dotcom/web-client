@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "hu",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Kapcsolat | 11tik",
+  "description": "Ezt az űrlapot használd a YouTube Indexkép-kivonóval kapcsolatos kérdések esetén. Az üzenetek a 11tik operátornak érkeznek e-mailben. Ne küldj videó- ​​vagy hangfájlokat. Az eszköz csak nyilvános indexképekkel működik.",
+  "h1": "Érintkezés",
+  "ogTitle": "Érintkezés",
+  "ogDescription": "Ezt az űrlapot használd a YouTube Indexkép-kivonóval kapcsolatos kérdések esetén. Az üzenetek a 11tik operátornak érkeznek e-mailben. Ne küldj videó- ​​vagy hangfájlokat. Az eszköz csak nyilvános indexképekkel működik.",
+  "imageAlt": "",
+  "faqHeading": "GYIK",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Érintkezés",
+      "html": "<h1>Érintkezés</h1>\n  <p class=\"yte-updated\">Utolsó frissítés: 2026. augusztus 22.</p>\n  <p itemprop=\"description\">Ezt az űrlapot használd a YouTube Indexkép-kivonóval kapcsolatos kérdések esetén. Az üzenetek a 11tik operátornak e-mailben érkeznek. Ne küldj videó- ​​vagy hangfájlokat. Az eszköz csak nyilvános indexképekkel működik.</p>\n  <p>Közvetlen e-mail:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Egy adott videóról szóló jelentéshez add meg a nyilvános YouTube URL-t. A 11tik nem tárolja az indexképfájlt; a képet a platform nyilvános CDN-jéről kéri le.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Név<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>Email<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Üzenet<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Üzenet küldése</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>·<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Adatvédelmi irányelvek</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

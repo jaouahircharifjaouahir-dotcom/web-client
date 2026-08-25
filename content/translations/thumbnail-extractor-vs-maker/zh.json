@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "zh",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "缩略图提取器 vs 生成器 | 11tik",
+  "description": "缩略图提取器会保存 YouTube 上已有的公开缩略图。缩略图制作工具（例如 Canva、Photoshop 或 YouTube Studio 的上传功能）则会创建一张属于您自己的新图片。11tik 是一款提取器，它不负责设计图片，也不会将自定义文件上传到您的频道。",
+  "h1": "缩略图提取器与生成器",
+  "ogTitle": "缩略图提取器与生成器",
+  "ogDescription": "缩略图提取器会保存 YouTube 上已有的公开缩略图。缩略图制作工具（例如 Canva、Photoshop 或 YouTube Studio 的上传功能）则会创建一张属于您自己的新图片。11tik 是一款提取器，它不负责设计图片，也不会将自定义文件上传到您的频道。",
+  "imageAlt": "11tik 提取器用于保存公开的 YouTube 缩略图",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 提取器用于保存公开的 YouTube 缩略图",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "什么是缩略图提取器？",
+      "html": "<p>提取器读取公开的视频 URL，在 YouTube 的 CDN 上查找图像文件，并允许您预览、下载或复制可用的图像 URL。它仅列出存在的图像尺寸，不会从视频流中提取帧。</p>"
+    },
+    {
+      "heading": "什么是缩略图生成器？",
+      "html": "<p>“创作者”指的是一种设计工作流程。你需要调整字体、字体和对比度，导出 16:9 的静态图像，然后将其上传到 YouTube 工作室。你拥有该文件的所有权（但需遵守字体、图片和平台规则）。提取竞争对手的静态图像并重新上传并非创作者的工作流程。</p>"
+    },
+    {
+      "heading": "什么时候应该使用萃取机？",
+      "html": "<p>使用<a href=\"https://www.11tik.com/\">11tik</a>当您需要获取公开的实时文件时：例如进行研究、备份已发布的静态图像、作为内容管理系统 (CMS) 的特色图片或进行 Open Graph 检查。粘贴公开观看链接、短链接、youtu.be 和 URL，然后下载能够实际返回图像的最大尺寸文件。</p>"
+    },
+    {
+      "heading": "什么时候应该使用打印机？",
+      "html": "<p>在为新上传的视频或更新缩略图创建原创包装时，请使用设计工具。该文件将在 Studio 中成为官方自定义缩略图。YouTube 处理完成后，您可以将观看链接粘贴到 11tik 中，以确认有哪些公开尺寸可供选择，包括 YouTube 发布时的最大分辨率尺寸。</p>"
+    },
+    {
+      "heading": "这两者之间有何关联？",
+      "html": "<ol>\n    <li>从您所在领域的视频中提取公开参考资料（仅供研究）。</li>\n    <li>使用创客工具设计一个原创的蒸馏器。</li>\n    <li>请使用 YouTube Studio 上传。</li>\n    <li>处理完成后，使用 11tik 确认公共 CDN 文件。</li>\n  </ol>\n  <p>有关的：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio 缩略图 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">截图与实际缩略图</a>。</p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">打开提取器</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "什么是缩略图提取器？",
+      "answer": "一个可以保存 YouTube 上已有公共资源的工具。11tik 只列出已存在的图像文件。",
+      "answerHtml": "一个可以保存 YouTube 上已有公共资源的工具。11tik 只列出已存在的图像文件。"
+    },
+    {
+      "question": "什么时候应该使用打印机？",
+      "answer": "当您在 YouTube 工作室中创建原创艺术作品并上传为自定义缩略图时。",
+      "answerHtml": "当您在 YouTube 工作室中创建原创艺术作品并上传为自定义缩略图时。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+}

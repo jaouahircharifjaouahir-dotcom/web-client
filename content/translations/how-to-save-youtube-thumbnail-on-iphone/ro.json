@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "ro",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Cum să salvezi o miniatură YouTube pe iPhone și Android (2026) | 11tik",
+  "description": "Salvează fișierul public de YouTube pe iPhone sau Android fără o captură de ecran și fără un program de descărcare din magazinul de aplicații. Inserează o adresă URL publică pentru vizionare sau Shorts în 11tik în Safari sau Chrome, apoi descarcă cel mai mare fișier de imagine pe care YouTube îl găzduiește deja.",
+  "h1": "Cum să salvezi o miniatură YouTube pe iPhone și Android (2026)",
+  "ogTitle": "Cum să salvezi o miniatură YouTube pe iPhone și Android (2026)",
+  "ogDescription": "Salvează fișierul public de YouTube pe iPhone sau Android fără o captură de ecran și fără un program de descărcare din magazinul de aplicații. Inserează o adresă URL publică pentru vizionare sau Shorts în 11tik în Safari sau Chrome, apoi descarcă cel mai mare fișier de imagine pe care YouTube îl găzduiește deja.",
+  "imageAlt": "Salvați o miniatură YouTube pe iPhone și Android cu 11tik — încă public, fără aplicație",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Salvați o miniatură YouTube pe iPhone și Android cu 11tik — încă public, fără aplicație",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Pot salva o miniatură YouTube pe telefon?",
+      "html": "<p>Da, dacă videoclipul este public și YouTube a publicat o imagine statică. Nu ai nevoie de un desktop și nu ai nevoie de un APK sau de o aplicație TestFlight. Deschide<a href=\"https://www.11tik.com/\">11tik</a>În browserul telefonului pe care îl folosești deja, lipește linkul, atinge Obține imagine miniatură, apoi salvează primul fișier listat. Fișierul respectiv este cel mai înalt JPEG sau WebP public care a returnat de fapt o imagine.</p>\n  <p>O captură de ecran a playerului cu apăsare lungă nu este același lucru. Captura de ecran include crom, bare din zona sigură și compresie suplimentară. Publicul încă există pe i.ytimg.com. Vezi<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captură de ecran vs. miniatură reală</a>dacă aveți nevoie de această distincție pentru un blog sau o etichetă Open Graph.</p>"
+    },
+    {
+      "heading": "Ce ai nevoie înainte de a începe",
+      "html": "<ul>\n    <li>O adresă URL publică de vizionare pe YouTube, Shorts, Live sau youtu.be. Parametri de interogare suplimentari, cum ar fi<code>pp=</code>sau ID-ul listei de redare nu contează; 11tik citește ID-ul videoclipului format din 11 caractere.</li>\n    <li>Safari pe iPhone sau iPad sau Chrome, Firefox sau Samsung Internet pe Android.</li>\n    <li>Permisiunea de a salva fotografiile dacă browserul solicită acest lucru. 11tik nu încarcă niciodată imaginea pe un server 11tik ca suport media original.</li>\n  </ul>\n  <p>Videoclipurile private, exclusiv pentru membri sau restricționate în funcție de vârstă care nu sunt publicate public nu vor fi totuși afișate pentru descărcare. Aceasta este o regulă a platformei, nu o limitare telefonică. De asemenea, miniaturile personalizate care sunt încă procesate în Studio pot lipsi pentru o perioadă scurtă de timp; confirmați ulterior cu aceeași adresă URL. Legate de:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniaturi YouTube Studio în 2026</a>.</p>"
+    },
+    {
+      "heading": "Cum să salvezi o miniatură YouTube pe iPhone",
+      "html": "<ol>\n    <li>În aplicația YouTube sau în Safari, copiază linkul videoclipului sau al videoclipului Shorts (Distribuie → Copiază linkul).</li>\n    <li>Deschide<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>în Safari. Nu instalați nimic.</li>\n    <li>Lipiți adresa URL și atingeți Obțineți imaginea miniatură. Așteptați până când apare o previzualizare reală. Casetele gri goale înseamnă că dimensiunea nu a fost niciodată publicată.</li>\n    <li>Atingeți primul control de descărcare. Safari va oferi Deschidere sau Descărcare. Alegeți Descărcare, apoi păstrați imaginea în Fișiere sau salvați-o în Poze din foaia de partajare.</li>\n    <li>Dacă aveți nevoie doar de adresa unui CMS, folosiți opțiunea „Copy image URL” în loc de „download”. Aceasta copiază un link HTTPS i.ytimg.com sau vi_webp. Ghid:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Adresa URL a miniaturii YouTube</a>.</li>\n  </ol>\n  <p>Dacă iOS blochează o descărcare cross-source, deschide adresa URL a imaginii într-o filă nouă, apoi atinge și ține apăsat pe imagine → Adaugă la Fotografii. Salvezi în continuare fișierul public YouTube, nu o captură de ecran a paginii 11tik.</p>"
+    },
+    {
+      "heading": "Cum să salvezi o miniatură YouTube pe Android",
+      "html": "<ol>\n    <li>Copiază adresa URL publică pentru vizionare sau Shorts din aplicația YouTube.</li>\n    <li>Deschide 11tik în Chrome (sau în browserul tău implicit).</li>\n    <li>Lipește, extrage, apoi atinge prima descărcare. De obicei, Chrome scrie fișierul în Descărcări.</li>\n    <li>Deschide notificarea Descărcări și mută imaginea în Galerie dacă vrei să fie în Poze.</li>\n  </ol>\n  <p>Android ar putea întreba ce aplicație ar trebui să deschidă un fișier JPEG. Alegeți Galerie sau Fișiere. Nu alegeți un „programare de descărcare video” care promite MP4; 11tik nu oferă video sau audio.</p>"
+    },
+    {
+      "heading": "Ce mărime ar trebui să păstrez la un telefon?",
+      "html": "<p>Păstrați prima dimensiune listată. 11tik fișiere deja clasate care există. Când YouTube a publicat maxresdefault, aceasta este de obicei 1280×720. Dacă numele fișierului este 404s, dimensiunea maximă corectă este următorul fișier real (adesea hq720, sddefault sau hqdefault). Lipsa unui fișier maxres este normală. Detalii:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ce este maxresdefault.jpg</a>şi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">dimensiunile miniaturilor în 2026</a>.</p>\n  <p>Scurtmetrajele sunt adesea redate pe verticală, în timp ce imaginea statică stocată este pe peisaj. Fișierul este în continuare miniatura publică oficială. Vedeți<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniaturi pentru scurtmetraje</a>.</p>"
+    },
+    {
+      "heading": "Este legal să salvez o miniatură pe telefon?",
+      "html": "<p>Salvarea unei imagini statice găzduite public pentru referințe personale, cercetare sau educație este utilizarea obișnuită. Imaginea rămâne opera protejată prin drepturi de autor a persoanei care a încărcat-o. Nu o reîncărcați ca miniatură personalizată, nu o imprimați pe produse și nu tratați 11tik ca o licență. Ajutorul YouTube pentru miniaturile personalizate este aici:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Încărcați miniaturi video personalizate</a>Regulile lui 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>şi<a href=\"https://www.11tik.com/copyright\">Drepturi de autor și utilizare</a>.</p>"
+    },
+    {
+      "heading": "De ce eșuează „aplicațiile miniatură” pentru telefon",
+      "html": "<p>Multe anunțuri din magazine încadrează o pagină de anunțuri în jurul unui ghicit<code>maxresdefault.jpg</code>URL. Dacă YouTube nu a publicat niciodată fișierul respectiv, veți primi o imagine nefuncțională sau o setare implicită gri. 11tik verifică răspunsurile din browser și ascunde dimensiunile care nu sunt imagini. Nimic nu este „deblocat” în spatele unei înscrieri. Confidențialitate: URL-urile lipite rămân în browser; consultați<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>.</p>"
+    },
+    {
+      "heading": "Salvați mai multe linkuri de pe un telefon",
+      "html": "<p>Folosește opțiunea „În bloc” pe aceeași pagină principală, cu o adresă URL publică pe rând, până la maximum 25. Adresa URL a unui canal se poate extinde la încărcările publice recente pe un ecran mai mare; pe un telefon, lipește linkuri individuale dacă extinderea canalului pare înghesuită. Ghid „În bloc”:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">descărcare în lot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Salvați o miniatură publică pe 11tik →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul extractorului din browser.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pot salva o miniatură YouTube pe telefon?",
+      "answer": "Da. Deschide 11tik în Safari sau Chrome, lipește o adresă URL publică de pe YouTube, extrage și descarcă prima imagine publică listată. Nu este necesar un program de descărcare din magazinul de aplicații.",
+      "answerHtml": "Da. Deschide 11tik în Safari sau Chrome, lipește o adresă URL publică de pe YouTube, extrage și descarcă prima imagine publică listată. Nu este necesar un program de descărcare din magazinul de aplicații."
+    },
+    {
+      "question": "Cum salvez o miniatură YouTube pe iPhone?",
+      "answer": "Copiază linkul, deschide https://www.11tik.com/ în Safari, lipește-l, extrage-l, apoi descarcă sau apasă lung pe adresa URL a imaginii și adaugă-o în Fotografii.",
+      "answerHtml": "Copiază linkul, deschide https://www.11tik.com/ în Safari, lipește-l, extrage-l, apoi descarcă sau apasă lung pe adresa URL a imaginii și adaugă-o în Fotografii."
+    },
+    {
+      "question": "Cum salvez o miniatură YouTube pe Android?",
+      "answer": "Copiază linkul, deschide 11tik în Chrome, extrage fișierul și salvează prima descărcare în Descărcări sau Galerie.",
+      "answerHtml": "Copiază linkul, deschide 11tik în Chrome, extrage fișierul și salvează prima descărcare în Descărcări sau Galerie."
+    },
+    {
+      "question": "Este legal să salvez o miniatură pe telefon?",
+      "answer": "Salvarea unei imagini publice pentru referință personală sau cercetare este ceva obișnuit. Nu o republicați ca propria copertă. Drepturile de autor rămân ale persoanei care a încărcat-o.",
+      "answerHtml": "Salvarea unei imagini publice pentru referință personală sau cercetare este ceva obișnuit. Nu o republicați ca propria copertă. Drepturile de autor rămân ale persoanei care a încărcat-o."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul extractorului din browser.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

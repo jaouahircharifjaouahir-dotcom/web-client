@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "sr",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Како преузети сличице са YouTube Shorts-а у HD резолуцији | 11tik",
+  "description": "Преузмите сличицу YouTube Shorts-а у прегледачу. Shorts-ови користе исте јавне фотографије као и URL-ови за гледање. Датотека је често у хоризонталном положају.",
+  "h1": "Како преузети сличице са YouTube Shorts-а у HD резолуцији",
+  "ogTitle": "Како преузети сличице са YouTube Shorts-а у HD резолуцији",
+  "ogDescription": "Преузмите сличицу YouTube Shorts-а у прегледачу. Shorts-ови користе исте јавне фотографије као и URL-ови за гледање. Датотека је често у хоризонталном положају.",
+  "imageAlt": "Преузимање јавне сличице YouTube Shorts-а у 11tik",
+  "faqHeading": "Честа питања",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Преузимање јавне сличице YouTube Shorts-а у 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Како да преузмем сличицу за YouTube Shorts?",
+      "html": "<p>Копирајте URL који садржи /shorts/ плус ИД видеа, налепите га у<a href=\"https://www.11tik.com/\">[[П2]]</a>и преузмите наведену величину. Екстракција почиње када је ИД важећи.</p>"
+    },
+    {
+      "heading": "Да ли су Shorts датотеке исте као датотеке странице гледања?",
+      "html": "<p>Користе исте јавне називе величина повезане ИД-ом видеа. Слика може изгледати испрекидано ако је YouTube сачувао дериват широког екрана.</p>"
+    },
+    {
+      "heading": "Шта ако се слика не појави?",
+      "html": "<p>Кратки видео може бити приватан, обрисан или без јавних кадрова. Екстрактор не може заобићи та ограничења.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Како преузети</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Могу ли да преузмем сличицу за YouTube Shorts?",
+      "answer": "Да, када је YouTube објавио јавне снимке за тај ИД Shorts видеа.",
+      "answerHtml": "Да, када је YouTube објавио јавне снимке за тај ИД Shorts видеа."
+    },
+    {
+      "question": "Зашто и даље изгледа као да је уоквирена?",
+      "answer": "Јутјуб може да сачува дериват 16:9 чак и за вертикални кратки видео. 11tik приказује хостовану датотеку уместо да измишља обрезивање.",
+      "answerHtml": "Јутјуб може да сачува дериват 16:9 чак и за вертикални кратки видео. 11tik приказује хостовану датотеку уместо да измишља обрезивање."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "vi",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Cách tải xuống hàng loạt hình thu nhỏ YouTube (tối đa 25 URL công khai) | 11tik",
+  "description": "Trích xuất hàng loạt ảnh thumbnail công khai trên YouTube ngay trong trình duyệt. Dán mỗi URL trên một dòng, tải xuống từng ảnh tĩnh đẹp nhất hoặc nén bộ ảnh chất lượng cao nhất. Không cần tài khoản và không lưu trữ tệp video.",
+  "h1": "Cách tải xuống hàng loạt ảnh thu nhỏ YouTube (tối đa 25 URL công khai)",
+  "ogTitle": "Cách tải xuống hàng loạt ảnh thu nhỏ YouTube (tối đa 25 URL công khai)",
+  "ogDescription": "Trích xuất hàng loạt ảnh thumbnail công khai trên YouTube ngay trong trình duyệt. Dán mỗi URL trên một dòng, tải xuống từng ảnh tĩnh đẹp nhất hoặc nén bộ ảnh chất lượng cao nhất. Không cần tài khoản và không lưu trữ tệp video.",
+  "imageAlt": "11tik công cụ trích xuất hình thu nhỏ hàng loạt với nhiều URL YouTube sẵn sàng để tải xuống",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik công cụ trích xuất hình thu nhỏ hàng loạt với nhiều URL YouTube sẵn sàng để tải xuống",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Làm thế nào để tải xuống hàng loạt ảnh thu nhỏ YouTube?",
+      "html": "<p>Mở<a href=\"https://www.11tik.com/\">11tik</a>Bật chế độ Xử lý hàng loạt, dán mỗi URL công khai trên một dòng, nhấp vào \"Giải nén tất cả\", sau đó tải xuống từng ảnh tĩnh tốt nhất hoặc tệp zip có chất lượng cao nhất. Giới hạn là 25 URL mỗi lần chạy để trình duyệt vẫn hoạt động mượt mà.</p>"
+    },
+    {
+      "heading": "Những gì nên có trong danh sách này?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be liên kết ngắn</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>Video riêng tư, video không được liệt kê (không có hình thu nhỏ công khai) hoặc video có giới hạn độ tuổi sẽ không hiển thị ảnh tĩnh. Điều này là bình thường. Xem thêm<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Ảnh thu nhỏ quần short</a>.</p>"
+    },
+    {
+      "heading": "Cách thực hiện trích xuất hàng loạt",
+      "html": "<ol>\n    <li>Trên trang chủ, hãy nhấp vào \"Số lượng lớn\".</li>\n    <li>Dán tối đa 25 liên kết công khai, mỗi liên kết trên một dòng.</li>\n    <li>Nhấp vào \"Trích xuất tất cả\" và đợi cho đến khi mỗi thẻ hiển thị bản xem trước.</li>\n    <li>Tải xuống video thu nhỏ (số thứ tự) cho mỗi hình ảnh đẹp nhất, hoặc tải xuống tất cả các video chất lượng cao nhất dưới dạng tệp zip.</li>\n    <li>Tùy chọn: Xuất CSV nhật ký nghiên cứu (ID video, tiêu đề, URL chia sẻ, URL hình ảnh).</li>\n  </ol>"
+    },
+    {
+      "heading": "Tôi có thể sử dụng thông tin này để nghiên cứu đối thủ cạnh tranh không?",
+      "html": "<p>Vâng, để nghiên cứu bao bì công cộng. Không đăng lại hình thu nhỏ của người tạo khác dưới dạng tải lên của riêng bạn. Bản quyền thuộc về chủ sở hữu quyền. 11tik chỉ tải các tệp mà YouTube đã lưu trữ công khai.</p>\n  <p><a href=\"https://www.11tik.com/\">Mở trích xuất hàng loạt trên 11tik →</a></p>\n  <p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Làm thế nào để tải xuống hàng loạt ảnh thu nhỏ YouTube?",
+      "answer": "Sử dụng Bulk trên 11tik, dán một URL công khai trên mỗi dòng, giải nén, sau đó tải xuống ảnh tĩnh hoặc tệp zip có chất lượng công khai cao nhất. Tối đa 25 URL mỗi lần chạy.",
+      "answerHtml": "Sử dụng Bulk trên 11tik, dán một URL công khai trên mỗi dòng, giải nén, sau đó tải xuống ảnh tĩnh hoặc tệp zip có chất lượng công khai cao nhất. Tối đa 25 URL mỗi lần chạy."
+    },
+    {
+      "question": "Tôi có thể sử dụng thông tin này để nghiên cứu đối thủ cạnh tranh không?",
+      "answer": "Đúng vậy, nên nghiên cứu về bao bì sản phẩm công cộng. Không được đăng lại hình thu nhỏ của người khác như của riêng bạn. Bản quyền thuộc về chủ sở hữu bản quyền.",
+      "answerHtml": "Đúng vậy, nên nghiên cứu về bao bì sản phẩm công cộng. Không được đăng lại hình thu nhỏ của người khác như của riêng bạn. Bản quyền thuộc về chủ sở hữu bản quyền."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>.</p>"
+}

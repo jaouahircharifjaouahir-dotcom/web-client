@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "ko",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "썸네일 추출기 vs 생성기 | 11tik",
+  "description": "썸네일 추출기는 YouTube에 이미 호스팅된 공개 스틸 이미지를 저장합니다. 썸네일 제작 도구(Canva, Photoshop 또는 YouTube Studio 업로드 기능)는 사용자가 소유한 새 이미지를 생성합니다. 11tik는 추출기입니다. 이미지를 디자인하거나 사용자 지정 파일을 채널에 업로드하지 않습니다.",
+  "h1": "썸네일 추출기 vs 썸네일 제작기",
+  "ogTitle": "썸네일 추출기 vs 썸네일 제작기",
+  "ogDescription": "썸네일 추출기는 YouTube에 이미 호스팅된 공개 스틸 이미지를 저장합니다. 썸네일 제작 도구(Canva, Photoshop 또는 YouTube Studio 업로드 기능)는 사용자가 소유한 새 이미지를 생성합니다. 11tik는 추출기입니다. 이미지를 디자인하거나 사용자 지정 파일을 채널에 업로드하지 않습니다.",
+  "imageAlt": "11tik 공개 YouTube 썸네일을 저장하는 데 사용되는 추출기",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 공개 YouTube 썸네일을 저장하는 데 사용되는 추출기",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "썸네일 추출기란 무엇인가요?",
+      "html": "<p>이미지 추출기는 공개 동영상 URL을 읽어 YouTube CDN에서 이미지 파일을 찾고, 미리보기, 다운로드 또는 작동하는 이미지 URL을 복사할 수 있도록 해줍니다. 존재하는 이미지 크기만 나열하며, 동영상 스트림에서 프레임을 추출하지는 않습니다.</p>"
+    },
+    {
+      "heading": "썸네일 제작 도구란 무엇인가요?",
+      "html": "<p>메이커란 디자인 워크플로를 의미합니다. 글꼴, 서체, 명암을 조합하고 16:9 비율의 스틸 이미지를 내보낸 후 YouTube 스튜디오에 업로드하는 것입니다. 이렇게 업로드한 파일의 소유권은 본인에게 있습니다(단, 글꼴, 사진, 플랫폼 규칙은 예외). 경쟁업체의 스틸 이미지를 추출하여 다시 업로드하는 것은 메이커 워크플로가 아닙니다.</p>"
+    },
+    {
+      "heading": "언제 추출기를 사용해야 할까요?",
+      "html": "<p>사용<a href=\"https://www.11tik.com/\">11tik</a>공개된 실시간 파일이 필요할 때: 연구, 게시된 스틸 이미지 백업, CMS 추천 이미지 또는 Open Graph 확인. 공개 감시, 쇼츠, youtu.be, URL을 붙여넣고 실제로 이미지를 반환하는 가장 큰 크기를 다운로드하세요.</p>"
+    },
+    {
+      "heading": "메이커는 언제 사용해야 할까요?",
+      "html": "<p>새로운 업로드나 썸네일 업데이트를 위한 독창적인 패키징을 만들 때는 디자인 도구를 사용하세요. 스튜디오에서 해당 파일이 공식 맞춤 썸네일이 됩니다. YouTube에서 처리가 완료되면 시청 URL을 11tik에 붙여넣어 YouTube에서 게시했을 때의 최대 해상도를 포함하여 어떤 공개 크기가 있는지 확인할 수 있습니다.</p>"
+    },
+    {
+      "heading": "이 두 가지는 어떻게 연결될까요?",
+      "html": "<ol>\n    <li>관심 분야의 동영상에서 공개된 참고 자료를 추출하세요 (연구 목적으로만 사용).</li>\n    <li>메이커 도구를 사용하여 독창적인 스틸컷을 디자인하세요.</li>\n    <li>YouTube 스튜디오에 업로드하세요.</li>\n    <li>처리 후 11tik를 사용하여 공개 CDN 파일을 확인합니다.</li>\n  </ol>\n  <p>관련된:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">유튜브 스튜디오 썸네일 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 썸네일</a>.</p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기를 여세요</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "썸네일 추출기란 무엇인가요?",
+      "answer": "YouTube에 이미 호스팅된 공개 콘텐츠를 저장하는 도구입니다. 11tik는 존재하는 이미지 파일만 나열합니다.",
+      "answerHtml": "YouTube에 이미 호스팅된 공개 콘텐츠를 저장하는 도구입니다. 11tik는 존재하는 이미지 파일만 나열합니다."
+    },
+    {
+      "question": "메이커는 언제 사용해야 할까요?",
+      "answer": "YouTube 스튜디오에서 맞춤 썸네일로 업로드할 원본 이미지를 제작할 때.",
+      "answerHtml": "YouTube 스튜디오에서 맞춤 썸네일로 업로드할 원본 이미지를 제작할 때."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+}

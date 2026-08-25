@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "ja",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "YouTube Studio サムネイル 2026 | 11tik",
+  "description": "2026年になっても、YouTubeの対象となるチャンネルは、Studioからカスタムサムネイルを動画の詳細ページにアップロードします。メニューラベルは移動しますが、結果は同じです。YouTubeは新しい公開静止画をホストします。11tikはそのファイルをアップロードしません。公開画像URLが存在する後にのみ読み取ります。",
+  "h1": "YouTube Studio サムネイル 2026",
+  "ogTitle": "YouTube Studio サムネイル 2026",
+  "ogDescription": "2026年になっても、YouTubeの対象となるチャンネルは、Studioからカスタムサムネイルを動画の詳細ページにアップロードします。メニューラベルは移動しますが、結果は同じです。YouTubeは新しい公開静止画をホストします。11tikはそのファイルをアップロードしません。公開画像URLが存在する後にのみ読み取ります。",
+  "imageAlt": "11tikはYouTube Studioにアップロードした後、公開サムネイルを検証するために使用されます。",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tikはYouTube Studioにアップロードした後、公開サムネイルを検証するために使用されます。",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "YouTube Studioでカスタムサムネイルをアップロードするにはどうすればよいですか？",
+      "html": "<ol>\n    <li>YouTube Studioを開き、動画を選択します。</li>\n    <li>詳細設定で、16:9の画像をアップロードしてください（YouTubeの一般的なターゲットサイズは1280×720です）。</li>\n    <li>保存して、処理が完了するまでお待ちください。</li>\n  </ol>\n  <p>ボタンの正確な名称は変更される場合があります。アカウントがカスタムサムネイルの対象外の場合、Studio はアップロード機能を提供しません。11tik ではこれを回避できません。</p>"
+    },
+    {
+      "heading": "Studioでサムネイルを変更した後、どのように確認すれば良いですか？",
+      "html": "<p>ウォッチのURLを貼り付けて<a href=\"https://www.11tik.com/\">11tik</a>最初にリストされているサイズをダウンロードまたはコピーしてください。maxresdefault が見つからない場合は、次の公開ファイルが実際の最大値です。これは YouTube のカタログであり、抽出に失敗したものではありません。こちらも参照してください。<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault の説明</a>。</p>"
+    },
+    {
+      "heading": "11tikはYouTube Studioの代わりになりますか？",
+      "html": "<p>いいえ。Studioは、YouTubeが提供するテストをアップロード、スケジュール設定、使用する場所です。11tikは、Studioでの変更後も含め、既に存在する公開静止画をプレビューおよび保存するためのものです。</p>"
+    },
+    {
+      "heading": "画像が古く見える場合はどうすればいいですか？",
+      "html": "<p>画像CDNは遅延する場合があります。後で再度確認するか、ハードリフレッシュするか、11tikが確認したURLをコピーしてください。4Kマスターを想定しないでください。公開されている最大解像度は通常1280×720です。Studioのスクリーンショットは公開されているサムネイルファイルではありません。</p>\n  <p>関連している：<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">抽出器 vs メーカー</a>。</p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出ツールを開く</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "11tikはYouTube Studioの代わりになりますか？",
+      "answer": "いいえ。Studioはカスタムアートをアップロードします。11tikは公開されているサムネイルファイルのみを読み取ります。",
+      "answerHtml": "いいえ。Studioはカスタムアートをアップロードします。11tikは公開されているサムネイルファイルのみを読み取ります。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+}

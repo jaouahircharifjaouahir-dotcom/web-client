@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "hu",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "YouTube indexképek kötegelt letöltése (legfeljebb 25 nyilvános URL) | 11tik",
+  "description": "Tömeges YouTube-bélyegképek kinyerése a böngészőben. Soronként egy URL-t illessz be, töltsd le a legjobb állóképeket, vagy tömörítsd be a legmagasabb minőségű készletet. Nincs szükség fiókra és videofájlokra.",
+  "h1": "YouTube-bélyegképek kötegelt letöltése (legfeljebb 25 nyilvános URL)",
+  "ogTitle": "YouTube-bélyegképek kötegelt letöltése (legfeljebb 25 nyilvános URL)",
+  "ogDescription": "Tömeges YouTube-bélyegképek kinyerése a böngészőben. Soronként egy URL-t illessz be, töltsd le a legjobb állóképeket, vagy tömörítsd be a legmagasabb minőségű készletet. Nincs szükség fiókra és videofájlokra.",
+  "imageAlt": "11tik tömeges bélyegkép-kicsomagoló több letöltésre kész YouTube URL-lel",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik tömeges bélyegkép-kicsomagoló több letöltésre kész YouTube URL-lel",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hogyan tölthetek le kötegelt YouTube-bélyegképeket?",
+      "html": "<p>Nyitott<a href=\"https://www.11tik.com/\">11tik</a>, kapcsold be a Tömeges letöltést, illessz be soronként egy nyilvános URL-t, kattints az Összes kibontása gombra, majd töltsd le a legjobb állóképeket vagy a legmagasabb minőségű zip fájlt. Futtatásonként legfeljebb 25 URL küldhető el, így a böngésző reszponzív marad.</p>"
+    },
+    {
+      "heading": "Mi tartozik a listába?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= Azonosítók</li>\n    <li>youtu.be rövid linkek</li>\n    <li>youtube.com/shorts/ Azonosítók</li>\n    </ul>\n  <p>A privát, a nyilvános indexkép nélküli, nem listázott vagy a korhatáros videók nem adnak vissza állóképet. Ez várható. Lásd még:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek indexképei</a>.</p>"
+    },
+    {
+      "heading": "Hogyan kell tömeges kinyerést futtatni",
+      "html": "<ol>\n    <li>A kezdőlapon kattintson a Tömeges megosztás gombra.</li>\n    <li>Illesszen be legfeljebb 25 nyilvános linket, soronként egyet.</li>\n    <li>Kattintson az Összes kibontása gombra, és várjon, amíg minden kártya előnézete megjelenik.</li>\n    <li>Tölts le N miniatűrvideót minden legjobb állóképhez, vagy töltsd le az összeset a legmagasabb minőségben zip formátumban.</li>\n    <li>Opcionális: CSV exportálása kutatási naplókhoz (videóazonosító, cím, megosztási URL, kép URL).</li>\n  </ol>"
+    },
+    {
+      "heading": "Felhasználhatom ezt versenytársak kutatására?",
+      "html": "<p>Igen, a nyilvános csomagolás tanulmányozásához. Ne tegye közzé újra más alkotó bélyegképét saját feltöltésként. A szerzői jog a jogtulajdonosnál marad. A 11tik csak azokat a fájlokat tölti le, amelyeket a YouTube már nyilvánosan tárol.</p>\n  <p><a href=\"https://www.11tik.com/\">Tömeges kivonatolás megnyitása a 11tik oldalon →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hogyan tölthetek le kötegelt YouTube-bélyegképeket?",
+      "answer": "Használj Bulk-ot a 11tik oldalon, illessz be egy nyilvános URL-t soronként, csomagold ki, majd töltsd le a legmagasabb nyilvános minőségű állóképeket vagy egy zip fájlt. Futtatásonként maximum 25 URL használható.",
+      "answerHtml": "Használj Bulk-ot a 11tik oldalon, illessz be egy nyilvános URL-t soronként, csomagold ki, majd töltsd le a legmagasabb nyilvános minőségű állóképeket vagy egy zip fájlt. Futtatásonként maximum 25 URL használható."
+    },
+    {
+      "question": "Felhasználhatom ezt versenytársak kutatására?",
+      "answer": "Igen, a nyilvános csomagolás tanulmányozására. Ne tegye közzé más alkotó bélyegképét sajátjaként. A szerzői jog a jogtulajdonosnál marad.",
+      "answerHtml": "Igen, a nyilvános csomagolás tanulmányozására. Ne tegye közzé más alkotó bélyegképét sajátjaként. A szerzői jog a jogtulajdonosnál marad."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+}

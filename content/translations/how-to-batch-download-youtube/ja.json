@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "ja",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "YouTubeサムネイルを一括ダウンロードする方法（最大25個の公開URL）｜11tik",
+  "description": "ブラウザ上でYouTubeの公開サムネイルを一括抽出します。1行に1つのURLを貼り付け、最適な静止画を1枚ずつダウンロードするか、最高品質のセットを圧縮してください。アカウントも動画ファイルも不要です。",
+  "h1": "YouTubeサムネイルを一括ダウンロードする方法（最大25個の公開URL）",
+  "ogTitle": "YouTubeサムネイルを一括ダウンロードする方法（最大25個の公開URL）",
+  "ogDescription": "ブラウザ上でYouTubeの公開サムネイルを一括抽出します。1行に1つのURLを貼り付け、最適な静止画を1枚ずつダウンロードするか、最高品質のセットを圧縮してください。アカウントも動画ファイルも不要です。",
+  "imageAlt": "11tik 複数のYouTube URLをダウンロードできる一括サムネイル抽出ツール",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 複数のYouTube URLをダウンロードできる一括サムネイル抽出ツール",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "YouTubeのサムネイルをまとめてダウンロードするにはどうすればよいですか？",
+      "html": "<p>開ける<a href=\"https://www.11tik.com/\">11tik</a>一括処理をオンにし、1行に1つの公開URLを貼り付け、「すべて抽出」をクリックして、各ベスト静止画または最高品質ファイルのzipファイルをダウンロードします。ブラウザの動作を妨げないよう、1回の実行で処理できるURLの上限は25個です。</p>"
+    },
+    {
+      "heading": "リストには何を入れるべきですか？",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be 短縮リンク</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>非公開、サムネイル非公開、または年齢制限付き動画では静止画は表示されません。これは想定内の動作です。参照<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">ショート動画のサムネイル</a>。</p>"
+    },
+    {
+      "heading": "大量抽出を実行する方法",
+      "html": "<ol>\n    <li>ホームページで「一括処理」をクリックします。</li>\n    <li>公開リンクを最大25個まで、1行に1つずつ貼り付けてください。</li>\n    <li>「すべて抽出」をクリックし、各カードのプレビューが表示されるまでお待ちください。</li>\n    <li>各静止画のサムネイル動画をダウンロードするか、最高品質の画像をすべてzipファイルとしてダウンロードしてください。</li>\n    <li>オプション：調査ログ用のCSVファイル（動画ID、タイトル、共有URL、画像URL）をエクスポートします。</li>\n  </ol>"
+    },
+    {
+      "heading": "競合他社の調査にこれを利用できますか？",
+      "html": "<p>はい、公開パッケージングの研究用です。他のクリエイターのサムネイルを自分のアップロードとして再公開しないでください。著作権は権利者に帰属します。11tikはYouTubeが既に公開しているファイルのみを取得します。</p>\n  <p><a href=\"https://www.11tik.com/\">11tikでバルク抽出を開く→</a></p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "YouTubeのサムネイルをまとめてダウンロードするにはどうすればよいですか？",
+      "answer": "11tikで一括処理を使用し、1行に1つの公開URLを貼り付け、抽出後、静止画または最高画質のZIPファイルをダウンロードしてください。1回の実行につき最大25個のURLまで可能です。",
+      "answerHtml": "11tikで一括処理を使用し、1行に1つの公開URLを貼り付け、抽出後、静止画または最高画質のZIPファイルをダウンロードしてください。1回の実行につき最大25個のURLまで可能です。"
+    },
+    {
+      "question": "競合他社の調査にこれを利用できますか？",
+      "answer": "はい、公共のパッケージデザインの研究用として使用できます。他のクリエイターのサムネイルを自分のものとして再公開しないでください。著作権は権利者に帰属します。",
+      "answerHtml": "はい、公共のパッケージデザインの研究用として使用できます。他のクリエイターのサムネイルを自分のものとして再公開しないでください。著作権は権利者に帰属します。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+}

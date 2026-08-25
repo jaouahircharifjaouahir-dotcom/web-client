@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "ja",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "11tikサムネイル抽出ツールを埋め込む | 11tik",
+  "description": "ブログ、ドキュメント、クリエイターツールキットに、無料のYouTubeサムネイル抽出ツールを追加しましょう。ウィジェットは11tikから読み込まれ、自動的にサイズ調整されます。APIキーは不要です。",
+  "h1": "11tikサムネイル抽出ツールを埋め込む",
+  "ogTitle": "11tikサムネイル抽出ツールを埋め込む",
+  "ogDescription": "ブログ、ドキュメント、クリエイターツールキットに、無料のYouTubeサムネイル抽出ツールを追加しましょう。ウィジェットは11tikから読み込まれ、自動的にサイズ調整されます。APIキーは不要です。",
+  "imageAlt": "",
+  "faqHeading": "よくある質問",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframeスニペット",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "ルール",
+      "html": "<ul>\n    <li>保つ<code>id=\"yte-app\"</code>高さ同期が機能するように属性を設定します。</li>\n    <li>ダウンロードボタンが隠れてしまうような固定高さの要素でiframeを囲まないでください。</li>\n    <li>リンク先<a href=\"https://www.11tik.com/\">www.11tik.com</a>ユーザーがツール全体を開くのに役立ちます。</li>\n  </ul>"
+    },
+    {
+      "heading": "ディープリンク",
+      "html": "<p>準備ができた抽出を共有します<code>https://www.11tik.com/?v=VIDEO_ID</code>。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">抽出ツールを開く</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

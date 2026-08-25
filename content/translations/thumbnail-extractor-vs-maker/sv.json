@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "sv",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Miniatyrutdragare kontra verktyg för att skapa miniatyrer | 11tik",
+  "description": "En miniatyrutdragare sparar det publika innehållet som YouTube redan har. En miniatyrutdragare (Canva, Photoshop eller YouTube Studios uppladdning) skapar en ny bild som du äger. 11tik är en utdragare. Den designar inte konst och laddar inte upp en anpassad fil till din kanal.",
+  "h1": "Miniatyrutdragare kontra tillverkare",
+  "ogTitle": "Miniatyrutdragare kontra tillverkare",
+  "ogDescription": "En miniatyrutdragare sparar det publika innehållet som YouTube redan har. En miniatyrutdragare (Canva, Photoshop eller YouTube Studios uppladdning) skapar en ny bild som du äger. 11tik är en utdragare. Den designar inte konst och laddar inte upp en anpassad fil till din kanal.",
+  "imageAlt": "11tik extraktor som används för att spara en offentlig YouTube-miniatyr",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik extraktor som används för att spara en offentlig YouTube-miniatyr",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Vad är en miniatyrextraktor?",
+      "html": "<p>En extraheringsverktyg läser en offentlig video-URL, hittar bildfiler på YouTubes CDN och låter dig förhandsgranska, ladda ner eller kopiera en fungerande bild-URL. Den listar bara storlekar som finns. Den rippar inte bildrutor från videoströmmen.</p>"
+    },
+    {
+      "heading": "Vad är en miniatyrbildare?",
+      "html": "<p>En maker är ett designarbetsflöde. Du komponerar typsnitt, ansikten och kontrast, exporterar en 16:9-stillbild och laddar sedan upp den i YouTube Studio. Du äger den filen (med förbehåll för typsnitt, foton och plattformsregler). Att extrahera en konkurrents stillbild och ladda upp den igen är inte ett maker-arbetsflöde.</p>"
+    },
+    {
+      "heading": "När ska jag använda en extraktor?",
+      "html": "<p>Använda<a href=\"https://www.11tik.com/\">11tik</a>när du behöver den offentliga filen: forskning, en säkerhetskopia av ditt eget publicerade stillbild, en CMS-bild eller en Open Graph-kontroll. Klistra in en offentlig visning, Shorts, youtu.be, URL och ladda ner den största storleken som faktiskt returnerar en bild.</p>"
+    },
+    {
+      "heading": "När ska jag använda en tillverkare?",
+      "html": "<p>Använd ett designverktyg när du skapar originalförpackningar för en ny uppladdning eller en miniatyruppdatering. Det är i Studio som filen blir den officiella anpassade miniatyren. När YouTube har slutfört bearbetningen kan du klistra in visnings-URL:en i 11tik för att bekräfta vilka offentliga storlekar som finns, inklusive maxstorlekar när YouTube publicerade den.</p>"
+    },
+    {
+      "heading": "Hur passar de två ihop?",
+      "html": "<ol>\n    <li>Extrahera offentliga referenser från videor inom din nisch (endast research).</li>\n    <li>Designa ett originalstillbild i ett maker-verktyg.</li>\n    <li>Ladda upp det i YouTube Studio.</li>\n    <li>Bekräfta de offentliga CDN-filerna med 11tik efter bearbetning.</li>\n  </ol>\n  <p>Släkt:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatyrbild 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skärmdump kontra riktig miniatyrbild</a>.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Öppna extraktorn</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vad är en miniatyrextraktor?",
+      "answer": "Ett verktyg som sparar allmänheten pengar till YouTube som redan finns. 11tik listar endast bildfiler som finns.",
+      "answerHtml": "Ett verktyg som sparar allmänheten pengar till YouTube som redan finns. 11tik listar endast bildfiler som finns."
+    },
+    {
+      "question": "När ska jag använda en tillverkare?",
+      "answer": "När du skapar originalkonstverk för att ladda upp som en anpassad miniatyrbild i YouTube Studio.",
+      "answerHtml": "När du skapar originalkonstverk för att ladda upp som en anpassad miniatyrbild i YouTube Studio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

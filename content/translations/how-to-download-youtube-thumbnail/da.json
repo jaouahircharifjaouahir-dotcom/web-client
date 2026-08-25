@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "da",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Sådan downloader du en YouTube-miniature i HD | 11tik",
+  "description": "Gem et offentligt YouTube-miniaturebillede: indsæt se, Shorts, youtu.be, eller indlejr URL'er i 11tik og download den største fil, der findes.",
+  "h1": "Sådan downloader du en YouTube-miniature i HD",
+  "ogTitle": "Sådan downloader du en YouTube-miniature i HD",
+  "ogDescription": "Gem et offentligt YouTube-miniaturebillede: indsæt se, Shorts, youtu.be, eller indlejr URL'er i 11tik og download den største fil, der findes.",
+  "imageAlt": "Firetrins-arbejdsgang fra kopiering af en YouTube-URL til download af et valideret offentligt miniaturebillede",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Firetrins-arbejdsgang fra kopiering af en YouTube-URL til download af et valideret offentligt miniaturebillede",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Fejlfindingsdiagram, der viser en manglende maxresdefault-fil, der er sprunget over, så den næste rigtige miniaturestørrelse kan downloades.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hurtigt svar",
+      "html": "<p>Kopier et offentligt YouTube-link, indsæt det i<a href=\"https://www.11tik.com/\">11tik</a>, vent på validerede forhåndsvisninger, og download derefter den første fil på listen. Denne fil er den højeste offentlige JPEG- eller WebP-fil, som YouTube allerede hoster for video-ID'et – ofte 1280×720, når maxres eller hq720 findes. Dette sparer en<strong>miniaturebillede</strong>, ikke videoen eller lyden.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktisk sti: offentlig URL → udtræk → forhåndsvisning af reelle størrelser → download eller kopier billedets URL.</p>"
+    },
+    {
+      "heading": "Hurtigste metode med 11tik",
+      "html": "<ol>\n    <li>Kopiér en offentlig afspilnings-, Shorts-, live-, indlejrings- eller youtu.be-URL (eller et almindeligt video-ID på 11 tegn).</li>\n    <li>Åben<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>i din browser.</li>\n    <li>Indsæt URL'en. Udtrækningen starter, når ID'et er gyldigt.</li>\n    <li>Download det første resultat (bedste tilgængelige), eller vælg en anden bevaret størrelse.</li>\n  </ol>\n  <p>Valgfrit: brug<strong>Kopiér billedets URL</strong>hvis du har brug for adressen til et CMS i stedet for en fil. Dette flow er dækket i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vejledning til miniature-URL'er</a>.</p>"
+    },
+    {
+      "heading": "Understøttede YouTube URL-formater",
+      "html": "<p>11tik læser video-ID'et fra de samme mønstre, som dens hjemmesideparser accepterer:</p>\n  <table>\n    <thead>\n      <tr><th>Format</th><th>Eksempelmønster</th><th>Noter</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ur</td><td><code>youtube.com/watch?v=ID</code></td><td>Ekstra forespørgselsparametre ignoreret</td></tr>\n      <tr><td>Kort link</td><td><code>youtu.be/ID</code></td><td>Mobildelinger bruger ofte dette</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/ID</code></td><td>Samme offentlige værter stadig</td></tr>\n      <tr><td>Integrer</td><td><code>youtube.com/embed/ID</code></td><td>Fra iframe-kilde</td></tr>\n      <tr><td>Levende</td><td><code>youtube.com/live/ID</code></td><td>Når et offentligt ID er til stede</td></tr>\n      <tr><td>nocookie-indlejring</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Behandlet som indlejring</td></tr>\n      <tr><td>Bare ID</td><td><code>dQw4w9WgXcQ</code></td><td>Kun 11 tegn</td></tr>\n    </tbody>\n  </table>\n  <p>Kanal- eller playliste-URL'er uden et video-ID vil ikke give et enkelt miniaturebillede. Brug massevisning (op til 25) for mange links på én gang – se<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch-download</a>Kanaludvidelse:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">uddrag fra en kanal-URL</a>.</p>"
+    },
+    {
+      "heading": "Direkte URL-metode (ingen ekstraktionsgrænseflade)",
+      "html": "<p>Hvis du allerede kender ID'et, kan du åbne en kandidatdetalje direkte:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Når den indlæses, skal du bruge browserens kommando save-image. Når den fejler, skal du gå ned til<code>hq720.jpg</code>,<code>sddefault.jpg</code>, eller<code>hqdefault.jpg</code>Denne manuelle sti er langsommere og mere fejlbehæftet sammenlignet med 11tiks validerede liste, men den fungerer offline fra enhver browser, når du har en god adresse.</p>"
+    },
+    {
+      "heading": "Valg af kvalitet, når du downloader",
+      "html": "<p>Download den første anførte størrelse, medmindre du har en grund til at beholde en mindre forhåndsvisning. \"HD\" betyder her det største offentlige stillbillede, der findes – normalt 1280×720 – ikke en 4K-master. Pixelforventninger og manglende størrelsesadfærd forklares i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">størrelses- og opløsningsguide</a>.</p>\n  <p>Hvis du kun er interesseret i den absolut øverste offentlige fil, kan du også se<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniaturebillede af højeste kvalitet</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Når en gættet størrelse ikke er tilgængelig, spring den over og behold den næste rigtige offentlige fil.</p>"
+    },
+    {
+      "heading": "Fejlfinding af downloads",
+      "html": "<table>\n    <thead>\n      <tr><th>Symptom</th><th>Sandsynlig årsag</th><th>Hvad skal man gøre</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ingen forhåndsvisning efter indsættelse</td><td>Ugyldig URL, intet video-ID eller privat/begrænset video</td><td>Indsæt et offentligt link til visning/Shorts/youtu.be</td></tr>\n      <tr><td>Maks. opløsning mangler</td><td>YouTube har aldrig offentliggjort den fil</td><td>Download den første anførte størrelse i stedet</td></tr>\n      <tr><td>Gråt / pladsholderbillede fra en håndbygget URL</td><td>Gættet filnavn</td><td>Brug 11tiks validerede liste</td></tr>\n      <tr><td>Telefonbesparelse akavet</td><td>Brugergrænsefladen for browserdownloads er forskellig</td><td>Se<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone / Android-vejledning til at gemme</a></td></tr>\n      <tr><td>Ligner et UI-billede</td><td>Du tager et skærmbillede af afspilleren</td><td>Gem CDN'et stadig, ikke skærmen —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skærmbillede vs. ægte</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Hvad du downloader (og ikke downloader)",
+      "html": "<p>Du gemmer et offentligt stillbillede, som YouTube allerede hoster. Du låser ikke op for private videoer, filer kun for medlemmer eller MP4/WebM-streams. 11tik er en udtrækker, ikke en skaber og ikke en videodownloader — sammenligning:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">udtrækker vs. producent</a>.</p>\n  <p>Ophavsretten forbliver hos uploaderen. Gemning til research eller personlig reference er den typiske brug; genudgivelse som dit eget brugerdefinerede miniaturebillede uden rettigheder er ikke. YouTube Hjælp:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">brugerdefinerede videominiaturebilleder</a>Regler for webstedet:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+    },
+    {
+      "heading": "Metodesammenligning",
+      "html": "<table>\n    <thead>\n      <tr><th>Metode</th><th>Hastighed</th><th>Bedst til</th><th>Har du brug for 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik download</td><td>Hurtig</td><td>Valideret bedst stadig</td><td>Ja</td></tr>\n      <tr><td>11tik kopiér URL</td><td>Hurtig</td><td>CMS / indlejringer</td><td>Ja</td></tr>\n      <tr><td>Håndbygget i.ytimg.com URL</td><td>Medium</td><td>Hurtige tests, når du kender ID'et</td><td>Ingen</td></tr>\n      <tr><td>Skærmbillede af spilleren</td><td>Hurtigt men lav kvalitet</td><td>Undgå blogs / originale versioner</td><td>Ingen</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Næste skridt",
+      "html": "<p>Åbn<a href=\"https://www.11tik.com/\">YouTube-miniatureudtrækker</a>, indsæt et offentligt link, og gem det første validerede stillbillede. Har du kun brug for linket? Læs<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-guide</a>Skal du vælge mellem størrelser? Brug<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">løsningsvejledning</a>.</p>\n\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af browser-udtrækkeren. Kun offentlige stillbilleder.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg downloade et miniaturebillede fra en Shorts-video?",
+      "answer": "Ja, når Short-billederne er offentlige, og der findes stillbilleder for det ID. Indsæt /shorts/ URL'en i 11tik. Stillbilledet kan være i liggende format, selvom afspilningen er lodret.",
+      "answerHtml": "<p>Ja, når Short-billederne er offentlige, og der findes stillbilleder for det ID. Indsæt<code>/shorts/</code>URL til 11tik. Stillbilledet kan være liggende, selvom afspilningen er lodret.</p>"
+    },
+    {
+      "question": "Hvad hvis det bedste miniaturebillede ikke indlæses?",
+      "answer": "Download den næste anførte størrelse. Manglende maks. res er almindeligt og ikke en værktøjsfejl.",
+      "answerHtml": "<p>Download den næste anførte størrelse. Manglende maks. res er almindeligt og ikke en værktøjsfejl.</p>"
+    },
+    {
+      "question": "Kan jeg downloade det originale offentlige miniaturebillede?",
+      "answer": "Ja – det er den bedst validerede fil. \"Original\" betyder det offentlige CDN-stillbillede, ikke et billede, der er kopieret fra videostreamen. Se det originale offentlige miniaturebillede.",
+      "answerHtml": "<p>Ja – det er den øverste validerede fil. \"Original\" betyder det offentlige CDN-stillbillede, ikke et billede, der er kopieret fra videostreamen. Se<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">original offentlig miniature</a>.</p>"
+    },
+    {
+      "question": "Kan jeg kopiere billedets URL i stedet for at downloade det?",
+      "answer": "Ja. Brug Kopier billedets URL på 11tik, eller kopier en bekræftet adresse fra browseren, når billedet er indlæst.",
+      "answerHtml": "<p>Ja. Brug Kopier billedets URL på 11tik, eller kopier en bekræftet adresse fra browseren, når billedet er indlæst.</p>"
+    },
+    {
+      "question": "Downloader dette YouTube-videofilen?",
+      "answer": "Nej. Kun det offentlige miniaturebillede stadig.",
+      "answerHtml": "<p>Nej. Kun det offentlige miniaturebillede stadig.</p>"
+    },
+    {
+      "question": "Vil alle videoer tilbyde en fil på 1280×720?",
+      "answer": "Nej. Behold den største offentlige fil, der validerer for det pågældende ID.",
+      "answerHtml": "<p>Nej. Behold den største offentlige fil, der validerer for det pågældende ID.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af browser-udtrækkeren. Kun offentlige stillbilleder.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+}

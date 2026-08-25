@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "ja",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "maxresdefault.jpgとは何ですか？404エラーが発生する理由と、代わりにダウンロードすべきもの | 11tik",
+  "description": "YouTubeが公開した時点では、maxresdefault.jpgは通常1280×720ピクセルです。404エラーは正常な動作です。推測したファイル名ではなく、次に公開されている実際の静止画を使用してください。",
+  "h1": "maxresdefault.jpgとは何ですか？404エラーが発生する理由と、代わりにダウンロードすべきものは何ですか？",
+  "ogTitle": "maxresdefault.jpgとは何ですか？404エラーが発生する理由と、代わりにダウンロードすべきものは何ですか？",
+  "ogDescription": "YouTubeが公開した時点では、maxresdefault.jpgは通常1280×720ピクセルです。404エラーは正常な動作です。推測したファイル名ではなく、次に公開されている実際の静止画を使用してください。",
+  "imageAlt": "推測された maxresdefault URL から次の検証済み YouTube サムネイル サイズへの 404 エラー発生時のトラブルシューティングフロー",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "推測された maxresdefault URL から次の検証済み YouTube サムネイル サイズへの 404 エラー発生時のトラブルシューティングフロー",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "YouTubeサムネイルファイル名の階層構造（maxresdefaultからdefaultまで）を示す図。欠落している階層はスキップされている。",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "簡単な回答",
+      "html": "<p><code>maxresdefault.jpg</code>YouTube の画像 CDN 上の公開サムネイルファイル名です。<strong>1280×720</strong>それは<strong>ない</strong>すべての動画で保証されています。404 (または小さな灰色のプレースホルダー) は、その動画 ID に対して派生作品が公開されていないことを意味します。視聴 URL を貼り付けてください<a href=\"https://www.11tik.com/\">11tik</a>そして最初にリストされたサイズをダウンロードします。このツールはすでに欠落している名前をスキップし、次のような生存者をランク付けしています。<code>hq720</code>、<code>sddefault</code>、 または<code>hqdefault</code>。</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">maxresファイルが見つからないのはフォールバックの問題であり、動画にサムネイルがないことの証明にはなりません。</p>"
+    },
+    {
+      "heading": "maxresdefault.jpgとは何ですか？",
+      "html": "<p>これはファイル名であり、魔法のような品質保証ではありません。通常のJPEGアドレスは次のようになります。</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>YouTubeがWebP版も公開した場合、11tikは以下をチェックします。</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>両方とも座る<code>i.ytimg.com</code>これらは静止画像であり、ビデオ ストリームでも、スタジオのプライベート エクスポートでも、4K マスターでもありません。ピクセルの要件やその他のサイズについては、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サムネイルのサイズと解像度ガイド</a>URL の構築については、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>。</p>"
+    },
+    {
+      "heading": "なぜ実際のYouTube動画でも、maxresに対して404エラーを返すことがあるのでしょうか？",
+      "html": "<ul>\n    <li>過去にアップロードされたファイルには、最大解像度版は作成されていません。</li>\n    <li>カスタムサムネイルのソースサイズが1280×720より小さかった。</li>\n    <li>Studioは現在、新しいカスタムアップロードを処理中です。</li>\n    <li>一部のショート動画や自動生成された静止画は、中サイズで止まります。</li>\n    <li>この動画は制限されており、一般公開されている静止画は一切含まれていません。</li>\n  </ul>\n  <p>動作するウォッチページは、ビデオIDが有効であることを証明するだけです。すべてのファイル名が正しいことを証明するわけではありません。<code>/vi/</code>存在する。</p>"
+    },
+    {
+      "heading": "入手不可能なバリアントを識別する方法",
+      "html": "<p>候補URLを新しいタブで開きます。失敗した場合は次のようになります。</p>\n  <ul>\n    <li>HTTPエラー／応答なし</li>\n    <li>1280×720を期待していたのに、非常に小さな灰色またはデフォルトのタイルが表示される</li>\n    <li>画像は読み込まれるが、高解像度ファイルが見つからないため、明らかにプレースホルダーとして表示されている。</li>\n  </ul>\n  <p>11tikのブラウザ検証ツールは、画像の読み込みに失敗した場合、または想定される大きなサイズが小さなプレースホルダー（約120×90）に縮小された場合に、候補を無効とマークします。これらの候補は「偽のHD」カードとして表示されることはありません。</p>"
+    },
+    {
+      "heading": "フォールバックバリアント11tikは実際にチェックします",
+      "html": "<p>公開候補者の発見順序（優先順位の高い順）：</p>\n  <table>\n    <thead>\n      <tr><th>ファイル名</th><th>パスパターン</th><th>存在する場合の典型的なサイズ</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720クラス</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>行が欠落している場合はスキップされます。最初にリストされているダウンロードは、最も長く残っているダウンロードであり、入力した名前の長さではありません。WebP と JPEG のフォーマット選択については、<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebPとJPEGのYouTubeサムネイルの比較</a>。</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">ファイル名はオプションの要素として扱います。実際の画像が表示されるまで、段階的に降りていきましょう。</p>"
+    },
+    {
+      "heading": "11tikが可用性を確認する方法",
+      "html": "<ol>\n    <li>公開されているウォッチ、ショート、ライブ、埋め込み、またはyoutu.be URLを解析して、11文字のIDを取得します。</li>\n    <li>上記のプリセットリストから候補となるURLを作成します。</li>\n    <li>各候補を画像としてブラウザに読み込む。</li>\n    <li>プレースホルダー以外の成功例のみを保持し、階層、ピクセル数、およびWebPスコアの微調整に基づいてランク付けします。</li>\n    <li>ランキング一覧を表示して、有効なURLをダウンロードまたはコピーできるようにしてください。</li>\n  </ol>\n  <p>そのため、推測された最大解像度のリンクは、失敗するとUIから消えてしまいます。抽出ツールが1280×720のファイルを作成することを拒否するからです。</p>"
+    },
+    {
+      "heading": "実用的なトラブルシューティングチェックリスト",
+      "html": "<ol>\n    <li>動画が公開されていること、およびIDが正しいことを確認してください。</li>\n    <li>テスト<code>maxresdefault.jpg</code>一度だけ試してみて。もし失敗したら、推測はやめなさい。</li>\n    <li>同じリンクを貼り付けて<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>最初に表示された静止画をダウンロードするか、その画像URLをコピーしてください。</li>\n    <li>何も表示されない場合は、動画が非公開、削除済み、年齢制限付き、または公開用の静止画がない可能性があります。</li>\n    <li>CMSで使用する場合は、ホットリンクされたCDNパスよりも、検証済みの静止画のホストされたコピーを優先してください。<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">ブログ / Open Graph ガイド</a>。</li>\n  </ol>"
+    },
+    {
+      "heading": "よくある間違い",
+      "html": "<ul>\n    <li>人気のある動画の1つが最大解像度だからといって、すべての動画が最大解像度だと仮定する。</li>\n    <li>ハードコーディング<code>maxresdefault.jpg</code>チェックなしの本番環境HTML。</li>\n    <li>ストレッチされた<code>hqdefault</code>「最大解像度」</li>\n    <li>プレイヤーのスクリーンショットとCDNの静止画像を混同する —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">スクリーンショットと実際のサムネイルの比較</a>。</li>\n    <li>4Kを想定しています。公開されている最大解像度は通常1280×720です。<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品質のガイド</a>。</li>\n  </ul>"
+    },
+    {
+      "heading": "次のステップ",
+      "html": "<p>公開されている YouTube URL を貼り付けます<a href=\"https://www.11tik.com/\">抽出器</a>maxres が欠落している場合は、次の実際の静止画を保持します。それがそのビデオの真の HD ファイルです。</p>\n  <p class=\"yte-bio\">11tikによる執筆。公開されているのは静止画のみで、動画のダウンロードはできません。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "404エラーは、動画にサムネイルが全く存在しないという意味ですか？",
+      "answer": "いいえ。通常はファイル名が1つ欠落していることを意味します。中サイズのファイルは残っている場合が多いです。",
+      "answerHtml": "<p>いいえ。通常はファイル名が1つ欠落していることを意味します。中サイズのファイルは残っている場合が多いです。</p>"
+    },
+    {
+      "question": "hq720はmaxresdefaultの良い代替品になりますか？",
+      "answer": "検証が成功すれば、確かに同じ高解像度（約1280×720）になります。ただし、必ずしも保証されるわけではありません。",
+      "answerHtml": "<p>検証が成功すれば、確かに同じ高解像度（約1280×720）になります。ただし、必ずしも保証されるわけではありません。</p>"
+    },
+    {
+      "question": "後でmaxresdefaultを再試行した方が良いでしょうか？",
+      "answer": "はい、Studioでの新規カスタムアップロードの処理が完了した後です。それ以外の場合は、検証済みのフォールバックを維持します。",
+      "answerHtml": "<p>はい、Studioでの新規カスタムアップロードの処理が完了した後です。それ以外の場合は、検証済みのフォールバックを維持します。</p>"
+    },
+    {
+      "question": "maxresはWebP形式としては存在できるが、JPEG形式としては存在できないということはあり得るだろうか？",
+      "answer": "はい。11tikは/vi_webp/の下でWebPのmaxresを個別にチェックします。どちらか一方、両方、またはどちらも存在しない場合があります。",
+      "answerHtml": "<p>はい。11tikはWebP maxresを個別にチェックします。<code>/vi_webp/</code>どちらか一方、両方、あるいはどちらも存在しない場合もある。</p>"
+    },
+    {
+      "question": "なぜ一部のツールは、未だに最大解像度のカードが故障していると表示するのでしょうか？",
+      "answer": "これらは画像を読み込まずにテンプレート URL を出力します。11tik は画像として応答するファイルのみを一覧表示します。",
+      "answerHtml": "<p>これらは画像を読み込まずにテンプレート URL を出力します。11tik は画像として応答するファイルのみを一覧表示します。</p>"
+    },
+    {
+      "question": "フォールバックを素早くダウンロードするにはどうすればよいですか？",
+      "answer": "ダウンロードガイドに従ってください。リストの一番上のファイルを貼り付け、解凍し、保存してください。",
+      "answerHtml": "<p>使用する<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>: リストの一番上のファイルを貼り付け、抽出して保存します。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tikによる執筆。公開されているのは静止画のみで、動画のダウンロードはできません。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+}

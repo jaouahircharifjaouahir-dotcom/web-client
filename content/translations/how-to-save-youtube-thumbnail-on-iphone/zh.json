@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "zh",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "如何在 iPhone 和 Android 设备上保存 YouTube 缩略图 (2026) | 11tik",
+  "description": "无需截图或使用应用商店下载器，即可在 iPhone 或 Android 设备上保存 YouTube 公开图片。将公开观看视频或 Shorts 短视频的 URL 粘贴到 Safari 或 Chrome 浏览器的 11tik 框中，然后下载 YouTube 已托管的最大图片文件。",
+  "h1": "如何在 iPhone 和 Android 设备上保存 YouTube 缩略图 (2026)",
+  "ogTitle": "如何在 iPhone 和 Android 设备上保存 YouTube 缩略图 (2026)",
+  "ogDescription": "无需截图或使用应用商店下载器，即可在 iPhone 或 Android 设备上保存 YouTube 公开图片。将公开观看视频或 Shorts 短视频的 URL 粘贴到 Safari 或 Chrome 浏览器的 11tik 框中，然后下载 YouTube 已托管的最大图片文件。",
+  "imageAlt": "使用 11tik 在 iPhone 和 Android 上保存 YouTube 缩略图 — 公开可用，无需应用程序",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "使用 11tik 在 iPhone 和 Android 上保存 YouTube 缩略图 — 公开可用，无需应用程序",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "我可以把YouTube视频缩略图保存到手机上吗？",
+      "html": "<p>是的，如果视频是公开的，并且 YouTube 发布了截图。您不需要电脑，也不需要 APK 或 TestFlight 应用。打开<a href=\"https://www.11tik.com/\">11tik</a>在您常用的手机浏览器中，粘贴链接，点击“获取缩略图”，然后保存第一个列出的文件。该文件是返回图像的最高级别公开 JPEG 或 WebP 文件。</p>\n  <p>长按播放器截图与此不同。截图包含边框、安全区域条和额外的压缩。公众仍然活跃在 i.ytimg.com 上。参见<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">截图与实际缩略图</a>如果您需要为博客或 Open Graph 标签区分这一点。</p>"
+    },
+    {
+      "heading": "开始之前你需要准备什么",
+      "html": "<ul>\n    <li>公开的 YouTube 观看、短视频、直播或 youtu.be URL。额外的查询参数，例如<code>pp=</code>或者播放列表 ID 无关紧要；11tik 读取 11 个字符的视频 ID。</li>\n    <li>iPhone 或 iPad 上的 Safari 浏览器，或 Android 上的 Chrome、Firefox 或三星浏览器。</li>\n    <li>如果浏览器询问，则允许保存照片。11tik 绝不会将图像作为原始媒体上传到 11tik 服务器。</li>\n  </ul>\n  <p>私密视频、仅限会员观看的视频或设有年龄限制的视频，如果未发布公开截图，则无法下载。这是平台规则，并非手机限制。仍在 Studio 中处理的自定义缩略图也可能暂时无法显示；请稍后使用相同的 URL 进行确认。相关内容：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026 年 YouTube 工作室缩略图</a>。</p>"
+    },
+    {
+      "heading": "如何在 iPhone 上保存 YouTube 缩略图",
+      "html": "<ol>\n    <li>在 YouTube 应用或 Safari 浏览器中，复制视频或 Shorts 链接（分享 → 复制链接）。</li>\n    <li>打开<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>在 Safari 浏览器中使用。无需安装任何软件。</li>\n    <li>粘贴网址并点击“获取缩略图”。等待直到出现实际预览图。空白的灰色方框表示该尺寸从未发布过。</li>\n    <li>点击第一个下载控件。Safari 会提供“打开”或“下载”选项。选择“下载”，然后将图片保留在“文件”应用中，或从共享菜单中将其保存到“照片”应用。</li>\n    <li>如果您只需要 CMS 的地址，请使用“复制图片 URL”而不是下载。这样会复制一个 HTTPS i.ytimg.com 或 vi_webp 链接。指南：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube缩略图网址</a>。</li>\n  </ol>\n  <p>如果 iOS 阻止跨域下载，请在新标签页中打开图片 URL，然后长按图片 → 添加到照片。这样保存的仍然是 YouTube 的公开文件，而不是 11tik 页面的屏幕截图。</p>"
+    },
+    {
+      "heading": "如何在安卓设备上保存 YouTube 缩略图",
+      "html": "<ol>\n    <li>从 YouTube 应用中复制公开观看或 Shorts 的 URL。</li>\n    <li>在 Chrome（或您的默认浏览器）中打开 11tik。</li>\n    <li>粘贴、解压，然后点击第一个下载的文件。Chrome 通常会将文件保存到“下载”文件夹中。</li>\n    <li>打开下载通知，如果想将图片保存到“照片”中，请将其移动到“图库”。</li>\n  </ol>\n  <p>Android 系统可能会询问应该使用哪个应用打开 JPEG 文件。请选择“图库”或“文件”。不要选择声称可以下载 MP4 文件的“视频下载器”；11tik 不提供视频或音频下载。</p>"
+    },
+    {
+      "heading": "手机上应该保留多大尺寸的内存？",
+      "html": "<p>保留第一个列出的尺寸。11tik 已排名的文件。YouTube 发布 maxresdefault 时，通常为 1280×720。如果该文件出现 404 错误，则正确的最大分辨率是下一个实际存在的文件（通常为 hq720、sddefault 或 hqdefault）。缺少 maxres 文件是正常的。详情：<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpg是什么</a>和<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">2026 年的缩略图尺寸</a>。</p>\n  <p>短片通常竖屏播放，而存储的静态图像却是横屏的。该文件仍然是官方公开的缩略图。<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">短片缩略图</a>。</p>"
+    },
+    {
+      "heading": "在手机上保存缩略图合法吗？",
+      "html": "<p>保存公开托管的静态图像用于个人参考、研究或教育是常见用途。该图像的版权仍归上传者所有。请勿将其重新上传为自定义缩略图、印制在商品上，或将 11tik 视为许可。YouTube 关于自定义缩略图的帮助文档请点击此处：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">上传自定义视频缩略图</a>. 11tik 的规则：<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>和<a href=\"https://www.11tik.com/copyright\">版权与使用</a>。</p>"
+    },
+    {
+      "heading": "为什么手机“缩略图应用”会失败",
+      "html": "<p>许多商店列表会将广告页面围绕一个猜测的标题进行包装。<code>maxresdefault.jpg</code>URL。如果 YouTube 从未发布过该文件，您将看到损坏的图像或灰色的默认图像。11tik 会检查浏览器中的响应，并隐藏非图像的尺寸信息。注册后不会“解锁”任何内容。隐私：粘贴的 URL 会保留在浏览器中；请参阅<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>。</p>"
+    },
+    {
+      "heading": "从手机保存几个链接",
+      "html": "<p>在同一首页使用批量功能，每行一个公开链接，最多 25 个。频道链接可以在大屏幕上展开显示最近公开上传的内容；在手机上，如果频道展开后空间不足，可以粘贴单个链接。批量指南：<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">批量下载</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">在 11tik 上保存公开缩略图 →</a></p>\n  <p class=\"yte-bio\">由浏览器内提取器发布者 11tik 编写。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "我可以把YouTube视频缩略图保存到手机上吗？",
+      "answer": "是的。在 Safari 或 Chrome 浏览器中打开 11tik，粘贴一个公开的 YouTube 视频链接，解压，然后下载第一个列出的公开视频。无需使用应用商店下载器。",
+      "answerHtml": "是的。在 Safari 或 Chrome 浏览器中打开 11tik，粘贴一个公开的 YouTube 视频链接，解压，然后下载第一个列出的公开视频。无需使用应用商店下载器。"
+    },
+    {
+      "question": "如何在 iPhone 上保存 YouTube 缩略图？",
+      "answer": "复制链接，在 Safari 中打开 https://www.11tik.com/，粘贴，提取，然后下载或长按图像 URL 并将其添加到“照片”中。",
+      "answerHtml": "复制链接，在 Safari 中打开 https://www.11tik.com/，粘贴，提取，然后下载或长按图像 URL 并将其添加到“照片”中。"
+    },
+    {
+      "question": "如何在安卓设备上保存 YouTube 缩略图？",
+      "answer": "复制链接，在 Chrome 中打开 11tik，解压，并将第一个下载的文件保存到“下载”或“图库”中。",
+      "answerHtml": "复制链接，在 Chrome 中打开 11tik，解压，并将第一个下载文件保存到“下载”或“图库”。"
+    },
+    {
+      "question": "在手机上保存缩略图合法吗？",
+      "answer": "保存公开图片用于个人参考或研究是很常见的做法。请勿将其重新发布为您自己的封面图。版权归上传者所有。",
+      "answerHtml": "保存公开图片用于个人参考或研究是很常见的做法。请勿将其重新发布为您自己的封面图。版权归上传者所有。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">由浏览器内提取器发布者 11tik 编写。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "ko",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "개인정보 보호정책 | 11tik",
+  "description": "이 정책은 https://www.11tik.com/의 YouTube 썸네일 추출기와 동일한 추출기를 로드하는 언어 호스트에 적용됩니다.",
+  "h1": "개인정보 보호정책",
+  "ogTitle": "개인정보 보호정책",
+  "ogDescription": "이 정책은 https://www.11tik.com/의 YouTube 썸네일 추출기와 동일한 추출기를 로드하는 언어 호스트에 적용됩니다.",
+  "imageAlt": "",
+  "faqHeading": "자주 묻는 질문",
+  "images": [],
+  "sections": [
+    {
+      "heading": "브라우저에서 처리 중",
+      "html": "<p>YouTube URL을 붙여넣으면 페이지에서 동영상 ID를 읽고 브라우저에서 공개 썸네일 이미지 URL을 확인합니다. 붙여넣은 링크는 11tik 애플리케이션 서버의 개인 계정에 저장되지 않습니다. 추출에는 로그인이 필요하지 않습니다.</p>"
+    },
+    {
+      "heading": "선택적 공유 페이지 색인",
+      "html": "<p>추출이 성공적으로 완료되면 브라우저는 공개 동영상 ID, 제목, 공개 메타데이터에서 파생된 태그, 공개 썸네일 URL만 Cloudflare Worker로 전송하여 동영상이 공유 페이지에 표시되고, 품질 검사를 통과하면 사이트맵에 추가될 수 있도록 합니다. 이미지 파일을 업로드하도록 요청하지 않습니다. 브라우저에서 요청이 차단되는 경우 인덱스 없이도 추출기를 사용할 수 있습니다.</p>"
+    },
+    {
+      "heading": "지역 역사",
+      "html": "<p>추출기는 사용자가 다시 열 수 있도록 최근 방문한 URL을 브라우저의 로컬 저장소에 저장할 수 있습니다. 이 저장소에 저장된 내용은 기기에 보관됩니다. 페이지 방문 기록 컨트롤을 사용하거나 브라우저에서 해당 사이트의 데이터를 삭제하여 삭제할 수 있습니다. 이는 클라우드 계정이 아닙니다.</p>"
+    },
+    {
+      "heading": "호스팅 로그",
+      "html": "<p>웹사이트, 언어 호스트 및 정적 파일은 11tik.com에 사용되는 호스팅 제공업체(Cloudflare 및 GitHub Pages 포함)에서 제공됩니다. 이러한 호스트는 자체 정책에 따라 IP 주소, 브라우저 유형 및 요청된 페이지와 같은 일반적인 웹 로그를 보관할 수 있습니다.</p>"
+    },
+    {
+      "heading": "제3자",
+      "html": "<p>썸네일 파일은 YouTube의 공개 이미지 호스팅 서비스에서 요청됩니다. 이 사이트는 Google Analytics 4(측정 ID G-FW7B8NDZZ5)를 사용하여 방문 횟수와 페이지 내 활동(예: 추출 및 다운로드)을 집계합니다. Google은 쿠키 또는 유사한 식별자를 설정할 수 있습니다. 붙여넣은 YouTube URL은 분석 이벤트 매개변수로 전송되지 않습니다. 글꼴이나 스크립트는 페이지 표시를 위해 사용되는 CDN에서 로드될 수도 있습니다.</p>\n  <p>문의 양식은 FormSubmit을 통해 운영자의 이메일로 전송됩니다. FormSubmit은 사용자가 제출한 이름, 이메일 주소 및 메시지를 확인할 수 있습니다.</p>"
+    },
+    {
+      "heading": "연락하다",
+      "html": "<p>이 정책에 대한 문의 사항은 이메일로 보내주세요.<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>또는 사용하세요<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>형태.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">유튜브 썸네일 추출기</a>·<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

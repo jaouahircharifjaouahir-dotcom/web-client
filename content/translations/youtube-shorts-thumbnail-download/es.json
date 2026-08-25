@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "es",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Cómo descargar una miniatura de YouTube Shorts en HD | 11tik",
+  "description": "Descarga una miniatura de YouTube Shorts en tu navegador. Los Shorts usan las mismas imágenes públicas que las URL de visualización. El archivo suele estar en formato horizontal.",
+  "h1": "Cómo descargar una miniatura de YouTube Shorts en HD",
+  "ogTitle": "Cómo descargar una miniatura de YouTube Shorts en HD",
+  "ogDescription": "Descarga una miniatura de YouTube Shorts en tu navegador. Los Shorts usan las mismas imágenes públicas que las URL de visualización. El archivo suele estar en formato horizontal.",
+  "imageAlt": "Descarga de una miniatura pública de YouTube Shorts en 11tik",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Descarga de una miniatura pública de YouTube Shorts en 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "¿Cómo descargo una miniatura de YouTube Shorts?",
+      "html": "<p>Copia una URL que contenga /shorts/ más un ID de video, pégala en<a href=\"https://www.11tik.com/\">11tik</a>y descarga el tamaño indicado. La extracción comienza cuando el ID es válido.</p>"
+    },
+    {
+      "heading": "¿Los archivos Shorts son lo mismo que los archivos watch-page?",
+      "html": "<p>Utilizan los mismos nombres de tamaño públicos, indexados por el ID del vídeo. La imagen fija puede aparecer con barras negras si YouTube almacenó una versión panorámica.</p>"
+    },
+    {
+      "heading": "¿Qué ocurre si no aparece ninguna imagen?",
+      "html": "<p>El vídeo corto puede ser privado, haber sido eliminado o no tener imágenes fijas públicas. El extractor no puede eludir esas limitaciones.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor del extractor de miniaturas de YouTube para navegador. Ver<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>o<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cómo descargar</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Puedo descargar una miniatura de YouTube Shorts?",
+      "answer": "Sí, cuando YouTube publicó capturas de pantalla públicas para ese ID de video de Shorts.",
+      "answerHtml": "Sí, cuando YouTube publicó capturas de pantalla públicas para ese ID de video de Shorts."
+    },
+    {
+      "question": "¿Por qué la imagen sigue apareciendo con formato panorámico?",
+      "answer": "YouTube puede almacenar una versión derivada de 16:9 incluso para un corto vertical. 11tik muestra el archivo alojado en lugar de inventar un recorte.",
+      "answerHtml": "YouTube puede almacenar una versión derivada de 16:9 incluso para un corto vertical. 11tik muestra el archivo alojado en lugar de inventar un recorte."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor del extractor de miniaturas de YouTube para navegador. Ver<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>o<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>.</p>"
+}

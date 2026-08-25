@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "de",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "Über 11tik | 11tik",
+  "description": "11tik ist der Herausgeber des YouTube Thumbnail Extractors auf www.11tik.com. Die Website richtet sich an Nutzer, die das öffentliche Vorschaubild eines YouTube-Videos benötigen, ohne Software installieren oder den Link auf einen Server hochladen zu müssen.",
+  "h1": "Über 11tik",
+  "ogTitle": "Über 11tik",
+  "ogDescription": "11tik ist der Herausgeber des YouTube Thumbnail Extractors auf www.11tik.com. Die Website richtet sich an Nutzer, die das öffentliche Vorschaubild eines YouTube-Videos benötigen, ohne Software installieren oder den Link auf einen Server hochladen zu müssen.",
+  "imageAlt": "11tik Produktvorschau des YouTube Thumbnail Extractors in der Auflösung 1200 x 630 Pixel",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Produktvorschau des YouTube Thumbnail Extractors in der Auflösung 1200 x 630 Pixel",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Wer veröffentlicht diese Website?",
+      "html": "<p>Inhalte und der Extraktor werden unter dem Namen 11tik veröffentlicht. Es gibt keine erfundene Expertenpersona und keine manipulierten Bewertungen. Auf den redaktionellen Seiten wird die Funktionsweise öffentlicher Vorschaubilder erklärt; sie geben sich nicht als YouTube oder Google aus.</p>"
+    },
+    {
+      "heading": "Was bewirkt 11tik?",
+      "html": "<p>Das Tool liest eine öffentliche Video-ID im Browser aus, prüft, welche Vorschaubilder auf YouTube-Bildhostern vorhanden sind, und ermöglicht das Herunterladen oder Kopieren dieser Bilder. Die Auswertung und das Ranking erfolgen lokal auf Ihrem Gerät. Sie können mit einer einzelnen URL, einer Liste von URLs oder einem öffentlichen Kanal-Feed mit den neuesten Uploads arbeiten.</p>"
+    },
+    {
+      "heading": "Was bewirkt 11tik nicht?",
+      "html": "<ul>\n    <li>Es lädt keine YouTube-Videos oder -Audiodateien herunter.</li>\n    <li>Es umgeht keine privaten, altersbeschränkten oder regional gesperrten Videos.</li>\n    <li>Es ist kein Konto erforderlich.</li>\n    <li>Es beansprucht kein Urheberrecht an den Vorschaubildern anderer.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sprachversionen",
+      "html": "<p>Die Benutzeroberfläche des Extraktors ist auf Sprachhostern wie z. B. verfügbar.<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>Und<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>Diese rechtlichen Seiten bleiben auf www.11tik.com, sodass es nur eine kanonische URL für Über uns, Datenschutz, Kontakt und Nutzungsbedingungen gibt.</p>"
+    },
+    {
+      "heading": "Wie kann ich den Verlag kontaktieren?",
+      "html": "<p>E-Mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>oder verwenden Sie die<a href=\"https://www.11tik.com/p/contact.html\">Kontaktformular</a>Lesen Sie die<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutzrichtlinie</a>für Analyse- und Hostingdetails sowie die<a href=\"https://www.11tik.com/p/terms-of-use.html\">Nutzungsbedingungen</a>zur zulässigen Verwendung.</p>\n  <p class=\"yte-bio\">11tik veröffentlicht praktische Anleitungen zu öffentlichen YouTube-Thumbnails und pflegt den kostenlosen Browser-Extraktor. Korrekturen sind per E-Mail oder über das Kontaktformular willkommen.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-Thumbnail-Extraktor</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutz</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik veröffentlicht praktische Anleitungen zu öffentlichen YouTube-Thumbnails und pflegt den kostenlosen Browser-Extraktor. Korrekturen sind per E-Mail oder über das Kontaktformular willkommen.</p>"
+}

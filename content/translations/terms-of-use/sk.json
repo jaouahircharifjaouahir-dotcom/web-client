@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "sk",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "Podmienky používania | 11tik",
+  "description": "Nástroj na extrahovanie miniatúr YouTube na adrese https://www.11tik.com/ je poskytovaný tak, ako je, na vyhľadávanie a ukladanie verejne dostupných miniatúr obrázkov YouTube.",
+  "h1": "Podmienky používania",
+  "ogTitle": "Podmienky používania",
+  "ogDescription": "Nástroj na extrahovanie miniatúr YouTube na adrese https://www.11tik.com/ je poskytovaný tak, ako je, na vyhľadávanie a ukladanie verejne dostupných miniatúr obrázkov YouTube.",
+  "imageAlt": "",
+  "faqHeading": "Často kladené otázky",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Čo nástroj robí",
+      "html": "<p>Identifikuje verejné adresy URL miniatúr pre ID videa a umožňuje vám zobraziť ukážku, kopírovať alebo sťahovať tieto obrázky vo vašom prehliadači. Hromadný režim akceptuje jednu verejnú URL adresu na riadok. Verejnú URL adresu kanála je možné rozšíriť o najnovšie nahrané videá prostredníctvom verejného kanála YouTube.</p>"
+    },
+    {
+      "heading": "Čo nástroj nerobí",
+      "html": "<ul>\n    <li>Nestiahne video ani audio z YouTube.</li>\n    <li>Neobchádza súkromný, vekovo obmedzený alebo inak neverejný obsah.</li>\n    <li>Neudeľuje práva na miniatúru. Ste zodpovední za to, ako obrázok použijete, vrátane autorských práv a podmienok YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "Prijateľné použitie",
+      "html": "<p>Nepoužívajte 11tik na nadmerné hlasné kopírovanie obsahu, na vydávanie sa za iný kanál ani na opätovné publikovanie miniatúry ako vlastného obalu albumu bez povolenia držiteľa práv. Automatický prístup môže byť obmedzený.</p>"
+    },
+    {
+      "heading": "Zdieľanie stránok a verejné API",
+      "html": "<p>Zdieľajte odkazy, ako napríklad<code>/?v=</code>a rozhranie API pre miniatúry opisuje verejné statické obrázky. Nejde o licenciu na komerčné opätovné použitie umeleckého diela. Widget na vloženie musí zachovať označenie „Powered by 11tik.com“, ak ho zobrazíte na inej stránke.</p>"
+    },
+    {
+      "heading": "Dostupnosť",
+      "html": "<p>Stránka sa môže zmeniť, prerušiť alebo prestať fungovať. Neexistuje žiadna zmluva o úrovni služieb ani záruka nepretržitého prístupu, vhodnosti na konkrétny účel alebo bezchybných výsledkov.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Otázky:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">kontaktný formulár</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">Zásady ochrany osobných údajov</a>·<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/\">Extraktor miniatúr YouTube</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

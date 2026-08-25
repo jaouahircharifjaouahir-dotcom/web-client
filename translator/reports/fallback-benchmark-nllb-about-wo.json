@@ -1,0 +1,21 @@
+{
+  "contentId": "about",
+  "locale": "wo",
+  "label": "Wolof utility NLLB",
+  "provider": "local_nllb",
+  "runtimeMs": 1237723,
+  "qualityOk": false,
+  "qualityErrors": [
+    "missing-contentId",
+    "contentId-mismatch",
+    "missing-locale",
+    "locale-mismatch",
+    "invalid-status",
+    "missing-sourceHash",
+    "stale-sourceHash"
+  ],
+  "sample": {
+    "h1": "Ci wàll bi 11tik",
+    "title": "Ci mbirum P2"
+  }
+}

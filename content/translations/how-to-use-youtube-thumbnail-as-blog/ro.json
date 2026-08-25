@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "ro",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Cum să folosești o miniatură YouTube ca imagine recomandată pentru blog sau ca previzualizare Open Graph | 11tik",
+  "description": "Confirmă că există încă un cont YouTube public, apoi găzduiește o copie pentru WordPress, Blogger sau og:image. Nu trimite linkuri directe către o adresă URL maxresdefault ghicită.",
+  "h1": "Cum să folosești o miniatură YouTube ca imagine recomandată pentru blog sau ca previzualizare Open Graph",
+  "ogTitle": "Cum să folosești o miniatură YouTube ca imagine recomandată pentru blog sau ca previzualizare Open Graph",
+  "ogDescription": "Confirmă că există încă un cont YouTube public, apoi găzduiește o copie pentru WordPress, Blogger sau og:image. Nu trimite linkuri directe către o adresă URL maxresdefault ghicită.",
+  "imageAlt": "Flux de lucru de la confirmarea unei miniaturi YouTube pe 11tik până la încărcarea acesteia în WordPress sau setarea og:image",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Flux de lucru de la confirmarea unei miniaturi YouTube pe 11tik până la încărcarea acesteia în WordPress sau setarea og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Încărcarea imaginilor recomandate WordPress în paralel cu o carte socială Open Graph folosind dimensiuni reale în pixeli",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Răspuns rapid",
+      "html": "<p>Lipiți o adresă URL publică de YouTube în<a href=\"https://www.11tik.com/\">11tik</a>, așteptați dimensiuni validate, apoi fie<strong>descărcare</strong>prima fotografie și încărcați-o în CMS-ul dvs. sau<strong>copiați adresa URL a imaginii</strong>numai după ce se încarcă. Pentru postări durabile, găzduiește-ți propria copie. Hotlinking<code>i.ytimg.com</code>este convenabil pentru schițe și fragil pentru producția de cărți sociale.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Confirmare → copiere sau descărcare → gazdă → referință în HTML / imagine prezentată / Open Graph.</p>"
+    },
+    {
+      "heading": "Ce este o adresă URL directă pentru miniatură",
+      "html": "<p>O adresă URL directă pentru miniatură indică, de exemplu, un fișier JPEG sau WebP din rețeaua CDN de imagini YouTube.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Nu este pagina de vizionare. Cum sunt construite acele adrese:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">obțineți o adresă URL pentru miniatura YouTube</a>Cum diferă dimensiunile:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de dimensiuni și rezoluție</a>.</p>"
+    },
+    {
+      "heading": "Exemplu HTML",
+      "html": "<p>După ce 11tik confirmă un fișier, un model de markup minimal arată astfel (înlocuiți URL-ul, lățimea, înălțimea și valorile alt cu valorile reale):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Preferați propria adresă URL găzduită în producție:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Folosește rapoartele reale de lățime și înălțime 11tik. Nu inventa 1280×720 când există doar 480×360.</p>"
+    },
+    {
+      "heading": "Flux de lucru WordPress",
+      "html": "<ol>\n    <li>Extrageți videoclipul de pe 11tik și descărcați prima imagine statică din listă.</li>\n    <li>În WordPress: Media → Adăugare fișier nou → încărcați fișierul.</li>\n    <li>Setează-o ca imagine recomandată a postării.</li>\n    <li>În Yoast, Rank Math sau similar, confirmă că previzualizarea socială folosește atașamentul respectiv (sau încarcă o crop OG dedicată).</li>\n    <li>Scrieți un text alternativ care să denumească videoclipul și să precizeze că fișierul este o imagine publică de pe YouTube, nu o listă de cuvinte cheie umplută.</li>\n  </ol>\n  <p>Evitați lipirea unui fișier brut<code>maxresdefault.jpg</code>calea în câmpul media până când fișierul a fost verificat. Lipsa valorilor maxime este frecventă —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Ghid maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "Blogger și site-uri statice",
+      "html": "<p><strong>Blogger:</strong>Încarcă imaginea statică în editorul de postări, apoi reutilizează adresa URL a imaginii Blogger găzduite pentru orice câmpuri de temă/fragment social pe care le controlezi. Nu te baza pe o cale CDN YouTube ghicită pentru o postare publicată care îți interesează.</p>\n  <p><strong>Generatoare statice:</strong>Comandă fișierul în depozitul sau CDN-ul tău, apoi setează etichete front-matter / meta pentru acel element HTTPS. Păstrează schițele pe o adresă URL temporară i.ytimg.com dacă este necesar, dar distribuie fișierul cu propria gazdă.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Imaginea recomandată și og:image pot partaja un fișier, dar ambele necesită o adresă URL care există efectiv.</p>"
+    },
+    {
+      "heading": "Considerații despre graficul deschis",
+      "html": "<p>Cardurile cu linkuri mari vizează de obicei aproximativ<strong>1200×630</strong>Rezoluția maximă YouTube este de obicei<strong>1280×720</strong>(16:9), care este format din răzuitoare sau cutie poștală. Setați<code>og:image</code>(și lățimea/înălțimea atunci când stiva le acceptă) la pixelii reali. După remedierea unui URL defect, repetați procesul în depanatorul fiecărei platforme - memoria cache rămâne.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Hotlinking vs. descărcare",
+      "html": "<table>\n    <thead>\n      <tr><th>Abordare</th><th>Cel mai bun pentru</th><th>Risc</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Legătură directă i.ytimg.com</td><td>Schițe rapide, note de cercetare</td><td>404, modificări CDN, fără control al culturilor</td></tr>\n      <tr><td>Descărcare + gazdă</td><td>Postări clasate, pagini de produse</td><td>Trebuie să stocați fișierul</td></tr>\n      <tr><td>Captură de ecran a jucătorului</td><td>Aproape niciodată</td><td>Interfață Chrome, raport de aspect greșit —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captură de ecran vs. reală</a></td></tr>\n    </tbody>\n  </table>\n  <p>Pași de descărcare:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">cum să descarci o miniatură YouTube</a>. Alegerea formatului când există atât WebP, cât și JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP vs. JPEG</a>.</p>"
+    },
+    {
+      "heading": "Noțiuni de bază despre SEO pentru imagini pentru aceste fotografii",
+      "html": "<ul>\n    <li><strong>Nume de fișier:</strong>descriptiv, cum ar fi<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alt:</strong>descrieți imaginea și videoclipul; nu umpleți cu „YouTube thumbnail downloader HD 4K”.</li>\n    <li><strong>Dimensiuni:</strong>declară lățimea/înălțimea reală.</li>\n    <li><strong>Numai HTTPS:</strong>URL-urile imaginilor cu conținut mixt sunt eliminate de scrapere.</li>\n    <li><strong>Comprimare:</strong>Recodificați ușor pentru CDN dacă este necesar; nu scalați hqdefault la rezoluții maxime false.</li>\n  </ul>"
+    },
+    {
+      "heading": "Reutilizare și drepturi de autor (nu consultanță juridică)",
+      "html": "<p>O adresă URL CDN publică nu este o licență. Încorporarea playerului YouTube este diferită de copierea imaginii statice în videoclipul Hero. Utilizarea loială este specifică faptelor. Model editorial mai sigur: ilustrați comentariile despre videoclipul respectiv, menționați creditul canalului, faceți link către pagina de vizionare și nu vindeți imaginea și nu o utilizați ca imagine proprie pentru canal. Ajutor oficial pentru miniaturi personalizate:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Încărcați miniaturi video personalizate</a>Regulile site-ului:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    },
+    {
+      "heading": "Depanare",
+      "html": "<ul>\n    <li>Card social defect → rezoluții maxime ghicite; reextrageți și găzduiți un fișier validat.</li>\n    <li>Card neclar/neclar → ai folosit hqdefault; verifică dimensiunile.</li>\n    <li>Decupare greșită → oferiți o decupare dedicată de 1200×630 dintr-o imagine statică reală de 16:9.</li>\n    <li>Cache lipicios → forțează o re-rastrare după schimbarea URL-ului.</li>\n  </ul>"
+    },
+    {
+      "heading": "Pasul următor",
+      "html": "<p>Confirmați o imagine statică pe imagine<a href=\"https://www.11tik.com/\">Extractor 11tik</a>, descarcă-l, încarcă-l pe site-ul tău și direcționează `featured image / og:image` către fișierul tău HTTPS.</p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pot lipi o adresă URL i.ytimg.com în WordPress?",
+      "answer": "Unele câmpuri îl acceptă, dar încărcarea unui fișier local confirmat este mai fiabilă pentru imaginile recomandate și previzualizările sociale.",
+      "answerHtml": "<p>Unele câmpuri îl acceptă, dar încărcarea unui fișier local confirmat este mai fiabilă pentru imaginile recomandate și previzualizările sociale.</p>"
+    },
+    {
+      "question": "Am nevoie de maxresdefault pentru Open Graph?",
+      "answer": "Nu. Ai nevoie de cea mai mare imagine publică validată. Lipsa rezoluțiilor maxime este normală.",
+      "answerHtml": "<p>Nu. Ai nevoie de cea mai mare imagine publică validată. Lipsa rezoluțiilor maxime este normală.</p>"
+    },
+    {
+      "question": "Ar trebui ca textul alternativ să menționeze YouTube?",
+      "answer": "Da, atunci când ajută la descrierea elementului („Miniatură publică YouTube pentru…”). Nu folosiți cuvinte cheie în exces.",
+      "answerHtml": "<p>Da, atunci când ajută la descrierea elementului („Miniatură publică YouTube pentru…”). Nu folosiți cuvinte cheie în exces.</p>"
+    },
+    {
+      "question": "Este vreodată în regulă să creezi linkuri directe?",
+      "answer": "Pentru schițe temporare sau note interne, da. Pentru o postare publică permanentă, găzduiți o copie.",
+      "answerHtml": "<p>Pentru schițe temporare sau note interne, da. Pentru o postare publică permanentă, găzduiți o copie.</p>"
+    },
+    {
+      "question": "Pot folosi fotografia ca și copertă a canalului meu?",
+      "answer": "Nu fără drepturi. Aceea este opera de artă a altcuiva.",
+      "answerHtml": "<p>Nu fără drepturi. Aceea este opera de artă a altcuiva.</p>"
+    },
+    {
+      "question": "Ce se întâmplă dacă Studio doar a modificat miniatura personalizată?",
+      "answer": "Așteptați procesarea, apoi verificați din nou 11tik înainte de a actualiza copia CMS. Legate de: Miniaturi YouTube Studio.",
+      "answerHtml": "<p>Așteptați procesarea, apoi verificați din nou 11tik înainte de a actualiza copia CMS. Legate de:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniaturi YouTube Studio</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+}

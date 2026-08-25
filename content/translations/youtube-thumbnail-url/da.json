@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "da",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Sådan får du en YouTube-miniature-URL direkte fra en video | 11tik",
+  "description": "Opret eller kopier en fungerende YouTube-miniature-URL fra video-ID'et på i.ytimg.com. Bekræft, at størrelsen findes, før du bruger et hotlink.",
+  "h1": "Sådan får du en YouTube-miniature-URL direkte fra en video",
+  "ogTitle": "Sådan får du en YouTube-miniature-URL direkte fra en video",
+  "ogDescription": "Opret eller kopier en fungerende YouTube-miniature-URL fra video-ID'et på i.ytimg.com. Bekræft, at størrelsen findes, før du bruger et hotlink.",
+  "imageAlt": "Diagram, der viser en YouTube-visnings-URL konverteret til et video-ID og derefter en miniaturebillede-URL",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Diagram, der viser en YouTube-visnings-URL konverteret til et video-ID og derefter en miniaturebillede-URL",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Mærket anatomi af en YouTube-miniature-URL, der viser vært, sti, video-ID og filnavn",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hurtigt svar",
+      "html": "<p>Sådan får du en YouTube-miniature-URL: Find video-ID'et på 11 tegn, og åbn derefter en bekræftet offentlig billedadresse, f.eks.<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>URL'en til visningssiden er ikke billedet. Indsæt videolinket i<a href=\"https://www.11tik.com/\">11tik</a>, vent på størrelser, der rent faktisk indlæses, og brug derefter<strong>Kopiér billedets URL</strong>så du beholder et fungerende HTTPS-link i stedet for et gættet filnavn, der sender 404'ere.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Flow brugt af ekstraktorer: offentlig visnings-URL → video-ID → offentlig miniature-URL på YouTubes billedhost.</p>"
+    },
+    {
+      "heading": "Hvad en YouTube-miniature-URL er",
+      "html": "<p>En YouTube-miniature-URL peger på en stillbilledfil, ikke på videoafspilleren. Den findes på YouTubes offentlige billed-CDN (normalt<code>i.ytimg.com</code>). Når adressen virker, downloader din browser en JPEG- eller WebP-fil. Når den ikke gør det, får du en manglende fil eller en grå pladsholder – ikke \"HD\" opfundet ud af ingenting.</p>\n  <p>Det er vigtigt for blogs, Open Graph-forhåndsvisninger, designmockups og CMS-felter med fremhævede billeder: disse systemer har brug for en billed-URL, ikke<code>youtube.com/watch?v=…</code>Hvis du kun har brug for filen på disken, skal du bruge<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">downloadvejledning</a>i stedet for denne URL-fokuserede side.</p>"
+    },
+    {
+      "heading": "Hvordan URL'en relaterer sig til video-ID'et",
+      "html": "<p>YouTube sorterer offentlige stillbilleder efter video-ID. Det sædvanlige JPEG-mønster er:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Nogle videoer udgiver også WebP-tvillinger under<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>er præcis 11 tegn fra sættet<code>A–Z a–z 0–9 _ -</code>Ændr ID'et, og du peger på stillbilleder fra en anden video. Ændr filnavnet, og du anmoder om en anden offentlig version af den samme video.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatomi af en offentlig miniature-URL: vært, sti, video-ID og filnavn.</p>"
+    },
+    {
+      "heading": "Sådan finder du YouTube-video-ID'et",
+      "html": "<p>Du behøver kun ID'et. Ekstra forespørgselsparametre såsom playliste-id'er eller<code>pp=</code>Du må ikke ændre stien til miniaturebilledernes vært.</p>\n  <table>\n    <thead>\n      <tr><th>YouTube URL-format</th><th>Eksempel</th><th>Hvor ID'et sidder</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ur</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>forespørgselsværdi</td></tr>\n      <tr><td>Kort link</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Første stisegment</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Sti efter<code>/shorts/</code></td></tr>\n      <tr><td>Integrer</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Sti efter<code>/embed/</code></td></tr>\n      <tr><td>Levende</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Sti efter<code>/live/</code></td></tr>\n      <tr><td>nocookie-indlejring</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Samme som indlejring</td></tr>\n    </tbody>\n  </table>\n  <p>11tiks parser accepterer disse former (og blot 11-tegns ID'er). En kanal- eller playliste-URL uden video-ID er ikke nok til en URL til et enkelt miniaturebillede.</p>"
+    },
+    {
+      "heading": "Almindelige offentlige miniaturefilnavne",
+      "html": "<p>Filnavne beskriver størrelsesniveauer, som YouTube muligvis eller muligvis ikke offentliggør for en given upload. Navne garanterer ikke, at filen eksisterer.</p>\n  <table>\n    <thead>\n      <tr><th>Filnavn</th><th>Typiske pixels når de er til stede</th><th>Noter</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Højeste almindelige offentlighed stadig ved offentliggørelse</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 klasse</td><td>Endnu et højt niveau, som nogle videoer afslører</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Ofte tilgængelig, når maks. res mangler</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Meget almindelig mellemstørrelse</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Lille forhåndsvisning</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Mindste standard stadig</td></tr>\n    </tbody>\n  </table>\n  <p>For detaljer på pixelniveau og hvornår man skal foretrække én størrelse frem for en anden, se<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guide til miniaturestørrelse og opløsning</a>Hvorfor<code>maxresdefault.jpg</code>mangler ofte, se<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">hvad maxresdefault er</a>.</p>"
+    },
+    {
+      "heading": "Eksempel på et udførelseseksempel med et offentligt video-ID",
+      "html": "<p>Tag det offentlige demo-ID<code>dQw4w9WgXcQ</code>En overvågnings-URL er:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>En kandidat til maxres JPEG-URL er:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Åbn den adresse i en ny fane. Hvis billedet indlæses, har du en fungerende miniature-URL. Hvis det mislykkes, kan du prøve det næste filnavn (f.eks.<code>hqdefault.jpg</code>) eller indsæt linket til visning i 11tik, så kun de overlevende filer vises. Gå aldrig ud fra, at alle videoer har maksimal opløsning.</p>"
+    },
+    {
+      "heading": "Tre måder at hente billed-URL'en på",
+      "html": "<h3>1. Hurtigst: kopiér fra 11tik</h3>\n  <ol>\n    <li>Kopiér en offentlig URL til visning, Shorts, live, indlejring eller youtu.be.</li>\n    <li>Åben<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Indsæt URL'en, og vent, indtil forhåndsvisningerne vises.</li>\n    <li>Vælge<strong>Kopiér billedets URL</strong>på den størrelse du har brug for.</li>\n  </ol>\n  <p>11tik tjekker svar i din browser og viser kun størrelser, der returnerer et rigtigt billede. Det er forskellen på et brugbart CMS-link og et defekt<code>maxresdefault</code>gætte.</p>\n\n  <h3>2. Browsermetode</h3>\n  <p>Efter du har en kandidat<code>i.ytimg.com</code>adressen, skal du åbne den i en ny fane. Hvis den stadig gengives, skal du kopiere adresselinjen. Hvis du ser en fejl eller en tom/pladsholder-flise, er den størrelse aldrig blevet offentliggjort for det pågældende ID – lad være med at oprette et hotlink til den.</p>\n\n  <h3>3. Opret URL'en manuelt</h3>\n  <p>Du kan sammenkæde vært +<code>/vi/</code>+ ID + filnavn selv. Håndbyggede URL'er er fine til test, men de er usikre at indsætte i produktions-HTML, før du har bekræftet svaret. Tilgængeligheden varierer afhængigt af uploadalder, kildegrafik og behandlingsstatus i YouTube Studio.</p>"
+    },
+    {
+      "heading": "Valg af den bedste tilgængelige URL",
+      "html": "<p>\"Bedst\" ​​betyder den største offentlige fil, der rent faktisk findes, ikke det længste filnavn, du kan skrive. Foretræk et valideret maxres- eller hq720-link, når det er til stede. Hvis disse ikke virker, skal du gå ned til sd, hq, mq eller standard. Opskalering af et 480×360 stillbillede til 1280×720 i en editor opretter ikke en ægte maxres-URL.</p>\n  <p>Skabere, der uploader brugerdefineret kunst, skal stadig bekræfte de live offentlige derivater bagefter – Studio-behandlingen kan være langsom. Relateret:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniaturebilleder i 2026</a>.</p>"
+    },
+    {
+      "heading": "Brug af URL'en på et andet websted",
+      "html": "<p>Du kan indsætte en fungerende<code>i.ytimg.com</code>URL i mange CMS-felter, men hotlinking har risici: YouTube kan ændre CDN-stier, og nogle netværk blokerer tredjepartshosts. For et holdbart blogfremhævet billede eller Open Graph-tag skal du downloade det bekræftede stillbillede og hoste en kopi på dit eget domæne. Gennemgang:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTube-miniaturebillede som blog / Open Graph-billede</a>.</p>\n  <p>Ophavsretten forbliver hos uploaderen. En offentlig URL er ikke en licens til at genudgive illustrationen som dit eget cover. Se YouTubes hjælp på<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">brugerdefinerede videominiaturebilleder</a>og 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+    },
+    {
+      "heading": "Fejlfinding af defekte miniature-URL'er",
+      "html": "<ul>\n    <li><strong>404 eller pladsholder:</strong>den størrelse blev aldrig offentliggjort. Prøv et andet filnavn eller brug 11tik's validerede liste.</li>\n    <li><strong>Forkert video:</strong>forkert indtastet ID. Kopier igen fra urets URL.</li>\n    <li><strong>Privat / aldersbegrænset / slettet:</strong>ingen offentligheder stadig at linke.</li>\n    <li><strong>Blandet HTTP-indhold:</strong>altid bruge<code>https://</code>billed-URL'er på HTTPS-sider.</li>\n    <li><strong>Shorts ser ud som en letterbox:</strong>Mange Shorts gemmer stadig offentlige filer i liggende format. URL'en er stadig den officielle offentlige fil.</li>\n  </ul>"
+    },
+    {
+      "heading": "Næste skridt",
+      "html": "<p>Indsæt en offentlig YouTube-URL i<a href=\"https://www.11tik.com/\">YouTube-miniatureudtrækker</a>, kopier det validerede billedlink, eller<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">download stillbilledet</a>hvis du har brug for en lokal fil. For at se valg af opløsning skal du åbne<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">størrelses- og kvalitetsguide</a>.</p>\n\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af browser-udtrækkeren. Kun offentlige stillbilleder – ingen video- eller lyddownload.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg kopiere den direkte miniature-URL uden at downloade filen?",
+      "answer": "Ja. På 11tik skal du bruge Kopier billed-URL. Det kopierer HTTPS-billedadressen for en størrelse, der allerede er valideret i din browser.",
+      "answerHtml": "<p>Ja. På 11tik skal du bruge Kopier billed-URL. Det kopierer HTTPS-billedadressen for en størrelse, der allerede er valideret i din browser.</p>"
+    },
+    {
+      "question": "Kan jeg få en miniature-URL fra en YouTube Short-video?",
+      "answer": "Ja, når Shorts-videoen er offentlig, og YouTube har offentliggjort stillbilleder for det ID. Indsæt et /shorts/-link på samme måde, som du indsætter en URL til visning. Se også Shorts-miniaturebilleder.",
+      "answerHtml": "<p>Ja, når Short-videoen er offentlig, og YouTube har offentliggjort stillbilleder for det ID. Indsæt en<code>/shorts/</code>link på samme måde som du indsætter en URL til overvågning. Se også<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniaturebilleder</a>.</p>"
+    },
+    {
+      "question": "Hvorfor virker én miniature-URL, mens en anden returnerer en fejl?",
+      "answer": "Filnavne er valgfrie offentlige afledninger. hqdefault.jpg kan eksistere, når maxresdefault.jpg ikke gør. En fungerende URL i mellemstørrelse indebærer ikke en fungerende URL med maksimal res.",
+      "answerHtml": "<p>Filnavne er valgfrie offentlige afledninger.<code>hqdefault.jpg</code>kan eksistere når<code>maxresdefault.jpg</code>gør ikke. En fungerende URL i mellemstørrelse indebærer ikke en fungerende URL med maksimal res.</p>"
+    },
+    {
+      "question": "Kan jeg bruge den direkte billed-URL på min hjemmeside?",
+      "answer": "Teknisk set ja, hvis filen findes, men det er mere pålideligt at hoste din egen kopi til fremhævede billeder og sociale forhåndsvisninger. Genudgiv ikke andres kunst som dit kanalcover uden rettigheder.",
+      "answerHtml": "<p>Teknisk set ja, hvis filen findes, men det er mere pålideligt at hoste din egen kopi til fremhævede billeder og sociale forhåndsvisninger. Genudgiv ikke andres kunst som dit kanalcover uden rettigheder.</p>"
+    },
+    {
+      "question": "Er URL'en til visning nogensinde URL'en til miniaturebilleder?",
+      "answer": "Nej. URL'en til visning identificerer videoen. URL'en til miniaturebilleder identificerer en billedfil på billed-CDN'et.",
+      "answerHtml": "<p>Nej. URL'en til visning identificerer videoen. URL'en til miniaturebilleder identificerer en billedfil på billed-CDN'et.</p>"
+    },
+    {
+      "question": "Opfinder 11tik en URL med højere opløsning?",
+      "answer": "Nej. Den viser kun offentlige filer, der reagerer som billeder. Manglende maks. res betyder, at URL'en ikke skal kopieres.",
+      "answerHtml": "<p>Nej. Den viser kun offentlige filer, der reagerer som billeder. Manglende maks. res betyder, at URL'en ikke skal kopieres.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af browser-udtrækkeren. Kun offentlige stillbilleder – ingen video- eller lyddownload.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+}

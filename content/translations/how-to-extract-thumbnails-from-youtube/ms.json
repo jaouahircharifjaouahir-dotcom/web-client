@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "ms",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Cara mengekstrak lakaran kecil daripada URL saluran YouTube | 11tik",
+  "description": "Tampal URL saluran YouTube awam ke dalam 11tik Bulk untuk mengembangkan muat naik awam terkini, kemudian muat turun setiap fail terbaik. Ini adalah untuk penyelidikan tentang pembungkusan, bukan untuk mengklon seni tersuai saluran lain.",
+  "h1": "Cara mengekstrak lakaran kecil daripada URL saluran YouTube",
+  "ogTitle": "Cara mengekstrak lakaran kecil daripada URL saluran YouTube",
+  "ogDescription": "Tampal URL saluran YouTube awam ke dalam 11tik Bulk untuk mengembangkan muat naik awam terkini, kemudian muat turun setiap fail terbaik. Ini adalah untuk penyelidikan tentang pembungkusan, bukan untuk mengklon seni tersuai saluran lain.",
+  "imageAlt": "Ekstrak lakaran kecil daripada URL saluran YouTube — muat naik awam terkini pada 11tik",
+  "faqHeading": "Soalan Lazim",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Ekstrak lakaran kecil daripada URL saluran YouTube — muat naik awam terkini pada 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bolehkah saya mendapatkan lakaran kecil daripada keseluruhan saluran YouTube?",
+      "html": "<p>Anda boleh mendapatkan gambar pegun untuk yang terkini<em>awam</em>muat naik yang mendedahkan ID video. 11tik tidak mengikis setiap video yang pernah disiarkan oleh saluran dan tidak memintas keahlian. Di laman utama, hidupkan Pukal, tampal URL saluran seperti<code>youtube.com/@handle</code>atau<code>/channel/UC…</code>, dan biarkan alat tersebut mengembangkan senarai gaya RSS awam. Kemudian ekstrak seperti yang anda lakukan pada senarai yang ditaip. Had kekal 25 URL setiap larian supaya pelayar kekal boleh digunakan.</p>\n  <p>Ini berbeza daripada menyimpan satu pautan tontonan. Aliran URL tunggal berada dalam<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">cara memuat turun lakaran kecil YouTube</a>Pukal baris demi baris tanpa saluran berada dalam<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">muat turun kelompok</a>.</p>"
+    },
+    {
+      "heading": "URL saluran yang manakah berfungsi?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>apabila halaman awam mendedahkan ID saluran</li>\n    <li>Legasi<code>/user/name</code>laluan yang masih menyelesaikan</li>\n  </ul>\n  <p>URL /playlist bukan saluran. Sebaliknya, tampal pautan tontonan individu senarai main. Pemegang yang tidak pernah bertukar kepada ID UC tidak akan mengembalikan video; buka saluran dalam pelayar biasa dan salin URL saluran kanonik daripada bar alamat.</p>"
+    },
+    {
+      "heading": "Cara mengekstrak lakaran kecil saluran pada 11tik",
+      "html": "<ol>\n    <li>Buka<a href=\"https://www.11tik.com/\">11tik</a>dan klik Pukal.</li>\n    <li>Tampal satu URL saluran awam. Anda boleh menambah lebih banyak pautan tontonan pada baris berikut.</li>\n    <li>Mulakan ekstrak. Tunggu sehingga alat tersebut menggantikan baris saluran dengan URL tontonan awam terkini, kemudian tarik gambar pegun.</li>\n    <li>Muat turun setiap gambar terbaik atau muat turun zip berkualiti tinggi atau eksport CSV (id, tajuk, URL kongsi, URL imej) untuk log penyelidikan.</li>\n  </ol>\n  <p>Kongsi pautan selepas penggunaan ekstrak yang berjaya<code>/thumb/VIDEO_ID</code>apabila pintu pagar berkualiti mempunyai tajuk, tag dan ibu jari langsung. Halaman-halaman tersebut adalah untuk pegun unik, bukan halaman utama kedua.</p>"
+    },
+    {
+      "heading": "Apa yang 11tik tidak akan lakukan",
+      "html": "<ul>\n    <li>Muat turun video atau audio. Gambar pegun sahaja.</li>\n    <li>Senaraikan muat naik yang tidak tersenarai atau peribadi.</li>\n    <li>Jaminan maxresdefault untuk setiap video terkini. Sumber lama atau kecil berhenti di hq atau sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">lalai maksimum</a>.</li>\n    <li>Berikan hak untuk menggunakan semula seni tersebut. Kajian grid pembungkusan awam adalah tujuan penyelidikan. Memuat naik semula pegun pesaing sebagai lakaran kecil tersuai anda adalah masalah hak cipta dan dasar.<a href=\"https://www.11tik.com/copyright\">Hak Cipta &amp; Penggunaan</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Bagaimana ini membantu penyelidikan tanpa halaman pintu",
+      "html": "<p>Ekstrak saluran hanyalah satu tugas: gambar awam terkini dalam satu sesi. Ia bukan halaman yang dijana bagi setiap jenama pesaing. Anda kekal menggunakan alat ini, menyimpan zip atau CSV dan menulis nota anda sendiri. Jika anda menerbitkan ulasan, kreditkan saluran tersebut dan pautkan halaman tontonan mereka. Peraturan muat naik lakaran kecil YouTube untuk<em>awak</em>saluran berada dalam<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">lakaran kecil video tersuai</a>.</p>"
+    },
+    {
+      "heading": "Penyelesaian masalah",
+      "html": "<p>Senarai kosong: suapan saluran tidak mengembalikan ID awam (saluran yang ditamatkan atau pemegang yang tidak dapat dipetakan oleh penyelesai). Cuba URL saluran UC daripada susun atur desktop YouTube.</p>\n  <p>Beberapa kad hilang: muat naik tersebut masih belum dipaparkan kepada umum atau pihak gate menolak ekstrak yang tidak lengkap. Jalankan semula satu URL tontonan. Privasi pautan yang ditampal:<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>.</p>\n  <p>Alat pengekstrak vs alat reka bentuk: 11tik tidak mencipta seni kulit.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Pengekstrak vs pembuat</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstrak gambar saluran awam pada 11tik →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bolehkah saya mendapatkan lakaran kecil daripada keseluruhan saluran YouTube?",
+      "answer": "Ya untuk muat naik awam terkini. Tampal URL saluran ke dalam 11tik Pukal. Video peribadi dan khusus ahli tidak disenaraikan.",
+      "answerHtml": "Ya untuk muat naik awam terkini. Tampal URL saluran ke dalam 11tik Pukal. Video peribadi dan khusus ahli tidak disenaraikan."
+    },
+    {
+      "question": "URL saluran yang manakah berfungsi?",
+      "answer": "URL awam /saluran/UC…, banyak URL @handle dan beberapa laluan /pengguna/ legasi. Senarai main bukanlah saluran.",
+      "answerHtml": "URL awam /saluran/UC…, banyak URL @handle dan beberapa laluan /pengguna/ legasi. Senarai main bukanlah saluran."
+    },
+    {
+      "question": "Adakah ini memuat turun video?",
+      "answer": "Tidak. 11tik hanya menyenaraikan gambar awam yang telah dihoskan oleh YouTube.",
+      "answerHtml": "Tidak. 11tik hanya menyenaraikan gambar awam yang telah dihoskan oleh YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>.</p>"
+}

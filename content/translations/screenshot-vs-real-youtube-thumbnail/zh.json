@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "zh",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "截图还是 YouTube 原图缩略图：应该保存哪个文件？ | 11tik",
+  "description": "手机截屏的播放器画面并非 YouTube 使用的缩略图。真正的用户仍然在使用 i.ytimg.com。请将其用于博客、Open Graph 和研究——截图会增加界面边框、压缩以及错误的宽高比。",
+  "h1": "屏幕截图与 YouTube 原图：应该保存哪个文件？",
+  "ogTitle": "屏幕截图与 YouTube 原图：应该保存哪个文件？",
+  "ogDescription": "手机截屏的播放器画面并非 YouTube 使用的缩略图。真正的用户仍然在使用 i.ytimg.com。请将其用于博客、Open Graph 和研究——截图会增加界面边框、压缩以及错误的宽高比。",
+  "imageAlt": "玩家截图与真实的公开 YouTube 缩略图文件对比",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "玩家截图与真实的公开 YouTube 缩略图文件对比",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "屏幕截图和真实缩略图有什么区别？",
+      "html": "<p>屏幕截图会捕捉您的屏幕，包括播放器边框、字幕和设备缩放比例。真正的缩略图是 YouTube 为该视频 ID 发布的 JPEG 或 WebP 文件。只有 CDN 文件才具有稳定的 URL 和已知的像素尺寸。</p>"
+    },
+    {
+      "heading": "为什么屏幕截图在谷歌图片和社交媒体预览中无法显示？",
+      "html": "<p>它们通常宽高比错误，包含用户界面，并且压缩两次。Open Graph 和许多 CMS 字段需要 16:9 的分辨率，大约为 1280×720。这与 maxresdefault 匹配（如果存在）——参见<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">缩略图尺寸指南</a>。</p>"
+    },
+    {
+      "heading": "如何保存真实的缩略图？",
+      "html": "<ol>\n    <li>复制公开视频的URL，而不是截图。</li>\n    <li>粘贴到<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>下载列表中第一个公开文件或复制图片网址。</li>\n  </ol>"
+    },
+    {
+      "heading": "截图在什么情况下仍然有用？",
+      "html": "<p>截图仅用于记录用户界面错误或视频中的某个瞬间。如果已有公开的截图，请勿将其用作官方缩略图、博客文章首页图片或分享图片。</p>\n  <p><a href=\"https://www.11tik.com/\">获取真实的公开缩略图 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "屏幕截图和真实缩略图有什么区别？",
+      "answer": "屏幕截图会捕捉您的屏幕和播放器界面。真正的缩略图是 YouTube 在 i.ytimg.com 上为该视频 ID 托管的 JPEG 或 WebP 文件。",
+      "answerHtml": "屏幕截图会捕捉您的屏幕和播放器界面。真正的缩略图是 YouTube 在 i.ytimg.com 上为该视频 ID 托管的 JPEG 或 WebP 文件。"
+    },
+    {
+      "question": "为什么屏幕截图在谷歌图片和社交媒体预览中无法显示？",
+      "answer": "它们通常存在宽高比错误、额外的用户界面元素和过度压缩等问题。内容管理系统 (CMS) 和 Open Graph 字段需要的是清晰的 16:9 公共静态图像。",
+      "answerHtml": "它们通常存在宽高比错误、额外的用户界面元素和过度压缩等问题。内容管理系统 (CMS) 和 Open Graph 字段需要的是清晰的 16:9 公共静态图像。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+}

@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "tl",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Paano kumuha ng mga thumbnail mula sa URL ng isang YouTube channel | 11tik",
+  "description": "I-paste ang isang pampublikong URL ng YouTube channel sa 11tik Bulk para mapalawak ang mga kamakailang pampublikong upload, pagkatapos ay i-download ang bawat pinakamahusay na still. Ito ay para sa pananaliksik sa packaging, hindi para sa pag-clone ng custom art ng ibang channel.",
+  "h1": "Paano kumuha ng mga thumbnail mula sa URL ng isang channel sa YouTube",
+  "ogTitle": "Paano kumuha ng mga thumbnail mula sa URL ng isang channel sa YouTube",
+  "ogDescription": "I-paste ang isang pampublikong URL ng YouTube channel sa 11tik Bulk para mapalawak ang mga kamakailang pampublikong upload, pagkatapos ay i-download ang bawat pinakamahusay na still. Ito ay para sa pananaliksik sa packaging, hindi para sa pag-clone ng custom art ng ibang channel.",
+  "imageAlt": "Kunin ang mga thumbnail mula sa URL ng isang channel sa YouTube — mga pinakabagong pampublikong upload sa 11tik",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Kunin ang mga thumbnail mula sa URL ng isang channel sa YouTube — mga pinakabagong pampublikong upload sa 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Makakakuha ba ako ng mga thumbnail mula sa isang buong channel sa YouTube?",
+      "html": "<p>Makakakuha ka ng mga still para sa pinakabago<em>publiko</em>mga upload na naglalantad ng video id. Hindi kinukunan ng 11tik ang bawat video na na-post ng isang channel at hindi nilalampasan ang mga membership. Sa homepage, i-on ang Bulk, i-paste ang URL ng channel tulad ng<code>youtube.com/@handle</code>o<code>/channel/UC…</code>, at hayaang palawakin ng tool ang pampublikong listahan na istilong RSS. Pagkatapos, i-extract gaya ng gagawin mo sa isang naka-type na listahan. Ang limitasyon ay nananatiling 25 URL bawat pagpapatakbo para manatiling magagamit ang browser.</p>\n  <p>Iba ito sa pag-save ng isang watch link. Ang single-URL flow ay nasa<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">paano mag-download ng thumbnail sa YouTube</a>. Ang line-by-line na bulk na walang channel ay nasa<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">pag-download nang maramihan</a>.</p>"
+    },
+    {
+      "heading": "Aling mga URL ng channel ang gumagana?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>kapag inilantad ng pampublikong pahina ang isang channel id</li>\n    <li>Pamana<code>/user/name</code>mga landas na patuloy pa ring lumulutas</li>\n  </ul>\n  <p>Ang URL na /playlist ay hindi isang channel. I-paste na lang ang mga indibidwal na link sa panonood ng playlist. Ang handle na hindi kailanman nagiging UC id ay hindi magbabalik ng mga video; buksan ang channel sa isang normal na browser at kopyahin ang canonical channel URL mula sa address bar.</p>"
+    },
+    {
+      "heading": "Paano kunin ang mga thumbnail ng channel sa 11tik",
+      "html": "<ol>\n    <li>Bukas<a href=\"https://www.11tik.com/\">11tik</a>at i-click ang Maramihan.</li>\n    <li>Mag-paste ng isang pampublikong URL ng channel. Maaari kang magdagdag ng higit pang mga link sa panonood sa mga sumusunod na linya.</li>\n    <li>Simulan ang pag-extract. Maghintay hanggang sa palitan ng tool ang linya ng channel ng mga kamakailang pampublikong URL ng panonood, pagkatapos ay kumuha ng mga still.</li>\n    <li>I-download ang bawat pinakamahusay na kopya, o i-download ang pinakamataas na kalidad na zip file, o i-export ang CSV (id, pamagat, URL ng pagbabahagi, URL ng larawan) para sa isang research log.</li>\n  </ol>\n  <p>Ibahagi ang mga link pagkatapos ng matagumpay na paggamit ng extract<code>/thumb/VIDEO_ID</code>kapag ang quality gate ay may pamagat, mga tag, at isang live thumb. Ang mga pahinang iyon ay para sa mga natatanging larawan, hindi para sa pangalawang homepage.</p>"
+    },
+    {
+      "heading": "Ano ang hindi gagawin ni 11tik",
+      "html": "<ul>\n    <li>I-download ang mga video o audio. Mga still lamang.</li>\n    <li>Ilista ang mga hindi nakalista o pribadong upload.</li>\n    <li>Garantiyadong maxresdefault para sa bawat kamakailang video. Ang mga luma o maliliit na source ay natatapos sa hq o sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Magbigay ng mga karapatan na muling gamitin ang sining. Ang pag-aaral ng isang grid ng pampublikong packaging ang nilalayong gamit sa pananaliksik. Ang muling pag-upload ng still ng isang kakumpitensya bilang iyong custom na thumbnail ay isang problema sa copyright at patakaran.<a href=\"https://www.11tik.com/copyright\">Karapatang-ari at Paggamit</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Paano ito nakakatulong sa pananaliksik nang walang mga doorway page",
+      "html": "<p>Isang trabaho lang ang pagkuha ng channel: mga kamakailang pampublikong still sa isang upuan lang. Hindi ito isang nabuong pahina para sa bawat kakumpitensyang brand. Mananatili ka sa tool, magtatago ka ng zip o CSV, at magsusulat ka ng sarili mong mga tala. Kung maglalathala ka ng komentaryo, bigyan ng kredito ang mga channel at i-link ang kanilang mga watch page. Mga panuntunan sa pag-upload ng thumbnail ng YouTube para sa<em>iyong</em>nasa loob ang channel<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">mga pasadyang thumbnail ng video</a>.</p>"
+    },
+    {
+      "heading": "Pag-troubleshoot",
+      "html": "<p>Walang laman na listahan: ang channel feed ay hindi nagbalik ng mga pampublikong ID (tinapos na channel, o isang handle na hindi ma-map ng resolver). Subukan ang URL ng UC channel mula sa desktop layout ng YouTube.</p>\n  <p>Nawawala ang ilang card: wala pang naka-public sa mga upload na iyon, o tinanggihan ng gate ang isang hindi kumpletong extract. Patakbuhin muli ang isang watch URL. Privacy ng mga na-paste na link:<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>.</p>\n  <p>Kagamitang pang-extractor vs. tool sa disenyo: Hindi lumilikha ng cover art ang 11tik.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Tagabunot vs tagagawa</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">I-extract ang mga pampublikong channel still sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Makakakuha ba ako ng mga thumbnail mula sa isang buong channel sa YouTube?",
+      "answer": "Oo para sa mga kamakailang pampublikong upload. I-paste ang URL ng channel sa 11tik Bulk. Hindi nakalista ang mga pribado at para sa mga miyembro lamang na video.",
+      "answerHtml": "Oo para sa mga kamakailang pampublikong upload. I-paste ang URL ng channel sa 11tik Bulk. Hindi nakalista ang mga pribado at para sa mga miyembro lamang na video."
+    },
+    {
+      "question": "Aling mga URL ng channel ang gumagana?",
+      "answer": "Mga pampublikong /channel/UC… na URL, maraming @handle na URL, at ilang legacy na /user/ na path. Ang mga playlist ay hindi mga channel.",
+      "answerHtml": "Mga pampublikong /channel/UC… na URL, maraming @handle na URL, at ilang legacy na /user/ na path. Ang mga playlist ay hindi mga channel."
+    },
+    {
+      "question": "Dito ba nagda-download ng mga video?",
+      "answer": "Hindi. Ang 11tik ay naglilista lamang ng mga pampublikong litrato na hino-host na ng YouTube.",
+      "answerHtml": "Hindi. Ang 11tik ay naglilista lamang ng mga pampublikong litrato na hino-host na ng YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+}

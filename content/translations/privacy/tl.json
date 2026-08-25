@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "tl",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Patakaran sa Pagkapribado | 11tik",
+  "description": "Nalalapat ang patakarang ito sa YouTube Thumbnail Extractor sa https://www.11tik.com/ at sa mga language host na naglo-load ng parehong extractor.",
+  "h1": "Patakaran sa Pagkapribado",
+  "ogTitle": "Patakaran sa Pagkapribado",
+  "ogDescription": "Nalalapat ang patakarang ito sa YouTube Thumbnail Extractor sa https://www.11tik.com/ at sa mga language host na naglo-load ng parehong extractor.",
+  "imageAlt": "",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Pagproseso sa browser",
+      "html": "<p>Kapag nag-paste ka ng URL sa YouTube, binabasa ng pahina ang video ID at sinusuri ang mga pampublikong URL ng thumbnail na larawan sa iyong browser. Ang mga na-paste na link na iyon ay hindi iniimbak bilang isang personal na account sa isang 11tik application server. Hindi nangangailangan ng pag-login ang pagkuha.</p>"
+    },
+    {
+      "heading": "Opsyonal na indeks ng pahina ng pagbabahagi",
+      "html": "<p>Pagkatapos ng matagumpay na pag-extract, maaaring magpadala lamang ang browser ng pampublikong video ID, pamagat, mga tag na hango sa pampublikong metadata, at isang pampublikong thumbnail URL sa aming Cloudflare Worker upang lumabas ang video sa isang share page at, kung pumasa ito sa quality check, sa sitemap. Hindi namin hinihiling sa iyo na i-upload ang image file. Maaari mong gamitin ang extractor nang walang index na iyon kung ang kahilingan ay hinarangan ng iyong browser.</p>"
+    },
+    {
+      "heading": "Lokal na kasaysayan",
+      "html": "<p>Maaaring i-save ng extractor ang mga kamakailang URL sa lokal na imbakan ng browser na ito para mabuksan mo ulit ang mga ito. Mananatili ang kopyang iyon sa iyong device. I-clear ito gamit ang in-page history control, o sa pamamagitan ng pag-clear ng data ng site na ito sa browser. Hindi ito isang cloud account.</p>"
+    },
+    {
+      "heading": "Mga log ng pagho-host",
+      "html": "<p>Ang website, mga host ng wika, at mga static file ay pinaglilingkuran ng mga hosting provider na ginagamit para sa 11tik.com (kabilang ang Cloudflare at GitHub Pages). Maaaring panatilihin ng mga host na iyon ang mga ordinaryong web log tulad ng IP address, uri ng browser, at ang hiniling na pahina, ayon sa kanilang sariling mga patakaran.</p>"
+    },
+    {
+      "heading": "Mga ikatlong partido",
+      "html": "<p>Hinihiling ang mga thumbnail file mula sa mga pampublikong image host ng YouTube. Ginagamit ng site ang Google Analytics 4 (measurement ID G-FW7B8NDZZ5) upang bilangin ang mga pagbisita at mga aksyon sa loob ng pahina tulad ng pag-extract at pag-download. Maaaring magtakda ang Google ng cookies o mga katulad na identifier. Ang mga naka-paste na URL ng YouTube ay hindi ipinapadala bilang mga parameter ng kaganapan sa analytics. Maaari ring mag-load ang mga font o script mula sa mga CDN na ginagamit upang ipakita ang pahina.</p>\n  <p>Ang contact form ay ipapadala sa email ng operator sa pamamagitan ng FormSubmit. Makikita ng FormSubmit ang pangalan, email, at mensaheng isinumite mo.</p>"
+    },
+    {
+      "heading": "Makipag-ugnayan",
+      "html": "<p>Mga tanong tungkol sa patakarang ito: email<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>o gamitin ang<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>anyo.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Pang-extract ng Thumbnail ng YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

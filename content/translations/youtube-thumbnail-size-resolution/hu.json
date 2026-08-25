@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "hu",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "YouTube indexkép mérete és felbontása: Teljes útmutató | 11tik",
+  "description": "Hasonlítsd össze a YouTube indexképeinek méreteit 120×90 és 1280×720 között. A Maxres és a hq720 opcionális – használd a legnagyobb betöltődő nyilvános fájlt.",
+  "h1": "YouTube indexkép mérete és felbontása: Teljes útmutató",
+  "ogTitle": "YouTube indexkép mérete és felbontása: Teljes útmutató",
+  "ogDescription": "Hasonlítsd össze a YouTube indexképeinek méreteit 120×90 és 1280×720 között. A Maxres és a hq720 opcionális – használd a legnagyobb betöltődő nyilvános fájlt.",
+  "imageAlt": "A nyilvános YouTube-bélyegképek méretének összehasonlító táblázata a maxresdefault 1280 x 720-tól az alapértelmezett 120 x 90-ig",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "A nyilvános YouTube-bélyegképek méretének összehasonlító táblázata a maxresdefault 1280 x 720-tól az alapértelmezett 120 x 90-ig",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Egymás melletti összehasonlítás, amely egy maxresdefault fájllal rendelkező videót mutat be egy olyan videóval szemben, amelyben csak egy kisebb hqdefault fájl létezik.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>Egyéni feltöltés esetén a YouTube súgója továbbra is a következőre összpontosít:<strong>16:9</strong>kép – általában<strong>1280×720</strong>Egy meglévő videóból letölthető fájlok esetében a nyilvános CDN-származékok eltérőek lehetnek. Amennyiben vannak ilyenek,<code>maxresdefault</code>/<code>hq720</code>általában 1280×720 méretűek. Sok videó megáll ennél:<code>sddefault</code>(640×480) vagy<code>hqdefault</code>(480×360). A nagyobb fájlnév soha nem teremt pixeleket. Illeszd be a figyelő URL-t ide<a href=\"https://www.11tik.com/\">11tik</a>csak olyan méretek listázása, amelyek valódi képet adnak vissza.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Relatív nyilvános méretek. Nem minden videó teszi közzé a ranglétra minden fokát.</p>"
+    },
+    {
+      "heading": "Ajánlott méretek alkotóknak",
+      "html": "<p>Ha egyéni indexképet tervezel a Studioban, kövesd a jelenlegi YouTube Súgót: törekedj egy<strong>16:9</strong>még mindig. A széles körben használt munkaméret a<strong>1280×720</strong>pixel. Ez megegyezik a lejátszó szélesvásznú képkockájával, és ugyanolyan pixelosztályú, mint egy közzétett<code>maxresdefault</code>amikor a YouTube létrehoz egyet.</p>\n  <p>Hivatalos hivatkozás:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Egyéni videóbélyegképek feltöltése</a>Miután a Studio befejezte a feldolgozást, a 11tik paranccsal erősítsd meg az élő nyilvános fájlokat, ahelyett, hogy feltételeznéd, hogy minden származékfájl azonnal megjelenik. Stúdióra vonatkozó megjegyzések:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio indexképek 2026-ban</a>.</p>"
+    },
+    {
+      "heading": "A nézők által ténylegesen lekérhető nyilvános CDN-méretek",
+      "html": "<p>A letöltők és blogok nem a Photoshop master fájlodat kérdezik le. A YouTube nyilvános származtatott fájljaiból keresik a videó azonosítóját. A 11tik fájlkicsomagolója ezeket a fájlneveket ellenőrzi (JPEG és ha van, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Változat</th><th>Tipikus felbontás</th><th>Szint</th><th>Elérhetőség</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Legjobb</td><td>Csak akkor, ha a YouTube közzétette a WebP maxres-t</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Legjobb</td><td>Gyakori az újabb/jó minőségű feltöltéseken; a régebbieknél gyakran hiányzik</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720-as osztály</td><td>Legjobb</td><td>Néhány videón alternatív magas szintű fájlként jelenik meg</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Magas</td><td>Gyakran elérhető, ha a maxres hiányzik</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Standard</td><td>Nagyon gyakori</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Előnézet</td><td>Kis előnézetek / listák</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Előnézet</td><td>Legkisebb szabványos üst</td></tr>\n    </tbody>\n  </table>\n  <p>Ezek az elvárt szélességek és magasságok megegyeznek a 11tik minőségi előbeállításaival. A valós válaszok továbbra is eltérhetnek, ha a YouTube helyőrzőt használ, vagy teljesen kihagy egy fájlt – mindig ellenőrizd.</p>"
+    },
+    {
+      "heading": "Miért számít a 16:9 akkor is, ha a fájlok eltérőek?",
+      "html": "<p>Az óralejátszó szélesvásznú. A 16:9-es képarányú, egyedi grafika továbbra is olvasható a keresésben, a javasolt polcokon és a beágyazásokban. Néhány nyilvános fájl (nevezetesen<code>hqdefault</code>/<code>sddefault</code>) nem szigorúan 16:9-es dobozok; ezek régebbi CDN-méretek. Inkább egy valódi 1280×720-as nyilvános mappát válassz, ha tiszta 16:9-es erőforrásra van szükséged az Open Graphhoz vagy egy blogfejléchez.</p>\n  <p>A rövidfilmek függőlegesen játszódnak le, de a tárolt nyilvános tartalom gyakran fekvő helyzetben van. Ez a gazdagép viselkedése, nem pedig sikertelen letöltés. Részletek:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek indexképének letöltése</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs „HD”",
+      "html": "<p><code>maxresdefault</code>az ismerős HD fájlnév a<code>i.ytimg.com</code>Amikor a fájl létezik, az általában 1280×720 felbontású – nem 4K.<code>hq720</code>egy másik magas szintű név, amelyet egyes videók ugyanabban a felbontási osztályban tesznek elérhetővé. Egyik név sem garantálja a fájlt. Azok az eszközök, amelyek ellenőrzés nélkül kinyomtatják a maxres URL-t, hibás képeket eredményeznek.</p>\n  <p>Mélyebb fájlnév megjegyzések:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">mi az a maxresdefault.jpg</a>és<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">legmagasabb minőségű nyilvános indexkép</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ugyanaz a kérésminta, különböző eredmények: egy magasabb fájlnév nem talál fel pixeleket, ha a fájl hiányzik.</p>"
+    },
+    {
+      "heading": "Miért van egy videónak több mérete, mint egy másiknak?",
+      "html": "<ul>\n    <li>A régebbi feltöltések talán soha nem kaptak maxres származékot.</li>\n    <li>A forrásgrafika kisebb volt, mint 1280×720.</li>\n    <li>Az egyéni bélyegképek feldolgozása még folyamatban van a Studioban.</li>\n    <li>A privát, csak tagoknak szóló vagy korhatáros videók nem tehetnek közzé nyilvános állóképeket.</li>\n    <li>A WebP-variánsok csak akkor jelennek meg, ha a YouTube közzétette őket az adott azonosítóhoz.</li>\n  </ul>\n  <p>Az elérhetőség videónként értendő. Soha ne tekintsd egy versenytárs működő maxres URL-jét a tiéd létezésének bizonyítékaként.</p>"
+    },
+    {
+      "heading": "Hogyan választja ki a 11tik a „legjobb” méretet",
+      "html": "<p>A 11tik rögzített minőségi sorrendben vizsgálja a nyilvános jelölteket (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → alapértelmezett). Megőrzi a képként érvényesített fájlokat, és a legmagasabb túlélőt rangsorolja előre. Nem skálázza fel. Ha a maxres hiányzik, az első kártya lehet hq720 vagy sd – ez az adott azonosítóhoz tartozó becsületes maximum.</p>\n  <p>Egy kiválasztott méretű cím másolásához használja a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>A fájl mentéséhez használja a<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">útmutató letöltése</a>.</p>"
+    },
+    {
+      "heading": "Melyik méretet érdemes használni?",
+      "html": "<table>\n    <thead>\n      <tr><th>Használati eset</th><th>Előnyben részesítem</th><th>Miért</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Blog kiemelt kép / Open Graph</td><td>Legnagyobb validált ~1280×720</td><td>Megfelel a gyakori társadalmi növényeknek; tárolja a saját példányát</td></tr>\n      <tr><td>Tervezési makett / bélyegkép kutatás</td><td>A legjobb elérhető nyilvános szenzor</td><td>Valódi csomagolás, nem játékos képernyőképe</td></tr>\n      <tr><td>Gyors csevegés előnézete</td><td>főhadiszállás vagy mq</td><td>A kisebb fájlok gyorsabban töltődnek be</td></tr>\n      <tr><td>Egyéni feltöltés a Studioban</td><td>Az eredeti 16:9 1280×720 (vagy nagyobb) képarányú</td><td>Te alkotsz művészetet; a CDN-származékok később jönnek</td></tr>\n    </tbody>\n  </table>\n  <p>Ne nyújtsd a hqdefault értéket 1280×720-ra, és ne nevezd maxres-nek. CMS tárhely tippek:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">kiemelt kép / Open Graph munkafolyamat</a>A játékos képernyőképei egy másik (rosszabb) eszköz:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">képernyőkép vs. valódi bélyegkép</a>.</p>"
+    },
+    {
+      "heading": "Következő lépés",
+      "html": "<p>Nézzen meg egy élő videót a<a href=\"https://www.11tik.com/\">11tik extraktor</a>, akkor vagy<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">másolja a kép URL-jét</a>vagy<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Töltsd le a legjobb elérhető still-t</a>.</p>\n\n  <p class=\"yte-bio\">Írta: 11tik. Csak nyilvános CDN-méretek; nincs felskálázás és nincs videóletöltés.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "A maxresdefault mindig elérhető?",
+      "answer": "Nem. Sok nyilvános videó soha nem teszi közzé ezt a fájlt. A 404-es hiba a maxres-en normális.",
+      "answerHtml": "<p>Nem. Sok nyilvános videó soha nem teszi közzé ezt a fájlt. A 404-es hiba a maxres-en normális.</p>"
+    },
+    {
+      "question": "Jobb a hq720, mint a többi bélyegkép-változat?",
+      "answer": "Amikor létezik, a hq720 felbontás ugyanazon a magas szinten van, mint a maxres (körülbelül 1280×720). Nem automatikusan „jobb”, mint egy validált maxres fájl, és ez nem is garantált.",
+      "answerHtml": "<p>Amikor létezik, a hq720 felbontás ugyanazon a magas szinten van, mint a maxres (körülbelül 1280×720). Nem automatikusan „jobb”, mint egy validált maxres fájl, és ez nem is garantált.</p>"
+    },
+    {
+      "question": "Mekkora méret a legjobb egy weboldalhoz?",
+      "answer": "Használd a legnagyobb validált ~16:9 felbontású nyilvános állóképet (gyakran 1280×720), majd tárolj egy másolatot a weboldaladon a stabil Open Graph és a kiemelt kép címkék érdekében.",
+      "answerHtml": "<p>Használd a legnagyobb validált ~16:9 felbontású nyilvános állóképet (gyakran 1280×720), majd tárolj egy másolatot a weboldaladon a stabil Open Graph és a kiemelt kép címkék érdekében.</p>"
+    },
+    {
+      "question": "Miért nem töltődik be néha egy nagy felbontású miniatűr?",
+      "answer": "A fájlnevet kitalálták. A YouTube nem tette közzé a videóazonosító származékát. Tölts be helyette egy kisebb, meglévő méretet.",
+      "answerHtml": "<p>A fájlnevet kitalálták. A YouTube nem tette közzé a videóazonosító származékát. Tölts be helyette egy kisebb, meglévő méretet.</p>"
+    },
+    {
+      "question": "A „HD bélyegkép” 4K-t jelent?",
+      "answer": "Nem. A nyilvános maximális felbontás jellemzően 1280×720. A 11tik nem fog 4K-s állóképet feltalálni.",
+      "answerHtml": "<p>Nem. A nyilvános maximális felbontás jellemzően 1280×720. A 11tik nem fog 4K-s állóképet feltalálni.</p>"
+    },
+    {
+      "question": "A WebP bélyegképek jobb minőségűek, mint a JPEG képek?",
+      "answer": "A WebP egy másik konténer ugyanilyen méretű réteghez közzétételkor. A 11tik fájlt részesítsd előnyben validálva; ne feltételezd, hogy a WebP mindig létezik.",
+      "answerHtml": "<p>A WebP egy másik konténer ugyanilyen méretű réteghez közzétételkor. A 11tik fájlt részesítsd előnyben validálva; ne feltételezd, hogy a WebP mindig létezik.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik. Csak nyilvános CDN-méretek; nincs felskálázás és nincs videóletöltés.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+}

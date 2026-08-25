@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "sv",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Bädda in 11tik miniatyrutdragaren | 11tik",
+  "description": "Lägg till en gratis YouTube-miniatyrutdragare till din blogg, dina dokument eller din verktygslåda för skapare. Widgeten laddas från 11tik och ändrar storlek på sig själv. Ingen API-nyckel.",
+  "h1": "Bädda in miniatyrutdragaren 11tik",
+  "ogTitle": "Bädda in miniatyrutdragaren 11tik",
+  "ogDescription": "Lägg till en gratis YouTube-miniatyrutdragare till din blogg, dina dokument eller din verktygslåda för skapare. Widgeten laddas från 11tik och ändrar storlek på sig själv. Ingen API-nyckel.",
+  "imageAlt": "",
+  "faqHeading": "Vanliga frågor",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe-kodavsnitt",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Regler",
+      "html": "<ul>\n    <li>Håll<code>id=\"yte-app\"</code>attribut så att höjdsynkronisering fungerar.</li>\n    <li>Se till att iframe-bilden inte har en fast höjd som klämmer fast nedladdningsknapparna.</li>\n    <li>Länkar tillbaka till<a href=\"https://www.11tik.com/\">www.11tik.com</a>hjälper användare att öppna hela verktyget.</li>\n  </ul>"
+    },
+    {
+      "heading": "Djuplänkar",
+      "html": "<p>Dela en färdig extraktion med<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Öppna extraktorn</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

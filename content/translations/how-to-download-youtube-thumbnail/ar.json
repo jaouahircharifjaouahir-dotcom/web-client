@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "ar",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "كيفية تنزيل صورة مصغرة من يوتيوب بجودة عالية | 11tik",
+  "description": "حفظ صورة مصغرة عامة من يوتيوب: الصق watch أو Shorts أو youtu.be أو قم بتضمين عناوين URL في 11tik وقم بتنزيل أكبر ملف موجود.",
+  "h1": "كيفية تنزيل صورة مصغرة من يوتيوب بجودة عالية",
+  "ogTitle": "كيفية تنزيل صورة مصغرة من يوتيوب بجودة عالية",
+  "ogDescription": "حفظ صورة مصغرة عامة من يوتيوب: الصق watch أو Shorts أو youtu.be أو قم بتضمين عناوين URL في 11tik وقم بتنزيل أكبر ملف موجود.",
+  "imageAlt": "سير عمل من أربع خطوات بدءًا من نسخ رابط يوتيوب وحتى تنزيل صورة مصغرة عامة تم التحقق من صحتها",
+  "faqHeading": "التعليمات",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "سير عمل من أربع خطوات بدءًا من نسخ رابط يوتيوب وحتى تنزيل صورة مصغرة عامة تم التحقق من صحتها",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "مخطط استكشاف الأخطاء وإصلاحها يوضح ملف maxresdefault المفقود الذي تم تخطيه حتى يمكن تنزيل حجم الصورة المصغرة الحقيقي التالي",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "إجابة سريعة",
+      "html": "<p>انسخ رابط يوتيوب عام، والصقه في<a href=\"https://www.11tik.com/\">11tik</a>انتظر حتى يتم التحقق من صحة المعاينات، ثم قم بتنزيل الملف الأول المدرج. هذا الملف هو أعلى ملف JPEG أو WebP متاح للجمهور على YouTube لمعرف الفيديو - غالبًا 1280×720 عندما يكون هناك ملف maxres أو hq720. هذا يوفر<strong>صورة مصغرة ثابتة</strong>، وليس الفيديو أو الصوت.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">المسار العملي: عنوان URL عام ← استخراج ← معاينة الأحجام الحقيقية ← تنزيل أو نسخ عنوان URL للصورة.</p>"
+    },
+    {
+      "heading": "أسرع طريقة باستخدام 11tik",
+      "html": "<ol>\n    <li>انسخ رابط مشاهدة عامة، أو مقاطع قصيرة، أو بث مباشر، أو تضمين، أو youtu.be (أو معرف فيديو مكون من 11 حرفًا فقط).</li>\n    <li>يفتح<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>في متصفحك.</li>\n    <li>ألصق عنوان URL. سيبدأ الاستخراج عندما يكون المعرّف صالحًا.</li>\n    <li>قم بتنزيل النتيجة الأولى (الأفضل المتاحة)، أو اختر حجمًا آخر من الأحجام المتبقية.</li>\n  </ol>\n  <p>اختياري: استخدم<strong>انسخ رابط الصورة</strong>إذا كنت بحاجة إلى عنوان نظام إدارة محتوى (CMS) بدلاً من ملف، فسيتم شرح هذه العملية في<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">دليل عناوين URL للصور المصغرة</a>.</p>"
+    },
+    {
+      "heading": "تنسيقات عناوين URL المدعومة على يوتيوب",
+      "html": "<p>11tik يقرأ معرف الفيديو من نفس الأنماط التي يقبلها محلل موقع الويب الخاص به:</p>\n  <table>\n    <thead>\n      <tr><th>شكل</th><th>نمط المثال</th><th>ملحوظات</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>يشاهد</td><td><code>youtube.com/watch?v=ID</code></td><td>تم تجاهل معلمات الاستعلام الإضافية</td></tr>\n      <tr><td>رابط مختصر</td><td><code>youtu.be/ID</code></td><td>غالباً ما تستخدم مشاركة الملفات عبر الهاتف المحمول هذه الميزة</td></tr>\n      <tr><td>سراويل</td><td><code>youtube.com/shorts/ID</code></td><td>لا يزال نفس الجمهور يستضيف</td></tr>\n      <tr><td>تضمين</td><td><code>youtube.com/embed/ID</code></td><td>من مصدر iframe</td></tr>\n      <tr><td>يعيش</td><td><code>youtube.com/live/ID</code></td><td>عند وجود بطاقة هوية عامة</td></tr>\n      <tr><td>تضمين بدون ملفات تعريف الارتباط</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>يتم التعامل معها كعنصر مضمن</td></tr>\n      <tr><td>الهوية المجردة</td><td><code>dQw4w9WgXcQ</code></td><td>11 حرفًا فقط</td></tr>\n    </tbody>\n  </table>\n  <p>لن تُنتج روابط القنوات أو قوائم التشغيل التي لا تحتوي على مُعرّف فيديو صورة مصغّرة واحدة. لإضافة روابط متعددة في وقت واحد، استخدم خاصية \"الإضافة المجمّعة\" (حتى 25 رابطًا) — انظر<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">تنزيل دفعة واحدة</a>توسيع القناة:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">مقتطف من عنوان URL للقناة</a>.</p>"
+    },
+    {
+      "heading": "طريقة عنوان URL المباشر (بدون واجهة مستخدم للاستخراج)",
+      "html": "<p>إذا كنت تعرف المعرف بالفعل، يمكنك فتح ملف مرشح مباشرةً:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>عند تحميل الصفحة، استخدم أمر حفظ الصورة في المتصفح. في حال فشل التحميل، انتقل إلى الخطوة التالية.<code>hq720.jpg</code>،<code>sddefault.jpg</code>، أو<code>hqdefault.jpg</code>هذا المسار اليدوي أبطأ وأكثر عرضة للأخطاء مقارنة بقائمة 11tik التي تم التحقق منها، ولكنه يعمل دون اتصال بالإنترنت من أي متصفح بمجرد حصولك على عنوان صحيح.</p>"
+    },
+    {
+      "heading": "اختيار الجودة عند التنزيل",
+      "html": "<p>قم بتنزيل الحجم الأول المُدرج ما لم يكن لديك سبب للاحتفاظ بمعاينة أصغر. يُقصد بـ \"HD\" هنا أكبر صورة ثابتة متاحة للجمهور - عادةً 1280×720 - وليس نسخة أصلية بدقة 4K. يتم شرح توقعات البكسل وسلوك الحجم المفقود في<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">دليل الحجم والدقة</a>.</p>\n  <p>إذا كنت تهتم فقط بالملف العام الأعلى، فراجع أيضًا<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">أعلى جودة للصورة المصغرة</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">عندما يكون الحجم المُخمّن غير متوفر، قم بتجاوزه واحتفظ بالملف العام الحقيقي التالي.</p>"
+    },
+    {
+      "heading": "استكشاف أخطاء التنزيلات وإصلاحها",
+      "html": "<table>\n    <thead>\n      <tr><th>الأعراض</th><th>السبب المحتمل</th><th>ما يجب القيام به</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>لا توجد معاينة لصق</td><td>عنوان URL غير صالح، أو لا يوجد مُعرّف فيديو، أو الفيديو خاص/مُقيّد</td><td>ألصق رابطًا عامًا للمشاهدة/العروض القصيرة/youtu.be</td></tr>\n      <tr><td>ماكسريس مفقود</td><td>لم ينشر موقع يوتيوب هذا الملف أبداً</td><td>قم بتنزيل المقاس الأول المدرج بدلاً من ذلك.</td></tr>\n      <tr><td>صورة رمادية / صورة بديلة من عنوان URL تم إنشاؤه يدويًا</td><td>اسم الملف المُخمّن</td><td>استخدم قائمة 11tik المُدققة</td></tr>\n      <tr><td>حفظ الهاتف أمر محرج</td><td>تختلف واجهة تنزيل المتصفح</td><td>يرى<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">دليل الحفظ لأجهزة iPhone / Android</a></td></tr>\n      <tr><td>يبدو أنها لقطة شاشة لواجهة المستخدم</td><td>أنت تلتقط لقطة شاشة للاعب</td><td>احتفظ بملف CDN، وليس الشاشة —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">لقطة الشاشة مقابل الواقع</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "ما تقوم بتنزيله (وما لا تقوم بتنزيله)",
+      "html": "<p>أنت تحفظ صورة ثابتة عامة موجودة بالفعل على يوتيوب. أنت لا تفتح مقاطع الفيديو الخاصة، أو الملفات المخصصة للأعضاء فقط، أو بث MP4/WebM. 11tik هو برنامج استخراج، وليس برنامج إنشاء أو تنزيل فيديو - للمقارنة:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">المستخلص مقابل الصانع</a>.</p>\n  <p>حقوق النشر محفوظة للمُحمِّل. يُعدّ الحفظ لأغراض البحث أو الرجوع الشخصي الاستخدام المعتاد؛ أما إعادة النشر كصورة مصغّرة مخصصة دون حقوق فهو غير مسموح. مساعدة يوتيوب:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">صور مصغرة مخصصة للفيديو</a>قواعد الموقع:<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+    },
+    {
+      "heading": "مقارنة الأساليب",
+      "html": "<table>\n    <thead>\n      <tr><th>طريقة</th><th>سرعة</th><th>الأفضل لـ</th><th>هل يحتاج إلى 11tik؟</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>تنزيل 11tik</td><td>سريع</td><td>الأفضل على الإطلاق</td><td>نعم</td></tr>\n      <tr><td>11tik نسخ الرابط</td><td>سريع</td><td>نظام إدارة المحتوى / العناصر المضمنة</td><td>نعم</td></tr>\n      <tr><td>عنوان URL تم إنشاؤه يدويًا i.ytimg.com</td><td>واسطة</td><td>اختبارات سريعة عندما تعرف الهوية</td><td>لا</td></tr>\n      <tr><td>لقطة شاشة للاعب</td><td>سريع لكن بجودة منخفضة</td><td>تجنب استخدامه في المدونات / OG</td><td>لا</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "الخطوة التالية",
+      "html": "<p>افتح<a href=\"https://www.11tik.com/\">مستخرج الصور المصغرة من يوتيوب</a>الصق رابطًا عامًا، واحفظ أول صورة ثابتة تم التحقق من صحتها. هل تحتاج الرابط فقط؟ اقرأ<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">دليل عناوين المواقع الإلكترونية</a>هل تحتار بين المقاسات؟ استخدم<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">دليل حل المشكلات</a>.</p>\n\n  <p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور داخل المتصفح. صور ثابتة عامة فقط.<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">خصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "هل يمكنني تنزيل صورة مصغرة من فيلم قصير؟",
+      "answer": "نعم، عندما يكون الفيلم القصير متاحًا للعامة وتتوفر صور ثابتة لهذا المعرّف. الصق رابط /shorts/ في 11tik. قد تكون الصورة الثابتة أفقية حتى لو كان التشغيل عموديًا.",
+      "answerHtml": "<p>نعم، عندما يكون الفيديو القصير عامًا ولا يزال موجودًا لهذا المعرّف. الصق<code>/shorts/</code>أدخل عنوان URL في 11tik. قد تكون الصورة ثابتة أفقية على الرغم من أن التشغيل عمودي.</p>"
+    },
+    {
+      "question": "ماذا لو لم يتم تحميل أفضل صورة مصغرة؟",
+      "answer": "قم بتنزيل الحجم التالي المدرج. يُعدّ فقدان قيمة maxres أمرًا شائعًا وليس خللًا في الأداة.",
+      "answerHtml": "<p>قم بتنزيل الحجم التالي المدرج. يُعدّ فقدان قيمة maxres أمرًا شائعًا وليس خللًا في الأداة.</p>"
+    },
+    {
+      "question": "هل يمكنني تنزيل الصورة المصغرة الأصلية العامة؟",
+      "answer": "نعم، هذا هو الملف المُعتمد الأعلى. \"الأصلي\" يعني الصورة الثابتة من شبكة توصيل المحتوى العامة، وليس إطارًا مُقتطعًا من بث الفيديو. انظر الصورة المصغرة الأصلية العامة.",
+      "answerHtml": "<p>نعم، هذا هو الملف الأعلى الذي تم التحقق منه. \"الأصلي\" يعني صورة ثابتة من شبكة توصيل المحتوى العامة، وليس إطارًا مقتطعًا من بث الفيديو. انظر<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">الصورة المصغرة الأصلية العامة</a>.</p>"
+    },
+    {
+      "question": "هل يمكنني نسخ رابط الصورة بدلاً من تنزيلها؟",
+      "answer": "نعم. استخدم خاصية نسخ رابط الصورة في 11tik، أو انسخ عنوانًا تم التحقق منه من المتصفح بعد تحميل الصورة.",
+      "answerHtml": "<p>نعم. استخدم خاصية نسخ رابط الصورة في 11tik، أو انسخ عنوانًا تم التحقق منه من المتصفح بعد تحميل الصورة.</p>"
+    },
+    {
+      "question": "هل يقوم هذا بتنزيل ملف فيديو يوتيوب؟",
+      "answer": "لا، ما زالت الصورة المصغرة العامة فقط.",
+      "answerHtml": "<p>لا، ما زالت الصورة المصغرة العامة فقط.</p>"
+    },
+    {
+      "question": "هل سيتوفر كل فيديو بصيغة 1280×720؟",
+      "answer": "لا. احتفظ بأكبر ملف عام صالح لهذا المعرف.",
+      "answerHtml": "<p>لا. احتفظ بأكبر ملف عام صالح لهذا المعرف.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور داخل المتصفح. صور ثابتة عامة فقط.<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">خصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+}

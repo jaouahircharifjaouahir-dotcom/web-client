@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "fr",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Intégrez l'extracteur de miniatures 11tik | 11tik",
+  "description": "Ajoutez un extracteur de miniatures YouTube gratuit à votre blog, vos documents ou votre boîte à outils de création. Le widget se charge depuis 11tik et s'adapte automatiquement à votre taille. Aucune clé API requise.",
+  "h1": "Intégrez l'extracteur de vignettes 11tik",
+  "ogTitle": "Intégrez l'extracteur de vignettes 11tik",
+  "ogDescription": "Ajoutez un extracteur de miniatures YouTube gratuit à votre blog, vos documents ou votre boîte à outils de création. Le widget se charge depuis 11tik et s'adapte automatiquement à votre taille. Aucune clé API requise.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "extrait d'iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Règles",
+      "html": "<ul>\n    <li>Gardez le<code>id=\"yte-app\"</code>L'attribut permet donc la synchronisation de la hauteur.</li>\n    <li>N’encapsulez pas l’iframe dans une balise de hauteur fixe qui masquerait les boutons de téléchargement.</li>\n    <li>Lien vers<a href=\"https://www.11tik.com/\">www.11tik.com</a>permet aux utilisateurs d'ouvrir l'outil complet.</li>\n  </ul>"
+    },
+    {
+      "heading": "Liens profonds",
+      "html": "<p>Partager une extraction prête à l'emploi avec<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Ouvrez l'extracteur</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

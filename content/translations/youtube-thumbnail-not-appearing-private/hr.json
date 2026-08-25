@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "hr",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "Zašto se minijatura YouTubea ne prikazuje: Privatni, dobno ograničeni ili videozapisi u obradi | 11tik",
+  "description": "Kada se javni YouTube i dalje ne učitava, videozapis može biti privatan, ograničen, u obradi ili izbrisan - ne samo da nedostaje naziv datoteke maxres.",
+  "h1": "Zašto se minijatura YouTubea ne prikazuje: privatni, dobno ograničeni ili videozapisi u obradi",
+  "ogTitle": "Zašto se minijatura YouTubea ne prikazuje: privatni, dobno ograničeni ili videozapisi u obradi",
+  "ogDescription": "Kada se javni YouTube i dalje ne učitava, videozapis može biti privatan, ograničen, u obradi ili izbrisan - ne samo da nedostaje naziv datoteke maxres.",
+  "imageAlt": "Tijek od YouTube URL-a preko ID-a videozapisa i provjere javnih sadržaja do dostupnih ili nedostupnih rezultata",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "Tijek od YouTube URL-a preko ID-a videozapisa i provjere javnih sadržaja do dostupnih ili nedostupnih rezultata",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Usporedna usporedba veličine nedostajuće minijature i nepostojanja upotrebljive javne minijature za videozapis",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p>Važeći YouTube URL dokazuje da imate ID videozapisa. Ne<strong>ne</strong>dokazati da je YouTube objavio upotrebljivu javnu datoteku sličica na CDN-u slika. Ekstrakcije poput<a href=\"https://www.11tik.com/\">11tik</a>provjeri samo javne fotografije. Ako se nijedna od tih kandidata za slike ne učita, alat izvještava da nije pronađena nijedna javna sličica. Taj ishod često prati pristup videozapisu ili stanje - privatno, ograničeno dobnom granicom ili na neki drugi način, fotografija se obrađuje, izbrisana ili na neki drugi način nije dostupna - umjesto jednog nedostajućeg naziva veličine, kao što je<code>maxresdefault.jpg</code>.</p>\n  <p>Važna provjera iskrenosti: 11tik radi<strong>ne</strong>klasificirajte točan uzrok kao privatni, s dobnim ograničenjem ili obradu. Te su oznake uobičajena objašnjenja koja korisnici trebaju provjeriti na samom YouTubeu. Alat za izdvajanje samo vam govori može li se javni videozapis potvrditi.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dijagnostički put: URL → ID videozapisa → provjera javne fotografije → dostupno naspram nedostupnog → što sljedeće provjeriti.</p>"
+    },
+    {
+      "heading": "Što može značiti \"minijatura nije dostupna\"",
+      "html": "<p>U praksi, „nedostupno“ znači jedan od dva različita problema:</p>\n  <ol>\n    <li><strong>Razina videa nije dostupna:</strong>Javni kandidati i dalje ne uspijevaju u svim slučajevima. Trenutno ne dobivate upotrebljivu javnu sliku za preuzimanje za taj ID.</li>\n    <li><strong>Varijanta nije dostupna:</strong>Nedostaje jedno ime datoteke više razine (često maxres), ali se i dalje učitava niža javna veličina. To je problem veličine/rezervne opcije, a ne nedostajuća sličica za cijeli videozapis.</li>\n  </ol>\n  <p>Ovaj članak pokriva prvi slučaj. Za drugi slučaj - posebno<code>maxresdefault.jpg</code>404 - koristite namjenski<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Vodič za rješavanje problema s maxresdefaultom</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Lijevo: nedostaje jedna varijanta, ostale javne veličine i dalje rade. Desno: nema upotrebljive javne slike za ID videozapisa.</p>"
+    },
+    {
+      "heading": "Javne fotografije u odnosu na stanje pristupa videozapisima",
+      "html": "<p>YouTube odvojeno hostira stranice za gledanje i izvedene slike. Javne datoteke sličica obično se nalaze na hostovima kao što su<code>i.ytimg.com</code>i definirani su 11-znamenkastim ID-om videozapisa. Alati koji izdvajaju minijature bez prijave na vaš račun mogu zatražiti samo te javne datoteke.</p>\n  <p>Kada videozapis nije javno pakiran - ili kada derivati ​​još nisu spremni - provjere slika ne uspijevaju čak i ako je zalijepljeni niz izgledao kao normalna poveznica za gledanje, Shorts, prijenos uživo ili ugradnju. Kako se ti oblici URL-ova mapiraju na ID opisano je u<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura na YouTubeu</a>Kako spremiti fotografiju ako već postoji, opisano je u<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzimanje vodiča</a>.</p>"
+    },
+    {
+      "heading": "Privatni videozapisi",
+      "html": "<p>Privatni prijenosi namijenjeni su ograničenoj publici. Ako YouTube ne objavljuje javne izvedenice minijatura za taj ID, javni alat za ekstrakciju u pregledniku ne može ih izmisliti. Otvaranje URL-a za gledanje dok ste prijavljeni kao vlasnik i dalje može prikazivati ​​videozapis unutar YouTubea; to ne znači da je javni CDN dostupan za anonimne zahtjeve za slike.</p>\n  <p>Što provjeriti: otvorite URL u privatnom/anonimnom prozoru dok ste odjavljeni. Ako sam YouTube zadrži videozapis, tretirajte izdvajanje minijatura kao da je namjerno blokirano.</p>"
+    },
+    {
+      "heading": "Dobna ograničenja i druga ograničenja pristupa",
+      "html": "<p>Videozapisi s dobnim ograničenjima, samo za članove ili slično ograničeni videozapisi mogu se ponašati kao privatni sadržaj za javno preuzimanje slika: ID se može ispravno analizirati, ali javne fotografije nikada neće biti validirane. Regionalna ograničenja i ograničenja računa mogu dati isti prazan rezultat za javni alat.</p>\n  <p>Ponovno, 11tik neće označiti vrstu ograničenja. Stanje pristupa potvrđujete na YouTubeu; ekstraktor samo izvještava je li javni sadržaj još uvijek učitan.</p>"
+    },
+    {
+      "heading": "Videozapisi se još uvijek obrađuju",
+      "html": "<p>\"Obrada\" se prikazuje na dva povezana načina:</p>\n  <ul>\n    <li><strong>Potpuno novi uploadovi:</strong>Stranica za gledanje može se pojaviti prije nego što je spremna svaka javno dostupna izvedenica slike. Pokušajte ponovno kasnije s istim URL-om.</li>\n    <li><strong>Osvježavanje prilagođenih minijatura u Studiju:</strong>Nakon što zamijenite umjetničku sliku, javne CDN datoteke mogu kasniti. Manje veličine mogu se pojaviti prije većih ili skup može nakratko biti nepotpun.</li>\n  </ul>\n  <p>Ako<em>neki</em>javne veličine već rade i nedostaje samo najveći naziv, prebacite se na<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">članak maxresdefault</a>Ako<em>Ne</em>javnost još uvijek potvrđuje, pričekajte obradu, a zatim ponovno provjerite<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Izbrisan ili na drugi način nedostupan sadržaj",
+      "html": "<p>Uklonjeni videozapisi, neispravni ID-ovi i neki prekinuti prijenosi ne ostavljaju pouzdano javno pakiranje. URL za gledanje označen s oznake i dalje može izgledati sintaktički ispravno, iako svaki kandidat za sliku ne uspije. Tretirajte izbrisano/nedostupno na isti način kao i druge neuspjehe na razini videozapisa: potvrdite status stranice za gledanje na YouTubeu, a zatim prestanite očekivati ​​CDN sliku.</p>"
+    },
+    {
+      "heading": "Zašto valjani URL nije dovoljan",
+      "html": "<p>Raščlanjivanje uspijeva kada niz sadrži ID od 11 znakova u podržanom uzorku. Izdvajanje uspijeva samo kada se barem jedan kandidat za javnu sličicu potvrdi kao stvarna slika. Ti koraci su neovisni:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>Na 11tik, prazna najbolja slika se pojavljuje kao jasna poruka u stilu \"bez javne sličice\". Proizvod to ne eskalira u klasifikator privatnog vs. dobne granice vs. obrade.</p>"
+    },
+    {
+      "heading": "Što prvo provjeriti (praktični tijek)",
+      "html": "<ol>\n    <li>Zalijepite isti URL u<a href=\"https://www.11tik.com/\">11tik</a>i pričekajte da se završi provjera javne veličine.</li>\n    <li>Ako se pojavi barem jedna veličina, to učinite<strong>ne</strong>imaju nedostupnost na razini videa - preuzmite tu fotografiju ili pročitajte vodiče za veličinu/maksimalnu rezoluciju za odabir kvalitete.</li>\n    <li>Ako se ništa ne prikazuje, otvorite stranicu za gledanje/Shorts bez prijave. Obratite pažnju prikazuje li YouTube videozapis, traži li potvrdu prijave/dobi ili piše da nije dostupno.</li>\n    <li>Ako ste vlasnik videozapisa i upravo ste prenijeli ili zamijenili prilagođenu minijaturu, pričekajte da Studio obradi videozapis i pokušajte ponovno.</li>\n    <li>Ako YouTube javno prikazuje videozapis, a 11tik i dalje ništa ne pronađe, pokušajte ponovno kasnije; stalno prazni rezultati obično znače da javne fotografije nisu izložene za taj ID.</li>\n  </ol>"
+    },
+    {
+      "heading": "Dijagnostička tablica",
+      "html": "<table>\n    <thead>\n      <tr><th>Što vidiš</th><th>Vjerojatna klasa</th><th>Sljedeći korak</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik navodi jednu ili više veličina</td><td>Postoje javne fotografije</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Preuzmi vodič</a>/ izbor veličine</td></tr>\n      <tr><td>Samo maxres ne uspijeva; hq/sd rade</td><td>Varijanta nije dostupna</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Rješavanje problema s maxresom</a></td></tr>\n      <tr><td>Nema veličina; YouTube traži prijavu / dobna granica</td><td>Ograničenje pristupa</td><td>Koristite javni videozapis ili prihvatite da se javno izdvajanje ne može nastaviti</td></tr>\n      <tr><td>Nema veličina; vlasnik je upravo prenio/zamijenio umjetničko djelo</td><td>Kašnjenje obrade</td><td>Pričekajte, a zatim ponovno provjerite isti URL</td></tr>\n      <tr><td>Nema veličina; YouTube kaže da je privatno/nedostupno</td><td>Privatno ili izbrisano stanje</td><td>Još uvijek nema javnosti za izvlačenje</td></tr>\n      <tr><td>URL se neće analizirati</td><td>Loša ili nepodržana veza</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove / ID-ove videozapisa</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Nedostaje varijanta u odnosu na nepostojanje upotrebljive javne minijature",
+      "html": "<p>Ljudi često zalijepe ručno izrađen URL maxres-a, vide grešku 404 i zaključe da „nema sličice“. Taj je zaključak često pogrešan. Nedostatak naziva datoteke više razine je normalan. Nedostupnost na razini videa znači da puni prolaz kandidata za ekstraktor ne vraća ništa upotrebljivo.</p>\n  <p>Pravilo:</p>\n  <ul>\n    <li>Treba najbolje<em>postojeći</em>javna datoteka → vodiči za preuzimanje / veličinu / maksimalnu rezoluciju.</li>\n    <li>Treba razumjeti zašto<em>ništa</em>javno se pojavljuje → ovaj članak + YouTubeova poruka o pristupu.</li>\n  </ul>"
+    },
+    {
+      "heading": "Kada koristiti koji 11tik vodič",
+      "html": "<ul>\n    <li><strong>Ovaj članak:</strong>nula upotrebljivih javnih fotografija; pitanja o pristupu ili stanju.</li>\n    <li><strong>Vodič za Maxres:</strong>Nedostaje naziv HD datoteke, a postoje druge javne veličine.</li>\n    <li><strong>Vodič za URL-ove:</strong>pronalaženje ID-a i izgradnja/kopiranje URL-ova slika koje stvarno postoje.</li>\n    <li><strong>Preuzmi vodič:</strong>spremanje fotografije nakon što se pojave veličine.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jamči li funkcionalna stranica za gledanje javnu minijaturu?",
+      "answer": "Ne. Iskustvo gledanja i CDN datoteke javne slike su povezane, ali nisu identične. Ograničenja pristupa i obrada mogu vam ostaviti ID videozapisa i nedostupnu javnu sliku.",
+      "answerHtml": "<p>Ne. Iskustvo gledanja i CDN datoteke javne slike su povezane, ali nisu identične. Ograničenja pristupa i obrada mogu vam ostaviti ID videozapisa i nedostupnu javnu sliku.</p>"
+    },
+    {
+      "question": "Može li mi 11tik reći je li videozapis privatan ili ima dobno ograničenje?",
+      "answer": "Ne. 11tik samo izvještava o tome može li se javni videozapis i dalje validirati. Potvrdite privatna ograničenja, dobna ograničenja ili druga ograničenja na YouTubeu.",
+      "answerHtml": "<p>Ne. 11tik samo izvještava o tome može li se javni videozapis i dalje validirati. Potvrdite privatna ograničenja, dobna ograničenja ili druga ograničenja na YouTubeu.</p>"
+    },
+    {
+      "question": "Upravo sam prenio/la prilagođenu sličicu. Zašto je izdvajanje prazno?",
+      "answer": "Obrada u Studiju može kasniti. Pričekajte, a zatim ponovno zalijepite isti javni URL. Ako se neke veličine prikazuju, ali maxres ne, pročitajte vodič za maxres umjesto da pretpostavljate da videozapis nema minijaturu.",
+      "answerHtml": "<p>Obrada u Studiju može kasniti. Pričekajte, a zatim ponovno zalijepite isti javni URL. Ako se neke veličine prikazuju, ali maxres ne, pročitajte vodič za maxres umjesto da pretpostavljate da videozapis nema minijaturu.</p>"
+    },
+    {
+      "question": "Je li ovo isti problem kao i maxresdefault 404?",
+      "answer": "Samo ponekad. Maxres 404 s funkcionalnim rezervnim opcijama je varijanta problema. Prazni rezultati među javnim kandidatima znače nedostupnost na razini videa.",
+      "answerHtml": "<p>Samo ponekad. Maxres 404 s funkcionalnim rezervnim opcijama je varijanta problema. Prazni rezultati među javnim kandidatima znače nedostupnost na razini videa.</p>"
+    },
+    {
+      "question": "Hoće li prijava na YouTube unutar 11tik otključati privatne fotografije?",
+      "answer": "Ne. 11tik je javni alat za izdvajanje fotografija u pregledniku. Ne zaobilazi privatno ili ograničeno pakiranje.",
+      "answerHtml": "<p>Ne. 11tik je javni alat za izdvajanje fotografija u pregledniku. Ne zaobilazi privatno ili ograničeno pakiranje.</p>"
+    },
+    {
+      "question": "Što trebam pokušati ako URL izgleda ispravno?",
+      "answer": "Potvrdite da se videozapis otvara bez prijave, pričekajte ako ste upravo promijenili umjetničku sliku u Studiju, a zatim ponovno pokrenite ekstrakciju na 11tik. Stalno prazni rezultati znače da trenutno nema dostupnih javnih fotografija za taj ID.",
+      "answerHtml": "<p>Potvrdite da se videozapis otvara bez prijave, pričekajte ako ste upravo promijenili umjetničku sliku u Studiju, a zatim ponovno pokrenite ekstrakciju na 11tik. Stalno prazni rezultati znače da trenutno nema dostupnih javnih fotografija za taj ID.</p>"
+    },
+    {
+      "question": "Znači li \"nema javne sličice\" da je video datoteka nestala?",
+      "answer": "Ne uvijek. Videozapis i dalje može postojati za gledatelje koji ispunjavaju uvjete dok su javno dostupne izvedene slike skrivene ili nisu spremne. Provjerite poruku na YouTubeovoj stranici.",
+      "answerHtml": "<p>Ne uvijek. Videozapis i dalje može postojati za gledatelje koji ispunjavaju uvjete dok su javno dostupne izvedene slike skrivene ili nisu spremne. Provjerite poruku na YouTubeovoj stranici.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Zaključak</h2>\n<p>Kada se minijatura „ne pojavljuje“, odvojite dva pitanja: Je li ijedna javna validacija ipak prošla? Ili je samo jedan naziv datoteke više razine propao? Kvarovi na razini videozapisa obično prate privatna, ograničena, obrađena, izbrisana ili na neki drugi način nejavna pakiranja - ne nedostaje magija.<code>maxresdefault</code>niz. Koristite 11tik za iskreno testiranje javne dostupnosti, a zatim slijedite maxres, URL ili vodič za preuzimanje za sljedeći korak podudaranja.</p>\n  <p><a href=\"https://www.11tik.com/\">Provjerite postoji li javna YouTube minijatura na 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>Službena pomoć za autore za prilagođene minijature:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prenesite prilagođene minijature videozapisa</a>.</p>"
+}

@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "sk",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Kontakt | 11tik",
+  "description": "Tento formulár použite pre otázky týkajúce sa nástroja na extrahovanie miniatúr YouTube. Správy sa odosielajú operátorovi 11tik e-mailom. Neposielajte video ani audio súbory. Nástroj funguje iba s verejnými miniatúrami.",
+  "h1": "Kontakt",
+  "ogTitle": "Kontakt",
+  "ogDescription": "Tento formulár použite pre otázky týkajúce sa nástroja na extrahovanie miniatúr YouTube. Správy sa odosielajú operátorovi 11tik e-mailom. Neposielajte video ani audio súbory. Nástroj funguje iba s verejnými miniatúrami.",
+  "imageAlt": "",
+  "faqHeading": "Často kladené otázky",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Kontakt",
+      "html": "<h1>Kontakt</h1>\n  <p class=\"yte-updated\">Posledná aktualizácia: 22. augusta 2026</p>\n  <p itemprop=\"description\">Tento formulár použite pre otázky týkajúce sa nástroja na extrahovanie miniatúr YouTube. Správy sa odosielajú e-mailom operátorovi 11tik. Neposielajte video ani audio súbory. Nástroj funguje iba s verejnými miniatúrami.</p>\n  <p>Priamy e-mail:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>V prípade nahlásenia konkrétneho videa uveďte verejnú URL adresu YouTube. 11tik nehosťuje súbor miniatúry; obrázok sa vyžaduje z verejnej CDN platformy.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Meno<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Správa<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Odoslať správu</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extraktor miniatúr YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Zásady ochrany osobných údajov</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

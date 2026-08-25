@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "sw",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Picha ya skrini dhidi ya kijipicha halisi cha YouTube: ni faili gani unapaswa kuhifadhi? | 11tik",
+  "description": "Picha ya skrini ya simu ya kichezaji si kijipicha cha mwenyeji wa YouTube. Umma halisi bado unaishi kwenye i.ytimg.com. Itumie kwa blogu, Grafu Huria, na utafiti—picha za skrini huongeza chrome ya UI, mgandamizo, na uwiano usio sahihi wa kipengele.",
+  "h1": "Picha ya skrini dhidi ya kijipicha halisi cha YouTube: ni faili gani unapaswa kuhifadhi?",
+  "ogTitle": "Picha ya skrini dhidi ya kijipicha halisi cha YouTube: ni faili gani unapaswa kuhifadhi?",
+  "ogDescription": "Picha ya skrini ya simu ya kichezaji si kijipicha cha mwenyeji wa YouTube. Umma halisi bado unaishi kwenye i.ytimg.com. Itumie kwa blogu, Grafu Huria, na utafiti—picha za skrini huongeza chrome ya UI, mgandamizo, na uwiano usio sahihi wa kipengele.",
+  "imageAlt": "Ulinganisho wa picha ya skrini ya mchezaji dhidi ya faili halisi ya vijipicha vya YouTube vya umma",
+  "faqHeading": "Maswali Yanayoulizwa Mara kwa Mara",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Ulinganisho wa picha ya skrini ya mchezaji dhidi ya faili halisi ya vijipicha vya YouTube vya umma",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kuna tofauti gani kati ya picha ya skrini na kijipicha halisi?",
+      "html": "<p>Picha ya skrini inapiga picha skrini yako, ikiwa ni pamoja na chrome ya kichezaji, manukuu, na upimaji wa kifaa. Kijipicha halisi ni faili ya JPEG au WebP ambayo YouTube imechapisha kwa ajili ya kitambulisho hicho cha video. Faili ya CDN pekee ndiyo yenye URL thabiti na saizi inayojulikana ya pikseli.</p>"
+    },
+    {
+      "heading": "Kwa nini picha za skrini hushindwa katika picha za Google na hakiki za kijamii?",
+      "html": "<p>Mara nyingi huwa na uwiano usio sahihi wa kipengele, hujumuisha UI, na kubana mara mbili. Fungua Grafu na sehemu nyingi za CMS zinahitaji 16:9 bado karibu 1280×720. Hiyo inalingana na maxresdefault inapokuwapo—tazama<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">mwongozo wa ukubwa wa kijipicha</a>.</p>"
+    },
+    {
+      "heading": "Ninawezaje kuhifadhi kijipicha halisi badala yake?",
+      "html": "<ol>\n    <li>Nakili URL ya video ya umma, si picha ya skrini.</li>\n    <li>Ibandike ndani<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Pakua faili ya kwanza ya umma iliyoorodheshwa au nakili URL ya picha.</li>\n  </ol>"
+    },
+    {
+      "heading": "Picha ya skrini bado ni muhimu lini?",
+      "html": "<p>Tumia picha ya skrini pekee ili kurekodi hitilafu ya kiolesura cha mtumiaji au tukio ndani ya video. Usitumie kama kijipicha rasmi, shujaa wa blogu, au picha ya kushiriki ikiwa bado kuna umma.</p>\n  <p><a href=\"https://www.11tik.com/\">Pata kijipicha halisi cha umma →</a></p>\n  <p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kuna tofauti gani kati ya picha ya skrini na kijipicha halisi?",
+      "answer": "Picha ya skrini inapiga picha skrini yako na chrome ya kichezaji. Kijipicha halisi ni faili ya JPEG au WebP ambayo YouTube huhifadhi kwenye i.ytimg.com kwa kitambulisho hicho cha video.",
+      "answerHtml": "Picha ya skrini inapiga picha skrini yako na chrome ya kichezaji. Kijipicha halisi ni faili ya JPEG au WebP ambayo YouTube huhifadhi kwenye i.ytimg.com kwa kitambulisho hicho cha video."
+    },
+    {
+      "question": "Kwa nini picha za skrini hushindwa katika picha za Google na hakiki za kijamii?",
+      "answer": "Mara nyingi huwa na uwiano usio sahihi wa kipengele, kiolesura cha ziada, na mgandamizo wa ziada. Sehemu za CMS na Grafu Huria zinatarajia umma safi wa 16:9 bado.",
+      "answerHtml": "Mara nyingi huwa na uwiano usio sahihi wa kipengele, kiolesura cha ziada, na mgandamizo wa ziada. Sehemu za CMS na Grafu Huria zinatarajia umma safi wa 16:9 bado."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>.</p>"
+}

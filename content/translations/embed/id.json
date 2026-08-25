@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "id",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Sematkan Ekstraktor Gambar Miniatur 11tik | 11tik",
+  "description": "Tambahkan ekstraktor thumbnail YouTube gratis ke blog, dokumen, atau toolkit kreator Anda. Widget dimuat dari 11tik dan mengubah ukurannya sendiri. Tidak ada kunci API.",
+  "h1": "Sematkan Ekstraktor Gambar Miniatur 11tik",
+  "ogTitle": "Sematkan Ekstraktor Gambar Miniatur 11tik",
+  "ogDescription": "Tambahkan ekstraktor thumbnail YouTube gratis ke blog, dokumen, atau toolkit kreator Anda. Widget dimuat dari 11tik dan mengubah ukurannya sendiri. Tidak ada kunci API.",
+  "imageAlt": "",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [],
+  "sections": [
+    {
+      "heading": "cuplikan iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Aturan",
+      "html": "<ul>\n    <li>Pertahankan<code>id=\"yte-app\"</code>atribut agar sinkronisasi tinggi berfungsi.</li>\n    <li>Jangan membungkus iframe dengan tinggi tetap yang memotong tombol unduh.</li>\n    <li>Menghubungkan kembali ke<a href=\"https://www.11tik.com/\">www.11tik.com</a>Membantu pengguna membuka fitur lengkapnya.</li>\n  </ul>"
+    },
+    {
+      "heading": "Tautan mendalam",
+      "html": "<p>Bagikan hasil ekstraksi yang sudah siap dengan<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buka alat ekstraktornya</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "pl",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Narzędzie do ekstrakcji i tworzenia miniatur | 11tik",
+  "description": "Narzędzie do ekstrakcji miniatur zapisuje obraz publiczny, który jest już hostowany na YouTube. Narzędzie do tworzenia miniatur (Canva, Photoshop lub YouTube Studio) tworzy nowy obraz, którego jesteś właścicielem. 11tik to narzędzie do ekstrakcji. Nie projektuje grafiki i nie przesyła niestandardowego pliku do Twojego kanału.",
+  "h1": "Narzędzie do ekstrakcji i tworzenia miniatur",
+  "ogTitle": "Narzędzie do ekstrakcji i tworzenia miniatur",
+  "ogDescription": "Narzędzie do ekstrakcji miniatur zapisuje obraz publiczny, który jest już hostowany na YouTube. Narzędzie do tworzenia miniatur (Canva, Photoshop lub YouTube Studio) tworzy nowy obraz, którego jesteś właścicielem. 11tik to narzędzie do ekstrakcji. Nie projektuje grafiki i nie przesyła niestandardowego pliku do Twojego kanału.",
+  "imageAlt": "11tik ekstraktor używany do zapisywania publicznej miniatury YouTube",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik ekstraktor używany do zapisywania publicznej miniatury YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Czym jest narzędzie do wyodrębniania miniatur?",
+      "html": "<p>Ekstraktor odczytuje publiczny adres URL filmu, wyszukuje pliki graficzne w sieci CDN YouTube i umożliwia podgląd, pobranie lub skopiowanie działającego adresu URL obrazu. Wyświetla tylko istniejące rozmiary. Nie wyszukuje klatek ze strumienia wideo.</p>"
+    },
+    {
+      "heading": "Czym jest generator miniatur?",
+      "html": "<p>Kreator to proces projektowania. Komponujesz tekst, twarze i kontrast, eksportujesz zdjęcie w formacie 16:9, a następnie przesyłasz je do YouTube Studio. Jesteś właścicielem tego pliku (zgodnie z zasadami dotyczącymi czcionek, zdjęć i platformy). Wyodrębnienie zdjęcia konkurencji i ponowne przesłanie go nie jest procesem projektowania.</p>"
+    },
+    {
+      "heading": "Kiedy powinienem użyć ekstraktora?",
+      "html": "<p>Używać<a href=\"https://www.11tik.com/\">11tik</a>Kiedy potrzebujesz pliku publicznego na żywo: badania, kopia zapasowa opublikowanego zdjęcia, wyróżniony obraz CMS lub weryfikacja Open Graph. Wklej publiczny adres URL do obejrzenia, Shorts, youtu.be i pobierz największy rozmiar, który faktycznie zwróci obraz.</p>"
+    },
+    {
+      "heading": "Kiedy powinienem użyć kreatora?",
+      "html": "<p>Użyj narzędzia do projektowania, tworząc oryginalne opakowanie dla nowego przesłania lub odświeżenia miniatury. To właśnie tam plik w Studio staje się oficjalną, niestandardową miniaturą. Po zakończeniu przetwarzania przez YouTube możesz wkleić adres URL do obejrzenia filmu w 11tik, aby sprawdzić, jakie rozmiary publiczne istnieją, w tym maksymalne rozmiary w momencie publikacji filmu przez YouTube.</p>"
+    },
+    {
+      "heading": "Jak te dwie rzeczy się ze sobą łączą?",
+      "html": "<ol>\n    <li>Wyodrębnij publiczne odniesienia z filmów z Twojej niszy (tylko w celach badawczych).</li>\n    <li>Zaprojektuj oryginalny kadr w narzędziu do tworzenia.</li>\n    <li>Prześlij do YouTube Studio.</li>\n    <li>Potwierdź publiczne pliki CDN za pomocą 11tik po przetworzeniu.</li>\n  </ol>\n  <p>Powiązany:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatura YouTube Studio 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">zrzut ekranu kontra prawdziwa miniatura</a>.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstraktor</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czym jest narzędzie do wyodrębniania miniatur?",
+      "answer": "Narzędzie, które zapisuje publiczne pliki, które YouTube już hostuje. 11tik wyświetla tylko istniejące pliki graficzne.",
+      "answerHtml": "Narzędzie, które zapisuje publiczne pliki, które YouTube już hostuje. 11tik wyświetla tylko istniejące pliki graficzne."
+    },
+    {
+      "question": "Kiedy powinienem użyć kreatora?",
+      "answer": "Gdy tworzysz oryginalną grafikę i chcesz ją przesłać jako niestandardową miniaturę w YouTube Studio.",
+      "answerHtml": "Gdy tworzysz oryginalną grafikę i chcesz ją przesłać jako niestandardową miniaturę w YouTube Studio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+}

@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "de",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Kontakt | 11tik",
+  "description": "Nutzen Sie dieses Formular für Fragen zum YouTube-Thumbnail-Extraktor. Nachrichten werden per E-Mail an den Betreiber 11tik gesendet. Bitte senden Sie keine Video- oder Audiodateien. Das Tool funktioniert nur mit öffentlichen Thumbnail-Bildern.",
+  "h1": "Kontakt",
+  "ogTitle": "Kontakt",
+  "ogDescription": "Nutzen Sie dieses Formular für Fragen zum YouTube-Thumbnail-Extraktor. Nachrichten werden per E-Mail an den Betreiber 11tik gesendet. Bitte senden Sie keine Video- oder Audiodateien. Das Tool funktioniert nur mit öffentlichen Thumbnail-Bildern.",
+  "imageAlt": "",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Kontakt",
+      "html": "<h1>Kontakt</h1>\n  <p class=\"yte-updated\">Letzte Aktualisierung: 22. August 2026</p>\n  <p itemprop=\"description\">Nutzen Sie dieses Formular für Fragen zum YouTube Thumbnail Extractor. Ihre Nachricht wird per E-Mail an den Betreiber von 11tik gesendet. Bitte senden Sie keine Video- oder Audiodateien. Das Tool funktioniert nur mit öffentlichen Vorschaubildern.</p>\n  <p>Direkte E-Mail:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Für einen Bericht über ein bestimmtes Video geben Sie bitte die öffentliche YouTube-URL an. 11tik hostet die Vorschaubilddatei nicht; das Bild wird vom öffentlichen CDN der Plattform angefordert.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Name<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-Mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Nachricht<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Nachricht senden</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-Thumbnail-Extraktor</a>·<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutzrichtlinie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

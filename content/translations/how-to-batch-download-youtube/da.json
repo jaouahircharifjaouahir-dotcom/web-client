@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "da",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Sådan downloader du YouTube-miniaturebilleder i batch (op til 25 offentlige URL'er) | 11tik",
+  "description": "Masseudpak offentlige YouTube-miniaturebilleder i browseren. Indsæt én URL pr. linje, download hvert bedste stillbillede, eller zip det sæt af højeste kvalitet. Ingen konto og ingen videofiler.",
+  "h1": "Sådan downloader du YouTube-miniaturebilleder i batch (op til 25 offentlige URL'er)",
+  "ogTitle": "Sådan downloader du YouTube-miniaturebilleder i batch (op til 25 offentlige URL'er)",
+  "ogDescription": "Masseudpak offentlige YouTube-miniaturebilleder i browseren. Indsæt én URL pr. linje, download hvert bedste stillbillede, eller zip det sæt af højeste kvalitet. Ingen konto og ingen videofiler.",
+  "imageAlt": "11tik masseudtrækker af miniaturebilleder med adskillige YouTube-URL'er klar til download",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik masseudtrækker af miniaturebilleder med adskillige YouTube-URL'er klar til download",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hvordan downloader jeg YouTube-miniaturebilleder i batch?",
+      "html": "<p>Åben<a href=\"https://www.11tik.com/\">11tik</a>, slå Bulk til, indsæt én offentlig URL pr. linje, klik på Udpak alle, og download derefter hvert bedste stillbillede eller zip-filen af ​​højeste kvalitet. Grænsen er 25 URL'er pr. kørsel, så browseren forbliver responsiv.</p>"
+    },
+    {
+      "heading": "Hvad hører til på listen?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID'er</li>\n    <li>youtu.be korte links</li>\n    <li>youtube.com/shorts/ ID'er</li>\n    </ul>\n  <p>Private videoer, videoer uden offentlige thumbnails eller videoer med aldersgrænser vil ikke returnere et stillbillede. Det er forventeligt. Se også<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniaturebilleder</a>.</p>"
+    },
+    {
+      "heading": "Sådan kører du et bulk-udtræk",
+      "html": "<ol>\n    <li>Klik på Massevisning på forsiden.</li>\n    <li>Indsæt op til 25 offentlige links, ét pr. linje.</li>\n    <li>Klik på Udpak alle, og vent, indtil hvert kort viser en forhåndsvisning.</li>\n    <li>Download miniaturevideo N for hvert bedste stillbillede, eller download alle i højeste kvalitet som zip-filer.</li>\n    <li>Valgfrit: Eksportér CSV til forskningslogfiler (video-id, titel, delings-URL, billed-URL).</li>\n  </ol>"
+    },
+    {
+      "heading": "Kan jeg bruge dette til konkurrentundersøgelser?",
+      "html": "<p>Ja, til at studere offentlig emballage. Genudgiv ikke en anden skabers miniaturebillede som din egen upload. Ophavsretten forbliver hos rettighedshaveren. 11tik henter kun filer, som YouTube allerede hoster offentligt.</p>\n  <p><a href=\"https://www.11tik.com/\">Åbn masseudtræk på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hvordan downloader jeg YouTube-miniaturebilleder i batch?",
+      "answer": "Brug Bulk på 11tik, indsæt én offentlig URL pr. linje, udtræk, og download derefter stillbilleder eller en zip-fil af højeste offentlige kvalitet. Maksimalt 25 URL'er pr. kørsel.",
+      "answerHtml": "Brug Bulk på 11tik, indsæt én offentlig URL pr. linje, udtræk, og download derefter stillbilleder eller en zip-fil af højeste offentlige kvalitet. Maksimalt 25 URL'er pr. kørsel."
+    },
+    {
+      "question": "Kan jeg bruge dette til konkurrentundersøgelser?",
+      "answer": "Ja, for at studere offentlig emballage. Genudgiv ikke en anden skabers miniaturebillede som dit eget. Ophavsretten forbliver hos rettighedshaveren.",
+      "answerHtml": "Ja, for at studere offentlig emballage. Genudgiv ikke en anden skabers miniaturebillede som dit eget. Ophavsretten forbliver hos rettighedshaveren."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "bg",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Вграждане на 11tik инструмента за извличане на миниатюри | 11tik",
+  "description": "Добавете безплатен инструмент за извличане на миниатюри от YouTube към вашия блог, документи или инструментариум за създатели. Уиджетът се зарежда от 11tik и се преоразмерява сам. Няма API ключ.",
+  "h1": "Вградете инструмента за извличане на миниатюри 11tik",
+  "ogTitle": "Вградете инструмента за извличане на миниатюри 11tik",
+  "ogDescription": "Добавете безплатен инструмент за извличане на миниатюри от YouTube към вашия блог, документи или инструментариум за създатели. Уиджетът се зарежда от 11tik и се преоразмерява сам. Няма API ключ.",
+  "imageAlt": "",
+  "faqHeading": "ЧЗВ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "фрагмент от iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Правила",
+      "html": "<ul>\n    <li>Запазете<code>id=\"yte-app\"</code>атрибут, така че синхронизацията на височината да работи.</li>\n    <li>Не обвивайте iframe-а с фиксирана височина, която да зарязва бутоните за изтегляне.</li>\n    <li>Връзка обратно към<a href=\"https://www.11tik.com/\">www.11tik.com</a>помага на потребителите да отворят пълния инструмент.</li>\n  </ul>"
+    },
+    {
+      "heading": "Дълбоки връзки",
+      "html": "<p>Споделете готова екстракция с<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Отворете екстрактора</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

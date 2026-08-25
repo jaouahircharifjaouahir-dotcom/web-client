@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "ro",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Cum să obții o miniatură YouTube de cea mai înaltă calitate | 11tik",
+  "description": "Calitatea cea mai înaltă înseamnă cea mai mare versiune publică de JPEG sau WebP pe care YouTube o returnează efectiv, nu un nume de fișier 4K ghicit.",
+  "h1": "Cum să obții o miniatură YouTube de cea mai înaltă calitate",
+  "ogTitle": "Cum să obții o miniatură YouTube de cea mai înaltă calitate",
+  "ogDescription": "Calitatea cea mai înaltă înseamnă cea mai mare versiune publică de JPEG sau WebP pe care YouTube o returnează efectiv, nu un nume de fișier 4K ghicit.",
+  "imageAlt": "Miniatură YouTube publică disponibilă de cea mai înaltă valoare selectată în 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Miniatură YouTube publică disponibilă de cea mai înaltă valoare selectată în 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Cum obțin o miniatură YouTube de cea mai înaltă calitate?",
+      "html": "<p>Lipiți o adresă URL publică în<a href=\"https://www.11tik.com/\">11tik</a>și descarcă prima dimensiune listată. Extractorul clasifică fișierele publice supraviețuitoare; nu extinde o imagine statică mică într-un HD fals.</p>"
+    },
+    {
+      "heading": "Care este rezoluția publică maximă?",
+      "html": "<p>Când YouTube publică maxresdefault, aceasta este de obicei 1280×720. Dacă fișierul respectiv lipsește, cea mai înaltă calitate este următoarea dimensiune validă, cum ar fi SD sau HQ.</p>"
+    },
+    {
+      "heading": "Contează WebP?",
+      "html": "<p>Unele videoclipuri au și variante WebP cu nume de aceeași dimensiune. 11tik le poate afișa atunci când există. Alegeți fișierul validat de instrument, nu o adresă URL ghicită.</p>"
+    },
+    {
+      "heading": "De ce pare uneori „HD” slab?",
+      "html": "<p>Rezoluția publică ar putea fi încă de 1280×720 cu compresie sau s-ar putea să vă uitați la hqdefault. Verificați rapoartele privind dimensiunea pixelilor 11tik înainte de a presupune că descărcarea a eșuat.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Ghid de mărimi</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cum obțin o miniatură YouTube de cea mai înaltă calitate?",
+      "answer": "Lipiți adresa URL publică în 11tik și descărcați prima dimensiune afișată. Aceasta este cea mai mare dimensiune de fișier public stocată de YouTube.",
+      "answerHtml": "Lipiți adresa URL publică în 11tik și descărcați prima dimensiune afișată. Aceasta este cea mai mare dimensiune de fișier public stocată de YouTube."
+    },
+    {
+      "question": "Fișierul de cea mai înaltă calitate este 4K?",
+      "answer": "De obicei nu. Rezoluția maximă publică este de obicei 1280×720. 11tik nu face upscaling și nu inventează un master mai mare.",
+      "answerHtml": "De obicei nu. Rezoluția maximă publică este de obicei 1280×720. 11tik nu face upscaling și nu inventează un master mai mare."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

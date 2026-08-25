@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "fi",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Kuvakaappaus vs. oikea YouTube-pikkukuva: kumpi tiedosto kannattaa tallentaa? | 11tik",
+  "description": "Soittimen puhelimesta otettu kuvakaappaus ei ole YouTuben ylläpitämä pikkukuva. Todellinen yleisö elää edelleen i.ytimg.com -sivustolla. Käytä sitä blogeissa, Open Graphissa ja tutkimuksessa – kuvakaappauksiin lisätään käyttöliittymän kromia, pakkausta ja väärä kuvasuhde.",
+  "h1": "Kuvakaappaus vs. oikea YouTube-pikkukuva: kumpi tiedosto kannattaa tallentaa?",
+  "ogTitle": "Kuvakaappaus vs. oikea YouTube-pikkukuva: kumpi tiedosto kannattaa tallentaa?",
+  "ogDescription": "Soittimen puhelimesta otettu kuvakaappaus ei ole YouTuben ylläpitämä pikkukuva. Todellinen yleisö elää edelleen i.ytimg.com -sivustolla. Käytä sitä blogeissa, Open Graphissa ja tutkimuksessa – kuvakaappauksiin lisätään käyttöliittymän kromia, pakkausta ja väärä kuvasuhde.",
+  "imageAlt": "Soittimen kuvakaappauksen ja oikean julkisen YouTube-pikkukuvan vertailu",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Soittimen kuvakaappauksen ja oikean julkisen YouTube-pikkukuvan vertailu",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mitä eroa on kuvakaappauksella ja oikealla pikkukuvalla?",
+      "html": "<p>Kuvakaappaus tallentaa näyttösi, mukaan lukien soittimen kromin, tekstitykset ja laitteen skaalauksen. Oikea pikkukuva on JPEG- tai WebP-tiedosto, jonka YouTube on julkaissut kyseiselle videotunnukselle. Vain CDN-tiedostolla on vakaa URL-osoite ja tunnettu pikselikoko.</p>"
+    },
+    {
+      "heading": "Miksi kuvakaappaukset eivät näy Google-kuvissa ja sosiaalisen median esikatseluissa?",
+      "html": "<p>Niiden kuvasuhde on usein väärä, ne sisältävät käyttöliittymän ja ne pakkaa kahdesti. Open Graph ja monet CMS-kentät haluavat 16:9-kuvan, joka on noin 1280×720. Tämä vastaa maxresdefault-arvoa, kun se on olemassa – katso<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">pikkukuvien koko-opas</a>.</p>"
+    },
+    {
+      "heading": "Miten tallennan oikean pikkukuvan?",
+      "html": "<ol>\n    <li>Kopioi videon julkinen URL-osoite, älä kuvakaappausta.</li>\n    <li>Liitä se sisään<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Lataa ensimmäinen listattu julkinen tiedosto tai kopioi kuvan URL-osoite.</li>\n  </ol>"
+    },
+    {
+      "heading": "Milloin kuvakaappauksesta on vielä hyötyä?",
+      "html": "<p>Käytä kuvakaappausta vain käyttöliittymävirheen tai videon sisältämän hetken dokumentointiin. Älä käytä sitä virallisena pikkukuvana, blogin sankarikuvana tai jaettavana kuvana, jos julkinen osa on edelleen olemassa.</p>\n  <p><a href=\"https://www.11tik.com/\">Hanki oikea julkinen pikkukuva →</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mitä eroa on kuvakaappauksella ja oikealla pikkukuvalla?",
+      "answer": "Kuvakaappaus tallentaa näytön ja soittimen Chromen. Oikea pikkukuva on JPEG- tai WebP-tiedosto, jota YouTube isännöi i.ytimg.com-palvelussa kyseiselle videotunnukselle.",
+      "answerHtml": "Kuvakaappaus tallentaa näytön ja soittimen Chromen. Oikea pikkukuva on JPEG- tai WebP-tiedosto, jota YouTube isännöi i.ytimg.com-palvelussa kyseiselle videotunnukselle."
+    },
+    {
+      "question": "Miksi kuvakaappaukset eivät näy Google-kuvissa ja sosiaalisen median esikatseluissa?",
+      "answer": "Niillä on usein väärä kuvasuhde, ylimääräinen käyttöliittymä ja ylimääräinen pakkaus. CMS ja Open Graph -kentät odottavat puhdasta 16:9-julkista still-kuvaa.",
+      "answerHtml": "Niillä on usein väärä kuvasuhde, ylimääräinen käyttöliittymä ja ylimääräinen pakkaus. CMS ja Open Graph -kentät odottavat puhdasta 16:9-julkista still-kuvaa."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+}

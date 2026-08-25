@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "fi",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Kuinka ladata YouTube-pikkukuva HD-laadulla | 11tik",
+  "description": "Tallenna julkinen YouTube-pikkukuva: liitä katseluvideo, lyhytvideot, youtu.be tai upota URL-osoitteita 11tik-kansioon ja lataa suurin olemassa oleva tiedosto.",
+  "h1": "Kuinka ladata YouTube-pikkukuva HD-laadulla",
+  "ogTitle": "Kuinka ladata YouTube-pikkukuva HD-laadulla",
+  "ogDescription": "Tallenna julkinen YouTube-pikkukuva: liitä katseluvideo, lyhytvideot, youtu.be tai upota URL-osoitteita 11tik-kansioon ja lataa suurin olemassa oleva tiedosto.",
+  "imageAlt": "Neljän vaiheen työnkulku YouTube-URL-osoitteen kopioinnista validoidun julkisen pikkukuvan lataamiseen",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Neljän vaiheen työnkulku YouTube-URL-osoitteen kopioinnista validoidun julkisen pikkukuvan lataamiseen",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Vianmäärityskaavio, jossa näkyy puuttuva maxresdefault-tiedosto ohitettuna, jotta seuraava todellinen pikkukuvan koko voidaan ladata",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Nopea vastaus",
+      "html": "<p>Kopioi julkinen YouTube-linkki ja liitä se<a href=\"https://www.11tik.com/\">11tik</a>, odota validoituja esikatseluja ja lataa sitten ensimmäinen listattu tiedosto. Kyseinen tiedosto on YouTuben videotunnukselle jo isännöimä korkein julkinen JPEG- tai WebP-tiedosto – usein 1280×720, kun maxres- tai hq720-tiedosto on olemassa. Tämä tallentaa<strong>pikkukuva still-kuva</strong>, ei videota tai ääntä.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Käytännön polku: julkinen URL → poimi → esikatsele todellisia kokoja → lataa tai kopioi kuvan URL-osoite.</p>"
+    },
+    {
+      "heading": "Nopein menetelmä 11tik-sovelluksella",
+      "html": "<ol>\n    <li>Kopioi julkisen katselun, lyhytvideon, live-lähetyksen, upotuksen tai youtu.be URL-osoite (tai pelkkä 11-merkkinen videotunnus).</li>\n    <li>Avata<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>selaimessasi.</li>\n    <li>Liitä URL-osoite. Poiminta alkaa, kun tunnus on kelvollinen.</li>\n    <li>Lataa ensimmäinen tulos (paras saatavilla oleva) tai valitse toinen jäljellä oleva koko.</li>\n  </ol>\n  <p>Valinnainen: käyttö<strong>Kopioi kuvan URL-osoite</strong>jos tarvitset sisällönhallintajärjestelmän osoitteen tiedoston sijaan. Tätä prosessia käsitellään kohdassa<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">pikkukuvan URL-opas</a>.</p>"
+    },
+    {
+      "heading": "Tuetut YouTuben URL-tiedostomuodot",
+      "html": "<p>11tik lukee videon tunnuksen samoista malleista, jotka sen verkkosivuston jäsennin hyväksyy:</p>\n  <table>\n    <thead>\n      <tr><th>Muoto</th><th>Esimerkkikuvio</th><th>Muistiinpanoja</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Katsella</td><td><code>youtube.com/watch?v=ID</code></td><td>Ylimääräisiä kyselyparametreja ei huomioitu</td></tr>\n      <tr><td>Lyhyt linkki</td><td><code>youtu.be/ID</code></td><td>Mobiilijakoissa tätä käytetään usein</td></tr>\n      <tr><td>Shortsit</td><td><code>youtube.com/shorts/ID</code></td><td>Sama julkinen isännöi edelleen</td></tr>\n      <tr><td>Upottaa</td><td><code>youtube.com/embed/ID</code></td><td>iframe-lähteestä</td></tr>\n      <tr><td>Elää</td><td><code>youtube.com/live/ID</code></td><td>Kun julkinen tunniste on läsnä</td></tr>\n      <tr><td>evästeetön upotus</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Käsitellään kuten upotettua sisältöä</td></tr>\n      <tr><td>Paljas henkilöllisyystodistus</td><td><code>dQw4w9WgXcQ</code></td><td>Vain 11 merkkiä</td></tr>\n    </tbody>\n  </table>\n  <p>Kanavan tai soittolistan URL-osoitteet, joissa ei ole videotunnusta, eivät tuota yhtä pikkukuvaa. Useiden linkkien samanaikaiseen lähettämiseen käytä joukkotoimintoa (enintään 25) — katso<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">erälataus</a>Kanavan laajennus:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">ote kanavan URL-osoitteesta</a>.</p>"
+    },
+    {
+      "heading": "Suora URL-osoitemenetelmä (ei poimijan käyttöliittymää)",
+      "html": "<p>Jos tiedät jo ID:n, voit avata ehdokkaan edelleen suoraan:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Kun se latautuu, käytä selaimen save-image-komentoa. Jos se epäonnistuu, siirry takaisin alkuun<code>hq720.jpg</code>,<code>sddefault.jpg</code>, tai<code>hqdefault.jpg</code>Tämä manuaalinen polku on hitaampi ja virhealttiimpi verrattuna 11tik:n validoituun listaan, mutta se toimii offline-tilassa mistä tahansa selaimesta, kunhan sinulla on hyvä osoite.</p>"
+    },
+    {
+      "heading": "Laadun valitseminen lataamisen yhteydessä",
+      "html": "<p>Lataa ensimmäinen lueteltu koko, ellet halua pienempää esikatselukuvaa. ”HD” tarkoittaa tässä suurinta julkista still-kuvaa – yleensä 1280 × 720 – ei 4K-masteria. Pikseliodotukset ja puuttuvan koon käyttäytyminen on selitetty<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">koko- ja resoluutioopas</a>.</p>\n  <p>Jos välität vain absoluuttisesti ylimmästä julkisesta tiedostosta, katso myös<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">korkealaatuisin pikkukuva</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kun arvattua kokoa ei ole saatavilla, ohita se ja säilytä seuraava todellinen julkinen tiedosto.</p>"
+    },
+    {
+      "heading": "Latausten vianmääritys",
+      "html": "<table>\n    <thead>\n      <tr><th>Oire</th><th>Todennäköinen syy</th><th>Mitä tehdä</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ei esikatselua liittämisen jälkeen</td><td>Virheellinen URL-osoite, ei videotunnusta tai video on yksityinen/rajoitettu</td><td>Liitä julkinen katselu-/lyhytvideo-/youtu.be-linkki</td></tr>\n      <tr><td>Maxres puuttuu</td><td>YouTube ei koskaan julkaissut kyseistä tiedostoa</td><td>Lataa sen sijaan ensimmäinen lueteltu koko</td></tr>\n      <tr><td>Harmaa / paikkamerkkikuva käsin luodusta URL-osoitteesta</td><td>Arvattu tiedostonimi</td><td>Käytä 11tik:n validoitua listaa</td></tr>\n      <tr><td>Puhelimen tallennus hankala</td><td>Selaimen latauskäyttöliittymä eroaa</td><td>Katso<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhonen / Androidin tallennusopas</a></td></tr>\n      <tr><td>Näyttää käyttöliittymäkuvalta</td><td>Otat pelaajasta kuvakaappauksen</td><td>Tallenna CDN edelleen, älä näyttöä —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">kuvakaappaus vs. oikea</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Mitä lataat (ja mitä et lataa)",
+      "html": "<p>Tallennat julkisen still-kuvan, joka on jo YouTuben ylläpitämä. Et avaa yksityisiä videoita, jäsenille tarkoitettuja tiedostoja tai MP4/WebM-streamia. 11tik on poimintaohjelma, ei videoiden tekijä eikä latausohjelma – vertailu:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">linko vs. valmistaja</a>.</p>\n  <p>Tekijänoikeudet pysyvät lataajalla. Tyypillinen käyttötarkoitus on tallentaminen tutkimuskäyttöön tai henkilökohtaiseen käyttöön; uudelleenjulkaiseminen omana mukautettuna pikkukuvana ilman oikeuksia ei ole. YouTube-ohjeet:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">mukautetut videopikkukuvat</a>Sivuston säännöt:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+    },
+    {
+      "heading": "Menetelmien vertailu",
+      "html": "<table>\n    <thead>\n      <tr><th>Menetelmä</th><th>Nopeus</th><th>Paras</th><th>Tarvitseeko 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik lataus</td><td>Nopeasti</td><td>Validoitu paras still-tuote</td><td>Kyllä</td></tr>\n      <tr><td>11tik kopioi URL-osoite</td><td>Nopeasti</td><td>CMS / upotukset</td><td>Kyllä</td></tr>\n      <tr><td>Käsintehty i.ytimg.com URL-osoite</td><td>Keskikokoinen</td><td>Pikatestit, kun tiedät tunnuksen</td><td>Ei</td></tr>\n      <tr><td>Pelaajan kuvakaappaus</td><td>Nopea mutta heikkolaatuinen</td><td>Vältä blogeissa / alkuperäisessä versiossa</td><td>Ei</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Seuraava vaihe",
+      "html": "<p>Avaa<a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>, liitä julkinen linkki ja tallenna ensimmäinen validoitu still-kuva. Tarvitsetko vain linkin? Lue<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-opas</a>Kokojen valitseminen? Käytä<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">resoluutio-opas</a>.</p>\n\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan kuvankeruuohjelman julkaisija. Vain julkisia still-kuvia.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voinko ladata pikkukuvan lyhytvideosta?",
+      "answer": "Kyllä, kun lyhytvideo on julkinen ja kyseiselle tunnukselle on olemassa still-kuvia. Liitä /shorts/-osoitteen URL-osoite kohtaan 11tik. Still-kuva voi olla vaakasuuntainen, vaikka toistetaan pystysuunnassa.",
+      "answerHtml": "<p>Kyllä, kun lyhytvideo on julkinen ja edelleen olemassa kyseisellä tunnuksella. Liitä<code>/shorts/</code>URL-osoite 11tik-kohtaan. Kuva voi olla vaakasuuntainen, vaikka toisto olisi pystysuuntainen.</p>"
+    },
+    {
+      "question": "Mitä jos paras pikkukuva ei lataudu?",
+      "answer": "Lataa seuraava lueteltu koko. Puuttuvat maksimiarvot ovat yleisiä, eivätkä ne johdu työkalun viasta.",
+      "answerHtml": "<p>Lataa seuraava lueteltu koko. Puuttuvat maksimiarvot ovat yleisiä, eivätkä ne johdu työkalun viasta.</p>"
+    },
+    {
+      "question": "Voinko ladata alkuperäisen julkisen pikkukuvan?",
+      "answer": "Kyllä – se on se parhaiten validoitu tiedosto. ”Alkuperäinen” tarkoittaa julkista CDN-kuvaa, ei videovirrasta kopioitua kehystä. Katso alkuperäinen julkinen pikkukuva.",
+      "answerHtml": "<p>Kyllä – juuri tuo on validoitu tiedosto. ”Alkuperäinen” tarkoittaa julkista CDN-tiedostoa, ei videovirrasta kopioitua kuvaa. Katso<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">alkuperäinen julkinen pikkukuva</a>.</p>"
+    },
+    {
+      "question": "Voinko kopioida kuvan URL-osoitteen lataamisen sijaan?",
+      "answer": "Kyllä. Käytä Kopioi kuvan URL-osoite -toimintoa 11tik-kohdassa tai kopioi vahvistettu osoite selaimesta kuvan latautumisen jälkeen.",
+      "answerHtml": "<p>Kyllä. Käytä Kopioi kuvan URL-osoite -toimintoa 11tik-kohdassa tai kopioi vahvistettu osoite selaimesta kuvan latautumisen jälkeen.</p>"
+    },
+    {
+      "question": "Lataako tämä YouTube-videotiedoston?",
+      "answer": "Ei. Vain julkinen pikkukuva edelleen.",
+      "answerHtml": "<p>Ei. Vain julkinen pikkukuva edelleen.</p>"
+    },
+    {
+      "question": "Tarjoaako jokainen video 1280×720-tiedoston?",
+      "answer": "Ei. Säilytä suurin julkinen tiedosto, joka vahvistaa kyseisen tunnuksen.",
+      "answerHtml": "<p>Ei. Säilytä suurin julkinen tiedosto, joka vahvistaa kyseisen tunnuksen.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan kuvankeruuohjelman julkaisija. Vain julkisia still-kuvia.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+}

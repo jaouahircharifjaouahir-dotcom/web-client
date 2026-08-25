@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "sw",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Ukubwa na Ubora wa Kijipicha cha YouTube: Mwongozo Kamili | 11tik",
+  "description": "Linganisha ukubwa wa vijipicha vya YouTube kuanzia 120×90 hadi 1280×720. Maxres na hq720 ni hiari—tumia faili kubwa zaidi ya umma inayopakiwa.",
+  "h1": "Kijipicha cha YouTube Ukubwa na Ubora: Mwongozo Kamili",
+  "ogTitle": "Kijipicha cha YouTube Ukubwa na Ubora: Mwongozo Kamili",
+  "ogDescription": "Linganisha ukubwa wa vijipicha vya YouTube kuanzia 120×90 hadi 1280×720. Maxres na hq720 ni hiari—tumia faili kubwa zaidi ya umma inayopakiwa.",
+  "imageAlt": "Chati ya kulinganisha ukubwa wa vijipicha vya YouTube vya umma kutoka maxresdefault 1280 kwa 720 hadi chaguo-msingi 120 kwa 90",
+  "faqHeading": "Maswali Yanayoulizwa Mara kwa Mara",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Chati ya kulinganisha ukubwa wa vijipicha vya YouTube vya umma kutoka maxresdefault 1280 kwa 720 hadi chaguo-msingi 120 kwa 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Ulinganisho wa kando kwa kando unaoonyesha video yenye maxresdefault inayopatikana dhidi ya video ambapo faili ndogo ya hqdefault pekee ipo",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jibu la haraka",
+      "html": "<p>Kwa upakiaji maalum, usaidizi wa YouTube bado unalenga<strong>16:9</strong>picha—kawaida<strong>1280×720</strong>. Kwa faili unazoweza kupakua kutoka kwa video iliyopo, derivatives za CDN za umma hutofautiana. Zinapokuwapo,<code>maxresdefault</code>/<code>hq720</code>kwa kawaida huwa 1280×720. Video nyingi huishia kwenye<code>sddefault</code>(640×480) au<code>hqdefault</code>(480×360). Jina la faili la juu zaidi halibuni pikseli kamwe. Bandika URL ya saa kwenye<a href=\"https://www.11tik.com/\">11tik</a>kuorodhesha ukubwa unaorudisha picha halisi pekee.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ukubwa wa umma. Sio kila video huchapisha kila kipigo kwenye ngazi hii.</p>"
+    },
+    {
+      "heading": "Vipimo vilivyopendekezwa kwa waundaji",
+      "html": "<p>Ikiwa unabuni kijipicha maalum katika Studio, fuata Msaada wa sasa wa YouTube: lenga<strong>16:9</strong>bado. Ukubwa wa kazi unaotumika sana ni<strong>1280×720</strong>pikseli. Hiyo inalingana na fremu pana ya skrini ya mchezaji na ni daraja sawa la pikseli kama iliyochapishwa<code>maxresdefault</code>YouTube inapounda moja.</p>\n  <p>Marejeleo rasmi:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Pakia vijipicha maalum vya video</a>Baada ya Studio kumaliza kuchakata, thibitisha faili za umma zinazoonekana moja kwa moja kwa kutumia 11tik badala ya kudhani kila derivative ilionekana mara moja. Maelezo yanayolenga Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Vijipicha vya Studio ya YouTube mnamo 2026</a>.</p>"
+    },
+    {
+      "heading": "Watazamaji wanaweza kuchukua ukubwa wa CDN za umma",
+      "html": "<p>Wapakuaji na blogu hazivutii programu yako ya Photoshop. Huvuta vielelezo vya umma vya mwenyeji wa YouTube kwa ajili ya kitambulisho cha video. Kitoaji cha 11tik huangalia majina haya ya faili (JPEG na, yanapokuwepo, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Lahaja</th><th>Ubora wa kawaida</th><th>Ngazi</th><th>Upatikanaji</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Bora zaidi</td><td>Ikiwa tu YouTube imechapisha maxres za WebP</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Bora zaidi</td><td>Kawaida kwenye vipakiaji vipya/vya ubora wa juu; mara nyingi hukosekana kwenye vipakiaji vya zamani</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Darasa la 1280×720</td><td>Bora zaidi</td><td>Wasilisha kwenye baadhi ya video kama faili mbadala ya juu</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Juu</td><td>Mara nyingi hupatikana wakati maxres haipo</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Kiwango</td><td>Kawaida sana</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Hakikisho</td><td>Orodhesha/hakiki ndogo</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Hakikisho</td><td>Kiwango kidogo zaidi cha kawaida</td></tr>\n    </tbody>\n  </table>\n  <p>Upana na urefu huu unaotarajiwa unalingana na mipangilio ya ubora ya 11tik. Majibu halisi bado yanaweza kutofautiana ikiwa YouTube inahudumia kishikilia nafasi au inaacha faili kabisa—hakikisha kila wakati.</p>"
+    },
+    {
+      "heading": "Kwa nini 16:9 ni muhimu hata wakati faili zinatofautiana",
+      "html": "<p>Kicheza saa kina skrini pana. Sanaa maalum iliyoundwa saa 16:9 inabaki kusomeka katika utafutaji, rafu zilizopendekezwa, na vipachiko. Baadhi ya faili za umma (hasa<code>hqdefault</code>/<code>sddefault</code>) si visanduku vikali vya 16:9; ni vya ukubwa wa CDN wa zamani. Pendelea umma halisi wa 1280×720 bado unapohitaji kipengee safi cha 16:9 kwa Grafu Huria au kichwa cha blogu.</p>\n  <p>Kaptura hucheza wima, lakini umma uliohifadhiwa bado ni wa mandhari. Hiyo ni tabia ya mwenyeji, si upakuaji ulioshindwa. Maelezo:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Pakua kijipicha cha Shorts</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault dhidi ya hq720 dhidi ya “HD”",
+      "html": "<p><code>maxresdefault</code>ni jina la faili la HD linalojulikana limewashwa<code>i.ytimg.com</code>. Faili inapokuwapo kwa kawaida huwa 1280×720—sio 4K.<code>hq720</code>ni jina lingine la kiwango cha juu ambalo baadhi ya video hufichua katika kiwango sawa cha ubora. Hakuna jina linalohakikisha faili. Zana zinazochapisha URL ya kiwango cha juu bila kuangalia hutoa picha zilizoharibika.</p>\n  <p>Maelezo ya kina ya jina la faili:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpg ni nini</a>na<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">kijipicha cha umma cha ubora wa juu zaidi</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Muundo sawa wa ombi, matokeo tofauti: jina la faili la juu halibuni pikseli wakati faili haipo.</p>"
+    },
+    {
+      "heading": "Kwa nini video moja ina ukubwa zaidi kuliko nyingine",
+      "html": "<ul>\n    <li>Huenda vipakiaji vya zamani havijawahi kupokea derivative ya maxres.</li>\n    <li>Mchoro chanzo ulikuwa mdogo kuliko 1280×720.</li>\n    <li>Vijipicha maalum bado vinashughulikiwa katika Studio.</li>\n    <li>Video za faragha, za wanachama pekee, au zilizo na kizuizi cha umri haziwezi kufichua picha za umma.</li>\n    <li>Vibadala vya WebP huonekana tu wakati YouTube inavichapisha kwa ajili ya kitambulisho hicho.</li>\n  </ul>\n  <p>Upatikanaji ni kwa kila video. Usichukulie kamwe URL ya mshindani inayofanya kazi kama uthibitisho kwamba yako ipo.</p>"
+    },
+    {
+      "heading": "Jinsi 11tik huchagua ukubwa \"bora zaidi\"",
+      "html": "<p>11tik huchunguza wagombea wa umma katika mpangilio wa ubora usiobadilika (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → chaguo-msingi). Huweka faili zinazothibitisha kama picha na huweka nafasi ya juu zaidi ya waokoaji kwanza. Haina ubora wa juu. Ikiwa maxres haipo, kadi ya kwanza inaweza kuwa hq720 au sd—hiyo ndiyo kiwango cha juu cha uaminifu kwa kitambulisho hicho.</p>\n  <p>Ili kunakili anwani ya ukubwa uliochaguliwa, tumia<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL ndogo</a>Ili kuhifadhi faili, tumia<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">mwongozo wa kupakua</a>.</p>"
+    },
+    {
+      "heading": "Unapaswa kutumia ukubwa gani?",
+      "html": "<table>\n    <thead>\n      <tr><th>Kisanduku cha matumizi</th><th>Pendelea</th><th>Kwa nini</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Picha iliyoangaziwa kwenye blogu / Grafu Iliyofunguliwa</td><td>Kubwa zaidi iliyothibitishwa ~1280×720</td><td>Inalingana na mazao ya kawaida ya kijamii; hifadhi nakala yako mwenyewe</td></tr>\n      <tr><td>Utafiti wa muundo/kijipicha</td><td>Bado kuna huduma bora zaidi za umma</td><td>Kifungashio halisi, si picha ya skrini ya mchezaji</td></tr>\n      <tr><td>Onyesho la awali la gumzo la haraka</td><td>hq au mq</td><td>Faili ndogo hupakia haraka zaidi</td></tr>\n      <tr><td>Upakiaji maalum katika Studio</td><td>Asili yako ya 16:9 1280×720 (au zaidi)</td><td>Unaunda sanaa; derivatives za CDN huja baadaye</td></tr>\n    </tbody>\n  </table>\n  <p>Usinyooshe hqdefault hadi 1280×720 na kuiita maxres. Kwa vidokezo vya upangishaji wa CMS:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">picha iliyoangaziwa / Mtiririko wa kazi wa Grafu Huria</a>Picha za skrini za mchezaji ni sifa tofauti (mbaya zaidi):<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">picha ya skrini dhidi ya kijipicha halisi</a>.</p>"
+    },
+    {
+      "heading": "Hatua inayofuata",
+      "html": "<p>Tazama video ya moja kwa moja kwenye<a href=\"https://www.11tik.com/\">11tik kitoaji</a>, basi ama<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">nakili URL ya picha</a>au<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">pakua bora zaidi inayopatikana bado</a>.</p>\n\n  <p class=\"yte-bio\">Imeandikwa na 11tik. Ukubwa wa CDN za umma pekee; hakuna uongezaji wa ukubwa na hakuna upakuaji wa video.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je, maxresdefault inapatikana kila wakati?",
+      "answer": "Hapana. Video nyingi za umma hazichapishi faili hiyo kamwe. 404 kwenye maxres ni kawaida.",
+      "answerHtml": "<p>Hapana. Video nyingi za umma hazichapishi faili hiyo kamwe. 404 kwenye maxres ni kawaida.</p>"
+    },
+    {
+      "question": "Je, hq720 ni bora kuliko aina zingine za vijipicha?",
+      "answer": "Inapokuwapo, hq720 iko katika kiwango sawa cha juu kama maxres (karibu 1280×720). Sio \"bora\" kiotomatiki kuliko faili ya maxres iliyothibitishwa, na haijahakikishwa.",
+      "answerHtml": "<p>Inapokuwapo, hq720 iko katika kiwango sawa cha juu kama maxres (karibu 1280×720). Sio \"bora\" kiotomatiki kuliko faili ya maxres iliyothibitishwa, na haijahakikishwa.</p>"
+    },
+    {
+      "question": "Ukubwa gani unaofaa zaidi kwa tovuti?",
+      "answer": "Tumia picha kubwa zaidi ya umma iliyothibitishwa ya ~16:9 (mara nyingi 1280×720), kisha weka nakala kwenye tovuti yako kwa ajili ya lebo za Open Graph thabiti na picha zilizoangaziwa.",
+      "answerHtml": "<p>Tumia picha kubwa zaidi ya umma iliyothibitishwa ya ~16:9 (mara nyingi 1280×720), kisha weka nakala kwenye tovuti yako kwa ajili ya lebo za Open Graph thabiti na picha zilizoangaziwa.</p>"
+    },
+    {
+      "question": "Kwa nini kijipicha chenye ubora wa juu wakati mwingine hushindwa kupakia?",
+      "answer": "Jina la faili lilikadiriwa. YouTube haikuchapisha derivative hiyo kwa kitambulisho cha video. Pakia ukubwa mdogo uliopo badala yake.",
+      "answerHtml": "<p>Jina la faili lilikadiriwa. YouTube haikuchapisha derivative hiyo kwa kitambulisho cha video. Pakia ukubwa mdogo uliopo badala yake.</p>"
+    },
+    {
+      "question": "Je, \"kijipicha kidogo cha HD\" kinamaanisha 4K?",
+      "answer": "Hapana. Upeo wa umma kwa kawaida huwa 1280×720. 11tik haitabuni stili ya 4K.",
+      "answerHtml": "<p>Hapana. Upeo wa umma kwa kawaida huwa 1280×720. 11tik haitabuni stili ya 4K.</p>"
+    },
+    {
+      "question": "Je, vijipicha vya WebP vina ubora wa juu kuliko JPEG?",
+      "answer": "WebP ni chombo kingine cha kiwango sawa cha ukubwa kinapochapishwa. Pendelea faili 11tik iliyothibitishwa; usidhani WebP ipo kila wakati.",
+      "answerHtml": "<p>WebP ni chombo kingine cha kiwango sawa cha ukubwa kinapochapishwa. Pendelea faili 11tik iliyothibitishwa; usidhani WebP ipo kila wakati.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik. Ukubwa wa CDN za umma pekee; hakuna uongezaji wa ukubwa na hakuna upakuaji wa video.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+}

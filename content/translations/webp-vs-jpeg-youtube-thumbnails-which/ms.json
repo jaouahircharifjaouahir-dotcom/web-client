@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "ms",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "Gambar Kecil YouTube WebP vs JPEG: Format Mana Yang Patut Anda Gunakan? | 11tik",
+  "description": "YouTube mungkin menerbitkan fail lakaran kecil JPEG dan WebP. Lebih suka format yang disahkan oleh 11tik untuk kes penggunaan anda—WebP tidak selalu tersedia.",
+  "h1": "Gambar Kecil YouTube WebP vs JPEG: Format Mana Yang Patut Anda Gunakan?",
+  "ogTitle": "Gambar Kecil YouTube WebP vs JPEG: Format Mana Yang Patut Anda Gunakan?",
+  "ogDescription": "YouTube mungkin menerbitkan fail lakaran kecil JPEG dan WebP. Lebih suka format yang disahkan oleh 11tik untuk kes penggunaan anda—WebP tidak selalu tersedia.",
+  "imageAlt": "Perbandingan bersebelahan laluan URL lakaran kecil YouTube JPEG dan WebP pada i.ytimg.com",
+  "faqHeading": "Soalan Lazim",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "Perbandingan bersebelahan laluan URL lakaran kecil YouTube JPEG dan WebP pada i.ytimg.com",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "Carta kes penggunaan yang membandingkan CMS laman web, pautan CDN langsung dan muat turun arkib untuk lakaran kecil YouTube JPEG berbanding WebP",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jawapan pantas",
+      "html": "<p>Untuk kebanyakan muat turun dan muat naik CMS, simpan<strong>senarai fail yang disahkan 11tik dahulu</strong>JPEG kekal sebagai milik orang awam<code>i.ytimg.com/vi/…</code>WebP muncul untuk beberapa video sebagai<code>maxresdefault.webp</code>di bawah<code>/vi_webp/</code>. WebP selalunya lebih kecil pada kualiti visual yang serupa, tetapi ia tidak diterbitkan untuk setiap ID. 11tik tidak<strong>tidak</strong>menukar WebP kepada JPEG semasa muat turun—ia menyimpan bait yang telah dihoskan oleh YouTube (muat turun JPEG hanya mendapat setem komen metadata yang kecil).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">ID video yang sama, bekas dan laluan berbeza—hanya apabila YouTube menerbitkan kedua-duanya.</p>"
+    },
+    {
+      "heading": "Cara format lakaran kecil YouTube dipaparkan dalam 11tik",
+      "html": "<p>Pratetap kualiti 11tik termasuk:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mime<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ di bawah<code>/vi/</code>(mime<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Calon dimuatkan dalam pelayar. Kegagalan dan ruang letak digugurkan. Kedudukan menggunakan peringkat, kawasan piksel, padanan saiz yang dijangkakan dan saiz kecil<strong>−8 penalti skor untuk<code>.webp</code>URL</strong>jadi JPEG dan WebP pada peringkat yang sama tidak bergaduh tanpa diduga—JPEG boleh menang seri apabila kedua-duanya disahkan. Butiran tentang saiz:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">panduan saiz lakaran kecil</a>. Tingkah laku maxres yang hilang:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">panduan maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "JPEG vs WebP dalam bahasa mudah",
+      "html": "<table>\n    <thead>\n      <tr><th>Format</th><th>Terbaik untuk</th><th>Kekuatan</th><th>Had</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Muat turun, muat naik WordPress, keserasian terluas</td><td>Sokongan hampir universal; kebanyakan pegun CDN</td><td>Fail yang lebih besar pada kualiti yang serupa</td></tr>\n      <tr><td>WebP</td><td>Laman web moden yang sudah menyediakan WebP</td><td>Selalunya lebih kecil untuk peringkat resolusi yang sama</td><td>Tidak diterbitkan untuk setiap video; beberapa alat lama enggan</td></tr>\n    </tbody>\n  </table>\n  <p>Kedua-dua format ini tidak mencipta resolusi. WebP 480×360 masih 480×360.</p>"
+    },
+    {
+      "heading": "Apa yang berlaku apabila anda memuat turun",
+      "html": "<p>Nama fail muat turun mengekalkan sambungan sebenar (<code>.jpg</code>atau<code>.webp</code>) daripada jenis mime / URL. Untuk gumpalan JPEG, 11tik boleh memasukkan komen JPEG pendek seperti<code>11tik VIDEO_ID quality youtube thumbnail</code>Gumpalan WebP dan bukan JPEG disimpan tanpa langkah pengekodan semula itu. Tiada \"peningkatan\" kualiti dan tiada penukaran paksa antara format.</p>"
+    },
+    {
+      "heading": "Bila hendak memilih JPEG",
+      "html": "<ul>\n    <li>Anda sedang memuat naik ke CMS yang menjangkakan JPG dalam pustaka media.</li>\n    <li>Anda memerlukan keserasian maksimum dengan klien e-mel atau pelayar lama.</li>\n    <li>Hanya saiz JPEG yang disahkan untuk video tersebut.</li>\n    <li>Anda sedang mencetak atau menyerahkan fail tersebut kepada pereka bentuk yang telah menyeragamkan pada JPG.</li>\n  </ul>"
+    },
+    {
+      "heading": "Apabila WebP mudah",
+      "html": "<ul>\n    <li>11tik menyenaraikan WebP maxres yang disahkan dan tapak anda sudah pun menyediakan WebP.</li>\n    <li>Anda mahukan fail yang lebih kecil untuk peringkat ~1280×720 yang sama.</li>\n    <li>Anda mengawal susunan dan boleh kembali kepada JPEG jika perlu.</li>\n  </ul>\n  <p>Jika tema anda tidak boleh menggunakan WebP, muat turun JPEG—atau tukar secara setempat selepas muat turun. 11tik tidak akan ditukar untuk anda.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Pilih format yang disahkan yang sepadan dengan saluran paip anda—bukan sambungan yang diteka.</p>"
+    },
+    {
+      "heading": "Pautan langsung dan laman web",
+      "html": "<p>Salin URL imej mengembalikan alamat CDN HTTPS calon yang disahkan. WebP atau JPEG Hotlinking mempunyai kerapuhan yang sama yang dibincangkan dalam<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Panduan Graf Terbuka</a>: lebih suka mengehoskan salinan anda sendiri untuk catatan yang berkekalan. Corak URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">panduan URL lakaran kecil</a>.</p>"
+    },
+    {
+      "heading": "Nota keserasian pelayar dan CMS",
+      "html": "<p>Versi Chromium, Firefox dan Safari moden mengendalikan imej WebP dalam halaman. Sesetengah pemalam legasi, templat e-mel atau aliran kerja cetakan masih mengutamakan JPEG. Teras WordPress boleh menyediakan WebP apabila dikonfigurasikan, tetapi banyak pasukan masih menyeragamkan imej pilihan sebagai JPG untuk kebolehramalan. Dokumen media rasmi WordPress adalah sumber kebenaran untuk versi anda—jangan menganggap setiap pemalam menerima muat naik WebP.</p>"
+    },
+    {
+      "heading": "Pokok keputusan praktikal",
+      "html": "<ol>\n    <li>Ekstrak pada<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Jika anda memerlukan imej pilihan CMS dan melihat kedua-dua format, pilih JPEG melainkan tindanan anda mengutamakan WebP.</li>\n    <li>Jika hanya saiz WebP maks yang disahkan di peringkat teratas, gunakannya—atau ambil saiz JPEG seterusnya jika anda mesti kekal pada JPG.</li>\n    <li>Untuk arkib, simpan sambungan asal daripada muat turun.</li>\n  </ol>\n  <p>Muat turun panduan:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">muat turun lakaran kecil YouTube</a>.</p>"
+    },
+    {
+      "heading": "Langkah seterusnya",
+      "html": "<p>Tampal URL awam ke dalam<a href=\"https://www.11tik.com/\">Pengekstrak Gambar Kecil YouTube</a>, perhatikan sama ada hasil teratas adalah<code>.jpg</code>atau<code>.webp</code>, dan pilih berdasarkan CMS anda—bukan berdasarkan nama fail yang lebih panjang.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik berdasarkan tingkah laku pengekstrak dalam pelayar semasa.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Adakah setiap video YouTube mempunyai lakaran kecil WebP?",
+      "answer": "Tidak. WebP maxres adalah pilihan. Banyak video hanya mendedahkan saiz JPEG.",
+      "answerHtml": "<p>Tidak. WebP maxres adalah pilihan. Banyak video hanya mendedahkan saiz JPEG.</p>"
+    },
+    {
+      "question": "Adakah WebP sentiasa lebih tajam daripada JPEG?",
+      "answer": "Tidak. Format tidak meningkatkan resolusi. Bandingkan saiz piksel yang sama.",
+      "answerHtml": "<p>Tidak. Format tidak meningkatkan resolusi. Bandingkan saiz piksel yang sama.</p>"
+    },
+    {
+      "question": "Mengapakah JPEG mungkin berada di kedudukan yang lebih tinggi daripada WebP dalam 11tik?",
+      "answer": "URL WebP yang disahkan menerima penalti skor kecil (−8) berbanding calon yang serupa, jadi JPEG boleh muncul dahulu apabila kedua-duanya wujud pada peringkat yang sama.",
+      "answerHtml": "<p>URL WebP yang disahkan menerima penalti skor kecil (−8) berbanding calon yang serupa, jadi JPEG boleh muncul dahulu apabila kedua-duanya wujud pada peringkat yang sama.</p>"
+    },
+    {
+      "question": "Adakah muat turun menukar WebP kepada JPEG?",
+      "answer": "Tidak. Fail yang disimpan mengekalkan format sumber. Hanya JPEG yang boleh mendapat komen metadata.",
+      "answerHtml": "<p>Tidak. Fail yang disimpan mengekalkan format sumber. Hanya JPEG yang boleh mendapat komen metadata.</p>"
+    },
+    {
+      "question": "Format manakah yang perlu saya hotlink?",
+      "answer": "Kedua-duanya, untuk halaman pengeluaran yang anda pentingkan. Hoskan salinannya. Jika anda mesti memautkan sementara, gunakan URL 11tik yang telah disahkan.",
+      "answerHtml": "<p>Kedua-duanya, untuk halaman pengeluaran yang anda pentingkan. Hoskan salinannya. Jika anda mesti memautkan pautan sementara, gunakan URL 11tik yang telah disahkan.</p>"
+    },
+    {
+      "question": "Bolehkah hq720 menjadi WebP?",
+      "answer": "Dalam senarai pratetap 11tik semasa, calon WebP khusus ialah maxres WebP. Saiz lain diminta sebagai nama fail JPEG di bawah /vi/.",
+      "answerHtml": "<p>Dalam senarai pratetap 11tik semasa, calon WebP khusus ialah WebP maksimum. Saiz lain diminta sebagai nama fail JPEG di bawah<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik berdasarkan tingkah laku pengekstrak dalam pelayar semasa.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+}

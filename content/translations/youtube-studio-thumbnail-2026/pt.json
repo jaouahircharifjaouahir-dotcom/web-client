@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "pt",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "Miniatura do YouTube Studio 2026 | 11tik",
+  "description": "Em 2026, os canais elegíveis do YouTube ainda poderão enviar uma miniatura personalizada do Studio para a página de detalhes do vídeo. Os rótulos do menu mudam, mas o resultado é o mesmo: o YouTube hospeda uma nova imagem pública. O 11tik não envia esse arquivo. Ele apenas lê os URLs das imagens públicas depois que elas já existem.",
+  "h1": "Miniatura do YouTube Studio 2026",
+  "ogTitle": "Miniatura do YouTube Studio 2026",
+  "ogDescription": "Em 2026, os canais elegíveis do YouTube ainda poderão enviar uma miniatura personalizada do Studio para a página de detalhes do vídeo. Os rótulos do menu mudam, mas o resultado é o mesmo: o YouTube hospeda uma nova imagem pública. O 11tik não envia esse arquivo. Ele apenas lê os URLs das imagens públicas depois que elas já existem.",
+  "imageAlt": "11tik usado para verificar uma miniatura pública após o upload no YouTube Studio",
+  "faqHeading": "Perguntas frequentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik usado para verificar uma miniatura pública após o upload no YouTube Studio",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Como faço para enviar uma miniatura personalizada no YouTube Studio?",
+      "html": "<ol>\n    <li>Abra o YouTube Studio e selecione o vídeo.</li>\n    <li>Na seção Detalhes, faça o upload de uma imagem no formato 16:9 (o formato padrão do YouTube é 1280×720).</li>\n    <li>Salve o arquivo e aguarde até que o processamento seja concluído.</li>\n  </ol>\n  <p>Os nomes exatos dos botões podem mudar. Se sua conta não for elegível para miniaturas personalizadas, o Studio não oferecerá a opção de upload. 11tik não pode contornar isso.</p>"
+    },
+    {
+      "heading": "Como faço para verificar uma miniatura depois de alterá-la no Studio?",
+      "html": "<p>Cole o URL do relógio em<a href=\"https://www.11tik.com/\">11tik</a>Baixe ou copie o primeiro arquivo listado. Se o arquivo maxresdefault estiver faltando, o próximo arquivo público é o tamanho máximo correto. Esse é o catálogo do YouTube, não uma extração malsucedida. Veja também<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault explicado</a>.</p>"
+    },
+    {
+      "heading": "O 11tik substitui o YouTube Studio?",
+      "html": "<p>Não. O Studio é onde você carrega, agenda e usa testes quando o YouTube os oferece. 11tik serve para visualizar e salvar imagens públicas já existentes, inclusive após uma alteração no Studio.</p>"
+    },
+    {
+      "heading": "O que devo fazer quando a imagem parecer antiga?",
+      "html": "<p>As CDNs de imagens podem apresentar lentidão. Verifique novamente mais tarde, atualize a página completamente ou copie o URL. 11tik confirma. Não assuma que a imagem master seja em 4K; a resolução máxima pública geralmente é 1280×720. Uma captura de tela do Studio não é o arquivo de miniatura público.</p>\n  <p>Relacionado:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extrator vs fabricante</a>.</p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Abra o extrator</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "O 11tik substitui o YouTube Studio?",
+      "answer": "Não. O Studio carrega arte personalizada. 11tik apenas lê arquivos de miniaturas públicos.",
+      "answerHtml": "Não. O Studio carrega arte personalizada. 11tik apenas lê arquivos de miniaturas públicos."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+}

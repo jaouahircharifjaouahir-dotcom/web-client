@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "tl",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Paano mag-batch download ng mga thumbnail ng YouTube (hanggang 25 pampublikong URL) | 11tik",
+  "description": "Maramihang pagkuha ng mga pampublikong thumbnail ng YouTube sa browser. I-paste ang isang URL bawat linya, i-download ang bawat pinakamahusay na still, o i-zip ang set na may pinakamataas na kalidad. Walang account at walang mga video file.",
+  "h1": "Paano mag-batch download ng mga thumbnail ng YouTube (hanggang 25 pampublikong URL)",
+  "ogTitle": "Paano mag-batch download ng mga thumbnail ng YouTube (hanggang 25 pampublikong URL)",
+  "ogDescription": "Maramihang pagkuha ng mga pampublikong thumbnail ng YouTube sa browser. I-paste ang isang URL bawat linya, i-download ang bawat pinakamahusay na still, o i-zip ang set na may pinakamataas na kalidad. Walang account at walang mga video file.",
+  "imageAlt": "11tik bulk thumbnail extractor na may ilang YouTube URL na handa nang i-download",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik bulk thumbnail extractor na may ilang YouTube URL na handa nang i-download",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Paano ko batch download ang mga thumbnail ng YouTube?",
+      "html": "<p>Bukas<a href=\"https://www.11tik.com/\">11tik</a>, i-on ang Bulk, i-paste ang isang pampublikong URL bawat linya, i-click ang I-extract lahat, pagkatapos ay i-download ang bawat pinakamahusay na still o ang zip na may pinakamataas na kalidad. Ang limitasyon ay 25 URL bawat pagpapatakbo kaya mananatiling responsive ang browser.</p>"
+    },
+    {
+      "heading": "Ano ang kabilang sa listahan?",
+      "html": "<ul>\n    <li>Mga ID na youtube.com/watch?v=</li>\n    <li>youtu.be maiikling link</li>\n    <li>Mga ID ng youtube.com/shorts/</li>\n    </ul>\n  <p>Ang mga pribado, hindi nakalistang-walang-pampublikong-thumbs, o mga video na may limitasyon sa edad ay hindi magbabalik ng still. Inaasahan iyan. Tingnan din<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Mga thumbnail ng shorts</a>.</p>"
+    },
+    {
+      "heading": "Paano magpatakbo ng bulk extract",
+      "html": "<ol>\n    <li>Sa homepage, i-click ang Maramihan.</li>\n    <li>Mag-paste ng hanggang 25 pampublikong link, isa bawat linya.</li>\n    <li>I-click ang I-extract lahat at maghintay hanggang sa magpakita ng preview ang bawat card.</li>\n    <li>I-download ang thumbnail na video N para sa bawat pinakamagandang litrato, o I-download lahat ng pinakamataas na kalidad bilang zip.</li>\n    <li>Opsyonal: I-export ang CSV para sa mga research log (video id, pamagat, share URL, image URL).</li>\n  </ol>"
+    },
+    {
+      "heading": "Maaari ko ba itong gamitin para sa pananaliksik sa mga kakumpitensya?",
+      "html": "<p>Oo, para sa pag-aaral ng pampublikong packaging. Huwag muling i-publish ang thumbnail ng ibang creator bilang sarili mong upload. Ang copyright ay nananatili sa may-ari ng mga karapatan. Kinukuha lamang ng 11tik ang mga file na pampublikong hino-host na ng YouTube.</p>\n  <p><a href=\"https://www.11tik.com/\">Buksan ang bulk extract sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Paano ko batch download ang mga thumbnail ng YouTube?",
+      "answer": "Gamitin ang Bulk sa 11tik, i-paste ang isang pampublikong URL bawat linya, kunin, pagkatapos ay mag-download ng mga still o isang zip file na may pinakamataas na pampublikong kalidad. Maximum na 25 URL bawat pagtakbo.",
+      "answerHtml": "Gamitin ang Bulk sa 11tik, i-paste ang isang pampublikong URL bawat linya, kunin, pagkatapos ay mag-download ng mga still o isang zip file na may pinakamataas na pampublikong kalidad. Maximum na 25 URL bawat pagtakbo."
+    },
+    {
+      "question": "Maaari ko ba itong gamitin para sa pananaliksik sa mga kakumpitensya?",
+      "answer": "Oo para sa pag-aaral ng pampublikong packaging. Huwag muling i-publish ang thumbnail ng ibang creator bilang iyo. Ang copyright ay nananatili sa may-ari ng mga karapatan.",
+      "answerHtml": "Oo para sa pag-aaral ng pampublikong packaging. Huwag muling i-publish ang thumbnail ng ibang creator bilang iyo. Ang copyright ay nananatili sa may-ari ng mga karapatan."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+}

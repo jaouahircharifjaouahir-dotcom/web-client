@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "pl",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Jak wyodrębnić miniatury z adresu URL kanału YouTube | 11tik",
+  "description": "Wklej adres URL publicznego kanału YouTube do 11tik zbiorczo, aby rozszerzyć ostatnio przesłane materiały publiczne, a następnie pobierz każde najlepsze zdjęcie. Służy to do badań nad opakowaniami, a nie do klonowania niestandardowej grafiki z innego kanału.",
+  "h1": "Jak wyodrębnić miniatury z adresu URL kanału YouTube",
+  "ogTitle": "Jak wyodrębnić miniatury z adresu URL kanału YouTube",
+  "ogDescription": "Wklej adres URL publicznego kanału YouTube do 11tik zbiorczo, aby rozszerzyć ostatnio przesłane materiały publiczne, a następnie pobierz każde najlepsze zdjęcie. Służy to do badań nad opakowaniami, a nie do klonowania niestandardowej grafiki z innego kanału.",
+  "imageAlt": "Wyodrębnij miniatury z adresu URL kanału YouTube — najnowsze publiczne przesłania na 11tik",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Wyodrębnij miniatury z adresu URL kanału YouTube — najnowsze publiczne przesłania na 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Czy mogę pobrać miniatury z całego kanału YouTube?",
+      "html": "<p>Możesz pobrać zdjęcia z najnowszych<em>publiczny</em>Przesyłanie plików, które ujawniają identyfikator wideo. 11tik nie pobiera wszystkich filmów, które kanał kiedykolwiek opublikował i nie pomija członkostwa. Na stronie głównej włącz opcję „Zbiorcze” i wklej adres URL kanału, taki jak<code>youtube.com/@handle</code>Lub<code>/channel/UC…</code>i pozwól narzędziu rozwinąć publiczną listę w stylu RSS. Następnie wyodrębnij ją tak, jak listę wpisaną. Limit wynosi 25 adresów URL na jedno uruchomienie, aby przeglądarka pozostała użyteczna.</p>\n  <p>To różni się od zapisywania jednego linku do oglądania. Przepływ pojedynczego adresu URL jest w<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">jak pobrać miniaturę z YouTube</a>. Linia po linii bez kanału jest dostępna<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">pobieranie wsadowe</a>.</p>"
+    },
+    {
+      "heading": "Które adresy URL kanałów działają?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>gdy strona publiczna ujawnia identyfikator kanału</li>\n    <li>Dziedzictwo<code>/user/name</code>ścieżki, które nadal się rozwiązują</li>\n  </ul>\n  <p>Adres URL „/playlist” nie jest kanałem. Zamiast tego wklej linki do poszczególnych playlist. Uchwyt, który nigdy nie prowadzi do identyfikatora UC, nie zwraca żadnych filmów. Otwórz kanał w zwykłej przeglądarce i skopiuj kanoniczny adres URL kanału z paska adresu.</p>"
+    },
+    {
+      "heading": "Jak wyodrębnić miniatury kanałów na 11tik",
+      "html": "<ol>\n    <li>Otwarte<a href=\"https://www.11tik.com/\">11tik</a>i kliknij opcję Hurtowo.</li>\n    <li>Wklej jeden adres URL kanału publicznego. Możesz dodać więcej linków do oglądania w poniższych wierszach.</li>\n    <li>Rozpocznij ekstrakcję. Poczekaj, aż narzędzie zastąpi linię kanału najnowszymi, publicznie oglądanymi adresami URL, a następnie pobierze zdjęcia.</li>\n    <li>Pobierz najlepsze zdjęcie, pobierz plik zip o najwyższej jakości lub wyeksportuj plik CSV (id, tytuł, adres URL udostępniania, adres URL obrazu) w celu utworzenia dziennika badań.</li>\n  </ol>\n  <p>Udostępnij linki po pomyślnym wyciągnięciu<code>/thumb/VIDEO_ID</code>Kiedy bramka jakości ma tytuł, tagi i aktywną miniaturkę. Te strony są przeznaczone dla unikalnych użytkowników, a nie dla drugiej strony głównej.</p>"
+    },
+    {
+      "heading": "Czego 11tik nie zrobi",
+      "html": "<ul>\n    <li>Pobierz filmy lub pliki audio. Tylko zdjęcia.</li>\n    <li>Wyświetl listę niepublicznych lub prywatnych przesłanych plików.</li>\n    <li>Gwarantujemy maksymalną rozdzielczość (maxresdefault) dla każdego najnowszego filmu. Starsze lub mniejsze źródła zatrzymują się na rozdzielczości HQ lub SD.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Udziel praw do ponownego wykorzystania grafiki. Badanie siatki publicznych opakowań jest zamierzonym zastosowaniem badawczym. Ponowne przesłanie zdjęcia konkurencji jako własnej miniatury stanowi problem z prawami autorskimi i narusza zasady.<a href=\"https://www.11tik.com/copyright\">Prawa autorskie i użytkowanie</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Jak to pomaga w badaniach bez stron wejściowych",
+      "html": "<p>Ekstrakt z kanału to jedno zadanie: najnowsze publiczne zdjęcia w jednym miejscu. Nie jest to strona generowana dla każdej marki konkurencji. Pozostajesz w narzędziu, przechowujesz plik ZIP lub CSV i piszesz własne notatki. Jeśli publikujesz komentarz, podaj źródła kanałów i linki do ich stron odtwarzania. Zasady przesyłania miniatur na YouTube<em>twój</em>kanał jest w<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">niestandardowe miniatury wideo</a>.</p>"
+    },
+    {
+      "heading": "Rozwiązywanie problemów",
+      "html": "<p>Pusta lista: kanał nie zwrócił identyfikatorów publicznych (kanał zakończony lub uchwyt, którego resolver nie mógł zmapować). Spróbuj użyć adresu URL kanału UC z wersji YouTube na komputer.</p>\n  <p>Brakuje niektórych kart: te przesłane pliki nie mają jeszcze statusu publicznego lub brama odrzuciła niekompletny wyciąg. Uruchom ponownie pojedynczy adres URL. Prywatność wklejonych linków:<a href=\"https://www.11tik.com/p/privacy.html\">Prywatność</a>.</p>\n  <p>Narzędzie do ekstrakcji kontra narzędzie do projektowania: 11tik nie tworzy okładek.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Ekstraktor kontra producent</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Wyodrębnij klatki z kanału publicznego na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czy mogę pobrać miniatury z całego kanału YouTube?",
+      "answer": "Tak, dotyczy to ostatnio przesłanych materiałów publicznych. Wklej adres URL kanału w polu 11tik (zbiorczo). Filmy prywatne i dostępne tylko dla członków nie są wyświetlane.",
+      "answerHtml": "Tak, dotyczy to ostatnio przesłanych materiałów publicznych. Wklej adres URL kanału w polu 11tik (zbiorczo). Filmy prywatne i dostępne tylko dla członków nie są wyświetlane."
+    },
+    {
+      "question": "Które adresy URL kanałów działają?",
+      "answer": "Publiczne adresy URL /channel/UC…, wiele adresów URL @handle i niektóre starsze ścieżki /user/. Listy odtwarzania nie są kanałami.",
+      "answerHtml": "Publiczne adresy URL /channel/UC…, wiele adresów URL @handle i niektóre starsze ścieżki /user/. Listy odtwarzania nie są kanałami."
+    },
+    {
+      "question": "Czy to umożliwia pobranie filmów?",
+      "answer": "Nie. 11tik wyświetla tylko publiczne zdjęcia, które są już hostowane w serwisie YouTube.",
+      "answerHtml": "Nie. 11tik wyświetla tylko publiczne zdjęcia, które są już hostowane w serwisie YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

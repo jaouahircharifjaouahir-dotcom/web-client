@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "hr",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Kako dobiti najkvalitetniju minijaturu na YouTubeu | 11tik",
+  "description": "Najviša kvaliteta znači da se najveći javni JPEG ili WebP YouTube zapravo vraća, a ne nagađani naziv 4K datoteke.",
+  "h1": "Kako dobiti najkvalitetniju minijaturu za YouTube",
+  "ogTitle": "Kako dobiti najkvalitetniju minijaturu za YouTube",
+  "ogDescription": "Najviša kvaliteta znači da se najveći javni JPEG ili WebP YouTube zapravo vraća, a ne nagađani naziv 4K datoteke.",
+  "imageAlt": "Najviša dostupna javna YouTube minijatura odabrana u 11tik",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Najviša dostupna javna YouTube minijatura odabrana u 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kako mogu dobiti YouTube minijaturu najviše kvalitete?",
+      "html": "<p>Zalijepite javni URL u<a href=\"https://www.11tik.com/\">11tik</a>i preuzmite prvu navedenu veličinu. Ekstraktor rangira preživjele javne datoteke; ne rasteže malu fotografiju u lažni HD.</p>"
+    },
+    {
+      "heading": "Koja je maksimalna javna rezolucija?",
+      "html": "<p>Kada YouTube objavi maxresdefault, obično je 1280 × 720. Ako ta datoteka nedostaje, najviša kvaliteta je sljedeća valjana veličina, kao što je sd ili hq.</p>"
+    },
+    {
+      "heading": "Je li WebP važan?",
+      "html": "<p>Neki videozapisi također imaju WebP varijante istih veličina naziva. 11tik ih može prikazati ako postoje. Odaberite datoteku koju je alat potvrdio, a ne nagađani URL.</p>"
+    },
+    {
+      "heading": "Zašto \"HD\" ponekad izgleda mekano?",
+      "html": "<p>Javna slika i dalje može biti 1280×720 s kompresijom ili možda gledate hqdefault. Provjerite izvješća o veličini piksela 11tik prije nego što pretpostavite da preuzimanje nije uspjelo.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Vodič za veličine</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kako mogu dobiti YouTube minijaturu najviše kvalitete?",
+      "answer": "Zalijepite javni URL u 11tik i preuzmite prvu navedenu veličinu. To je najveća javna datoteka koju je YouTube pohranio.",
+      "answerHtml": "Zalijepite javni URL u 11tik i preuzmite prvu navedenu veličinu. To je najveća javna datoteka koju je YouTube pohranio."
+    },
+    {
+      "question": "Je li datoteka najviše kvalitete 4K?",
+      "answer": "Obično ne. Javna maksimalna rezolucija je obično 1280&#215;720. 11tik ne povećava skalu niti izmišlja veći master.",
+      "answerHtml": "Obično ne. Javna maksimalna rezolucija je obično 1280×720. 11tik ne povećava skalu niti izmišlja veći master."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

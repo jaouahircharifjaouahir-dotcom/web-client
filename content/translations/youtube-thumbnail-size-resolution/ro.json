@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "ro",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Dimensiunea și rezoluția miniaturilor YouTube: Ghid complet | 11tik",
+  "description": "Compară dimensiunile miniaturilor YouTube de la 120×90 la 1280×720. Maxres și hq720 sunt opționale - folosește cel mai mare fișier public care se încarcă.",
+  "h1": "Dimensiunea și rezoluția miniaturilor YouTube: Ghid complet",
+  "ogTitle": "Dimensiunea și rezoluția miniaturilor YouTube: Ghid complet",
+  "ogDescription": "Compară dimensiunile miniaturilor YouTube de la 120×90 la 1280×720. Maxres și hq720 sunt opționale - folosește cel mai mare fișier public care se încarcă.",
+  "imageAlt": "Diagramă comparativă a dimensiunilor miniaturilor publice de pe YouTube, de la maxresdefault 1280 x 720 până la implicit 120 x 90",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Diagramă comparativă a dimensiunilor miniaturilor publice de pe YouTube, de la maxresdefault 1280 x 720 până la implicit 120 x 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Comparație alăturată care prezintă un videoclip cu maxresdefault disponibil față de un videoclip în care există doar un fișier hqdefault mai mic",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Răspuns rapid",
+      "html": "<p>Pentru o încărcare personalizată, ajutorul YouTube se concentrează în continuare pe...<strong>16:9</strong>imagine — de obicei<strong>1280×720</strong>Pentru fișierele pe care le puteți descărca dintr-un videoclip existent, derivatele CDN publice variază. Atunci când sunt prezente,<code>maxresdefault</code>/<code>hq720</code>sunt de obicei 1280×720. Multe videoclipuri se opresc la<code>sddefault</code>(640×480) sau<code>hqdefault</code>(480×360). Un nume de fișier mai mare nu inventează niciodată pixeli. Lipiți adresa URL a fișierului de urmărire în<a href=\"https://www.11tik.com/\">11tik</a>pentru a lista doar dimensiunile care returnează o imagine reală.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dimensiuni publice relative. Nu fiecare videoclip publică fiecare treaptă de pe această scară.</p>"
+    },
+    {
+      "heading": "Dimensiuni recomandate pentru creatori",
+      "html": "<p>Dacă creezi o miniatură personalizată în Studio, urmează instrucțiunile actuale ale Ajutorului YouTube: urmărește crearea unei<strong>16:9</strong>încă. Dimensiunea de lucru utilizată pe scară largă este<strong>1280×720</strong>pixeli. Aceasta se potrivește cu cadrul ecranului lat al playerului și are aceeași clasă de pixeli ca un fișier publicat<code>maxresdefault</code>când YouTube creează unul.</p>\n  <p>Referință oficială:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Încărcați miniaturi video personalizate</a>După ce Studio termină procesarea, confirmați fișierele publice active cu 11tik, în loc să presupuneți că fiecare fișier derivat a apărut instantaneu. Note dedicate Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniaturi YouTube Studio în 2026</a>.</p>"
+    },
+    {
+      "heading": "Dimensiunile CDN publice pe care le pot prelua efectiv spectatorii",
+      "html": "<p>Programele de descărcare și blogurile nu vă extrag fișierele master din Photoshop. Acestea extrag fișierele derivate publice de pe gazdele YouTube pentru ID-ul videoclipului. Extractorul 11tik verifică aceste nume de fișiere (JPEG și, atunci când există, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Variantă</th><th>Rezoluție tipică</th><th>Nivel</th><th>Disponibilitate</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Cel mai bun</td><td>Numai dacă YouTube a publicat rezoluții maxime WebP</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Cel mai bun</td><td>Destul de comun la încărcările mai noi / de înaltă calitate; adesea lipsește la cele mai vechi</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Clasa 1280×720</td><td>Cel mai bun</td><td>Prezentat în unele videoclipuri ca fișier alternativ de înaltă calitate</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Ridicat</td><td>Adesea disponibil când maxres este absent</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Standard</td><td>Foarte frecvent</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Previzualizare</td><td>Previzualizări / liste mici</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Previzualizare</td><td>Cel mai mic standard încă</td></tr>\n    </tbody>\n  </table>\n  <p>Aceste lățimi și înălțimi așteptate corespund presetărilor de calitate ale 11tik. Răspunsurile reale pot diferi în continuare dacă YouTube difuzează un provizoriu sau omite complet un fișier - validați întotdeauna.</p>"
+    },
+    {
+      "heading": "De ce este important formatul 16:9 chiar și atunci când fișierele diferă",
+      "html": "<p>Playerul de vizionare este pe ecran lat. Grafica personalizată, concepută la formatul 16:9, rămâne lizibilă în căutări, pe rafturile sugerate și în fișierele încorporate. Unele fișiere publice (în special<code>hqdefault</code>/<code>sddefault</code>) nu sunt format strict 16:9; sunt dimensiuni CDN mai vechi. Preferați o imagine publică reală de 1280×720 atunci când aveți nevoie de un element curat 16:9 pentru Open Graph sau un antet de blog.</p>\n  <p>Fișierele scurte sunt redate vertical, dar conținutul public stocat este adesea afișat în continuare pe orizontală. Acesta este un comportament al gazdei, nu o descărcare eșuată. Detalii:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Descărcare miniatură scurtături</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs „HD”",
+      "html": "<p><code>maxresdefault</code>este numele familiar al fișierului HD de pe<code>i.ytimg.com</code>Când fișierul există, acesta are de obicei rezoluția de 1280×720, nu 4K.<code>hq720</code>este un alt nume de nivel înalt pe care unele videoclipuri îl expun la aceeași clasă de rezoluție. Niciun nume nu garantează fișierul. Instrumentele care imprimă o adresă URL maxres fără verificare produc imagini defecte.</p>\n  <p>Note mai detaliate despre numele fișierelor:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ce este maxresdefault.jpg</a>şi<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatură publică de cea mai înaltă calitate</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Același model de solicitare, rezultate diferite: un nume de fișier mai mare nu inventează pixeli atunci când fișierul lipsește.</p>"
+    },
+    {
+      "heading": "De ce un videoclip are mai multe dimensiuni decât altul",
+      "html": "<ul>\n    <li>Este posibil ca încărcările mai vechi să nu fi primit niciodată o versiune derivată maxres.</li>\n    <li>Grafica sursă avea o dimensiune mai mică de 1280×720.</li>\n    <li>Miniaturile personalizate sunt încă procesate în Studio.</li>\n    <li>Videoclipurile private, exclusiv pentru membri sau restricționate în funcție de vârstă nu pot afișa imagini statice publice.</li>\n    <li>Variantele WebP apar numai atunci când YouTube le-a publicat pentru ID-ul respectiv.</li>\n  </ul>\n  <p>Disponibilitatea este per videoclip. Nu considerați niciodată URL-ul maxres funcțional al unui concurent ca dovadă că al dvs. există.</p>"
+    },
+    {
+      "heading": "Cum alege 11tik dimensiunea „cea mai bună”",
+      "html": "<p>11tik examinează candidații publici într-o ordine fixă ​​a calității (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). Păstrează fișierele care se validează ca imagini și clasează primul cel mai mare supraviețuitor. Nu face upscaling. Dacă maxres lipsește, prima cartelă poate fi hq720 sau sd - acesta este maximul corect pentru ID-ul respectiv.</p>\n  <p>Pentru a copia adresa de dimensiunea aleasă, utilizați<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>Pentru a salva fișierul, utilizați<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">descărcați ghidul</a>.</p>"
+    },
+    {
+      "heading": "Ce dimensiune ar trebui să folosești?",
+      "html": "<table>\n    <thead>\n      <tr><th>Caz de utilizare</th><th>Prefera</th><th>De ce</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Imagine prezentată pe blog / Open Graph</td><td>Cea mai mare validată ~1280×720</td><td>Potrivește culturi sociale comune; găzduiește-ți propria copie</td></tr>\n      <tr><td>Cercetare machetă/miniaturi design</td><td>Cea mai bună imagine statică disponibilă publicului</td><td>Ambalaj real, nu o captură de ecran a jucătorului</td></tr>\n      <tr><td>Previzualizare rapidă a chatului</td><td>sediu central sau sediu central</td><td>Fișierele mai mici se încarcă mai repede</td></tr>\n      <tr><td>Încărcare personalizată în Studio</td><td>Originalul tău 16:9 1280×720 (sau mai mare)</td><td>Tu creezi artă; derivatele CDN vin mai târziu</td></tr>\n    </tbody>\n  </table>\n  <p>Nu extinde hqdefault la 1280×720 și nu-i spune maxres. Pentru sfaturi de găzduire CMS:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Imagine prezentată / flux de lucru Open Graph</a>Capturile de ecran ale playerului sunt un avantaj diferit (și mai rău):<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captură de ecran vs. miniatură reală</a>.</p>"
+    },
+    {
+      "heading": "Pasul următor",
+      "html": "<p>Urmăriți o înregistrare video în direct pe<a href=\"https://www.11tik.com/\">Extractor 11tik</a>, atunci fie<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">copiați adresa URL a imaginii</a>sau<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">descărcați cea mai bună imagine disponibilă</a>.</p>\n\n  <p class=\"yte-bio\">Scris de 11tik. Doar dimensiuni CDN publice; fără upscaling și fără descărcare video.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Este maxresdefault întotdeauna disponibil?",
+      "answer": "Nu. Multe videoclipuri publice nu publică niciodată acel fișier. O eroare 404 la rezoluție maximă este normală.",
+      "answerHtml": "<p>Nu. Multe videoclipuri publice nu publică niciodată acel fișier. O eroare 404 la rezoluție maximă este normală.</p>"
+    },
+    {
+      "question": "Este hq720 mai bun decât alte variante de miniaturi?",
+      "answer": "Când există, hq720 se află în același nivel superior ca maxres (aproximativ 1280×720). Nu este automat „mai bun” decât un fișier maxres validat și nu este garantat.",
+      "answerHtml": "<p>Când există, hq720 se află în același nivel superior ca maxres (aproximativ 1280×720). Nu este automat „mai bun” decât un fișier maxres validat și nu este garantat.</p>"
+    },
+    {
+      "question": "Ce dimensiune este cea mai potrivită pentru un site web?",
+      "answer": "Folosește cea mai mare imagine publică validată, cu rezoluția ~16:9 (adesea 1280×720), apoi găzduiește o copie pe site-ul tău pentru etichete Open Graph și imagini recomandate stabile.",
+      "answerHtml": "<p>Folosește cea mai mare imagine publică validată, cu rezoluția ~16:9 (adesea 1280×720), apoi găzduiește o copie pe site-ul tău pentru etichete Open Graph și imagini recomandate stabile.</p>"
+    },
+    {
+      "question": "De ce nu se încarcă uneori o miniatură de înaltă rezoluție?",
+      "answer": "Numele fișierului a fost ghicit. YouTube nu a publicat acea versiune derivată pentru ID-ul videoclipului. Încărcați în schimb o dimensiune existentă mai mică.",
+      "answerHtml": "<p>Numele fișierului a fost ghicit. YouTube nu a publicat acea versiune derivată pentru ID-ul videoclipului. Încărcați în schimb o dimensiune existentă mai mică.</p>"
+    },
+    {
+      "question": "„Miniatură HD” înseamnă 4K?",
+      "answer": "Nu. Rezoluția maximă publică este de obicei 1280×720. 11tik nu va inventa o imagine statică 4K.",
+      "answerHtml": "<p>Nu. Rezoluția maximă publică este de obicei 1280×720. 11tik nu va inventa o imagine statică 4K.</p>"
+    },
+    {
+      "question": "Miniaturile WebP sunt de calitate mai mare decât JPEG?",
+      "answer": "WebP este un alt container pentru același nivel de dimensiune atunci când este publicat. Se preferă ca fișierul 11tik să fie validat; nu presupuneți că WebP există întotdeauna.",
+      "answerHtml": "<p>WebP este un alt container pentru același nivel de dimensiune atunci când este publicat. Se preferă ca fișierul 11tik să fie validat; nu presupuneți că WebP există întotdeauna.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik. Doar dimensiuni CDN publice; fără upscaling și fără descărcare video.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+}

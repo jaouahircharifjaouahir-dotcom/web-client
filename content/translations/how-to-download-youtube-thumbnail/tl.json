@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "tl",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Paano Mag-download ng Thumbnail sa YouTube sa HD | 11tik",
+  "description": "Mag-save ng pampublikong thumbnail sa YouTube: i-paste ang relo, Shorts, youtu.be, o i-embed ang mga URL sa 11tik at i-download ang pinakamalaking file na umiiral.",
+  "h1": "Paano Mag-download ng YouTube Thumbnail sa HD",
+  "ogTitle": "Paano Mag-download ng YouTube Thumbnail sa HD",
+  "ogDescription": "Mag-save ng pampublikong thumbnail sa YouTube: i-paste ang relo, Shorts, youtu.be, o i-embed ang mga URL sa 11tik at i-download ang pinakamalaking file na umiiral.",
+  "imageAlt": "Apat na hakbang na daloy ng trabaho mula sa pagkopya ng URL sa YouTube hanggang sa pag-download ng napatunayang pampublikong thumbnail",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Apat na hakbang na daloy ng trabaho mula sa pagkopya ng URL sa YouTube hanggang sa pag-download ng napatunayang pampublikong thumbnail",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Nilaktawan ang diagram ng pag-troubleshoot na nagpapakita ng nawawalang maxresdefault file para ma-download ang susunod na totoong laki ng thumbnail",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mabilis na sagot",
+      "html": "<p>Kopyahin ang isang pampublikong link sa YouTube, i-paste ito sa<a href=\"https://www.11tik.com/\">11tik</a>, maghintay para sa mga napatunayang preview, pagkatapos ay i-download ang unang nakalistang file. Ang file na iyon ang pinakamataas na pampublikong JPEG o WebP na hino-host na ng YouTube para sa video ID—kadalasang 1280×720 kapag umiiral ang maxres o hq720. Nakakatipid ito ng<strong>thumbnail still</strong>, hindi ang video o audio.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktikal na landas: pampublikong URL → kunin → i-preview ang mga totoong laki → i-download o kopyahin ang URL ng larawan.</p>"
+    },
+    {
+      "heading": "Pinakamabilis na paraan gamit ang 11tik",
+      "html": "<ol>\n    <li>Kopyahin ang pampublikong panonood, Shorts, live, embed, o youtu.be URL (o isang simpleng 11-character na video ID).</li>\n    <li>Bukas<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>sa iyong browser.</li>\n    <li>I-paste ang URL. Magsisimula ang pagkuha kapag balido na ang ID.</li>\n    <li>I-download ang unang resulta (pinakamahusay na makukuha), o pumili ng ibang natitirang laki.</li>\n  </ol>\n  <p>Opsyonal: gamitin<strong>Kopyahin ang URL ng larawan</strong>kung kailangan mo ang address para sa isang CMS sa halip na isang file. Ang daloy na iyon ay sakop ng<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Mga sinusuportahang format ng URL ng YouTube",
+      "html": "<p>Binabasa ng 11tik ang video ID mula sa parehong mga pattern na tinatanggap ng website parser nito:</p>\n  <table>\n    <thead>\n      <tr><th>Pormat</th><th>Halimbawang padron</th><th>Mga Tala</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Panoorin</td><td><code>youtube.com/watch?v=ID</code></td><td>Hindi pinansin ang mga karagdagang parameter ng query</td></tr>\n      <tr><td>Maikling link</td><td><code>youtu.be/ID</code></td><td>Madalas itong ginagamit ng mga mobile share</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/ID</code></td><td>Pareho pa ring publiko ang nagho-host</td></tr>\n      <tr><td>I-embed</td><td><code>youtube.com/embed/ID</code></td><td>Mula sa iframe src</td></tr>\n      <tr><td>Mabuhay</td><td><code>youtube.com/live/ID</code></td><td>Kapag may hawak na pampublikong ID</td></tr>\n      <tr><td>nocookie embed</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Itinuring na parang naka-embed</td></tr>\n      <tr><td>Walang ID</td><td><code>dQw4w9WgXcQ</code></td><td>11 karakter lamang</td></tr>\n    </tbody>\n  </table>\n  <p>Ang mga URL ng channel o playlist na walang video ID ay hindi magbubunga ng kahit isang thumbnail. Para sa maraming link nang sabay-sabay, gamitin ang Bulk (hanggang 25) — tingnan<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">pag-download nang maramihan</a>Pagpapalawak ng kanal:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">kunin mula sa URL ng isang channel</a>.</p>"
+    },
+    {
+      "heading": "Direktang paraan ng URL (walang UI ng tagakuha)",
+      "html": "<p>Kung alam mo na ang ID, maaari ka pa ring direktang magbukas ng kandidato:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Kapag naglo-load ito, gamitin ang utos na save-image ng browser. Kapag nabigo ito, bumaba sa<code>hq720.jpg</code>,<code>sddefault.jpg</code>, o<code>hqdefault.jpg</code>Mas mabagal at madaling magkamali ang manu-manong landas na ito kumpara sa napatunayang listahan ni 11tik, ngunit gumagana ito offline mula sa anumang browser kapag mayroon ka nang maayos na address.</p>"
+    },
+    {
+      "heading": "Pagpili ng kalidad kapag nagda-download ka",
+      "html": "<p>I-download ang unang nakalistang laki maliban na lang kung may dahilan ka para magpanatili ng mas maliit na preview. Ang ibig sabihin ng \"HD\" dito ay ang pinakamalaking pampublikong imahe na umiiral pa rin—karaniwang 1280×720—hindi isang 4K master. Ang mga inaasahan sa pixel at ang gawi sa nawawalang laki ay ipinaliwanag sa<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">gabay sa laki at resolusyon</a>.</p>\n  <p>Kung ang mahalaga lang sa iyo ay ang pinakamataas na pampublikong file, tingnan din ang<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">pinakamataas na kalidad na thumbnail</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kapag walang magagamit na nahulaang laki, laktawan ito at itago ang susunod na totoong pampublikong file.</p>"
+    },
+    {
+      "heading": "Pag-troubleshoot ng mga download",
+      "html": "<table>\n    <thead>\n      <tr><th>Sintomas</th><th>Malamang na sanhi</th><th>Ano ang gagawin</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Walang preview pagkatapos i-paste</td><td>Hindi wastong URL, walang video ID, o pribado/pinaghihigpitang video</td><td>Mag-paste ng link para sa pampublikong panonood/Shorts/youtu.be</td></tr>\n      <tr><td>Nawawala si Maxres</td><td>Hindi kailanman nai-publish ng YouTube ang file na iyon</td><td>I-download na lang ang unang nakalistang laki</td></tr>\n      <tr><td>Larawan na kulay abo / placeholder mula sa URL na gawang-kamay</td><td>Nahulaang pangalan ng file</td><td>Gamitin ang napatunayang listahan ni 11tik</td></tr>\n      <tr><td>Nakakainis ang pag-save ng telepono</td><td>Magkakaiba ang UI ng pag-download ng browser</td><td>Tingnan<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">Gabay sa pag-save ng iPhone / Android</a></td></tr>\n      <tr><td>Mukhang UI capture</td><td>I-screenshot mo ang player</td><td>I-save pa rin ang CDN, hindi ang screen —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot laban sa totoong</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Ang iyong dina-download (at hindi dina-download)",
+      "html": "<p>Nagse-save ka ng pampublikong hino-host na ng YouTube. Hindi mo maa-unlock ang mga pribadong video, mga file na para lang sa mga miyembro, o ang MP4/WebM stream. Ang 11tik ay isang extractor, hindi isang maker at hindi isang video downloader — paghahambing:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">tagabunot vs tagagawa</a>.</p>\n  <p>Ang karapatang-ari ay nananatili sa nag-upload. Ang pag-save para sa pananaliksik o personal na sanggunian ang karaniwang gamit; ang muling pag-publish bilang sarili mong custom na thumbnail nang walang mga karapatan ay hindi. Tulong sa YouTube:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">mga pasadyang thumbnail ng video</a>Mga patakaran sa site:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+    },
+    {
+      "heading": "Paghahambing ng pamamaraan",
+      "html": "<table>\n    <thead>\n      <tr><th>Paraan</th><th>Bilis</th><th>Pinakamahusay para sa</th><th>Kailangan 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik i-download</td><td>Mabilis</td><td>Na-validate pa rin ang pinakamahusay</td><td>Oo</td></tr>\n      <tr><td>11tik kopyahin ang URL</td><td>Mabilis</td><td>CMS / mga pag-embed</td><td>Oo</td></tr>\n      <tr><td>URL na gawa ng kamay i.ytimg.com</td><td>Katamtaman</td><td>Mabilisang mga pagsubok kapag alam mo ang ID</td><td>Hindi</td></tr>\n      <tr><td>Screenshot ng manlalaro</td><td>Mabilis ngunit mababang kalidad</td><td>Iwasan para sa mga blog / OG</td><td>Hindi</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Susunod na hakbang",
+      "html": "<p>Buksan ang<a href=\"https://www.11tik.com/\">Pang-extract ng Thumbnail ng YouTube</a>, i-paste ang pampublikong link, at i-save ang unang napatunayang still. Kailangan lang ba ang link? Basahin ang<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Gabay sa URL</a>. Pumipili sa pagitan ng mga sukat? Gamitin ang<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">gabay sa resolusyon</a>.</p>\n\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser extractor. Mga pampublikong still lamang.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Maaari ba akong mag-download ng thumbnail mula sa isang Short?",
+      "answer": "Oo, kapag pampubliko ang Short at may mga still para sa ID na iyon. I-paste ang URL ng /shorts/ sa 11tik. Maaaring naka-landscape ang still kahit na patayo ang playback.",
+      "answerHtml": "<p>Oo, kapag pampubliko ang Short at umiiral ang mga still para sa ID na iyon. I-paste ang<code>/shorts/</code>URL papunta sa 11tik. Maaaring naka-landscape ang still kahit patayo ang playback.</p>"
+    },
+    {
+      "question": "Paano kung hindi mag-load ang pinakamagandang thumbnail?",
+      "answer": "I-download ang susunod na nakalistang laki. Karaniwan ang pagkawala ng maxres at hindi ito dahil sa pagkasira ng tool.",
+      "answerHtml": "<p>I-download ang susunod na nakalistang laki. Karaniwan ang pagkawala ng maxres at hindi ito dahil sa pagkasira ng tool.</p>"
+    },
+    {
+      "question": "Maaari ko bang i-download ang orihinal na pampublikong thumbnail na larawan?",
+      "answer": "Oo—iyan ang nangungunang na-validate na file. Ang ibig sabihin ng \"Orihinal\" ay ang pampublikong CDN pa rin, hindi isang frame na kinuha mula sa video stream. Tingnan ang orihinal na pampublikong thumbnail.",
+      "answerHtml": "<p>Oo—iyan ang nangungunang na-validate na file. Ang ibig sabihin ng \"Orihinal\" ay ang pampublikong CDN pa rin, hindi isang frame na kinuha mula sa video stream. Tingnan<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">orihinal na pampublikong thumbnail</a>.</p>"
+    },
+    {
+      "question": "Maaari ko bang kopyahin ang URL ng larawan sa halip na i-download ito?",
+      "answer": "Oo. Gamitin ang Kopyahin ang URL ng larawan sa 11tik, o kopyahin ang isang na-verify na address mula sa browser pagkatapos mag-load ang larawan.",
+      "answerHtml": "<p>Oo. Gamitin ang Kopyahin ang URL ng larawan sa 11tik, o kopyahin ang isang na-verify na address mula sa browser pagkatapos mag-load ang larawan.</p>"
+    },
+    {
+      "question": "Nagda-download ba ito ng YouTube video file?",
+      "answer": "Hindi. Pampublikong thumbnail lang pa rin.",
+      "answerHtml": "<p>Hindi. Pampublikong thumbnail lang pa rin.</p>"
+    },
+    {
+      "question": "Mag-aalok ba ang bawat video ng 1280×720 na file?",
+      "answer": "Hindi. Panatilihin ang anumang pinakamalaking pampublikong file na nag-validate para sa ID na iyon.",
+      "answerHtml": "<p>Hindi. Panatilihin ang anumang pinakamalaking pampublikong file na nag-validate para sa ID na iyon.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser extractor. Mga pampublikong still lamang.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+}

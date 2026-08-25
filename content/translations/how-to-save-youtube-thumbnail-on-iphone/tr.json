@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "tr",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "iPhone ve Android'de YouTube küçük resmini nasıl kaydedebilirsiniz (2026) | 11tik",
+  "description": "Herkese açık YouTube videosunu, ekran görüntüsü almadan ve uygulama mağazasından indirme yapmadan iPhone veya Android cihazınıza kaydedin. Herkese açık videonun veya Shorts URL'sinin bir kopyasını Safari veya Chrome'da 11tik alanına yapıştırın, ardından YouTube'un zaten barındırdığı en büyük resim dosyasını indirin.",
+  "h1": "iPhone ve Android'de YouTube küçük resmini nasıl kaydedebilirsiniz (2026)",
+  "ogTitle": "iPhone ve Android'de YouTube küçük resmini nasıl kaydedebilirsiniz (2026)",
+  "ogDescription": "Herkese açık YouTube videosunu, ekran görüntüsü almadan ve uygulama mağazasından indirme yapmadan iPhone veya Android cihazınıza kaydedin. Herkese açık videonun veya Shorts URL'sinin bir kopyasını Safari veya Chrome'da 11tik alanına yapıştırın, ardından YouTube'un zaten barındırdığı en büyük resim dosyasını indirin.",
+  "imageAlt": "11tik ile iPhone ve Android'de YouTube küçük resmini kaydedin — henüz herkese açık, uygulama yok.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "11tik ile iPhone ve Android'de YouTube küçük resmini kaydedin — henüz herkese açık, uygulama yok.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "YouTube videosunun küçük resmini telefonuma kaydedebilir miyim?",
+      "html": "<p>Evet, eğer video herkese açıksa ve YouTube bir ekran görüntüsü yayınladıysa. Masaüstü bilgisayara veya APK ya da TestFlight uygulamasına ihtiyacınız yok. Açın.<a href=\"https://www.11tik.com/\">11tik</a>Telefonunuzda zaten kullandığınız tarayıcıya bağlantıyı yapıştırın, \"Küçük Resim Al\" seçeneğine dokunun ve ardından listelenen ilk dosyayı kaydedin. Bu dosya, gerçekten bir resim döndüren en yüksek dereceli JPEG veya WebP dosyasıdır.</p>\n  <p>Oynatıcının uzun basma ekran görüntüsü aynı şey değil. Ekran görüntüsünde krom, güvenli alan çubukları ve ekstra sıkıştırma bulunuyor. Halk hala i.ytimg.com'de yaşıyor. Bakınız.<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ekran görüntüsü ile gerçek küçük resim karşılaştırması</a>Eğer bu ayrımı bir blog veya Open Graph etiketi için kullanmanız gerekiyorsa.</p>"
+    },
+    {
+      "heading": "Başlamadan önce ihtiyacınız olanlar",
+      "html": "<ul>\n    <li>Herkese açık bir YouTube izleme, Shorts, canlı yayın veya youtu.be URL'si. Ek sorgu parametreleri, örneğin:<code>pp=</code>veya oynatma listesi kimliği önemli değil; 11tik 11 karakterlik video kimliğini okur.</li>\n    <li>iPhone veya iPad'de Safari, Android'de ise Chrome, Firefox veya Samsung Internet.</li>\n    <li>Tarayıcı sorarsa fotoğrafları kaydetme izni. 11tik, görüntüyü hiçbir zaman orijinal medya olarak bir 11tik sunucusuna yüklemez.</li>\n  </ul>\n  <p>Herkese açık bir görseli yayınlanmayan özel, üyelere özel veya yaş sınırlamalı videolar indirme seçeneği göstermeyecektir. Bu, telefon sınırlaması değil, platform kuralıdır. Studio'da işlenmekte olan özel küçük resimler de kısa bir süre için görünmeyebilir; aynı URL ile daha sonra doğrulayın. İlgili:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026'da YouTube Studio küçük resimleri</a>.</p>"
+    },
+    {
+      "heading": "iPhone'da YouTube küçük resmini nasıl kaydedebilirim?",
+      "html": "<ol>\n    <li>YouTube uygulamasında veya Safari'de video veya Shorts bağlantısını kopyalayın (Paylaş → Bağlantıyı kopyala).</li>\n    <li>Açık<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>Safari'de. Hiçbir şey yüklemenize gerek yok.</li>\n    <li>URL'yi yapıştırın ve \"Küçük Resim Al\" seçeneğine dokunun. Gerçek önizleme görünene kadar bekleyin. Boş gri kutular, boyutun hiç yayınlanmadığı anlamına gelir.</li>\n    <li>İlk indirme kontrolüne dokunun. Safari size Aç veya İndir seçeneklerini sunacaktır. İndir'i seçin, ardından resmi Dosyalar'da saklayın veya paylaşım menüsünden Fotoğraflar'a kaydedin.</li>\n    <li>Yalnızca bir CMS için adrese ihtiyacınız varsa, indirmek yerine \"Resim URL'sini kopyala\" seçeneğini kullanın. Bu, bir HTTPS i.ytimg.com veya vi_webp bağlantısını kopyalar. Kılavuz:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube küçük resim URL'si</a>.</li>\n  </ol>\n  <p>Eğer iOS farklı kaynaklardan indirmeyi engelliyorsa, resim URL'sini yeni bir sekmede açın, ardından resme dokunup basılı tutun → Fotoğraflara Ekle. Hala YouTube'un herkese açık dosyasını kaydediyorsunuz, 11tik sayfasının ekran görüntüsünü değil.</p>"
+    },
+    {
+      "heading": "Android'de YouTube küçük resmini nasıl kaydedebilirim?",
+      "html": "<ol>\n    <li>YouTube uygulamasından herkese açık video veya kısa video URL'sini kopyalayın.</li>\n    <li>11tik'yi Chrome'da (veya varsayılan tarayıcınızda) açın.</li>\n    <li>Yapıştırın, çıkarın ve ardından ilk indirdiğiniz dosyaya dokunun. Chrome genellikle dosyayı İndirilenler klasörüne yazar.</li>\n    <li>İndirilenler bildirimini açın ve fotoğrafı Fotoğraflar'a eklemek istiyorsanız Galeri'ye taşıyın.</li>\n  </ol>\n  <p>Android, JPEG dosyasını hangi uygulamanın açması gerektiğini sorabilir. Galeri veya Dosyalar'ı seçin. MP4 vaat eden bir \"video indirici\" seçmeyin; 11tik video veya ses sağlamaz.</p>"
+    },
+    {
+      "heading": "Telefonumda hangi boyutta kağıt kullanmalıyım?",
+      "html": "<p>Listelenen ilk boyutu koruyun. 11tik zaten mevcut olan dosyaları sıraladı. YouTube maxresdefault'u yayınladığında genellikle 1280×720'dir. Bu dosya adı 404 hatası verirse, gerçek maksimum bir sonraki gerçek dosyadır (genellikle hq720, sddefault veya hqdefault). Eksik bir maxres dosyası normaldir. Ayrıntılar:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpg nedir</a>Ve<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">2026'daki küçük resim boyutları</a>.</p>\n  <p>Kısa videolar genellikle dikey olarak oynatılırken, kaydedilen fotoğraf yatay formatta olur. Dosya yine de resmi halka açık küçük resimdir. Bakınız.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kısa filmlerin küçük resimleri</a>.</p>"
+    },
+    {
+      "heading": "Telefonuma küçük resim kaydetmek yasal mı?",
+      "html": "<p>Herkese açık olarak barındırılan bir görüntüyü kişisel referans, araştırma veya eğitim amacıyla kaydetmek tipik kullanım şeklidir. Görüntü, yükleyicinin telif hakkıyla korunan eseri olarak kalır. Kendi özel küçük resminiz olarak yeniden yüklemeyin, ürünlere basmayın veya 11tik'yi bir lisans olarak kullanmayın. YouTube'un özel küçük resimlerle ilgili kendi yardım sayfası burada:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Özel video küçük resimleri yükleyin</a>11tik'nin kuralları:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>Ve<a href=\"https://www.11tik.com/copyright\">Telif Hakkı ve Kullanım</a>.</p>"
+    },
+    {
+      "heading": "Telefonlardaki \"küçük resim uygulamaları\" neden başarısız oluyor?",
+      "html": "<p>Birçok mağaza listesi, tahmini bir fiyatın etrafına bir reklam sayfası ekler.<code>maxresdefault.jpg</code>URL. Eğer YouTube bu dosyayı hiç yayınlamadıysa, bozuk bir görüntü veya gri bir varsayılan değer görürsünüz. 11tik tarayıcınızdaki yanıtları kontrol eder ve görüntü olmayan boyutları gizler. Kayıt olmanın arkasında hiçbir şey \"açılmaz\". Gizlilik: yapıştırılan URL'ler tarayıcıda kalır; bkz.<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>.</p>"
+    },
+    {
+      "heading": "Telefonunuzdan birkaç bağlantı kaydedin.",
+      "html": "<p>Aynı ana sayfada Toplu İşlem özelliğini kullanın, her satırda bir genel URL olacak şekilde, en fazla 25 URL ekleyebilirsiniz. Kanal URL'si daha büyük ekranlarda son genel yüklemeleri gösterecek şekilde genişleyebilir; telefonda kanal genişlemesi sıkışık görünüyorsa, tek tek bağlantıları yapıştırın. Toplu İşlem kılavuzu:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">toplu indirme</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik üzerinde herkese açık bir küçük resim kaydet →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, tarayıcı içi çıkarıcının yayıncısıdır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "YouTube videosunun küçük resmini telefonuma kaydedebilir miyim?",
+      "answer": "Evet. 11tik'ü Safari veya Chrome'da açın, herkese açık bir YouTube URL'si yapıştırın, çıkarın ve listede ilk bulunan herkese açık fotoğrafı indirin. Herhangi bir uygulama mağazası indirme programına gerek yoktur.",
+      "answerHtml": "Evet. 11tik'yi Safari veya Chrome'da açın, herkese açık bir YouTube URL'si yapıştırın, çıkarın ve listedeki ilk herkese açık fotoğrafı indirin. Herhangi bir uygulama mağazası indirme programına gerek yoktur."
+    },
+    {
+      "question": "iPhone'da YouTube küçük resmini nasıl kaydedebilirim?",
+      "answer": "Bağlantıyı kopyalayın, Safari'de https://www.11tik.com/ dosyasını açın, yapıştırın, çıkarın, ardından indirin veya resim URL'sine uzun süre basılı tutarak Fotoğraflar'a ekleyin.",
+      "answerHtml": "Bağlantıyı kopyalayın, Safari'de https://www.11tik.com/ dosyasını açın, yapıştırın, çıkarın, ardından indirin veya resim URL'sine uzun süre basılı tutarak Fotoğraflar'a ekleyin."
+    },
+    {
+      "question": "Android'de YouTube küçük resmini nasıl kaydedebilirim?",
+      "answer": "Bağlantıyı kopyalayın, 11tik dosyasını Chrome'da açın, dosyayı çıkarın ve ilk indirdiğiniz dosyayı İndirilenler veya Galeri'ye kaydedin.",
+      "answerHtml": "Bağlantıyı kopyalayın, 11tik dosyasını Chrome'da açın, dosyayı çıkarın ve ilk indirdiğiniz dosyayı İndirilenler veya Galeri'ye kaydedin."
+    },
+    {
+      "question": "Telefonuma küçük resim kaydetmek yasal mı?",
+      "answer": "Herkese açık bir fotoğrafı kişisel referans veya araştırma amacıyla kaydetmek tipiktir. Bunu kendi kapak resminiz olarak yeniden yayınlamayın. Telif hakkı yükleyiciye aittir.",
+      "answerHtml": "Herkese açık bir fotoğrafı kişisel referans veya araştırma amacıyla kaydetmek tipiktir. Bunu kendi kapak resminiz olarak yeniden yayınlamayın. Telif hakkı yükleyiciye aittir."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, tarayıcı içi çıkarıcının yayıncısıdır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+}

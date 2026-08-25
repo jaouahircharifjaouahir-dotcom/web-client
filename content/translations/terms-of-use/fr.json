@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "fr",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "Conditions d'utilisation | 11tik",
+  "description": "L'extracteur de miniatures YouTube à https://www.11tik.com/ est fourni tel quel pour trouver et enregistrer des images miniatures YouTube disponibles publiquement.",
+  "h1": "Conditions d'utilisation",
+  "ogTitle": "Conditions d'utilisation",
+  "ogDescription": "L'extracteur de miniatures YouTube à https://www.11tik.com/ est fourni tel quel pour trouver et enregistrer des images miniatures YouTube disponibles publiquement.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Ce que fait l'outil",
+      "html": "<p>Il identifie les URL des vignettes publiques associées à un identifiant vidéo et vous permet de les prévisualiser, de les copier ou de les télécharger dans votre navigateur. Le mode groupé accepte une URL publique par ligne. L'URL d'une chaîne publique peut être développée pour afficher les vidéos récemment mises en ligne via le flux public de YouTube.</p>"
+    },
+    {
+      "heading": "Ce que l'outil ne fait pas",
+      "html": "<ul>\n    <li>Il ne télécharge pas les vidéos ni les fichiers audio de YouTube.</li>\n    <li>Il ne permet pas de contourner les contenus privés, réservés aux adultes ou non publics.</li>\n    <li>Cela ne vous confère aucun droit sur la miniature. Vous êtes responsable de l'utilisation que vous faites de l'image, notamment en ce qui concerne les droits d'auteur et les conditions d'utilisation de YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "Utilisation acceptable",
+      "html": "<p>N'utilisez pas 11tik pour extraire des données en masse, usurper l'identité d'une autre chaîne ou republier une miniature comme votre propre illustration sans l'autorisation du détenteur des droits. L'accès automatisé peut être limité.</p>"
+    },
+    {
+      "heading": "Pages de partage et API publique",
+      "html": "<p>Partagez des liens tels que<code>/?v=</code>L'API de vignettes décrit les images fixes publiques. Elles ne constituent pas une licence pour la réutilisation commerciale des illustrations. Le widget d'intégration doit conserver la mention «&nbsp;Propulsé par 11tik.com&nbsp;» s'il est affiché sur un autre site.</p>"
+    },
+    {
+      "heading": "Disponibilité",
+      "html": "<p>Le site peut être modifié, dysfonctionner ou devenir inaccessible. Aucun accord de niveau de service n'est fourni et aucune garantie n'est donnée quant à un accès ininterrompu, son adéquation à un usage particulier ou l'absence d'erreurs dans les résultats.</p>"
+    },
+    {
+      "heading": "Contact",
+      "html": "<p>Questions :<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>ou le<a href=\"https://www.11tik.com/p/contact.html\">formulaire de contact</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">Politique de confidentialité</a>·<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/\">Extracteur de miniatures YouTube</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

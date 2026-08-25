@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "it",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Come scaricare in blocco le miniature di YouTube (fino a 25 URL pubblici) | 11tik",
+  "description": "Estrai in blocco le miniature pubbliche di YouTube direttamente nel browser. Incolla un URL per riga, scarica la migliore immagine o comprimi il set di qualità più elevata in un file ZIP. Non è necessario un account e non sono disponibili file video.",
+  "h1": "Come scaricare in blocco le miniature di YouTube (fino a 25 URL pubblici)",
+  "ogTitle": "Come scaricare in blocco le miniature di YouTube (fino a 25 URL pubblici)",
+  "ogDescription": "Estrai in blocco le miniature pubbliche di YouTube direttamente nel browser. Incolla un URL per riga, scarica la migliore immagine o comprimi il set di qualità più elevata in un file ZIP. Non è necessario un account e non sono disponibili file video.",
+  "imageAlt": "11tik Estrattore di miniature in blocco con diversi URL di YouTube pronti per il download",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Estrattore di miniature in blocco con diversi URL di YouTube pronti per il download",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Come faccio a scaricare in blocco le miniature di YouTube?",
+      "html": "<p>Aprire<a href=\"https://www.11tik.com/\">11tik</a>Attiva l'opzione \"Elaborazione in blocco\", incolla un URL pubblico per riga, fai clic su \"Estrai tutto\", quindi scarica ogni immagine migliore o il file zip di qualità più elevata. Il limite è di 25 URL per operazione, in modo che il browser rimanga reattivo.</p>"
+    },
+    {
+      "heading": "Cosa va incluso nella lista?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be collegamenti brevi</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>I video privati, non in elenco senza miniature pubbliche o con restrizioni di età non restituiranno un'immagine fissa. Questo è previsto. Vedi anche<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">miniature dei cortometraggi</a>.</p>"
+    },
+    {
+      "heading": "Come eseguire un'estrazione di massa",
+      "html": "<ol>\n    <li>Nella pagina iniziale, fai clic su \"Gestione in blocco\".</li>\n    <li>Inserisci fino a 25 link pubblici, uno per riga.</li>\n    <li>Fai clic su Estrai tutto e attendi che venga visualizzata l'anteprima di ogni scheda.</li>\n    <li>Scarica le miniature video N per ogni immagine migliore, oppure scarica tutte le immagini in alta qualità in un file zip.</li>\n    <li>Opzionale: Esporta in formato CSV i registri delle ricerche (ID video, titolo, URL di condivisione, URL immagine).</li>\n  </ol>"
+    },
+    {
+      "heading": "Posso utilizzare questo strumento per ricerche di mercato sulla concorrenza?",
+      "html": "<p>Sì, per studiare il packaging pubblico. Non ripubblicare la miniatura di un altro creatore come se fosse un tuo caricamento. Il copyright rimane al titolare dei diritti. 11tik recupera solo i file che YouTube ospita già pubblicamente.</p>\n  <p><a href=\"https://www.11tik.com/\">Apri l'estratto di massa su 11tik →</a></p>\n  <p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Come faccio a scaricare in blocco le miniature di YouTube?",
+      "answer": "Utilizza la funzione Bulk su 11tik, incolla un URL pubblico per riga, estrai e scarica le immagini fisse o un file zip della massima qualità pubblica. Massimo 25 URL per esecuzione.",
+      "answerHtml": "Utilizza la funzione Bulk su 11tik, incolla un URL pubblico per riga, estrai e scarica le immagini fisse o un file zip della massima qualità pubblica. Massimo 25 URL per esecuzione."
+    },
+    {
+      "question": "Posso utilizzare questo strumento per ricerche di mercato sulla concorrenza?",
+      "answer": "Sì, per studiare il packaging pubblico. Non ripubblicare la miniatura di un altro creatore come se fosse tua. Il copyright rimane al titolare dei diritti.",
+      "answerHtml": "Sì, per studiare il packaging pubblico. Non ripubblicare la miniatura di un altro creatore come se fosse tua. Il copyright rimane al titolare dei diritti."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>.</p>"
+}

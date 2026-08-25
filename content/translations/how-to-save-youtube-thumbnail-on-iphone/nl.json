@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "nl",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Hoe sla je een YouTube-thumbnail op op iPhone en Android (2026) | 11tik",
+  "description": "Sla de openbare YouTube-afbeelding op je iPhone of Android op zonder screenshot en zonder een downloadprogramma uit de App Store. Plak een URL van een openbare video of Shorts in 11tik in Safari of Chrome en download vervolgens het grootste afbeeldingsbestand dat YouTube al host.",
+  "h1": "Hoe sla je een YouTube-thumbnail op op iPhone en Android (2026)?",
+  "ogTitle": "Hoe sla je een YouTube-thumbnail op op iPhone en Android (2026)?",
+  "ogDescription": "Sla de openbare YouTube-afbeelding op je iPhone of Android op zonder screenshot en zonder een downloadprogramma uit de App Store. Plak een URL van een openbare video of Shorts in 11tik in Safari of Chrome en download vervolgens het grootste afbeeldingsbestand dat YouTube al host.",
+  "imageAlt": "Bewaar een YouTube-thumbnail op iPhone en Android met 11tik — nog steeds openbaar, geen app",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Bewaar een YouTube-thumbnail op iPhone en Android met 11tik — nog steeds openbaar, geen app",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kan ik een YouTube-thumbnail op mijn telefoon opslaan?",
+      "html": "<p>Ja, als de video openbaar is en YouTube een stilstaand beeld heeft gepubliceerd. Je hebt geen desktopcomputer nodig en ook geen APK- of TestFlight-app. Openen<a href=\"https://www.11tik.com/\">11tik</a>Plak de link in de browser die je al gebruikt op je telefoon, tik op 'Miniatuurafbeelding ophalen' en sla het eerst weergegeven bestand op. Dat bestand is de grootste openbare JPEG- of WebP-afbeelding die daadwerkelijk een afbeelding heeft opgeleverd.</p>\n  <p>Een screenshot van de speler die je maakt door lang op het scherm te drukken, is niet hetzelfde. De screenshot bevat chroma, safe-area-balken en extra compressie. Het publiek blijft i.ytimg.com bestaan. Zie<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot versus echte miniatuur</a>Als je dat onderscheid nodig hebt voor een blog of Open Graph-tag.</p>"
+    },
+    {
+      "heading": "Wat je nodig hebt voordat je begint",
+      "html": "<ul>\n    <li>Een openbare YouTube-kijk-, Shorts-, live- of youtu.be-URL. Extra queryparameters zoals<code>pp=</code>Of het nu een afspeellijst-ID is of niet, 11tik leest de 11-tekens lange video-ID.</li>\n    <li>Safari op iPhone of iPad, of Chrome, Firefox of Samsung Internet op Android.</li>\n    <li>Toestemming om foto's op te slaan als de browser daarom vraagt. 11tik uploadt de afbeelding nooit als origineel mediabestand naar een 11tik-server.</li>\n  </ul>\n  <p>Privévideo's, video's die alleen toegankelijk zijn voor leden of video's met een leeftijdsbeperking die niet openbaar worden gepubliceerd, tonen geen downloadlink. Dit is een platformregel, geen beperking van de telefoon. Aangepaste miniaturen die nog in Studio worden verwerkt, kunnen ook tijdelijk ontbreken; controleer dit later met dezelfde URL. Gerelateerd:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-thumbnails in 2026</a>.</p>"
+    },
+    {
+      "heading": "Hoe sla je een YouTube-thumbnail op je iPhone op?",
+      "html": "<ol>\n    <li>Kopieer in de YouTube-app of Safari de link naar de video of Shorts (Delen → Link kopiëren).</li>\n    <li>Open<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>In Safari. Je hoeft niets te installeren.</li>\n    <li>Plak de URL en tik op 'Miniatuurafbeelding ophalen'. Wacht tot er een echte preview verschijnt. Lege grijze vakjes betekenen dat die afmeting nooit is gepubliceerd.</li>\n    <li>Tik op de eerste downloadknop. Safari biedt je de opties 'Openen' of 'Downloaden'. Kies 'Downloaden' en bewaar de afbeelding in 'Bestanden' of sla deze op in 'Foto's' via het deelmenu.</li>\n    <li>Als je alleen het adres voor een CMS nodig hebt, gebruik dan 'Afbeeldings-URL kopiëren' in plaats van 'Downloaden'. Hiermee wordt een HTTPS i.ytimg.com- of vi_webp-link gekopieerd. Handleiding:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube-miniatuur-URL</a>.</li>\n  </ol>\n  <p>Als iOS een download van een andere bron blokkeert, open dan de afbeeldings-URL in een nieuw tabblad, tik en houd de afbeelding ingedrukt → Toevoegen aan Foto's. Je slaat nog steeds het openbare bestand van YouTube op, geen schermafbeelding van de 11tik-pagina.</p>"
+    },
+    {
+      "heading": "Hoe sla je een YouTube-thumbnail op Android op?",
+      "html": "<ol>\n    <li>Kopieer de URL van de openbare video of de Shorts-link uit de YouTube-app.</li>\n    <li>Open 11tik in Chrome (of je standaardbrowser).</li>\n    <li>Plak het bestand, pak het uit en tik vervolgens op de eerste download. Chrome slaat het bestand meestal op in de map Downloads.</li>\n    <li>Open de downloadmelding en verplaats de afbeelding naar de galerij als je deze in je foto's wilt bewaren.</li>\n  </ol>\n  <p>Android kan vragen welke app een JPEG-bestand moet openen. Kies Galerij of Bestanden. Kies geen 'video-downloader' die een MP4-bestand belooft; 11tik levert geen video of audio.</p>"
+    },
+    {
+      "heading": "Welke maat moet ik op mijn telefoon hebben?",
+      "html": "<p>Houd de eerstgenoemde grootte aan. 11tik heeft reeds bestaande bestanden gerangschikt. Wanneer YouTube maxresdefault publiceert, is dit meestal 1280×720. Als die bestandsnaam een ​​404-fout geeft, is de werkelijke maximale resolutie het volgende daadwerkelijke bestand (vaak hq720, sddefault of hqdefault). Een ontbrekend maxres-bestand is normaal. Details:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">wat maxresdefault.jpg is</a>En<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">miniatuurformaten in 2026</a>.</p>\n  <p>Korte filmpjes worden vaak verticaal afgespeeld, terwijl het opgeslagen stilbeeld in liggend formaat is. Het bestand is nog steeds de officiële openbare miniatuur. Zie<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatuurafbeeldingen van korte filmpjes</a>.</p>"
+    },
+    {
+      "heading": "Is het legaal om een ​​miniatuurafbeelding op mijn telefoon op te slaan?",
+      "html": "<p>Het opslaan van een openbaar beschikbare afbeelding voor persoonlijk gebruik, onderzoek of educatie is het gebruikelijke gebruik. De afbeelding blijft het auteursrechtelijk beschermde werk van de uploader. Upload de afbeelding niet opnieuw als uw eigen aangepaste thumbnail, print deze niet op merchandise en beschouw 11tik niet als een licentie. De helpfunctie van YouTube zelf voor aangepaste thumbnails vindt u hier:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Upload aangepaste miniatuurafbeeldingen voor video's</a>De regels van 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>En<a href=\"https://www.11tik.com/copyright\">Auteursrecht en gebruiksvoorwaarden</a>.</p>"
+    },
+    {
+      "heading": "Waarom apps voor miniatuurafbeeldingen op telefoons falen",
+      "html": "<p>Veel winkeladvertenties wikkelen een advertentiepagina in rond een vermoedelijke<code>maxresdefault.jpg</code>URL. Als YouTube dat bestand nooit heeft gepubliceerd, krijg je een kapotte afbeelding of een grijs standaardscherm. 11tik controleert reacties in je browser en verbergt formaten die geen afbeeldingen zijn. Niets wordt \"ontgrendeld\" achter een aanmelding. Privacy: geplakte URL's blijven in de browser; zie<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>.</p>"
+    },
+    {
+      "heading": "Sla meerdere links op vanaf een telefoon",
+      "html": "<p>Gebruik de bulkfunctie op dezelfde homepage, één openbare URL per regel, tot maximaal 25. Een kanaal-URL kan op een groter scherm worden uitgebreid naar recente openbare uploads; plak op een telefoon de afzonderlijke links als de kanaal-URL te klein is. Handleiding voor bulkverzending:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batchdownload</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Sla een openbare miniatuurafbeelding op 11tik →</a></p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser extractor.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan ik een YouTube-thumbnail op mijn telefoon opslaan?",
+      "answer": "Ja. Open 11tik in Safari of Chrome, plak een openbare YouTube-URL, pak het bestand uit en download de eerstgenoemde openbare afbeelding. Je hebt geen app store-downloader nodig.",
+      "answerHtml": "Ja. Open 11tik in Safari of Chrome, plak een openbare YouTube-URL, pak het bestand uit en download de eerstgenoemde openbare afbeelding. Je hebt geen app store-downloader nodig."
+    },
+    {
+      "question": "Hoe sla ik een YouTube-thumbnail op mijn iPhone op?",
+      "answer": "Kopieer de link, open https://www.11tik.com/ in Safari, plak de link, pak het bestand uit en download de afbeelding, of houd de URL van de afbeelding ingedrukt en voeg deze toe aan Foto's.",
+      "answerHtml": "Kopieer de link, open https://www.11tik.com/ in Safari, plak de link, pak het bestand uit en download de afbeelding, of houd de URL van de afbeelding ingedrukt en voeg deze toe aan Foto's."
+    },
+    {
+      "question": "Hoe sla ik een YouTube-thumbnail op in een Android-apparaat?",
+      "answer": "Kopieer de link, open 11tik in Chrome, pak het bestand uit en sla de eerste download op in Downloads of Galerij.",
+      "answerHtml": "Kopieer de link, open 11tik in Chrome, pak het bestand uit en sla de eerste download op in Downloads of Galerij."
+    },
+    {
+      "question": "Is het legaal om een ​​miniatuurafbeelding op mijn telefoon op te slaan?",
+      "answer": "Het is gebruikelijk om een ​​openbare afbeelding op te slaan voor persoonlijk gebruik of onderzoek. Publiceer deze afbeelding niet opnieuw als je eigen omslagontwerp. Het auteursrecht blijft bij de uploader.",
+      "answerHtml": "Het is gebruikelijk om een ​​openbare afbeelding op te slaan voor persoonlijk gebruik of onderzoek. Publiceer deze afbeelding niet opnieuw als je eigen omslagontwerp. Het auteursrecht blijft bij de uploader."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser extractor.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

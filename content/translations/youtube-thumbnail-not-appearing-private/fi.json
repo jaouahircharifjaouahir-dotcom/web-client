@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "fi",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "Miksi YouTube-pikkukuva ei näy: Yksityiset, ikärajoitetut tai käsittelyssä olevat videot | 11tik",
+  "description": "Kun julkinen YouTube ei vieläkään lataudu, video voi olla yksityinen, rajoitettu, käsittelyssä tai poistettu – ei pelkästään puuttuva maxres-tiedostonimi.",
+  "h1": "Miksi YouTube-pikkukuva ei näy: Yksityiset, ikärajoitetut tai käsittelyssä olevat videot",
+  "ogTitle": "Miksi YouTube-pikkukuva ei näy: Yksityiset, ikärajoitetut tai käsittelyssä olevat videot",
+  "ogDescription": "Kun julkinen YouTube ei vieläkään lataudu, video voi olla yksityinen, rajoitettu, käsittelyssä tai poistettu – ei pelkästään puuttuva maxres-tiedostonimi.",
+  "imageAlt": "Siirry YouTube-URL-osoitteesta videotunnuksen ja julkisen tarkistuksen kautta saatavilla oleviin tai ei-saatavilla oleviin tuloksiin",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "Siirry YouTube-URL-osoitteesta videotunnuksen ja julkisen tarkistuksen kautta saatavilla oleviin tai ei-saatavilla oleviin tuloksiin",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Puuttuvan pikkukuvan koon ja videon julkisen pikkukuvan puuttumisen vertailu rinnakkain",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Nopea vastaus",
+      "html": "<p>Kelvollinen YouTube-URL-osoite todistaa, että sinulla on videotunnus. Se todellakin todistaa, että sinulla on videotunnus.<strong>ei</strong>todista, että YouTube julkaisi käyttökelpoisen julkisen pikkukuvatiedoston kuva-CDN:ssä. Poimijat, kuten<a href=\"https://www.11tik.com/\">11tik</a>tarkista vain julkiset still-kuvat. Jos mikään näistä kuvaehdokkaista ei lataudu, työkalu ilmoittaa, ettei julkista pikkukuvaa löytynyt. Tämä tulos seuraa usein videon käyttöoikeutta tai tilaa – yksityinen, ikärajoitettu tai muuten rajoitettu, edelleen käsiteltävä, poistettu tai muuten ei-saatavilla – eikä yksittäistä puuttuvaa kokonimeä, kuten<code>maxresdefault.jpg</code>.</p>\n  <p>Tärkeä rehellisyyden tarkistus: 11tik tekee niin<strong>ei</strong>luokittele tarkka syy yksityiseksi, ikärajoitetuksi tai käsittelyyn liittyväksi. Nämä merkinnät ovat yleisiä selityksiä, jotka käyttäjien tulisi tarkistaa itse YouTubessa. Poimija kertoo vain, voidaanko julkinen syy vielä vahvistaa.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Diagnostiikkapolku: URL → videon tunnus → julkinen edelleentarkistus → saatavilla vs. ei saatavilla → mitä seuraavaksi tarkistetaan.</p>"
+    },
+    {
+      "heading": "Mitä \"pikkukuva ei ole käytettävissä\" voi tarkoittaa",
+      "html": "<p>Käytännössä ”ei saatavilla” tarkoittaa yhtä kahdesta eri ongelmasta:</p>\n  <ol>\n    <li><strong>Videotaso ei saatavilla:</strong>Julkiset ehdokkaat epäonnistuvat silti kautta linjan. Et saa käyttökelpoista ladattavaa julkista kuvaa kyseiselle henkilöllisyystodistukselle juuri nyt.</li>\n    <li><strong>Muunnelma ei saatavilla:</strong>Yksi korkeamman tason tiedostonimi puuttuu (usein maxres), mutta pienempi julkinen koko latautuu silti. Kyseessä on koko-/varaongelma, ei koko videon puuttuva pikkukuva.</li>\n  </ol>\n  <p>Tämä artikkeli käsittelee ensimmäistä tapausta. Toisen tapauksen osalta – erityisesti<code>maxresdefault.jpg</code>404-virheet – käytä erillistä<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-vianmääritysopas</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Vasemmalla: yksi variantti puuttuu, muut julkiset koot toimivat edelleen. Oikealla: videotunnukselle ei ole vieläkään käyttökelpoista julkista tunnistetta.</p>"
+    },
+    {
+      "heading": "Julkisten still-kuvien ja videoiden käyttöoikeustila",
+      "html": "<p>YouTube isännöi katselusivuja ja kuvajohdannaisia ​​erikseen. Julkiset pikkukuvatiedostot sijaitsevat tyypillisesti isännöitsijöiden, kuten<code>i.ytimg.com</code>ja ne tunnistetaan 11-merkkisellä videotunnuksella. Työkalut, jotka poimivat pikkukuvia kirjautumatta tilillesi, voivat pyytää vain näitä julkisia tiedostoja.</p>\n  <p>Kun videota ei ole julkaistu julkisesti paketoituna – tai kun johdannaiset eivät ole vielä valmiita – kuvatarkistukset epäonnistuvat, vaikka liitetty merkkijono näyttäisi tavalliselta katselu-, lyhytvideo-, live- tai upotuslinkiltä. Se, miten nämä URL-muotoilut yhdistetään tunnukseen, käsitellään seuraavassa.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube-pikkukuvan URL-opas</a>. Olemassa olevan still-kuvan tallentamista käsitellään kohdassa<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">latausopas</a>.</p>"
+    },
+    {
+      "heading": "Yksityiset videot",
+      "html": "<p>Yksityiset lataukset on tarkoitettu rajoitetulle yleisölle. Jos YouTube ei julkaise julkisia pikkukuvien johdannaisia ​​kyseiselle tunnukselle, selaimen julkinen poimija ei voi keksiä niitä. Katselu-URL-osoitteen avaaminen sisäänkirjautuneena omistajana saattaa silti näyttää videon YouTubessa; tämä ei tarkoita, että julkinen CDN olisi edelleen käytettävissä nimettömille kuvapyynnöille.</p>\n  <p>Tarkista seuraavat asiat: avaa URL-osoite yksityisessä/incognito-ikkunassa kirjautumatta ulos. Jos YouTube itse estää videon näyttämisen, käsittele pikkukuvien poimintaa tarkoituksella estettynä.</p>"
+    },
+    {
+      "heading": "Ikärajoitus ja muut käyttöoikeusrajoitukset",
+      "html": "<p>Ikärajoitetut, vain jäsenille tarkoitetut tai vastaavalla tavalla rajoitetut videot voivat käyttäytyä kuin yksityinen sisältö julkisessa kuvahaussa: tunniste saattaa jäsentyä oikein, mutta julkiset still-kuvat eivät koskaan validoidu. Aluerajoitukset ja tilirajoitukset voivat tuottaa saman tyhjän tuloksen julkisessa työkalussa.</p>\n  <p>Jälleen kerran, 11tik ei merkitse rajoituksen tyyppiä. Vahvistat käyttötilan YouTubessa; poimija raportoi vain, onko julkinen edelleen ladattu.</p>"
+    },
+    {
+      "heading": "Videoita käsitellään edelleen",
+      "html": "<p>”Käsittely” ilmenee kahdella toisiinsa liittyvällä tavalla:</p>\n  <ul>\n    <li><strong>Upouusia latauksia:</strong>Katselusivu saattaa ilmestyä ennen kuin kaikki julkiset kuvajohdannaiset ovat valmiita. Yritä myöhemmin uudelleen samalla URL-osoitteella.</li>\n    <li><strong>Mukautetun pikkukuvan päivitys Studiossa:</strong>Kun olet korvannut kuvan, julkiset CDN-tiedostot voivat toimia hitaasti. Pienemmät koot saattavat näkyä ennen suurempia, tai joukko voi olla hetken epätäydellinen.</li>\n  </ul>\n  <p>Jos<em>jotkut</em>julkiset koot toimivat jo ja vain suurin nimi puuttuu, vaihda<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-artikkeli</a>Jos<em>ei</em>julkinen validoi vielä, odota käsittelyä ja tarkista sitten uudelleen<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Poistettu tai muuten saavuttamaton sisältö",
+      "html": "<p>Poistetut videot, rikkinäiset tunnisteet ja jotkin keskeytetyt lataukset eivät jätä luotettavaa julkista pakkausta. Kirjanmerkkeihin lisätty katselusivun URL-osoite voi silti näyttää syntaktisesti hyvältä, vaikka kaikki kuvaehdokkaat epäonnistuvat. Käsittele poistettuja/ei saatavilla -tilanteita samalla tavalla kuin muita videotason virheitä: vahvista katselusivun tila YouTubessa ja lopeta sitten CDN-ilmoituksen odottaminen.</p>"
+    },
+    {
+      "heading": "Miksi kelvollinen URL-osoite ei riitä",
+      "html": "<p>Jäsennys onnistuu, kun merkkijono sisältää 11-merkkisen tunnuksen tuetussa mallissa. Poiminta onnistuu vain, kun vähintään yksi julkinen pikkukuvakandidaatti validoituu oikeaksi kuvaksi. Nämä vaiheet ovat toisistaan ​​riippumattomia:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>11tik-sivulla tyhjä paras näkyy edelleen selkeänä \"ei julkista pikkukuvaa\" -tyyppisenä viestinä. Tuote ei eskaloi tätä yksityiseksi vs. ikärajoitettu vs. käsittely-luokittelijaksi.</p>"
+    },
+    {
+      "heading": "Mitä tarkistaa ensin (käytännön vaiheet)",
+      "html": "<ol>\n    <li>Liitä sama URL-osoite kohteeseen<a href=\"https://www.11tik.com/\">11tik</a>ja odota julkisen koon tarkistuksen valmistumista.</li>\n    <li>Jos vähintään yksi koko näkyy, sinun on<strong>ei</strong>videotasoinen saatavuus ei ole mahdollista – lataa kyseinen still-kuva tai lue koko-/maksimikuvaoppaat laadun valinnan varmistamiseksi.</li>\n    <li>Jos mitään ei näy, avaa katselu-/Shorts-sivu kirjautumatta. Tarkista, näyttääkö YouTube videon, pyytääkö se kirjautumista/iän vahvistusta vai sanooko se, ettei se ole käytettävissä.</li>\n    <li>Jos omistat videon ja olet juuri ladannut tai vaihtanut mukautetun pikkukuvan, odota Studion käsittelyä ja yritä uudelleen.</li>\n    <li>Jos YouTube näyttää videon julkisesti ja 11tik ei vieläkään löydä mitään, yritä uudelleen myöhemmin; jatkuvasti tyhjät tulokset tarkoittavat yleensä, että kyseisellä tunnuksella ei ole julkisia still-kuvia.</li>\n  </ol>"
+    },
+    {
+      "heading": "Diagnostiikkataulukko",
+      "html": "<table>\n    <thead>\n      <tr><th>Mitä näet</th><th>Todennäköinen luokka</th><th>Seuraava vaihe</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik listaa yhden tai useamman koon</td><td>Julkisia still-kuvia on olemassa</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Lataa opas</a>/ koon valinta</td></tr>\n      <tr><td>Vain maxres epäonnistuu; hq/sd toimii</td><td>Versio ei saatavilla</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Maxresin vianmääritys</a></td></tr>\n      <tr><td>Ei kokoja; YouTube pyytää kirjautumista / ikärajoitus</td><td>Pääsyrajoitus</td><td>Käytä julkista videota tai hyväksy, että julkinen poiminta ei ole mahdollista</td></tr>\n      <tr><td>Ei kokoja; omistaja juuri latasi/korvasi kuvan</td><td>Käsittelyviive</td><td>Odota ja tarkista sitten sama URL-osoite uudelleen.</td></tr>\n      <tr><td>Ei kokoja; YouTube sanoo yksityinen/ei saatavilla</td><td>Yksityinen tai poistettu tila</td><td>Ei vieläkään julkista poimittavaa</td></tr>\n      <tr><td>URL-osoitetta ei jäsennetä</td><td>Viallinen tai ei-tuettu linkki</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-osoite-/videotunnusopas</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Variantti puuttuu vs. ei käyttökelpoista julkista pikkukuvaa",
+      "html": "<p>Ihmiset usein liittävät käsin luodun maxres-URL-osoitteen, näkevät 404-virheen ja päättelevät, että \"esikatselukuvaa ei ole\". Tämä johtopäätös on usein väärä. Puuttuva korkean tason tiedostonimi on normaalia. Videotason saatavuusongelmat tarkoittavat, että poimijan täydellinen ehdokastiedosto ei palauta mitään käyttökelpoista.</p>\n  <p>Nyrkkisääntö:</p>\n  <ul>\n    <li>Tarvitaan parasta<em>olemassa oleva</em>julkinen tiedosto → lataa / koko / maxres-oppaat.</li>\n    <li>Täytyy ymmärtää miksi<em>ei mitään</em>julkiset esiintymiset → tämä artikkeli + YouTuben oma käyttöoikeusviesti.</li>\n  </ul>"
+    },
+    {
+      "heading": "Milloin mitäkin 11tik-opasta käytetään",
+      "html": "<ul>\n    <li><strong>Tämä artikkeli:</strong>ei yhtään käyttökelpoista julkista kuvaa; pääsy- tai tilakysymyksiä.</li>\n    <li><strong>Maxresin opas:</strong>HD-tiedostonimi puuttuu, vaikka muita julkisia kokoja on olemassa.</li>\n    <li><strong>URL-opas:</strong>ID:n löytäminen ja olemassa olevien kuvien URL-osoitteiden luominen/kopiointi.</li>\n    <li><strong>Lataa opas:</strong>still-kuvan tallentaminen kokojen ilmestyttyä.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Takaako toimiva katselusivu julkisen pikkukuvan?",
+      "answer": "Ei. Katselukokemus ja julkisten kuvien CDN-tiedostot ovat toisiinsa liittyviä, mutta eivät identtisiä. Käyttöoikeusrajoitukset ja käsittely voivat jättää sinulle videotunnuksen, mutta et voi poimia julkista still-kuvaa.",
+      "answerHtml": "<p>Ei. Katselukokemus ja julkisten kuvien CDN-tiedostot ovat toisiinsa liittyviä, mutta eivät identtisiä. Käyttöoikeusrajoitukset ja käsittely voivat jättää sinulle videotunnuksen, mutta et voi poimia julkista still-kuvaa.</p>"
+    },
+    {
+      "question": "Voiko 11tik kertoa minulle, onko video yksityinen vai ikärajoitettu?",
+      "answer": "Ei. 11tik raportoi vain, voidaanko julkinen vielä vahvistaa. Vahvista yksityisyys, ikäraja tai muut rajoitukset YouTubessa.",
+      "answerHtml": "<p>Ei. 11tik raportoi vain, voidaanko julkinen vielä vahvistaa. Vahvista yksityisyys, ikäraja tai muut rajoitukset YouTubessa.</p>"
+    },
+    {
+      "question": "Latasin juuri mukautetun pikkukuvan. Miksi poiminta on tyhjä?",
+      "answer": "Studion prosessoinnissa voi olla viivettä. Odota ja liitä sitten sama julkinen URL-osoite uudelleen. Jos jotkin koot näkyvät, mutta maxres ei, lue maxres-opas sen sijaan, että oletat, että videolla ei ole pikkukuvaa.",
+      "answerHtml": "<p>Studion prosessoinnissa voi olla viivettä. Odota ja liitä sitten sama julkinen URL-osoite uudelleen. Jos jotkin koot näkyvät, mutta maxres ei, lue maxres-opas sen sijaan, että oletat, että videolla ei ole pikkukuvaa.</p>"
+    },
+    {
+      "question": "Onko tämä sama ongelma kuin maxresdefault 404?",
+      "answer": "Vain joskus. Toimivien varajärjestelmien kanssa esiintyvä maxres 404 on varianttiongelma. Tyhjät tulokset julkisissa ehdokkaissa johtuvat videotason saatavuuden puutteesta.",
+      "answerHtml": "<p>Vain joskus. Toimivien varajärjestelmien kanssa esiintyvä maxres 404 on varianttiongelma. Tyhjät tulokset julkisissa ehdokkaissa johtuvat videotason saatavuuden puutteesta.</p>"
+    },
+    {
+      "question": "Voiko YouTubeen kirjautuminen P2:n kautta avata yksityisiä still-kuvia?",
+      "answer": "Ei. 11tik on julkinen still-tiedostojen poimija selaimessa. Se ei ohita yksityisiä tai suljettuja paketteja.",
+      "answerHtml": "<p>Ei. 11tik on julkinen still-tiedostojen poimija selaimessa. Se ei ohita yksityisiä tai suljettuja paketteja.</p>"
+    },
+    {
+      "question": "Mitä minun pitäisi kokeilla, jos URL-osoite näyttää oikealta?",
+      "answer": "Varmista, että video avautuu kirjautumatta. Jos olet juuri muuttanut Studio-kuvaa, odota ja suorita sitten poiminta uudelleen 11tik:ssä. Jatkuvat tyhjät tulokset tarkoittavat, että kyseiselle tunnukselle ei ole tällä hetkellä saatavilla julkisia kuvia.",
+      "answerHtml": "<p>Varmista, että video avautuu kirjautumatta. Jos olet juuri muuttanut Studio-kuvaa, odota ja suorita sitten poiminta uudelleen 11tik:ssä. Jatkuvat tyhjät tulokset tarkoittavat, että kyseiselle tunnukselle ei ole tällä hetkellä saatavilla julkisia kuvia.</p>"
+    },
+    {
+      "question": "Tarkoittaako \"ei julkista pikkukuvaa\" -toiminto, että videotiedosto on poissa?",
+      "answer": "Ei aina. Video voi silti olla katsottavissa oikeutetuille katsojille, vaikka julkisia kuvia ei olisi saatavilla tai ne eivät olisi valmiita. Tarkista YouTuben oma sivuviesti.",
+      "answerHtml": "<p>Ei aina. Video voi silti olla katsottavissa oikeutetuille katsojille, vaikka julkisia kuvia ei olisi saatavilla tai ne eivät olisi valmiita. Tarkista YouTuben oma sivuviesti.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Johtopäätös</h2>\n<p>Kun pikkukuva \"ei näy\", erota kaksi kysymystä: Onko mikään julkinen tiedostonimi edelleen validoitu? Vai epäonnistuiko vain yksi korkean tason tiedostonimi? Videotason epäonnistumiset seuraavat yleensä yksityisiä, rajoitettuja, käsiteltävinä pidettyjä, poistettuja tai muuten ei-julkisia pakkauksia – ei mikään taikatemppu.<code>maxresdefault</code>merkkijono. Testaa julkinen saatavuus rehellisesti 11tik-komennolla ja seuraa sitten vastaavaa maxres-arvoa, URL-osoitetta tai latausopasta seuraavaa vaihetta varten.</p>\n  <p><a href=\"https://www.11tik.com/\">Tarkista, onko 11tik-sivustolla julkista YouTube-pikkukuvaa →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>Virallinen kehittelyohje mukautettujen pikkukuvien luomiseen:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Lataa mukautettuja videopikkukuvia</a>.</p>"
+}

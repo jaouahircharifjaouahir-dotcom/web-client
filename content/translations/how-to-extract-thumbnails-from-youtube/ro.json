@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "ro",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Cum se extrag miniaturi dintr-o adresă URL a unui canal YouTube | 11tik",
+  "description": "Inserează adresa URL a unui canal YouTube public în 11tik Bulk pentru a extinde încărcările publice recente, apoi descarcă fiecare dintre cele mai bune fotografii. Acest lucru este pentru cercetarea ambalajelor, nu pentru clonarea imaginilor personalizate ale unui alt canal.",
+  "h1": "Cum se extrag miniaturi dintr-o adresă URL a unui canal YouTube",
+  "ogTitle": "Cum se extrag miniaturi dintr-o adresă URL a unui canal YouTube",
+  "ogDescription": "Inserează adresa URL a unui canal YouTube public în 11tik Bulk pentru a extinde încărcările publice recente, apoi descarcă fiecare dintre cele mai bune fotografii. Acest lucru este pentru cercetarea ambalajelor, nu pentru clonarea imaginilor personalizate ale unui alt canal.",
+  "imageAlt": "Extrage miniaturi dintr-o adresă URL a canalului YouTube — cele mai recente încărcări publice pe 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Extrage miniaturi dintr-o adresă URL a canalului YouTube — cele mai recente încărcări publice pe 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Pot obține miniaturi de pe un întreg canal YouTube?",
+      "html": "<p>Puteți obține imagini statice pentru cele mai recente<em>public</em>încărcări care expun un ID de videoclip. 11tik nu extrage toate videoclipurile postate vreodată de un canal și nu ocolește abonamentul. Pe pagina principală, activați opțiunea În bloc, inserați adresa URL a canalului, cum ar fi<code>youtube.com/@handle</code>sau<code>/channel/UC…</code>...și permiteți instrumentului să extindă lista publică în stil RSS. Apoi extrageți ca pe o listă tipărită. Limita rămâne de 25 de adrese URL per rulare, astfel încât browserul să rămână utilizabil.</p>\n  <p>Acest lucru este diferit de salvarea unui singur link de vizionare. Fluxul cu un singur URL este în<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">cum să descarci o miniatură YouTube</a>. Înregistrarea în bloc linie cu linie fără canal este în<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">descărcare în lot</a>.</p>"
+    },
+    {
+      "heading": "Ce adrese URL ale canalului funcționează?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>când pagina publică expune un ID de canal</li>\n    <li>Moştenire<code>/user/name</code>căi care încă se rezolvă</li>\n  </ul>\n  <p>O adresă URL /playlist nu este un canal. Lipiți în schimb linkurile individuale de vizionare ale listei de redare. Un identificator care nu se rezolvă niciodată într-un ID UC nu returnează videoclipuri; deschideți canalul într-un browser normal și copiați adresa URL canonică a canalului din bara de adrese.</p>"
+    },
+    {
+      "heading": "Cum se extrag miniaturile canalului pe 11tik",
+      "html": "<ol>\n    <li>Deschide<a href=\"https://www.11tik.com/\">11tik</a>și faceți clic pe În bloc.</li>\n    <li>Inserează adresa URL a unui canal public. Poți adăuga mai multe linkuri de vizionare pe rândurile următoare.</li>\n    <li>Începeți extragerea. Așteptați până când instrumentul înlocuiește linia canalului cu adresele URL publice recente de vizionare, apoi extrage imagini statice.</li>\n    <li>Descarcă fiecare fotografie de cea mai bună calitate, descarcă fișierul zip de cea mai înaltă calitate sau exportă CSV (id, titlu, URL de partajare, URL imagine) pentru un jurnal de cercetare.</li>\n  </ol>\n  <p>Partajați linkuri după o utilizare reușită a extragerii<code>/thumb/VIDEO_ID</code>când poarta de calitate are un titlu, etichete și o miniatură activă. Acele pagini sunt pentru imaginea unică, nu pentru o a doua pagină principală.</p>"
+    },
+    {
+      "heading": "Ceea ce 11tik nu va face",
+      "html": "<ul>\n    <li>Descărcați videoclipurile sau sunetul. Doar fotografii.</li>\n    <li>Listează încărcările nelistate sau private.</li>\n    <li>Garantează maxresdefault pentru fiecare videoclip recent. Sursele mai vechi sau mai mici se opresc la hq sau sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Acordați drepturi de reutilizare a lucrării artistice. Studierea unei grile de ambalaje publice este utilizarea preconizată în cercetare. Reîncărcarea unei imagini statice a unui concurent ca miniatură personalizată reprezintă o problemă legată de drepturile de autor și de politicile în vigoare.<a href=\"https://www.11tik.com/copyright\">Drepturi de autor și utilizare</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Cum ajută acest lucru cercetarea fără pagini de intrare",
+      "html": "<p>Un extras de canal este o singură sarcină: fotografii publice recente dintr-o singură ședință. Nu este o pagină generată pentru fiecare marcă concurentă. Rămâi pe instrument, păstrezi un fișier zip sau CSV și îți scrii propriile notițe. Dacă publici comentarii, menționează canalele și trimite linkuri către paginile lor de vizionare. Regulile YouTube pentru încărcarea miniaturilor<em>al tău</em>canalul este în<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">miniaturi video personalizate</a>.</p>"
+    },
+    {
+      "heading": "Depanare",
+      "html": "<p>Listă goală: fluxul de canal nu a returnat ID-uri publice (canal terminat sau un handle pe care rezolvatorul nu l-a putut mapa). Încercați adresa URL a canalului UC din aspectul desktop al YouTube.</p>\n  <p>Lipsesc câteva carduri: acele încărcări nu au încă o imagine publică sau poarta a respins un extras incomplet. Rulați din nou o singură adresă URL de vizionare. Confidențialitatea linkurilor lipite:<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>.</p>\n  <p>Extractor vs. instrument de design: 11tik nu creează coperți.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extractor vs. producător</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrageți imagini statice ale canalului public pe 11tik →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pot obține miniaturi de pe un întreg canal YouTube?",
+      "answer": "Da pentru încărcările publice recente. Inserați adresa URL a canalului în 11tik În bloc. Videoclipurile private și cele exclusiv pentru membri nu sunt listate.",
+      "answerHtml": "Da pentru încărcările publice recente. Inserați adresa URL a canalului în 11tik În bloc. Videoclipurile private și cele exclusiv pentru membri nu sunt listate."
+    },
+    {
+      "question": "Ce adrese URL ale canalului funcționează?",
+      "answer": "Adresele URL publice /channel/UC…, multe adrese URL @handle și unele căi /user/ vechi. Listele de redare nu sunt canale.",
+      "answerHtml": "Adresele URL publice /channel/UC…, multe adrese URL @handle și unele căi /user/ vechi. Listele de redare nu sunt canale."
+    },
+    {
+      "question": "Asta descarcă videoclipurile?",
+      "answer": "Nu. 11tik listează doar imaginile publice pe care YouTube le găzduiește deja.",
+      "answerHtml": "Nu. 11tik listează doar imaginile publice pe care YouTube le găzduiește deja."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "fi",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Pienoiskuvien poimija vs. tekijä | 11tik",
+  "description": "Pienkuvankerääjä tallentaa YouTuben jo ylläpitämän julkisen kuvan. Pienkuvankerääjä (Canvan, Photoshopin tai YouTube Studion lataama) luo uuden kuvan, jonka omistat. 11tik on kerääjä. Se ei suunnittele taidetta eikä lataa mukautettua tiedostoa kanavallesi.",
+  "h1": "Pikkukuvien poimija vs. tekijä",
+  "ogTitle": "Pikkukuvien poimija vs. tekijä",
+  "ogDescription": "Pienkuvankerääjä tallentaa YouTuben jo ylläpitämän julkisen kuvan. Pienkuvankerääjä (Canvan, Photoshopin tai YouTube Studion lataama) luo uuden kuvan, jonka omistat. 11tik on kerääjä. Se ei suunnittele taidetta eikä lataa mukautettua tiedostoa kanavallesi.",
+  "imageAlt": "11tik poimija, jota käytetään julkisen YouTube-pikkukuvan tallentamiseen",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik poimija, jota käytetään julkisen YouTube-pikkukuvan tallentamiseen",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mikä on pikkukuvien poimija?",
+      "html": "<p>Poimija lukee julkisen videon URL-osoitteen, löytää kuvatiedostoja YouTuben CDN-palvelusta ja antaa sinun esikatsella, ladata tai kopioida toimivan kuvan URL-osoitteen. Se listaa vain olemassa olevat koot. Se ei kopioi kehyksiä videovirrasta.</p>"
+    },
+    {
+      "heading": "Mikä on pikkukuvien luontiohjelma?",
+      "html": "<p>Tekijäntyönkulku on suunnitteluprosessi. Sinä luot fontin, pinnat ja kontrastin, viet 16:9-kuvan ja lataat sen YouTube Studioon. Olet tiedoston omistaja (fonttien, valokuvien ja alustan sääntöjen mukaisesti). Kilpailijan kuvan poimiminen ja uudelleenlataaminen ei ole tekijäntyönkulku.</p>"
+    },
+    {
+      "heading": "Milloin minun pitäisi käyttää liesituuletinta?",
+      "html": "<p>Käyttää<a href=\"https://www.11tik.com/\">[[S. 3]]</a>Kun tarvitset julkista tiedostoa: tutkimusta, omaa julkaistua still-kuvaasi varmuuskopiota, CMS-esittelykuvaa tai Open Graph -tarkistusta, liitä julkinen katselukuva, lyhytkuvat, youtu.be, URL-osoite ja lataa suurin kokoinen tiedosto, joka todellisuudessa palauttaa kuvan.</p>"
+    },
+    {
+      "heading": "Milloin minun pitäisi käyttää laitevalmistajaa?",
+      "html": "<p>Käytä suunnittelutyökalua, kun luot alkuperäisen pakkauksen uudelle lataukselle tai pikkukuvan päivitykselle. Studiossa tiedostosta tulee virallinen mukautettu pikkukuva. Kun YouTube on käsitellyt tiedoston, voit liittää katselun URL-osoitteen 11tik-kansioon varmistaaksesi, mitkä julkiset koot ovat olemassa, mukaan lukien YouTuben julkaisuhetken enimmäiskoot.</p>"
+    },
+    {
+      "heading": "Miten nämä kaksi sopivat yhteen?",
+      "html": "<ol>\n    <li>Poimi julkisia viitteitä oman alasi videoista (vain tutkimus).</li>\n    <li>Suunnittele alkuperäinen still-kuva Maker-työkalussa.</li>\n    <li>Lataa se YouTube Studiossa.</li>\n    <li>Vahvista julkiset CDN-tiedostot painamalla 11tik käsittelyn jälkeen.</li>\n  </ol>\n  <p>Aiheeseen liittyvää:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studion pikkukuva 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">kuvakaappaus vs. todellinen pikkukuva</a>.</p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avaa liesituuletin</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mikä on pikkukuvien poimija?",
+      "answer": "Työkalu, joka tallentaa julkisen kuvan, jota YouTube jo ylläpitää. 11tik listaa vain olemassa olevat kuvatiedostot.",
+      "answerHtml": "Työkalu, joka tallentaa julkisen kuvan, jota YouTube jo ylläpitää. 11tik listaa vain olemassa olevat kuvatiedostot."
+    },
+    {
+      "question": "Milloin minun pitäisi käyttää laitevalmistajaa?",
+      "answer": "Kun luot alkuperäisen taideteoksen ladataksesi sen mukautettuna pikkukuvana YouTube Studiossa.",
+      "answerHtml": "Kun luot alkuperäisen taideteoksen ladataksesi sen mukautettuna pikkukuvana YouTube Studiossa."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+}

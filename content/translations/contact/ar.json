@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "ar",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "للتواصل | 11tik",
+  "description": "استخدم هذا النموذج لطرح أسئلتك حول أداة استخراج الصور المصغرة من يوتيوب. تُرسل الرسائل إلى مُشغّل 11tik عبر البريد الإلكتروني. يُرجى عدم إرسال ملفات فيديو أو صوت. تعمل الأداة فقط مع الصور المصغرة العامة.",
+  "h1": "اتصال",
+  "ogTitle": "اتصال",
+  "ogDescription": "استخدم هذا النموذج لطرح أسئلتك حول أداة استخراج الصور المصغرة من يوتيوب. تُرسل الرسائل إلى مُشغّل 11tik عبر البريد الإلكتروني. يُرجى عدم إرسال ملفات فيديو أو صوت. تعمل الأداة فقط مع الصور المصغرة العامة.",
+  "imageAlt": "",
+  "faqHeading": "التعليمات",
+  "images": [],
+  "sections": [
+    {
+      "heading": "اتصال",
+      "html": "<h1>اتصال</h1>\n  <p class=\"yte-updated\">آخر تحديث: 22 أغسطس 2026</p>\n  <p itemprop=\"description\">استخدم هذا النموذج لطرح أسئلتك حول أداة استخراج الصور المصغرة من يوتيوب. تُرسل الرسائل إلى مُشغّل 11tik عبر البريد الإلكتروني. يُرجى عدم إرسال ملفات فيديو أو صوت. تعمل الأداة فقط مع الصور المصغرة العامة.</p>\n  <p>البريد الإلكتروني المباشر:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>لإعداد تقرير عن فيديو محدد، يُرجى تضمين رابط يوتيوب العام. لا يستضيف 11tik ملف الصورة المصغرة؛ يتم طلب الصورة من شبكة توصيل المحتوى العامة للمنصة.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>اسم<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>بريد إلكتروني<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>رسالة<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">إرسال الرسائل</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">مستخرج الصور المصغرة من يوتيوب</a>·<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">سياسة الخصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

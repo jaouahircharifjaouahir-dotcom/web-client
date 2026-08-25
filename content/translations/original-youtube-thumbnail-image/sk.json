@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "sk",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Ako získať pôvodný miniatúrny obrázok z YouTube | 11tik",
+  "description": "Získajte pôvodnú verejnú miniatúru YouTube, ktorú YouTube už hostí. Toto je záber z CDN, nie záber vytrhnutý z videa.",
+  "h1": "Ako získať pôvodný obrázok miniatúry YouTube",
+  "ogTitle": "Ako získať pôvodný obrázok miniatúry YouTube",
+  "ogDescription": "Získajte pôvodnú verejnú miniatúru YouTube, ktorú YouTube už hostí. Toto je záber z CDN, nie záber vytrhnutý z videa.",
+  "imageAlt": "Pôvodný verejný súbor miniatúr YouTube zobrazený v extraktore 11tik",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Pôvodný verejný súbor miniatúr YouTube zobrazený v extraktore 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Čo je pôvodná miniatúra na YouTube?",
+      "html": "<p>Je to ukážkový obrázok, ktorý YouTube už ukladá na svojich hostiteľských serveroch obrázkov. Je to súbor používaný vo vyhľadávaní a navrhovaných poličkach, nie snímka, ktorú zachytíte pomocou funkcie Print Screen.</p>"
+    },
+    {
+      "heading": "V čom sa to líši od snímky obrazovky?",
+      "html": "<p>Snímka obrazovky obsahuje prehrávač Chrome, používateľské rozhranie prehliadača a dodatočnú kompresiu. Pôvodný súbor je čistá statická snímka s veľkosťou pixelov, ktorú zverejnil YouTube.</p>"
+    },
+    {
+      "heading": "Ako nájdem pôvodnú miniatúru?",
+      "html": "<p>Vložte URL adresu sledovania, krátkych videí, živého vysielania alebo youtu.be do<a href=\"https://www.11tik.com/\">11tik</a>Nástroj prečíta ID videa, skontroluje verejné súbory a zoradí existujúci súbor s najvyšším hodnotením.</p>"
+    },
+    {
+      "heading": "Ako fungujú adresy URL miniatúr na YouTube?",
+      "html": "<p>Používajú ID videa a názov veľkosti, napríklad maxresdefault.jpg alebo hqdefault.jpg na i.ytimg.com. Uhádnutie veľkosti, ktorá nebola nikdy publikovaná, vráti chybu alebo zástupný symbol.</p>"
+    },
+    {
+      "heading": "Čo je maxresdefault.jpg?",
+      "html": "<p>Je to bežný najvyšší verejný názov súboru, zvyčajne s rozmermi 1280 × 720, keď ho YouTube vytvoril. Nie je to 4K master a nie je to video súbor.</p>"
+    },
+    {
+      "heading": "Znamená originál vždy 1280&#217;720?",
+      "html": "<p>Nie. Ak súbor maxres nebol nikdy publikovaný, pôvodný verejný obrázok je vo formáte hq, sd alebo iný zachovaný súbor. 11tik zobrazuje skutočnú veľkosť pixelov namiesto vymýšľania pixelov.</p>"
+    },
+    {
+      "heading": "Môžem získať originálny záber z videoklipov Shorts, Live alebo youtu.be?",
+      "html": "<p>Áno, keď tieto adresy URL obsahujú verejné ID videa a verejné statické snímky hostené na YouTube. Extraktor s nimi zaobchádza rovnako ako so štandardnou adresou URL na pozeranie.</p>"
+    },
+    {
+      "heading": "Ako overím, či som naozaj dostal pôvodný súbor?",
+      "html": "<p>Po overení súboru použite zoznamy veľkostí a rozmerov 11tik. Ak obrázok vyzerá ako snímka obrazovky prehrávača, nestiahli ste si hostovanú miniatúru.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Najvyššia kvalita</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Čo je pôvodná miniatúra na YouTube?",
+      "answer": "Verejný súbor obrázka, ktorý YouTube uchováva pre ID videa, napríklad maxresdefault, ak existuje. Nie je to snímka obrazovky stránky pozerania.",
+      "answerHtml": "Verejný súbor obrázka, ktorý YouTube uchováva pre ID videa, napríklad maxresdefault, ak existuje. Nie je to snímka obrazovky stránky pozerania."
+    },
+    {
+      "question": "Znamená originál vždy 1280&#217;720?",
+      "answer": "Nie. Maximálne rozlíšenie je pri publikovaní zvyčajne 1280×720. Ak tento súbor chýba, pôvodný verejný súbor je stále najbližšej veľkosti uloženej na YouTube.",
+      "answerHtml": "Nie. Maximálne rozlíšenie je pri publikovaní zvyčajne 1280 × 720. Ak tento súbor chýba, pôvodný verejný súbor je stále najbližšej veľkosti uloženej na YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

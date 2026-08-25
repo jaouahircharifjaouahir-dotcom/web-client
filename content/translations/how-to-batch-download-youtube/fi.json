@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "fi",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "YouTube-pikkukuvien erälataus (enintään 25 julkista URL-osoitetta) | 11tik",
+  "description": "Pura julkisia YouTube-pikkukuvia joukkona selaimessa. Liitä yksi URL-osoite riviä kohden, lataa jokainen paras still-kuva tai pakkaa paras laatuinen pakkaus. Ei tiliä eikä videotiedostoja.",
+  "h1": "YouTube-pikkukuvien erälataus (enintään 25 julkista URL-osoitetta)",
+  "ogTitle": "YouTube-pikkukuvien erälataus (enintään 25 julkista URL-osoitetta)",
+  "ogDescription": "Pura julkisia YouTube-pikkukuvia joukkona selaimessa. Liitä yksi URL-osoite riviä kohden, lataa jokainen paras still-kuva tai pakkaa paras laatuinen pakkaus. Ei tiliä eikä videotiedostoja.",
+  "imageAlt": "11tik useiden YouTube-URL-osoitteiden joukkolatausohjelma, jossa on valmiita ladattavia pikkukuvia",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik useiden YouTube-URL-osoitteiden joukkolatausohjelma, jossa on valmiita ladattavia pikkukuvia",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Miten voin ladata YouTube-pikkukuvia erissä?",
+      "html": "<p>Avata<a href=\"https://www.11tik.com/\">11tik</a>, ota käyttöön joukkolataus, liitä yksi julkinen URL-osoite riviä kohden, napsauta Pura kaikki ja lataa sitten parhaat still-tiedostot tai korkealaatuisimmat zip-tiedostot. URL-osoitteiden enimmäismäärä on 25 latauskertaa kohden, jotta selain pysyy responsiivisena.</p>"
+    },
+    {
+      "heading": "Mikä listaan ​​kuuluu?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= Tunnukset</li>\n    <li>youtu.be lyhyet linkit</li>\n    <li>youtube.com/shorts/ Tunnukset</li>\n    </ul>\n  <p>Yksityiset, listaamattomat ilman julkisia pikkukuvia tai ikärajoitetut videot eivät palauta pysäytyskuvaa. Tämä on odotettavissa. Katso myös<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Lyhytvideoiden pikkukuvat</a>.</p>"
+    },
+    {
+      "heading": "Kuinka suorittaa joukkouutos",
+      "html": "<ol>\n    <li>Klikkaa kotisivulla Joukkolataus.</li>\n    <li>Liitä enintään 25 julkista linkkiä, yksi riviä kohden.</li>\n    <li>Valitse Pura kaikki ja odota, kunnes jokaisen kortin esikatselu näkyy.</li>\n    <li>Lataa jokaisesta parhaasta still-kuvasta N pikkukuvaa tai lataa kaikki kuvat korkeimmalla laadulla zip-tiedostona.</li>\n    <li>Valinnainen: Vie tutkimuslokeja varten CSV-tiedosto (videon tunnus, otsikko, jako-osoite, kuvan URL-osoite).</li>\n  </ol>"
+    },
+    {
+      "heading": "Voinko käyttää tätä kilpailijatutkimukseen?",
+      "html": "<p>Kyllä, julkisten pakkausten tutkimiseen. Älä julkaise toisen sisällöntuottajan pikkukuvaa omana lataamanasi videona. Tekijänoikeudet pysyvät oikeudenhaltijalla. 11tik hakee vain tiedostoja, jotka YouTube jo ylläpitää julkisesti.</p>\n  <p><a href=\"https://www.11tik.com/\">Avaa joukkouutos 11tik →</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Miten voin ladata YouTube-pikkukuvia erissä?",
+      "answer": "Käytä Bulk-latausta 11tik-kohdassa, liitä yksi julkinen URL-osoite riviä kohden, pura ja lataa sitten still-kuvia tai zip-tiedosto korkealaatuisimmalla julkisella tasolla. Enintään 25 URL-osoitetta per suorituskerta.",
+      "answerHtml": "Käytä Bulk-latausta 11tik-kohdassa, liitä yksi julkinen URL-osoite riviä kohden, pura ja lataa sitten still-kuvia tai zip-tiedosto korkealaatuisimmalla julkisella tasolla. Enintään 25 URL-osoitetta per suorituskerta."
+    },
+    {
+      "question": "Voinko käyttää tätä kilpailijatutkimukseen?",
+      "answer": "Kyllä, julkisten pakkausten tutkimiseen. Älä julkaise toisen tekijän pikkukuvaa omana. Tekijänoikeudet pysyvät oikeudenhaltijalla.",
+      "answerHtml": "Kyllä, julkisten pakkausten tutkimiseen. Älä julkaise toisen tekijän pikkukuvaa omana. Tekijänoikeudet pysyvät oikeudenhaltijalla."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+}

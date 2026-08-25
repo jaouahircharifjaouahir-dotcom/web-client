@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "pt",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Como obter o URL da miniatura do YouTube diretamente de um vídeo | 11tik",
+  "description": "Crie ou copie um URL de miniatura do YouTube válido a partir do ID do vídeo em i.ytimg.com. Confirme se o tamanho existe antes de criar o link direto.",
+  "h1": "Como obter o URL da miniatura do YouTube diretamente de um vídeo",
+  "ogTitle": "Como obter o URL da miniatura do YouTube diretamente de um vídeo",
+  "ogDescription": "Crie ou copie um URL de miniatura do YouTube válido a partir do ID do vídeo em i.ytimg.com. Confirme se o tamanho existe antes de criar o link direto.",
+  "imageAlt": "Diagrama mostrando um URL de visualização do YouTube convertido em um ID de vídeo e, em seguida, em um URL de imagem em miniatura.",
+  "faqHeading": "Perguntas frequentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Diagrama mostrando um URL de visualização do YouTube convertido em um ID de vídeo e, em seguida, em um URL de imagem em miniatura.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Anatomia rotulada da URL da miniatura do YouTube, mostrando o host, o caminho, o ID do vídeo e o nome do arquivo.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Resposta rápida",
+      "html": "<p>Para obter o URL da miniatura do YouTube: encontre o ID do vídeo de 11 caracteres e, em seguida, abra um endereço de imagem público confirmado, como...<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>O URL da página de visualização não é a imagem. Cole o link do vídeo em<a href=\"https://www.11tik.com/\">11tik</a>Aguarde até que os tamanhos sejam carregados corretamente e, em seguida, use-os.<strong>Copiar URL da imagem</strong>Assim, você mantém um link HTTPS funcional em vez de um nome de arquivo adivinhado que retorna um erro 404.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Fluxo utilizado pelos extratores: URL de visualização pública → ID do vídeo → URL da miniatura pública no servidor de imagens do YouTube.</p>"
+    },
+    {
+      "heading": "O que é um URL de miniatura do YouTube?",
+      "html": "<p>A URL de uma miniatura do YouTube aponta para um arquivo de imagem estática, não para o reprodutor de vídeo. Ela reside na CDN pública de imagens do YouTube (geralmente em `/etc/youtube.com`).<code>i.ytimg.com</code>Quando o endereço funciona, seu navegador baixa um arquivo JPEG ou WebP. Quando não funciona, você recebe um arquivo ausente ou um espaço reservado cinza — não um \"HD\" inventado do nada.</p>\n  <p>Isso é importante para blogs, pré-visualizações do Open Graph, protótipos de design e campos de imagem em destaque de CMS: esses sistemas precisam de um URL de imagem, não de um texto.<code>youtube.com/watch?v=…</code>Se você precisar apenas do arquivo no disco, use o<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">guia de download</a>em vez desta página focada em URLs.</p>"
+    },
+    {
+      "heading": "Como a URL se relaciona com o ID do vídeo",
+      "html": "<p>O YouTube identifica imagens públicas por ID de vídeo. O padrão JPEG usual é:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Alguns vídeos também publicam versões gêmeas WebP sob o nome WebP.<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>são exatamente 11 caracteres do conjunto<code>A–Z a–z 0–9 _ -</code>Altere o ID e você apontará para imagens estáticas de um vídeo diferente. Altere o nome do arquivo e você solicitará uma versão pública diferente do mesmo vídeo.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatomia de uma URL de miniatura pública: host, caminho, ID do vídeo e nome do arquivo de tamanho.</p>"
+    },
+    {
+      "heading": "Como encontrar o ID de um vídeo do YouTube",
+      "html": "<p>Você só precisa do ID. Parâmetros de consulta adicionais, como IDs de listas de reprodução ou<code>pp=</code>Não altere o caminho do host da miniatura.</p>\n  <table>\n    <thead>\n      <tr><th>Formato de URL do YouTube</th><th>Exemplo</th><th>Onde fica o documento de identidade</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Assistir</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>valor da consulta</td></tr>\n      <tr><td>Link curto</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Primeiro segmento de caminho</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Caminho após<code>/shorts/</code></td></tr>\n      <tr><td>Incorporar</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Caminho após<code>/embed/</code></td></tr>\n      <tr><td>Ao vivo</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Caminho após<code>/live/</code></td></tr>\n      <tr><td>incorporação nocookie</td><td><code>youtube-nocookie.com/embed/…</code></td><td>O mesmo que incorporar.</td></tr>\n    </tbody>\n  </table>\n  <p>O analisador do 11tik aceita esses formatos (e IDs simples de 11 caracteres). Um URL de canal ou lista de reprodução sem ID de vídeo não é suficiente para um URL de miniatura único.</p>"
+    },
+    {
+      "heading": "Nomes de arquivos de miniaturas públicas comuns",
+      "html": "<p>Os nomes dos arquivos descrevem os tamanhos que o YouTube pode ou não publicar para um determinado upload. Os nomes não garantem que o arquivo exista.</p>\n  <table>\n    <thead>\n      <tr><th>Nome do arquivo</th><th>Pixels típicos quando presentes</th><th>Notas</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Maior público comum ainda quando publicado</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Classe 1280×720</td><td>Outro nível elevado, alguns vídeos expõem</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Geralmente disponível quando maxres está ausente</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Tamanho médio muito comum</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Pequena prévia</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>O menor padrão ainda</td></tr>\n    </tbody>\n  </table>\n  <p>Para obter detalhes ao nível do pixel e saber quando preferir um tamanho em detrimento de outro, consulte o<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guia de tamanho e resolução de miniaturas</a>Por quê?<code>maxresdefault.jpg</code>está frequentemente ausente, veja<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">O que é maxresdefault?</a>.</p>"
+    },
+    {
+      "heading": "Exemplo prático com um ID de vídeo público",
+      "html": "<p>Use o ID da demonstração pública<code>dQw4w9WgXcQ</code>Um URL de visualização é:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Um possível URL JPEG de resolução máxima é:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Abra esse endereço em uma nova aba. Se a imagem carregar, você tem um URL de miniatura válido. Se não carregar, tente o próximo nome de arquivo (por exemplo,<code>hqdefault.jpg</code>) ou cole o link do vídeo em 11tik para que apenas os arquivos existentes sejam listados. Nunca presuma que todos os vídeos têm resolução máxima.</p>"
+    },
+    {
+      "heading": "Três maneiras de recuperar o URL da imagem",
+      "html": "<h3>1. Mais rápido: copiar de 11tik</h3>\n  <ol>\n    <li>Copie um link público para assistir, Shorts, ao vivo, incorporar ou youtu.be.</li>\n    <li>Abrir<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Cole o URL e aguarde até que as pré-visualizações apareçam.</li>\n    <li>Escolher<strong>Copiar URL da imagem</strong>no tamanho que você precisa.</li>\n  </ol>\n  <p>11tik verifica as respostas no seu navegador e exibe apenas os tamanhos que retornam uma imagem real. Essa é a diferença entre um link CMS utilizável e um link quebrado.<code>maxresdefault</code>adivinhar.</p>\n\n  <h3>2. Método do navegador</h3>\n  <p>Depois de ter um candidato<code>i.ytimg.com</code>Abra o endereço em uma nova aba. Se o link ainda aparecer, copie a barra de endereços. Se você vir um erro ou um bloco em branco/de espaço reservado, esse tamanho nunca foi publicado para esse ID — não crie um link direto para ele.</p>\n\n  <h3>3. Construa a URL manualmente.</h3>\n  <p>Você pode concatenar host +<code>/vi/</code>+ ID + nome do arquivo. URLs criadas manualmente são adequadas para testes, mas não é seguro colá-las em HTML de produção até que você verifique a resposta. A disponibilidade varia de acordo com a idade do upload, a arte original e o estado de processamento no YouTube Studio.</p>"
+    },
+    {
+      "heading": "Escolher a melhor URL disponível",
+      "html": "<p>\"Melhor\" significa o maior arquivo público que realmente existe, não o nome de arquivo mais longo que você consegue digitar. Dê preferência a um link maxres ou hq720 validado, quando disponível. Se esses links falharem, use sd, hq, mq ou default. Aumentar a resolução de uma imagem de 480×360 para 1280×720 em um editor não cria uma URL maxres verdadeira.</p>\n  <p>Criadores que enviarem artes personalizadas ainda devem confirmar as versões públicas posteriormente — o processamento do Studio pode apresentar atrasos. Relacionado:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniaturas do YouTube Studio em 2026</a>.</p>"
+    },
+    {
+      "heading": "Utilizando o URL em outro site",
+      "html": "<p>Você pode colar um código funcional.<code>i.ytimg.com</code>O uso de URLs em diversos campos de CMS é problemático, mas o hotlinking apresenta riscos: o YouTube pode alterar os caminhos da CDN e algumas redes bloqueiam hosts de terceiros. Para uma imagem de destaque permanente no blog ou uma tag Open Graph, baixe a imagem confirmada e hospede uma cópia em seu próprio domínio. Passo a passo:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Miniatura do YouTube como imagem de blog/Open Graph</a>.</p>\n  <p>Os direitos autorais permanecem com quem fez o upload. Um URL público não é uma licença para republicar a arte como se fosse sua própria capa. Consulte a ajuda do YouTube sobre isso.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">miniaturas de vídeo personalizadas</a>e 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termos</a>.</p>"
+    },
+    {
+      "heading": "Solução de problemas de URLs de miniaturas quebradas",
+      "html": "<ul>\n    <li><strong>404 ou espaço reservado:</strong>Esse tamanho nunca foi publicado. Tente outro nome de arquivo ou use a lista validada de 11tik.</li>\n    <li><strong>Vídeo errado:</strong>ID digitado incorretamente. Copie novamente do URL de monitoramento.</li>\n    <li><strong>Privado / com restrição de idade / excluído:</strong>Ainda não há links públicos disponíveis.</li>\n    <li><strong>Conteúdo misto HTTP:</strong>sempre use<code>https://</code>URLs de imagens em sites HTTPS.</li>\n    <li><strong>Os shorts parecem estar em formato letterbox:</strong>Muitos Shorts ainda armazenam arquivos públicos em formato paisagem. O URL ainda é o oficial público.</li>\n  </ul>"
+    },
+    {
+      "heading": "Próximo passo",
+      "html": "<p>Cole um URL público do YouTube no campo<a href=\"https://www.11tik.com/\">Extrator de miniaturas do YouTube</a>, copie o link da imagem validada, ou<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Baixe a imagem.</a>Se precisar de um arquivo local, abra o arquivo para escolher a resolução desejada.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guia de tamanhos e qualidade</a>.</p>\n\n  <p class=\"yte-bio\">Escrito por 11tik, editor do extrator integrado ao navegador. Apenas imagens estáticas públicas — sem download de vídeo ou áudio.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidade</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termos</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Posso copiar o URL direto da miniatura sem baixar o arquivo?",
+      "answer": "Sim. Em 11tik, use Copiar URL da imagem. Isso copia o endereço HTTPS da imagem para um tamanho que já foi validado no seu navegador.",
+      "answerHtml": "<p>Sim. Em 11tik, use Copiar URL da imagem. Isso copia o endereço HTTPS da imagem para um tamanho já validado no seu navegador.</p>"
+    },
+    {
+      "question": "É possível obter o URL da miniatura de um vídeo curto do YouTube?",
+      "answer": "Sim, quando o vídeo curto é público e o YouTube publicou imagens estáticas para esse ID. Cole um link /shorts/ da mesma forma que você cola um URL de exibição. Veja também Miniaturas de vídeos curtos.",
+      "answerHtml": "<p>Sim, quando o curta for público e o YouTube publicar imagens estáticas para esse ID. Cole um<code>/shorts/</code>Insira o link da mesma forma que você cola a URL de um relógio. Veja também<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniaturas curtas</a>.</p>"
+    },
+    {
+      "question": "Por que uma URL de miniatura funciona enquanto outra retorna um erro?",
+      "answer": "Os nomes de arquivos são derivados públicos opcionais. hqdefault.jpg pode existir mesmo que maxresdefault.jpg não exista. Uma URL funcional de tamanho médio não implica uma URL funcional de resolução máxima.",
+      "answerHtml": "<p>Os nomes dos arquivos são derivados públicos opcionais.<code>hqdefault.jpg</code>pode existir quando<code>maxresdefault.jpg</code>Não. Uma URL de tamanho médio que funciona não implica necessariamente que uma URL de resolução máxima também funcione.</p>"
+    },
+    {
+      "question": "Posso usar o URL direto da imagem no meu site?",
+      "answer": "Tecnicamente sim, se o arquivo existir, mas hospedar sua própria cópia é mais confiável para imagens em destaque e prévias em redes sociais. Não republique a arte de outra pessoa como capa do seu canal sem os devidos direitos.",
+      "answerHtml": "<p>Tecnicamente sim, se o arquivo existir, mas hospedar sua própria cópia é mais confiável para imagens em destaque e prévias em redes sociais. Não republique a arte de outra pessoa como capa do seu canal sem os devidos direitos.</p>"
+    },
+    {
+      "question": "O URL de visualização é sempre o mesmo que o URL da miniatura?",
+      "answer": "Não. O URL de visualização identifica o vídeo. O URL da miniatura identifica um arquivo de imagem na CDN de imagens.",
+      "answerHtml": "<p>Não. O URL de visualização identifica o vídeo. O URL da miniatura identifica um arquivo de imagem na CDN de imagens.</p>"
+    },
+    {
+      "question": "Será que 11tik inventa uma URL de resolução mais alta?",
+      "answer": "Não. A lista contém apenas arquivos públicos que respondem como imagens. A ausência do parâmetro `maxres` significa que a URL não deve ser copiada.",
+      "answerHtml": "<p>Não. A lista contém apenas arquivos públicos que respondem como imagens. A ausência do parâmetro `maxres` significa que a URL não deve ser copiada.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor do extrator integrado ao navegador. Apenas imagens estáticas públicas — sem download de vídeo ou áudio.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidade</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termos</a>.</p>"
+}

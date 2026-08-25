@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "ko",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "동영상에서 유튜브 썸네일 URL을 직접 가져오는 방법 | 11tik",
+  "description": "i.ytimg.com의 동영상 ID에서 작동하는 YouTube 썸네일 URL을 생성하거나 복사하세요. 핫링크하기 전에 크기가 존재하는지 확인하세요.",
+  "h1": "유튜브 영상에서 바로 썸네일 URL을 얻는 방법",
+  "ogTitle": "유튜브 영상에서 바로 썸네일 URL을 얻는 방법",
+  "ogDescription": "i.ytimg.com의 동영상 ID에서 작동하는 YouTube 썸네일 URL을 생성하거나 복사하세요. 핫링크하기 전에 크기가 존재하는지 확인하세요.",
+  "imageAlt": "유튜브 시청 URL을 동영상 ID로 변환한 다음, 썸네일 이미지 URL로 변환하는 과정을 보여주는 다이어그램",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "유튜브 시청 URL을 동영상 ID로 변환한 다음, 썸네일 이미지 URL로 변환하는 과정을 보여주는 다이어그램",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "호스트, 경로, 동영상 ID 및 파일 이름을 보여주는 YouTube 썸네일 URL의 구성 요소를 나타낸 그림입니다.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "빠른 답변",
+      "html": "<p>YouTube 썸네일 URL을 얻으려면 11자리 동영상 ID를 찾은 다음, 다음과 같은 공개 이미지 주소를 엽니다.<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>시청 페이지 URL은 이미지가 아닙니다. 동영상 링크를 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>실제로 로드되는 크기를 기다린 다음 사용하십시오.<strong>이미지 URL 복사</strong>그러면 404 오류가 발생하는 추측된 파일 이름 대신 제대로 작동하는 HTTPS 링크를 유지할 수 있습니다.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">추출기가 사용하는 흐름: 공개 시청 URL → 동영상 ID → YouTube 이미지 호스팅 사이트의 공개 썸네일 URL.</p>"
+    },
+    {
+      "heading": "YouTube 썸네일 URL이란 무엇인가",
+      "html": "<p>YouTube 썸네일 URL은 동영상 플레이어가 아닌 정지 이미지 파일을 가리킵니다. 이 URL은 YouTube의 공개 이미지 CDN(일반적으로)에 저장됩니다.<code>i.ytimg.com</code>주소가 제대로 연결되면 브라우저는 JPEG 또는 WebP 파일을 다운로드합니다. 연결에 실패하면 파일이 누락되었거나 회색 자리 표시자가 나타납니다. \"HD\"라는 단어가 갑자기 생겨나는 것이 아닙니다.</p>\n  <p>이는 블로그, 오픈 그래프 미리보기, 디자인 목업, CMS 추천 이미지 필드에 중요한 사항입니다. 이러한 시스템에는 이미지 URL이 필요하며, 이미지 자체의 URL은 필요하지 않습니다.<code>youtube.com/watch?v=…</code>디스크에 있는 파일만 필요한 경우, 다음을 사용하세요.<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">다운로드 가이드</a>이 URL 중심 페이지 대신에.</p>"
+    },
+    {
+      "heading": "URL과 비디오 ID의 관계는 무엇인가요?",
+      "html": "<p>YouTube는 동영상 ID를 기준으로 공개된 스틸 이미지를 키로 지정합니다. 일반적인 JPEG 패턴은 다음과 같습니다.</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>일부 동영상은 WebP 트윈도 함께 게시합니다.<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>해당 집합에서 정확히 11개의 문자입니다.<code>A–Z a–z 0–9 _ -</code>ID를 변경하면 다른 비디오의 스틸컷을 가리키게 됩니다. 파일 이름을 변경하면 동일한 비디오의 다른 공개 파생물을 요청할 수 있습니다.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">공개 썸네일 URL의 구성 요소: 호스트, 경로, 비디오 ID 및 파일 크기.</p>"
+    },
+    {
+      "heading": "유튜브 영상 ID를 찾는 방법",
+      "html": "<p>ID만 있으면 됩니다. 플레이리스트 ID와 같은 추가 쿼리 매개변수는 필요하지 않습니다.<code>pp=</code>썸네일 호스트 경로를 변경하지 마십시오.</p>\n  <table>\n    <thead>\n      <tr><th>YouTube URL 형식</th><th>예</th><th>ID가 있는 위치</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>보다</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>쿼리 값</td></tr>\n      <tr><td>짧은 링크</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>첫 번째 경로 부분</td></tr>\n      <tr><td>반바지</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>경로 이후<code>/shorts/</code></td></tr>\n      <tr><td>포함시키다</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>경로 이후<code>/embed/</code></td></tr>\n      <tr><td>살다</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>경로 이후<code>/live/</code></td></tr>\n      <tr><td>노쿠키 임베드</td><td><code>youtube-nocookie.com/embed/…</code></td><td>임베드와 동일</td></tr>\n    </tbody>\n  </table>\n  <p>11tik의 파서는 이러한 형태(및 11자리 ID)를 허용합니다. 비디오 ID가 없는 채널 또는 재생 목록 URL은 단일 썸네일 URL로 충분하지 않습니다.</p>"
+    },
+    {
+      "heading": "일반적인 공개 썸네일 파일 이름",
+      "html": "<p>파일 이름은 YouTube에서 업로드된 파일에 대해 게시 여부를 결정할 수 있는 크기 등급을 나타냅니다. 파일 이름이 파일의 존재를 보장하는 것은 아닙니다.</p>\n  <table>\n    <thead>\n      <tr><th>파일 이름</th><th>일반적인 픽셀이 존재할 경우</th><th>메모</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>출판 당시 가장 높은 일반 대중 수치</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 클래스</td><td>또 다른 고등급 영상들이 폭로합니다.</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>maxres가 없을 때 종종 사용 가능합니다.</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>매우 흔한 중간 크기</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>간단한 미리보기</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>가장 작은 표준은 여전히</td></tr>\n    </tbody>\n  </table>\n  <p>픽셀 단위의 세부 정보와 어떤 크기를 선호해야 하는지에 대한 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">썸네일 크기 및 해상도 가이드</a>왜냐하면...<code>maxresdefault.jpg</code>종종 누락됩니다. 참조하세요.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault란 무엇인가</a>.</p>"
+    },
+    {
+      "heading": "공개 비디오 ID를 사용한 예시",
+      "html": "<p>공개 데모 ID를 가져오세요.<code>dQw4w9WgXcQ</code>시청 URL은 다음과 같습니다.</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>최대 해상도 JPEG URL 후보는 다음과 같습니다.</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>해당 주소를 새 탭에서 여세요. 이미지가 로드되면 썸네일 URL이 제대로 작동하는 것입니다. 로드되지 않으면 다음 파일 이름을 시도해 보세요(예: ).<code>hqdefault.jpg</code>) 또는 시청 링크를 11tik에 붙여넣어 살아남은 파일만 나열되도록 하세요. 모든 비디오가 최대 해상도를 가지고 있다고 가정하지 마세요.</p>"
+    },
+    {
+      "heading": "이미지 URL을 가져오는 세 가지 방법",
+      "html": "<h3>1. 가장 빠른 방법: 11tik에서 복사</h3>\n  <ol>\n    <li>공개 시청, 쇼츠, 라이브, 임베드 또는 youtu.be URL을 복사합니다.</li>\n    <li>열려 있는<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>URL을 붙여넣고 미리보기가 나타날 때까지 기다리세요.</li>\n    <li>선택하다<strong>이미지 URL 복사</strong>필요한 사이즈로 선택하세요.</li>\n  </ol>\n  <p>11tik는 브라우저의 응답을 확인하고 실제 이미지를 반환하는 크기만 표시합니다. 이것이 바로 사용 가능한 CMS 링크와 깨진 링크의 차이입니다.<code>maxresdefault</code>추측하다.</p>\n\n  <h3>2. 브라우저 방식</h3>\n  <p>후보자를 확보한 후에는<code>i.ytimg.com</code>주소를 입력하고 새 탭에서 여세요. 화면이 제대로 표시되면 주소 표시줄을 복사하세요. 오류가 발생하거나 빈/자리 표시자 타일이 보이면 해당 ID에 대해 해당 크기가 게시된 적이 없으므로 직접 링크하지 마세요.</p>\n\n  <h3>3. URL을 직접 생성합니다.</h3>\n  <p>호스트 +를 연결할 수 있습니다.<code>/vi/</code>+ ID + 파일 이름을 직접 입력하세요. 직접 만든 URL은 테스트용으로는 괜찮지만, 응답을 확인하기 전까지는 프로덕션 HTML에 붙여넣는 것은 안전하지 않습니다. URL 사용 가능 여부는 업로드 시점, 원본 이미지, YouTube 스튜디오의 처리 상태에 따라 달라집니다.</p>"
+    },
+    {
+      "heading": "사용 가능한 URL 중 최적의 URL 선택",
+      "html": "<p>\"최적\"이란 실제로 존재하는 가장 큰 공개 파일 크기를 의미하며, 입력할 수 있는 가장 긴 파일 이름을 의미하는 것이 아닙니다. 가능한 경우 유효성이 검증된 maxres 또는 hq720 링크를 우선적으로 사용하십시오. 해당 링크가 실패할 경우 sd, hq, mq 또는 기본값으로 낮추십시오. 편집기에서 480x360 스틸 이미지를 1280x720으로 확대하는 것은 진정한 maxres URL을 생성하지 않습니다.</p>\n  <p>사용자 지정 아트워크를 업로드하는 크리에이터는 이후에 공개 파생물을 확인해야 합니다. 스튜디오 처리 과정에 지연이 발생할 수 있습니다. 관련 항목:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026년 유튜브 스튜디오 썸네일</a>.</p>"
+    },
+    {
+      "heading": "다른 웹사이트에서 URL 사용하기",
+      "html": "<p>작동하는 코드를 붙여넣을 수 있습니다.<code>i.ytimg.com</code>URL을 여러 CMS ​​필드에 삽입할 수 있지만, 핫링크에는 위험이 따릅니다. YouTube는 CDN 경로를 변경할 수 있고, 일부 네트워크는 타사 호스트를 차단합니다. 안정적인 블로그 추천 이미지 또는 오픈 그래프 태그를 사용하려면 검증된 스틸 이미지를 다운로드하여 자체 도메인에 호스팅하세요. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">블로그용 YouTube 썸네일 이미지 / 오픈 그래프 이미지</a>.</p>\n  <p>저작권은 업로더에게 있습니다. 공개 URL은 해당 이미지를 자신의 표지 이미지로 재배포할 수 있는 라이선스가 아닙니다. 자세한 내용은 YouTube 도움말을 참조하세요.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">맞춤형 비디오 썸네일</a>그리고 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+    },
+    {
+      "heading": "깨진 썸네일 URL 문제 해결",
+      "html": "<ul>\n    <li><strong>404 오류 또는 자리 표시자:</strong>해당 크기는 게시된 적이 없습니다. 다른 파일 이름을 사용하거나 11tik의 검증된 목록을 사용해 보세요.</li>\n    <li><strong>잘못된 영상입니다:</strong>ID를 잘못 입력했습니다. 시청 URL에서 다시 복사하세요.</li>\n    <li><strong>비공개/연령 제한/삭제됨:</strong>아직 공개적으로 연결할 수 있는 링크가 없습니다.</li>\n    <li><strong>HTTP 혼합 콘텐츠:</strong>항상 사용하세요<code>https://</code>HTTPS 사이트의 이미지 URL.</li>\n    <li><strong>반바지가 레터박스처럼 보입니다:</strong>많은 Shorts는 여전히 가로 방향의 공개 파일을 저장합니다. URL은 여전히 ​​공식적인 공개 URL입니다.</li>\n  </ul>"
+    },
+    {
+      "heading": "다음 단계",
+      "html": "<p>공개 YouTube URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">유튜브 썸네일 추출기</a>유효한 이미지 링크를 복사하거나<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">스틸 이미지를 다운로드하세요</a>로컬 파일이 필요한 경우. 해상도 선택은 파일을 열어 확인하세요.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">사이즈 및 품질 가이드</a>.</p>\n\n  <p class=\"yte-bio\">11tik가 작성했으며, 브라우저 내 추출 도구를 발행했습니다. 공개된 스틸 이미지만 제공되며, 비디오나 오디오는 다운로드할 수 없습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "파일을 다운로드하지 않고 썸네일 URL을 직접 복사할 수 있나요?",
+      "answer": "네. 11tik에서 '이미지 URL 복사'를 사용하세요. 그러면 브라우저에서 이미 유효성 검사를 통과한 크기의 HTTPS 이미지 주소가 복사됩니다.",
+      "answerHtml": "<p>네. 11tik에서 '이미지 URL 복사'를 사용하세요. 그러면 브라우저에서 이미 유효성 검사를 통과한 크기의 HTTPS 이미지 주소가 복사됩니다.</p>"
+    },
+    {
+      "question": "유튜브 쇼츠 영상의 썸네일 URL을 얻을 수 있나요?",
+      "answer": "네, 쇼츠가 공개되어 있고 YouTube에서 해당 ID에 대한 스틸컷을 게시한 경우 가능합니다. 시청 URL을 붙여넣는 것과 같은 방식으로 /shorts/ 링크를 붙여넣으세요. 쇼츠 썸네일도 참고하세요.",
+      "answerHtml": "<p>네, 영상이 공개되어 있고 YouTube에서 해당 ID의 스틸컷을 게시한 경우입니다. 붙여넣기<code>/shorts/</code>시계 URL을 붙여넣는 것과 같은 방식으로 링크를 추가하세요. 참고 사항도 확인하세요.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">쇼츠 썸네일</a>.</p>"
+    },
+    {
+      "question": "어떤 썸네일 URL은 정상적으로 작동하는데 다른 URL은 오류를 반환하는 이유는 무엇인가요?",
+      "answer": "파일 이름은 선택적인 공개 파생물입니다. hqdefault.jpg은 maxresdefault.jpg이 없을 때 존재할 수 있습니다. 중간 크기의 URL이 작동한다고 해서 최대 해상도 URL이 작동한다는 것을 의미하지는 않습니다.",
+      "answerHtml": "<p>파일 이름은 선택적인 공개 파생물입니다.<code>hqdefault.jpg</code>존재할 수 있는 경우<code>maxresdefault.jpg</code>그렇지 않습니다. 중간 크기 URL이 정상적으로 작동한다고 해서 최대 해상도 URL도 정상적으로 작동하는 것은 아닙니다.</p>"
+    },
+    {
+      "question": "제 웹사이트에서 이미지 URL을 직접 사용할 수 있나요?",
+      "answer": "기술적으로는 파일이 존재한다면 가능하지만, 추천 이미지나 소셜 미디어 미리보기에는 자체적으로 복사본을 호스팅하는 것이 더 안정적입니다. 저작권 없이 타인의 작품을 채널 커버 이미지로 재사용하지 마세요.",
+      "answerHtml": "<p>기술적으로는 파일이 존재한다면 가능하지만, 추천 이미지나 소셜 미디어 미리보기에는 자체적으로 복사본을 호스팅하는 것이 더 안정적입니다. 저작권 없이 타인의 작품을 채널 커버 이미지로 재사용하지 마세요.</p>"
+    },
+    {
+      "question": "시계 URL이 썸네일 URL인 경우가 있나요?",
+      "answer": "아니요. 시청 URL은 동영상을 식별하고, 썸네일 URL은 이미지 CDN에 있는 이미지 파일을 식별합니다.",
+      "answerHtml": "<p>아니요. 시청 URL은 동영상을 식별하고, 썸네일 URL은 이미지 CDN에 있는 이미지 파일을 식별합니다.</p>"
+    },
+    {
+      "question": "11tik는 더 높은 해상도의 URL을 발명합니까?",
+      "answer": "아니요. 이미지로 응답하는 공개 파일만 나열합니다. maxres가 누락된 경우 해당 URL을 복사해서는 안 됩니다.",
+      "answerHtml": "<p>아니요. 이미지로 응답하는 공개 파일만 나열합니다. maxres가 누락된 경우 해당 URL을 복사해서는 안 됩니다.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했으며, 브라우저 내 추출 도구를 발행했습니다. 공개된 스틸 이미지만 제공되며, 비디오나 오디오는 다운로드할 수 없습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+}

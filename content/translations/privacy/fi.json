@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "fi",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Tietosuojakäytäntö | 11tik",
+  "description": "Tämä käytäntö koskee YouTuben pikkukuvien poimijaa osoitteessa https://www.11tik.com/ ja saman poimijan lataavia kielipalvelimia.",
+  "h1": "Tietosuojakäytäntö",
+  "ogTitle": "Tietosuojakäytäntö",
+  "ogDescription": "Tämä käytäntö koskee YouTuben pikkukuvien poimijaa osoitteessa https://www.11tik.com/ ja saman poimijan lataavia kielipalvelimia.",
+  "imageAlt": "",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Käsittely selaimessa",
+      "html": "<p>Kun liität YouTube-URL-osoitteen, sivu lukee videotunnuksen ja tarkistaa julkisten pikkukuvien URL-osoitteet selaimessasi. Liitettyjä linkkejä ei tallenneta henkilökohtaisena tilinä 11tik-sovelluspalvelimelle. Purkaminen ei vaadi kirjautumista.</p>"
+    },
+    {
+      "heading": "Valinnainen jakosivun hakemisto",
+      "html": "<p>Onnistuneen poiminnan jälkeen selain voi lähettää Cloudflare Workerillemme vain julkisen videotunnuksen, otsikon, julkisista metatiedoista johdetut tunnisteet ja julkisen pikkukuvan URL-osoitteen, jotta video voi näkyä jakosivulla ja, jos se läpäisee laatutarkastuksen, sivustokartassa. Emme pyydä sinua lataamaan kuvatiedostoa. Voit käyttää poimijaa ilman kyseistä indeksiä, jos selaimesi estää pyynnön.</p>"
+    },
+    {
+      "heading": "Paikallishistoria",
+      "html": "<p>Purkaja saattaa tallentaa viimeisimmät URL-osoitteet tämän selaimen paikalliseen tallennustilaan, jotta voit avata ne uudelleen. Kopio pysyy laitteellasi. Tyhjennä se sivun sisäisen historian avulla tai tyhjentämällä tämän sivuston tiedot selaimessa. Se ei ole pilvitili.</p>"
+    },
+    {
+      "heading": "Isännöintilokit",
+      "html": "<p>Verkkosivustoa, kielipalvelimia ja staattisia tiedostoja tarjoavat samat hosting-palveluntarjoajat kuin 11tik.com (mukaan lukien Cloudflare ja GitHub Pages). Nämä hosting-palveluntarjoajat voivat säilyttää tavallisia verkkolokeja, kuten IP-osoitteen, selaintyypin ja pyydetyn sivun, omien käytäntöjensä mukaisesti.</p>"
+    },
+    {
+      "heading": "Kolmannet osapuolet",
+      "html": "<p>Pienoiskuvatiedostoja pyydetään YouTuben julkisilta kuvapalveluilta. Sivusto käyttää Google Analytics 4:ää (mittaustunnus G-FW7B8NDZZ5) vierailujen ja sivun sisäisten toimintojen, kuten purkamisen ja lataamisen, laskemiseen. Google voi asettaa evästeitä tai vastaavia tunnisteita. Liitettyjä YouTube-URL-osoitteita ei lähetetä analytiikkatapahtumaparametreina. Fontteja tai skriptejä voidaan myös ladata sivun näyttämiseen käytetyistä CDN-verkoista.</p>\n  <p>FormSubmit toimittaa yhteydenottolomakkeen operaattorin sähköpostiosoitteeseen. FormSubmit näkee lähettämäsi nimen, sähköpostiosoitteen ja viestin.</p>"
+    },
+    {
+      "heading": "Yhteystiedot",
+      "html": "<p>Kysymyksiä tästä käytännöstä: sähköposti<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>tai käytä<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>lomake.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>·<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "hr",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Snimka zaslona u odnosu na pravu YouTube sličicu: koju datoteku spremiti? | 11tik",
+  "description": "Snimka zaslona playera s telefona nije minijatura koju YouTube hostira. Prava javnost još uvijek živi na i.ytimg.com. Koristite ga za blogove, Open Graph i istraživanja - snimke zaslona dodaju UI krom, kompresiju i pogrešan omjer slike.",
+  "h1": "Snimka zaslona u odnosu na pravu YouTube sličicu: koju datoteku trebate spremiti?",
+  "ogTitle": "Snimka zaslona u odnosu na pravu YouTube sličicu: koju datoteku trebate spremiti?",
+  "ogDescription": "Snimka zaslona playera s telefona nije minijatura koju YouTube hostira. Prava javnost još uvijek živi na i.ytimg.com. Koristite ga za blogove, Open Graph i istraživanja - snimke zaslona dodaju UI krom, kompresiju i pogrešan omjer slike.",
+  "imageAlt": "Usporedba snimke zaslona igrača i stvarne javne datoteke sličica na YouTubeu",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Usporedba snimke zaslona igrača i stvarne javne datoteke sličica na YouTubeu",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Koja je razlika između snimke zaslona i prave sličice?",
+      "html": "<p>Snimka zaslona snima vaš zaslon, uključujući Chrome playera, titlove i skaliranje uređaja. Prava minijatura je JPEG ili WebP datoteka koju je YouTube objavio za taj ID videozapisa. Samo CDN datoteka ima stabilan URL i poznatu veličinu piksela.</p>"
+    },
+    {
+      "heading": "Zašto snimke zaslona ne uspijevaju u Google slikama i pregledima društvenih mreža?",
+      "html": "<p>Često imaju pogrešan omjer slike, uključuju korisničko sučelje i komprimiraju se dvaput. Open Graph i mnoga CMS polja žele sliku omjera 16:9 oko 1280×720. To odgovara maxresdefaultu kada postoji - vidi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu sličica</a>.</p>"
+    },
+    {
+      "heading": "Kako da umjesto toga spremim pravu sličicu?",
+      "html": "<ol>\n    <li>Kopirajte javni URL videa, a ne snimku zaslona.</li>\n    <li>Zalijepi ga u<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Preuzmite prvu navedenu javnu datoteku ili kopirajte URL slike.</li>\n  </ol>"
+    },
+    {
+      "heading": "Kada je snimka zaslona još uvijek korisna?",
+      "html": "<p>Snimku zaslona koristite samo za dokumentiranje pogreške korisničkog sučelja ili trenutka unutar videa. Nemojte je koristiti kao službenu minijaturu, naslovnicu bloga ili sliku za dijeljenje ako još uvijek postoji javna slika.</p>\n  <p><a href=\"https://www.11tik.com/\">Nabavite pravu javnu minijaturu →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Koja je razlika između snimke zaslona i prave sličice?",
+      "answer": "Snimka zaslona snima vaš zaslon i player u Chromeu. Prava minijatura je JPEG ili WebP datoteka koju YouTube hostira na i.ytimg.com za taj ID videozapisa.",
+      "answerHtml": "Snimka zaslona snima vaš zaslon i player u Chromeu. Prava minijatura je JPEG ili WebP datoteka koju YouTube hostira na i.ytimg.com za taj ID videozapisa."
+    },
+    {
+      "question": "Zašto snimke zaslona ne uspijevaju u Google slikama i pregledima društvenih mreža?",
+      "answer": "Često imaju pogrešan omjer slike, dodatno korisničko sučelje i dodatnu kompresiju. CMS i Open Graph polja očekuju čistu javnu fotografiju u omjeru 16:9.",
+      "answerHtml": "Često imaju pogrešan omjer slike, dodatno korisničko sučelje i dodatnu kompresiju. CMS i Open Graph polja očekuju čistu javnu fotografiju u omjeru 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+}

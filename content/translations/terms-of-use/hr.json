@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "hr",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "Uvjeti korištenja | 11tik",
+  "description": "Alat za izdvajanje sličica s YouTubea na https://www.11tik.com/ dostupan je \"kakav jest\" za pronalaženje i spremanje javno dostupnih sličica s YouTubea.",
+  "h1": "Uvjeti korištenja",
+  "ogTitle": "Uvjeti korištenja",
+  "ogDescription": "Alat za izdvajanje sličica s YouTubea na https://www.11tik.com/ dostupan je \"kakav jest\" za pronalaženje i spremanje javno dostupnih sličica s YouTubea.",
+  "imageAlt": "",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Što alat radi",
+      "html": "<p>Identificira javne URL-ove minijatura za ID videozapisa i omogućuje vam pregled, kopiranje ili preuzimanje tih slika u pregledniku. Skupni način rada prihvaća jedan javni URL po retku. Javni URL kanala može se proširiti na nedavne prijenose putem javnog feeda YouTubea.</p>"
+    },
+    {
+      "heading": "Što alat ne radi",
+      "html": "<ul>\n    <li>Ne preuzima YouTube videozapise ili audiozapise.</li>\n    <li>Ne zaobilazi privatni, dobno ograničen ili na drugi način nejavni sadržaj.</li>\n    <li>Ne daje prava na minijaturu. Vi ste odgovorni za način na koji koristite sliku, uključujući autorska prava i uvjete korištenja YouTubea.</li>\n  </ul>"
+    },
+    {
+      "heading": "Prihvatljiva upotreba",
+      "html": "<p>Ne koristite 11tik za preuzimanje sadržaja u prevelikoj količini, lažno predstavljanje kao drugi kanal ili ponovno objavljivanje sličice kao vlastite naslovnice albuma bez dopuštenja nositelja prava. Automatizirani pristup može biti ograničen brzinom.</p>"
+    },
+    {
+      "heading": "Dijeljenje stranica i javnog API-ja",
+      "html": "<p>Podijelite poveznice kao što su<code>/?v=</code>i API za sličice opisuje javne fotografije. One ne daju licencu za komercijalnu ponovnu upotrebu umjetničkog djela. Ugrađeni widget mora zadržati oznaku \"Powered by 11tik.com\" ako ga prikazujete na drugoj web-lokaciji.</p>"
+    },
+    {
+      "heading": "Dostupnost",
+      "html": "<p>Stranica se može promijeniti, prestati s radom ili biti nedostupna. Ne postoji ugovor o razini usluge niti jamstvo neprekidnog pristupa, prikladnosti za određenu svrhu ili rezultata bez grešaka.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Pitanja:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>ili<a href=\"https://www.11tik.com/p/contact.html\">kontaktni obrazac</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">Pravila o privatnosti</a>·<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/\">Izdvajanje minijatura s YouTubea</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "zh",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "如何下载高清 YouTube Shorts 缩略图 | 11tik",
+  "description": "在浏览器中下载 YouTube Shorts 缩略图。Shorts 使用与观看链接相同的公开静态图像。该文件通常为横向图像。",
+  "h1": "如何下载高清 YouTube Shorts 缩略图",
+  "ogTitle": "如何下载高清 YouTube Shorts 缩略图",
+  "ogDescription": "在浏览器中下载 YouTube Shorts 缩略图。Shorts 使用与观看链接相同的公开静态图像。该文件通常为横向图像。",
+  "imageAlt": "在 11tik 中下载公开的 YouTube Shorts 缩略图",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "在 11tik 中下载公开的 YouTube Shorts 缩略图",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "如何下载 YouTube Shorts 缩略图？",
+      "html": "<p>复制包含 /shorts/ 和视频 ID 的 URL，并将其粘贴到<a href=\"https://www.11tik.com/\">11tik</a>并下载指定大小的文件。当ID有效时，提取过程开始。</p>"
+    },
+    {
+      "heading": "Shorts 文件和 watch-page 文件是一样的吗？",
+      "html": "<p>它们使用相同的公开尺寸名称，并以视频 ID 为键。如果 YouTube 存储的是宽屏衍生版本，则静帧图像可能会出现黑边。</p>"
+    },
+    {
+      "heading": "如果没有图像显示怎么办？",
+      "html": "<p>该短片可能设置为私有、已删除或没有公开剧照。提取器无法绕过这些限制。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">如何下载</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "我可以下载 YouTube Shorts 的缩略图吗？",
+      "answer": "是的，当时 YouTube 发布了该 Shorts 视频 ID 的公开截图。",
+      "answerHtml": "是的，当时 YouTube 发布了该 Shorts 视频 ID 的公开截图。"
+    },
+    {
+      "question": "为什么画面看起来像是有黑边的？",
+      "answer": "即使是竖屏短视频，YouTube 也可能存储 16:9 的衍生版本。11tik 显示的是托管文件，而不是人为裁剪。",
+      "answerHtml": "即使是竖屏短视频，YouTube 也可能存储 16:9 的衍生版本。11tik 显示的是托管文件，而不是人为裁剪。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

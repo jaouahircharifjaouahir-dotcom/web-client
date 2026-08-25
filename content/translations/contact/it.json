@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "it",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Contatti | 11tik",
+  "description": "Utilizza questo modulo per domande relative a YouTube Thumbnail Extractor. I messaggi vengono inviati all'operatore 11tik tramite e-mail. Non inviare file video o audio. Lo strumento funziona solo con immagini di anteprima pubbliche.",
+  "h1": "Contatto",
+  "ogTitle": "Contatto",
+  "ogDescription": "Utilizza questo modulo per domande relative a YouTube Thumbnail Extractor. I messaggi vengono inviati all'operatore 11tik tramite e-mail. Non inviare file video o audio. Lo strumento funziona solo con immagini di anteprima pubbliche.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Contatto",
+      "html": "<h1>Contatto</h1>\n  <p class=\"yte-updated\">Ultimo aggiornamento: 22 agosto 2026</p>\n  <p itemprop=\"description\">Utilizza questo modulo per domande relative a YouTube Thumbnail Extractor. I messaggi vengono inviati all'operatore 11tik tramite e-mail. Non inviare file video o audio. Lo strumento funziona solo con immagini di anteprima pubbliche.</p>\n  <p>Indirizzo email diretto:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Per una segnalazione relativa a un video specifico, includi l'URL pubblico di YouTube. 11tik non ospita il file di anteprima; l'immagine viene richiesta dalla CDN pubblica della piattaforma.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Nome<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Messaggio<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Invia messaggio</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Estrattore di miniature di YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Di</a>·<a href=\"https://www.11tik.com/p/privacy.html\">politica sulla riservatezza</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Informazioni</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

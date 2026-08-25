@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "tr",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "WebP mi JPEG mi YouTube Küçük Resimleri: Hangi Formatı Kullanmalısınız? | 11tik",
+  "description": "YouTube, JPEG ve WebP küçük resim dosyaları yayınlayabilir. Kullanım durumunuz için 11tik'ün onayladığı formatı tercih edin; WebP her zaman mevcut olmayabilir.",
+  "h1": "YouTube küçük resimleri için WebP mi yoksa JPEG mi kullanmalısınız?",
+  "ogTitle": "YouTube küçük resimleri için WebP mi yoksa JPEG mi kullanmalısınız?",
+  "ogDescription": "YouTube, JPEG ve WebP küçük resim dosyaları yayınlayabilir. Kullanım durumunuz için 11tik'ün onayladığı formatı tercih edin; WebP her zaman mevcut olmayabilir.",
+  "imageAlt": "i.ytimg.com'de JPEG ve WebP YouTube küçük resim URL yollarının yan yana karşılaştırması",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "i.ytimg.com'de JPEG ve WebP YouTube küçük resim URL yollarının yan yana karşılaştırması",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "JPEG ve WebP YouTube küçük resimleri için web sitesi CMS'si, doğrudan CDN bağlantıları ve arşiv indirmelerini karşılaştıran kullanım senaryosu tablosu.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>Çoğu indirme ve CMS yüklemesi için şunları göz önünde bulundurun:<strong>doğrulanmış dosya 11tik ilk listeyi listeliyor</strong>JPEG hala yaygın olarak kullanılan bir format olmaya devam ediyor.<code>i.ytimg.com/vi/…</code>WebP bazı videolar için şu şekilde görünür:<code>maxresdefault.webp</code>altında<code>/vi_webp/</code>WebP genellikle benzer görsel kalitede daha küçüktür, ancak her kimlik için yayınlanmaz. 11tik ise yayınlanmaz.<strong>Olumsuz</strong>WebP dosyalarını indirme sırasında JPEG'e dönüştürün; bu, YouTube'un zaten barındırdığı baytları tasarruf etmenizi sağlar (JPEG indirmelerinde yalnızca küçük bir meta veri yorum damgası bulunur).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Aynı video kimliği, farklı kapsayıcılar ve yollar—bu yalnızca YouTube her ikisini de yayınladığında geçerlidir.</p>"
+    },
+    {
+      "heading": "YouTube küçük resim formatlarının 11tik'te nasıl göründüğü",
+      "html": "<p>11tik'nin kalite ayarları şunları içerir:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(pantomim)<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ altında<code>/vi/</code>(pantomim)<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Adaylar tarayıcıya yüklenir. Başarısız olanlar ve yer tutucular elenir. Sıralama, kademe, piksel alanı, beklenen boyut eşleşmesi ve küçük bir faktör kullanılarak yapılır.<strong>-8 puanlık ceza<code>.webp</code>URL'ler</strong>Bu nedenle aynı seviyedeki JPEG ve WebP dosyaları öngörülemeyen bir şekilde sonuç vermez; her ikisi de doğrulandığında JPEG kazanabilir. Boyutlarla ilgili ayrıntılar:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">küçük resim boyutu kılavuzu</a>. Eksik maxres davranışı:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "JPEG ve WebP arasındaki farkın sade bir dille açıklaması",
+      "html": "<table>\n    <thead>\n      <tr><th>Biçim</th><th>En iyisi</th><th>Kuvvet</th><th>Sınırlama</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>İndirmeler, WordPress yüklemeleri, en geniş uyumluluk</td><td>Neredeyse evrensel destek; çoğu CDN hala</td><td>Benzer kalitede daha büyük dosyalar</td></tr>\n      <tr><td>WebP</td><td>WebP'ye zaten hizmet veren modern siteler</td><td>Genellikle aynı çözünürlük seviyesi için daha küçüktür.</td><td>Her video için yayınlanmıyor; bazı eski araçlar sorun çıkarıyor.</td></tr>\n    </tbody>\n  </table>\n  <p>Bu formatların hiçbiri çözünürlük kavramını icat etmedi. 480x360 çözünürlüğündeki bir WebP yine 480x360 çözünürlüğündedir.</p>"
+    },
+    {
+      "heading": "İndirdiğinizde ne olur?",
+      "html": "<p>İndirilen dosya adı gerçek uzantısını korur (<code>.jpg</code>veya<code>.webp</code>(mime türünden / URL'den). JPEG ikili dosyaları için, 11tik aşağıdaki gibi kısa bir JPEG yorumu ekleyebilir:<code>11tik VIDEO_ID quality youtube thumbnail</code>WebP ve JPEG olmayan dosyalar, yeniden kodlama adımı olmadan kaydedilir. Kalite \"yükseltmesi\" veya formatlar arasında zorunlu dönüştürme yoktur.</p>"
+    },
+    {
+      "heading": "JPEG'i ne zaman tercih etmelisiniz?",
+      "html": "<ul>\n    <li>Medya kütüphanesinde JPG formatı bekleyen bir içerik yönetim sistemine (CMS) dosya yüklüyorsunuz.</li>\n    <li>E-posta istemcileri veya eski tarayıcılarla maksimum uyumluluğa ihtiyacınız var.</li>\n    <li>Bu video için yalnızca JPEG boyutları doğrulanmıştır.</li>\n    <li>Dosyayı yazdırıyorsunuz veya JPG formatını standartlaştırmış bir tasarımcıya teslim ediyorsunuz.</li>\n  </ul>"
+    },
+    {
+      "heading": "WebP'nin uygun olduğu durumlarda",
+      "html": "<ul>\n    <li>11tik, doğrulanmış bir WebP maxres değeri listeledi ve siteniz zaten WebP sunuyor.</li>\n    <li>Aynı ~1280×720 çözünürlük için daha küçük bir dosya istiyorsunuz.</li>\n    <li>Yığın kontrolünü siz sağlarsınız ve gerekirse JPEG'e geri dönebilirsiniz.</li>\n  </ul>\n  <p>Temanız WebP'yi desteklemiyorsa, bunun yerine JPEG indirin veya indirdikten sonra yerel olarak dönüştürün. 11tik sizin için dönüştürme yapmayacaktır.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">İşlem hattınıza uygun, doğrulanmış formatı seçin; tahmini bir uzantıyı değil.</p>"
+    },
+    {
+      "heading": "Doğrudan bağlantılar ve web siteleri",
+      "html": "<p>Görüntü URL'sini kopyala seçeneği, doğrulanmış adayın HTTPS CDN adresini döndürür. WebP veya JPEG'i doğrudan bağlantı yoluyla kullanmanın, daha önce ele alınan aynı kırılganlığı vardır.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Open Graph kılavuzu</a>Kalıcı gönderiler için kendi kopyanızı barındırmayı tercih edin. URL kalıpları:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Tarayıcı ve CMS uyumluluk notları",
+      "html": "<p>Modern Chromium, Firefox ve Safari sürümleri, sayfalarda WebP resimlerini destekler. Bazı eski eklentiler, e-posta şablonları veya yazdırma iş akışları hala JPEG'i tercih etmektedir. WordPress çekirdeği, yapılandırıldığında WebP'yi sunabilir, ancak birçok ekip öngörülebilirlik için öne çıkan resimleri hala JPG olarak standartlaştırmaktadır. Resmi WordPress medya belgeleri, sürümünüz için doğru bilgi kaynağıdır; her eklentinin WebP yüklemelerini kabul ettiğini varsaymayın.</p>"
+    },
+    {
+      "heading": "Pratik karar ağacı",
+      "html": "<ol>\n    <li>Özetle<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Eğer bir CMS öne çıkan görseline ihtiyacınız varsa ve her iki formatı da görüyorsanız, WebP öncelikli bir sistem kullanmıyorsanız JPEG'i seçin.</li>\n    <li>En üst seviyede yalnızca WebP maksimum çözünürlüğü onaylanmışsa, onu kullanın; veya JPEG'de kalmanız gerekiyorsa bir sonraki JPEG boyutunu seçin.</li>\n    <li>Arşivler için, indirdiğiniz orijinal dosya uzantısını koruyun.</li>\n  </ol>\n  <p>Çözüm rehberini indirin:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube küçük resmini indir</a>.</p>"
+    },
+    {
+      "heading": "Sonraki adım",
+      "html": "<p>Herkese açık bir URL'yi yapıştırın.<a href=\"https://www.11tik.com/\">YouTube Küçük Resim Çıkarıcı</a>En üstteki sonucun hangisi olduğuna dikkat edin.<code>.jpg</code>veya<code>.webp</code>Ve dosya adının uzunluğuna göre değil, kullandığınız içerik yönetim sistemine (CMS) göre seçim yapın.</p>\n  <p class=\"yte-bio\">11tik tarafından, tarayıcı içi çıkarıcının mevcut davranışına dayanarak yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Her YouTube videosunun WebP formatında bir küçük resmi var mı?",
+      "answer": "Hayır. WebP maxres isteğe bağlıdır. Birçok video yalnızca JPEG boyutlarını gösterir.",
+      "answerHtml": "<p>Hayır. WebP maxres isteğe bağlıdır. Birçok video yalnızca JPEG boyutlarını gösterir.</p>"
+    },
+    {
+      "question": "WebP her zaman JPEG'den daha mı nettir?",
+      "answer": "Hayır. Biçimlendirme çözünürlüğü artırmaz. Eşit piksel boyutlarını karşılaştırın.",
+      "answerHtml": "<p>Hayır. Biçimlendirme çözünürlüğü artırmaz. Eşit piksel boyutlarını karşılaştırın.</p>"
+    },
+    {
+      "question": "JPEG'in 11tik'te WebP'den daha üst sırada yer almasının sebebi ne olabilir?",
+      "answer": "Doğrulanan WebP URL'leri, benzer adaylara kıyasla küçük bir puan cezası (-8) alır, bu nedenle her ikisi de aynı kademede olduğunda JPEG önce görünebilir.",
+      "answerHtml": "<p>Doğrulanan WebP URL'leri, benzer adaylara kıyasla küçük bir puan cezası (-8) alır, bu nedenle her ikisi de aynı kademede olduğunda JPEG önce görünebilir.</p>"
+    },
+    {
+      "question": "İndirme işlemi WebP'yi JPEG'e dönüştürür mü?",
+      "answer": "Hayır. Kaydedilen dosya kaynak formatını korur. Yalnızca JPEG dosyalarına meta veri yorumu eklenebilir.",
+      "answerHtml": "<p>Hayır. Kaydedilen dosya kaynak formatını korur. Yalnızca JPEG dosyalarına meta veri yorumu eklenebilir.</p>"
+    },
+    {
+      "question": "Hangi formatta doğrudan bağlantı vermeliyim?",
+      "answer": "Üretim sayfalarınız için de aynı durum geçerli değil. Bir kopyasını barındırın. Geçici olarak doğrudan bağlantı vermeniz gerekiyorsa, önceden doğrulanmış bir URL 11tik kullanın.",
+      "answerHtml": "<p>Üretim sayfalarınız için de aynı durum geçerli değil. Bir kopyasını barındırın. Geçici olarak doğrudan bağlantı vermeniz gerekiyorsa, önceden doğrulanmış bir URL 11tik kullanın.</p>"
+    },
+    {
+      "question": "HQ720 WebP olabilir mi?",
+      "answer": "Mevcut 11tik ön ayar listesinde, özel WebP adayı maxres WebP'dir. Diğer boyutlar /vi/ altında JPEG dosya adları olarak istenmektedir.",
+      "answerHtml": "<p>Mevcut 11tik ön ayar listesinde, özel WebP adayı maxres WebP'dir. Diğer boyutlar JPEG dosya adları altında talep edilmektedir.<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından, tarayıcı içi çıkarıcının mevcut davranışına dayanarak yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+}

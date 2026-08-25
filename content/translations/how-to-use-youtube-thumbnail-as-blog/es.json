@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "es",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Cómo usar una miniatura de YouTube como imagen destacada de un blog o vista previa de Open Graph | 11tik",
+  "description": "Confirma que aún existe un canal público de YouTube y, a continuación, aloja una copia en WordPress, Blogger o og:image. No enlaces directamente a una URL de maxresdefault que hayas adivinado.",
+  "h1": "Cómo usar una miniatura de YouTube como imagen destacada de un blog o vista previa de Open Graph.",
+  "ogTitle": "Cómo usar una miniatura de YouTube como imagen destacada de un blog o vista previa de Open Graph.",
+  "ogDescription": "Confirma que aún existe un canal público de YouTube y, a continuación, aloja una copia en WordPress, Blogger o og:image. No enlaces directamente a una URL de maxresdefault que hayas adivinado.",
+  "imageAlt": "Flujo de trabajo desde la confirmación de una miniatura de YouTube en 11tik hasta su carga en WordPress o la configuración de og:image",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Flujo de trabajo desde la confirmación de una miniatura de YouTube en 11tik hasta su carga en WordPress o la configuración de og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Comparación lado a lado de la carga de imágenes destacadas de WordPress frente a una tarjeta social de Open Graph utilizando dimensiones de píxeles reales.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Respuesta rápida",
+      "html": "<p>Pegue una URL pública de YouTube en<a href=\"https://www.11tik.com/\">11tik</a>, esperar a que se validen los tamaños, luego<strong>descargar</strong>la primera imagen fija y súbela a tu CMS, o<strong>Copia la URL de la imagen.</strong>Solo después de que se cargue. Para publicaciones permanentes, aloje su propia copia. Enlace directo<code>i.ytimg.com</code>Es conveniente para borradores y frágil para la producción de tarjetas sociales.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Confirmar → copiar o descargar → alojar → referenciar en HTML / imagen destacada / Open Graph.</p>"
+    },
+    {
+      "heading": "Qué es una URL de miniatura directa",
+      "html": "<p>Una URL de miniatura directa apunta a un archivo JPEG o WebP en la CDN de imágenes de YouTube, por ejemplo<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>No es la página de vigilancia. Cómo se construyen esas direcciones:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Obtén una URL de miniatura de YouTube</a>En qué se diferencian los tamaños:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guía de tamaño y resolución</a>.</p>"
+    },
+    {
+      "heading": "Ejemplo HTML",
+      "html": "<p>Después de que 11tik confirme un archivo, un patrón de marcado mínimo se ve así (reemplace la URL, el ancho, la altura y el texto alternativo con los valores reales):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>En producción, utilice su propia URL alojada:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Utilice los informes de ancho y alto reales 11tik. No invente 1280×720 cuando solo existe 480×360.</p>"
+    },
+    {
+      "heading": "Flujo de trabajo de WordPress",
+      "html": "<ol>\n    <li>Extraiga el vídeo en 11tik y descargue la primera imagen fija que aparece en la lista.</li>\n    <li>En WordPress: Medios → Añadir nuevo → subir el archivo.</li>\n    <li>Establecer como imagen destacada de la publicación.</li>\n    <li>En Yoast, Rank Math o similar, confirma que la vista previa social utiliza ese archivo adjunto (o sube un recorte OG específico).</li>\n    <li>Escribe un texto alternativo que indique el nombre del vídeo y que el archivo es una imagen fija pública de YouTube, no una lista interminable de palabras clave.</li>\n  </ol>\n  <p>Evite pegar un archivo sin formato<code>maxresdefault.jpg</code>ruta hacia el campo de medios hasta que se haya comprobado el archivo. Es común que falte maxres.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Guía para el error 404 de maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "Blogger y sitios estáticos",
+      "html": "<p><strong>Blogger:</strong>Sube la imagen fija al editor de entradas y reutiliza la URL de la imagen alojada en Blogger para cualquier campo de tema o fragmento social que controles. No te fíes de una ruta de CDN de YouTube adivinada para una entrada publicada que te importe.</p>\n  <p><strong>Generadores estáticos:</strong>Confirma el archivo en tu repositorio o CDN, luego configura las etiquetas de encabezado/meta para ese recurso HTTPS. Si es necesario, guarda los borradores en una URL temporal i.ytimg.com, pero publícalos con tu propio servidor.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">La imagen destacada y og:image pueden compartir un archivo, pero ambas necesitan una URL que realmente exista.</p>"
+    },
+    {
+      "heading": "Consideraciones sobre Open Graph",
+      "html": "<p>Las tarjetas de enlace grandes suelen apuntar a aproximadamente<strong>1200×630</strong>. YouTube maxres suele ser<strong>1280×720</strong>(16:9), que recorta los raspadores o el buzón. Conjunto<code>og:image</code>(y ancho/alto cuando tu pila los admita) a los píxeles reales. Después de corregir una URL rota, vuelve a rastrear en el depurador de cada plataforma; las cachés se conservan.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Enlaces directos frente a descargas",
+      "html": "<table>\n    <thead>\n      <tr><th>Acercarse</th><th>Lo mejor para</th><th>Riesgo</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Enlace directo i.ytimg.com</td><td>Borradores rápidos, notas de investigación</td><td>Errores 404, cambios en CDN, sin control de cultivos</td></tr>\n      <tr><td>Descargar + alojamiento</td><td>Publicaciones destacadas, páginas de productos</td><td>Debes guardar el archivo</td></tr>\n      <tr><td>Captura de pantalla del jugador</td><td>Casi nunca</td><td>Interfaz de usuario Chrome, proporción incorrecta —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captura de pantalla vs real</a></td></tr>\n    </tbody>\n  </table>\n  <p>Pasos de descarga:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cómo descargar una miniatura de YouTube</a>Elección de formato cuando existen tanto WebP como JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP frente a JPEG</a>.</p>"
+    },
+    {
+      "heading": "Conceptos básicos de SEO para imágenes fijas",
+      "html": "<ul>\n    <li><strong>Nombre del archivo:</strong>descriptivo, como por ejemplo<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alt:</strong>Describe la imagen y el video; no incluyas \"descargador de miniaturas de YouTube HD 4K\".</li>\n    <li><strong>Dimensiones:</strong>Declara el ancho/alto real.</li>\n    <li><strong>Solo HTTPS:</strong>Los programas de extracción de datos descartan las URL de imágenes con contenido mixto.</li>\n    <li><strong>Compresión:</strong>Si es necesario, vuelva a codificar ligeramente para su CDN; no aumente la resolución de hqdefault a una resolución máxima falsa.</li>\n  </ul>"
+    },
+    {
+      "heading": "Reutilización y derechos de autor (esto no constituye asesoramiento legal).",
+      "html": "<p>Una URL pública de CDN no es una licencia. Incrustar el reproductor de YouTube es diferente a copiar la imagen fija en la cabecera. El uso legítimo depende de cada caso. Un patrón editorial más seguro: ilustrar comentarios sobre ese video, dar crédito al canal, enlazar la página de visualización y no vender la imagen ni usarla como imagen de portada de tu canal. Ayuda oficial para miniaturas personalizadas:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Sube miniaturas de vídeo personalizadas</a>Reglas del sitio:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+    },
+    {
+      "heading": "Solución de problemas",
+      "html": "<ul>\n    <li>Tarjeta social rota → maxres adivinado; reextraiga y aloje un archivo validado.</li>\n    <li>Tarjeta borrosa/de baja calidad → usaste hqdefault; verifica los tamaños.</li>\n    <li>Recorte incorrecto → proporcione un recorte específico de 1200×630 a partir de una imagen fija real de 16:9.</li>\n    <li>Caché persistente → fuerza un nuevo rastreo después de un cambio de URL.</li>\n  </ul>"
+    },
+    {
+      "heading": "Siguiente paso",
+      "html": "<p>Confirma una imagen fija en el<a href=\"https://www.11tik.com/\">Extractor 11tik</a>, descárguelo, súbalo a su sitio y apunte featured image / og:image a su archivo HTTPS.</p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Puedo pegar una URL i.ytimg.com en WordPress?",
+      "answer": "Algunos campos lo aceptan, pero subir un archivo local confirmado es más fiable para las imágenes destacadas y las vistas previas en redes sociales.",
+      "answerHtml": "<p>Algunos campos lo aceptan, pero subir un archivo local confirmado es más fiable para las imágenes destacadas y las vistas previas en redes sociales.</p>"
+    },
+    {
+      "question": "¿Necesito maxresdefault para Open Graph?",
+      "answer": "No. Todavía necesitas la mayor cantidad de público validado. Que falte maxres es normal.",
+      "answerHtml": "<p>No. Todavía necesitas la mayor cantidad de público validado. Que falte maxres es normal.</p>"
+    },
+    {
+      "question": "¿Debería mencionarse YouTube en el texto alternativo?",
+      "answer": "Sí, cuando ayude a describir el contenido (\"Miniatura pública de YouTube para...\"). No abuses de las palabras clave.",
+      "answerHtml": "<p>Sí, cuando ayude a describir el contenido (\"Miniatura pública de YouTube para...\"). No abuses de las palabras clave.</p>"
+    },
+    {
+      "question": "¿Está permitido el hotlinking en algún caso?",
+      "answer": "Para borradores temporales o notas internas, sí. Para una publicación pública permanente, aloje una copia.",
+      "answerHtml": "<p>Para borradores temporales o notas internas, sí. Para una publicación pública permanente, aloje una copia.</p>"
+    },
+    {
+      "question": "¿Puedo usar la imagen fija como portada de mi canal?",
+      "answer": "No sin derechos. Esa es la obra de arte de otra persona.",
+      "answerHtml": "<p>No sin derechos. Esa es la obra de arte de otra persona.</p>"
+    },
+    {
+      "question": "¿Y si Studio simplemente cambiara la miniatura personalizada?",
+      "answer": "Espere a que se procese y luego vuelva a comprobar en 11tik antes de actualizar su copia de CMS. Relacionado: Miniaturas de YouTube Studio.",
+      "answerHtml": "<p>Espere a que se procese y luego vuelva a comprobar en 11tik antes de actualizar su copia de CMS. Relacionado:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">miniaturas de YouTube Studio</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+}

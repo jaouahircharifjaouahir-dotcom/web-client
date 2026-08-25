@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "ja",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "YouTubeサムネイルのサイズと解像度：完全ガイド | 11tik",
+  "description": "YouTubeのサムネイルサイズを120×90から1280×720まで比較します。Maxresとhq720はオプションです。読み込める最大の公開ファイルを使用してください。",
+  "h1": "YouTubeサムネイルのサイズと解像度：完全ガイド",
+  "ogTitle": "YouTubeサムネイルのサイズと解像度：完全ガイド",
+  "ogDescription": "YouTubeのサムネイルサイズを120×90から1280×720まで比較します。Maxresとhq720はオプションです。読み込める最大の公開ファイルを使用してください。",
+  "imageAlt": "YouTubeの公開サムネイルサイズの比較表（最大解像度1280×720からデフォルト120×90まで）",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "YouTubeの公開サムネイルサイズの比較表（最大解像度1280×720からデフォルト120×90まで）",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "maxresdefault が利用可能な動画と、より小さな hqdefault ファイルしか存在しない動画を並べて比較した図。",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "簡単な回答",
+      "html": "<p>カスタムアップロードの場合、YouTube のヘルプは依然として<strong>16:9</strong>画像—一般的に<strong>1280×720</strong>既存のビデオからダウンロードできるファイルの場合、公開CDN派生ファイルは異なります。存在する場合、<code>maxresdefault</code>/<code>hq720</code>通常は 1280×720 です。多くの動画は<code>sddefault</code>(640×480)または<code>hqdefault</code>(480×360)。ファイル名が大きいほどピクセルが増えるわけではありません。ウォッチURLを貼り付けてください。<a href=\"https://www.11tik.com/\">11tik</a>実際の画像が返されるサイズのみを一覧表示する。</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">相対的な視聴者数。すべての動画がこの階層のすべての段階を公開しているわけではありません。</p>"
+    },
+    {
+      "heading": "クリエイター向け推奨寸法",
+      "html": "<p>Studioでカスタムサムネイルをデザインする場合は、現在のYouTubeヘルプに従ってください。<strong>16:9</strong>それでも。広く使われている作業サイズは<strong>1280×720</strong>ピクセル。これはプレーヤーのワイドスクリーンフレームと一致し、公開されているものと同じピクセルクラスです。<code>maxresdefault</code>YouTubeが作成するとき。</p>\n  <p>公式資料：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>Studioによる処理が完了したら、すべての派生ファイルが即座に作成されたと想定するのではなく、11tikを使用してライブ公開ファイルを確認してください。Studioに関する注意事項：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026年のYouTube Studioのサムネイル</a>。</p>"
+    },
+    {
+      "heading": "パブリックCDNのサイズは、視聴者が実際に取得できます。",
+      "html": "<p>ダウンローダーやブログは、Photoshopのマスターファイルを取得しません。動画IDを取得するために、YouTubeホストから公開されている派生ファイルを取得します。11tikのエクストラクタは、これらのファイル名（JPEG、および存在する場合はWebP）をチェックします。</p>\n  <table>\n    <thead>\n      <tr><th>変異体</th><th>標準解像度</th><th>ティア</th><th>可用性</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>最高</td><td>YouTubeがWebP maxresを公開した場合のみ</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>最高</td><td>新しい/高画質のアップロードではよく見られるが、古いアップロードでは見られないことが多い。</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720クラス</td><td>最高</td><td>一部の動画では、代替の高解像度ファイルとして表示されます。</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>高い</td><td>maxres が存在しない場合、多くの場合利用可能です</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>標準</td><td>非常に一般的</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>プレビュー</td><td>簡単なプレビュー／リスト</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>プレビュー</td><td>最小基準は依然として</td></tr>\n    </tbody>\n  </table>\n  <p>これらの想定される幅と高さは、11tikの品質プリセットと一致します。ただし、YouTubeがプレースホルダーを表示したり、ファイルを完全に省略したりすると、実際の応答は異なる場合があるので、必ず検証してください。</p>"
+    },
+    {
+      "heading": "ファイルが異なる場合でも、16:9が重要な理由",
+      "html": "<p>ウォッチプレーヤーはワイドスクリーンです。16:9 でデザインされたカスタムアートは、検索、おすすめの棚、埋め込みで読みやすいままです。一部の公開ファイル (特に<code>hqdefault</code>/<code>sddefault</code>）は厳密には 16:9 のボックスではありません。これらは古い CDN サイズです。Open Graph やブログのヘッダー用にきれいな 16:9 アセットが必要な場合は、真の 1280×720 のパブリック静止画を使用することをお勧めします。</p>\n  <p>ショート動画は縦向きで再生されますが、保存されている動画は横向きのままの場合が多いです。これはホスト側の動作であり、ダウンロードの失敗ではありません。詳細：<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">ショート動画のサムネイルをダウンロード</a>。</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs “HD”",
+      "html": "<p><code>maxresdefault</code>は、おなじみの HD ファイル名です<code>i.ytimg.com</code>ファイルが存在する場合、通常は1280×720であり、4Kではありません。<code>hq720</code>は、同じ解像度クラスの動画で使用されている別の高レベルな名前です。どちらの名前もファイルを保証するものではありません。確認せずにmaxres URLを出力するツールは、破損した画像を生成します。</p>\n  <p>ファイル名に関するより詳細な注記：<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpgとは何か</a>そして<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品質のパブリックサムネイル</a>。</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">同じリクエストパターンでも結果が異なる：ファイルが存在しない場合、ファイル名を大きくしてもピクセルは生成されない。</p>"
+    },
+    {
+      "heading": "なぜ動画のサイズが動画によって異なるのか",
+      "html": "<ul>\n    <li>古いアップロードファイルには、最大解像度版が作成されていない可能性があります。</li>\n    <li>元の画像サイズは1280×720ピクセル未満でした。</li>\n    <li>カスタムサムネイルは現在Studioで処理中です。</li>\n    <li>非公開動画、会員限定動画、または年齢制限付き動画では、公開用の静止画を掲載することはできません。</li>\n    <li>WebP形式のファイルは、YouTubeがそのID向けに公開した場合にのみ表示されます。</li>\n  </ul>\n  <p>利用可能状況は動画ごとに異なります。競合他社の有効なmaxres URLを、自社のURLが存在することの証明として扱わないでください。</p>"
+    },
+    {
+      "heading": "11tikが「最適な」サイズを選ぶ方法",
+      "html": "<p>11tikは、公開されている候補ファイルを固定品質順（WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default）で調査します。画像として検証されたファイルを保持し、最も高いランクのファイルを最初に表示します。アップスケールは行いません。maxresが指定されていない場合、最初のカードはhq720またはsdになる可能性があります。これは、そのIDにおける正直な最大値です。</p>\n  <p>選択したサイズのアドレスをコピーするには、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>ファイルを保存するには、<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>。</p>"
+    },
+    {
+      "heading": "どのサイズを使用すればよいですか？",
+      "html": "<table>\n    <thead>\n      <tr><th>使用事例</th><th>好む</th><th>なぜ</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>ブログの注目画像 / Open Graph</td><td>最大検証済みサイズ：約1280×720</td><td>一般的な社会作物にマッチします。独自のコピーをホストしてください。</td></tr>\n      <tr><td>デザインモックアップ／サムネイルリサーチ</td><td>入手可能な最高の公共静止画</td><td>実際のパッケージであり、プレイヤーのスクリーンショットではありません</td></tr>\n      <tr><td>クイックチャットプレビュー</td><td>hq または mq</td><td>ファイルサイズが小さいほど読み込みが速くなります</td></tr>\n      <tr><td>Studioでのカスタムアップロード</td><td>16:9 1280×720（またはそれ以上）のオリジナル</td><td>あなたはアートを創造する。CDNの派生商品は後から生まれる。</td></tr>\n    </tbody>\n  </table>\n  <p>hqdefault を 1280×720 に引き伸ばして maxres と呼ばないでください。CMS ホスティングのヒントについては、以下を参照してください。<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">注目の画像 / Open Graphワークフロー</a>プレイヤーのスクリーンショットは、別の（より悪い）アセットです。<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">スクリーンショットと実際のサムネイルの比較</a>。</p>"
+    },
+    {
+      "heading": "次のステップ",
+      "html": "<p>ライブビデオをチェック<a href=\"https://www.11tik.com/\">11tik エクストラクター</a>すると、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">画像のURLをコピーしてください</a>または<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">入手可能な最高の静止画をダウンロード</a>。</p>\n\n  <p class=\"yte-bio\">11tikによって作成されました。公開CDNサイズのみ。アップスケーリングや動画ダウンロードは行いません。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "maxresdefaultは常に利用可能ですか？",
+      "answer": "いいえ。多くの公開動画では、そのファイルは公開されません。maxresで404エラーが表示されるのは正常です。",
+      "answerHtml": "<p>いいえ。多くの公開動画では、そのファイルは公開されません。maxresで404エラーが表示されるのは正常です。</p>"
+    },
+    {
+      "question": "hq720は他のサムネイル形式よりも優れていますか？",
+      "answer": "hq720が存在する場合、それはmaxres（約1280×720）と同等の高解像度です。ただし、検証済みのmaxresファイルよりも自動的に「優れている」わけではなく、また、そのことが保証されているわけでもありません。",
+      "answerHtml": "<p>hq720が存在する場合、それはmaxres（約1280×720）と同等の高解像度です。ただし、検証済みのmaxresファイルよりも自動的に「優れている」わけではなく、また、そのことが保証されているわけでもありません。</p>"
+    },
+    {
+      "question": "ウェブサイトに最適なサイズはどれくらいですか？",
+      "answer": "検証済みの最大サイズの約16:9の公開静止画（多くの場合1280×720）を使用し、そのコピーをサイトにホストして、安定したOpen Graphタグと注目画像タグを取得してください。",
+      "answerHtml": "<p>検証済みの最大サイズの約16:9の公開静止画（多くの場合1280×720）を使用し、そのコピーをサイトにホストして、安定したOpen Graphタグと注目画像タグを取得してください。</p>"
+    },
+    {
+      "question": "高解像度のサムネイルが読み込まれないことがあるのはなぜですか？",
+      "answer": "ファイル名は推測されたものです。YouTube は、その動画 ID に対応する派生ファイルを公開していません。代わりに、より小さい既存のサイズを読み込んでください。",
+      "answerHtml": "<p>ファイル名は推測されたものです。YouTube は、その動画 ID に対応する派生ファイルを公開していません。代わりに、より小さい既存のサイズを読み込んでください。</p>"
+    },
+    {
+      "question": "「HDサムネイル」とは4Kを意味しますか？",
+      "answer": "いいえ。公開されている最大解像度は通常1280×720です。11tikは4K静止画を発明しません。",
+      "answerHtml": "<p>いいえ。公開されている最大解像度は通常1280×720です。11tikは4K静止画を発明しません。</p>"
+    },
+    {
+      "question": "WebPサムネイルはJPEGよりも高画質ですか？",
+      "answer": "WebPは、公開時に同じサイズの階層の別のコンテナです。ファイル11tikの検証を優先します。WebPが常に存在するとは限りません。",
+      "answerHtml": "<p>WebPは、公開時に同じサイズの階層の別のコンテナです。ファイル11tikの検証を優先します。WebPが常に存在するとは限りません。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tikによって作成されました。公開CDNサイズのみ。アップスケーリングや動画ダウンロードは行いません。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+}

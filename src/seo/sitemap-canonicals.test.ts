@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { GUIDE_POSTS } from "../content/posts";
 import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import { POST_DESCRIPTIONS } from "../../workers/post-descriptions.js";
 import {
   INDEXABLE_UTILITY_PATHS,
@@ -79,18 +80,19 @@ describe("sitemap canonical inventory", () => {
     expect(locs).toContain(`${SITE_ORIGIN}/p/keyword-tools.html`);
   });
 
-  it("has no duplicates; allows only the ready French POC locale article host", () => {
+  it("has no duplicates; includes all ready target-language localized URLs", () => {
     const locs = locsFromGeneratedSite();
+    const manifest = scanPublishability();
     expect(new Set(locs).size).toBe(locs.length);
-    const localeLocs = locs.filter((loc) => /^https:\/\/[a-z]{2}\.11tik\.com\//.test(loc));
-    expect(localeLocs).toEqual([
-      "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html",
-    ]);
-    for (const loc of locs) {
+    const localeLocs = locs.filter((loc) => /\/l\/[a-z]{2,3}\//.test(loc));
+    expect(localeLocs.length).toBe(manifest.counts.ready);
+    expect(localeLocs.length).toBeGreaterThanOrEqual(851);
+    for (const loc of localeLocs) {
+      expect(loc).toMatch(/^https:\/\/[a-z]{2,3}\.11tik\.com\/l\/[a-z]{2,3}\//);
       expect(loc.includes("?")).toBe(false);
-      if (!loc.startsWith("https://www.11tik.com")) {
-        expect(loc).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
-      }
+    }
+    for (const loc of locs.filter((l) => l.startsWith("https://www.11tik.com"))) {
+      expect(loc.includes("?")).toBe(false);
     }
   });
 

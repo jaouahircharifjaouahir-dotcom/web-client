@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "he",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "הטמע את כלי חילוץ התמונות הממוזערות 11tik | 11tik",
+  "description": "הוסף כלי חינמי לחילוץ תמונות ממוזערות מיוטיוב לבלוג, למסמכים או לערכת הכלים ליוצרים שלך. הווידג'ט נטען מ-11tik ומשנה את גודלו. אין צורך במפתח API.",
+  "h1": "הטמע את כלי חילוץ התמונות הממוזערות 11tik",
+  "ogTitle": "הטמע את כלי חילוץ התמונות הממוזערות 11tik",
+  "ogDescription": "הוסף כלי חינמי לחילוץ תמונות ממוזערות מיוטיוב לבלוג, למסמכים או לערכת הכלים ליוצרים שלך. הווידג'ט נטען מ-11tik ומשנה את גודלו. אין צורך במפתח API.",
+  "imageAlt": "",
+  "faqHeading": "שאלות נפוצות",
+  "images": [],
+  "sections": [
+    {
+      "heading": "קטע iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "כללים",
+      "html": "<ul>\n    <li>שמור את<code>id=\"yte-app\"</code>תכונה כדי שסנכרון גובה יעבוד.</li>\n    <li>אין לעטוף את ה-iframe בגובה קבוע שיגרום לפגיעה בכפתורי ההורדה.</li>\n    <li>מקשר חזרה אל<a href=\"https://www.11tik.com/\">[[עמוד 1]]</a>עוזר למשתמשים לפתוח את הכלי המלא.</li>\n  </ul>"
+    },
+    {
+      "heading": "קישורים עמוקים",
+      "html": "<p>שתף חילוץ מוכן עם<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">פתח את המחלץ</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

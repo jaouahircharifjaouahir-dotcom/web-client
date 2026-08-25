@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "ko",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "YouTube 썸네일 크기 및 해상도: 완벽 가이드 | 11tik",
+  "description": "120x90 해상도와 1280x720 해상도의 YouTube 썸네일 크기를 비교해 보세요. Maxres와 hq720은 선택 사항이며, 로드되는 가장 큰 공개 파일을 사용하세요.",
+  "h1": "유튜브 썸네일 크기 및 해상도: 완벽 가이드",
+  "ogTitle": "유튜브 썸네일 크기 및 해상도: 완벽 가이드",
+  "ogDescription": "120x90 해상도와 1280x720 해상도의 YouTube 썸네일 크기를 비교해 보세요. Maxres와 hq720은 선택 사항이며, 로드되는 가장 큰 공개 파일을 사용하세요.",
+  "imageAlt": "최대 해상도 기본값인 1280x720부터 기본 값인 120x90까지 공개 유튜브 썸네일 크기를 비교한 차트",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "최대 해상도 기본값인 1280x720부터 기본 값인 120x90까지 공개 유튜브 썸네일 크기를 비교한 차트",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "maxresdefault 파일이 있는 비디오와 더 작은 hqdefault 파일만 있는 비디오를 나란히 비교하여 보여줍니다.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "빠른 답변",
+      "html": "<p>사용자 지정 업로드의 경우 YouTube 지원은 여전히 ​​다음 사항에 중점을 둡니다.<strong>16:9</strong>이미지—일반적으로<strong>1280×720</strong>기존 비디오에서 다운로드할 수 있는 파일의 경우, 공개 CDN 파생물이 다양합니다. 존재하는 경우,<code>maxresdefault</code>/<code>hq720</code>일반적으로 해상도는 1280×720입니다. 많은 동영상은 이 해상도에서 멈춥니다.<code>sddefault</code>(640×480) 또는<code>hqdefault</code>(480×360). 파일 이름이 더 크다고 해서 픽셀 수가 늘어나는 것은 아닙니다. 시청 URL을 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>실제 이미지를 반환하는 크기만 나열합니다.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">상대적인 공개 규모. 모든 영상이 이 사다리의 모든 단계를 공개하는 것은 아닙니다.</p>"
+    },
+    {
+      "heading": "크리에이터를 위한 권장 크기",
+      "html": "<p>YouTube Studio에서 사용자 지정 썸네일을 디자인하는 경우, 현재 YouTube 도움말을 참조하세요. 목표는 다음과 같습니다.<strong>16:9</strong>여전히. 널리 사용되는 작업 크기는 다음과 같습니다.<strong>1280×720</strong>픽셀입니다. 이는 플레이어의 와이드스크린 프레임과 일치하며 게시된 이미지와 동일한 픽셀 클래스입니다.<code>maxresdefault</code>유튜브가 만들면요.</p>\n  <p>공식 참고 자료:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">사용자 지정 동영상 썸네일을 업로드하세요</a>Studio에서 처리가 완료되면 모든 파생물이 즉시 나타났다고 가정하지 말고 11tik를 사용하여 공개된 라이브 파일을 확인하십시오. Studio 관련 참고 사항:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026년 유튜브 스튜디오 썸네일</a>.</p>"
+    },
+    {
+      "heading": "공개 CDN에서 뷰어가 실제로 가져올 수 있는 크기",
+      "html": "<p>다운로더와 블로그는 포토샵 원본 파일을 다운로드하지 않습니다. 동영상 ID를 얻기 위해 유튜브 호스트에서 공개된 파생 파일을 다운로드합니다. 11tik의 추출기는 이러한 파일 이름(JPEG 및, 있는 경우 WebP)을 확인합니다.</p>\n  <table>\n    <thead>\n      <tr><th>변종</th><th>일반적인 해상도</th><th>층</th><th>유효성</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>최상의</td><td>YouTube가 WebP 최대 해상도를 게시한 경우에만</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>최상의</td><td>최근 업로드된 고화질 영상에서 흔히 볼 수 있으며, 오래된 영상에서는 종종 나타나지 않습니다.</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 클래스</td><td>최상의</td><td>일부 동영상에서는 대체 고화질 파일로 제공됩니다.</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>높은</td><td>maxres가 없을 때 종종 사용 가능합니다.</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>기준</td><td>매우 흔함</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>시사</td><td>간단한 미리보기/목록</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>시사</td><td>가장 작은 표준은 여전히</td></tr>\n    </tbody>\n  </table>\n  <p>이러한 예상 너비와 높이는 11tik의 품질 사전 설정과 일치합니다. YouTube에서 플레이스홀더를 제공하거나 파일을 완전히 생략하는 경우 실제 응답이 다를 수 있으므로 항상 유효성을 검사하십시오.</p>"
+    },
+    {
+      "heading": "파일 내용이 다르더라도 16:9 비율이 중요한 이유",
+      "html": "<p>시계 플레이어는 와이드스크린입니다. 16:9 비율로 디자인된 맞춤형 아트워크는 검색, 추천 라이브러리 및 임베드에서 가독성을 유지합니다. 일부 공개 파일(특히)<code>hqdefault</code>/<code>sddefault</code>)는 엄밀히 말하면 16:9 비율의 박스가 아닙니다. 예전 CDN 크기입니다. 오픈 그래프나 블로그 헤더에 사용할 깔끔한 16:9 비율의 이미지가 필요한 경우에는 1280x720 크기의 퍼블릭 박스를 사용하는 것이 좋습니다.</p>\n  <p>짧은 영상은 세로로 재생되지만, 저장된 최종 영상은 종종 가로 방향입니다. 이는 호스트의 동작 방식이지 다운로드 실패가 아닙니다. 자세한 내용은 다음과 같습니다.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">반바지 썸네일 다운로드</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs \"HD\"",
+      "html": "<p><code>maxresdefault</code>익숙한 HD 파일 이름입니다.<code>i.ytimg.com</code>해당 파일이 존재하더라도 일반적으로 해상도는 1280×720이며, 4K는 아닙니다.<code>hq720</code>또 다른 고급 이름은 일부 비디오에서 동일한 해상도 등급으로 노출됩니다. 하지만 두 이름 모두 파일의 품질을 보장하지는 않습니다. 해상도 확인 없이 최대 해상도 URL을 출력하는 도구는 깨진 이미지를 생성합니다.</p>\n  <p>파일 이름에 대한 자세한 설명:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpg는 무엇인가</a>그리고<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">최고 품질의 공개 썸네일</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">동일한 요청 패턴, 다른 결과: 파일이 없을 때 파일 이름이 더 높다고 해서 픽셀이 새로 생성되는 것은 아닙니다.</p>"
+    },
+    {
+      "heading": "왜 어떤 동영상은 다른 동영상보다 더 다양한 크기를 지원할까요?",
+      "html": "<ul>\n    <li>이전에 업로드된 파일은 최대 해상도 파생 파일이 생성되지 않았을 수 있습니다.</li>\n    <li>원본 이미지의 크기가 1280×720보다 작습니다.</li>\n    <li>사용자 지정 썸네일은 스튜디오에서 아직 처리 중입니다.</li>\n    <li>비공개, 회원 전용 또는 연령 제한 영상에는 공개된 스틸컷이 노출되지 않을 수 있습니다.</li>\n    <li>WebP 변형은 YouTube가 해당 ID에 대해 게시한 경우에만 표시됩니다.</li>\n  </ul>\n  <p>이용 가능 여부는 영상별로 다릅니다. 경쟁업체의 작동하는 maxres URL을 보고 자신의 URL이 존재한다고 절대 단정짓지 마세요.</p>"
+    },
+    {
+      "heading": "11tik가 \"최적의\" 크기를 선택하는 방법",
+      "html": "<p>11tik는 고정된 품질 순서(WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default)로 공개 후보를 검사합니다. 이미지로 유효성 검사를 통과한 파일을 유지하고 가장 높은 순위를 먼저 지정합니다. 업스케일링은 수행하지 않습니다. maxres가 없는 경우 첫 번째 카드는 hq720 또는 sd일 수 있습니다. 이는 해당 ID에 대한 정직한 최대 품질입니다.</p>\n  <p>선택한 크기의 주소를 복사하려면 다음을 사용하십시오.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">썸네일 URL 가이드</a>파일을 저장하려면 다음을 사용하세요.<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">다운로드 가이드</a>.</p>"
+    },
+    {
+      "heading": "어떤 사이즈를 사용해야 할까요?",
+      "html": "<table>\n    <thead>\n      <tr><th>사용 사례</th><th>선호하다</th><th>왜</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>블로그 추천 이미지 / 오픈 그래프</td><td>가장 큰 검증된 해상도는 약 1280×720입니다.</td><td>일반적인 소셜 작물과 일치합니다. 직접 사본을 호스팅하세요.</td></tr>\n      <tr><td>디자인 목업/썸네일 리서치</td><td>현재 이용 가능한 최고의 공개 정보입니다.</td><td>실제 패키징 이미지이며, 플레이어 스크린샷이 아닙니다.</td></tr>\n      <tr><td>빠른 채팅 미리보기</td><td>HQ 또는 MQ</td><td>파일 크기가 작을수록 로딩 속도가 빠릅니다.</td></tr>\n      <tr><td>스튜디오에서 사용자 지정 업로드</td><td>16:9 비율의 1280×720 (또는 그 이상) 해상도의 원본 파일</td><td>당신이 예술 작품을 창조하는 겁니다. CDN 파생 상품은 나중에 따라오는 거죠.</td></tr>\n    </tbody>\n  </table>\n  <p>hqdefault를 1280×720으로 늘려서 maxres라고 부르지 마세요. CMS 호스팅 팁은 다음과 같습니다.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">대표 이미지 / 오픈 그래프 워크플로우</a>플레이어의 스크린샷은 또 다른 (더 나쁜) 자산입니다.<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 썸네일</a>.</p>"
+    },
+    {
+      "heading": "다음 단계",
+      "html": "<p>라이브 영상을 확인하세요<a href=\"https://www.11tik.com/\">11tik 추출기</a>그러면 둘 중 하나<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">이미지 URL을 복사하세요</a>또는<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">현재 이용 가능한 최고의 스틸 이미지를 다운로드하세요</a>.</p>\n\n  <p class=\"yte-bio\">11tik 작성. 공용 CDN 크기만 지원하며, 업스케일링 및 비디오 다운로드는 지원하지 않습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "maxresdefault는 항상 사용 가능한가요?",
+      "answer": "아니요. 공개된 동영상 중 상당수는 해당 파일을 게시하지 않습니다. maxres에서 404 오류가 발생하는 것은 정상입니다.",
+      "answerHtml": "<p>아니요. 공개된 동영상 중 상당수는 해당 파일을 게시하지 않습니다. maxres에서 404 오류가 발생하는 것은 정상입니다.</p>"
+    },
+    {
+      "question": "hq720이 다른 썸네일 버전보다 더 나은가요?",
+      "answer": "hq720 파일이 존재할 경우, 이는 maxres(약 1280×720)와 같은 최상위급 해상도입니다. 하지만 검증된 maxres 파일보다 자동으로 \"더 좋다\"는 의미는 아니며, 더 좋다는 것이 보장되는 것도 아닙니다.",
+      "answerHtml": "<p>hq720 파일이 존재할 경우, 이는 maxres(약 1280×720)와 같은 최상위급 해상도입니다. 하지만 검증된 maxres 파일보다 자동으로 \"더 좋다\"는 의미는 아니며, 더 좋다는 것이 보장되는 것도 아닙니다.</p>"
+    },
+    {
+      "question": "웹사이트에 가장 적합한 크기는 어느 정도일까요?",
+      "answer": "가장 크고 검증된 16:9 비율의 공개 스틸 이미지(일반적으로 1280x720)를 사용한 다음, 해당 이미지의 사본을 사이트에 호스팅하여 안정적인 Open Graph 및 추천 이미지 태그를 사용하세요.",
+      "answerHtml": "<p>가장 크고 검증된 16:9 비율의 공개 스틸 이미지(일반적으로 1280x720)를 사용한 다음, 해당 이미지의 사본을 사이트에 호스팅하여 안정적인 Open Graph 및 추천 이미지 태그를 사용하세요.</p>"
+    },
+    {
+      "question": "고해상도 썸네일이 가끔 로드되지 않는 이유는 무엇인가요?",
+      "answer": "파일 이름이 추측되었습니다. YouTube는 해당 동영상 ID에 대한 파생 파일을 게시하지 않았습니다. 대신 크기가 더 작은 기존 파일을 로드하세요.",
+      "answerHtml": "<p>파일 이름이 추측되었습니다. YouTube는 해당 동영상 ID에 대한 파생 파일을 게시하지 않았습니다. 대신 크기가 더 작은 기존 파일을 로드하세요.</p>"
+    },
+    {
+      "question": "\"HD 썸네일\"은 4K를 의미하는 건가요?",
+      "answer": "아니요. 일반적으로 공개된 최대 해상도는 1280×720입니다. 11tik는 4K 스틸 이미지를 만들어내지 않을 것입니다.",
+      "answerHtml": "<p>아니요. 일반적으로 공개된 최대 해상도는 1280×720입니다. 11tik는 4K 스틸 이미지를 만들어내지 않을 것입니다.</p>"
+    },
+    {
+      "question": "WebP 썸네일이 JPEG보다 화질이 더 좋은가요?",
+      "answer": "WebP는 게시될 때 동일한 크기의 계층에 대한 또 다른 컨테이너입니다. 파일 11tik의 유효성 검사를 권장합니다. WebP가 항상 존재한다고 가정하지 마십시오.",
+      "answerHtml": "<p>WebP는 게시될 때 동일한 크기의 계층에 대한 또 다른 컨테이너입니다. 파일 11tik의 유효성 검사를 권장합니다. WebP가 항상 존재한다고 가정하지 마십시오.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik 작성. 공용 CDN 크기만 지원하며, 업스케일링 및 비디오 다운로드는 지원하지 않습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+}

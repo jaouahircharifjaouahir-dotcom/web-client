@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "id",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Cara Mengunduh Thumbnail YouTube Shorts dalam HD | 11tik",
+  "description": "Unduh thumbnail YouTube Shorts di browser. Shorts menggunakan gambar diam publik yang sama dengan URL tontonan. File tersebut seringkali berformat lanskap.",
+  "h1": "Cara Mengunduh Thumbnail YouTube Shorts dalam Kualitas HD",
+  "ogTitle": "Cara Mengunduh Thumbnail YouTube Shorts dalam Kualitas HD",
+  "ogDescription": "Unduh thumbnail YouTube Shorts di browser. Shorts menggunakan gambar diam publik yang sama dengan URL tontonan. File tersebut seringkali berformat lanskap.",
+  "imageAlt": "Mengunduh thumbnail YouTube Shorts publik di 11tik",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Mengunduh thumbnail YouTube Shorts publik di 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bagaimana cara mengunduh thumbnail YouTube Shorts?",
+      "html": "<p>Salin URL yang berisi /shorts/ ditambah ID video, lalu tempelkan ke dalam<a href=\"https://www.11tik.com/\">11tik</a>, dan unduh ukuran yang tertera. Ekstraksi dimulai ketika ID valid.</p>"
+    },
+    {
+      "heading": "Apakah file Shorts sama dengan file watch-page?",
+      "html": "<p>Mereka menggunakan nama ukuran publik yang sama yang dikunci berdasarkan ID video. Gambar diam mungkin terlihat berbingkai hitam di atas dan bawah jika YouTube menyimpan turunan layar lebar.</p>"
+    },
+    {
+      "heading": "Bagaimana jika tidak ada gambar yang muncul?",
+      "html": "<p>Film pendek tersebut mungkin bersifat pribadi, telah dihapus, atau tanpa gambar diam yang dapat diakses publik. Ekstraktor tidak dapat melewati batasan tersebut.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Alat pengambilan sari</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cara mengunduh</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bisakah saya mengunduh thumbnail YouTube Shorts?",
+      "answer": "Ya, saat YouTube menerbitkan gambar diam publik untuk ID video Shorts tersebut.",
+      "answerHtml": "Ya, saat YouTube menerbitkan gambar diam publik untuk ID video Shorts tersebut."
+    },
+    {
+      "question": "Mengapa gambar diamnya terlihat seperti menggunakan bingkai hitam di atas dan bawah?",
+      "answer": "YouTube mungkin menyimpan turunan 16:9 bahkan untuk Short vertikal. 11tik menampilkan file yang dihosting alih-alih membuat pemangkasan.",
+      "answerHtml": "YouTube mungkin menyimpan turunan 16:9 bahkan untuk Short vertikal. 11tik menampilkan file yang dihosting alih-alih membuat pemangkasan."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+}

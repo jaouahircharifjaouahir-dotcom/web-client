@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "tl",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "Mga Thumbnail sa YouTube na WebP vs JPEG: Aling Format ang Dapat Mong Gamitin? | 11tik",
+  "description": "Maaaring mag-publish ang YouTube ng mga JPEG at WebP thumbnail file. Mas gusto mo ang format na 11tik na naaayon sa iyong paggamit—hindi laging available ang WebP.",
+  "h1": "WebP vs JPEG YouTube Thumbnail: Aling Format ang Dapat Mong Gamitin?",
+  "ogTitle": "WebP vs JPEG YouTube Thumbnail: Aling Format ang Dapat Mong Gamitin?",
+  "ogDescription": "Maaaring mag-publish ang YouTube ng mga JPEG at WebP thumbnail file. Mas gusto mo ang format na 11tik na naaayon sa iyong paggamit—hindi laging available ang WebP.",
+  "imageAlt": "Paghahambing nang magkatabi ng mga path ng URL ng thumbnail ng JPEG at WebP sa YouTube sa i.ytimg.com",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "Paghahambing nang magkatabi ng mga path ng URL ng thumbnail ng JPEG at WebP sa YouTube sa i.ytimg.com",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "Tsart ng paggamit na naghahambing sa CMS ng website, mga direktang link ng CDN, at mga pag-download ng archive para sa JPEG kumpara sa mga thumbnail ng WebP YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mabilis na sagot",
+      "html": "<p>Para sa karamihan ng mga download at CMS upload, panatilihin ang<strong>unang inililista ng napatunayang file na 11tik ang listahan ng 11tik</strong>. Ang JPEG ay nananatiling naka-imbak sa publiko<code>i.ytimg.com/vi/…</code>Lumalabas ang WebP para sa ilang mga video bilang<code>maxresdefault.webp</code>sa ilalim<code>/vi_webp/</code>Ang WebP ay kadalasang mas maliit sa parehong kalidad ng biswal, ngunit hindi ito inilalathala para sa bawat ID. Ginagawa ito ng 11tik<strong>hindi</strong>kino-convert ang WebP sa JPEG kapag na-download—sine-save nito ang mga byte na hino-host na ng YouTube (ang mga na-download na JPEG ay nakakakuha lamang ng maliit na metadata comment stamp).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Parehong video ID, magkaibang container at path—nang i-publish lang ng YouTube ang pareho.</p>"
+    },
+    {
+      "heading": "Paano lumalabas ang mga format ng thumbnail ng YouTube sa 11tik",
+      "html": "<p>Kabilang sa mga preset ng kalidad ng 11tik ang:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mime<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ sa ilalim<code>/vi/</code>(mime<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Ang mga kandidato ay nilo-load sa browser. Ang mga pagkabigo at mga placeholder ay inaalis. Ang ranggo ay gumagamit ng tier, pixel area, inaasahang laki ng pagtutugma, at isang maliit na<strong>−8 puntos na parusa para sa<code>.webp</code>Mga URL</strong>kaya ang JPEG at WebP na may parehong antas ay hindi nag-aaway nang hindi inaasahan—maaaring manalo ng tabla ang JPEG kapag pareho itong napatunayan. Mga detalye tungkol sa mga laki:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">gabay sa laki ng thumbnail</a>Nawawalang kilos ng Maxres:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">gabay sa maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "JPEG vs WebP sa simpleng wika",
+      "html": "<table>\n    <thead>\n      <tr><th>Pormat</th><th>Pinakamahusay para sa</th><th>Lakas</th><th>Limitasyon</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Mga download, pag-upload ng WordPress, pinakamalawak na compatibility</td><td>Halos pangkalahatang suporta; karamihan sa mga CDN still</td><td>Mas malalaking file na may parehong kalidad</td></tr>\n      <tr><td>WebP</td><td>Mga modernong site na nagseserbisyo na ng WebP</td><td>Kadalasang mas maliit para sa parehong antas ng resolusyon</td><td>Hindi nai-publish para sa bawat video; may ilang mas lumang tool na tumatanggi</td></tr>\n    </tbody>\n  </table>\n  <p>Hindi nag-iimbento ng resolution ang alinman sa mga format na ito. Ang 480×360 WebP ay 480×360 pa rin.</p>"
+    },
+    {
+      "heading": "Ano ang mangyayari kapag nag-download ka",
+      "html": "<p>Ang pangalan ng file na na-download ay nagpapanatili ng tunay na extension (<code>.jpg</code>o<code>.webp</code>) mula sa uri ng mime / URL. Para sa mga JPEG blobs, maaaring maglagay ang 11tik ng maikling komento sa JPEG tulad ng<code>11tik VIDEO_ID quality youtube thumbnail</code>Ang mga WebP at non-JPEG blob ay sine-save nang walang hakbang na muling pag-encode. Walang \"pag-upgrade\" ng kalidad at walang sapilitang conversion sa pagitan ng mga format.</p>"
+    },
+    {
+      "heading": "Kailan mas gugustuhin ang JPEG",
+      "html": "<ul>\n    <li>Nag-a-upload ka sa isang CMS na umaasa ng JPG sa media library.</li>\n    <li>Kailangan mo ng pinakamataas na compatibility sa mga email client o mas lumang browser.</li>\n    <li>Mga laki ng JPEG lang ang na-validate para sa video na iyon.</li>\n    <li>Ini-print o ibinibigay mo ang file sa isang designer na nag-standardize sa JPG.</li>\n  </ul>"
+    },
+    {
+      "heading": "Kapag maginhawa ang WebP",
+      "html": "<ul>\n    <li>Naglista ang 11tik ng isang napatunayang WebP maxres at ang iyong site ay nagseserbisyo na ng WebP.</li>\n    <li>Gusto mo ng mas maliit na file para sa parehong ~1280×720 na tier.</li>\n    <li>Kinokontrol mo ang stack at maaari kang bumalik sa JPEG kung kinakailangan.</li>\n  </ul>\n  <p>Kung hindi magagamit ng iyong tema ang WebP, i-download na lang ang JPEG—o i-convert ito nang lokal pagkatapos i-download. Hindi magko-convert ang 11tik para sa iyo.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Piliin ang napatunayang format na tumutugma sa iyong pipeline—hindi isang hinulaang extension.</p>"
+    },
+    {
+      "heading": "Mga direktang link at website",
+      "html": "<p>Ang URL ng kopya ng larawan ay nagbabalik ng HTTPS CDN address ng napatunayang kandidato. Ang Hotlinking WebP o JPEG ay may parehong kahinaan na tinalakay sa<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">gabay sa blog / Open Graph</a>: mas gusto mong i-host ang sarili mong kopya para sa pangmatagalang mga post. Mga pattern ng URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Mga tala sa pagiging tugma ng browser at CMS",
+      "html": "<p>Ang mga modernong bersyon ng Chromium, Firefox, at Safari ay humahawak ng mga imaheng WebP sa mga pahina. Mas gusto pa rin ng ilang mga legacy plugin, template ng email, o mga daloy ng trabaho sa pag-print ang JPEG. Maaaring maghatid ang WordPress core ng WebP kapag na-configure, ngunit maraming mga koponan ang nag-istandardize pa rin sa mga itinatampok na imahe bilang JPG para sa kakayahang mahulaan. Ang mga opisyal na dokumento ng media ng WordPress ang pinagmumulan ng katotohanan para sa iyong bersyon—huwag ipagpalagay na ang bawat plugin ay tumatanggap ng mga pag-upload ng WebP.</p>"
+    },
+    {
+      "heading": "Praktikal na puno ng desisyon",
+      "html": "<ol>\n    <li>I-extract sa<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Kung kailangan mo ng itinatampok na larawan ng CMS at nakikita mo ang parehong format, piliin ang JPEG maliban na lang kung ang iyong stack ay WebP-first.</li>\n    <li>Kung ang WebP maxres lang ang na-validate sa pinakamataas na antas, gamitin ito—o kunin ang susunod na laki ng JPEG kung kailangan mong manatili sa JPG.</li>\n    <li>Para sa mga archive, itago ang orihinal na extension mula sa na-download.</li>\n  </ol>\n  <p>I-download ang gabay:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">mag-download ng thumbnail sa YouTube</a>.</p>"
+    },
+    {
+      "heading": "Susunod na hakbang",
+      "html": "<p>I-paste ang isang pampublikong URL sa<a href=\"https://www.11tik.com/\">Pang-extract ng Thumbnail ng YouTube</a>, tandaan kung ang pinakamataas na resulta ay<code>.jpg</code>o<code>.webp</code>, at pumili batay sa iyong CMS—hindi batay sa mas mahabang filename.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik batay sa kasalukuyang gawi ng in-browser extractor.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "May WebP thumbnail ba ang bawat video sa YouTube?",
+      "answer": "Hindi. Opsyonal ang WebP maxres. Maraming video ang nagpapakita lamang ng mga laki ng JPEG.",
+      "answerHtml": "<p>Hindi. Opsyonal ang WebP maxres. Maraming video ang nagpapakita lamang ng mga laki ng JPEG.</p>"
+    },
+    {
+      "question": "Mas matalas ba palagi ang WebP kaysa sa JPEG?",
+      "answer": "Hindi. Hindi pinapataas ng format ang resolution. Paghambingin ang magkaparehong laki ng pixel.",
+      "answerHtml": "<p>Hindi. Hindi pinapataas ng format ang resolution. Paghambingin ang magkaparehong laki ng pixel.</p>"
+    },
+    {
+      "question": "Bakit maaaring mas mataas ang ranggo ng JPEG kaysa sa WebP sa 11tik?",
+      "answer": "Ang mga na-validate na WebP URL ay makakatanggap ng maliit na score penalty (−8) kumpara sa mga katulad na kandidato, kaya ang JPEG ay maaaring unang lumabas kapag pareho silang nasa iisang tier.",
+      "answerHtml": "<p>Ang mga na-validate na WebP URL ay makakatanggap ng maliit na score penalty (−8) kumpara sa mga katulad na kandidato, kaya ang JPEG ay maaaring unang lumabas kapag pareho silang nasa iisang tier.</p>"
+    },
+    {
+      "question": "Kino-convert ba ng pag-download ang WebP patungong JPEG?",
+      "answer": "Hindi. Ang naka-save na file ay nagpapanatili ng source format. Tanging ang JPEG lamang ang maaaring makakuha ng metadata comment.",
+      "answerHtml": "<p>Hindi. Ang naka-save na file ay nagpapanatili ng source format. Tanging ang JPEG lamang ang maaaring makakuha ng metadata comment.</p>"
+    },
+    {
+      "question": "Aling format ang dapat kong i-hotlink?",
+      "answer": "Hindi rin, para sa mga pahina ng produksyon na mahalaga sa iyo. Mag-host ng kopya. Kung kailangan mong pansamantalang mag-hotlink, gumamit ng URL na 11tik na na-validate na.",
+      "answerHtml": "<p>Hindi rin, para sa mga pahina ng produksyon na mahalaga sa iyo. Mag-host ng kopya. Kung kailangan mong pansamantalang mag-hotlink, gumamit ng URL na 11tik na na-validate na.</p>"
+    },
+    {
+      "question": "Maaari bang maging WebP ang hq720?",
+      "answer": "Sa kasalukuyang listahan ng mga itinakdang 11tik, ang nakalaang kandidato para sa WebP ay maxres WebP. Ang iba pang mga laki ay hinihiling bilang mga pangalan ng file na JPEG sa ilalim ng /vi/.",
+      "answerHtml": "<p>Sa kasalukuyang listahan ng mga itinakdang 11tik, ang nakalaang kandidato para sa WebP ay ang maxres WebP. Ang iba pang mga laki ay hinihiling bilang mga pangalan ng JPEG file sa ilalim ng<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik batay sa kasalukuyang gawi ng in-browser extractor.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+}

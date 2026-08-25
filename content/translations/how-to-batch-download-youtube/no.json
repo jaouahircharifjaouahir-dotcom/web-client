@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "no",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Slik laster du ned YouTube-miniatyrbilder i batch (opptil 25 offentlige nettadresser) | 11tik",
+  "description": "Masseuttrekk offentlige YouTube-miniatyrbilder i nettleseren. Lim inn én URL per linje, last ned hvert beste stillbilde, eller zip-settet med høyest kvalitet. Ingen konto og ingen videofiler.",
+  "h1": "Slik laster du ned YouTube-miniatyrbilder i batch (opptil 25 offentlige nettadresser)",
+  "ogTitle": "Slik laster du ned YouTube-miniatyrbilder i batch (opptil 25 offentlige nettadresser)",
+  "ogDescription": "Masseuttrekk offentlige YouTube-miniatyrbilder i nettleseren. Lim inn én URL per linje, last ned hvert beste stillbilde, eller zip-settet med høyest kvalitet. Ingen konto og ingen videofiler.",
+  "imageAlt": "11tik masseuttrekk av miniatyrbilder med flere YouTube-nettadresser klare til nedlasting",
+  "faqHeading": "Vanlige spørsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik masseuttrekk av miniatyrbilder med flere YouTube-nettadresser klare til nedlasting",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hvordan laster jeg ned YouTube-miniatyrbilder i batch?",
+      "html": "<p>Åpne<a href=\"https://www.11tik.com/\">11tik</a>, slå på Bulk, lim inn én offentlig URL per linje, klikk på Pakk ut alle, og last deretter ned hvert beste stillbilde eller zip-filen av høyeste kvalitet. Grensen er 25 URL-er per kjøring, slik at nettleseren forblir responsiv.</p>"
+    },
+    {
+      "heading": "Hva hører hjemme på listen?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID-er</li>\n    <li>youtu.be korte lenker</li>\n    <li>youtube.com/shorts/ ID-er</li>\n    </ul>\n  <p>Private videoer, videoer uten offentlige miniatyrbilder eller videoer med aldersbegrensning vil ikke returnere et stillbilde. Det er forventet. Se også<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniatyrbilder</a>.</p>"
+    },
+    {
+      "heading": "Slik kjører du et bulk-uttrekk",
+      "html": "<ol>\n    <li>Klikk på Massevisning på hjemmesiden.</li>\n    <li>Lim inn opptil 25 offentlige lenker, én per linje.</li>\n    <li>Klikk på Pakk ut alle og vent til hvert kort viser en forhåndsvisning.</li>\n    <li>Last ned miniatyrvideo N for hvert beste stillbilde, eller last ned alle i høyeste kvalitet som zip-filer.</li>\n    <li>Valgfritt: Eksporter CSV for forskningslogger (video-ID, tittel, delings-URL, bilde-URL).</li>\n  </ol>"
+    },
+    {
+      "heading": "Kan jeg bruke dette til konkurrentundersøkelser?",
+      "html": "<p>Ja, for å studere offentlig emballasje. Ikke publiser en annen skapers miniatyrbilde på nytt som din egen opplasting. Opphavsretten forblir hos rettighetshaveren. 11tik henter bare filer som YouTube allerede er offentlig lagret.</p>\n  <p><a href=\"https://www.11tik.com/\">Åpne masseuttrekk på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hvordan laster jeg ned YouTube-miniatyrbilder i batch?",
+      "answer": "Bruk massevisning på 11tik, lim inn én offentlig URL per linje, trekk ut, og last deretter ned stillbilder eller en zip-fil av høyeste offentlige kvalitet. Maksimalt 25 URL-er per kjøring.",
+      "answerHtml": "Bruk massevisning på 11tik, lim inn én offentlig URL per linje, trekk ut, og last deretter ned stillbilder eller en zip-fil av høyeste offentlige kvalitet. Maksimalt 25 URL-er per kjøring."
+    },
+    {
+      "question": "Kan jeg bruke dette til konkurrentundersøkelser?",
+      "answer": "Ja, for å studere offentlig emballasje. Ikke publiser en annen skapers miniatyrbilde på nytt som ditt eget. Opphavsretten forblir hos rettighetshaveren.",
+      "answerHtml": "Ja, for å studere offentlig emballasje. Ikke publiser en annen skapers miniatyrbilde på nytt som ditt eget. Opphavsretten forblir hos rettighetshaveren."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "th",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "ฝังตัวแยกภาพขนาดย่อ 11tik | 11tik",
+  "description": "เพิ่มเครื่องมือแยกภาพขนาดย่อจาก YouTube ฟรีลงในบล็อก เอกสาร หรือชุดเครื่องมือสำหรับครีเอเตอร์ของคุณ วิดเจ็ตจะโหลดจาก 11tik และปรับขนาดตัวเองโดยอัตโนมัติ ไม่ต้องใช้คีย์ API",
+  "h1": "ฝังตัวแยกภาพขนาดย่อ 11tik",
+  "ogTitle": "ฝังตัวแยกภาพขนาดย่อ 11tik",
+  "ogDescription": "เพิ่มเครื่องมือแยกภาพขนาดย่อจาก YouTube ฟรีลงในบล็อก เอกสาร หรือชุดเครื่องมือสำหรับครีเอเตอร์ของคุณ วิดเจ็ตจะโหลดจาก 11tik และปรับขนาดตัวเองโดยอัตโนมัติ ไม่ต้องใช้คีย์ API",
+  "imageAlt": "",
+  "faqHeading": "คำถามที่พบบ่อย",
+  "images": [],
+  "sections": [
+    {
+      "heading": "โค้ดตัวอย่าง iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "กฎ",
+      "html": "<ul>\n    <li>เก็บไว้<code>id=\"yte-app\"</code>คุณสมบัติที่ทำให้การซิงค์ความสูงทำงานได้</li>\n    <li>อย่ากำหนดความสูงคงที่ให้กับ iframe จนไปทับปุ่มดาวน์โหลด</li>\n    <li>เชื่อมโยงกลับไปยัง<a href=\"https://www.11tik.com/\">www.11tik.com</a>ช่วยให้ผู้ใช้เปิดใช้งานเครื่องมือแบบเต็มรูปแบบได้</li>\n  </ul>"
+    },
+    {
+      "heading": "ลิงก์แบบเจาะลึก",
+      "html": "<p>แชร์ไฟล์ที่ดึงข้อมูลเสร็จแล้วกับ<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">เปิดเครื่องสกัด</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

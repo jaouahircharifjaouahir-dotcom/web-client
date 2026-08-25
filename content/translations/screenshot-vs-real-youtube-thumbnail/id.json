@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "id",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Screenshot vs thumbnail YouTube asli: file mana yang sebaiknya Anda simpan? | 11tik",
+  "description": "Tangkapan layar ponsel dari pemutar video bukanlah thumbnail yang dihosting YouTube. Publik sebenarnya masih ada di i.ytimg.com. Gunakan untuk blog, Open Graph, dan penelitian—tangkapan layar menambahkan elemen UI, kompresi, dan rasio aspek yang salah.",
+  "h1": "Screenshot vs thumbnail YouTube asli: file mana yang sebaiknya Anda simpan?",
+  "ogTitle": "Screenshot vs thumbnail YouTube asli: file mana yang sebaiknya Anda simpan?",
+  "ogDescription": "Tangkapan layar ponsel dari pemutar video bukanlah thumbnail yang dihosting YouTube. Publik sebenarnya masih ada di i.ytimg.com. Gunakan untuk blog, Open Graph, dan penelitian—tangkapan layar menambahkan elemen UI, kompresi, dan rasio aspek yang salah.",
+  "imageAlt": "Perbandingan antara tangkapan layar pemain dan file thumbnail YouTube publik yang sebenarnya.",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Perbandingan antara tangkapan layar pemain dan file thumbnail YouTube publik yang sebenarnya.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Apa perbedaan antara tangkapan layar dan gambar mini yang sebenarnya?",
+      "html": "<p>Screenshot menangkap layar Anda, termasuk tampilan pemutar video, teks keterangan, dan skala perangkat. Thumbnail sebenarnya adalah file JPEG atau WebP yang diterbitkan YouTube untuk ID video tersebut. Hanya file CDN yang memiliki URL stabil dan ukuran piksel yang diketahui.</p>"
+    },
+    {
+      "heading": "Mengapa tangkapan layar gagal di Google Images dan pratinjau media sosial?",
+      "html": "<p>Gambar-gambar tersebut seringkali memiliki rasio aspek yang salah, menyertakan UI, dan dikompresi dua kali. Open Graph dan banyak bidang CMS menginginkan rasio 16:9 yang masih sekitar 1280×720. Itu sesuai dengan maxresdefault jika ada—lihat<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">panduan ukuran thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Bagaimana cara menyimpan gambar mini aslinya?",
+      "html": "<ol>\n    <li>Salin URL video publik, bukan tangkapan layar.</li>\n    <li>Tempelkan ke dalam<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Unduh file publik pertama yang terdaftar atau salin URL gambarnya.</li>\n  </ol>"
+    },
+    {
+      "heading": "Kapan tangkapan layar masih berguna?",
+      "html": "<p>Gunakan tangkapan layar hanya untuk mendokumentasikan bug UI atau momen tertentu di dalam video. Jangan gunakan sebagai thumbnail resmi, gambar utama blog, atau gambar untuk dibagikan jika masih tersedia untuk umum.</p>\n  <p><a href=\"https://www.11tik.com/\">Dapatkan thumbnail publik yang sebenarnya →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apa perbedaan antara tangkapan layar dan gambar mini yang sebenarnya?",
+      "answer": "Screenshot menangkap layar dan tampilan pemutar Anda. Thumbnail sebenarnya adalah file JPEG atau WebP yang dihosting YouTube di i.ytimg.com untuk ID video tersebut.",
+      "answerHtml": "Screenshot menangkap layar dan tampilan pemutar Anda. Thumbnail sebenarnya adalah file JPEG atau WebP yang dihosting YouTube di i.ytimg.com untuk ID video tersebut."
+    },
+    {
+      "question": "Mengapa tangkapan layar gagal di Google Images dan pratinjau media sosial?",
+      "answer": "Gambar-gambar tersebut seringkali memiliki rasio aspek yang salah, UI tambahan, dan kompresi tambahan. Bidang CMS dan Open Graph mengharapkan gambar publik dengan rasio 16:9 yang bersih.",
+      "answerHtml": "Gambar-gambar tersebut seringkali memiliki rasio aspek yang salah, UI tambahan, dan kompresi tambahan. Bidang CMS dan Open Graph mengharapkan gambar publik dengan rasio 16:9 yang bersih."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>.</p>"
+}

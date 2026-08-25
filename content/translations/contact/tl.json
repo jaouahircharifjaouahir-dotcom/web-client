@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "tl",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Makipag-ugnayan | 11tik",
+  "description": "Gamitin ang form na ito para sa mga tanong tungkol sa YouTube Thumbnail Extractor. Ang mga mensahe ay mapupunta sa operator na 11tik sa pamamagitan ng email. Huwag magpadala ng mga video o audio file. Gumagana lamang ang tool sa mga pampublikong thumbnail na larawan.",
+  "h1": "Makipag-ugnayan",
+  "ogTitle": "Makipag-ugnayan",
+  "ogDescription": "Gamitin ang form na ito para sa mga tanong tungkol sa YouTube Thumbnail Extractor. Ang mga mensahe ay mapupunta sa operator na 11tik sa pamamagitan ng email. Huwag magpadala ng mga video o audio file. Gumagana lamang ang tool sa mga pampublikong thumbnail na larawan.",
+  "imageAlt": "",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Makipag-ugnayan",
+      "html": "<h1>Makipag-ugnayan</h1>\n  <p class=\"yte-updated\">Huling na-update: 22 Agosto 2026</p>\n  <p itemprop=\"description\">Gamitin ang form na ito para sa mga tanong tungkol sa YouTube Thumbnail Extractor. Ang mga mensahe ay mapupunta sa operator na 11tik sa pamamagitan ng email. Huwag magpadala ng mga video o audio file. Gumagana lamang ang tool sa mga pampublikong thumbnail na larawan.</p>\n  <p>Direktang email:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Para sa isang ulat tungkol sa isang partikular na video, isama ang pampublikong URL ng YouTube. Hindi hino-host ng 11tik ang thumbnail file; ang imahe ay hinihiling mula sa pampublikong CDN ng platform.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Pangalan<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>I-email<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Mensahe<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Magpadala ng mensahe</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Pang-extract ng Thumbnail ng YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Patakaran sa Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

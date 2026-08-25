@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "sk",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Veľkosť a rozlíšenie miniatúr YouTube: Kompletný sprievodca | 11tik",
+  "description": "Porovnajte veľkosti miniatúr YouTube od 120 × 90 do 1280 × 720. Maximálne rozlíšenie a hq720 sú voliteľné – použite najväčší verejný súbor, ktorý sa načíta.",
+  "h1": "Veľkosť a rozlíšenie miniatúr YouTube: Kompletný sprievodca",
+  "ogTitle": "Veľkosť a rozlíšenie miniatúr YouTube: Kompletný sprievodca",
+  "ogDescription": "Porovnajte veľkosti miniatúr YouTube od 120 × 90 do 1280 × 720. Maximálne rozlíšenie a hq720 sú voliteľné – použite najväčší verejný súbor, ktorý sa načíta.",
+  "imageAlt": "Porovnávacia tabuľka veľkostí miniatúr verejných videí na YouTube od maxresdefault 1280 x 720 po predvolenú 120 x 90",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Porovnávacia tabuľka veľkostí miniatúr verejných videí na YouTube od maxresdefault 1280 x 720 po predvolenú 120 x 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Porovnanie videa s dostupným súborom maxresdefault oproti videu, kde existuje iba menší súbor hqdefault",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rýchla odpoveď",
+      "html": "<p>V prípade vlastného nahrávania sa pomoc YouTube stále zameriava na<strong>16:9</strong>obrázok – bežne<strong>1280×720</strong>Pre súbory, ktoré si môžete stiahnuť z existujúceho videa, sa verejné deriváty CDN líšia. Ak sú k dispozícii,<code>maxresdefault</code>/<code>hq720</code>zvyčajne majú rozlíšenie 1280 × 720. Mnoho videí sa zastaví na<code>sddefault</code>(640×480) alebo<code>hqdefault</code>(480×360). Vyšší názov súboru nikdy nevytvára pixely. Vložte URL adresu sledovania do<a href=\"https://www.11tik.com/\">11tik</a>zobraziť iba veľkosti, ktoré vracajú skutočný obrázok.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Relatívne veľkosti verejných zdrojov. Nie každé video zverejňuje všetky priečky na tomto rebríčku.</p>"
+    },
+    {
+      "heading": "Odporúčané rozmery pre tvorcov",
+      "html": "<p>Ak navrhujete vlastnú miniatúru v aplikácii Štúdio, postupujte podľa aktuálneho Pomocníka pre YouTube: snažte sa o<strong>16:9</strong>stále. Široko používaná pracovná veľkosť je<strong>1280×720</strong>pixelov. To zodpovedá širokouhlej obrazovke prehrávača a má rovnakú triedu pixelov ako publikovaný<code>maxresdefault</code>keď ho YouTube vytvorí.</p>\n  <p>Oficiálna referencia:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Nahrať vlastné miniatúry videí</a>Po dokončení spracovania v aplikácii Studio potvrďte živé verejné súbory pomocou funkcie 11tik, namiesto predpokladu, že sa všetky odvodené súbory objavili okamžite. Poznámky zamerané na Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatúry v Štúdiu YouTube v roku 2026</a>.</p>"
+    },
+    {
+      "heading": "Verejné veľkosti CDN, ktoré si diváci skutočne môžu načítať",
+      "html": "<p>Sťahovacie programy a blogy neťahajú váš hlavný súbor Photoshopu. Ťahajú verejné odvodené súbory YouTube pre ID videa. Extraktor 11tik kontroluje tieto názvy súborov (JPEG a, ak sú prítomné, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Variant</th><th>Typické rozlíšenie</th><th>Úroveň</th><th>Dostupnosť</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Najlepšie</td><td>Iba ak YouTube zverejnil maximálne rozlíšenie WebP</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Najlepšie</td><td>Bežné pri novších/kvalitných nahrávkach; často chýba pri starších</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>trieda 1280×720</td><td>Najlepšie</td><td>Zobrazovať v niektorých videách ako alternatívny súbor s vysokou výškou</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Vysoká</td><td>Často dostupné, keď chýba maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Štandard</td><td>Veľmi časté</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Náhľad</td><td>Malé náhľady / zoznamy</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Náhľad</td><td>Najmenší štandardný destilačný prístroj</td></tr>\n    </tbody>\n  </table>\n  <p>Tieto očakávané šírky a výšky zodpovedajú predvoľbám kvality 11tik. Skutočné odpovede sa môžu líšiť, ak YouTube zobrazí zástupný symbol alebo súbor úplne vynechá – vždy overte.</p>"
+    },
+    {
+      "heading": "Prečo je pomer strán 16:9 dôležitý, aj keď sa súbory líšia",
+      "html": "<p>Prehrávač sledovania je širokouhlý. Vlastné grafické prvky navrhnuté s pomerom strán 16:9 zostávajú čitateľné vo vyhľadávaní, na navrhovaných poličkach a vo vložených súboroch. Niektoré verejné súbory (najmä<code>hqdefault</code>/<code>sddefault</code>) nie sú striktne 16:9 boxy; sú to staršie veľkosti CDN. Uprednostnite skutočný verejný statický obrázok s rozlíšením 1280 × 720, ak potrebujete čistý obraz s pomerom strán 16:9 pre Open Graph alebo hlavičku blogu.</p>\n  <p>Krátke videá sa prehrávajú vertikálne, ale uložené verejné súbory sú často stále na šírku. To je správanie hostiteľa, nie neúspešné sťahovanie. Podrobnosti:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Stiahnutie miniatúr krátkych filmov</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs „HD“",
+      "html": "<p><code>maxresdefault</code>je známy názov HD súboru na<code>i.ytimg.com</code>Keď súbor existuje, zvyčajne má rozmer 1280 × 720 – nie 4K.<code>hq720</code>je ďalší názov vysokej úrovne, ktorý niektoré videá zobrazujú v rovnakej triede rozlíšenia. Ani jeden z názvov nezaručuje dokonalý súbor. Nástroje, ktoré vytlačia URL adresu s maxres bez kontroly, vytvárajú poškodené obrázky.</p>\n  <p>Podrobnejšie poznámky k názvom súborov:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">čo je maxresdefault.jpg</a>a<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">verejná miniatúra najvyššej kvality</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Rovnaký vzor požiadavky, rôzne výsledky: vyšší názov súboru nevytvára pixely, keď súbor chýba.</p>"
+    },
+    {
+      "heading": "Prečo má jedno video viac veľkostí ako iné",
+      "html": "<ul>\n    <li>Staršie nahrané súbory možno nikdy nedostali odvodenú verziu s maxres.</li>\n    <li>Zdrojová grafika bola menšia ako 1280 × 720.</li>\n    <li>Vlastné miniatúry sa stále spracovávajú v aplikácii Štúdio.</li>\n    <li>Súkromné ​​videá, videá len pre členov alebo videá s vekovým obmedzením nesmú zobrazovať verejné fotografie.</li>\n    <li>Varianty WebP sa zobrazia iba vtedy, keď ich YouTube zverejnil pre dané ID.</li>\n  </ul>\n  <p>Dostupnosť sa vzťahuje na jednotlivé videá. Nikdy nepovažujte funkčnú URL adresu konkurenta s maximálnym rozlíšením za dôkaz, že existuje tá vaša.</p>"
+    },
+    {
+      "heading": "Ako 11tik vyberá „najlepšiu“ veľkosť",
+      "html": "<p>11tik skúma verejných kandidátov v pevne stanovenom poradí kvality (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). Uchováva súbory, ktoré sa overia ako obrázky, a najvyššie preživšie hodnotenie zoradí ako prvé. Nevykonáva zvýšenie rozlíšenia. Ak chýba maxres, prvá karta môže byť hq720 alebo sd – to je skutočné maximum pre dané ID.</p>\n  <p>Na kopírovanie adresy zvolenej veľkosti použite<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Sprievodca URL adresami miniatúr</a>Na uloženie súboru použite<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stiahnuť sprievodcu</a>.</p>"
+    },
+    {
+      "heading": "Akú veľkosť by ste mali použiť?",
+      "html": "<table>\n    <thead>\n      <tr><th>Prípad použitia</th><th>Preferovať</th><th>Prečo</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Obrázok blogu / Open Graph</td><td>Najväčší overený ~1280×720</td><td>Zodpovedá bežným spoločenským plodinám; hostiť vlastnú kópiu</td></tr>\n      <tr><td>Výskum návrhu makety / miniatúry</td><td>Najlepší dostupný verejný záber</td><td>Skutočné balenie, nie snímka obrazovky hráča</td></tr>\n      <tr><td>Rýchly náhľad chatu</td><td>ústredie alebo mq</td><td>Menšie súbory sa načítavajú rýchlejšie</td></tr>\n      <tr><td>Vlastné nahrávanie v Štúdiu</td><td>Váš originál s pomerom strán 16:9 1280×720 (alebo vyšším)</td><td>Vy tvoríte umenie; deriváty CDN prichádzajú neskôr</td></tr>\n    </tbody>\n  </table>\n  <p>Nerozťahujte hqdefault na 1280×720 a nenazývajte to maxres. Tipy na hosting CMS:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">odporúčaný obrázok / pracovný postup Open Graph</a>Snímky obrazovky hráča sú iným (horším) prínosom:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snímka obrazovky verzus skutočná miniatúra</a>.</p>"
+    },
+    {
+      "heading": "Ďalší krok",
+      "html": "<p>Pozrite si živé video na<a href=\"https://www.11tik.com/\">extraktor 11tik</a>, potom buď<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">skopírujte URL adresu obrázka</a>alebo<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stiahnite si najlepší dostupný film</a>.</p>\n\n  <p class=\"yte-bio\">Napísal 11tik. Iba verejné CDN veľkosti; žiadne upscaling ani sťahovanie videa.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je maxresdefault vždy k dispozícii?",
+      "answer": "Nie. Mnoho verejných videí nikdy nezverejní tento súbor. Chyba 404 na maxres je normálna.",
+      "answerHtml": "<p>Nie. Mnoho verejných videí nikdy nezverejní tento súbor. Chyba 404 na maxres je normálna.</p>"
+    },
+    {
+      "question": "Je hq720 lepší ako iné varianty miniatúr?",
+      "answer": "Ak existuje, súbor hq720 je v rovnakej vysokej úrovni ako maxres (približne 1280×720). Nie je automaticky „lepší“ ako overený súbor maxres a nie je to zaručené.",
+      "answerHtml": "<p>Ak existuje, súbor hq720 je v rovnakej vysokej úrovni ako maxres (približne 1280×720). Nie je automaticky „lepší“ ako overený súbor maxres a nie je to zaručené.</p>"
+    },
+    {
+      "question": "Aká veľkosť je najlepšia pre webovú stránku?",
+      "answer": "Použite najväčší overený verejný záber s rozlíšením ~16:9 (často 1280 × 720) a potom ho umiestnite na svoju stránku pre stabilný Open Graph a tagy featured-image.",
+      "answerHtml": "<p>Použite najväčší overený verejný záber s rozlíšením ~16:9 (často 1280 × 720) a potom ho umiestnite na svoju stránku pre stabilný Open Graph a tagy featured-image.</p>"
+    },
+    {
+      "question": "Prečo sa niekedy nenačíta miniatúra s vysokým rozlíšením?",
+      "answer": "Názov súboru bol uhádnutý. YouTube nezverejnil tento odvodený názov pre ID videa. Namiesto toho načítajte menšiu existujúcu veľkosť.",
+      "answerHtml": "<p>Názov súboru bol uhádnutý. YouTube nezverejnil tento odvodený názov pre ID videa. Namiesto toho načítajte menšiu existujúcu veľkosť.</p>"
+    },
+    {
+      "question": "Znamená „HD miniatúra“ 4K?",
+      "answer": "Nie. Verejné maximálne rozlíšenie je zvyčajne 1280 × 720. 11tik nevytvorí 4K statický záber.",
+      "answerHtml": "<p>Nie. Verejné maximálne rozlíšenie je zvyčajne 1280 × 720. 11tik nevytvorí 4K statický záber.</p>"
+    },
+    {
+      "question": "Sú miniatúry WebP vyššej kvality ako JPEG?",
+      "answer": "WebP je ďalší kontajner pre rovnakú veľkosť vrstvy po publikovaní. Uprednostňujte overený súbor 11tik; nepredpokladajte, že WebP vždy existuje.",
+      "answerHtml": "<p>WebP je ďalší kontajner pre rovnakú veľkosť vrstvy po publikovaní. Uprednostňujte overený súbor 11tik; nepredpokladajte, že WebP vždy existuje.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik. Iba verejné CDN veľkosti; žiadne upscaling ani sťahovanie videa.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+}

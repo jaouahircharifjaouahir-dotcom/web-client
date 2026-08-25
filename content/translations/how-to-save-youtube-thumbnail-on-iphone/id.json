@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "id",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Cara menyimpan thumbnail YouTube di iPhone dan Android (2026) | 11tik",
+  "description": "Simpan gambar diam YouTube publik di iPhone atau Android tanpa tangkapan layar dan tanpa pengunduh aplikasi dari App Store. Tempel URL tontonan publik atau Shorts ke 11tik di Safari atau Chrome, lalu unduh file gambar terbesar yang sudah dihosting YouTube.",
+  "h1": "Cara menyimpan thumbnail YouTube di iPhone dan Android (2026)",
+  "ogTitle": "Cara menyimpan thumbnail YouTube di iPhone dan Android (2026)",
+  "ogDescription": "Simpan gambar diam YouTube publik di iPhone atau Android tanpa tangkapan layar dan tanpa pengunduh aplikasi dari App Store. Tempel URL tontonan publik atau Shorts ke 11tik di Safari atau Chrome, lalu unduh file gambar terbesar yang sudah dihosting YouTube.",
+  "imageAlt": "Simpan thumbnail YouTube di iPhone dan Android dengan 11tik — masih publik, belum ada aplikasi.",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Simpan thumbnail YouTube di iPhone dan Android dengan 11tik — masih publik, belum ada aplikasi.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bisakah saya menyimpan thumbnail YouTube di ponsel saya?",
+      "html": "<p>Ya, jika videonya publik dan YouTube telah menerbitkan gambar diamnya. Anda tidak memerlukan komputer desktop dan Anda tidak memerlukan aplikasi APK atau TestFlight. Buka<a href=\"https://www.11tik.com/\">11tik</a>Di browser ponsel yang sudah Anda gunakan, tempel tautannya, ketuk Dapatkan Gambar Miniatur, lalu simpan file pertama yang terdaftar. File tersebut adalah JPEG atau WebP publik tertinggi yang benar-benar menampilkan gambar.</p>\n  <p>Tangkapan layar tekan lama pada pemutar tidak sama. Tangkapan layar tersebut menyertakan chrome, bilah area aman, dan kompresi tambahan. Publik masih hidup di i.ytimg.com. Lihat<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">tangkapan layar vs gambar mini asli</a>jika Anda memerlukan perbedaan tersebut untuk blog atau tag Open Graph.</p>"
+    },
+    {
+      "heading": "Yang Anda butuhkan sebelum memulai",
+      "html": "<ul>\n    <li>URL untuk menonton YouTube publik, Shorts, siaran langsung, atau youtu.be. Parameter kueri tambahan seperti<code>pp=</code>atau ID playlist tidak masalah; 11tik membaca ID video 11 karakter.</li>\n    <li>Safari di iPhone atau iPad, atau Chrome, Firefox, atau Samsung Internet di Android.</li>\n    <li>Izin untuk menyimpan foto jika browser meminta. 11tik tidak pernah mengunggah gambar ke server 11tik sebagai media asli.</li>\n  </ul>\n  <p>Video pribadi, khusus anggota, atau video dengan batasan usia yang tidak mempublikasikan gambar diam publik tidak akan menampilkan opsi unduhan. Itu adalah aturan platform, bukan batasan ponsel. Gambar mini kustom yang masih diproses di Studio mungkin juga hilang untuk sementara waktu; konfirmasikan nanti dengan URL yang sama. Terkait:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Gambar mini YouTube Studio di tahun 2026</a>.</p>"
+    },
+    {
+      "heading": "Cara menyimpan thumbnail YouTube di iPhone",
+      "html": "<ol>\n    <li>Di aplikasi YouTube atau Safari, salin tautan video atau Shorts (Bagikan → Salin tautan).</li>\n    <li>Membuka<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>di Safari. Anda tidak perlu menginstal apa pun.</li>\n    <li>Tempel URL dan ketuk Dapatkan Gambar Miniatur. Tunggu hingga pratinjau sebenarnya muncul. Kotak abu-abu kosong berarti ukuran tersebut belum pernah dipublikasikan.</li>\n    <li>Ketuk kontrol unduhan pertama. Safari akan menawarkan Buka atau Unduh. Pilih Unduh, lalu simpan gambar di File atau simpan ke Foto dari lembar berbagi.</li>\n    <li>Jika Anda hanya memerlukan alamat untuk CMS, gunakan Salin URL gambar alih-alih mengunduh. Ini menyalin tautan HTTPS i.ytimg.com atau vi_webp. Panduan:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL thumbnail YouTube</a>.</li>\n  </ol>\n  <p>Jika iOS memblokir unduhan lintas asal, buka URL gambar di tab baru, lalu ketuk dan tahan gambar → Tambahkan ke Foto. Anda masih menyimpan file publik YouTube, bukan tangkapan layar halaman 11tik.</p>"
+    },
+    {
+      "heading": "Cara menyimpan thumbnail YouTube di Android",
+      "html": "<ol>\n    <li>Salin URL tontonan publik atau Shorts dari aplikasi YouTube.</li>\n    <li>Buka 11tik di Chrome (atau browser default Anda).</li>\n    <li>Tempel, ekstrak, lalu ketuk unduhan pertama. Chrome biasanya menulis file ke folder Unduhan.</li>\n    <li>Buka notifikasi Unduhan dan pindahkan gambar ke Galeri jika Anda ingin menyimpannya di Foto.</li>\n  </ol>\n  <p>Android mungkin akan menanyakan aplikasi mana yang harus membuka JPEG. Pilih Galeri atau File. Jangan pilih \"pengunduh video\" yang menjanjikan MP4; 11tik tidak menyediakan video atau audio.</p>"
+    },
+    {
+      "heading": "Ukuran mana yang sebaiknya saya gunakan di ponsel?",
+      "html": "<p>Pertahankan ukuran yang tercantum pertama. 11tik sudah mengurutkan file yang ada. Saat YouTube menerbitkan maxresdefault, biasanya ukurannya 1280×720. Jika nama file tersebut menghasilkan error 404, ukuran maksimum yang sebenarnya adalah file berikutnya (seringkali hq720, sddefault, atau hqdefault). File maxres yang hilang adalah hal yang normal. Detail:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">apa maxresdefault.jpg itu</a>Dan<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Ukuran thumbnail pada tahun 2026</a>.</p>\n  <p>Video pendek sering diputar secara vertikal sementara gambar diam yang tersimpan dalam format lanskap. File tersebut masih merupakan thumbnail publik resmi. Lihat<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Gambar mini celana pendek</a>.</p>"
+    },
+    {
+      "heading": "Apakah menyimpan gambar mini di ponsel saya itu legal?",
+      "html": "<p>Menyimpan gambar diam yang dihosting secara publik untuk referensi pribadi, penelitian, atau pendidikan adalah penggunaan yang umum. Gambar tersebut tetap merupakan karya berhak cipta pengunggah. Jangan mengunggah ulang sebagai thumbnail kustom Anda sendiri, mencetaknya di merchandise, atau memperlakukan 11tik sebagai lisensi. Bantuan YouTube sendiri tentang thumbnail kustom ada di sini:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Unggah thumbnail video kustom</a>Aturan 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ketentuan</a>Dan<a href=\"https://www.11tik.com/copyright\">Hak Cipta &amp; Penggunaan</a>.</p>"
+    },
+    {
+      "heading": "Mengapa aplikasi \"thumbnail\" ponsel gagal?",
+      "html": "<p>Banyak daftar toko membungkus halaman iklan di sekitar perkiraan.<code>maxresdefault.jpg</code>URL. Jika YouTube tidak pernah menerbitkan file tersebut, Anda akan mendapatkan gambar rusak atau tampilan default abu-abu. 11tik memeriksa respons di browser Anda dan menyembunyikan ukuran yang bukan gambar. Tidak ada yang \"dibuka\" di balik pendaftaran. Privasi: URL yang ditempel tetap ada di browser; lihat<a href=\"https://www.11tik.com/p/privacy.html\">Pribadi</a>.</p>"
+    },
+    {
+      "heading": "Simpan beberapa tautan dari ponsel.",
+      "html": "<p>Gunakan Bulk di halaman beranda yang sama, satu URL publik per baris, hingga 25. URL saluran dapat diperluas untuk menampilkan unggahan publik terbaru di layar yang lebih besar; di ponsel, tempel tautan individual jika tampilan perluasan saluran terasa sempit. Panduan Bulk:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">unduhan massal</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Simpan thumbnail publik di 11tik →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit ekstraktor dalam browser.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bisakah saya menyimpan thumbnail YouTube di ponsel saya?",
+      "answer": "Ya. Buka 11tik di Safari atau Chrome, tempel URL YouTube publik, ekstrak, dan unduh gambar diam publik pertama yang terdaftar. Tidak diperlukan pengunduh aplikasi dari app store.",
+      "answerHtml": "Ya. Buka 11tik di Safari atau Chrome, tempel URL YouTube publik, ekstrak, dan unduh gambar diam publik pertama yang terdaftar. Tidak diperlukan pengunduh aplikasi dari app store."
+    },
+    {
+      "question": "Bagaimana cara menyimpan thumbnail YouTube di iPhone?",
+      "answer": "Salin tautannya, buka https://www.11tik.com/ di Safari, tempel, ekstrak, lalu unduh atau tekan lama URL gambar dan tambahkan ke Foto.",
+      "answerHtml": "Salin tautannya, buka https://www.11tik.com/ di Safari, tempel, ekstrak, lalu unduh atau tekan lama URL gambar dan tambahkan ke Foto."
+    },
+    {
+      "question": "Bagaimana cara menyimpan thumbnail YouTube di Android?",
+      "answer": "Salin tautannya, buka 11tik di Chrome, ekstrak, dan simpan unduhan pertama ke Unduhan atau Galeri.",
+      "answerHtml": "Salin tautannya, buka 11tik di Chrome, ekstrak, dan simpan unduhan pertama ke Unduhan atau Galeri."
+    },
+    {
+      "question": "Apakah menyimpan gambar mini di ponsel saya itu legal?",
+      "answer": "Menyimpan gambar diam publik untuk referensi pribadi atau penelitian adalah hal yang umum. Jangan menerbitkannya kembali sebagai sampul karya seni Anda sendiri. Hak cipta tetap berada pada pengunggah.",
+      "answerHtml": "Menyimpan gambar diam publik untuk referensi pribadi atau penelitian adalah hal yang umum. Jangan menerbitkannya kembali sebagai sampul karya seni Anda sendiri. Hak cipta tetap berada pada pengunggah."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit ekstraktor dalam browser.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+}

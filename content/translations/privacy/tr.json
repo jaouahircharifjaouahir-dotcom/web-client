@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "tr",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Gizlilik Politikası | 11tik",
+  "description": "Bu politika, https://www.11tik.com/ adresindeki YouTube Küçük Resim Çıkarıcısı ve aynı çıkarıcıyı yükleyen dil sunucuları için geçerlidir.",
+  "h1": "Gizlilik Politikası",
+  "ogTitle": "Gizlilik Politikası",
+  "ogDescription": "Bu politika, https://www.11tik.com/ adresindeki YouTube Küçük Resim Çıkarıcısı ve aynı çıkarıcıyı yükleyen dil sunucuları için geçerlidir.",
+  "imageAlt": "",
+  "faqHeading": "SSS",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Tarayıcıda işleme",
+      "html": "<p>Bir YouTube URL'si yapıştırdığınızda, sayfa video kimliğini okur ve tarayıcınızdaki herkese açık küçük resim URL'lerini kontrol eder. Yapıştırılan bu bağlantılar, 11tik uygulama sunucusunda kişisel bir hesap olarak saklanmaz. Çıkarma işlemi oturum açmayı gerektirmez.</p>"
+    },
+    {
+      "heading": "İsteğe bağlı paylaşım sayfası dizini",
+      "html": "<p>Başarılı bir çıkarma işleminden sonra, tarayıcı yalnızca genel video kimliğini, başlığı, genel meta verilerden türetilen etiketleri ve genel küçük resim URL'sini Cloudflare Worker'ımıza gönderebilir; böylece video paylaşım sayfasında ve (kalite kontrolünden geçerse) site haritasında görünebilir. Görüntü dosyasını yüklemenizi istemiyoruz. İsteğiniz tarayıcınız tarafından engellenirse, bu dizin olmadan da çıkarıcıyı kullanabilirsiniz.</p>"
+    },
+    {
+      "heading": "Yerel tarih",
+      "html": "<p>Bu araç, yakın zamanda ziyaret ettiğiniz URL'leri tarayıcınızın yerel depolama alanına kaydedebilir, böylece bunları tekrar açabilirsiniz. Bu kopya cihazınızda kalır. Bunu sayfa içi geçmiş denetimiyle veya tarayıcıda bu sitenin verilerini temizleyerek silebilirsiniz. Bu bir bulut hesabı değildir.</p>"
+    },
+    {
+      "heading": "Barındırma günlükleri",
+      "html": "<p>Web sitesi, dil sunucuları ve statik dosyalar, 11tik.com için kullanılan barındırma sağlayıcıları (Cloudflare ve GitHub Pages dahil) tarafından sunulmaktadır. Bu sunucular, kendi politikalarına göre IP adresi, tarayıcı türü ve istenen sayfa gibi sıradan web günlüklerini tutabilirler.</p>"
+    },
+    {
+      "heading": "Üçüncü taraflar",
+      "html": "<p>Küçük resim dosyaları YouTube'un herkese açık resim barındırma hizmetlerinden talep edilir. Site, ziyaretleri ve sayfa içi eylemleri (örneğin, çıkarma ve indirme) saymak için Google Analytics 4'ü (ölçüm kimliği G-FW7B8NDZZ5) kullanır. Google çerezler veya benzer tanımlayıcılar ayarlayabilir. Yapıştırılan YouTube URL'leri analiz etkinliği parametreleri olarak gönderilmez. Yazı tipleri veya komut dosyaları, sayfayı görüntülemek için kullanılan CDN'lerden de yüklenebilir.</p>\n  <p>İletişim formu, FormSubmit tarafından operatörün e-posta adresine gönderilir. FormSubmit, gönderdiğiniz adı, e-postayı ve mesajı görebilir.</p>"
+    },
+    {
+      "heading": "Temas etmek",
+      "html": "<p>Bu politikayla ilgili sorularınız için: e-posta gönderin.<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>veya şunu kullanın<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>biçim.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube Küçük Resim Çıkarıcı</a>·<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

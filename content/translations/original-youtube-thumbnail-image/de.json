@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "de",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "So erhalten Sie das originale YouTube-Vorschaubild | 11tik",
+  "description": "Verwenden Sie das originale, öffentliche YouTube-Thumbnail, das YouTube bereits hostet. Es handelt sich um ein Standbild des CDN, nicht um ein aus dem Video extrahiertes Einzelbild.",
+  "h1": "So erhalten Sie das originale YouTube-Vorschaubild",
+  "ogTitle": "So erhalten Sie das originale YouTube-Vorschaubild",
+  "ogDescription": "Verwenden Sie das originale, öffentliche YouTube-Thumbnail, das YouTube bereits hostet. Es handelt sich um ein Standbild des CDN, nicht um ein aus dem Video extrahiertes Einzelbild.",
+  "imageAlt": "Die ursprüngliche öffentliche YouTube-Miniaturansichtsdatei wird im 11tik-Extraktor angezeigt.",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Die ursprüngliche öffentliche YouTube-Miniaturansichtsdatei wird im 11tik-Extraktor angezeigt.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Was ist das originale YouTube-Vorschaubild?",
+      "html": "<p>Es handelt sich um das Vorschaubild, das YouTube bereits auf seinen Bildservern speichert. Es ist die Datei, die für die Suche und die vorgeschlagenen Regale verwendet wird, nicht ein mit der Druck-Taste aufgenommenes Bild.</p>"
+    },
+    {
+      "heading": "Worin besteht der Unterschied zu einem Screenshot?",
+      "html": "<p>Der Screenshot enthält die Player-Oberfläche, die Browser-Benutzeroberfläche und zusätzliche Komprimierung. Die Originaldatei ist ein sauberes Standbild in der von YouTube veröffentlichten Pixelgröße.</p>"
+    },
+    {
+      "heading": "Wie finde ich das Original-Thumbnail?",
+      "html": "<p>Fügen Sie die URL für Watch, Shorts, Live oder youtu.be ein in<a href=\"https://www.11tik.com/\">11tik</a>Das Tool liest die Video-ID, überprüft öffentliche Dateien und ordnet die beste vorhandene Datei nach ihrer Qualität.</p>"
+    },
+    {
+      "heading": "Wie funktionieren YouTube-Thumbnail-URLs?",
+      "html": "<p>Sie verwenden die Video-ID plus eine Größenbezeichnung wie maxresdefault.jpg oder hqdefault.jpg auf i.ytimg.com. Die Annahme einer Größe, die nie veröffentlicht wurde, führt zu einem Fehler oder einem Platzhalter.</p>"
+    },
+    {
+      "heading": "Was ist maxresdefault.jpg?",
+      "html": "<p>Es handelt sich um den üblicherweise höchsten öffentlichen Dateinamen, in der Regel 1280×720 Pixel, wie er bei der Erstellung durch YouTube angegeben wurde. Es ist weder ein 4K-Master noch die eigentliche Videodatei.</p>"
+    },
+    {
+      "heading": "Bedeutet „Original“ immer 1280 720?",
+      "html": "<p>Nein. Falls die maximale Auflösung nie veröffentlicht wurde, liegt das ursprüngliche öffentliche Bild in HQ, SD oder einer anderen verfügbaren Datei vor. 11tik zeigt die tatsächliche Pixelgröße an, anstatt Pixel zu erfinden.</p>"
+    },
+    {
+      "heading": "Kann ich das Original-Standbild aus Shorts, Live oder youtu.be bekommen?",
+      "html": "<p>Ja, wenn diese URLs eine öffentliche Video-ID und auf YouTube gehostete öffentliche Standbilder enthalten. Der Extraktor behandelt sie wie eine normale Wiedergabe-URL.</p>"
+    },
+    {
+      "heading": "Wie kann ich überprüfen, ob ich tatsächlich die Originaldatei erhalten habe?",
+      "html": "<p>Verwenden Sie die Listen für Größe und Abmessungen 11tik, nachdem die Datei validiert wurde. Wenn das Bild wie ein Screenshot eines Spielers aussieht, haben Sie nicht das gehostete Vorschaubild heruntergeladen.</p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Höchste Qualität</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Was ist das originale YouTube-Vorschaubild?",
+      "answer": "Die öffentliche Bilddatei, die YouTube für die Video-ID speichert (z. B. maxresdefault, sofern vorhanden), ist kein Screenshot der Wiedergabeseite.",
+      "answerHtml": "Die öffentliche Bilddatei, die YouTube für die Video-ID speichert (z. B. maxresdefault, sofern vorhanden), ist kein Screenshot der Wiedergabeseite."
+    },
+    {
+      "question": "Bedeutet „Original“ immer 1280 720?",
+      "answer": "Nein. Die maximale Auflösung (Maxres) beträgt beim Veröffentlichen üblicherweise 1280 × 720 Pixel. Falls diese Datei fehlt, wird die ursprüngliche öffentliche Version dennoch in der nächstgrößeren Auflösung von YouTube gespeichert.",
+      "answerHtml": "Nein. Die maximale Auflösung beträgt bei der Veröffentlichung üblicherweise 1280×720. Falls diese Datei fehlt, wird die ursprüngliche öffentliche Version dennoch in der nächstgrößeren Auflösung von YouTube gespeichert."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+}

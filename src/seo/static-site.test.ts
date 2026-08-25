@@ -4,9 +4,10 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { GUIDE_POSTS } from "../content/posts";
 import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import {
-  INDEXABLE_UTILITY_PATHS,
   LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP,
+  collectCanonicalSitemapLocs,
   parseSitemapLocs,
 } from "../../workers/sitemap-canonicals.js";
 
@@ -21,6 +22,11 @@ describe("build-time static site", () => {
       const robots = readFileSync(join(dir, "robots.txt"), "utf8");
       const sitemap = readFileSync(join(dir, "sitemap.xml"), "utf8");
       const locs = parseSitemapLocs(sitemap);
+      const manifest = scanPublishability();
+      const englishLocs = collectCanonicalSitemapLocs({
+        postHrefs: GUIDE_POSTS.map((post) => post.href),
+      });
+
       expect(home).toContain('lang="en"');
       expect(home).toContain('rel="canonical" href="https://www.11tik.com/"');
       expect(ar).toContain('lang="ar"');
@@ -51,8 +57,9 @@ describe("build-time static site", () => {
       expect([...robots.matchAll(/^Sitemap:/gm)]).toHaveLength(1);
       expect(sitemap).toContain("https://www.11tik.com/");
       expect(sitemap).toContain("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
-      expect(sitemap).not.toContain("https://ar.11tik.com/");
-      expect(locs).toHaveLength(1 + GUIDE_POSTS.length + INDEXABLE_UTILITY_PATHS.length + 1);
+      expect(sitemap).toContain("https://ar.11tik.com/l/ar/2026/08/how-to-download-youtube-thumbnail.html");
+      expect(locs).toHaveLength(englishLocs.length + manifest.counts.ready);
+      expect(locs.filter((loc) => loc.includes("/l/"))).toHaveLength(manifest.counts.ready);
       expect(existsSync(join(dir, "l", "fr", "2026", "08", "11tik-share-links-thumb-vs-youtube.html"))).toBe(
         true,
       );

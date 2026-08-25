@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-08-24T22:19:33.992Z",
+  "hardware": {
+    "cpus": 4,
+    "ramGiB": 8,
+    "cpuModel": "Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz"
+  },
+  "pilot": {
+    "contentIds": [
+      "11tik-share-links-thumb-vs-youtube",
+      "how-to-download-youtube-thumbnail",
+      "youtube-thumbnail-url"
+    ],
+    "locales": [
+      "fr",
+      "es",
+      "de",
+      "ar"
+    ],
+    "jobs": 12
+  },
+  "baselinePilotMs": 808546,
+  "sequential": {
+    "label": "sequential",
+    "runtimeMs": 603978,
+    "runtimeSec": 604,
+    "jobs": 12,
+    "processed": 12,
+    "succeeded": 12,
+    "failed": 0,
+    "secPerJob": 50.33,
+    "jobsPerSec": 0.02,
+    "ramPeakMiB": 88,
+    "env": {
+      "concurrency": 1,
+      "gtxConcurrency": 1,
+      "rateLimitMs": 300
+    }
+  },
+  "parallel": {
+    "label": "parallel",
+    "runtimeMs": 170489,
+    "runtimeSec": 170.5,
+    "jobs": 12,
+    "processed": 12,
+    "succeeded": 12,
+    "failed": 0,
+    "secPerJob": 14.21,
+    "jobsPerSec": 0.07,
+    "ramPeakMiB": 107,
+    "env": {
+      "concurrency": 4,
+      "gtxConcurrency": 8,
+      "rateLimitMs": 80
+    }
+  },
+  "speedup": {
+    "parallelVsSequential": 3.54,
+    "parallelVsBaselinePilot": 4.74,
+    "percentFasterVsSequential": 71.8,
+    "percentFasterVsBaseline": 78.9
+  },
+  "rolloutEstimate": {
+    "gtxLocales": 135,
+    "contentItems": 23,
+    "totalJobs": 3105,
+    "estimatedHoursSequential": 43.4,
+    "estimatedHoursParallel": 12.3
+  },
+  "recommendation": "parallel architecture approved for mass rollout"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "ko",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "스크린샷과 실제 유튜브 썸네일: 어떤 파일을 저장해야 할까요? | 11tik",
+  "description": "플레이어의 휴대폰 스크린샷은 YouTube에서 호스팅하는 썸네일이 아닙니다. 실제 사용자들은 여전히 ​​i.ytimg.com에 있습니다. 블로그, Open Graph 및 연구에 사용하세요. 스크린샷은 UI 크롬, 압축 및 잘못된 화면 비율을 추가합니다.",
+  "h1": "스크린샷과 실제 유튜브 썸네일: 어떤 파일을 저장해야 할까요?",
+  "ogTitle": "스크린샷과 실제 유튜브 썸네일: 어떤 파일을 저장해야 할까요?",
+  "ogDescription": "플레이어의 휴대폰 스크린샷은 YouTube에서 호스팅하는 썸네일이 아닙니다. 실제 사용자들은 여전히 ​​i.ytimg.com에 있습니다. 블로그, Open Graph 및 연구에 사용하세요. 스크린샷은 UI 크롬, 압축 및 잘못된 화면 비율을 추가합니다.",
+  "imageAlt": "플레이어 스크린샷과 실제 공개된 유튜브 썸네일 파일 비교",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "플레이어 스크린샷과 실제 공개된 유튜브 썸네일 파일 비교",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "스크린샷과 실제 썸네일의 차이점은 무엇인가요?",
+      "html": "<p>스크린샷은 플레이어 테두리, 자막, 기기 화면 배율 등을 포함하여 화면을 캡처합니다. 실제 썸네일은 YouTube에서 해당 동영상 ID에 대해 게시한 JPEG 또는 WebP 파일입니다. CDN 파일만 안정적인 URL과 알려진 픽셀 크기를 가지고 있습니다.</p>"
+    },
+    {
+      "heading": "왜 스크린샷이 구글 이미지 검색과 소셜 미디어 미리보기에서 제대로 표시되지 않나요?",
+      "html": "<p>이러한 이미지는 종종 화면 비율이 맞지 않고, UI를 포함하며, 두 번 압축됩니다. Open Graph와 많은 CMS 필드는 여전히 약 1280x720 크기의 16:9 비율을 요구합니다. 이는 maxresdefault가 존재하는 경우 해당 해상도와 일치합니다. 자세한 내용은 다음을 참조하십시오.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">썸네일 크기 가이드</a>.</p>"
+    },
+    {
+      "heading": "실제 썸네일 이미지를 저장하려면 어떻게 해야 하나요?",
+      "html": "<ol>\n    <li>스크린샷이 아닌 공개 동영상 URL을 복사하세요.</li>\n    <li>붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>목록에 있는 첫 번째 공개 파일을 다운로드하거나 이미지 URL을 복사하세요.</li>\n  </ol>"
+    },
+    {
+      "heading": "스크린샷은 언제 유용할까요?",
+      "html": "<p>스크린샷은 UI 버그를 기록하거나 영상 속 특정 순간을 보여주는 용도로만 사용하세요. 공식 썸네일, 블로그 메인 이미지 또는 공유 이미지(공개 계정이 있는 경우)로는 사용하지 마세요.</p>\n  <p><a href=\"https://www.11tik.com/\">실제 공개 썸네일을 확인하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "스크린샷과 실제 썸네일의 차이점은 무엇인가요?",
+      "answer": "스크린샷은 화면과 플레이어 크롬을 캡처합니다. 실제 썸네일은 YouTube가 해당 동영상 ID에 대해 i.ytimg.com에 호스팅하는 JPEG 또는 WebP 파일입니다.",
+      "answerHtml": "스크린샷은 화면과 플레이어 크롬을 캡처합니다. 실제 썸네일은 YouTube가 해당 동영상 ID에 대해 i.ytimg.com에 호스팅하는 JPEG 또는 WebP 파일입니다."
+    },
+    {
+      "question": "왜 스크린샷이 구글 이미지 검색과 소셜 미디어 미리보기에서 제대로 표시되지 않나요?",
+      "answer": "이러한 이미지는 종종 잘못된 화면 비율, 불필요한 UI 요소, 과도한 압축률을 가지고 있습니다. CMS 및 Open Graph 필드는 깔끔한 16:9 비율의 공개 이미지를 기대합니다.",
+      "answerHtml": "이러한 이미지는 종종 잘못된 화면 비율, 불필요한 UI 요소, 과도한 압축률을 가지고 있습니다. CMS 및 Open Graph 필드는 깔끔한 16:9 비율의 공개 이미지를 기대합니다."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+}

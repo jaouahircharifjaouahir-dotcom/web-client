@@ -2,10 +2,10 @@ import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { generateStaticSite } from "./generate-static-site.mjs";
 import {
-  readEnglishSourceHash,
-  resolveLocalePublishState,
-  SHARE_LINKS_ARTICLE_ID,
   syncBloggerThemePoc,
+  SHARE_LINKS_ARTICLE_ID,
+  resolveLocalePublishState,
+  readEnglishSourceHash,
 } from "./article-i18n.mjs";
 
 const root = join(import.meta.dirname, "..");

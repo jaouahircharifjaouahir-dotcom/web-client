@@ -1,0 +1,183 @@
+{
+  "generatedAt": "2026-08-24T22:20:06.883Z",
+  "mode": "pilot-3-articles-x-4-locales",
+  "provider": {
+    "translateEnabled": true,
+    "provider": "chrome_gtx",
+    "credentialsPresent": true,
+    "credentialsSource": "translator/extension embedded GTX key",
+    "configurationValid": true,
+    "configurationErrors": [],
+    "rateLimitMs": 80,
+    "maxRetries": 3,
+    "batchSize": 1,
+    "timeoutMs": 120000,
+    "googleProject": null,
+    "googleLocation": null,
+    "model": "chrome-extension-gtx-translate-pa",
+    "baseUrlConfigured": false,
+    "localEngine": true
+  },
+  "extension": {
+    "extensionPath": "C:\\Users\\ADMIN\\Desktop\\seo\\translator\\extension",
+    "extensionPresent": true,
+    "primaryEngine": "translate-pa.googleapis.com/v1/translate (client=gtx)",
+    "browserRequired": false,
+    "note": "Full-page Chrome translate UI is built into Chrome; this extension mainly does selection bubbles. Local runner uses the same TranslationAPI the extension calls."
+  },
+  "inventory": {
+    "articles": 17,
+    "utilities": 6,
+    "localizable": 23,
+    "locales": 182,
+    "theoreticalAll": 4186
+  },
+  "gtxCoverage": {
+    "supported": 135,
+    "unsupported": 47,
+    "unsupportedLocales": [
+      "aa",
+      "ae",
+      "an",
+      "av",
+      "bi",
+      "bo",
+      "ce",
+      "ch",
+      "cr",
+      "cu",
+      "fo",
+      "gv",
+      "ho",
+      "hz",
+      "ia",
+      "ie",
+      "ii",
+      "ik",
+      "io",
+      "iu",
+      "kg",
+      "ki",
+      "kj",
+      "kl",
+      "kr",
+      "ks",
+      "kv",
+      "kw",
+      "lu",
+      "mh",
+      "na",
+      "nd",
+      "ng",
+      "nv",
+      "oj",
+      "os",
+      "pi",
+      "rm",
+      "sc",
+      "se",
+      "to",
+      "ty",
+      "ve",
+      "vo",
+      "wa",
+      "wo",
+      "za"
+    ]
+  },
+  "pilot": {
+    "contentIds": [
+      "11tik-share-links-thumb-vs-youtube",
+      "how-to-download-youtube-thumbnail",
+      "youtube-thumbnail-url"
+    ],
+    "locales": [
+      "fr",
+      "es",
+      "de",
+      "ar"
+    ],
+    "jobsPlanned": 12
+  },
+  "smoke": {
+    "ok": true,
+    "sample": "Bonjour de la part de 11tik",
+    "provider": "chrome_gtx",
+    "extensionPresent": true
+  },
+  "translation": {
+    "runtimeMs": 196,
+    "processed": 0,
+    "succeeded": 0,
+    "failed": 0,
+    "skipped": 0,
+    "items": []
+  },
+  "generation": {
+    "runtimeMs": 6071,
+    "staged": "C:\\Users\\ADMIN\\Desktop\\seo\\dist-assets-pilot",
+    "generatedBytes": 3622881,
+    "files": {
+      "expected": 13,
+      "present": 13,
+      "missing": 0,
+      "missingFiles": [],
+      "rtlPages": 3,
+      "totalBytes": 248831,
+      "totalMiB": 0.24,
+      "hreflangLinks": 75
+    },
+    "sitemapLocalized": 13,
+    "internalLinks": {
+      "totalLinks": 0,
+      "localizedLinks": 0,
+      "englishFallbackLinks": 0,
+      "broken": [],
+      "brokenCount": 0
+    },
+    "rtlPages": 3,
+    "rtlLocalesInPilot": [
+      "ar"
+    ]
+  },
+  "validation": {
+    "ready": 13,
+    "stale": 0,
+    "missing": 3092,
+    "failed": 0,
+    "draft": 0,
+    "issues": []
+  },
+  "productionIsolation": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "no-gtx-in-staged",
+        "leaked": false,
+        "detail": ""
+      },
+      {
+        "name": "no-extension-js-in-staged",
+        "leaked": false,
+        "detail": ""
+      }
+    ]
+  },
+  "readyForMass": true,
+  "blockers": [],
+  "summary": {
+    "pilotJobs": 12,
+    "succeeded": 0,
+    "skippedReady": 0,
+    "failed": 0,
+    "pilotReadyOrSkipped": 0,
+    "pilotFailed": 0,
+    "totalRuntimeMs": 20876
+  },
+  "massEstimate": {
+    "theoreticalJobs": 3105,
+    "gtxMappedJobs": 3105,
+    "ignoredLocales": 47,
+    "note": "GTX-only: translate and publish supported Google Translate locales only."
+  }
+}

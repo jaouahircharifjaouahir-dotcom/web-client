@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "de",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "So laden Sie ein YouTube Shorts-Thumbnail in HD herunter | 11tik",
+  "description": "Laden Sie ein YouTube Shorts-Thumbnail im Browser herunter. Shorts verwenden dieselben öffentlichen Standbilder wie die Wiedergabe-URLs. Die Datei hat oft das Querformat.",
+  "h1": "So laden Sie ein YouTube Shorts-Thumbnail in HD herunter",
+  "ogTitle": "So laden Sie ein YouTube Shorts-Thumbnail in HD herunter",
+  "ogDescription": "Laden Sie ein YouTube Shorts-Thumbnail im Browser herunter. Shorts verwenden dieselben öffentlichen Standbilder wie die Wiedergabe-URLs. Die Datei hat oft das Querformat.",
+  "imageAlt": "Herunterladen eines öffentlichen YouTube Shorts-Thumbnails in 11tik",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Herunterladen eines öffentlichen YouTube Shorts-Thumbnails in 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Wie lade ich ein YouTube Shorts-Thumbnail herunter?",
+      "html": "<p>Kopieren Sie eine URL, die /shorts/ und eine Video-ID enthält, und fügen Sie sie ein in<a href=\"https://www.11tik.com/\">11tik</a>und lädt eine angegebene Größe herunter. Die Extraktion beginnt, sobald die ID gültig ist.</p>"
+    },
+    {
+      "heading": "Sind Shorts-Dateien dasselbe wie Watchpage-Dateien?",
+      "html": "<p>Sie verwenden dieselben öffentlichen Größennamen, die anhand der Video-ID identifiziert werden. Das Standbild kann mit schwarzen Balken an den Seiten erscheinen, wenn YouTube eine Breitbildversion gespeichert hat.</p>"
+    },
+    {
+      "heading": "Was passiert, wenn kein Bild erscheint?",
+      "html": "<p>Das Short kann privat, gelöscht oder ohne öffentliche Standbilder sein. Der Extraktor kann diese Einschränkungen nicht umgehen.</p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">So laden Sie es herunter</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kann ich ein YouTube Shorts-Thumbnail herunterladen?",
+      "answer": "Ja, als YouTube öffentliche Standbilder für diese Shorts-Video-ID veröffentlichte.",
+      "answerHtml": "Ja, als YouTube öffentliche Standbilder für diese Shorts-Video-ID veröffentlichte."
+    },
+    {
+      "question": "Warum sieht das Bild immer noch so aus, als ob es im Letterbox-Format wäre?",
+      "answer": "YouTube speichert möglicherweise auch bei vertikalen Kurzvideos eine 16:9-Variante. 11tik zeigt die Originaldatei an, anstatt einen Zuschnitt zu erstellen.",
+      "answerHtml": "YouTube speichert möglicherweise auch bei vertikalen Kurzvideos eine 16:9-Variante. 11tik zeigt die Originaldatei an, anstatt einen Zuschnitt zu erstellen."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+}

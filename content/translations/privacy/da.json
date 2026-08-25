@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "da",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Privatlivspolitik | 11tik",
+  "description": "Denne politik gælder for YouTube Thumbnail Extractor på https://www.11tik.com/ og de sprogværter, der indlæser den samme extractor.",
+  "h1": "Privatlivspolitik",
+  "ogTitle": "Privatlivspolitik",
+  "ogDescription": "Denne politik gælder for YouTube Thumbnail Extractor på https://www.11tik.com/ og de sprogværter, der indlæser den samme extractor.",
+  "imageAlt": "",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Behandling i browseren",
+      "html": "<p>Når du indsætter en YouTube-URL, læser siden video-ID'et og kontrollerer URL'er til offentlige miniaturebilleder i din browser. Disse indsatte links gemmes ikke som en personlig konto på en 11tik-applikationsserver. Udtrækning kræver ikke login.</p>"
+    },
+    {
+      "heading": "Valgfrit indeks for delingsside",
+      "html": "<p>Efter en vellykket udtrækning sender browseren muligvis kun et offentligt video-ID, titel, tags afledt af offentlige metadata og en offentlig miniature-URL til vores Cloudflare Worker, så videoen kan vises på en delingsside og, hvis den består en kvalitetskontrol, i sitemap. Vi beder dig ikke om at uploade billedfilen. Du kan bruge udtrækkeren uden dette indeks, hvis anmodningen er blokeret af din browser.</p>"
+    },
+    {
+      "heading": "Lokal historie",
+      "html": "<p>Udtrækkeren kan gemme de seneste webadresser i denne browsers lokale lager, så du kan åbne dem igen. Den kopi forbliver på din enhed. Ryd den med historikkontrollen på siden eller ved at rydde dette websteds data i browseren. Det er ikke en cloud-konto.</p>"
+    },
+    {
+      "heading": "Hosting-logfiler",
+      "html": "<p>Hjemmesiden, sproghosts og statiske filer leveres af de hostingudbydere, der bruges til 11tik.com (inklusive Cloudflare og GitHub Pages). Disse hosts kan gemme almindelige weblogfiler såsom IP-adresse, browsertype og den ønskede side i henhold til deres egne politikker.</p>"
+    },
+    {
+      "heading": "Tredjeparter",
+      "html": "<p>Miniaturebilleder anmodes om fra YouTubes offentlige billedværter. Webstedet bruger Google Analytics 4 (målings-ID G-FW7B8NDZZ5) til at tælle besøg og handlinger på siden, såsom udtrækning og download. Google kan indstille cookies eller lignende identifikatorer. Indsatte YouTube-URL'er sendes ikke som analysehændelsesparametre. Skrifttyper eller scripts kan også indlæses fra CDN'er, der bruges til at vise siden.</p>\n  <p>Kontaktformularen leveres af FormSubmit til operatørens e-mail. FormSubmit kan se navn, e-mail og besked, du sender.</p>"
+    },
+    {
+      "heading": "Kontakte",
+      "html": "<p>Spørgsmål om denne politik: e-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>eller brug<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>form.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-miniatureudtrækker</a>·<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "es",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "Miniatura de YouTube Studio 2026 | 11tik",
+  "description": "En 2026, los canales de YouTube que cumplan los requisitos seguirán subiendo una miniatura personalizada desde Studio a la página de detalles del vídeo. Las etiquetas del menú se mueven, pero el resultado es el mismo: YouTube aloja una nueva imagen pública fija. 11tik no sube ese archivo. Solo lee las URL de las imágenes públicas una vez que existen.",
+  "h1": "Miniatura de YouTube Studio 2026",
+  "ogTitle": "Miniatura de YouTube Studio 2026",
+  "ogDescription": "En 2026, los canales de YouTube que cumplan los requisitos seguirán subiendo una miniatura personalizada desde Studio a la página de detalles del vídeo. Las etiquetas del menú se mueven, pero el resultado es el mismo: YouTube aloja una nueva imagen pública fija. 11tik no sube ese archivo. Solo lee las URL de las imágenes públicas una vez que existen.",
+  "imageAlt": "11tik se utiliza para verificar una miniatura pública después de una carga en YouTube Studio",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik se utiliza para verificar una miniatura pública después de una carga en YouTube Studio",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "¿Cómo subo una miniatura personalizada en YouTube Studio?",
+      "html": "<ol>\n    <li>Abre YouTube Studio y selecciona el vídeo.</li>\n    <li>En Detalles, sube una imagen con una relación de aspecto de 16:9 (el tamaño habitual de YouTube es de 1280×720).</li>\n    <li>Guarda y espera a que finalice el procesamiento.</li>\n  </ol>\n  <p>Los nombres exactos de los botones pueden cambiar. Si tu cuenta no cumple los requisitos para usar miniaturas personalizadas, Studio no ofrecerá la opción de subirlas. 11tik no puede eludir esta restricción.</p>"
+    },
+    {
+      "heading": "¿Cómo puedo comprobar una miniatura después de modificarla en Studio?",
+      "html": "<p>Pegue la URL del reloj en<a href=\"https://www.11tik.com/\">11tik</a>Descarga o copia el primer tamaño que aparece en la lista. Si falta maxresdefault, el siguiente archivo público es el máximo real. Ese es el catálogo de YouTube, no una extracción fallida. Ver también<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Explicación de maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "¿11tik reemplaza a YouTube Studio?",
+      "html": "<p>No. Studio es donde subes, programas y usas pruebas cuando YouTube las ofrece. 11tik es para previsualizar y guardar imágenes fijas públicas que ya existen, incluso después de un cambio en Studio.</p>"
+    },
+    {
+      "heading": "¿Qué debo hacer cuando la imagen parece antigua?",
+      "html": "<p>Las CDN de imágenes pueden presentar retrasos. Vuelva a comprobarlo más tarde, actualice la página o copie la URL que 11tik confirma. No asuma que se trata de una imagen maestra en 4K; la resolución máxima pública suele ser de 1280 × 720. Una captura de pantalla de Studio no es el archivo de miniatura público.</p>\n  <p>Relacionado:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs fabricante</a>.</p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Abra el extractor</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿11tik reemplaza a YouTube Studio?",
+      "answer": "No. Studio sube arte personalizado. 11tik solo lee archivos de miniaturas públicas.",
+      "answerHtml": "No. Studio sube arte personalizado. 11tik solo lee archivos de miniaturas públicas."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+}

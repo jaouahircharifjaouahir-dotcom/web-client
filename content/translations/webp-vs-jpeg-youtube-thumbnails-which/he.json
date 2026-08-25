@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "he",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "תמונות ממוזערות של WebP לעומת JPEG ביוטיוב: באיזה פורמט כדאי להשתמש? | 11tik",
+  "description": "ייתכן שיוטיוב יפרסם קבצי תמונות ממוזערות בפורמט JPEG ו-WebP. יש להעדיף את הפורמט ש11tik מאמת עבור מקרה השימוש שלך - WebP לא תמיד זמין.",
+  "h1": "תמונות ממוזערות של WebP לעומת JPEG ביוטיוב: באיזה פורמט כדאי להשתמש?",
+  "ogTitle": "תמונות ממוזערות של WebP לעומת JPEG ביוטיוב: באיזה פורמט כדאי להשתמש?",
+  "ogDescription": "ייתכן שיוטיוב יפרסם קבצי תמונות ממוזערות בפורמט JPEG ו-WebP. יש להעדיף את הפורמט ש11tik מאמת עבור מקרה השימוש שלך - WebP לא תמיד זמין.",
+  "imageAlt": "השוואה זו לצד זו של נתיבי כתובות URL של תמונות ממוזערות של JPEG ו-WebP ביוטיוב ב-i.ytimg.com",
+  "faqHeading": "שאלות נפוצות",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "השוואה זו לצד זו של נתיבי כתובות URL של תמונות ממוזערות של JPEG ו-WebP ביוטיוב ב-i.ytimg.com",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "תרשים מקרי שימוש המשווה CMS לאתרים, קישורי CDN ישירים והורדות ארכיון עבור תמונות ממוזערות של YouTube ב-JPEG לעומת WebP",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "תשובה מהירה",
+      "html": "<p>עבור רוב ההורדות וההעלאות של מערכת ניהול התוכן (CMS), שמור את<strong>קובץ מאומת 11tik מופיע ראשון</strong>JPEG נשאר הציבור הרחב עדיין זמין<code>i.ytimg.com/vi/…</code>WebP מופיע עבור חלק מהסרטונים כ-<code>maxresdefault.webp</code>תַחַת<code>/vi_webp/</code>WebP לרוב קטן יותר באיכות ויזואלית דומה, אך הוא אינו מתפרסם עבור כל מזהה. 11tik כן.<strong>לֹא</strong>להמיר WebP ל-JPEG בעת ההורדה - זה חוסך את הבייטים שיוטיוב כבר מארח (הורדות JPEG מקבלות רק חותמת הערה קטנה של מטא-דאטה).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">אותו מזהה וידאו, קונטיינרים ונתיבים שונים - רק כאשר YouTube פרסם את שניהם.</p>"
+    },
+    {
+      "heading": "כיצד מופיעים פורמטי תמונות ממוזערות של יוטיוב ב-11tik",
+      "html": "<p>הגדרות האיכות המוגדרות מראש של 11tik כוללות:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(לְחַקוֹת<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ מתחת<code>/vi/</code>(לְחַקוֹת<code>image/jpeg</code>)</li>\n  </ul>\n  <p>מועמדים נטענים בדפדפן. כשלים ומצייני מיקום מוסרים. הדירוג משתמש בדרגה, שטח פיקסלים, התאמה לגודל הצפוי וערך קטן.<strong>עונש של 8 נקודות - עבור<code>.webp</code>כתובות URL</strong>כך ש-JPEG ו-WebP מאותה שכבה לא יתמודדו זה מול זה באופן בלתי צפוי - JPEG יכול לנצח בתיקו כאשר שניהם מתאימים. פרטים על גדלים:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך גודל של תמונות ממוזערות</a>התנהגות חסרה של מקסימום:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">מדריך maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "JPEG לעומת WebP בשפה פשוטה",
+      "html": "<table>\n    <thead>\n      <tr><th>פוּרמָט</th><th>הכי טוב עבור</th><th>כּוֹחַ</th><th>הַגבָּלָה</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>הורדות, העלאות לוורדפרס, תאימות רחבה ביותר</td><td>תמיכה כמעט אוניברסלית; רוב תמונות הסטילס של CDN</td><td>קבצים גדולים יותר באיכות דומה</td></tr>\n      <tr><td>WebP</td><td>אתרים מודרניים שכבר משרתים WebP</td><td>לעיתים קרובות קטנים יותר עבור אותה רמת רזולוציה</td><td>לא פורסם עבור כל סרטון; חלק מהכלים הישנים יותר נרתעים</td></tr>\n    </tbody>\n  </table>\n  <p>אף אחד מהפורמטים לא ממציא רזולוציה. WebP של 480×360 הוא עדיין 480×360.</p>"
+    },
+    {
+      "heading": "מה קורה כשאתה מוריד",
+      "html": "<p>שם קובץ ההורדה שומר על הסיומת האמיתית (<code>.jpg</code>אוֹ<code>.webp</code>) מסוג mime / כתובת URL. עבור כתמי JPEG, 11tik עשוי להוסיף הערה קצרה של JPEG כגון<code>11tik VIDEO_ID quality youtube thumbnail</code>קבצי WebP וקבצי JPEG נשמרים ללא שלב הקידוד מחדש. אין \"שדרוג\" איכות ואין המרה כפויה בין פורמטים.</p>"
+    },
+    {
+      "heading": "מתי להעדיף JPEG",
+      "html": "<ul>\n    <li>אתה מעלה למערכת ניהול תוכן (CMS) שמצפה ל-JPG בספריית המדיה.</li>\n    <li>אתה זקוק לתאימות מקסימלית עם לקוחות דוא\"ל או דפדפנים ישנים יותר.</li>\n    <li>רק גדלי JPEG אומתו עבור סרטון זה.</li>\n    <li>אתה מדפיס או מוסר את הקובץ למעצב שתמך בתקינה של JPG.</li>\n  </ul>"
+    },
+    {
+      "heading": "מתי WebP נוח",
+      "html": "<ul>\n    <li>11tik ציין מקסימום WebP מאומת והאתר שלך כבר משרת WebP.</li>\n    <li>אתה רוצה קובץ קטן יותר עבור אותה שכבה של ~1280×720.</li>\n    <li>אתה שולט במחסנית ויכול לחזור ל-JPEG במידת הצורך.</li>\n  </ul>\n  <p>אם ערכת הנושא שלך אינה יכולה להשתמש ב-WebP, הורד במקום זאת JPEG - או המר אותה באופן מקומי לאחר ההורדה. 11tik לא יעשה את המרה עבורך.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">בחר את הפורמט המאומת שמתאים לצינור שלך - לא סיומת מנחשת.</p>"
+    },
+    {
+      "heading": "קישורים ישירים ואתרי אינטרנט",
+      "html": "<p>העתקת כתובת URL של תמונה מחזירה את כתובת ה-HTTPS CDN של המועמד המאומת. קישורים חמים ל-WebP או JPEG סובלים מאותה שבריריות שנדונה ב-<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">בלוג / מדריך גרף פתוח</a>: מעדיפים לאחסן עותק משלכם עבור פוסטים ארוכי טווח. דפוסי כתובות URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">מדריך כתובות URL של תמונות ממוזערות</a>.</p>"
+    },
+    {
+      "heading": "הערות על תאימות לדפדפנים ולמערכת ניהול התוכן (CMS)",
+      "html": "<p>גרסאות מודרניות של Chromium, Firefox ו-Safari מטפלות בתמונות WebP בדפים. חלק מהתוספים מדור קודם, תבניות דוא\"ל או זרימות עבודה להדפסה עדיין מעדיפים JPEG. ליבת וורדפרס יכולה לשרת WebP לאחר שתצורתה מוגדרת, אך צוותים רבים עדיין מתקננים תמונות נבחרות כ-JPG לצורך חיזוי. מסמכי מדיה רשמיים של וורדפרס הם מקור האמת עבור הגרסה שלך - אל תניח שכל תוסף מקבל העלאות WebP.</p>"
+    },
+    {
+      "heading": "עץ החלטות מעשי",
+      "html": "<ol>\n    <li>חילוץ ב<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>.</li>\n    <li>אם אתם זקוקים לתמונה מוצגת במערכת ניהול תוכן (CMS) ורואים את שני הפורמטים, בחרו ב-JPEG אלא אם כן הפורמט שלכם מבוסס על WebP.</li>\n    <li>אם רק גודל ה-WebP המקסימלי אומת ברמה העליונה, השתמש בו - או בחר את גודל ה-JPEG הבא אם אתה חייב להישאר על JPG.</li>\n    <li>עבור ארכיונים, שמור את ההרחבה המקורית מההורדה.</li>\n  </ol>\n  <p>הורדת מדריך:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">הורד תמונה ממוזערת של יוטיוב</a>.</p>"
+    },
+    {
+      "heading": "השלב הבא",
+      "html": "<p>הדבק כתובת URL ציבורית לתוך<a href=\"https://www.11tik.com/\">מחלץ תמונות ממוזערות של יוטיוב</a>, שימו לב האם התוצאה העליונה היא<code>.jpg</code>אוֹ<code>.webp</code>, ובחרו בהתבסס על מערכת ניהול התוכן שלכם - לא בהתבסס על שם הקובץ הארוך יותר.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik בהתבסס על התנהגות החילוץ הנוכחית בדפדפן.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "האם לכל סרטון יוטיוב יש תמונה ממוזערת של WebP?",
+      "answer": "לא. רזולוציית WebP מקסימלית היא אופציונלית. סרטונים רבים מציגים רק גדלי JPEG.",
+      "answerHtml": "<p>לא. רזולוציית WebP מקסימלית היא אופציונלית. סרטונים רבים מציגים רק גדלי JPEG.</p>"
+    },
+    {
+      "question": "האם WebP תמיד חד יותר מ-JPEG?",
+      "answer": "לא. הפורמט לא מעלה את הרזולוציה. השווה גדלי פיקסלים שווים.",
+      "answerHtml": "<p>לא. הפורמט לא מעלה את הרזולוציה. השווה גדלי פיקסלים שווים.</p>"
+    },
+    {
+      "question": "מדוע JPEG עשוי להיות מדורג מעל WebP ב-11tik?",
+      "answer": "כתובות URL מאומתות של WebP מקבלות עונש ניקוד קטן (-8 ביחס למועמדים דומים אחרים, כך ש-JPEG יכול להופיע ראשון כאשר שניהם קיימים באותה רמה.",
+      "answerHtml": "<p>כתובות URL מאומתות של WebP מקבלות עונש ניקוד קטן (-8 ביחס למועמדים דומים אחרים, כך ש-JPEG יכול להופיע ראשון כאשר שניהם קיימים באותה רמה.</p>"
+    },
+    {
+      "question": "האם הורדה ממירה את WebP ל-JPEG?",
+      "answer": "לא. הקובץ השמור שומר על פורמט המקור. רק JPEG עשוי לקבל הערה למטא-דאטה.",
+      "answerHtml": "<p>לא. הקובץ השמור שומר על פורמט המקור. רק JPEG עשוי לקבל הערה למטא-דאטה.</p>"
+    },
+    {
+      "question": "באיזה פורמט כדאי לי ליצור קישור חם?",
+      "answer": "אף אחד מהם, עבור דפי ייצור שאכפת לך מהם. אחסן עותק. אם עליך ליצור קישור זמני, השתמש בכתובת URL 11tik שכבר אומתה.",
+      "answerHtml": "<p>אף אחד מהם, עבור דפי ייצור שאכפת לך מהם. אחסן עותק. אם עליך ליצור קישור זמני, השתמש בכתובת URL 11tik שכבר אומתה.</p>"
+    },
+    {
+      "question": "האם hq720 יכול להיות WebP?",
+      "answer": "ברשימת 11tik הנוכחית, המועמד הייעודי ל-WebP הוא maxres WebP. גדלים אחרים מתבקשים כשמות קבצי JPEG תחת /vi/.",
+      "answerHtml": "<p>ברשימת 11tik המוגדרת מראש הנוכחית, מועמד WebP הייעודי הוא maxres WebP. גדלים אחרים מתבקשים כשמות קבצי JPEG תחת<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik בהתבסס על התנהגות החילוץ הנוכחית בדפדפן.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+}

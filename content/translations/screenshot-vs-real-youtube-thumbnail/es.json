@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "es",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Captura de pantalla vs. miniatura real de YouTube: ¿qué archivo deberías guardar? | 11tik",
+  "description": "Una captura de pantalla del reproductor tomada con el teléfono no es la miniatura que muestra YouTube. El público real sigue en i.ytimg.com. Úsala para blogs, Open Graph e investigación; las capturas de pantalla añaden efectos visuales a la interfaz, compresión y una relación de aspecto incorrecta.",
+  "h1": "Captura de pantalla vs. miniatura real de YouTube: ¿qué archivo deberías guardar?",
+  "ogTitle": "Captura de pantalla vs. miniatura real de YouTube: ¿qué archivo deberías guardar?",
+  "ogDescription": "Una captura de pantalla del reproductor tomada con el teléfono no es la miniatura que muestra YouTube. El público real sigue en i.ytimg.com. Úsala para blogs, Open Graph e investigación; las capturas de pantalla añaden efectos visuales a la interfaz, compresión y una relación de aspecto incorrecta.",
+  "imageAlt": "Comparación de una captura de pantalla de un jugador con un archivo de miniatura público real de YouTube.",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Comparación de una captura de pantalla de un jugador con un archivo de miniatura público real de YouTube.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "¿Cuál es la diferencia entre una captura de pantalla y una miniatura real?",
+      "html": "<p>Una captura de pantalla muestra la pantalla, incluyendo la interfaz del reproductor, los subtítulos y el escalado del dispositivo. Una miniatura real es el archivo JPEG o WebP que YouTube publicó para ese ID de video. Solo el archivo de la CDN tiene una URL estable y un tamaño de píxel conocido.</p>"
+    },
+    {
+      "heading": "¿Por qué fallan las capturas de pantalla en Google Imágenes y en las vistas previas de redes sociales?",
+      "html": "<p>A menudo tienen una relación de aspecto incorrecta, incluyen la interfaz de usuario y se comprimen dos veces. Open Graph y muchos campos de CMS requieren una relación de aspecto de 16:9, que sigue estando alrededor de 1280 × 720. Esto coincide con maxresdefault cuando existe; consulte<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guía de tamaño de miniatura</a>.</p>"
+    },
+    {
+      "heading": "¿Cómo puedo guardar la miniatura real?",
+      "html": "<ol>\n    <li>Copia la URL del vídeo público, no una captura de pantalla.</li>\n    <li>Pégalo en<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Descarga el primer archivo público de la lista o copia la URL de la imagen.</li>\n  </ol>"
+    },
+    {
+      "heading": "¿Cuándo sigue siendo útil una captura de pantalla?",
+      "html": "<p>Utiliza una captura de pantalla únicamente para documentar un error de la interfaz de usuario o un momento específico del vídeo. No la uses como miniatura oficial, imagen principal de un blog ni imagen para compartir si aún existe una cuenta pública.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtén la miniatura pública real →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Cuál es la diferencia entre una captura de pantalla y una miniatura real?",
+      "answer": "Una captura de pantalla muestra tu pantalla y la interfaz del reproductor. Una miniatura real es el archivo JPEG o WebP que YouTube aloja en i.ytimg.com para ese ID de video.",
+      "answerHtml": "Una captura de pantalla muestra tu pantalla y la interfaz del reproductor. Una miniatura real es el archivo JPEG o WebP que YouTube aloja en i.ytimg.com para ese ID de video."
+    },
+    {
+      "question": "¿Por qué fallan las capturas de pantalla en Google Imágenes y en las vistas previas de redes sociales?",
+      "answer": "A menudo presentan una relación de aspecto incorrecta, interfaz de usuario adicional y compresión extra. Los campos de CMS y Open Graph esperan una imagen pública limpia en formato 16:9.",
+      "answerHtml": "A menudo presentan una relación de aspecto incorrecta, interfaz de usuario adicional y compresión extra. Los campos de CMS y Open Graph esperan una imagen pública limpia en formato 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+}

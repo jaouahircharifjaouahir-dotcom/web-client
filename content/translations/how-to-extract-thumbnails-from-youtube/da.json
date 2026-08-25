@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "da",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Sådan udtrækker du miniaturebilleder fra en YouTube-kanals URL | 11tik",
+  "description": "Indsæt en offentlig YouTube-kanals URL i 11tik Bulk for at udvide de seneste offentlige uploads, og download derefter hver enkelt bedste still. Dette er til research om emballage, ikke til kloning af en anden kanals brugerdefinerede grafik.",
+  "h1": "Sådan udtrækker du miniaturebilleder fra en YouTube-kanals URL",
+  "ogTitle": "Sådan udtrækker du miniaturebilleder fra en YouTube-kanals URL",
+  "ogDescription": "Indsæt en offentlig YouTube-kanals URL i 11tik Bulk for at udvide de seneste offentlige uploads, og download derefter hver enkelt bedste still. Dette er til research om emballage, ikke til kloning af en anden kanals brugerdefinerede grafik.",
+  "imageAlt": "Udtræk miniaturebilleder fra en YouTube-kanals URL — seneste offentlige uploads på 11tik",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Udtræk miniaturebilleder fra en YouTube-kanals URL — seneste offentlige uploads på 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kan jeg få miniaturebilleder fra en hel YouTube-kanal?",
+      "html": "<p>Du kan få stillbilleder af det seneste<em>offentlig</em>uploads, der eksponerer et video-id. 11tik scraper ikke alle videoer, som en kanal nogensinde har lagt ud, og omgår ikke medlemskaber. Slå masseudsendelser til på startsiden, indsæt en kanal-URL, f.eks.<code>youtube.com/@handle</code>eller<code>/channel/UC…</code>, og lad værktøjet udvide den offentlige RSS-lignende liste. Udtræk derefter, som du ville gøre med en indtastet liste. Loftet er fortsat 25 URL'er pr. kørsel, så browseren forbliver brugbar.</p>\n  <p>Dette er forskelligt fra at gemme ét overvågningslink. Flow med én URL er i<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hvordan man downloader et YouTube-miniaturebillede</a>Linje-for-linje bulk uden en kanal er i<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch-download</a>.</p>"
+    },
+    {
+      "heading": "Hvilke kanal-URL'er fungerer?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>når den offentlige side viser et kanal-id</li>\n    <li>Arv<code>/user/name</code>stier, der stadig løser sig</li>\n  </ul>\n  <p>En /playlist-URL er ikke en kanal. Indsæt i stedet playlistens individuelle visningslinks. Et handle, der aldrig omdannes til et UC-id, returnerer ingen videoer. Åbn kanalen i en normal browser, og kopier den kanoniske kanal-URL fra adresselinjen.</p>"
+    },
+    {
+      "heading": "Sådan udtrækker du miniaturebilleder af kanaler på 11tik",
+      "html": "<ol>\n    <li>Åben<a href=\"https://www.11tik.com/\">11tik</a>og klik på Massevisning.</li>\n    <li>Indsæt én offentlig kanal-URL. Du kan tilføje flere afspilningslinks på de følgende linjer.</li>\n    <li>Start udtrækning. Vent, indtil værktøjet erstatter kanallinjen med de seneste offentlige URL'er til visning, og trækker derefter stillbilleder.</li>\n    <li>Download hvert af de bedste stillbilleder, eller download zip-filen af ​​højeste kvalitet, eller eksporter CSV (id, titel, delings-URL, billed-URL) for at lave en forskningslog.</li>\n  </ol>\n  <p>Del links efter vellykket brug af udtræk<code>/thumb/VIDEO_ID</code>når kvalitetsportalen har en titel, tags og en live thumbnail. Disse sider er til det unikke stillbillede, ikke en sekundær hjemmeside.</p>"
+    },
+    {
+      "heading": "Hvad 11tik ikke vil gøre",
+      "html": "<ul>\n    <li>Download videoer eller lyd. Kun stillbilleder.</li>\n    <li>Angiv ikke-listede eller private uploads.</li>\n    <li>Garanter maxresdefault for alle nyere videoer. Ældre eller små kilder stopper ved hq eller sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Giv rettigheder til at genbruge kunsten. Det tilsigtede forskningsformål er at studere et gitter af offentlig emballage. Genupload af et konkurrents stillbillede som dit brugerdefinerede miniaturebillede er et problem med hensyn til ophavsret og politikker.<a href=\"https://www.11tik.com/copyright\">Ophavsret og brug</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hvordan dette hjælper forskning uden døråbningssider",
+      "html": "<p>Et kanaludtræk er én opgave: nylige offentlige stillbilleder i én omgang. Det er ikke en genereret side pr. konkurrentmærke. Du bliver i værktøjet, du gemmer en zip- eller CSV-fil, og du skriver dine egne noter. Hvis du udgiver kommentarer, skal du kreditere kanalerne og linke til deres visningssider. YouTubes regler for upload af miniaturebilleder<em>dine</em>kanalen er i<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">brugerdefinerede videominiaturebilleder</a>.</p>"
+    },
+    {
+      "heading": "Fejlfinding",
+      "html": "<p>Tom liste: Kanalfeedet returnerede ikke offentlige id'er (afsluttet kanal eller et handle, som resolveren ikke kunne tilknytte). Prøv UC-kanalens URL fra YouTubes desktoplayout.</p>\n  <p>Nogle kort mangler: Disse uploads er endnu ikke offentliggjorte, eller også afviste gaten et ufuldstændigt uddrag. Kør en enkelt overvågnings-URL igen. Privatliv for indsatte links:<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>.</p>\n  <p>Udtrækker vs. designværktøj: 11tik opretter ikke omslagsbilleder.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Udtrækker vs. producent</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udtræk stillbilleder fra den offentlige kanal på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg få miniaturebilleder fra en hel YouTube-kanal?",
+      "answer": "Ja, for nylige offentlige uploads. Indsæt kanalens URL i 11tik Bulk. Private videoer og videoer kun for medlemmer vises ikke.",
+      "answerHtml": "Ja, for nylige offentlige uploads. Indsæt kanalens URL i 11tik Bulk. Private videoer og videoer kun for medlemmer vises ikke."
+    },
+    {
+      "question": "Hvilke kanal-URL'er fungerer?",
+      "answer": "Offentlige /kanal/UC… URL'er, mange @handle URL'er og nogle ældre /bruger/-stier. Afspilningslister er ikke kanaler.",
+      "answerHtml": "Offentlige /kanal/UC… URL'er, mange @handle URL'er og nogle ældre /bruger/-stier. Afspilningslister er ikke kanaler."
+    },
+    {
+      "question": "Downloader dette videoerne?",
+      "answer": "Nej. 11tik viser kun offentlige stillbilleder, som YouTube allerede er vært for.",
+      "answerHtml": "Nej. 11tik viser kun offentlige stillbilleder, som YouTube allerede er vært for."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+}

@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "ru",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Контакты | 11tik",
+  "description": "Используйте эту форму для вопросов о программе для извлечения миниатюр YouTube. Сообщения отправляются оператору 11tik по электронной почте. Не отправляйте видео- или аудиофайлы. Инструмент работает только с общедоступными изображениями миниатюр.",
+  "h1": "Контакт",
+  "ogTitle": "Контакт",
+  "ogDescription": "Используйте эту форму для вопросов о программе для извлечения миниатюр YouTube. Сообщения отправляются оператору 11tik по электронной почте. Не отправляйте видео- или аудиофайлы. Инструмент работает только с общедоступными изображениями миниатюр.",
+  "imageAlt": "",
+  "faqHeading": "Часто задаваемые вопросы",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Контакт",
+      "html": "<h1>Контакт</h1>\n  <p class=\"yte-updated\">Последнее обновление: 22 августа 2026 г.</p>\n  <p itemprop=\"description\">Используйте эту форму для вопросов о программе для извлечения миниатюр YouTube. Сообщения отправляются оператору 11tik по электронной почте. Не отправляйте видео- или аудиофайлы. Инструмент работает только с общедоступными изображениями миниатюр.</p>\n  <p>Прямая электронная почта:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Для отчета о конкретном видео укажите общедоступный URL-адрес YouTube. 11tik не размещает файл миниатюры; изображение запрашивается с общедоступной CDN платформы.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Имя<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>Электронная почта<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Сообщение<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Отправить сообщение</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Программа для извлечения миниатюр с YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">О</a>·<a href=\"https://www.11tik.com/p/privacy.html\">политика конфиденциальности</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Условия</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

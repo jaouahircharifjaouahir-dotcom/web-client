@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "ja",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "YouTubeのサムネイルをブログのアイキャッチ画像またはOpen Graphプレビューとして使用する方法 | 11tik",
+  "description": "公開されているYouTubeチャンネルが存在することを確認し、WordPress、Blogger、またはog:image用にコピーをホストしてください。推測したmaxresdefault URLにホットリンクしないでください。",
+  "h1": "YouTubeのサムネイルをブログのアイキャッチ画像またはOpen Graphプレビューとして使用する方法",
+  "ogTitle": "YouTubeのサムネイルをブログのアイキャッチ画像またはOpen Graphプレビューとして使用する方法",
+  "ogDescription": "公開されているYouTubeチャンネルが存在することを確認し、WordPress、Blogger、またはog:image用にコピーをホストしてください。推測したmaxresdefault URLにホットリンクしないでください。",
+  "imageAlt": "11tikでYouTubeサムネイルを確認するワークフローから、WordPressへのアップロード、またはog:imageの設定まで",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "11tikでYouTubeサムネイルを確認するワークフローから、WordPressへのアップロード、またはog:imageの設定まで",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "WordPressのアイキャッチ画像アップロードとOpen Graphソーシャルカードを実際のピクセル寸法で並べて比較",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "簡単な回答",
+      "html": "<p>公開されている YouTube URL を貼り付けてください<a href=\"https://www.11tik.com/\">11tik</a>検証済みのサイズを待ってから、<strong>ダウンロード</strong>最初の静止画をCMSにアップロードするか、<strong>画像のURLをコピーしてください</strong>読み込みが完了した後のみ。永続的な投稿には、独自のコピーをホストしてください。ホットリンク<code>i.ytimg.com</code>下書きには便利だが、社交カードの制作には不向きである。</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">確認 → コピーまたはダウンロード → ホスト → HTML / 注目の画像 / Open Graph で参照。</p>"
+    },
+    {
+      "heading": "直接サムネイルURLとは何か",
+      "html": "<p>例えば、直接サムネイルURLはYouTubeの画像CDN上のJPEGまたはWebPファイルを指しています。<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>これはウォッチページではありません。これらのアドレスがどのように構築されるか：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTubeサムネイルURLを取得する</a>サイズの違いについて：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズと解像度ガイド</a>。</p>"
+    },
+    {
+      "heading": "HTMLの例",
+      "html": "<p>11tikがファイルを承認した後、最小限のマークアップパターンは次のようになります（URL、幅、高さ、altを実際の値に置き換えてください）。</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>本番環境では、独自のホスト型URLを使用することをお勧めします。</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>11tik レポートに記載されている実際の幅と高さを使用してください。480×360 しか存在しないのに、1280×720 をでっち上げないでください。</p>"
+    },
+    {
+      "heading": "WordPressワークフロー",
+      "html": "<ol>\n    <li>11tikの動画を抽出して、最初に表示された静止画をダウンロードしてください。</li>\n    <li>WordPressの場合：メディア → 新規追加 → ファイルをアップロードします。</li>\n    <li>投稿のアイキャッチ画像として設定してください。</li>\n    <li>Yoast、Rank Math、または同様のツールで、ソーシャルプレビューがその添付ファイルを使用することを確認するか（または専用のオリジナル画像ファイルをアップロードする）。</li>\n    <li>代替テキストには、動画の名前と、そのファイルがYouTubeの公開静止画であることを示す内容を記述してください。キーワードを詰め込んだリストは使用しないでください。</li>\n  </ol>\n  <p>生データを貼り付けないでください<code>maxresdefault.jpg</code>ファイルが証明されるまで、メディアフィールドへのパス。maxres が欠落しているのはよくあることです —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 ガイド</a>。</p>"
+    },
+    {
+      "heading": "Bloggerと静的サイト",
+      "html": "<p><strong>ブロガー：</strong>静止画を投稿エディターにアップロードし、その後、ホストされているBloggerの画像URLを、あなたが管理するテーマやソーシャルスニペットのフィールドに再利用してください。公開済みの投稿で、YouTube CDNのパスを推測して使用することは避けてください。</p>\n  <p><strong>静止型発電機：</strong>ファイルをリポジトリまたはCDNにコミットし、そのHTTPSアセットにフロントマター/メタタグを設定してください。どうしても必要な場合は、一時的なi.ytimg.com URLにドラフトを保存しておいてください。ただし、独自のホストで配布してください。</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">特集画像とog:imageは同じファイルを共有できますが、どちらも実際に存在するURLが必要です。</p>"
+    },
+    {
+      "heading": "Open Graphに関する考慮事項",
+      "html": "<p>大きなリンクカードは一般的に約<strong>1200×630</strong>YouTube の最大解像度は通常<strong>1280×720</strong>（16:9）スクレーパーは作物や郵便受けを削ります。<code>og:image</code>（スタックがサポートしている場合は幅と高さも）実際のピクセル値に換算します。壊れたURLを修正した後は、各プラットフォームのデバッガーで再度スクレイピングしてください。キャッシュは保持されます。</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "ホットリンクとダウンロードの違い",
+      "html": "<table>\n    <thead>\n      <tr><th>アプローチ</th><th>最適</th><th>リスク</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>ホットリンク i.ytimg.com</td><td>簡単な下書き、調査メモ</td><td>404エラー、CDNの変更、作物制御なし</td></tr>\n      <tr><td>ダウンロード＋ホスト</td><td>ランキング上位の投稿、商品ページ</td><td>ファイルを保存する必要があります</td></tr>\n      <tr><td>プレイヤーのスクリーンショット</td><td>ほとんどない</td><td>UIクローム、比率が間違っている —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">スクリーンショットと実物</a></td></tr>\n    </tbody>\n  </table>\n  <p>ダウンロード手順：<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTubeサムネイルをダウンロードする方法</a>WebPとJPEGの両方が存在する場合のフォーマット選択：<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebPとJPEGの比較</a>。</p>"
+    },
+    {
+      "heading": "これらの静止画に対する画像SEOの基本",
+      "html": "<ul>\n    <li><strong>ファイル名：</strong>記述的な、例えば<code>channel-name-video-topic-thumb.jpg</code>。</li>\n    <li><strong>代替:</strong>画像と動画を説明してください。「YouTube サムネイルダウンローダー HD 4K」のような説明はしないでください。</li>\n    <li><strong>寸法:</strong>実際の幅/高さを宣言します。</li>\n    <li><strong>HTTPSのみ：</strong>混合コンテンツを含む画像のURLは、スクレイパーによって削除されます。</li>\n    <li><strong>圧縮：</strong>必要に応じてCDN用に軽く再エンコードしてください。hqdefaultを偽の最大解像度にアップスケールしないでください。</li>\n  </ul>"
+    },
+    {
+      "heading": "再利用と著作権（法的助言ではありません）",
+      "html": "<p>公開されている CDN URL はライセンスではありません。YouTube プレーヤーを埋め込むことと、静止画をヒーロー画像にコピーすることは異なります。フェアユースは事実によって異なります。より安全な編集パターン：その動画に関する解説を図示し、チャンネルをクレジットし、視聴ページへのリンクを貼り、画像を販売したり、自分のチャンネルアートとして使用したりしないでください。公式カスタムサムネイルヘルプ：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>サイトルール：<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    },
+    {
+      "heading": "トラブルシューティング",
+      "html": "<ul>\n    <li>破損したソーシャルカード → 最大解像度を推測します。検証済みのファイルを再抽出してホストします。</li>\n    <li>ソフト/ぼやけたカード → hqdefault を使用しています。サイズを確認してください。</li>\n    <li>トリミングが間違っています → 実際の16:9の静止画から、専用の1200×630のトリミングを提供してください。</li>\n    <li>スティッキーキャッシュ → URL変更後に再スクレイピングを強制する。</li>\n  </ul>"
+    },
+    {
+      "heading": "次のステップ",
+      "html": "<p>静止画を確認する<a href=\"https://www.11tik.com/\">11tik エクストラクター</a>ダウンロードして、サイトにアップロードし、featured image / og:image を HTTPS ファイルに設定します。</p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "i.ytimg.com URLをWordPressに貼り付けることはできますか？",
+      "answer": "一部のフィールドでは受け付けられますが、注目の画像やソーシャルメディアのプレビューには、確認済みのローカルファイルをアップロードする方がより確実です。",
+      "answerHtml": "<p>一部のフィールドでは受け付けられますが、注目の画像やソーシャルメディアのプレビューには、確認済みのローカルファイルをアップロードする方がより確実です。</p>"
+    },
+    {
+      "question": "Open Graphにはmaxresdefaultが必要ですか？",
+      "answer": "いいえ。検証済みの公開静止画の中で最大サイズのものが必要です。maxresが欠落しているのは正常です。",
+      "answerHtml": "<p>いいえ。検証済みの公開静止画の中で最大サイズのものが必要です。maxresが欠落しているのは正常です。</p>"
+    },
+    {
+      "question": "代替テキストにYouTubeについて言及すべきでしょうか？",
+      "answer": "はい、アセットの説明に役立つ場合（例：「…のYouTube公開サムネイル」）は使用できます。キーワードを詰め込みすぎないでください。",
+      "answerHtml": "<p>はい、アセットの説明に役立つ場合（例：「…のYouTube公開サムネイル」）は使用できます。キーワードを詰め込みすぎないでください。</p>"
+    },
+    {
+      "question": "ホットリンクは許容される場合もあるのでしょうか？",
+      "answer": "一時的な下書きや内部メモであれば問題ありません。永続的な公開投稿の場合は、コピーをホストしてください。",
+      "answerHtml": "<p>一時的な下書きや内部メモであれば問題ありません。永続的な公開投稿の場合は、コピーをホストしてください。</p>"
+    },
+    {
+      "question": "その静止画をチャンネルカバー画像として使用してもいいですか？",
+      "answer": "権利なしにはあり得ない。それは他人の作品だ。",
+      "answerHtml": "<p>権利なしにはあり得ない。それは他人の作品だ。</p>"
+    },
+    {
+      "question": "Studioがカスタムサムネイルを変更したらどうなるでしょうか？",
+      "answer": "処理が完了するまでお待ちください。その後、11tik で再度確認してから、CMS のコピーを更新してください。関連: YouTube Studio のサムネイル。",
+      "answerHtml": "<p>処理が完了するまでお待ちください。その後、11tikで再度確認してから、CMSのコピーを更新してください。関連情報：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studioのサムネイル</a>。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+}

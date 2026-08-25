@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "it",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Come ottenere l'immagine miniatura originale di YouTube | 11tik",
+  "description": "Ottieni l'immagine di anteprima pubblica originale di YouTube, già presente su YouTube. Si tratta di un'immagine fissa proveniente dalla CDN, non di un fotogramma estratto dal video.",
+  "h1": "Come ottenere l'immagine miniatura originale di YouTube",
+  "ogTitle": "Come ottenere l'immagine miniatura originale di YouTube",
+  "ogDescription": "Ottieni l'immagine di anteprima pubblica originale di YouTube, già presente su YouTube. Si tratta di un'immagine fissa proveniente dalla CDN, non di un fotogramma estratto dal video.",
+  "imageAlt": "File originale della miniatura pubblica di YouTube mostrato nell'estrattore 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "File originale della miniatura pubblica di YouTube mostrato nell'estrattore 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Qual è l'immagine di anteprima originale di YouTube?",
+      "html": "<p>Si tratta dell'immagine di anteprima che YouTube già memorizza sui suoi server di immagini. È il file utilizzato nei risultati di ricerca e nei suggerimenti, non un fotogramma catturato con il tasto Stamp.</p>"
+    },
+    {
+      "heading": "In che cosa si differenzia da uno screenshot?",
+      "html": "<p>Uno screenshot include la cornice del player, l'interfaccia utente del browser e una compressione aggiuntiva. Il file originale è un'immagine fissa nitida con le dimensioni in pixel con cui YouTube l'ha pubblicata.</p>"
+    },
+    {
+      "heading": "Come faccio a trovare l'immagine in miniatura originale?",
+      "html": "<p>Incolla l'URL di watch, Shorts, live o youtu.be in<a href=\"https://www.11tik.com/\">11tik</a>Lo strumento legge l'ID del video, controlla i file pubblici e classifica quello con il punteggio più alto tra quelli esistenti.</p>"
+    },
+    {
+      "heading": "Come funzionano gli URL delle miniature di YouTube?",
+      "html": "<p>Utilizzano l'ID del video più un nome di dimensione come maxresdefault.jpg o hqdefault.jpg su i.ytimg.com. Indovinare una dimensione che non è mai stata pubblicata restituisce un errore o un segnaposto.</p>"
+    },
+    {
+      "heading": "Che cos'è maxresdefault.jpg?",
+      "html": "<p>Si tratta del nome file pubblico più comune, solitamente 1280×720 quando YouTube lo ha creato. Non è un master 4K e non è il file video.</p>"
+    },
+    {
+      "heading": "Il termine \"originale\" si riferisce sempre a 1280-720?",
+      "html": "<p>No. Se la risoluzione massima non è mai stata pubblicata, l'immagine pubblica originale è in alta qualità, a bassa risoluzione o in un altro file ancora esistente. 11tik mostra la dimensione reale dei pixel invece di inventare i pixel.</p>"
+    },
+    {
+      "heading": "Posso avere l'immagine originale da Shorts, Live o youtu.be?",
+      "html": "<p>Sì, quando quegli URL contengono un ID video pubblico e immagini fisse pubbliche ospitate su YouTube. L'estrattore li tratta allo stesso modo di un URL di visualizzazione standard.</p>"
+    },
+    {
+      "heading": "Come faccio a verificare di aver effettivamente ricevuto il file originale?",
+      "html": "<p>Utilizza le dimensioni e le misure 11tik elencate dopo la convalida del file. Se l'immagine sembra uno screenshot del lettore, non hai scaricato la miniatura ospitata.</p>\n  <p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrattore</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Massima qualità</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qual è l'immagine di anteprima originale di YouTube?",
+      "answer": "Si tratta del file immagine pubblico che YouTube ospita per l'ID del video, come ad esempio maxresdefault se presente. Non è uno screenshot della pagina di visualizzazione.",
+      "answerHtml": "Si tratta del file immagine pubblico che YouTube ospita per l'ID del video, come ad esempio maxresdefault se presente. Non è uno screenshot della pagina di visualizzazione."
+    },
+    {
+      "question": "Il termine \"originale\" si riferisce sempre a 1280-720?",
+      "answer": "No. La risoluzione massima è solitamente 1280x720 quando viene pubblicata. Se quel file non è presente, la versione pubblica originale è comunque quella con la risoluzione più vicina memorizzata da YouTube.",
+      "answerHtml": "No. La risoluzione massima è solitamente 1280×720 quando viene pubblicata. Se quel file non è presente, la versione originale pubblica è comunque quella immediatamente superiore a quella memorizzata da YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>"
+}

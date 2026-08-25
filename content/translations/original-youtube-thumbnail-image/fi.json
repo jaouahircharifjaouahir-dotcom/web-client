@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "fi",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Kuinka saada alkuperäinen YouTube-pikkukuva | 11tik",
+  "description": "Hanki alkuperäinen julkinen YouTube-pikkukuva, jota YouTube jo ylläpitää. Tämä on CDN-kuvake, ei videosta kopioitu ruutu.",
+  "h1": "Kuinka saada alkuperäinen YouTube-pikkukuva",
+  "ogTitle": "Kuinka saada alkuperäinen YouTube-pikkukuva",
+  "ogDescription": "Hanki alkuperäinen julkinen YouTube-pikkukuva, jota YouTube jo ylläpitää. Tämä on CDN-kuvake, ei videosta kopioitu ruutu.",
+  "imageAlt": "Alkuperäinen julkinen YouTube-pikkukuvatiedosto, joka näkyy 11tik-poimijassa",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Alkuperäinen julkinen YouTube-pikkukuvatiedosto, joka näkyy 11tik-poimijassa",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mikä on alkuperäinen YouTube-pikkukuva?",
+      "html": "<p>Se on esikatselukuva, jonka YouTube tallentaa jo kuvapalveluihinsa. Se on haussa ja ehdotettujen hyllyjen tiedosto, ei Print Screen -toiminnolla kaapattu ruutu.</p>"
+    },
+    {
+      "heading": "Miten se eroaa kuvakaappauksesta?",
+      "html": "<p>Kuvakaappaus sisältää soittimen kromin, selaimen käyttöliittymän ja lisäpakkauksen. Alkuperäinen tiedosto on puhdas still-kuva YouTuben julkaisemassa pikselikoossa.</p>"
+    },
+    {
+      "heading": "Miten löydän alkuperäisen pikkukuvan?",
+      "html": "<p>Liitä katselu-, lyhytvideo-, live- tai youtu.be-osoite tähän<a href=\"https://www.11tik.com/\">[[S. 3]]</a>Työkalu lukee videon tunnuksen, tarkistaa julkiset tiedostot ja luokittelee olemassa olevan tiedoston korkeimmaksi.</p>"
+    },
+    {
+      "heading": "Miten YouTuben pikkukuvien URL-osoitteet toimivat?",
+      "html": "<p>He käyttävät videon tunnusta ja koon nimeä, kuten maxresdefault.jpg tai hqdefault.jpg, kohdassa i.ytimg.com. Julkaisemattoman koon arvaaminen palauttaa virheen tai paikkamerkin.</p>"
+    },
+    {
+      "heading": "Mikä on maxresdefault.jpg?",
+      "html": "<p>Se on yleisin julkinen tiedostonimi, yleensä 1280×720, kun YouTube loi sen. Se ei ole 4K-master eikä videotiedosto.</p>"
+    },
+    {
+      "heading": "Tarkoittaako alkuperäinen aina 1280¢/720¢?",
+      "html": "<p>Ei. Jos maxres-tiedostoa ei koskaan julkaistu, alkuperäinen julkinen kuva on hq-, sd- tai jokin muu säilynyt tiedosto. 11tik näyttää todellisen pikselikoon keksimisen sijaan.</p>"
+    },
+    {
+      "heading": "Voinko saada alkuperäisen still-kuvan Shortsista, Livestä tai youtu.be:stä?",
+      "html": "<p>Kyllä, kun kyseiset URL-osoitteet sisältävät julkisen videotunnuksen ja YouTuben isännöimiä julkisia still-kuvia. Poimija käsittelee niitä samalla tavalla kuin tavallista katseluosoitetta.</p>"
+    },
+    {
+      "heading": "Miten tarkistan, että sain todella alkuperäisen tiedoston?",
+      "html": "<p>Käytä koko- ja mitat 11tik-luetteloita tiedoston validoinnin jälkeen. Jos kuva näyttää pelaajan kuvakaappaukselta, et ladannut isännöityä pikkukuvaa.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Korkein laatu</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mikä on alkuperäinen YouTube-pikkukuva?",
+      "answer": "YouTuben ylläpitämä videotunnukselle tarkoitettu julkinen kuvatiedosto, kuten maxresdefault, jos sellainen on olemassa. Se ei ole katselusivun kuvakaappaus.",
+      "answerHtml": "YouTuben ylläpitämä videotunnukselle tarkoitettu julkinen kuvatiedosto, kuten maxresdefault, jos sellainen on olemassa. Se ei ole katselusivun kuvakaappaus."
+    },
+    {
+      "question": "Tarkoittaako alkuperäinen aina 1280¢/720¢?",
+      "answer": "Ei. Julkaisun maksimikoko on yleensä 1280×720. Jos tiedosto puuttuu, alkuperäinen julkinen tiedosto on silti seuraava YouTuben tallentama tiedostokoko.",
+      "answerHtml": "Ei. Maxres on yleensä julkaistuna 1280 × 720. Jos tiedosto puuttuu, alkuperäinen julkinen tiedosto on silti seuraava YouTuben tallentama koko."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+}

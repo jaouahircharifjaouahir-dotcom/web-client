@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "ar",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "تضمين أداة استخراج الصور المصغرة 11tik | 11tik",
+  "description": "أضف أداة استخراج الصور المصغرة المجانية من يوتيوب إلى مدونتك أو مستنداتك أو أدواتك الإبداعية. يتم تحميل الأداة من 11tik وتُغيّر حجمها تلقائيًا. لا حاجة لمفتاح API.",
+  "h1": "تضمين أداة استخراج الصور المصغرة 11tik",
+  "ogTitle": "تضمين أداة استخراج الصور المصغرة 11tik",
+  "ogDescription": "أضف أداة استخراج الصور المصغرة المجانية من يوتيوب إلى مدونتك أو مستنداتك أو أدواتك الإبداعية. يتم تحميل الأداة من 11tik وتُغيّر حجمها تلقائيًا. لا حاجة لمفتاح API.",
+  "imageAlt": "",
+  "faqHeading": "التعليمات",
+  "images": [],
+  "sections": [
+    {
+      "heading": "مقتطف من إطار iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "قواعد",
+      "html": "<ul>\n    <li>احتفظ بـ<code>id=\"yte-app\"</code>خاصية مزامنة الارتفاع تعمل.</li>\n    <li>لا تقم بتغليف الإطار المضمن (iframe) بارتفاع ثابت يؤدي إلى قص أزرار التنزيل.</li>\n    <li>رابط إلى<a href=\"https://www.11tik.com/\">www.11tik.com</a>يساعد المستخدمين على فتح الأداة كاملة.</li>\n  </ul>"
+    },
+    {
+      "heading": "الروابط العميقة",
+      "html": "<p>شارك عملية استخلاص جاهزة مع<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">افتح جهاز الاستخراج</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

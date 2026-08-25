@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "vi",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Cách lấy URL hình thu nhỏ YouTube trực tiếp từ video | 11tik",
+  "description": "Tạo hoặc sao chép URL hình thu nhỏ YouTube hoạt động từ ID video trên i.ytimg.com. Xác nhận kích thước tồn tại trước khi bạn tạo liên kết trực tiếp.",
+  "h1": "Cách lấy URL hình thu nhỏ YouTube trực tiếp từ video",
+  "ogTitle": "Cách lấy URL hình thu nhỏ YouTube trực tiếp từ video",
+  "ogDescription": "Tạo hoặc sao chép URL hình thu nhỏ YouTube hoạt động từ ID video trên i.ytimg.com. Xác nhận kích thước tồn tại trước khi bạn tạo liên kết trực tiếp.",
+  "imageAlt": "Sơ đồ minh họa cách chuyển đổi URL xem video trên YouTube thành ID video và sau đó thành URL hình thu nhỏ.",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Sơ đồ minh họa cách chuyển đổi URL xem video trên YouTube thành ID video và sau đó thành URL hình thu nhỏ.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Hình ảnh minh họa cấu trúc URL hình thu nhỏ của YouTube, bao gồm máy chủ, đường dẫn, ID video và tên tệp.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Câu trả lời nhanh",
+      "html": "<p>Để lấy URL hình thu nhỏ của YouTube: tìm ID video gồm 11 ký tự, sau đó mở địa chỉ hình ảnh công khai đã được xác nhận, ví dụ như...<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>URL của trang xem không phải là hình ảnh. Hãy dán liên kết video vào...<a href=\"https://www.11tik.com/\">11tik</a>Chờ cho đến khi các kích thước thực sự được tải xong, rồi mới sử dụng.<strong>Sao chép URL hình ảnh</strong>Như vậy, bạn sẽ giữ được liên kết HTTPS hoạt động thay vì một tên tệp được đoán trước gây ra lỗi 404.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Quy trình được các công cụ trích xuất sử dụng: URL xem công khai → ID video → URL hình thu nhỏ công khai trên máy chủ hình ảnh của YouTube.</p>"
+    },
+    {
+      "heading": "URL hình thu nhỏ của YouTube là gì?",
+      "html": "<p>URL hình thu nhỏ của YouTube trỏ đến một tệp hình ảnh tĩnh, chứ không phải trình phát video. Nó nằm trên mạng phân phối nội dung hình ảnh công cộng của YouTube (thường được gọi là CDN).<code>i.ytimg.com</code>Khi địa chỉ hợp lệ, trình duyệt của bạn sẽ tải xuống ảnh JPEG hoặc WebP. Khi không, bạn sẽ nhận được thông báo lỗi \"tệp bị thiếu\" hoặc hình ảnh giữ chỗ màu xám—chứ không phải \"HD\" được tạo ra từ hư không.</p>\n  <p>Điều đó quan trọng đối với blog, bản xem trước Open Graph, bản thiết kế mẫu và trường hình ảnh nổi bật của CMS: các hệ thống đó cần URL hình ảnh, chứ không phải URL.<code>youtube.com/watch?v=…</code>Nếu bạn chỉ cần tệp tin trên ổ đĩa, hãy sử dụng...<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hướng dẫn tải xuống</a>thay vì trang tập trung vào URL này.</p>"
+    },
+    {
+      "heading": "URL có liên quan như thế nào đến ID video?",
+      "html": "<p>YouTube phân loại ảnh tĩnh công khai theo ID video. Định dạng JPEG thông thường là:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Một số video cũng đăng tải các bản sao WebP dưới dạng...<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>chính xác là 11 ký tự từ tập hợp<code>A–Z a–z 0–9 _ -</code>Thay đổi ID và bạn sẽ trỏ đến các ảnh tĩnh của một video khác. Thay đổi tên tệp và bạn yêu cầu một phiên bản công khai khác của cùng một video.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Cấu trúc URL hình thu nhỏ công khai: máy chủ, đường dẫn, ID video và kích thước tệp.</p>"
+    },
+    {
+      "heading": "Cách tìm ID video YouTube",
+      "html": "<p>Bạn chỉ cần ID. Các tham số truy vấn bổ sung như ID danh sách phát hoặc<code>pp=</code>Không thay đổi đường dẫn máy chủ hình thu nhỏ.</p>\n  <table>\n    <thead>\n      <tr><th>Định dạng URL YouTube</th><th>Ví dụ</th><th>Nơi đặt thẻ ID</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Đồng hồ</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>giá trị truy vấn</td></tr>\n      <tr><td>Liên kết rút gọn</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Đoạn đường đầu tiên</td></tr>\n      <tr><td>Quần short</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Đường đi sau<code>/shorts/</code></td></tr>\n      <tr><td>Nhúng</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Đường đi sau<code>/embed/</code></td></tr>\n      <tr><td>Sống</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Đường đi sau<code>/live/</code></td></tr>\n      <tr><td>nhúng không cookie</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Tương tự như nhúng</td></tr>\n    </tbody>\n  </table>\n  <p>Trình phân tích cú pháp của 11tik chấp nhận các hình dạng đó (và ID 11 ký tự đơn giản). URL kênh hoặc danh sách phát không có ID video là không đủ cho một URL hình thu nhỏ duy nhất.</p>"
+    },
+    {
+      "heading": "Tên tệp hình thu nhỏ phổ biến công khai",
+      "html": "<p>Tên tệp mô tả các mức kích thước mà YouTube có thể hoặc không thể công bố cho một video tải lên cụ thể. Tên tệp không đảm bảo tệp đó tồn tại.</p>\n  <table>\n    <thead>\n      <tr><th>Tên tệp</th><th>Các điểm ảnh điển hình (nếu có)</th><th>Ghi chú</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Công chúng phổ thông cao nhất vẫn còn khi được công bố</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Lớp 1280×720</td><td>Một số video khác thuộc phân khúc cao cấp tiết lộ...</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Thường có sẵn khi thiếu tùy chọn maxres.</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Rất phổ biến, cỡ trung bình</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Xem trước nhỏ</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Tiêu chuẩn tối thiểu vẫn còn</td></tr>\n    </tbody>\n  </table>\n  <p>Để biết thông tin chi tiết ở cấp độ pixel và khi nào nên ưu tiên kích thước này hơn kích thước khác, hãy xem phần [liên kết].<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn về kích thước và độ phân giải hình thu nhỏ</a>Vì sao?<code>maxresdefault.jpg</code>thường bị thiếu, xem<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault là gì</a>.</p>"
+    },
+    {
+      "heading": "Ví dụ minh họa với ID video công khai",
+      "html": "<p>Lấy ID bản demo công khai<code>dQw4w9WgXcQ</code>URL của đồng hồ là:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>URL JPEG có độ phân giải tối đa mà ứng viên có thể sử dụng là:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Mở địa chỉ đó trong một tab mới. Nếu hình ảnh tải được, bạn đã có URL hình thu nhỏ hoạt động. Nếu không được, hãy thử tên tệp tiếp theo (ví dụ:<code>hqdefault.jpg</code>) hoặc dán liên kết xem vào 11tik để chỉ những tệp còn tồn tại mới được liệt kê. Đừng bao giờ cho rằng mọi video đều có độ phân giải tối đa.</p>"
+    },
+    {
+      "heading": "Ba cách để lấy URL hình ảnh",
+      "html": "<h3>1. Nhanh nhất: sao chép từ 11tik</h3>\n  <ol>\n    <li>Sao chép URL của chế độ xem công khai, Shorts, trực tiếp, nhúng hoặc youtu.be.</li>\n    <li>Mở<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Dán URL và đợi cho đến khi bản xem trước xuất hiện.</li>\n    <li>Chọn<strong>Sao chép URL hình ảnh</strong>Tùy theo kích thước bạn cần.</li>\n  </ol>\n  <p>11tik kiểm tra phản hồi trong trình duyệt của bạn và chỉ hiển thị các kích thước trả về hình ảnh thực. Đó là sự khác biệt giữa một liên kết CMS có thể sử dụng được và một liên kết bị hỏng.<code>maxresdefault</code>đoán.</p>\n\n  <h3>2. Phương pháp trình duyệt</h3>\n  <p>Sau khi bạn có một ứng viên<code>i.ytimg.com</code>Mở địa chỉ đó trong một tab mới. Nếu trang vẫn hiển thị, hãy sao chép thanh địa chỉ. Nếu bạn thấy lỗi hoặc ô trống/ô giữ chỗ, điều đó có nghĩa là kích thước đó chưa từng được công bố cho ID đó — đừng tạo liên kết trực tiếp đến nó.</p>\n\n  <h3>3. Tự tạo URL</h3>\n  <p>Bạn có thể nối chuỗi máy chủ +<code>/vi/</code>+ ID + tên tệp do bạn tự đặt. URL tự tạo rất tốt cho việc thử nghiệm, nhưng không an toàn khi dán vào HTML chính thức cho đến khi bạn xác minh được phản hồi. Tính khả dụng thay đổi tùy thuộc vào thời gian tải lên, hình ảnh nguồn và trạng thái xử lý trong YouTube Studio.</p>"
+    },
+    {
+      "heading": "Chọn URL tốt nhất hiện có",
+      "html": "<p>\"Tốt nhất\" có nghĩa là tệp công khai lớn nhất thực sự tồn tại, chứ không phải tên tệp dài nhất bạn có thể nhập. Ưu tiên liên kết maxres hoặc hq720 đã được xác thực nếu có. Nếu những liên kết đó không thành công, hãy chuyển xuống sd, hq, mq hoặc mặc định. Việc phóng to ảnh tĩnh 480×360 lên 1280×720 trong trình chỉnh sửa không tạo ra URL maxres thực sự.</p>\n  <p>Những người sáng tạo tải lên tác phẩm nghệ thuật tùy chỉnh vẫn nên xác nhận lại các phiên bản công khai trực tiếp sau đó — quá trình xử lý của Studio có thể bị chậm. (Có liên quan:)<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Ảnh thu nhỏ của YouTube Studio năm 2026</a>.</p>"
+    },
+    {
+      "heading": "Sử dụng URL trên một trang web khác",
+      "html": "<p>Bạn có thể dán một đoạn mã đang hoạt động.<code>i.ytimg.com</code>Bạn có thể sử dụng URL trong nhiều trường CMS, nhưng việc liên kết trực tiếp (hotlinking) tiềm ẩn rủi ro: YouTube có thể thay đổi đường dẫn CDN, và một số mạng CDN chặn các máy chủ bên thứ ba. Để có hình ảnh nổi bật trên blog hoặc thẻ Open Graph bền vững, hãy tải xuống hình ảnh đã được xác nhận và lưu trữ bản sao trên tên miền của riêng bạn. Hướng dẫn chi tiết:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Ảnh thu nhỏ YouTube dưới dạng ảnh blog / Open Graph</a>.</p>\n  <p>Bản quyền thuộc về người tải lên. URL công khai không phải là giấy phép để bạn đăng lại tác phẩm nghệ thuật đó dưới dạng ảnh bìa của riêng mình. Xem phần trợ giúp của YouTube về vấn đề này.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">hình thu nhỏ video tùy chỉnh</a>và 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+    },
+    {
+      "heading": "Khắc phục sự cố URL hình thu nhỏ bị lỗi",
+      "html": "<ul>\n    <li><strong>404 hoặc chỗ giữ chỗ:</strong>Kích thước đó chưa bao giờ được công bố. Hãy thử tên tệp khác hoặc sử dụng danh sách đã được xác thực của 11tik.</li>\n    <li><strong>Video sai rồi:</strong>Nhập sai ID. Vui lòng sao chép lại từ URL của đồng hồ.</li>\n    <li><strong>Riêng tư / Giới hạn độ tuổi / Đã xóa:</strong>Hiện vẫn chưa có liên kết công khai nào.</li>\n    <li><strong>Nội dung hỗn hợp HTTP:</strong>luôn sử dụng<code>https://</code>URL hình ảnh trên các trang web HTTPS.</li>\n    <li><strong>Quần short trông như bị thu nhỏ lại thành nhiều khung hình:</strong>Nhiều trang Shorts vẫn lưu trữ các tập tin công khai theo chiều ngang. URL vẫn là URL công khai chính thức.</li>\n  </ul>"
+    },
+    {
+      "heading": "Bước tiếp theo",
+      "html": "<p>Dán URL YouTube công khai vào<a href=\"https://www.11tik.com/\">Công cụ trích xuất hình thu nhỏ YouTube</a>, sao chép liên kết hình ảnh đã được xác thực, hoặc<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">tải xuống ảnh tĩnh</a>Nếu bạn cần một tập tin cục bộ. Để chọn độ phân giải, hãy mở...<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn về kích thước và chất lượng</a>.</p>\n\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của trình trích xuất trong trình duyệt. Chỉ hiển thị hình ảnh tĩnh công khai—không cho phép tải xuống video hoặc âm thanh.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Tôi có thể sao chép URL hình thu nhỏ trực tiếp mà không cần tải xuống tệp không?",
+      "answer": "Vâng. Trên 11tik, hãy sử dụng Sao chép URL hình ảnh. Thao tác này sẽ sao chép địa chỉ hình ảnh HTTPS cho kích thước đã được xác thực trong trình duyệt của bạn.",
+      "answerHtml": "<p>Vâng. Trên 11tik, hãy sử dụng Sao chép URL hình ảnh. Thao tác này sẽ sao chép địa chỉ hình ảnh HTTPS cho kích thước đã được xác thực trong trình duyệt của bạn.</p>"
+    },
+    {
+      "question": "Tôi có thể lấy URL hình thu nhỏ từ video ngắn trên YouTube không?",
+      "answer": "Đúng vậy, khi Short được công khai và YouTube đã đăng tải ảnh tĩnh cho ID đó. Dán liên kết /shorts/ giống như cách bạn dán URL xem. Xem thêm hình thu nhỏ của Shorts.",
+      "answerHtml": "<p>Vâng, khi video ngắn được công khai và YouTube đã đăng tải hình ảnh tĩnh cho video đó. Dán vào đây.<code>/shorts/</code>Liên kết theo cách tương tự như khi bạn dán URL của đồng hồ. Xem thêm<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Ảnh thu nhỏ quần short</a>.</p>"
+    },
+    {
+      "question": "Tại sao một URL hình thu nhỏ hoạt động bình thường trong khi URL khác lại báo lỗi?",
+      "answer": "Tên tệp là các dẫn xuất công khai tùy chọn. hqdefault.jpg có thể tồn tại khi maxresdefault.jpg không tồn tại. Một URL kích thước trung bình hoạt động không có nghĩa là một URL độ phân giải tối đa hoạt động.",
+      "answerHtml": "<p>Tên tệp là các định danh công khai tùy chọn.<code>hqdefault.jpg</code>có thể tồn tại khi<code>maxresdefault.jpg</code>Không phải vậy. Một URL kích thước trung bình hoạt động được không có nghĩa là một URL độ phân giải tối đa hoạt động được.</p>"
+    },
+    {
+      "question": "Tôi có thể sử dụng URL hình ảnh trực tiếp trên trang web của mình không?",
+      "answer": "Về mặt kỹ thuật thì có thể nếu tệp tin tồn tại, nhưng việc tự lưu trữ bản sao của mình sẽ đáng tin cậy hơn cho hình ảnh nổi bật và bản xem trước trên mạng xã hội. Không được đăng lại tác phẩm nghệ thuật của người khác làm ảnh bìa kênh của bạn mà không có quyền.",
+      "answerHtml": "<p>Về mặt kỹ thuật thì có thể nếu tệp tin tồn tại, nhưng việc tự lưu trữ bản sao của mình sẽ đáng tin cậy hơn cho hình ảnh nổi bật và bản xem trước trên mạng xã hội. Không được đăng lại tác phẩm nghệ thuật của người khác làm ảnh bìa kênh của bạn mà không có quyền.</p>"
+    },
+    {
+      "question": "URL hiển thị đồng hồ có bao giờ trùng với URL hình thu nhỏ không?",
+      "answer": "Không. URL \"watch\" xác định video. URL \"thumbnail\" xác định tệp hình ảnh trên CDN hình ảnh.",
+      "answerHtml": "<p>Không. URL \"watch\" xác định video. URL \"thumbnail\" xác định tệp hình ảnh trên CDN hình ảnh.</p>"
+    },
+    {
+      "question": "Liệu 11tik có phát minh ra URL có độ phân giải cao hơn không?",
+      "answer": "Không. Nó chỉ liệt kê các tệp công khai phản hồi dưới dạng hình ảnh. Thiếu maxres có nghĩa là URL đó không nên được sao chép.",
+      "answerHtml": "<p>Không. Nó chỉ liệt kê các tệp công khai phản hồi dưới dạng hình ảnh. Thiếu maxres có nghĩa là URL đó không nên được sao chép.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của trình trích xuất trong trình duyệt. Chỉ hiển thị hình ảnh tĩnh công khai—không cho phép tải xuống video hoặc âm thanh.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+}

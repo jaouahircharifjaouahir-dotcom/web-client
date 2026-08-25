@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "ro",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Contact | 11tik",
+  "description": "Folosește acest formular pentru întrebări despre YouTube Thumbnail Extractor. Mesajele sunt trimise operatorului 11tik prin e-mail. Nu trimite fișiere video sau audio. Instrumentul funcționează doar cu imagini miniatură publice.",
+  "h1": "Contact",
+  "ogTitle": "Contact",
+  "ogDescription": "Folosește acest formular pentru întrebări despre YouTube Thumbnail Extractor. Mesajele sunt trimise operatorului 11tik prin e-mail. Nu trimite fișiere video sau audio. Instrumentul funcționează doar cu imagini miniatură publice.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Contact",
+      "html": "<h1>Contact</h1>\n  <p class=\"yte-updated\">Ultima actualizare: 22 august 2026</p>\n  <p itemprop=\"description\">Folosește acest formular pentru întrebări despre YouTube Thumbnail Extractor. Mesajele sunt trimise operatorului 11tik prin e-mail. Nu trimite fișiere video sau audio. Instrumentul funcționează doar cu imagini miniatură publice.</p>\n  <p>E-mail direct:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Pentru un raport despre un anumit videoclip, includeți adresa URL publică YouTube. 11tik nu găzduiește fișierul miniatură; imaginea este solicitată din CDN-ul public al platformei.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Nume<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Mesaj<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Trimite mesaj</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Politica de confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

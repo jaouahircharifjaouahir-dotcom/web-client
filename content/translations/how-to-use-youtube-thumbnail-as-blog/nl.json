@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "nl",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Hoe gebruik je een YouTube-thumbnail als uitgelichte afbeelding voor je blog of als Open Graph-preview? | 11tik",
+  "description": "Controleer of het openbare YouTube-kanaal nog bestaat en host vervolgens een kopie voor WordPress, Blogger of og:image. Gebruik geen directe link naar een URL die je zelf hebt bedacht (maxresdefault).",
+  "h1": "Hoe gebruik je een YouTube-thumbnail als uitgelichte afbeelding voor je blog of als Open Graph-preview?",
+  "ogTitle": "Hoe gebruik je een YouTube-thumbnail als uitgelichte afbeelding voor je blog of als Open Graph-preview?",
+  "ogDescription": "Controleer of het openbare YouTube-kanaal nog bestaat en host vervolgens een kopie voor WordPress, Blogger of og:image. Gebruik geen directe link naar een URL die je zelf hebt bedacht (maxresdefault).",
+  "imageAlt": "Werkstroom van het bevestigen van een YouTube-thumbnail op 11tik tot het uploaden ervan in WordPress of het instellen van og:image",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Werkstroom van het bevestigen van een YouTube-thumbnail op 11tik tot het uploaden ervan in WordPress of het instellen van og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Vergelijking van een uitgelichte afbeelding uploaden via WordPress versus een Open Graph-sociale kaart met werkelijke pixelafmetingen.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snel antwoord",
+      "html": "<p>Plak een openbare YouTube-URL in<a href=\"https://www.11tik.com/\">11tik</a>, wacht op gevalideerde afmetingen, en doe dan het volgende:<strong>downloaden</strong>het eerste stilstaande beeld en upload het naar je CMS, of<strong>kopieer de afbeeldings-URL</strong>Pas nadat het geladen is. Voor permanente berichten kunt u uw eigen kopie hosten. Hotlinking<code>i.ytimg.com</code>is handig voor concepten en kwetsbaar voor de productie van sociale kaarten.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Bevestigen → kopiëren of downloaden → hosten → verwijzen in HTML / uitgelichte afbeelding / Open Graph.</p>"
+    },
+    {
+      "heading": "Wat een directe thumbnail-URL is",
+      "html": "<p>Een directe miniatuur-URL verwijst bijvoorbeeld naar een JPEG- of WebP-bestand op het afbeeldings-CDN van YouTube.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Dit is niet de pagina voor het bekijken van berichten. Hoe die adressen worden opgebouwd:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Een YouTube-thumbnail-URL verkrijgen</a>Hoe de maten verschillen:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Richtlijnen voor grootte en resolutie</a>.</p>"
+    },
+    {
+      "heading": "HTML-voorbeeld",
+      "html": "<p>Nadat 11tik een bestand heeft bevestigd, ziet een minimaal opmaakpatroon er als volgt uit (vervang de URL, breedte, hoogte en alt door de werkelijke waarden):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Gebruik bij voorkeur uw eigen gehoste URL in de productieomgeving:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Gebruik de werkelijke breedte en hoogte die 11tik aangeeft. Verzin geen 1280×720 als er alleen 480×360 bestaat.</p>"
+    },
+    {
+      "heading": "WordPress-workflow",
+      "html": "<ol>\n    <li>Extraheer de video op 11tik en download de eerstgenoemde stilstaande afbeelding.</li>\n    <li>In WordPress: Media → Nieuw toevoegen → upload het bestand.</li>\n    <li>Stel deze afbeelding in als de uitgelichte afbeelding van het bericht.</li>\n    <li>Controleer in Yoast, Rank Math of een vergelijkbare app of de sociale preview die bijlage gebruikt (of upload een aparte uitsnede van de originele afbeelding).</li>\n    <li>Schrijf een alternatieve tekst die de naam van de video bevat en aangeeft dat het een openbare YouTube-afbeelding is – geen opsomming van zoekwoorden.</li>\n  </ol>\n  <p>Vermijd het plakken van rauw voedsel<code>maxresdefault.jpg</code>Het pad naar het mediaveld totdat het bestand is geverifieerd. Het ontbreken van maxres komt vaak voor.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 handleiding</a>.</p>"
+    },
+    {
+      "heading": "Blogger en statische websites",
+      "html": "<p><strong>Blogger:</strong>Upload de afbeelding naar de berichteditor en hergebruik vervolgens de URL van die gehoste Blogger-afbeelding voor alle thema-/socialmediacodevelden die je beheert. Vertrouw niet op een willekeurig YouTube CDN-pad voor een gepubliceerd bericht dat belangrijk voor je is.</p>\n  <p><strong>Statische generatoren:</strong>Commit het bestand naar je repository of CDN en stel vervolgens front-matter/metatags in voor die HTTPS-asset. Bewaar concepten desnoods op een tijdelijke URL i.ytimg.com, maar lever ze via je eigen hostingprovider.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Uitgelichte afbeelding en og:image kunnen een bestand delen, maar beide vereisen een daadwerkelijk bestaande URL.</p>"
+    },
+    {
+      "heading": "Overwegingen met betrekking tot Open Graph",
+      "html": "<p>Grote linkkaarten richten zich doorgaans op ongeveer<strong>1200×630</strong>De maximale resolutie van YouTube is meestal<strong>1280×720</strong>(16:9), welke schrapers een gewas of brievenbus. Set.<code>og:image</code>(en breedte/hoogte indien je stack dit ondersteunt) naar de werkelijke pixels. Nadat je een kapotte URL hebt hersteld, voer je de scraping opnieuw uit in de debugger van elk platform; caches blijven behouden.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Hotlinking versus downloaden",
+      "html": "<table>\n    <thead>\n      <tr><th>Benadering</th><th>Het beste voor</th><th>Risico</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hotlink i.ytimg.com</td><td>Snelle concepten, onderzoeksnotities</td><td>404-fouten, wijzigingen in het Canadese netwerk (CDN), geen gewascontrole</td></tr>\n      <tr><td>Downloaden + hosten</td><td>Gerangschikte berichten, productpagina's</td><td>U moet het bestand opslaan.</td></tr>\n      <tr><td>Screenshot van de speler</td><td>Bijna nooit</td><td>UI-chrome, verkeerde verhouding —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot versus de werkelijkheid</a></td></tr>\n    </tbody>\n  </table>\n  <p>Downloadstappen:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hoe download je een YouTube-thumbnail?</a>. Formaatkeuze wanneer zowel WebP als JPEG beschikbaar zijn:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP versus JPEG</a>.</p>"
+    },
+    {
+      "heading": "Basisprincipes van beeld-SEO voor deze foto's",
+      "html": "<ul>\n    <li><strong>Bestandsnaam:</strong>beschrijvend, zoals<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alternatief:</strong>Beschrijf de afbeelding en video; vul het niet aan met \"YouTube thumbnail downloader HD 4K\".</li>\n    <li><strong>Afmetingen:</strong>Definieer de werkelijke breedte/hoogte.</li>\n    <li><strong>Alleen HTTPS:</strong>URL's van afbeeldingen met gemengde inhoud worden door webscrapers genegeerd.</li>\n    <li><strong>Compressie:</strong>Hercodeer indien nodig lichtjes voor uw CDN; schaal hqdefault niet op naar een gesimuleerde maximale resolutie.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hergebruik en auteursrecht (geen juridisch advies)",
+      "html": "<p>Een openbare CDN-URL is geen licentie. Het insluiten van de YouTube-speler is iets anders dan het kopiëren van een stilstaand beeld naar je hero-afbeelding. Fair use is afhankelijk van de specifieke omstandigheden. Een veiliger redactioneel patroon: voeg commentaar toe aan de video, vermeld het kanaal, link naar de kijkpagina en verkoop de afbeelding niet en gebruik deze niet als je eigen kanaalafbeelding. Officiële hulp bij het maken van aangepaste thumbnails:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Upload aangepaste miniatuurafbeeldingen voor video's</a>. Site regels:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+    },
+    {
+      "heading": "Probleemoplossing",
+      "html": "<ul>\n    <li>Defecte sociale mediakaart → geschatte maximale resolutie; opnieuw extraheren en een gevalideerd bestand hosten.</li>\n    <li>Onscherpe/wazige kaart → je hebt hqdefault gebruikt; controleer de formaten.</li>\n    <li>Onjuiste uitsnede → lever een specifieke uitsnede van 1200×630 aan van een echte 16:9-foto.</li>\n    <li>Permanente cache → forceer een nieuwe scraping na een URL-wijziging.</li>\n  </ul>"
+    },
+    {
+      "heading": "Volgende stap",
+      "html": "<p>Bevestig een stilstaand beeld op de<a href=\"https://www.11tik.com/\">11tik extractor</a>Download het, upload het naar je site en verwijs de featured image / og:image naar je HTTPS-bestand.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan ik een i.ytimg.com URL in WordPress plakken?",
+      "answer": "Sommige velden accepteren het, maar het uploaden van een geverifieerd lokaal bestand is betrouwbaarder voor uitgelichte afbeeldingen en previews op sociale media.",
+      "answerHtml": "<p>Sommige velden accepteren het, maar het uploaden van een geverifieerd lokaal bestand is betrouwbaarder voor uitgelichte afbeeldingen en previews op sociale media.</p>"
+    },
+    {
+      "question": "Heb ik maxresdefault nodig voor Open Graph?",
+      "answer": "Nee. Je hebt nog steeds het grootste gevalideerde publiek nodig. Het ontbreken van maxres is normaal.",
+      "answerHtml": "<p>Nee. Je hebt nog steeds het grootste gevalideerde publiek nodig. Het ontbreken van maxres is normaal.</p>"
+    },
+    {
+      "question": "Moet er in de alt-tekst naar YouTube worden verwezen?",
+      "answer": "Ja, als het helpt om het item te beschrijven (\"Openbare YouTube-thumbnail voor …\"). Vermijd overmatig gebruik van zoekwoorden.",
+      "answerHtml": "<p>Ja, als het helpt om het item te beschrijven (\"Openbare YouTube-thumbnail voor …\"). Vermijd overmatig gebruik van zoekwoorden.</p>"
+    },
+    {
+      "question": "Is hotlinking ooit toegestaan?",
+      "answer": "Voor tijdelijke concepten of interne notities, ja. Voor een permanente openbare publicatie, host een kopie.",
+      "answerHtml": "<p>Voor tijdelijke concepten of interne notities, ja. Voor een permanente openbare publicatie, host een kopie.</p>"
+    },
+    {
+      "question": "Kan ik deze afbeelding als kanaalomslag gebruiken?",
+      "answer": "Niet zonder rechten. Dat is andermans kunstwerk.",
+      "answerHtml": "<p>Niet zonder rechten. Dat is andermans kunstwerk.</p>"
+    },
+    {
+      "question": "Wat als Studio gewoon de aangepaste miniatuurafbeelding zou wijzigen?",
+      "answer": "Wacht tot de verwerking is voltooid en controleer vervolgens 11tik opnieuw voordat u uw CMS-tekst bijwerkt. Gerelateerd: YouTube Studio-thumbnails.",
+      "answerHtml": "<p>Wacht tot de verwerking is voltooid en controleer vervolgens 11tik opnieuw voordat u uw CMS-tekst bijwerkt. Gerelateerd:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatuurafbeeldingen</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+}

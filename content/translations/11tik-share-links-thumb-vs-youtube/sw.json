@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "sw",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Jinsi Viungo vya Kushiriki 11tik Hufanya Kazi: /thumb/{VIDEO_ID} dhidi ya URL za Kutazama za YouTube | 11tik",
+  "description": "11tik /thumb/{id} ni ukurasa wa matokeo ya kushiriki. Sio URL ya kutazama ya YouTube na sio faili ya picha ya moja kwa moja ya i.ytimg.com.",
+  "h1": "Jinsi Viungo vya Kushiriki 11tik Vinavyofanya Kazi: /thumb/{VIDEO_ID} dhidi ya URL za Kutazama za YouTube",
+  "ogTitle": "Jinsi Viungo vya Kushiriki 11tik Vinavyofanya Kazi: /thumb/{VIDEO_ID} dhidi ya URL za Kutazama za YouTube",
+  "ogDescription": "11tik /thumb/{id} ni ukurasa wa matokeo ya kushiriki. Sio URL ya kutazama ya YouTube na sio faili ya picha ya moja kwa moja ya i.ytimg.com.",
+  "imageAlt": "Mchoro unaolinganisha URL ya saa ya kutazama ya YouTube, URL ya kijipicha cha 11tik cha kushiriki, na URL ya picha ya kijipicha ya moja kwa moja ya YouTube",
+  "faqHeading": "Maswali Yanayoulizwa Mara kwa Mara",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Mchoro unaolinganisha URL ya saa ya kutazama ya YouTube, URL ya kijipicha cha 11tik cha kushiriki, na URL ya picha ya kijipicha ya moja kwa moja ya YouTube",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Mtiririko wa kazi unaoonyesha dondoo, hakikisho, nakala kiungo cha kushiriki 11tik, na mpokeaji akifungua ukurasa wa matokeo ya kidole gumba",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jibu la haraka",
+      "html": "<p>URL tatu tofauti zinaweza kushiriki kitambulisho sawa cha video cha YouTube. Ni moja tu kati ya hizo ni faili ya picha.</p>\n  <ol>\n    <li><strong>URL ya kutazama kwenye YouTube</strong>— inafungua video kwenye YouTube.</li>\n    <li><strong>11tik URL ya kushiriki</strong>— hufungua ukurasa wa matokeo ya kitoaji cha 11tik kwa kitambulisho hicho (<code>/thumb/{VIDEO_ID}</code>Huu ni ukurasa wa wavuti, si faili ya JPEG/WebP.</li>\n    <li><strong>URL ya kijipicha cha moja kwa moja cha CDN</strong>— inaonyesha picha ya umma kwenye mwenyeji wa picha wa YouTube (kwa mfano<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Kutumia kitambulisho cha onyesho la umma<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Anwani ya tatu ni mfano wa muundo wa URL ya picha ya moja kwa moja. Faili hiyo maalum ya maxres haihakikishiwi kwa kila video—thibitisha ukubwa halisi na<a href=\"https://www.11tik.com/\">11tik</a>au<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">mwongozo wa maxresdefault</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kitambulisho sawa cha video, kazi tatu: tazama video, fungua ukurasa wa matokeo wa 11tik, au omba CDN still.</p>"
+    },
+    {
+      "heading": "/thumb/{VIDEO_ID} ni nini?",
+      "html": "<p>Kwenye 11tik, dondoo la video moja lililofanikiwa husasisha anwani ya kivinjari hadi kwenye njia yenye umbo kama:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Njia hiyo ni URL ya kushiriki/matokeo ya bidhaa. Imetolewa kutoka kwa Kitambulisho cha video (tazama wasaidizi wa kushiriki wa tovuti) na imekusudiwa kufungua tena kitoaji kinachozingatia Kitambulisho hicho. Viungo vya zamani vya mtindo wa hoja kama vile<code>?v=VIDEO_ID</code>zinachukuliwa kama viungo vya kina vya wazo lile lile na zinaweza kuandika upya kwa<code>/thumb/</code>umbo.</p>\n  <p><code>/thumb/…</code>ni<strong>si</strong>Imehifadhiwa kwenye CDN ya picha ya YouTube. Kuifungua hakupakui picha yenyewe; hupakia njia ya programu ya 11tik kwa kitambulisho hicho.</p>"
+    },
+    {
+      "heading": "Kwa nini ukurasa upo",
+      "html": "<p>Watu wanahitaji njia thabiti ya kufungua tena au kutuma \"matokeo ya kijipicha cha video hii kwenye 11tik\" bila kubandika URL ya kutazama kwa muda mrefu kwenye gumzo na wakitumai mpokeaji anajua la kufanya baadaye. Ukurasa wa kushiriki huweka mazungumzo kwenye kitoa data: kitambulisho kile kile, mtiririko uleule wa kazi wa umma, vitendo vya kupakua na kunakili mahali pamoja.</p>\n  <p>Pia huweka URL ya zana ya ukurasa wa nyumbani safi. Ukurasa wa nyumbani wa uuzaji unabaki kuwa kichocheo cha jumla;<code>/thumb/{id}</code>ni kiungo kirefu cha kitambulisho maalum.</p>"
+    },
+    {
+      "heading": "Kile ambacho mtumiaji huona anapokifungua",
+      "html": "<p>Ufunguzi<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>Inapakia programu ya ukurasa mmoja ya 11tik kwenye njia ya kidole gumba. Programu inasoma kitambulisho cha herufi 11 kutoka kwenye njia, inaweka URL ya saa inayolingana kwenye kitoa data, na kuendesha pasi ya ugunduzi wa vijipicha vya umma kwa kitambulisho hicho. Wakati stills za umma zipo, hakikisho la kawaida, orodha ya ubora, vitendo vya kupakua, na vidhibiti vya kushiriki huonekana. Wakati havipo, unapata matokeo yaleyale tupu/ya umma ambayo hayajapatikana kama kubandika kwa mkono.</p>\n  <p>Unaweza pia kuona kichwa kifupi cha njia ya kidole gumba na maandishi ya kiongozi kwa kitambulisho hicho juu ya kiolesura cha zana. Maudhui hayo yanaelezea ukurasa wa matokeo; bado ni sehemu ya uzoefu wa tovuti, si jibu la picha ghafi.</p>"
+    },
+    {
+      "heading": "Jinsi ya kunakili kiungo cha 11tik",
+      "html": "<ol>\n    <li>Fungua<a href=\"https://www.11tik.com/\">11tik</a>na ubandike URL ya YouTube ya umma (au fungua iliyopo<code>/thumb/</code>kiungo).</li>\n    <li>Subiri hadi uchimbaji umalizike na umma bora bado uonyeshwe.</li>\n    <li>Tumia kidhibiti cha kushiriki kwenye ukurasa kilichoandikwa kwa kiungo cha kushiriki (nakili kiungo cha kushiriki). Thamani inaonekana kama<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Tuma URL hiyo. Mpokeaji anatua kwenye ukurasa wa matokeo na anaweza kufanya tena ukaguzi uleule wa umma.</li>\n  </ol>\n  <p>Dondoo za wingi zinaweza kufichua URL moja ya kushiriki kwa kila kitambulisho cha video kilichofanikiwa (ikiwa ni pamoja na katika safu wima za usafirishaji wa CSV). Kila kitambulisho huhifadhi chake<code>/thumb/</code>njia ili viungo visiangukie kwenye matokeo ya kwanza.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Shiriki mtiririko wa kazi: dondoo → hakikisho → nakala<code>/thumb/{id}</code>→ mpokeaji anafungua ukurasa wa matokeo.</p>"
+    },
+    {
+      "heading": "Jedwali la kulinganisha URL",
+      "html": "<table>\n    <thead>\n      <tr><th>Aina ya URL</th><th>Mfano</th><th>Kinachofungua</th><th>Je, ni faili ya picha?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Tazama YouTube</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>Kichezaji cha YouTube / ukurasa wa kutazama</td><td>Hapana</td></tr>\n      <tr><td>11tik kushiriki</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik matokeo ya kitoaji cha kitambulisho hicho</td><td>Hapana</td></tr>\n      <tr><td>Bado CDN ya moja kwa moja</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Baiti za picha (wakati faili ipo)</td><td>Ndiyo</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Jinsi URL hizo tatu zinavyotofautiana kivitendo",
+      "html": "<h3>URL ya Tazama dhidi ya URL ya kushiriki ya 11tik</h3>\n  <p>Shiriki URL ya kutazama wakati lengo ni kutazama au kujadili video kwenye YouTube. Shiriki URL ya 11tik wakati lengo ni kufungua tena matokeo ya uchimbaji wa vijipicha—hakiki, vipakuliwa, na ukubwa uliothibitishwa wa umma—bila kumuuliza mtu kutafuta kitoaji kwanza.</p>\n  <h3>11tik URL ya kushiriki dhidi ya URL ya picha ya moja kwa moja</h3>\n  <p>URL ya picha ya moja kwa moja ndiyo unayobandika<code>&lt;img src&gt;</code>, maktaba za vyombo vya habari vya CMS, au zana za usanifu baada ya kuthibitisha kuwa faili ipo. Jinsi URL hizo za CDN zinavyojengwa kutoka kwa kitambulisho ni kazi ya<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL ndogo</a>URL ya kushiriki ya 11tik haibadilishi anwani hiyo ya picha: wapokeaji bado hutumia Pakua au Nakili URL ya picha ndani ya kifaa wanapohitaji faili yenyewe.</p>\n  <h3>URL ya kutazama dhidi ya URL ya picha ya moja kwa moja</h3>\n  <p>URL ya saa hutambua video. URL ya picha hutambua derivative moja ya umma. Haziwezi kubadilishwa, ndiyo maana ya kubahatisha<code>maxresdefault.jpg</code>mara nyingi hushindwa hata wakati ukurasa wa kutazama unafanya kazi.</p>"
+    },
+    {
+      "heading": "Wakati wa kushiriki kiungo gani",
+      "html": "<ul>\n    <li><strong>Shiriki URL ya kutazama ya YouTube</strong>kwa ajili ya kutazama, kutoa maoni, au kunukuu video.</li>\n    <li><strong>Shiriki 11tik<code>/thumb/</code>URL</strong>kwa washirika wanaohitaji matokeo ya dondoo, orodha ya ubora, au upakuaji wa haraka wa umma bado.</li>\n    <li><strong>Shiriki au pangisha URL ya picha ya moja kwa moja / faili iliyopakuliwa</strong>kwa picha zilizoangaziwa kwenye blogu, Grafu Huria, na marekebisho ya muundo—baada ya uthibitisho. Tazama<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">mwongozo wa kupakua</a>na<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">mwongozo wa ukubwa na ubora</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Jinsi kitambulisho cha video kinavyounganisha vyote vitatu",
+      "html": "<p>Kila kitu kinategemea kitambulisho kimoja cha herufi 11. Tazama URL zikiiingiza<code>v=</code>(au sehemu za njia fupi/zilizopachikwa/njia ya moja kwa moja). 11tik huiweka ndani<code>/thumb/{id}</code>. Vielelezo vya CDN vinaweka kati<code>/vi/</code>(au<code>/vi_webp/</code>) na ukubwa wa jina la faili. Ikiwa kitambulisho si sahihi, vyote vitatu huvunjika kwa njia tofauti: video isiyo sahihi, ukurasa wa matokeo usio sahihi, au picha isiyo sahihi/inayokosekana.</p>"
+    },
+    {
+      "heading": "Jinsi hii inavyofaa mtiririko wa kazi wa dondoo",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Kiungo cha kushiriki ni alamisho katika mtiririko huo wa kazi. Hakiruki uthibitishaji, kubuni 4K, au kubadilisha video za faragha kuwa picha za umma.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je, https://www.11tik.com/thumb/VIDEO_ID ni picha ya moja kwa moja?",
+      "answer": "Hapana. Ni ukurasa wa matokeo wa 11tik kwa kitambulisho hicho cha video. Picha za moja kwa moja zinaonekana moja kwa moja kwenye seva kama vile i.ytimg.com.",
+      "answerHtml": "<p>Hapana. Ni ukurasa wa matokeo wa 11tik wa kitambulisho hicho cha video. Picha za moja kwa moja zinaonekana moja kwa moja kwenye seva kama vile<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Nini kitatokea baada ya mtu kufungua kiungo changu cha kushiriki?",
+      "answer": "11tik hupakia njia ya kidole gumba, husoma kitambulisho, huendesha ukaguzi wa kijipicha cha umma kwa kitambulisho hicho, na kuonyesha kiolesura cha kitoa data na matokeo wakati public bado ipo.",
+      "answerHtml": "<p>11tik hupakia njia ya kidole gumba, husoma kitambulisho, huendesha ukaguzi wa kijipicha cha umma kwa kitambulisho hicho, na kuonyesha kiolesura cha kitoa data na matokeo wakati public bado ipo.</p>"
+    },
+    {
+      "question": "Je, ninaweza kuweka kiungo cha hotlink /thumb/ ndani ya lebo ya img?",
+      "answer": "Usitumie. Tumia URL ya picha ya CDN iliyothibitishwa au faili uliyopakua. Njia ya kushiriki inarudisha ganda la programu ya HTML, sio baiti za picha.",
+      "answerHtml": "<p>Usitumie. Tumia URL ya picha ya CDN iliyothibitishwa au faili uliyopakua. Njia ya kushiriki inarudisha ganda la programu ya HTML, sio baiti za picha.</p>"
+    },
+    {
+      "question": "Kwa nini upau wangu wa anwani ulibadilika baada ya kutoa kijipicha?",
+      "answer": "Baada ya dondoo la video moja, 11tik husawazisha njia ya kushiriki hadi /thumb/{VIDEO_ID} ili matokeo ya sasa yawe rahisi kunakili na kufungua tena.",
+      "answerHtml": "<p>Baada ya dondoo la video moja, 11tik husawazisha njia ya kushiriki hadi<code>/thumb/{VIDEO_ID}</code>kwa hivyo matokeo ya sasa ni rahisi kunakili na kufungua tena.</p>"
+    },
+    {
+      "question": "Je, Shorts hutumia njia tofauti ya kushiriki?",
+      "answer": "Hapana. Shorts bado zinabaki kuwa na kitambulisho cha herufi 11. URL ya kushiriki inabaki /thumb/{id}; ni umbo la URL asili ya YouTube pekee lililotofautiana.",
+      "answerHtml": "<p>Hapana. Shorts bado zina utambulisho wa herufi 11. URL ya kushiriki inabaki<code>/thumb/{id}</code>; ni umbo la URL asilia ya YouTube pekee lililotofautiana.</p>"
+    },
+    {
+      "question": "Je, /thumb/{id} ni sawa na kunakili URL ya maxres?",
+      "answer": "Hapana. Maxres (wakati ipo) ni faili moja inayowezekana ya CDN. Ukurasa wa kushiriki unaorodhesha ukubwa wa umma uliothibitishwa na unaweza kujumuisha viwango vingine wakati maxres haipo.",
+      "answerHtml": "<p>Hapana. Maxres (wakati ipo) ni faili moja inayowezekana ya CDN. Ukurasa wa kushiriki unaorodhesha ukubwa wa umma uliothibitishwa na unaweza kujumuisha viwango vingine wakati maxres haipo.</p>"
+    },
+    {
+      "question": "URL za saa na URL za picha zinaelezewa wapi kwa undani zaidi?",
+      "answer": "Tumia makala ya URL ya kijipicha kwa ajili ya ujenzi wa ID → CDN, na makala ya kupakua kwa ajili ya kuhifadhi faili.",
+      "answerHtml": "<p>Tumia<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Makala ya URL ya kijipicha</a>kwa ajili ya kitambulisho → muundo wa CDN, na makala ya kupakua kwa ajili ya kuhifadhi faili.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Hitimisho</h2>\n<p>Tiba<code>/thumb/{VIDEO_ID}</code>kama anwani ya kushiriki/matokeo ya 11tik: muhimu kwa kufungua tena na kutuma dondoo, kamwe kama mbadala wa kiungo cha kutazama cha YouTube au kiunga cha moja kwa moja<code>i.ytimg.com</code>Bado. Weka aina tatu za URL sawa na vipakuliwa vyako, vipachiko, na viungo vya washirika vinabaki sahihi.</p>\n  <p><a href=\"https://www.11tik.com/\">Toa kijipicha cha umma na unakili kiungo chake cha kushiriki 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>. Marejeleo ya Muumba:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Pakia vijipicha maalum vya video</a>.</p>"
+}

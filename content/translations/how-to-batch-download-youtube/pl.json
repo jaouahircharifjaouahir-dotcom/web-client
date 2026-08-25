@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "pl",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Jak pobrać zbiorczo miniaturki z YouTube (do 25 publicznych adresów URL) | 11tik",
+  "description": "Masowo wyodrębniaj publiczne miniatury z YouTube w przeglądarce. Wklej jeden adres URL w każdym wierszu, pobierz każde najlepsze zdjęcie lub spakuj zestaw w najwyższej jakości. Bez konta i plików wideo.",
+  "h1": "Jak pobrać zbiorczo miniatury z YouTube (do 25 publicznych adresów URL)",
+  "ogTitle": "Jak pobrać zbiorczo miniatury z YouTube (do 25 publicznych adresów URL)",
+  "ogDescription": "Masowo wyodrębniaj publiczne miniatury z YouTube w przeglądarce. Wklej jeden adres URL w każdym wierszu, pobierz każde najlepsze zdjęcie lub spakuj zestaw w najwyższej jakości. Bez konta i plików wideo.",
+  "imageAlt": "11tik program do zbiorczego pobierania miniatur z kilkoma adresami URL YouTube gotowymi do pobrania",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik program do zbiorczego pobierania miniatur z kilkoma adresami URL YouTube gotowymi do pobrania",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jak pobrać zbiorczo miniaturki z YouTube?",
+      "html": "<p>Otwarte<a href=\"https://www.11tik.com/\">11tik</a>Włącz opcję „Zbiorcze”, wklej jeden publiczny adres URL w każdym wierszu, kliknij „Wyodrębnij wszystkie”, a następnie pobierz każdy najlepszy obraz lub plik ZIP o najwyższej jakości. Limit wynosi 25 adresów URL na jedno uruchomienie, aby przeglądarka działała płynnie.</p>"
+    },
+    {
+      "heading": "Co należy umieścić na liście?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= Identyfikatory</li>\n    <li>youtu.be krótkie linki</li>\n    <li>youtube.com/shorts/ Identyfikatory</li>\n    </ul>\n  <p>Filmy prywatne, niepubliczne, bez publicznych kciuków lub z ograniczeniami wiekowymi nie zwrócą klatki. To normalne. Zobacz też<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatury krótkich filmów</a>.</p>"
+    },
+    {
+      "heading": "Jak uruchomić ekstrakcję zbiorczą",
+      "html": "<ol>\n    <li>Na stronie głównej kliknij opcję Hurtowo.</li>\n    <li>Wklej maksymalnie 25 linków publicznych, po jednym w każdym wierszu.</li>\n    <li>Kliknij Wyodrębnij wszystko i poczekaj, aż wyświetli się podgląd każdej karty.</li>\n    <li>Pobierz miniaturę wideo N dla każdego najlepszego zdjęcia lub pobierz wszystkie najwyższej jakości jako plik zip.</li>\n    <li>Opcjonalnie: Eksportuj pliki CSV dzienników badań (identyfikator wideo, tytuł, adres URL udostępniania, adres URL obrazu).</li>\n  </ol>"
+    },
+    {
+      "heading": "Czy mogę wykorzystać to do badania konkurencji?",
+      "html": "<p>Tak, w celu zbadania publicznego pakowania. Nie publikuj ponownie miniatury innego twórcy jako swojego własnego pliku. Prawa autorskie pozostają przy właścicielu praw. 11tik pobiera tylko pliki, które YouTube już udostępnia publicznie.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstrakt zbiorczy na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jak pobrać zbiorczo miniaturki z YouTube?",
+      "answer": "Użyj Bulk na 11tik, wklej jeden publiczny adres URL w każdym wierszu, wyodrębnij, a następnie pobierz zdjęcia lub plik zip o najwyższej jakości publicznej. Maksymalnie 25 adresów URL na jedno uruchomienie.",
+      "answerHtml": "Użyj Bulk na 11tik, wklej jeden publiczny adres URL w każdym wierszu, wyodrębnij, a następnie pobierz zdjęcia lub plik zip o najwyższej jakości publicznej. Maksymalnie 25 adresów URL na jedno uruchomienie."
+    },
+    {
+      "question": "Czy mogę wykorzystać to do badania konkurencji?",
+      "answer": "Tak, w przypadku badania opakowań publicznych. Nie publikuj miniatury innego twórcy jako swojej własnej. Prawa autorskie pozostają przy właścicielu praw.",
+      "answerHtml": "Tak, w przypadku badania opakowań publicznych. Nie publikuj miniatury innego twórcy jako swojej własnej. Prawa autorskie pozostają przy właścicielu praw."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+}

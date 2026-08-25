@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "fi",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "YouTube-pikkukuvan tallentaminen iPhonella ja Androidilla (2026) | 11tik",
+  "description": "Tallenna julkinen YouTube-video iPhonella tai Androidilla ilman kuvakaappausta ja sovelluskaupan latausohjelmaa. Liitä julkisen katselun tai Shorts-videon URL-osoite Safarin tai Chromen 11tik-kansioon ja lataa sitten suurin YouTuben jo ylläpitämä kuvatiedosto.",
+  "h1": "YouTube-pikkukuvan tallentaminen iPhonella ja Androidilla (2026)",
+  "ogTitle": "YouTube-pikkukuvan tallentaminen iPhonella ja Androidilla (2026)",
+  "ogDescription": "Tallenna julkinen YouTube-video iPhonella tai Androidilla ilman kuvakaappausta ja sovelluskaupan latausohjelmaa. Liitä julkisen katselun tai Shorts-videon URL-osoite Safarin tai Chromen 11tik-kansioon ja lataa sitten suurin YouTuben jo ylläpitämä kuvatiedosto.",
+  "imageAlt": "Tallenna YouTube-pikkukuva iPhonella ja Androidilla 11tik -sovelluksella — julkinen still-kuva, ei sovellusta",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Tallenna YouTube-pikkukuva iPhonella ja Androidilla 11tik -sovelluksella — julkinen still-kuva, ei sovellusta",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Voinko tallentaa YouTube-pikkukuvan puhelimeeni?",
+      "html": "<p>Kyllä, jos video on julkinen ja YouTube julkaisi still-kuvan. Et tarvitse tietokonetta etkä APK:ta tai TestFlight-sovellusta. Avaa<a href=\"https://www.11tik.com/\">[[S. 3]]</a>Liitä linkki jo käyttämääsi puhelimen selaimeen, napauta Hae pikkukuva ja tallenna sitten ensimmäinen listattu tiedosto. Tämä tiedosto on korkein julkinen JPEG- tai WebP-tiedosto, joka todellisuudessa palautti kuvan.</p>\n  <p>Pitkällä painalluksella otettu kuvakaappaus pelaajasta ei ole sama asia. Kuvakaappauksessa on kromia, turva-alueen palkit ja lisäpakkaus. Yleisö elää edelleen i.ytimg.com. Katso<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">kuvakaappaus vs. todellinen pikkukuva</a>jos tarvitset kyseisen eron blogia tai Open Graph -tunnistetta varten.</p>"
+    },
+    {
+      "heading": "Mitä tarvitset ennen aloittamista",
+      "html": "<ul>\n    <li>Julkinen YouTube-katselu-, Shorts-video-, live- tai youtu.be-URL-osoite. Lisäkyselyparametreja, kuten<code>pp=</code>tai soittolistan tunnuksella ei ole väliä; 11tik lukee 11-merkkisen videon tunnuksen.</li>\n    <li>Safari iPhonella tai iPadilla tai Chrome, Firefox tai Samsung Internet Androidilla.</li>\n    <li>Lupa tallentaa kuvia, jos selain kysyy. 11tik ei koskaan lataa kuvaa 11tik palvelimelle alkuperäisenä tallennusvälineenä.</li>\n  </ul>\n  <p>Yksityisissä, vain jäsenille tarkoitetuissa tai ikärajoitetuissa videoissa, joissa ei ole julkista latausta, latausta ei vieläkään näytetä. Tämä on alustakohtainen sääntö, ei puhelinrajoitus. Studiossa vielä käsiteltävät mukautetut pikkukuvat saattavat myös puuttua lyhyen aikaa; vahvista myöhemmin samalla URL-osoitteella. Aiheeseen liittyvää:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studion pikkukuvat vuonna 2026</a>.</p>"
+    },
+    {
+      "heading": "YouTube-pikkukuvan tallentaminen iPhoneen",
+      "html": "<ol>\n    <li>Kopioi videon tai Shorts-videon linkki YouTube-sovelluksessa tai Safarissa (Jaa → Kopioi linkki).</li>\n    <li>Avata<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>Safarissa. Et asenna mitään.</li>\n    <li>Liitä URL-osoite ja napauta Hae pikkukuva. Odota, kunnes todellinen esikatselu tulee näkyviin. Tyhjät harmaat ruudut tarkoittavat, että kokoa ei koskaan julkaistu.</li>\n    <li>Napauta ensimmäistä latauspainiketta. Safari tarjoaa Avaa- tai Lataa-vaihtoehtoa. Valitse Lataa ja tallenna kuva sitten Tiedostot-kansioon tai tallenna se jakotaulukosta Kuvat-kansioon.</li>\n    <li>Jos tarvitset vain sisällönhallintajärjestelmän osoitteen, käytä Kopioi kuvan URL-osoite -toimintoa lataamisen sijaan. Tämä kopioi HTTPS-i.ytimg.com- tai vi_webp-linkin. Opas:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube-pikkukuvan URL-osoite</a>.</li>\n  </ol>\n  <p>Jos iOS estää ristilatauksen, avaa kuvan URL-osoite uudella välilehdellä ja napauta kuvaa pitkään → Lisää kuviin. Tallennat edelleen YouTuben julkisen tiedoston, etkä kuvakaappausta 11tik-sivusta.</p>"
+    },
+    {
+      "heading": "YouTube-pikkukuvan tallentaminen Androidilla",
+      "html": "<ol>\n    <li>Kopioi julkisen katselun tai Shorts-videon URL-osoite YouTube-sovelluksesta.</li>\n    <li>Avaa 11tik Chromessa (tai oletusselaimessasi).</li>\n    <li>Liitä, pura ja napauta sitten ensimmäistä latausta. Chrome kirjoittaa tiedoston yleensä Lataukset-kansioon.</li>\n    <li>Avaa Lataukset-ilmoitus ja siirrä kuva Galleriaan, jos haluat sen näkyvän Kuvissa.</li>\n  </ol>\n  <p>Android saattaa kysyä, minkä sovelluksen tulisi avata JPEG-tiedosto. Valitse Galleria tai Tiedostot. Älä valitse \"videonlatausohjelmaa\", joka lupaa MP4-tiedoston; 11tik ei tarjoa videota tai ääntä.</p>"
+    },
+    {
+      "heading": "Minkä kokoisen puhelimen minun pitäisi pitää?",
+      "html": "<p>Säilytä ensimmäinen lueteltu koko. 11tik on jo rankannut olemassa olevat tiedostot. Kun YouTube julkaisi maxresdefault-koon, se oli yleensä 1280×720. Jos tiedostonimi on 404s, rehellinen maksimi on seuraava todellinen tiedosto (usein hq720, sddefault tai hqdefault). Puuttuva maxres-tiedosto on normaalia. Tiedot:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">mikä on maxresdefault.jpg</a>ja<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Pienoiskuvien koot vuonna 2026</a>.</p>\n  <p>Lyhytkuvat kuvat toistetaan usein pystysuunnassa, kun taas tallennettu still-kuva on vaakasuunnassa. Tiedosto on edelleen virallinen julkinen pikkukuva. Katso.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Lyhytvideoiden pikkukuvat</a>.</p>"
+    },
+    {
+      "heading": "Onko laillista tallentaa pikkukuva puhelimeeni?",
+      "html": "<p>Tyypillinen käyttötarkoitus on julkisesti saatavilla olevan still-kuvan tallentaminen henkilökohtaiseen käyttöön, tutkimukseen tai koulutukseen. Kuva pysyy lataajan tekijänoikeuksin suojattuna teoksena. Älä lataa sitä uudelleen omana mukautettuna pikkukuvana, tulosta sitä oheistuotteisiin tai käsittele 11tik-palvelua lisenssinä. YouTuben omat ohjeet mukautetuista pikkukuvista löytyvät täältä:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Lataa mukautettuja videopikkukuvia</a>. 11tik:n säännöt:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>ja<a href=\"https://www.11tik.com/copyright\">Tekijänoikeudet ja käyttö</a>.</p>"
+    },
+    {
+      "heading": "Miksi puhelimen \"pikkukuvasovellukset\" epäonnistuvat",
+      "html": "<p>Monissa kauppojen listauksissa mainossivu ympäröi arvauksen<code>maxresdefault.jpg</code>URL-osoite. Jos YouTube ei ole koskaan julkaissut kyseistä tiedostoa, saat rikkinäisen kuvan tai harmaan oletusarvon. 11tik tarkistaa vastaukset selaimessasi ja piilottaa koot, jotka eivät ole kuvia. Mikään ei \"avaudu\" rekisteröitymisen jälkeen. Tietosuoja: liitetyt URL-osoitteet pysyvät selaimessa; katso<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>.</p>"
+    },
+    {
+      "heading": "Tallenna useita linkkejä puhelimesta",
+      "html": "<p>Käytä joukkolatausta samalla etusivulla, yksi julkinen URL-osoite riviä kohden, enintään 25. Kanavan URL-osoite voi laajentua viimeaikaisiin julkisiin latauksiin suuremmalla näytöllä; puhelimella voit liittää yksittäisiä linkkejä, jos kanavan laajennus tuntuu ahtaalta. Joukkolatausopas:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">erälataus</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Tallenna julkinen pikkukuva 11tik →</a></p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan poimijan julkaisija.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voinko tallentaa YouTube-pikkukuvan puhelimeeni?",
+      "answer": "Kyllä. Avaa 11tik Safarissa tai Chromessa, liitä julkinen YouTube-URL-osoite, pura ja lataa ensimmäinen listattu julkinen still-kuva. Sovelluskaupan latausohjelmaa ei tarvita.",
+      "answerHtml": "Kyllä. Avaa 11tik Safarissa tai Chromessa, liitä julkinen YouTube-URL-osoite, pura ja lataa ensimmäinen listattu julkinen still-kuva. Sovelluskauppaan ei tarvita latausohjelmaa."
+    },
+    {
+      "question": "Kuinka tallentaa YouTube-pikkukuvan iPhoneen?",
+      "answer": "Kopioi linkki, avaa https://www.11tik.com/ Safarissa, liitä, pura ja lataa tai paina kuvan URL-osoitetta pitkään ja lisää se Kuviin.",
+      "answerHtml": "Kopioi linkki, avaa https://www.11tik.com/ Safarissa, liitä, pura ja lataa tai paina kuvan URL-osoitetta pitkään ja lisää se Kuviin."
+    },
+    {
+      "question": "Kuinka tallentaa YouTube-pikkukuva Androidilla?",
+      "answer": "Kopioi linkki, avaa 11tik Chromessa, pura se ja tallenna ensimmäinen lataus Lataukset- tai Galleria-kansioon.",
+      "answerHtml": "Kopioi linkki, avaa 11tik Chromessa, pura se ja tallenna ensimmäinen lataus Lataukset- tai Galleria-kansioon."
+    },
+    {
+      "question": "Onko laillista tallentaa pikkukuva puhelimeeni?",
+      "answer": "Julkisen still-kuvan tallentaminen henkilökohtaiseen käyttöön tai tutkimukseen on tyypillistä. Älä julkaise sitä uudelleen omana kansikuvanasi. Tekijänoikeudet pysyvät lataajalla.",
+      "answerHtml": "Julkisen still-kuvan tallentaminen henkilökohtaiseen käyttöön tai tutkimukseen on tyypillistä. Älä julkaise sitä uudelleen omana kansikuvanasi. Tekijänoikeudet pysyvät lataajalla."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan poimijan julkaisija.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+}

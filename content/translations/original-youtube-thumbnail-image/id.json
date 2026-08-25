@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "id",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Cara Mendapatkan Gambar Thumbnail YouTube Asli | 11tik",
+  "description": "Dapatkan thumbnail YouTube publik asli yang sudah dihosting oleh YouTube. Ini masih dari CDN, bukan frame yang diambil langsung dari video.",
+  "h1": "Cara Mendapatkan Gambar Thumbnail YouTube Asli",
+  "ogTitle": "Cara Mendapatkan Gambar Thumbnail YouTube Asli",
+  "ogDescription": "Dapatkan thumbnail YouTube publik asli yang sudah dihosting oleh YouTube. Ini masih dari CDN, bukan frame yang diambil langsung dari video.",
+  "imageAlt": "File thumbnail YouTube publik asli ditampilkan di ekstraktor 11tik",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "File thumbnail YouTube publik asli ditampilkan di ekstraktor 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Apa gambar thumbnail YouTube aslinya?",
+      "html": "<p>Ini adalah gambar pratinjau yang sudah disimpan YouTube di layanan hosting gambarnya. Ini adalah file yang digunakan dalam pencarian dan saran rak, bukan tangkapan layar yang Anda tangkap dengan Print Screen.</p>"
+    },
+    {
+      "heading": "Apa bedanya dengan tangkapan layar?",
+      "html": "<p>Screenshot menyertakan tampilan pemutar, UI browser, dan kompresi tambahan. File aslinya adalah gambar diam yang bersih dengan ukuran piksel yang dipublikasikan YouTube.</p>"
+    },
+    {
+      "heading": "Bagaimana cara menemukan thumbnail aslinya?",
+      "html": "<p>Tempel URL tontonan, Shorts, siaran langsung, atau youtu.be ke dalam<a href=\"https://www.11tik.com/\">11tik</a>Alat ini membaca ID video, memeriksa file publik, dan memberi peringkat pada yang tertinggi yang ada.</p>"
+    },
+    {
+      "heading": "Bagaimana cara kerja URL thumbnail YouTube?",
+      "html": "<p>Mereka menggunakan ID video ditambah nama ukuran seperti maxresdefault.jpg atau hqdefault.jpg pada i.ytimg.com. Menebak ukuran yang belum pernah dipublikasikan akan menghasilkan kesalahan atau placeholder.</p>"
+    },
+    {
+      "heading": "Apa itu maxresdefault.jpg?",
+      "html": "<p>Ini adalah nama file publik tertinggi yang umum, biasanya 1280×720 saat YouTube membuatnya. Ini bukan master 4K dan bukan file video.</p>"
+    },
+    {
+      "heading": "Apakah \"asli\" selalu berarti 1280 × 720?",
+      "html": "<p>Tidak. Jika maxres tidak pernah dipublikasikan, gambar publik aslinya adalah hq, sd, atau file lain yang masih ada. 11tik menunjukkan ukuran piksel sebenarnya alih-alih mengarang piksel.</p>"
+    },
+    {
+      "heading": "Bisakah saya mendapatkan gambar asli dari Shorts, Live, atau youtu.be?",
+      "html": "<p>Ya, jika URL tersebut berisi ID video publik dan gambar diam publik yang dihosting YouTube. Ekstraktor memperlakukannya sama seperti URL tontonan standar.</p>"
+    },
+    {
+      "heading": "Bagaimana cara saya memastikan bahwa saya benar-benar mendapatkan file aslinya?",
+      "html": "<p>Gunakan daftar ukuran dan dimensi 11tik setelah memvalidasi file. Jika gambar terlihat seperti tangkapan layar pemain, Anda tidak mengunduh thumbnail yang dihosting.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Alat pengambilan sari</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Kualitas tertinggi</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apa gambar thumbnail YouTube aslinya?",
+      "answer": "File gambar publik yang dihosting YouTube untuk ID video, seperti maxresdefault jika ada. Ini bukan tangkapan layar halaman tontonan.",
+      "answerHtml": "File gambar publik yang dihosting YouTube untuk ID video, seperti maxresdefault jika ada. Ini bukan tangkapan layar halaman tontonan."
+    },
+    {
+      "question": "Apakah \"asli\" selalu berarti 1280 × 720?",
+      "answer": "Tidak. Maxres biasanya 1280x720 saat dipublikasikan. Jika file tersebut hilang, gambar asli yang dipublikasikan masih berukuran lebih kecil dari yang disimpan YouTube.",
+      "answerHtml": "Tidak. Maxres biasanya 1280×720 saat dipublikasikan. Jika file tersebut hilang, gambar diam publik aslinya adalah ukuran berikutnya yang disimpan YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+}

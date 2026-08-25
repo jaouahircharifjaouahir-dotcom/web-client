@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "fi",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Kuinka saada YouTube-pikkukuvan URL-osoite suoraan videosta | 11tik",
+  "description": "Luo tai kopioi toimiva YouTube-pikkukuvan URL-osoite videon tunnuksesta i.ytimg.com-sivustolla. Varmista, että koko on olemassa ennen kuin lisäät siihen pikalinkin.",
+  "h1": "Kuinka saada YouTube-pikkukuvan URL-osoite suoraan videosta",
+  "ogTitle": "Kuinka saada YouTube-pikkukuvan URL-osoite suoraan videosta",
+  "ogDescription": "Luo tai kopioi toimiva YouTube-pikkukuvan URL-osoite videon tunnuksesta i.ytimg.com-sivustolla. Varmista, että koko on olemassa ennen kuin lisäät siihen pikalinkin.",
+  "imageAlt": "Kaavio, joka näyttää YouTube-katseluosoitteen muunnettuna videotunnukseksi ja sitten pikkukuvan URL-osoitteeksi",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Kaavio, joka näyttää YouTube-katseluosoitteen muunnettuna videotunnukseksi ja sitten pikkukuvan URL-osoitteeksi",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "YouTube-pikkukuvan URL-osoitteen merkitty rakenne, jossa näkyy isäntä, polku, videotunnus ja tiedostonimi",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Nopea vastaus",
+      "html": "<p>YouTube-pikkukuvan URL-osoitteen löytämiseksi: etsi 11-merkkinen videotunnus ja avaa sitten vahvistettu julkinen kuvan osoite, kuten<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>Katselusivun URL-osoite ei ole kuva. Liitä videolinkki<a href=\"https://www.11tik.com/\">11tik</a>, odota, kunnes koot todella latautuvat, ja käytä sitten<strong>Kopioi kuvan URL-osoite</strong>Joten pidät toimivan HTTPS-linkin arvatun tiedostonimen sijaan, joka aiheuttaa 404-virheen.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Poimijoiden käyttämä työnkulku: julkinen katseluosoite → videon tunnus → julkinen pikkukuvan URL YouTuben kuvapalvelimella.</p>"
+    },
+    {
+      "heading": "Mikä on YouTube-pikkukuvan URL-osoite?",
+      "html": "<p>YouTuben pikkukuvan URL-osoite osoittaa still-kuvatiedostoon, ei videosoittimeen. Se sijaitsee YouTuben julkisella kuva-CDN:llä (yleensä<code>i.ytimg.com</code>). Kun osoite toimii, selaimesi lataa JPEG- tai WebP-tiedoston. Kun se ei toimi, saat puuttuvan tiedoston tai harmaan paikkamerkin – ei tyhjästä keksittyä ”HD”-tiedostoa.</p>\n  <p>Sillä on merkitystä blogeissa, Open Graph -esikatseluissa, suunnittelumalleissa ja sisällönhallintajärjestelmien esillä olevien kuvien kentissä: nämä järjestelmät tarvitsevat kuvan URL-osoitteen, eivät<code>youtube.com/watch?v=…</code>Jos tarvitset tiedostoa vain levyllä, käytä<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">latausopas</a>tämän URL-osoitteeseen keskittyvän sivun sijaan.</p>"
+    },
+    {
+      "heading": "Miten URL-osoite liittyy videotunnukseen",
+      "html": "<p>YouTube luokittelee julkiset still-kuvat videon ID:n mukaan. Tavallinen JPEG-muoto on:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Joissakin videoissa julkaistaan ​​myös WebP-kaksosia alla<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>on tasan 11 merkkiä joukosta<code>A–Z a–z 0–9 _ -</code>Vaihda ID:tä ja osoitat eri videon still-kuvia. Vaihda tiedostonimeä ja pyydät saman videon eri julkista versiota.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Julkisen pikkukuvan URL-osoitteen rakenne: isäntä, polku, videotunnus ja koko, tiedostonimi.</p>"
+    },
+    {
+      "heading": "YouTube-videon tunnuksen löytäminen",
+      "html": "<p>Tarvitset vain tunnuksen. Lisäkyselyparametreja, kuten soittolistan tunnuksia tai<code>pp=</code>Älä muuta pikkukuvan isäntäpolkua.</p>\n  <table>\n    <thead>\n      <tr><th>YouTuben URL-osoitteen muoto</th><th>Esimerkki</th><th>Missä henkilöllisyystodistus sijaitsee</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Katsella</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>kyselyn arvo</td></tr>\n      <tr><td>Lyhyt linkki</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Ensimmäinen reitin osa</td></tr>\n      <tr><td>Shortsit</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Polku jälkeen<code>/shorts/</code></td></tr>\n      <tr><td>Upottaa</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Polku jälkeen<code>/embed/</code></td></tr>\n      <tr><td>Elää</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Polku jälkeen<code>/live/</code></td></tr>\n      <tr><td>evästeetön upotus</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Sama kuin upotettu</td></tr>\n    </tbody>\n  </table>\n  <p>11tik:n jäsennin hyväksyy nuo muodot (ja pelkät 11-merkkiset tunnukset). Kanavan tai soittolistan URL-osoite ilman videotunnusta ei riitä yhdeksi pikkukuvan URL-osoitteeksi.</p>"
+    },
+    {
+      "heading": "Yleisiä julkisia pikkukuvien tiedostonimiä",
+      "html": "<p>Tiedostonimet kuvaavat kokoluokkia, joita YouTube saattaa julkaista tai olla julkaisematta tietylle lataukselle. Nimet eivät takaa tiedoston olemassaoloa.</p>\n  <table>\n    <thead>\n      <tr><th>Tiedostonimi</th><th>Tyypilliset pikselit, jos niitä on</th><th>Muistiinpanoja</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280 × 720</td><td>Korkein yhteinen yleisö edelleen julkaistuna</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720-luokka</td><td>Toinen korkea taso, jotkut videot paljastavat</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640 × 480</td><td>Usein saatavilla, kun maxres puuttuu</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480 × 360</td><td>Hyvin yleinen keskikokoinen</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320 × 180</td><td>Pieni esikatselu</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120 × 90</td><td>Pienin vakiokokoinen still-patteri</td></tr>\n    </tbody>\n  </table>\n  <p>Pikselitason yksityiskohtien ja sen osalta, milloin tiettyä kokoa kannattaa suosia toisen sijaan, katso<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">pikkukuvien koko- ja resoluutio-opas</a>Miksi<code>maxresdefault.jpg</code>usein puuttuu, ks.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">mikä on maxresdefault?</a>.</p>"
+    },
+    {
+      "heading": "Toimiva esimerkki julkisella videotunnuksella",
+      "html": "<p>Ota julkisen demon tunnus<code>dQw4w9WgXcQ</code>Seuranta-URL-osoite on:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Ehdokkaan maxres JPEG URL on:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Avaa kyseinen osoite uudessa välilehdessä. Jos kuva latautuu, sinulla on toimiva pikkukuvan URL-osoite. Jos se epäonnistuu, kokeile seuraavaa tiedostonimeä (esimerkiksi<code>hqdefault.jpg</code>) tai liitä katselulinkki 11tik-kansioon, jotta vain jäljellä olevat tiedostot listataan. Älä koskaan oleta, että jokaisella videolla on maksimiarvo.</p>"
+    },
+    {
+      "heading": "Kolme tapaa hakea kuvan URL-osoite",
+      "html": "<h3>1. Nopein: kopioi sivulta 11tik</h3>\n  <ol>\n    <li>Kopioi julkisen katselun, lyhytvideon, live-lähetyksen, upotuksen tai youtu.be URL-osoite.</li>\n    <li>Avata<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Liitä URL-osoite ja odota, kunnes esikatselut tulevat näkyviin.</li>\n    <li>Valita<strong>Kopioi kuvan URL-osoite</strong>tarvitsemasi koon mukaan.</li>\n  </ol>\n  <p>11tik tarkistaa vastaukset selaimessasi ja näyttää vain koot, jotka palauttavat oikean kuvan. Tämä on ero käytettävän CMS-linkin ja rikkinäisen välillä.<code>maxresdefault</code>arvaus.</p>\n\n  <h3>2. Selainmenetelmä</h3>\n  <p>Kun sinulla on ehdokas<code>i.ytimg.com</code>osoitteen, avaa se uuteen välilehteen. Jos näkyy edelleen, kopioi osoiterivi. Jos näet virheen tai tyhjän/paikkamerkkiruudun, kyseistä kokoa ei ole koskaan julkaistu kyseiselle tunnukselle – älä linkitä sitä pikalinkillä.</p>\n\n  <h3>3. Luo URL-osoite käsin</h3>\n  <p>Voit ketjuttaa isäntä +<code>/vi/</code>+ ID + tiedostonimi itse. Käsin luodut URL-osoitteet sopivat testaukseen, mutta niitä ei ole turvallista liittää tuotanto-HTML-tiedostoon ennen kuin olet vahvistanut vastauksen. Saatavuus vaihtelee latausiän, lähdekuvan ja YouTube Studion käsittelytilan mukaan.</p>"
+    },
+    {
+      "heading": "Parhaan saatavilla olevan URL-osoitteen valitseminen",
+      "html": "<p>”Paras” tarkoittaa suurinta olemassa olevaa julkista tiedostoa, ei pisintä kirjoittamaasi tiedostonimeä. Suosi validoitua maxres- tai hq720-linkkiä, jos sellainen on. Jos ne eivät toimi, siirry käyttämään sd-, hq-, mq- tai default-muotoa. 480×360-kokoisen still-kuvan skaalaaminen 1280×720-kokoiseksi editorissa ei luo todellista maxres-URL-osoitetta.</p>\n  <p>Mukautettua taidetta lataavien sisällöntuottajien tulisi silti vahvistaa julkiset, livenä tehdyt kuvat jälkikäteen – studion käsittelyssä voi olla viiveitä:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studion pikkukuvat vuonna 2026</a>.</p>"
+    },
+    {
+      "heading": "URL-osoitteen käyttäminen toisella verkkosivustolla",
+      "html": "<p>Voit liittää työtiedoston<code>i.ytimg.com</code>URL-osoitteen lisääminen moniin sisällönhallintajärjestelmän kenttiin, mutta pikalinkitykseen liittyy riskejä: YouTube voi muuttaa CDN-polkuja, ja jotkut verkostot estävät kolmannen osapuolen isännöintipalvelut. Jos haluat kestävän blogikuvan tai Open Graph -tunnisteen, lataa vahvistettu still-kuva ja isännöi kopiota omalla verkkotunnuksellasi. Vaihe vaiheittain:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTube-pikkukuva blogikuvana / Open Graph -kuvana</a>.</p>\n  <p>Tekijänoikeus pysyy lataajalla. Julkinen URL-osoite ei ole lupa julkaista taideteosta uudelleen omana kansikuvana. Katso YouTuben ohjeet.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">mukautetut videopikkukuvat</a>ja 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+    },
+    {
+      "heading": "Vianmääritys rikkinäisille pikkukuvien URL-osoitteille",
+      "html": "<ul>\n    <li><strong>404 tai paikkamerkki:</strong>Tuota kokoa ei koskaan julkaistu. Kokeile toista tiedostonimeä tai käytä 11tik:n validoitua listaa.</li>\n    <li><strong>Väärä video:</strong>Väärin kirjoitettu tunnus. Kopioi uudelleen kellon URL-osoitteesta.</li>\n    <li><strong>Yksityinen / ikärajoitettu / poistettu:</strong>ei vieläkään julkista linkitystä.</li>\n    <li><strong>HTTP-sekoitettu sisältö:</strong>käytä aina<code>https://</code>kuvien URL-osoitteet HTTPS-sivustoilla.</li>\n    <li><strong>Shortsit näyttävät postilaatikon muotoisilta:</strong>Monet Shorts-videot tallentavat edelleen vaakasuuntaisia ​​julkisia tiedostoja. URL-osoite on edelleen virallinen julkinen osoite.</li>\n  </ul>"
+    },
+    {
+      "heading": "Seuraava vaihe",
+      "html": "<p>Liitä julkinen YouTube-URL-osoite<a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>, kopioi validoitu kuvalinkki tai<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">lataa still-kuva</a>jos tarvitset paikallisen tiedoston. Avaa resoluutiovaihtoehdot<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">koko- ja laatuopas</a>.</p>\n\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan kuvankeruuohjelman julkaisija. Vain julkisia still-kuvia – ei video- tai äänitiedostojen latausta.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voinko kopioida pikkukuvan suoran URL-osoitteen lataamatta tiedostoa?",
+      "answer": "Kyllä. Käytä 11tik-kohdassa Kopioi kuvan URL-osoite -toimintoa. Se kopioi HTTPS-kuvan osoitteen, jonka koko on jo vahvistettu selaimessasi.",
+      "answerHtml": "<p>Kyllä. Käytä 11tik-kohdassa Kopioi kuvan URL-osoite -toimintoa. Se kopioi HTTPS-kuvan osoitteen, jonka koko on jo vahvistettu selaimessasi.</p>"
+    },
+    {
+      "question": "Voinko saada YouTube-lyhytvideon pikkukuvan URL-osoitteen?",
+      "answer": "Kyllä, kun Shorts-video on julkinen ja YouTube on julkaissut still-kuvia kyseisestä tunnuksesta. Liitä /shorts/-linkki samalla tavalla kuin liität katseluosoitteen. Katso myös Shorts-videoiden pikkukuvat.",
+      "answerHtml": "<p>Kyllä, kun lyhytvideo on julkinen ja YouTube on julkaissut still-kuvia kyseisestä tunnuksesta. Liitä<code>/shorts/</code>linkitä samalla tavalla kuin liität katseluosoitteen. Katso myös<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Lyhytvideoiden pikkukuvat</a>.</p>"
+    },
+    {
+      "question": "Miksi yksi pikkukuvan URL-osoite toimii, kun taas toinen palauttaa virheen?",
+      "answer": "Tiedostonimet ovat valinnaisia ​​julkisia johdannaisia. hqdefault.jpg voi olla olemassa, vaikka maxresdefault.jpg ei olisi. Toimiva keskikokoinen URL-osoite ei tarkoita toimivaa maxres-URL-osoitetta.",
+      "answerHtml": "<p>Tiedostonimet ovat valinnaisia ​​julkisia johdannaisia.<code>hqdefault.jpg</code>voi olla olemassa, kun<code>maxresdefault.jpg</code>ei. Toimiva keskikokoinen URL-osoite ei tarkoita toimivaa maxres-URL-osoitetta.</p>"
+    },
+    {
+      "question": "Voinko käyttää suoraa kuvan URL-osoitetta verkkosivustollani?",
+      "answer": "Teknisesti ottaen kyllä, jos tiedosto on olemassa, mutta oman kopion ylläpitäminen on luotettavampi tapa esitellä kuvia ja esikatsella sosiaalisen median kanavia. Älä julkaise jonkun toisen taidetta kanavasi kansikuvana ilman oikeuksia.",
+      "answerHtml": "<p>Teknisesti ottaen kyllä, jos tiedosto on olemassa, mutta oman kopion ylläpitäminen on luotettavampi tapa esitellä kuvia ja esikatsella sosiaalisen median kanavia. Älä julkaise jonkun toisen taidetta kanavasi kansikuvana ilman oikeuksia.</p>"
+    },
+    {
+      "question": "Onko katselun URL-osoite koskaan pikkukuvan URL-osoite?",
+      "answer": "Ei. Katselu-URL-osoite identifioi videon. Pienoiskuvan URL-osoite identifioi kuvatiedoston kuva-CDN:ssä.",
+      "answerHtml": "<p>Ei. Katselu-URL-osoite identifioi videon. Pienoiskuvan URL-osoite identifioi kuvatiedoston kuva-CDN:ssä.</p>"
+    },
+    {
+      "question": "Keksiikö 11tik korkeamman resoluution URL-osoitteen?",
+      "answer": "Ei. Se listaa vain julkiset tiedostot, jotka vastaavat kuvina. Puuttuva maxres tarkoittaa, että URL-osoitetta ei tule kopioida.",
+      "answerHtml": "<p>Ei. Se listaa vain julkiset tiedostot, jotka vastaavat kuvina. Puuttuva maxres tarkoittaa, että URL-osoitetta ei tule kopioida.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan kuvankeruuohjelman julkaisija. Vain julkisia still-kuvia – ei video- tai äänitiedostojen latausta.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+}

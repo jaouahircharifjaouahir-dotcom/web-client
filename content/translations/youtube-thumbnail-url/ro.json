@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "ro",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Cum să obții o adresă URL pentru miniatura YouTube direct dintr-un videoclip | 11tik",
+  "description": "Creați sau copiați o adresă URL funcțională pentru miniatura YouTube din ID-ul videoclipului de pe i.ytimg.com. Confirmați că dimensiunea există înainte de a o adăuga ca link direct.",
+  "h1": "Cum să obții o adresă URL pentru miniatura YouTube direct dintr-un videoclip",
+  "ogTitle": "Cum să obții o adresă URL pentru miniatura YouTube direct dintr-un videoclip",
+  "ogDescription": "Creați sau copiați o adresă URL funcțională pentru miniatura YouTube din ID-ul videoclipului de pe i.ytimg.com. Confirmați că dimensiunea există înainte de a o adăuga ca link direct.",
+  "imageAlt": "Diagramă care arată o adresă URL de vizionare YouTube convertită într-un ID de videoclip și apoi o adresă URL a unei imagini miniatură",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Diagramă care arată o adresă URL de vizionare YouTube convertită într-un ID de videoclip și apoi o adresă URL a unei imagini miniatură",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Anatomia etichetată a unei adrese URL de miniatură YouTube care arată gazda, calea, ID-ul videoclipului și numele fișierului",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Răspuns rapid",
+      "html": "<p>Pentru a obține o adresă URL pentru miniatura YouTube: găsiți ID-ul videoclipului format din 11 caractere, apoi deschideți o adresă de imagine publică confirmată, cum ar fi<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>Adresa URL a paginii de vizionare nu este imaginea. Inserați linkul videoclipului în<a href=\"https://www.11tik.com/\">11tik</a>, așteptați dimensiunile care se încarcă efectiv, apoi utilizați<strong>Copiați adresa URL a imaginii</strong>deci păstrezi un link HTTPS funcțional în loc de un nume de fișier ghicit care provoacă erori 404.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Fluxul utilizat de extractoare: URL public de vizionare → ID videoclip → URL public al miniaturii pe gazda de imagini YouTube.</p>"
+    },
+    {
+      "heading": "Ce este o adresă URL pentru miniaturi YouTube",
+      "html": "<p>O adresă URL pentru miniaturi YouTube indică un fișier de imagine statică, nu playerul video. Aceasta se află pe CDN-ul public de imagini al YouTube (de obicei<code>i.ytimg.com</code>). Când adresa funcționează, browserul descarcă un fișier JPEG sau WebP. Când nu funcționează, primești un fișier lipsă sau un provizoriu gri - nu „HD” inventat de nicăieri.</p>\n  <p>Acest lucru este important pentru bloguri, previzualizări Open Graph, machete de design și câmpuri de imagini recomandate în CMS: aceste sisteme au nevoie de o adresă URL a imaginii, nu<code>youtube.com/watch?v=…</code>Dacă aveți nevoie doar de fișierul de pe disc, utilizați<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">descărcați ghidul</a>în loc de această pagină axată pe URL-uri.</p>"
+    },
+    {
+      "heading": "Cum se leagă adresa URL de ID-ul videoclipului",
+      "html": "<p>YouTube cheie fotografiile publice în funcție de ID-ul videoclipului. Modelul JPEG obișnuit este:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Unele videoclipuri publică și gemeni WebP sub<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>are exact 11 caractere din set<code>A–Z a–z 0–9 _ -</code>Dacă schimbi ID-ul, vei indica spre imaginile statice ale unui alt videoclip. Dacă schimbi numele fișierului, vei solicita o versiune publică diferită a aceluiași videoclip.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatomia unei adrese URL publice pentru miniaturi: gazdă, cale, ID-ul videoclipului și dimensiunea numelui fișierului.</p>"
+    },
+    {
+      "heading": "Cum să găsești ID-ul videoclipului YouTube",
+      "html": "<p>Aveți nevoie doar de ID. Parametri de interogare suplimentari, cum ar fi ID-urile playlistului sau<code>pp=</code>Nu modificați calea gazdei miniaturii.</p>\n  <table>\n    <thead>\n      <tr><th>Formatul URL-ului YouTube</th><th>Exemplu</th><th>Unde se află ID-ul</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ceas</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>valoare a interogării</td></tr>\n      <tr><td>Legătură scurtă</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Primul segment de cale</td></tr>\n      <tr><td>Pantaloni scurţi</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Calea după<code>/shorts/</code></td></tr>\n      <tr><td>Încorporare</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Calea după<code>/embed/</code></td></tr>\n      <tr><td>Trăi</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Calea după<code>/live/</code></td></tr>\n      <tr><td>fără încorporare de cookie-uri</td><td><code>youtube-nocookie.com/embed/…</code></td><td>La fel ca încorporare</td></tr>\n    </tbody>\n  </table>\n  <p>Parserul 11tik acceptă aceste forme (și ID-uri simple de 11 caractere). O adresă URL a unui canal sau a unei liste de redare fără ID de videoclip nu este suficientă pentru o singură adresă URL de miniatură.</p>"
+    },
+    {
+      "heading": "Nume comune de fișiere miniatură publice",
+      "html": "<p>Numele fișierelor descriu nivelurile de dimensiune pe care YouTube le poate publica sau nu pentru o anumită încărcare. Numele nu garantează existența fișierului.</p>\n  <table>\n    <thead>\n      <tr><th>Nume de fișier</th><th>Pixeli tipici atunci când sunt prezenți</th><th>Note</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Cel mai înalt nivel public comun la publicare</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Clasa 1280×720</td><td>Un alt nivel înalt, unele videoclipuri expun</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Adesea disponibil când lipsește maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Foarte comună, mărime medie</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Previzualizare mică</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Cel mai mic standard încă</td></tr>\n    </tbody>\n  </table>\n  <p>Pentru detalii la nivel de pixel și pentru a afla când să preferați o dimensiune față de alta, consultați<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid pentru dimensiunea și rezoluția miniaturilor</a>De ce<code>maxresdefault.jpg</code>lipsește adesea, vezi<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ce este maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "Exemplu funcțional cu un ID video public",
+      "html": "<p>Luați ID-ul public demo<code>dQw4w9WgXcQ</code>O adresă URL de vizionare este:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>O adresă URL JPEG cu rezoluție maximă candidată este:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Deschideți adresa respectivă într-o filă nouă. Dacă imaginea se încarcă, aveți o adresă URL funcțională pentru miniatură. Dacă eșuează, încercați următorul nume de fișier (de exemplu<code>hqdefault.jpg</code>) sau lipiți linkul de vizionare în 11tik, astfel încât să fie listate doar fișierele supraviețuitoare. Nu presupuneți niciodată că fiecare videoclip are rezoluție maximă.</p>"
+    },
+    {
+      "heading": "Trei modalități de a recupera adresa URL a imaginii",
+      "html": "<h3>1. Cel mai rapid: copiere din 11tik</h3>\n  <ol>\n    <li>Copiați o adresă URL publică de vizionare, Shorts, live, embed sau youtu.be.</li>\n    <li>Deschide<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Lipiți adresa URL și așteptați până când apar previzualizările.</li>\n    <li>Alege<strong>Copiați adresa URL a imaginii</strong>pe dimensiunea de care aveți nevoie.</li>\n  </ol>\n  <p>11tik verifică răspunsurile din browser și afișează doar dimensiunile care returnează o imagine reală. Aceasta este diferența dintre un link CMS utilizabil și un link nefuncțional.<code>maxresdefault</code>ghici.</p>\n\n  <h3>2. Metoda browserului</h3>\n  <p>După ce ai un candidat<code>i.ytimg.com</code>Adresă, deschideți-o într-o filă nouă. Dacă afișarea se face în continuare, copiați bara de adrese. Dacă vedeți o eroare sau o dală goală/substitut, înseamnă că dimensiunea respectivă nu a fost publicată niciodată pentru ID-ul respectiv - nu o conectați direct.</p>\n\n  <h3>3. Construiți URL-ul manual</h3>\n  <p>Puteți concatena gazda +<code>/vi/</code>+ ID + numele fișierului. Adresele URL create manual sunt acceptabile pentru testare, dar nu sunt sigure pentru inserarea lor în HTML-ul de producție până când nu verificați răspunsul. Disponibilitatea variază în funcție de vechimea încărcării, grafica sursă și starea de procesare în YouTube Studio.</p>"
+    },
+    {
+      "heading": "Alegerea celei mai bune adrese URL disponibile",
+      "html": "<p>„Cel mai bun” înseamnă cel mai mare fișier public care există de fapt, nu cel mai lung nume de fișier pe care îl puteți tasta. Preferați un link maxres sau hq720 validat, atunci când este prezent. Dacă acestea eșuează, treceți la sd, hq, mq sau implicit. Micșorarea unei imagini statice de 480×360 la 1280×720 într-un editor nu creează o adresă URL maxres reală.</p>\n  <p>Creatorii care încarcă imagini personalizate ar trebui să confirme în continuare derivatele publice live ulterior - procesarea în Studio poate avea întârzieri. Legate de:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniaturi YouTube Studio în 2026</a>.</p>"
+    },
+    {
+      "heading": "Utilizarea adresei URL pe un alt site web",
+      "html": "<p>Puteți lipi un fișier funcțional<code>i.ytimg.com</code>URL în multe câmpuri CMS, dar linkurile directe prezintă riscuri: YouTube poate modifica căile CDN, iar unele rețele blochează gazdele terțe. Pentru o imagine recomandată de blog durabilă sau o etichetă Open Graph, descărcați imaginea statică confirmată și găzduiți o copie pe propriul domeniu. Ghid:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Miniatură YouTube ca imagine de blog / Open Graph</a>.</p>\n  <p>Drepturile de autor rămân la cel care a încărcat lucrarea. O adresă URL publică nu este o licență pentru a republica lucrarea ca propria copertă. Consultați ajutorul YouTube pe<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">miniaturi video personalizate</a>și 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    },
+    {
+      "heading": "Depanarea URL-urilor de miniaturi defecte",
+      "html": "<ul>\n    <li><strong>404 sau provizoriu:</strong>acea dimensiune nu a fost niciodată publicată. Încercați un alt nume de fișier sau folosiți lista validată a 11tik.</li>\n    <li><strong>Videoclip greșit:</strong>ID introdus greșit. Copiați din nou adresa URL a ceasului.</li>\n    <li><strong>Privat / restricționat în funcție de vârstă / șters:</strong>încă nu există niciun public care să ofere link.</li>\n    <li><strong>Conținut mixt HTTP:</strong>folosește întotdeauna<code>https://</code>URL-uri de imagini pe site-uri HTTPS.</li>\n    <li><strong>Pantalonii scurți arată ca niște letterbox-uri:</strong>Multe Shorts încă stochează fișiere publice în format peisaj. Adresa URL este încă adresa publică oficială.</li>\n  </ul>"
+    },
+    {
+      "heading": "Pasul următor",
+      "html": "<p>Lipiți o adresă URL publică de YouTube în<a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>, copiați linkul imaginii validate sau<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">descărcați imaginea statică</a>dacă aveți nevoie de un fișier local. Pentru opțiuni de rezoluție, deschideți<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de mărime și calitate</a>.</p>\n\n  <p class=\"yte-bio\">Scris de 11tik, editorul extractorului în browser. Doar fotografii publice — fără descărcare video sau audio.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pot copia adresa URL directă a miniaturii fără a descărca fișierul?",
+      "answer": "Da. Pe 11tik, folosiți opțiunea „Copiere URL imagine”. Aceasta copiază adresa imaginii HTTPS pentru o dimensiune deja validată în browser.",
+      "answerHtml": "<p>Da. Pe 11tik, folosiți opțiunea „Copiere URL imagine”. Aceasta copiază adresa imaginii HTTPS pentru o dimensiune deja validată în browser.</p>"
+    },
+    {
+      "question": "Pot obține o adresă URL pentru miniatură dintr-un videoclip YouTube Short?",
+      "answer": "Da, când videoclipul scurt este public și YouTube a publicat imagini statice pentru acel ID. Inserați un link /shorts/ în același mod în care inserați o adresă URL de vizionare. Vedeți și miniaturile videoclipurilor scurte.",
+      "answerHtml": "<p>Da, când scurtmetrajul este public și YouTube a publicat imagini statice pentru acel ID. Inserați un<code>/shorts/</code>link în același mod în care lipești o adresă URL de vizionare. Vezi și<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniaturi pentru scurtmetraje</a>.</p>"
+    },
+    {
+      "question": "De ce funcționează o adresă URL pentru miniatură, în timp ce alta returnează o eroare?",
+      "answer": "Numele de fișiere sunt derivate publice opționale. hqdefault.jpg poate exista atunci când maxresdefault.jpg nu există. O adresă URL funcțională de dimensiune medie nu implică o adresă URL maxres funcțională.",
+      "answerHtml": "<p>Numele de fișiere sunt derivate publice opționale.<code>hqdefault.jpg</code>poate exista atunci când<code>maxresdefault.jpg</code>nu. O adresă URL funcțională de dimensiune medie nu implică o adresă URL maxres funcțională.</p>"
+    },
+    {
+      "question": "Pot folosi adresa URL directă a imaginii pe site-ul meu web?",
+      "answer": "Tehnic, da, dacă fișierul există, dar găzduirea propriei copii este mai fiabilă pentru imaginile recomandate și previzualizările pe rețelele sociale. Nu republicați lucrările altcuiva ca copertă a canalului dvs. fără drepturi.",
+      "answerHtml": "<p>Tehnic, da, dacă fișierul există, dar găzduirea propriei copii este mai fiabilă pentru imaginile recomandate și previzualizările pe rețelele sociale. Nu republicați lucrările altcuiva ca copertă a canalului dvs. fără drepturi.</p>"
+    },
+    {
+      "question": "URL-ul pentru vizionare este vreodată URL-ul pentru miniatură?",
+      "answer": "Nu. Adresa URL pentru vizionare identifică videoclipul. Adresa URL pentru miniatură identifică un fișier de imagine pe CDN-ul de imagini.",
+      "answerHtml": "<p>Nu. Adresa URL pentru vizionare identifică videoclipul. Adresa URL pentru miniatură identifică un fișier de imagine pe CDN-ul de imagini.</p>"
+    },
+    {
+      "question": "Inventează 11tik un URL cu rezoluție mai mare?",
+      "answer": "Nu. Listează doar fișierele publice care răspund ca imagini. Lipsa valorilor maxres înseamnă că adresa URL nu trebuie copiată.",
+      "answerHtml": "<p>Nu. Listează doar fișierele publice care răspund ca imagini. Lipsa valorilor maxres înseamnă că adresa URL nu trebuie copiată.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul extractorului în browser. Doar fotografii publice — fără descărcare video sau audio.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+}

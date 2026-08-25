@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "ms",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Saiz & Resolusi Gambar Kecil YouTube: Panduan Lengkap | 11tik",
+  "description": "Bandingkan saiz lakaran kecil YouTube dari 120×90 hingga 1280×720. Maxres dan hq720 adalah pilihan—gunakan fail awam terbesar yang dimuatkan.",
+  "h1": "Saiz & Resolusi Gambar Kecil YouTube: Panduan Lengkap",
+  "ogTitle": "Saiz & Resolusi Gambar Kecil YouTube: Panduan Lengkap",
+  "ogDescription": "Bandingkan saiz lakaran kecil YouTube dari 120×90 hingga 1280×720. Maxres dan hq720 adalah pilihan—gunakan fail awam terbesar yang dimuatkan.",
+  "imageAlt": "Carta perbandingan saiz lakaran kecil YouTube awam daripada maxresdefault 1280 x 720 ke bawah kepada lalai 120 x 90",
+  "faqHeading": "Soalan Lazim",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Carta perbandingan saiz lakaran kecil YouTube awam daripada maxresdefault 1280 x 720 ke bawah kepada lalai 120 x 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Perbandingan bersebelahan yang menunjukkan video dengan maxresdefault tersedia berbanding video yang hanya mempunyai fail hqdefault yang lebih kecil",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jawapan pantas",
+      "html": "<p>Untuk muat naik tersuai, bantuan YouTube masih tertumpu pada<strong>16:9</strong>imej—biasanya<strong>1280×720</strong>. Untuk fail yang boleh anda muat turun daripada video sedia ada, terbitan CDN awam berbeza-beza. Apabila wujud,<code>maxresdefault</code>/<code>hq720</code>biasanya 1280×720. Banyak video berhenti di<code>sddefault</code>(640×480) atau<code>hqdefault</code>(480×360). Nama fail yang lebih tinggi tidak akan mencipta piksel. Tampal URL jam tangan ke dalam<a href=\"https://www.11tik.com/\">11tik</a>untuk menyenaraikan hanya saiz yang mengembalikan imej sebenar.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Saiz awam relatif. Bukan setiap video menerbitkan setiap anak tangga pada tangga ini.</p>"
+    },
+    {
+      "heading": "Dimensi yang disyorkan untuk pencipta",
+      "html": "<p>Jika anda mereka bentuk lakaran kecil tersuai dalam Studio, ikuti Bantuan YouTube semasa: sasarkan untuk<strong>16:9</strong>masih. Saiz kerja yang digunakan secara meluas ialah<strong>1280×720</strong>piksel. Itu sepadan dengan bingkai skrin lebar pemain dan merupakan kelas piksel yang sama seperti yang diterbitkan<code>maxresdefault</code>apabila YouTube menciptanya.</p>\n  <p>Rujukan rasmi:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Muat naik lakaran kecil video tersuai</a>Selepas Studio selesai memproses, sahkan fail awam langsung dengan 11tik dan bukannya menganggap setiap terbitan muncul serta-merta. Nota yang berfokus pada Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Gambar kecil YouTube Studio pada tahun 2026</a>.</p>"
+    },
+    {
+      "heading": "Saiz CDN awam yang sebenarnya boleh diambil oleh penonton",
+      "html": "<p>Pemuat turun dan blog tidak menarik Photoshop master anda. Ia menarik hos YouTube terbitan awam untuk ID video. Pengekstrak 11tik menyemak nama fail ini (JPEG dan, apabila ada, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Varian</th><th>Resolusi tipikal</th><th>Peringkat</th><th>Ketersediaan</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Terbaik</td><td>Hanya jika YouTube menerbitkan WebP maxres</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Terbaik</td><td>Biasa pada muat naik yang lebih baharu/berkualiti tinggi; sering tiada pada muat naik yang lebih lama</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Kelas 1280×720</td><td>Terbaik</td><td>Muncul pada beberapa video sebagai fail tinggi alternatif</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Tinggi</td><td>Selalunya tersedia apabila maxres tiada</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Piawai</td><td>Sangat biasa</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Pratonton</td><td>Pratonton/senarai kecil</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Pratonton</td><td>Standard terkecil lagi</td></tr>\n    </tbody>\n  </table>\n  <p>Lebar dan ketinggian yang dijangkakan ini sepadan dengan pratetap kualiti 11tik. Respons sebenar masih boleh berbeza jika YouTube menyediakan ruang letak atau meninggalkan fail sepenuhnya—sentiasa sahkan.</p>"
+    },
+    {
+      "heading": "Mengapa 16:9 penting walaupun fail berbeza",
+      "html": "<p>Pemain jam tangan ini skrin lebar. Seni tersuai yang direka pada 16:9 kekal boleh dibaca dalam carian, rak yang dicadangkan dan benamkan. Beberapa fail awam (terutamanya<code>hqdefault</code>/<code>sddefault</code>) bukanlah kotak 16:9 yang ketat; ia adalah saiz CDN yang lebih lama. Lebih suka imej awam 1280×720 yang sebenar apabila anda memerlukan aset 16:9 yang bersih untuk Open Graph atau pengepala blog.</p>\n  <p>Filem pendek dimainkan secara menegak, tetapi penonton awam yang disimpan masih sering bersifat landskap. Itu adalah tingkah laku hos, bukan muat turun yang gagal. Butiran:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Muat turun lakaran kecil seluar pendek</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault lawan hq720 lawan “HD”",
+      "html": "<p><code>maxresdefault</code>ialah nama fail HD yang biasa pada<code>i.ytimg.com</code>Apabila fail itu wujud, ia biasanya 1280×720—bukan 4K.<code>hq720</code>merupakan satu lagi nama peringkat tinggi yang didedahkan oleh sesetengah video pada kelas resolusi yang sama. Kedua-dua nama ini tidak menjamin fail tersebut. Alat yang mencetak URL maksimum tanpa menyemak menghasilkan imej yang rosak.</p>\n  <p>Nota nama fail yang lebih mendalam:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">apakah maxresdefault.jpg itu</a>dan<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">lakaran kecil awam berkualiti tinggi</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Corak permintaan yang sama, hasil yang berbeza: nama fail yang lebih tinggi tidak mencipta piksel apabila fail hilang.</p>"
+    },
+    {
+      "heading": "Mengapa satu video mempunyai lebih banyak saiz daripada yang lain",
+      "html": "<ul>\n    <li>Muat naik yang lebih lama mungkin tidak pernah menerima terbitan maxres.</li>\n    <li>Karya seni sumber adalah lebih kecil daripada 1280×720.</li>\n    <li>Gambar kecil tersuai masih diproses di Studio.</li>\n    <li>Video peribadi, khusus ahli atau video terhad umur tidak boleh mendedahkan gambar pegun awam.</li>\n    <li>Varian WebP hanya muncul apabila YouTube menerbitkannya untuk ID tersebut.</li>\n  </ul>\n  <p>Ketersediaan adalah berdasarkan setiap video. Jangan sekali-kali menganggap URL maksres pesaing yang berfungsi sebagai bukti bahawa URL anda wujud.</p>"
+    },
+    {
+      "heading": "Bagaimana 11tik memilih saiz “terbaik”",
+      "html": "<p>11tik menyiasat calon awam dalam susunan kualiti tetap (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → lalai). Ia menyimpan fail yang disahkan sebagai imej dan meletakkan yang paling selamat dahulu. Ia tidak meningkatkan taraf. Jika maxres tiada, kad pertama mungkin hq720 atau sd—iaitu maksimum jujur ​​untuk ID tersebut.</p>\n  <p>Untuk menyalin alamat saiz yang dipilih, gunakan<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">panduan URL lakaran kecil</a>Untuk menyimpan fail, gunakan<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">panduan muat turun</a>.</p>"
+    },
+    {
+      "heading": "Saiz yang manakah patut anda gunakan?",
+      "html": "<table>\n    <thead>\n      <tr><th>Kes penggunaan</th><th>Lebih suka</th><th>Mengapa</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Imej pilihan blog / Graf Terbuka</td><td>Terbesar yang disahkan ~1280×720</td><td>Memadankan tanaman sosial biasa; hoskan salinan anda sendiri</td></tr>\n      <tr><td>Kajian mockup/lakaran kecil reka bentuk</td><td>Awam terbaik yang masih tersedia</td><td>Pembungkusan sebenar, bukan tangkapan skrin pemain</td></tr>\n      <tr><td>Pratonton sembang pantas</td><td>hq atau mq</td><td>Fail yang lebih kecil dimuatkan dengan lebih pantas</td></tr>\n      <tr><td>Muat naik tersuai dalam Studio</td><td>Asal 16:9 1280×720 (atau lebih tinggi) anda</td><td>Anda mencipta seni; derivatif CDN datang kemudian</td></tr>\n    </tbody>\n  </table>\n  <p>Jangan panjangkan hqdefault kepada 1280×720 dan panggil ia maxres. Untuk petua pengehosan CMS:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">imej pilihan / aliran kerja Graf Terbuka</a>Tangkapan skrin pemain adalah aset yang berbeza (lebih teruk):<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">tangkapan skrin vs lakaran kecil sebenar</a>.</p>"
+    },
+    {
+      "heading": "Langkah seterusnya",
+      "html": "<p>Tonton video langsung di<a href=\"https://www.11tik.com/\">Pengekstrak 11tik</a>, maka sama ada<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">salin URL imej</a>atau<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">muat turun yang terbaik yang masih ada</a>.</p>\n\n  <p class=\"yte-bio\">Ditulis oleh 11tik. Saiz CDN awam sahaja; tiada penskalaan tambahan dan tiada muat turun video.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Adakah maxresdefault sentiasa tersedia?",
+      "answer": "Tidak. Banyak video awam tidak pernah menerbitkan fail itu. 404 pada maxres adalah perkara biasa.",
+      "answerHtml": "<p>Tidak. Banyak video awam tidak pernah menerbitkan fail itu. 404 pada maxres adalah perkara biasa.</p>"
+    },
+    {
+      "question": "Adakah hq720 lebih baik daripada varian thumbnail yang lain?",
+      "answer": "Apabila ia wujud, hq720 berada dalam tahap tinggi yang sama seperti maxres (kira-kira 1280×720). Ia tidak secara automatik \"lebih baik\" daripada fail maxres yang disahkan, dan ia tidak dijamin.",
+      "answerHtml": "<p>Apabila ia wujud, hq720 berada dalam tahap tinggi yang sama seperti maxres (kira-kira 1280×720). Ia tidak secara automatik \"lebih baik\" daripada fail maxres yang disahkan, dan ia tidak dijamin.</p>"
+    },
+    {
+      "question": "Apakah saiz yang terbaik untuk sesebuah laman web?",
+      "answer": "Gunakan imej awam ~16:9 yang disahkan terbesar (selalunya 1280×720), kemudian hoskan salinan di tapak anda untuk teg Open Graph dan imej pilihan yang stabil.",
+      "answerHtml": "<p>Gunakan imej awam ~16:9 yang disahkan terbesar (selalunya 1280×720), kemudian hoskan salinan di tapak anda untuk teg Open Graph dan imej pilihan yang stabil.</p>"
+    },
+    {
+      "question": "Mengapakah lakaran kecil beresolusi tinggi kadangkala gagal dimuatkan?",
+      "answer": "Nama fail telah diteka. YouTube tidak menerbitkan terbitan tersebut untuk ID video. Muatkan saiz sedia ada yang lebih kecil.",
+      "answerHtml": "<p>Nama fail telah diteka. YouTube tidak menerbitkan terbitan tersebut untuk ID video. Muatkan saiz sedia ada yang lebih kecil.</p>"
+    },
+    {
+      "question": "Adakah \"lakaran kecil HD\" bermaksud 4K?",
+      "answer": "Tidak. Resolusi maksimum awam biasanya 1280×720. 11tik masih tidak akan mencipta 4K.",
+      "answerHtml": "<p>Tidak. Resolusi maksimum awam biasanya 1280×720. 11tik masih tidak akan mencipta 4K.</p>"
+    },
+    {
+      "question": "Adakah imej kecil WebP berkualiti lebih tinggi daripada JPEG?",
+      "answer": "WebP ialah bekas lain untuk peringkat saiz yang sama apabila diterbitkan. Lebih baik fail 11tik disahkan; jangan anggap WebP sentiasa wujud.",
+      "answerHtml": "<p>WebP ialah bekas lain untuk peringkat saiz yang sama apabila diterbitkan. Lebih baik fail 11tik disahkan; jangan anggap WebP sentiasa wujud.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik. Saiz CDN awam sahaja; tiada penskalaan tambahan dan tiada muat turun video.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+}

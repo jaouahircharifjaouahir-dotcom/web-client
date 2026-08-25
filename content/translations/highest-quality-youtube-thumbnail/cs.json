@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "cs",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Jak získat miniaturu YouTube v nejvyšší kvalitě | 11tik",
+  "description": "Nejvyšší kvalita znamená, že se zobrazí největší veřejný soubor JPEG nebo WebP, který YouTube skutečně vrátí, nikoli uhádnutý název souboru v rozlišení 4K.",
+  "h1": "Jak získat miniaturu YouTube v nejvyšší kvalitě",
+  "ogTitle": "Jak získat miniaturu YouTube v nejvyšší kvalitě",
+  "ogDescription": "Nejvyšší kvalita znamená, že se zobrazí největší veřejný soubor JPEG nebo WebP, který YouTube skutečně vrátí, nikoli uhádnutý název souboru v rozlišení 4K.",
+  "imageAlt": "Nejvyšší dostupná veřejná miniatura YouTube vybraná v 11tik",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Nejvyšší dostupná veřejná miniatura YouTube vybraná v 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jak získám miniaturu na YouTube v nejvyšší kvalitě?",
+      "html": "<p>Vložte veřejnou URL adresu do<a href=\"https://www.11tik.com/\">11tik</a>a stáhněte si první uvedenou velikost. Extraktor seřadí přeživší veřejné soubory; neroztáhne malou fotografii do falešného HD rozlišení.</p>"
+    },
+    {
+      "heading": "Jaké je maximální veřejné rozlišení?",
+      "html": "<p>Když YouTube zveřejní maxresdefault, obvykle je to 1280×720. Pokud tento soubor chybí, nejvyšší kvalita je další platná velikost, například sd nebo hq.</p>"
+    },
+    {
+      "heading": "Záleží na WebP?",
+      "html": "<p>Některá videa mají také varianty WebP se stejnými názvy velikosti. 11tik je dokáže zobrazit, pokud existují. Vyberte soubor, který nástroj ověřil, ne uhodnutou URL adresu.</p>"
+    },
+    {
+      "heading": "Proč „HD“ někdy vypadá měkce?",
+      "html": "<p>Veřejné zobrazení může být stále 1280×720 s kompresí, nebo se možná díváte na hqdefault. Než se rozhodnete stahování selhat, zkontrolujte hlášení o velikosti pixelů 11tik.</p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Průvodce velikostmi</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jak získám miniaturu na YouTube v nejvyšší kvalitě?",
+      "answer": "Vložte veřejnou URL adresu do 11tik a stáhněte první uvedenou velikost. To je nejvyšší veřejný soubor, který YouTube ukládá.",
+      "answerHtml": "Vložte veřejnou URL adresu do 11tik a stáhněte první uvedenou velikost. To je nejvyšší veřejný soubor, který YouTube ukládá."
+    },
+    {
+      "question": "Je soubor s nejvyšší kvalitou 4K?",
+      "answer": "Obvykle ne. Veřejné maximální rozlišení je typicky 1280–720. 11tik neprovádí upscaling ani nevytváří větší master.",
+      "answerHtml": "Obvykle ne. Veřejné maximální rozlišení je obvykle 1280×720. 11tik neprovádí upscale ani nevytváří větší master."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

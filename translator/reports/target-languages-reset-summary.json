@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-08-25T20:45:00.000Z",
+  "policy": "GLOBAL_MAJOR_LANGUAGES_ONLY",
+  "sourceOfTruth": "config/target-languages.json",
+  "provider": "chrome_gtx",
+  "targetCount": 37,
+  "tier1Count": 24,
+  "tier2Count": 13,
+  "contentItems": 23,
+  "theoreticalJobs": 851,
+  "readyAfterPilot": 134,
+  "queuedRemaining": 717,
+  "pilot": {
+    "contentId": "11tik-share-links-thumb-vs-youtube",
+    "locales": 37,
+    "readyForMass": true,
+    "failed": 0
+  },
+  "massRollout": "NOT_STARTED_AWAITING_APPROVAL",
+  "production": {
+    "wranglerUnchanged": true,
+    "dnsUnchanged": true,
+    "wafUnchanged": true,
+    "noCommitNoPushNoDeploy": true
+  }
+}

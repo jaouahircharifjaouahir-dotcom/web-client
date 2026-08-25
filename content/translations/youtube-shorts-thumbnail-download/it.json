@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "it",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Come scaricare la miniatura di un video breve di YouTube in HD | 11tik",
+  "description": "Scarica l'anteprima di un video YouTube Shorts direttamente nel browser. Gli Shorts utilizzano le stesse immagini fisse pubbliche degli URL di visualizzazione. Il file è spesso in formato orizzontale.",
+  "h1": "Come scaricare la miniatura di un video breve di YouTube in HD",
+  "ogTitle": "Come scaricare la miniatura di un video breve di YouTube in HD",
+  "ogDescription": "Scarica l'anteprima di un video YouTube Shorts direttamente nel browser. Gli Shorts utilizzano le stesse immagini fisse pubbliche degli URL di visualizzazione. Il file è spesso in formato orizzontale.",
+  "imageAlt": "Scaricare una miniatura pubblica di YouTube Shorts in 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Scaricare una miniatura pubblica di YouTube Shorts in 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Come faccio a scaricare la miniatura di un video di YouTube Shorts?",
+      "html": "<p>Copia un URL che contiene /shorts/ più un ID video, incollalo in<a href=\"https://www.11tik.com/\">11tik</a>e scarica la dimensione indicata. L'estrazione inizia quando l'ID è valido.</p>"
+    },
+    {
+      "heading": "I file Shorts sono uguali ai file watch-page?",
+      "html": "<p>Utilizzano gli stessi nomi di dimensioni pubbliche, identificati tramite ID video. L'immagine fissa potrebbe apparire con bande nere laterali se YouTube ha memorizzato una versione widescreen.</p>"
+    },
+    {
+      "heading": "Cosa succede se non compare nessuna immagine?",
+      "html": "<p>Il cortometraggio potrebbe essere privato, eliminato o privo di immagini fisse pubbliche. L'estrattore non può aggirare tali limitazioni.</p>\n  <p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrattore</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Come scaricare</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Posso scaricare l'anteprima di un video di YouTube Shorts?",
+      "answer": "Sì, quando YouTube ha pubblicato le immagini fisse per quell'ID video Shorts.",
+      "answerHtml": "Sì, quando YouTube ha pubblicato le immagini fisse per quell'ID video Shorts."
+    },
+    {
+      "question": "Perché l'immagine appare ancora con le bande nere laterali?",
+      "answer": "YouTube potrebbe memorizzare una versione derivata in formato 16:9 anche per un video breve verticale. 11tik mostra il file ospitato invece di creare un ritaglio.",
+      "answerHtml": "YouTube potrebbe memorizzare una versione derivata in formato 16:9 anche per un video breve verticale. 11tik mostra il file ospitato invece di creare un ritaglio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>"
+}

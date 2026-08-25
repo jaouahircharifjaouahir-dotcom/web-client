@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "hi",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "11tik थंबनेल एक्सट्रैक्टर को एम्बेड करें | 11tik",
+  "description": "अपने ब्लॉग, दस्तावेज़ या क्रिएटर टूलकिट में एक निःशुल्क YouTube थंबनेल एक्सट्रैक्टर जोड़ें। विजेट 11tik से लोड होता है और स्वयं को रीसाइज़ करता है। किसी API कुंजी की आवश्यकता नहीं है।",
+  "h1": "11tik थंबनेल एक्सट्रैक्टर को एम्बेड करें",
+  "ogTitle": "11tik थंबनेल एक्सट्रैक्टर को एम्बेड करें",
+  "ogDescription": "अपने ब्लॉग, दस्तावेज़ या क्रिएटर टूलकिट में एक निःशुल्क YouTube थंबनेल एक्सट्रैक्टर जोड़ें। विजेट 11tik से लोड होता है और स्वयं को रीसाइज़ करता है। किसी API कुंजी की आवश्यकता नहीं है।",
+  "imageAlt": "",
+  "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+  "images": [],
+  "sections": [
+    {
+      "heading": "आईफ़्रेम स्निपेट",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "नियम",
+      "html": "<ul>\n    <li>अपने पास रखें<code>id=\"yte-app\"</code>विशेषता ताकि ऊंचाई का सिंक्रनाइज़ेशन काम करे।</li>\n    <li>डाउनलोड बटन को ढकने वाली निश्चित ऊंचाई वाले फ्रेम में iframe को रैप न करें।</li>\n    <li>वापस लिंक करना<a href=\"https://www.11tik.com/\">[[पी1]]</a>यह उपयोगकर्ताओं को पूरे टूल को खोलने में मदद करता है।</li>\n  </ul>"
+    },
+    {
+      "heading": "डीप लिंक्स",
+      "html": "<p>तैयार निष्कर्षण साझा करें<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">एक्सट्रैक्टर खोलें</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

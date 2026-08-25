@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "sv",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "Vad är maxresdefault.jpg? Varför det är 404 och vad man ska ladda ner istället | 11tik",
+  "description": "maxresdefault.jpg är vanligtvis 1280×720 när YouTube publicerade den. En 404 är normal – använd nästa riktiga offentliga stillbild, inte ett gissat filnamn.",
+  "h1": "Vad är maxresdefault.jpg? Varför det är 404 och vad man ska ladda ner istället",
+  "ogTitle": "Vad är maxresdefault.jpg? Varför det är 404 och vad man ska ladda ner istället",
+  "ogDescription": "maxresdefault.jpg är vanligtvis 1280×720 när YouTube publicerade den. En 404 är normal – använd nästa riktiga offentliga stillbild, inte ett gissat filnamn.",
+  "imageAlt": "Felsökningsflöde från en gissad maxresdefault-URL som får 404-fel till nästa validerade YouTube-miniatyrstorlek",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Felsökningsflöde från en gissad maxresdefault-URL som får 404-fel till nästa validerade YouTube-miniatyrstorlek",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "Stege med YouTube-miniatyrfilnamn från maxresdefault ner till standard som visar att saknade stegpinnar hoppas över",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snabbt svar",
+      "html": "<p><code>maxresdefault.jpg</code>är ett offentligt miniatyrfilnamn på YouTubes bild-CDN. När filen finns är den vanligtvis<strong>1280×720</strong>Det är<strong>inte</strong>garanteras för varje video. En 404 (eller en liten grå platshållare) betyder att den derivatan aldrig publicerades för det video-ID:t. Klistra in visnings-URL:en i<a href=\"https://www.11tik.com/\">11tik</a>och ladda ner den första listade storleken – verktyget har redan hoppat över saknade namn och rankat överlevande som<code>hq720</code>,<code>sddefault</code>, eller<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">En saknad maxres-fil är ett reservproblem, inte ett bevis på att videon saknar miniatyrbild.</p>"
+    },
+    {
+      "heading": "Vad är maxresdefault.jpg?",
+      "html": "<p>Det är ett filnamn, inte en magisk kvalitetsgaranti. Den vanliga JPEG-adressen ser ut så här:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>När YouTube också publicerade en WebP-tvilling kontrollerar 11tik:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Båda sitter på<code>i.ytimg.com</code>De är stillbilder – inte videoströmmen, inte en privat export från Studio och inte en 4K-master. Pixelförväntningar och andra storlekar täcks i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide för miniatyrstorlek och upplösning</a>URL-konstruktion behandlas i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>.</p>"
+    },
+    {
+      "heading": "Varför kan en riktig YouTube-video fortfarande returnera 404 för maxres?",
+      "html": "<ul>\n    <li>Äldre uppladdningar fick aldrig en maxres-derivata.</li>\n    <li>Den anpassade miniatyrbildskällan var mindre än 1280×720.</li>\n    <li>Studio bearbetar fortfarande en ny anpassad uppladdning.</li>\n    <li>Vissa Shorts och automatiskt genererade stillbilder slutar vid mellanstorlekar.</li>\n    <li>Videon är begränsad och visar inga offentliga stillbilder alls.</li>\n  </ul>\n  <p>En fungerande visningssida bevisar bara att video-ID:t är giltigt. Den bevisar inte alla filnamn under<code>/vi/</code>finns.</p>"
+    },
+    {
+      "heading": "Hur man känner igen en otillgänglig variant",
+      "html": "<p>Öppna den aktuella URL:en i en ny flik. Fel ser ut så här:</p>\n  <ul>\n    <li>HTTP-fel / tomt svar</li>\n    <li>En väldigt liten grå eller standardruta när du förväntade dig 1280×720</li>\n    <li>En bild som laddas men tydligt är en platshållare för en saknad högupplöst fil</li>\n  </ul>\n  <p>11tiks webbläsarvaliderare markerar kandidater som ogiltiga när bilden inte laddas eller när en hög förväntad storlek krymper till en liten platshållare (cirka 120×90). Dessa kandidater visas aldrig som \"falska HD\"-kort.</p>"
+    },
+    {
+      "heading": "Alternativvarianter 11tik kontrollerar faktiskt",
+      "html": "<p>Ordningsföljd för offentliga kandidater (högst först):</p>\n  <table>\n    <thead>\n      <tr><th>Filnamn</th><th>Banmönster</th><th>Typisk storlek när den finns</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720-klass</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Saknade rader hoppas över. Den första listade nedladdningen är den högst överlevande – inte det längsta namnet du skrev. Formatval mellan WebP och JPEG behandlas i<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP kontra JPEG YouTube-miniatyrer</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Behandla filnamn som valfria stegpinnar. Gå ner tills en riktig bild svarar.</p>"
+    },
+    {
+      "heading": "Hur 11tik kontrollerar tillgänglighet",
+      "html": "<ol>\n    <li>Analysera en URL för offentlig visning, Shorts, live, inbäddning eller youtu.be för det 11 tecken långa ID:t.</li>\n    <li>Skapa kandidat-URL:er från den förinställda listan ovan.</li>\n    <li>Ladda varje kandidat som en bild i webbläsaren.</li>\n    <li>Behåll endast framgångar som inte är platshållare; rangordna efter nivå, pixlar och en liten justering av WebP-poängen.</li>\n    <li>Visa den rankade listan så att du kan ladda ner eller kopiera en fungerande URL.</li>\n  </ol>\n  <p>Det är därför som gissade maxres-länkar försvinner från användargränssnittet när de misslyckas: extraktorn vägrar att uppfinna en 1280×720-fil.</p>"
+    },
+    {
+      "heading": "Praktisk felsökningschecklista",
+      "html": "<ol>\n    <li>Bekräfta att videon är offentlig och att ID:t är korrekt.</li>\n    <li>Testa<code>maxresdefault.jpg</code>en gång. Om det misslyckas, sluta gissa.</li>\n    <li>Klistra in samma länk i<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Ladda ner den första listade stillbilden eller kopiera dess bild-URL.</li>\n    <li>Om ingenting visas kan videon vara privat, raderad, åldersbegränsad eller utan offentliga stillbilder.</li>\n    <li>För CMS-användning, föredra en hostad kopia av ett validerat stillbildsobjekt framför en hotlinkad CDN-sökväg. Se<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blogg / Open Graph-guide</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Vanliga misstag",
+      "html": "<ul>\n    <li>Antar att varje video har maxupplösning eftersom en populär video har det.</li>\n    <li>Hårdkodning<code>maxresdefault.jpg</code>i produktions-HTML utan en kontroll.</li>\n    <li>Att ringa en utsträckt<code>hqdefault</code>\"Maxres.\"</li>\n    <li>Förväxlar en skärmdump av en spelare med CDN-stillbilden —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skärmdump kontra riktig miniatyrbild</a>.</li>\n    <li>Förväntar mig 4K. Maxupplösning för publika enheter är vanligtvis 1280×720 när det används —<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">guide av högsta kvalitet</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Nästa steg",
+      "html": "<p>Klistra in en offentlig YouTube-URL i<a href=\"https://www.11tik.com/\">extraktor</a>Om maxres saknas, behåll nästa riktiga stillbild – det är den riktiga HD-filen för den videon.</p>\n  <p class=\"yte-bio\">Skriven av 11tik. Endast offentliga stillbilder; ingen videonedladdning.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Betyder en 404 att videon inte har någon miniatyrbild alls?",
+      "answer": "Nej. Det betyder oftast att ett filnamn saknas. Mellanstora filstorlekar förekommer ofta fortfarande.",
+      "answerHtml": "<p>Nej. Det betyder oftast att ett filnamn saknas. Mellanstora filstorlekar förekommer ofta fortfarande.</p>"
+    },
+    {
+      "question": "Är hq720 ett bra alternativ till maxresdefault?",
+      "answer": "När den validerar, ja – den är i samma höga nivå (~1280×720). Det är inte heller garanterat.",
+      "answerHtml": "<p>När den validerar, ja – den är i samma höga nivå (~1280×720). Det är inte heller garanterat.</p>"
+    },
+    {
+      "question": "Borde jag försöka igen med maxresdefault senare?",
+      "answer": "Ja, efter att en ny anpassad uppladdning i Studio har bearbetats. Annars, behåll den validerade reservfilen.",
+      "answerHtml": "<p>Ja, efter att en ny anpassad uppladdning i Studio har bearbetats. Annars, behåll den validerade reservfilen.</p>"
+    },
+    {
+      "question": "Kan maxres existera som WebP men inte JPEG?",
+      "answer": "Ja. 11tik kontrollerar WebP-maxres separat under /vi_webp/. Antingen, båda eller ingen av dem kan finnas.",
+      "answerHtml": "<p>Ja. 11tik kontrollerar WebP-maxvärden separat under<code>/vi_webp/</code>Antingen, båda eller ingendera kan existera.</p>"
+    },
+    {
+      "question": "Varför visar vissa verktyg fortfarande ett maxres-kort som går sönder?",
+      "answer": "De skriver ut en mall-URL utan att ladda bilden. 11tik listar bara filer som svarar som bilder.",
+      "answerHtml": "<p>De skriver ut en mall-URL utan att ladda bilden. 11tik listar bara filer som svarar som bilder.</p>"
+    },
+    {
+      "question": "Hur laddar jag ner reservversionen snabbt?",
+      "answer": "Använd nedladdningsguiden: klistra in, extrahera och spara den första listade filen.",
+      "answerHtml": "<p>Använd<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">nedladdningsguide</a>klistra in, extrahera, spara den första listade filen.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skriven av 11tik. Endast offentliga stillbilder; ingen videonedladdning.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+}

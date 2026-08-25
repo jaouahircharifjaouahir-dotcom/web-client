@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "de",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "So laden Sie YouTube-Thumbnails im Stapelverfahren herunter (bis zu 25 öffentliche URLs) | 11tik",
+  "description": "Öffentliche YouTube-Thumbnails im Browser massenhaft extrahieren. Fügen Sie eine URL pro Zeile ein, laden Sie die besten Bilder herunter oder zippen Sie die hochwertigsten Thumbnails als ZIP-Datei. Kein Konto und keine Videodateien erforderlich.",
+  "h1": "So laden Sie YouTube-Thumbnails im Stapelverfahren herunter (bis zu 25 öffentliche URLs)",
+  "ogTitle": "So laden Sie YouTube-Thumbnails im Stapelverfahren herunter (bis zu 25 öffentliche URLs)",
+  "ogDescription": "Öffentliche YouTube-Thumbnails im Browser massenhaft extrahieren. Fügen Sie eine URL pro Zeile ein, laden Sie die besten Bilder herunter oder zippen Sie die hochwertigsten Thumbnails als ZIP-Datei. Kein Konto und keine Videodateien erforderlich.",
+  "imageAlt": "11tik Massen-Thumbnail-Extraktor mit mehreren YouTube-URLs zum Herunterladen",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Massen-Thumbnail-Extraktor mit mehreren YouTube-URLs zum Herunterladen",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Wie kann ich YouTube-Thumbnails stapelweise herunterladen?",
+      "html": "<p>Offen<a href=\"https://www.11tik.com/\">11tik</a>Aktivieren Sie die Massenverarbeitung, fügen Sie pro Zeile eine öffentliche URL ein, klicken Sie auf „Alle extrahieren“ und laden Sie anschließend die besten Bilder oder die ZIP-Datei mit der höchsten Qualität herunter. Die maximale Anzahl an URLs pro Durchlauf beträgt 25, damit der Browser reaktionsschnell bleibt.</p>"
+    },
+    {
+      "heading": "Was gehört in die Liste?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= IDs</li>\n    <li>youtu.be Kurzlinks</li>\n    <li>youtube.com/shorts/ IDs</li>\n    </ul>\n  <p>Private, nicht gelistete Videos ohne öffentliche Vorschaubilder oder Videos mit Altersbeschränkung liefern kein Standbild. Das ist zu erwarten. Siehe auch<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kurze Vorschaubilder</a>Die</p>"
+    },
+    {
+      "heading": "Wie man eine Massenextraktion durchführt",
+      "html": "<ol>\n    <li>Klicken Sie auf der Startseite auf Bulk.</li>\n    <li>Fügen Sie bis zu 25 öffentliche Links ein, einen pro Zeile.</li>\n    <li>Klicken Sie auf „Alle extrahieren“ und warten Sie, bis für jede Karte eine Vorschau angezeigt wird.</li>\n    <li>Laden Sie für jedes beste Standbild ein Vorschaubild-Video (N) herunter oder laden Sie alle Bilder in höchster Qualität als ZIP-Datei herunter.</li>\n    <li>Optional: Exportieren Sie eine CSV-Datei mit den Forschungsprotokollen (Video-ID, Titel, Freigabe-URL, Bild-URL).</li>\n  </ol>"
+    },
+    {
+      "heading": "Kann ich das für die Wettbewerbsanalyse verwenden?",
+      "html": "<p>Ja, zum Studium öffentlicher Verpackungen. Veröffentlichen Sie nicht das Vorschaubild eines anderen Erstellers als Ihr eigenes. Das Urheberrecht verbleibt beim Rechteinhaber. 11tik ruft nur Dateien ab, die YouTube bereits öffentlich hostet.</p>\n  <p><a href=\"https://www.11tik.com/\">Öffnen Sie den Massenextrakt auf 11tik →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie kann ich YouTube-Thumbnails stapelweise herunterladen?",
+      "answer": "Verwenden Sie die Funktion „Massenverarbeitung“ auf 11tik, fügen Sie pro Zeile eine öffentliche URL ein, extrahieren Sie die Datei und laden Sie anschließend Standbilder oder eine ZIP-Datei in höchster öffentlicher Qualität herunter. Maximal 25 URLs pro Durchlauf.",
+      "answerHtml": "Verwenden Sie die Funktion „Massenverarbeitung“ auf 11tik, fügen Sie pro Zeile eine öffentliche URL ein, extrahieren Sie die Datei und laden Sie anschließend Standbilder oder eine ZIP-Datei in höchster öffentlicher Qualität herunter. Maximal 25 URLs pro Durchlauf."
+    },
+    {
+      "question": "Kann ich das für die Wettbewerbsanalyse verwenden?",
+      "answer": "Ja, das gilt für die Untersuchung öffentlicher Verpackungen. Veröffentlichen Sie nicht das Vorschaubild eines anderen Urhebers als Ihr eigenes. Das Urheberrecht verbleibt beim Rechteinhaber.",
+      "answerHtml": "Ja, das gilt für die Untersuchung öffentlicher Verpackungen. Veröffentlichen Sie nicht das Vorschaubild eines anderen Urhebers als Ihr eigenes. Das Urheberrecht verbleibt beim Rechteinhaber."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+}

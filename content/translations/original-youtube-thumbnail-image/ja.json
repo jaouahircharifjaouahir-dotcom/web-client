@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "ja",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "オリジナルのYouTubeサムネイル画像を取得する方法 | 11tik",
+  "description": "YouTubeが既にホストしているオリジナルの公開サムネイルを取得します。これはCDNの静止画であり、動画から抜き出したフレームではありません。",
+  "h1": "オリジナルのYouTubeサムネイル画像を取得する方法",
+  "ogTitle": "オリジナルのYouTubeサムネイル画像を取得する方法",
+  "ogDescription": "YouTubeが既にホストしているオリジナルの公開サムネイルを取得します。これはCDNの静止画であり、動画から抜き出したフレームではありません。",
+  "imageAlt": "11tik抽出ツールで表示される元の公開YouTubeサムネイルファイル",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik抽出ツールで表示される元の公開YouTubeサムネイルファイル",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "オリジナルのYouTubeサムネイルは何ですか？",
+      "html": "<p>これは、YouTubeが画像ホスティングサービスに既に保存しているプレビュー画像です。検索結果やおすすめ棚に表示されるファイルであり、Print Screenキーでキャプチャした画像ではありません。</p>"
+    },
+    {
+      "heading": "それはスクリーンショットとどう違うのですか？",
+      "html": "<p>スクリーンショットには、プレーヤーのフレーム、ブラウザのUI、および追加の圧縮が含まれています。元のファイルは、YouTubeが公開したピクセルサイズの鮮明な静止画です。</p>"
+    },
+    {
+      "heading": "元のサムネイルはどこで見つけられますか？",
+      "html": "<p>ウォッチ、ショーツ、ライブ、またはyoutu.beのURLを貼り付けてください<a href=\"https://www.11tik.com/\">11tik</a>このツールは動画IDを読み取り、公開されているファイルをチェックし、存在する中で最も評価の高いものをランク付けします。</p>"
+    },
+    {
+      "heading": "YouTubeのサムネイルURLはどのように機能するのですか？",
+      "html": "<p>動画IDとサイズ名（例：maxresdefault.jpgまたはhqdefault.jpg）をi.ytimg.comに組み合わせて使用​​します。公開されていないサイズを推測すると、エラーまたはプレースホルダーが返されます。</p>"
+    },
+    {
+      "heading": "maxresdefault.jpgとは何ですか？",
+      "html": "<p>これは、YouTubeが作成した際に通常1280×720という解像度で保存される、一般的な最大解像度の公開ファイル名です。4Kマスターファイルでも、動画ファイルでもありません。</p>"
+    },
+    {
+      "heading": "オリジナルとは、常に1280720を意味するのですか？",
+      "html": "<p>いいえ。maxresが公開されていない場合、元の公開画像はhq、sd、または別の現存するファイルです。11tikは、ピクセルを捏造するのではなく、実際のピクセルサイズを表示します。</p>"
+    },
+    {
+      "heading": "Shorts、Live、またはyoutu.beからオリジナルの静止画を入手できますか？",
+      "html": "<p>はい、それらのURLに公開動画IDとYouTubeがホストする公開静止画が含まれている場合、抽出ツールはそれらを標準的な視聴URLと同じように扱います。</p>"
+    },
+    {
+      "heading": "オリジナルファイルを入手したことを本当に確認するにはどうすればよいですか？",
+      "html": "<p>ファイル検証後に11tikが表示するサイズと寸法を使用してください。画像がプレーヤーのスクリーンショットのように見える場合は、ホストされているサムネイルをダウンロードしていません。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品質</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "オリジナルのYouTubeサムネイルは何ですか？",
+      "answer": "YouTubeが動画ID用にホストする公開画像ファイル（例：maxresdefault）。これは視聴ページのスクリーンショットではありません。",
+      "answerHtml": "YouTubeが動画ID用にホストする公開画像ファイル（例：maxresdefault）。これは視聴ページのスクリーンショットではありません。"
+    },
+    {
+      "question": "オリジナルとは、常に1280720を意味するのですか？",
+      "answer": "いいえ。通常、公開時の最大解像度は1280×720です。そのファイルが見つからない場合は、元の公開ファイルはYouTubeに保存されている次のサイズになります。",
+      "answerHtml": "いいえ。通常、公開時の最大解像度は1280×720です。そのファイルが見つからない場合、YouTubeに保存されている次のサイズの元の公開ファイルが代わりになります。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

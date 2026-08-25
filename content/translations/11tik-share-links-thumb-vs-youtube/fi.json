@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "fi",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Miten 11tik jakolinkit toimivat: /thumb/{VIDEO_ID} vs. YouTube-katselu-URL-osoitteet | 11tik",
+  "description": "11tik /thumb/{id} on jakotulossivu. Se ei ole YouTube-katselusivun URL-osoite eikä suora i.ytimg.com kuvatiedosto.",
+  "h1": "Miten 11tik jakolinkit toimivat: /thumb/{VIDEO_ID} vs. YouTube-katselu-URL-osoitteet",
+  "ogTitle": "Miten 11tik jakolinkit toimivat: /thumb/{VIDEO_ID} vs. YouTube-katselu-URL-osoitteet",
+  "ogDescription": "11tik /thumb/{id} on jakotulossivu. Se ei ole YouTube-katselusivun URL-osoite eikä suora i.ytimg.com kuvatiedosto.",
+  "imageAlt": "Kaavio, jossa vertaillaan YouTube-katselu-URL-osoitetta, 11tik-pikkukuvan jakamis-URL-osoitetta ja suoraa YouTube-pikkukuvan URL-osoitetta",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Kaavio, jossa vertaillaan YouTube-katselu-URL-osoitetta, 11tik-pikkukuvan jakamis-URL-osoitetta ja suoraa YouTube-pikkukuvan URL-osoitetta",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Työnkulku, jossa näkyy poiminta, esikatselu, kopiointi 11tik jakolinkki sekä vastaanottaja avaamassa pikkukuvatulossivua",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Nopea vastaus",
+      "html": "<p>Kolmella eri URL-osoitteella voi olla sama YouTube-videon tunnus. Vain yksi niistä on kuvatiedosto.</p>\n  <ol>\n    <li><strong>YouTube-katseluosoite</strong>— avaa videon YouTubessa.</li>\n    <li><strong>11tik jako-URL-osoite</strong>— avaa kyseisen ID:n 11tik-poimijan tulossivun (<code>/thumb/{VIDEO_ID}</code>). Tämä on verkkosivu, ei JPEG/WebP-tiedosto.</li>\n    <li><strong>Suora pikkukuva CDN-URL-osoite</strong>— osoittaa julkiseen still-kuvaan YouTuben kuvapalvelussa (esimerkiksi<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Julkisen demon tunnuksen käyttäminen<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Kolmas osoite on esimerkki suorasta kuvan URL-mallista. Kyseistä maxres-tiedostoa ei taata jokaiselle videolle – varmista todelliset koot<a href=\"https://www.11tik.com/\">11tik</a>tai<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-opas</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sama videotunnus, kolme tehtävää: katso video, avaa 11tik tulossivu tai pyydä CDN-still-kuvaa.</p>"
+    },
+    {
+      "heading": "Mikä on /thumb/{VIDEO_ID}",
+      "html": "<p>11tik-sivulla onnistunut yhden videon poiminta päivittää selaimen osoitteen seuraavan muotoiseksi poluksi:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Tuo polku on tuotteen jakamis-/tulos-URL-osoite. Se luodaan videon tunnuksesta (katso sivuston jakamisapuohjelmat) ja sen tarkoituksena on avata uudelleen kyseiseen tunnukseen keskittyvä poimija. Vanhemmat kyselytyyppiset linkit, kuten<code>?v=VIDEO_ID</code>käsitellään syvälinkkeinä samaan ideaan ja ne voidaan kirjoittaa uudelleen<code>/thumb/</code>lomake.</p>\n  <p><code>/thumb/…</code>on<strong>ei</strong>YouTuben kuva-CDN:ssä. Sen avaaminen ei koskaan lataa kuvaa erikseen; se lataa kyseisen tunnuksen 11tik-sovellusreitin.</p>"
+    },
+    {
+      "heading": "Miksi sivu on olemassa",
+      "html": "<p>Ihmiset tarvitsevat vakaan tavan avata uudelleen tai lähettää \"tämän videon pikkukuvan tulos 11tik\" ilman, että pitkää katseluosoitetta liitetään chattiin ja toivotaan vastaanottajan tietävän, mitä tehdä seuraavaksi. Jakosivu pitää keskustelun poimijassa: sama ID, sama julkisen still-kuvan työnkulku, lataus- ja kopiointitoiminnot yhdessä paikassa.</p>\n  <p>Se pitää myös kotisivutyökalun URL-osoitteen siistinä. Markkinoinnin kotisivu pysyy yleisenä poimijana;<code>/thumb/{id}</code>on tietyn tunnuksen syvälinkki.</p>"
+    },
+    {
+      "heading": "Mitä käyttäjä näkee avatessaan sen",
+      "html": "<p>Avaaminen<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>lataa 11tik-sivuisen sovelluksen peukalo-reitillä. Sovellus lukee polusta 11-merkkisen tunnuksen, syöttää poimijaan vastaavan katselu-URL-osoitteen ja suorittaa julkisen pikkukuvien etsintäprosessin kyseiselle tunnukselle. Kun julkisia still-kuvia on olemassa, tavalliset esikatselu-, laatuluettelo-, lataustoiminnot- ja jakamissäätimet tulevat näkyviin. Kun niitä ei ole, saat saman tyhjän/julkisen-ei-löydetty-tuloksen kuin manuaalisessa liittämisessä.</p>\n  <p>Saatat myös nähdä lyhyen peukalonmuotoisen reitin otsikon ja johdatustekstin kyseiselle tunnukselle työkalun käyttöliittymän yläpuolella. Tämä sisältö kuvaa tulossivua; se on silti osa sivuston käyttökokemusta, ei raakakuvavastaus.</p>"
+    },
+    {
+      "heading": "Kuinka kopioida 11tik-linkki",
+      "html": "<ol>\n    <li>Avata<a href=\"https://www.11tik.com/\">11tik</a>ja liitä julkinen YouTube-URL-osoite (tai avaa olemassa oleva<code>/thumb/</code>linkki).</li>\n    <li>Odota, kunnes uutto on valmis ja paras julkinen tislauskuva tulee näkyviin.</li>\n    <li>Käytä sivulla olevaa jakamislinkkiä (kopioi jakolinkki) vastaavaa jakamistoimintoa. Arvo näyttää tältä<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Lähetä kyseinen URL-osoite. Vastaanottaja päätyy tulossivulle ja voi suorittaa saman julkisen tarkistuksen uudelleen.</li>\n  </ol>\n  <p>Joukkopoiminnat voivat paljastaa yhden jako-URL-osoitteen onnistunutta videotunnusta kohden (myös CSV-vientisarakkeissa). Jokaisella tunnuksella on oma<code>/thumb/</code>polku, jotta linkit eivät putoa ensimmäiseen tulokseen.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Jaa työnkulku: poimi → esikatselu → kopioi<code>/thumb/{id}</code>→ vastaanottaja avaa tulossivun.</p>"
+    },
+    {
+      "heading": "URL-osoitevertailutaulukko",
+      "html": "<table>\n    <thead>\n      <tr><th>URL-osoitetyyppi</th><th>Esimerkki</th><th>Mikä avautuu</th><th>Onko se kuvatiedosto?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>YouTube-katselu</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube-soitin / katselusivu</td><td>Ei</td></tr>\n      <tr><td>11tik osake</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik poimijan tulos kyseiselle tunnukselle</td><td>Ei</td></tr>\n      <tr><td>Suora CDN-still-versio</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Kuvan tavumäärä (jos tiedosto on olemassa)</td><td>Kyllä</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Miten kolme URL-osoitetta eroavat toisistaan ​​käytännössä",
+      "html": "<h3>Katso URL-osoite vs. 11tik jako-URL-osoite</h3>\n  <p>Jaa katselun URL-osoite, kun tavoitteena on katsoa video tai keskustella siitä YouTubessa. Jaa 11tik-URL-osoite, kun tavoitteena on avata uudelleen pikkukuvien poiminnan tulokset – esikatselut, lataukset ja validoidut julkiset koot – pyytämättä ensin ketään etsimään poimijaa.</p>\n  <h3>11tik jaettu URL-osoite vs. suora kuvan URL-osoite</h3>\n  <p>Suora kuvan URL-osoite on se, mihin liität kuvan.<code>&lt;img src&gt;</code>, CMS-mediakirjastoja tai suunnittelutyökaluja sen jälkeen, kun olet varmistanut tiedoston olemassaolon. Se, miten nämä CDN-URL-osoitteet rakennetaan tunnuksesta, on käyttäjän tehtävä.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">pikkukuvan URL-opas</a>Jaettu 11tik-URL-osoite ei koskaan korvaa kyseistä kuvan osoitetta: vastaanottajat käyttävät edelleen työkalun sisällä olevaa Lataa- tai Kopioi-kuvan URL-osoitetta, kun he tarvitsevat itse tiedostoa.</p>\n  <h3>Katso URL-osoite vs. suora kuvan URL-osoite</h3>\n  <p>Katseluosoite identifioi videon. Kuvan URL-osoite identifioi yhden julkisen johdannaisen. Ne eivät ole keskenään vaihdettavissa, minkä vuoksi arvailu<code>maxresdefault.jpg</code>epäonnistuu usein, vaikka katselusivu toimisi.</p>"
+    },
+    {
+      "heading": "Milloin jakaa mikäkin linkki",
+      "html": "<ul>\n    <li><strong>Jaa YouTube-katseluosoite</strong>videon katselua, kommentointia tai viittauksia varten.</li>\n    <li><strong>Jaa 11tik<code>/thumb/</code>URL-osoite</strong>yhteistyökumppaneille, jotka tarvitsevat uuttotuloksen, laatuluettelon tai julkisen still-kuvan nopean uudelleenlatauksen.</li>\n    <li><strong>Jaa tai isännöi suoraa kuvan URL-osoitetta / ladattua tiedostoa</strong>blogissa esitellyt kuvat, Open Graph ja suunnittelukoosteet – vahvistuksen jälkeen. Katso<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">latausopas</a>ja<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">koko- ja resoluutioopas</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Miten videotunnus yhdistää kaikki kolme",
+      "html": "<p>Kaikki riippuu samasta 11-merkkisestä tunnuksesta. Katso, että URL-osoitteet sisältävät sen.<code>v=</code>(tai lyhytvideoita/upotusvideoita/live-polkusegmenttejä). 11tik lisää sen<code>/thumb/{id}</code>CDN-kuvat asettavat sen väliin<code>/vi/</code>(tai<code>/vi_webp/</code>) ja tiedostonimen koko. Jos tunnus on väärä, kaikki kolme toimivat eri tavoin: väärä video, väärä tulossivu tai väärä/puuttuva kuva.</p>"
+    },
+    {
+      "heading": "Miten tämä sopii uuttolaitteen työnkulkuun",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Jakolinkki toimii kirjanmerkkinä kyseiseen työnkulkuun. Se ei ohita validointia, keksi 4K:ta tai muuta yksityisiä videoita julkisiksi still-kuviksi.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Onko https://www.11tik.com/thumb/VIDEO_ID suora kuva?",
+      "answer": "Ei. Se on 11tik-hakutulossivu kyseiselle videotunnukselle. Suorat kuvat ovat saatavilla isännillä, kuten i.ytimg.com.",
+      "answerHtml": "<p>Ei. Se on 11tik-tulossivu kyseiselle videotunnukselle. Suorat kuvat ovat saatavilla isännillä, kuten<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Mitä tapahtuu, kun joku avaa jakolinkkini?",
+      "answer": "11tik lataa peukaloreitin, lukee ID:n, suorittaa julkisen pikkukuvan tarkistuksen kyseiselle ID:lle ja näyttää poimijan käyttöliittymän tuloksineen, kun julkisia still-kuvia on olemassa.",
+      "answerHtml": "<p>11tik lataa peukaloreitin, lukee ID:n, suorittaa julkisen pikkukuvan tarkistuksen kyseiselle ID:lle ja näyttää poimijan käyttöliittymän tuloksineen, kun julkisia still-kuvia on olemassa.</p>"
+    },
+    {
+      "question": "Voinko lisätä /thumb/-pikalinkin img-tagin sisään?",
+      "answer": "Älä käytä. Käytä vahvistettua CDN-kuvan URL-osoitetta tai lataamaasi tiedostoa. Jakopolku palauttaa HTML-sovelluskomentotulkin, ei kuvan tavumäärää.",
+      "answerHtml": "<p>Älä käytä. Käytä vahvistettua CDN-kuvan URL-osoitetta tai lataamaasi tiedostoa. Jakopolku palauttaa HTML-sovelluskomentotulkin, ei kuvan tavumäärää.</p>"
+    },
+    {
+      "question": "Miksi osoiterivi muuttui pikkukuvan poistamisen jälkeen?",
+      "answer": "Yhden videon poiminnan jälkeen 11tik synkronoi jakopolun kansioon /thumb/{VIDEO_ID}, jotta nykyinen tulos on helppo kopioida ja avata uudelleen.",
+      "answerHtml": "<p>Yhden videon otteen jälkeen 11tik synkronoi jakopolun kohteeseen<code>/thumb/{VIDEO_ID}</code>joten nykyinen tulos on helppo kopioida ja avata uudelleen.</p>"
+    },
+    {
+      "question": "Käyttävätkö Shorts-videot eri jakopolkua?",
+      "answer": "Ei. Lyhytvideoiden tunnisteeksi muodostuu edelleen 11 merkkiä. Jako-URL-osoite pysyy muodossa /thumb/{id}; vain alkuperäisen YouTube-URL-osoitteen muoto erosi.",
+      "answerHtml": "<p>Ei. Lyhytvideoiden tunnisteet ratkaistaan ​​edelleen 11-merkkiseksi tunnukseksi. Jako-osoite pysyy samana.<code>/thumb/{id}</code>; vain alkuperäisen YouTube-URL-osoitteen muoto erosi.</p>"
+    },
+    {
+      "question": "Onko /thumb/{id} sama asia kuin maxres-URL-osoitteen kopioiminen?",
+      "answer": "Ei. Maxres (jos sellainen on) on yksi mahdollinen CDN-tiedosto. Jakosivulla luetellaan validoidut julkiset koot ja se voi sisältää muita tasoja, jos maxres puuttuu.",
+      "answerHtml": "<p>Ei. Maxres (jos sellainen on) on yksi mahdollinen CDN-tiedosto. Jakosivulla luetellaan validoidut julkiset koot ja se voi sisältää muita tasoja, jos maxres puuttuu.</p>"
+    },
+    {
+      "question": "Missä kellojen ja kuvien URL-osoitteet selitetään tarkemmin?",
+      "answer": "Käytä ID → CDN -muodostukseen artikkelin pikkukuvaa ja tiedostojen tallentamiseen latausartikkelia.",
+      "answerHtml": "<p>Käytä<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">artikkelin pikkukuvan URL-osoite</a>ID → CDN-rakentaminen ja tiedostojen tallentamista käsittelevä ladattava artikkeli.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Johtopäätös</h2>\n<p>Herkku<code>/thumb/{VIDEO_ID}</code>11tik:n jako-/tulososoitteena: hyödyllinen uudelleenavaamiseen ja otteen lähettämiseen, ei koskaan YouTube-katselulinkin tai suoran yhteyden korvikkeena<code>i.ytimg.com</code>Pidä kolme URL-tyyppiä oikein, niin latauksesi, upotukset ja yhteistyökumppanilinkkisi pysyvät oikeina.</p>\n  <p><a href=\"https://www.11tik.com/\">Ota julkinen pikkukuva ja kopioi sen 11tik jakolinkki →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>Luojaviite:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Lataa mukautettuja videopikkukuvia</a>.</p>"
+}

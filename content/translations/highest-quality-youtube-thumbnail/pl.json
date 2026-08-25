@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "pl",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Jak uzyskać najwyższą jakość miniatur YouTube | 11tik",
+  "description": "Najwyższa jakość oznacza największy publiczny plik JPEG lub WebP, jaki YouTube faktycznie zwraca, a nie zgadywaną nazwę pliku 4K.",
+  "h1": "Jak uzyskać miniaturę YouTube najwyższej jakości",
+  "ogTitle": "Jak uzyskać miniaturę YouTube najwyższej jakości",
+  "ogDescription": "Najwyższa jakość oznacza największy publiczny plik JPEG lub WebP, jaki YouTube faktycznie zwraca, a nie zgadywaną nazwę pliku 4K.",
+  "imageAlt": "Najwyższa dostępna publiczna miniatura YouTube wybrana w 11tik",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Najwyższa dostępna publiczna miniatura YouTube wybrana w 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jak uzyskać najwyższą jakość miniatury YouTube?",
+      "html": "<p>Wklej publiczny adres URL do<a href=\"https://www.11tik.com/\">11tik</a>i pobierz pierwszy z wymienionych rozmiarów. Ekstraktor klasyfikuje zachowane pliki publiczne; nie rozciąga małego statycznego obrazu do fałszywego HD.</p>"
+    },
+    {
+      "heading": "Jaka jest maksymalna rozdzielczość publiczna?",
+      "html": "<p>YouTube opublikował plik maxresdefault, zazwyczaj o rozdzielczości 1280×720. Jeśli brakuje tego pliku, najwyższa jakość to następny prawidłowy rozmiar, taki jak sd lub hq.</p>"
+    },
+    {
+      "heading": "Czy WebP ma znaczenie?",
+      "html": "<p>Niektóre filmy mają również warianty WebP o tych samych nazwach. 11tik może je wyświetlić, jeśli istnieją. Wybierz plik sprawdzony przez narzędzie, a nie zgadywany adres URL.</p>"
+    },
+    {
+      "heading": "Dlaczego „HD” czasami wygląda na miękkie?",
+      "html": "<p>Publiczność może nadal mieć rozdzielczość 1280×720 z kompresją lub możesz używać hqdefault. Sprawdź raporty dotyczące rozmiaru pikseli 11tik, zanim założysz, że pobieranie się nie powiodło.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Przewodnik po rozmiarach</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jak uzyskać najwyższą jakość miniatury YouTube?",
+      "answer": "Wklej publiczny adres URL do 11tik i pobierz pierwszy z wymienionych rozmiarów. To najwyższy publiczny plik przechowywany przez YouTube.",
+      "answerHtml": "Wklej publiczny adres URL do 11tik i pobierz pierwszy z wymienionych rozmiarów. To najwyższy publiczny plik przechowywany przez YouTube."
+    },
+    {
+      "question": "Czy plik najwyższej jakości ma rozdzielczość 4K?",
+      "answer": "Zwykle nie. Maksymalna rozdzielczość publiczna wynosi zazwyczaj 1280&#215;720. 11tik nie zwiększa rozdzielczości ani nie tworzy większej rozdzielczości master.",
+      "answerHtml": "Zwykle nie. Publiczna rozdzielczość maksymalna to zazwyczaj 1280×720. 11tik nie skaluje ani nie tworzy większego oryginału."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

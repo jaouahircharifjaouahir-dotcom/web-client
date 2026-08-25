@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "tr",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "YouTube Küçük Resminin Görünmemesinin Nedenleri: Özel, Yaş Kısıtlamalı veya İşlemde Olan Videolar | 11tik",
+  "description": "Herkese açık YouTube videoları hala yüklenmiyorsa, video özel, kısıtlı, işleme alınmış veya silinmiş olabilir; bu sadece maxres dosya adının eksik olmasından kaynaklanmaz.",
+  "h1": "YouTube küçük resminin görünmemesinin nedenleri: Gizli, yaş kısıtlamalı veya işlenmekte olan videolar",
+  "ogTitle": "YouTube küçük resminin görünmemesinin nedenleri: Gizli, yaş kısıtlamalı veya işlenmekte olan videolar",
+  "ogDescription": "Herkese açık YouTube videoları hala yüklenmiyorsa, video özel, kısıtlı, işleme alınmış veya silinmiş olabilir; bu sadece maxres dosya adının eksik olmasından kaynaklanmaz.",
+  "imageAlt": "YouTube URL'sinden video kimliğine ve herkese açık olup olmadığı kontrolüne kadar olan akış, kullanılabilir veya kullanılamaz sonuçlara kadar uzanır.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "YouTube URL'sinden video kimliğine ve herkese açık olup olmadığı kontrolüne kadar olan akış, kullanılabilir veya kullanılamaz sonuçlara kadar uzanır.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Video için küçük resim boyutunun eksik olması durumu ile video için kullanılabilir bir küçük resmin olmaması durumunun yan yana karşılaştırması.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>Geçerli bir YouTube URL'si, bir video kimliğinizin olduğunu kanıtlar.<strong>Olumsuz</strong>YouTube'un görüntü CDN'sinde kullanılabilir bir herkese açık küçük resim dosyası yayınladığını kanıtlayın. Çıkarma araçları gibi.<a href=\"https://www.11tik.com/\">11tik</a>Yalnızca herkese açık görselleri kontrol edin. Bu görsel adaylarından hiçbiri yüklenmezse, araç herkese açık küçük resim bulunamadığını bildirir. Bu sonuç genellikle tek bir eksik boyut adından ziyade video erişimini veya durumunu (özel, yaş sınırlamalı veya başka şekilde kısıtlanmış, işlemde, silinmiş veya başka şekilde kullanılamaz) takip eder.<code>maxresdefault.jpg</code>.</p>\n  <p>Önemli dürüstlük kontrolü: 11tik yapar<strong>Olumsuz</strong>Kesin nedeni özel, yaş kısıtlamalı veya işleme aşamasında olarak sınıflandırın. Bu etiketler, kullanıcıların YouTube'da doğrulaması gereken yaygın açıklamalardır. Çıkarıcı yalnızca herkese açık bir görüntünün doğrulanıp doğrulanamayacağını size söyler.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Teşhis yolu: URL → video kimliği → genel fotoğraf kontrolü → mevcut mu, değil mi → sonraki adımda neyi doğrulamak gerekiyor</p>"
+    },
+    {
+      "heading": "“Küçük resim kullanılamıyor” ne anlama gelebilir?",
+      "html": "<p>Pratikte, \"mevcut değil\" ifadesi iki farklı sorundan birini ifade eder:</p>\n  <ol>\n    <li><strong>Video düzeyinde bilgi mevcut değil:</strong>Kamuoyuna açık adaylar her alanda başarısız oluyor. Şu anda bu kimlik için kullanılabilir, indirilebilir bir kamu imajı elde edemezsiniz.</li>\n    <li><strong>Mevcut olmayan varyant:</strong>Yüksek çözünürlüklü dosya adlarından biri (genellikle maxres) eksik, ancak daha düşük boyutlu bir dosya yine de yükleniyor. Bu, tüm video için eksik bir küçük resim değil, boyut/yedekleme sorunudur.</li>\n  </ol>\n  <p>Bu makale ilk vakayı ele almaktadır. İkinci vaka için—özellikle de—<code>maxresdefault.jpg</code>404 hataları için özel yöntemi kullanın.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault sorun giderme kılavuzu</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sol: Bir varyant eksik, diğer genel boyutlar hala çalışıyor. Sağ: Video kimliği için kullanılabilir genel bir görsel yok.</p>"
+    },
+    {
+      "heading": "Kamuya açık fotoğraf ve video erişim durumu",
+      "html": "<p>YouTube, izleme sayfalarını ve görsel türevlerini ayrı ayrı barındırır. Herkese açık küçük resim dosyaları genellikle şu gibi sunucular altında bulunur:<code>i.ytimg.com</code>ve 11 karakterlik video kimliğiyle anahtarlanırlar. Hesabınıza giriş yapmadan küçük resimleri çıkaran araçlar yalnızca bu herkese açık dosyaları isteyebilir.</p>\n  <p>Bir video herkese açık bir şekilde yayınlanmadığında veya türevleri henüz hazır olmadığında, yapıştırılan metin normal bir izleme, kısa video, canlı yayın veya yerleştirme bağlantısı gibi görünse bile görüntü kontrolleri başarısız olur. Bu URL biçimlerinin bir kimliğe nasıl eşlendiği aşağıdaki bölümde ele alınmıştır.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube küçük resim URL kılavuzu</a>Mevcut bir fotoğrafın nasıl kaydedileceği bu bölümde açıklanmıştır.<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kılavuzu indir</a>.</p>"
+    },
+    {
+      "heading": "Özel videolar",
+      "html": "<p>Özel yüklemeler sınırlı bir kitle içindir. YouTube, o kimlik için herkese açık küçük resim türevleri yayınlamıyorsa, tarayıcı içi herkese açık bir çıkarıcı bunları oluşturamaz. Sahibi olarak oturum açmışken izleme URL'sini açmak, videoyu YouTube içinde göstermeye devam edebilir; ancak bu, anonim resim istekleri için herkese açık bir CDN'nin hala mevcut olduğu anlamına gelmez.</p>\n  <p>Kontrol edilmesi gerekenler: Oturumunuz kapalıyken URL'yi özel/anonim pencerede açın. YouTube videoyu kendisi engelliyorsa, küçük resim çıkarma işleminin tasarım gereği engellendiğini varsayın.</p>"
+    },
+    {
+      "heading": "Yaş sınırlaması ve diğer erişim kısıtlamaları",
+      "html": "<p>Yaş sınırlamalı, üyelere özel veya benzer şekilde kısıtlanmış videolar, genel görüntü arama için özel içerik gibi davranabilir: kimlik doğru şekilde ayrıştırılabilir, ancak genel görüntüler asla doğrulanmaz. Bölge sınırlamaları ve hesap kısıtlamaları, genel bir araç için aynı boş sonucu üretebilir.</p>\n  <p>Tekrar ediyorum, 11tik kısıtlama türünü etiketlemeyecektir. YouTube'da erişim durumunu onaylıyorsunuz; çıkarıcı yalnızca halka açık bir kanalın hala yüklü olup olmadığını bildiriyor.</p>"
+    },
+    {
+      "heading": "Videolar hala işleniyor.",
+      "html": "<p>“İşleme” iki ilgili şekilde karşımıza çıkar:</p>\n  <ul>\n    <li><strong>Yepyeni yüklemeler:</strong>İzleme sayfası, herkese açık görsel türevlerinin tamamı hazır olmadan önce görünebilir. Lütfen aynı URL ile daha sonra tekrar deneyin.</li>\n    <li><strong>Studio'da özel küçük resim yenileme:</strong>Görsel dosyaları değiştirdikten sonra, herkese açık CDN dosyalarında gecikmeler yaşanabilir. Daha küçük boyutlu dosyalar daha büyük boyutlu dosyalardan önce görünebilir veya dosya seti kısa süreliğine eksik olabilir.</li>\n  </ul>\n  <p>Eğer<em>bazı</em>Genel boyutlar zaten çalışıyor ve sadece en yüksek isim eksik, şuna geçin:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault makalesi</a>. Eğer<em>HAYIR</em>Kamuoyu doğrulaması henüz tamamlanmadı, işleme alınmasını bekleyin, ardından tekrar kontrol edin.<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Silinmiş veya başka şekilde erişilemeyen içerik",
+      "html": "<p>Silinen videolar, bozuk kimlikler ve bazı sonlandırılmış yüklemeler, güvenilir bir genel paketleme bırakmıyor. Yer imlerine eklenmiş bir izleme URL'si sözdizimsel olarak hala doğru görünebilirken, her görüntü adayı başarısız olabilir. Silinen/kullanılamayan durumları diğer video düzeyindeki hatalarla aynı şekilde ele alın: YouTube'daki izleme sayfası durumunu doğrulayın, ardından bir CDN'den hala bir şey beklemeyi bırakın.</p>"
+    },
+    {
+      "heading": "Geçerli bir URL'nin neden yeterli olmadığı",
+      "html": "<p>Dize, desteklenen bir kalıpta 11 karakterlik bir kimlik içerdiğinde ayrıştırma başarılı olur. Çıkarma işlemi yalnızca en az bir genel küçük resim adayı gerçek bir görüntü olarak doğrulandığında başarılı olur. Bu adımlar birbirinden bağımsızdır:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>11tik'de, boş bir en iyi seçenek hala net bir \"herkese açık küçük resim yok\" tarzı mesaj olarak ortaya çıkıyor. Ürün bunu özel, yaş sınırı veya işleme sınıflandırıcısına dönüştürmüyor.</p>"
+    },
+    {
+      "heading": "Öncelikle neleri kontrol etmelisiniz (pratik akış)",
+      "html": "<ol>\n    <li>Aynı URL'yi yapıştırın<a href=\"https://www.11tik.com/\">11tik</a>ve genel denetimin bitmesini bekleyin.</li>\n    <li>En az bir beden seçeneği görünüyorsa, yapabilirsiniz.<strong>Olumsuz</strong>Video düzeyinde erişim mümkün değil—bu durumda görüntüyü indirin veya kalite seçimi için boyut/maksimum çözünürlük kılavuzlarını okuyun.</li>\n    <li>Eğer hiçbir şey görünmüyorsa, oturum açmadan izle/kısa videolar sayfasına girin. YouTube'un videoyu gösterip göstermediğini, oturum açma/yaş onayı isteyip istemediğini veya kullanılamaz dediğini not edin.</li>\n    <li>Videonun sahibi sizseniz ve özel bir küçük resim yüklediyseniz veya değiştirdiyseniz, Studio işleminin tamamlanmasını bekleyin ve tekrar deneyin.</li>\n    <li>YouTube videoyu herkese açık olarak gösteriyorsa ve 11tik hala hiçbir şey bulamıyorsa, daha sonra bir kez daha deneyin; sürekli boş sonuçlar genellikle o kimlik için herkese açık görsellerin gösterilmediği anlamına gelir.</li>\n  </ol>"
+    },
+    {
+      "heading": "Teşhis tablosu",
+      "html": "<table>\n    <thead>\n      <tr><th>Gördüğünüz şey</th><th>Muhtemel sınıf</th><th>Sonraki adım</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik bir veya daha fazla boyutu listeler</td><td>Herkese açık fotoğraflar mevcut.</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Kılavuzu indirin</a>/ beden seçimi</td></tr>\n      <tr><td>Sadece maxres başarısız oluyor; hq/sd çalışıyor.</td><td>Varyant mevcut değil</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxres sorun giderme</a></td></tr>\n      <tr><td>Beden bilgisi yok; YouTube oturum açmayı/yaş sınırlaması istiyor.</td><td>Erişim kısıtlaması</td><td>Herkese açık bir video kullanın veya kamuya açık veri çıkarma işleminin gerçekleştirilemeyeceğini kabul edin.</td></tr>\n      <tr><td>Ölçü bilgisi yok; sahibi sadece görseli yükledi/değiştirdi.</td><td>İşlem gecikmesi</td><td>Bekleyin, ardından aynı URL'yi tekrar kontrol edin.</td></tr>\n      <tr><td>Beden bilgisi yok; YouTube özel/kullanılamaz diyor.</td><td>Özel veya silinmiş durum</td><td>Henüz kamuoyundan çıkarılacak bir şey yok.</td></tr>\n      <tr><td>URL ayrıştırılamayacak.</td><td>Geçersiz veya desteklenmeyen bağlantı</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL / video kimliği kılavuzu</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Varyant eksik veya kullanılabilir genel küçük resim yok",
+      "html": "<p>İnsanlar genellikle elle oluşturulmuş maksimum çözünürlüklü bir URL yapıştırır, 404 hatası görür ve \"küçük resim yok\" sonucuna varır. Bu sonuç sıklıkla yanlıştır. Üst düzey dosya adının eksik olması normaldir. Video düzeyinde erişilemezlik, çıkarıcının tüm aday geçişinin kullanılabilir hiçbir şey döndürmediği anlamına gelir.</p>\n  <p>Genel kural:</p>\n  <ul>\n    <li>En iyisine ihtiyacım var.<em>mevcut</em>Herkese açık dosya → indirme / boyut / maksimum çözünürlük kılavuzları.</li>\n    <li>Nedenini anlamamız gerekiyor.<em>Hiçbir şey</em>Herkese açık görünüyor → bu makale + YouTube'un kendi erişim mesajı.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hangi 11tik kılavuzunu ne zaman kullanmalı?",
+      "html": "<ul>\n    <li><strong>Bu makale:</strong>Kullanılabilir halka açık fotoğraf makinesi yok; erişim veya devlet soruları.</li>\n    <li><strong>Maxres kılavuzu:</strong>HD dosya adı eksik, ancak diğer genel boyutlar mevcut.</li>\n    <li><strong>URL kılavuzu:</strong>Var olan görüntü URL'lerinin kimliklerini bulma ve bunları oluşturma/kopyalama.</li>\n    <li><strong>Kılavuzu indirin:</strong>Boyutlar göründükten sonra bir kare kaydediliyor.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Çalışır durumda olan bir izleme sayfası, herkese açık bir küçük resim garantisi veriyor mu?",
+      "answer": "Hayır. İzleme deneyimi ve herkese açık görüntü CDN dosyaları birbiriyle ilişkili ancak özdeş değildir. Erişim sınırlamaları ve işleme, size yalnızca bir video kimliği bırakabilir ancak çıkarılabilir herkese açık bir fotoğraf dosyası sağlayamayabilir.",
+      "answerHtml": "<p>Hayır. İzleme deneyimi ve herkese açık görüntü CDN dosyaları birbiriyle ilişkili ancak özdeş değildir. Erişim sınırlamaları ve işleme, size yalnızca bir video kimliği bırakabilir ancak çıkarılabilir herkese açık bir fotoğraf dosyası sağlayamayabilir.</p>"
+    },
+    {
+      "question": "11tik bana videonun özel mi yoksa yaş kısıtlamalı mı olduğunu söyleyebilir mi?",
+      "answer": "Hayır. 11tik yalnızca bir kamuya açık içeriğin doğrulanıp doğrulanamayacağını bildirir. YouTube'da özel, yaş sınırlaması veya diğer kısıtlamaları doğrulayın.",
+      "answerHtml": "<p>Hayır. 11tik yalnızca bir kamuya açık içeriğin doğrulanıp doğrulanamayacağını bildirir. YouTube'da özel, yaş sınırlaması veya diğer kısıtlamaları doğrulayın.</p>"
+    },
+    {
+      "question": "Az önce özel bir küçük resim yükledim. Çıkarma işlemi neden boş?",
+      "answer": "Stüdyo işlemleri gecikebilir. Bir süre bekleyin, ardından aynı genel URL'yi tekrar yapıştırın. Bazı boyutlar görünüyor ancak maksimum çözünürlük görünmüyorsa, videonun küçük resminin olmadığını varsaymak yerine maksimum çözünürlük kılavuzunu okuyun.",
+      "answerHtml": "<p>Stüdyo işlemleri gecikebilir. Bir süre bekleyin, ardından aynı genel URL'yi tekrar yapıştırın. Bazı boyutlar görünüyor ancak maksimum çözünürlük görünmüyorsa, videonun küçük resminin olmadığını varsaymak yerine maksimum çözünürlük kılavuzunu okuyun.</p>"
+    },
+    {
+      "question": "Bu, maxresdefault 404 hatasıyla aynı sorun mu?",
+      "answer": "Sadece bazen. Çalışan yedeklemelerle birlikte maxres 404 hatası, bir varyant sorunudur. Herkese açık adaylarda boş sonuçlar, video düzeyinde erişilememe anlamına gelir.",
+      "answerHtml": "<p>Sadece bazen. Çalışan yedeklemelerle birlikte maxres 404 hatası, bir varyant sorunudur. Herkese açık adaylarda boş sonuçlar, video düzeyinde erişilememe anlamına gelir.</p>"
+    },
+    {
+      "question": "11tik içinde YouTube'a giriş yapmak özel fotoğrafların kilidini açacak mı?",
+      "answer": "Hayır. 11tik, tarayıcıda hala herkese açık bir çıkarıcıdır. Özel veya kilitli paketlemeyi atlamaz.",
+      "answerHtml": "<p>Hayır. 11tik, tarayıcıda hala herkese açık bir çıkarıcıdır. Özel veya kilitli paketlemeyi atlamaz.</p>"
+    },
+    {
+      "question": "URL doğru görünüyorsa ne denemeliyim?",
+      "answer": "Videonun oturum kapatılmış olarak açıldığını doğrulayın, Stüdyo resmini değiştirdiyseniz bekleyin, ardından 11tik üzerinde çıkarma işlemini yeniden çalıştırın. Sürekli boş sonuçlar, şu anda o kimlik için halka açık bir fotoğrafın mevcut olmadığı anlamına gelir.",
+      "answerHtml": "<p>Videonun oturum kapatılmış olarak açıldığını doğrulayın, Stüdyo resmini değiştirdiyseniz bekleyin, ardından 11tik üzerinde çıkarma işlemini yeniden çalıştırın. Sürekli boş sonuçlar, şu anda o kimlik için halka açık bir fotoğrafın mevcut olmadığı anlamına gelir.</p>"
+    },
+    {
+      "question": "\"Herkese açık küçük resim yok\" ifadesi, video dosyasının silindiği anlamına mı geliyor?",
+      "answer": "Her zaman değil. Kamuoyu algısına yönelik içerikler saklanmış veya hazır olmamış olsa bile, video uygun izleyiciler için hâlâ mevcut olabilir. YouTube'un kendi sayfasındaki mesajı kontrol edin.",
+      "answerHtml": "<p>Her zaman değil. Kamuoyu algısına yönelik içerikler saklanmış veya hazır olmamış olsa bile, video uygun izleyiciler için hâlâ mevcut olabilir. YouTube'un kendi sayfasındaki mesajı kontrol edin.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Çözüm</h2>\n<p>Küçük resim \"görünmüyor\"sa, iki soruyu birbirinden ayırın: Herhangi bir genel doğrulama işlemi gerçekleşti mi? Yoksa yalnızca üst düzey bir dosya adı mı başarısız oldu? Video düzeyindeki hatalar genellikle özel, kısıtlı, işleme aşamasında, silinmiş veya başka şekilde herkese açık olmayan paketlemeyle ilgilidir; sihirli bir eksiklikten kaynaklanmaz.<code>maxresdefault</code>11tik dizesini kullanarak herkese açık kullanılabilirliği dürüstçe test edin, ardından eşleşen sonraki adım için maxres, URL veya indirme kılavuzunu izleyin.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik üzerinde herkese açık bir YouTube küçük resminin olup olmadığını kontrol edin →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>Özel küçük resimler için resmi içerik oluşturucu yardımı:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Özel video küçük resimleri yükleyin</a>.</p>"
+}

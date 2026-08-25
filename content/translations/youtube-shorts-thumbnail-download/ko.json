@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "ko",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "YouTube Shorts 썸네일을 HD 화질로 다운로드하는 방법 | 11tik",
+  "description": "YouTube Shorts의 미리보기 이미지를 브라우저에서 다운로드하세요. Shorts는 시청 URL과 동일한 공개 이미지를 사용합니다. 다운로드 파일은 일반적으로 가로 방향입니다.",
+  "h1": "고화질 유튜브 쇼츠 썸네일 다운로드 방법",
+  "ogTitle": "고화질 유튜브 쇼츠 썸네일 다운로드 방법",
+  "ogDescription": "YouTube Shorts의 미리보기 이미지를 브라우저에서 다운로드하세요. Shorts는 시청 URL과 동일한 공개 이미지를 사용합니다. 다운로드 파일은 일반적으로 가로 방향입니다.",
+  "imageAlt": "11tik에서 공개 YouTube Shorts 썸네일을 다운로드합니다.",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik에서 공개 YouTube Shorts 썸네일을 다운로드합니다.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "유튜브 쇼츠 썸네일은 어떻게 다운로드하나요?",
+      "html": "<p>/shorts/와 동영상 ID가 포함된 URL을 복사하여 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>지정된 크기를 다운로드하세요. ID가 유효하면 압축 해제가 시작됩니다.</p>"
+    },
+    {
+      "heading": "Shorts 파일은 watch-page 파일과 같은 건가요?",
+      "html": "<p>이들은 동영상 ID를 기준으로 동일한 공개 크기 이름을 사용합니다. YouTube가 와이드스크린 버전을 저장한 경우 스틸 이미지가 레터박스 형태로 보일 수 있습니다.</p>"
+    },
+    {
+      "heading": "이미지가 나타나지 않으면 어떻게 해야 하나요?",
+      "html": "<p>해당 단편 영상은 비공개이거나 삭제되었거나 공개된 스틸컷이 없을 수 있습니다. 추출기는 이러한 제한을 우회할 수 없습니다.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">다운로드 방법</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "유튜브 쇼츠 썸네일을 다운로드할 수 있나요?",
+      "answer": "네, 유튜브가 해당 쇼츠 영상 ID의 스틸컷을 공개했을 때요.",
+      "answerHtml": "네, 유튜브가 해당 쇼츠 영상 ID의 스틸컷을 공개했을 때요."
+    },
+    {
+      "question": "왜 여전히 레터박스 형태로 보일까요?",
+      "answer": "YouTube는 세로형 Short의 경우에도 16:9 파생물을 저장할 수 있습니다. 11tik는 자르기를 만들어내는 대신 호스팅된 파일을 보여줍니다.",
+      "answerHtml": "YouTube는 세로형 Short의 경우에도 16:9 파생물을 저장할 수 있습니다. 11tik는 자르기를 만들어내는 대신 호스팅된 파일을 보여줍니다."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+}

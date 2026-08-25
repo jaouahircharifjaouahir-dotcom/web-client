@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "hu",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "A 11tik Indexkép-kivonó beágyazása | 11tik",
+  "description": "Adj hozzá egy ingyenes YouTube bélyegkép-kivonót a blogodhoz, dokumentumaidhoz vagy alkotói eszköztáradhoz. A widget a 11tik oldalról töltődik be és átméretezi magát. Nincs API-kulcs.",
+  "h1": "A 11tik bélyegkép-kivonó beágyazása",
+  "ogTitle": "A 11tik bélyegkép-kivonó beágyazása",
+  "ogDescription": "Adj hozzá egy ingyenes YouTube bélyegkép-kivonót a blogodhoz, dokumentumaidhoz vagy alkotói eszköztáradhoz. A widget a 11tik oldalról töltődik be és átméretezi magát. Nincs API-kulcs.",
+  "imageAlt": "",
+  "faqHeading": "GYIK",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe kódrészlet",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Szabályok",
+      "html": "<ul>\n    <li>Tartsa meg a<code>id=\"yte-app\"</code>attribútum, hogy a magasság szinkronizálása működjön.</li>\n    <li>Ne tekerd be az iframe-et olyan rögzített magasságba, amely levágja a letöltési gombokat.</li>\n    <li>Visszahivatkozás ide:<a href=\"https://www.11tik.com/\">www.11tik.com</a>segít a felhasználóknak megnyitni a teljes eszközt.</li>\n  </ul>"
+    },
+    {
+      "heading": "Mélylinkek",
+      "html": "<p>Ossza meg a kész extrakciót a következővel:<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Nyissa ki az elszívót</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

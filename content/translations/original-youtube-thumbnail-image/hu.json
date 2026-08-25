@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "hu",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Hogyan szerezd meg az eredeti YouTube indexképet | 11tik",
+  "description": "Szerezd meg az eredeti nyilvános YouTube-bélyegképet, amelyet a YouTube már tárol. Ez a CDN állóképe, nem a videóból kivágott képkocka.",
+  "h1": "Hogyan lehet megszerezni az eredeti YouTube indexképet",
+  "ogTitle": "Hogyan lehet megszerezni az eredeti YouTube indexképet",
+  "ogDescription": "Szerezd meg az eredeti nyilvános YouTube-bélyegképet, amelyet a YouTube már tárol. Ez a CDN állóképe, nem a videóból kivágott képkocka.",
+  "imageAlt": "Az eredeti nyilvános YouTube-bélyegképfájl a 11tik kivonatolóban látható",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Az eredeti nyilvános YouTube-bélyegképfájl a 11tik kivonatolóban látható",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mi az eredeti YouTube indexkép?",
+      "html": "<p>Ez az előnézeti kép, amelyet a YouTube már tárol a képtárhelyein. Ez a keresésben és a javasolt polcokon használt fájl, nem pedig egy képkocka, amelyet a Print Screen segítségével rögzítesz.</p>"
+    },
+    {
+      "heading": "Miben különbözik ez egy képernyőképtől?",
+      "html": "<p>A képernyőkép tartalmazza a lejátszó krómját, a böngésző felhasználói felületét és extra tömörítést. Az eredeti fájl egy tiszta állókép a YouTube által közzétett pixelméretben.</p>"
+    },
+    {
+      "heading": "Hogyan találom meg az eredeti miniatűrképet?",
+      "html": "<p>Illeszd be a videó, rövid videó, élő videók vagy a youtu.be URL-címét ide:<a href=\"https://www.11tik.com/\">[[3. oldal]]</a>Az eszköz beolvassa a videoazonosítót, ellenőrzi a nyilvános fájlokat, és rangsorolja a legmagasabb értékű videót.</p>"
+    },
+    {
+      "heading": "Hogyan működnek a YouTube indexképek URL-jei?",
+      "html": "<p>A videó azonosítóját és egy méretnevet, például maxresdefault.jpg vagy hqdefault.jpg-et használják a i.ytimg.com oldalon. Egy soha nem közzétett méret megtippelése hibát vagy helykitöltőt ad vissza.</p>"
+    },
+    {
+      "heading": "Mi az a maxresdefault.jpg?",
+      "html": "<p>Ez a leggyakoribb legmagasabb nyilvános fájlnév, általában 1280×720 volt, amikor a YouTube létrehozta. Ez nem egy 4K-s master fájl, és nem is maga a videofájl.</p>"
+    },
+    {
+      "heading": "Az eredeti mindig 1280&#215;720-at jelent?",
+      "html": "<p>Nem. Ha a maxres soha nem jelent meg, az eredeti nyilvános kép hq, sd vagy más fennmaradt fájl. A 11tik a valós pixelméretet mutatja a pixelek kitalálása helyett.</p>"
+    },
+    {
+      "heading": "Megszerezhetem az eredeti állóképet a Shortsból, Live-ból vagy a youtu.be-ből?",
+      "html": "<p>Igen, ha ezek az URL-ek nyilvános videoazonosítót és YouTube-on tárolt nyilvános állóképeket tartalmaznak. A kivonatoló program ugyanúgy kezeli őket, mint egy normál megtekintési URL-t.</p>"
+    },
+    {
+      "heading": "Hogyan tudom ellenőrizni, hogy valóban az eredeti fájlt kaptam-e meg?",
+      "html": "<p>A fájl érvényesítése után használd a méret és dimenziók 11tik listákat. Ha a kép egy lejátszó képernyőképére hasonlít, akkor nem töltötted le a tárolt bélyegképet.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Legmagasabb minőség</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mi az eredeti YouTube indexkép?",
+      "answer": "A YouTube által a videóazonosítóhoz tárolt nyilvános képfájl, például maxresdefault, ha létezik. Ez nem a videóoldal képernyőképe.",
+      "answerHtml": "A YouTube által a videóazonosítóhoz tárolt nyilvános képfájl, például maxresdefault, ha létezik. Ez nem a videóoldal képernyőképe."
+    },
+    {
+      "question": "Az eredeti mindig 1280&#215;720-at jelent?",
+      "answer": "Nem. A Maxres általában 1280×720 méretű közzétételkor. Ha ez a fájl hiányzik, az eredeti nyilvános fájl továbbra is a YouTube által tárolt következő méret.",
+      "answerHtml": "Nem. A Maxres általában 1280×720 felbontású közzétételkor. Ha ez a fájl hiányzik, az eredeti nyilvános fájl továbbra is a YouTube által tárolt következő méret."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>"
+}

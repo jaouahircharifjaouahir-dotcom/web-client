@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "zh",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "如何获得最高质量的 YouTube 视频缩略图 | 11tik",
+  "description": "最高质量指的是 YouTube 实际返回的最大公开 JPEG 或 WebP 文件，而不是猜测的 4K 文件名。",
+  "h1": "如何获得最高质量的 YouTube 缩略图",
+  "ogTitle": "如何获得最高质量的 YouTube 缩略图",
+  "ogDescription": "最高质量指的是 YouTube 实际返回的最大公开 JPEG 或 WebP 文件，而不是猜测的 4K 文件名。",
+  "imageAlt": "在 11tik 中选择了最高可用的公开 YouTube 缩略图",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "在 11tik 中选择了最高可用的公开 YouTube 缩略图",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "如何获得最高质量的YouTube视频缩略图？",
+      "html": "<p>将公共 URL 粘贴到<a href=\"https://www.11tik.com/\">11tik</a>并下载列表中第一个列出的尺寸。提取器会对现存的公共文件进行排序；它不会将小尺寸的静态图像拉伸成伪高清图像。</p>"
+    },
+    {
+      "heading": "公众决议的最高版本是什么？",
+      "html": "<p>YouTube 发布 maxresdefault 时，通常为 1280×720。如果该文件缺失，则最高质量为下一个有效尺寸，例如 sd 或 hq。</p>"
+    },
+    {
+      "heading": "WebP 重要吗？",
+      "html": "<p>某些视频也有相同大小名称的 WebP 版本。11tik 可以识别这些版本。请选择工具验证过的文件，而不是猜测的 URL。</p>"
+    },
+    {
+      "heading": "为什么“高清”有时看起来很柔和？",
+      "html": "<p>公开的图片分辨率可能仍然是 1280×720（压缩后），或者您可能看到的是 hqdefault 分辨率。在断定下载失败之前，请检查像素大小 11tik 报告。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">尺码指南</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "如何获得最高质量的YouTube视频缩略图？",
+      "answer": "将公开链接粘贴到 11tik 中，然后下载列表中第一个列出的文件大小。这是 YouTube 存储的最大公开文件大小。",
+      "answerHtml": "将公开链接粘贴到 11tik 中，然后下载列表中第一个列出的文件大小。这是 YouTube 存储的最大公开文件大小。"
+    },
+    {
+      "question": "最高质量的文件是 4K 吗？",
+      "answer": "通常不会。公共最大分辨率通常为 1280×720。11tik 不会放大或创建更大的母版。",
+      "answerHtml": "通常不会。公共最大分辨率通常为 1280×720。11tik 不会放大或生成更大的母版。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

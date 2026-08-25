@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "id",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Cara Mendapatkan URL Thumbnail YouTube Langsung dari Video | 11tik",
+  "description": "Buat atau salin URL thumbnail YouTube yang berfungsi dari ID video di i.ytimg.com. Konfirmasikan ukurannya ada sebelum Anda membuat tautan langsung.",
+  "h1": "Cara Mendapatkan URL Thumbnail YouTube Langsung dari Video",
+  "ogTitle": "Cara Mendapatkan URL Thumbnail YouTube Langsung dari Video",
+  "ogDescription": "Buat atau salin URL thumbnail YouTube yang berfungsi dari ID video di i.ytimg.com. Konfirmasikan ukurannya ada sebelum Anda membuat tautan langsung.",
+  "imageAlt": "Diagram yang menunjukkan URL tontonan YouTube yang dikonversi menjadi ID video dan kemudian URL gambar thumbnail.",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Diagram yang menunjukkan URL tontonan YouTube yang dikonversi menjadi ID video dan kemudian URL gambar thumbnail.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Anatomi berlabel dari URL thumbnail YouTube yang menunjukkan host, path, ID video, dan nama file.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jawaban singkat",
+      "html": "<p>Untuk mendapatkan URL thumbnail YouTube: temukan ID video 11 karakter, lalu buka alamat gambar publik yang terverifikasi seperti<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>URL halaman tontonan bukanlah gambar. Tempelkan tautan video ke<a href=\"https://www.11tik.com/\">11tik</a>, tunggu hingga ukuran yang benar-benar dimuat, lalu gunakan<strong>Salin URL gambar</strong>Jadi, Anda tetap memiliki tautan HTTPS yang berfungsi, bukan nama file yang ditebak dan menghasilkan error 404.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Alur yang digunakan oleh ekstraktor: URL tontonan publik → ID video → URL thumbnail publik di layanan hosting gambar YouTube.</p>"
+    },
+    {
+      "heading": "Apa itu URL thumbnail YouTube?",
+      "html": "<p>URL thumbnail YouTube mengarah ke file gambar diam, bukan ke pemutar video. URL tersebut tersimpan di CDN gambar publik YouTube (umumnya<code>i.ytimg.com</code>). Jika alamat tersebut berfungsi, browser Anda akan mengunduh file JPEG atau WebP. Jika tidak, Anda akan mendapatkan file yang hilang atau placeholder abu-abu—bukan \"HD\" yang muncul begitu saja.</p>\n  <p>Hal itu penting untuk blog, pratinjau Open Graph, maket desain, dan kolom gambar unggulan CMS: sistem-sistem tersebut membutuhkan URL gambar, bukan<code>youtube.com/watch?v=…</code>Jika Anda hanya membutuhkan file di disk, gunakan<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">panduan unduhan</a>alih-alih halaman yang berfokus pada URL ini.</p>"
+    },
+    {
+      "heading": "Bagaimana URL berhubungan dengan ID video",
+      "html": "<p>YouTube mengidentifikasi gambar diam publik berdasarkan ID video. Pola JPEG yang umum adalah:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Beberapa video juga mempublikasikan kembaran WebP di bawah<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>adalah tepat 11 karakter dari himpunan tersebut<code>A–Z a–z 0–9 _ -</code>Ubah ID-nya dan Anda akan diarahkan ke gambar diam dari video yang berbeda. Ubah nama filenya dan Anda akan meminta turunan publik yang berbeda dari video yang sama.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatomi URL thumbnail publik: host, path, ID video, dan nama file ukuran.</p>"
+    },
+    {
+      "heading": "Cara menemukan ID video YouTube",
+      "html": "<p>Anda hanya memerlukan ID-nya. Parameter kueri tambahan seperti ID daftar putar atau<code>pp=</code>Jangan mengubah jalur host thumbnail.</p>\n  <table>\n    <thead>\n      <tr><th>Format URL YouTube</th><th>Contoh</th><th>Di mana kartu identitas berada</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Jam tangan</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>nilai kueri</td></tr>\n      <tr><td>Tautan pendek</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Segmen jalur pertama</td></tr>\n      <tr><td>Celana pendek</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Jalur setelahnya<code>/shorts/</code></td></tr>\n      <tr><td>Menanamkan</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Jalur setelahnya<code>/embed/</code></td></tr>\n      <tr><td>Hidup</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Jalur setelahnya<code>/live/</code></td></tr>\n      <tr><td>penyematan tanpa cookie</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Sama seperti menyematkan</td></tr>\n    </tbody>\n  </table>\n  <p>Parser 11tik menerima bentuk-bentuk tersebut (dan ID 11 karakter saja). URL saluran atau daftar putar tanpa ID video tidak cukup untuk URL thumbnail tunggal.</p>"
+    },
+    {
+      "heading": "Nama file thumbnail publik umum",
+      "html": "<p>Nama file menjelaskan tingkatan ukuran yang mungkin atau mungkin tidak dipublikasikan oleh YouTube untuk unggahan tertentu. Nama file tidak menjamin keberadaan file tersebut.</p>\n  <table>\n    <thead>\n      <tr><th>Nama berkas</th><th>Piksel tipikal jika ada.</th><th>Catatan</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Publik umum tertinggi masih saat dipublikasikan</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Kelas 1280×720</td><td>Beberapa video mengungkap tingkatan tinggi lainnya.</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Sering tersedia ketika maxres tidak ada.</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Ukuran sedang yang sangat umum</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Pratinjau singkat</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Standar terkecil masih</td></tr>\n    </tbody>\n  </table>\n  <p>Untuk detail tingkat piksel dan kapan harus memilih satu ukuran daripada ukuran lainnya, lihat<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Panduan ukuran dan resolusi thumbnail</a>. Karena mengapa<code>maxresdefault.jpg</code>seringkali hilang, lihat<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">apa itu maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "Contoh yang berhasil dengan ID video publik",
+      "html": "<p>Gunakan ID demo publik.<code>dQw4w9WgXcQ</code>URL untuk memantau adalah:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Contoh URL JPEG maxres adalah:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Buka alamat tersebut di tab baru. Jika gambar dimuat, Anda memiliki URL thumbnail yang berfungsi. Jika gagal, coba nama file berikutnya (misalnya<code>hqdefault.jpg</code>) atau tempel tautan tontonan ke 11tik sehingga hanya file yang masih ada yang tercantum. Jangan pernah berasumsi setiap video memiliki resolusi maksimal.</p>"
+    },
+    {
+      "heading": "Tiga cara untuk mengambil URL gambar",
+      "html": "<h3>1. Tercepat: salin dari 11tik</h3>\n  <ol>\n    <li>Salin tontonan publik, Shorts, siaran langsung, sematan, atau URL youtu.be.</li>\n    <li>Membuka<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Tempel URL-nya dan tunggu hingga pratinjau muncul.</li>\n    <li>Memilih<strong>Salin URL gambar</strong>sesuai ukuran yang Anda butuhkan.</li>\n  </ol>\n  <p>11tik memeriksa respons di browser Anda dan hanya menampilkan ukuran yang menghasilkan gambar asli. Itulah perbedaan antara tautan CMS yang dapat digunakan dan tautan yang rusak.<code>maxresdefault</code>tebakan.</p>\n\n  <h3>2. Metode peramban</h3>\n  <p>Setelah Anda memiliki kandidat<code>i.ytimg.com</code>Buka alamat tersebut di tab baru. Jika masih muncul, salin bilah alamatnya. Jika Anda melihat kesalahan atau ubin kosong/placeholder, ukuran tersebut tidak pernah diterbitkan untuk ID tersebut—jangan gunakan hotlink.</p>\n\n  <h3>3. Buat URL secara manual</h3>\n  <p>Anda dapat menggabungkan host +<code>/vi/</code>+ ID + nama file sendiri. URL yang dibuat secara manual baik untuk pengujian, tetapi tidak aman untuk ditempelkan ke HTML produksi sampai Anda memverifikasi responsnya. Ketersediaan bervariasi tergantung pada usia unggahan, gambar sumber, dan status pemrosesan di YouTube Studio.</p>"
+    },
+    {
+      "heading": "Memilih URL terbaik yang tersedia",
+      "html": "<p>“Terbaik” berarti file publik terbesar yang benar-benar ada, bukan nama file terpanjang yang dapat Anda ketik. Lebih disukai tautan maxres atau hq720 yang tervalidasi jika tersedia. Jika gagal, turunkan ke sd, hq, mq, atau default. Meningkatkan resolusi gambar diam 480×360 menjadi 1280×720 di editor tidak akan menghasilkan URL maxres yang sebenarnya.</p>\n  <p>Para kreator yang mengunggah karya seni kustom tetap harus mengkonfirmasi turunan publik langsung setelahnya—proses di Studio dapat tertunda. Terkait:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Gambar mini YouTube Studio di tahun 2026</a>.</p>"
+    },
+    {
+      "heading": "Menggunakan URL di situs web lain",
+      "html": "<p>Anda dapat menempelkan kode yang berfungsi.<code>i.ytimg.com</code>Anda dapat memasukkan URL ke banyak kolom CMS, tetapi hotlinking memiliki risiko: YouTube dapat mengubah jalur CDN, dan beberapa jaringan memblokir host pihak ketiga. Untuk gambar unggulan blog atau tag Open Graph yang tahan lama, unduh gambar diam yang telah dikonfirmasi dan hosting salinannya di domain Anda sendiri. Panduan langkah demi langkah:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Gambar thumbnail YouTube sebagai gambar blog / Open Graph</a>.</p>\n  <p>Hak cipta tetap berada pada pengunggah. URL publik bukanlah izin untuk menerbitkan ulang karya seni tersebut sebagai sampul Anda sendiri. Lihat bantuan YouTube tentang hal ini.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">thumbnail video kustom</a>dan 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ketentuan</a>.</p>"
+    },
+    {
+      "heading": "Memecahkan masalah URL thumbnail yang rusak",
+      "html": "<ul>\n    <li><strong>404 atau tempat penampung:</strong>Ukuran tersebut tidak pernah dipublikasikan. Coba nama file lain atau gunakan daftar yang divalidasi oleh 11tik.</li>\n    <li><strong>Video yang salah:</strong>ID salah ketik. Salin ulang dari URL pengawasan.</li>\n    <li><strong>Pribadi / dibatasi usia / dihapus:</strong>belum ada tautan publik yang tersedia.</li>\n    <li><strong>Konten campuran HTTP:</strong>selalu gunakan<code>https://</code>URL gambar pada situs HTTPS.</li>\n    <li><strong>Celana pendek terlihat seperti letterbox:</strong>Banyak Shorts masih menyimpan file publik dalam format lanskap. URL-nya masih URL publik resmi.</li>\n  </ul>"
+    },
+    {
+      "heading": "Langkah selanjutnya",
+      "html": "<p>Tempelkan URL YouTube publik ke dalam<a href=\"https://www.11tik.com/\">Ekstraktor Thumbnail YouTube</a>, salin tautan gambar yang telah divalidasi, atau<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">unduh gambar diam</a>Jika Anda memerlukan file lokal. Untuk pilihan resolusi, buka<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">panduan ukuran dan kualitas</a>.</p>\n\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit ekstraktor dalam peramban. Hanya gambar diam publik—tidak ada unduhan video atau audio.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pribadi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ketentuan</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bisakah saya menyalin URL thumbnail langsung tanpa mengunduh filenya?",
+      "answer": "Ya. Pada 11tik, gunakan Salin URL gambar. Itu menyalin alamat gambar HTTPS untuk ukuran yang sudah divalidasi di browser Anda.",
+      "answerHtml": "<p>Ya. Pada 11tik, gunakan Salin URL gambar. Itu akan menyalin alamat gambar HTTPS dengan ukuran yang sudah divalidasi di browser Anda.</p>"
+    },
+    {
+      "question": "Bisakah saya mendapatkan URL thumbnail dari YouTube Short?",
+      "answer": "Ya, saat Short tersebut bersifat publik dan YouTube telah menerbitkan gambar diam untuk ID tersebut. Tempelkan tautan /shorts/ dengan cara yang sama seperti Anda menempelkan URL tontonan. Lihat juga thumbnail Shorts.",
+      "answerHtml": "<p>Ya, saat Short tersebut bersifat publik dan YouTube telah menerbitkan gambar diam untuk ID tersebut. Tempelkan<code>/shorts/</code>Tautkan dengan cara yang sama seperti Anda menempelkan URL jam tangan. Lihat juga<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Gambar mini celana pendek</a>.</p>"
+    },
+    {
+      "question": "Mengapa satu URL thumbnail berfungsi sementara yang lain menampilkan kesalahan?",
+      "answer": "Nama berkas merupakan turunan publik opsional. hqdefault.jpg dapat ada ketika maxresdefault.jpg tidak ada. URL ukuran menengah yang berfungsi tidak berarti URL resolusi maksimum juga berfungsi.",
+      "answerHtml": "<p>Nama file merupakan turunan publik opsional.<code>hqdefault.jpg</code>mungkin ada ketika<code>maxresdefault.jpg</code>Tidak. URL berukuran sedang yang berfungsi tidak berarti URL resolusi maksimal juga berfungsi.</p>"
+    },
+    {
+      "question": "Bisakah saya menggunakan URL gambar langsung di situs web saya?",
+      "answer": "Secara teknis ya, jika file tersebut ada, tetapi menyimpan salinan sendiri lebih andal untuk gambar unggulan dan pratinjau media sosial. Jangan menerbitkan ulang karya seni orang lain sebagai sampul saluran Anda tanpa hak cipta.",
+      "answerHtml": "<p>Secara teknis ya, jika file tersebut ada, tetapi menyimpan salinan sendiri lebih andal untuk gambar unggulan dan pratinjau media sosial. Jangan menerbitkan ulang karya seni orang lain sebagai sampul saluran Anda tanpa hak cipta.</p>"
+    },
+    {
+      "question": "Apakah URL untuk menonton pernah sama dengan URL untuk gambar mini?",
+      "answer": "Tidak. URL tontonan mengidentifikasi video. URL thumbnail mengidentifikasi file gambar di CDN gambar.",
+      "answerHtml": "<p>Tidak. URL tontonan mengidentifikasi video. URL thumbnail mengidentifikasi file gambar di CDN gambar.</p>"
+    },
+    {
+      "question": "Apakah 11tik menciptakan URL dengan resolusi lebih tinggi?",
+      "answer": "Tidak. Ini hanya menampilkan file publik yang merespons sebagai gambar. Jika maxres hilang, berarti URL tersebut tidak boleh disalin.",
+      "answerHtml": "<p>Tidak. Ini hanya menampilkan file publik yang merespons sebagai gambar. Jika maxres hilang, berarti URL tersebut tidak boleh disalin.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit ekstraktor dalam peramban. Hanya gambar diam publik—tidak ada unduhan video atau audio.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pribadi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ketentuan</a>.</p>"
+}

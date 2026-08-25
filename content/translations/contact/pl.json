@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "pl",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Kontakt | 11tik",
+  "description": "Użyj tego formularza, aby zadać pytania dotyczące narzędzia YouTube Thumbnail Extractor. Wiadomości należy kierować e-mailem do operatora 11tik. Nie wysyłaj plików wideo ani audio. Narzędzie działa tylko z publicznymi obrazami miniatur.",
+  "h1": "Kontakt",
+  "ogTitle": "Kontakt",
+  "ogDescription": "Użyj tego formularza, aby zadać pytania dotyczące narzędzia YouTube Thumbnail Extractor. Wiadomości należy kierować e-mailem do operatora 11tik. Nie wysyłaj plików wideo ani audio. Narzędzie działa tylko z publicznymi obrazami miniatur.",
+  "imageAlt": "",
+  "faqHeading": "Często zadawane pytania",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Kontakt",
+      "html": "<h1>Kontakt</h1>\n  <p class=\"yte-updated\">Ostatnia aktualizacja: 22 sierpnia 2026 r.</p>\n  <p itemprop=\"description\">Użyj tego formularza, aby zadać pytania dotyczące narzędzia YouTube Thumbnail Extractor. Wiadomości należy kierować e-mailem do operatora 11tik. Nie wysyłaj plików wideo ani audio. Narzędzie działa tylko z publicznymi obrazami miniatur.</p>\n  <p>Bezpośredni e-mail:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Aby uzyskać raport dotyczący konkretnego filmu, uwzględnij publiczny adres URL YouTube. 11tik nie hostuje pliku miniatury; obraz jest żądany z publicznej sieci CDN platformy.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Nazwa<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Wiadomość<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Wyślij wiadomość</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Narzędzie do ekstrakcji miniatur YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Polityka prywatności</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

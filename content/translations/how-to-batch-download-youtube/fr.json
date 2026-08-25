@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "fr",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Comment télécharger par lots les miniatures YouTube (jusqu'à 25 URL publiques) | 11tik",
+  "description": "Extrayez en masse les miniatures YouTube publiques directement dans votre navigateur. Collez une URL par ligne, téléchargez chaque image ou compressez l'ensemble en haute qualité. Aucun compte ni fichier vidéo requis.",
+  "h1": "Comment télécharger par lots les miniatures YouTube (jusqu'à 25 URL publiques)",
+  "ogTitle": "Comment télécharger par lots les miniatures YouTube (jusqu'à 25 URL publiques)",
+  "ogDescription": "Extrayez en masse les miniatures YouTube publiques directement dans votre navigateur. Collez une URL par ligne, téléchargez chaque image ou compressez l'ensemble en haute qualité. Aucun compte ni fichier vidéo requis.",
+  "imageAlt": "11tik Extracteur de vignettes en masse avec plusieurs URL YouTube prêtes à être téléchargées",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Extracteur de vignettes en masse avec plusieurs URL YouTube prêtes à être téléchargées",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Comment télécharger par lots les miniatures YouTube ?",
+      "html": "<p>Ouvrir<a href=\"https://www.11tik.com/\">11tik</a>Activez le traitement par lots, collez une URL publique par ligne, cliquez sur Extraire tout, puis téléchargez chaque image fixe ou le fichier ZIP de la meilleure qualité. Le nombre d'URL traitées est limité à 25 par opération afin de préserver la réactivité du navigateur.</p>"
+    },
+    {
+      "heading": "Qu'est-ce qui doit figurer sur la liste ?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= Identifiants</li>\n    <li>youtu.be Liens courts</li>\n    <li>youtube.com/shorts/ Identifiants</li>\n    </ul>\n  <p>Les vidéos privées, non répertoriées sans vignettes publiques ou soumises à une restriction d'âge ne généreront pas d'image fixe. Ceci est normal. Voir aussi<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">vignettes courtes</a>.</p>"
+    },
+    {
+      "heading": "Comment effectuer une extraction en masse",
+      "html": "<ol>\n    <li>Sur la page d'accueil, cliquez sur «&nbsp;En masse&nbsp;».</li>\n    <li>Collez jusqu'à 25 liens publics, un par ligne.</li>\n    <li>Cliquez sur « Extraire tout » et attendez que chaque carte affiche un aperçu.</li>\n    <li>Téléchargez la miniature vidéo N pour chaque meilleure image fixe, ou téléchargez toutes les images en haute qualité au format zip.</li>\n    <li>Facultatif : Exporter les journaux de recherche au format CSV (identifiant de la vidéo, titre, URL de partage, URL de l'image).</li>\n  </ol>"
+    },
+    {
+      "heading": "Puis-je utiliser ceci pour une étude de la concurrence ?",
+      "html": "<p>Oui, pour étudier les emballages publics. Ne republiez pas la miniature d'un autre créateur comme étant la vôtre. Les droits d'auteur restent la propriété de leur détenteur. 11tik ne récupère que les fichiers déjà hébergés publiquement par YouTube.</p>\n  <p><a href=\"https://www.11tik.com/\">Ouvrir l'extraction en masse sur 11tik →</a></p>\n  <p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Comment télécharger par lots les miniatures YouTube ?",
+      "answer": "Utilisez la fonction Bulk sur 11tik, collez une URL publique par ligne, extrayez, puis téléchargez les images fixes ou un fichier zip de la meilleure qualité publique. Maximum 25 URL par exécution.",
+      "answerHtml": "Utilisez la fonction Bulk sur 11tik, collez une URL publique par ligne, extrayez, puis téléchargez les images fixes ou un fichier zip de la meilleure qualité publique. Maximum 25 URL par exécution."
+    },
+    {
+      "question": "Puis-je utiliser ceci pour une étude de la concurrence ?",
+      "answer": "Oui, pour étudier les emballages publics. Ne republiez pas la miniature d'un autre créateur comme étant la vôtre. Les droits d'auteur restent la propriété de son détenteur.",
+      "answerHtml": "Oui, pour étudier les emballages publics. Ne republiez pas la miniature d'un autre créateur comme étant la vôtre. Les droits d'auteur restent la propriété de son détenteur."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>"
+}

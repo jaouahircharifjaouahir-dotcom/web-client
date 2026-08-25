@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "cs",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Jak extrahovat miniatury z adresy URL kanálu YouTube | 11tik",
+  "description": "Vložte URL adresu veřejného kanálu YouTube do 11tik hromadně, chcete-li rozbalit nedávné veřejné nahrané snímky, a poté si stáhněte každý nejlepší obrázek. Toto slouží k výzkumu obalů, nikoli ke klonování vlastní grafiky jiného kanálu.",
+  "h1": "Jak extrahovat miniatury z adresy URL kanálu YouTube",
+  "ogTitle": "Jak extrahovat miniatury z adresy URL kanálu YouTube",
+  "ogDescription": "Vložte URL adresu veřejného kanálu YouTube do 11tik hromadně, chcete-li rozbalit nedávné veřejné nahrané snímky, a poté si stáhněte každý nejlepší obrázek. Toto slouží k výzkumu obalů, nikoli ke klonování vlastní grafiky jiného kanálu.",
+  "imageAlt": "Extrahovat miniatury z adresy URL kanálu YouTube – nejnovější veřejně nahrané příspěvky na 11tik",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Extrahovat miniatury z adresy URL kanálu YouTube – nejnovější veřejně nahrané příspěvky na 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mohu získat miniatury z celého kanálu YouTube?",
+      "html": "<p>Můžete si pořídit fotografie z nejnovějších<em>veřejnost</em>nahrávání, která odhalují ID videa. 11tik neshromažďuje všechna videa, která kanál kdy zveřejnil, a neobchází členství. Na domovské stránce zapněte hromadné shromažďování a vložte URL adresu kanálu, například<code>youtube.com/@handle</code>nebo<code>/channel/UC…</code>a nechte nástroj rozbalit veřejný seznam ve stylu RSS. Poté extrahujte jako typový seznam. Omezení zůstává na 25 URL adres na spuštění, aby prohlížeč zůstal použitelný.</p>\n  <p>To se liší od uložení jednoho odkazu pro sledování. Tok s jednou URL adresou je v<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">jak stáhnout miniaturu z YouTube</a>Hromadné vyřizování řádků bez kanálu je v<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">dávkové stahování</a>.</p>"
+    },
+    {
+      "heading": "Které URL adresy kanálů fungují?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>když veřejná stránka zobrazuje ID kanálu</li>\n    <li>Dědictví<code>/user/name</code>cesty, které se stále vyřeší</li>\n  </ul>\n  <p>URL adresa /playlist není kanál. Místo toho vložte jednotlivé odkazy pro sledování daného playlistu. Popisovač, který se nikdy nerozezná na UC ID, nevrátí žádná videa; otevřete kanál v běžném prohlížeči a zkopírujte kanonickou URL adresu kanálu z adresního řádku.</p>"
+    },
+    {
+      "heading": "Jak extrahovat miniatury kanálů na 11tik",
+      "html": "<ol>\n    <li>OTEVŘENO<a href=\"https://www.11tik.com/\">11tik</a>a klikněte na Hromadně.</li>\n    <li>Vložte jednu veřejnou URL adresu kanálu. Další odkazy pro sledování můžete přidat na následujících řádcích.</li>\n    <li>Spustit extrakci. Počkejte, až nástroj nahradí řádek kanálu nedávnými veřejnými URL adresami sledování, a poté načte statické snímky.</li>\n    <li>Stáhněte si každý nejlepší statický snímek, stáhněte si zip soubor nejvyšší kvality nebo exportujte CSV (id, název, adresa URL pro sdílení, adresa URL obrázku) pro výzkumný protokol.</li>\n  </ol>\n  <p>Sdílení odkazů po úspěšném použití extrakce<code>/thumb/VIDEO_ID</code>když má brána kvality titulek, štítky a aktivní miniaturu. Tyto stránky jsou určeny pro unikátní statický obrázek, ne pro druhou domovskou stránku.</p>"
+    },
+    {
+      "heading": "Co 11tik neudělá",
+      "html": "<ul>\n    <li>Stáhněte si videa nebo audio. Pouze fotografie.</li>\n    <li>Zobrazit neveřejné nebo soukromé nahrané soubory.</li>\n    <li>Zaručte maximální resdefault pro každé nedávné video. Starší nebo malé zdroje se zastaví v rozlišení HQ nebo SD.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Udělte práva k opětovnému použití uměleckého díla. Zamýšleným výzkumným využitím je studium mřížky veřejných obalů. Opětovné nahrání fotografie konkurence jako vlastní miniatury je problémem s autorskými právy a pravidly.<a href=\"https://www.11tik.com/copyright\">Autorská práva a použití</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Jak to pomáhá s výzkumem bez doorway pages",
+      "html": "<p>Výňatek z kanálu je jeden úkol: nedávné veřejné statické snímky najednou. Nejedná se o vygenerovanou stránku pro každou konkurenční značku. Zůstanete v nástroji, uložíte si zip nebo CSV soubor a napíšete si vlastní poznámky. Pokud publikujete komentář, uveďte kanály a propojte jejich stránky sledování. Pravidla pro nahrávání miniatur na YouTube pro<em>tvůj</em>kanál je v<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">vlastní miniatury videí</a>.</p>"
+    },
+    {
+      "heading": "Odstraňování problémů",
+      "html": "<p>Prázdný seznam: kanál kanálu nevrátil veřejná ID (kanál byl ukončen nebo se překladač nepodařilo namapovat adresu URL kanálu UC z rozvržení YouTube pro počítače.</p>\n  <p>Některé karty chybí: tyto nahrané soubory ještě nejsou veřejné nebo brána odmítla neúplný výňatek. Znovu spusťte jednu URL pro sledování. Soukromí vložených odkazů:<a href=\"https://www.11tik.com/p/privacy.html\">Soukromí</a>.</p>\n  <p>Extraktor vs. nástroj pro návrh: 11tik nevytváří obal alba.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extraktor vs. výrobce</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrahovat statické snímky z veřejného kanálu na 11tik →</a></p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mohu získat miniatury z celého kanálu YouTube?",
+      "answer": "Ano pro nedávná veřejná nahraná videa. Vložte URL kanálu do složky 11tik Bulk. Soukromá videa a videa pouze pro členy zde nejsou uvedena.",
+      "answerHtml": "Ano pro nedávná veřejná nahraná videa. Vložte URL kanálu do složky 11tik Bulk. Soukromá videa a videa pouze pro členy zde nejsou uvedena."
+    },
+    {
+      "question": "Které URL adresy kanálů fungují?",
+      "answer": "Veřejné adresy /channel/UC…, mnoho adres URL @handle a některé starší cesty /user/. Seznamy videí nejsou kanály.",
+      "answerHtml": "Veřejné adresy /channel/UC…, mnoho adres URL @handle a některé starší cesty /user/. Seznamy videí nejsou kanály."
+    },
+    {
+      "question": "Stahuje se z toho videa?",
+      "answer": "Ne. 11tik zobrazuje pouze veřejné statické snímky, které YouTube již hostuje.",
+      "answerHtml": "Ne. 11tik zobrazuje pouze veřejné statické snímky, které YouTube již hostuje."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

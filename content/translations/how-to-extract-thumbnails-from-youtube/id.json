@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "id",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Cara mengekstrak thumbnail dari URL saluran YouTube | 11tik",
+  "description": "Tempel URL saluran YouTube publik ke 11tik Bulk untuk memperluas unggahan publik terbaru, lalu unduh setiap gambar terbaik. Ini untuk penelitian pengemasan, bukan untuk mengkloning karya seni khusus saluran lain.",
+  "h1": "Cara mengekstrak thumbnail dari URL saluran YouTube",
+  "ogTitle": "Cara mengekstrak thumbnail dari URL saluran YouTube",
+  "ogDescription": "Tempel URL saluran YouTube publik ke 11tik Bulk untuk memperluas unggahan publik terbaru, lalu unduh setiap gambar terbaik. Ini untuk penelitian pengemasan, bukan untuk mengkloning karya seni khusus saluran lain.",
+  "imageAlt": "Ekstrak thumbnail dari URL saluran YouTube — unggahan publik terbaru di 11tik",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Ekstrak thumbnail dari URL saluran YouTube — unggahan publik terbaru di 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bisakah saya mendapatkan thumbnail dari seluruh saluran YouTube?",
+      "html": "<p>Anda bisa mendapatkan gambar diam untuk yang terbaru.<em>publik</em>unggahan yang mengungkap ID video. 11tik tidak mengikis setiap video yang pernah diunggah oleh sebuah saluran dan tidak melewati keanggotaan. Di halaman beranda, aktifkan Massal, tempel URL saluran seperti<code>youtube.com/@handle</code>atau<code>/channel/UC…</code>, dan biarkan alat tersebut memperluas daftar publik bergaya RSS. Kemudian ekstrak seperti yang Anda lakukan pada daftar yang diketik. Batas tetap 25 URL per eksekusi agar browser tetap dapat digunakan.</p>\n  <p>Ini berbeda dengan menyimpan satu tautan tontonan. Alur URL tunggal ada di<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">cara mengunduh thumbnail YouTube</a>. Pencetakan massal baris demi baris tanpa saluran ada di<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">unduhan massal</a>.</p>"
+    },
+    {
+      "heading": "URL saluran mana yang berfungsi?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>ketika halaman publik menampilkan ID saluran</li>\n    <li>Warisan<code>/user/name</code>jalur yang masih terselesaikan</li>\n  </ul>\n  <p>URL /playlist bukanlah saluran. Tempelkan tautan tontonan individual dari playlist tersebut. Handle yang tidak pernah mengarah ke ID UC tidak akan menampilkan video apa pun; buka saluran tersebut di browser biasa dan salin URL saluran kanonik dari bilah alamat.</p>"
+    },
+    {
+      "heading": "Cara mengekstrak thumbnail saluran di 11tik",
+      "html": "<ol>\n    <li>Membuka<a href=\"https://www.11tik.com/\">11tik</a>lalu klik Massal.</li>\n    <li>Tempelkan satu URL saluran publik. Anda dapat menambahkan lebih banyak tautan tontonan di baris berikutnya.</li>\n    <li>Mulai ekstraksi. Tunggu hingga alat tersebut mengganti baris saluran dengan URL tontonan publik terbaru, lalu mengambil gambar diam.</li>\n    <li>Unduh setiap gambar terbaik, atau unduh file zip berkualitas tertinggi, atau ekspor ke CSV (id, judul, URL berbagi, URL gambar) untuk catatan penelitian.</li>\n  </ol>\n  <p>Bagikan tautan setelah penggunaan ekstrak berhasil.<code>/thumb/VIDEO_ID</code>ketika gerbang kualitas memiliki judul, tag, dan thumbnail langsung. Halaman-halaman tersebut ditujukan untuk gambar diam yang unik, bukan halaman beranda kedua.</p>"
+    },
+    {
+      "heading": "Apa yang tidak akan dilakukan 11tik",
+      "html": "<ul>\n    <li>Unduh video atau audionya. Hanya gambar diam.</li>\n    <li>Daftar unggahan yang tidak terdaftar atau bersifat pribadi.</li>\n    <li>Jaminan resolusi maksimal (maxresdefault) untuk setiap video terbaru. Sumber video lama atau berukuran kecil akan berhenti pada resolusi hq atau sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Berikan hak untuk menggunakan kembali karya seni tersebut. Mempelajari pola kemasan publik adalah tujuan penggunaan penelitian. Mengunggah ulang gambar diam pesaing sebagai thumbnail kustom Anda merupakan masalah hak cipta dan kebijakan.<a href=\"https://www.11tik.com/copyright\">Hak Cipta &amp; Penggunaan</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Bagaimana ini membantu penelitian tanpa halaman pengantar",
+      "html": "<p>Ekstraksi saluran adalah satu pekerjaan: gambar diam publik terbaru dalam satu kali proses. Ini bukan halaman yang dibuat per merek pesaing. Anda tetap menggunakan alat ini, Anda menyimpan file zip atau CSV, dan Anda menulis catatan Anda sendiri. Jika Anda menerbitkan komentar, sebutkan sumber saluran dan tautkan halaman tontonan mereka. Aturan unggahan thumbnail YouTube untuk<em>milikmu</em>saluran berada di<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">thumbnail video kustom</a>.</p>"
+    },
+    {
+      "heading": "Penyelesaian Masalah",
+      "html": "<p>Daftar kosong: umpan saluran tidak mengembalikan ID publik (saluran dihentikan, atau handle yang tidak dapat dipetakan oleh resolver). Coba URL saluran UC dari tata letak desktop YouTube.</p>\n  <p>Beberapa kartu hilang: unggahan tersebut belum memiliki akses publik, atau gerbang menolak ekstrak yang tidak lengkap. Jalankan ulang URL pengawasan tunggal. Privasi tautan yang disalin:<a href=\"https://www.11tik.com/p/privacy.html\">Pribadi</a>.</p>\n  <p>Ekstraktor vs alat desain: 11tik tidak membuat sampul buku.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Ekstraktor vs pembuat</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstrak gambar diam saluran publik di 11tik →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bisakah saya mendapatkan thumbnail dari seluruh saluran YouTube?",
+      "answer": "Ya, untuk unggahan publik terbaru. Tempel URL saluran ke 11tik Massal. Video pribadi dan khusus anggota tidak tercantum.",
+      "answerHtml": "Ya, untuk unggahan publik terbaru. Tempel URL saluran ke 11tik Massal. Video pribadi dan khusus anggota tidak tercantum."
+    },
+    {
+      "question": "URL saluran mana yang berfungsi?",
+      "answer": "URL publik /channel/UC…, banyak URL @handle, dan beberapa jalur /user/ lama. Playlist bukanlah saluran.",
+      "answerHtml": "URL publik /channel/UC…, banyak URL @handle, dan beberapa jalur /user/ lama. Playlist bukanlah saluran."
+    },
+    {
+      "question": "Apakah ini mengunduh video?",
+      "answer": "Tidak. 11tik hanya menampilkan gambar diam publik yang sudah dihosting oleh YouTube.",
+      "answerHtml": "Tidak. 11tik hanya menampilkan gambar diam publik yang sudah dihosting oleh YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+}

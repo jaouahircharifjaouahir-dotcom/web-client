@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "ur",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "ایمبیڈ کریں 11tik تھمب نیل ایکسٹریکٹر | [[پ2]]",
+  "description": "اپنے بلاگ، دستاویزات، یا تخلیق کار ٹول کٹ میں مفت YouTube تھمب نیل ایکسٹریکٹر شامل کریں۔ ویجیٹ 11tik سے لوڈ ہوتا ہے اور اپنا سائز تبدیل کرتا ہے۔ کوئی API کلید نہیں۔",
+  "h1": "11tik تھمب نیل ایکسٹریکٹر کو ایمبیڈ کریں۔",
+  "ogTitle": "11tik تھمب نیل ایکسٹریکٹر کو ایمبیڈ کریں۔",
+  "ogDescription": "اپنے بلاگ، دستاویزات، یا تخلیق کار ٹول کٹ میں مفت YouTube تھمب نیل ایکسٹریکٹر شامل کریں۔ ویجیٹ 11tik سے لوڈ ہوتا ہے اور اپنا سائز تبدیل کرتا ہے۔ کوئی API کلید نہیں۔",
+  "imageAlt": "",
+  "faqHeading": "اکثر پوچھے گئے سوالات",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe کا ٹکڑا",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "قواعد",
+      "html": "<ul>\n    <li>رکھیں<code>id=\"yte-app\"</code>خاصیت تاکہ اونچائی کی مطابقت پذیری کام کرے۔</li>\n    <li>iframe کو ایک مقررہ اونچائی میں نہ لپیٹیں جو ڈاؤن لوڈ کے بٹن کو کلپ کرے۔</li>\n    <li>سے لنک کر رہا ہے۔<a href=\"https://www.11tik.com/\">[[پ1]]</a>صارفین کو مکمل ٹول کھولنے میں مدد کرتا ہے۔</li>\n  </ul>"
+    },
+    {
+      "heading": "گہرے روابط",
+      "html": "<p>کے ساتھ ایک تیار نکالنے کا اشتراک کریں<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">ایکسٹریکٹر کھولیں۔</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

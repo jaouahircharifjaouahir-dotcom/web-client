@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "zh",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "如何批量下载 YouTube 视频缩略图（最多 25 个公开 URL） | 11tik",
+  "description": "在浏览器中批量提取公开的 YouTube 缩略图。每行粘贴一个 URL，即可下载每张最佳图片，或下载最高质量的图片合集。无需注册账号，也不会生成视频文件。",
+  "h1": "如何批量下载 YouTube 视频缩略图（最多 25 个公开 URL）",
+  "ogTitle": "如何批量下载 YouTube 视频缩略图（最多 25 个公开 URL）",
+  "ogDescription": "在浏览器中批量提取公开的 YouTube 缩略图。每行粘贴一个 URL，即可下载每张最佳图片，或下载最高质量的图片合集。无需注册账号，也不会生成视频文件。",
+  "imageAlt": "11tik 批量提取 YouTube 缩略图的工具，提供多个可供下载的 YouTube URL",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 批量提取 YouTube 缩略图的工具，提供多个可供下载的 YouTube URL",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "如何批量下载 YouTube 缩略图？",
+      "html": "<p>打开<a href=\"https://www.11tik.com/\">11tik</a>启用批量下载，每行粘贴一个公开URL，点击“全部提取”，然后下载最佳图片或最高质量的压缩包。每次最多只能下载25个URL，以确保浏览器响应迅速。</p>"
+    },
+    {
+      "heading": "哪些内容应该列入清单？",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be 短链接</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>私密视频、未公开且无公开缩略图的视频或设有年龄限制的视频不会返回静帧。这是正常现象。另请参阅<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">短片缩略图</a>。</p>"
+    },
+    {
+      "heading": "如何运行批量提取",
+      "html": "<ol>\n    <li>在首页点击“批量”。</li>\n    <li>最多可粘贴 25 个公共链接，每行一个。</li>\n    <li>点击“全部提取”，然后等待每张卡片显示预览。</li>\n    <li>下载每个最佳剧照的缩略图视频 N，或将所有最高质量的视频下载为 zip 文件。</li>\n    <li>可选：导出 CSV 文件以获取研究日志（视频 ID、标题、分享 URL、图像 URL）。</li>\n  </ol>"
+    },
+    {
+      "heading": "我可以用它来做竞品研究吗？",
+      "html": "<p>是的，用于研究公开的打包方式。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。11tik 仅获取 YouTube 已公开托管的文件。</p>\n  <p><a href=\"https://www.11tik.com/\">在 11tik 上打开批量提取 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "如何批量下载 YouTube 缩略图？",
+      "answer": "在 11tik 上使用批量处理功能，每行粘贴一个公开 URL，提取后即可下载最高画质的静态图像或压缩文件。每次最多可添加 25 个 URL。",
+      "answerHtml": "在 11tik 上使用批量处理功能，每行粘贴一个公开 URL，提取后即可下载最高画质的静态图像或压缩文件。每次最多可添加 25 个 URL。"
+    },
+    {
+      "question": "我可以用它来做竞品研究吗？",
+      "answer": "是的，可以用于研究公开包装。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。",
+      "answerHtml": "是的，可以用于研究公开包装。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+}

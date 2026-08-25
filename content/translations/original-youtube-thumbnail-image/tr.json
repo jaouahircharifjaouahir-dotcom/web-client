@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "tr",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Orijinal YouTube Küçük Resim Görüntüsünü Nasıl Alabilirsiniz? | 11tik",
+  "description": "YouTube'un zaten barındırdığı orijinal herkese açık YouTube küçük resmini alın. Bu, CDN'den alınmış bir kare değil, hala mevcut olan bir görseldir.",
+  "h1": "Orijinal YouTube Küçük Resim Görüntüsünü Nasıl Alabilirsiniz?",
+  "ogTitle": "Orijinal YouTube Küçük Resim Görüntüsünü Nasıl Alabilirsiniz?",
+  "ogDescription": "YouTube'un zaten barındırdığı orijinal herkese açık YouTube küçük resmini alın. Bu, CDN'den alınmış bir kare değil, hala mevcut olan bir görseldir.",
+  "imageAlt": "11tik çıkarıcısında gösterilen orijinal herkese açık YouTube küçük resim dosyası",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik çıkarıcısında gösterilen orijinal herkese açık YouTube küçük resim dosyası",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Orijinal YouTube küçük resmi nedir?",
+      "html": "<p>Bu, YouTube'un resim barındırma sunucularında zaten sakladığı önizleme görüntüsüdür. Arama ve önerilen raflarda kullanılan dosya budur, Print Screen ile yakaladığınız bir kare değildir.</p>"
+    },
+    {
+      "heading": "Bu, ekran görüntüsünden ne farkı var?",
+      "html": "<p>Ekran görüntüsü, oynatıcı arayüzünü, tarayıcı kullanıcı arayüzünü ve ek sıkıştırmayı içerir. Orijinal dosya, YouTube'un yayınladığı piksel boyutunda temiz bir görüntüdür.</p>"
+    },
+    {
+      "heading": "Orijinal küçük resmi nasıl bulabilirim?",
+      "html": "<p>Saat, Shorts, canlı veya youtu.be URL'sini yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Bu araç video kimliğini okur, herkese açık dosyaları kontrol eder ve mevcut olanlar arasında en yüksek sırada yer alanları belirler.</p>"
+    },
+    {
+      "heading": "YouTube küçük resim URL'leri nasıl çalışır?",
+      "html": "<p>maxresdefault.jpg veya hqdefault.jpg gibi bir boyut adını i.ytimg.com üzerinde video kimliğiyle birlikte kullanıyorlar. Daha önce hiç yayınlanmamış bir boyutu tahmin etmek hata veya yer tutucu döndürüyor.</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg nedir?",
+      "html": "<p>Bu, genellikle YouTube tarafından oluşturulduğunda kullanılan 1280×720 çözünürlüğündeki, en yaygın ve herkese açık dosya adıdır. 4K ana dosya değildir ve video dosyasının kendisi de değildir.</p>"
+    },
+    {
+      "heading": "Orijinal her zaman 1280 ve 720 anlamına mı gelir?",
+      "html": "<p>Hayır. Eğer maxres hiç yayınlanmadıysa, orijinal kamuya açık görüntü hq, sd veya hayatta kalan başka bir dosyadır. 11tik piksel uydurmak yerine gerçek piksel boyutunu gösterir.</p>"
+    },
+    {
+      "heading": "Orijinal fotoğrafı Shorts, Live veya youtu.be'den alabilir miyim?",
+      "html": "<p>Evet, bu URL'ler herkese açık bir video kimliği ve YouTube tarafından barındırılan herkese açık görseller içeriyorsa, çıkarıcı bunları standart bir izleme URL'si gibi ele alır.</p>"
+    },
+    {
+      "heading": "Dosyanın gerçekten orijinal olduğunu nasıl kontrol edebilirim?",
+      "html": "<p>Dosya doğrulandıktan sonra 11tik listesindeki boyut ve ölçüleri kullanın. Görüntü bir oyuncu ekran görüntüsüne benziyorsa, barındırılan küçük resmi indirmemişsiniz demektir.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>veya<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktör</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">En yüksek kalite</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Orijinal YouTube küçük resmi nedir?",
+      "answer": "YouTube'un video kimliği için barındırdığı herkese açık resim dosyasıdır; örneğin, varsa maxresdefault gibi. Bu, izleme sayfasının ekran görüntüsü değildir.",
+      "answerHtml": "YouTube'un video kimliği için barındırdığı herkese açık resim dosyasıdır; örneğin, varsa maxresdefault gibi. Bu, izleme sayfasının ekran görüntüsü değildir."
+    },
+    {
+      "question": "Orijinal her zaman 1280 ve 720 anlamına mı gelir?",
+      "answer": "Hayır. Maxres genellikle yayınlandığında 1280x720 çözünürlüğündedir. Bu dosya eksikse, orijinal yayınlanan dosya YouTube'un sakladığı bir sonraki boyuttadır.",
+      "answerHtml": "Hayır. Yayınlandığında maksimum çözünürlük genellikle 1280×720'dir. Bu dosya eksikse, orijinal yayınlanan dosya YouTube'un sakladığı bir sonraki boyuttadır."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>veya<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "sv",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Hur man laddar ner en YouTube Shorts-miniatyr i HD | 11tik",
+  "description": "Ladda ner en miniatyrbild av en YouTube Shorts-video i webbläsaren. Shorts använder samma offentliga stillbilder som visningswebbadresser. Filen är ofta liggande.",
+  "h1": "Hur man laddar ner en YouTube Shorts-miniatyr i HD",
+  "ogTitle": "Hur man laddar ner en YouTube Shorts-miniatyr i HD",
+  "ogDescription": "Ladda ner en miniatyrbild av en YouTube Shorts-video i webbläsaren. Shorts använder samma offentliga stillbilder som visningswebbadresser. Filen är ofta liggande.",
+  "imageAlt": "Ladda ner en offentlig YouTube Shorts-miniatyr i 11tik",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Ladda ner en offentlig YouTube Shorts-miniatyr i 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hur laddar jag ner en YouTube Shorts-miniatyr?",
+      "html": "<p>Kopiera en URL som innehåller /shorts/ plus ett video-ID, klistra in den i<a href=\"https://www.11tik.com/\">11tik</a>och ladda ner en angiven storlek. Extraheringen startar när ID:t är giltigt.</p>"
+    },
+    {
+      "heading": "Är Shorts-filer samma sak som visningssidesfiler?",
+      "html": "<p>De använder samma offentliga storleksnamn som anges av video-ID. Stillbilden kan se ut som en bokstavslådebild om YouTube lagrade en widescreen-variant.</p>"
+    },
+    {
+      "heading": "Vad händer om ingen bild visas?",
+      "html": "<p>Kortfilmen kan vara privat, raderad eller utan offentliga stillbilder. Extraktorn kan inte kringgå dessa gränser.</p>\n  <p class=\"yte-bio\">Skriven av 11tik, utgivare av YouTube Thumbnail Extractor i webbläsaren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hur man laddar ner</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jag ladda ner en YouTube Shorts-miniatyr?",
+      "answer": "Ja, när YouTube publicerade offentliga stillbilder för det Shorts-video-ID:t.",
+      "answerHtml": "Ja, när YouTube publicerade offentliga stillbilder för det Shorts-video-ID:t."
+    },
+    {
+      "question": "Varför ser stillbilden ut som en bokstavslåde?",
+      "answer": "YouTube kan lagra ett 16:9-derivat även för en vertikal kortfilm. 11tik visar den hostade filen istället för att skapa en beskärning.",
+      "answerHtml": "YouTube kan lagra ett 16:9-derivat även för en vertikal kortfilm. 11tik visar den hostade filen istället för att skapa en beskärning."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skriven av 11tik, utgivare av YouTube Thumbnail Extractor i webbläsaren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>.</p>"
+}

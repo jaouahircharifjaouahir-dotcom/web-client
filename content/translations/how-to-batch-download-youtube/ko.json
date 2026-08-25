@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "ko",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "YouTube 썸네일 일괄 다운로드 방법 (최대 25개의 공개 URL) | 11tik",
+  "description": "브라우저에서 공개 YouTube 썸네일을 일괄 추출하세요. 한 줄에 URL 하나씩 붙여넣고, 가장 좋은 스틸컷을 각각 다운로드하거나, 최고 화질의 이미지 세트를 압축할 수 있습니다. 계정이 필요 없고 동영상 파일도 필요하지 않습니다.",
+  "h1": "유튜브 썸네일을 일괄 다운로드하는 방법 (최대 25개의 공개 URL)",
+  "ogTitle": "유튜브 썸네일을 일괄 다운로드하는 방법 (최대 25개의 공개 URL)",
+  "ogDescription": "브라우저에서 공개 YouTube 썸네일을 일괄 추출하세요. 한 줄에 URL 하나씩 붙여넣고, 가장 좋은 스틸컷을 각각 다운로드하거나, 최고 화질의 이미지 세트를 압축할 수 있습니다. 계정이 필요 없고 동영상 파일도 필요하지 않습니다.",
+  "imageAlt": "11tik 여러 YouTube URL을 다운로드할 수 있는 대량 썸네일 추출기",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 여러 YouTube URL을 다운로드할 수 있는 대량 썸네일 추출기",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "유튜브 썸네일을 일괄 다운로드하는 방법은 무엇인가요?",
+      "html": "<p>열려 있는<a href=\"https://www.11tik.com/\">11tik</a>일괄 추출 기능을 켜고, 각 줄에 공개 URL을 하나씩 붙여넣은 다음, '모두 추출'을 클릭하고, 가장 좋은 스틸 이미지 또는 최고 품질의 압축 파일을 다운로드하세요. 브라우저 응답성을 유지하기 위해 한 번에 최대 25개의 URL만 처리할 수 있습니다.</p>"
+    },
+    {
+      "heading": "이 목록에 무엇이 들어가야 할까요?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be 짧은 링크</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>비공개, 공개 썸네일 기능이 없는 비공개 동영상 또는 연령 제한 동영상은 스틸컷을 반환하지 않습니다. 이는 정상적인 현상입니다. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">쇼츠 썸네일</a>.</p>"
+    },
+    {
+      "heading": "대량 추출 실행 방법",
+      "html": "<ol>\n    <li>홈페이지에서 '일괄 처리'를 클릭하세요.</li>\n    <li>공개 링크를 최대 25개까지 한 줄에 하나씩 붙여넣으세요.</li>\n    <li>\"모두 추출\"을 클릭하고 각 카드의 미리보기가 표시될 때까지 기다리세요.</li>\n    <li>각 최고 화질 스틸 이미지에 대한 썸네일 비디오를 다운로드하거나, 모든 최고 화질 이미지를 ZIP 파일로 다운로드하세요.</li>\n    <li>선택 사항: 연구 로그(동영상 ID, 제목, 공유 URL, 이미지 URL)를 CSV 파일로 내보낼 수 있습니다.</li>\n  </ol>"
+    },
+    {
+      "heading": "이 자료를 경쟁사 분석에 사용할 수 있을까요?",
+      "html": "<p>네, 공개 패키징 연구를 위해서입니다. 다른 크리에이터의 썸네일을 자신의 업로드인 것처럼 재게시하지 마세요. 저작권은 권리 보유자에게 있습니다. 11tik는 YouTube에서 이미 공개적으로 호스팅하는 파일만 가져옵니다.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik에서 대량 추출을 엽니다 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "유튜브 썸네일을 일괄 다운로드하는 방법은 무엇인가요?",
+      "answer": "11tik에서 대량 기능을 사용하고, 각 줄에 공개 URL을 하나씩 붙여넣은 다음, 압축을 풀고 최고 품질의 스틸 이미지 또는 zip 파일을 다운로드하세요. 한 번 실행할 때 최대 25개의 URL을 처리할 수 있습니다.",
+      "answerHtml": "11tik에서 대량 기능을 사용하고, 각 줄에 공개 URL을 하나씩 붙여넣은 다음, 압축을 풀고 최고 품질의 스틸 이미지 또는 zip 파일을 다운로드하세요. 한 번 실행할 때 최대 25개의 URL을 처리할 수 있습니다."
+    },
+    {
+      "question": "이 자료를 경쟁사 분석에 사용할 수 있을까요?",
+      "answer": "네, 공개 패키징 연구 목적으로 사용하세요. 다른 제작자의 썸네일을 자신의 것처럼 재게시하지 마세요. 저작권은 해당 권리자에게 있습니다.",
+      "answerHtml": "네, 공개 패키징 연구 목적으로 사용하세요. 다른 제작자의 썸네일을 자신의 것처럼 재게시하지 마세요. 저작권은 해당 권리자에게 있습니다."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "cs",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Jak stáhnout miniaturu krátkých videí z YouTube v HD rozlišení | 11tik",
+  "description": "Stáhněte si miniaturu YouTube Shorts v prohlížeči. Shorts používají stejné veřejné statické snímky jako URL adresy pro sledování. Soubor je často orientován na šířku.",
+  "h1": "Jak stáhnout miniaturu YouTube Shorts v HD rozlišení",
+  "ogTitle": "Jak stáhnout miniaturu YouTube Shorts v HD rozlišení",
+  "ogDescription": "Stáhněte si miniaturu YouTube Shorts v prohlížeči. Shorts používají stejné veřejné statické snímky jako URL adresy pro sledování. Soubor je často orientován na šířku.",
+  "imageAlt": "Stahování veřejné miniatury YouTube Shorts v 11tik",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Stahování veřejné miniatury YouTube Shorts v 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jak si stáhnu miniaturu z YouTube Shorts?",
+      "html": "<p>Zkopírujte URL adresu, která obsahuje /shorts/ a ID videa, a vložte ji do<a href=\"https://www.11tik.com/\">11tik</a>a stáhněte si uvedenou velikost. Extrakce začne, jakmile je ID platné.</p>"
+    },
+    {
+      "heading": "Jsou soubory Shorts stejné jako soubory stránek pro sledování?",
+      "html": "<p>Používají stejné veřejné názvy velikostí s klíčem podle ID videa. Statický obrázek může vypadat jako letterbox, pokud YouTube ukládá širokoúhlou verzi.</p>"
+    },
+    {
+      "heading": "Co když se žádný obrázek nezobrazí?",
+      "html": "<p>Krátký videoklip může být soukromý, smazaný nebo bez veřejných statických snímků. Extraktor tato omezení nemůže obejít.</p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Jak stáhnout</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Můžu si stáhnout miniaturu z YouTube Shorts?",
+      "answer": "Ano, když YouTube zveřejnil veřejné statické snímky pro dané ID videa Shorts.",
+      "answerHtml": "Ano, když YouTube zveřejnil veřejné statické snímky pro dané ID videa Shorts."
+    },
+    {
+      "question": "Proč to stále vypadá jako letterbox?",
+      "answer": "YouTube může ukládat verzi s poměrem stran 16:9 i pro vertikální krátký videoklip. 11tik zobrazuje hostovaný soubor místo ořezu.",
+      "answerHtml": "YouTube může ukládat verzi s poměrem stran 16:9 i pro vertikální krátký videoklip. 11tik zobrazuje hostovaný soubor místo ořezu."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "ms",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Cara Pautan Kongsi 11tik Berfungsi: /thumb/{VIDEO_ID} vs URL Tontonan YouTube | 11tik",
+  "description": "11tik /thumb/{id} ialah halaman hasil perkongsian. Ia bukan URL tontonan YouTube dan bukan fail imej i.ytimg.com langsung.",
+  "h1": "Cara Pautan Kongsi 11tik Berfungsi: /thumb/{VIDEO_ID} vs URL Tontonan YouTube",
+  "ogTitle": "Cara Pautan Kongsi 11tik Berfungsi: /thumb/{VIDEO_ID} vs URL Tontonan YouTube",
+  "ogDescription": "11tik /thumb/{id} ialah halaman hasil perkongsian. Ia bukan URL tontonan YouTube dan bukan fail imej i.ytimg.com langsung.",
+  "imageAlt": "Gambar rajah yang membandingkan URL tontonan YouTube, URL perkongsian lakaran kecil 11tik dan URL imej lakaran kecil YouTube langsung",
+  "faqHeading": "Soalan Lazim",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Gambar rajah yang membandingkan URL tontonan YouTube, URL perkongsian lakaran kecil 11tik dan URL imej lakaran kecil YouTube langsung",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Aliran kerja yang menunjukkan ekstrak, pratonton, salin pautan kongsi 11tik, dan penerima membuka halaman hasil carian ibu jari",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jawapan pantas",
+      "html": "<p>Tiga URL berbeza boleh berkongsi ID video YouTube yang sama. Hanya satu daripadanya yang merupakan fail imej.</p>\n  <ol>\n    <li><strong>URL tontonan YouTube</strong>— membuka video di YouTube.</li>\n    <li><strong>11tik URL kongsi</strong>— membuka halaman hasil pengekstrak 11tik untuk ID tersebut (<code>/thumb/{VIDEO_ID}</code>). Ini ialah halaman web, bukan fail JPEG/WebP.</li>\n    <li><strong>URL CDN lakaran kecil langsung</strong>— menunjuk ke arah imej awam pada hos imej YouTube (contohnya<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Menggunakan ID demo awam<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Alamat ketiga ialah contoh corak URL imej langsung. Fail maxres khusus itu tidak dijamin untuk setiap video—sahkan saiz sebenar dengan<a href=\"https://www.11tik.com/\">11tik</a>atau<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">panduan lalai maksres</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">ID video yang sama, tiga kerja: tonton video, buka halaman hasil 11tik atau minta CDN still.</p>"
+    },
+    {
+      "heading": "Apakah /thumb/{VIDEO_ID} itu",
+      "html": "<p>Pada 11tik, ekstrak video tunggal yang berjaya mengemas kini alamat pelayar kepada laluan berbentuk seperti:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Laluan tersebut ialah URL perkongsian/keputusan produk. Ia dijana daripada ID video (lihat pembantu perkongsian tapak) dan bertujuan untuk membuka semula pengekstrak yang tertumpu pada ID tersebut. Pautan gaya pertanyaan lama seperti<code>?v=VIDEO_ID</code>dianggap sebagai pautan mendalam kepada idea yang sama dan boleh ditulis semula kepada<code>/thumb/</code>borang.</p>\n  <p><code>/thumb/…</code>ialah<strong>tidak</strong>dihoskan pada CDN imej YouTube. Membukanya tidak akan memuat turun imej dengan sendirinya; ia memuatkan laluan aplikasi 11tik untuk ID tersebut.</p>"
+    },
+    {
+      "heading": "Mengapa halaman itu wujud",
+      "html": "<p>Orang ramai memerlukan cara yang stabil untuk membuka semula atau menghantar \"hasil lakaran kecil video ini pada 11tik\" tanpa menampal URL tontonan yang panjang ke dalam sembang dan berharap penerima tahu apa yang perlu dilakukan seterusnya. Halaman kongsi menyimpan perbualan pada pengekstrak: ID yang sama, aliran kerja awam-pegun yang sama, tindakan muat turun dan salin di satu tempat.</p>\n  <p>Ia juga memastikan URL alat halaman utama bersih. Halaman utama pemasaran kekal sebagai pengekstrak umum;<code>/thumb/{id}</code>ialah pautan dalam untuk ID tertentu.</p>"
+    },
+    {
+      "heading": "Apa yang dilihat oleh pengguna semasa membukanya",
+      "html": "<p>Pembukaan<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>memuatkan aplikasi halaman tunggal 11tik pada laluan ibu jari. Aplikasi ini membaca ID 11 aksara daripada laluan, menyemai pengekstrak dengan URL tontonan yang sepadan dan menjalankan pas penemuan lakaran kecil awam untuk ID tersebut. Apabila pegun awam wujud, pratonton, senarai kualiti, tindakan muat turun dan kawalan kongsi yang biasa muncul. Apabila tidak, anda akan mendapat hasil kosong/awam-tidak-dijumpai yang sama seperti tampalan manual.</p>\n  <p>Anda juga mungkin melihat tajuk laluan ibu jari pendek dan teks petunjuk untuk ID tersebut di atas UI alat. Kandungan tersebut menerangkan halaman hasil; ia masih merupakan sebahagian daripada pengalaman tapak, bukan respons imej mentah.</p>"
+    },
+    {
+      "heading": "Cara menyalin pautan 11tik",
+      "html": "<ol>\n    <li>Buka<a href=\"https://www.11tik.com/\">11tik</a>dan tampal URL YouTube awam (atau buka URL sedia ada<code>/thumb/</code>pautan).</li>\n    <li>Tunggu sehingga pengekstrakan selesai dan imej awam terbaik akan dipaparkan.</li>\n    <li>Gunakan kawalan perkongsian pada halaman yang dilabelkan untuk pautan kongsi (salin pautan kongsi). Nilainya kelihatan seperti<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Hantar URL tersebut. Penerima akan berada di halaman hasil dan boleh menjalankan semula semakan awam yang sama.</li>\n  </ol>\n  <p>Ekstrak pukal boleh mendedahkan satu URL perkongsian bagi setiap ID video yang berjaya (termasuk dalam lajur eksport CSV). Setiap ID mengekalkan ciri tersendiri<code>/thumb/</code>laluan supaya pautan tidak dilipat ke atas hasil pertama.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kongsi aliran kerja: ekstrak → pratonton → salin<code>/thumb/{id}</code>→ penerima membuka halaman hasil.</p>"
+    },
+    {
+      "heading": "Jadual perbandingan URL",
+      "html": "<table>\n    <thead>\n      <tr><th>Jenis URL</th><th>Contoh</th><th>Apa yang dibuka</th><th>Adakah ia fail imej?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Tontonan YouTube</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>Pemain YouTube / halaman tontonan</td><td>Tidak</td></tr>\n      <tr><td>11tik kongsi</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik hasil pengekstrak untuk ID tersebut</td><td>Tidak</td></tr>\n      <tr><td>CDN langsung masih</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Bait imej (apabila fail wujud)</td><td>Ya</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Perbezaan antara ketiga-tiga URL dalam praktiknya",
+      "html": "<h3>URL Tontonan vs URL Kongsi 11tik</h3>\n  <p>Kongsi URL tontonan apabila matlamatnya adalah untuk menonton atau membincangkan video tersebut di YouTube. Kongsi URL 11tik apabila matlamatnya adalah untuk membuka semula hasil pengekstrakan lakaran kecil—pratonton, muat turun dan saiz awam yang disahkan—tanpa meminta seseorang mencari pengekstrak terlebih dahulu.</p>\n  <h3>11tik URL kongsi vs URL imej langsung</h3>\n  <p>URL imej langsung ialah apa yang anda tampalkan<code>&lt;img src&gt;</code>, perpustakaan media CMS atau alat reka bentuk selepas anda mengesahkan fail tersebut wujud. Bagaimana URL CDN tersebut dibina daripada ID adalah tugas<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">panduan URL lakaran kecil</a>URL perkongsian 11tik tidak pernah menggantikan alamat imej tersebut: penerima masih menggunakan Muat Turun atau Salin URL imej di dalam alat tersebut apabila mereka memerlukan fail itu sendiri.</p>\n  <h3>URL Tontonan vs URL Imej Langsung</h3>\n  <p>URL tontonan mengenal pasti video tersebut. URL imej mengenal pasti satu terbitan awam. Ia tidak boleh ditukar ganti, oleh itu meneka<code>maxresdefault.jpg</code>sering gagal walaupun halaman tontonan berfungsi.</p>"
+    },
+    {
+      "heading": "Bila hendak berkongsi pautan yang mana",
+      "html": "<ul>\n    <li><strong>Kongsi URL tontonan YouTube</strong>untuk menonton, mengulas atau memetik video tersebut.</li>\n    <li><strong>Kongsi 11tik<code>/thumb/</code>URL</strong>untuk kolaborator yang memerlukan hasil pengekstrak, senarai kualiti atau muat turun semula fail awam yang cepat.</li>\n    <li><strong>Kongsi atau hoskan URL imej langsung / fail yang dimuat turun</strong>untuk imej pilihan blog, Open Graph dan pertandingan reka bentuk—selepas pengesahan. Lihat<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">panduan muat turun</a>dan<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">panduan saiz &amp; resolusi</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Cara ID video menghubungkan ketiga-tiganya",
+      "html": "<p>Semuanya bergantung pada ID 11 aksara yang sama. URL Tontonan membawanya<code>v=</code>(atau segmen laluan ringkas/benaman/langsung). 11tik memasukkannya<code>/thumb/{id}</code>CDN masih meletakkannya di antara<code>/vi/</code>(atau<code>/vi_webp/</code>) dan saiz nama fail. Jika ID salah, ketiga-tiganya akan rosak dengan cara yang berbeza: video salah, halaman hasil yang salah atau imej yang salah/hilang.</p>"
+    },
+    {
+      "heading": "Bagaimana ini sesuai dengan aliran kerja pengekstrak",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Pautan kongsi ialah penanda buku ke dalam aliran kerja tersebut. Ia tidak melangkau pengesahan, mencipta 4K atau menukar video peribadi kepada gambar pegun awam.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Adakah https://www.11tik.com/thumb/VIDEO_ID imej langsung?",
+      "answer": "Tidak. Ia adalah halaman hasil 11tik untuk ID video tersebut. Imej langsung dipaparkan pada hos seperti i.ytimg.com.",
+      "answerHtml": "<p>Tidak. Ia adalah halaman hasil 11tik untuk ID video tersebut. Imej langsung disiarkan secara langsung pada hos seperti<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Apa yang berlaku selepas seseorang membuka pautan perkongsian saya?",
+      "answer": "11tik memuatkan laluan ibu jari, membaca ID, menjalankan semakan lakaran kecil awam untuk ID tersebut dan menunjukkan UI pengekstrak dengan hasil apabila gambar pegun awam wujud.",
+      "answerHtml": "<p>11tik memuatkan laluan ibu jari, membaca ID, menjalankan semakan lakaran kecil awam untuk ID tersebut dan menunjukkan UI pengekstrak dengan hasil apabila gambar pegun awam wujud.</p>"
+    },
+    {
+      "question": "Bolehkah saya memautkan /thumb/ di dalam tag img?",
+      "answer": "Jangan. Gunakan URL imej CDN yang disahkan atau fail yang anda muat turun. Laluan kongsi mengembalikan cangkerang aplikasi HTML, bukan bait imej.",
+      "answerHtml": "<p>Jangan. Gunakan URL imej CDN yang disahkan atau fail yang anda muat turun. Laluan kongsi mengembalikan cangkerang aplikasi HTML, bukan bait imej.</p>"
+    },
+    {
+      "question": "Mengapakah bar alamat saya berubah selepas saya mengekstrak lakaran kecil?",
+      "answer": "Selepas ekstrak video tunggal, 11tik menyegerakkan laluan kongsi ke /thumb/{VIDEO_ID} supaya hasil semasa mudah disalin dan dibuka semula.",
+      "answerHtml": "<p>Selepas ekstrak video tunggal, 11tik menyegerakkan laluan kongsi ke<code>/thumb/{VIDEO_ID}</code>jadi hasil semasa mudah disalin dan dibuka semula.</p>"
+    },
+    {
+      "question": "Adakah Shorts menggunakan laluan perkongsian yang berbeza?",
+      "answer": "Tidak. Video pendek masih mempunyai ID 11 aksara. URL perkongsian kekal /thumb/{id}; hanya bentuk URL YouTube asal yang berbeza.",
+      "answerHtml": "<p>Tidak. Filem pendek masih mempunyai ID 11 aksara. URL perkongsian kekal<code>/thumb/{id}</code>; hanya bentuk URL YouTube asal yang berbeza.</p>"
+    },
+    {
+      "question": "Adakah /thumb/{id} sama seperti menyalin URL maxres?",
+      "answer": "Tidak. Maxres (apabila ada) adalah salah satu fail CDN yang mungkin. Halaman kongsi menyenaraikan saiz awam yang disahkan dan mungkin termasuk peringkat lain apabila maxres tiada.",
+      "answerHtml": "<p>Tidak. Maxres (apabila ada) adalah salah satu fail CDN yang mungkin. Halaman kongsi menyenaraikan saiz awam yang disahkan dan mungkin termasuk peringkat lain apabila maxres tiada.</p>"
+    },
+    {
+      "question": "Di manakah URL tontonan dan URL imej dijelaskan dengan lebih mendalam?",
+      "answer": "Gunakan artikel URL lakaran kecil untuk pembinaan ID → CDN dan artikel muat turun untuk menyimpan fail.",
+      "answerHtml": "<p>Gunakan<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">artikel URL lakaran kecil</a>untuk pembinaan ID → CDN dan artikel muat turun untuk menyimpan fail.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Kesimpulan</h2>\n<p>Rawat<code>/thumb/{VIDEO_ID}</code>sebagai alamat perkongsian/keputusan 11tik: berguna untuk membuka semula dan menghantar pengekstrakan, bukan sebagai pengganti pautan tontonan YouTube atau pautan langsung<code>i.ytimg.com</code>masih. Pastikan ketiga-tiga jenis URL itu betul dan muat turun, benam dan pautan kolaborator anda kekal tepat.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstrak lakaran kecil awam dan salin pautan kongsi 11tiknya →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>Rujukan pencipta:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Muat naik lakaran kecil video tersuai</a>.</p>"
+}

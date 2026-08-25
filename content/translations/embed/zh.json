@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "zh",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "嵌入 11tik 缩略图提取器 | 11tik",
+  "description": "为您的博客、文档或创作工具包添加一个免费的 YouTube 缩略图提取器。该小部件从 11tik 加载并自动调整大小。无需 API 密钥。",
+  "h1": "嵌入 11tik 缩略图提取器",
+  "ogTitle": "嵌入 11tik 缩略图提取器",
+  "ogDescription": "为您的博客、文档或创作工具包添加一个免费的 YouTube 缩略图提取器。该小部件从 11tik 加载并自动调整大小。无需 API 密钥。",
+  "imageAlt": "",
+  "faqHeading": "常问问题",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe 代码片段",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "规则",
+      "html": "<ul>\n    <li>保留<code>id=\"yte-app\"</code>赋予高度同步属性，使其生效。</li>\n    <li>不要将 iframe 包裹在固定高度的元素中，以免裁剪掉下载按钮。</li>\n    <li>链接回<a href=\"https://www.11tik.com/\">www.11tik.com</a>帮助用户打开完整工具。</li>\n  </ul>"
+    },
+    {
+      "heading": "深度链接",
+      "html": "<p>分享一个已准备好的提取文件<code>https://www.11tik.com/?v=VIDEO_ID</code>。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">打开提取器</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

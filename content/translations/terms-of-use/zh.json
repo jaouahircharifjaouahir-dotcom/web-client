@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "zh",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "使用条款 | 11tik",
+  "description": "https://www.11tik.com/ 上的 YouTube 缩略图提取器按原样提供，用于查找和保存公开可用的 YouTube 缩略图图像。",
+  "h1": "使用条款",
+  "ogTitle": "使用条款",
+  "ogDescription": "https://www.11tik.com/ 上的 YouTube 缩略图提取器按原样提供，用于查找和保存公开可用的 YouTube 缩略图图像。",
+  "imageAlt": "",
+  "faqHeading": "常问问题",
+  "images": [],
+  "sections": [
+    {
+      "heading": "该工具的功能",
+      "html": "<p>它可以识别视频 ID 对应的公开缩略图 URL，并允许您在浏览器中预览、复制或下载这些图片。批量模式每行接受一个公开 URL。公开频道 URL 可以通过 YouTube 的公开信息流扩展到最近上传的内容。</p>"
+    },
+    {
+      "heading": "该工具无法做什么",
+      "html": "<ul>\n    <li>它不会下载 YouTube 视频或音频。</li>\n    <li>它不会绕过私人内容、年龄限制内容或其他非公开内容。</li>\n    <li>这并不授予您缩略图的使用权。您需对图片的使用方式负责，包括遵守版权和 YouTube 的条款。</li>\n  </ul>"
+    },
+    {
+      "heading": "可接受的使用",
+      "html": "<p>请勿使用 11tik 进行滥用抓取、冒充其他频道或未经版权所有者许可将缩略图重新发布为您自己的封面图。自动访问可能会受到速率限制。</p>"
+    },
+    {
+      "heading": "分享页面和公共 API",
+      "html": "<p>分享链接，例如<code>/?v=</code>缩略图 API 描述的是公开的静态图像。它们并不构成商业用途的许可。如果您在其他网站上显示嵌入组件，则必须保留“Powered by 11tik.com”的署名。</p>"
+    },
+    {
+      "heading": "可用性",
+      "html": "<p>本网站可能变更、出现故障或离线。我们不提供服务级别协议，也不保证不间断访问、适用于特定用途或无错误结果。</p>"
+    },
+    {
+      "heading": "接触",
+      "html": "<p>问题：<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>或者<a href=\"https://www.11tik.com/p/contact.html\">联系表格</a>。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">隐私政策</a>·<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

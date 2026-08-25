@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "vi",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Cách 11tik Chia sẻ liên kết hoạt động: /thumb/{VIDEO_ID} so với URL xem YouTube | 11tik",
+  "description": "11tik /thumb/{id} là trang kết quả chia sẻ. Nó không phải là URL xem YouTube và không phải là tệp hình ảnh trực tiếp i.ytimg.com.",
+  "h1": "Cách thức hoạt động của liên kết chia sẻ 11tik: /thumb/{VIDEO_ID} so với URL xem YouTube",
+  "ogTitle": "Cách thức hoạt động của liên kết chia sẻ 11tik: /thumb/{VIDEO_ID} so với URL xem YouTube",
+  "ogDescription": "11tik /thumb/{id} là trang kết quả chia sẻ. Nó không phải là URL xem YouTube và không phải là tệp hình ảnh trực tiếp i.ytimg.com.",
+  "imageAlt": "Sơ đồ so sánh URL xem YouTube, URL chia sẻ hình thu nhỏ 11tik và URL hình ảnh thu nhỏ trực tiếp của YouTube.",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Sơ đồ so sánh URL xem YouTube, URL chia sẻ hình thu nhỏ 11tik và URL hình ảnh thu nhỏ trực tiếp của YouTube.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Quy trình làm việc hiển thị trích xuất, xem trước, sao chép 11tik liên kết chia sẻ và người nhận mở trang kết quả thu nhỏ",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Câu trả lời nhanh",
+      "html": "<p>Ba URL khác nhau có thể cùng chia sẻ một ID video YouTube. Chỉ có một trong số đó là tệp hình ảnh.</p>\n  <ol>\n    <li><strong>URL xem trên YouTube</strong>— mở video trên YouTube.</li>\n    <li><strong>11tik chia sẻ URL</strong>— mở trang kết quả trích xuất 11tik cho ID đó (<code>/thumb/{VIDEO_ID}</code>(Đây là trang web, không phải tệp JPEG/WebP.)</li>\n    <li><strong>URL CDN hình thu nhỏ trực tiếp</strong>— chỉ vào một hình ảnh tĩnh công khai trên kho lưu trữ hình ảnh của YouTube (ví dụ:<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Sử dụng ID demo công khai<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Địa chỉ thứ ba là một ví dụ về mẫu URL hình ảnh trực tiếp. Tệp maxres cụ thể đó không được đảm bảo cho mọi video — hãy xác nhận kích thước thực bằng cách sử dụng<a href=\"https://www.11tik.com/\">11tik</a>hoặc<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">hướng dẫn maxresdefault</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Cùng một ID video, ba tác vụ: xem video, mở trang kết quả 11tik hoặc yêu cầu CDN.</p>"
+    },
+    {
+      "heading": "/thumb/{VIDEO_ID} là gì?",
+      "html": "<p>Trên 11tik, việc trích xuất video đơn thành công sẽ cập nhật địa chỉ trình duyệt thành một đường dẫn có dạng như sau:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Đường dẫn đó là URL chia sẻ/kết quả của sản phẩm. Nó được tạo từ ID video (xem các công cụ hỗ trợ chia sẻ của trang web) và nhằm mục đích mở lại trình trích xuất tập trung vào ID đó. Các liên kết kiểu truy vấn cũ hơn như...<code>?v=VIDEO_ID</code>được coi là những liên kết sâu đến cùng một ý tưởng và có thể được viết lại thành...<code>/thumb/</code>hình thức.</p>\n  <p><code>/thumb/…</code>là<strong>không</strong>được lưu trữ trên CDN hình ảnh của YouTube. Việc mở nó không bao giờ tự tải xuống hình ảnh; nó tải tuyến ứng dụng 11tik cho ID đó.</p>"
+    },
+    {
+      "heading": "Lý do trang này tồn tại",
+      "html": "<p>Mọi người cần một cách ổn định để mở lại hoặc gửi \"kết quả hình thu nhỏ của video này trên 11tik\" mà không cần dán một URL xem dài vào cuộc trò chuyện và hy vọng người nhận biết phải làm gì tiếp theo. Trang chia sẻ giữ cuộc trò chuyện trên trình trích xuất: cùng ID, cùng quy trình làm việc công khai, các thao tác tải xuống và sao chép ở cùng một nơi.</p>\n  <p>Điều này cũng giúp giữ cho URL của công cụ trang chủ luôn gọn gàng. Trang chủ tiếp thị vẫn là công cụ trích xuất dữ liệu chung;<code>/thumb/{id}</code>Đây là liên kết sâu cho một ID cụ thể.</p>"
+    },
+    {
+      "heading": "Những gì người dùng nhìn thấy khi mở nó",
+      "html": "<p>Khai mạc<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>Ứng dụng một trang 11tik được tải trên đường dẫn hình thu nhỏ. Ứng dụng đọc ID 11 ký tự từ đường dẫn, cung cấp cho trình trích xuất URL xem phù hợp và chạy quá trình tìm kiếm hình thu nhỏ công khai cho ID đó. Khi có hình ảnh công khai, các tùy chọn xem trước, danh sách chất lượng, hành động tải xuống và điều khiển chia sẻ thông thường sẽ xuất hiện. Khi không có, bạn sẽ nhận được kết quả trống/không tìm thấy công khai tương tự như khi dán thủ công.</p>\n  <p>Bạn cũng có thể thấy một tiêu đề ngắn và văn bản dẫn dắt cho ID đó phía trên giao diện người dùng của công cụ. Nội dung đó mô tả trang kết quả; nó vẫn là một phần của trải nghiệm trang web, chứ không phải là phản hồi hình ảnh thô.</p>"
+    },
+    {
+      "heading": "Cách sao chép liên kết 11tik",
+      "html": "<ol>\n    <li>Mở<a href=\"https://www.11tik.com/\">11tik</a>và dán URL YouTube công khai (hoặc mở một video YouTube hiện có).<code>/thumb/</code>(liên kết).</li>\n    <li>Hãy đợi cho đến khi quá trình trích xuất hoàn tất và hình ảnh tĩnh tốt nhất được hiển thị.</li>\n    <li>Sử dụng công cụ chia sẻ trên trang có nhãn \"Liên kết chia sẻ\" (sao chép liên kết chia sẻ). Giá trị sẽ trông như sau:<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Hãy gửi URL đó. Người nhận sẽ được chuyển đến trang kết quả và có thể chạy lại quy trình kiểm tra công khai tương tự.</li>\n  </ol>\n  <p>Việc trích xuất hàng loạt có thể hiển thị một URL chia sẻ cho mỗi ID video thành công (bao gồm cả trong các cột xuất CSV). Mỗi ID giữ nguyên URL riêng của nó.<code>/thumb/</code>Điều chỉnh đường dẫn để các liên kết không bị thu gọn vào kết quả đầu tiên.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Quy trình chia sẻ: trích xuất → xem trước → sao chép<code>/thumb/{id}</code>→ Người nhận mở trang kết quả.</p>"
+    },
+    {
+      "heading": "bảng so sánh URL",
+      "html": "<table>\n    <thead>\n      <tr><th>Loại URL</th><th>Ví dụ</th><th>Điều gì mở ra</th><th>Đây có phải là một tập tin hình ảnh không?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Xem trên YouTube</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>Trình phát YouTube / Trang xem</td><td>KHÔNG</td></tr>\n      <tr><td>11tik chia sẻ</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik kết quả trích xuất cho ID đó</td><td>KHÔNG</td></tr>\n      <tr><td>CDN trực tiếp vẫn</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Các byte hình ảnh (khi tệp tin tồn tại)</td><td>Đúng</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Sự khác biệt giữa ba URL này trong thực tế",
+      "html": "<h3>Xem URL so với URL chia sẻ 11tik</h3>\n  <p>Chia sẻ URL xem khi mục đích là xem hoặc thảo luận video trên YouTube. Chia sẻ URL 11tik khi mục đích là mở lại kết quả trích xuất hình thu nhỏ — bản xem trước, bản tải xuống và kích thước công khai đã được xác thực — mà không cần yêu cầu ai đó tìm trình trích xuất trước.</p>\n  <h3>11tik URL chia sẻ so với URL hình ảnh trực tiếp</h3>\n  <p>URL hình ảnh trực tiếp là URL mà bạn dán vào<code>&lt;img src&gt;</code>, thư viện phương tiện CMS hoặc công cụ thiết kế sau khi bạn xác nhận tệp tồn tại. Cách các URL CDN đó được xây dựng từ ID là nhiệm vụ của<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL hình thu nhỏ</a>URL chia sẻ 11tik không bao giờ thay thế địa chỉ hình ảnh đó: người nhận vẫn sử dụng URL Tải xuống hoặc Sao chép hình ảnh bên trong công cụ khi họ cần tệp đó.</p>\n  <h3>So sánh URL hiển thị với URL hình ảnh trực tiếp</h3>\n  <p>URL của video xác định video đó. URL của hình ảnh xác định một phiên bản công khai phái sinh. Chúng không thể thay thế cho nhau, đó là lý do tại sao việc đoán mò lại khó khăn.<code>maxresdefault.jpg</code>Thường xuyên gặp lỗi ngay cả khi trang theo dõi hoạt động bình thường.</p>"
+    },
+    {
+      "heading": "Khi nào nên chia sẻ liên kết nào?",
+      "html": "<ul>\n    <li><strong>Chia sẻ đường dẫn xem video trên YouTube</strong>để xem, bình luận hoặc trích dẫn video.</li>\n    <li><strong>Chia sẻ 11tik<code>/thumb/</code>URL</strong>Dành cho các cộng tác viên cần kết quả trích xuất, danh sách chất lượng hoặc tải lại nhanh chóng các tệp tin công khai.</li>\n    <li><strong>Chia sẻ hoặc lưu trữ URL hình ảnh trực tiếp / tệp đã tải xuống</strong>Đối với hình ảnh nổi bật trên blog, Open Graph và bản thiết kế mẫu—sau khi xác nhận. Xem thêm<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hướng dẫn tải xuống</a>Và<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn về kích thước và độ phân giải</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Cách ID video kết nối cả ba yếu tố này",
+      "html": "<p>Mọi thứ đều phụ thuộc vào cùng một mã định danh 11 ký tự. URL của đồng hồ đều chứa mã này.<code>v=</code>(hoặc các đoạn tin ngắn/nhúng/đường dẫn trực tiếp). 11tik đặt nó vào<code>/thumb/{id}</code>CDN vẫn đặt nó ở giữa<code>/vi/</code>(hoặc<code>/vi_webp/</code>) và kích thước tên tệp. Nếu ID sai, cả ba sẽ gặp lỗi theo những cách khác nhau: video sai, trang kết quả sai hoặc hình ảnh sai/thiếu.</p>"
+    },
+    {
+      "heading": "Điều này phù hợp với quy trình trích xuất dữ liệu như thế nào?",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Liên kết chia sẻ là một dấu trang trong quy trình làm việc đó. Nó không bỏ qua bước xác thực, không tạo ra độ phân giải 4K, hoặc biến video riêng tư thành ảnh tĩnh công khai.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "https://www.11tik.com/thumb/VIDEO_ID có phải là ảnh trực tiếp không?",
+      "answer": "Không. Đó là trang kết quả 11tik cho ID video đó. Hình ảnh trực tiếp nằm trên các máy chủ như i.ytimg.com .",
+      "answerHtml": "<p>Không. Đó là trang kết quả 11tik cho ID video đó. Hình ảnh trực tiếp nằm trên các máy chủ như...<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Điều gì sẽ xảy ra sau khi ai đó mở liên kết chia sẻ của tôi?",
+      "answer": "11tik tải tuyến đường hình thu nhỏ, đọc ID, chạy kiểm tra hình thu nhỏ công khai cho ID đó và hiển thị giao diện người dùng trình trích xuất với kết quả khi có hình ảnh tĩnh công khai.",
+      "answerHtml": "<p>11tik tải tuyến đường hình thu nhỏ, đọc ID, chạy kiểm tra hình thu nhỏ công khai cho ID đó và hiển thị giao diện người dùng trình trích xuất với kết quả khi có hình ảnh tĩnh công khai.</p>"
+    },
+    {
+      "question": "Tôi có thể tạo liên kết trực tiếp đến /thumb/ bên trong thẻ img không?",
+      "answer": "Không nên làm vậy. Hãy sử dụng URL hình ảnh CDN đã được xác nhận hoặc tệp bạn đã tải xuống. Đường dẫn chia sẻ trả về một khung ứng dụng HTML, chứ không phải là các byte hình ảnh.",
+      "answerHtml": "<p>Không nên làm vậy. Hãy sử dụng URL hình ảnh CDN đã được xác nhận hoặc tệp bạn đã tải xuống. Đường dẫn chia sẻ trả về một khung ứng dụng HTML, chứ không phải là các byte hình ảnh.</p>"
+    },
+    {
+      "question": "Tại sao thanh địa chỉ của tôi lại thay đổi sau khi tôi trích xuất ảnh thu nhỏ?",
+      "answer": "Sau khi trích xuất một video duy nhất, 11tik sẽ đồng bộ đường dẫn chia sẻ tới /thumb/{VIDEO_ID} để kết quả hiện tại dễ dàng sao chép và mở lại.",
+      "answerHtml": "<p>Sau khi trích xuất một video duy nhất, 11tik đồng bộ hóa đường dẫn chia sẻ tới<code>/thumb/{VIDEO_ID}</code>Vì vậy, kết quả hiện tại rất dễ sao chép và mở lại.</p>"
+    },
+    {
+      "question": "Liệu Shorts có sử dụng đường dẫn chia sẻ khác không?",
+      "answer": "Không. Các video ngắn vẫn được phân giải thành ID 11 ký tự. URL chia sẻ vẫn là /thumb/{id}; chỉ có dạng URL YouTube gốc là khác.",
+      "answerHtml": "<p>Không. Các đoạn mã ngắn vẫn được phân giải thành ID 11 ký tự. URL chia sẻ vẫn giữ nguyên.<code>/thumb/{id}</code>Chỉ có hình dạng URL gốc của YouTube là khác nhau.</p>"
+    },
+    {
+      "question": "/thumb/{id} có giống với việc sao chép URL maxres không?",
+      "answer": "Không. Maxres (nếu có) là một trong những tệp CDN khả thi. Trang chia sẻ liệt kê các kích thước công khai đã được xác thực và có thể bao gồm các cấp độ khác khi thiếu maxres.",
+      "answerHtml": "<p>Không. Maxres (nếu có) là một trong những tệp CDN khả thi. Trang chia sẻ liệt kê các kích thước công khai đã được xác thực và có thể bao gồm các cấp độ khác khi thiếu maxres.</p>"
+    },
+    {
+      "question": "Bạn có thể tìm hiểu thêm về URL đồng hồ và URL hình ảnh ở đâu?",
+      "answer": "Sử dụng URL hình thu nhỏ của bài viết để xây dựng ID → CDN, và URL bài viết để tải xuống và lưu tệp.",
+      "answerHtml": "<p>Sử dụng<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL hình thu nhỏ của bài viết</a>Đối với việc xây dựng ID → CDN và bài viết tải xuống để lưu tệp.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Phần kết luận</h2>\n<p>Đối xử<code>/thumb/{VIDEO_ID}</code>là địa chỉ chia sẻ/kết quả của 11tik: hữu ích để mở lại và gửi bản trích xuất, không bao giờ được dùng thay thế cho liên kết xem YouTube hoặc liên kết trực tiếp.<code>i.ytimg.com</code>Vẫn vậy. Hãy phân biệt rõ ba loại URL này để các liên kết tải xuống, nhúng và cộng tác viên của bạn luôn chính xác.</p>\n  <p><a href=\"https://www.11tik.com/\">Trích xuất hình thu nhỏ công khai và sao chép liên kết chia sẻ của nó →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>. Tham khảo người tạo:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Tải lên hình thu nhỏ video tùy chỉnh</a>.</p>"
+}

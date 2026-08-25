@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "pt",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "Sobre 11tik | 11tik",
+  "description": "11tik é o editor do Extrator de Miniaturas do YouTube em www.11tik.com . O site é mantido para pessoas que precisam da imagem de pré-visualização pública de um vídeo do YouTube sem instalar software ou enviar o link para um servidor de processamento.",
+  "h1": "Sobre 11tik",
+  "ogTitle": "Sobre 11tik",
+  "ogDescription": "11tik é o editor do Extrator de Miniaturas do YouTube em www.11tik.com . O site é mantido para pessoas que precisam da imagem de pré-visualização pública de um vídeo do YouTube sem instalar software ou enviar o link para um servidor de processamento.",
+  "imageAlt": "11tik Pré-visualização do produto YouTube Thumbnail Extractor em 1200 por 630 pixels",
+  "faqHeading": "Perguntas frequentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Pré-visualização do produto YouTube Thumbnail Extractor em 1200 por 630 pixels",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Quem publica este site?",
+      "html": "<p>O conteúdo e o extrator são publicados sob o nome 11tik. Não há persona de especialista inventada nem pontuações de avaliação fabricadas. As páginas editoriais explicam como funcionam os arquivos de miniaturas públicos; elas não se apresentam como YouTube, Google, etc.</p>"
+    },
+    {
+      "heading": "O que faz 11tik?",
+      "html": "<p>A ferramenta lê um ID de vídeo público no navegador, verifica quais arquivos de miniaturas existem nos servidores de imagens do YouTube e permite que você baixe ou copie essas imagens. A análise e a classificação permanecem no seu dispositivo. Você pode trabalhar com um único URL, uma lista de URLs ou um feed público de vídeos recentes.</p>"
+    },
+    {
+      "heading": "O que 11tik não faz?",
+      "html": "<ul>\n    <li>Não baixa vídeos ou áudios do YouTube.</li>\n    <li>Não contorna vídeos privados, com restrição de idade ou bloqueio geográfico.</li>\n    <li>Não requer criação de conta.</li>\n    <li>Não reivindica direitos autorais sobre a miniatura de ninguém.</li>\n  </ul>"
+    },
+    {
+      "heading": "Versões em idiomas",
+      "html": "<p>A interface de usuário do extrator está disponível em servidores de idiomas como...<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>e<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>. Essas páginas legais permanecem em www.11tik.com para que haja um URL canônico para Sobre, Privacidade, Contato e Termos.</p>"
+    },
+    {
+      "heading": "Como posso entrar em contato com a editora?",
+      "html": "<p>E-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>ou use o<a href=\"https://www.11tik.com/p/contact.html\">formulário de contato</a>Leia o<a href=\"https://www.11tik.com/p/privacy.html\">política de Privacidade</a>para detalhes de análise e hospedagem, e o<a href=\"https://www.11tik.com/p/terms-of-use.html\">termos de uso</a>para uso aceitável.</p>\n  <p class=\"yte-bio\">11tik publica guias práticos sobre miniaturas públicas do YouTube e mantém o extrator gratuito para navegador. Correções são bem-vindas por e-mail ou pelo formulário de contato.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extrator de miniaturas do YouTube</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidade</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termos</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik publica guias práticos sobre miniaturas públicas do YouTube e mantém o extrator gratuito para navegador. Correções são bem-vindas por e-mail ou pelo formulário de contato.</p>"
+}

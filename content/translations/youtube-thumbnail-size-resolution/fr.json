@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "fr",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Taille et résolution des miniatures YouTube : Guide complet | 11tik",
+  "description": "Comparez les tailles des vignettes YouTube de 120×90 à 1280×720. Maxres et hq720 sont facultatifs ; utilisez le fichier public le plus grand qui se charge.",
+  "h1": "Taille et résolution des miniatures YouTube : guide complet",
+  "ogTitle": "Taille et résolution des miniatures YouTube : guide complet",
+  "ogDescription": "Comparez les tailles des vignettes YouTube de 120×90 à 1280×720. Maxres et hq720 sont facultatifs ; utilisez le fichier public le plus grand qui se charge.",
+  "imageAlt": "Tableau comparatif des tailles de vignettes YouTube publiques, de la résolution maximale par défaut (1280 x 720) à la résolution par défaut (120 x 90).",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Tableau comparatif des tailles de vignettes YouTube publiques, de la résolution maximale par défaut (1280 x 720) à la résolution par défaut (120 x 90).",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Comparaison côte à côte montrant une vidéo avec la résolution maxresdefault disponible par rapport à une vidéo pour laquelle seul un fichier hqdefault de plus petite résolution existe.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Réponse rapide",
+      "html": "<p>Pour un téléchargement personnalisé, l'aide de YouTube reste centrée sur un<strong>16:9</strong>image—communément<strong>1280×720</strong>Pour les fichiers téléchargeables à partir d'une vidéo existante, les CDN publics disponibles varient. Lorsqu'ils sont présents,<code>maxresdefault</code>/<code>hq720</code>sont généralement en 1280×720. De nombreuses vidéos s'arrêtent à<code>sddefault</code>(640×480) ou<code>hqdefault</code>(480×360). Un nom de fichier plus long n'invente pas de pixels. Collez l'URL de la montre dans<a href=\"https://www.11tik.com/\">11tik</a>Afficher uniquement les tailles qui renvoient une image réelle.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Taille relative du public. Toutes les vidéos ne publient pas tous les échelons de cette échelle.</p>"
+    },
+    {
+      "heading": "Dimensions recommandées pour les créateurs",
+      "html": "<p>Si vous créez une miniature personnalisée dans Studio, suivez les instructions de l'aide YouTube&nbsp;: visez un<strong>16:9</strong>toujours. La taille de travail couramment utilisée est<strong>1280×720</strong>pixels. Cela correspond au format d'image grand écran du lecteur et est de la même classe de pixels qu'une image publiée<code>maxresdefault</code>quand YouTube en créera une.</p>\n  <p>Référence officielle :<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Télécharger des vignettes vidéo personnalisées</a>Une fois le traitement terminé par Studio, vérifiez la disponibilité des fichiers publics avec 11tik plutôt que de supposer que chaque dérivé est apparu instantanément. Remarques concernant Studio&nbsp;:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatures de YouTube Studio en 2026</a>.</p>"
+    },
+    {
+      "heading": "Tailles des CDN publics que les utilisateurs peuvent réellement récupérer",
+      "html": "<p>Les outils de téléchargement et les blogs ne récupèrent pas votre fichier Photoshop original. Ils récupèrent les versions publiques hébergées par YouTube à partir de l'identifiant vidéo. L'extracteur de 11tik vérifie ces noms de fichiers (JPEG et, le cas échéant, WebP)&nbsp;:</p>\n  <table>\n    <thead>\n      <tr><th>Variante</th><th>Résolution typique</th><th>Étage</th><th>Disponibilité</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Meilleur</td><td>Uniquement si YouTube publiait des fichiers WebP en résolution maximale.</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Meilleur</td><td>Fréquent sur les vidéos récentes/de haute qualité&nbsp;; souvent absent sur les plus anciennes.</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>Classe 1280×720</td><td>Meilleur</td><td>Présent sur certaines vidéos en tant que fichier haute résolution alternatif</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Haut</td><td>Souvent disponible en l'absence de maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Standard</td><td>Très courant</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Aperçu</td><td>Petites aperçus / listes</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Aperçu</td><td>Le plus petit standard encore</td></tr>\n    </tbody>\n  </table>\n  <p>Ces dimensions (largeur et hauteur) correspondent aux préréglages de qualité de 11tik. Les résultats peuvent varier si YouTube affiche un fichier de remplacement ou omet complètement un fichier&nbsp;; vérifiez toujours les informations.</p>"
+    },
+    {
+      "heading": "Pourquoi le format 16:9 est important même lorsque les fichiers diffèrent",
+      "html": "<p>Le lecteur de montres est au format écran large. Les illustrations personnalisées conçues au format 16:9 restent lisibles dans la recherche, les suggestions de contenu et les intégrations. Certains fichiers publics (notamment<code>hqdefault</code>/<code>sddefault</code>Ces images ne correspondent pas à des formats 16:9 stricts&nbsp;; il s’agit d’anciens formats CDN. Privilégiez une image publique 1280×720 native lorsque vous avez besoin d’une ressource 16:9 nette pour Open Graph ou l’en-tête d’un blog.</p>\n  <p>Les vidéos courtes sont lues verticalement, mais la version publique stockée est souvent au format paysage. Il s'agit d'un comportement du serveur, et non d'un problème de téléchargement. Détails&nbsp;:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Téléchargement de la miniature du short</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs « HD »",
+      "html": "<p><code>maxresdefault</code>est le nom de fichier HD familier sur<code>i.ytimg.com</code>. Lorsque le fichier existe, il est généralement en 1280×720, et non en 4K.<code>hq720</code>Il s'agit d'un autre nom de haut niveau que certaines vidéos affichent à une résolution similaire. Aucun de ces noms ne garantit le fichier. Les outils qui affichent une URL maxres sans vérification produisent des images corrompues.</p>\n  <p>Notes plus détaillées sur le nom du fichier&nbsp;:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ce que maxresdefault.jpg est</a>et<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">vignette publique de la plus haute qualité</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Même requête, résultats différents&nbsp;: un nom de fichier plus long n’invente pas de pixels lorsque le fichier est manquant.</p>"
+    },
+    {
+      "heading": "Pourquoi une vidéo a-t-elle plus de tailles qu'une autre ?",
+      "html": "<ul>\n    <li>Les fichiers plus anciens n'ont peut-être jamais reçu de version dérivée en résolution maximale.</li>\n    <li>L'image source avait une résolution inférieure à 1280×720.</li>\n    <li>Le traitement des vignettes personnalisées est toujours en cours dans Studio.</li>\n    <li>Les vidéos privées, réservées aux membres ou soumises à une restriction d'âge ne peuvent pas diffuser d'images fixes publiques.</li>\n    <li>Les variantes WebP n'apparaissent que lorsque YouTube les a publiées pour cet identifiant.</li>\n  </ul>\n  <p>La disponibilité est indiquée par vidéo. Ne considérez jamais l'URL maxres fonctionnelle d'un concurrent comme une preuve de l'existence de la vôtre.</p>"
+    },
+    {
+      "heading": "Comment 11tik choisit la « meilleure » taille",
+      "html": "<p>11tik examine les candidats publics selon un ordre de qualité fixe (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → par défaut). Il conserve les fichiers validés comme images et classe en premier celui de la meilleure qualité. Il n'effectue pas de mise à l'échelle. Si maxres est manquant, la première carte peut être hq720 ou sd&nbsp;; il s'agit de la résolution maximale réelle pour cet identifiant.</p>\n  <p>Pour copier l'adresse d'une taille choisie, utilisez le<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guide des URL des vignettes</a>Pour enregistrer le fichier, utilisez le<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">guide de téléchargement</a>.</p>"
+    },
+    {
+      "heading": "Quelle taille devez-vous utiliser ?",
+      "html": "<table>\n    <thead>\n      <tr><th>Cas d'utilisation</th><th>Préférer</th><th>Pourquoi</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Image mise en avant du blog / Open Graph</td><td>La plus grande résolution validée est d'environ 1280×720.</td><td>Convient aux cultures sociales courantes&nbsp;; hébergez votre propre copie</td></tr>\n      <tr><td>Recherche de maquettes/vignettes de conception</td><td>Meilleure photo publique disponible</td><td>Véritable emballage, pas une capture d'écran du lecteur</td></tr>\n      <tr><td>Aperçu rapide du chat</td><td>HQ ou MQ</td><td>Les fichiers plus petits se chargent plus rapidement.</td></tr>\n      <tr><td>Téléchargement personnalisé dans Studio</td><td>Votre image originale au format 16:9 et de résolution 1280×720 (ou supérieure)</td><td>Vous créez de l'art&nbsp;; les dérivés CDN viendront plus tard.</td></tr>\n    </tbody>\n  </table>\n  <p>N'étirez pas la résolution par défaut (hqdefault) à 1280×720 et ne la nommez pas maxres. Conseils pour l'hébergement de CMS&nbsp;:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Image mise en avant / Flux de travail Open Graph</a>Les captures d'écran du lecteur constituent une ressource différente (et de moindre qualité)&nbsp;:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Capture d'écran vs miniature réelle</a>.</p>"
+    },
+    {
+      "heading": "Étape suivante",
+      "html": "<p>Consultez une vidéo en direct sur le<a href=\"https://www.11tik.com/\">11tik extracteur</a>, alors soit<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">copier l'URL de l'image</a>ou<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">télécharger la meilleure image fixe disponible</a>.</p>\n\n  <p class=\"yte-bio\">Écrit par 11tik. Tailles CDN publiques uniquement&nbsp;; pas de mise à l’échelle ni de téléchargement vidéo.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidentialité</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termes</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "La valeur maxresdefault est-elle toujours disponible ?",
+      "answer": "Non. De nombreuses vidéos publiques ne publient jamais ce fichier. Une erreur 404 sur maxres est normale.",
+      "answerHtml": "<p>Non. De nombreuses vidéos publiques ne publient jamais ce fichier. Une erreur 404 sur maxres est normale.</p>"
+    },
+    {
+      "question": "Le format hq720 est-il meilleur que les autres variantes de miniatures ?",
+      "answer": "Lorsqu'elle existe, la résolution hq720 est du même niveau de qualité élevé que maxres (environ 1280×720). Elle n'est pas automatiquement « meilleure » ​​qu'un fichier maxres validé, et cela n'est pas garanti.",
+      "answerHtml": "<p>Lorsqu'elle existe, la résolution hq720 est du même niveau de qualité élevé que maxres (environ 1280×720). Elle n'est pas automatiquement «&nbsp;meilleure&nbsp;» ​​qu'un fichier maxres validé, et cela n'est pas garanti.</p>"
+    },
+    {
+      "question": "Quelle est la taille idéale pour un site web ?",
+      "answer": "Utilisez la plus grande image publique validée ~16:9 (souvent 1280×720), puis hébergez-en une copie sur votre site pour des balises Open Graph et d'image mise en avant stables.",
+      "answerHtml": "<p>Utilisez la plus grande image publique validée ~16:9 (souvent 1280×720), puis hébergez-en une copie sur votre site pour des balises Open Graph et d'image mise en avant stables.</p>"
+    },
+    {
+      "question": "Pourquoi une vignette haute résolution ne se charge-t-elle parfois pas ?",
+      "answer": "Le nom du fichier a été deviné. YouTube n'a pas publié ce dérivé pour l'identifiant de la vidéo. Veuillez charger une version plus petite existante.",
+      "answerHtml": "<p>Le nom du fichier a été deviné. YouTube n'a pas publié ce dérivé pour l'identifiant de la vidéo. Veuillez charger une version plus petite existante.</p>"
+    },
+    {
+      "question": "« Vignette HD » signifie-t-elle 4K ?",
+      "answer": "Non. La résolution maximale publique est généralement de 1280×720. 11tik n'inventera toujours pas de 4K.",
+      "answerHtml": "<p>Non. La résolution maximale publique est généralement de 1280×720. 11tik n'inventera toujours pas de 4K.</p>"
+    },
+    {
+      "question": "Les vignettes WebP sont-elles de meilleure qualité que les vignettes JPEG ?",
+      "answer": "WebP est un autre conteneur pour le même niveau de taille lors de la publication. Privilégiez le fichier validé 11tik ; ne présumez pas que WebP existe toujours.",
+      "answerHtml": "<p>WebP est un autre conteneur pour le même niveau de taille lors de la publication. Privilégiez le fichier validé 11tik&nbsp;; ne présumez pas que WebP existe toujours.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik. Tailles CDN publiques uniquement&nbsp;; pas de mise à l’échelle ni de téléchargement vidéo.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidentialité</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termes</a>.</p>"
+}

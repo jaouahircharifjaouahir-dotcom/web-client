@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "fa",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "تماس | [[قسمت دوم]]",
+  "description": "برای سوالات مربوط به استخراج‌کننده‌ی تصاویر بندانگشتی یوتیوب از این فرم استفاده کنید. پیام‌ها از طریق ایمیل به اپراتور 11tik ارسال می‌شوند. فایل‌های ویدیویی یا صوتی ارسال نکنید. این ابزار فقط با تصاویر بندانگشتی عمومی کار می‌کند.",
+  "h1": "تماس",
+  "ogTitle": "تماس",
+  "ogDescription": "برای سوالات مربوط به استخراج‌کننده‌ی تصاویر بندانگشتی یوتیوب از این فرم استفاده کنید. پیام‌ها از طریق ایمیل به اپراتور 11tik ارسال می‌شوند. فایل‌های ویدیویی یا صوتی ارسال نکنید. این ابزار فقط با تصاویر بندانگشتی عمومی کار می‌کند.",
+  "imageAlt": "",
+  "faqHeading": "سوالات متداول",
+  "images": [],
+  "sections": [
+    {
+      "heading": "تماس",
+      "html": "<h1>تماس</h1>\n  <p class=\"yte-updated\">آخرین به‌روزرسانی: ۲۲ آگوست ۲۰۲۶</p>\n  <p itemprop=\"description\">برای سوالات مربوط به استخراج‌کننده‌ی تصاویر بندانگشتی یوتیوب از این فرم استفاده کنید. پیام‌ها از طریق ایمیل به اپراتور 11tik ارسال می‌شوند. فایل‌های ویدیویی یا صوتی ارسال نکنید. این ابزار فقط با تصاویر بندانگشتی عمومی کار می‌کند.</p>\n  <p>ایمیل مستقیم:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>برای گزارش درباره یک ویدیوی خاص، آدرس عمومی یوتیوب را وارد کنید. 11tik فایل تصویر بندانگشتی را میزبانی نمی‌کند؛ تصویر از CDN عمومی پلتفرم درخواست می‌شود.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>نام<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>ایمیل<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>پیام<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">ارسال پیام</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">استخراج کننده تصاویر بند انگشتی یوتیوب</a>·<a href=\"https://www.11tik.com/p/about.html\">درباره ما</a>·<a href=\"https://www.11tik.com/p/privacy.html\">سیاست حفظ حریم خصوصی</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرایط</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

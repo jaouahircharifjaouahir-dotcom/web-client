@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "fr",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Comment extraire les miniatures à partir de l'URL d'une chaîne YouTube | 11tik",
+  "description": "Collez l'URL d'une chaîne YouTube publique dans 11tik Bulk pour afficher les dernières vidéos publiques, puis téléchargez les meilleures images. Ceci est destiné à la recherche en matière d'emballage, et non au clonage des illustrations personnalisées d'une autre chaîne.",
+  "h1": "Comment extraire les miniatures d'une URL de chaîne YouTube",
+  "ogTitle": "Comment extraire les miniatures d'une URL de chaîne YouTube",
+  "ogDescription": "Collez l'URL d'une chaîne YouTube publique dans 11tik Bulk pour afficher les dernières vidéos publiques, puis téléchargez les meilleures images. Ceci est destiné à la recherche en matière d'emballage, et non au clonage des illustrations personnalisées d'une autre chaîne.",
+  "imageAlt": "Extraire les vignettes à partir de l'URL d'une chaîne YouTube — dernières mises en ligne publiques sur 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Extraire les vignettes à partir de l'URL d'une chaîne YouTube — dernières mises en ligne publiques sur 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Est-il possible d'obtenir les miniatures de toute une chaîne YouTube ?",
+      "html": "<p>Vous pouvez obtenir des images fixes des dernières<em>publique</em>Les téléchargements qui exposent un identifiant vidéo. 11tik ne récupère pas toutes les vidéos publiées par une chaîne et ne contourne pas les abonnements. Sur la page d'accueil, activez l'option «&nbsp;Recherche en masse&nbsp;», puis collez l'URL d'une chaîne, par exemple&nbsp;:<code>youtube.com/@handle</code>ou<code>/channel/UC…</code>Laissez l'outil développer la liste publique au format RSS. Extrayez ensuite les URL comme vous le feriez pour une liste saisie au clavier. La limite reste de 25 URL par exécution afin de préserver la fluidité du navigateur.</p>\n  <p>Cela diffère de l'enregistrement d'un seul lien de montre. Le flux à URL unique se trouve dans<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Comment télécharger une miniature YouTube</a>. Le traitement en vrac ligne par ligne sans canal est en<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">téléchargement par lots</a>.</p>"
+    },
+    {
+      "heading": "Quelles URL de chaînes fonctionnent ?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>lorsque la page publique expose un identifiant de canal</li>\n    <li>Héritage<code>/user/name</code>chemins qui résolvent encore</li>\n  </ul>\n  <p>Une URL de playlist n'est pas une chaîne. Collez plutôt les liens de visionnage individuels de la playlist. Une URL qui ne correspond jamais à un identifiant UC ne renvoie aucune vidéo&nbsp;; ouvrez la chaîne dans un navigateur classique et copiez l'URL canonique de la chaîne depuis la barre d'adresse.</p>"
+    },
+    {
+      "heading": "Comment extraire les vignettes des chaînes sur 11tik",
+      "html": "<ol>\n    <li>Ouvrir<a href=\"https://www.11tik.com/\">11tik</a>et cliquez sur «&nbsp;Vente en masse&nbsp;».</li>\n    <li>Collez l'URL d'une chaîne publique. Vous pouvez ajouter d'autres liens de visionnage sur les lignes suivantes.</li>\n    <li>Lancez l'extraction. Attendez que l'outil remplace la ligne du canal par les URL de visionnage publiques récentes, puis extrayez les images fixes.</li>\n    <li>Téléchargez chaque meilleure image fixe, ou téléchargez le fichier zip de la plus haute qualité, ou exportez le fichier CSV (identifiant, titre, URL de partage, URL de l'image) pour un journal de recherche.</li>\n  </ol>\n  <p>Partagez les liens après une extraction réussie.<code>/thumb/VIDEO_ID</code>Lorsque la page de contrôle qualité comporte un titre, des étiquettes et une vignette animée, elle est destinée à un usage unique et non à servir de deuxième page d'accueil.</p>"
+    },
+    {
+      "heading": "Ce que 11tik ne fera pas",
+      "html": "<ul>\n    <li>Téléchargez les vidéos ou l'audio. Images fixes uniquement.</li>\n    <li>Liste des fichiers non répertoriés ou privés.</li>\n    <li>Garantie de résolution maximale par défaut pour toutes les vidéos récentes. Les sources plus anciennes ou de petite taille s'arrêtent à la qualité haute ou basse définition.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Accordez les droits de réutilisation de l'illustration. L'étude d'une grille d'emballages publics constitue l'usage prévu à des fins de recherche. Le rechargement d'une image fixe d'un concurrent comme vignette personnalisée pose un problème de droits d'auteur et de politique en la matière.<a href=\"https://www.11tik.com/copyright\">Droits d'auteur et utilisation</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Comment cela facilite la recherche sans pages d'entrée",
+      "html": "<p>L'extraction d'une chaîne consiste à rassembler en une seule fois des captures d'écran publiques récentes. Il ne s'agit pas d'une page générée pour chaque marque concurrente. Vous restez sur l'outil, vous enregistrez un fichier zip ou CSV et vous ajoutez vos propres notes. Si vous publiez des commentaires, n'oubliez pas de mentionner les chaînes et d'inclure un lien vers leurs pages de visionnage. Consultez les règles de YouTube concernant le téléchargement des miniatures.<em>ton</em>Les chaînes sont dans<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">vignettes vidéo personnalisées</a>.</p>"
+    },
+    {
+      "heading": "Dépannage",
+      "html": "<p>Liste vide&nbsp;: le flux de la chaîne n’a pas renvoyé d’identifiants publics (chaîne supprimée ou identifiant que le résolveur n’a pas pu associer). Essayez l’URL de la chaîne UC depuis la version bureau de YouTube.</p>\n  <p>Certaines cartes sont manquantes&nbsp;: ces téléchargements ne sont pas encore publics, ou le portail a refusé une extraction incomplète. Relancez une seule URL de surveillance. Confidentialité des liens collés&nbsp;:<a href=\"https://www.11tik.com/p/privacy.html\">Confidentialité</a>.</p>\n  <p>Outil d'extraction vs outil de conception&nbsp;: 11tik ne crée pas d'illustration de couverture.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extracteur vs fabricant</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraire des images fixes de la chaîne publique sur 11tik →</a></p>\n  <p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Est-il possible d'obtenir les miniatures de toute une chaîne YouTube ?",
+      "answer": "Oui, pour les vidéos publiques récemment mises en ligne. Collez l'URL de la chaîne dans 11tik Bulk. Les vidéos privées et réservées aux membres ne sont pas affichées.",
+      "answerHtml": "Oui, pour les vidéos publiques récemment mises en ligne. Collez l'URL de la chaîne dans 11tik Bulk. Les vidéos privées et réservées aux membres ne sont pas affichées."
+    },
+    {
+      "question": "Quelles URL de chaînes fonctionnent ?",
+      "answer": "URL publiques /channel/UC…, de nombreuses URL @handle et quelques anciens chemins /user/. Les playlists ne sont pas des chaînes.",
+      "answerHtml": "URL publiques /channel/UC…, de nombreuses URL @handle et quelques anciens chemins /user/. Les playlists ne sont pas des chaînes."
+    },
+    {
+      "question": "Est-ce que cela permet de télécharger les vidéos ?",
+      "answer": "Non. 11tik ne répertorie que les images fixes publiques déjà hébergées par YouTube.",
+      "answerHtml": "Non. 11tik ne répertorie que les images fixes publiques déjà hébergées par YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

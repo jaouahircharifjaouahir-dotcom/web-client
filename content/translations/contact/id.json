@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "id",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Kontak | 11tik",
+  "description": "Gunakan formulir ini untuk pertanyaan tentang YouTube Thumbnail Extractor. Pesan akan dikirim ke operator 11tik melalui email. Jangan mengirim file video atau audio. Alat ini hanya berfungsi dengan gambar thumbnail publik.",
+  "h1": "Kontak",
+  "ogTitle": "Kontak",
+  "ogDescription": "Gunakan formulir ini untuk pertanyaan tentang YouTube Thumbnail Extractor. Pesan akan dikirim ke operator 11tik melalui email. Jangan mengirim file video atau audio. Alat ini hanya berfungsi dengan gambar thumbnail publik.",
+  "imageAlt": "",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Kontak",
+      "html": "<h1>Kontak</h1>\n  <p class=\"yte-updated\">Terakhir diperbarui: 22 Agustus 2026</p>\n  <p itemprop=\"description\">Gunakan formulir ini untuk pertanyaan tentang YouTube Thumbnail Extractor. Pesan akan dikirim ke operator 11tik melalui email. Jangan mengirim file video atau audio. Alat ini hanya berfungsi dengan gambar thumbnail publik.</p>\n  <p>Email langsung:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Untuk laporan tentang video tertentu, sertakan URL YouTube publik. 11tik tidak menyimpan file thumbnail; gambar diminta dari CDN publik platform tersebut.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Nama<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Pesan<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Kirim pesan</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Ekstraktor Thumbnail YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Kebijakan Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ketentuan</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "tl",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Paano mag-save ng thumbnail sa YouTube sa iPhone at Android (2026) | 11tik",
+  "description": "I-save pa rin ang pampublikong YouTube sa iPhone o Android nang walang screenshot at walang app store downloader. I-paste ang pampublikong URL ng relo o Shorts sa 11tik sa Safari o Chrome, pagkatapos ay i-download ang pinakamalaking image file na hino-host na ng YouTube.",
+  "h1": "Paano mag-save ng thumbnail sa YouTube sa iPhone at Android (2026)",
+  "ogTitle": "Paano mag-save ng thumbnail sa YouTube sa iPhone at Android (2026)",
+  "ogDescription": "I-save pa rin ang pampublikong YouTube sa iPhone o Android nang walang screenshot at walang app store downloader. I-paste ang pampublikong URL ng relo o Shorts sa 11tik sa Safari o Chrome, pagkatapos ay i-download ang pinakamalaking image file na hino-host na ng YouTube.",
+  "imageAlt": "I-save ang thumbnail ng YouTube sa iPhone at Android gamit ang 11tik — pampubliko pa rin, walang app",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "I-save ang thumbnail ng YouTube sa iPhone at Android gamit ang 11tik — pampubliko pa rin, walang app",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Maaari ko bang i-save ang thumbnail ng YouTube sa aking telepono?",
+      "html": "<p>Oo, kung pampubliko ang video at may na-publish na still ang YouTube. Hindi mo kailangan ng desktop at hindi mo kailangan ng APK o TestFlight app. Buksan<a href=\"https://www.11tik.com/\">11tik</a>Sa browser ng teleponong ginagamit mo na, i-paste ang link, i-tap ang Kunin ang Larawan ng Thumbnail, pagkatapos ay i-save ang unang nakalistang file. Ang file na iyon ay ang pinakamataas na pampublikong JPEG o WebP na aktwal na nagbalik ng isang imahe.</p>\n  <p>Hindi pareho ang isang matagal na pagpindot sa screenshot ng player. Kasama sa screenshot ang chrome, mga safe-area bar, at karagdagang compression. Nabubuhay pa rin ang publiko sa i.ytimg.com. Tingnan<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot vs totoong thumbnail</a>kung kailangan mo ang pagkakaibang iyon para sa isang blog o Open Graph tag.</p>"
+    },
+    {
+      "heading": "Ang kailangan mo bago ka magsimula",
+      "html": "<ul>\n    <li>Isang pampublikong URL para sa panonood, Shorts, live, o youtu.be sa YouTube. Mga karagdagang parameter ng query tulad ng<code>pp=</code>o hindi mahalaga ang isang playlist id; binabasa ng 11tik ang 11-character na video id.</li>\n    <li>Safari sa iPhone o iPad, o Chrome, Firefox, o Samsung Internet sa Android.</li>\n    <li>Pahintulot na i-save ang mga larawan kung hihilingin ng browser. Hindi kailanman ia-upload ng 11tik ang larawan sa isang 11tik server bilang orihinal na media.</li>\n  </ul>\n  <p>Ang mga pribado, para lamang sa mga miyembro, o mga video na may limitasyon sa edad na hindi naglalathala ng publiko ay hindi pa rin magpapakita ng download. Iyan ay isang patakaran ng platform, hindi isang limitasyon sa telepono. Ang mga custom na thumbnail na pinoproseso pa rin sa Studio ay maaari ring mawala sa loob ng maikling panahon; kumpirmahin mamaya gamit ang parehong URL. Kaugnay:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Mga thumbnail ng YouTube Studio sa 2026</a>.</p>"
+    },
+    {
+      "heading": "Paano mag-save ng thumbnail sa YouTube sa iPhone",
+      "html": "<ol>\n    <li>Sa YouTube app o safari, kopyahin ang video o link ng Shorts (Ibahagi → Kopyahin ang link).</li>\n    <li>Bukas<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>sa Safari. Wala kang i-install na kahit ano.</li>\n    <li>I-paste ang URL at i-tap ang Kunin ang Larawan ng Thumbnail. Maghintay hanggang sa lumabas ang isang tunay na preview. Ang mga walang laman na kulay abong kahon ay nangangahulugan na ang laki ay hindi kailanman nai-publish.</li>\n    <li>I-tap ang unang kontrol sa pag-download. Iaalok ng Safari ang Buksan o I-download. Piliin ang I-download, pagkatapos ay itago ang larawan sa Mga File o i-save ito sa Mga Larawan mula sa share sheet.</li>\n    <li>Kung ang address lang para sa isang CMS ang kailangan mo, gamitin ang Copy image URL sa halip na mag-download. Kinokopya nito ang isang HTTPS i.ytimg.com o vi_webp link. Gabay:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL ng thumbnail ng YouTube</a>.</li>\n  </ol>\n  <p>Kung hinaharangan ng iOS ang isang cross-origin download, buksan ang URL ng larawan sa isang bagong tab, pagkatapos ay i-tap nang matagal ang larawan → Idagdag sa Mga Larawan. Sine-save mo pa rin ang pampublikong file ng YouTube, hindi ang screenshot ng pahinang 11tik.</p>"
+    },
+    {
+      "heading": "Paano mag-save ng thumbnail ng YouTube sa Android",
+      "html": "<ol>\n    <li>Kopyahin ang pampublikong panonood o URL ng Shorts mula sa YouTube app.</li>\n    <li>Buksan ang 11tik sa Chrome (o sa iyong default na browser).</li>\n    <li>I-paste, i-extract, pagkatapos ay i-tap ang unang download. Karaniwang isinusulat ng Chrome ang file sa Downloads.</li>\n    <li>Buksan ang notification ng Mga Download at ilipat ang larawan sa Gallery kung gusto mo itong mapunta sa Mga Larawan.</li>\n  </ol>\n  <p>Maaaring itanong ng Android kung aling app ang dapat magbukas ng JPEG. Pumili ng Gallery o Files. Huwag pumili ng \"video downloader\" na nangangako ng MP4; ang 11tik ay hindi nagbibigay ng video o audio.</p>"
+    },
+    {
+      "heading": "Anong sukat ang dapat kong panatilihin sa isang telepono?",
+      "html": "<p>Panatilihin ang unang nakalistang laki. 11tik ay niraranggo na ang mga umiiral na file. Kapag inilathala ng YouTube ang maxresdefault, kadalasan ito ay 1280×720. Kung ang pangalan ng file na iyon ay 404s, ang honest maximum ay ang susunod na totoong file (madalas ay hq720, sddefault, o hqdefault). Normal lang ang nawawalang maxres file. Mga Detalye:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ano ang maxresdefault.jpg</a>at<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">mga laki ng thumbnail sa 2026</a>.</p>\n  <p>Kadalasang patayo ang tunog ng mga shorts habang landscape naman ang naka-save na still. Ang file pa rin ang opisyal na pampublikong thumbnail. Tingnan<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Mga thumbnail ng shorts</a>.</p>"
+    },
+    {
+      "heading": "Legal ba ang pag-save ng thumbnail sa telepono ko?",
+      "html": "<p>Ang karaniwang gamit ay ang pag-save ng isang pampublikong naka-host na still para sa personal na sanggunian, pananaliksik, o edukasyon. Ang larawan ay mananatiling gawa ng uploader na may copyright. Huwag itong i-upload muli bilang sarili mong custom thumbnail, i-print ito sa merchandise, o ituring ang 11tik bilang isang lisensya. Narito ang sariling tulong ng YouTube sa mga custom na thumbnail:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Mag-upload ng mga custom na thumbnail ng video</a>Mga tuntunin ni 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>at<a href=\"https://www.11tik.com/copyright\">Karapatang-ari at Paggamit</a>.</p>"
+    },
+    {
+      "heading": "Bakit nabibigo ang mga \"thumbnail app\" sa telepono",
+      "html": "<p>Maraming listahan ng tindahan ang bumabalot sa isang pahina ng mga ad sa isang nahulaan<code>maxresdefault.jpg</code>URL. Kung hindi kailanman nai-publish ng YouTube ang file na iyon, makakakuha ka ng sirang larawan o kulay abong default. Sinusuri ng 11tik ang mga tugon sa iyong browser at itinatago ang mga laki na hindi mga larawan. Walang \"naa-unlock\" sa likod ng isang pag-signup. Privacy: nananatili ang mga naka-paste na URL sa browser; tingnan<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>.</p>"
+    },
+    {
+      "heading": "Mag-save ng ilang link mula sa isang telepono",
+      "html": "<p>Gamitin ang Bulk sa iisang homepage, isang pampublikong URL bawat linya, hanggang 25. Maaaring palawakin ang URL ng channel sa mga kamakailang pampublikong upload sa mas malaking screen; sa telepono, i-paste ang mga indibidwal na link kung sa tingin mo ay masikip ang pagpapalawak ng channel. Gabay sa bulk:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">pag-download nang maramihan</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">I-save ang isang pampublikong thumbnail sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser extractor.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Maaari ko bang i-save ang thumbnail ng YouTube sa aking telepono?",
+      "answer": "Oo. Buksan ang 11tik sa Safari o Chrome, i-paste ang pampublikong URL ng YouTube, kunin, at i-download ang unang nakalistang pampublikong still. Hindi kinakailangan ng app store downloader.",
+      "answerHtml": "Oo. Buksan ang 11tik sa Safari o Chrome, i-paste ang pampublikong URL ng YouTube, i-extract, at i-download ang unang nakalistang pampublikong still. Hindi kinakailangan ng app store downloader."
+    },
+    {
+      "question": "Paano i-save ang thumbnail ng YouTube sa iPhone?",
+      "answer": "Kopyahin ang link, buksan ang https://www.11tik.com/ sa Safari, i-paste, i-extract, pagkatapos ay i-download o pindutin nang matagal ang URL ng larawan at idagdag ito sa Photos.",
+      "answerHtml": "Kopyahin ang link, buksan ang https://www.11tik.com/ sa Safari, i-paste, i-extract, pagkatapos ay i-download o pindutin nang matagal ang URL ng larawan at idagdag ito sa Photos."
+    },
+    {
+      "question": "Paano i-save ang thumbnail ng YouTube sa Android?",
+      "answer": "Kopyahin ang link, buksan ang 11tik sa Chrome, i-extract, at i-save ang unang download sa Downloads o Gallery.",
+      "answerHtml": "Kopyahin ang link, buksan ang 11tik sa Chrome, i-extract, at i-save ang unang download sa Downloads o Gallery."
+    },
+    {
+      "question": "Legal ba ang pag-save ng thumbnail sa telepono ko?",
+      "answer": "Karaniwan ang pag-save ng isang pampublikong litrato para sa personal na sanggunian o pananaliksik. Huwag itong i-publish muli bilang sarili mong cover art. Ang karapatang-ari ay nananatili sa nag-upload.",
+      "answerHtml": "Karaniwan ang pag-save ng isang pampublikong litrato para sa personal na sanggunian o pananaliksik. Huwag itong i-publish muli bilang sarili mong cover art. Ang karapatang-ari ay nananatili sa nag-upload."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser extractor.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+}

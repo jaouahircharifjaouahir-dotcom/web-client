@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "tr",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "YouTube kanal URL'sinden küçük resimler nasıl çıkarılır | 11tik",
+  "description": "Herkese açık bir YouTube kanalının URL'sini 11tik Bulk'a yapıştırarak son herkese açık yüklemeleri genişletebilir ve ardından en iyi görselleri indirebilirsiniz. Bu, ambalajlama üzerine araştırma yapmak içindir, başka bir kanalın özel sanat eserini kopyalamak için değildir.",
+  "h1": "YouTube kanal URL'sinden küçük resimler nasıl çıkarılır?",
+  "ogTitle": "YouTube kanal URL'sinden küçük resimler nasıl çıkarılır?",
+  "ogDescription": "Herkese açık bir YouTube kanalının URL'sini 11tik Bulk'a yapıştırarak son herkese açık yüklemeleri genişletebilir ve ardından en iyi görselleri indirebilirsiniz. Bu, ambalajlama üzerine araştırma yapmak içindir, başka bir kanalın özel sanat eserini kopyalamak için değildir.",
+  "imageAlt": "Bir YouTube kanal URL'sinden küçük resimleri çıkarın — 11tik'deki en son herkese açık yüklemeler",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Bir YouTube kanal URL'sinden küçük resimleri çıkarın — 11tik'deki en son herkese açık yüklemeler",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bir YouTube kanalının tamamından küçük resimler alabilir miyim?",
+      "html": "<p>En son filme ait fotoğraf karelerine ulaşabilirsiniz.<em>halk</em>Video kimliğini ortaya çıkaran yüklemeler. 11tik bir kanalın şimdiye kadar yayınladığı her videoyu taramaz ve üyelikleri atlamaz. Ana sayfada Toplu İşlem'i açın, aşağıdaki gibi bir kanal URL'si yapıştırın:<code>youtube.com/@handle</code>veya<code>/channel/UC…</code>Ardından, aracın herkese açık RSS tarzı listeyi genişletmesine izin verin. Daha sonra, tıpkı yazılı bir liste gibi verileri çıkarın. Tarayıcının kullanılabilirliğini korumak için her çalıştırmada 25 URL sınırı korunmuştur.</p>\n  <p>Bu, tek bir izleme bağlantısını kaydetmekten farklıdır. Tek URL akışı şu şekildedir:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube küçük resmini nasıl indirebilirim?</a>Kanalsız, satır satır toplu işlem şu şekildedir:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">toplu indirme</a>.</p>"
+    },
+    {
+      "heading": "Hangi kanal URL'leri çalışıyor?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>Herkese açık sayfa bir kanal kimliğini gösterdiğinde</li>\n    <li>Miras<code>/user/name</code>hâlâ çözümlenen yollar</li>\n  </ul>\n  <p>Bir /playlist URL'si kanal değildir. Bunun yerine oynatma listesinin ayrı ayrı izleme bağlantılarını yapıştırın. UC kimliğine çözümlenmeyen bir tanıtıcı hiçbir video döndürmez; kanalı normal bir tarayıcıda açın ve adres çubuğundan kanonik kanal URL'sini kopyalayın.</p>"
+    },
+    {
+      "heading": "11tik'de kanal küçük resimleri nasıl çıkarılır?",
+      "html": "<ol>\n    <li>Açık<a href=\"https://www.11tik.com/\">11tik</a>ve Toplu İşlem'e tıklayın.</li>\n    <li>Herkese açık bir kanal URL'si yapıştırın. Sonraki satırlara daha fazla izleme bağlantısı ekleyebilirsiniz.</li>\n    <li>Çıkarma işlemine başlayın. Araç, kanal satırını son herkese açık izleme URL'leriyle değiştirene kadar bekleyin, ardından hareketsiz görüntüleri çekin.</li>\n    <li>En iyi fotoğrafların her birini indirin, en yüksek kalitedeki zip dosyasını indirin veya araştırma günlüğü için CSV olarak dışa aktarın (kimlik, başlık, paylaşım URL'si, resim URL'si).</li>\n  </ol>\n  <p>Veri çıkarma işlemi başarıyla tamamlandıktan sonra bağlantıları paylaşın.<code>/thumb/VIDEO_ID</code>Kalite kontrol kapısının başlığı, etiketleri ve canlı küçük resmi olduğunda, bu sayfalar benzersiz içerik içindir, ikinci bir ana sayfa için değil.</p>"
+    },
+    {
+      "heading": "11tik'nin yapmayacağı şey",
+      "html": "<ul>\n    <li>Videoları veya ses dosyalarını indirin. Sadece fotoğraflar.</li>\n    <li>Listelenmemiş veya özel yüklemeleri listele.</li>\n    <li>Son videoların tümü için maxresdefault garantisi verilir. Daha eski veya küçük boyutlu kaynaklar hq veya sd kalitesinde durdurulur.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Sanat eserinin yeniden kullanım haklarını verin. Amaçlanan araştırma kullanımı, halka açık ambalajların bir ızgarasını incelemektir. Rakip bir firmanın fotoğrafını özel küçük resminiz olarak yeniden yüklemek telif hakkı ve politika sorunudur.<a href=\"https://www.11tik.com/copyright\">Telif Hakkı ve Kullanım</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Bu, giriş sayfaları olmadan araştırmaya nasıl yardımcı olur?",
+      "html": "<p>Kanal özeti tek bir işlemdir: tek seferde son zamanlarda yayınlanan herkese açık görsellerin toplanması. Rakip markalar için ayrı ayrı oluşturulmuş bir sayfa değildir. Araçta kalırsınız, zip veya CSV dosyası oluşturursunuz ve kendi notlarınızı yazarsınız. Yorum yayınlıyorsanız, kanalları kaynak gösterin ve izleme sayfalarına bağlantı verin. YouTube'un küçük resim yükleme kuralları...<em>senin</em>kanal içindedir<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">özel video küçük resimleri</a>.</p>"
+    },
+    {
+      "heading": "Sorun giderme",
+      "html": "<p>Boş liste: Kanal akışı genel kimlikleri döndürmedi (sonlandırılmış kanal veya çözümleyicinin eşleştiremediği bir tanıtıcı). YouTube'un masaüstü düzeninden UC kanal URL'sini deneyin.</p>\n  <p>Bazı kartlar eksik: Bu yüklemelerin henüz herkese açık bir sürümü yok veya sistem eksik bir çıkarmayı reddetti. Tek bir izleme URL'sini yeniden çalıştırın. Yapıştırılan bağlantıların gizliliği:<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>.</p>\n  <p>Çıkarma aracı ile tasarım aracı arasındaki fark: 11tik kapak resmi oluşturmaz.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Çıkarıcıya karşı üretici</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik'deki herkese açık kanal görüntülerini çıkarın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bir YouTube kanalının tamamından küçük resimler alabilir miyim?",
+      "answer": "Evet, yakın zamanda herkese açık olarak yüklenen videolar için. Kanal URL'sini 11tik Toplu İşlem bölümüne yapıştırın. Özel ve sadece üyelere özel videolar listelenmez.",
+      "answerHtml": "Evet, yakın zamanda herkese açık olarak yüklenen videolar için. Kanal URL'sini 11tik Toplu İşlem bölümüne yapıştırın. Özel ve sadece üyelere özel videolar listelenmez."
+    },
+    {
+      "question": "Hangi kanal URL'leri çalışıyor?",
+      "answer": "Herkese açık /channel/UC… URL'leri, birçok @handle URL'si ve bazı eski /user/ yolları. Çalma listeleri kanal değildir.",
+      "answerHtml": "Herkese açık /channel/UC… URL'leri, birçok @handle URL'si ve bazı eski /user/ yolları. Çalma listeleri kanal değildir."
+    },
+    {
+      "question": "Bu, videoları indiriyor mu?",
+      "answer": "Hayır. 11tik yalnızca YouTube'un zaten barındırdığı herkese açık fotoğrafları listeler.",
+      "answerHtml": "Hayır. 11tik yalnızca YouTube'un zaten barındırdığı herkese açık fotoğrafları listeler."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+}

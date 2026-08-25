@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "da",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Sådan får du YouTube-miniaturebilleder af højeste kvalitet | 11tik",
+  "description": "Højeste kvalitet betyder den største offentlige JPEG- eller WebP-fil, som YouTube rent faktisk returnerer, ikke et gættet 4K-filnavn.",
+  "h1": "Sådan får du YouTube-miniaturebilleder af højeste kvalitet",
+  "ogTitle": "Sådan får du YouTube-miniaturebilleder af højeste kvalitet",
+  "ogDescription": "Højeste kvalitet betyder den største offentlige JPEG- eller WebP-fil, som YouTube rent faktisk returnerer, ikke et gættet 4K-filnavn.",
+  "imageAlt": "Højeste tilgængelige offentlige YouTube-miniaturebillede valgt i 11tik",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Højeste tilgængelige offentlige YouTube-miniaturebillede valgt i 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hvordan får jeg YouTube-miniaturebilleder af højeste kvalitet?",
+      "html": "<p>Indsæt en offentlig URL i<a href=\"https://www.11tik.com/\">11tik</a>og download den første anførte størrelse. Udtrækkeren rangerer overlevende offentlige filer; den strækker ikke et lille stillbillede til falsk HD.</p>"
+    },
+    {
+      "heading": "Hvad er den maksimale offentlige opløsning?",
+      "html": "<p>Når YouTube udgiver maxresdefault, er den normalt 1280×720. Hvis filen mangler, er den højeste kvalitet den næste gyldige størrelse, såsom sd eller hq.</p>"
+    },
+    {
+      "heading": "Har WebP betydning?",
+      "html": "<p>Nogle videoer har også WebP-varianter af samme størrelse ved navne. 11tik kan vise dem, når de findes. Vælg den fil, som værktøjet validerede, ikke en gættet URL.</p>"
+    },
+    {
+      "heading": "Hvorfor ser 'HD' nogle gange blød ud?",
+      "html": "<p>Den offentlige opløsning kan stadig være 1280×720 med komprimering, eller du kigger måske på hqdefault. Tjek pixelstørrelsesrapporterne 11tik, før du antager, at download mislykkedes.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udsugningsapparat</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Størrelsesguide</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hvordan får jeg YouTube-miniaturebilleder af højeste kvalitet?",
+      "answer": "Indsæt den offentlige URL i 11tik og download den første anførte størrelse. Det er den største offentlige filstørrelse, som YouTube gemmer.",
+      "answerHtml": "Indsæt den offentlige URL i 11tik og download den første anførte størrelse. Det er den største offentlige filstørrelse, som YouTube gemmer."
+    },
+    {
+      "question": "Er filen af ​​højeste kvalitet i 4K?",
+      "answer": "Normalt ikke. Offentlig maks. er typisk 1280×720. 11tik opskalerer eller opfinder ikke en større master.",
+      "answerHtml": "Normalt ikke. Offentlig maks. er typisk 1280×720. 11tik opskalerer eller opfinder ikke en større master."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+}

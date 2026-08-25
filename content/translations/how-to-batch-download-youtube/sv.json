@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "sv",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Hur man laddar ner YouTube-miniatyrer i grupp (upp till 25 offentliga webbadresser) | 11tik",
+  "description": "Massextrahera offentliga YouTube-miniatyrer i webbläsaren. Klistra in en URL per rad, ladda ner varje bästa stillbild eller zippa den med högsta kvalitet. Inget konto och inga videofiler.",
+  "h1": "Hur man laddar ner YouTube-miniatyrer i grupp (upp till 25 offentliga webbadresser)",
+  "ogTitle": "Hur man laddar ner YouTube-miniatyrer i grupp (upp till 25 offentliga webbadresser)",
+  "ogDescription": "Massextrahera offentliga YouTube-miniatyrer i webbläsaren. Klistra in en URL per rad, ladda ner varje bästa stillbild eller zippa den med högsta kvalitet. Inget konto och inga videofiler.",
+  "imageAlt": "11tik extrahera massminiatyrer med flera YouTube-URL:er redo att laddas ner",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik extrahera massminiatyrer med flera YouTube-URL:er redo att laddas ner",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hur laddar jag ner YouTube-miniatyrer i grupp?",
+      "html": "<p>Öppna<a href=\"https://www.11tik.com/\">11tik</a>, aktivera Massaktivering, klistra in en offentlig URL per rad, klicka på Extrahera alla och ladda sedan ner varje bästa stillbild eller zip-fil av högsta kvalitet. Taket är 25 URL:er per körning så att webbläsaren förblir responsiv.</p>"
+    },
+    {
+      "heading": "Vad hör hemma på listan?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID:n</li>\n    <li>youtu.be korta länkar</li>\n    <li>youtube.com/shorts/ ID:n</li>\n    </ul>\n  <p>Privata videor, videor utan offentliga tummar eller videor med åldersgränser kommer inte att ge en stillbild. Det är förväntat. Se även<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniatyrer</a>.</p>"
+    },
+    {
+      "heading": "Hur man kör ett bulkutdrag",
+      "html": "<ol>\n    <li>Klicka på Massproduktion på startsidan.</li>\n    <li>Klistra in upp till 25 offentliga länkar, en per rad.</li>\n    <li>Klicka på Extrahera alla och vänta tills varje kort visar en förhandsgranskning.</li>\n    <li>Ladda ner miniatyrvideo N för varje bästa stillbild, eller ladda ner alla i högsta kvalitet som zip-filer.</li>\n    <li>Valfritt: Exportera CSV för forskningsloggar (video-ID, titel, delnings-URL, bild-URL).</li>\n  </ol>"
+    },
+    {
+      "heading": "Kan jag använda detta för konkurrentundersökningar?",
+      "html": "<p>Ja, för att studera offentliga paketeringar. Publicera inte en annan skapares miniatyrbild som din egen uppladdning. Upphovsrätten ligger kvar hos rättighetsinnehavaren. 11tik hämtar endast filer som YouTube redan lagrar offentligt.</p>\n  <p><a href=\"https://www.11tik.com/\">Öppna bulkutdragning på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hur laddar jag ner YouTube-miniatyrer i grupp?",
+      "answer": "Använd Bulk på 11tik, klistra in en offentlig URL per rad, extrahera och ladda sedan ner stillbilder eller en zip-fil av högsta offentliga kvalitet. Max 25 URL:er per körning.",
+      "answerHtml": "Använd Bulk på 11tik, klistra in en offentlig URL per rad, extrahera och ladda sedan ner stillbilder eller en zip-fil av högsta offentliga kvalitet. Max 25 URL:er per körning."
+    },
+    {
+      "question": "Kan jag använda detta för konkurrentundersökningar?",
+      "answer": "Ja, för att studera offentliga paketeringar. Publicera inte en annan skapares miniatyrbild som din egen. Upphovsrätten ligger kvar hos rättighetsinnehavaren.",
+      "answerHtml": "Ja, för att studera offentliga paketeringar. Publicera inte en annan skapares miniatyrbild som din egen. Upphovsrätten ligger kvar hos rättighetsinnehavaren."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

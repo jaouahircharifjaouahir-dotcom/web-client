@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "el",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Επικοινωνία | [[Σελ.2]]",
+  "description": "Χρησιμοποιήστε αυτήν τη φόρμα για ερωτήσεις σχετικά με το εργαλείο εξαγωγής μικρογραφιών YouTube. Τα μηνύματα αποστέλλονται στον χειριστή 11tik μέσω email. Μην στέλνετε αρχεία βίντεο ή ήχου. Το εργαλείο λειτουργεί μόνο με δημόσιες μικρογραφίες εικόνων.",
+  "h1": "Επαφή",
+  "ogTitle": "Επαφή",
+  "ogDescription": "Χρησιμοποιήστε αυτήν τη φόρμα για ερωτήσεις σχετικά με το εργαλείο εξαγωγής μικρογραφιών YouTube. Τα μηνύματα αποστέλλονται στον χειριστή 11tik μέσω email. Μην στέλνετε αρχεία βίντεο ή ήχου. Το εργαλείο λειτουργεί μόνο με δημόσιες μικρογραφίες εικόνων.",
+  "imageAlt": "",
+  "faqHeading": "Συχνές ερωτήσεις",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Επαφή",
+      "html": "<h1>Επαφή</h1>\n  <p class=\"yte-updated\">Τελευταία ενημέρωση: 22 Αυγούστου 2026</p>\n  <p itemprop=\"description\">Χρησιμοποιήστε αυτήν τη φόρμα για ερωτήσεις σχετικά με το εργαλείο εξαγωγής μικρογραφιών YouTube. Τα μηνύματα αποστέλλονται στον χειριστή 11tik μέσω email. Μην στέλνετε αρχεία βίντεο ή ήχου. Το εργαλείο λειτουργεί μόνο με δημόσιες μικρογραφίες εικόνων.</p>\n  <p>Άμεσο email:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Για μια αναφορά σχετικά με ένα συγκεκριμένο βίντεο, συμπεριλάβετε τη δημόσια διεύθυνση URL του YouTube. Το 11tik δεν φιλοξενεί το αρχείο μικρογραφίας. Η εικόνα ζητείται από το δημόσιο CDN της πλατφόρμας.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Ονομα<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Μήνυμα<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Αποστολή μηνύματος</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Εργαλείο εξαγωγής μικρογραφιών YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Για</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Πολιτική Απορρήτου</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Οροι</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

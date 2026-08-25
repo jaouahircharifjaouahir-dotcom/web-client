@@ -100,8 +100,8 @@ export function collectCanonicalSitemapLocs(input = {}) {
 }
 
 /**
- * Allow only https://{xx}.11tik.com/l/{xx}/2026/08/{slug}.html (xx ≠ en).
- * Rejects www, apex, arbitrary hosts, and non-article locale paths.
+ * Allow only https://{xx}.11tik.com/l/{xx}/…html (xx ≠ en).
+ * Rejects www, apex, arbitrary hosts, and bare locale homes (/l/xx/).
  */
 export function normalizeTrustedLocaleSitemapLoc(raw) {
   try {
@@ -114,7 +114,8 @@ export function normalizeTrustedLocaleSitemapLoc(raw) {
     const code = match[1];
     if (code === "en") return null;
     const path = url.pathname.replace(/\/+$/, "") || "/";
-    if (!new RegExp(`^/l/${code}/2026/08/[a-z0-9-]+\\.html$`).test(path)) return null;
+    // Require /l/{code}/…/*.html (articles or utilities), not the SPA locale home alone.
+    if (!new RegExp(`^/l/${code}/.+\.html$`).test(path)) return null;
     return `https://${code}.11tik.com${path}`;
   } catch {
     return null;

@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "cs",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Extraktor miniatur vs. tvůrce | 11tik",
+  "description": "Extraktor miniatur ukládá veřejné statické obrázky, které YouTube již hostuje. Tvůrce miniatur (nahrán z Canvy, Photoshopu nebo YouTube Studia) vytvoří nový obrázek, který vlastníte. 11tik je extraktor. Nevytváří grafiku a nenahrává na váš kanál vlastní soubor.",
+  "h1": "Extraktor miniatur vs. tvůrce",
+  "ogTitle": "Extraktor miniatur vs. tvůrce",
+  "ogDescription": "Extraktor miniatur ukládá veřejné statické obrázky, které YouTube již hostuje. Tvůrce miniatur (nahrán z Canvy, Photoshopu nebo YouTube Studia) vytvoří nový obrázek, který vlastníte. 11tik je extraktor. Nevytváří grafiku a nenahrává na váš kanál vlastní soubor.",
+  "imageAlt": "Extraktor 11tik používaný k uložení veřejné miniatury z YouTube",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Extraktor 11tik používaný k uložení veřejné miniatury z YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Co je extraktor miniatur?",
+      "html": "<p>Extraktor načte veřejnou URL adresu videa, vyhledá obrazové soubory na CDN YouTube a umožní vám zobrazit náhled, stáhnout nebo zkopírovat funkční URL adresu obrázku. Zobrazí pouze dostupné velikosti. Nevytrhává snímky z video streamu.</p>"
+    },
+    {
+      "heading": "Co je to nástroj pro tvorbu miniatur?",
+      "html": "<p>Tvůrce je designový pracovní postup. Skládáte písmo, tváře a kontrast, exportujete fotografii v poměru 16:9 a poté ji nahrajete do YouTube Studia. Vlastníte tento soubor (v souladu s pravidly fontů, fotografií a platformy). Extrakce fotografie konkurence a její opětovné nahrání není pracovní postup tvůrce.</p>"
+    },
+    {
+      "heading": "Kdy mám použít extraktor?",
+      "html": "<p>Použití<a href=\"https://www.11tik.com/\">11tik</a>Když potřebujete veřejný soubor: pro výzkum, zálohu vlastního publikovaného snímku, obrázek z CMS nebo kontrolu Open Graphu. Vložte URL adresu veřejného sledovaného videa, krátkých videí youtu.be a stáhněte si nejvyšší velikost, která skutečně vrátí obrázek.</p>"
+    },
+    {
+      "heading": "Kdy bych měl/a použít výrobce/výrobce?",
+      "html": "<p>Při vytváření originálního balení pro nový video nebo aktualizaci miniatury použijte grafický nástroj. Studio je místo, kde se tento soubor stane oficiální vlastní miniaturou. Po dokončení zpracování YouTube můžete vložit URL adresu pro sledování do 11tik a ověřit si, jaké veřejné velikosti existují, včetně maximálních rozlišení v době, kdy YouTube video publikoval.</p>"
+    },
+    {
+      "heading": "Jak se k sobě hodí?",
+      "html": "<ol>\n    <li>Získejte veřejné reference z videí ve vaší oblasti (pouze pro výzkum).</li>\n    <li>Navrhněte originální statický snímek v nástroji Maker.</li>\n    <li>Nahrajte to do YouTube Studia.</li>\n    <li>Po zpracování potvrďte veřejné soubory CDN pomocí 11tik.</li>\n  </ol>\n  <p>Související:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Náhled YouTube Studia 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snímek obrazovky vs. skutečná miniatura</a>.</p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otevřete extraktor</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Co je extraktor miniatur?",
+      "answer": "Nástroj, který ukládá veřejné statické soubory, které YouTube již hostuje. 11tik zobrazuje pouze existující obrazové soubory.",
+      "answerHtml": "Nástroj, který ukládá veřejné statické soubory, které YouTube již hostuje. 11tik zobrazuje pouze existující obrazové soubory."
+    },
+    {
+      "question": "Kdy bych měl/a použít výrobce/výrobce?",
+      "answer": "Když vytvoříte originální grafiku, kterou chcete nahrát jako vlastní miniaturu ve Studiu YouTube.",
+      "answerHtml": "Když vytvoříte originální grafiku, kterou chcete nahrát jako vlastní miniaturu ve Studiu YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+}

@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "zh",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "如何直接从视频中获取 YouTube 缩略图 URL | 11tik",
+  "description": "根据 i.ytimg.com 中的视频 ID 构建或复制可用的 YouTube 缩略图 URL。在直接链接之前，请确认尺寸是否合适。",
+  "h1": "如何直接从视频中获取 YouTube 视频缩略图 URL",
+  "ogTitle": "如何直接从视频中获取 YouTube 视频缩略图 URL",
+  "ogDescription": "根据 i.ytimg.com 中的视频 ID 构建或复制可用的 YouTube 缩略图 URL。在直接链接之前，请确认尺寸是否合适。",
+  "imageAlt": "图示展示了如何将 YouTube 观看链接转换为视频 ID，然后再转换为缩略图链接。",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "图示展示了如何将 YouTube 观看链接转换为视频 ID，然后再转换为缩略图链接。",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "YouTube 缩略图 URL 的组成部分（标注了主机、路径、视频 ID 和文件名）。",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "快速回答",
+      "html": "<p>要获取 YouTube 缩略图 URL：找到 11 个字符的视频 ID，然后打开一个已验证的公开图片地址，例如：<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>观看页面网址不是图片本身。请将视频链接粘贴到此处。<a href=\"https://www.11tik.com/\">11tik</a>等待实际加载的尺寸，然后使用<strong>复制图片链接</strong>这样可以保持有效的 HTTPS 链接，而不是使用猜测的文件名，避免出现 404 错误。</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">提取器使用的流程：公开观看 URL → 视频 ID → YouTube 图片托管上的公开缩略图 URL。</p>"
+    },
+    {
+      "heading": "什么是 YouTube 缩略图 URL",
+      "html": "<p>YouTube 缩略图 URL 指向的是静态图像文件，而不是视频播放器。它存储在 YouTube 的公共图像 CDN（通常位于 [此处应填写 CDN 路径]）上。<code>i.ytimg.com</code>如果地址有效，浏览器会下载 JPEG 或 WebP 文件。如果地址无效，则会出现文件缺失或灰色占位符——而不是凭空出现的“高清”图像。</p>\n  <p>这一点对博客、Open Graph预览、设计模型和CMS特色图片字段至关重要：这些系统需要的是图片URL，而不是图片本身。<code>youtube.com/watch?v=…</code>如果您只需要磁盘上的文件，请使用<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载指南</a>而不是这个以 URL 为中心的页面。</p>"
+    },
+    {
+      "heading": "URL 与视频 ID 的关系",
+      "html": "<p>YouTube 通过视频 ID 对公开的静态图像进行密钥匹配。常见的 JPEG 格式如下：</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>有些视频也以 WebP 格式发布。<code>/vi_webp/</code>：</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>正好是该系列中的第 11 个字符<code>A–Z a–z 0–9 _ -</code>更改ID，即可指向另一个视频的静帧图像。更改文件名，即可请求同一视频的另一个公开衍生版本。</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">公开缩略图 URL 的组成：主机、路径、视频 ID 和大小文件名。</p>"
+    },
+    {
+      "heading": "如何查找 YouTube 视频 ID",
+      "html": "<p>您只需要 ID。其他查询参数，例如播放列表 ID 或其他参数。<code>pp=</code>请勿更改缩略图宿主路径。</p>\n  <table>\n    <thead>\n      <tr><th>YouTube URL格式</th><th>例子</th><th>ID所在位置</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>手表</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>查询值</td></tr>\n      <tr><td>短链接</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>第一路径段</td></tr>\n      <tr><td>短裤</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>路径之后<code>/shorts/</code></td></tr>\n      <tr><td>嵌入</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>路径之后<code>/embed/</code></td></tr>\n      <tr><td>居住</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>路径之后<code>/live/</code></td></tr>\n      <tr><td>无 cookie 嵌入</td><td><code>youtube-nocookie.com/embed/…</code></td><td>与嵌入相同</td></tr>\n    </tbody>\n  </table>\n  <p>11tik 的解析器接受这些格式（以及仅包含 11 个字符的 ID）。仅提供频道或播放列表 URL 而不包含视频 ID 不足以生成单个缩略图 URL。</p>"
+    },
+    {
+      "heading": "常见的公共缩略图文件名",
+      "html": "<p>文件名描述了 YouTube 可能发布也可能不发布特定上传文件的文件大小等级。文件名并不能保证文件一定存在。</p>\n  <table>\n    <thead>\n      <tr><th>文件名</th><th>典型像素（如有）</th><th>笔记</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>发布时的最高公众仍是普通公众</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 级</td><td>另一部分高水平视频曝光</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>当缺少 maxres 时通常可用</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>非常常见的中型</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>小预览</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>最小标准仍然</td></tr>\n    </tbody>\n  </table>\n  <p>有关像素级细节以及何时选择某种尺寸而非另一种尺寸，请参阅<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">缩略图尺寸和分辨率指南</a>为什么<code>maxresdefault.jpg</code>经常缺失，见<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 是什么？</a>。</p>"
+    },
+    {
+      "heading": "使用公共视频 ID 的示例",
+      "html": "<p>获取公开演示 ID<code>dQw4w9WgXcQ</code>观看网址为：</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>候选的最大分辨率 JPEG URL 为：</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>在新标签页中打开该地址。如果图片加载成功，说明您已获得有效的缩略图 URL。如果加载失败，请尝试下一个文件名（例如<code>hqdefault.jpg</code>或者将观看链接粘贴到 11tik 中，这样就只会列出仍然存在的文件。切勿假设每个视频都是最高分辨率的。</p>"
+    },
+    {
+      "heading": "获取图片 URL 的三种方法",
+      "html": "<h3>1. 最快：从 11tik 复制</h3>\n  <ol>\n    <li>复制公开的观察、短线、直播、嵌入或 youtu.be URL。</li>\n    <li>打开<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>。</li>\n    <li>粘贴网址，等待预览出现。</li>\n    <li>选择<strong>复制图片链接</strong>按您需要的尺寸。</li>\n  </ol>\n  <p>11tik 会检查浏览器的响应，并且只显示能够返回真实图像的尺寸。这就是可用 CMS 链接和失效链接之间的区别。<code>maxresdefault</code>猜测。</p>\n\n  <h3>2. 浏览器方法</h3>\n  <p>有了候选人之后<code>i.ytimg.com</code>如果地址栏显示错误，请在新标签页中打开。如果页面仍然显示，请复制地址栏内容。如果看到错误信息或空白/占位符图块，则表示该尺寸的图片从未针对该 ID 发布过——请勿直接链接。</p>\n\n  <h3>3. 手动构建 URL。</h3>\n  <p>你可以将主机名 + 连接起来。<code>/vi/</code>请自行添加 ID 和文件名。手动生成的 URL 可以用于测试，但在验证响应之前，请勿将其粘贴到生产环境的 HTML 代码中。可用性取决于上传时间、源素材以及 YouTube 工作室中的处理状态。</p>"
+    },
+    {
+      "heading": "选择最佳可用网址",
+      "html": "<p>“最佳”指的是实际存在的最大公开文件，而不是你能输入的最长文件名。如果可以，优先选择经过验证的 maxres 或 hq720 链接。如果这些链接都无法使用，则降至 sd、hq、mq 或 default。在编辑器中将 480×360 的静态图像放大到 1280×720 并不会生成真正的 maxres URL。</p>\n  <p>上传自定义艺术作品的创作者仍应在上传完成后确认公开的衍生作品——工作室的处理可能会有延迟。相关内容：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026 年 YouTube 工作室缩略图</a>。</p>"
+    },
+    {
+      "heading": "在另一个网站上使用该网址",
+      "html": "<p>您可以粘贴一个工作示例。<code>i.ytimg.com</code>可以在许多内容管理系统 (CMS) 字段中插入 URL，但直接链接存在风险：YouTube 可能会更改 CDN 路径，而且某些网络会屏蔽第三方主机。为了获得持久的博客特色图片或 Open Graph 标签，请下载已验证的图片并将其副本托管在您自己的域名上。操作步骤：<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTube 缩略图作为博客/Open Graph 图片</a>。</p>\n  <p>版权归上传者所有。公开的URL链接并不代表你可以将该作品重新发布为自己的翻唱作品。请参阅YouTube的帮助文档。<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">自定义视频缩略图</a>和 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+    },
+    {
+      "heading": "排查损坏的缩略图 URL",
+      "html": "<ul>\n    <li><strong>404 或占位符：</strong>该文件大小从未公开过。请尝试其他文件名或使用 11tik 的已验证列表。</li>\n    <li><strong>视频错误：</strong>ID输错了。请从手表网址重新复制。</li>\n    <li><strong>私密/年龄限制/已删除：</strong>没有公开的静态链接。</li>\n    <li><strong>HTTP 混合内容：</strong>始终使用<code>https://</code>HTTPS 网站上的图片 URL。</li>\n    <li><strong>短裤看起来像信箱模式：</strong>许多 Shorts 仍然存储着风景公共文件。URL 仍然是官方的公共文件。</li>\n  </ul>"
+    },
+    {
+      "heading": "下一步",
+      "html": "<p>将公开的 YouTube 网址粘贴到<a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>复制已验证的图片链接，或<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载静止图像</a>如果您需要本地文件。有关分辨率选项，请打开<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">尺寸和质量指南</a>。</p>\n\n  <p class=\"yte-bio\">由浏览器内提取器发布者 11tik 编写。仅提供公开静态图像——不提供视频或音频下载。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "我可以不下载文件就复制缩略图的直接URL吗？",
+      "answer": "是的。在 11tik 中，使用“复制图片 URL”。这样就可以复制已在浏览器中验证过尺寸的 HTTPS 图片地址。",
+      "answerHtml": "<p>是的。在 11tik 中，使用“复制图片 URL”。这样就可以复制已在浏览器中验证过尺寸的 HTTPS 图片地址。</p>"
+    },
+    {
+      "question": "我可以获取 YouTube Short 视频的缩略图网址吗？",
+      "answer": "是的，当短片公开且 YouTube 发布了该 ID 的静态图片时，就可以粘贴 /shorts/ 链接，就像粘贴观看链接一样。另请参阅短片缩略图。",
+      "answerHtml": "<p>是的，当短片公开且 YouTube 发布了该 ID 的剧照时。粘贴一个<code>/shorts/</code>链接方式与粘贴手表网址相同。<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">短片缩略图</a>。</p>"
+    },
+    {
+      "question": "为什么有的缩略图链接可以正常显示，而有的却会报错？",
+      "answer": "文件名是可选的公共派生名称。hqdefault.jpg 可能存在，而 maxresdefault.jpg 可能不存在。一个有效的中等尺寸 URL 并不意味着一个有效的最大分辨率 URL。",
+      "answerHtml": "<p>文件名是可选的公共衍生词。<code>hqdefault.jpg</code>可能存在<code>maxresdefault.jpg</code>并非如此。一个有效的中等尺寸URL并不意味着一个有效的最大分辨率URL。</p>"
+    },
+    {
+      "question": "我可以在我的网站上直接使用图片URL吗？",
+      "answer": "理论上，如果文件存在，就可以使用，但对于特色图片和社交媒体预览来说，自行托管副本更可靠。未经授权，请勿将他人的作品重新发布为您的频道封面。",
+      "answerHtml": "<p>理论上，如果文件存在，就可以使用，但对于特色图片和社交媒体预览来说，自行托管副本更可靠。未经授权，请勿将他人的作品重新发布为您的频道封面。</p>"
+    },
+    {
+      "question": "观看链接是否有时就是缩略图链接？",
+      "answer": "不。观看链接指向视频。缩略图链接指向图像 CDN 上的图像文件。",
+      "answerHtml": "<p>不。观看链接指向视频。缩略图链接指向图像 CDN 上的图像文件。</p>"
+    },
+    {
+      "question": "11tik 是否发明了更高分辨率的 URL？",
+      "answer": "不，它只列出以图像形式返回的公共文件。缺少 maxres 参数意味着不应复制该 URL。",
+      "answerHtml": "<p>不，它只列出以图像形式返回的公共文件。缺少 maxres 参数意味着不应复制该 URL。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">由浏览器内提取器发布者 11tik 编写。仅提供公开静态图像——不提供视频或音频下载。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+}

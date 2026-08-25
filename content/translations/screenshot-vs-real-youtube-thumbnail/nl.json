@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "nl",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Screenshot versus echte YouTube-thumbnail: welk bestand moet je opslaan? | 11tik",
+  "description": "Een screenshot van de speler gemaakt met een telefoon is niet de thumbnail die YouTube gebruikt. Het echte publiek bevindt zich nog steeds op i.ytimg.com. Gebruik het voor blogs, Open Graph en onderzoek – screenshots voegen UI-effecten, compressie en een verkeerde beeldverhouding toe.",
+  "h1": "Screenshot versus echte YouTube-thumbnail: welk bestand moet je opslaan?",
+  "ogTitle": "Screenshot versus echte YouTube-thumbnail: welk bestand moet je opslaan?",
+  "ogDescription": "Een screenshot van de speler gemaakt met een telefoon is niet de thumbnail die YouTube gebruikt. Het echte publiek bevindt zich nog steeds op i.ytimg.com. Gebruik het voor blogs, Open Graph en onderzoek – screenshots voegen UI-effecten, compressie en een verkeerde beeldverhouding toe.",
+  "imageAlt": "Vergelijking van een screenshot van een speler met een echte, openbare YouTube-thumbnail.",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Vergelijking van een screenshot van een speler met een echte, openbare YouTube-thumbnail.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Wat is het verschil tussen een screenshot en een echte miniatuurafbeelding?",
+      "html": "<p>Een screenshot legt je scherm vast, inclusief de rand van de videospeler, ondertiteling en schaalvergroting van het apparaat. Een echte thumbnail is het JPEG- of WebP-bestand dat YouTube voor die video-ID heeft gepubliceerd. Alleen het CDN-bestand heeft een stabiele URL en een bekende pixelgrootte.</p>"
+    },
+    {
+      "heading": "Waarom werken screenshots niet in Google Afbeeldingen en sociale media-voorbeelden?",
+      "html": "<p>Ze hebben vaak de verkeerde beeldverhouding, bevatten gebruikersinterface-elementen en worden twee keer gecomprimeerd. Open Graph en veel CMS-velden vereisen een 16:9-verhouding, wat nog steeds ongeveer 1280×720 is. Dat komt overeen met maxresdefault wanneer die bestaat – zie<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Richtlijnen voor miniatuurafmetingen</a>.</p>"
+    },
+    {
+      "heading": "Hoe sla ik in plaats daarvan de echte miniatuurafbeelding op?",
+      "html": "<ol>\n    <li>Kopieer de openbare video-URL, niet een schermafbeelding.</li>\n    <li>Plak het in<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Download het eerstgenoemde openbare bestand of kopieer de URL van de afbeelding.</li>\n  </ol>"
+    },
+    {
+      "heading": "Wanneer is een screenshot nog nuttig?",
+      "html": "<p>Gebruik een screenshot alleen om een ​​UI-bug of een moment in de video te documenteren. Gebruik het niet als officiële thumbnail, als hero-afbeelding voor blogs of als deelafbeelding als die nog openbaar beschikbaar is.</p>\n  <p><a href=\"https://www.11tik.com/\">Bekijk de echte openbare miniatuurafbeelding →</a></p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wat is het verschil tussen een screenshot en een echte miniatuurafbeelding?",
+      "answer": "Een screenshot legt je scherm en de browserinterface vast. Een echte miniatuur is het JPEG- of WebP-bestand dat YouTube host op i.ytimg.com voor die video-ID.",
+      "answerHtml": "Een screenshot legt je scherm en de browserinterface vast. Een echte miniatuur is het JPEG- of WebP-bestand dat YouTube host op i.ytimg.com voor die video-ID."
+    },
+    {
+      "question": "Waarom werken screenshots niet in Google Afbeeldingen en sociale media-voorbeelden?",
+      "answer": "Ze hebben vaak een verkeerde beeldverhouding, extra gebruikersinterface en extra compressie. CMS- en Open Graph-velden verwachten een schone 16:9-weergave voor het publiek.",
+      "answerHtml": "Ze hebben vaak een verkeerde beeldverhouding, extra gebruikersinterface en extra compressie. CMS- en Open Graph-velden verwachten een schone 16:9-weergave voor het publiek."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>.</p>"
+}

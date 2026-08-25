@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "ro",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Extractor de miniaturi vs. creator | 11tik",
+  "description": "Un extractor de miniaturi salvează publicul imaginile pe care YouTube le găzduiește deja. Un instrument de creare a miniaturilor (încărcare prin Canva, Photoshop sau YouTube Studio) creează o imagine nouă pe care o dețineți. 11tik este un extractor. Nu creează grafică și nu încarcă un fișier personalizat pe canalul dvs.",
+  "h1": "Extractor de miniaturi vs. creator",
+  "ogTitle": "Extractor de miniaturi vs. creator",
+  "ogDescription": "Un extractor de miniaturi salvează publicul imaginile pe care YouTube le găzduiește deja. Un instrument de creare a miniaturilor (încărcare prin Canva, Photoshop sau YouTube Studio) creează o imagine nouă pe care o dețineți. 11tik este un extractor. Nu creează grafică și nu încarcă un fișier personalizat pe canalul dvs.",
+  "imageAlt": "Extractor 11tik folosit pentru a salva o miniatură publică de pe YouTube",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Extractor 11tik folosit pentru a salva o miniatură publică de pe YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ce este un extractor de miniaturi?",
+      "html": "<p>Un extractor citește adresa URL a unui videoclip public, găsește fișiere de imagine pe CDN-ul YouTube și vă permite să previzualizați, să descărcați sau să copiați o adresă URL de imagine funcțională. Listează doar dimensiunile existente. Nu extrage cadre din fluxul video.</p>"
+    },
+    {
+      "heading": "Ce este un instrument de creare a miniaturilor?",
+      "html": "<p>Un flux de lucru de tip „maker” este un flux de lucru de design. Compui fontul, fețele și contrastul, exporți o imagine statică 16:9, apoi o încarci în YouTube Studio. Deții fișierul respectiv (sub rezerva fonturilor, fotografiilor și regulilor platformei). Extragerea imaginii statice a unui concurent și reîncărcarea acesteia nu este un flux de lucru de tip „maker”.</p>"
+    },
+    {
+      "heading": "Când ar trebui să folosesc un extractor?",
+      "html": "<p>Utilizare<a href=\"https://www.11tik.com/\">11tik</a>când ai nevoie de fișierul public live: cercetare, o copie de rezervă a propriei imagini publicate, o imagine prezentată în CMS sau o verificare Open Graph. Lipește un URL public de urmărire, Shorts, youtu.be și descarcă cea mai mare dimensiune care returnează de fapt o imagine.</p>"
+    },
+    {
+      "heading": "Când ar trebui să folosesc un aparat de făcut?",
+      "html": "<p>Folosește un instrument de design atunci când creezi ambalajul original pentru o încărcare nouă sau o reîmprospătare a miniaturii. Fișierul respectiv devine miniatura personalizată oficială în Studio. După ce YouTube termină procesarea, poți insera adresa URL de vizionare în 11tik pentru a confirma ce dimensiuni publice există, inclusiv rezoluțiile maxime la momentul publicării YouTube.</p>"
+    },
+    {
+      "heading": "Cum se potrivesc cele două?",
+      "html": "<ol>\n    <li>Extrage referințe publice din videoclipuri din nișa ta (doar pentru cercetare).</li>\n    <li>Proiectați o imagine statică originală într-un instrument Maker.</li>\n    <li>Încarcă-l în YouTube Studio.</li>\n    <li>Confirmați fișierele CDN publice cu 11tik după procesare.</li>\n  </ol>\n  <p>Înrudite:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatură YouTube Studio 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captură de ecran vs. miniatură reală</a>.</p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extractorul</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ce este un extractor de miniaturi?",
+      "answer": "Un instrument care salvează publicul încărcările găzduite deja de YouTube. 11tik listează doar fișierele de imagine care există.",
+      "answerHtml": "Un instrument care salvează publicul încărcările găzduite deja de YouTube. 11tik listează doar fișierele de imagine care există."
+    },
+    {
+      "question": "Când ar trebui să folosesc un aparat de făcut?",
+      "answer": "Când creezi o grafică originală pentru a o încărca ca miniatură personalizată în YouTube Studio.",
+      "answerHtml": "Când creezi o grafică originală pentru a o încărca ca miniatură personalizată în YouTube Studio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+}

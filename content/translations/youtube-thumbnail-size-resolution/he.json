@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "he",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "גודל ורזולוציה של תמונות ממוזערות ביוטיוב: מדריך מלא | 11tik",
+  "description": "השווה גדלי תמונות ממוזערות ביוטיוב מ-120×90 עד 1280×720. רזולוציות Maxres ו-hq720 הן אופציונליות - השתמש בקובץ הציבורי הגדול ביותר שנטען.",
+  "h1": "גודל ורזולוציה של תמונות ממוזערות ביוטיוב: מדריך מלא",
+  "ogTitle": "גודל ורזולוציה של תמונות ממוזערות ביוטיוב: מדריך מלא",
+  "ogDescription": "השווה גדלי תמונות ממוזערות ביוטיוב מ-120×90 עד 1280×720. רזולוציות Maxres ו-hq720 הן אופציונליות - השתמש בקובץ הציבורי הגדול ביותר שנטען.",
+  "imageAlt": "טבלת השוואה של גדלי תמונות ממוזערות ציבוריות ביוטיוב מגודל maxresdefault 1280 על 720 עד לגודל ברירת המחדל 120 על 90",
+  "faqHeading": "שאלות נפוצות",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "טבלת השוואה של גדלי תמונות ממוזערות ציבוריות ביוטיוב מגודל maxresdefault 1280 על 720 עד לגודל ברירת המחדל 120 על 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "השוואה זו לצד זו המציגה סרטון עם maxresdefault זמין לעומת סרטון שבו קיים רק קובץ hqdefault קטן יותר",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "תשובה מהירה",
+      "html": "<p>עבור העלאה מותאמת אישית, העזרה של YouTube עדיין מתמקדת ב-<strong>16:9</strong>תמונה - בדרך כלל<strong>1280×720</strong>עבור קבצים שניתן להוריד מסרטון קיים, נגזרות CDN ציבוריות משתנות. כאשר קיימות,<code>maxresdefault</code>/<code>hq720</code>הם בדרך כלל 1280×720. סרטונים רבים נעצרים ב<code>sddefault</code>(640×480) או<code>hqdefault</code>‏(480×360). שם קובץ גבוה יותר לעולם לא ממציא פיקסלים. הדבק את כתובת ה-URL של הצפייה ב-<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>כדי לרשום רק גדלים שמחזירים תמונה אמיתית.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">גדלים ציבוריים יחסיים. לא כל סרטון מפרסם כל שלב בסולם הזה.</p>"
+    },
+    {
+      "heading": "מידות מומלצות ליוצרים",
+      "html": "<p>אם אתם מעצבים תמונה ממוזערת מותאמת אישית ב-Studio, עקבו אחר העזרה העדכנית של YouTube: שאפו ל-<strong>16:9</strong>עדיין. גודל העבודה הנפוץ הוא<strong>1280×720</strong>פיקסלים. שמתאימים למסגרת המסך הרחב של הנגן ואותה מחלקת פיקסלים כמו פורסם<code>maxresdefault</code>כאשר יוטיוב יוצר אחד כזה.</p>\n  <p>הפניה רשמית:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">העלאת תמונות ממוזערות של סרטונים מותאמות אישית</a>לאחר שסטודיו מסיים את העיבוד, אשר את הקבצים הציבוריים החיים באמצעות 11tik במקום להניח שכל גרסה נגזרת מופיעה באופן מיידי. הערות המתמקדות בסטודיו:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">תמונות ממוזערות של YouTube Studio בשנת 2026</a>.</p>"
+    },
+    {
+      "heading": "גדלי CDN ציבוריים שצופים יכולים למעשה לאחזר",
+      "html": "<p>מורידים ובלוגים לא שולפים את קובץ הפוטושופ המאסטר שלך. הם שולפים מארחי YouTube נגזרים ציבוריים עבור מזהה הסרטון. כלי החילוץ של 11tik בודק את שמות הקבצים הבאים (JPEG, וכאשר קיים, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>גִרְסָה אַחֶרֶת</th><th>רזולוציה אופיינית</th><th>נִדבָּך</th><th>זְמִינוּת</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>טוֹב בִּיוֹתֵר</td><td>רק אם יוטיוב פרסם את ה-WebP המקסימלי</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>טוֹב בִּיוֹתֵר</td><td>נפוץ בהעלאות חדשות/איכותיות; לעיתים קרובות חסר בהעלאות ישנות יותר</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 מחלקה</td><td>טוֹב בִּיוֹתֵר</td><td>מופיע בחלק מהסרטונים כקובץ חלופי בגובה</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>גָבוֹהַ</td><td>זמין לעתים קרובות כאשר אין ערך מקסימלי</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>תֶקֶן</td><td>נפוץ מאוד</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>תצוגה מקדימה</td><td>תצוגות מקדימות/רשימות קטנות</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>תצוגה מקדימה</td><td>הסטנדרט הקטן ביותר עדיין</td></tr>\n    </tbody>\n  </table>\n  <p>רוחב וגבהים צפויים אלה תואמים להגדרות האיכות המוגדרות מראש של 11tik. תגובות אמיתיות עדיין יכולות להיות שונות אם YouTube מציג placeholder או משמיט קובץ לחלוטין - תמיד יש לאמת.</p>"
+    },
+    {
+      "heading": "למה יחס גובה-רוחב של 16:9 חשוב גם כאשר הקבצים שונים",
+      "html": "<p>נגן הצפייה הוא מסך רחב. גרפיקה מותאמת אישית שעוצבה ביחס גובה-רוחב של 16:9 נשארת קריאה בחיפוש, במדפים מוצעים ובקבצים מוטמעים. חלק מהקבצים הציבוריים (בעיקר<code>hqdefault</code>/<code>sddefault</code>) אינם תיבות 16:9 קפדניות; אלו גדלי CDN ישנים יותר. עדיף תמונה ציבורית אמיתית של 1280×720 כשאתה זקוק לנכס נקי ביחס 16:9 עבור Open Graph או כותרת בבלוג.</p>\n  <p>סרטונים קצרים מוצגים אנכית, אך הפורמט הציבורי המאוחסן עדיין לרוב אופקי. זוהי התנהגות של המארח, לא הורדה כושלת. פרטים:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">הורדת תמונות ממוזערות של סרטונים קצרים</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault לעומת hq720 לעומת \"HD\"",
+      "html": "<p><code>maxresdefault</code>האם שם קובץ ה-HD המוכר ב<code>i.ytimg.com</code>כאשר הקובץ קיים, הוא בדרך כלל 1280×720 - לא 4K.<code>hq720</code>הוא שם נוסף ברמה גבוהה שחלק מהסרטונים חושפים באותה רמת רזולוציה. אף אחד מהשמות לא מבטיח את הקובץ. כלים שמדפיסים כתובת URL של maxres ללא בדיקה מייצרים תמונות שבורות.</p>\n  <p>הערות מעמיקות יותר על שמות קבצים:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">מהו maxresdefault.jpg</a>ו<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">תמונה ממוזערת ציבורית באיכות הגבוהה ביותר</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">אותה תבנית בקשה, תוצאות שונות: שם קובץ גבוה יותר אינו ממציא פיקסלים כאשר הקובץ חסר.</p>"
+    },
+    {
+      "heading": "למה סרטון אחד מכיל יותר גדלים מאשר סרטון אחר",
+      "html": "<ul>\n    <li>ייתכן שהעלאות ישנות יותר מעולם לא קיבלו נגזרת של maxres.</li>\n    <li>גרפיקת המקור הייתה קטנה מ-1280×720.</li>\n    <li>תמונות ממוזערות מותאמות אישית עדיין מעובדות ב-Studio.</li>\n    <li>סרטונים פרטיים, סרטונים לחברים בלבד או סרטונים עם הגבלת גיל אינם רשאים לחשוף תמונות סטילס ציבוריות.</li>\n    <li>גרסאות WebP מופיעות רק כאשר YouTube פרסם אותן עבור מזהה זה.</li>\n  </ul>\n  <p>הזמינות היא לכל סרטון. לעולם אל תתייחסו לכתובת האתר המקסימלית הפעילה של מתחרה כהוכחה לקיומו של הסרטון שלכם.</p>"
+    },
+    {
+      "heading": "כיצד 11tik בוחר את הגודל \"הטוב ביותר\"",
+      "html": "<p>11tik בודק מועמדים ציבוריים בסדר איכות קבוע (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). הוא שומר קבצים שאושרו כתמונות ומדרג את הקבצים בעלי הערך הגבוה ביותר ראשון. הוא אינו מבצע שינוי גודל. אם חסר maxres, הכרטיס הראשון עשוי להיות hq720 או sd - זהו המקסימום האמין עבור מזהה זה.</p>\n  <p>כדי להעתיק את הכתובת של גודל שנבחר, השתמש ב-<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">מדריך כתובות URL של תמונות ממוזערות</a>כדי לשמור את הקובץ, השתמש ב-<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">מדריך להורדה</a>.</p>"
+    },
+    {
+      "heading": "באיזה גודל כדאי להשתמש?",
+      "html": "<table>\n    <thead>\n      <tr><th>מקרה שימוש</th><th>לְהַעֲדִיף</th><th>מַדוּעַ</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>תמונה ראשית בבלוג / גרף פתוח</td><td>המאומת הגדול ביותר ~1280×720</td><td>תואם לגידולים חברתיים נפוצים; אחסן עותק משלך</td></tr>\n      <tr><td>מחקר עיצובי / מוקאפ ממוזער</td><td>הטוב ביותר שזמין לציבור</td><td>אריזה אמיתית, לא צילום מסך של השחקן</td></tr>\n      <tr><td>תצוגה מקדימה מהירה של הצ'אט</td><td>hq או mq</td><td>קבצים קטנים יותר נטענים מהר יותר</td></tr>\n      <tr><td>העלאה מותאמת אישית בסטודיו</td><td>רזולוציית 16:9, 1280×720 (או יותר) המקורית שלך</td><td>אתה יוצר אמנות; נגזרות של CDN מגיעות מאוחר יותר</td></tr>\n    </tbody>\n  </table>\n  <p>אל תמתחו את hqdefault ל-1280×720 ותקראו לזה maxres. לטיפים לאירוח CMS:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">תמונה ראשית / תהליך עבודה של Open Graph</a>צילומי מסך של הנגן הם נכס אחר (גרוע יותר):<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">צילום מסך לעומת תמונה ממוזערת אמיתית</a>.</p>"
+    },
+    {
+      "heading": "השלב הבא",
+      "html": "<p>בדוק וידאו חי ב-<a href=\"https://www.11tik.com/\">מחלץ 11tik</a>, אז או<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">העתק את כתובת האתר של התמונה</a>אוֹ<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">הורידו את הטוב ביותר שעדיין זמין</a>.</p>\n\n  <p class=\"yte-bio\">נכתב על ידי 11tik. גדלי CDN ציבוריים בלבד; אין אפשרות לשדרג וללא אפשרות להורדת וידאו.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "האם maxresdefault תמיד זמין?",
+      "answer": "לא. סרטונים ציבוריים רבים לעולם לא מפרסמים את הקובץ הזה. 404 ברזולוציה מקסימלית זה נורמלי.",
+      "answerHtml": "<p>לא. סרטונים ציבוריים רבים לעולם לא מפרסמים את הקובץ הזה. 404 ברזולוציה מקסימלית זה נורמלי.</p>"
+    },
+    {
+      "question": "האם hq720 טוב יותר מגרסאות אחרות של טאמבואר?",
+      "answer": "כאשר הוא קיים, hq720 נמצא באותה רמה גבוהה כמו maxres (בערך 1280×720). הוא לא אוטומטית \"טוב\" יותר מקובץ maxres מאומת, והוא אינו מובטח.",
+      "answerHtml": "<p>כאשר הוא קיים, hq720 נמצא באותה רמה גבוהה כמו maxres (בערך 1280×720). הוא לא אוטומטית \"טוב\" יותר מקובץ maxres מאומת, והוא אינו מובטח.</p>"
+    },
+    {
+      "question": "איזה גודל הכי טוב לאתר אינטרנט?",
+      "answer": "השתמשו בתמונות סטילס ציבוריות גדולות ביותר המאומתות ביחס של ~16:9 (לרוב 1280×720), ולאחר מכן אחסנו עותק באתר שלכם עבור תגיות יציבות של Open Graph ותמונה נבחרת.",
+      "answerHtml": "<p>השתמשו בתמונות סטילס ציבוריות גדולות ביותר המאומתות ביחס של ~16:9 (לרוב 1280×720), ולאחר מכן אחסנו עותק באתר שלכם עבור תגיות יציבות של Open Graph ותמונה נבחרת.</p>"
+    },
+    {
+      "question": "מדוע תמונה ממוזערת ברזולוציה גבוהה לפעמים נכשלת בטעינה?",
+      "answer": "שם הקובץ נחשף. יוטיוב לא פרסם את הגרסה הנגזרת הזו עבור מזהה הסרטון. טען במקום זאת גודל קטן יותר.",
+      "answerHtml": "<p>שם הקובץ נחשף. יוטיוב לא פרסם את הגרסה הנגזרת הזו עבור מזהה הסרטון. טען במקום זאת גודל קטן יותר.</p>"
+    },
+    {
+      "question": "האם \"רזולוציית HD ממוזערת\" משמעה 4K?",
+      "answer": "לא. רזולוציה מקסימלית ציבורית היא בדרך כלל 1280×720. 11tik לא ימציא תמונה סטילס 4K.",
+      "answerHtml": "<p>לא. רזולוציה מקסימלית ציבורית היא בדרך כלל 1280×720. 11tik לא ימציא תמונה סטילס 4K.</p>"
+    },
+    {
+      "question": "האם תמונות ממוזערות של WebP באיכות גבוהה יותר מ-JPEG?",
+      "answer": "WebP הוא קונטיינר נוסף לאותו גודל שכבה בעת פרסומו. עדיף שהקובץ 11tik יאושר; אין להניח ש-WebP תמיד קיים.",
+      "answerHtml": "<p>WebP הוא קונטיינר נוסף לאותו גודל שכבה בעת פרסומו. עדיף שהקובץ 11tik יאושר; אין להניח ש-WebP תמיד קיים.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik. גדלי CDN ציבוריים בלבד; אין אפשרות לשדרג וללא אפשרות להורדת וידאו.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "vi",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Ảnh chụp màn hình so với ảnh thu nhỏ YouTube thực tế: bạn nên lưu tệp nào? | 11tik",
+  "description": "Ảnh chụp màn hình điện thoại của người chơi không phải là hình thu nhỏ mà YouTube lưu trữ. Người dùng thực sự vẫn ở trên i.ytimg.com. Hãy sử dụng nó cho blog, Open Graph và nghiên cứu — ảnh chụp màn hình thêm giao diện người dùng phức tạp, nén ảnh và tỷ lệ khung hình sai.",
+  "h1": "Ảnh chụp màn hình so với ảnh thumbnail YouTube thực tế: bạn nên lưu tệp nào?",
+  "ogTitle": "Ảnh chụp màn hình so với ảnh thumbnail YouTube thực tế: bạn nên lưu tệp nào?",
+  "ogDescription": "Ảnh chụp màn hình điện thoại của người chơi không phải là hình thu nhỏ mà YouTube lưu trữ. Người dùng thực sự vẫn ở trên i.ytimg.com. Hãy sử dụng nó cho blog, Open Graph và nghiên cứu — ảnh chụp màn hình thêm giao diện người dùng phức tạp, nén ảnh và tỷ lệ khung hình sai.",
+  "imageAlt": "So sánh ảnh chụp màn hình trình phát với ảnh thu nhỏ thực tế của video YouTube công khai.",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "So sánh ảnh chụp màn hình trình phát với ảnh thu nhỏ thực tế của video YouTube công khai.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ảnh chụp màn hình và ảnh thu nhỏ thực sự khác nhau ở điểm nào?",
+      "html": "<p>Ảnh chụp màn hình ghi lại toàn bộ màn hình của bạn, bao gồm cả giao diện trình phát, phụ đề và tỷ lệ hiển thị của thiết bị. Ảnh thu nhỏ thực sự là tệp JPEG hoặc WebP mà YouTube đã xuất bản cho ID video đó. Chỉ có tệp CDN mới có URL ổn định và kích thước pixel đã biết.</p>"
+    },
+    {
+      "heading": "Tại sao ảnh chụp màn hình lại không hiển thị tốt trên Google Hình ảnh và bản xem trước mạng xã hội?",
+      "html": "<p>Chúng thường có tỷ lệ khung hình sai, bao gồm giao diện người dùng và bị nén hai lần. Open Graph và nhiều trường CMS vẫn yêu cầu tỷ lệ 16:9 với độ phân giải khoảng 1280×720. Điều này phù hợp với maxresdefault khi nó tồn tại — xem<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn kích thước hình thu nhỏ</a>.</p>"
+    },
+    {
+      "heading": "Tôi có thể lưu ảnh thu nhỏ thật của ảnh gốc như thế nào?",
+      "html": "<ol>\n    <li>Hãy sao chép URL của video công khai, chứ không phải ảnh chụp màn hình.</li>\n    <li>Dán nó vào<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Tải xuống tệp công khai đầu tiên được liệt kê hoặc sao chép URL hình ảnh.</li>\n  </ol>"
+    },
+    {
+      "heading": "Ảnh chụp màn hình vẫn còn hữu ích trong những trường hợp nào?",
+      "html": "<p>Chỉ sử dụng ảnh chụp màn hình để ghi lại lỗi giao diện người dùng hoặc một khoảnh khắc nào đó trong video. Không sử dụng nó làm ảnh thu nhỏ chính thức, ảnh nổi bật trên blog hoặc ảnh chia sẻ nếu vẫn còn chế độ chia sẻ công khai.</p>\n  <p><a href=\"https://www.11tik.com/\">Xem ảnh thu nhỏ công khai thực sự →</a></p>\n  <p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ảnh chụp màn hình và ảnh thu nhỏ thực sự khác nhau ở điểm nào?",
+      "answer": "Ảnh chụp màn hình ghi lại màn hình và giao diện trình phát của bạn. Hình thu nhỏ thực sự là tệp JPEG hoặc WebP mà YouTube lưu trữ trên i.ytimg.com cho ID video đó.",
+      "answerHtml": "Ảnh chụp màn hình ghi lại màn hình và giao diện trình phát của bạn. Hình thu nhỏ thực sự là tệp JPEG hoặc WebP mà YouTube lưu trữ trên i.ytimg.com cho ID video đó."
+    },
+    {
+      "question": "Tại sao ảnh chụp màn hình lại không hiển thị tốt trên Google Hình ảnh và bản xem trước mạng xã hội?",
+      "answer": "Chúng thường có tỷ lệ khung hình sai, giao diện người dùng thừa và độ nén cao. Các lĩnh vực CMS và Open Graph vẫn yêu cầu tỷ lệ khung hình 16:9 chuẩn cho công chúng.",
+      "answerHtml": "Chúng thường có tỷ lệ khung hình sai, giao diện người dùng thừa và độ nén cao. Các lĩnh vực CMS và Open Graph vẫn yêu cầu tỷ lệ khung hình 16:9 chuẩn cho công chúng."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>.</p>"
+}

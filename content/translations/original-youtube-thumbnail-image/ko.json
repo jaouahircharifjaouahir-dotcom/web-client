@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "ko",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "유튜브 원본 썸네일 이미지를 얻는 방법 | 11tik",
+  "description": "YouTube에서 이미 호스팅하고 있는 원본 공개 썸네일을 가져옵니다. 이는 CDN에서 제공하는 스틸 이미지이며, 동영상에서 추출한 프레임이 아닙니다.",
+  "h1": "유튜브 오리지널 썸네일 이미지를 얻는 방법",
+  "ogTitle": "유튜브 오리지널 썸네일 이미지를 얻는 방법",
+  "ogDescription": "YouTube에서 이미 호스팅하고 있는 원본 공개 썸네일을 가져옵니다. 이는 CDN에서 제공하는 스틸 이미지이며, 동영상에서 추출한 프레임이 아닙니다.",
+  "imageAlt": "11tik 추출기에 표시된 원본 공개 YouTube 썸네일 파일",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 추출기에 표시된 원본 공개 YouTube 썸네일 파일",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "원래 유튜브 썸네일은 무엇인가요?",
+      "html": "<p>이는 YouTube가 이미지 호스팅 사이트에 이미 저장해 둔 미리보기 이미지입니다. 검색 및 추천 콘텐츠에 사용되는 파일이지, Print Screen으로 캡처한 화면이 아닙니다.</p>"
+    },
+    {
+      "heading": "스크린샷과 어떻게 다른가요?",
+      "html": "<p>스크린샷에는 플레이어 크롬, 브라우저 UI 및 추가 압축 내용이 포함되어 있습니다. 원본 파일은 YouTube에 게시된 픽셀 크기의 깨끗한 정지 이미지입니다.</p>"
+    },
+    {
+      "heading": "원본 썸네일은 어떻게 찾을 수 있나요?",
+      "html": "<p>시계, 쇼츠, 라이브 또는 youtu.be URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>이 도구는 비디오 ID를 읽고 공개 파일을 확인한 후 존재하는 파일 중 가장 높은 순위를 매깁니다.</p>"
+    },
+    {
+      "heading": "유튜브 썸네일 URL은 어떻게 작동하나요?",
+      "html": "<p>이들은 비디오 ID와 maxresdefault.jpg 또는 hqdefault.jpg on i.ytimg.com와 같은 크기 이름을 사용합니다. 게시된 적이 없는 크기를 추측하면 오류 또는 자리 표시자가 반환됩니다.</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg는 무엇입니까?",
+      "html": "<p>이는 유튜브가 처음 만들었을 당시 일반적으로 사용하던 가장 일반적인 공개 파일명으로, 보통 1280x720 해상도를 의미합니다. 4K 마스터 파일도 아니고, 동영상 파일 자체도 아닙니다.</p>"
+    },
+    {
+      "heading": "원본이라는 것은 항상 1280x720을 의미하는 건가요?",
+      "html": "<p>아니요. maxres가 게시된 적이 없다면 원래 공개 이미지는 hq, sd 또는 다른 남아 있는 파일입니다. 11tik는 픽셀을 만들어내는 대신 실제 픽셀 크기를 보여줍니다.</p>"
+    },
+    {
+      "heading": "Shorts, Live 또는 youtu.be의 원본 스틸컷을 구할 수 있을까요?",
+      "html": "<p>네, 해당 URL에 공개 동영상 ID와 YouTube에서 호스팅하는 공개 스틸 이미지가 포함된 경우 추출기는 이를 일반 시청 URL과 동일하게 처리합니다.</p>"
+    },
+    {
+      "heading": "내가 정말로 원본 파일을 받았는지 어떻게 확인할 수 있나요?",
+      "html": "<p>파일 유효성 검사 후 11tik에 나열된 크기 및 치수를 사용하십시오. 이미지가 플레이어 스크린샷처럼 보이면 호스팅된 썸네일을 다운로드하지 않은 것입니다.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">최고 품질</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "원래 유튜브 썸네일은 무엇인가요?",
+      "answer": "유튜브에서 동영상 ID(예: maxresdefault)에 대해 호스팅하는 공개 이미지 파일입니다. 시청 페이지의 스크린샷이 아닙니다.",
+      "answerHtml": "유튜브에서 동영상 ID(예: maxresdefault)에 대해 호스팅하는 공개 이미지 파일입니다. 시청 페이지의 스크린샷이 아닙니다."
+    },
+    {
+      "question": "원본이라는 것은 항상 1280x720을 의미하는 건가요?",
+      "answer": "아니요. 게시될 때의 최대 해상도는 보통 1280x720입니다. 해당 파일이 없는 경우, 원래 공개된 영상은 YouTube에 저장된 다음 크기의 영상입니다.",
+      "answerHtml": "아니요. 게시될 때의 최대 해상도는 보통 1280x720입니다. 해당 파일이 없는 경우, 원래 공개된 영상은 YouTube에 저장된 다음 크기의 해상도로 제공됩니다."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "fr",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Comment obtenir une miniature YouTube de la plus haute qualité | 11tik",
+  "description": "La qualité maximale correspond au format JPEG ou WebP public le plus volumineux que YouTube renvoie réellement, et non à un nom de fichier 4K deviné.",
+  "h1": "Comment obtenir une miniature YouTube de la plus haute qualité",
+  "ogTitle": "Comment obtenir une miniature YouTube de la plus haute qualité",
+  "ogDescription": "La qualité maximale correspond au format JPEG ou WebP public le plus volumineux que YouTube renvoie réellement, et non à un nom de fichier 4K deviné.",
+  "imageAlt": "Meilleure miniature publique YouTube disponible sélectionnée dans 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Meilleure miniature publique YouTube disponible sélectionnée dans 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Comment obtenir une miniature YouTube de la meilleure qualité possible ?",
+      "html": "<p>Collez une URL publique dans<a href=\"https://www.11tik.com/\">11tik</a>Téléchargez le premier fichier de la liste. L'extracteur classe les fichiers publics disponibles&nbsp;; il ne transforme pas une petite image fixe en fausse HD.</p>"
+    },
+    {
+      "heading": "Quelle est la résolution publique maximale ?",
+      "html": "<p>Lorsque YouTube publie la résolution maxresdefault, celle-ci est généralement de 1280×720. Si ce fichier est manquant, la meilleure qualité disponible est la prochaine taille valide, telle que sd ou hq.</p>"
+    },
+    {
+      "heading": "WebP a-t-il une importance ?",
+      "html": "<p>Certaines vidéos existent également en WebP, avec des noms et une taille identiques. 11tik peut les afficher lorsqu'elles sont présentes. Choisissez le fichier validé par l'outil, et non une URL devinée.</p>"
+    },
+    {
+      "heading": "Pourquoi la HD a-t-elle parfois un aspect flou ?",
+      "html": "<p>L'image publique peut encore être en 1280×720 avec compression, ou vous pouvez consulter la qualité par défaut. Vérifiez la taille des pixels 11tik avant de conclure à un échec du téléchargement.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guide des tailles</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Comment obtenir une miniature YouTube de la meilleure qualité possible ?",
+      "answer": "Collez l'URL publique dans 11tik et téléchargez le premier fichier listé. Il s'agit du fichier public le plus volumineux hébergé par YouTube.",
+      "answerHtml": "Collez l'URL publique dans 11tik et téléchargez le premier fichier listé. Il s'agit du fichier public le plus volumineux hébergé par YouTube."
+    },
+    {
+      "question": "Le fichier de la plus haute qualité est-il en 4K ?",
+      "answer": "Généralement non. La résolution maximale publique est généralement de 1280 x 720. 11tik ne procède pas à une mise à l'échelle ni à la création d'un master plus grand.",
+      "answerHtml": "Généralement non. La résolution maximale publique est généralement de 1280×720. 11tik n'effectue pas de mise à l'échelle ni ne crée une image maître plus grande."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

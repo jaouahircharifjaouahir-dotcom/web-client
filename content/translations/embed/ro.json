@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "ro",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Încorporează extractorul de miniaturi 11tik | 11tik",
+  "description": "Adaugă un extractor gratuit de miniaturi YouTube la blogul, documentele sau setul de instrumente pentru creatori. Widgetul se încarcă din 11tik și se redimensionează singur. Nu necesită cheie API.",
+  "h1": "Încorporați extractorul de miniaturi 11tik",
+  "ogTitle": "Încorporați extractorul de miniaturi 11tik",
+  "ogDescription": "Adaugă un extractor gratuit de miniaturi YouTube la blogul, documentele sau setul de instrumente pentru creatori. Widgetul se încarcă din 11tik și se redimensionează singur. Nu necesită cheie API.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "fragment de iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Reguli",
+      "html": "<ul>\n    <li>Păstrați<code>id=\"yte-app\"</code>atribut, astfel încât sincronizarea înălțimii să funcționeze.</li>\n    <li>Nu încadrați iframe-ul la o înălțime fixă ​​care blochează butoanele de descărcare.</li>\n    <li>Legătură înapoi la<a href=\"https://www.11tik.com/\">www.11tik.com</a>îi ajută pe utilizatori să deschidă instrumentul complet.</li>\n  </ul>"
+    },
+    {
+      "heading": "Linkuri profunde",
+      "html": "<p>Distribuiți o extracție gata preparată cu<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Deschideți extractorul</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

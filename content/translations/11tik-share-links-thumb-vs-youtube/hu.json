@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "hu",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Hogyan működnek a 11tik megosztási linkek: /thumb/{VIDEO_ID} vs. YouTube-os videómegtekintési URL-ek | 11tik",
+  "description": "A 11tik /thumb/{id} egy megosztási találati oldal. Nem YouTube-megtekintési URL és nem közvetlen i.ytimg.com képfájl.",
+  "h1": "Hogyan működnek a 11tik megosztási linkek: /thumb/{VIDEO_ID} vs. YouTube-os videómegtekintési URL-ek",
+  "ogTitle": "Hogyan működnek a 11tik megosztási linkek: /thumb/{VIDEO_ID} vs. YouTube-os videómegtekintési URL-ek",
+  "ogDescription": "A 11tik /thumb/{id} egy megosztási találati oldal. Nem YouTube-megtekintési URL és nem közvetlen i.ytimg.com képfájl.",
+  "imageAlt": "Diagram, amely összehasonlít egy YouTube-megtekintési URL-t, egy 11tik indexkép-megosztási URL-t és egy közvetlen YouTube-indexkép-URL-t",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Diagram, amely összehasonlít egy YouTube-megtekintési URL-t, egy 11tik indexkép-megosztási URL-t és egy közvetlen YouTube-indexkép-URL-t",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Munkafolyamat, amelyen látható a kinyerés, előnézet, másolás 11tik megosztási link, és a címzett megnyitja az eredményoldalt (indexkép)",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>Három különböző URL-címnek lehet ugyanaz a YouTube-videóazonosítója. Csak az egyik lehet képfájl.</p>\n  <ol>\n    <li><strong>YouTube-megtekintési URL</strong>— megnyitja a videót a YouTube-on.</li>\n    <li><strong>11tik megosztási URL</strong>— megnyitja az adott azonosítóhoz tartozó 11tik kinyerési eredményoldalt (<code>/thumb/{VIDEO_ID}</code>). Ez egy weboldal, nem JPEG/WebP fájl.</li>\n    <li><strong>Közvetlen bélyegkép CDN URL</strong>— egy nyilvános állóképre mutat a YouTube képtárhelyén (például<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>A nyilvános demóazonosító használata<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>A harmadik cím egy közvetlen kép URL-mintára példa. Az adott maxres fájl nem garantált minden videó esetében – erősítse meg a valós méreteket a következővel:<a href=\"https://www.11tik.com/\">11tik</a>vagy a<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault útmutató</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ugyanaz a videóazonosító, három feladat: videó megtekintése, a 11tik találati oldal megnyitása, vagy CDN állókép kérése.</p>"
+    },
+    {
+      "heading": "Mi az a /thumb/{VIDEO_ID}?",
+      "html": "<p>A 11tik oldalon egy sikeres, egyetlen videóból álló kivonat frissíti a böngésző címét egy ilyen alakú elérési útra:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Ez az elérési út a termék megosztási/eredmény URL-je. A videó azonosítójából generálódik (lásd a webhely megosztási segédleteit), és célja, hogy újra megnyissa az adott azonosítóra fókuszáló kinyerőt. Régebbi lekérdezés stílusú linkek, mint például<code>?v=VIDEO_ID</code>ugyanarra az ötletre mutató mélyhivatkozásokként kezelik őket, és átírhatók a<code>/thumb/</code>forma.</p>\n  <p><code>/thumb/…</code>van<strong>nem</strong>a YouTube kép CDN-jén található. Megnyitása soha nem tölt le automatikusan képet; betölti az adott azonosítóhoz tartozó 11tik alkalmazásútvonalat.</p>"
+    },
+    {
+      "heading": "Miért létezik az oldal",
+      "html": "<p>Az embereknek stabil módszerre van szükségük ahhoz, hogy újranyissák vagy elküldjék a „videó indexképének eredményét a 11tik oldalon” üzenetet anélkül, hogy egy hosszú megtekintési URL-t beillesztenének a csevegésbe, és abban reménykednének, hogy a címzett tudja, mit kell tennie ezután. A megosztási oldal a beszélgetést a kivonatoló rendszeren tartja: ugyanaz az azonosító, ugyanaz a nyilvános megtekintés munkafolyamat, letöltési és másolási műveletek egy helyen.</p>\n  <p>Ezáltal a kezdőlap eszköz URL-címe is tisztán marad. A marketing kezdőlapja továbbra is az általános gyűjtőeszköz;<code>/thumb/{id}</code>egy adott azonosítóhoz tartozó mélyhivatkozás.</p>"
+    },
+    {
+      "heading": "Amit a felhasználó lát, amikor megnyitja",
+      "html": "<p>Nyílás<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>Betölti a 11tik egyoldalas alkalmazást a thumb útvonalon. Az alkalmazás beolvassa a 11 karakteres azonosítót az elérési útból, beírja a kinyerőbe a megfelelő megfigyelési URL-t, és lefuttatja a nyilvános bélyegkép-felderítési folyamatot az adott azonosítóhoz. Ha léteznek nyilvános állóképek, akkor a szokásos előnézet, minőséglista, letöltési műveletek és megosztási vezérlők jelennek meg. Ha nem, akkor ugyanazt az üres/nyilvános-nem található eredményt kapod, mint egy manuális beillesztés esetén.</p>\n  <p>Előfordulhat, hogy az eszköz felhasználói felülete felett egy rövid, hüvelykujjra mutató címsort és az azonosítóhoz tartozó bevezető szöveget is lát. Ez a tartalom az eredményoldalt írja le; továbbra is a webhelyélmény része, nem pedig egy nyers képválasz.</p>"
+    },
+    {
+      "heading": "Hogyan másoljuk a 11tik linket",
+      "html": "<ol>\n    <li>Nyitott<a href=\"https://www.11tik.com/\">11tik</a>és illessz be egy nyilvános YouTube URL-t (vagy nyisson meg egy meglévőt<code>/thumb/</code>link).</li>\n    <li>Várjon, amíg a kinyerés befejeződik, és megjelenik a legjobb nyilvános lebegőkép.</li>\n    <li>Használd az oldalon található, megosztási hivatkozáshoz (megosztási hivatkozás másolása) rendelt megosztási vezérlőt. Az érték így néz ki:<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Küldd el az URL-t. A címzett az eredményoldalra kerül, és újra futtathatja ugyanazt a nyilvános ellenőrzést.</li>\n  </ol>\n  <p>A tömeges kivonatolások sikeres videóazonosítónként egy megosztási URL-t jeleníthetnek meg (beleértve a CSV export oszlopait is). Minden azonosító megtartja a sajátját.<code>/thumb/</code>elérési utat, így a linkek nem omlanak össze az első találatnál.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Munkafolyamat megosztása: kibontás → előnézet → másolás<code>/thumb/{id}</code>→ a címzett megnyitja az eredményoldalt.</p>"
+    },
+    {
+      "heading": "URL-összehasonlító táblázat",
+      "html": "<table>\n    <thead>\n      <tr><th>URL-típus</th><th>Példa</th><th>Mi nyílik meg</th><th>Ez egy képfájl?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>YouTube-nézés</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube-lejátszó / videóoldal</td><td>Nem</td></tr>\n      <tr><td>11tik részvény</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik kinyerési eredmény az adott azonosítóhoz</td><td>Nem</td></tr>\n      <tr><td>Közvetlen CDN-en keresztül</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Képbájtok (ha a fájl létezik)</td><td>Igen</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Hogyan különböznek a három URL a gyakorlatban?",
+      "html": "<h3>Nézési URL vs. 11tik megosztási URL</h3>\n  <p>Oszd meg a megtekintési URL-t, ha a cél a videó megtekintése vagy megvitatása a YouTube-on. Oszd meg a 11tik URL-t, ha a cél az indexkép-kinyerési eredmény – előnézetek, letöltések és érvényesített nyilvános méretek – újranyitása anélkül, hogy előtte valakitől megkérnél a kinyerő megtalálását.</p>\n  <h3>11tik megosztási URL vs. közvetlen kép URL</h3>\n  <p>A közvetlen kép URL-címe az, amit beillesztesz<code>&lt;img src&gt;</code>, CMS médiakönyvtárak vagy tervezőeszközök, miután megerősítette a fájl létezését. Az, hogy ezek a CDN URL-ek hogyan épülnek fel az azonosítóból, a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>A 11tik megosztási URL soha nem helyettesíti a kép címét: a címzettek továbbra is a Letöltés vagy Kép URL-jének másolása funkciót használják az eszközön belül, amikor magára a fájlra van szükségük.</p>\n  <h3>Nézze meg az URL-t vs. közvetlen kép URL-t</h3>\n  <p>A megtekintési URL azonosítja a videót. A kép URL-je egy nyilvános származékot azonosít. Nem felcserélhetők, ezért nehéz találgatni.<code>maxresdefault.jpg</code>gyakran akkor is meghibásodik, ha a videóoldal működik.</p>"
+    },
+    {
+      "heading": "Mikor melyik linket kell megosztani",
+      "html": "<ul>\n    <li><strong>YouTube-megtekintési URL megosztása</strong>a videó megtekintéséhez, kommenteléséhez vagy idézéséhez.</li>\n    <li><strong>Oszd meg a 11tik-t<code>/thumb/</code>URL-cím</strong>azoknak az együttműködőknek, akiknek szükségük van a kinyerési eredményre, a minőségi listára vagy a nyilvános állókép gyors újbóli letöltésére.</li>\n    <li><strong>Oszd meg vagy tárold a közvetlen kép URL-címét / letöltött fájlját</strong>blogbejegyzésként kiemelt képekért, Open Graphért és tervezési összeállításokért – megerősítés után. Lásd a<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">útmutató letöltése</a>és<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">méret- és felbontási útmutató</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hogyan köti össze a videoazonosító mindhármat",
+      "html": "<p>Minden ugyanazon a 11 karakteres azonosítón múlik. Figyeld, hogy az URL-ek tartalmazzák-e ezt.<code>v=</code>(vagy rövid/beágyazott/élő útvonal szegmensek). A 11tik beilleszti<code>/thumb/{id}</code>A CDN állóképei közé teszik<code>/vi/</code>(vagy<code>/vi_webp/</code>) és a méret fájlnév. Ha az azonosító helytelen, mindhárom különböző módon hibás lesz: helytelen videó, helytelen találati oldal vagy helytelen/hiányzó kép.</p>"
+    },
+    {
+      "heading": "Hogyan illeszkedik ez az extraktor munkafolyamatába",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>A megosztási link egy könyvjelző ebben a munkafolyamatban. Nem hagyja ki az ellenőrzést, nem találja fel a 4K-t, és nem alakítja át a privát videókat nyilvános állóképekké.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "A https://www.11tik.com/thumb/VIDEO_ID egy közvetlen kép?",
+      "answer": "Nem. Ez egy 11tik találati oldal az adott videóazonosítóhoz. A közvetlen képek olyan gazdagépeken találhatók, mint a i.ytimg.com.",
+      "answerHtml": "<p>Nem. Ez egy 11tik találati oldal az adott videoazonosítóhoz. A közvetlen képek élőben jelennek meg olyan gazdagépeken, mint például<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Mi történik, miután valaki megnyitja a megosztási linkemet?",
+      "answer": "A 11tik betölti a thumb útvonalat, beolvassa az azonosítót, lefuttatja a nyilvános bélyegkép-ellenőrzést az adott azonosítóhoz, és megjeleníti a kinyerő felhasználói felületét az eredményekkel, ha léteznek nyilvános still-képek.",
+      "answerHtml": "<p>A 11tik betölti a thumb útvonalat, beolvassa az azonosítót, lefuttatja a nyilvános bélyegkép-ellenőrzést az adott azonosítóhoz, és megjeleníti a kinyerő felhasználói felületét az eredményekkel, ha léteznek nyilvános still-képek.</p>"
+    },
+    {
+      "question": "Elhelyezhetek egy /thumb/ hotlinket egy img tag-en belül?",
+      "answer": "Ne tedd. Használj egy megerősített CDN-kép URL-címét vagy egy letöltött fájlt. A megosztási útvonal egy HTML alkalmazáshéjat ad vissza, nem képbájtokat.",
+      "answerHtml": "<p>Ne tedd. Használj egy megerősített CDN-kép URL-címét vagy egy letöltött fájlt. A megosztási útvonal egy HTML alkalmazáshéjat ad vissza, nem képbájtokat.</p>"
+    },
+    {
+      "question": "Miért változott meg a címsorom, miután kivettem egy bélyegképet?",
+      "answer": "Egyetlen videó kivonatolása után a 11tik szinkronizálja a megosztási útvonalat a /thumb/{VIDEO_ID} fájllal, így az aktuális eredmény könnyen másolható és újra megnyitható.",
+      "answerHtml": "<p>Egyetlen videókivonat után a 11tik szinkronizálja a megosztási útvonalat a következővel:<code>/thumb/{VIDEO_ID}</code>így a jelenlegi eredmény könnyen másolható és újra megnyitható.</p>"
+    },
+    {
+      "question": "A Shorts videóknak más a megosztási útvonaluk?",
+      "answer": "Nem. A rövid videók továbbra is egy 11 karakteres azonosítót adnak meg. A megosztási URL továbbra is /thumb/{id} marad; csak az eredeti YouTube URL alakja változott.",
+      "answerHtml": "<p>Nem. A rövid videók továbbra is egy 11 karakteres azonosítót adnak meg. A megosztási URL marad.<code>/thumb/{id}</code>csak az eredeti YouTube URL alakja különbözött.</p>"
+    },
+    {
+      "question": "A /thumb/{id} ugyanaz, mint a maxres URL másolása?",
+      "answer": "Nem. A Maxres (ha van) egy lehetséges CDN-fájl. A megosztási oldal listázza az érvényesített nyilvános méreteket, és tartalmazhat más szinteket is, ha a maxres hiányzik.",
+      "answerHtml": "<p>Nem. A Maxres (ha van) egy lehetséges CDN-fájl. A megosztási oldal listázza az érvényesített nyilvános méreteket, és tartalmazhat más szinteket is, ha a maxres hiányzik.</p>"
+    },
+    {
+      "question": "Hol találok részletesebb magyarázatot a videó- ​​és kép-URL-ekre?",
+      "answer": "Az ID → CDN létrehozásához használd az előnézeti URL cikket, a fájlok mentéséhez pedig a letöltési cikket.",
+      "answerHtml": "<p>Használd a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">cikk indexképének URL-címe</a>az ID → CDN felépítéséhez, valamint a fájlok mentéséhez szükséges letöltési cikkhez.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Következtetés</h2>\n<p>Élvezet<code>/thumb/{VIDEO_ID}</code>11tik megosztási/eredmény címeként: hasznos egy kivonat újranyitásához és elküldéséhez, soha nem helyettesíti a YouTube-nézési linket vagy a közvetlen<code>i.ytimg.com</code>továbbra is. Tartsd a három URL-típust pontosan, és a letöltések, beágyazások és együttműködő linkek pontosak maradnak.</p>\n  <p><a href=\"https://www.11tik.com/\">Nyisson ki egy nyilvános bélyegképet, és másolja ki a 11tik megosztási linkjét →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>Alkotói hivatkozás:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Egyéni videóbélyegképek feltöltése</a>.</p>"
+}

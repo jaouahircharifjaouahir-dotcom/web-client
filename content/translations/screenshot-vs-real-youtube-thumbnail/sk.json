@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "sk",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Snímka obrazovky verzus skutočná miniatúra YouTube: ktorý súbor by ste si mali uložiť? | 11tik",
+  "description": "Snímka obrazovky prehrávača z telefónu nie je miniatúra, ktorú hostí YouTube. Skutočná verejnosť stále žije na i.ytimg.com. Použite ju pre blogy, Open Graph a výskum – snímky obrazovky pridávajú chrómovanie používateľského rozhrania, kompresiu a nesprávny pomer strán.",
+  "h1": "Snímka obrazovky verzus skutočná miniatúra YouTube: ktorý súbor by ste si mali uložiť?",
+  "ogTitle": "Snímka obrazovky verzus skutočná miniatúra YouTube: ktorý súbor by ste si mali uložiť?",
+  "ogDescription": "Snímka obrazovky prehrávača z telefónu nie je miniatúra, ktorú hostí YouTube. Skutočná verejnosť stále žije na i.ytimg.com. Použite ju pre blogy, Open Graph a výskum – snímky obrazovky pridávajú chrómovanie používateľského rozhrania, kompresiu a nesprávny pomer strán.",
+  "imageAlt": "Porovnanie snímky obrazovky prehrávača so skutočným verejným súborom miniatúr YouTube",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Porovnanie snímky obrazovky prehrávača so skutočným verejným súborom miniatúr YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Aký je rozdiel medzi snímkou ​​obrazovky a skutočnou miniatúrou?",
+      "html": "<p>Snímka obrazovky zachytáva obrazovku vrátane prehliadača Chrome, titulkov a mierky zariadenia. Skutočná miniatúra je súbor JPEG alebo WebP, ktorý YouTube zverejnil pre dané ID videa. Iba súbor CDN má stabilnú URL adresu a známu veľkosť v pixeloch.</p>"
+    },
+    {
+      "heading": "Prečo sa snímky obrazovky nezobrazujú v Obrázkoch Google a v ukážkach zo sociálnych sietí?",
+      "html": "<p>Často majú nesprávny pomer strán, zahŕňajú používateľské rozhranie a dvakrát sa komprimujú. Open Graph a mnoho polí CMS vyžaduje snímku s pomerom strán 16:9 s rozlíšením približne 1280 × 720. To zodpovedá maxresdefault, ak existuje – pozri<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">sprievodca veľkosťami miniatúr</a>.</p>"
+    },
+    {
+      "heading": "Ako si namiesto toho uložím skutočnú miniatúru?",
+      "html": "<ol>\n    <li>Skopírujte verejnú URL adresu videa, nie snímku obrazovky.</li>\n    <li>Vložte to do<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Stiahnite si prvý uvedený verejný súbor alebo skopírujte URL adresu obrázka.</li>\n  </ol>"
+    },
+    {
+      "heading": "Kedy je snímka obrazovky stále užitočná?",
+      "html": "<p>Snímku obrazovky použite iba na zdokumentovanie chyby v používateľskom rozhraní alebo momentu vo videu. Nepoužívajte ju ako oficiálnu miniatúru, hrdinu blogu ani obrázok na zdieľanie, ak stále existuje verejná prípojka.</p>\n  <p><a href=\"https://www.11tik.com/\">Získajte skutočnú verejnú miniatúru →</a></p>\n  <p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Aký je rozdiel medzi snímkou ​​obrazovky a skutočnou miniatúrou?",
+      "answer": "Snímka obrazovky zachytáva obrazovku a prehliadač Chrome. Skutočná miniatúra je súbor JPEG alebo WebP, ktorý YouTube hostí na i.ytimg.com pre dané ID videa.",
+      "answerHtml": "Snímka obrazovky zachytáva obrazovku a prehliadač Chrome. Skutočná miniatúra je súbor JPEG alebo WebP, ktorý YouTube hostí na i.ytimg.com pre dané ID videa."
+    },
+    {
+      "question": "Prečo sa snímky obrazovky nezobrazujú v Obrázkoch Google a v ukážkach zo sociálnych sietí?",
+      "answer": "Často majú nesprávny pomer strán, extra používateľské rozhranie a extra kompresiu. Polia CMS a Open Graph očakávajú čistý verejný záber s pomerom strán 16:9.",
+      "answerHtml": "Často majú nesprávny pomer strán, extra používateľské rozhranie a extra kompresiu. Polia CMS a Open Graph očakávajú čistý verejný záber s pomerom strán 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>.</p>"
+}

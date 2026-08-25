@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "vi",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Cách tải ảnh thu nhỏ YouTube chất lượng HD | 11tik",
+  "description": "Lưu ảnh thu nhỏ YouTube công khai: dán URL watch, Shorts, youtu.be hoặc nhúng vào 11tik và tải xuống tệp lớn nhất hiện có.",
+  "h1": "Cách tải ảnh thumbnail YouTube chất lượng HD",
+  "ogTitle": "Cách tải ảnh thumbnail YouTube chất lượng HD",
+  "ogDescription": "Lưu ảnh thu nhỏ YouTube công khai: dán URL watch, Shorts, youtu.be hoặc nhúng vào 11tik và tải xuống tệp lớn nhất hiện có.",
+  "imageAlt": "Quy trình bốn bước từ việc sao chép URL YouTube đến việc tải xuống hình thu nhỏ công khai đã được xác thực.",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Quy trình bốn bước từ việc sao chép URL YouTube đến việc tải xuống hình thu nhỏ công khai đã được xác thực.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Sơ đồ khắc phục sự cố cho thấy tệp maxresdefault bị thiếu đã được bỏ qua để có thể tải xuống kích thước hình thu nhỏ thực tiếp theo.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Câu trả lời nhanh",
+      "html": "<p>Sao chép liên kết YouTube công khai, rồi dán vào<a href=\"https://www.11tik.com/\">11tik</a>Chờ cho đến khi các bản xem trước được xác thực, sau đó tải xuống tệp đầu tiên trong danh sách. Tệp đó là tệp JPEG hoặc WebP công khai có độ phân giải cao nhất mà YouTube đã lưu trữ cho ID video đó — thường là 1280×720 khi có maxres hoặc hq720. Điều này giúp tiết kiệm được một khoảng thời gian.<strong>ảnh thu nhỏ vẫn</strong>Không phải video hay âm thanh.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Quy trình thực tế: URL công khai → trích xuất → xem trước kích thước thực → tải xuống hoặc sao chép URL hình ảnh.</p>"
+    },
+    {
+      "heading": "Phương pháp nhanh nhất với 11tik",
+      "html": "<ol>\n    <li>Sao chép URL xem công khai, Shorts, trực tiếp, nhúng hoặc youtu.be (hoặc ID video gồm 11 ký tự).</li>\n    <li>Mở<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>trong trình duyệt của bạn.</li>\n    <li>Dán URL vào đây. Quá trình trích xuất bắt đầu khi ID hợp lệ.</li>\n    <li>Tải xuống kết quả đầu tiên (kết quả tốt nhất hiện có), hoặc chọn kích thước khác còn khả dụng.</li>\n  </ol>\n  <p>Tùy chọn: sử dụng<strong>Sao chép URL hình ảnh</strong>Nếu bạn cần địa chỉ của hệ thống quản lý nội dung (CMS) thay vì địa chỉ của một tập tin. Quy trình đó được đề cập trong tài liệu này.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL hình thu nhỏ</a>.</p>"
+    },
+    {
+      "heading": "Các định dạng URL YouTube được hỗ trợ",
+      "html": "<p>11tik đọc ID video từ cùng các mẫu mà trình phân tích cú pháp của trang web chấp nhận:</p>\n  <table>\n    <thead>\n      <tr><th>Định dạng</th><th>Ví dụ về mẫu</th><th>Ghi chú</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Đồng hồ</td><td><code>youtube.com/watch?v=ID</code></td><td>Các tham số truy vấn bổ sung bị bỏ qua</td></tr>\n      <tr><td>Liên kết rút gọn</td><td><code>youtu.be/ID</code></td><td>Chia sẻ trên thiết bị di động thường sử dụng điều này.</td></tr>\n      <tr><td>Quần short</td><td><code>youtube.com/shorts/ID</code></td><td>Cùng một nhóm công chúng vẫn tổ chức sự kiện.</td></tr>\n      <tr><td>Nhúng</td><td><code>youtube.com/embed/ID</code></td><td>Từ nguồn iframe</td></tr>\n      <tr><td>Sống</td><td><code>youtube.com/live/ID</code></td><td>Khi có ID công khai</td></tr>\n      <tr><td>nhúng không cookie</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Được xử lý như nhúng</td></tr>\n      <tr><td>Giấy tờ tùy thân</td><td><code>dQw4w9WgXcQ</code></td><td>Chỉ 11 ký tự</td></tr>\n    </tbody>\n  </table>\n  <p>URL kênh hoặc danh sách phát không có ID video sẽ không hiển thị hình thu nhỏ. Để hiển thị nhiều liên kết cùng lúc, hãy sử dụng chức năng Hiển thị hàng loạt (tối đa 25) — xem<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">tải xuống hàng loạt</a>Mở rộng kênh:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">trích xuất từ ​​URL kênh</a>.</p>"
+    },
+    {
+      "heading": "Phương pháp URL trực tiếp (không cần giao diện trích xuất)",
+      "html": "<p>Nếu bạn đã biết ID, bạn vẫn có thể mở hồ sơ ứng viên trực tiếp:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Khi tải xong, hãy sử dụng lệnh lưu ảnh của trình duyệt. Nếu thất bại, hãy chuyển sang bước tiếp theo.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, hoặc<code>hqdefault.jpg</code>Đường dẫn thủ công này chậm hơn và dễ xảy ra lỗi hơn so với danh sách đã được xác thực của 11tik, nhưng nó hoạt động ngoại tuyến từ bất kỳ trình duyệt nào sau khi bạn có địa chỉ hợp lệ.</p>"
+    },
+    {
+      "heading": "Chọn chất lượng khi bạn tải xuống",
+      "html": "<p>Hãy tải xuống kích thước được liệt kê đầu tiên trừ khi bạn có lý do để giữ bản xem trước nhỏ hơn. \"HD\" ở đây có nghĩa là độ phân giải cao nhất hiện có – thường là 1280×720 – chứ không phải bản gốc 4K. Thông tin về độ phân giải và hiện tượng thiếu kích thước được giải thích trong phần...<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn về kích thước và độ phân giải</a>.</p>\n  <p>Nếu bạn chỉ quan tâm đến tập tin công khai cấp cao nhất, hãy xem thêm...<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">hình thu nhỏ chất lượng cao nhất</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Khi không có kích thước ước tính, hãy bỏ qua tệp đó và giữ lại tệp công khai thực sự tiếp theo.</p>"
+    },
+    {
+      "heading": "Khắc phục sự cố khi tải xuống",
+      "html": "<table>\n    <thead>\n      <tr><th>Triệu chứng</th><th>Nguyên nhân có thể xảy ra</th><th>Nên làm gì</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Không hiển thị bản xem trước sau khi dán.</td><td>URL không hợp lệ, không có ID video hoặc video riêng tư/bị hạn chế truy cập.</td><td>Dán liên kết xem công khai/Shorts/youtu.be</td></tr>\n      <tr><td>Maxres bị thiếu</td><td>YouTube chưa bao giờ đăng tải tệp đó.</td><td>Hãy tải xuống kích thước đầu tiên được liệt kê.</td></tr>\n      <tr><td>Hình ảnh màu xám/hình ảnh giữ chỗ từ một URL được tạo thủ công.</td><td>Tên tệp tin được đoán</td><td>Sử dụng danh sách đã được xác thực của 11tik</td></tr>\n      <tr><td>Lưu điện thoại một cách vụng về</td><td>Giao diện tải xuống của trình duyệt khác nhau.</td><td>Nhìn thấy<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">Hướng dẫn lưu trên iPhone/Android</a></td></tr>\n      <tr><td>Có vẻ như đây là ảnh chụp giao diện người dùng.</td><td>Bạn chụp ảnh màn hình người chơi.</td><td>Hãy giữ nguyên CDN, chứ không phải màn hình —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ảnh chụp màn hình so với ảnh thật</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Những gì bạn đang (và không) tải xuống",
+      "html": "<p>Bạn lưu một hình ảnh tĩnh công khai mà YouTube đã lưu trữ. Bạn không mở khóa các video riêng tư, các tệp chỉ dành cho thành viên hoặc luồng MP4/WebM. 11tik là một trình trích xuất, không phải là trình tạo và không phải là trình tải xuống video — so sánh:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">máy chiết xuất so với máy tạo</a>.</p>\n  <p>Bản quyền thuộc về người tải lên. Việc lưu trữ để nghiên cứu hoặc tham khảo cá nhân là mục đích sử dụng thông thường; việc đăng lại dưới dạng hình thu nhỏ tùy chỉnh mà không có bản quyền là không được phép. Trợ giúp của YouTube:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">hình thu nhỏ video tùy chỉnh</a>. Nội quy trang web:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+    },
+    {
+      "heading": "So sánh phương pháp",
+      "html": "<table>\n    <thead>\n      <tr><th>Phương pháp</th><th>Tốc độ</th><th>Tốt nhất cho</th><th>Cần 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik tải xuống</td><td>Nhanh</td><td>Đã được xác nhận là tốt nhất vẫn còn</td><td>Đúng</td></tr>\n      <tr><td>11tik sao chép URL</td><td>Nhanh</td><td>CMS / nhúng</td><td>Đúng</td></tr>\n      <tr><td>URL được xây dựng thủ công i.ytimg.com</td><td>Trung bình</td><td>Các bài kiểm tra nhanh khi bạn biết ID</td><td>KHÔNG</td></tr>\n      <tr><td>Ảnh chụp màn hình người chơi</td><td>Nhanh nhưng chất lượng thấp</td><td>Tránh sử dụng cho blog / OG</td><td>KHÔNG</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Bước tiếp theo",
+      "html": "<p>Mở<a href=\"https://www.11tik.com/\">Công cụ trích xuất hình thu nhỏ YouTube</a>Dán liên kết công khai và lưu lại ảnh tĩnh đầu tiên đã được xác thực. Chỉ cần liên kết thôi? Hãy đọc tiếp...<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL</a>Bạn đang phân vân giữa các kích cỡ? Hãy sử dụng<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn giải quyết</a>.</p>\n\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của trình trích xuất trong trình duyệt. Chỉ công khai hình ảnh tĩnh.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Tôi có thể tải xuống hình thu nhỏ từ một video ngắn không?",
+      "answer": "Có, khi Short được công khai và có ảnh tĩnh cho ID đó. Dán URL /shorts/ vào 11tik. Ảnh tĩnh có thể ở chế độ ngang ngay cả khi phát lại ở chế độ dọc.",
+      "answerHtml": "<p>Vâng, khi Short được công khai và vẫn còn tồn tại cho ID đó. Dán vào.<code>/shorts/</code>URL vào 11tik. Hình ảnh vẫn có thể ở dạng ngang ngay cả khi phát lại ở dạng dọc.</p>"
+    },
+    {
+      "question": "Nếu ảnh thu nhỏ tốt nhất không tải được thì sao?",
+      "answer": "Hãy tải xuống kích thước tiếp theo trong danh sách. Việc thiếu thông tin về độ phân giải tối đa là điều thường gặp và không phải là lỗi của công cụ.",
+      "answerHtml": "<p>Hãy tải xuống kích thước tiếp theo trong danh sách. Việc thiếu thông tin về độ phân giải tối đa là điều thường gặp và không phải là lỗi của công cụ.</p>"
+    },
+    {
+      "question": "Tôi có thể tải xuống ảnh thu nhỏ công khai gốc không?",
+      "answer": "Đúng vậy—đó chính là tệp được xác thực hàng đầu. \"Bản gốc\" có nghĩa là bản gốc từ CDN công cộng, chứ không phải là một khung hình được trích xuất từ ​​luồng video. Xem hình thu nhỏ công cộng gốc.",
+      "answerHtml": "<p>Đúng vậy—đó chính là tập tin được xác thực hàng đầu. \"Bản gốc\" có nghĩa là vẫn là bản từ CDN công cộng, chứ không phải là một khung hình được trích xuất từ ​​luồng video. Xem<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">ảnh thu nhỏ công khai gốc</a>.</p>"
+    },
+    {
+      "question": "Tôi có thể sao chép URL hình ảnh thay vì tải xuống được không?",
+      "answer": "Có. Sử dụng Sao chép URL hình ảnh trên 11tik, hoặc sao chép địa chỉ đã được xác minh từ trình duyệt sau khi hình ảnh tải xong.",
+      "answerHtml": "<p>Có. Sử dụng Sao chép URL hình ảnh trên 11tik, hoặc sao chép địa chỉ đã được xác minh từ trình duyệt sau khi hình ảnh tải xong.</p>"
+    },
+    {
+      "question": "Thao tác này có tải xuống tệp video YouTube không?",
+      "answer": "Không. Chỉ còn ảnh thu nhỏ công khai thôi.",
+      "answerHtml": "<p>Không. Chỉ còn ảnh thu nhỏ công khai thôi.</p>"
+    },
+    {
+      "question": "Liệu mọi video đều sẽ có định dạng file 1280×720?",
+      "answer": "Không. Hãy giữ lại bất kỳ tập tin công khai lớn nhất nào xác thực cho ID đó.",
+      "answerHtml": "<p>Không. Hãy giữ lại bất kỳ tập tin công khai lớn nhất nào xác thực cho ID đó.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của trình trích xuất trong trình duyệt. Chỉ công khai hình ảnh tĩnh.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+}

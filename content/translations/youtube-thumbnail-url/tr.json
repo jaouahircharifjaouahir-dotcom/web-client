@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "tr",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Bir Videodan Doğrudan YouTube Küçük Resim URL'si Nasıl Alınır | 11tik",
+  "description": "i.ytimg.com'deki video kimliğinden çalışan bir YouTube küçük resim URL'si oluşturun veya kopyalayın. Doğrudan bağlantı vermeden önce boyutun mevcut olduğundan emin olun.",
+  "h1": "Bir Videodan Doğrudan YouTube Küçük Resim URL'si Nasıl Alınır?",
+  "ogTitle": "Bir Videodan Doğrudan YouTube Küçük Resim URL'si Nasıl Alınır?",
+  "ogDescription": "i.ytimg.com'deki video kimliğinden çalışan bir YouTube küçük resim URL'si oluşturun veya kopyalayın. Doğrudan bağlantı vermeden önce boyutun mevcut olduğundan emin olun.",
+  "imageAlt": "YouTube izleme URL'sinin video kimliğine ve ardından küçük resim URL'sine nasıl dönüştürüldüğünü gösteren diyagram.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "YouTube izleme URL'sinin video kimliğine ve ardından küçük resim URL'sine nasıl dönüştürüldüğünü gösteren diyagram.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "YouTube küçük resim URL'sinin etiketlenmiş anatomisi; sunucu, yol, video kimliği ve dosya adını göstermektedir.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>YouTube küçük resim URL'sini almak için: 11 karakterlik video kimliğini bulun, ardından onaylanmış herkese açık bir resim adresini açın, örneğin:<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>İzleme sayfasının URL'si resim değil. Video bağlantısını buraya yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Yüklenen boyutları bekleyin, sonra kullanın.<strong>Resim URL'sini kopyala</strong>Böylece, 404 hatası veren tahmini bir dosya adı yerine çalışan bir HTTPS bağlantısına sahip olursunuz.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Çıkarma araçlarının kullandığı akış: herkese açık izleme URL'si → video kimliği → YouTube'un resim barındırma hizmetindeki herkese açık küçük resim URL'si.</p>"
+    },
+    {
+      "heading": "YouTube küçük resim URL'si nedir?",
+      "html": "<p>YouTube küçük resim URL'si, video oynatıcısına değil, durağan bir görüntü dosyasına işaret eder. Bu URL, YouTube'un herkese açık görüntü CDN'sinde (genellikle ) bulunur.<code>i.ytimg.com</code>Adres çalıştığında, tarayıcınız bir JPEG veya WebP dosyası indirir. Çalışmadığında ise, eksik dosya veya gri bir yer tutucu elde edersiniz; yani \"HD\" diye bir şey uydurmaz.</p>\n  <p>Bu durum bloglar, Open Graph önizlemeleri, tasarım taslakları ve CMS öne çıkan görsel alanları için önemlidir: bu sistemler bir görsel URL'sine ihtiyaç duyar, adresine değil.<code>youtube.com/watch?v=…</code>Yalnızca diskteki dosyaya ihtiyacınız varsa, şunu kullanın:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kılavuzu indir</a>Bunun yerine URL odaklı sayfayı kullanın.</p>"
+    },
+    {
+      "heading": "URL'nin video kimliğiyle ilişkisi",
+      "html": "<p>YouTube, herkese açık görselleri video kimliğine göre sınıflandırır. Genellikle kullanılan JPEG formatı şöyledir:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Bazı videolar WebP ikizlerini de yayınlıyor.<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>kümedeki tam olarak 11 karakterdir.<code>A–Z a–z 0–9 _ -</code>Kimliği değiştirirseniz, farklı bir videonun karelerine işaret edersiniz. Dosya adını değiştirirseniz, aynı videonun farklı bir herkese açık türevini talep edersiniz.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Herkese açık küçük resim URL'sinin yapısı: sunucu, yol, video kimliği ve boyut dosya adı.</p>"
+    },
+    {
+      "heading": "YouTube video kimliğini nasıl bulabilirim?",
+      "html": "<p>Sadece kimliğe ihtiyacınız var. Çalma listesi kimlikleri gibi ek sorgu parametrelerine gerek yok.<code>pp=</code>Küçük resim barındırma yolunu değiştirmeyin.</p>\n  <table>\n    <thead>\n      <tr><th>YouTube URL formatı</th><th>Örnek</th><th>Kimlik kartının bulunduğu yer</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Kol saati</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>sorgu değeri</td></tr>\n      <tr><td>Kısa bağlantı</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>İlk yol segmenti</td></tr>\n      <tr><td>Şort</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Yoldan sonra<code>/shorts/</code></td></tr>\n      <tr><td>Göm</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Yoldan sonra<code>/embed/</code></td></tr>\n      <tr><td>Canlı</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Yoldan sonra<code>/live/</code></td></tr>\n      <tr><td>çerezsiz yerleştirme</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Aynı şekilde gömme özelliğiyle</td></tr>\n    </tbody>\n  </table>\n  <p>11tik'nin ayrıştırıcısı bu şekilleri (ve sadece 11 karakterlik kimlikleri) kabul eder. Video kimliği olmayan bir kanal veya oynatma listesi URL'si, tek bir küçük resim URL'si için yeterli değildir.</p>"
+    },
+    {
+      "heading": "Genel kullanıma açık küçük resim dosya adları",
+      "html": "<p>Dosya adları, YouTube'un belirli bir yükleme için yayınlayabileceği veya yayınlamayabileceği boyut kademelerini tanımlar. Adlar, dosyanın var olduğunu garanti etmez.</p>\n  <table>\n    <thead>\n      <tr><th>Dosya adı</th><th>Mevcut olduğunda tipik pikseller</th><th>Notlar</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Yayınlandığında hala en yüksek ortak kamuoyu oranı.</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 sınıfı</td><td>Bazı videoların ortaya koyduğu bir diğer üst düzey durum.</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Genellikle maxres eksik olduğunda kullanılabilir.</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Çok yaygın orta boy</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Kısa önizleme</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>En küçük standart hala</td></tr>\n    </tbody>\n  </table>\n  <p>Piksel düzeyindeki ayrıntılar ve hangi boyutun diğerine tercih edilmesi gerektiği hakkında bilgi için, aşağıdaki bölüme bakın.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Küçük resim boyutu ve çözünürlük kılavuzu</a>Neden?<code>maxresdefault.jpg</code>genellikle eksiktir, bkz.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault nedir?</a>.</p>"
+    },
+    {
+      "heading": "Herkese açık video kimliğiyle çalışan örnek",
+      "html": "<p>Herkese açık demo kimliğini alın.<code>dQw4w9WgXcQ</code>İzleme bağlantısı şu şekildedir:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Aday maxres JPEG URL'si şöyledir:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Bu adresi yeni bir sekmede açın. Resim yüklenirse, çalışan bir küçük resim URL'niz var demektir. Yüklenmezse, bir sonraki dosya adını deneyin (örneğin...).<code>hqdefault.jpg</code>) veya izleme bağlantısını 11tik'ye yapıştırın, böylece yalnızca kalan dosyalar listelenir. Her videonun maksimum çözünürlüğe sahip olduğunu asla varsaymayın.</p>"
+    },
+    {
+      "heading": "Görüntü URL'sini almanın üç yolu",
+      "html": "<h3>1. En hızlısı: 11tik'ten kopyala</h3>\n  <ol>\n    <li>Herkese açık bir izleme, kısa video, canlı yayın, gömülü video veya youtu.be URL'sini kopyalayın.</li>\n    <li>Açık<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>URL'yi yapıştırın ve önizlemeler görünene kadar bekleyin.</li>\n    <li>Seçmek<strong>Resim URL'sini kopyala</strong>İhtiyacınız olan boyutta.</li>\n  </ol>\n  <p>11tik tarayıcınızdaki yanıtları kontrol eder ve yalnızca gerçek bir görüntü döndüren boyutları gösterir. Bu, kullanılabilir bir CMS bağlantısı ile bozuk bir bağlantı arasındaki farktır.<code>maxresdefault</code>tahmin etmek.</p>\n\n  <h3>2. Tarayıcı yöntemi</h3>\n  <p>Bir adayınız olduktan sonra<code>i.ytimg.com</code>Adresi girin ve yeni bir sekmede açın. Eğer hala görüntüleniyorsa, adres çubuğunu kopyalayın. Bir hata veya boş/yer tutucu bir kutucuk görürseniz, o boyut o kimlik için hiç yayınlanmamıştır; doğrudan bağlantı vermeyin.</p>\n\n  <h3>3. URL'yi elle oluşturun</h3>\n  <p>Ana bilgisayarı + ile birleştirebilirsiniz.<code>/vi/</code>+ Kimlik + dosya adını kendiniz ekleyin. Elle oluşturulmuş URL'ler test için uygundur, ancak yanıtı doğrulayana kadar üretim HTML'sine yapıştırmak güvenli değildir. Kullanılabilirlik, yükleme yaşına, kaynak görsele ve YouTube Studio'daki işlem durumuna göre değişir.</p>"
+    },
+    {
+      "heading": "En iyi kullanılabilir URL'yi seçmek",
+      "html": "<p>\"En iyi\" ifadesi, yazabileceğiniz en uzun dosya adı değil, gerçekten var olan en büyük genel dosya anlamına gelir. Varsa, doğrulanmış bir maxres veya hq720 bağlantısını tercih edin. Bunlar işe yaramazsa, sd, hq, mq veya varsayılan çözünürlüğe geçin. Bir düzenleyicide 480x360 çözünürlüğündeki bir fotoğrafı 1280x720'ye yükseltmek, gerçek bir maxres URL'si oluşturmaz.</p>\n  <p>Özel tasarım görseller yükleyen içerik oluşturucular, canlı olarak yayınlanan eserleri daha sonra onaylamalıdır; stüdyo işlemleri gecikebilir. İlgili konu:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026'da YouTube Studio küçük resimleri</a>.</p>"
+    },
+    {
+      "heading": "URL'yi başka bir web sitesinde kullanma",
+      "html": "<p>Çalışan bir kodu yapıştırabilirsiniz.<code>i.ytimg.com</code>Birçok CMS alanına URL ekleyebilirsiniz, ancak doğrudan bağlantı vermenin riskleri vardır: YouTube CDN yollarını değiştirebilir ve bazı ağlar üçüncü taraf sunucuları engelleyebilir. Kalıcı bir blog öne çıkan görseli veya Open Graph etiketi için, onaylanmış görseli indirin ve bir kopyasını kendi alan adınızda barındırın. Adım adım kılavuz:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTube küçük resmi blog/Open Graph görseli olarak</a>.</p>\n  <p>Telif hakkı yükleyiciye aittir. Herkese açık bir URL, görseli kendi kapağınız olarak yeniden yayınlama lisansı anlamına gelmez. YouTube'un yardım sayfasına bakın.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">özel video küçük resimleri</a>ve 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    },
+    {
+      "heading": "Bozuk küçük resim URL'lerinde sorun giderme",
+      "html": "<ul>\n    <li><strong>404 veya yer tutucu:</strong>Bu boyut hiçbir zaman yayınlanmadı. Başka bir dosya adı deneyin veya 11tik'nin doğrulanmış listesini kullanın.</li>\n    <li><strong>Yanlış video:</strong>Kimlik yanlış yazılmış. İzleme URL'sinden tekrar kopyalayın.</li>\n    <li><strong>Özel / yaş sınırlamalı / silinmiş:</strong>Henüz halka açık bir bağlantı yok.</li>\n    <li><strong>HTTP karışık içerik:</strong>her zaman kullanın<code>https://</code>HTTPS sitelerindeki resim URL'leri.</li>\n    <li><strong>Şortlar, kenarları siyah bantlarla çevrili gibi duruyor:</strong>Birçok Shorts sitesi hala yatay formatta herkese açık dosyalar saklıyor. URL hala resmi herkese açık URL'dir.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sonraki adım",
+      "html": "<p>Herkese açık bir YouTube URL'sini buraya yapıştırın.<a href=\"https://www.11tik.com/\">YouTube Küçük Resim Çıkarıcı</a>Onaylanmış resim bağlantısını kopyalayın veya<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">fotoğrafı indir</a>Yerel bir dosyaya ihtiyacınız varsa. Çözünürlük seçenekleri için açın.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">boyut ve kalite kılavuzu</a>.</p>\n\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, tarayıcı içi çıkarıcının yayıncısıdır. Sadece herkese açık görseller—video veya ses indirme yok.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Dosyayı indirmeden doğrudan küçük resim URL'sini kopyalayabilir miyim?",
+      "answer": "Evet. 11tik'te, Görüntü URL'sini Kopyala'yı kullanın. Bu, tarayıcınızda önceden doğrulanmış bir boyut için HTTPS görüntü adresini kopyalar.",
+      "answerHtml": "<p>Evet. 11tik'de, \"Resim URL'sini Kopyala\"yı kullanın. Bu, tarayıcınızda önceden doğrulanmış bir boyut için HTTPS resim adresini kopyalar.</p>"
+    },
+    {
+      "question": "YouTube kısa videosunun küçük resim URL'sini alabilir miyim?",
+      "answer": "Evet, kısa video herkese açık olduğunda ve YouTube o kimlik için hareketsiz görüntüler yayınladığında. İzleme URL'si yapıştırdığınız gibi /shorts/ bağlantısını da yapıştırın. Ayrıca bkz. Kısa Video küçük resimleri.",
+      "answerHtml": "<p>Evet, kısa video yayınlandığında ve YouTube bu video için fotoğraflar yayınladığında. Bir dosya yapıştırın.<code>/shorts/</code>İzleme URL'sini yapıştırdığınız gibi bağlantı da ekleyin. Ayrıca bakınız:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kısa filmlerin küçük resimleri</a>.</p>"
+    },
+    {
+      "question": "Küçük resim URL'lerinden biri çalışırken diğeri neden hata veriyor?",
+      "answer": "Dosya adları isteğe bağlı, herkese açık türetilmiş adlardır. hqdefault.jpg, maxresdefault.jpg mevcut olmadığında da mevcut olabilir. Çalışan bir orta boyutlu URL, çalışan bir maksimum çözünürlüklü URL anlamına gelmez.",
+      "answerHtml": "<p>Dosya adları isteğe bağlı, herkese açık türetilmiş adlardır.<code>hqdefault.jpg</code>mevcut olabilir<code>maxresdefault.jpg</code>Hayır, öyle değil. Çalışan bir orta boyutlu URL, çalışan bir maksimum çözünürlüklü URL anlamına gelmez.</p>"
+    },
+    {
+      "question": "Resmin doğrudan URL'sini web sitemde kullanabilir miyim?",
+      "answer": "Teknik olarak dosya mevcutsa evet, ancak öne çıkan görseller ve sosyal medya önizlemeleri için kendi kopyanızı barındırmak daha güvenilirdir. Başkasının sanat eserini telif hakkı olmadan kanal kapağınız olarak yeniden yayınlamayın.",
+      "answerHtml": "<p>Teknik olarak dosya mevcutsa evet, ancak öne çıkan görseller ve sosyal medya önizlemeleri için kendi kopyanızı barındırmak daha güvenilirdir. Başkasının sanat eserini telif hakkı olmadan kanal kapağınız olarak yeniden yayınlamayın.</p>"
+    },
+    {
+      "question": "İzleme URL'si hiç küçük resim URL'si oluyor mu?",
+      "answer": "Hayır. İzleme URL'si videoyu tanımlar. Küçük resim URL'si ise resim CDN'sindeki bir resim dosyasını tanımlar.",
+      "answerHtml": "<p>Hayır. İzleme URL'si videoyu tanımlar. Küçük resim URL'si ise resim CDN'sindeki bir resim dosyasını tanımlar.</p>"
+    },
+    {
+      "question": "11tik daha yüksek çözünürlüklü bir URL mi icat ediyor?",
+      "answer": "Hayır. Yalnızca resim olarak yanıt veren herkese açık dosyaları listeler. Maxres'in eksik olması, URL'nin kopyalanmaması gerektiği anlamına gelir.",
+      "answerHtml": "<p>Hayır. Yalnızca resim olarak yanıt veren herkese açık dosyaları listeler. Maxres'in eksik olması, URL'nin kopyalanmaması gerektiği anlamına gelir.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, tarayıcı içi çıkarıcının yayıncısıdır. Sadece herkese açık görseller—video veya ses indirme yok.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+}

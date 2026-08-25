@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "ko",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "YouTube 썸네일을 블로그 추천 이미지 또는 오픈 그래프 미리보기로 사용하는 방법 | 11tik",
+  "description": "공개 YouTube 채널이 여전히 존재하는지 확인한 후, WordPress, Blogger 또는 og:image에 사본을 호스팅하세요. 추측으로 생성한 maxresdefault URL을 직접 링크하지 마세요.",
+  "h1": "YouTube 썸네일을 블로그 추천 이미지 또는 Open Graph 미리보기로 사용하는 방법",
+  "ogTitle": "YouTube 썸네일을 블로그 추천 이미지 또는 Open Graph 미리보기로 사용하는 방법",
+  "ogDescription": "공개 YouTube 채널이 여전히 존재하는지 확인한 후, WordPress, Blogger 또는 og:image에 사본을 호스팅하세요. 추측으로 생성한 maxresdefault URL을 직접 링크하지 마세요.",
+  "imageAlt": "11tik에서 YouTube 썸네일을 확인하는 것부터 WordPress에 업로드하거나 og:image를 설정하는 워크플로",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "11tik에서 YouTube 썸네일을 확인하는 것부터 WordPress에 업로드하거나 og:image를 설정하는 워크플로",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "워드프레스 추천 이미지 업로드와 오픈그래프 소셜 카드의 실제 픽셀 크기 비교",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "빠른 답변",
+      "html": "<p>공개 YouTube URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>검증된 크기를 기다린 다음,<strong>다운로드</strong>첫 번째 스틸컷을 선택하고 CMS에 업로드하거나,<strong>이미지 URL을 복사하세요</strong>로딩이 완료된 후에만 가능합니다. 게시물이 오래 유지되도록 하려면 자체적으로 사본을 호스팅하세요. 핫링크<code>i.ytimg.com</code>초안 작성에는 편리하지만, 제작용 소셜 카드에는 적합하지 않습니다.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">확인 → 복사 또는 다운로드 → 호스팅 → HTML/추천 이미지/Open Graph에서 참조.</p>"
+    },
+    {
+      "heading": "직접 썸네일 URL이란 무엇인가",
+      "html": "<p>예를 들어, 직접 썸네일 URL은 YouTube의 이미지 CDN에 있는 JPEG 또는 WebP 파일을 가리킵니다.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>이것은 시청 페이지가 아닙니다. 해당 주소가 구성되는 방식은 다음과 같습니다.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube 썸네일 URL 가져오기</a>사이즈별 차이점:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">크기 및 해상도 가이드</a>.</p>"
+    },
+    {
+      "heading": "HTML 예제",
+      "html": "<p>11tik가 파일을 확인한 후, 최소한의 마크업 패턴은 다음과 같습니다(URL, 너비, 높이 및 alt 값을 실제 값으로 대체하십시오).</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>운영 환경에서는 자체 호스팅 URL을 사용하는 것이 좋습니다.</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>실제 너비와 높이를 사용하세요. 11tik 보고서에 나와 있는 내용을 사용하세요. 480×360만 존재하는 경우 1280×720을 임의로 만들지 마세요.</p>"
+    },
+    {
+      "heading": "WordPress 워크플로",
+      "html": "<ol>\n    <li>11tik에서 비디오를 추출하고 목록에 있는 첫 번째 스틸 이미지를 다운로드하세요.</li>\n    <li>워드프레스에서: 미디어 → 새 미디어 추가 → 파일 업로드.</li>\n    <li>해당 이미지를 게시물 대표 이미지로 설정하세요.</li>\n    <li>Yoast, Rank Math 또는 유사한 도구에서 소셜 미리보기가 해당 첨부 파일을 사용하는지 확인하거나 (또는 ​​별도의 원본 이미지를 업로드하세요).</li>\n    <li>대체 텍스트에는 동영상 이름과 해당 파일이 공개 YouTube 스틸 이미지임을 명시해야 하며, 키워드를 덕지덕지 붙인 목록을 사용해서는 안 됩니다.</li>\n  </ol>\n  <p>날것 그대로 붙여넣지 마세요<code>maxresdefault.jpg</code>파일이 검증될 때까지 미디어 필드로의 경로가 유지됩니다. maxres가 누락되는 것은 흔한 일입니다.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 가이드</a>.</p>"
+    },
+    {
+      "heading": "블로거 및 정적 사이트",
+      "html": "<p><strong>블로거:</strong>이미지를 게시물 편집기에 업로드한 다음, 호스팅된 Blogger 이미지 URL을 직접 관리하는 테마/소셜 스니펫 필드에 재사용하세요. 중요한 게시물의 경우 추측에 의존하여 YouTube CDN 경로를 사용하지 마세요.</p>\n  <p><strong>정적 생성기:</strong>파일을 저장소 또는 CDN에 커밋한 다음, 프런트매터/메타 태그를 해당 HTTPS 자산으로 설정하세요. 필요한 경우 임시 i.ytimg.com URL에 초안을 보관하되, 배포 시에는 자체 호스팅을 사용하세요.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">추천 이미지와 og:image는 파일을 공유할 수 있지만, 둘 다 실제로 존재하는 URL이 필요합니다.</p>"
+    },
+    {
+      "heading": "오픈 그래프 고려 사항",
+      "html": "<p>대형 링크 카드는 일반적으로 약 ~을 대상으로 합니다.<strong>1200×630</strong>유튜브 최대 해상도는 일반적으로 다음과 같습니다.<strong>1280×720</strong>(16:9), 스크레이퍼 크롭 또는 레터박스. 설정<code>og:image</code>(스택에서 지원하는 경우 너비/높이도 포함) 실제 픽셀 단위로 변환하세요. 깨진 URL을 수정한 후에는 각 플랫폼의 디버거에서 다시 스크래핑하세요. 캐시는 유지됩니다.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "핫링크 vs 다운로드",
+      "html": "<table>\n    <thead>\n      <tr><th>접근하다</th><th>~에 가장 적합함</th><th>위험</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>핫링크 i.ytimg.com</td><td>빠른 초안, 연구 노트</td><td>404 오류, CDN 변경, 작물 제어 없음</td></tr>\n      <tr><td>다운로드 + 호스팅</td><td>순위가 높은 게시물, 제품 페이지</td><td>파일을 저장해야 합니다.</td></tr>\n      <tr><td>플레이어 스크린샷</td><td>거의 절대</td><td>UI 크롬, 비율 오류 —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 사진</a></td></tr>\n    </tbody>\n  </table>\n  <p>다운로드 단계:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">유튜브 썸네일 다운로드 방법</a>WebP와 JPEG 형식이 모두 있는 경우 형식 선택:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP vs JPEG</a>.</p>"
+    },
+    {
+      "heading": "이 스틸컷에 대한 이미지 SEO 기본 사항",
+      "html": "<ul>\n    <li><strong>파일 이름:</strong>서술적인, 예를 들면<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>대체:</strong>이미지와 동영상에 대한 설명을 작성하세요. \"YouTube 썸네일 다운로더 HD 4K\"와 같은 문구를 과도하게 사용하지 마세요.</li>\n    <li><strong>치수:</strong>실제 너비/높이를 선언하세요.</li>\n    <li><strong>HTTPS만 사용:</strong>혼합 콘텐츠 이미지 URL은 스크래퍼에 의해 삭제됩니다.</li>\n    <li><strong>압축:</strong>필요한 경우 CDN에 맞게 가볍게 재인코딩하세요. hqdefault를 가짜 최대 해상도로 업스케일링하지 마세요.</li>\n  </ul>"
+    },
+    {
+      "heading": "재사용 및 저작권 (법률 자문이 아님)",
+      "html": "<p>공개 CDN URL은 라이선스가 아닙니다. YouTube 플레이어를 삽입하는 것과 스틸 이미지를 히어로 이미지로 복사하는 것은 다릅니다. 공정 사용은 구체적인 사실 관계에 따라 결정됩니다. 더 안전한 편집 방식은 해당 영상에 대한 논평을 그림으로 표현하고, 채널명을 명시하고, 시청 페이지 링크를 제공하며, 이미지를 판매하거나 자신의 채널 아트로 사용하지 않는 것입니다. 공식 맞춤 썸네일 도움말은 다음과 같습니다.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">사용자 지정 동영상 썸네일을 업로드하세요</a>사이트 규칙:<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+    },
+    {
+      "heading": "문제 해결",
+      "html": "<ul>\n    <li>소셜 카드 오류 → maxres 추측; 유효성 검사를 거친 파일을 다시 추출하여 호스팅하세요.</li>\n    <li>이미지가 흐릿하거나 선명하지 않은 경우 → hqdefault를 사용하셨으므로 크기를 확인하세요.</li>\n    <li>잘못된 자르기 → 실제 16:9 비율의 스틸 이미지에서 1200×630 크기의 영역을 잘라내세요.</li>\n    <li>스티키 캐시 → URL 변경 후 강제로 재스크래핑합니다.</li>\n  </ul>"
+    },
+    {
+      "heading": "다음 단계",
+      "html": "<p>정지 화면을 확인하세요<a href=\"https://www.11tik.com/\">11tik 추출기</a>해당 파일을 다운로드하고, 사이트에 업로드한 다음, featured image / og:image에서 HTTPS 파일을 가리키도록 설정하세요.</p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "i.ytimg.com URL을 워드프레스에 붙여넣을 수 있나요?",
+      "answer": "일부 필드에서는 허용하지만, 대표 이미지 및 소셜 미디어 미리보기의 경우 검증된 로컬 파일을 업로드하는 것이 더 안정적입니다.",
+      "answerHtml": "<p>일부 필드에서는 허용하지만, 대표 이미지 및 소셜 미디어 미리보기의 경우 검증된 로컬 파일을 업로드하는 것이 더 안정적입니다.</p>"
+    },
+    {
+      "question": "Open Graph를 사용하려면 maxresdefault가 필요한가요?",
+      "answer": "아니요. 여전히 가장 큰 규모의 검증된 공개 데이터가 필요합니다. maxres가 없는 것은 정상입니다.",
+      "answerHtml": "<p>아니요. 여전히 가장 큰 규모의 검증된 공개 데이터가 필요합니다. maxres가 없는 것은 정상입니다.</p>"
+    },
+    {
+      "question": "대체 텍스트에 YouTube를 언급해야 할까요?",
+      "answer": "네, 자산을 설명하는 데 도움이 된다면 (\"…의 공개 YouTube 썸네일\") 키워드를 사용하세요. 하지만 키워드를 과도하게 남용하지 마세요.",
+      "answerHtml": "<p>네, 자산을 설명하는 데 도움이 된다면 (\"…의 공개 YouTube 썸네일\") 키워드를 사용하세요. 하지만 키워드를 과도하게 남용하지 마세요.</p>"
+    },
+    {
+      "question": "핫링크는 언제라도 괜찮을까요?",
+      "answer": "임시 초안이나 내부 메모의 경우라면 그렇습니다. 하지만 영구적으로 공개할 게시물의 경우라면 사본을 호스팅하는 것이 좋습니다.",
+      "answerHtml": "<p>임시 초안이나 내부 메모의 경우라면 그렇습니다. 하지만 영구적으로 공개할 게시물의 경우라면 사본을 호스팅하는 것이 좋습니다.</p>"
+    },
+    {
+      "question": "이 이미지를 채널 커버로 사용해도 될까요?",
+      "answer": "저작권이 없는 건 아닙니다. 저건 다른 사람의 작품이에요.",
+      "answerHtml": "<p>저작권이 없는 건 아닙니다. 저건 다른 사람의 작품이에요.</p>"
+    },
+    {
+      "question": "Studio에서 사용자 지정 썸네일을 변경하면 어떻게 될까요?",
+      "answer": "처리가 완료될 때까지 기다린 후 CMS 사본을 업데이트하기 전에 11tik을 다시 확인하세요. 관련 항목: YouTube Studio 썸네일.",
+      "answerHtml": "<p>처리가 완료될 때까지 기다린 후 11tik를 다시 확인하고 CMS 사본을 업데이트하세요. 관련 항목:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube 스튜디오 썸네일</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+}

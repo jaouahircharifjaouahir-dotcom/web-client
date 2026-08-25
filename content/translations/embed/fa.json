@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "fa",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "ابزار استخراج تصویر بندانگشتی 11tik | 11tik را جاسازی کنید",
+  "description": "یک ابزار رایگان استخراج تصاویر کوچک یوتیوب به وبلاگ، اسناد یا جعبه ابزار سازنده خود اضافه کنید. این ابزارک از 11tik بارگیری می‌شود و خودش تغییر اندازه می‌دهد. بدون کلید API.",
+  "h1": "ابزار استخراج تصویر بندانگشتی 11tik را جاسازی کنید",
+  "ogTitle": "ابزار استخراج تصویر بندانگشتی 11tik را جاسازی کنید",
+  "ogDescription": "یک ابزار رایگان استخراج تصاویر کوچک یوتیوب به وبلاگ، اسناد یا جعبه ابزار سازنده خود اضافه کنید. این ابزارک از 11tik بارگیری می‌شود و خودش تغییر اندازه می‌دهد. بدون کلید API.",
+  "imageAlt": "",
+  "faqHeading": "سوالات متداول",
+  "images": [],
+  "sections": [
+    {
+      "heading": "قطعه کد iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "قوانین",
+      "html": "<ul>\n    <li>نگه دارید<code>id=\"yte-app\"</code>ویژگی تا همگام‌سازی ارتفاع کار کند.</li>\n    <li>آی‌فریم را در ارتفاع ثابتی که دکمه‌های دانلود را می‌پوشاند، قرار ندهید.</li>\n    <li>پیوند دادن به<a href=\"https://www.11tik.com/\">[[صفحه ۱]]</a>به کاربران کمک می‌کند تا ابزار کامل را باز کنند.</li>\n  </ul>"
+    },
+    {
+      "heading": "پیوندهای عمیق",
+      "html": "<p>یک فایل آماده استخراج را با دیگران به اشتراک بگذارید<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">استخراج کننده را باز کنید</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

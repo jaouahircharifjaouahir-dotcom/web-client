@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "es",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "¿Por qué no aparece la miniatura de YouTube?: Vídeos privados, con restricción de edad o en proceso | 11tik",
+  "description": "Si YouTube sigue sin cargar públicamente, es posible que el vídeo sea privado, restringido, esté en procesamiento o haya sido eliminado, y no simplemente que falte el nombre del archivo maxres.",
+  "h1": "¿Por qué no aparece la miniatura de YouTube?: Videos privados, con restricción de edad o en proceso.",
+  "ogTitle": "¿Por qué no aparece la miniatura de YouTube?: Videos privados, con restricción de edad o en proceso.",
+  "ogDescription": "Si YouTube sigue sin cargar públicamente, es posible que el vídeo sea privado, restringido, esté en procesamiento o haya sido eliminado, y no simplemente que falte el nombre del archivo maxres.",
+  "imageAlt": "Flujo desde una URL de YouTube a través de la ID del video y la verificación pública de imágenes fijas para resultados disponibles o no disponibles.",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "Flujo desde una URL de YouTube a través de la ID del video y la verificación pública de imágenes fijas para resultados disponibles o no disponibles.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Comparación lado a lado de un tamaño de miniatura faltante frente a una miniatura pública no utilizable para el video.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Respuesta rápida",
+      "html": "<p>Una URL válida de YouTube demuestra que tienes un ID de video.<strong>no</strong>Demuestra que YouTube publicó un archivo de miniatura pública utilizable en la CDN de imágenes. Extractores como<a href=\"https://www.11tik.com/\">11tik</a>Solo se comprueban las imágenes fijas públicas. Si ninguna de esas imágenes candidatas se carga, la herramienta informa que no se encontró ninguna miniatura pública. Ese resultado a menudo rastrea el acceso o el estado del video (privado, restringido por edad o de otro modo, procesamiento de imágenes fijas, eliminado o no disponible de otro modo) en lugar de un solo nombre de tamaño faltante como<code>maxresdefault.jpg</code>.</p>\n  <p>Importante comprobación de honestidad: 11tik lo hace<strong>no</strong>Clasifique la causa exacta como privada, con restricción de edad o en procesamiento. Estas etiquetas son explicaciones comunes que los usuarios deben verificar en YouTube. El extractor solo indica si se puede validar una imagen pública.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ruta de diagnóstico: URL → ID de vídeo → comprobación de imagen pública → disponible vs no disponible → qué verificar a continuación.</p>"
+    },
+    {
+      "heading": "Qué puede significar “miniatura no disponible”",
+      "html": "<p>En la práctica, “no disponible” significa uno de dos problemas diferentes:</p>\n  <ol>\n    <li><strong>Nivel de vídeo no disponible:</strong>Los candidatos públicos no obtienen ninguna imagen pública. Actualmente no se puede descargar una imagen pública utilizable para esa identificación.</li>\n    <li><strong>Variante no disponible:</strong>Falta un nombre de archivo de alta calidad (a menudo maxres), pero se carga una versión pública de menor tamaño. Se trata de un problema de tamaño o de compatibilidad, no de una miniatura que falte para todo el vídeo.</li>\n  </ol>\n  <p>Este artículo cubre el primer caso. Para el segundo caso, especialmente<code>maxresdefault.jpg</code>Errores 404: utilice el sistema dedicado.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Guía de solución de problemas de maxresdefault</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Izquierda: falta una variante, los demás tamaños públicos siguen funcionando. Derecha: no hay ninguna imagen pública utilizable para el ID del vídeo.</p>"
+    },
+    {
+      "heading": "Imágenes públicas versus acceso a videos",
+      "html": "<p>Los servidores de YouTube ven las páginas y los derivados de imágenes por separado. Los archivos de miniaturas públicas normalmente se encuentran en servidores como<code>i.ytimg.com</code>y se identifican mediante el ID de vídeo de 11 caracteres. Las herramientas que extraen miniaturas sin iniciar sesión en tu cuenta solo pueden solicitar esos archivos públicos.</p>\n  <p>Cuando un vídeo no se expone con un empaquetado público, o cuando los derivados aún no están listos, las comprobaciones de imágenes fallan incluso si la cadena pegada parecía un enlace normal de ver, Shorts, en directo o incrustado. Cómo se asignan esas formas de URL a un ID se explica en el<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guía de URL de miniaturas de YouTube</a>Cómo guardar una imagen fija cuando existe se explica en el<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Guía de descarga</a>.</p>"
+    },
+    {
+      "heading": "Vídeos privados",
+      "html": "<p>Las subidas privadas están destinadas a un público limitado. Si YouTube no publica miniaturas públicas derivadas para esa ID, un extractor público integrado en el navegador no puede generarlas. Abrir la URL de visualización con la sesión iniciada como propietario puede mostrar el vídeo dentro de YouTube; esto no significa que una CDN pública siga estando disponible para solicitudes anónimas de imágenes.</p>\n  <p>Qué comprobar: abre la URL en una ventana privada/de incógnito sin iniciar sesión. Si YouTube bloquea el vídeo, considera que la extracción de miniaturas está bloqueada por diseño.</p>"
+    },
+    {
+      "heading": "Restricciones de edad y otras limitaciones de acceso",
+      "html": "<p>Los vídeos con restricción de edad, acceso solo para miembros o similares pueden comportarse como contenido privado a la hora de recuperar imágenes públicas: el ID puede analizarse correctamente, pero las imágenes fijas públicas nunca se validan. Las restricciones regionales y de acceso a cuentas pueden producir el mismo resultado vacío para una herramienta pública.</p>\n  <p>Nuevamente, 11tik no etiquetará el tipo de restricción. Usted confirma el estado de acceso en YouTube; el extractor solo informa si un público aún está cargado.</p>"
+    },
+    {
+      "heading": "Los vídeos aún se están procesando.",
+      "html": "<p>El “procesamiento” se manifiesta de dos maneras relacionadas:</p>\n  <ul>\n    <li><strong>Nuevas subidas:</strong>Es posible que la página de seguimiento aparezca antes de que todas las imágenes derivadas públicas estén listas. Inténtelo de nuevo más tarde con la misma URL.</li>\n    <li><strong>Actualización de miniaturas personalizadas en Studio:</strong>Tras reemplazar las imágenes, los archivos CDN públicos pueden presentar retrasos. Es posible que aparezcan tamaños inferiores antes que los superiores, o que el conjunto esté incompleto brevemente.</li>\n  </ul>\n  <p>Si<em>alguno</em>Los tamaños públicos ya funcionan y solo falta el nombre más alto, cambie al<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Artículo maxresdefault</a>. Si<em>No</em>público todavía valida, espere a que se procese y luego vuelva a comprobar en<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Contenido eliminado o no disponible por otros motivos.",
+      "html": "<p>Los vídeos eliminados, los identificadores rotos y algunas cargas canceladas dejan un empaquetado público poco fiable. Una URL de seguimiento guardada en favoritos puede parecer sintácticamente correcta, aunque todas las imágenes candidatas fallen. Trata los vídeos eliminados o no disponibles del mismo modo que otros fallos a nivel de vídeo: confirma el estado de la página de seguimiento en YouTube y deja de esperar que la CDN siga funcionando.</p>"
+    },
+    {
+      "heading": "Por qué una URL válida no es suficiente",
+      "html": "<p>El análisis se realiza correctamente cuando la cadena contiene un ID de 11 caracteres con un patrón compatible. La extracción solo se realiza correctamente cuando al menos una miniatura pública candidata se valida como una imagen real. Estos pasos son independientes:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>En 11tik, aparece una imagen vacía con un mensaje claro de \"miniatura no pública\". El producto no lo convierte en un clasificador de privacidad, edad o procesamiento.</p>"
+    },
+    {
+      "heading": "Qué comprobar primero (flujo práctico)",
+      "html": "<ol>\n    <li>Pegue la misma URL en<a href=\"https://www.11tik.com/\">11tik</a>y esperar a que termine el control de tamaño público.</li>\n    <li>Si aparece al menos un tamaño, lo haces.<strong>no</strong>No hay disponibilidad de vídeo a nivel de vídeo; descargue esa imagen fija o consulte las guías de tamaño/resolución máxima para elegir la calidad.</li>\n    <li>Si no aparece nada, abre la página de vídeos cortos sin haber iniciado sesión. Observa si YouTube muestra el vídeo, solicita que inicies sesión o confirmes tu edad, o indica que no está disponible.</li>\n    <li>Si eres el propietario del vídeo y acabas de subir o reemplazar una miniatura personalizada, espera a que Studio lo procese e inténtalo de nuevo.</li>\n    <li>Si YouTube muestra el vídeo públicamente y 11tik sigue sin encontrar nada, inténtelo de nuevo más tarde una vez; los resultados vacíos persistentes suelen significar que las imágenes fijas públicas no están expuestas para esa ID.</li>\n  </ol>"
+    },
+    {
+      "heading": "Tabla de diagnóstico",
+      "html": "<table>\n    <thead>\n      <tr><th>Lo que ves</th><th>Clase probable</th><th>Siguiente paso</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik enumera uno o más tamaños</td><td>Existen alambiques públicos</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Descargar guía</a>/ elección de tamaño</td></tr>\n      <tr><td>Solo falla maxres; hq/sd funciona</td><td>Variante no disponible</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Solución de problemas de maxres</a></td></tr>\n      <tr><td>Sin tallas; YouTube solicita iniciar sesión / control de edad</td><td>Restricción de acceso</td><td>Utilice un vídeo público o acepte que la extracción pública no puede llevarse a cabo.</td></tr>\n      <tr><td>Sin tallas; el propietario simplemente subió/reemplazó la imagen</td><td>Retraso en el procesamiento</td><td>Espera y vuelve a comprobar la misma URL.</td></tr>\n      <tr><td>No hay tallas disponibles; YouTube dice que es privado/no está disponible.</td><td>Estado privado o eliminado</td><td>Todavía no hay público para extraer</td></tr>\n      <tr><td>La URL no se analizará</td><td>Enlace incorrecto o no compatible</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guía de URL/ID de vídeo</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Variante faltante vs. miniatura pública no utilizable",
+      "html": "<p>A menudo, los usuarios pegan una URL de máxima resolución creada manualmente, ven un error 404 y concluyen que «no hay miniatura». Esta conclusión suele ser errónea. Es normal que falte un nombre de archivo de alto nivel. La indisponibilidad a nivel de vídeo significa que el extractor no devuelve ningún archivo utilizable.</p>\n  <p>Regla general:</p>\n  <ul>\n    <li>Necesito lo mejor<em>existente</em>Archivo público → descarga / tamaño / guías de resolución máxima.</li>\n    <li>Necesito entender por qué<em>nada</em>El público aparece → este artículo + mensaje de acceso propio de YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "¿Cuándo usar qué guía 11tik?",
+      "html": "<ul>\n    <li><strong>Este artículo:</strong>cero imágenes públicas utilizables; cuestiones de acceso o de estado.</li>\n    <li><strong>Guía de resolución máxima:</strong>Falta el nombre del archivo HD, aunque existen otros tamaños públicos.</li>\n    <li><strong>Guía de URL:</strong>encontrar la ID y crear/copiar las URL de las imágenes que realmente existen.</li>\n    <li><strong>Descarga la guía:</strong>guardando una imagen fija después de que aparezcan los tamaños.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Una página de seguimiento en funcionamiento garantiza una miniatura pública?",
+      "answer": "No. La experiencia de visualización y los archivos CDN de imágenes públicas están relacionados, pero no son idénticos. Las limitaciones de acceso y el procesamiento pueden resultar en un ID de video sin una imagen fija pública extraíble.",
+      "answerHtml": "<p>No. La experiencia de visualización y los archivos CDN de imágenes públicas están relacionados, pero no son idénticos. Las limitaciones de acceso y el procesamiento pueden resultar en un ID de video sin una imagen fija pública extraíble.</p>"
+    },
+    {
+      "question": "¿Puede 11tik decirme si el vídeo es privado o si tiene restricción de edad?",
+      "answer": "No. 11tik solo informa si se pudo validar una imagen pública. Confirma si es privada, tiene restricción de edad u otras restricciones en YouTube.",
+      "answerHtml": "<p>No. 11tik solo informa si se pudo validar una imagen pública. Confirma si es privada, tiene restricción de edad u otras restricciones en YouTube.</p>"
+    },
+    {
+      "question": "Acabo de subir una miniatura personalizada. ¿Por qué la extracción está vacía?",
+      "answer": "El procesamiento en estudio puede presentar retrasos. Espera y vuelve a pegar la misma URL pública. Si aparecen algunos tamaños pero no maxres, consulta la guía de maxres en lugar de asumir que el vídeo no tiene miniatura.",
+      "answerHtml": "<p>El procesamiento en estudio puede presentar retrasos. Espera y vuelve a pegar la misma URL pública. Si aparecen algunos tamaños pero no maxres, consulta la guía de maxres en lugar de asumir que el vídeo no tiene miniatura.</p>"
+    },
+    {
+      "question": "¿Es este el mismo problema que un error 404 de maxresdefault?",
+      "answer": "Solo en ocasiones. Un error 404 de resolución máxima con alternativas funcionales es un problema de variante. Los resultados vacíos en los candidatos públicos indican una indisponibilidad a nivel de vídeo.",
+      "answerHtml": "<p>Solo en ocasiones. Un error 404 de resolución máxima con alternativas funcionales es un problema de variante. Los resultados vacíos en los candidatos públicos indican una indisponibilidad a nivel de vídeo.</p>"
+    },
+    {
+      "question": "¿Iniciar sesión en YouTube dentro de 11tik desbloqueará las imágenes fijas privadas?",
+      "answer": "No. 11tik es un extractor público de imágenes fijas en el navegador. No elude el empaquetado privado o restringido.",
+      "answerHtml": "<p>No. 11tik es un extractor público de imágenes fijas en el navegador. No elude el empaquetado privado o restringido.</p>"
+    },
+    {
+      "question": "¿Qué debo intentar si la URL parece correcta?",
+      "answer": "Confirma que el vídeo se abre sin sesión iniciada, espera si acabas de cambiar la carátula del estudio y vuelve a ejecutar la extracción en 11tik. Los resultados vacíos persistentes significan que no hay ninguna imagen pública disponible para ese ID en este momento.",
+      "answerHtml": "<p>Confirma que el vídeo se abre sin sesión iniciada, espera si acabas de cambiar la carátula del estudio y vuelve a ejecutar la extracción en 11tik. Los resultados vacíos persistentes significan que no hay ninguna imagen pública disponible para ese ID en este momento.</p>"
+    },
+    {
+      "question": "¿Significa \"sin miniatura pública\" que el archivo de vídeo ha desaparecido?",
+      "answer": "No siempre. El vídeo puede seguir estando disponible para los espectadores que cumplan los requisitos, aunque las imágenes derivadas públicas estén retenidas o no estén listas. Consulta el mensaje en la página de YouTube.",
+      "answerHtml": "<p>No siempre. El vídeo puede seguir estando disponible para los espectadores que cumplan los requisitos, aunque las imágenes derivadas públicas estén retenidas o no estén listas. Consulta el mensaje en la página de YouTube.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Conclusión</h2>\n<p>Cuando una miniatura \"no aparece\", se plantean dos preguntas: ¿Se validó algún archivo público? ¿O falló solo un nombre de archivo de alto nivel? Los fallos a nivel de vídeo suelen estar relacionados con archivos privados, restringidos, en procesamiento, eliminados o empaquetados de forma no pública, no con un error mágico.<code>maxresdefault</code>cadena. Usa 11tik para probar la disponibilidad pública honestamente, luego sigue la guía de maxres, URL o descarga para el siguiente paso correspondiente.</p>\n  <p><a href=\"https://www.11tik.com/\">Comprueba si existe una miniatura pública de YouTube en 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>Ayuda oficial para creadores de miniaturas personalizadas:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Sube miniaturas de vídeo personalizadas</a>.</p>"
+}

@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "ur",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "WebP بمقابلہ JPEG YouTube تھمب نیلز: آپ کو کون سا فارمیٹ استعمال کرنا چاہئے؟ | 11tik",
+  "description": "YouTube JPEG اور WebP تھمب نیل فائلیں شائع کر سکتا ہے۔ اپنے استعمال کے معاملے کے لیے فارمیٹ 11tik کی توثیق کو ترجیح دیں—WebP ہمیشہ دستیاب نہیں ہوتا ہے۔",
+  "h1": "WebP بمقابلہ JPEG YouTube تھمب نیلز: آپ کو کون سا فارمیٹ استعمال کرنا چاہئے؟",
+  "ogTitle": "WebP بمقابلہ JPEG YouTube تھمب نیلز: آپ کو کون سا فارمیٹ استعمال کرنا چاہئے؟",
+  "ogDescription": "YouTube JPEG اور WebP تھمب نیل فائلیں شائع کر سکتا ہے۔ اپنے استعمال کے معاملے کے لیے فارمیٹ 11tik کی توثیق کو ترجیح دیں—WebP ہمیشہ دستیاب نہیں ہوتا ہے۔",
+  "imageAlt": "i.ytimg.com پر JPEG اور WebP یوٹیوب تھمب نیل یو آر ایل کے راستوں کا ساتھ ساتھ موازنہ",
+  "faqHeading": "اکثر پوچھے گئے سوالات",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "i.ytimg.com پر JPEG اور WebP یوٹیوب تھمب نیل یو آر ایل کے راستوں کا ساتھ ساتھ موازنہ",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "ویب سائٹ CMS، براہ راست CDN لنکس، اور JPEG بمقابلہ WebP YouTube تھمب نیلز کے لیے آرکائیو ڈاؤن لوڈز کا موازنہ کرنے والے استعمال کے کیس کا چارٹ",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "فوری جواب",
+      "html": "<p>زیادہ تر ڈاؤن لوڈز اور CMS اپ لوڈز کے لیے، رکھیں<strong>توثیق شدہ فائل 11tik کی فہرست پہلے ہے۔</strong>. JPEG اب بھی عام عوام پر ہے۔<code>i.ytimg.com/vi/…</code>. WebP کچھ ویڈیوز کے لیے بطور ظاہر ہوتا ہے۔<code>maxresdefault.webp</code>کے تحت<code>/vi_webp/</code>. اسی طرح کے بصری معیار پر WebP اکثر چھوٹا ہوتا ہے، لیکن یہ ہر ID کے لیے شائع نہیں ہوتا ہے۔ 11tik کرتا ہے۔<strong>نہیں</strong>WebP کو ڈاؤن لوڈ کرنے پر JPEG میں تبدیل کریں— یہ YouTube کے پہلے سے میزبان بائٹس کو بچاتا ہے (JPEG ڈاؤن لوڈ پر صرف ایک چھوٹا میٹا ڈیٹا کمنٹ اسٹیمپ ملتا ہے)۔</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">ایک ہی ویڈیو ID، مختلف کنٹینرز اور راستے—صرف اس وقت جب YouTube نے دونوں کو شائع کیا۔</p>"
+    },
+    {
+      "heading": "YouTube تھمب نیل فارمیٹس 11tik میں کیسے ظاہر ہوتے ہیں",
+      "html": "<p>11tik کے معیار کے پیش سیٹوں میں شامل ہیں:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mime<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ نیچے<code>/vi/</code>(mime<code>image/jpeg</code>)</li>\n  </ul>\n  <p>امیدوار براؤزر میں لوڈ ہوتے ہیں۔ ناکامیوں اور پلیس ہولڈرز کو چھوڑ دیا جاتا ہے۔ درجہ بندی میں درجے، پکسل ایریا، متوقع سائز کا میچ، اور ایک چھوٹا استعمال ہوتا ہے۔<strong>−8 سکور پنالٹی کے لیے<code>.webp</code>URLs</strong>اس لیے ایک ہی درجے کے JPEG اور WebP غیر متوقع طور پر نہیں مارتے — جب دونوں کی توثیق ہوتی ہے تو JPEG ٹائی جیت سکتا ہے۔ سائز پر تفصیلات:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">تھمب نیل سائز گائیڈ</a>. لاپتہ maxres سلوک:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 گائیڈ</a>.</p>"
+    },
+    {
+      "heading": "سادہ زبان میں JPEG بمقابلہ WebP",
+      "html": "<table>\n    <thead>\n      <tr><th>فارمیٹ</th><th>کے لیے بہترین</th><th>طاقت</th><th>حد بندی</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>جے پی ای جی</td><td>ڈاؤن لوڈز، ورڈپریس اپ لوڈز، وسیع ترین مطابقت</td><td>قریب عالمگیر حمایت؛ زیادہ تر CDN اسٹیلز</td><td>اسی معیار پر بڑی فائلیں۔</td></tr>\n      <tr><td>ویب پی</td><td>جدید سائٹس جو پہلے سے ہی WebP کی خدمت کرتی ہیں۔</td><td>ایک ہی ریزولوشن ٹائر کے لیے اکثر چھوٹا</td><td>ہر ویڈیو کے لیے شائع نہیں کیا گیا؛ کچھ پرانے اوزار بک جاتے ہیں۔</td></tr>\n    </tbody>\n  </table>\n  <p>نہ ہی فارمیٹ ریزولوشن ایجاد کرتا ہے۔ ایک 480×360 WebP اب بھی 480×360 ہے۔</p>"
+    },
+    {
+      "heading": "جب آپ ڈاؤن لوڈ کرتے ہیں تو کیا ہوتا ہے۔",
+      "html": "<p>ڈاؤن لوڈ فائل کا نام اصلی ایکسٹینشن رکھتا ہے (<code>.jpg</code>یا<code>.webp</code>) mime قسم / URL سے۔ JPEG blobs کے لیے، 11tik ایک مختصر JPEG تبصرہ ڈال سکتا ہے جیسے<code>11tik VIDEO_ID quality youtube thumbnail</code>. WebP اور نان JPEG بلاب اس دوبارہ انکوڈ قدم کے بغیر محفوظ کیے جاتے ہیں۔ کوئی معیار \"اپ گریڈ\" نہیں ہے اور فارمیٹس کے درمیان کوئی زبردستی تبدیلی نہیں ہے۔</p>"
+    },
+    {
+      "heading": "جے پی ای جی کو کب ترجیح دیں۔",
+      "html": "<ul>\n    <li>آپ ایک CMS پر اپ لوڈ کر رہے ہیں جو میڈیا لائبریری میں JPG کی توقع رکھتا ہے۔</li>\n    <li>آپ کو ای میل کلائنٹس یا پرانے براؤزرز کے ساتھ زیادہ سے زیادہ مطابقت درکار ہے۔</li>\n    <li>اس ویڈیو کے لیے صرف JPEG سائز کی توثیق کی گئی۔</li>\n    <li>آپ فائل پرنٹ کر رہے ہیں یا کسی ایسے ڈیزائنر کے حوالے کر رہے ہیں جو JPG پر معیاری ہے۔</li>\n  </ul>"
+    },
+    {
+      "heading": "جب WebP آسان ہو۔",
+      "html": "<ul>\n    <li>11tik نے ایک توثیق شدہ WebP maxres درج کیا ہے اور آپ کی سائٹ پہلے سے WebP کی خدمت کرتی ہے۔</li>\n    <li>آپ اسی ~1280×720 درجے کے لیے ایک چھوٹی فائل چاہتے ہیں۔</li>\n    <li>آپ اسٹیک کو کنٹرول کرتے ہیں اور ضرورت پڑنے پر واپس JPEG پر جا سکتے ہیں۔</li>\n  </ul>\n  <p>اگر آپ کی تھیم WebP استعمال نہیں کر سکتی ہے تو اس کے بجائے JPEG ڈاؤن لوڈ کریں—یا ڈاؤن لوڈ کے بعد مقامی طور پر تبدیل کریں۔ 11tik آپ کے لیے تبدیل نہیں ہوگا۔</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">وہ توثیق شدہ فارمیٹ چنیں جو آپ کی پائپ لائن سے مماثل ہو — اندازہ لگایا گیا ایکسٹینشن نہیں۔</p>"
+    },
+    {
+      "heading": "براہ راست روابط اور ویب سائٹس",
+      "html": "<p>تصویر کا URL کاپی کریں توثیق شدہ امیدوار کا HTTPS CDN پتہ لوٹاتا ہے۔ ہاٹ لنکنگ ویب پی یا جے پی ای جی میں وہی نزاکت ہے جس پر بحث کی گئی ہے۔<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">بلاگ / اوپن گراف گائیڈ</a>: دیرپا پوسٹس کے لیے اپنی کاپی کی میزبانی کو ترجیح دیں۔ URL پیٹرن:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">تھمب نیل یو آر ایل گائیڈ</a>.</p>"
+    },
+    {
+      "heading": "براؤزر اور CMS مطابقت کے نوٹ",
+      "html": "<p>جدید Chromium، Firefox، اور Safari ورژن صفحات میں WebP تصاویر کو ہینڈل کرتے ہیں۔ کچھ میراثی پلگ ان، ای میل ٹیمپلیٹس، یا پرنٹ ورک فلو اب بھی JPEG کو ترجیح دیتے ہیں۔ ورڈپریس کور کنفیگر ہونے پر WebP کی خدمت کر سکتا ہے، لیکن بہت سی ٹیمیں اب بھی پیشین گوئی کے لیے JPG کے طور پر نمایاں تصاویر کو معیاری بناتی ہیں۔ آفیشل ورڈپریس میڈیا دستاویزات آپ کے ورژن کے لیے سچائی کا ذریعہ ہیں — یہ مت سمجھیں کہ ہر پلگ ان WebP اپ لوڈز کو قبول کرتا ہے۔</p>"
+    },
+    {
+      "heading": "عملی فیصلے کا درخت",
+      "html": "<ol>\n    <li>پر نکالیں۔<a href=\"https://www.11tik.com/\">[[پ2]]</a>.</li>\n    <li>اگر آپ کو ایک CMS نمایاں تصویر کی ضرورت ہے اور دونوں فارمیٹس دیکھیں تو JPEG چنیں جب تک کہ آپ کا اسٹیک WebP-پہلے نہ ہو۔</li>\n    <li>اگر اوپر والے درجے پر صرف WebP maxres کی توثیق ہوتی ہے، تو اسے استعمال کریں—یا اگلا JPEG سائز لیں اگر آپ کو JPG پر رہنا ضروری ہے۔</li>\n    <li>آرکائیوز کے لیے، ڈاؤن لوڈ سے اصل ایکسٹینشن رکھیں۔</li>\n  </ol>\n  <p>واک تھرو ڈاؤن لوڈ کریں:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">یوٹیوب تھمب نیل ڈاؤن لوڈ کریں۔</a>.</p>"
+    },
+    {
+      "heading": "اگلا مرحلہ",
+      "html": "<p>میں ایک عوامی URL چسپاں کریں۔<a href=\"https://www.11tik.com/\">یوٹیوب تھمب نیل ایکسٹریکٹر</a>، نوٹ کریں کہ آیا سب سے اوپر نتیجہ ہے۔<code>.jpg</code>یا<code>.webp</code>، اور اپنے CMS کی بنیاد پر منتخب کریں—لمبے فائل نام کی بنیاد پر نہیں۔</p>\n  <p class=\"yte-bio\">موجودہ براؤزر ایکسٹریکٹر رویے کی بنیاد پر 11tik نے لکھا ہے۔<a href=\"https://www.11tik.com/p/about.html\">کے بارے میں</a>·<a href=\"https://www.11tik.com/p/privacy.html\">رازداری</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرائط</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "کیا ہر YouTube ویڈیو میں WebP تھمب نیل ہوتا ہے؟",
+      "answer": "نہیں. WebP maxres اختیاری ہے۔ بہت سی ویڈیوز صرف JPEG سائز کو ظاہر کرتی ہیں۔",
+      "answerHtml": "<p>نہیں. WebP maxres اختیاری ہے۔ بہت سی ویڈیوز صرف JPEG سائز کو ظاہر کرتی ہیں۔</p>"
+    },
+    {
+      "question": "کیا WebP ہمیشہ JPEG سے تیز ہوتا ہے؟",
+      "answer": "نمبر۔ فارمیٹ ریزولوشن نہیں بڑھاتا۔ مساوی پکسل سائز کا موازنہ کریں۔",
+      "answerHtml": "<p>نمبر۔ فارمیٹ ریزولوشن نہیں بڑھاتا۔ مساوی پکسل سائز کا موازنہ کریں۔</p>"
+    },
+    {
+      "question": "11tik میں JPEG کا درجہ WebP سے اوپر کیوں ہو سکتا ہے؟",
+      "answer": "توثیق شدہ WebP URLs کو بصورت دیگر ملتے جلتے امیدواروں کے مقابلے میں ایک چھوٹا اسکور جرمانہ (−8) ملتا ہے، لہذا JPEG پہلے سامنے آسکتا ہے جب دونوں ایک ہی درجے پر موجود ہوں۔",
+      "answerHtml": "<p>توثیق شدہ WebP URLs کو بصورت دیگر ملتے جلتے امیدواروں کے مقابلے میں ایک چھوٹا اسکور جرمانہ (−8) ملتا ہے، لہذا JPEG پہلے سامنے آسکتا ہے جب دونوں ایک ہی درجے پر موجود ہوں۔</p>"
+    },
+    {
+      "question": "کیا ڈاؤن لوڈ کرنے سے WebP کو JPEG میں تبدیل ہو جاتا ہے؟",
+      "answer": "نہیں۔ محفوظ کردہ فائل سورس فارمیٹ کو برقرار رکھتی ہے۔ صرف JPEG کو میٹا ڈیٹا تبصرہ مل سکتا ہے۔",
+      "answerHtml": "<p>نہیں۔ محفوظ کردہ فائل سورس فارمیٹ کو برقرار رکھتی ہے۔ صرف JPEG کو میٹا ڈیٹا تبصرہ مل سکتا ہے۔</p>"
+    },
+    {
+      "question": "مجھے کس فارمیٹ میں ہاٹ لنک کرنا چاہیے؟",
+      "answer": "نہ ہی، پیداواری صفحات کے لیے جن کی آپ کو پرواہ ہے۔ ایک کاپی کی میزبانی کریں۔ اگر آپ کو عارضی طور پر ہاٹ لنک کرنا ہو تو پہلے سے توثیق شدہ URL 11tik استعمال کریں۔",
+      "answerHtml": "<p>نہ ہی، پیداواری صفحات کے لیے جن کی آپ کو پرواہ ہے۔ ایک کاپی کی میزبانی کریں۔ اگر آپ کو عارضی طور پر ہاٹ لنک کرنا ہو تو پہلے سے توثیق شدہ یو آر ایل 11tik استعمال کریں۔</p>"
+    },
+    {
+      "question": "کیا hq720 WebP ہو سکتا ہے؟",
+      "answer": "موجودہ 11tik پیش سیٹ فہرست میں، وقف WebP امیدوار maxres WebP ہے۔ دیگر سائز کی درخواست JPEG فائل ناموں کے تحت /vi/ کے تحت کی جاتی ہے۔",
+      "answerHtml": "<p>موجودہ 11tik پیش سیٹ فہرست میں، وقف WebP امیدوار maxres WebP ہے۔ دیگر سائز کے تحت JPEG فائل نام کے طور پر درخواست کی جاتی ہے۔<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">موجودہ براؤزر ایکسٹریکٹر رویے کی بنیاد پر 11tik نے لکھا ہے۔<a href=\"https://www.11tik.com/p/about.html\">کے بارے میں</a>·<a href=\"https://www.11tik.com/p/privacy.html\">رازداری</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرائط</a>.</p>"
+}

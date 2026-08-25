@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "nl",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Privacybeleid | 11tik",
+  "description": "Dit beleid is van toepassing op de YouTube Thumbnail Extractor op https://www.11tik.com/ en de taalhosts die dezelfde extractor laden.",
+  "h1": "Privacybeleid",
+  "ogTitle": "Privacybeleid",
+  "ogDescription": "Dit beleid is van toepassing op de YouTube Thumbnail Extractor op https://www.11tik.com/ en de taalhosts die dezelfde extractor laden.",
+  "imageAlt": "",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Verwerking in de browser",
+      "html": "<p>Wanneer je een YouTube-URL plakt, leest de pagina de video-ID en controleert de openbare thumbnail-afbeelding-URL's in je browser. Deze geplakte links worden niet opgeslagen als een persoonlijk account op een 11tik-applicatieserver. Extractie vereist geen login.</p>"
+    },
+    {
+      "heading": "Optionele deelpagina-index",
+      "html": "<p>Na een succesvolle extractie stuurt de browser mogelijk alleen een openbare video-ID, titel, tags afgeleid van openbare metadata en een openbare thumbnail-URL naar onze Cloudflare Worker, zodat de video op een deelpagina kan verschijnen en, als deze een kwaliteitscontrole doorstaat, in de sitemap. We vragen u niet om het afbeeldingsbestand te uploaden. U kunt de extractor ook zonder die index gebruiken als het verzoek door uw browser wordt geblokkeerd.</p>"
+    },
+    {
+      "heading": "Lokale geschiedenis",
+      "html": "<p>De extractor kan recent gebruikte URL's opslaan in het lokale geheugen van deze browser, zodat u ze later opnieuw kunt openen. Deze kopie blijft op uw apparaat staan. U kunt deze wissen met de browsegeschiedenis op de pagina zelf, of door de gegevens van deze website in uw browser te wissen. Dit is geen cloudaccount.</p>"
+    },
+    {
+      "heading": "Hostinglogboeken",
+      "html": "<p>De website, taalhosts en statische bestanden worden aangeboden door de hostingproviders die voor 11tik.com worden gebruikt (waaronder Cloudflare en GitHub Pages). Deze hosts kunnen, volgens hun eigen beleid, gewone weblogs bijhouden, zoals IP-adres, browsertype en de opgevraagde pagina.</p>"
+    },
+    {
+      "heading": "Derden",
+      "html": "<p>Miniatuurafbeeldingen worden opgevraagd bij de openbare afbeeldingshosts van YouTube. De site gebruikt Google Analytics 4 (meet-ID G-FW7B8NDZZ5) om bezoeken en acties op de pagina, zoals het extraheren en downloaden van content, te tellen. Google kan cookies of vergelijkbare identificatoren plaatsen. Geplakte YouTube-URL's worden niet als parameters voor analysegebeurtenissen verzonden. Lettertypen of scripts kunnen ook worden geladen vanaf CDN's die worden gebruikt om de pagina weer te geven.</p>\n  <p>Het contactformulier wordt door FormSubmit naar het e-mailadres van de operator verzonden. FormSubmit kan de naam, het e-mailadres en het bericht dat u verzendt zien.</p>"
+    },
+    {
+      "heading": "Contact",
+      "html": "<p>Vragen over dit beleid? Stuur een e-mail.<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>of gebruik de<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>formulier.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-thumbnail-extractor</a>·<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

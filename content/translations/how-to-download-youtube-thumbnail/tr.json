@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "tr",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "YouTube Küçük Resmini HD Olarak Nasıl İndirebilirsiniz? | 11tik",
+  "description": "Herkese açık bir YouTube küçük resmini kaydedin: 11tik'e watch, Shorts, youtu.be veya gömme URL'lerini yapıştırın ve mevcut en büyük dosyayı indirin.",
+  "h1": "YouTube Küçük Resmini HD Olarak Nasıl İndirebilirsiniz?",
+  "ogTitle": "YouTube Küçük Resmini HD Olarak Nasıl İndirebilirsiniz?",
+  "ogDescription": "Herkese açık bir YouTube küçük resmini kaydedin: 11tik'e watch, Shorts, youtu.be veya gömme URL'lerini yapıştırın ve mevcut en büyük dosyayı indirin.",
+  "imageAlt": "YouTube URL'sini kopyalamaktan onaylanmış herkese açık küçük resmi indirmeye kadar dört adımlı iş akışı.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "YouTube URL'sini kopyalamaktan onaylanmış herkese açık küçük resmi indirmeye kadar dört adımlı iş akışı.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Eksik maxresdefault dosyasının atlandığını ve böylece bir sonraki gerçek küçük resim boyutunun indirilebileceğini gösteren sorun giderme diyagramı.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>Herkese açık bir YouTube bağlantısını kopyalayın ve yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Onaylanmış önizlemeleri bekleyin, ardından listelenen ilk dosyayı indirin. Bu dosya, YouTube'un video kimliği için zaten barındırdığı en yüksek çözünürlüklü JPEG veya WebP dosyasıdır; genellikle maxres veya hq720 mevcut olduğunda 1280×720'dir. Bu, zaman kazandırır.<strong>küçük resim hala</strong>Video veya ses değil.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Pratik yol: herkese açık URL → Çıkarma → Gerçek boyutları önizleme → İndirme veya resim URL'sini kopyalama.</p>"
+    },
+    {
+      "heading": "11tik ile en hızlı yöntem",
+      "html": "<ol>\n    <li>Herkese açık bir izleme, kısa video, canlı yayın, yerleştirme veya youtu.be URL'sini (veya 11 karakterlik yalın bir video kimliğini) kopyalayın.</li>\n    <li>Açık<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>Tarayıcınızda.</li>\n    <li>URL'yi yapıştırın. Kimlik geçerli olduğunda çıkarma işlemi başlar.</li>\n    <li>İlk sonucu (en iyi olanı) indirin veya mevcut diğer boyutlardan birini seçin.</li>\n  </ol>\n  <p>İsteğe bağlı: kullanın<strong>Resim URL'sini kopyala</strong>Dosya yerine bir CMS adresine ihtiyacınız varsa, bu süreç şu bölümde ele alınmıştır.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Desteklenen YouTube URL biçimleri",
+      "html": "<p>11tik, web sitesi ayrıştırıcısının kabul ettiği aynı kalıplardan video kimliğini okur:</p>\n  <table>\n    <thead>\n      <tr><th>Biçim</th><th>Örnek desen</th><th>Notlar</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Kol saati</td><td><code>youtube.com/watch?v=ID</code></td><td>Ek sorgu parametreleri göz ardı edildi.</td></tr>\n      <tr><td>Kısa bağlantı</td><td><code>youtu.be/ID</code></td><td>Mobil paylaşım platformları genellikle bunu kullanır.</td></tr>\n      <tr><td>Şort</td><td><code>youtube.com/shorts/ID</code></td><td>Aynı halk hala ev sahipliği yapıyor.</td></tr>\n      <tr><td>Göm</td><td><code>youtube.com/embed/ID</code></td><td>iframe kaynağından</td></tr>\n      <tr><td>Canlı</td><td><code>youtube.com/live/ID</code></td><td>Kimlik belgesi ibraz edildiğinde</td></tr>\n      <tr><td>çerezsiz yerleştirme</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>gömülü gibi işlem gördü</td></tr>\n      <tr><td>Çıplak Kimlik</td><td><code>dQw4w9WgXcQ</code></td><td>Sadece 11 karakter</td></tr>\n    </tbody>\n  </table>\n  <p>Video kimliği olmayan kanal veya oynatma listesi URL'leri tek bir küçük resim oluşturmaz. Birçok bağlantıyı aynı anda işlemek için Toplu İşlem (en fazla 25) özelliğini kullanın — bkz.<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">toplu indirme</a>Kanal genişletme:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">kanal URL'sinden alıntı</a>.</p>"
+    },
+    {
+      "heading": "Doğrudan URL yöntemi (arayüz çıkarıcı olmadan)",
+      "html": "<p>Kimlik numarasını zaten biliyorsanız, doğrudan aday kaydı açabilirsiniz:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Yüklendiğinde, tarayıcının \"resmi kaydet\" komutunu kullanın. Başarısız olursa, bir alt adıma geçin.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, veya<code>hqdefault.jpg</code>Bu manuel yol, 11tik'nin doğrulanmış listesine kıyasla daha yavaş ve hataya daha yatkındır, ancak geçerli bir adresiniz olduğunda herhangi bir tarayıcıdan çevrimdışı olarak çalışır.</p>"
+    },
+    {
+      "heading": "İndirirken kaliteyi seçmek",
+      "html": "<p>Daha küçük bir önizlemeyi saklamak için bir nedeniniz yoksa, listelenen ilk boyutu indirin. Buradaki \"HD\" ifadesi, genellikle 1280x720 olan, mevcut en büyük genel çözünürlüğü ifade eder, 4K master'ı değil. Piksel beklentileri ve eksik boyut davranışı şurada açıklanmıştır:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">boyut ve çözünürlük kılavuzu</a>.</p>\n  <p>Eğer sadece en üst düzeydeki herkese açık dosyayı önemsiyorsanız, ayrıca şunlara da bakın.<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">en yüksek kalitede küçük resim</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Tahmini boyut mevcut değilse, onu atlayın ve bir sonraki gerçek genel dosyayı saklayın.</p>"
+    },
+    {
+      "heading": "İndirmelerle ilgili sorun giderme",
+      "html": "<table>\n    <thead>\n      <tr><th>Belirti</th><th>Muhtemel neden</th><th>Ne yapalım</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Yapıştırdıktan sonra önizleme yok.</td><td>Geçersiz URL, video kimliği yok veya özel/kısıtlı video</td><td>Herkese açık bir izleme/Kısa Haberler/youtu.be bağlantısı yapıştırın.</td></tr>\n      <tr><td>Maxres kayıp</td><td>YouTube o dosyayı asla yayınlamadı.</td><td>Listelenen ilk boyutu indirin.</td></tr>\n      <tr><td>Elle oluşturulmuş bir URL'den alınan gri/yer tutucu resim</td><td>Tahmin edilen dosya adı</td><td>11tik'ün doğrulanmış listesini kullanın</td></tr>\n      <tr><td>Telefon kaydetme işlemi garip</td><td>Tarayıcı indirme arayüzü farklılık gösterir.</td><td>Görmek<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone/Android kaydetme kılavuzu</a></td></tr>\n      <tr><td>Kullanıcı arayüzü görüntüsü gibi görünüyor.</td><td>Oyuncunun ekran görüntüsünü alıyorsunuz.</td><td>Ekranı değil, CDN'yi kaydedin —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ekran görüntüsü ile gerçek arasındaki fark</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "İndirdiğiniz (ve indirmediğiniz) şeyler",
+      "html": "<p>YouTube'un zaten barındırdığı herkese açık bir görüntüyü kaydedersiniz. Özel videoların, yalnızca üyelere özel dosyaların veya MP4/WebM akışının kilidini açmazsınız. 11tik bir çıkarıcıdır, bir oluşturucu veya video indirici değildir — karşılaştırma:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">çıkarıcı vs üretici</a>.</p>\n  <p>Telif hakkı yükleyiciye aittir. Araştırma veya kişisel referans amacıyla kaydetmek tipik kullanım şeklidir; telif hakkı olmadan kendi özel küçük resminiz olarak yeniden yayınlamak ise uygun değildir. YouTube Yardım:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">özel video küçük resimleri</a>Site kuralları:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    },
+    {
+      "heading": "Yöntem karşılaştırması",
+      "html": "<table>\n    <thead>\n      <tr><th>Yöntem</th><th>Hız</th><th>En iyisi</th><th>11tik'e mi ihtiyaç var?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik indir</td><td>Hızlı</td><td>Onaylanmış en iyi seçenek</td><td>Evet</td></tr>\n      <tr><td>11tik URL'yi kopyala</td><td>Hızlı</td><td>CMS / gömülü içerikler</td><td>Evet</td></tr>\n      <tr><td>Elle yapılmış i.ytimg.com URL</td><td>Orta</td><td>Kimlik numarasını bildiğinizde hızlı testler</td><td>HAYIR</td></tr>\n      <tr><td>Oyuncu ekran görüntüsü</td><td>Hızlı ama düşük kaliteli</td><td>Bloglar/OG için uygun değildir.</td><td>HAYIR</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Sonraki adım",
+      "html": "<p>Açın<a href=\"https://www.11tik.com/\">YouTube Küçük Resim Çıkarıcı</a>Herkese açık bir bağlantı yapıştırın ve doğrulanan ilk görüntüyü kaydedin. Sadece bağlantıya mı ihtiyacınız var? Şunu okuyun:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL kılavuzu</a>Bedenler arasında seçim mi yapıyorsunuz? Şunu kullanın:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">çözünürlük kılavuzu</a>.</p>\n\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, tarayıcı içi çıkarıcının yayıncısıdır. Yalnızca herkese açık görseller.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kısa filmden küçük resim indirebilir miyim?",
+      "answer": "Evet, kısa video herkese açık olduğunda ve o kimlik için hareketsiz görüntüler mevcut olduğunda. /shorts/ URL'sini 11tik'e yapıştırın. Oynatma dikey olsa bile hareketsiz görüntü yatay olabilir.",
+      "answerHtml": "<p>Evet, kısa video herkese açık olduğunda ve o kimlik numarasına ait fotoğraflar mevcut olduğunda. Yapıştırın.<code>/shorts/</code>URL'yi 11tik içine yerleştirin. Oynatma dikey olsa bile, görüntü yatay olabilir.</p>"
+    },
+    {
+      "question": "En iyi küçük resim yüklenmezse ne olacak?",
+      "answer": "Listelenen bir sonraki boyutu indirin. Maksimum çözünürlüğün eksik olması yaygındır ve bir araç hatası değildir.",
+      "answerHtml": "<p>Listelenen bir sonraki boyutu indirin. Maksimum çözünürlüğün eksik olması yaygındır ve bir araç hatası değildir.</p>"
+    },
+    {
+      "question": "Orijinal herkese açık küçük resim dosyasını indirebilir miyim?",
+      "answer": "Evet, en üstte yer alan doğrulanmış dosya tam olarak budur. \"Orijinal\" ifadesi, video akışından alınmış bir kare değil, herkese açık CDN görüntüsü anlamına gelir. Orijinal herkese açık küçük resme bakın.",
+      "answerHtml": "<p>Evet, en üst düzeyde doğrulanmış dosya tam olarak budur. \"Orijinal\" ifadesi, video akışından alınmış bir kare değil, herkese açık CDN dosyası anlamına gelir. Bakınız.<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">orijinal herkese açık küçük resim</a>.</p>"
+    },
+    {
+      "question": "Resmi indirmek yerine URL'sini kopyalayabilir miyim?",
+      "answer": "Evet. 11tik'te \"Resim URL'sini kopyala\" seçeneğini kullanın veya resim yüklendikten sonra tarayıcıdan doğrulanmış bir adresi kopyalayın.",
+      "answerHtml": "<p>Evet. 11tik'de \"Resim URL'sini kopyala\" seçeneğini kullanın veya resim yüklendikten sonra tarayıcıdan doğrulanmış bir adresi kopyalayın.</p>"
+    },
+    {
+      "question": "Bu, YouTube video dosyasını indiriyor mu?",
+      "answer": "Hayır. Sadece herkese açık küçük resim duruyor.",
+      "answerHtml": "<p>Hayır. Sadece herkese açık küçük resim duruyor.</p>"
+    },
+    {
+      "question": "Her video 1280x720 çözünürlüğünde dosya sunacak mı?",
+      "answer": "Hayır. O kimlik için geçerli olan en büyük genel dosyayı saklayın.",
+      "answerHtml": "<p>Hayır. O kimlik için geçerli olan en büyük genel dosyayı saklayın.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, tarayıcı içi çıkarıcının yayıncısıdır. Yalnızca herkese açık görseller.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+}

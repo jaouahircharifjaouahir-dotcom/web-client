@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "tl",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Paano Mag-download ng Thumbnail ng YouTube Shorts sa HD | 11tik",
+  "description": "Mag-download ng thumbnail ng YouTube Shorts sa browser. Gumagamit ang mga shorts ng parehong pampublikong stills gaya ng mga URL ng panonood. Kadalasang naka-landscape ang file.",
+  "h1": "Paano Mag-download ng Thumbnail ng YouTube Shorts sa HD",
+  "ogTitle": "Paano Mag-download ng Thumbnail ng YouTube Shorts sa HD",
+  "ogDescription": "Mag-download ng thumbnail ng YouTube Shorts sa browser. Gumagamit ang mga shorts ng parehong pampublikong stills gaya ng mga URL ng panonood. Kadalasang naka-landscape ang file.",
+  "imageAlt": "Pag-download ng pampublikong thumbnail ng YouTube Shorts sa 11tik",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Pag-download ng pampublikong thumbnail ng YouTube Shorts sa 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Paano ako magda-download ng thumbnail ng YouTube Shorts?",
+      "html": "<p>Kopyahin ang URL na naglalaman ng /shorts/ kasama ang video ID, i-paste ito sa<a href=\"https://www.11tik.com/\">11tik</a>, at mag-download ng nakalistang laki. Magsisimula ang pagkuha kapag balido na ang ID.</p>"
+    },
+    {
+      "heading": "Pareho ba ang mga file ng Shorts at mga file ng watch-page?",
+      "html": "<p>Gumagamit sila ng parehong pangalan ng pampublikong laki na naka-key sa pamamagitan ng video ID. Maaaring magmukhang naka-letterbox ang still kung nag-imbak ang YouTube ng hinango sa widescreen.</p>"
+    },
+    {
+      "heading": "Paano kung walang lumabas na imahe?",
+      "html": "<p>Ang Maikling Larawan ay maaaring pribado, nabura, o walang pampublikong mga still. Hindi maaaring malampasan ng extractor ang mga limitasyong iyon.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>o<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Tagabunot</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Paano mag-download</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Maaari ba akong mag-download ng thumbnail ng YouTube Shorts?",
+      "answer": "Oo, noong naglathala ang YouTube ng mga pampublikong still para sa Shorts video ID na iyon.",
+      "answerHtml": "Oo, noong naglathala ang YouTube ng mga pampublikong still para sa Shorts video ID na iyon."
+    },
+    {
+      "question": "Bakit mukhang naka-letterbox pa rin?",
+      "answer": "Maaaring mag-imbak ang YouTube ng 16:9 derivative kahit para sa isang patayong Short. Ipinapakita ng 11tik ang naka-host na file sa halip na mag-imbento ng crop.",
+      "answerHtml": "Maaaring mag-imbak ang YouTube ng 16:9 derivative kahit para sa isang patayong Short. Ipinapakita ng 11tik ang naka-host na file sa halip na mag-imbento ng crop."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>o<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+}

@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "sv",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Hur man laddar ner en YouTube-miniatyrbild i HD | 11tik",
+  "description": "Spara en offentlig YouTube-miniatyrbild: klistra in titta, Shorts, youtu.be eller bädda in webbadresser i 11tik och ladda ner den största filen som finns.",
+  "h1": "Hur man laddar ner en YouTube-miniatyrbild i HD",
+  "ogTitle": "Hur man laddar ner en YouTube-miniatyrbild i HD",
+  "ogDescription": "Spara en offentlig YouTube-miniatyrbild: klistra in titta, Shorts, youtu.be eller bädda in webbadresser i 11tik och ladda ner den största filen som finns.",
+  "imageAlt": "Arbetsflöde i fyra steg, från att kopiera en YouTube-URL till att ladda ner en validerad offentlig miniatyrbild",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Arbetsflöde i fyra steg, från att kopiera en YouTube-URL till att ladda ner en validerad offentlig miniatyrbild",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Felsökningsdiagram som visar en saknad maxresdefault-fil som hoppats över så att nästa riktiga miniatyrstorlek kan laddas ner.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snabbt svar",
+      "html": "<p>Kopiera en offentlig YouTube-länk, klistra in den i<a href=\"https://www.11tik.com/\">11tik</a>, vänta på validerade förhandsgranskningar och ladda sedan ner den första listade filen. Den filen är den högsta publika JPEG- eller WebP-filen som YouTube redan har för video-ID:t – ofta 1280×720 när maxres eller hq720 finns. Detta sparar en<strong>miniatyrbild</strong>, inte videon eller ljudet.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktisk sökväg: offentlig URL → extrahera → förhandsgranska verkliga storlekar → ladda ner eller kopiera bild-URL:en.</p>"
+    },
+    {
+      "heading": "Snabbaste metoden med 11tik",
+      "html": "<ol>\n    <li>Kopiera en URL för offentlig visning, Shorts, livesändning, inbäddning eller youtu.be (eller ett rent video-ID på 11 tecken).</li>\n    <li>Öppna<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>i din webbläsare.</li>\n    <li>Klistra in URL:en. Extraheringen startar när ID:t är giltigt.</li>\n    <li>Ladda ner det första resultatet (bästa tillgängliga), eller välj en annan överlevande storlek.</li>\n  </ol>\n  <p>Valfritt: använd<strong>Kopiera bild-URL</strong>om du behöver adressen för ett CMS istället för en fil. Det flödet behandlas i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>.</p>"
+    },
+    {
+      "heading": "Stödda YouTube-URL-format",
+      "html": "<p>11tik läser video-ID:t från samma mönster som webbplatsens parser accepterar:</p>\n  <table>\n    <thead>\n      <tr><th>Formatera</th><th>Exempelmönster</th><th>Anteckningar</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Titta</td><td><code>youtube.com/watch?v=ID</code></td><td>Extra frågeparametrar ignorerade</td></tr>\n      <tr><td>Kort länk</td><td><code>youtu.be/ID</code></td><td>Mobila delningar använder ofta detta</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/ID</code></td><td>Samma publika värdar fortfarande</td></tr>\n      <tr><td>Bädda in</td><td><code>youtube.com/embed/ID</code></td><td>Från iframe-källa</td></tr>\n      <tr><td>Bo</td><td><code>youtube.com/live/ID</code></td><td>När ett offentligt ID finns</td></tr>\n      <tr><td>nocookie-inbäddning</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Behandlas som inbäddning</td></tr>\n      <tr><td>Bare ID</td><td><code>dQw4w9WgXcQ</code></td><td>Endast 11 tecken</td></tr>\n    </tbody>\n  </table>\n  <p>Kanal- eller spelliste-URL:er utan video-ID ger inte en enda miniatyrbild. För många länkar samtidigt, använd Massvisning (upp till 25) – se<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batchnedladdning</a>Kanalutbyggnad:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extrahera från en kanal-URL</a>.</p>"
+    },
+    {
+      "heading": "Direkt URL-metod (inget extraheringsgränssnitt)",
+      "html": "<p>Om du redan vet ID:t kan du öppna en kandidatstillbild direkt:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>När den laddas, använd webbläsarens kommando save-image. Om det misslyckas, gå ner till<code>hq720.jpg</code>,<code>sddefault.jpg</code>, eller<code>hqdefault.jpg</code>Den här manuella sökvägen är långsammare och felbenägen jämfört med 11tiks validerade lista, men den fungerar offline från vilken webbläsare som helst när du väl har en bra adress.</p>"
+    },
+    {
+      "heading": "Att välja kvalitet när du laddar ner",
+      "html": "<p>Ladda ner den först listade storleken om du inte har en anledning att behålla en mindre förhandsvisning. ”HD” betyder här den största offentliga stillbilden som finns – vanligtvis 1280×720 – inte en 4K-master. Pixelförväntningar och beteende vid saknad storlek förklaras i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide för storlek och upplösning</a>.</p>\n  <p>Om du bara bryr dig om den absolut högsta publika filen, se även<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatyrbild av högsta kvalitet</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">När en gissad storlek inte är tillgänglig, hoppa över den och behåll nästa riktiga offentliga fil.</p>"
+    },
+    {
+      "heading": "Felsökning av nedladdningar",
+      "html": "<table>\n    <thead>\n      <tr><th>Symptom</th><th>Trolig orsak</th><th>Vad man ska göra</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ingen förhandsgranskning efter inklistring</td><td>Ogiltig URL, inget video-ID eller privat/begränsad video</td><td>Klistra in en offentlig länk för titta/Shorts/youtu.be</td></tr>\n      <tr><td>Maxres saknas</td><td>YouTube publicerade aldrig den filen</td><td>Ladda ner den första listade storleken istället</td></tr>\n      <tr><td>Grå / platshållarbild från en handbyggd URL</td><td>Gissat filnamn</td><td>Använd 11tiks validerade lista</td></tr>\n      <tr><td>Telefonbesparing obekväm</td><td>Webbläsarens nedladdningsgränssnitt skiljer sig åt</td><td>Se<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">Sparguide för iPhone/Android</a></td></tr>\n      <tr><td>Ser ut som en UI-bild</td><td>Du tar en skärmdump av spelaren</td><td>Spara CDN:et fortfarande, inte skärmen —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skärmdump kontra verklighet</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Vad du laddar ner (och inte laddar ner)",
+      "html": "<p>Du sparar en offentlig stillbild som YouTube redan är värd för. Du låser inte upp privata videor, medlemsfiler eller MP4/WebM-strömmar. 11tik är en extraheringstjänst, inte en skapare och inte en videonedladdare — jämförelse:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extraktor vs tillverkare</a>.</p>\n  <p>Upphovsrätten ligger kvar hos uppladdaren. Att spara för forskning eller personlig referens är den vanligaste användningen; att publicera om som din egen anpassade miniatyrbild utan rättigheter är inte det. YouTube-hjälp:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">anpassade videominiatyrer</a>Webbplatsens regler:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+    },
+    {
+      "heading": "Metodjämförelse",
+      "html": "<table>\n    <thead>\n      <tr><th>Metod</th><th>Hastighet</th><th>Bäst för</th><th>Behöver 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik nedladdning</td><td>Snabb</td><td>Validerad bäst fortfarande</td><td>Ja</td></tr>\n      <tr><td>11tik kopiera URL</td><td>Snabb</td><td>CMS / inbäddningar</td><td>Ja</td></tr>\n      <tr><td>Handbyggd i.ytimg.com URL</td><td>Medium</td><td>Snabba tester när du vet ID:t</td><td>Inga</td></tr>\n      <tr><td>Skärmdump av spelaren</td><td>Snabb men låg kvalitet</td><td>Undvik bloggar / originalversioner</td><td>Inga</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Nästa steg",
+      "html": "<p>Öppna<a href=\"https://www.11tik.com/\">YouTube-miniatyrutdragare</a>, klistra in en offentlig länk och spara den första validerade stillbilden. Behöver du bara länken? Läs<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-guide</a>Väljer du mellan storlekar? Använd<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">upplösningsguide</a>.</p>\n\n  <p class=\"yte-bio\">Skriven av 11tik, utgivare av extraheringsverktyget för webbläsaren. Endast offentliga stillbilder.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jag ladda ner en miniatyrbild från en Shorts-video?",
+      "answer": "Ja, när Short-bilden är offentlig och stillbilder finns för det ID:t. Klistra in /shorts/-URL:en i 11tik. Stillbilden kan vara liggande även om uppspelningen är vertikal.",
+      "answerHtml": "<p>Ja, när kortfilmen är offentlig och stillbilder finns för det ID:t. Klistra in<code>/shorts/</code>URL till 11tik. Stillbilden kan vara liggande även om uppspelningen är vertikal.</p>"
+    },
+    {
+      "question": "Vad händer om den bästa miniatyrbilden inte laddas?",
+      "answer": "Ladda ner nästa listade storlek. Saknade maxres är vanligt och inte ett verktygsfel.",
+      "answerHtml": "<p>Ladda ner nästa listade storlek. Saknade maxres är vanligt och inte ett verktygsfel.</p>"
+    },
+    {
+      "question": "Kan jag ladda ner den ursprungliga offentliga miniatyrbilden?",
+      "answer": "Ja – det är vad den högst validerade filen är. ”Original” betyder den offentliga CDN-stillbilden, inte en bildruta som rippats från videoströmmen. Se original offentlig miniatyrbild.",
+      "answerHtml": "<p>Ja – det är vad den högst validerade filen är. ”Original” betyder den offentliga CDN-stillbilden, inte en bildruta som rippats från videoströmmen. Se<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">original offentlig miniatyrbild</a>.</p>"
+    },
+    {
+      "question": "Kan jag kopiera bildens URL istället för att ladda ner den?",
+      "answer": "Ja. Använd Kopiera bild-URL på 11tik, eller kopiera en verifierad adress från webbläsaren efter att bilden har laddats.",
+      "answerHtml": "<p>Ja. Använd Kopiera bild-URL på 11tik, eller kopiera en verifierad adress från webbläsaren efter att bilden har laddats.</p>"
+    },
+    {
+      "question": "Laddar detta ner YouTube-videofilen?",
+      "answer": "Nej. Endast den offentliga miniatyrbilden fortfarande.",
+      "answerHtml": "<p>Nej. Endast den offentliga miniatyrbilden fortfarande.</p>"
+    },
+    {
+      "question": "Kommer varje video att erbjuda en fil på 1280×720?",
+      "answer": "Nej. Behåll den största offentliga filen som validerar för det ID:t.",
+      "answerHtml": "<p>Nej. Behåll den största offentliga filen som validerar för det ID:t.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skriven av 11tik, utgivare av extraheringsverktyget för webbläsaren. Endast offentliga stillbilder.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+}

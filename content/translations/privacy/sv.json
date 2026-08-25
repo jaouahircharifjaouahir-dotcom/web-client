@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "sv",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Integritetspolicy | 11tik",
+  "description": "Denna policy gäller YouTube Thumbnail Extractor på https://www.11tik.com/ och de språkvärdar som laddar samma extraktor.",
+  "h1": "Integritetspolicy",
+  "ogTitle": "Integritetspolicy",
+  "ogDescription": "Denna policy gäller YouTube Thumbnail Extractor på https://www.11tik.com/ och de språkvärdar som laddar samma extraktor.",
+  "imageAlt": "",
+  "faqHeading": "Vanliga frågor",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Bearbetning i webbläsaren",
+      "html": "<p>När du klistrar in en YouTube-URL läser sidan video-ID:t och kontrollerar URL:er för offentliga miniatyrbilder i din webbläsare. De inklistrade länkarna lagras inte som ett personligt konto på en 11tik-applikationsserver. Extrahering kräver ingen inloggning.</p>"
+    },
+    {
+      "heading": "Valfritt index för delningssida",
+      "html": "<p>Efter en lyckad extrahering kan webbläsaren endast skicka ett offentligt video-ID, titel, taggar härledda från offentlig metadata och en URL för en offentlig miniatyrbild till vår Cloudflare Worker så att videon kan visas på en delningssida och, om den klarar en kvalitetskontroll, i webbplatskartan. Vi ber dig inte att ladda upp bildfilen. Du kan använda extraheringsverktyget utan det indexet om begäran blockeras av din webbläsare.</p>"
+    },
+    {
+      "heading": "Lokal historia",
+      "html": "<p>Extraktorn kan spara de senaste webbadresserna i webbläsarens lokala lagring så att du kan öppna dem igen. Den kopian finns kvar på din enhet. Rensa den med historikkontrollen på sidan eller genom att rensa webbplatsens data i webbläsaren. Det är inte ett molnkonto.</p>"
+    },
+    {
+      "heading": "Hosting-loggar",
+      "html": "<p>Webbplatsen, språkvärdarna och statiska filer hanteras av de webbhotellsleverantörer som används för 11tik.com (inklusive Cloudflare och GitHub Pages). Dessa webbhotell kan behålla vanliga webbloggar som IP-adress, webbläsartyp och vilken sida som begärs, enligt sina egna policyer.</p>"
+    },
+    {
+      "heading": "Tredje parter",
+      "html": "<p>Miniatyrfiler begärs från YouTubes offentliga bildvärdar. Webbplatsen använder Google Analytics 4 (mätnings-ID G-FW7B8NDZZ5) för att räkna besök och åtgärder på sidan, såsom extrahering och nedladdning. Google kan komma att ställa in cookies eller liknande identifierare. Inklistrade YouTube-URL:er skickas inte som analyshändelseparametrar. Teckensnitt eller skript kan också läsas in från CDN:er som används för att visa sidan.</p>\n  <p>Kontaktformuläret levereras av FormSubmit till operatörens e-postadress. FormSubmit kan se namn, e-postadress och meddelande du skickar.</p>"
+    },
+    {
+      "heading": "Kontakta",
+      "html": "<p>Frågor om denna policy: e-post<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>eller använd<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>form.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-miniatyrutdragare</a>·<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

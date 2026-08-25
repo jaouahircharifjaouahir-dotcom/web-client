@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "hr",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Kako koristiti YouTube minijaturu kao istaknutu sliku bloga ili pregled Open Grapha | 11tik",
+  "description": "Potvrdite da javni YouTube još uvijek postoji, a zatim hostirajte kopiju za WordPress, Blogger ili og:image. Nemojte povezivati ​​nagađani maxresdefault URL.",
+  "h1": "Kako koristiti YouTube minijaturu kao istaknutu sliku bloga ili pregled Open Grapha",
+  "ogTitle": "Kako koristiti YouTube minijaturu kao istaknutu sliku bloga ili pregled Open Grapha",
+  "ogDescription": "Potvrdite da javni YouTube još uvijek postoji, a zatim hostirajte kopiju za WordPress, Blogger ili og:image. Nemojte povezivati ​​nagađani maxresdefault URL.",
+  "imageAlt": "Tijek rada od potvrde YouTube minijature na 11tik do njenog prijenosa u WordPress ili postavljanja og:image",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Tijek rada od potvrde YouTube minijature na 11tik do njenog prijenosa u WordPress ili postavljanja og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Usporedba istaknutih slika s WordPressa u odnosu na društvenu karticu Open Grapha korištenjem stvarnih dimenzija piksela",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p>Zalijepite javni YouTube URL u<a href=\"https://www.11tik.com/\">11tik</a>, pričekajte potvrđene veličine, a zatim bilo koje<strong>preuzimanje</strong>prvu fotografiju i prenesite je na svoj CMS ili<strong>kopirajte URL slike</strong>tek nakon što se učita. Za dugotrajne objave, hostirajte vlastitu kopiju. Vruće povezivanje<code>i.ytimg.com</code>Prikladno je za nacrte, a krhko za izradu društvenih kartica.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Potvrdi → kopiraj ili preuzmi → hostiraj → referenciraj u HTML-u / istaknutoj slici / Open Graphu.</p>"
+    },
+    {
+      "heading": "Što je izravni URL minijature",
+      "html": "<p>Izravni URL minijature upućuje na JPEG ili WebP datoteku na YouTubeovoj CDN mreži za slike, na primjer<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>To nije stranica za praćenje. Kako su te adrese izgrađene:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">dobiti URL minijature za YouTube</a>Po čemu se veličine razlikuju:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu i rezoluciju</a>.</p>"
+    },
+    {
+      "heading": "Primjer HTML-a",
+      "html": "<p>Nakon što 11tik potvrdi datoteku, minimalni uzorak označavanja izgleda ovako (zamijenite URL, širinu, visinu i alt stvarnim vrijednostima):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Preferirajte vlastiti hostirani URL u produkciji:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Koristite izvješća o stvarnoj širini i visini 11tik. Nemojte izmišljati 1280×720 kada postoji samo 480×360.</p>"
+    },
+    {
+      "heading": "WordPress tijek rada",
+      "html": "<ol>\n    <li>Izvucite videozapis na 11tik i preuzmite prvu navedenu fotografiju.</li>\n    <li>U WordPressu: Mediji → Dodaj novo → prenesi datoteku.</li>\n    <li>Postavi kao istaknutu sliku objave.</li>\n    <li>U Yoastu, Rank Mathu ili sličnom programu potvrdite da pregled društvenih mreža koristi taj privitak (ili prenesite namjenski originalni izrez).</li>\n    <li>Napišite alternativni tekst koji imenuje videozapis i navodi da je datoteka javna YouTube fotografija, a ne pretrpani popis ključnih riječi.</li>\n  </ol>\n  <p>Izbjegavajte lijepljenje sirovog<code>maxresdefault.jpg</code>put u medijsko polje dok se datoteka ne dokaže. Nedostatak maxres je uobičajen —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Vodič za maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "Blogger i statične stranice",
+      "html": "<p><strong>Bloger:</strong>Prenesite fotografiju u uređivač objava, a zatim ponovno upotrijebite URL te hostane slike s Bloggera za bilo koja polja teme/isječka društvenih mreža koja kontrolirate. Nemojte se oslanjati na nagađanje putanje YouTube CDN-a za objavljenu objavu koja vam je važna.</p>\n  <p><strong>Statički generatori:</strong>Potvrdite (commit) datoteku u svoj repozitorij ili CDN, a zatim postavite oznake front-matter / meta na tu HTTPS imovinu. Nacrte držite na privremenom i.ytimg.com URL-u ako morate, ali pošaljite s vlastitog hosta.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Istaknuta slika i og:image mogu dijeliti datoteku, ali obje trebaju URL koji stvarno postoji.</p>"
+    },
+    {
+      "heading": "Razmatranja otvorenog grafa",
+      "html": "<p>Velike kartice s poveznicama obično ciljaju na otprilike<strong>1200×630</strong>Maksimalna rezolucija YouTubea je obično<strong>1280×720</strong>(16:9), koji strugači obrezuju ili služe za poštanski sandučić. Postavite<code>og:image</code>(i širinu/visinu kada ih vaš stog podržava) u stvarne piksele. Nakon što ispravite neispravan URL, ponovno ga stružite u debuggeru svake platforme - predmemorije se zadržavaju.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Hotlinking u odnosu na preuzimanje",
+      "html": "<table>\n    <thead>\n      <tr><th>Pristup</th><th>Najbolje za</th><th>Rizik</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Vruća veza i.ytimg.com</td><td>Brzi nacrti, istraživačke bilješke</td><td>404, promjene CDN-a, nema kontrole usjeva</td></tr>\n      <tr><td>Preuzimanje + host</td><td>Rangirane objave, stranice proizvoda</td><td>Morate pohraniti datoteku</td></tr>\n      <tr><td>Snimka zaslona igrača</td><td>Gotovo nikad</td><td>UI chrome, pogrešan omjer —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snimka zaslona u odnosu na stvarni snimak</a></td></tr>\n    </tbody>\n  </table>\n  <p>Koraci preuzimanja:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kako preuzeti minijaturu s YouTubea</a>Izbor formata kada postoje i WebP i JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP u odnosu na JPEG</a>.</p>"
+    },
+    {
+      "heading": "Osnove SEO optimizacije za slike za ove fotografije",
+      "html": "<ul>\n    <li><strong>Naziv datoteke:</strong>opisni, kao što su<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alt:</strong>opišite sliku i videozapis; nemojte stavljati \"YouTube thumbnail downloader HD 4K\".</li>\n    <li><strong>Dimenzije:</strong>deklarirati stvarnu širinu/visinu.</li>\n    <li><strong>Samo HTTPS:</strong>Scraperi odbacuju URL-ove slika s miješanim sadržajem.</li>\n    <li><strong>Kompresija:</strong>Ako je potrebno, lagano ponovno kodirajte za svoj CDN; nemojte povećavati hqdefault na lažne maksimalne rezolucije.</li>\n  </ul>"
+    },
+    {
+      "heading": "Ponovna upotreba i autorska prava (nije pravni savjet)",
+      "html": "<p>Javni CDN URL nije licenca. Ugrađivanje YouTube playera razlikuje se od kopiranja fotografije u vašu hero sliku. Poštena upotreba temelji se na činjenicama. Sigurniji urednički obrazac: ilustrirajte komentar o tom videu, navedite kanal, povežite stranicu za gledanje i nemojte prodavati sliku niti je koristiti kao vlastitu sliku kanala. Službena pomoć za prilagođene minijature:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prenesite prilagođene minijature videozapisa</a>Pravila stranice:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    },
+    {
+      "heading": "Rješavanje problema",
+      "html": "<ul>\n    <li>Neispravna društvena kartica → pogođene maksimalne vrijednosti; ponovno izdvojite i hostirajte validiranu datoteku.</li>\n    <li>Mekana / mutna kartica → koristili ste hqdefault; provjerite veličine.</li>\n    <li>Pogrešno izrezivanje → omogućite namjensko izrezivanje od 1200×630 s prave fotografije u omjeru 16:9.</li>\n    <li>Ljepljiva predmemorija → prisilno ponovno struganje nakon promjene URL-a.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sljedeći korak",
+      "html": "<p>Potvrdite fotografiju na<a href=\"https://www.11tik.com/\">11tik ekstraktor</a>, preuzmite ga, prenesite na svoju stranicu i usmjerite istaknutu sliku / og:image na svoju HTTPS datoteku.</p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mogu li zalijepiti URL i.ytimg.com u WordPress?",
+      "answer": "Neka polja ga prihvaćaju, ali prijenos potvrđene lokalne datoteke pouzdaniji je za istaknute slike i preglede na društvenim mrežama.",
+      "answerHtml": "<p>Neka polja ga prihvaćaju, ali prijenos potvrđene lokalne datoteke pouzdaniji je za istaknute slike i preglede na društvenim mrežama.</p>"
+    },
+    {
+      "question": "Trebam li maxresdefault za Open Graph?",
+      "answer": "Ne. Treba vam najveći validirani javni i dalje. Nedostatak maxres je normalan.",
+      "answerHtml": "<p>Ne. Treba vam najveći validirani javni i dalje. Nedostatak maxres je normalan.</p>"
+    },
+    {
+      "question": "Treba li alternativni tekst spominjati YouTube?",
+      "answer": "Da kada pomaže u opisu sadržaja („Javna YouTube minijatura za …“). Nemojte previše koristiti ključne riječi.",
+      "answerHtml": "<p>Da kada pomaže u opisu sadržaja („Javna YouTube minijatura za …“). Nemojte previše koristiti ključne riječi.</p>"
+    },
+    {
+      "question": "Je li hotlinkanje ikada u redu?",
+      "answer": "Za privremene nacrte ili interne bilješke, da. Za trajnu javnu objavu, pohranite kopiju.",
+      "answerHtml": "<p>Za privremene nacrte ili interne bilješke, da. Za trajnu javnu objavu, pohranite kopiju.</p>"
+    },
+    {
+      "question": "Mogu li koristiti fotografiju kao naslovnicu svog kanala?",
+      "answer": "Ne bez prava. To je tuđe umjetničko djelo.",
+      "answerHtml": "<p>Ne bez prava. To je tuđe umjetničko djelo.</p>"
+    },
+    {
+      "question": "Što ako Studio samo promijeni prilagođenu minijaturu?",
+      "answer": "Pričekajte obradu, a zatim ponovno provjerite 11tik prije ažuriranja kopije CMS-a. Povezano: Minijature u YouTube Studiju.",
+      "answerHtml": "<p>Pričekajte obradu, a zatim ponovno provjerite 11tik prije ažuriranja kopije CMS-a. Povezano:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Minijature YouTube Studija</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+}

@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "pt",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Como extrair miniaturas de um URL de canal do YouTube | 11tik",
+  "description": "Cole o URL de um canal público do YouTube em 11tik Bulk para expandir os uploads públicos recentes e, em seguida, baixe cada imagem de melhor qualidade. Isso serve para pesquisa sobre embalagens, não para clonar a arte personalizada de outro canal.",
+  "h1": "Como extrair miniaturas do URL de um canal do YouTube",
+  "ogTitle": "Como extrair miniaturas do URL de um canal do YouTube",
+  "ogDescription": "Cole o URL de um canal público do YouTube em 11tik Bulk para expandir os uploads públicos recentes e, em seguida, baixe cada imagem de melhor qualidade. Isso serve para pesquisa sobre embalagens, não para clonar a arte personalizada de outro canal.",
+  "imageAlt": "Extrair miniaturas de um URL de canal do YouTube — últimos uploads públicos em 11tik",
+  "faqHeading": "Perguntas frequentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Extrair miniaturas de um URL de canal do YouTube — últimos uploads públicos em 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Posso obter miniaturas de um canal inteiro do YouTube?",
+      "html": "<p>Você pode obter fotos da versão mais recente.<em>público</em>uploads que expõem o ID do vídeo. 11tik não coleta todos os vídeos que um canal já publicou e não ignora as assinaturas. Na página inicial, ative a opção \"Em massa\" e cole o URL de um canal, como por exemplo:<code>youtube.com/@handle</code>ou<code>/channel/UC…</code>e deixe a ferramenta expandir a lista pública no estilo RSS. Em seguida, extraia os dados como faria com uma lista digitada. O limite permanece em 25 URLs por execução, para que o navegador continue utilizável.</p>\n  <p>Isso é diferente de salvar um único link de visualização. O fluxo de URL única está em<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Como baixar uma miniatura do YouTube</a>. O processamento em massa linha por linha sem canal está em<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">download em lote</a>.</p>"
+    },
+    {
+      "heading": "Quais URLs de canal funcionam?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>quando a página pública expõe um ID de canal</li>\n    <li>Legado<code>/user/name</code>caminhos que ainda resolvem</li>\n  </ul>\n  <p>Um URL /playlist não é um canal. Cole os links individuais de visualização da playlist. Um identificador que nunca é resolvido para um ID do Canal não retorna vídeos; abra o canal em um navegador normal e copie o URL canônico do canal da barra de endereços.</p>"
+    },
+    {
+      "heading": "Como extrair miniaturas de canais no 11tik",
+      "html": "<ol>\n    <li>Abrir<a href=\"https://www.11tik.com/\">11tik</a>e clique em Em massa.</li>\n    <li>Cole o URL de um canal público. Você pode adicionar mais links para assistir nas linhas seguintes.</li>\n    <li>Inicie a extração. Aguarde até que a ferramenta substitua a linha do canal por URLs de visualização pública recentes e, em seguida, extraia as imagens estáticas.</li>\n    <li>Faça o download de cada imagem de melhor qualidade, ou baixe o arquivo zip de maior qualidade, ou exporte o arquivo CSV (id, título, URL de compartilhamento, URL da imagem) para um registro de pesquisa.</li>\n  </ol>\n  <p>Compartilhe os links após uma extração bem-sucedida.<code>/thumb/VIDEO_ID</code>Quando o portal de qualidade tem um título, tags e uma miniatura ativa, essas páginas são para conteúdo exclusivo, não uma segunda página inicial.</p>"
+    },
+    {
+      "heading": "O que 11tik não fará",
+      "html": "<ul>\n    <li>Faça o download dos vídeos ou do áudio. Somente imagens estáticas.</li>\n    <li>Listar uploads não listados ou privados.</li>\n    <li>Garantir resolução máxima padrão para todos os vídeos recentes. Vídeos mais antigos ou de baixa resolução serão exibidos em alta qualidade (HQ) ou resolução padrão (SD).<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Conceda direitos de reutilização da arte. O estudo de uma grade de embalagens públicas é o uso pretendido para fins de pesquisa. Reenviar a imagem de um concorrente como sua miniatura personalizada constitui um problema de direitos autorais e de política.<a href=\"https://www.11tik.com/copyright\">Direitos autorais e de uso</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Como isso ajuda na pesquisa sem páginas de entrada",
+      "html": "<p>Extrair conteúdo de um canal é uma tarefa simples: capturar imagens públicas recentes de uma só vez. Não se trata de gerar uma página específica para cada marca concorrente. Você utiliza a ferramenta, salva um arquivo zip ou CSV e anota seus próprios comentários. Se publicar comentários, dê os créditos aos canais e inclua links para suas páginas de exibição. As regras de upload de miniaturas do YouTube são...<em>seu</em>canais estão em<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">miniaturas de vídeo personalizadas</a>.</p>"
+    },
+    {
+      "heading": "Solução de problemas",
+      "html": "<p>Lista vazia: o feed do canal não retornou IDs públicos (canal encerrado ou um identificador que o resolvedor não conseguiu mapear). Tente acessar o URL do canal do UC pelo layout para desktop do YouTube.</p>\n  <p>Algumas cartas estão faltando: esses uploads ainda não têm um status público ou o gateway rejeitou uma extração incompleta. Execute novamente um único URL de monitoramento. Privacidade dos links colados:<a href=\"https://www.11tik.com/p/privacy.html\">Privacidade</a>.</p>\n  <p>Ferramenta de extração versus ferramenta de design: 11tik não cria arte de capa.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extrator vs. fabricante</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrair imagens estáticas do canal público em 11tik →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Posso obter miniaturas de um canal inteiro do YouTube?",
+      "answer": "Sim, para uploads públicos recentes. Cole o URL do canal em 11tik Bulk. Vídeos privados e exclusivos para membros não são listados.",
+      "answerHtml": "Sim, para uploads públicos recentes. Cole o URL do canal em 11tik Bulk. Vídeos privados e exclusivos para membros não são listados."
+    },
+    {
+      "question": "Quais URLs de canal funcionam?",
+      "answer": "URLs públicas /channel/UC…, muitas URLs @handle e alguns caminhos legados /user/. Listas de reprodução não são canais.",
+      "answerHtml": "URLs públicas /channel/UC…, muitas URLs @handle e alguns caminhos legados /user/. Listas de reprodução não são canais."
+    },
+    {
+      "question": "Isso baixa os vídeos?",
+      "answer": "Não. 11tik lista apenas imagens públicas que o YouTube já hospeda.",
+      "answerHtml": "Não. 11tik lista apenas imagens públicas que o YouTube já hospeda."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>.</p>"
+}

@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "tl",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Pang-extract ng thumbnail vs. tagagawa | 11tik",
+  "description": "Ang isang thumbnail extractor ay nagse-save ng publikong hino-host na ng YouTube. Ang isang thumbnail maker (Canva, Photoshop, o upload ng YouTube Studio) ay lumilikha ng isang bagong larawan na pagmamay-ari mo. Ang 11tik ay isang extractor. Hindi ito nagdidisenyo ng sining at hindi ito nag-a-upload ng custom na file sa iyong channel.",
+  "h1": "Pang-extract ng thumbnail vs. tagagawa",
+  "ogTitle": "Pang-extract ng thumbnail vs. tagagawa",
+  "ogDescription": "Ang isang thumbnail extractor ay nagse-save ng publikong hino-host na ng YouTube. Ang isang thumbnail maker (Canva, Photoshop, o upload ng YouTube Studio) ay lumilikha ng isang bagong larawan na pagmamay-ari mo. Ang 11tik ay isang extractor. Hindi ito nagdidisenyo ng sining at hindi ito nag-a-upload ng custom na file sa iyong channel.",
+  "imageAlt": "11tik extractor na ginagamit para i-save ang isang pampublikong thumbnail sa YouTube",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik extractor na ginagamit para i-save ang isang pampublikong thumbnail sa YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ano ang isang thumbnail extractor?",
+      "html": "<p>Binabasa ng isang extractor ang isang pampublikong URL ng video, hinahanap ang mga file ng imahe sa CDN ng YouTube, at hinahayaan kang mag-preview, mag-download, o kopyahin ang isang gumaganang URL ng imahe. Inililista lamang nito ang mga umiiral na laki. Hindi nito niri-rip ang mga frame mula sa video stream.</p>"
+    },
+    {
+      "heading": "Ano ang isang tagagawa ng thumbnail?",
+      "html": "<p>Ang isang maker ay isang daloy ng trabaho sa disenyo. Ikaw ang gagawa ng type, faces, at contrast, mag-e-export ng 16:9 still, pagkatapos ay ia-upload ito sa YouTube Studio. Ikaw ang may-ari ng file na iyon (nakabatay sa mga font, larawan, at mga panuntunan sa platform). Ang pag-extract ng still ng isang kakumpitensya at muling pag-upload nito ay hindi isang daloy ng trabaho sa paggawa.</p>"
+    },
+    {
+      "heading": "Kailan ako dapat gumamit ng extractor?",
+      "html": "<p>Gamitin<a href=\"https://www.11tik.com/\">11tik</a>kapag kailangan mo ang live na pampublikong file: pananaliksik, isang backup ng sarili mong nailathalang still, isang itinatampok na larawan ng CMS, o isang Open Graph check. I-paste ang isang pampublikong relo, Shorts, youtu.be, URL at i-download ang pinakamataas na laki na aktwal na nagbabalik ng isang larawan.</p>"
+    },
+    {
+      "heading": "Kailan ako dapat gumamit ng maker?",
+      "html": "<p>Gumamit ng design tool kapag gumagawa ka ng orihinal na packaging para sa isang bagong upload o pag-refresh ng thumbnail. Sa Studio nagiging opisyal na custom thumbnail ang file na iyon. Pagkatapos maproseso ng YouTube, maaari mong i-paste ang watch URL sa 11tik para kumpirmahin kung aling mga pampublikong laki ang umiiral, kabilang ang mga maxres noong inilathala ito ng YouTube.</p>"
+    },
+    {
+      "heading": "Paano nagkakasundo ang dalawa?",
+      "html": "<ol>\n    <li>Kumuha ng mga pampublikong sanggunian mula sa mga video sa iyong niche (pananaliksik lamang).</li>\n    <li>Magdisenyo ng orihinal na larawan gamit ang maker tool.</li>\n    <li>I-upload mo na sa YouTube Studio.</li>\n    <li>Kumpirmahin ang mga pampublikong CDN file gamit ang 11tik pagkatapos ng pagproseso.</li>\n  </ol>\n  <p>Kaugnay:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Thumbnail ng YouTube Studio 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot vs totoong thumbnail</a>.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Buksan ang pangbunot</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ano ang isang thumbnail extractor?",
+      "answer": "Isang tool na nagse-save ng publiko na hino-host na ng YouTube. Inililista lamang ng 11tik ang mga umiiral na file ng imahe.",
+      "answerHtml": "Isang tool na nagse-save ng publiko na hino-host na ng YouTube. Inililista lamang ng 11tik ang mga umiiral na file ng imahe."
+    },
+    {
+      "question": "Kailan ako dapat gumamit ng maker?",
+      "answer": "Kapag gumawa ka ng orihinal na artwork na ia-upload bilang custom na thumbnail sa YouTube Studio.",
+      "answerHtml": "Kapag gumawa ka ng orihinal na artwork na ia-upload bilang custom na thumbnail sa YouTube Studio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+}

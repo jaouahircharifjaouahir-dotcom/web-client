@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "da",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Skærmbillede vs. rigtigt YouTube-miniaturebillede: hvilken fil skal du gemme? | 11tik",
+  "description": "Et telefonskærmbillede af afspilleren er ikke miniaturebilledet fra YouTube-værterne. Den virkelige offentlighed lever stadig på i.ytimg.com. Brug det til blogs, Open Graph og research – skærmbilleder tilføjer brugergrænseflade-chrome, komprimering og det forkerte billedformat.",
+  "h1": "Skærmbillede vs. rigtigt YouTube-miniaturebillede: hvilken fil skal du gemme?",
+  "ogTitle": "Skærmbillede vs. rigtigt YouTube-miniaturebillede: hvilken fil skal du gemme?",
+  "ogDescription": "Et telefonskærmbillede af afspilleren er ikke miniaturebilledet fra YouTube-værterne. Den virkelige offentlighed lever stadig på i.ytimg.com. Brug det til blogs, Open Graph og research – skærmbilleder tilføjer brugergrænseflade-chrome, komprimering og det forkerte billedformat.",
+  "imageAlt": "Sammenligning af et afspillerskærmbillede versus en rigtig offentlig YouTube-miniaturefil",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Sammenligning af et afspillerskærmbillede versus en rigtig offentlig YouTube-miniaturefil",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hvad er forskellen på et skærmbillede og et rigtigt miniaturebillede?",
+      "html": "<p>Et skærmbillede optager din skærm, inklusive afspillerens Chrome, undertekster og enhedsskalering. Et rigtigt miniaturebillede er den JPEG- eller WebP-fil, som YouTube har offentliggjort for det pågældende video-ID. Kun CDN-filen har en stabil URL og kendt pixelstørrelse.</p>"
+    },
+    {
+      "heading": "Hvorfor fejler skærmbilleder i Google Billeder og sociale forhåndsvisninger?",
+      "html": "<p>De har ofte det forkerte billedformat, inkluderer brugergrænsefladen og komprimeres to gange. Open Graph og mange CMS-felter ønsker et 16:9-stillbillede omkring 1280×720. Det matcher maxresdefault, når det findes – se<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide til størrelse på miniaturebilleder</a>.</p>"
+    },
+    {
+      "heading": "Hvordan gemmer jeg det rigtige miniaturebillede i stedet?",
+      "html": "<ol>\n    <li>Kopiér den offentlige video-URL, ikke et skærmbillede.</li>\n    <li>Indsæt det i<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Download den første offentlige fil på listen, eller kopier billedets URL.</li>\n  </ol>"
+    },
+    {
+      "heading": "Hvornår er et skærmbillede stadig nyttigt?",
+      "html": "<p>Brug kun et skærmbillede til at dokumentere en fejl i brugergrænsefladen eller et øjeblik inde i videoen. Brug det ikke som det officielle miniaturebillede, en bloghelt eller et delingsbillede, hvis der stadig findes et offentligt billede.</p>\n  <p><a href=\"https://www.11tik.com/\">Få det rigtige offentlige miniaturebillede →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hvad er forskellen på et skærmbillede og et rigtigt miniaturebillede?",
+      "answer": "Et skærmbillede optager din skærm og afspillerens Chrome. Et rigtigt miniaturebillede er den JPEG- eller WebP-fil, som YouTube hoster på i.ytimg.com for det pågældende video-ID.",
+      "answerHtml": "Et skærmbillede optager din skærm og afspillerens Chrome. Et rigtigt miniaturebillede er den JPEG- eller WebP-fil, som YouTube hoster på i.ytimg.com for det pågældende video-ID."
+    },
+    {
+      "question": "Hvorfor fejler skærmbilleder i Google Billeder og sociale forhåndsvisninger?",
+      "answer": "De har ofte det forkerte billedformat, ekstra brugergrænseflade og ekstra komprimering. CMS- og Open Graph-felter forventer et rent offentligt stillbillede i 16:9-format.",
+      "answerHtml": "De har ofte det forkerte billedformat, ekstra brugergrænseflade og ekstra komprimering. CMS- og Open Graph-felter forventer et rent offentligt stillbillede i 16:9-format."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

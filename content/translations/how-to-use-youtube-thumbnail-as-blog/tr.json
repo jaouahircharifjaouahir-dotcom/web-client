@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "tr",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "YouTube Küçük Resmini Blog Öne Çıkan Görseli veya Open Graph Önizlemesi Olarak Nasıl Kullanabilirsiniz? | 11tik",
+  "description": "Herkese açık bir YouTube kanalının hala mevcut olduğunu doğrulayın, ardından WordPress, Blogger veya og:image için bir kopyasını barındırın. Tahmin edilen maxresdefault URL'sine doğrudan bağlantı vermeyin.",
+  "h1": "YouTube küçük resmini blogunuzda öne çıkan görsel veya Open Graph önizlemesi olarak nasıl kullanabilirsiniz?",
+  "ogTitle": "YouTube küçük resmini blogunuzda öne çıkan görsel veya Open Graph önizlemesi olarak nasıl kullanabilirsiniz?",
+  "ogDescription": "Herkese açık bir YouTube kanalının hala mevcut olduğunu doğrulayın, ardından WordPress, Blogger veya og:image için bir kopyasını barındırın. Tahmin edilen maxresdefault URL'sine doğrudan bağlantı vermeyin.",
+  "imageAlt": "11tik'te YouTube küçük resmini onaylamaktan WordPress'e yüklemeye veya og:image ayarını yapmaya kadar olan iş akışı.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "11tik'te YouTube küçük resmini onaylamaktan WordPress'e yüklemeye veya og:image ayarını yapmaya kadar olan iş akışı.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "WordPress'in öne çıkan görsel yükleme özelliği ile gerçek piksel boyutlarını kullanan Open Graph sosyal kartının yan yana karşılaştırması.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>Herkese açık bir YouTube URL'sini yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Doğrulanmış boyutları bekleyin, ardından ya<strong>indirmek</strong>İlk fotoğrafı çekip içerik yönetim sisteminize yükleyin veya<strong>Resim URL'sini kopyala</strong>Yalnızca yüklendikten sonra. Kalıcı gönderiler için kendi kopyanızı barındırın. Hotlinking<code>i.ytimg.com</code>Taslaklar için uygundur ancak sosyal kartların üretimi için hassastır.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Onayla → kopyala veya indir → barındır → HTML'de / öne çıkan görselde / Open Graph'ta referans göster.</p>"
+    },
+    {
+      "heading": "Doğrudan küçük resim URL'si nedir?",
+      "html": "<p>Örneğin, doğrudan küçük resim URL'si, YouTube'un resim CDN'sinde bulunan bir JPEG veya WebP dosyasına işaret eder.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Bu, izleme sayfası değil. Bu adresler şu şekilde oluşturuluyor:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube küçük resim URL'si alın</a>Boyutlar arasındaki farklar şunlardır:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">boyut ve çözünürlük kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "HTML örneği",
+      "html": "<p>11tik bir dosyayı onayladıktan sonra, minimal bir işaretleme kalıbı şu şekilde görünür (URL, genişlik, yükseklik ve alt değerlerini gerçek değerlerle değiştirin):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Üretim ortamında kendi barındırdığınız URL'yi tercih edin:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>11tik raporlarındaki gerçek genişlik ve yükseklik değerlerini kullanın. Yalnızca 480×360 çözünürlük mevcutken 1280×720 gibi bir değer uydurmayın.</p>"
+    },
+    {
+      "heading": "WordPress iş akışı",
+      "html": "<ol>\n    <li>11tik'deki videoyu çıkarın ve listedeki ilk kareyi indirin.</li>\n    <li>WordPress'te: Medya → Yeni Ekle → dosyayı yükleyin.</li>\n    <li>Bu resmi gönderinin öne çıkan görseli olarak ayarlayın.</li>\n    <li>Yoast, Rank Math veya benzeri bir programda, sosyal önizlemenin bu eklentiyi kullandığını doğrulayın (veya özel bir orijinal dosya yükleyin).</li>\n    <li>Videoyu adlandıran ve dosyanın herkese açık bir YouTube fotoğrafı olduğunu, anahtar kelime listesiyle doldurulmadığını belirten bir alternatif metin yazın.</li>\n  </ol>\n  <p>Ham bir dosyayı yapıştırmaktan kaçının.<code>maxresdefault.jpg</code>Dosya doğrulanana kadar medya alanına giden yol. Maksimum çözünürlüğün eksik olması yaygındır.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Blogger ve statik siteler",
+      "html": "<p><strong>Blogger:</strong>Fotoğrafı gönderi düzenleyicisine yükleyin, ardından bu Blogger görsel URL'sini kontrol ettiğiniz herhangi bir tema/sosyal medya snippet alanı için yeniden kullanın. Önemsediğiniz yayınlanmış bir gönderi için tahmini bir YouTube CDN yoluna güvenmeyin.</p>\n  <p><strong>Statik jeneratörler:</strong>Dosyayı deponuza veya CDN'inize kaydedin, ardından ön bilgi/meta etiketlerini bu HTTPS varlığına ayarlayın. Taslakları gerekirse geçici bir i.ytimg.com URL'sinde saklayın, ancak kendi sunucunuzla birlikte gönderin.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Öne çıkan görsel ve og:image aynı dosyayı paylaşabilir, ancak her ikisinin de gerçekten var olan bir URL'ye ihtiyacı vardır.</p>"
+    },
+    {
+      "heading": "Açık Grafik hususları",
+      "html": "<p>Büyük bağlantı kartları genellikle yaklaşık olarak şu hedeflere yöneliktir:<strong>1200×630</strong>YouTube'un maksimum çözünürlüğü genellikle şöyledir:<strong>1280×720</strong>(16:9), bu da kazıyıcıların kırpma veya letterbox yapmasına olanak tanır. Ayarla<code>og:image</code>(ve yığınınız destekliyorsa genişlik/yükseklik değerlerini) gerçek piksellere dönüştürün. Bozuk bir URL'yi düzelttikten sonra, her platformun hata ayıklayıcısında yeniden kazıma işlemi yapın; önbellekler kalıcıdır.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Hotlinking ile indirme arasındaki fark",
+      "html": "<table>\n    <thead>\n      <tr><th>Yaklaşmak</th><th>En iyisi</th><th>Risk</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hotlink i.ytimg.com</td><td>Hızlı taslaklar, araştırma notları</td><td>404 hataları, CDN değişiklikleri, ürün kontrolü yok</td></tr>\n      <tr><td>İndir + barındır</td><td>Sıralamada yer alan gönderiler, ürün sayfaları</td><td>Dosyayı saklamanız gerekiyor.</td></tr>\n      <tr><td>Oyuncu ekran görüntüsü</td><td>Neredeyse hiç</td><td>Kullanıcı arayüzü kromu, yanlış oran —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ekran görüntüsü ile gerçek arasındaki fark</a></td></tr>\n    </tbody>\n  </table>\n  <p>İndirme adımları:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube küçük resmini nasıl indirebilirim?</a>Hem WebP hem de JPEG formatlarının mevcut olduğu durumlarda format seçimi:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP ve JPEG karşılaştırması</a>.</p>"
+    },
+    {
+      "heading": "Bu fotoğraflar için görsel SEO temelleri",
+      "html": "<ul>\n    <li><strong>Dosya adı:</strong>tanımlayıcı, örneğin<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alternatif:</strong>Görüntü ve videoyu tanımlayın; \"YouTube thumbnail downloader HD 4K\" gibi gereksiz ifadeler kullanmayın.</li>\n    <li><strong>Boyutlar:</strong>Gerçek genişlik/yüksekliği belirtin.</li>\n    <li><strong>Yalnızca HTTPS:</strong>Karışık içerikli resim URL'leri, veri kazıyıcılar tarafından silinir.</li>\n    <li><strong>Sıkıştırma:</strong>Gerekirse CDN'niz için hafifçe yeniden kodlayın; hqdefault değerini sahte maxres'e yükseltmeyin.</li>\n  </ul>"
+    },
+    {
+      "heading": "Yeniden kullanım ve telif hakkı (yasal tavsiye niteliğinde değildir)",
+      "html": "<p>Herkese açık bir CDN URL'si lisans anlamına gelmez. YouTube oynatıcısını yerleştirmek, görüntüyü ana görselinize kopyalamaktan farklıdır. Adil kullanım, olgulara özgüdür. Daha güvenli yayın modeli: video hakkında yorum ekleyin, kanalı belirtin, izleme sayfasına bağlantı verin ve görüntüyü satmayın veya kendi kanal resminiz olarak kullanmayın. Resmi özel küçük resim yardımı:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Özel video küçük resimleri yükleyin</a>Site kuralları:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    },
+    {
+      "heading": "Sorun giderme",
+      "html": "<ul>\n    <li>Bozuk sosyal kart → tahmini maksimum çözünürlük; yeniden çıkar ve doğrulanmış bir dosya barındır.</li>\n    <li>Yumuşak/bulanık kart → hqdefault kullandınız; boyutları kontrol edin.</li>\n    <li>Yanlış kırpma → gerçek bir 16:9 fotoğraf karesinden özel bir 1200×630 kırpma dosyası sağlayın.</li>\n    <li>Kalıcı önbellek → URL değişikliğinden sonra yeniden veri kazıma işlemini zorla.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sonraki adım",
+      "html": "<p>Fotoğrafın hala üzerinde olduğunu doğrulayın.<a href=\"https://www.11tik.com/\">11tik çıkarıcı</a>İndirin, sitenize yükleyin ve HTTPS dosyanızda featured image / og:image özelliğini kullanın.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "i.ytimg.com URL'sini WordPress'e yapıştırabilir miyim?",
+      "answer": "Bazı alanlar bunu kabul ediyor, ancak öne çıkan görseller ve sosyal medya önizlemeleri için onaylanmış yerel bir dosya yüklemek daha güvenilir.",
+      "answerHtml": "<p>Bazı alanlar bunu kabul ediyor, ancak öne çıkan görseller ve sosyal medya önizlemeleri için onaylanmış yerel bir dosya yüklemek daha güvenilir.</p>"
+    },
+    {
+      "question": "Open Graph için maxresdefault'a ihtiyacım var mı?",
+      "answer": "Hayır. Hala en büyük doğrulanmış halka açık veritabanına ihtiyacınız var. Maksimum çözünürlüğün eksik olması normal.",
+      "answerHtml": "<p>Hayır. Hala en büyük doğrulanmış halka açık veritabanına ihtiyacınız var. Maksimum çözünürlüğün eksik olması normal.</p>"
+    },
+    {
+      "question": "Alternatif metinde YouTube'dan bahsedilmeli mi?",
+      "answer": "Evet, içeriği tanımlamaya yardımcı olduğunda (\"Herkese açık YouTube küçük resmi...\"). Anahtar kelime doldurma yapmayın.",
+      "answerHtml": "<p>Evet, içeriği tanımlamaya yardımcı olduğunda (\"Herkese açık YouTube küçük resmi...\"). Anahtar kelime doldurma yapmayın.</p>"
+    },
+    {
+      "question": "Hotlink kullanımı hiç kabul edilebilir mi?",
+      "answer": "Geçici taslaklar veya dahili notlar için evet. Kalıcı ve herkese açık bir paylaşım için bir kopyasını barındırın.",
+      "answerHtml": "<p>Geçici taslaklar veya dahili notlar için evet. Kalıcı ve herkese açık bir paylaşım için bir kopyasını barındırın.</p>"
+    },
+    {
+      "question": "Bu fotoğrafı kanal kapağı olarak kullanabilir miyim?",
+      "answer": "Haksız değil. Bu başkasının sanat eseri.",
+      "answerHtml": "<p>Haksız değil. Bu başkasının sanat eseri.</p>"
+    },
+    {
+      "question": "Peki ya Studio özel küçük resmi değiştirseydi?",
+      "answer": "İşlemin tamamlanmasını bekleyin, ardından CMS kopyanızı güncellemeden önce 11tik'ü tekrar kontrol edin. İlgili konu: YouTube Studio küçük resimleri.",
+      "answerHtml": "<p>İşlemin tamamlanmasını bekleyin, ardından CMS kopyanızı güncellemeden önce 11tik'yi tekrar kontrol edin. İlgili:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Stüdyo küçük resimleri</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+}

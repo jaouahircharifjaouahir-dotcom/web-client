@@ -1,0 +1,819 @@
+{
+  "generatedAt": "2026-08-24T20:48:17.746Z",
+  "gtxSupported": 135,
+  "gtxGap": 47,
+  "gapLocales": [
+    "aa",
+    "ae",
+    "an",
+    "av",
+    "bi",
+    "bo",
+    "ce",
+    "ch",
+    "cr",
+    "cu",
+    "fo",
+    "gv",
+    "ho",
+    "hz",
+    "ia",
+    "ie",
+    "ii",
+    "ik",
+    "io",
+    "iu",
+    "kg",
+    "ki",
+    "kj",
+    "kl",
+    "kr",
+    "ks",
+    "kv",
+    "kw",
+    "lu",
+    "mh",
+    "na",
+    "nd",
+    "ng",
+    "nv",
+    "oj",
+    "os",
+    "pi",
+    "rm",
+    "sc",
+    "se",
+    "to",
+    "ty",
+    "ve",
+    "vo",
+    "wa",
+    "wo",
+    "za"
+  ],
+  "rows": [
+    {
+      "locale": "aa",
+      "name": "Afar",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ae",
+      "name": "Avestan",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "an",
+      "name": "Aragonese",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "av",
+      "name": "Avaric",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "bi",
+      "name": "Bislama",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-bi",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-bi",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "bo",
+      "name": "Tibetan",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "bod_Tibt",
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "bod_Tibt",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "ce",
+      "name": "Chechen",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "ch",
+      "name": "Chamorro",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "cr",
+      "name": "Cree",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "cu",
+      "name": "Church Slavic",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "fo",
+      "name": "Faroese",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "fao_Latn",
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "fao_Latn",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "gv",
+      "name": "Manx",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-gv",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-gv",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "ho",
+      "name": "Hiri Motu",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-ho",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-ho",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "hz",
+      "name": "Herero",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ia",
+      "name": "Interlingua",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ie",
+      "name": "Interlingue",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ii",
+      "name": "Sichuan Yi",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ik",
+      "name": "Inupiaq",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "io",
+      "name": "Ido",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "iu",
+      "name": "Inuktitut",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "kg",
+      "name": "Kongo",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "kon_Latn",
+      "opusEnMul": false,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-kg",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "kon_Latn",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "ki",
+      "name": "Kikuyu",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "kik_Latn",
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "kik_Latn",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "kj",
+      "name": "Kuanyama",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-kj",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-kj",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "kl",
+      "name": "Kalaallisut",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "kr",
+      "name": "Kanuri",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ks",
+      "name": "Kashmiri",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "kas_Deva",
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "kas_Deva",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "kv",
+      "name": "Komi",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "kw",
+      "name": "Cornish",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "lu",
+      "name": "Luba-Katanga",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-lu",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-lu",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "mh",
+      "name": "Marshallese",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-mh",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-mh",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "na",
+      "name": "Nauru",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "nd",
+      "name": "North Ndebele",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "ng",
+      "name": "Ndonga",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-ng",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-ng",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "nv",
+      "name": "Navajo",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "oj",
+      "name": "Ojibwa",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "os",
+      "name": "Ossetian",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "pi",
+      "name": "Pali",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "rm",
+      "name": "Romansh",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "sc",
+      "name": "Sardinian",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "srd_Latn",
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "srd_Latn",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "se",
+      "name": "Northern Sami",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "to",
+      "name": "Tonga",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-to",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-to",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "ty",
+      "name": "Tahitian",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": "Helsinki-NLP/opus-mt-en-ty",
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_direct",
+        "model": "Helsinki-NLP/opus-mt-en-ty",
+        "confidence": "medium"
+      }
+    },
+    {
+      "locale": "ve",
+      "name": "Venda",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "vo",
+      "name": "Volapük",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    },
+    {
+      "locale": "wa",
+      "name": "Walloon",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "opus_mt_en_mul",
+        "model": "Helsinki-NLP/opus-mt-en-mul",
+        "confidence": "medium-low"
+      }
+    },
+    {
+      "locale": "wo",
+      "name": "Wolof",
+      "gtx": false,
+      "nllb": true,
+      "nllbCode": "wol_Latn",
+      "opusEnMul": true,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": "local_nllb",
+        "model": "wol_Latn",
+        "confidence": "high"
+      }
+    },
+    {
+      "locale": "za",
+      "name": "Zhuang",
+      "gtx": false,
+      "nllb": false,
+      "nllbCode": null,
+      "opusEnMul": false,
+      "opusDirect": null,
+      "libre": false,
+      "seamless": false,
+      "best": {
+        "provider": null,
+        "status": "NO VERIFIED LOCAL MT MODEL"
+      }
+    }
+  ],
+  "summary": {
+    "nllbCoversGap": 7,
+    "opusEnMulCoversGap": 19,
+    "opusDirectCoversGap": 10,
+    "libreCoversGap": 0,
+    "seamlessCoversGap": 0,
+    "bestVerifiedCoverage": 28,
+    "stillImpossible": 19,
+    "impossibleLocales": [
+      "aa",
+      "ae",
+      "av",
+      "cr",
+      "cu",
+      "hz",
+      "ia",
+      "ie",
+      "ii",
+      "ik",
+      "iu",
+      "kr",
+      "kv",
+      "nd",
+      "oj",
+      "pi",
+      "ve",
+      "vo",
+      "za"
+    ]
+  }
+}

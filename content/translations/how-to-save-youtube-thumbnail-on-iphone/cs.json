@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "cs",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Jak uložit miniaturu videa z YouTube na iPhonu a Androidu (2026) | 11tik",
+  "description": "Uložte si veřejný statický záběr z YouTube na iPhone nebo Android bez snímku obrazovky a bez stahování z obchodu s aplikacemi. Vložte URL adresu veřejného videa nebo krátkého videa do 11tik v Safari nebo Chrome a poté si stáhněte největší soubor s obrázkem, který YouTube již hostuje.",
+  "h1": "Jak uložit miniaturu videa z YouTube na iPhonu a Androidu (2026)",
+  "ogTitle": "Jak uložit miniaturu videa z YouTube na iPhonu a Androidu (2026)",
+  "ogDescription": "Uložte si veřejný statický záběr z YouTube na iPhone nebo Android bez snímku obrazovky a bez stahování z obchodu s aplikacemi. Vložte URL adresu veřejného videa nebo krátkého videa do 11tik v Safari nebo Chrome a poté si stáhněte největší soubor s obrázkem, který YouTube již hostuje.",
+  "imageAlt": "Uložte si miniaturu YouTube na iPhone a Android pomocí 11tik – veřejně dostupný obsah, bez aplikace",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Uložte si miniaturu YouTube na iPhone a Android pomocí 11tik – veřejně dostupný obsah, bez aplikace",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Můžu si uložit miniaturu z YouTube do telefonu?",
+      "html": "<p>Ano, pokud je video veřejné a YouTube zveřejnil statický obrázek. Nepotřebujete počítač ani APK ani aplikaci TestFlight. Otevřít<a href=\"https://www.11tik.com/\">11tik</a>V prohlížeči telefonu, který již používáte, vložte odkaz, klepněte na Získat náhledový obrázek a poté uložte první uvedený soubor. Tento soubor je nejvyšší veřejný JPEG nebo WebP, který skutečně vrátil obrázek.</p>\n  <p>Snímek obrazovky přehrávače s dlouhým stisknutím není totéž. Snímek obrazovky obsahuje chrom, lišty v bezpečné oblasti a extra kompresi. Veřejnost stále žije na i.ytimg.com. Viz<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snímek obrazovky vs. skutečná miniatura</a>pokud potřebujete toto rozlišení pro blog nebo tag Open Graph.</p>"
+    },
+    {
+      "heading": "Co potřebujete před začátkem",
+      "html": "<ul>\n    <li>Veřejná URL adresa pro sledování na YouTube, Shorts, živé vysílání nebo youtu.be. Další parametry dotazu, jako například<code>pp=</code>nebo ID playlistu nehrají roli; 11tik přečte 11místné ID videa.</li>\n    <li>Safari na iPhonu nebo iPadu, případně Chrome, Firefox nebo Samsung Internet na Androidu.</li>\n    <li>Povolení k ukládání fotografií, pokud se o to prohlížeč zeptá. 11tik nikdy nenahrává obrázek na server 11tik jako originální médium.</li>\n  </ul>\n  <p>Soukromá, pouze pro členy nebo věkově omezená videa, která nezveřejní veřejnou verzi, se stále nebudou stahovat. Jedná se o pravidlo platformy, nikoli o omezení telefonu. Vlastní miniatury, které se stále zpracovávají ve Studiu, mohou také krátkou dobu chybět; ověřte si to později se stejnou URL adresou. Související:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatury ve Studiu YouTube v roce 2026</a>.</p>"
+    },
+    {
+      "heading": "Jak uložit miniaturu z YouTube na iPhone",
+      "html": "<ol>\n    <li>V aplikaci YouTube nebo v Safari zkopírujte odkaz na video nebo krátká videa (Sdílet → Kopírovat odkaz).</li>\n    <li>OTEVŘENO<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>v Safari. Nic neinstalujete.</li>\n    <li>Vložte URL adresu a klepněte na Získat náhledový obrázek. Počkejte, až se zobrazí skutečný náhled. Prázdná šedá políčka znamenají, že daná velikost nebyla nikdy publikována.</li>\n    <li>Klepněte na první ovládací prvek stahování. Safari nabídne Otevřít nebo Stáhnout. Vyberte Stáhnout a poté obrázek uložte do složky Soubory nebo jej uložte do složky Fotografie ze sdílené tabulky.</li>\n    <li>Pokud potřebujete pouze adresu pro CMS, použijte místo stahování možnost Kopírovat URL obrázku. Tím se zkopíruje odkaz HTTPS i.ytimg.com nebo vi_webp. Průvodce:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL miniatury YouTube</a>.</li>\n  </ol>\n  <p>Pokud iOS blokuje stahování z různých zdrojů, otevřete URL adresu obrázku na nové kartě a poté na obrázek klepněte a podržte jej → Přidat do Fotek. Stále ukládáte veřejný soubor YouTube, nikoli snímek obrazovky stránky 11tik.</p>"
+    },
+    {
+      "heading": "Jak uložit miniaturu z YouTube v systému Android",
+      "html": "<ol>\n    <li>Zkopírujte URL adresu veřejného videa nebo krátkých videí z aplikace YouTube.</li>\n    <li>Otevřete 11tik v Chromu (nebo ve vašem výchozím prohlížeči).</li>\n    <li>Vložte, extrahujte a poté klepněte na první stažený soubor. Chrome obvykle zapíše soubor do složky Stažené soubory.</li>\n    <li>Otevřete oznámení Stažení a přesuňte obrázek do Galerie, pokud ho chcete mít ve Fotkách.</li>\n  </ol>\n  <p>Android se může zeptat, která aplikace má otevřít soubor JPEG. Vyberte Galerii nebo Soubory. Nevybírejte „program pro stahování videa“, který slibuje MP4; 11tik neposkytuje video ani zvuk.</p>"
+    },
+    {
+      "heading": "Jakou velikost telefonu bych si měl ponechat?",
+      "html": "<p>Ponechte první uvedenou velikost. 11tik již existující soubory seřazené podle pořadí. Když YouTube zveřejní maxresdefault, obvykle je to 1280×720. Pokud je název souboru 404s, je skutečným maximem další skutečný soubor (často hq720, sddefault nebo hqdefault). Chybějící soubor maxres je normální. Podrobnosti:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">co je maxresdefault.jpg</a>a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">velikosti miniatur v roce 2026</a>.</p>\n  <p>Krátké video se často přehrává vertikálně, zatímco uložená fotografie je na šířku. Soubor je stále oficiální veřejnou miniaturou. Viz<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatury krátkých filmů</a>.</p>"
+    },
+    {
+      "heading": "Je legální ukládat si miniaturu do telefonu?",
+      "html": "<p>Typickým použitím je uložení veřejně hostovaného snímku pro osobní potřebu, výzkum nebo vzdělávání. Obrázek zůstává autorským dílem uživatele, který jej nahrál. Nenahrávejte jej znovu jako vlastní miniaturu, netiskněte jej na zboží ani nepovažujte 11tik za licenci. Nápověda YouTube k vlastním miniaturám je zde:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Nahrávání vlastních miniatur videí</a>Pravidla hráče 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmínky</a>a<a href=\"https://www.11tik.com/copyright\">Autorská práva a použití</a>.</p>"
+    },
+    {
+      "heading": "Proč selhávají aplikace s miniaturami v telefonu",
+      "html": "<p>Mnoho záznamů v obchodě obaluje stránku s reklamami kolem uhádnutého<code>maxresdefault.jpg</code>URL. Pokud YouTube daný soubor nikdy nezveřejnil, zobrazí se poškozený obrázek nebo šedý výchozí kód. 11tik kontroluje odpovědi ve vašem prohlížeči a skryje velikosti, které nejsou obrázky. Za registrací se nic „odemkne“. Soukromí: vložené URL zůstávají v prohlížeči; viz<a href=\"https://www.11tik.com/p/privacy.html\">Soukromí</a>.</p>"
+    },
+    {
+      "heading": "Uložení několika odkazů z telefonu",
+      "html": "<p>Používejte hromadné vkládání na stejné domovské stránce, jednu veřejnou URL adresu na řádek, maximálně 25 odkazů. URL adresu kanálu lze na větší obrazovce rozbalit na nedávné veřejně nahrané příspěvky; na telefonu vkládejte jednotlivé odkazy, pokud se vám rozbalení kanálu zdá stísněné. Průvodce hromadným vkládáním:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">dávkové stahování</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Uložit veřejnou miniaturu na 11tik →</a></p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem extraktoru v prohlížeči.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Můžu si uložit miniaturu z YouTube do telefonu?",
+      "answer": "Ano. Otevřete 11tik v Safari nebo Chrome, vložte veřejnou URL adresu YouTube, extrahujte a stáhněte první zobrazenou veřejnou fotografii. Není potřeba žádný program pro stahování z obchodu s aplikacemi.",
+      "answerHtml": "Ano. Otevřete 11tik v Safari nebo Chrome, vložte veřejnou URL adresu YouTube, extrahujte a stáhněte první zobrazenou veřejnou fotografii. Není potřeba žádný program pro stahování z obchodu s aplikacemi."
+    },
+    {
+      "question": "Jak uložit miniaturu z YouTube na iPhone?",
+      "answer": "Zkopírujte odkaz, otevřete https://www.11tik.com/ v Safari, vložte jej, extrahujte, poté jej stáhněte nebo dlouze stiskněte URL adresu obrázku a přidejte ji do Fotek.",
+      "answerHtml": "Zkopírujte odkaz, otevřete https://www.11tik.com/ v Safari, vložte jej, extrahujte, poté jej stáhněte nebo dlouze stiskněte URL adresu obrázku a přidejte ji do Fotek."
+    },
+    {
+      "question": "Jak uložit miniaturu z YouTube v systému Android?",
+      "answer": "Zkopírujte odkaz, otevřete 11tik v Chromu, extrahujte a uložte první stažený soubor do složky Stažení nebo Galerie.",
+      "answerHtml": "Zkopírujte odkaz, otevřete 11tik v Chromu, extrahujte a uložte první stažený soubor do složky Stažení nebo Galerie."
+    },
+    {
+      "question": "Je legální ukládat si miniaturu do telefonu?",
+      "answer": "Ukládání veřejné fotografie pro osobní potřebu nebo výzkum je běžné. Nepublikujte ji znovu jako vlastní obal fotografie. Autorská práva zůstávají u uživatele, který ji nahrál.",
+      "answerHtml": "Ukládání veřejné fotografie pro osobní potřebu nebo výzkum je běžné. Nepublikujte ji znovu jako vlastní obal fotografie. Autorská práva zůstávají u uživatele, který ji nahrál."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem extraktoru v prohlížeči.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

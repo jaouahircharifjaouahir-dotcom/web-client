@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "hu",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Indexkép-kivonó vs. készítő | 11tik",
+  "description": "Egy bélyegkép-kicsomagoló program elmenti a YouTube által már tárolt nyilvános tartalmakat. Egy bélyegkép-készítő (Canva, Photoshop vagy YouTube Studio feltöltése) egy új, a te tulajdonodban lévő képet hoz létre. A 11tik egy bélyegkép-kicsomagoló program. Nem tervez grafikát, és nem tölt fel egyéni fájlt a csatornádra.",
+  "h1": "Indexkép-kivonó vs. készítő",
+  "ogTitle": "Indexkép-kivonó vs. készítő",
+  "ogDescription": "Egy bélyegkép-kicsomagoló program elmenti a YouTube által már tárolt nyilvános tartalmakat. Egy bélyegkép-készítő (Canva, Photoshop vagy YouTube Studio feltöltése) egy új, a te tulajdonodban lévő képet hoz létre. A 11tik egy bélyegkép-kicsomagoló program. Nem tervez grafikát, és nem tölt fel egyéni fájlt a csatornádra.",
+  "imageAlt": "11tik kivonatoló, amely nyilvános YouTube-bélyegkép mentésére szolgál",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik kivonatoló, amely nyilvános YouTube-bélyegkép mentésére szolgál",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mi az a bélyegkép-kivonó?",
+      "html": "<p>Egy kicsomagoló program beolvassa a nyilvános videó URL-címét, képfájlokat talál a YouTube CDN-jén, és lehetővé teszi egy működő kép URL-címének előnézetét, letöltését vagy másolását. Csak a létező méreteket listázza. Nem rippeli a képkockákat a videostreamből.</p>"
+    },
+    {
+      "heading": "Mi az a bélyegkép-készítő?",
+      "html": "<p>A készítői munkafolyamat egy tervezési munkafolyamat. Te komponálsz betűtípusokat, arcokat és kontrasztot, exportálsz egy 16:9-es állóképet, majd feltöltöd a YouTube Studióba. A fájl a te tulajdonod (a betűtípusok, fotók és platformszabályok függvényében). Egy versenytárs állóképének kinyerése és újbóli feltöltése nem készítői munkafolyamat.</p>"
+    },
+    {
+      "heading": "Mikor kell használnom az elszívót?",
+      "html": "<p>Használat<a href=\"https://www.11tik.com/\">[[3. oldal]]</a>Amikor élő nyilvános fájlra van szükséged: kutatás, saját publikált állóképed biztonsági mentése, CMS kiemelt kép vagy Open Graph ellenőrzés. Illessz be egy nyilvános megfigyelési fájlt, rövid videót, youtu.be URL-t, és töltsd le a legnagyobb méretet, amely ténylegesen képet ad vissza.</p>"
+    },
+    {
+      "heading": "Mikor kell készítőt használnom?",
+      "html": "<p>Használj tervezőeszközt, amikor eredeti csomagolást hozol létre egy új feltöltésekhez vagy egy indexkép frissítéséhez. A Studio alkalmazásban lesz ez a fájl a hivatalos egyéni indexkép. Miután a YouTube befejezte a feldolgozást, beillesztheted a megtekintési URL-t a 11tik oldalra, hogy megerősítsd, milyen nyilvános méretek léteznek, beleértve a YouTube által közzétett maximális méreteket is.</p>"
+    },
+    {
+      "heading": "Hogyan fér össze a kettő?",
+      "html": "<ol>\n    <li>Nyerj ki nyilvános hivatkozásokat a résedhez kapcsolódó videókból (csak kutatás).</li>\n    <li>Tervezzen egy eredeti állóképet egy készítő eszközben.</li>\n    <li>Töltsd fel a YouTube Studióban.</li>\n    <li>A feldolgozás után erősítse meg a nyilvános CDN-fájlokat a 11tik paranccsal.</li>\n  </ol>\n  <p>Összefüggő:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio indexkép 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">képernyőkép vs. valódi bélyegkép</a>.</p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Nyissa ki az elszívót</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mi az a bélyegkép-kivonó?",
+      "answer": "Egy eszköz, amely a YouTube által már tárolt nyilvános képfájlokat menti el. A 11tik csak a létező képfájlokat listázza.",
+      "answerHtml": "Egy eszköz, amely a YouTube által már tárolt nyilvános képfájlokat menti el. A 11tik csak a létező képfájlokat listázza."
+    },
+    {
+      "question": "Mikor kell készítőt használnom?",
+      "answer": "Amikor eredeti grafikát hozol létre, amelyet egyéni indexképként szeretnél feltölteni a YouTube Studióban.",
+      "answerHtml": "Amikor eredeti grafikát hozol létre, amelyet egyéni indexképként szeretnél feltölteni a YouTube Studióban."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+}

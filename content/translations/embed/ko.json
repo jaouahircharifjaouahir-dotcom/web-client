@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "ko",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "11tik썸네일 추출기 삽입 | 11tik",
+  "description": "블로그, 문서 또는 크리에이터 툴킷에 무료 YouTube 썸네일 추출기를 추가하세요. 이 위젯은 11tik에서 로드되어 자동으로 크기가 조정됩니다. API 키가 필요하지 않습니다.",
+  "h1": "11tik썸네일 추출기를 삽입합니다.",
+  "ogTitle": "11tik썸네일 추출기를 삽입합니다.",
+  "ogDescription": "블로그, 문서 또는 크리에이터 툴킷에 무료 YouTube 썸네일 추출기를 추가하세요. 이 위젯은 11tik에서 로드되어 자동으로 크기가 조정됩니다. API 키가 필요하지 않습니다.",
+  "imageAlt": "",
+  "faqHeading": "자주 묻는 질문",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe 스니펫",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "규칙",
+      "html": "<ul>\n    <li>유지하세요<code>id=\"yte-app\"</code>높이 동기화가 작동하도록 하는 속성입니다.</li>\n    <li>다운로드 버튼이 잘리는 고정 높이로 iframe을 감싸지 마세요.</li>\n    <li>다시 연결하기<a href=\"https://www.11tik.com/\">www.11tik.com</a>사용자가 전체 도구를 열 수 있도록 도와줍니다.</li>\n  </ul>"
+    },
+    {
+      "heading": "딥 링크",
+      "html": "<p>준비된 추출본을 공유하세요<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">추출기를 여세요</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

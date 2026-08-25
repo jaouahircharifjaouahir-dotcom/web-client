@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "it",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Screenshot o miniatura reale di YouTube: quale file salvare? | 11tik",
+  "description": "Uno screenshot del player scattato con il telefono non è la miniatura che YouTube ospita. Il vero pubblico vive ancora su i.ytimg.com. Usalo per blog, Open Graph e ricerche: gli screenshot aggiungono elementi dell'interfaccia utente, compressione e proporzioni errate.",
+  "h1": "Screenshot o miniatura originale di YouTube: quale file salvare?",
+  "ogTitle": "Screenshot o miniatura originale di YouTube: quale file salvare?",
+  "ogDescription": "Uno screenshot del player scattato con il telefono non è la miniatura che YouTube ospita. Il vero pubblico vive ancora su i.ytimg.com. Usalo per blog, Open Graph e ricerche: gli screenshot aggiungono elementi dell'interfaccia utente, compressione e proporzioni errate.",
+  "imageAlt": "Confronto tra uno screenshot di un giocatore e una miniatura pubblica reale di YouTube.",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Confronto tra uno screenshot di un giocatore e una miniatura pubblica reale di YouTube.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Qual è la differenza tra uno screenshot e una vera miniatura?",
+      "html": "<p>Uno screenshot cattura la schermata, inclusi i bordi del player, i sottotitoli e il ridimensionamento del dispositivo. Una vera miniatura è il file JPEG o WebP pubblicato da YouTube per quell'ID video. Solo il file CDN ha un URL stabile e una dimensione in pixel nota.</p>"
+    },
+    {
+      "heading": "Perché gli screenshot non vengono visualizzati correttamente nelle anteprime di Google Immagini e dei social media?",
+      "html": "<p>Spesso hanno un rapporto d'aspetto errato, includono l'interfaccia utente e vengono compressi due volte. Open Graph e molti campi CMS richiedono un formato 16:9, ancora intorno a 1280×720. Questo corrisponde a maxresdefault quando esiste—vedi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guida alle dimensioni delle miniature</a>.</p>"
+    },
+    {
+      "heading": "Come faccio a salvare la vera miniatura?",
+      "html": "<ol>\n    <li>Copia l'URL pubblico del video, non uno screenshot.</li>\n    <li>Incollalo in<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Scarica il primo file pubblico elencato oppure copia l'URL dell'immagine.</li>\n  </ol>"
+    },
+    {
+      "heading": "Quando uno screenshot è ancora utile?",
+      "html": "<p>Utilizzate gli screenshot solo per documentare un bug dell'interfaccia utente o un momento specifico del video. Non usateli come miniatura ufficiale, immagine principale del blog o immagine da condividere se il contenuto è ancora pubblico.</p>\n  <p><a href=\"https://www.11tik.com/\">Ottieni l'immagine di anteprima pubblica reale →</a></p>\n  <p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qual è la differenza tra uno screenshot e una vera miniatura?",
+      "answer": "Uno screenshot cattura la schermata e l'interfaccia del lettore. Una vera miniatura è il file JPEG o WebP che YouTube ospita su i.ytimg.com per quell'ID video.",
+      "answerHtml": "Uno screenshot cattura la schermata e l'interfaccia del lettore. Una vera miniatura è il file JPEG o WebP che YouTube ospita su i.ytimg.com per quell'ID video."
+    },
+    {
+      "question": "Perché gli screenshot non vengono visualizzati correttamente nelle anteprime di Google Immagini e dei social media?",
+      "answer": "Spesso presentano proporzioni errate, un'interfaccia utente superflua e una compressione eccessiva. I formati CMS e Open Graph richiedono un'immagine fissa pubblica in formato 16:9.",
+      "answerHtml": "Spesso presentano proporzioni errate, un'interfaccia utente superflua e una compressione eccessiva. I formati CMS e Open Graph richiedono un'immagine fissa pubblica in formato 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>.</p>"
+}

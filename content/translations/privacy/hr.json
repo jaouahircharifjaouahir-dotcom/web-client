@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "hr",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Pravila privatnosti | 11tik",
+  "description": "Ova se pravila primjenjuju na alat za izdvajanje minijatura s YouTubea na https://www.11tik.com/ i jezične hostove koji učitavaju isti alat za izdvajanje.",
+  "h1": "Pravila o privatnosti",
+  "ogTitle": "Pravila o privatnosti",
+  "ogDescription": "Ova se pravila primjenjuju na alat za izdvajanje minijatura s YouTubea na https://www.11tik.com/ i jezične hostove koji učitavaju isti alat za izdvajanje.",
+  "imageAlt": "",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Obrada u pregledniku",
+      "html": "<p>Kada zalijepite URL s YouTubea, stranica čita ID videozapisa i provjerava javne URL-ove minijatura u vašem pregledniku. Te zalijepljene poveznice ne pohranjuju se kao osobni račun na 11tik aplikacijskom poslužitelju. Za izdvajanje nije potrebna prijava.</p>"
+    },
+    {
+      "heading": "Neobavezni indeks stranice za dijeljenje",
+      "html": "<p>Nakon uspješne ekstrakcije, preglednik može poslati samo javni ID videozapisa, naslov, oznake izvedene iz javnih metapodataka i javni URL minijature našem Cloudflare Workeru kako bi se videozapis mogao pojaviti na stranici za dijeljenje i, ako prođe provjeru kvalitete, na mapi web-mjesta. Ne tražimo od vas da prenesete datoteku slike. Možete koristiti alat za ekstrakciju bez tog indeksa ako vaš preglednik blokira zahtjev.</p>"
+    },
+    {
+      "heading": "Lokalna povijest",
+      "html": "<p>Alat za izdvajanje može spremiti nedavne URL-ove u lokalnu pohranu ovog preglednika kako biste ih mogli ponovno otvoriti. Ta kopija ostaje na vašem uređaju. Izbrišite je pomoću kontrole povijesti na stranici ili brisanjem podataka ove web-lokacije u pregledniku. To nije račun u oblaku.</p>"
+    },
+    {
+      "heading": "Zapisnici hostinga",
+      "html": "<p>Web-stranicu, jezične hostove i statičke datoteke poslužuju pružatelji hostinga koji se koriste za 11tik.com (uključujući Cloudflare i GitHub Pages). Ti hostovi mogu čuvati uobičajene web zapisnike kao što su IP adresa, vrsta preglednika i tražena stranica, u skladu s vlastitim pravilima.</p>"
+    },
+    {
+      "heading": "Treće strane",
+      "html": "<p>Datoteke minijatura zatraže se od javnih hostova slika na YouTubeu. Stranica koristi Google Analytics 4 (ID mjerenja G-FW7B8NDZZ5) za brojanje posjeta i radnji na stranici kao što su izdvajanje i preuzimanje. Google može postaviti kolačiće ili slične identifikatore. Zalijepljeni URL-ovi s YouTubea ne šalju se kao parametri analitičkih događaja. Fontovi ili skripte također se mogu učitavati s CDN-ova koji se koriste za prikaz stranice.</p>\n  <p>FormSubmit dostavlja kontaktni obrazac na e-mail operatera. FormSubmit može vidjeti ime, e-mail i poruku koju pošaljete.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Pitanja o ovoj politici: e-pošta<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>ili koristite<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>oblik.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Izdvajanje minijatura s YouTubea</a>·<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

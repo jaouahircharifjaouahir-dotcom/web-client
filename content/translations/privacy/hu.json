@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "hu",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Adatvédelmi irányelvek | 11tik",
+  "description": "Ez a szabályzat a https://www.11tik.com/ címen található YouTube indexkép-kicsomagolóra és az ugyanazon kivonatolót betöltő nyelvi hosztokra vonatkozik.",
+  "h1": "Adatvédelmi irányelvek",
+  "ogTitle": "Adatvédelmi irányelvek",
+  "ogDescription": "Ez a szabályzat a https://www.11tik.com/ címen található YouTube indexkép-kicsomagolóra és az ugyanazon kivonatolót betöltő nyelvi hosztokra vonatkozik.",
+  "imageAlt": "",
+  "faqHeading": "GYIK",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Feldolgozás a böngészőben",
+      "html": "<p>Amikor beilleszt egy YouTube URL-t, az oldal beolvassa a videó azonosítóját, és ellenőrzi a nyilvános indexképek URL-jeit a böngésződben. Ezeket a beillesztett linkeket a rendszer nem tárolja személyes fiókként egy 11tik alkalmazáskiszolgálón. A kibontáshoz nem szükséges bejelentkezés.</p>"
+    },
+    {
+      "heading": "Opcionális megosztási oldal index",
+      "html": "<p>Sikeres kinyerés után a böngésző csak egy nyilvános videoazonosítót, címet, nyilvános metaadatokból származó címkéket és egy nyilvános indexkép URL-t küldhet a Cloudflare Workernek, hogy a videó megjelenhessen egy megosztási oldalon, és ha átmegy a minőségellenőrzésen, akkor az oldaltérképen is. Nem kérjük a képfájl feltöltését. A kinyerőt index nélkül is használhatod, ha a böngésződ blokkolja a kérést.</p>"
+    },
+    {
+      "heading": "Helytörténet",
+      "html": "<p>A kinyerő elmentheti a legutóbbi URL-eket a böngésző helyi tárolójába, így később újra megnyithatja őket. Ez a másolat az eszközén marad. Törölje az oldalon belüli előzmények vezérlőjével, vagy a webhely adatainak törlésével a böngészőben. Ez nem felhőfiók.</p>"
+    },
+    {
+      "heading": "Tárhelynaplók",
+      "html": "<p>A weboldalt, a nyelvi hosztokat és a statikus fájlokat a 11tik.com-hez használt tárhelyszolgáltatók (beleértve a Cloudflare és a GitHub Pages oldalakat) szolgálják ki. Ezek a hosztok a saját szabályzataiknak megfelelően megőrizhetnek szokásos webnaplókat, például az IP-címet, a böngésző típusát és a kért oldalt.</p>"
+    },
+    {
+      "heading": "Harmadik felek",
+      "html": "<p>A YouTube nyilvános képszolgáltatóitól kérnek indexképfájlokat. Az oldal a Google Analytics 4 szolgáltatást (mérési azonosító: G-FW7B8NDZZ5) használja a látogatások és az oldalon belüli műveletek, például a kibontás és a letöltés számlálásához. A Google sütiket vagy hasonló azonosítókat állíthat be. A beillesztett YouTube URL-eket nem küldi el analitikai eseményparaméterként. Betűtípusok vagy szkriptek is betöltődhetnek az oldal megjelenítéséhez használt CDN-ekből.</p>\n  <p>A kapcsolatfelvételi űrlapot a FormSubmit kézbesíti az üzemeltető e-mail címére. A FormSubmit láthatja a beküldött nevet, e-mail címet és üzenetet.</p>"
+    },
+    {
+      "heading": "Érintkezés",
+      "html": "<p>Kérdések a szabályzattal kapcsolatban: e-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>vagy használja a<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>forma.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>·<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

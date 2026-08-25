@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "hu",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Hogyan szerezhetsz YouTube indexkép URL-t közvetlenül egy videóból | 11tik",
+  "description": "Hozz létre vagy másold ki egy működő YouTube indexkép URL-t a i.ytimg.com oldalon található videóazonosítóból. Győződj meg róla, hogy a méret létezik, mielőtt hotlinket használsz.",
+  "h1": "Hogyan szerezhetsz be egy YouTube indexkép URL-t közvetlenül egy videóból",
+  "ogTitle": "Hogyan szerezhetsz be egy YouTube indexkép URL-t közvetlenül egy videóból",
+  "ogDescription": "Hozz létre vagy másold ki egy működő YouTube indexkép URL-t a i.ytimg.com oldalon található videóazonosítóból. Győződj meg róla, hogy a méret létezik, mielőtt hotlinket használsz.",
+  "imageAlt": "Diagram, amely egy YouTube-megtekintési URL-t mutat videoazonosítóvá, majd indexkép URL-lé konvertálva",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Diagram, amely egy YouTube-megtekintési URL-t mutat videoazonosítóvá, majd indexkép URL-lé konvertálva",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Egy YouTube indexkép URL-jének címkézett felépítése, amelyen látható a gazdagép, az elérési út, a videoazonosító és a fájlnév.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>YouTube-indexkép URL-jének megszerzéséhez: keresse meg a 11 karakteres videoazonosítót, majd nyisson meg egy megerősített nyilvános képcímet, például<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>A videóoldal URL-címe nem a kép. Illeszd be a videó linkjét.<a href=\"https://www.11tik.com/\">11tik</a>, várjon, amíg a méretek ténylegesen betöltődnek, majd használja a<strong>Kép URL-címének másolása</strong>így egy működő HTTPS linket tartasz meg egy kitalált fájlnév helyett, ami 404-es hibakódot ad.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">A kinyerők által használt folyamat: nyilvános megtekintési URL → videóazonosító → nyilvános indexkép URL a YouTube képtárhelyén.</p>"
+    },
+    {
+      "heading": "Mi az a YouTube indexkép URL?",
+      "html": "<p>Egy YouTube-bélyegkép URL-je egy állóképfájlra mutat, nem a videolejátszóra. A YouTube nyilvános kép-CDN-jén található (általában<code>i.ytimg.com</code>). Amikor a cím működik, a böngésző JPEG vagy WebP fájlt tölt le. Ha nem, akkor hiányzó fájlt vagy szürke helykitöltőt kapsz – nem egy váratlanul kitalált „HD”-t.</p>\n  <p>Ez fontos a blogok, az Open Graph előnézetek, a design mockupok és a CMS kiemelt kép mezők esetében: ezeknek a rendszereknek kép URL-címre van szükségük, nem pedig<code>youtube.com/watch?v=…</code>Ha csak a lemezen lévő fájlra van szüksége, használja a<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">útmutató letöltése</a>ahelyett, hogy ezt az URL-re fókuszáló oldalt használná.</p>"
+    },
+    {
+      "heading": "Hogyan kapcsolódik az URL a videoazonosítóhoz?",
+      "html": "<p>A YouTube a nyilvános állóképeket videoazonosító alapján keresi. A szokásos JPEG minta a következő:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Néhány videó WebP ikreket is közzétesz a következő címen:<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>pontosan 11 karakter a halmazból<code>A–Z a–z 0–9 _ -</code>Ha megváltoztatod az azonosítót, egy másik videó állóképeire mutatsz. Ha megváltoztatod a fájlnevet, akkor ugyanannak a videónak egy másik nyilvános származékát kéred.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Egy nyilvános indexkép URL-jének felépítése: gazdagép, elérési út, videoazonosító és méret/fájlnév.</p>"
+    },
+    {
+      "heading": "Hogyan találom meg a YouTube-videó azonosítóját",
+      "html": "<p>Csak az azonosítóra van szükséged. További lekérdezési paraméterek, például a lejátszási lista azonosítói vagy<code>pp=</code>ne módosítsa a bélyegkép gazda elérési útját.</p>\n  <table>\n    <thead>\n      <tr><th>YouTube URL-formátum</th><th>Példa</th><th>Hol található az azonosító</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Óra</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>lekérdezési érték</td></tr>\n      <tr><td>Rövid link</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Első útvonalszakasz</td></tr>\n      <tr><td>Rövidnadrág</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Út utána<code>/shorts/</code></td></tr>\n      <tr><td>Beágyaz</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Út utána<code>/embed/</code></td></tr>\n      <tr><td>Élő</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Út utána<code>/live/</code></td></tr>\n      <tr><td>nocookie beágyazás</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Ugyanaz, mint a beágyazás</td></tr>\n    </tbody>\n  </table>\n  <p>A 11tik elemzője elfogadja ezeket az alakzatokat (és a puszta 11 karakteres azonosítókat). Egy videóazonosító nélküli csatorna- vagy lejátszási lista URL nem elegendő egyetlen indexkép URL-hez.</p>"
+    },
+    {
+      "heading": "Gyakori nyilvános bélyegképfájl-nevek",
+      "html": "<p>A fájlnevek a YouTube által egy adott feltöltés esetén közzétett vagy nem közzétett méretkategóriákat írják le. A név nem garantálja a fájl létezését.</p>\n  <table>\n    <thead>\n      <tr><th>Fájlnév</th><th>Tipikus pixelek, ha vannak</th><th>Megjegyzések</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Legmagasabb közönség még mindig, amikor közzéteszik</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720-as osztály</td><td>Egy újabb magas szint, amit egyes videók lelepleznek</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Gyakran elérhető, ha hiányzik a maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Nagyon gyakori közepes méretű</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Kis előnézet</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Legkisebb szabványos üst</td></tr>\n    </tbody>\n  </table>\n  <p>A képpontszintű részletességért és a kívánt méretek előnyben részesítéséért lásd a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">bélyegkép méretének és felbontásának útmutatója</a>Miért<code>maxresdefault.jpg</code>gyakran hiányzik, lásd<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Mi a maxresdefault?</a>.</p>"
+    },
+    {
+      "heading": "Működő példa nyilvános videoazonosítóval",
+      "html": "<p>Vegye ki a nyilvános demóazonosítót<code>dQw4w9WgXcQ</code>Egy megfigyelési URL a következő:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Egy jelölt maxres JPEG URL-címe:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Nyisd meg ezt a címet egy új lapon. Ha a kép betöltődik, akkor van egy működő bélyegkép URL-ed. Ha nem sikerül, próbáld meg a következő fájlnevet (például<code>hqdefault.jpg</code>) vagy illeszd be a megtekintési linket a 11tik-be, hogy csak a fennmaradt fájlok legyenek listázva. Soha ne feltételezd, hogy minden videónak maximális felbontása van.</p>"
+    },
+    {
+      "heading": "Három módszer a kép URL-címének lekérésére",
+      "html": "<h3>1. Leggyorsabb: másolás innen: 11tik</h3>\n  <ol>\n    <li>Nyilvános megtekintés, rövid videó, élő adás, beágyazás vagy youtu.be URL másolása.</li>\n    <li>Nyitott<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Illeszd be az URL-t, és várj, amíg megjelennek az előnézetek.</li>\n    <li>Válasszon<strong>Kép URL-címének másolása</strong>a szükséges méretről.</li>\n  </ol>\n  <p>A 11tik ellenőrzi a böngésződben található válaszokat, és csak olyan méreteket jelenít meg, amelyek valódi képet adnak vissza. Ez a különbség egy használható CMS link és egy hibás között.<code>maxresdefault</code>találgatás.</p>\n\n  <h3>2. Böngészős módszer</h3>\n  <p>Miután van egy jelöltje<code>i.ytimg.com</code>címet, nyisd meg új lapon. Ha továbbra is megjelenik, másold ki a címsort. Ha hibát vagy üres/helykitöltő csempét látsz, az a méret soha nem lett közzétéve ehhez az azonosítóhoz – ne használj hotlinket.</p>\n\n  <h3>3. URL manuális létrehozása</h3>\n  <p>Összefűzheted a host +<code>/vi/</code>+ Azonosító + fájlnév. A kézzel írt URL-ek tesztelésre megfelelőek, de nem biztonságosak az éles HTML-be való beillesztésük, amíg nem igazolod a választ. Az elérhetőség a feltöltés korától, a forrásgrafikától és a YouTube Studio feldolgozási állapotától függően változik.</p>"
+    },
+    {
+      "heading": "A legjobb elérhető URL kiválasztása",
+      "html": "<p>A „legjobb” a ténylegesen létező legnagyobb nyilvános fájlt jelenti, nem a leghosszabb beírható fájlnevet. Ha van, akkor érvényesített maxres vagy hq720 hivatkozást használj. Ha ezek nem működnek, akkor válts sd, hq, mq vagy default értékre. Egy 480×360-as állókép 1280×720-ra való felskálázása egy szerkesztőben nem hoz létre valódi maxres URL-t.</p>\n  <p>Az egyéni grafikákat feltöltő alkotóknak utólag is meg kell erősíteniük az élő nyilvános származékokat – a stúdió feldolgozása késedelembe eshet:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio indexképek 2026-ban</a>.</p>"
+    },
+    {
+      "heading": "URL használata egy másik weboldalon",
+      "html": "<p>Beilleszthet egy működőképes<code>i.ytimg.com</code>URL sok CMS mezőbe beilleszthető, de a hotlinkelésnek kockázatai vannak: a YouTube módosíthatja a CDN elérési utakat, és egyes hálózatok blokkolják a harmadik féltől származó tárhelyszolgáltatókat. Tartós blogbejegyzés kiemelt képéhez vagy Open Graph címkéjéhez töltse le a megerősített állóképet, és tároljon egy másolatot a saját domainjén. Útmutató:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTube bélyegkép blogként / Open Graph képként</a>.</p>\n  <p>A szerzői jog a feltöltőt illeti. A nyilvános URL nem jogosít fel a műalkotás saját borítóként való újraközlésére. További információ a YouTube súgójában.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">egyéni videóbélyegképek</a>és 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    },
+    {
+      "heading": "Hibás bélyegkép URL-ek hibaelhárítása",
+      "html": "<ul>\n    <li><strong>404 vagy helyőrző:</strong>Ezt a méretet soha nem tették közzé. Próbáljon ki egy másik fájlnevet, vagy használja a 11tik által ellenőrzött listát.</li>\n    <li><strong>Rossz videó:</strong>Hibásan beírt azonosító. Másolja újra a figyelő URL-jéből.</li>\n    <li><strong>Privát / korhatáros / törölt:</strong>még mindig nincs nyilvános link.</li>\n    <li><strong>HTTP vegyes tartalom:</strong>mindig használd<code>https://</code>kép URL-ek HTTPS webhelyeken.</li>\n    <li><strong>A rövidnadrágok postaládáznak tűnnek:</strong>Sok rövidfilm továbbra is tárol fekvő tájolású nyilvános fájlokat. Az URL továbbra is a hivatalos nyilvános URL.</li>\n  </ul>"
+    },
+    {
+      "heading": "Következő lépés",
+      "html": "<p>Illesszen be egy nyilvános YouTube URL-t a következőbe:<a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>, másolja ki az érvényesített kép linkjét, vagy<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">töltsd le a képet</a>ha helyi fájlra van szüksége. A felbontás kiválasztásához nyissa meg a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">méret- és minőségi útmutató</a>.</p>\n\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőn belüli képkicsomagoló kiadója. Csak nyilvános állóképek – videó vagy hanganyag letöltése nem lehetséges.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Lemásolhatom a közvetlen bélyegkép URL-jét a fájl letöltése nélkül?",
+      "answer": "Igen. A 11tik oldalon használd a Kép URL-címének másolása opciót. Ez a HTTPS képcímet másolja egy olyan mérethez, amelyet már ellenőriztek a böngésződben.",
+      "answerHtml": "<p>Igen. A 11tik oldalon használd a Kép URL-címének másolása opciót. Ez a HTTPS képcímet másolja egy olyan mérethez, amelyet már ellenőriztek a böngésződben.</p>"
+    },
+    {
+      "question": "Lekérhetek egy YouTube rövid videó indexképének URL-jét?",
+      "answer": "Igen, ha a rövid videó nyilvános, és a YouTube közzétett állóképeket az adott azonosítóhoz. Illeszd be a /shorts/ linket ugyanúgy, mint egy megtekintési URL-t. Lásd még a Rövid videók indexképeit.",
+      "answerHtml": "<p>Igen, ha a rövid videó nyilvános, és a YouTube közzétette az adott azonosítóhoz tartozó állóképeket. Illesszen be egy<code>/shorts/</code>ugyanúgy linkelj, mint ahogy beilleszted egy megtekintési URL-t. Lásd még<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek indexképei</a>.</p>"
+    },
+    {
+      "question": "Miért működik az egyik bélyegkép URL-címe, miközben egy másik hibát ad vissza?",
+      "answer": "A fájlnevek opcionális nyilvános származékok. A hqdefault.jpg akkor is létezhet, ha a maxresdefault.jpg nem. Egy működő közepes méretű URL nem jelent működő maxres URL-t.",
+      "answerHtml": "<p>A fájlnevek opcionális nyilvános származékok.<code>hqdefault.jpg</code>létezhet, amikor<code>maxresdefault.jpg</code>nem. Egy működő közepes méretű URL nem jelent működő maxres URL-t.</p>"
+    },
+    {
+      "question": "Használhatom a közvetlen kép URL-t a weboldalamon?",
+      "answer": "Technikailag igen, ha a fájl létezik, de a saját példányod tárhelye megbízhatóbb kiemelt képek és közösségi média előnézetek esetén. Ne publikáld újra valaki más képét csatornaborítóként jogok nélkül.",
+      "answerHtml": "<p>Technikailag igen, ha a fájl létezik, de a saját példányod tárhelye megbízhatóbb kiemelt képek és közösségi média előnézetek esetén. Ne publikáld újra valaki más képét csatornaborítóként jogok nélkül.</p>"
+    },
+    {
+      "question": "A megtekintési URL valaha is egyezik az indexkép URL-jével?",
+      "answer": "Nem. A megtekintési URL azonosítja a videót. Az indexkép URL egy képfájlt azonosít a kép CDN-en.",
+      "answerHtml": "<p>Nem. A megtekintési URL azonosítja a videót. Az indexkép URL egy képfájlt azonosít a kép CDN-en.</p>"
+    },
+    {
+      "question": "A 11tik feltalál egy nagyobb felbontású URL-t?",
+      "answer": "Nem. Csak azokat a nyilvános fájlokat listázza, amelyek képként válaszolnak. A hiányzó maxres azt jelenti, hogy az URL-t nem szabad másolni.",
+      "answerHtml": "<p>Nem. Csak azokat a nyilvános fájlokat listázza, amelyek képként válaszolnak. A hiányzó maxres azt jelenti, hogy az URL-t nem szabad másolni.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőn belüli képkicsomagoló kiadója. Csak nyilvános állóképek – videó vagy hanganyag letöltése nem lehetséges.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+}

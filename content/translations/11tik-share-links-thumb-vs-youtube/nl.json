@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "nl",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Hoe 11tik deellinks werken: /thumb/{VIDEO_ID} versus YouTube-kijk-URL's | 11tik",
+  "description": "11tik /thumb/{id} is een pagina met deelresultaten. Het is geen YouTube-kijk-URL en geen direct i.ytimg.com afbeeldingsbestand.",
+  "h1": "Hoe 11tik deellinks werken: /thumb/{VIDEO_ID} versus YouTube-kijk-URL's",
+  "ogTitle": "Hoe 11tik deellinks werken: /thumb/{VIDEO_ID} versus YouTube-kijk-URL's",
+  "ogDescription": "11tik /thumb/{id} is een pagina met deelresultaten. Het is geen YouTube-kijk-URL en geen direct i.ytimg.com afbeeldingsbestand.",
+  "imageAlt": "Diagram ter vergelijking van een YouTube-kijk-URL, een 11tik-thumbnail-deel-URL en een directe YouTube-thumbnail-afbeelding-URL",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Diagram ter vergelijking van een YouTube-kijk-URL, een 11tik-thumbnail-deel-URL en een directe YouTube-thumbnail-afbeelding-URL",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Werkstroom met weergave van extractie, voorbeeldweergave, kopiëren 11tik deellink en ontvanger die de miniatuurresultatenpagina opent",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snel antwoord",
+      "html": "<p>Drie verschillende URL's kunnen dezelfde YouTube-video-ID delen. Slechts één daarvan is een afbeeldingsbestand.</p>\n  <ol>\n    <li><strong>YouTube-video-URL</strong>— opent de video op YouTube.</li>\n    <li><strong>11tik URL delen</strong>— opent de resultatenpagina van de 11tik-extractor voor die ID (<code>/thumb/{VIDEO_ID}</code>Dit is een webpagina, geen JPEG/WebP-bestand.</li>\n    <li><strong>Directe CDN-URL voor miniatuurafbeeldingen</strong>— wijst naar een openbare afbeelding op de afbeeldingshost van YouTube (bijvoorbeeld<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Gebruikmakend van de openbare demo-ID<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Het derde adres is een voorbeeld van een direct afbeeldings-URL-patroon. Dat specifieke maxres-bestand is niet gegarandeerd voor elke video; controleer de werkelijke afmetingen met<a href=\"https://www.11tik.com/\">11tik</a>of de<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault handleiding</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dezelfde video-ID, drie taken: de video bekijken, de 11tik-resultatenpagina openen of een CDN-afbeelding aanvragen.</p>"
+    },
+    {
+      "heading": "Wat /thumb/{VIDEO_ID} is",
+      "html": "<p>Op 11tik wordt bij een succesvolle extractie van één video het browseradres bijgewerkt naar een pad met de volgende vorm:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Dat pad is de deel-/resultaat-URL van het product. Deze wordt gegenereerd op basis van de video-ID (zie de deelhulpmiddelen van de site) en is bedoeld om de extractor, gericht op die ID, opnieuw te openen. Oudere links in querystijl, zoals<code>?v=VIDEO_ID</code>worden beschouwd als diepe links naar hetzelfde idee en kunnen worden herschreven naar de<code>/thumb/</code>formulier.</p>\n  <p><code>/thumb/…</code>is<strong>niet</strong>gehost op het afbeeldings-CDN van YouTube. Het openen ervan downloadt nooit direct een afbeelding; het laadt de 11tik app-route voor die ID.</p>"
+    },
+    {
+      "heading": "Waarom deze pagina bestaat",
+      "html": "<p>Mensen hebben een stabiele manier nodig om \"het miniatuurresultaat van deze video op 11tik\" opnieuw te openen of te delen zonder een lange URL in de chat te hoeven plakken en te hopen dat de ontvanger weet wat hij of zij vervolgens moet doen. De deelpagina houdt het gesprek binnen de extractor: dezelfde ID, dezelfde openbare workflow, download- en kopieeracties op één plek.</p>\n  <p>Het zorgt er ook voor dat de URL van de tool op de homepage schoon blijft. De marketinghomepage blijft de algemene extractor;<code>/thumb/{id}</code>Dit is de deep link voor een specifieke ID.</p>"
+    },
+    {
+      "heading": "Wat een gebruiker ziet bij het openen ervan.",
+      "html": "<p>Opening<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>Laadt de 11tik single-page app op de thumbnail-route. De app leest de 11-tekens tellende ID uit het pad, vult de extractor met de bijbehorende watch-URL en voert de openbare thumbnail-detectie voor die ID uit. Als er openbare afbeeldingen bestaan, verschijnen de gebruikelijke preview, kwaliteitslijst, downloadopties en deelknoppen. Als deze er niet zijn, krijgt u hetzelfde lege resultaat/openbare afbeelding niet gevonden als bij handmatig plakken.</p>\n  <p>Mogelijk ziet u boven de gebruikersinterface van de tool ook een korte thumbnail met een titel en een inleidende tekst voor die ID. Deze inhoud beschrijft de resultatenpagina; het is nog steeds onderdeel van de website-ervaring en geen losse afbeelding.</p>"
+    },
+    {
+      "heading": "Hoe kopieer je de 11tik link?",
+      "html": "<ol>\n    <li>Open<a href=\"https://www.11tik.com/\">11tik</a>en plak een openbare YouTube-URL (of open een bestaande).<code>/thumb/</code>link).</li>\n    <li>Wacht tot de extractie is voltooid en een beste openbare still wordt getoond.</li>\n    <li>Gebruik de deelknop op de pagina met het label voor de deellink (deellink kopiëren). De waarde ziet er als volgt uit:<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Verstuur die URL. De ontvanger komt op de resultatenpagina terecht en kan dezelfde openbare controle opnieuw uitvoeren.</li>\n  </ol>\n  <p>Bulk-extracties kunnen één deel-URL per succesvolle video-ID weergeven (ook in de kolommen van het CSV-exportbestand). Elke ID behoudt zijn eigen URL.<code>/thumb/</code>pad zodat links niet samenvallen met het eerste resultaat.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Deelworkflow: extraheren → voorbeeld bekijken → kopiëren<code>/thumb/{id}</code>→ De ontvanger opent de resultatenpagina.</p>"
+    },
+    {
+      "heading": "URL-vergelijkingstabel",
+      "html": "<table>\n    <thead>\n      <tr><th>URL-type</th><th>Voorbeeld</th><th>Wat opent</th><th>Is het een afbeeldingsbestand?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>YouTube-video</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube-speler / kijkpagina</td><td>Nee</td></tr>\n      <tr><td>11tik delen</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik extractieresultaat voor die ID</td><td>Nee</td></tr>\n      <tr><td>Directe CDN nog steeds</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Afbeeldingsbytes (indien het bestand bestaat)</td><td>Ja</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Hoe de drie URL's in de praktijk verschillen",
+      "html": "<h3>Bekijk URL vs 11tik deel-URL</h3>\n  <p>Deel de URL voor het bekijken van de video wanneer het de bedoeling is om de video op YouTube te bekijken of te bespreken. Deel de 11tik-URL wanneer het de bedoeling is om het resultaat van de thumbnail-extractie opnieuw te openen – previews, downloads en gevalideerde openbare formaten – zonder dat iemand eerst de extractor hoeft te vinden.</p>\n  <h3>11tik URL delen versus directe afbeeldings-URL</h3>\n  <p>De directe afbeeldings-URL is wat je in het daarvoor bestemde veld plakt.<code>&lt;img src&gt;</code>, CMS-mediabibliotheken of ontwerptools nadat je hebt bevestigd dat het bestand bestaat. Hoe die CDN-URL's worden opgebouwd uit de ID is de taak van de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>De 11tik deel-URL vervangt nooit het afbeeldingsadres: ontvangers gebruiken nog steeds de optie 'Downloaden' of 'Afbeeldings-URL kopiëren' binnen de tool wanneer ze het bestand zelf nodig hebben.</p>\n  <h3>Bekijk URL versus directe afbeeldings-URL</h3>\n  <p>De URL van de video identificeert de video. De URL van de afbeelding identificeert een openbaar afgeleide versie. Ze zijn niet uitwisselbaar, vandaar dat het moeilijk te raden is.<code>maxresdefault.jpg</code>Het werkt vaak niet, zelfs niet als de horlogepagina wel functioneert.</p>"
+    },
+    {
+      "heading": "Wanneer welke link te delen?",
+      "html": "<ul>\n    <li><strong>Deel de YouTube-link van de video.</strong>voor het bekijken, becommentariëren of citeren van de video.</li>\n    <li><strong>Deel de 11tik<code>/thumb/</code>URL</strong>Voor medewerkers die het extractieresultaat, de kwaliteitslijst of een snelle herdownload van de openbare afbeelding nodig hebben.</li>\n    <li><strong>Deel of host de directe URL van de afbeelding / het gedownloade bestand</strong>Voor uitgelichte afbeeldingen op de blog, Open Graph en ontwerpvoorbeelden – na bevestiging. Zie de<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">downloadhandleiding</a>En<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Richtlijnen voor grootte en resolutie</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hoe de video-ID alle drie met elkaar verbindt.",
+      "html": "<p>Alles draait om dezelfde 11-cijferige ID. De URL's van de horloges bevatten deze ID.<code>v=</code>(of Shorts/embed/live path segmenten). 11tik plaatst het in<code>/thumb/{id}</code>CDN plaatst het nog steeds ertussen.<code>/vi/</code>(of<code>/vi_webp/</code>) en de bestandsnaam qua grootte. Als de ID onjuist is, leidt dit op alle drie manieren tot problemen: een verkeerde video, een verkeerde resultatenpagina of een verkeerde/ontbrekende afbeelding.</p>"
+    },
+    {
+      "heading": "Hoe dit past in de extractieworkflow",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>De deelbare link is een bladwijzer in die workflow. Het slaat de validatie niet over, verzint geen 4K-resolutie en maakt van privévideo's geen openbare foto's.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is https://www.11tik.com/thumb/VIDEO_ID een direct beeld?",
+      "answer": "Nee. Het is een 11tik resultatenpagina voor die video-ID. Directe afbeeldingen staan ​​op hosts zoals i.ytimg.com.",
+      "answerHtml": "<p>Nee. Het is een 11tik-resultatenpagina voor die video-ID. Directe afbeeldingen staan ​​op hosts zoals<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Wat gebeurt er nadat iemand mijn deelbare link opent?",
+      "answer": "11tik laadt de thumbnail-route, leest de ID, voert de openbare thumbnail-controle uit voor die ID en toont de extractor-UI met resultaten wanneer er openbare afbeeldingen bestaan.",
+      "answerHtml": "<p>11tik laadt de thumbnail-route, leest de ID, voert de openbare thumbnail-controle uit voor die ID en toont de extractor-UI met resultaten wanneer er openbare afbeeldingen bestaan.</p>"
+    },
+    {
+      "question": "Kan ik /thumb/ rechtstreeks in een img-tag linken?",
+      "answer": "Niet doen. Gebruik een bevestigde CDN-image-URL of een bestand dat u hebt gedownload. Het gedeelde pad retourneert een HTML-app-shell, geen image-bytes.",
+      "answerHtml": "<p>Niet doen. Gebruik een bevestigde CDN-image-URL of een bestand dat u hebt gedownload. Het gedeelde pad retourneert een HTML-app-shell, geen image-bytes.</p>"
+    },
+    {
+      "question": "Waarom veranderde mijn adresbalk nadat ik een miniatuurafbeelding had uitgepakt?",
+      "answer": "Na het extraheren van één video synchroniseert 11tik het deelpad naar /thumb/{VIDEO_ID}, zodat het huidige resultaat gemakkelijk kan worden gekopieerd en opnieuw geopend.",
+      "answerHtml": "<p>Na het extraheren van één video synchroniseert 11tik het deelpad naar<code>/thumb/{VIDEO_ID}</code>Het huidige resultaat is dus gemakkelijk te kopiëren en opnieuw te openen.</p>"
+    },
+    {
+      "question": "Gebruiken Shorts een ander deelpad?",
+      "answer": "Nee. Shorts worden nog steeds omgezet naar een ID van 11 tekens. De deel-URL blijft /thumb/{id}; alleen de oorspronkelijke structuur van de YouTube-URL is veranderd.",
+      "answerHtml": "<p>Nee. Shorts worden nog steeds omgezet naar een ID van 11 tekens. De deel-URL blijft ongewijzigd.<code>/thumb/{id}</code>Alleen de oorspronkelijke vorm van de YouTube-URL verschilde.</p>"
+    },
+    {
+      "question": "Is /thumb/{id} hetzelfde als het kopiëren van de maxres-URL?",
+      "answer": "Nee. Maxres (indien aanwezig) is één mogelijk CDN-bestand. De deelpagina toont gevalideerde openbare formaten en kan andere formaten bevatten als maxres ontbreekt.",
+      "answerHtml": "<p>Nee. Maxres (indien aanwezig) is één mogelijk CDN-bestand. De deelpagina toont gevalideerde openbare formaten en kan andere formaten bevatten als maxres ontbreekt.</p>"
+    },
+    {
+      "question": "Waar worden URL's van horloges en URL's van afbeeldingen uitgebreider uitgelegd?",
+      "answer": "Gebruik het artikel over miniatuur-URL's voor het samenstellen van ID's via CDN's, en het downloadartikel voor het opslaan van bestanden.",
+      "answerHtml": "<p>Gebruik de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatuur-URL artikel</a>Zie het artikel over het opslaan van bestanden voor ID → CDN-constructie en het downloadartikel voor het opslaan van bestanden.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Conclusie</h2>\n<p>Traktatie<code>/thumb/{VIDEO_ID}</code>als het deel-/resultaatadres van 11tik: handig voor het heropenen en verzenden van een extractie, nooit als vervanging voor een YouTube-kijklink of een directe link.<code>i.ytimg.com</code>Toch. Zorg dat je de drie URL-typen goed onderscheidt, zodat je downloads, ingesloten content en links naar samenwerkingspartners correct blijven.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraheer een openbare miniatuurafbeelding en kopieer de bijbehorende deellink 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>. Referentie naar de maker:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Upload aangepaste miniatuurafbeeldingen voor video's</a>.</p>"
+}

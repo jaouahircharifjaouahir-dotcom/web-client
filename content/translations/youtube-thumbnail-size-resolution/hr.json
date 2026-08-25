@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "hr",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Veličina i razlučivost minijature na YouTubeu: Potpuni vodič | 11tik",
+  "description": "Usporedite veličine sličica na YouTubeu od 120 × 90 do 1280 × 720. Maxres i hq720 su opcionalni - koristite najveću javnu datoteku koja se učitava.",
+  "h1": "Veličina i razlučivost minijature na YouTubeu: Potpuni vodič",
+  "ogTitle": "Veličina i razlučivost minijature na YouTubeu: Potpuni vodič",
+  "ogDescription": "Usporedite veličine sličica na YouTubeu od 120 × 90 do 1280 × 720. Maxres i hq720 su opcionalni - koristite najveću javnu datoteku koja se učitava.",
+  "imageAlt": "Tablica usporedbe veličina javnih YouTube minijatura od maxresdefault 1280 x 720 do zadanih 120 x 90",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Tablica usporedbe veličina javnih YouTube minijatura od maxresdefault 1280 x 720 do zadanih 120 x 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Usporedni prikaz videa s dostupnom maxresdefault datotekom u odnosu na video gdje postoji samo manja hqdefault datoteka",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p>Za prilagođeni prijenos, YouTubeova pomoć i dalje se usredotočuje na<strong>16:9</strong>slika - obično<strong>1280×720</strong>Za datoteke koje možete preuzeti s postojećeg videozapisa, javni CDN derivati ​​se razlikuju. Kada su prisutni,<code>maxresdefault</code>/<code>hq720</code>obično su 1280×720. Mnogi videozapisi se zaustavljaju na<code>sddefault</code>(640×480) ili<code>hqdefault</code>(480×360). Veći naziv datoteke nikada ne izmišlja piksele. Zalijepite URL za praćenje u<a href=\"https://www.11tik.com/\">11tik</a>navesti samo veličine koje vraćaju stvarnu sliku.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Relativne javne veličine. Ne objavljuje svaki videozapis svaku prečku na ovoj ljestvici.</p>"
+    },
+    {
+      "heading": "Preporučene dimenzije za kreatore",
+      "html": "<p>Ako dizajnirate prilagođenu minijaturu u Studiju, slijedite trenutnu pomoć za YouTube: ciljajte na<strong>16:9</strong>još uvijek. Široko korištena radna veličina je<strong>1280×720</strong>piksela. To odgovara širokom zaslonu igrača i iste je klase piksela kao i objavljeni<code>maxresdefault</code>kada ga YouTube stvori.</p>\n  <p>Službena referenca:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prenesite prilagođene minijature videozapisa</a>Nakon što Studio završi s obradom, potvrdite javne datoteke uživo pomoću 11tik umjesto da pretpostavljate da se svaki derivat pojavio odmah. Napomene usmjerene na Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Minijature u YouTube Studiju u 2026. godini</a>.</p>"
+    },
+    {
+      "heading": "Veličine javnih CDN-ova koje gledatelji zapravo mogu dohvatiti",
+      "html": "<p>Preuzimači i blogovi ne preuzimaju vaš Photoshop master. Oni preuzimaju javne derivate YouTube hostova za ID videa. 11tik-ov ekstraktor provjerava ove nazive datoteka (JPEG i, ako je prisutan, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Varijanta</th><th>Tipična rezolucija</th><th>Razina</th><th>Dostupnost</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Najbolje</td><td>Samo ako je YouTube objavio WebP maksimalne rezolucije</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Najbolje</td><td>Uobičajeno na novijim/visokokvalitetnim uploadima; često nedostaje na starijim</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 razred</td><td>Najbolje</td><td>Prikazivanje na nekim videozapisima kao alternativna visoka datoteka</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Visoko</td><td>Često dostupno kada nema maxres-a</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Standard</td><td>Vrlo često</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Pregled</td><td>Mali pregledi / popisi</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Pregled</td><td>Najmanji standardni destilator</td></tr>\n    </tbody>\n  </table>\n  <p>Ove očekivane širine i visine odgovaraju unaprijed postavljenim postavkama kvalitete za 11tik. Stvarni odgovori i dalje se mogu razlikovati ako YouTube posluži rezervirano mjesto ili u potpunosti izostavi datoteku - uvijek provjerite.</p>"
+    },
+    {
+      "heading": "Zašto je 16:9 važan čak i kada se datoteke razlikuju",
+      "html": "<p>Player za gledanje je širokog zaslona. Prilagođena umjetnost dizajnirana u omjeru 16:9 ostaje čitljiva u pretraživanju, predloženim policama i ugrađenim datotekama. Neke javne datoteke (posebno<code>hqdefault</code>/<code>sddefault</code>) nisu strogo 16:9 okviri; to su starije CDN veličine. Preferirajte pravu javnu sliku od 1280 × 720 kada vam je potrebna čista 16:9 datoteka za Open Graph ili zaglavlje bloga.</p>\n  <p>Kratki videozapisi se reproduciraju vertikalno, ali pohranjeni javni sadržaji su često i dalje u vodoravnom položaju. To je ponašanje hosta, a ne neuspješno preuzimanje. Detalji:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Preuzimanje minijatura kratkih filmova</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault u odnosu na hq720 u odnosu na “HD”",
+      "html": "<p><code>maxresdefault</code>je poznati naziv HD datoteke na<code>i.ytimg.com</code>Kada datoteka postoji, obično je veličine 1280 × 720, a ne 4K.<code>hq720</code>je još jedno visokokvalitetno ime koje neki videozapisi prikazuju u istoj klasi rezolucije. Nijedno ime ne jamči datoteku. Alati koji ispisuju URL maksimalne rezolucije bez provjere proizvode oštećene slike.</p>\n  <p>Detaljnije bilješke o nazivima datoteka:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">što je maxresdefault.jpg</a>i<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">javna minijatura najviše kvalitete</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Isti obrazac zahtjeva, različiti rezultati: datoteka s višim nazivom ne izmišlja piksele kada datoteka nedostaje.</p>"
+    },
+    {
+      "heading": "Zašto jedan videozapis ima više veličina od drugog",
+      "html": "<ul>\n    <li>Stariji uploadovi možda nikada nisu dobili derivat maxresa.</li>\n    <li>Izvorni crtež bio je manji od 1280×720.</li>\n    <li>Prilagođene minijature se još uvijek obrađuju u Studiju.</li>\n    <li>Privatni videozapisi, videozapisi samo za članove ili videozapisi s dobnim ograničenjem ne smiju prikazivati ​​javne fotografije.</li>\n    <li>WebP varijante pojavljuju se samo kada ih je YouTube objavio za taj ID.</li>\n  </ul>\n  <p>Dostupnost je određena po videozapisu. Nikada ne smatrajte radni URL maksimalne rezolucije konkurenta dokazom da vaš postoji.</p>"
+    },
+    {
+      "heading": "Kako 11tik odabire „najbolju“ veličinu",
+      "html": "<p>11tik ispituje javne kandidate prema fiksnom redoslijedu kvalitete (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). Zadržava datoteke koje se validiraju kao slike i prvo rangira one s najvišom preživjelom vrijednošću. Ne povećava skalu. Ako maxres nedostaje, prva kartica može biti hq720 ili sd - to je iskreni maksimum za taj ID.</p>\n  <p>Za kopiranje adrese odabrane veličine koristite<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura</a>Za spremanje datoteke upotrijebite<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzimanje vodiča</a>.</p>"
+    },
+    {
+      "heading": "Koju veličinu trebate koristiti?",
+      "html": "<table>\n    <thead>\n      <tr><th>Primjer upotrebe</th><th>Preferiraj</th><th>Zašto</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Istaknuta slika bloga / Open Graph</td><td>Najveća validirana ~1280×720</td><td>Odgovara uobičajenim društvenim usjevima; postavite vlastitu kopiju</td></tr>\n      <tr><td>Istraživanje maketa dizajna / minijatura</td><td>Najbolji dostupni javni i dalje</td><td>Pravo pakiranje, ne snimka zaslona igrača</td></tr>\n      <tr><td>Kratki pregled chata</td><td>sjedište ili mq</td><td>Manje datoteke se brže učitavaju</td></tr>\n      <tr><td>Prilagođeni prijenos u Studiju</td><td>Vaš original 16:9 1280×720 (ili veći)</td><td>Ti stvaraš umjetnost; CDN derivati ​​dolaze kasnije</td></tr>\n    </tbody>\n  </table>\n  <p>Nemojte rastezati hqdefault na 1280×720 i zvati ga maxres. Za savjete o CMS hostingu:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">istaknuta slika / tijek rada Open Grapha</a>Snimke zaslona igrača su drugačija (gora) prednost:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snimka zaslona u odnosu na pravu sličicu</a>.</p>"
+    },
+    {
+      "heading": "Sljedeći korak",
+      "html": "<p>Pogledajte video uživo na<a href=\"https://www.11tik.com/\">11tik ekstraktor</a>, onda bilo<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">kopirajte URL slike</a>ili<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzmite najbolju dostupnu fotografiju</a>.</p>\n\n  <p class=\"yte-bio\">Napisao 11tik. Samo javne CDN veličine; bez povećanja skale i preuzimanja videa.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je li maxresdefault uvijek dostupan?",
+      "answer": "Ne. Mnogi javni videozapisi nikada ne objave tu datoteku. Greška 404 na maxresu je normalna.",
+      "answerHtml": "<p>Ne. Mnogi javni videozapisi nikada ne objave tu datoteku. Greška 404 na maxresu je normalna.</p>"
+    },
+    {
+      "question": "Je li hq720 bolji od ostalih varijanti sličica?",
+      "answer": "Kada postoji, hq720 je u istoj visokoj razini kao i maxres (oko 1280×720). Nije automatski \"bolji\" od validirane maxres datoteke i to nije zajamčeno.",
+      "answerHtml": "<p>Kada postoji, hq720 je u istoj visokoj razini kao i maxres (oko 1280×720). Nije automatski \"bolji\" od validirane maxres datoteke i to nije zajamčeno.</p>"
+    },
+    {
+      "question": "Koja je veličina najbolja za web stranicu?",
+      "answer": "Koristite najveću validiranu javnu fotografiju u formatu ~16:9 (često 1280×720), a zatim postavite kopiju na svoju web-stranicu za stabilne oznake Open Grapha i istaknutih slika.",
+      "answerHtml": "<p>Koristite najveću validiranu javnu fotografiju u formatu ~16:9 (često 1280×720), a zatim postavite kopiju na svoju web-stranicu za stabilne oznake Open Grapha i istaknutih slika.</p>"
+    },
+    {
+      "question": "Zašto se minijatura visoke rezolucije ponekad ne učitava?",
+      "answer": "Naziv datoteke je pogođen. YouTube nije objavio tu izvedenicu za ID videozapisa. Umjesto toga učitajte manju postojeću veličinu.",
+      "answerHtml": "<p>Naziv datoteke je pogođen. YouTube nije objavio tu izvedenicu za ID videozapisa. Umjesto toga učitajte manju postojeću veličinu.</p>"
+    },
+    {
+      "question": "Znači li „HD sličica“ 4K?",
+      "answer": "Ne. Javna maksimalna rezolucija je obično 1280 × 720. 11tik neće izmisliti 4K fotografiju.",
+      "answerHtml": "<p>Ne. Javna maksimalna rezolucija je obično 1280 × 720. 11tik neće izmisliti 4K fotografiju.</p>"
+    },
+    {
+      "question": "Jesu li WebP sličice bolje kvalitete od JPEG-a?",
+      "answer": "WebP je još jedan spremnik za isti sloj veličine prilikom objavljivanja. Poželjno je da datoteka 11tik bude validirana; nemojte pretpostavljati da WebP uvijek postoji.",
+      "answerHtml": "<p>WebP je još jedan spremnik za isti sloj veličine prilikom objavljivanja. Poželjno je da datoteka 11tik bude validirana; nemojte pretpostavljati da WebP uvijek postoji.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik. Samo javne CDN veličine; bez povećanja skale i preuzimanja videa.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+}

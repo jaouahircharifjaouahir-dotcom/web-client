@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "sv",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Hur 11tik delningslänkar fungerar: /thumb/{VIDEO_ID} kontra YouTube-visnings-URL:er | 11tik",
+  "description": "11tik /thumb/{id} är en resultatsida för delningar. Det är inte en YouTube-visnings-URL och inte en direkt i.ytimg.com bildfil.",
+  "h1": "Hur 11tik delningslänkar fungerar: /thumb/{VIDEO_ID} kontra YouTube-visnings-URL:er",
+  "ogTitle": "Hur 11tik delningslänkar fungerar: /thumb/{VIDEO_ID} kontra YouTube-visnings-URL:er",
+  "ogDescription": "11tik /thumb/{id} är en resultatsida för delningar. Det är inte en YouTube-visnings-URL och inte en direkt i.ytimg.com bildfil.",
+  "imageAlt": "Diagram som jämför en YouTube-visningsadress, en 11tik-delningsadress för miniatyrbilder och en direkt YouTube-miniatyrbildsadress",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Diagram som jämför en YouTube-visningsadress, en 11tik-delningsadress för miniatyrbilder och en direkt YouTube-miniatyrbildsadress",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Arbetsflöde som visar extrakt, förhandsgranskning, kopia 11tik delningslänk och mottagaren som öppnar miniatyrresultatsidan",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snabbt svar",
+      "html": "<p>Tre olika webbadresser kan dela samma YouTube-video-ID. Endast en av dem är en bildfil.</p>\n  <ol>\n    <li><strong>YouTube-visningsadress</strong>— öppnar videon på YouTube.</li>\n    <li><strong>11tik delnings-URL</strong>— öppnar resultatsidan för 11tik-extraktorn för det ID:t (<code>/thumb/{VIDEO_ID}</code>). Detta är en webbsida, inte en JPEG/WebP-fil.</li>\n    <li><strong>Direkt miniatyr-CDN-URL</strong>— pekar på en offentlig stillbild på YouTubes bildvärd (till exempel<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Använda det offentliga demo-ID:t<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Den tredje adressen är ett exempel på ett direkt bild-URL-mönster. Den specifika maxres-filen garanteras inte för varje video – bekräfta verkliga storlekar med<a href=\"https://www.11tik.com/\">11tik</a>eller den<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-guide</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Samma video-ID, tre jobb: titta på videon, öppna resultatsidan 11tik eller begär en CDN-stillbild.</p>"
+    },
+    {
+      "heading": "Vad /thumb/{VIDEO_ID} är",
+      "html": "<p>På 11tik uppdaterar ett lyckat extraherande av en enda video webbläsaradressen till en sökväg formad som:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Den sökvägen är produktens delnings-/resultat-URL. Den genereras från video-ID:t (se webbplatsens delningshjälpare) och är avsedd att öppna extraheringsverktyget igen med fokus på det ID:t. Äldre länkar i frågeformat som<code>?v=VIDEO_ID</code>behandlas som djuplänkar till samma idé och kan skrivas om till<code>/thumb/</code>form.</p>\n  <p><code>/thumb/…</code>är<strong>inte</strong>finns på YouTubes bild-CDN. Att öppna den laddar aldrig ner en bild i sig själv; den laddar 11tik-apprutten för det ID:t.</p>"
+    },
+    {
+      "heading": "Varför sidan finns",
+      "html": "<p>Folk behöver ett stabilt sätt att öppna eller skicka \"den här videons miniatyrbildsresultat på 11tik\" utan att klistra in en lång visnings-URL i chatten och hoppas att mottagaren vet vad de ska göra härnäst. Delningssidan håller konversationen på extraheraren: samma ID, samma arbetsflöde för offentliga stillbilder, nedladdnings- och kopieringsåtgärder på ett ställe.</p>\n  <p>Det håller också hemsidans URL ren. Marknadsföringshemsidan förblir den generella extraktorn;<code>/thumb/{id}</code>är djuplänken för ett specifikt ID.</p>"
+    },
+    {
+      "heading": "Vad en användare ser när den öppnas",
+      "html": "<p>Öppning<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>laddar 11tik-appen med en sida på thumbnail-rutten. Appen läser det 11 tecken långa ID:t från sökvägen, sätter in matchande visnings-URL i extraktorn och kör det offentliga miniatyrbildsupptäcktspasset för det ID:t. När det finns offentliga stillbilder visas den vanliga förhandsgranskningen, kvalitetslistan, nedladdningsåtgärderna och delningskontrollerna. När de inte gör det får du samma tomma/offentliga-hittades-inte-resultat som vid manuell inklistring.</p>\n  <p>Du kan också se en kort rubrik och inledande text för det ID:t ovanför verktygets användargränssnitt. Det innehållet beskriver resultatsidan; det är fortfarande en del av webbplatsupplevelsen, inte ett råbildsvar.</p>"
+    },
+    {
+      "heading": "Hur man kopierar länken 11tik",
+      "html": "<ol>\n    <li>Öppna<a href=\"https://www.11tik.com/\">11tik</a>och klistra in en offentlig YouTube-URL (eller öppna en befintlig<code>/thumb/</code>länk).</li>\n    <li>Vänta tills extraheringen är klar och en bästa publika stillbild visas.</li>\n    <li>Använd delningskontrollen på sidan som är märkt för delningslänken (kopiera delningslänk). Värdet ser ut så här<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Skicka den URL:en. Mottagaren hamnar på resultatsidan och kan köra samma offentliga kontroll igen.</li>\n  </ol>\n  <p>Massutdrag kan exponera en delnings-URL per lyckat video-ID (inklusive i CSV-exportkolumner). Varje ID behåller sitt eget<code>/thumb/</code>sökväg så att länkar inte kollapsar på det första resultatet.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dela arbetsflöde: extrahera → förhandsgranska → kopiera<code>/thumb/{id}</code>→ mottagaren öppnar resultatsidan.</p>"
+    },
+    {
+      "heading": "URL-jämförelsetabell",
+      "html": "<table>\n    <thead>\n      <tr><th>URL-typ</th><th>Exempel</th><th>Vad som öppnas</th><th>Är det en bildfil?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>YouTube-visning</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube-spelare/visningssida</td><td>Inga</td></tr>\n      <tr><td>11tik dela</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik extraheringsresultat för det ID:t</td><td>Inga</td></tr>\n      <tr><td>Direkt CDN-stillbild</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Bildbyte (när filen finns)</td><td>Ja</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Hur de tre webbadresserna skiljer sig åt i praktiken",
+      "html": "<h3>Titta på URL kontra 11tik delnings-URL</h3>\n  <p>Dela visnings-URL:en när målet är att titta på eller diskutera videon på YouTube. Dela 11tik-URL:en när målet är att öppna resultatet av miniatyrextraheringen – förhandsvisningar, nedladdningar och validerade offentliga storlekar – utan att be någon att hitta extraheraren först.</p>\n  <h3>11tik delnings-URL kontra direkt bild-URL</h3>\n  <p>Den direkta bild-URL:en är den du klistrar in i<code>&lt;img src&gt;</code>, CMS-mediebibliotek eller designverktyg efter att du har bekräftat att filen finns. Hur dessa CDN-URL:er byggs upp från ID:t är uppdraget för<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>Delnings-URL:en 11tik ersätter aldrig den bildadressen: mottagarna använder fortfarande nedladdnings- eller kopierings-URL:en för bild i verktyget när de behöver själva filen.</p>\n  <h3>Titta på URL kontra direkt bild-URL</h3>\n  <p>Titta-URL:en identifierar videon. Bild-URL:en identifierar en offentlig derivata. De är inte utbytbara, vilket är anledningen till att gissningar<code>maxresdefault.jpg</code>misslyckas ofta även när visningssidan fungerar.</p>"
+    },
+    {
+      "heading": "När ska man dela vilken länk",
+      "html": "<ul>\n    <li><strong>Dela YouTube-visnings-URL:en</strong>för att titta på, kommentera eller citera videon.</li>\n    <li><strong>Dela 11tik<code>/thumb/</code>URL</strong>för samarbetspartners som behöver extraheringsresultatet, en kvalitetslista eller en snabb åternedladdning av den offentliga stillbilden.</li>\n    <li><strong>Dela eller värd för den direkta bildens URL/nedladdade fil</strong>för bloggens utvalda bilder, Open Graph och designkompositioner – efter bekräftelse. Se<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">nedladdningsguide</a>och<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">storleks- och upplösningsguide</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hur video-ID:t kopplar samman alla tre",
+      "html": "<p>Allt hänger på samma 11-teckens-ID. Watch-URL:er innehåller det.<code>v=</code>(eller Shorts/Embed/Live-sökvägssegment). 11tik placerar den i<code>/thumb/{id}</code>CDN-stillbilder placerar det mellan<code>/vi/</code>(eller<code>/vi_webp/</code>) och filnamnets storlek. Om ID:t är felaktigt, bryts alla tre på olika sätt: fel video, fel resultatsida eller fel/saknad bild.</p>"
+    },
+    {
+      "heading": "Hur detta passar extraktorns arbetsflöde",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Delningslänken är ett bokmärke i det arbetsflödet. Den hoppar inte över validering, skapar inte 4K eller omvandlar privata videor till offentliga stillbilder.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Är https://www.11tik.com/thumb/VIDEO_ID en direkt bild?",
+      "answer": "Nej. Det är en 11tik resultatsida för det video-ID:t. Direkta bilder finns på webbhotell som i.ytimg.com.",
+      "answerHtml": "<p>Nej. Det är en 11tik resultatsida för det video-ID:t. Direkta bilder finns på webbhotell som<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Vad händer efter att någon öppnat min delningslänk?",
+      "answer": "11tik laddar miniatyrrutten, läser ID:t, kör den offentliga miniatyrkontrollen för det ID:t och visar extraheringsgränssnittet med resultat när offentliga stillbilder finns.",
+      "answerHtml": "<p>11tik laddar miniatyrrutten, läser ID:t, kör den offentliga miniatyrkontrollen för det ID:t och visar extraheringsgränssnittet med resultat när offentliga stillbilder finns.</p>"
+    },
+    {
+      "question": "Kan jag använda en hotlink /thumb/ inuti en img-tagg?",
+      "answer": "Gör inte det. Använd en bekräftad CDN-bild-URL eller en fil som du har laddat ner. Delningssökvägen returnerar ett HTML-appskal, inte bildbyte.",
+      "answerHtml": "<p>Gör inte det. Använd en bekräftad CDN-bild-URL eller en fil som du har laddat ner. Delningssökvägen returnerar ett HTML-appskal, inte bildbyte.</p>"
+    },
+    {
+      "question": "Varför ändrades mitt adressfält efter att jag extraherade en miniatyrbild?",
+      "answer": "Efter ett extrakt av en enda video synkroniserar 11tik delningssökvägen till /thumb/{VIDEO_ID} så att det aktuella resultatet är enkelt att kopiera och öppna igen.",
+      "answerHtml": "<p>Efter ett extrakt av en enda video synkroniserar 11tik delningssökvägen till<code>/thumb/{VIDEO_ID}</code>så det aktuella resultatet är enkelt att kopiera och öppna igen.</p>"
+    },
+    {
+      "question": "Använder Shorts en annan delningsväg?",
+      "answer": "Nej. Shorts-videor tolkas fortfarande som ett 11-tecken långt ID. Delnings-URL:en förblir /thumb/{id}; endast den ursprungliga YouTube-URL:ens form skilde sig.",
+      "answerHtml": "<p>Nej. Shorts konverteras fortfarande till ett 11-tecken långt ID. Delnings-URL:en finns kvar.<code>/thumb/{id}</code>; endast den ursprungliga formen på YouTube-URL:en skilde sig.</p>"
+    },
+    {
+      "question": "Är /thumb/{id} samma sak som att kopiera maxres-URL:en?",
+      "answer": "Nej. Maxres (när det finns) är en möjlig CDN-fil. Delningssidan listar validerade offentliga storlekar och kan inkludera andra nivåer när maxres saknas.",
+      "answerHtml": "<p>Nej. Maxres (när det finns) är en möjlig CDN-fil. Delningssidan listar validerade offentliga storlekar och kan inkludera andra nivåer när maxres saknas.</p>"
+    },
+    {
+      "question": "Var förklaras visnings- och bild-URL:er mer ingående?",
+      "answer": "Använd miniatyr-URL-artikeln för ID → CDN-konstruktion och nedladdningsartikeln för att spara filer.",
+      "answerHtml": "<p>Använd<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-artikel</a>för ID → CDN-konstruktion, och nedladdningsartikeln för att spara filer.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Slutsats</h2>\n<p>Behandla<code>/thumb/{VIDEO_ID}</code>som 11tiks delnings-/resultatadress: användbar för att öppna igen och skicka ett utdrag, aldrig som en ersättning för en YouTube-tittlänk eller en direkt<code>i.ytimg.com</code>fortfarande. Håll de tre URL-typerna raka så förblir dina nedladdningar, inbäddningar och länkar till samarbetspartners korrekta.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrahera en offentlig miniatyrbild och kopiera dess delningslänk 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>Skaparens referens:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Ladda upp anpassade videominiatyrer</a>.</p>"
+}

@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "th",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "ติดต่อ | 11tik",
+  "description": "โปรดใช้แบบฟอร์มนี้สำหรับคำถามเกี่ยวกับโปรแกรมดึงภาพขนาดย่อจาก YouTube ข้อความจะถูกส่งไปยังผู้ดูแลระบบ 11tik ทางอีเมล ห้ามส่งไฟล์วิดีโอหรือไฟล์เสียง เครื่องมือนี้ใช้งานได้เฉพาะกับภาพขนาดย่อสาธารณะเท่านั้น",
+  "h1": "ติดต่อ",
+  "ogTitle": "ติดต่อ",
+  "ogDescription": "โปรดใช้แบบฟอร์มนี้สำหรับคำถามเกี่ยวกับโปรแกรมดึงภาพขนาดย่อจาก YouTube ข้อความจะถูกส่งไปยังผู้ดูแลระบบ 11tik ทางอีเมล ห้ามส่งไฟล์วิดีโอหรือไฟล์เสียง เครื่องมือนี้ใช้งานได้เฉพาะกับภาพขนาดย่อสาธารณะเท่านั้น",
+  "imageAlt": "",
+  "faqHeading": "คำถามที่พบบ่อย",
+  "images": [],
+  "sections": [
+    {
+      "heading": "ติดต่อ",
+      "html": "<h1>ติดต่อ</h1>\n  <p class=\"yte-updated\">อัปเดตล่าสุด: 22 สิงหาคม 2569</p>\n  <p itemprop=\"description\">โปรดใช้แบบฟอร์มนี้สำหรับคำถามเกี่ยวกับโปรแกรมดึงภาพขนาดย่อจาก YouTube ข้อความจะถูกส่งไปยังผู้ดูแลระบบ 11tik ทางอีเมล ห้ามส่งไฟล์วิดีโอหรือไฟล์เสียง เครื่องมือนี้ใช้งานได้เฉพาะกับภาพขนาดย่อสาธารณะเท่านั้น</p>\n  <p>อีเมลโดยตรง:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>สำหรับรายงานเกี่ยวกับวิดีโอเฉพาะ ให้ระบุ URL สาธารณะของ YouTube 11tik ไม่ได้โฮสต์ไฟล์ภาพขนาดย่อ รูปภาพจะถูกร้องขอจาก CDN สาธารณะของแพลตฟอร์ม</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>ชื่อ<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>อีเมล<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>ข้อความ<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">ส่งข้อความ</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">โปรแกรมดึงภาพขนาดย่อจาก YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">เกี่ยวกับ</a>·<a href=\"https://www.11tik.com/p/privacy.html\">นโยบายความเป็นส่วนตัว</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">เงื่อนไข</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

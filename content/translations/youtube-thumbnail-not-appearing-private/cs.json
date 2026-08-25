@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "cs",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "Proč se nezobrazuje miniatura na YouTube: Soukromá, věkově omezená nebo zpracovávaná videa | 11tik",
+  "description": "Pokud se stále nenačítá žádné veřejné video z YouTube, může být video soukromé, omezené, zpracovávané nebo smazané – nejen chybějící název souboru s maxres.",
+  "h1": "Proč se nezobrazuje miniatura YouTube: Soukromá, věkově omezená nebo zpracovávaná videa",
+  "ogTitle": "Proč se nezobrazuje miniatura YouTube: Soukromá, věkově omezená nebo zpracovávaná videa",
+  "ogDescription": "Pokud se stále nenačítá žádné veřejné video z YouTube, může být video soukromé, omezené, zpracovávané nebo smazané – nejen chybějící název souboru s maxres.",
+  "imageAlt": "Tok od adresy URL YouTube přes ID videa a kontrolu veřejných záznamů k dostupným nebo nedostupným výsledkům",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "Tok od adresy URL YouTube přes ID videa a kontrolu veřejných záznamů k dostupným nebo nedostupným výsledkům",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Porovnání chybějící velikosti miniatury s nepoužitelnou veřejnou miniaturou videa",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rychlá odpověď",
+      "html": "<p>Platná URL adresa YouTube dokazuje, že máte ID videa.<strong>ne</strong>prokázat, že YouTube zveřejnil použitelný veřejný soubor s miniaturami na síti CDN obrázků. Extraktory jako<a href=\"https://www.11tik.com/\">11tik</a>kontrolovat pouze veřejné statické snímky. Pokud se žádný z těchto kandidátů na obrázky nenačte, nástroj oznámí, že nebyla nalezena žádná veřejná miniatura. Tento výsledek často sleduje přístup k videu nebo jeho stav – soukromé, věkově omezené nebo jinak omezené, statický obrázek se zpracovává, je smazaný nebo jinak nedostupný – spíše než jediný chybějící název velikosti, například<code>maxresdefault.jpg</code>.</p>\n  <p>Důležitá kontrola poctivosti: 11tik ano<strong>ne</strong>klasifikovat přesnou příčinu jako soukromou, s věkovým omezením nebo zpracovávání. Tyto štítky jsou běžná vysvětlení, která by si uživatelé měli ověřit na samotném YouTube. Extraktor vám pouze sdělí, zda lze veřejný obsah ověřit.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Diagnostická cesta: URL → ID videa → kontrola veřejných statických snímků → dostupné vs. nedostupné → co ověřit dále.</p>"
+    },
+    {
+      "heading": "Co může znamenat „miniatura není k dispozici“",
+      "html": "<p>V praxi „nedostupný“ znamená jeden ze dvou různých problémů:</p>\n  <ol>\n    <li><strong>Úroveň videa není k dispozici:</strong>Veřejní kandidáti stále selhávají napříč všemi možnostmi. Pro dané ID momentálně nemáte k dispozici použitelný veřejný obraz ke stažení.</li>\n    <li><strong>Varianta nedostupná:</strong>Chybí jeden název souboru vyšší úrovně (často maxres), ale nižší veřejná velikost se stále načítá. To je problém s velikostí/záložní verzí, nikoli chybějící miniatura pro celé video.</li>\n  </ol>\n  <p>Tento článek se zabývá prvním případem. Pro druhý případ – zejména<code>maxresdefault.jpg</code>404 – použijte vyhrazený<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Průvodce řešením problémů s maxresdefault</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Vlevo: jedna varianta chybí, ostatní veřejné velikosti stále fungují. Vpravo: pro ID videa není k dispozici žádný použitelný veřejný záběr.</p>"
+    },
+    {
+      "heading": "Veřejné fotografie vs. stav přístupu k videu",
+      "html": "<p>YouTube hostuje stránky sledování a odvozené obrázky odděleně. Veřejné soubory miniatur obvykle hostují hostingy, jako například<code>i.ytimg.com</code>a jsou definovány 11místným ID videa. Nástroje, které extrahují miniatury bez přihlášení k vašemu účtu, mohou vyžádat pouze tyto veřejné soubory.</p>\n  <p>Pokud video není vystaveno s veřejným obalem – nebo pokud deriváty ještě nejsou připraveny – kontroly obrázků selžou, i když vložený řetězec vypadal jako normální odkaz pro sledování, krátká videa, živé vysílání nebo vložení. Jak se tyto tvary URL mapují na ID, je popsáno v<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Průvodce URL adresami miniatur YouTube</a>Jak uložit existující statický snímek, je popsáno v<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stáhnout průvodce</a>.</p>"
+    },
+    {
+      "heading": "Soukromá videa",
+      "html": "<p>Soukromé nahrávání je určeno pro omezené publikum. Pokud YouTube pro dané ID nezveřejňuje veřejné odvozené miniatury, nemůže je extraktor v prohlížeči vytvořit. Otevření adresy URL pro sledování, když jste přihlášeni jako vlastník, může video stále zobrazit na YouTube; to neznamená, že pro anonymní požadavky na obrázky je k dispozici veřejná síť CDN.</p>\n  <p>Co zkontrolovat: otevřít URL adresu v soukromém/anonymním okně bez přihlášení. Pokud YouTube video zablokuje, považovat extrakci miniatur za záměrně blokovanou.</p>"
+    },
+    {
+      "heading": "Věkové omezení a další omezení přístupu",
+      "html": "<p>Videa s věkovým omezením, pouze pro členy nebo podobně omezená se mohou pro veřejné vyhledávání obrázků chovat jako soukromý obsah: ID se sice může analyzovat správně, ale veřejné statické snímky se nikdy neověří. Regionální omezení a omezení přístupu k účtu mohou pro veřejný nástroj vést ke stejnému prázdnému výsledku.</p>\n  <p>11tik opět neoznačí typ omezení. Stav přístupu potvrdíte na YouTube; extraktor pouze hlásí, zda je veřejný soubor stále načten.</p>"
+    },
+    {
+      "heading": "Videa se stále zpracovávají",
+      "html": "<p>„Zpracování“ se zobrazuje dvěma souvisejícími způsoby:</p>\n  <ul>\n    <li><strong>Zbrusu nové nahrané příspěvky:</strong>Stránka sledování se může zobrazit dříve, než budou k dispozici všechny odvozené veřejné obrázky. Zkuste to později se stejnou URL adresou.</li>\n    <li><strong>Vlastní aktualizace miniatur ve Studiu:</strong>Po nahrazení grafiky se mohou veřejné soubory CDN zpožďovat. Nižší velikosti se mohou zobrazit před vyššími nebo může být sada krátce neúplná.</li>\n  </ul>\n  <p>Li<em>nějaký</em>Veřejné velikosti již fungují a chybí pouze nejvyšší název, přepněte na<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">článek maxresdefault</a>Pokud<em>žádný</em>public stále ověřuje, počkejte na zpracování a poté znovu zkontrolujte<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Smazaný nebo jinak nedostupný obsah",
+      "html": "<p>Odstraněná videa, poškozená ID a některé ukončené nahrávky nezanechávají žádné spolehlivé veřejné balení. URL adresa pro sledování uložená v záložkách může syntakticky stále vypadat v pořádku, i když každý kandidát na obrázek selže. S odstraněnými/nedostupnými videi zacházejte stejně jako s jinými selháními na úrovni videa: ověřte stav stránky sledování na YouTube a poté přestaňte očekávat statický obrázek z CDN.</p>"
+    },
+    {
+      "heading": "Proč platná URL adresa nestačí",
+      "html": "<p>Analýza je úspěšná, pokud řetězec obsahuje 11místné ID v podporovaném vzoru. Extrakce je úspěšná pouze tehdy, když se alespoň jeden kandidát na veřejnou miniaturu ověří jako skutečný obrázek. Tyto kroky jsou nezávislé:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>Na 11tik se prázdný nejlepší statický obrázek zobrazuje jako jasná zpráva ve stylu „neveřejné miniatury“. Produkt to nestupňová do klasifikace soukromého vs. věkového omezení vs. zpracování.</p>"
+    },
+    {
+      "heading": "Co zkontrolovat jako první (praktický postup)",
+      "html": "<ol>\n    <li>Vložte stejnou URL adresu do<a href=\"https://www.11tik.com/\">11tik</a>a počkejte na dokončení kontroly veřejné velikosti.</li>\n    <li>Pokud se objeví alespoň jedna velikost, tak<strong>ne</strong>Pokud video není k dispozici – stáhněte si ho nebo si přečtěte návod k velikosti/maximálnímu rozlišení pro výběr kvality.</li>\n    <li>Pokud se nic nezobrazí, otevřete stránku sledování/krátkých videí bez přihlášení. Všimněte si, zda YouTube video zobrazuje, požaduje přihlášení/potvrzení věku nebo hlásí, že video není k dispozici.</li>\n    <li>Pokud vlastníte video a právě jste nahráli nebo nahradili vlastní miniaturu, počkejte na zpracování ve Studiu a zkuste to znovu.</li>\n    <li>Pokud YouTube video veřejně zobrazí a 11tik stále nic nenajde, zkuste to znovu později; trvale prázdné výsledky obvykle znamenají, že veřejné statické snímky pro dané ID nejsou zobrazeny.</li>\n  </ol>"
+    },
+    {
+      "heading": "Diagnostická tabulka",
+      "html": "<table>\n    <thead>\n      <tr><th>Co vidíš</th><th>Pravděpodobná třída</th><th>Další krok</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik uvádí jednu nebo více velikostí</td><td>Existují veřejné fotografie</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Stáhnout průvodce</a>/ výběr velikosti</td></tr>\n      <tr><td>Selhává pouze maxres; hq/sd funguje</td><td>Varianta není k dispozici</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Řešení problémů s maxres</a></td></tr>\n      <tr><td>Žádné velikosti; YouTube vyzývá k přihlášení / věková hranice</td><td>Omezení přístupu</td><td>Použijte veřejné video nebo akceptujte, že veřejná extrakce nemůže probíhat</td></tr>\n      <tr><td>Žádné velikosti; vlastník pouze nahrál/nahradil obrázek</td><td>Zpoždění zpracování</td><td>Počkejte a poté znovu zkontrolujte stejnou URL adresu.</td></tr>\n      <tr><td>Žádné velikosti; YouTube uvádí, že je soukromé/nedostupné</td><td>Soukromý nebo smazaný stav</td><td>Stále není možné vystěhovat veřejnost</td></tr>\n      <tr><td>URL adresa se neanalyzuje</td><td>Špatný nebo nepodporovaný odkaz</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Průvodce URL / ID videa</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Chybějící varianta vs. žádná použitelná veřejná miniatura",
+      "html": "<p>Lidé často vkládají ručně vytvořenou URL adresu maxres, vidí chybu 404 a dojdou k závěru, že „neexistuje žádná miniatura“. Tento závěr je často chybný. Chybějící název souboru vyšší úrovně je normální. Nedostupnost na úrovni videa znamená, že úplný průchod kandidáta extraktoru nevrátí nic použitelného.</p>\n  <p>Pravidlo:</p>\n  <ul>\n    <li>Potřebujete to nejlepší<em>existující</em>veřejný soubor → stažení / velikost / návody k maximálnímu rozlišení.</li>\n    <li>Je třeba pochopit proč<em>nic</em>veřejné objevy → tento článek + vlastní zpráva o přístupu od YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "Kdy použít který průvodce 11tik",
+      "html": "<ul>\n    <li><strong>Tento článek:</strong>žádné použitelné veřejné statické snímky; otázky ohledně přístupu nebo stavu.</li>\n    <li><strong>Průvodce Maxres:</strong>Chybí název souboru HD, ačkoli existují jiné veřejné velikosti.</li>\n    <li><strong>Průvodce URL:</strong>nalezení ID a vytvoření/kopírování URL adres obrázků, které skutečně existují.</li>\n    <li><strong>Stáhnout průvodce:</strong>uložení snímku po zobrazení velikostí.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Zaručuje funkční stránka sledování veřejnou miniaturu?",
+      "answer": "Ne. Soubory CDN pro sledování a veřejné obrázky jsou sice související, ale nejsou identické. Omezení přístupu a zpracování mohou vést k tomu, že budete mít ID videa a nebudete moci extrahovat veřejnou statickou fotografii.",
+      "answerHtml": "<p>Ne. Soubory CDN pro sledování a veřejné obrázky jsou sice související, ale nejsou identické. Omezení přístupu a zpracování mohou vést k tomu, že budete mít ID videa a nebudete moci extrahovat veřejnou statickou fotografii.</p>"
+    },
+    {
+      "question": "Může mi 11tik říct, zda je video soukromé, nebo věkově omezené?",
+      "answer": "Ne. 11tik uvádí pouze to, zda lze veřejný obsah stále ověřit. Potvrďte soukromá, věková omezení nebo jiná omezení na YouTube.",
+      "answerHtml": "<p>Ne. 11tik uvádí pouze to, zda lze veřejný obsah stále ověřit. Potvrďte soukromá, věková omezení nebo jiná omezení na YouTube.</p>"
+    },
+    {
+      "question": "Právě jsem nahrál vlastní miniaturu. Proč je extrakce prázdná?",
+      "answer": "Zpracování ve Studiu se může zpožďovat. Počkejte a poté znovu vložte stejnou veřejnou URL adresu. Pokud se některé velikosti zobrazují, ale maxres ne, přečtěte si průvodce maxres, místo abyste předpokládali, že video nemá miniaturu.",
+      "answerHtml": "<p>Zpracování ve Studiu se může zpožďovat. Počkejte a poté znovu vložte stejnou veřejnou URL adresu. Pokud se některé velikosti zobrazují, ale maxres ne, přečtěte si průvodce maxres, místo abyste předpokládali, že video nemá miniaturu.</p>"
+    },
+    {
+      "question": "Je to stejný problém jako u maxresdefault 404?",
+      "answer": "Pouze někdy. Chyba maxres 404 s funkčními záložními funkcemi je variantou problému. Prázdné výsledky napříč veřejnými kandidáty znamenají nedostupnost na úrovni videa.",
+      "answerHtml": "<p>Pouze někdy. Chyba maxres 404 s funkčními záložními funkcemi je variantou problému. Prázdné výsledky napříč veřejnými kandidáty znamenají nedostupnost na úrovni videa.</p>"
+    },
+    {
+      "question": "Odemkne se po přihlášení na YouTube v [[P2] soukromé fotografie?",
+      "answer": "Ne. 11tik je veřejný extraktor statických obrázků v prohlížeči. Neobchází soukromé ani chráněné balení.",
+      "answerHtml": "<p>Ne. 11tik je veřejný extraktor statických obrázků v prohlížeči. Neobchází soukromé ani chráněné balení.</p>"
+    },
+    {
+      "question": "Co mám zkusit, když URL adresa vypadá správně?",
+      "answer": "Potvrďte, že se video otevře bez přihlášení. Pokud jste právě změnili grafiku ve Studiu, počkejte a znovu spusťte extrakci na 11tik. Trvalé prázdné výsledky znamenají, že pro dané ID momentálně není k dispozici žádná veřejná fotografie.",
+      "answerHtml": "<p>Potvrďte, že se video otevře bez přihlášení. Pokud jste právě změnili grafiku ve Studiu, počkejte a znovu spusťte extrakci na 11tik. Trvalé prázdné výsledky znamenají, že pro dané ID momentálně není k dispozici žádná veřejná fotografie.</p>"
+    },
+    {
+      "question": "Znamená „žádná veřejná miniatura“, že video soubor je pryč?",
+      "answer": "Ne vždy. Video může být stále k dispozici pro oprávněné diváky, i když jsou veřejné odvozené obrázky zatajeny nebo nejsou k dispozici. Zkontrolujte zprávu na stránce YouTube.",
+      "answerHtml": "<p>Ne vždy. Video může být stále k dispozici pro oprávněné diváky, i když jsou veřejné odvozené obrázky zatajeny nebo nejsou k dispozici. Zkontrolujte zprávu na stránce YouTube.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Závěr</h2>\n<p>Pokud se miniatura „nezobrazuje“, oddělte ji dvěma otázkami: Ověřil se přesto nějaký veřejný soubor? Nebo selhal pouze jeden název souboru na vyšší úrovni? Selhání na úrovni videa obvykle sledují soukromé, omezené, zpracovávané, smazané nebo jinak neveřejné balíčky – nejde o záhadné chybějící balíčky.<code>maxresdefault</code>řetězec. Pro poctivý test veřejné dostupnosti použijte 11tik a poté postupujte podle pokynů pro maxres, URL nebo stažení pro další odpovídající krok.</p>\n  <p><a href=\"https://www.11tik.com/\">Zkontrolujte, zda na 11tik existuje veřejná miniatura YouTube →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Soukromí</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmínky</a>Oficiální nápověda pro tvůrce s vlastními miniaturami:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Nahrávání vlastních miniatur videí</a>.</p>"
+}

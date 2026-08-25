@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "sk",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Ako získať URL adresu miniatúry YouTube priamo z videa | 11tik",
+  "description": "Vytvorte alebo skopírujte funkčnú URL adresu miniatúry YouTube z ID videa na i.ytimg.com. Pred vytvorením odkazu na danú veľkosť sa uistite, že existuje.",
+  "h1": "Ako získať URL adresu miniatúry YouTube priamo z videa",
+  "ogTitle": "Ako získať URL adresu miniatúry YouTube priamo z videa",
+  "ogDescription": "Vytvorte alebo skopírujte funkčnú URL adresu miniatúry YouTube z ID videa na i.ytimg.com. Pred vytvorením odkazu na danú veľkosť sa uistite, že existuje.",
+  "imageAlt": "Diagram zobrazujúci URL adresu pozerania na YouTube prevedenú na ID videa a následne URL adresu miniatúry obrázka",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Diagram zobrazujúci URL adresu pozerania na YouTube prevedenú na ID videa a následne URL adresu miniatúry obrázka",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Označená anatómia URL miniatúry YouTube zobrazujúca hostiteľa, cestu, ID videa a názov súboru",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rýchla odpoveď",
+      "html": "<p>Ak chcete získať adresu URL miniatúry YouTube: vyhľadajte 11-miestny identifikátor videa a potom otvorte potvrdenú verejnú adresu obrázka, napríklad<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>URL adresa stránky pozerania nie je obrázok. Vložte odkaz na video do<a href=\"https://www.11tik.com/\">11tik</a>, počkajte, kým sa veľkosti skutočne načítajú, a potom použite<strong>Kopírovať URL adresu obrázka</strong>takže si ponecháte funkčný HTTPS odkaz namiesto uhádnutého názvu súboru, ktorý vygeneruje chybu 404.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Postup používaný extraktormi: verejná URL adresa na pozeranie → ID videa → verejná URL adresa miniatúry na hostiteľovi obrázkov YouTube.</p>"
+    },
+    {
+      "heading": "Čo je URL adresa miniatúry YouTube",
+      "html": "<p>URL adresa miniatúry YouTube odkazuje na súbor so statickým obrázkom, nie na prehrávač videa. Nachádza sa na verejnej sieti CDN obrázkov YouTube (bežne<code>i.ytimg.com</code>). Keď adresa funguje, váš prehliadač stiahne súbor JPEG alebo WebP. Ak nie, zobrazí sa vám chýbajúci súbor alebo sivý zástupný symbol – nie „HD“ vynájdený z ničoho nič.</p>\n  <p>To je dôležité pre blogy, ukážky Open Graphu, návrhy dizajnov a polia s obrázkami v CMS: tieto systémy potrebujú URL adresu obrázka, nie<code>youtube.com/watch?v=…</code>Ak potrebujete iba súbor na disku, použite<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stiahnuť sprievodcu</a>namiesto tejto stránky zameranej na URL.</p>"
+    },
+    {
+      "heading": "Ako URL adresa súvisí s ID videa",
+      "html": "<p>Verejné statické snímky YouTube kľúčuje podľa ID videa. Obvyklý vzor JPEG je:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Niektoré videá tiež publikujú dvojčatá WebP pod<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>je presne 11 znakov z množiny<code>A–Z a–z 0–9 _ -</code>Zmenou ID ukážete na zábery z iného videa. Zmenou názvu súboru požiadate o inú verejnú deriváciu toho istého videa.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatómia verejnej adresy URL miniatúry: hostiteľ, cesta, ID videa a názov súboru s veľkosťou.</p>"
+    },
+    {
+      "heading": "Ako nájsť ID videa na YouTube",
+      "html": "<p>Potrebujete iba ID. Ďalšie parametre dopytu, ako napríklad ID zoznamov skladieb alebo<code>pp=</code>Nemeňte cestu k hostiteľovi miniatúry.</p>\n  <table>\n    <thead>\n      <tr><th>Formát URL adresy YouTube</th><th>Príklad</th><th>Kde sa nachádza identifikačné číslo</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Sledujte</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>hodnota dopytu</td></tr>\n      <tr><td>Krátky odkaz</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Prvý segment cesty</td></tr>\n      <tr><td>Šortky</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Cesta po<code>/shorts/</code></td></tr>\n      <tr><td>Vložiť</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Cesta po<code>/embed/</code></td></tr>\n      <tr><td>Naživo</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Cesta po<code>/live/</code></td></tr>\n      <tr><td>vloženie súborov cookie</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Rovnaké ako vložiť</td></tr>\n    </tbody>\n  </table>\n  <p>Analyzátor 11tik akceptuje tieto tvary (a holé 11-znakové ID). URL adresa kanála alebo zoznamu skladieb bez ID videa nestačí pre jednu URL adresu miniatúry.</p>"
+    },
+    {
+      "heading": "Bežné názvy verejných súborov miniatúr",
+      "html": "<p>Názvy súborov opisujú úrovne veľkosti, ktoré YouTube môže alebo nemusí zverejniť pre daný nahraný súbor. Názvy nezaručujú existenciu súboru.</p>\n  <table>\n    <thead>\n      <tr><th>Názov súboru</th><th>Typické pixely, ak sú prítomné</th><th>Poznámky</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Najvyššia verejná dostupnosť v čase vydania</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>trieda 1280×720</td><td>Ďalšia vysoká úroveň, ktorú odhaľujú niektoré videá</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Často dostupné, keď chýba maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Veľmi bežná stredná veľkosť</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Malý náhľad</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Najmenší štandardný destilačný prístroj</td></tr>\n    </tbody>\n  </table>\n  <p>Podrobnosti na úrovni pixelov a kedy uprednostniť jednu veľkosť pred inou nájdete v<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">sprievodca veľkosťou a rozlíšením miniatúr</a>Prečo<code>maxresdefault.jpg</code>často chýba, pozri<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">čo je maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "Pracovaný príklad s verejným ID videa",
+      "html": "<p>Vezmite si verejné ID demo verzie<code>dQw4w9WgXcQ</code>URL adresa na sledovanie je:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Kandidát na URL adresu JPEG s maxres je:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Otvorte túto adresu na novej karte. Ak sa obrázok načíta, máte funkčnú adresu URL miniatúry. Ak to zlyhá, skúste ďalší názov súboru (napríklad<code>hqdefault.jpg</code>) alebo vložte odkaz na pozeranie do 11tik, aby boli uvedené iba preživšie súbory. Nikdy nepredpokladajte, že každé video má maximálne rozlíšenie.</p>"
+    },
+    {
+      "heading": "Tri spôsoby, ako získať URL adresu obrázka",
+      "html": "<h3>1. Najrýchlejšie: kopírovanie z 11tik</h3>\n  <ol>\n    <li>Skopírujte URL adresu verejného pozerania, krátkych videí, živého vysielania, vloženia alebo youtu.be.</li>\n    <li>OTVORENÉ<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Vložte URL adresu a počkajte, kým sa zobrazia ukážky.</li>\n    <li>Vyberte<strong>Kopírovať URL adresu obrázka</strong>na veľkosti, ktorú potrebujete.</li>\n  </ol>\n  <p>11tik kontroluje odpovede vo vašom prehliadači a zobrazuje iba veľkosti, ktoré vracajú skutočný obrázok. To je rozdiel medzi použiteľným odkazom CMS a nefunkčným.<code>maxresdefault</code>hádaj.</p>\n\n  <h3>2. Metóda prehliadača</h3>\n  <p>Potom, čo máte kandidáta<code>i.ytimg.com</code>adresu, otvorte ju na novej karte. Ak sa stále vykresľuje, skopírujte panel s adresou. Ak sa zobrazí chyba alebo prázdna/zástupná dlaždica, táto veľkosť nebola pre dané ID nikdy publikovaná – nevytvárajte na ňu hotlink.</p>\n\n  <h3>3. Ručne vytvorte URL adresu</h3>\n  <p>Môžete zreťaziť host +<code>/vi/</code>+ ID + názov súboru. Ručne vytvorené URL adresy sú vhodné na testovanie, ale nie je bezpečné ich vkladať do produkčného HTML, kým neoveríte odpoveď. Dostupnosť sa líši v závislosti od veku nahraného súboru, zdrojového grafického návrhu a stavu spracovania v Štúdiu YouTube.</p>"
+    },
+    {
+      "heading": "Výber najlepšej dostupnej URL adresy",
+      "html": "<p>„Najlepší“ znamená najväčší verejný súbor, ktorý skutočne existuje, nie najdlhší názov súboru, ktorý môžete zadať. Ak je k dispozícii, uprednostnite overený odkaz maxres alebo hq720. Ak tieto odkazy zlyhajú, prejdite na sd, hq, mq alebo default. Zmena rozlíšenia fotografie z rozmeru 480×360 na 1280×720 v editore nevytvorí skutočnú URL adresu maxres.</p>\n  <p>Tvorcovia, ktorí nahrávajú vlastné grafické prvky, by si mali aj tak následne overiť verejné deriváty – spracovanie v štúdiu môže oneskorovať. Súvisiace:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatúry v Štúdiu YouTube v roku 2026</a>.</p>"
+    },
+    {
+      "heading": "Použitie URL adresy na inej webovej stránke",
+      "html": "<p>Môžete vložiť funkčný<code>i.ytimg.com</code>URL do mnohých polí CMS, ale hotlinking má svoje riziká: YouTube môže zmeniť cesty CDN a niektoré siete blokujú hosting tretích strán. Pre trvalý blogový obrázok alebo značku Open Graph si stiahnite potvrdenú fotografiu a jej kópiu hostujte na svojej vlastnej doméne. Návod:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Miniatúra YouTube ako obrázok blogu / Open Graph</a>.</p>\n  <p>Autorské práva zostávajú u používateľa, ktorý ich nahral. Verejná URL adresa nie je licenciou na opätovné publikovanie umeleckého diela ako vlastného obalu. Pozrite si pomocníka YouTube na<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">vlastné miniatúry videí</a>a 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+    },
+    {
+      "heading": "Riešenie problémov s nefunkčnými URL adresami miniatúr",
+      "html": "<ul>\n    <li><strong>404 alebo zástupný symbol:</strong>Táto veľkosť nebola nikdy publikovaná. Skúste iný názov súboru alebo použite overený zoznam 11tik.</li>\n    <li><strong>Nesprávne video:</strong>chybne zadané ID. Znova skopírujte z adresy URL sledovania.</li>\n    <li><strong>Súkromné ​​/ s vekovým obmedzením / odstránené:</strong>stále nie je k dispozícii žiadny verejný odkaz.</li>\n    <li><strong>Zmiešaný obsah HTTP:</strong>vždy používajte<code>https://</code>URL adresy obrázkov na HTTPS stránkach.</li>\n    <li><strong>Šortky vyzerajú ako letterbox:</strong>Mnoho krátkych videí (Shorts) stále uchováva verejné súbory s mapou na šírku. URL adresa je stále oficiálna verejná adresa.</li>\n  </ul>"
+    },
+    {
+      "heading": "Ďalší krok",
+      "html": "<p>Vložte verejnú URL adresu YouTube do<a href=\"https://www.11tik.com/\">Extraktor miniatúr YouTube</a>skopírujte overený odkaz na obrázok alebo<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stiahnite si statický obrázok</a>ak potrebujete lokálny súbor. Pre výber rozlíšenia otvorte<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">sprievodca veľkosťami a kvalitou</a>.</p>\n\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ extraktora v prehliadači. Iba verejné statické obrázky – žiadne sťahovanie videa ani zvuku.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Môžem skopírovať priamu adresu URL miniatúry bez sťahovania súboru?",
+      "answer": "Áno. Na 11tik použite možnosť Kopírovať URL adresu obrázka. Tým sa skopíruje adresa obrázka HTTPS pre veľkosť, ktorá už bola overená vo vašom prehliadači.",
+      "answerHtml": "<p>Áno. Na 11tik použite možnosť Kopírovať URL adresu obrázka. Tým sa skopíruje adresa obrázka HTTPS pre veľkosť, ktorá už bola overená vo vašom prehliadači.</p>"
+    },
+    {
+      "question": "Môžem získať URL adresu miniatúry z krátkeho videa na YouTube?",
+      "answer": "Áno, keď je krátke video verejné a YouTube zverejnil fotografie pre dané ID. Vložte odkaz /shorts/ rovnakým spôsobom ako vkladáte URL adresu na pozeranie. Pozrite si tiež Miniatúry krátkych videí.",
+      "answerHtml": "<p>Áno, keď je krátke video verejné a YouTube zverejnil fotografie pre dané ID. Vložte<code>/shorts/</code>odkaz rovnakým spôsobom, ako vkladáte URL adresu sledovania. Pozrite si tiež<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatúry krátkych videí</a>.</p>"
+    },
+    {
+      "question": "Prečo jedna adresa URL miniatúry funguje, zatiaľ čo iná vracia chybu?",
+      "answer": "Názvy súborov sú voliteľné verejné odvodeniny. hqdefault.jpg môže existovať, aj keď maxresdefault.jpg neexistuje. Funkčná URL adresa strednej veľkosti neznamená funkčnú URL adresu s maximálnym rozlíšením.",
+      "answerHtml": "<p>Názvy súborov sú voliteľné verejné odvodeniny.<code>hqdefault.jpg</code>môže existovať, keď<code>maxresdefault.jpg</code>nie. Funkčná URL adresa strednej veľkosti neznamená funkčnú URL adresu s maximálnou rozlíšenie.</p>"
+    },
+    {
+      "question": "Môžem použiť priamu URL adresu obrázka na mojej webovej stránke?",
+      "answer": "Technicky áno, ak súbor existuje, ale hosťovanie vlastnej kópie je spoľahlivejšie pre vybrané obrázky a ukážky na sociálnych sieťach. Nepublikujte umenie niekoho iného ako obal svojho kanála bez práv.",
+      "answerHtml": "<p>Technicky áno, ak súbor existuje, ale hosťovanie vlastnej kópie je spoľahlivejšie pre vybrané obrázky a ukážky na sociálnych sieťach. Nepublikujte umenie niekoho iného ako obal svojho kanála bez práv.</p>"
+    },
+    {
+      "question": "Je adresa URL pre sledovanie niekedy aj adresou URL miniatúry?",
+      "answer": "Nie. URL adresa na pozeranie identifikuje video. URL adresa miniatúry identifikuje súbor obrázka na sieti CDN s obrázkami.",
+      "answerHtml": "<p>Nie. URL adresa na pozeranie identifikuje video. URL adresa miniatúry identifikuje súbor obrázka na sieti CDN s obrázkami.</p>"
+    },
+    {
+      "question": "Vymýšľa 11tik URL s vyšším rozlíšením?",
+      "answer": "Nie. Zobrazuje iba verejné súbory, ktoré reagujú ako obrázky. Chýbajúce maxres znamená, že URL by sa nemalo kopírovať.",
+      "answerHtml": "<p>Nie. Zobrazuje iba verejné súbory, ktoré reagujú ako obrázky. Chýbajúce maxres znamená, že URL by sa nemalo kopírovať.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ extraktora v prehliadači. Iba verejné statické obrázky – žiadne sťahovanie videa ani zvuku.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+}

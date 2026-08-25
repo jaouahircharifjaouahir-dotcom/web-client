@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "fr",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Capture d'écran ou miniature YouTube réelle : quel fichier enregistrer ? | 11tik",
+  "description": "Une capture d'écran du lecteur prise avec un téléphone ne correspond pas à la miniature utilisée par YouTube. La version publique réelle se trouve toujours sur i.ytimg.com. Utilisez-la pour les blogs, Open Graph et la recherche ; les captures d'écran ajoutent des éléments d'interface, de la compression et un format d'image incorrect.",
+  "h1": "Capture d'écran ou miniature YouTube réelle : quel fichier devez-vous enregistrer ?",
+  "ogTitle": "Capture d'écran ou miniature YouTube réelle : quel fichier devez-vous enregistrer ?",
+  "ogDescription": "Une capture d'écran du lecteur prise avec un téléphone ne correspond pas à la miniature utilisée par YouTube. La version publique réelle se trouve toujours sur i.ytimg.com. Utilisez-la pour les blogs, Open Graph et la recherche ; les captures d'écran ajoutent des éléments d'interface, de la compression et un format d'image incorrect.",
+  "imageAlt": "Comparaison d'une capture d'écran de joueur avec une véritable miniature publique YouTube",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Comparaison d'une capture d'écran de joueur avec une véritable miniature publique YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Quelle est la différence entre une capture d'écran et une véritable miniature ?",
+      "html": "<p>Une capture d'écran immortalise votre écran, y compris l'interface du lecteur, les sous-titres et l'adaptation à l'échelle de votre appareil. Une miniature, quant à elle, est le fichier JPEG ou WebP publié par YouTube pour l'identifiant de la vidéo. Seul le fichier hébergé sur le CDN possède une URL stable et une taille en pixels connue.</p>"
+    },
+    {
+      "heading": "Pourquoi les captures d'écran ne fonctionnent-elles pas dans Google Images et les aperçus des réseaux sociaux ?",
+      "html": "<p>Elles ont souvent un format d'image incorrect, incluent l'interface utilisateur et sont compressées deux fois. Open Graph et de nombreux champs CMS exigent un format 16:9, soit environ 1280×720. Cela correspond à la valeur maxresdefault lorsqu'elle existe (voir<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guide des tailles pour les vignettes</a>.</p>"
+    },
+    {
+      "heading": "Comment puis-je enregistrer la véritable miniature à la place ?",
+      "html": "<ol>\n    <li>Copiez l'URL publique de la vidéo, pas une capture d'écran.</li>\n    <li>Collez-le dans<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Téléchargez le premier fichier public listé ou copiez l'URL de l'image.</li>\n  </ol>"
+    },
+    {
+      "heading": "Quand une capture d'écran reste-t-elle utile ?",
+      "html": "<p>N'utilisez une capture d'écran que pour documenter un bug d'interface ou un moment précis de la vidéo. Ne l'utilisez pas comme vignette officielle, image d'en-tête de blog ou image de partage si elle est encore publique.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtenir la véritable miniature publique →</a></p>\n  <p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quelle est la différence entre une capture d'écran et une véritable miniature ?",
+      "answer": "Une capture d'écran immortalise votre écran et l'interface du lecteur. La miniature, quant à elle, est le fichier JPEG ou WebP hébergé par YouTube sur i.ytimg.com pour l'identifiant de cette vidéo.",
+      "answerHtml": "Une capture d'écran immortalise votre écran et l'interface du lecteur. La miniature, quant à elle, est le fichier JPEG ou WebP hébergé par YouTube sur i.ytimg.com pour l'identifiant de cette vidéo."
+    },
+    {
+      "question": "Pourquoi les captures d'écran ne fonctionnent-elles pas dans Google Images et les aperçus des réseaux sociaux ?",
+      "answer": "Elles présentent souvent un format d'image incorrect, une interface utilisateur superflue et une compression excessive. Les champs CMS et Open Graph exigent un format public 16:9 sans altération.",
+      "answerHtml": "Elles présentent souvent un format d'image incorrect, une interface utilisateur superflue et une compression excessive. Les champs CMS et Open Graph exigent un format public 16:9 sans altération."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>"
+}

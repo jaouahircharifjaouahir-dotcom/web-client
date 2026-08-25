@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "he",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "כיצד להשתמש בתמונה ממוזערת של יוטיוב כתמונה נבחרת בבלוג או תצוגה מקדימה של גרף פתוח | 11tik",
+  "description": "ודא ש-YouTube ציבורי עדיין קיים, ולאחר מכן אחסן עותק עבור WordPress, Blogger או og:image. אל תיצור קישור חם לכתובת URL maxresdefault ניחושה.",
+  "h1": "כיצד להשתמש בתמונה ממוזערת של YouTube כתמונה נבחרת בבלוג או תצוגה מקדימה של גרף פתוח",
+  "ogTitle": "כיצד להשתמש בתמונה ממוזערת של YouTube כתמונה נבחרת בבלוג או תצוגה מקדימה של גרף פתוח",
+  "ogDescription": "ודא ש-YouTube ציבורי עדיין קיים, ולאחר מכן אחסן עותק עבור WordPress, Blogger או og:image. אל תיצור קישור חם לכתובת URL maxresdefault ניחושה.",
+  "imageAlt": "תהליך עבודה מאישור תמונה ממוזערת ביוטיוב ב-11tik ועד להעלאתה בוורדפרס או הגדרת og:image",
+  "faqHeading": "שאלות נפוצות",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "תהליך עבודה מאישור תמונה ממוזערת ביוטיוב ב-11tik ועד להעלאתה בוורדפרס או הגדרת og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "העלאת תמונות נבחרות זו לצד זו של וורדפרס לעומת כרטיס רשת חברתית של Open Graph באמצעות ממדי פיקסלים אמיתיים",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "תשובה מהירה",
+      "html": "<p>הדבק כתובת URL ציבורית של YouTube לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>, המתן לגדלים מאומתים, ואז או<strong>הורדה</strong>התמונה הראשונה והעלאתה למערכת ניהול התוכן שלך, או<strong>העתק את כתובת האתר של התמונה</strong>רק לאחר טעינתו. לפוסטים עמידים לאורך זמן, אחסנו עותק משלכם. קישורים חמים<code>i.ytimg.com</code>נוח לטיוטות ושביר לכרטיסי ייצור חברתיים.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">אישור ← העתקה או הורדה ← אירוח ← הפניה ב-HTML / תמונה ראשית / Open Graph.</p>"
+    },
+    {
+      "heading": "מהי כתובת URL ישירה של תמונה ממוזערת",
+      "html": "<p>כתובת URL ישירה של תמונה ממוזערת מפנה, לדוגמה, לקובץ JPEG או WebP ב-CDN התמונות של YouTube.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>זה לא דף הצפייה. איך הכתובות האלה בנויות:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">קבל כתובת URL של תמונה ממוזערת ביוטיוב</a>כיצד גדלים שונים:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך גודל ורזולוציה</a>.</p>"
+    },
+    {
+      "heading": "דוגמה ל-HTML",
+      "html": "<p>לאחר ש-11tik מאשר קובץ, תבנית סימון מינימלית נראית כך (החליפו את כתובת האתר, הרוחב, הגובה וה-alt בערכים האמיתיים):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>העדיפו כתובת URL מתארחת משלכם בסביבת ייצור:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>השתמש בדוחות הרוחב והגובה האמיתיים 11tik. אל תמציא 1280×720 כאשר קיים רק 480×360.</p>"
+    },
+    {
+      "heading": "זרימת עבודה של וורדפרס",
+      "html": "<ol>\n    <li>חלצו את הסרטון ב-11tik והורידו את הסטילס הראשון שמופיע ברשימה.</li>\n    <li>בוורדפרס: מדיה ← הוסף חדש ← העלה את הקובץ.</li>\n    <li>הגדר אותו כתמונה נבחרת בפוסט.</li>\n    <li>ב-Yoast, Rank Math או דומים, אשרו שהתצוגה המקדימה ברשתות החברתיות משתמשת בקובץ המצורף הזה (או העלו חיתוך מקורי ייעודי).</li>\n    <li>כתבו טקסט חלופי (alt text) שמציין את שם הסרטון ומציין שהקובץ הוא תמונת סטילס ציבורית מיוטיוב - ולא רשימת מילות מפתח מלאה.</li>\n  </ol>\n  <p>הימנעו מהדבקת קובץ גולמי<code>maxresdefault.jpg</code>נתיב לתוך שדה המדיה עד שהקובץ יאושר. חסרות רזולוציות מקסימליות נפוצות -<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">מדריך maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "בלוגר ואתרים סטטיים",
+      "html": "<p><strong>בלוגר:</strong>העלה את תמונת הסטילס לעורך הפוסטים, לאחר מכן השתמש שוב בכתובת האתר של תמונת Blogger המתארחת עבור כל שדות קטעי הקוד של ערכות נושא/רשתות חברתיות שאתה שולט בהם. אל תסתמך על נתיב ניחוש של YouTube CDN עבור פוסט שפורסם שאכפת לך ממנו.</p>\n  <p><strong>גנרטורים סטטיים:</strong>העבירו את הקובץ למאגר או ל-CDN שלכם, לאחר מכן הגדירו front-matter / מטא תגים לנכס HTTPS זה. שמרו טיוטות בכתובת URL זמנית i.ytimg.com אם אתם חייבים, אך שלחו אותן דרך שרת אירוח משלכם.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">תמונה נבחרת ו-og:image יכולות לשתף קובץ, אך שתיהן זקוקות לכתובת URL שקיימת בפועל.</p>"
+    },
+    {
+      "heading": "שיקולי גרף פתוח",
+      "html": "<p>כרטיסי קישור גדולים בדרך כלל מכוונים לכ-<strong>1200×630</strong>מקסימום ביוטיוב הוא בדרך כלל<strong>1280×720</strong>(16:9), אשר מגרד את החיתוך או את תיבת הדואר. הגדר<code>og:image</code>(ורוחב/גובה כאשר המחסנית שלך תומכת בהם) לפיקסלים האמיתיים. לאחר תיקון כתובת URL פגומה, גרד מחדש את ניפוי הבאגים של כל פלטפורמה - מטמונים נשארים.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "קישורים חמים לעומת הורדה",
+      "html": "<table>\n    <thead>\n      <tr><th>גִישָׁה</th><th>הכי טוב עבור</th><th>לְהִסְתָכֵּן</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>קישור חם i.ytimg.com</td><td>טיוטות מהירות, הערות מחקר</td><td>404s, שינויי CDN, אין בקרת גידולים</td></tr>\n      <tr><td>הורדה + מארח</td><td>פוסטים מדורגים, דפי מוצר</td><td>עליך לאחסן את הקובץ</td></tr>\n      <tr><td>צילום מסך של הנגן</td><td>כמעט אף פעם לא</td><td>ממשק משתמש כרום, יחס יחס שגוי —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">צילום מסך לעומת אמיתי</a></td></tr>\n    </tbody>\n  </table>\n  <p>שלבי הורדה:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">איך להוריד תמונה ממוזערת מיוטיוב</a>בחירת פורמט כאשר קיימים גם WebP וגם JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP לעומת JPEG</a>.</p>"
+    },
+    {
+      "heading": "יסודות קידום אתרים בתמונות עבור תמונות סטילס אלו",
+      "html": "<ul>\n    <li><strong>שם הקובץ:</strong>תיאורי, כגון<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>חלופי:</strong>תאר את התמונה והסרטון; אל תמלא \"כלי להורדת תמונות ממוזערות ביוטיוב HD 4K\".</li>\n    <li><strong>מידות:</strong>הכרזה על רוחב/גובה אמיתיים.</li>\n    <li><strong>HTTPS בלבד:</strong>כתובות URL של תמונות עם תוכן מעורב נושרות על ידי סקראפרים.</li>\n    <li><strong>דְחִיסָה:</strong>קידוד מחדש קל עבור ה-CDN שלך במידת הצורך; אל תשדרג את hqdefault ל-maxres מזויפים.</li>\n  </ul>"
+    },
+    {
+      "heading": "שימוש חוזר וזכויות יוצרים (לא ייעוץ משפטי)",
+      "html": "<p>כתובת URL ציבורית של CDN אינה רישיון. הטמעת נגן YouTube שונה מהעתקת התמונה הסטילס לתוך הגיבור שלך. שימוש הוגן הוא ספציפי לעובדות. דפוס עריכה בטוח יותר: איור פרשנות על הסרטון, קרדיט לערוץ, קישור לדף הצפייה ואל תמכור את התמונה או השתמש בה כעיצוב ערוץ משלך. עזרה רשמית לתמונות ממוזערות מותאמות אישית:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">העלאת תמונות ממוזערות של סרטונים מותאמות אישית</a>חוקי האתר:<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    },
+    {
+      "heading": "פתרון בעיות",
+      "html": "<ul>\n    <li>כרטיס חברתי שבור → ניחוש ערכי מקסימום; חלץ מחדש ושמור קובץ מאומת.</li>\n    <li>כרטיס רך / מטושטש → השתמשת ב-hqdefault; בדוק גדלים.</li>\n    <li>חיתוך שגוי ← ספק חיתוך ייעודי של 1200×630 מתמונה אמיתית ביחס גובה-רוחב של 16:9.</li>\n    <li>מטמון דביק → כפיית גירוד מחדש לאחר שינוי כתובת URL.</li>\n  </ul>"
+    },
+    {
+      "heading": "השלב הבא",
+      "html": "<p>אשר תמונה סטילס על<a href=\"https://www.11tik.com/\">מחלץ 11tik</a>, הורידו אותו, העלו אותו לאתר שלכם, והפנו את התמונה המוצגת / og:image לקובץ ה-HTTPS שלכם.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "האם ניתן להדביק כתובת URL של i.ytimg.com לתוך וורדפרס?",
+      "answer": "חלק מהשדות מקבלים זאת, אך העלאת קובץ מקומי מאושר אמינה יותר עבור תמונות נבחרות ותצוגות מקדימות ברשתות חברתיות.",
+      "answerHtml": "<p>חלק מהשדות מקבלים זאת, אך העלאת קובץ מקומי מאושר אמינה יותר עבור תמונות נבחרות ותצוגות מקדימות ברשתות חברתיות.</p>"
+    },
+    {
+      "question": "האם אני צריך maxresdefault עבור Open Graph?",
+      "answer": "לא. אתה צריך את הסטייל הציבורי המאומת הגדול ביותר. חסרים גובה-רוחב מקסימלי זה נורמלי.",
+      "answerHtml": "<p>לא. אתה צריך את הסטייל הציבורי המאומת הגדול ביותר. חסרים גובה-רוחב מקסימלי זה נורמלי.</p>"
+    },
+    {
+      "question": "האם טקסט חלופי צריך להזכיר את יוטיוב?",
+      "answer": "כן, כאשר זה עוזר לתאר את הנכס (\"תמונה ממוזערת ציבורית ביוטיוב עבור...\"). אל תשתמשו במילות מפתח.",
+      "answerHtml": "<p>כן, כאשר זה עוזר לתאר את הנכס (\"תמונה ממוזערת ציבורית ביוטיוב עבור...\"). אל תשתמשו במילות מפתח.</p>"
+    },
+    {
+      "question": "האם קישורים חמים אי פעם בסדר?",
+      "answer": "עבור טיוטות זמניות או הערות פנימיות, כן. עבור פוסט ציבורי קבוע, אחסנו עותק.",
+      "answerHtml": "<p>עבור טיוטות זמניות או הערות פנימיות, כן. עבור פוסט ציבורי קבוע, אחסנו עותק.</p>"
+    },
+    {
+      "question": "האם אני יכול להשתמש בתמונה הסטילס ככיסוי לערוץ שלי?",
+      "answer": "לא בלי זכויות. זוהי יצירת אמנות של מישהו אחר.",
+      "answerHtml": "<p>לא בלי זכויות. זוהי יצירת אמנות של מישהו אחר.</p>"
+    },
+    {
+      "question": "מה אם סטודיו פשוט שינה את התמונה הממוזערת המותאמת אישית?",
+      "answer": "המתן לעיבוד, ולאחר מכן בדוק שוב את 11tik לפני עדכון עותק מערכת ניהול התוכן שלך. קשור: תמונות ממוזערות של YouTube Studio.",
+      "answerHtml": "<p>המתן לעיבוד, ולאחר מכן בדוק שוב את 11tik לפני עדכון עותק CMS שלך. קשור:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">תמונות ממוזערות של YouTube Studio</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+}

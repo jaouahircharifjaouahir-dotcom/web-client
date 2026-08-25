@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "bn",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "11tik থাম্বনেইল এক্সট্র্যাক্টর এমবেড করুন | 11tik",
+  "description": "আপনার ব্লগ, ডক্স, বা ক্রিয়েটর টুলকিটে একটি বিনামূল্যের ইউটিউব থাম্বনেইল এক্সট্র্যাক্টর যোগ করুন। উইজেটটি 11tik থেকে লোড হয় এবং নিজে থেকেই আকার পরিবর্তন করে। কোনো এপিআই কী নেই।",
+  "h1": "11tik থাম্বনেইল এক্সট্র্যাক্টর এমবেড করুন",
+  "ogTitle": "11tik থাম্বনেইল এক্সট্র্যাক্টর এমবেড করুন",
+  "ogDescription": "আপনার ব্লগ, ডক্স, বা ক্রিয়েটর টুলকিটে একটি বিনামূল্যের ইউটিউব থাম্বনেইল এক্সট্র্যাক্টর যোগ করুন। উইজেটটি 11tik থেকে লোড হয় এবং নিজে থেকেই আকার পরিবর্তন করে। কোনো এপিআই কী নেই।",
+  "imageAlt": "",
+  "faqHeading": "প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী",
+  "images": [],
+  "sections": [
+    {
+      "heading": "আইফ্রেম স্নিপেট",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "নিয়ম",
+      "html": "<ul>\n    <li>রাখুন<code>id=\"yte-app\"</code>অ্যাট্রিবিউটটি এমনভাবে তৈরি করা হয়েছে যাতে উচ্চতা সিঙ্ক কাজ করে।</li>\n    <li>আইফ্রেমটিকে এমন কোনো নির্দিষ্ট উচ্চতার মধ্যে রাখবেন না, যা ডাউনলোড বাটনগুলোকে কেটে ফেলে।</li>\n    <li>লিঙ্কিং ব্যাক টু<a href=\"https://www.11tik.com/\">[[পি১]]</a>ব্যবহারকারীদের সম্পূর্ণ টুলটি খুলতে সাহায্য করে।</li>\n  </ul>"
+    },
+    {
+      "heading": "গভীর সংযোগ",
+      "html": "<p>একটি প্রস্তুত নিষ্কাশন শেয়ার করুন<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">এক্সট্র্যাক্টরটি খুলুন</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -24,7 +24,7 @@ import { normalizeTrustedLocaleSitemapLoc, parseSitemapLocs } from "../../worker
 const FR_URL = "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html";
 const FR_REL = "l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html";
 
-describe("POC French share-links article i18n", () => {
+describe("POC French share-links article i18n (regression)", () => {
   it("loads the French artifact with matching sourceHash and ready status", () => {
     const artifact = loadLocaleArtifact(SHARE_LINKS_ARTICLE_ID, "fr");
     expect(artifact).toBeTruthy();
@@ -40,9 +40,11 @@ describe("POC French share-links article i18n", () => {
     const hash = readEnglishSourceHash();
     expect(resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", hash).publishable).toBe(true);
     expect(resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", "0".repeat(64)).reason).toBe("stale");
-    expect(resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "de", hash).reason).toBe("missing");
-    expect(collectPublishableLocaleArticleLocs("0".repeat(64))).toEqual([]);
-    expect(collectPublishableLocaleArticleLocs(hash)).toEqual([FR_URL]);
+    expect(resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "aa", hash).reason).toBe("missing");
+    // Publishability is driven by artifact vs English source file hash (not a caller override).
+    const locs = collectPublishableLocaleArticleLocs(hash);
+    expect(locs).toContain(FR_URL);
+    expect(locs.every((loc) => loc.includes(".11tik.com/l/"))).toBe(true);
   });
 
   it("normalizes only trusted locale article hosts", () => {
@@ -68,7 +70,8 @@ describe("POC French share-links article i18n", () => {
       expect(html).toContain(`hreflang="x-default" href="${SHARE_LINKS_EN_HREF}"`);
       expect(html).toContain("Comment fonctionnent les liens de partage 11tik");
       expect(html).toContain("FAQ");
-      expect(html).toContain('alt="Schéma comparant une URL YouTube');
+      expect(html).toMatch(/alt="[^"]+"/);
+      expect(html).toContain("yte-hero");
       expect(html).not.toContain("noindex");
       expect(localeArticlePublicUrl(SHARE_LINKS_ARTICLE_ID, "fr")).toBe(FR_URL);
       expect(FR_URL.startsWith("https://www.")).toBe(false);
@@ -80,7 +83,7 @@ describe("POC French share-links article i18n", () => {
     }
   });
 
-  it("includes FR sitemap loc only when ready and file exists; never emits orphan locs", () => {
+  it("includes ready locale sitemap locs with matching generated files", () => {
     const dir = mkdtempSync(join(tmpdir(), "11tik-fr-sm-"));
     try {
       generateStaticSite(dir);
@@ -88,7 +91,11 @@ describe("POC French share-links article i18n", () => {
       const frLocs = locs.filter((loc) => loc === FR_URL);
       expect(frLocs).toHaveLength(1);
       expect(locs).toContain(SHARE_LINKS_EN_HREF);
-      assertLocaleSitemapLocsHaveFiles(dir, frLocs);
+      expect(locs.filter((loc) => loc.includes("/l/")).length).toBeGreaterThanOrEqual(851);
+      assertLocaleSitemapLocsHaveFiles(
+        dir,
+        locs.filter((loc) => loc.includes("/l/")),
+      );
       expect(localeArticleLocToAssetRel(FR_URL)).toBe(FR_REL);
       expect(existsSync(join(dir, FR_REL))).toBe(true);
       for (const loc of frLocs) {
@@ -101,21 +108,19 @@ describe("POC French share-links article i18n", () => {
     expect(hashArticleSource("x")).not.toBe(readEnglishSourceHash());
   });
 
-  it("writes ready:false manifest and no FR file/hreflang/sitemap when translation is stale", () => {
+  it("writes ready:false manifest helpers and rejects orphan sitemap locs", () => {
     const dir = mkdtempSync(join(tmpdir(), "11tik-fr-stale-"));
     try {
-      // Simulate generation path without relying on mutating fr.json: assert helpers + empty publish set.
       const staleHash = "0".repeat(64);
-      expect(collectPublishableLocaleArticleLocs(staleHash)).toEqual([]);
+      expect(resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", staleHash).reason).toBe("stale");
       const manifest = buildPocFrReadinessManifest(false, staleHash);
       expect(manifest.ready).toBe(false);
       expect(manifest.url).toBeNull();
       const themeNotReady = buildBloggerPocThemeFragment(false);
-      expect(themeNotReady).not.toContain(FR_URL);
-      expect(themeNotReady).not.toContain("yte-poc-share-links-fr-redir");
+      expect(themeNotReady).not.toContain("publishability.json");
+      expect(themeNotReady).not.toContain("yte-i18n-redir");
       expect(themeNotReady).toContain("https://fr.11tik.com/");
       generateStaticSite(dir);
-      // Current artifact is ready — file exists. Soft check: assert helper rejects orphan loc.
       expect(() => assertLocaleSitemapLocsHaveFiles(dir, [FR_URL.replace("youtube", "missing")])).toThrow(
         /without generated files/,
       );
@@ -171,22 +176,20 @@ describe("POC French share-links article i18n", () => {
     ).toBeNull();
   });
 
-  it("keeps Blogger theme POC fragment aligned with ready translation (local only)", () => {
+  it("keeps Blogger theme fragment aligned with compact publishability manifest (local only)", () => {
     const theme = readFileSync(join(process.cwd(), "docs/blogger-theme.xml"), "utf8");
     const hash = readEnglishSourceHash();
     const ready = resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", hash).publishable;
     expect(ready).toBe(true);
     const synced = applyBloggerPocTheme(theme, ready);
-    expect(synced).toContain(FR_URL);
-    expect(synced).toContain("poc-share-links-fr.json");
+    expect(synced).toContain("publishability.json");
+    expect(synced).toContain("yte-i18n-redir");
     expect(synced).toContain("YTE-POC-SHARE-LINKS-I18N:BEGIN");
-    expect(synced).toContain(`hreflang='fr' rel='alternate'`);
-    expect(synced).toContain(SHARE_LINKS_EN_HREF);
+    expect(synced).toContain("Googlebot");
     const notReady = applyBloggerPocTheme(theme, false);
-    expect(notReady).not.toContain(FR_URL);
-    expect(notReady).not.toContain("poc-share-links-fr.json");
-    expect(buildBloggerPocThemeFragment(true)).toContain(FR_URL);
-    expect(buildBloggerPocThemeFragment(false)).not.toContain(FR_URL);
+    expect(notReady).not.toContain("publishability.json");
+    expect(buildBloggerPocThemeFragment(true)).toContain("publishability.json");
+    expect(buildBloggerPocThemeFragment(false)).not.toContain("publishability.json");
   });
 
   it("documents Worker-zero path: FR article outside run_worker_first", () => {

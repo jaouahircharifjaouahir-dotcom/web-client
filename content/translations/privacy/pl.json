@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "pl",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Polityka prywatności | 11tik",
+  "description": "Niniejsza polityka dotyczy narzędzia YouTube Thumbnail Extractor w https://www.11tik.com/ oraz hostów językowych, które ładują to samo narzędzie.",
+  "h1": "Polityka prywatności",
+  "ogTitle": "Polityka prywatności",
+  "ogDescription": "Niniejsza polityka dotyczy narzędzia YouTube Thumbnail Extractor w https://www.11tik.com/ oraz hostów językowych, które ładują to samo narzędzie.",
+  "imageAlt": "",
+  "faqHeading": "Często zadawane pytania",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Przetwarzanie w przeglądarce",
+      "html": "<p>Po wklejeniu adresu URL z YouTube strona odczytuje identyfikator filmu i sprawdza publiczne adresy URL miniatur w przeglądarce. Wklejone linki nie są przechowywane jako konto osobiste na serwerze aplikacji 11tik. Wyodrębnienie nie wymaga logowania.</p>"
+    },
+    {
+      "heading": "Opcjonalny indeks stron udostępniania",
+      "html": "<p>Po pomyślnym wyodrębnieniu, przeglądarka może wysłać do naszego Cloudflare Worker jedynie publiczny identyfikator filmu, tytuł, tagi pochodzące z publicznych metadanych oraz publiczny adres URL miniatury, aby film mógł pojawić się na stronie udostępniania, a po pomyślnym przejściu kontroli jakości – również w mapie witryny. Nie prosimy o przesyłanie pliku obrazu. Możesz korzystać z ekstraktora bez tego indeksu, jeśli żądanie zostanie zablokowane przez przeglądarkę.</p>"
+    },
+    {
+      "heading": "Historia lokalna",
+      "html": "<p>Ekstraktor może zapisać ostatnie adresy URL w pamięci lokalnej przeglądarki, aby można je było ponownie otworzyć. Ta kopia pozostaje na urządzeniu. Wyczyść ją za pomocą historii na stronie lub czyszcząc dane tej witryny w przeglądarce. To nie jest konto w chmurze.</p>"
+    },
+    {
+      "heading": "Logi hostingowe",
+      "html": "<p>Za stronę internetową, hosty językowe i pliki statyczne odpowiadają dostawcy hostingu, z których korzysta 11tik.com (w tym Cloudflare i GitHub Pages). Dostawcy ci mogą przechowywać standardowe logi sieciowe, takie jak adres IP, typ przeglądarki i żądana strona, zgodnie z własnymi zasadami.</p>"
+    },
+    {
+      "heading": "Strony trzecie",
+      "html": "<p>Pliki miniatur są pobierane od publicznych hostów obrazów YouTube. Witryna korzysta z Google Analytics 4 (identyfikator pomiaru G-FW7B8NDZZ5) do zliczania wizyt i działań na stronie, takich jak wyodrębnianie i pobieranie. Google może ustawiać pliki cookie lub podobne identyfikatory. Wklejone adresy URL YouTube nie są wysyłane jako parametry zdarzeń analitycznych. Czcionki lub skrypty mogą być również ładowane z sieci CDN używanych do wyświetlania strony.</p>\n  <p>Formularz kontaktowy jest dostarczany przez FormSubmit na adres e-mail operatora. FormSubmit widzi imię, adres e-mail i przesłaną wiadomość.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Pytania dotyczące tej polityki: e-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>lub użyj<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>formularz.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Narzędzie do ekstrakcji miniatur YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

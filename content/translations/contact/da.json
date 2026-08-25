@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "da",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Kontakt | 11tik",
+  "description": "Brug denne formular til spørgsmål om YouTube Thumbnail Extractor. Beskeder sendes til 11tik-operatøren via e-mail. Send ikke video- eller lydfiler. Værktøjet fungerer kun med offentlige miniaturebilleder.",
+  "h1": "Kontakte",
+  "ogTitle": "Kontakte",
+  "ogDescription": "Brug denne formular til spørgsmål om YouTube Thumbnail Extractor. Beskeder sendes til 11tik-operatøren via e-mail. Send ikke video- eller lydfiler. Værktøjet fungerer kun med offentlige miniaturebilleder.",
+  "imageAlt": "",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Kontakte",
+      "html": "<h1>Kontakte</h1>\n  <p class=\"yte-updated\">Sidst opdateret: 22. august 2026</p>\n  <p itemprop=\"description\">Brug denne formular til spørgsmål om YouTube Thumbnail Extractor. Beskeder sendes til 11tik-operatøren via e-mail. Send ikke video- eller lydfiler. Værktøjet fungerer kun med offentlige miniaturebilleder.</p>\n  <p>Direkte e-mail:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>For en rapport om en specifik video, skal du inkludere den offentlige YouTube-URL. 11tik hoster ikke miniaturefilen; billedet anmodes om fra platformens offentlige CDN.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Navn<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Besked<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Send besked</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-miniatureudtrækker</a>·<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatlivspolitik</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

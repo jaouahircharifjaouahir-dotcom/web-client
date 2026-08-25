@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-thumbnail-url",
+  "articleId": "youtube-thumbnail-url",
+  "locale": "hr",
+  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "status": "ready",
+  "title": "Kako izravno iz videa dobiti URL minijature na YouTubeu | 11tik",
+  "description": "Izradite ili kopirajte funkcionalni URL minijature za YouTube iz ID-a videozapisa na i.ytimg.com. Potvrdite da veličina postoji prije nego što je dodate u hitnu vezu.",
+  "h1": "Kako dobiti URL minijature za YouTube izravno iz videa",
+  "ogTitle": "Kako dobiti URL minijature za YouTube izravno iz videa",
+  "ogDescription": "Izradite ili kopirajte funkcionalni URL minijature za YouTube iz ID-a videozapisa na i.ytimg.com. Potvrdite da veličina postoji prije nego što je dodate u hitnu vezu.",
+  "imageAlt": "Dijagram koji prikazuje URL za gledanje na YouTubeu pretvoren u ID videozapisa, a zatim URL minijature",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png",
+      "alt": "Dijagram koji prikazuje URL za gledanje na YouTubeu pretvoren u ID videozapisa, a zatim URL minijature",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png",
+      "alt": "Označena anatomija URL-a minijature YouTubea koja prikazuje host, putanju, ID videozapisa i naziv datoteke",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p>Za dobivanje URL-a minijature za YouTube: pronađite 11-znakovni ID videozapisa, a zatim otvorite potvrđenu javnu adresu slike, kao što je<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>URL stranice za gledanje nije slika. Zalijepite video vezu u<a href=\"https://www.11tik.com/\">11tik</a>, pričekajte da se veličine zapravo učitavaju, a zatim koristite<strong>Kopiraj URL slike</strong>tako da zadržavate funkcionalnu HTTPS vezu umjesto nagađanog naziva datoteke koji šalje 404 poruke.</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">Tok koji koriste alati za izdvajanje: javni URL za gledanje → ID videozapisa → javni URL minijature na YouTubeovom hostu slika.</p>"
+    },
+    {
+      "heading": "Što je URL minijature na YouTubeu",
+      "html": "<p>URL YouTube minijature upućuje na datoteku statične slike, a ne na video player. Nalazi se na YouTubeovoj javnoj CDN mreži za slike (obično<code>i.ytimg.com</code>). Kada adresa radi, vaš preglednik preuzima JPEG ili WebP datoteku. Kada ne radi, dobit ćete poruku da nedostaje datoteka ili sivo rezervirano mjesto - ne \"HD\" izmišljen niotkuda.</p>\n  <p>To je važno za blogove, preglede Open Grapha, makete dizajna i polja istaknutih slika u CMS-u: tim sustavima je potreban URL slike, a ne<code>youtube.com/watch?v=…</code>Ako vam je potrebna samo datoteka na disku, koristite<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzimanje vodiča</a>umjesto ove stranice usmjerene na URL.</p>"
+    },
+    {
+      "heading": "Kako se URL odnosi na ID videozapisa",
+      "html": "<p>YouTube ključevi javnih fotografija prema ID-u videozapisa. Uobičajeni JPEG uzorak je:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>Neki videozapisi također objavljuju WebP blizance pod<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>je točno 11 znakova iz skupa<code>A–Z a–z 0–9 _ -</code>Promijenite ID i pokazivač pokazuje na fotografije iz drugog videozapisa. Promijenite naziv datoteke i zatražit ćete drugu javnu derivativnu verziju istog videozapisa.</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">Anatomija URL-a javne minijature: host, put, ID videozapisa i naziv datoteke veličine.</p>"
+    },
+    {
+      "heading": "Kako pronaći ID videozapisa na YouTubeu",
+      "html": "<p>Trebate samo ID. Dodatni parametri upita kao što su ID-ovi popisa za reprodukciju ili<code>pp=</code>Ne mijenjajte putanju hosta minijature.</p>\n  <table>\n    <thead>\n      <tr><th>Format URL-a na YouTubeu</th><th>Primjer</th><th>Gdje se nalazi identifikacijski broj</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Gledati</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td><code>v=</code>vrijednost upita</td></tr>\n      <tr><td>Kratka poveznica</td><td><code>youtu.be/dQw4w9WgXcQ</code></td><td>Prvi segment puta</td></tr>\n      <tr><td>Kratke hlače</td><td><code>youtube.com/shorts/dQw4w9WgXcQ</code></td><td>Put nakon<code>/shorts/</code></td></tr>\n      <tr><td>Ugraditi</td><td><code>youtube.com/embed/dQw4w9WgXcQ</code></td><td>Put nakon<code>/embed/</code></td></tr>\n      <tr><td>Živjeti</td><td><code>youtube.com/live/dQw4w9WgXcQ</code></td><td>Put nakon<code>/live/</code></td></tr>\n      <tr><td>ugradnja nocookieja</td><td><code>youtube-nocookie.com/embed/…</code></td><td>Isto kao i ugrađeno</td></tr>\n    </tbody>\n  </table>\n  <p>Parser 11tik-a prihvaća te oblike (i samo 11-znakovne ID-ove). URL kanala ili popisa za reprodukciju bez ID-a videozapisa nije dovoljan za jedan URL minijature.</p>"
+    },
+    {
+      "heading": "Uobičajeni javni nazivi datoteka minijatura",
+      "html": "<p>Nazivi datoteka opisuju razine veličine koje YouTube može, ali i ne mora objaviti za određeni prijenos. Nazivi ne jamče da datoteka postoji.</p>\n  <table>\n    <thead>\n      <tr><th>Naziv datoteke</th><th>Tipični pikseli kada su prisutni</th><th>Bilješke</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>Najviša javna fotografija u trenutku objave</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 razred</td><td>Još jedna visoka razina koju neki videozapisi otkrivaju</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Često dostupno kada nedostaje maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Vrlo česta srednja veličina</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Mali pregled</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Najmanji standardni destilator</td></tr>\n    </tbody>\n  </table>\n  <p>Za detalje na razini piksela i kada dati prednost jednoj veličini u odnosu na drugu, pogledajte<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu i rezoluciju sličica</a>Zašto<code>maxresdefault.jpg</code>često nedostaje, vidi<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">što je maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "Primjer rada s javnim ID-om videozapisa",
+      "html": "<p>Uzmite javni demo ID<code>dQw4w9WgXcQ</code>URL za praćenje je:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ</pre>\n  <p>Kandidat za URL JPEG-a maksimalne rezolucije je:</p>\n  <pre>https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Otvorite tu adresu u novoj kartici. Ako se slika učita, imate ispravan URL minijature. Ako ne uspije, pokušajte sa sljedećim nazivom datoteke (na primjer<code>hqdefault.jpg</code>) ili zalijepite poveznicu za gledanje u 11tik kako bi se navele samo preživjele datoteke. Nikada ne pretpostavljajte da svaki videozapis ima maksimalnu rezoluciju.</p>"
+    },
+    {
+      "heading": "Tri načina za dohvaćanje URL-a slike",
+      "html": "<h3>1. Najbrže: kopiranje iz 11tik</h3>\n  <ol>\n    <li>Kopirajte URL javnog gledanja, Shorts videozapisa, uživo, ugrađenog sadržaja ili youtu.be.</li>\n    <li>Otvoriti<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Zalijepite URL i pričekajte dok se ne pojave pregledi.</li>\n    <li>Odaberite<strong>Kopiraj URL slike</strong>na veličinu koja vam je potrebna.</li>\n  </ol>\n  <p>11tik provjerava odgovore u vašem pregledniku i prikazuje samo veličine koje vraćaju stvarnu sliku. To je razlika između upotrebljive CMS poveznice i neispravne.<code>maxresdefault</code>pogađaj.</p>\n\n  <h3>2. Metoda preglednika</h3>\n  <p>Nakon što imate kandidata<code>i.ytimg.com</code>adresu, otvorite je u novoj kartici. Ako se i dalje prikazuje, kopirajte adresnu traku. Ako vidite grešku ili praznu/privremenu pločicu, ta veličina nikada nije objavljena za taj ID - nemojte je povezivati.</p>\n\n  <h3>3. Ručno izradite URL</h3>\n  <p>Možete spojiti host +<code>/vi/</code>+ ID + naziv datoteke. Ručno izrađeni URL-ovi su u redu za testiranje, ali ih nije sigurno lijepiti u produkcijski HTML dok ne provjerite odgovor. Dostupnost varira ovisno o starosti prijenosa, izvornom umjetničkom djelu i stanju obrade u YouTube Studiju.</p>"
+    },
+    {
+      "heading": "Odabir najboljeg dostupnog URL-a",
+      "html": "<p>„Najbolja“ znači najveću javnu datoteku koja stvarno postoji, a ne najduži naziv datoteke koji možete upisati. Poželjno je koristiti validiranu maxres ili hq720 vezu ako postoji. Ako one ne uspiju, pređite na sd, hq, mq ili default. Povećanje razlučivosti fotografije od 480×360 na 1280×720 u editoru ne stvara pravi maxres URL.</p>\n  <p>Autori koji prenose prilagođenu umjetnost i dalje bi trebali naknadno potvrditi objavljene javne derivate - obrada u Studiju može kasniti. Povezano:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Minijature u YouTube Studiju u 2026. godini</a>.</p>"
+    },
+    {
+      "heading": "Korištenje URL-a na drugoj web stranici",
+      "html": "<p>Možete zalijepiti radni<code>i.ytimg.com</code>URL u mnoga CMS polja, ali vruće povezivanje ima rizike: YouTube može promijeniti CDN putanje, a neke mreže blokiraju treće strane hostinga. Za trajnu istaknutu sliku bloga ili oznaku Open Grapha preuzmite potvrđenu fotografiju i hostirajte kopiju na vlastitoj domeni. Vodič:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTube minijatura kao slika bloga / Open Grapha</a>.</p>\n  <p>Autorska prava ostaju kod osobe koja je prenijela sliku. Javni URL nije licenca za ponovno objavljivanje umjetničkog djela kao vlastite naslovnice. Pogledajte pomoć za YouTube na<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">prilagođene minijature videozapisa</a>i 11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    },
+    {
+      "heading": "Rješavanje problema s neispravnim URL-ovima minijatura",
+      "html": "<ul>\n    <li><strong>404 ili rezervirano mjesto:</strong>Ta veličina nikada nije objavljena. Pokušajte s drugim nazivom datoteke ili upotrijebite validirani popis 11tik.</li>\n    <li><strong>Pogrešan video:</strong>Pogrešno upisani ID. Ponovno kopirajte s URL-a za praćenje.</li>\n    <li><strong>Privatno / ograničeno dobnom skupinom / izbrisano:</strong>još uvijek nema javnog linka.</li>\n    <li><strong>Mješoviti HTTP sadržaj:</strong>uvijek koristi<code>https://</code>URL-ovi slika na HTTPS stranicama.</li>\n    <li><strong>Kratke hlače izgledaju u obliku slova \"letterbox\":</strong>Mnogi Shorts videozapisi i dalje pohranjuju javne datoteke pejzaža. URL je i dalje službeni javni.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sljedeći korak",
+      "html": "<p>Zalijepite javni YouTube URL u<a href=\"https://www.11tik.com/\">Izdvajanje minijatura s YouTubea</a>, kopirajte provjerenu vezu slike ili<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzmi fotografiju</a>ako vam je potrebna lokalna datoteka. Za izbor rezolucije otvorite<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu i kvalitetu</a>.</p>\n\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za ekstrakciju u pregledniku. Samo javne fotografije - bez preuzimanja videa ili zvuka.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mogu li kopirati izravni URL minijature bez preuzimanja datoteke?",
+      "answer": "Da. Na 11tik koristite Kopiraj URL slike. To kopira HTTPS adresu slike za veličinu koja je već potvrđena u vašem pregledniku.",
+      "answerHtml": "<p>Da. Na 11tik koristite Kopiraj URL slike. To kopira HTTPS adresu slike za veličinu koja je već potvrđena u vašem pregledniku.</p>"
+    },
+    {
+      "question": "Mogu li dobiti URL minijature iz YouTube Shorts videa?",
+      "answer": "Da, kada je kratki videozapis javan i YouTube je objavio fotografije za taj ID. Zalijepite poveznicu /shorts/ na isti način kao što lijepite URL za gledanje. Pogledajte i minijature kratkih videozapisa.",
+      "answerHtml": "<p>Da, kada je kratki videozapis javan i YouTube objavi fotografije za taj ID. Zalijepite<code>/shorts/</code>poveznicu na isti način na koji lijepite URL za praćenje. Vidi također<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Minijature kratkih videozapisa</a>.</p>"
+    },
+    {
+      "question": "Zašto jedan URL minijature radi, dok drugi vraća grešku?",
+      "answer": "Imena datoteka su opcionalne javne izvedenice. hqdefault.jpg može postojati kada maxresdefault.jpg ne postoji. Ispravan URL srednje veličine ne podrazumijeva ispravan URL maksimalne rezolucije.",
+      "answerHtml": "<p>Imena datoteka su opcionalne javne izvedenice.<code>hqdefault.jpg</code>može postojati kada<code>maxresdefault.jpg</code>ne. Ispravan URL srednje veličine ne podrazumijeva ispravan URL maksimalne rezolucije.</p>"
+    },
+    {
+      "question": "Mogu li koristiti izravni URL slike na svojoj web stranici?",
+      "answer": "Tehnički da ako datoteka postoji, ali hosting vlastite kopije je pouzdaniji za istaknute slike i društvene preglede. Nemojte ponovno objavljivati ​​tuđu umjetnost kao naslovnicu svog kanala bez autorskih prava.",
+      "answerHtml": "<p>Tehnički da ako datoteka postoji, ali hosting vlastite kopije je pouzdaniji za istaknute slike i društvene preglede. Nemojte ponovno objavljivati ​​tuđu umjetnost kao naslovnicu svog kanala bez autorskih prava.</p>"
+    },
+    {
+      "question": "Je li URL za gledanje ikada URL minijature?",
+      "answer": "Ne. URL za gledanje identificira videozapis. URL minijature identificira slikovnu datoteku na CDN-u za slike.",
+      "answerHtml": "<p>Ne. URL za gledanje identificira videozapis. URL minijature identificira slikovnu datoteku na CDN-u za slike.</p>"
+    },
+    {
+      "question": "Izmišlja li 11tik URL veće rezolucije?",
+      "answer": "Ne. Navodi samo javne datoteke koje se odazivaju kao slike. Nedostatak maxres-a znači da se URL ne smije kopirati.",
+      "answerHtml": "<p>Ne. Navodi samo javne datoteke koje se odazivaju kao slike. Nedostatak maxres-a znači da se URL ne smije kopirati.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za ekstrakciju u pregledniku. Samo javne fotografije - bez preuzimanja videa ili zvuka.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+}

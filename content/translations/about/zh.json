@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "zh",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "关于 11tik | 11tik",
+  "description": "11tik 是 www.11tik.com 上的 YouTube 缩略图提取器的发布者。该网站旨在为那些需要获取 YouTube 视频公开预览图像，但又不想安装软件或将链接上传到处理服务器的用户提供服务。",
+  "h1": "关于 11tik",
+  "ogTitle": "关于 11tik",
+  "ogDescription": "11tik 是 www.11tik.com 上的 YouTube 缩略图提取器的发布者。该网站旨在为那些需要获取 YouTube 视频公开预览图像，但又不想安装软件或将链接上传到处理服务器的用户提供服务。",
+  "imageAlt": "11tik YouTube 缩略图提取器产品预览，尺寸为 1200 x 630 像素",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik YouTube 缩略图提取器产品预览，尺寸为 1200 x 630 像素",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "这个网站是谁运营的？",
+      "html": "<p>内容和提取器均以 11tik 的名义发布。我们没有虚构的专家身份，也没有捏造评分。编辑页面解释了公共缩略图文件的工作原理；他们并不声称自己是 YouTube 或 Google。</p>"
+    },
+    {
+      "heading": "11tik 的作用是什么？",
+      "html": "<p>该工具读取浏览器中的公开视频 ID，检查 YouTube 图片托管服务商中是否存在缩略图文件，并允许您下载或复制这些图片。解析和排名过程均在您的设备上完成。您可以处理单个 URL、URL 列表或包含近期上传视频的公开频道信息流。</p>"
+    },
+    {
+      "heading": "11tik 不做什么？",
+      "html": "<ul>\n    <li>它不会下载 YouTube 视频或音频。</li>\n    <li>它无法绕过私密视频、年龄限制视频或地区限制视频。</li>\n    <li>无需注册账号。</li>\n    <li>它并未对任何其他人的缩略图主张版权。</li>\n  </ul>"
+    },
+    {
+      "heading": "语言版本",
+      "html": "<p>提取器用户界面可在诸如以下语言宿主程序上使用：<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>和<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>这些法律页面保留在 www.11tik.com 上，因此只有一个规范的“关于我们”、“隐私”、“联系我们”和“条款”URL。</p>"
+    },
+    {
+      "heading": "我该如何联系出版社？",
+      "html": "<p>电子邮件<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>或者使用<a href=\"https://www.11tik.com/p/contact.html\">联系表格</a>阅读<a href=\"https://www.11tik.com/p/privacy.html\">隐私政策</a>用于分析和托管详情，以及<a href=\"https://www.11tik.com/p/terms-of-use.html\">使用条款</a>符合可接受的使用标准。</p>\n  <p class=\"yte-bio\">11tik 发布关于 YouTube 公开缩略图的实用指南，并维护免费的浏览器内缩略图提取工具​​。欢迎通过电子邮件或联系表格提出更正意见。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik 发布关于 YouTube 公开缩略图的实用指南，并维护免费的浏览器内缩略图提取工具​​。欢迎通过电子邮件或联系表格提出更正意见。</p>"
+}

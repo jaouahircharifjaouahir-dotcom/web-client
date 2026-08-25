@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "nl",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Hoe krijg je de originele YouTube-thumbnailafbeelding? | 11tik",
+  "description": "Download de originele, openbare YouTube-thumbnail die YouTube al host. Dit is nog steeds de CDN-versie, geen frame dat uit de video is gehaald.",
+  "h1": "Hoe krijg je de originele YouTube-thumbnailafbeelding?",
+  "ogTitle": "Hoe krijg je de originele YouTube-thumbnailafbeelding?",
+  "ogDescription": "Download de originele, openbare YouTube-thumbnail die YouTube al host. Dit is nog steeds de CDN-versie, geen frame dat uit de video is gehaald.",
+  "imageAlt": "Het originele openbare YouTube-thumbnailbestand dat wordt weergegeven in de 11tik-extractor.",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Het originele openbare YouTube-thumbnailbestand dat wordt weergegeven in de 11tik-extractor.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Wat is de originele miniatuurafbeelding van YouTube?",
+      "html": "<p>Dit is de voorbeeldafbeelding die YouTube al opslaat op zijn afbeeldingshostingplatforms. Het is het bestand dat wordt gebruikt in de zoekfunctie en voor voorgestelde programma's, niet een frame dat je vastlegt met Print Screen.</p>"
+    },
+    {
+      "heading": "Wat is het verschil met een schermafbeelding?",
+      "html": "<p>Een screenshot toont de spelerinterface, de browserinterface en extra compressie. Het originele bestand is een schone, stilstaande afbeelding met de pixelgrootte die YouTube publiceerde.</p>"
+    },
+    {
+      "heading": "Hoe vind ik de originele miniatuurafbeelding?",
+      "html": "<p>Plak de URL van de watch, Shorts, live of youtu.be in<a href=\"https://www.11tik.com/\">11tik</a>De tool leest de video-ID, controleert openbare bestanden en rangschikt het beschikbare bestand met de hoogste score.</p>"
+    },
+    {
+      "heading": "Hoe werken YouTube-thumbnail-URL's?",
+      "html": "<p>Ze gebruiken de video-ID plus een formaatnaam zoals maxresdefault.jpg of hqdefault.jpg op i.ytimg.com. Het raden van een formaat dat nooit is gepubliceerd, resulteert in een foutmelding of een placeholder.</p>"
+    },
+    {
+      "heading": "Wat is maxresdefault.jpg?",
+      "html": "<p>Het is de meest voorkomende, hoogst haalbare openbare bestandsnaam, meestal 1280×720 toen YouTube het aanmaakte. Het is geen 4K-master en het is ook niet het videobestand zelf.</p>"
+    },
+    {
+      "heading": "Betekent 'origineel' altijd 1280 720?",
+      "html": "<p>Nee. Als maxres nooit is gepubliceerd, is de originele openbare afbeelding hq, sd of een ander bewaard gebleven bestand. 11tik toont de werkelijke pixelgrootte in plaats van pixels te verzinnen.</p>"
+    },
+    {
+      "heading": "Kan ik de originele still krijgen van Shorts, Live of youtu.be?",
+      "html": "<p>Ja, als die URL's een openbare video-ID en openbare stilstaande beelden bevatten die op YouTube worden gehost. De extractor behandelt ze hetzelfde als een standaard kijk-URL.</p>"
+    },
+    {
+      "heading": "Hoe kan ik controleren of ik echt het originele bestand heb ontvangen?",
+      "html": "<p>Gebruik de lijst met grootte en afmetingen 11tik nadat het bestand is gevalideerd. Als de afbeelding eruitziet als een screenshot van een speler, heb je de gehoste miniatuur niet gedownload.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Hoogste kwaliteit</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wat is de originele miniatuurafbeelding van YouTube?",
+      "answer": "Het openbare afbeeldingsbestand dat YouTube host voor de video-ID, zoals maxresdefault indien aanwezig. Het is geen schermafbeelding van de kijkpagina.",
+      "answerHtml": "Het openbare afbeeldingsbestand dat YouTube host voor de video-ID, zoals maxresdefault indien aanwezig. Het is geen schermafbeelding van de kijkpagina."
+    },
+    {
+      "question": "Betekent 'origineel' altijd 1280 720?",
+      "answer": "Nee. De maximale resolutie is normaal gesproken 1280x720 wanneer het bestand wordt gepubliceerd. Als dat bestand ontbreekt, is de oorspronkelijke resolutie nog steeds de eerstvolgende resolutie die YouTube heeft opgeslagen.",
+      "answerHtml": "Nee. De maximale resolutie is meestal 1280×720 wanneer het bestand wordt gepubliceerd. Als dat bestand ontbreekt, is de oorspronkelijke publicatieversie nog steeds de eerstvolgende resolutie die YouTube heeft opgeslagen."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

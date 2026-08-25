@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "ro",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Cum se descarcă în serie miniaturi YouTube (până la 25 de adrese URL publice) | 11tik",
+  "description": "Extrageți în bloc miniaturi publice de pe YouTube în browser. Lipiți câte o adresă URL pe fiecare rând, descărcați fiecare dintre cele mai bune imagini statice sau arhivați setul de cea mai înaltă calitate. Fără cont și fără fișiere video.",
+  "h1": "Cum să descarci în serie miniaturi YouTube (până la 25 de adrese URL publice)",
+  "ogTitle": "Cum să descarci în serie miniaturi YouTube (până la 25 de adrese URL publice)",
+  "ogDescription": "Extrageți în bloc miniaturi publice de pe YouTube în browser. Lipiți câte o adresă URL pe fiecare rând, descărcați fiecare dintre cele mai bune imagini statice sau arhivați setul de cea mai înaltă calitate. Fără cont și fără fișiere video.",
+  "imageAlt": "11tik extractor de miniaturi în bloc cu mai multe adrese URL YouTube gata de descărcare",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik extractor de miniaturi în bloc cu mai multe adrese URL YouTube gata de descărcare",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Cum descarc în serie miniaturi de la YouTube?",
+      "html": "<p>Deschide<a href=\"https://www.11tik.com/\">11tik</a>, activează opțiunea În bloc, lipește câte o adresă URL publică pe rând, dă clic pe Extrage tot, apoi descarcă fiecare cea mai bună imagine statică sau fișierul zip de cea mai înaltă calitate. Limita este de 25 de adrese URL per rulare, astfel încât browserul să rămână receptiv.</p>"
+    },
+    {
+      "heading": "Ce aparține listei?",
+      "html": "<ul>\n    <li>ID-uri youtube.com/watch?v=</li>\n    <li>youtu.be linkuri scurte</li>\n    <li>ID-uri youtube.com/shorts/</li>\n    </ul>\n  <p>Videoclipurile private, nelistate fără imagini publice sau restricționate în funcție de vârstă nu vor afișa imagini statice. Acest lucru este de așteptat. Vedeți și<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniaturi pentru scurtmetraje</a>.</p>"
+    },
+    {
+      "heading": "Cum se execută o extragere în vrac",
+      "html": "<ol>\n    <li>Pe pagina principală, faceți clic pe În bloc.</li>\n    <li>Lipiți până la 25 de linkuri publice, câte unul pe rând.</li>\n    <li>Faceți clic pe Extrageți tot și așteptați până când fiecare card este afișat într-o previzualizare.</li>\n    <li>Descărcați miniatura videoclipului N pentru fiecare dintre cele mai bune imagini statice sau descărcați toate cele mai bune imagini de cea mai înaltă calitate ca fișier zip.</li>\n    <li>Opțional: Exportați fișierul CSV pentru jurnalele de cercetare (ID videoclip, titlu, URL de partajare, URL imagine).</li>\n  </ol>"
+    },
+    {
+      "heading": "Pot folosi asta pentru studiul concurenței?",
+      "html": "<p>Da, pentru studierea ambalajelor publice. Nu republicați miniatura altui creator ca fiind propria încărcare. Drepturile de autor rămân la deținătorul drepturilor. 11tik preia doar fișierele pe care YouTube le găzduiește deja public.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extrasul în vrac pe 11tik →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cum descarc în serie miniaturi de la YouTube?",
+      "answer": "Folosește opțiunea Bulk pe 11tik, lipește o adresă URL publică pe rând, extrage, apoi descarcă imagini statice sau un fișier zip de cea mai înaltă calitate publică. Maxim 25 de adrese URL per rulare.",
+      "answerHtml": "Folosește opțiunea Bulk pe 11tik, lipește o adresă URL publică pe rând, extrage, apoi descarcă imagini statice sau un fișier zip de cea mai înaltă calitate publică. Maxim 25 de adrese URL per rulare."
+    },
+    {
+      "question": "Pot folosi asta pentru studiul concurenței?",
+      "answer": "Da, pentru studierea ambalajelor publice. Nu republicați miniatura altui creator ca fiind a dvs. Drepturile de autor rămân la deținătorul drepturilor.",
+      "answerHtml": "Da, pentru studierea ambalajelor publice. Nu republicați miniatura altui creator ca fiind a dvs. Drepturile de autor rămân la deținătorul drepturilor."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+}

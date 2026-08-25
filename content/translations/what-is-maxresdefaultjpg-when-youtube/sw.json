@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "sw",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "maxresdefault.jpg ni nini? Kwa Nini Ni 404s na Nini cha Kupakua Badala Yake | 11tik",
+  "description": "maxresdefault.jpg kwa kawaida huwa 1280×720 wakati YouTube ilipochapisha. 404 ni ya kawaida—tumia jina linalofuata la umma halisi, si jina la faili lililokadiriwa.",
+  "h1": "maxresdefault.jpg ni nini? Kwa Nini Ni 404s na Nini cha Kupakua Badala Yake",
+  "ogTitle": "maxresdefault.jpg ni nini? Kwa Nini Ni 404s na Nini cha Kupakua Badala Yake",
+  "ogDescription": "maxresdefault.jpg kwa kawaida huwa 1280×720 wakati YouTube ilipochapisha. 404 ni ya kawaida—tumia jina linalofuata la umma halisi, si jina la faili lililokadiriwa.",
+  "imageAlt": "Kutatua matatizo kutoka kwa URL iliyokadiriwa ya maxresdefault ambayo ni 404s hadi ukubwa unaofuata wa kijipicha cha YouTube kilichothibitishwa",
+  "faqHeading": "Maswali Yanayoulizwa Mara kwa Mara",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Kutatua matatizo kutoka kwa URL iliyokadiriwa ya maxresdefault ambayo ni 404s hadi ukubwa unaofuata wa kijipicha cha YouTube kilichothibitishwa",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "Ngazi ya majina ya faili ya YouTube kuanzia maxresdefault hadi chaguo-msingi inayoonyesha viwango vilivyokosekana vimerukwa",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jibu la haraka",
+      "html": "<p><code>maxresdefault.jpg</code>ni jina la faili la umma kwenye CDN ya picha ya YouTube. Faili linapokuwapo kwa kawaida huwa<strong>1280×720</strong>Ni<strong>si</strong>Imehakikishwa kwa kila video. 404 (au kishikilia nafasi kidogo cha kijivu) inamaanisha kuwa derivative haijawahi kuchapishwa kwa kitambulisho hicho cha video. Bandika URL ya saa kwenye<a href=\"https://www.11tik.com/\">11tik</a>na upakue ukubwa wa kwanza ulioorodheshwa—zana tayari imeacha majina yaliyokosekana na kuorodhesha walionusurika kama vile<code>hq720</code>,<code>sddefault</code>au<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Faili ya maxres inayokosekana ni tatizo la kurudi nyuma, si uthibitisho kwamba video haina kijipicha.</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg ni nini?",
+      "html": "<p>Ni jina la faili, si dhamana ya ubora wa kichawi. Anwani ya kawaida ya JPEG inaonekana kama:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>YouTube pia ilipochapisha pacha wa WebP, 11tik huangalia:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Wote wawili hukaa<code>i.ytimg.com</code>Bado ni picha—sio mtiririko wa video, si usafirishaji wa kibinafsi wa Studio, na si mtaalamu wa 4K. Matarajio ya pikseli na ukubwa mwingine yamefunikwa katika<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Ukubwa wa kijipicha na mwongozo wa ubora</a>. Uundaji wa URL umefunikwa katika<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL ndogo</a>.</p>"
+    },
+    {
+      "heading": "Kwa nini video halisi ya YouTube inaweza kurudisha 404 kwa maxres?",
+      "html": "<ul>\n    <li>Vipakiaji vya zamani havikupokea derivative ya maxres.</li>\n    <li>Chanzo maalum cha kijipicha kilikuwa kidogo kuliko 1280×720.</li>\n    <li>Studio bado inachakata upakiaji mpya maalum.</li>\n    <li>Baadhi ya picha fupi na picha zinazotengenezwa kiotomatiki husimama katika ukubwa wa kati.</li>\n    <li>Video hii imewekewa vikwazo na haionyeshi picha za umma hata kidogo.</li>\n  </ul>\n  <p>Ukurasa wa kutazama unaofanya kazi unathibitisha tu kwamba kitambulisho cha video ni halali. Hauthibitishi kila jina la faili chini ya<code>/vi/</code>ipo.</p>"
+    },
+    {
+      "heading": "Jinsi ya kutambua aina tofauti isiyopatikana",
+      "html": "<p>Fungua URL ya mgombea katika kichupo kipya. Kushindwa kunaonekana kama:</p>\n  <ul>\n    <li>Hitilafu ya HTTP / jibu tupu</li>\n    <li>Kigae kidogo sana cha kijivu au chaguo-msingi wakati ulivyotarajia 1280×720</li>\n    <li>Picha inayopakia lakini ni wazi kuwa ni kishikilia nafasi cha faili yenye ubora wa juu inayokosekana</li>\n  </ul>\n  <p>Kithibitishaji cha kivinjari cha [[P2] huashiria kuwa herufi ni batili wakati picha inashindwa kupakia au wakati ukubwa unaotarajiwa unaanguka hadi kwenye kishikilia nafasi kidogo (karibu 120×90). Wahusika hao hawaonekani kamwe kama kadi za \"HD bandia\".</p>"
+    },
+    {
+      "heading": "Vigezo vya kurudi nyuma 11tik huangalia kweli",
+      "html": "<p>Agizo la ugunduzi kwa wagombea wa umma (wa kwanza kabisa):</p>\n  <table>\n    <thead>\n      <tr><th>Jina la Faili</th><th>Muundo wa njia</th><th>Ukubwa wa kawaida unapokuwepo</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>Darasa la 1280×720</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Safu mlalo zinazokosekana zimerukwa. Kipakuliwa cha kwanza kilichoorodheshwa ndicho kilichosalia cha juu zaidi—sio jina refu zaidi uliloandika. Chaguo la umbizo kati ya WebP na JPEG limefunikwa katika<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">Vijipicha vya WebP dhidi ya JPEG kwenye YouTube</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Chukulia majina ya faili kama vipandio vya hiari. Panda chini hadi picha halisi ijibu.</p>"
+    },
+    {
+      "heading": "Jinsi 11tik inavyoangalia upatikanaji",
+      "html": "<ol>\n    <li>Changanua saa ya umma, Shorts, moja kwa moja, embed, au URL ya youtu.be kwa kitambulisho cha herufi 11.</li>\n    <li>Jenga URL zinazopendekezwa kutoka kwenye orodha iliyowekwa mapema hapo juu.</li>\n    <li>Pakia kila kigezo kama picha kwenye kivinjari.</li>\n    <li>Weka mafanikio yasiyo ya kishikilia nafasi pekee; cheo kwa daraja, pikseli, na marekebisho madogo ya alama ya WebP.</li>\n    <li>Onyesha orodha iliyopangwa ili uweze kupakua au kunakili URL inayofanya kazi.</li>\n  </ol>\n  <p>Ndiyo maana viungo vya maxres vilivyokadiriwa hupotea kutoka kwa UI vinaposhindwa: kitoaji hukataa kubuni faili ya 1280×720.</p>"
+    },
+    {
+      "heading": "Orodha ya vitendo ya utatuzi wa matatizo",
+      "html": "<ol>\n    <li>Thibitisha kuwa video ni ya umma na kitambulisho ni sahihi.</li>\n    <li>Mtihani<code>maxresdefault.jpg</code>mara moja. Ikiwa itashindwa, acha kubahatisha.</li>\n    <li>Bandika kiungo hicho hicho kwenye<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Pakua picha ya kwanza iliyoorodheshwa, au nakili URL yake ya picha.</li>\n    <li>Ikiwa hakuna kinachoonekana, video inaweza kuwa ya faragha, iliyofutwa, iliyo na umri, au bila picha za umma.</li>\n    <li>Kwa matumizi ya CMS, napendelea nakala iliyohifadhiwa ya picha iliyothibitishwa badala ya njia ya CDN iliyounganishwa.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Mwongozo wa blogu / Grafu Huria</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Makosa ya kawaida",
+      "html": "<ul>\n    <li>Tukidhani kila video ina maxres kwa sababu video moja maarufu ina.</li>\n    <li>Msimbo mgumu<code>maxresdefault.jpg</code>katika HTML ya uzalishaji bila hundi.</li>\n    <li>Kuita kwa kunyoosha<code>hqdefault</code>\"maxres.\"</li>\n    <li>Kuchanganya picha ya skrini ya mchezaji na picha ya CDN —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">picha ya skrini dhidi ya kijipicha halisi</a>.</li>\n    <li>Inatarajia 4K. Upeo wa umma kwa kawaida huwa 1280×720 unapokuwepo —<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">mwongozo wa ubora wa juu zaidi</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hatua inayofuata",
+      "html": "<p>Bandika URL ya YouTube ya umma kwenye<a href=\"https://www.11tik.com/\">kitoaji</a>Ikiwa maxres haipo, weka faili inayofuata tuli—hiyo ni faili ya HD ya kweli kwa video hiyo.</p>\n  <p class=\"yte-bio\">Imeandikwa na 11tik. Picha za umma pekee; hakuna upakuaji wa video.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je, 404 inamaanisha video haina kijipicha hata kidogo?",
+      "answer": "Hapana. Kwa kawaida humaanisha kwamba jina moja la faili halipo. Ukubwa wa kati mara nyingi bado upo.",
+      "answerHtml": "<p>Hapana. Kwa kawaida humaanisha kwamba jina moja la faili halipo. Ukubwa wa kati mara nyingi bado upo.</p>"
+    },
+    {
+      "question": "Je, hq720 ni mbadala mzuri wa maxresdefault?",
+      "answer": "Inapothibitishwa, ndiyo—iko katika kiwango sawa cha juu (~1280×720). Haina dhamana pia.",
+      "answerHtml": "<p>Inapothibitishwa, ndiyo—iko katika kiwango sawa cha juu (~1280×720). Haina dhamana pia.</p>"
+    },
+    {
+      "question": "Je, nijaribu tena maxresdefault baadaye?",
+      "answer": "Ndiyo baada ya upakiaji mpya maalum katika Studio kukamilika kuchakatwa. Vinginevyo, endelea na chaguo lililothibitishwa.",
+      "answerHtml": "<p>Ndiyo baada ya upakiaji mpya maalum katika Studio kukamilika kuchakatwa. Vinginevyo, endelea na chaguo lililothibitishwa.</p>"
+    },
+    {
+      "question": "Je, maxres zinaweza kuwepo kama WebP lakini si JPEG?",
+      "answer": "Ndiyo. 11tik huangalia maxres za WebP kando chini ya /vi_webp/ . Vyovyote viwili, au vyote viwili, vinaweza kuwepo.",
+      "answerHtml": "<p>Ndiyo. 11tik huangalia maxres za WebP kando chini ya<code>/vi_webp/</code>. Yoyote, yote mawili, au hakuna yeyote kati yao anayeweza kuwepo.</p>"
+    },
+    {
+      "question": "Kwa nini baadhi ya vifaa bado vinaonyesha kadi ya maxres inayovunjika?",
+      "answer": "Wanachapisha URL ya kiolezo bila kupakia picha. 11tik huorodhesha faili zinazojibu kama picha pekee.",
+      "answerHtml": "<p>Wanachapisha URL ya kiolezo bila kupakia picha. 11tik huorodhesha faili zinazojibu kama picha pekee.</p>"
+    },
+    {
+      "question": "Ninawezaje kupakua faili ya awali haraka?",
+      "answer": "Tumia mwongozo wa kupakua: bandika, toa, hifadhi faili ya kwanza iliyoorodheshwa.",
+      "answerHtml": "<p>Tumia<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">mwongozo wa kupakua</a>: bandika, toa, hifadhi faili ya kwanza iliyoorodheshwa.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik. Picha za umma pekee; hakuna upakuaji wa video.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>.</p>"
+}

@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "hr",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Kako dobiti originalnu minijaturu s YouTubea | 11tik",
+  "description": "Preuzmite originalnu javnu YouTube minijaturu koju YouTube već hostira. Ovo je CDN slika, a ne kadar izrezan iz videa.",
+  "h1": "Kako dobiti originalnu sliku minijature s YouTubea",
+  "ogTitle": "Kako dobiti originalnu sliku minijature s YouTubea",
+  "ogDescription": "Preuzmite originalnu javnu YouTube minijaturu koju YouTube već hostira. Ovo je CDN slika, a ne kadar izrezan iz videa.",
+  "imageAlt": "Izvorna javna datoteka sličica YouTubea prikazana u ekstraktoru 11tik",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Izvorna javna datoteka sličica YouTubea prikazana u ekstraktoru 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Što je originalna YouTube minijatura?",
+      "html": "<p>To je slika pregleda koju YouTube već pohranjuje na svojim hostovima slika. To je datoteka koja se koristi u pretraživanju i predloženim policama, a ne okvir koji snimate pomoću Print Screena.</p>"
+    },
+    {
+      "heading": "Po čemu se to razlikuje od snimke zaslona?",
+      "html": "<p>Snimka zaslona uključuje Chrome player, korisničko sučelje preglednika i dodatnu kompresiju. Izvorna datoteka je čista fotografija u veličini piksela koju je objavio YouTube.</p>"
+    },
+    {
+      "heading": "Kako mogu pronaći originalnu sličicu?",
+      "html": "<p>Zalijepite URL za gledanje, Shorts, uživo ili youtu.be u<a href=\"https://www.11tik.com/\">11tik</a>Alat čita ID videozapisa, provjerava javne datoteke i rangira najvišu postojeću.</p>"
+    },
+    {
+      "heading": "Kako funkcioniraju URL-ovi minijatura na YouTubeu?",
+      "html": "<p>Koriste ID videozapisa plus naziv veličine kao što je maxresdefault.jpg ili hqdefault.jpg na i.ytimg.com. Pogađanje veličine koja nikada nije objavljena vraća pogrešku ili rezervirano mjesto.</p>"
+    },
+    {
+      "heading": "Što je maxresdefault.jpg?",
+      "html": "<p>To je uobičajeni najviši javni naziv datoteke, obično 1280 × 720 kada ju je YouTube stvorio. Nije 4K master i nije video datoteka.</p>"
+    },
+    {
+      "heading": "Znači li original uvijek 1280&#21720?",
+      "html": "<p>Ne. Ako maxres nikada nije objavljen, izvorna javna slika je hq, sd ili neka druga sačuvana datoteka. 11tik prikazuje stvarnu veličinu piksela umjesto izmišljanja piksela.</p>"
+    },
+    {
+      "heading": "Mogu li dobiti originalnu sliku iz Shortsa, Livea ili youtu.be?",
+      "html": "<p>Da, kada ti URL-ovi sadrže javni ID videozapisa i javne fotografije hostane na YouTubeu. Alat za izdvajanje tretira ih isto kao standardni URL za gledanje.</p>"
+    },
+    {
+      "heading": "Kako mogu provjeriti jesam li stvarno dobio originalnu datoteku?",
+      "html": "<p>Koristite popise veličina i dimenzija 11tik nakon što se datoteka validira. Ako slika izgleda kao snimka zaslona igrača, niste preuzeli hostanu minijaturu.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Najviša kvaliteta</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Što je originalna YouTube minijatura?",
+      "answer": "Javna datoteka slike koju YouTube hostira za ID videozapisa, kao što je maxresdefault ako postoji. To nije snimka zaslona stranice za gledanje.",
+      "answerHtml": "Javna datoteka slike koju YouTube hostira za ID videozapisa, kao što je maxresdefault ako postoji. To nije snimka zaslona stranice za gledanje."
+    },
+    {
+      "question": "Znači li original uvijek 1280&#21720?",
+      "answer": "Ne. Maxres je obično 1280&#21720 prilikom objave. Ako ta datoteka nedostaje, izvorna javna datoteka i dalje je sljedeća veličina koju je pohranio YouTube.",
+      "answerHtml": "Ne. Maxres je obično 1280 × 720 prilikom objave. Ako ta datoteka nedostaje, izvorna javna datoteka i dalje je sljedeća veličina koju je YouTube pohranio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

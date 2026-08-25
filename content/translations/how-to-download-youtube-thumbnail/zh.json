@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "zh",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "如何下载高清 YouTube 视频缩略图 | 11tik",
+  "description": "保存公开的 YouTube 缩略图静态图像：粘贴 watch、Shorts、youtu.be 或嵌入 URL 到 11tik 中，并下载存在的最大文件。",
+  "h1": "如何下载高清 YouTube 缩略图",
+  "ogTitle": "如何下载高清 YouTube 缩略图",
+  "ogDescription": "保存公开的 YouTube 缩略图静态图像：粘贴 watch、Shorts、youtu.be 或嵌入 URL 到 11tik 中，并下载存在的最大文件。",
+  "imageAlt": "从复制 YouTube URL 到下载已验证的公开缩略图，只需四步即可完成。",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "从复制 YouTube URL 到下载已验证的公开缩略图，只需四步即可完成。",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "故障排除图显示，由于缺少 maxresdefault 文件，已跳过该文件以便下载下一个实际缩略图尺寸。",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "快速回答",
+      "html": "<p>复制一个公开的 YouTube 链接，并将其粘贴到<a href=\"https://www.11tik.com/\">11tik</a>等待预览验证通过，然后下载列表中第一个文件。该文件是 YouTube 上已托管的与该视频 ID 对应的最高公开 JPEG 或 WebP 格式文件——通常是 1280×720（如果存在 maxres 或 hq720 版本）。这样可以节省时间。<strong>缩略图静止</strong>不是视频或音频。</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">实际路径：公共 URL → 提取 → 预览实际尺寸 → 下载或复制图像 URL。</p>"
+    },
+    {
+      "heading": "使用 11tik 的最快方法",
+      "html": "<ol>\n    <li>复制公开观看、短视频、直播、嵌入或 youtu.be URL（或 11 个字符的视频 ID）。</li>\n    <li>打开<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>在您的浏览器中。</li>\n    <li>粘贴网址。ID有效后开始提取数据。</li>\n    <li>下载第一个结果（最佳可用版本），或者选择其他可用的尺寸。</li>\n  </ol>\n  <p>可选：使用<strong>复制图片链接</strong>如果您需要的是内容管理系统 (CMS) 的地址而不是文件地址，那么该流程将在以下部分介绍：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>。</p>"
+    },
+    {
+      "heading": "支持的 YouTube URL 格式",
+      "html": "<p>11tik 从其网站解析器接受的相同模式读取视频 ID：</p>\n  <table>\n    <thead>\n      <tr><th>格式</th><th>示例模式</th><th>笔记</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>手表</td><td><code>youtube.com/watch?v=ID</code></td><td>忽略额外的查询参数</td></tr>\n      <tr><td>短链接</td><td><code>youtu.be/ID</code></td><td>移动共享通常使用这种方式</td></tr>\n      <tr><td>短裤</td><td><code>youtube.com/shorts/ID</code></td><td>同样的公共场所仍然开放。</td></tr>\n      <tr><td>嵌入</td><td><code>youtube.com/embed/ID</code></td><td>来自 iframe src</td></tr>\n      <tr><td>居住</td><td><code>youtube.com/live/ID</code></td><td>当存在公共身份标识时</td></tr>\n      <tr><td>无 cookie 嵌入</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>像嵌入式设备一样处理</td></tr>\n      <tr><td>裸露身份证</td><td><code>dQw4w9WgXcQ</code></td><td>仅限 11 个字符</td></tr>\n    </tbody>\n  </table>\n  <p>缺少视频 ID 的频道或播放列表 URL 将不会生成任何缩略图。要一次生成多个链接，请使用批量功能（最多 25 个）——请参阅<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">批量下载</a>渠道拓展：<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">从频道 URL 中提取信息</a>。</p>"
+    },
+    {
+      "heading": "直接URL方法（无需提取器界面）",
+      "html": "<p>如果您已经知道候选人 ID，则可以直接创建候选人页面：</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>加载完成后，使用浏览器的保存图像命令。如果失败，则退而求其次。<code>hq720.jpg</code>，<code>sddefault.jpg</code>， 或者<code>hqdefault.jpg</code>与 11tik 的验证列表相比，这种手动方法速度较慢且容易出错，但只要你拥有一个正确的地址，它就可以在任何浏览器中离线工作。</p>"
+    },
+    {
+      "heading": "下载时选择质量",
+      "html": "<p>除非您有理由保留较小的预览图，否则请下载列表中第一个列出的尺寸。“高清”指的是现存最大的公开静帧图像（通常为 1280×720），而不是 4K 母版。像素预期和缺失尺寸的处理方式在[此处应插入相关说明]中进行了解释。<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">尺寸和分辨率指南</a>。</p>\n  <p>如果您只关心最顶级的公开文件，另请参阅<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高质量的缩略图</a>。</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">如果无法估算文件大小，则跳过该文件，保留下一个实际的公共文件。</p>"
+    },
+    {
+      "heading": "下载故障排除",
+      "html": "<table>\n    <thead>\n      <tr><th>症状</th><th>可能原因</th><th>该怎么办</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>粘贴后没有预览</td><td>无效的URL、没有视频ID或视频为私有/受限视频</td><td>粘贴公开的观察/做空/youtu.be链接</td></tr>\n      <tr><td>Maxres 缺失</td><td>YouTube从未发布过该文件</td><td>请下载列表中第一个列出的尺寸</td></tr>\n      <tr><td>来自手工构建网址的灰色/占位符图像</td><td>猜测的文件名</td><td>使用 11tik 的已验证列表</td></tr>\n      <tr><td>手机保存尴尬</td><td>浏览器下载界面有所不同。</td><td>看<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone/Android 保存指南</a></td></tr>\n      <tr><td>看起来像是用户界面截图</td><td>你截取了玩家的屏幕截图。</td><td>保存CDN，而不是屏幕——<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">截图与实物对比</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "您正在下载（和未下载）的内容",
+      "html": "<p>您保存的是 YouTube 上已有的公开静态图像。您无法解锁私人视频、会员专属文件或 MP4/WebM 流。11tik 是一个提取器，而不是视频制作器或视频下载器——对比：<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">提取器与制造商</a>。</p>\n  <p>版权归上传者所有。保存用于研究或个人参考是常见用途；未经授权重新发布为您自己的自定义缩略图是不允许的。YouTube 帮助：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">自定义视频缩略图</a>网站规则：<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+    },
+    {
+      "heading": "方法比较",
+      "html": "<table>\n    <thead>\n      <tr><th>方法</th><th>速度</th><th>最适合</th><th>需要 11tik？</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik 下载</td><td>快速地</td><td>经验证的最佳状态</td><td>是的</td></tr>\n      <tr><td>11tik 复制 URL</td><td>快速地</td><td>内容管理系统/嵌入式内容</td><td>是的</td></tr>\n      <tr><td>手工打造的 i.ytimg.com URL</td><td>中等的</td><td>知道ID后可进行快速测试</td><td>不</td></tr>\n      <tr><td>玩家截图</td><td>速度快但质量低</td><td>避免在博客/OG中使用</td><td>不</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "下一步",
+      "html": "<p>打开<a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>粘贴一个公开链接，并保存第一个验证过的静止图像。只需要链接？请阅读……<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL指南</a>还在纠结选哪个尺寸？请使用<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">解决方案指南</a>。</p>\n\n  <p class=\"yte-bio\">由浏览器内提取器发布者 11tik 撰写。仅提供公开静态图像。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "我可以下载短片的缩略图吗？",
+      "answer": "是的，当短片公开且存在对应 ID 的静帧时，请将 /shorts/ URL 粘贴到 11tik 中。即使播放是竖屏，静帧也可能是横屏的。",
+      "answerHtml": "<p>是的，当短视频公开且该ID仍然存在时。粘贴以下内容。<code>/shorts/</code>URL 插入 11tik。即使播放是竖屏，画面也可能是横屏。</p>"
+    },
+    {
+      "question": "如果最佳缩略图无法加载怎么办？",
+      "answer": "下载下一个列出的尺寸。缺少最大分辨率是常见现象，并非工具故障。",
+      "answerHtml": "<p>下载下一个列出的尺寸。缺少最大分辨率是常见现象，并非工具故障。</p>"
+    },
+    {
+      "question": "我可以下载原图吗？",
+      "answer": "是的——这就是排名第一的已验证文件。“原图”指的是公共 CDN 上的静态图像，而不是从视频流中提取的帧。请参阅原始公共缩略图。",
+      "answerHtml": "<p>是的——这就是排名第一的已验证文件。“原始文件”指的是公共 CDN 上的静态图像，而不是从视频流中提取的帧。参见<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">原始公开缩略图</a>。</p>"
+    },
+    {
+      "question": "我可以复制图片网址而不是下载图片吗？",
+      "answer": "是的。请使用 11tik 上的“复制图片 URL”功能，或者在图片加载后从浏览器中复制已验证的地址。",
+      "answerHtml": "<p>是的。请使用 11tik 上的“复制图片 URL”，或者在图片加载后从浏览器复制已验证的地址。</p>"
+    },
+    {
+      "question": "这样会下载 YouTube 视频文件吗？",
+      "answer": "不，目前只有公开的缩略图。",
+      "answerHtml": "<p>不，目前只有公开的缩略图。</p>"
+    },
+    {
+      "question": "每个视频都会提供 1280×720 的文件吗？",
+      "answer": "不。保留与该 ID 匹配的最大公共文件。",
+      "answerHtml": "<p>不。保留与该 ID 匹配的最大公共文件。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">由浏览器内提取器发布者 11tik 撰写。仅提供公开静态图像。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+}

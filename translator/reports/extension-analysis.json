@@ -1,0 +1,945 @@
+{
+  "name": "Google Translate Chrome Extension",
+  "version": "2.0.17",
+  "manifestVersion": 3,
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "offscreen",
+    "scripting"
+  ],
+  "contentScripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "bubble_compiled.js"
+      ],
+      "css": [
+        "bubble_gss.css"
+      ],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "main_compiled.js"
+  },
+  "howItWorks": {
+    "selectionBubble": "bubble_compiled.js injects on all URLs; selected text is sent to TranslationAPI and shown in a popup bubble.",
+    "popupUi": "popup.html + popup_compiled.js translate typed/selected text and offer options.",
+    "pageTranslationNote": "Extension UI states page translation is built into Chrome. Full-page translation is NOT this extension's primary job; it uses translate.google.com/translate?u=… for image/page links.",
+    "translationEngine": "trans.common.TranslationAPI client=gtx → https://translate-pa.googleapis.com/v1/translate with embedded key from getApiKey().",
+    "languageSelection": "chrome.storage.local stores targetLang; Options page sets primary language; normLang() normalizes zh/he variants.",
+    "domMutation": "Bubble overlays UI; does not rewrite whole page DOM. Page rewrite would come from Chrome built-in translate or translate.google.com proxy."
+  },
+  "endpoints": {
+    "onePlatformTranslate": "https://translate-pa.googleapis.com/v1/translate",
+    "onePlatformSupportedLanguages": "https://translate-pa.googleapis.com/v1/supportedLanguages",
+    "ajaxSingle": "https://translate.googleapis.com/translate_a/single",
+    "ajaxBatch": "https://translate.googleapis.com/translate_a/t",
+    "websiteTranslate": "https://translate.google.com/translate"
+  },
+  "selectors": {
+    "popupTextInput": "#text-input",
+    "popupTranslation": "#translation",
+    "popupTranslatePageInfo": "#translate-page-info",
+    "popupOptionsLink": "#options-link",
+    "popupTranslateLink": "#translate-link",
+    "optionsPrimaryLanguage": "select, #lang-select, [name='targetLang']",
+    "bubbleClass": ".gtx-bubble",
+    "languageSelectorClass": ".gtx-lang-selector"
+  },
+  "embeddedApiKeyPresent": true,
+  "apiKeyExtractable": true,
+  "fileSizes": {
+    "popup_compiled": 2378858,
+    "main_compiled": 1292589,
+    "bubble_compiled": 2402840
+  },
+  "localAutomationStrategy": {
+    "chosen": "Reuse extension TranslationAPI (translate-pa GTX) via Node runner",
+    "why": "Same engine the extension uses for text translation; deterministic; resumable; DOM-aware via scripts/i18n/dom-translate.mjs; no production leakage.",
+    "notChosen": "Drive Chrome UI for every page (fragile, slow, page-translate is Chrome-native not extension)."
+  },
+  "localeCoverage": {
+    "supported": [
+      {
+        "locale": "ab",
+        "gtxCode": "ab",
+        "name": "Abkhazian"
+      },
+      {
+        "locale": "af",
+        "gtxCode": "af",
+        "name": "Afrikaans"
+      },
+      {
+        "locale": "ak",
+        "gtxCode": "ak",
+        "name": "Akan"
+      },
+      {
+        "locale": "am",
+        "gtxCode": "am",
+        "name": "Amharic"
+      },
+      {
+        "locale": "ar",
+        "gtxCode": "ar",
+        "name": "Arabic"
+      },
+      {
+        "locale": "as",
+        "gtxCode": "as",
+        "name": "Assamese"
+      },
+      {
+        "locale": "ay",
+        "gtxCode": "ay",
+        "name": "Aymara"
+      },
+      {
+        "locale": "az",
+        "gtxCode": "az",
+        "name": "Azerbaijani"
+      },
+      {
+        "locale": "ba",
+        "gtxCode": "ba",
+        "name": "Bashkir"
+      },
+      {
+        "locale": "be",
+        "gtxCode": "be",
+        "name": "Belarusian"
+      },
+      {
+        "locale": "bg",
+        "gtxCode": "bg",
+        "name": "Bulgarian"
+      },
+      {
+        "locale": "bm",
+        "gtxCode": "bm",
+        "name": "Bambara"
+      },
+      {
+        "locale": "bn",
+        "gtxCode": "bn",
+        "name": "Bengali"
+      },
+      {
+        "locale": "br",
+        "gtxCode": "br",
+        "name": "Breton"
+      },
+      {
+        "locale": "bs",
+        "gtxCode": "bs",
+        "name": "Bosnian"
+      },
+      {
+        "locale": "ca",
+        "gtxCode": "ca",
+        "name": "Catalan"
+      },
+      {
+        "locale": "co",
+        "gtxCode": "co",
+        "name": "Corsican"
+      },
+      {
+        "locale": "cs",
+        "gtxCode": "cs",
+        "name": "Czech"
+      },
+      {
+        "locale": "cv",
+        "gtxCode": "cv",
+        "name": "Chuvash"
+      },
+      {
+        "locale": "cy",
+        "gtxCode": "cy",
+        "name": "Welsh"
+      },
+      {
+        "locale": "da",
+        "gtxCode": "da",
+        "name": "Danish"
+      },
+      {
+        "locale": "de",
+        "gtxCode": "de",
+        "name": "German"
+      },
+      {
+        "locale": "dv",
+        "gtxCode": "dv",
+        "name": "Divehi"
+      },
+      {
+        "locale": "dz",
+        "gtxCode": "dz",
+        "name": "Dzongkha"
+      },
+      {
+        "locale": "ee",
+        "gtxCode": "ee",
+        "name": "Ewe"
+      },
+      {
+        "locale": "el",
+        "gtxCode": "el",
+        "name": "Greek"
+      },
+      {
+        "locale": "eo",
+        "gtxCode": "eo",
+        "name": "Esperanto"
+      },
+      {
+        "locale": "es",
+        "gtxCode": "es",
+        "name": "Spanish"
+      },
+      {
+        "locale": "et",
+        "gtxCode": "et",
+        "name": "Estonian"
+      },
+      {
+        "locale": "eu",
+        "gtxCode": "eu",
+        "name": "Basque"
+      },
+      {
+        "locale": "fa",
+        "gtxCode": "fa",
+        "name": "Persian"
+      },
+      {
+        "locale": "ff",
+        "gtxCode": "ff",
+        "name": "Fulah"
+      },
+      {
+        "locale": "fi",
+        "gtxCode": "fi",
+        "name": "Finnish"
+      },
+      {
+        "locale": "fj",
+        "gtxCode": "fj",
+        "name": "Fijian"
+      },
+      {
+        "locale": "fr",
+        "gtxCode": "fr",
+        "name": "French"
+      },
+      {
+        "locale": "fy",
+        "gtxCode": "fy",
+        "name": "Western Frisian"
+      },
+      {
+        "locale": "ga",
+        "gtxCode": "ga",
+        "name": "Irish"
+      },
+      {
+        "locale": "gd",
+        "gtxCode": "gd",
+        "name": "Scottish Gaelic"
+      },
+      {
+        "locale": "gl",
+        "gtxCode": "gl",
+        "name": "Galician"
+      },
+      {
+        "locale": "gn",
+        "gtxCode": "gn",
+        "name": "Guarani"
+      },
+      {
+        "locale": "gu",
+        "gtxCode": "gu",
+        "name": "Gujarati"
+      },
+      {
+        "locale": "ha",
+        "gtxCode": "ha",
+        "name": "Hausa"
+      },
+      {
+        "locale": "he",
+        "gtxCode": "iw",
+        "name": "Hebrew"
+      },
+      {
+        "locale": "hi",
+        "gtxCode": "hi",
+        "name": "Hindi"
+      },
+      {
+        "locale": "hr",
+        "gtxCode": "hr",
+        "name": "Croatian"
+      },
+      {
+        "locale": "ht",
+        "gtxCode": "ht",
+        "name": "Haitian Creole"
+      },
+      {
+        "locale": "hu",
+        "gtxCode": "hu",
+        "name": "Hungarian"
+      },
+      {
+        "locale": "hy",
+        "gtxCode": "hy",
+        "name": "Armenian"
+      },
+      {
+        "locale": "id",
+        "gtxCode": "id",
+        "name": "Indonesian"
+      },
+      {
+        "locale": "ig",
+        "gtxCode": "ig",
+        "name": "Igbo"
+      },
+      {
+        "locale": "is",
+        "gtxCode": "is",
+        "name": "Icelandic"
+      },
+      {
+        "locale": "it",
+        "gtxCode": "it",
+        "name": "Italian"
+      },
+      {
+        "locale": "ja",
+        "gtxCode": "ja",
+        "name": "Japanese"
+      },
+      {
+        "locale": "jv",
+        "gtxCode": "jw",
+        "name": "Javanese"
+      },
+      {
+        "locale": "ka",
+        "gtxCode": "ka",
+        "name": "Georgian"
+      },
+      {
+        "locale": "kk",
+        "gtxCode": "kk",
+        "name": "Kazakh"
+      },
+      {
+        "locale": "km",
+        "gtxCode": "km",
+        "name": "Khmer"
+      },
+      {
+        "locale": "kn",
+        "gtxCode": "kn",
+        "name": "Kannada"
+      },
+      {
+        "locale": "ko",
+        "gtxCode": "ko",
+        "name": "Korean"
+      },
+      {
+        "locale": "ku",
+        "gtxCode": "ku",
+        "name": "Kurdish"
+      },
+      {
+        "locale": "ky",
+        "gtxCode": "ky",
+        "name": "Kyrgyz"
+      },
+      {
+        "locale": "la",
+        "gtxCode": "la",
+        "name": "Latin"
+      },
+      {
+        "locale": "lb",
+        "gtxCode": "lb",
+        "name": "Luxembourgish"
+      },
+      {
+        "locale": "lg",
+        "gtxCode": "lg",
+        "name": "Ganda"
+      },
+      {
+        "locale": "li",
+        "gtxCode": "li",
+        "name": "Limburgish"
+      },
+      {
+        "locale": "ln",
+        "gtxCode": "ln",
+        "name": "Lingala"
+      },
+      {
+        "locale": "lo",
+        "gtxCode": "lo",
+        "name": "Lao"
+      },
+      {
+        "locale": "lt",
+        "gtxCode": "lt",
+        "name": "Lithuanian"
+      },
+      {
+        "locale": "lv",
+        "gtxCode": "lv",
+        "name": "Latvian"
+      },
+      {
+        "locale": "mg",
+        "gtxCode": "mg",
+        "name": "Malagasy"
+      },
+      {
+        "locale": "mi",
+        "gtxCode": "mi",
+        "name": "Maori"
+      },
+      {
+        "locale": "mk",
+        "gtxCode": "mk",
+        "name": "Macedonian"
+      },
+      {
+        "locale": "ml",
+        "gtxCode": "ml",
+        "name": "Malayalam"
+      },
+      {
+        "locale": "mn",
+        "gtxCode": "mn",
+        "name": "Mongolian"
+      },
+      {
+        "locale": "mr",
+        "gtxCode": "mr",
+        "name": "Marathi"
+      },
+      {
+        "locale": "ms",
+        "gtxCode": "ms",
+        "name": "Malay"
+      },
+      {
+        "locale": "mt",
+        "gtxCode": "mt",
+        "name": "Maltese"
+      },
+      {
+        "locale": "my",
+        "gtxCode": "my",
+        "name": "Burmese"
+      },
+      {
+        "locale": "nb",
+        "gtxCode": "no",
+        "name": "Norwegian Bokmål"
+      },
+      {
+        "locale": "ne",
+        "gtxCode": "ne",
+        "name": "Nepali"
+      },
+      {
+        "locale": "nl",
+        "gtxCode": "nl",
+        "name": "Dutch"
+      },
+      {
+        "locale": "nn",
+        "gtxCode": "no",
+        "name": "Norwegian Nynorsk"
+      },
+      {
+        "locale": "no",
+        "gtxCode": "no",
+        "name": "Norwegian"
+      },
+      {
+        "locale": "nr",
+        "gtxCode": "nr",
+        "name": "South Ndebele"
+      },
+      {
+        "locale": "ny",
+        "gtxCode": "ny",
+        "name": "Chichewa"
+      },
+      {
+        "locale": "oc",
+        "gtxCode": "oc",
+        "name": "Occitan"
+      },
+      {
+        "locale": "om",
+        "gtxCode": "om",
+        "name": "Oromo"
+      },
+      {
+        "locale": "or",
+        "gtxCode": "or",
+        "name": "Odia"
+      },
+      {
+        "locale": "pa",
+        "gtxCode": "pa",
+        "name": "Punjabi"
+      },
+      {
+        "locale": "pl",
+        "gtxCode": "pl",
+        "name": "Polish"
+      },
+      {
+        "locale": "ps",
+        "gtxCode": "ps",
+        "name": "Pashto"
+      },
+      {
+        "locale": "pt",
+        "gtxCode": "pt",
+        "name": "Portuguese"
+      },
+      {
+        "locale": "qu",
+        "gtxCode": "qu",
+        "name": "Quechua"
+      },
+      {
+        "locale": "rn",
+        "gtxCode": "rn",
+        "name": "Rundi"
+      },
+      {
+        "locale": "ro",
+        "gtxCode": "ro",
+        "name": "Romanian"
+      },
+      {
+        "locale": "ru",
+        "gtxCode": "ru",
+        "name": "Russian"
+      },
+      {
+        "locale": "rw",
+        "gtxCode": "rw",
+        "name": "Kinyarwanda"
+      },
+      {
+        "locale": "sa",
+        "gtxCode": "sa",
+        "name": "Sanskrit"
+      },
+      {
+        "locale": "sd",
+        "gtxCode": "sd",
+        "name": "Sindhi"
+      },
+      {
+        "locale": "sg",
+        "gtxCode": "sg",
+        "name": "Sango"
+      },
+      {
+        "locale": "si",
+        "gtxCode": "si",
+        "name": "Sinhala"
+      },
+      {
+        "locale": "sk",
+        "gtxCode": "sk",
+        "name": "Slovak"
+      },
+      {
+        "locale": "sl",
+        "gtxCode": "sl",
+        "name": "Slovenian"
+      },
+      {
+        "locale": "sm",
+        "gtxCode": "sm",
+        "name": "Samoan"
+      },
+      {
+        "locale": "sn",
+        "gtxCode": "sn",
+        "name": "Shona"
+      },
+      {
+        "locale": "so",
+        "gtxCode": "so",
+        "name": "Somali"
+      },
+      {
+        "locale": "sq",
+        "gtxCode": "sq",
+        "name": "Albanian"
+      },
+      {
+        "locale": "sr",
+        "gtxCode": "sr",
+        "name": "Serbian"
+      },
+      {
+        "locale": "ss",
+        "gtxCode": "ss",
+        "name": "Swati"
+      },
+      {
+        "locale": "st",
+        "gtxCode": "st",
+        "name": "Southern Sotho"
+      },
+      {
+        "locale": "su",
+        "gtxCode": "su",
+        "name": "Sundanese"
+      },
+      {
+        "locale": "sv",
+        "gtxCode": "sv",
+        "name": "Swedish"
+      },
+      {
+        "locale": "sw",
+        "gtxCode": "sw",
+        "name": "Swahili"
+      },
+      {
+        "locale": "ta",
+        "gtxCode": "ta",
+        "name": "Tamil"
+      },
+      {
+        "locale": "te",
+        "gtxCode": "te",
+        "name": "Telugu"
+      },
+      {
+        "locale": "tg",
+        "gtxCode": "tg",
+        "name": "Tajik"
+      },
+      {
+        "locale": "th",
+        "gtxCode": "th",
+        "name": "Thai"
+      },
+      {
+        "locale": "ti",
+        "gtxCode": "ti",
+        "name": "Tigrinya"
+      },
+      {
+        "locale": "tk",
+        "gtxCode": "tk",
+        "name": "Turkmen"
+      },
+      {
+        "locale": "tl",
+        "gtxCode": "tl",
+        "name": "Tagalog"
+      },
+      {
+        "locale": "tn",
+        "gtxCode": "tn",
+        "name": "Tswana"
+      },
+      {
+        "locale": "tr",
+        "gtxCode": "tr",
+        "name": "Turkish"
+      },
+      {
+        "locale": "ts",
+        "gtxCode": "ts",
+        "name": "Tsonga"
+      },
+      {
+        "locale": "tt",
+        "gtxCode": "tt",
+        "name": "Tatar"
+      },
+      {
+        "locale": "tw",
+        "gtxCode": "ak",
+        "name": "Twi"
+      },
+      {
+        "locale": "ug",
+        "gtxCode": "ug",
+        "name": "Uyghur"
+      },
+      {
+        "locale": "uk",
+        "gtxCode": "uk",
+        "name": "Ukrainian"
+      },
+      {
+        "locale": "ur",
+        "gtxCode": "ur",
+        "name": "Urdu"
+      },
+      {
+        "locale": "uz",
+        "gtxCode": "uz",
+        "name": "Uzbek"
+      },
+      {
+        "locale": "vi",
+        "gtxCode": "vi",
+        "name": "Vietnamese"
+      },
+      {
+        "locale": "xh",
+        "gtxCode": "xh",
+        "name": "Xhosa"
+      },
+      {
+        "locale": "yi",
+        "gtxCode": "yi",
+        "name": "Yiddish"
+      },
+      {
+        "locale": "yo",
+        "gtxCode": "yo",
+        "name": "Yoruba"
+      },
+      {
+        "locale": "zh",
+        "gtxCode": "zh-CN",
+        "name": "Chinese"
+      },
+      {
+        "locale": "zu",
+        "gtxCode": "zu",
+        "name": "Zulu"
+      }
+    ],
+    "unsupported": [
+      {
+        "locale": "aa",
+        "name": "Afar"
+      },
+      {
+        "locale": "ae",
+        "name": "Avestan"
+      },
+      {
+        "locale": "an",
+        "name": "Aragonese"
+      },
+      {
+        "locale": "av",
+        "name": "Avaric"
+      },
+      {
+        "locale": "bi",
+        "name": "Bislama"
+      },
+      {
+        "locale": "bo",
+        "name": "Tibetan"
+      },
+      {
+        "locale": "ce",
+        "name": "Chechen"
+      },
+      {
+        "locale": "ch",
+        "name": "Chamorro"
+      },
+      {
+        "locale": "cr",
+        "name": "Cree"
+      },
+      {
+        "locale": "cu",
+        "name": "Church Slavic"
+      },
+      {
+        "locale": "fo",
+        "name": "Faroese"
+      },
+      {
+        "locale": "gv",
+        "name": "Manx"
+      },
+      {
+        "locale": "ho",
+        "name": "Hiri Motu"
+      },
+      {
+        "locale": "hz",
+        "name": "Herero"
+      },
+      {
+        "locale": "ia",
+        "name": "Interlingua"
+      },
+      {
+        "locale": "ie",
+        "name": "Interlingue"
+      },
+      {
+        "locale": "ii",
+        "name": "Sichuan Yi"
+      },
+      {
+        "locale": "ik",
+        "name": "Inupiaq"
+      },
+      {
+        "locale": "io",
+        "name": "Ido"
+      },
+      {
+        "locale": "iu",
+        "name": "Inuktitut"
+      },
+      {
+        "locale": "kg",
+        "name": "Kongo"
+      },
+      {
+        "locale": "ki",
+        "name": "Kikuyu"
+      },
+      {
+        "locale": "kj",
+        "name": "Kuanyama"
+      },
+      {
+        "locale": "kl",
+        "name": "Kalaallisut"
+      },
+      {
+        "locale": "kr",
+        "name": "Kanuri"
+      },
+      {
+        "locale": "ks",
+        "name": "Kashmiri"
+      },
+      {
+        "locale": "kv",
+        "name": "Komi"
+      },
+      {
+        "locale": "kw",
+        "name": "Cornish"
+      },
+      {
+        "locale": "lu",
+        "name": "Luba-Katanga"
+      },
+      {
+        "locale": "mh",
+        "name": "Marshallese"
+      },
+      {
+        "locale": "na",
+        "name": "Nauru"
+      },
+      {
+        "locale": "nd",
+        "name": "North Ndebele"
+      },
+      {
+        "locale": "ng",
+        "name": "Ndonga"
+      },
+      {
+        "locale": "nv",
+        "name": "Navajo"
+      },
+      {
+        "locale": "oj",
+        "name": "Ojibwa"
+      },
+      {
+        "locale": "os",
+        "name": "Ossetian"
+      },
+      {
+        "locale": "pi",
+        "name": "Pali"
+      },
+      {
+        "locale": "rm",
+        "name": "Romansh"
+      },
+      {
+        "locale": "sc",
+        "name": "Sardinian"
+      },
+      {
+        "locale": "se",
+        "name": "Northern Sami"
+      },
+      {
+        "locale": "to",
+        "name": "Tonga"
+      },
+      {
+        "locale": "ty",
+        "name": "Tahitian"
+      },
+      {
+        "locale": "ve",
+        "name": "Venda"
+      },
+      {
+        "locale": "vo",
+        "name": "Volapük"
+      },
+      {
+        "locale": "wa",
+        "name": "Walloon"
+      },
+      {
+        "locale": "wo",
+        "name": "Wolof"
+      },
+      {
+        "locale": "za",
+        "name": "Zhuang"
+      }
+    ],
+    "supportedCount": 135,
+    "unsupportedCount": 47,
+    "totalProjectLocales": 182
+  },
+  "browser": {
+    "extensionPath": "C:\\Users\\ADMIN\\Desktop\\seo\\translator\\extension",
+    "extensionPresent": true,
+    "primaryEngine": "translate-pa.googleapis.com/v1/translate (client=gtx)",
+    "browserRequired": false,
+    "note": "Full-page Chrome translate UI is built into Chrome; this extension mainly does selection bubbles. Local runner uses the same TranslationAPI the extension calls."
+  }
+}

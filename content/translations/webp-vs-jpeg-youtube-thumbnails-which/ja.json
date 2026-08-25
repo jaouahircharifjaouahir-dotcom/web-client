@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "ja",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "YouTubeサムネイル：WebPとJPEG、どちらのフォーマットを使うべきか？ | 11tik",
+  "description": "YouTubeはJPEGとWebPのサムネイルファイルを公開する場合があります。使用目的に応じて11tikが検証する形式を優先してください。WebPは常に利用できるとは限りません。",
+  "h1": "YouTubeサムネイル：WebPとJPEG、どちらのフォーマットを使うべきか？",
+  "ogTitle": "YouTubeサムネイル：WebPとJPEG、どちらのフォーマットを使うべきか？",
+  "ogDescription": "YouTubeはJPEGとWebPのサムネイルファイルを公開する場合があります。使用目的に応じて11tikが検証する形式を優先してください。WebPは常に利用できるとは限りません。",
+  "imageAlt": "i.ytimg.comにおけるJPEGとWebPのYouTubeサムネイルURLパスの並列比較",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "i.ytimg.comにおけるJPEGとWebPのYouTubeサムネイルURLパスの並列比較",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "ウェブサイトのCMS、直接CDNリンク、アーカイブダウンロードを比較した、JPEG形式とWebP形式のYouTubeサムネイルに関するユースケースチャート",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "簡単な回答",
+      "html": "<p>ほとんどのダウンロードと CMS アップロードでは、<strong>検証済みファイル11tikは最初にリストします</strong>JPEGは依然として一般大衆に広く利用されている。<code>i.ytimg.com/vi/…</code>WebP は一部の動画で次のように表示されます。<code>maxresdefault.webp</code>下<code>/vi_webp/</code>WebPは多くの場合、同等の視覚品質でより小さいサイズになりますが、すべてのIDで公開されているわけではありません。11tikは<strong>ない</strong>ダウンロード時にWebPをJPEGに変換すると、YouTubeが既にホストしているバイト数を節約できます（JPEGダウンロードには小さなメタデータコメントが付加されるだけです）。</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">同じ動画IDでも、コンテナとパスが異なるのは、YouTubeが両方を公開した場合に限られます。</p>"
+    },
+    {
+      "heading": "YouTubeのサムネイル形式が11tikでどのように表示されるか",
+      "html": "<p>11tikの品質プリセットには以下が含まれます。</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>（パントマイム）<code>image/webp</code>）</li>\n    <li><code>maxresdefault.jpg</code>、<code>hq720.jpg</code>、<code>sddefault.jpg</code>、<code>hqdefault.jpg</code>、<code>mqdefault.jpg</code>、<code>default.jpg</code>→ 下<code>/vi/</code>（パントマイム）<code>image/jpeg</code>）</li>\n  </ul>\n  <p>候補はブラウザに読み込まれます。失敗例とプレースホルダーは削除されます。ランキングは、ティア、ピクセル領域、期待されるサイズの一致、および小さな<strong>−8点のペナルティ<code>.webp</code>URL</strong>そのため、同じティアのJPEGとWebPが予測不能な競合を起こすことはありません。両方が検証に合格した場合、JPEGが勝つこともあります。サイズに関する詳細：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サムネイルサイズガイド</a>. maxres の動作が欠落しています:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 ガイド</a>。</p>"
+    },
+    {
+      "heading": "JPEGとWebPの違いを分かりやすく解説",
+      "html": "<table>\n    <thead>\n      <tr><th>形式</th><th>最適</th><th>強さ</th><th>制限</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>ダウンロード、WordPressへのアップロード、幅広い互換性</td><td>ほぼ普遍的なサポート。ほとんどのCDNは静止画</td><td>同等の品質でより大きなファイル</td></tr>\n      <tr><td>WebP</td><td>WebPを既に提供している現代のサイト</td><td>同じ解像度レベルでは、多くの場合より小さい</td><td>すべての動画で公開されているわけではありません。一部の古いツールでは動作しません。</td></tr>\n    </tbody>\n  </table>\n  <p>どちらのフォーマットも解像度を新たに作り出すものではありません。480×360のWebPは、依然として480×360です。</p>"
+    },
+    {
+      "heading": "ダウンロードするとどうなりますか？",
+      "html": "<p>ダウンロードファイル名には実際の拡張子が保持されます（<code>.jpg</code>または<code>.webp</code>）MIMEタイプ/URLから。JPEGブロブの場合、11tikは次のような短いJPEGコメントを挿入することがあります。<code>11tik VIDEO_ID quality youtube thumbnail</code>WebPやJPEG以外のブロブは、再エンコード処理なしで保存されます。画質の「向上」やフォーマット間の強制的な変換は行われません。</p>"
+    },
+    {
+      "heading": "JPEGを優先すべき場合",
+      "html": "<ul>\n    <li>あなたがアップロードしようとしているCMSは、メディアライブラリにJPG形式を想定しています。</li>\n    <li>メールクライアントや古いブラウザとの最大限の互換性が必要です。</li>\n    <li>その動画で検証されたのはJPEGサイズのみです。</li>\n    <li>あなたは、JPG形式を標準としているデザイナーにファイルを印刷したり渡したりしようとしています。</li>\n  </ul>"
+    },
+    {
+      "heading": "WebPが便利な場合",
+      "html": "<ul>\n    <li>11tikは検証済みのWebP maxresをリストしており、あなたのサイトは既にWebPを提供しています。</li>\n    <li>同じ約1280×720の解像度で、より小さなファイルサイズが欲しいのですね。</li>\n    <li>スタックを制御できるので、必要に応じてJPEGにフォールバックできます。</li>\n  </ul>\n  <p>テーマがWebPに対応していない場合は、代わりにJPEGをダウンロードするか、ダウンロード後にローカルで変換してください。11tikは変換を行いません。</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">パイプラインに合った検証済みのフォーマットを選択してください。推測による拡張子は使用しないでください。</p>"
+    },
+    {
+      "heading": "直接リンクとウェブサイト",
+      "html": "<p>画像URLをコピーすると、検証済みの候補のHTTPS CDNアドレスが返されます。WebPまたはJPEGのホットリンクには、前述の脆弱性があります。<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">ブログ / Open Graph ガイド</a>: 永続的な投稿には、独自のコピーをホストすることをお勧めします。 URL パターン:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>。</p>"
+    },
+    {
+      "heading": "ブラウザとCMSの互換性に関する注意事項",
+      "html": "<p>最新のChromium、Firefox、Safariでは、ページ内のWebP画像が処理されます。ただし、一部の古いプラグイン、メールテンプレート、印刷ワークフローでは、依然としてJPEG形式が推奨されています。WordPressコアは設定次第でWebPに対応できますが、多くの開発チームは予測可能性を高めるため、アイキャッチ画像をJPG形式に標準化しています。お使いのWordPressバージョンに関する正確な情報は、公式のメディアドキュメントを参照してください。すべてのプラグインがWebPアップロードに対応しているとは限りませんのでご注意ください。</p>"
+    },
+    {
+      "heading": "実用的な意思決定ツリー",
+      "html": "<ol>\n    <li>抽出<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>CMSのアイキャッチ画像が必要で、両方のフォーマットが表示される場合は、WebPを優先する設定になっていない限り、JPEGを選択してください。</li>\n    <li>最上位ティアで検証されたのがWebPの最大解像度のみの場合は、それを使用するか、どうしてもJPGを使用する必要がある場合は、次のJPEGサイズを使用してください。</li>\n    <li>アーカイブの場合は、ダウンロード時の元の拡張子を保持してください。</li>\n  </ol>\n  <p>攻略ガイドをダウンロード：<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTubeのサムネイルをダウンロードする</a>。</p>"
+    },
+    {
+      "heading": "次のステップ",
+      "html": "<p>公開URLを貼り付けます<a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>上位の結果が<code>.jpg</code>または<code>.webp</code>そして、ファイル名の長さではなく、CMSに基づいて選択してください。</p>\n  <p class=\"yte-bio\">現在のブラウザ内抽出器の動作に基づいて、11tikによって作成されました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "YouTubeの動画はすべてWebP形式のサムネイルを使用していますか？",
+      "answer": "いいえ。WebPの最大解像度はオプションです。多くの動画はJPEGサイズのみを公開しています。",
+      "answerHtml": "<p>いいえ。WebPの最大解像度はオプションです。多くの動画はJPEGサイズのみを公開しています。</p>"
+    },
+    {
+      "question": "WebPは常にJPEGよりも鮮明なのでしょうか？",
+      "answer": "いいえ。フォーマットを変更しても解像度は上がりません。同じピクセルサイズを比較してください。",
+      "answerHtml": "<p>いいえ。フォーマットを変更しても解像度は上がりません。同じピクセルサイズを比較してください。</p>"
+    },
+    {
+      "question": "なぜJPEGは11tikでWebPより上位にランクされる可能性があるのでしょうか？",
+      "answer": "検証済みのWebP URLは、それ以外は類似した候補と比較してわずかなスコアペナルティ（-8）を受けるため、両者が同じ階層に存在する場合、JPEGが先に表示される場合があります。",
+      "answerHtml": "<p>検証済みのWebP URLは、それ以外は類似した候補と比較してわずかなスコアペナルティ（-8）を受けるため、両者が同じ階層に存在する場合、JPEGが先に表示される場合があります。</p>"
+    },
+    {
+      "question": "ダウンロードするとWebPはJPEGに変換されますか？",
+      "answer": "いいえ。保存されたファイルは元のフォーマットを保持します。メタデータコメントが付加されるのはJPEG形式のみです。",
+      "answerHtml": "<p>いいえ。保存されたファイルは元のフォーマットを保持します。メタデータコメントが付加されるのはJPEG形式のみです。</p>"
+    },
+    {
+      "question": "どの形式でホットリンクすれば良いですか？",
+      "answer": "どちらも、重要な本番ページには適していません。コピーをホストしてください。一時的にホットリンクする必要がある場合は、既に検証済みの URL 11tik を使用してください。",
+      "answerHtml": "<p>どちらも、あなたが大切にしている本番ページには適していません。コピーをホストしてください。一時的にホットリンクする必要がある場合は、既に検証済みの URL 11tik を使用してください。</p>"
+    },
+    {
+      "question": "hq720はWebP形式にできますか？",
+      "answer": "現在の11tikプリセットリストでは、専用のWebP候補はmaxres WebPです。その他のサイズは/vi/以下のJPEGファイル名で要求されます。",
+      "answerHtml": "<p>現在の11tikプリセットリストでは、専用のWebP候補はmaxres WebPです。その他のサイズはJPEGファイル名で要求されます。<code>/vi/</code>。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">現在のブラウザ内抽出器の動作に基づいて、11tikによって作成されました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+}

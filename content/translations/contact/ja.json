@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "ja",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "お問い合わせ | 11tik",
+  "description": "YouTubeサムネイル抽出ツールに関するご質問は、こちらのフォームをご利用ください。メッセージは11tikオペレーターにメールで送信されます。動画ファイルや音声ファイルは送信しないでください。このツールは公開されているサムネイル画像のみに対応しています。",
+  "h1": "接触",
+  "ogTitle": "接触",
+  "ogDescription": "YouTubeサムネイル抽出ツールに関するご質問は、こちらのフォームをご利用ください。メッセージは11tikオペレーターにメールで送信されます。動画ファイルや音声ファイルは送信しないでください。このツールは公開されているサムネイル画像のみに対応しています。",
+  "imageAlt": "",
+  "faqHeading": "よくある質問",
+  "images": [],
+  "sections": [
+    {
+      "heading": "接触",
+      "html": "<h1>接触</h1>\n  <p class=\"yte-updated\">最終更新日：2026年8月22日</p>\n  <p itemprop=\"description\">YouTubeサムネイル抽出ツールに関するご質問は、こちらのフォームをご利用ください。メッセージは11tikオペレーターにメールで送信されます。動画ファイルや音声ファイルは送信しないでください。このツールは公開されているサムネイル画像のみに対応しています。</p>\n  <p>直接メール：<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>特定の動画に関するレポートの場合は、YouTubeの公開URLを含めてください。11tikはサムネイルファイルをホストしていません。画像はプラットフォームの公開CDNから取得されます。</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>名前<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>メール<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>メッセージ<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">メッセージを送信</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>・<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシーポリシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

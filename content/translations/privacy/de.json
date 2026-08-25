@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "de",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Datenschutzrichtlinie | 11tik",
+  "description": "Diese Richtlinie gilt für den YouTube Thumbnail Extractor unter https://www.11tik.com/ und die Sprachhosts, die denselben Extractor laden.",
+  "h1": "Datenschutzrichtlinie",
+  "ogTitle": "Datenschutzrichtlinie",
+  "ogDescription": "Diese Richtlinie gilt für den YouTube Thumbnail Extractor unter https://www.11tik.com/ und die Sprachhosts, die denselben Extractor laden.",
+  "imageAlt": "",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Verarbeitung im Browser",
+      "html": "<p>Beim Einfügen einer YouTube-URL liest die Seite die Video-ID und prüft die URLs der öffentlichen Vorschaubilder in Ihrem Browser. Diese eingefügten Links werden nicht als persönliches Konto auf einem 11tik-Anwendungsserver gespeichert. Für die Datenextraktion ist keine Anmeldung erforderlich.</p>"
+    },
+    {
+      "heading": "Optionaler Freigabeseitenindex",
+      "html": "<p>Nach erfolgreichem Extrahieren sendet der Browser möglicherweise nur eine öffentliche Video-ID, den Titel, aus öffentlichen Metadaten abgeleitete Tags und eine öffentliche Thumbnail-URL an unseren Cloudflare Worker, damit das Video auf einer Teilen-Seite und, falls es die Qualitätsprüfung besteht, in der Sitemap angezeigt werden kann. Sie müssen die Bilddatei nicht hochladen. Sie können den Extraktor auch ohne diesen Index verwenden, falls die Anfrage von Ihrem Browser blockiert wird.</p>"
+    },
+    {
+      "heading": "Ortsgeschichte",
+      "html": "<p>Der Extraktor speichert möglicherweise zuletzt besuchte URLs im lokalen Speicher Ihres Browsers, damit Sie diese später erneut öffnen können. Diese Kopie verbleibt auf Ihrem Gerät. Sie können sie über die Verlaufsfunktion der Seite oder durch Löschen der Website-Daten im Browser entfernen. Es handelt sich nicht um einen Cloud-Speicher.</p>"
+    },
+    {
+      "heading": "Hosting-Protokolle",
+      "html": "<p>Die Website, die Sprachdateien und die statischen Dateien werden von den für 11tik.com verwendeten Hosting-Anbietern (darunter Cloudflare und GitHub Pages) bereitgestellt. Diese Anbieter können gemäß ihren eigenen Richtlinien übliche Weblogs wie IP-Adresse, Browsertyp und die aufgerufene Seite speichern.</p>"
+    },
+    {
+      "heading": "Dritte",
+      "html": "<p>Vorschaubilder werden von den öffentlichen Bildhostern von YouTube angefordert. Die Website verwendet Google Analytics 4 (Mess-ID G-FW7B8NDZZ5), um Besuche und Aktionen auf der Seite, wie z. B. das Extrahieren und Herunterladen, zu zählen. Google kann Cookies oder ähnliche Kennungen setzen. Eingefügte YouTube-URLs werden nicht als Analyseparameter gesendet. Schriftarten oder Skripte können außerdem von CDNs geladen werden, die zur Anzeige der Seite verwendet werden.</p>\n  <p>Das Kontaktformular wird von FormSubmit an die E-Mail-Adresse des Betreibers gesendet. FormSubmit kann den Namen, die E-Mail-Adresse und die von Ihnen übermittelte Nachricht einsehen.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Fragen zu dieser Richtlinie: E-Mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>oder verwenden Sie die<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>bilden.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-Thumbnail-Extraktor</a>·<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

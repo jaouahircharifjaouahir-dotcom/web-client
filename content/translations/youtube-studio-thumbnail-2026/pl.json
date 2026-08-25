@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "pl",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "Miniatura YouTube Studio 2026 | 11tik",
+  "description": "W 2026 roku kwalifikujące się kanały YouTube nadal przesyłają niestandardową miniaturę ze Studio na stronie szczegółów filmu. Etykiety menu zostaną przeniesione, ale efekt będzie ten sam: YouTube hostuje nowy publiczny obraz. 11tik nie przesyła tego pliku. Odczytuje adresy URL publicznych obrazów dopiero po ich utworzeniu.",
+  "h1": "Miniatura YouTube Studio 2026",
+  "ogTitle": "Miniatura YouTube Studio 2026",
+  "ogDescription": "W 2026 roku kwalifikujące się kanały YouTube nadal przesyłają niestandardową miniaturę ze Studio na stronie szczegółów filmu. Etykiety menu zostaną przeniesione, ale efekt będzie ten sam: YouTube hostuje nowy publiczny obraz. 11tik nie przesyła tego pliku. Odczytuje adresy URL publicznych obrazów dopiero po ich utworzeniu.",
+  "imageAlt": "11tik służy do weryfikacji publicznej miniatury po przesłaniu do YouTube Studio",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik służy do weryfikacji publicznej miniatury po przesłaniu do YouTube Studio",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jak przesłać własną miniaturę do YouTube Studio?",
+      "html": "<ol>\n    <li>Otwórz YouTube Studio i wybierz wideo.</li>\n    <li>W sekcji Szczegóły prześlij obraz w formacie 16:9 (typowa rozdzielczość docelowa YouTube’a to 1280×720).</li>\n    <li>Zapisz i poczekaj na zakończenie przetwarzania.</li>\n  </ol>\n  <p>Dokładne nazwy przycisków mogą ulec zmianie. Jeśli Twoje konto nie kwalifikuje się do niestandardowych miniatur, Studio nie zaoferuje możliwości przesłania. 11tik nie może tego ominąć.</p>"
+    },
+    {
+      "heading": "Jak sprawdzić miniaturę po jej zmianie w Studio?",
+      "html": "<p>Wklej adres URL zegarka<a href=\"https://www.11tik.com/\">11tik</a>Pobierz lub skopiuj pierwszy z wymienionych rozmiarów. Jeśli brakuje maxresdefault, następny publiczny plik to uczciwy maksymalny rozmiar. To katalog YouTube, a nie nieudany ekstrakt. Zobacz też<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault wyjaśniony</a>.</p>"
+    },
+    {
+      "heading": "Czy 11tik zastępuje YouTube Studio?",
+      "html": "<p>Nie. Studio to miejsce, w którym przesyłasz, planujesz i używasz testów, gdy YouTube je udostępnia. 11tik służy do podglądu i zapisywania publicznych zdjęć, które już istnieją, także po zmianie w Studio.</p>"
+    },
+    {
+      "heading": "Co zrobić, gdy obraz wygląda na stary?",
+      "html": "<p>Sieci CDN z obrazami mogą się opóźniać. Sprawdź ponownie później, odśwież lub skopiuj adres URL. 11tik Potwierdza. Nie zakładaj rozdzielczości master 4K; publiczna rozdzielczość maksymalna to zazwyczaj 1280×720. Zrzut ekranu ze Studio nie jest publicznym plikiem miniatur.</p>\n  <p>Powiązany:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">ekstraktor kontra producent</a>.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstraktor</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czy 11tik zastępuje YouTube Studio?",
+      "answer": "Nie. Studio przesyła niestandardowe grafiki. 11tik odczytuje tylko publiczne pliki miniatur.",
+      "answerHtml": "Nie. Studio przesyła niestandardowe grafiki. 11tik odczytuje tylko publiczne pliki miniatur."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+}

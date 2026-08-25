@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "ja",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "iPhoneとAndroidでYouTubeのサムネイルを保存する方法（2026）｜11tik",
+  "description": "スクリーンショットやアプリストアダウンローダーを使わずに、iPhoneやAndroidで公開されているYouTubeの静止画を保存します。SafariやChromeで公開されているウォッチまたはショート動画のURLを11tikに貼り付けると、YouTubeが既にホストしている最大の画像ファイルをダウンロードできます。",
+  "h1": "iPhoneとAndroidでYouTubeのサムネイルを保存する方法（2026年版）",
+  "ogTitle": "iPhoneとAndroidでYouTubeのサムネイルを保存する方法（2026年版）",
+  "ogDescription": "スクリーンショットやアプリストアダウンローダーを使わずに、iPhoneやAndroidで公開されているYouTubeの静止画を保存します。SafariやChromeで公開されているウォッチまたはショート動画のURLを11tikに貼り付けると、YouTubeが既にホストしている最大の画像ファイルをダウンロードできます。",
+  "imageAlt": "11tikを使ってiPhoneとAndroidでYouTubeのサムネイルを保存する — 公開中、アプリなし",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "11tikを使ってiPhoneとAndroidでYouTubeのサムネイルを保存する — 公開中、アプリなし",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "YouTubeのサムネイルをスマホに保存できますか？",
+      "html": "<p>はい、動画が公開されていて、YouTubeが静止画を公開している場合です。デスクトップは不要で、APKやTestFlightアプリも必要ありません。<a href=\"https://www.11tik.com/\">11tik</a>普段お使いのスマートフォンのブラウザで、リンクを貼り付け、「サムネイル画像を取得」をタップし、リストの一番上に表示されるファイルを保存してください。そのファイルが、実際に画像が取得できた公開されているJPEGまたはWebPファイルの中で、最も高解像度のものです。</p>\n  <p>プレーヤーの長押しスクリーンショットは同じものではありません。スクリーンショットには、クローム、セーフエリアバー、および追加の圧縮が含まれます。一般の人々は依然としてi.ytimg.comに住んでいます。参照<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">スクリーンショットと実際のサムネイルの比較</a>ブログやOpen Graphタグでその区別が必要な場合。</p>"
+    },
+    {
+      "heading": "始める前に必要なもの",
+      "html": "<ul>\n    <li>公開されている YouTube ウォッチ、ショート動画、ライブ、または youtu.be URL。追加のクエリ パラメータとして、<code>pp=</code>またはプレイリスト ID は関係ありません。11tik は 11 文字のビデオ ID を読み取ります。</li>\n    <li>iPhoneまたはiPadの場合はSafari、Androidの場合はChrome、Firefox、またはSamsung Internetをご利用ください。</li>\n    <li>ブラウザが許可を求めた場合、写真を保存する権限を与えます。11tik は、画像をオリジナルメディアとして 11tik サーバーにアップロードすることはありません。</li>\n  </ul>\n  <p>公開静止画が公開されない非公開、会員限定、または年齢制限付き動画はダウンロードできません。これはプラットフォームのルールであり、端末の制限ではありません。Studioで処理中のカスタムサムネイルも一時的に表示されない場合があります。同じURLで後ほどご確認ください。関連情報：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026年のYouTube Studioのサムネイル</a>。</p>"
+    },
+    {
+      "heading": "iPhoneでYouTubeのサムネイルを保存する方法",
+      "html": "<ol>\n    <li>YouTubeアプリまたはSafariで、動画またはショート動画のリンクをコピーします（共有 → リンクをコピー）。</li>\n    <li>開ける<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>Safariで利用できます。何もインストールする必要はありません。</li>\n    <li>URLを貼り付けて「サムネイル画像を取得」をタップしてください。実際のプレビューが表示されるまでお待ちください。灰色の空欄は、そのサイズが公開されていないことを意味します。</li>\n    <li>最初のダウンロードコントロールをタップします。Safariで「開く」または「ダウンロード」の選択肢が表示されます。「ダウンロード」を選択し、画像を共有シートから「ファイル」フォルダに保存するか、「写真」フォルダに保存してください。</li>\n    <li>CMSのアドレスだけが必要な場合は、ダウンロードする代わりに「画像URLをコピー」を使用してください。これにより、HTTPS i.ytimg.comまたはvi_webpリンクがコピーされます。ガイド：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTubeサムネイルURL</a>。</li>\n  </ol>\n  <p>iOS がクロスオリジンダウンロードをブロックする場合は、画像 URL を新しいタブで開き、画像を長押しして → 写真に追加 を選択してください。保存されるのは YouTube の公開ファイルであり、11tik ページのスクリーンショットではありません。</p>"
+    },
+    {
+      "heading": "AndroidでYouTubeのサムネイルを保存する方法",
+      "html": "<ol>\n    <li>YouTubeアプリから公開されている視聴動画またはショート動画のURLをコピーしてください。</li>\n    <li>Chrome（またはデフォルトのブラウザ）で11tikを開きます。</li>\n    <li>貼り付けて解凍し、最初のダウンロードをタップします。Chromeは通常、ファイルをダウンロードフォルダに保存します。</li>\n    <li>ダウンロード通知を開き、画像を写真アプリに保存したい場合はギャラリーに移動してください。</li>\n  </ol>\n  <p>Androidでは、JPEGファイルを開くアプリを選択するよう求められる場合があります。ギャラリーまたはファイルを選択してください。MP4ファイルを提供すると謳う「ビデオダウンローダー」は選択しないでください。11tikはビデオもオーディオも提供しません。</p>"
+    },
+    {
+      "heading": "スマートフォンにはどのサイズのデータ​​を保存すれば良いですか？",
+      "html": "<p>最初にリストされたサイズを保持します。11tik 既に存在するランク付けされたファイル。YouTube が maxresdefault を公開した場合、通常は 1280×720 です。そのファイル名が 404 エラーになった場合、実際の最大値は次の実際のファイル (多くの場合 hq720、sddefault、または hqdefault) です。maxres ファイルが見つからないのは正常です。詳細:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpgとは何か</a>そして<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">2026年のサムネイルサイズ</a>。</p>\n  <p>ショート動画は縦向きで再生されることが多いが、保存されている静止画は横向きである。ファイルは公式の公開サムネイルである。参照<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">ショート動画のサムネイル</a>。</p>"
+    },
+    {
+      "heading": "スマートフォンにサムネイルを保存するのは合法ですか？",
+      "html": "<p>公開されている静止画を個人的な参考資料、研究、または教育目的で保存するのが一般的な使用方法です。画像の著作権はアップロード者に帰属します。独自のカスタムサムネイルとして再アップロードしたり、グッズに印刷したり、11tikをライセンスとして扱ったりしないでください。カスタムサムネイルに関するYouTubeのヘルプはこちらです。<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>11tikのルール：<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>そして<a href=\"https://www.11tik.com/copyright\">著作権と使用許諾</a>。</p>"
+    },
+    {
+      "heading": "スマートフォンの「サムネイルアプリ」が失敗する理由",
+      "html": "<p>多くの店舗リストは、推測される広告ページを囲んでいます。<code>maxresdefault.jpg</code>URL。YouTubeがそのファイルを公開していない場合、画像が破損するか、灰色のデフォルトが表示されます。11tikはブラウザの応答をチェックし、画像ではないサイズを非表示にします。サインアップの背後に「ロック解除」されるものはありません。プライバシー：貼り付けたURLはブラウザに残ります。参照<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>。</p>"
+    },
+    {
+      "heading": "携帯電話から複数のリンクを保存する",
+      "html": "<p>同じホームページで一括入力機能を使用し、1行に1つの公開URLを最大25個まで入力できます。チャンネルURLは、画面が大きい場合は最近の公開アップロードに展開されます。スマートフォンでは、チャンネル展開が窮屈に感じる場合は、個々のリンクを貼り付けてください。一括入力ガイド：<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">バッチダウンロード</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">11tikに公開サムネイルを保存 →</a></p>\n  <p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって執筆されました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "YouTubeのサムネイルをスマホに保存できますか？",
+      "answer": "はい。SafariまたはChromeで11tikを開き、公開されているYouTubeのURLを貼り付け、解凍して、最初に表示された公開静止画をダウンロードしてください。アプリストアのダウンローダーは必要ありません。",
+      "answerHtml": "はい。SafariまたはChromeで11tikを開き、公開されているYouTubeのURLを貼り付けて解凍し、最初に表示された公開静止画をダウンロードしてください。アプリストアのダウンローダーは必要ありません。"
+    },
+    {
+      "question": "iPhoneでYouTubeのサムネイルを保存する方法は？",
+      "answer": "リンクをコピーし、Safariでhttps://www.11tik.com/を開き、貼り付け、抽出してからダウンロードするか、画像のURLを長押しして写真に追加します。",
+      "answerHtml": "リンクをコピーし、Safariでhttps://www.11tik.com/を開き、貼り付け、抽出してからダウンロードするか、画像のURLを長押しして写真に追加します。"
+    },
+    {
+      "question": "AndroidでYouTubeのサムネイルを保存する方法は？",
+      "answer": "リンクをコピーし、Chromeで11tikを開き、解凍して、最初のダウンロードをダウンロードフォルダまたはギャラリーに保存します。",
+      "answerHtml": "リンクをコピーし、Chromeで11tikを開き、解凍して、最初のダウンロードをダウンロードフォルダまたはギャラリーに保存します。"
+    },
+    {
+      "question": "スマートフォンにサムネイルを保存するのは合法ですか？",
+      "answer": "公開されている静止画を個人的な参考資料や研究のために保存することは一般的です。ただし、それを自分の作品の表紙画像として再掲載しないでください。著作権はアップロード者に帰属します。",
+      "answerHtml": "公開されている静止画を個人的な参考資料や研究のために保存することは一般的です。ただし、それを自分の作品の表紙画像として再掲載しないでください。著作権はアップロード者に帰属します。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって執筆されました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

@@ -1,0 +1,493 @@
+{
+  "generatedAt": "2026-08-25T20:31:48.549Z",
+  "mode": "pilot-1-article-x-all-target-languages",
+  "provider": {
+    "translateEnabled": true,
+    "provider": "chrome_gtx",
+    "credentialsPresent": true,
+    "credentialsSource": "translator/extension embedded GTX key",
+    "configurationValid": true,
+    "configurationErrors": [],
+    "rateLimitMs": 80,
+    "maxRetries": 3,
+    "batchSize": 1,
+    "timeoutMs": 120000,
+    "concurrency": 4,
+    "gtxConcurrency": 8,
+    "model": "chrome-extension-gtx-translate-pa",
+    "localEngine": true
+  },
+  "extension": {
+    "extensionPath": "C:\\Users\\ADMIN\\Desktop\\seo\\translator\\extension",
+    "extensionPresent": true,
+    "primaryEngine": "translate-pa.googleapis.com/v1/translate (client=gtx)",
+    "browserRequired": false,
+    "note": "Full-page Chrome translate UI is built into Chrome; this extension mainly does selection bubbles. Local runner uses the same TranslationAPI the extension calls."
+  },
+  "targetLanguages": {
+    "sourceLanguage": "en",
+    "targetCount": 37,
+    "tier1": [
+      "ar",
+      "bn",
+      "de",
+      "es",
+      "fa",
+      "fr",
+      "he",
+      "hi",
+      "id",
+      "it",
+      "ja",
+      "ko",
+      "ms",
+      "nl",
+      "pl",
+      "pt",
+      "ru",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh"
+    ],
+    "tier2": [
+      "bg",
+      "cs",
+      "da",
+      "el",
+      "fi",
+      "hr",
+      "hu",
+      "no",
+      "ro",
+      "sk",
+      "sr",
+      "sv",
+      "sw"
+    ],
+    "locales": [
+      "ar",
+      "bg",
+      "bn",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "es",
+      "fa",
+      "fi",
+      "fr",
+      "he",
+      "hi",
+      "hr",
+      "hu",
+      "id",
+      "it",
+      "ja",
+      "ko",
+      "ms",
+      "nl",
+      "no",
+      "pl",
+      "pt",
+      "ro",
+      "ru",
+      "sk",
+      "sr",
+      "sv",
+      "sw",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh"
+    ],
+    "unsupportedCandidates": [
+      {
+        "code": "rm",
+        "language": "Romansh",
+        "reason": "Official in Switzerland but low web/SEO scale; no verified GTX mapping in translator/ for project ISO set"
+      }
+    ]
+  },
+  "inventory": {
+    "articles": 17,
+    "utilities": 6,
+    "localizable": 23,
+    "targetLocales": 37,
+    "theoreticalAll": 851
+  },
+  "pilot": {
+    "contentId": "11tik-share-links-thumb-vs-youtube",
+    "locales": [
+      "ar",
+      "bg",
+      "bn",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "es",
+      "fa",
+      "fi",
+      "fr",
+      "he",
+      "hi",
+      "hr",
+      "hu",
+      "id",
+      "it",
+      "ja",
+      "ko",
+      "ms",
+      "nl",
+      "no",
+      "pl",
+      "pt",
+      "ro",
+      "ru",
+      "sk",
+      "sr",
+      "sv",
+      "sw",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh"
+    ],
+    "tier1": [
+      "ar",
+      "bn",
+      "de",
+      "es",
+      "fa",
+      "fr",
+      "he",
+      "hi",
+      "id",
+      "it",
+      "ja",
+      "ko",
+      "ms",
+      "nl",
+      "pl",
+      "pt",
+      "ru",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh"
+    ],
+    "tier2": [
+      "bg",
+      "cs",
+      "da",
+      "el",
+      "fi",
+      "hr",
+      "hu",
+      "no",
+      "ro",
+      "sk",
+      "sr",
+      "sv",
+      "sw"
+    ],
+    "jobsPlanned": 37
+  },
+  "smoke": {
+    "ok": true,
+    "sample": "Bonjour de la part de 11tik",
+    "provider": "chrome_gtx",
+    "extensionPresent": true
+  },
+  "translation": {
+    "runtimeMs": 691881,
+    "processed": 33,
+    "succeeded": 33,
+    "failed": 0,
+    "skipped": 0,
+    "items": [
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "bg",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "bn",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "cs",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "da",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "el",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "fa",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "fi",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "he",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "hi",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "hr",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "hu",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "id",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "it",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "ja",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "ko",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "ms",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "nl",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "no",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "pl",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "pt",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "ro",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "ru",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "sk",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "sr",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "sv",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "sw",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "th",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "tl",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "tr",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "uk",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "ur",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "vi",
+        "ok": true,
+        "status": "ready"
+      },
+      {
+        "contentId": "11tik-share-links-thumb-vs-youtube",
+        "locale": "zh",
+        "ok": true,
+        "status": "ready"
+      }
+    ],
+    "secPerJob": "20.97"
+  },
+  "generation": {
+    "runtimeMs": 2539,
+    "staged": "C:\\Users\\ADMIN\\Desktop\\seo\\dist-assets-pilot",
+    "generatedBytes": 6678231,
+    "files": {
+      "expected": 134,
+      "present": 134,
+      "missing": 0,
+      "missingFiles": [],
+      "rtlPages": 15,
+      "totalBytes": 3282055,
+      "totalMiB": 3.13,
+      "hreflangLinks": 4860
+    },
+    "sitemapLocalized": 134,
+    "internalLinks": {
+      "totalLinks": 0,
+      "localizedLinks": 0,
+      "englishFallbackLinks": 0,
+      "broken": [],
+      "brokenCount": 0
+    },
+    "rtlPages": 15,
+    "rtlLocalesInPilot": [
+      "ar",
+      "fa",
+      "he",
+      "ur"
+    ]
+  },
+  "validation": {
+    "ready": 134,
+    "stale": 0,
+    "missing": 717,
+    "failed": 0,
+    "draft": 0,
+    "issues": []
+  },
+  "productionIsolation": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "no-gtx-in-staged",
+        "leaked": false,
+        "detail": ""
+      },
+      {
+        "name": "no-extension-js-in-staged",
+        "leaked": false,
+        "detail": ""
+      }
+    ]
+  },
+  "readyForMass": true,
+  "blockers": [],
+  "summary": {
+    "pilotJobs": 37,
+    "succeeded": 33,
+    "skippedReady": 0,
+    "failed": 0,
+    "pilotFailed": 0,
+    "totalRuntimeMs": 701569
+  },
+  "massEstimate": {
+    "contentItems": 23,
+    "targetLocales": 37,
+    "theoreticalJobs": 851,
+    "remainingJobs": 717,
+    "note": "Mass rollout NOT started — await approval after this report."
+  }
+}

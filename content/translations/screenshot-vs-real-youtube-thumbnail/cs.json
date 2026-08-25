@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "cs",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Snímek obrazovky vs. skutečný náhled na YouTube: který soubor byste si měli uložit? | 11tik",
+  "description": "Snímek obrazovky z telefonu s přehrávačem není miniaturou, kterou YouTube hostí. Skutečná veřejnost stále žije na i.ytimg.com. Použijte ho pro blogy, Open Graph a výzkum – snímky obrazovky přidávají chrome pro UI, kompresi a špatný poměr stran.",
+  "h1": "Snímek obrazovky vs. skutečný náhled na YouTube: který soubor byste si měli uložit?",
+  "ogTitle": "Snímek obrazovky vs. skutečný náhled na YouTube: který soubor byste si měli uložit?",
+  "ogDescription": "Snímek obrazovky z telefonu s přehrávačem není miniaturou, kterou YouTube hostí. Skutečná veřejnost stále žije na i.ytimg.com. Použijte ho pro blogy, Open Graph a výzkum – snímky obrazovky přidávají chrome pro UI, kompresi a špatný poměr stran.",
+  "imageAlt": "Porovnání snímku obrazovky hráče a skutečného veřejného souboru miniatury z YouTube",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Porovnání snímku obrazovky hráče a skutečného veřejného souboru miniatury z YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jaký je rozdíl mezi snímkem obrazovky a skutečnou miniaturou?",
+      "html": "<p>Snímek obrazovky zachycuje obrazovku, včetně prohlížeče Chrome, titulků a škálování zařízení. Skutečná miniatura je soubor JPEG nebo WebP, který YouTube zveřejnil pro dané ID videa. Pouze soubor CDN má stabilní URL a známou velikost v pixelech.</p>"
+    },
+    {
+      "heading": "Proč selhávají snímky obrazovky v Google Images a náhledech na sociálních sítích?",
+      "html": "<p>Často mají špatný poměr stran, zahrnují uživatelské rozhraní a dvakrát se komprimují. Open Graph a mnoho polí CMS vyžaduje statický záběr 16:9 s rozlišením přibližně 1280×720. To odpovídá maxresdefault, pokud existuje – viz<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">průvodce velikostmi miniatur</a>.</p>"
+    },
+    {
+      "heading": "Jak si uložím skutečnou miniaturu?",
+      "html": "<ol>\n    <li>Zkopírujte veřejnou URL adresu videa, ne snímek obrazovky.</li>\n    <li>Vložte to do<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Stáhněte si první uvedený veřejný soubor nebo zkopírujte URL adresu obrázku.</li>\n  </ol>"
+    },
+    {
+      "heading": "Kdy je snímek obrazovky stále užitečný?",
+      "html": "<p>Snímek obrazovky používejte pouze k zdokumentování chyby v uživatelském rozhraní nebo momentu ve videu. Nepoužívejte jej jako oficiální miniaturu, obrázek blogu ani obrázek pro sdílení, pokud stále existuje veřejný obrázek.</p>\n  <p><a href=\"https://www.11tik.com/\">Získejte skutečnou veřejnou miniaturu →</a></p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jaký je rozdíl mezi snímkem obrazovky a skutečnou miniaturou?",
+      "answer": "Snímek obrazovky zachycuje vaši obrazovku a prohlížeč Chrome. Skutečná miniatura je soubor JPEG nebo WebP, který YouTube hostuje na i.ytimg.com pro dané ID videa.",
+      "answerHtml": "Snímek obrazovky zachycuje vaši obrazovku a prohlížeč Chrome. Skutečná miniatura je soubor JPEG nebo WebP, který YouTube hostuje na i.ytimg.com pro dané ID videa."
+    },
+    {
+      "question": "Proč selhávají snímky obrazovky v Google Images a náhledech na sociálních sítích?",
+      "answer": "Často mají špatný poměr stran, extra uživatelské rozhraní a extra kompresi. Pole CMS a Open Graph očekávají čistý veřejný záběr v poměru 16:9.",
+      "answerHtml": "Často mají špatný poměr stran, extra uživatelské rozhraní a extra kompresi. Pole CMS a Open Graph očekávají čistý veřejný záběr v poměru 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+}

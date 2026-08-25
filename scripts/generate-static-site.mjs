@@ -11,7 +11,6 @@ import {
 } from "../workers/sitemap-canonicals.js";
 import {
   collectPublishableLocaleArticleLocs,
-  readEnglishSourceHash,
   writePublishableLocaleArticles,
   writePocFrReadinessManifest,
   assertLocaleSitemapLocsHaveFiles,
@@ -170,14 +169,11 @@ export function generateStaticSite(staged) {
       }),
     );
   }
-  const sourceHash = readEnglishSourceHash();
-  const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged, sourceHash);
-  // Sitemap only includes locs that were actually written (ready + hash match).
-  const publishable = collectPublishableLocaleArticleLocs(sourceHash).filter((loc) =>
-    localeArticleLocs.includes(loc),
-  );
+  // Ready translations only (status=ready + sourceHash match + validation). Missing/stale skipped.
+  const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged);
+  const publishable = collectPublishableLocaleArticleLocs().filter((loc) => localeArticleLocs.includes(loc));
   assertLocaleSitemapLocsHaveFiles(staged, publishable);
-  writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, sourceHash);
+  writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, null);
   writeFile(join(staged, "robots.txt"), robotsTxt());
   writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
 }

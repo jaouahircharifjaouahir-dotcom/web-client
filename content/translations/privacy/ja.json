@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "ja",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "プライバシーポリシー | 11tik",
+  "description": "このポリシーは、https://www.11tik.com/にあるYouTubeサムネイル抽出ツールと、同じ抽出ツールを読み込む言語ホストに適用されます。",
+  "h1": "プライバシーポリシー",
+  "ogTitle": "プライバシーポリシー",
+  "ogDescription": "このポリシーは、https://www.11tik.com/にあるYouTubeサムネイル抽出ツールと、同じ抽出ツールを読み込む言語ホストに適用されます。",
+  "imageAlt": "",
+  "faqHeading": "よくある質問",
+  "images": [],
+  "sections": [
+    {
+      "heading": "ブラウザでの処理",
+      "html": "<p>YouTubeのURLを貼り付けると、ページは動画IDを読み取り、ブラウザで公開されているサムネイル画像のURLを確認します。貼り付けられたリンクは、11tikアプリケーションサーバーの個人アカウントとして保存されません。抽出にはログインは不要です。</p>"
+    },
+    {
+      "heading": "オプションの共有ページインデックス",
+      "html": "<p>抽出が成功すると、ブラウザは公開動画ID、タイトル、公開メタデータから生成されたタグ、および公開サムネイルURLのみをCloudflare Workerに送信する場合があります。これにより、動画は共有ページに表示され、品質チェックに合格すればサイトマップにも表示されます。画像ファイルのアップロードは不要です。ブラウザでリクエストがブロックされる場合は、インデックスなしで抽出ツールを使用できます。</p>"
+    },
+    {
+      "heading": "地元の歴史",
+      "html": "<p>抽出ツールは、最近アクセスしたURLをブラウザのローカルストレージに保存し、後で再度開くことができるようにする場合があります。保存されたコピーはデバイス上に残ります。ページ内の履歴コントロールを使用するか、ブラウザでこのサイトのデータを消去することで、コピーを削除できます。これはクラウドアカウントではありません。</p>"
+    },
+    {
+      "heading": "ホスティングログ",
+      "html": "<p>ウェブサイト、言語ホスト、および静的ファイルは、11tik.comで使用されているホスティングプロバイダー（CloudflareやGitHub Pagesなど）によって提供されています。これらのホストは、それぞれのポリシーに従って、IPアドレス、ブラウザの種類、リクエストされたページなどの通常のウェブログを保持する場合があります。</p>"
+    },
+    {
+      "heading": "第三者",
+      "html": "<p>サムネイルファイルは、YouTubeの公開画像ホストから取得されます。当サイトは、Google Analytics 4（測定ID G-FW7B8NDZZ5）を使用して、訪問数やページ内操作（抽出、ダウンロードなど）を計測します。GoogleはCookieまたは類似の識別子を設定する場合があります。貼り付けられたYouTube URLは、分析イベントパラメータとして送信されません。フォントやスクリプトは、ページ表示に使用されるCDNから読み込まれる場合もあります。</p>\n  <p>お問い合わせフォームはFormSubmitによってオペレーターのメールアドレスに送信されます。FormSubmitは、送信された名前、メールアドレス、メッセージを確認できます。</p>"
+    },
+    {
+      "heading": "接触",
+      "html": "<p>このポリシーに関するご質問はメールでお問い合わせください。<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>形状。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>・<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

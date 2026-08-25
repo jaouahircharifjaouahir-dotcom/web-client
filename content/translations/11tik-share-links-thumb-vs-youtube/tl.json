@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "tl",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Paano Gumagana ang 11tik Share Links: /thumb/{VIDEO_ID} vs. Mga URL ng Panonood sa YouTube | 11tik",
+  "description": "Ang 11tik /thumb/{id} ay isang pahina ng resulta ng pagbabahagi. Hindi ito isang URL ng panonood sa YouTube at hindi rin ito isang direktang i.ytimg.com na file ng imahe.",
+  "h1": "Paano Gumagana ang 11tik Share Links: /thumb/{VIDEO_ID} vs. Mga URL ng Panonood sa YouTube",
+  "ogTitle": "Paano Gumagana ang 11tik Share Links: /thumb/{VIDEO_ID} vs. Mga URL ng Panonood sa YouTube",
+  "ogDescription": "Ang 11tik /thumb/{id} ay isang pahina ng resulta ng pagbabahagi. Hindi ito isang URL ng panonood sa YouTube at hindi rin ito isang direktang i.ytimg.com na file ng imahe.",
+  "imageAlt": "Diagram na naghahambing sa isang URL ng panonood sa YouTube, isang URL ng pagbabahagi ng thumbnail na 11tik, at isang direktang URL ng larawan ng thumbnail sa YouTube",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Diagram na naghahambing sa isang URL ng panonood sa YouTube, isang URL ng pagbabahagi ng thumbnail na 11tik, at isang direktang URL ng larawan ng thumbnail sa YouTube",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Daloy ng trabaho na nagpapakita ng pagkuha, pag-preview, pagkopya ng 11tik share link, at ang tatanggap na nagbubukas ng thumb result page",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mabilis na sagot",
+      "html": "<p>Tatlong magkakaibang URL ang maaaring magbahagi ng parehong YouTube video ID. Isa lamang sa mga ito ang isang image file.</p>\n  <ol>\n    <li><strong>URL ng panonood sa YouTube</strong>— binubuksan ang video sa YouTube.</li>\n    <li><strong>11tik ibahagi ang URL</strong>— binubuksan ang pahina ng resulta ng 11tik extractor para sa ID na iyon (<code>/thumb/{VIDEO_ID}</code>). Ito ay isang web page, hindi isang JPEG/WebP file.</li>\n    <li><strong>Direktang thumbnail na URL ng CDN</strong>— mga punto sa isang pampublikong imahe sa host ng YouTube (halimbawa<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Paggamit ng pampublikong demo ID<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Ang ikatlong address ay isang halimbawa ng isang direktang pattern ng URL ng larawan. Ang partikular na maxres file na iyon ay hindi garantisado para sa bawat video—kumpirmahin ang mga totoong laki gamit ang<a href=\"https://www.11tik.com/\">11tik</a>o ang<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">gabay sa default na maxres</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Parehong video ID, tatlong trabaho: panoorin ang video, buksan ang pahina ng resulta ng 11tik, o humiling ng CDN pa rin.</p>"
+    },
+    {
+      "heading": "Ano ang /thumb/{VIDEO_ID}",
+      "html": "<p>Sa 11tik, ang isang matagumpay na single-video extract ay nag-a-update ng browser address sa isang path na hugis:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Ang path na iyon ay ang share/result URL ng produkto. Ito ay nabubuo mula sa video ID (tingnan ang mga share helper ng site) at nilalayong buksan muli ang extractor na nakatuon sa ID na iyon. Ang mga mas lumang link na istilo ng query tulad ng<code>?v=VIDEO_ID</code>ay itinuturing bilang malalalim na kawing sa parehong ideya at maaaring muling isulat sa<code>/thumb/</code>anyo.</p>\n  <p><code>/thumb/…</code>ay<strong>hindi</strong>naka-host sa image CDN ng YouTube. Ang pagbubukas nito ay hindi kailanman magda-download ng larawan nang mag-isa; nilo-load nito ang ruta ng 11tik app para sa ID na iyon.</p>"
+    },
+    {
+      "heading": "Bakit umiiral ang pahina",
+      "html": "<p>Kailangan ng mga tao ng isang matatag na paraan upang muling buksan o ipadala ang \"thumbnail result ng video na ito sa 11tik\" nang hindi nagpe-paste ng mahabang watch URL sa chat at umaasang alam ng tatanggap kung ano ang susunod na gagawin. Pinapanatili ng share page ang pag-uusap sa extractor: parehong ID, parehong public-still workflow, mga aksyon sa pag-download at pagkopya sa iisang lugar.</p>\n  <p>Pinapanatili rin nitong malinis ang URL ng tool sa homepage. Ang homepage ng marketing ang nananatiling pangkalahatang tagakuha;<code>/thumb/{id}</code>ay ang deep link para sa isang partikular na ID.</p>"
+    },
+    {
+      "heading": "Ang nakikita ng isang gumagamit kapag binubuksan ito",
+      "html": "<p>Pagbubukas<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>Nilo-load ang 11tik single-page app sa thumb route. Binabasa ng app ang 11-character na ID mula sa path, nilalagay ang extractor ng katugmang watch URL, at pinapatakbo ang public thumbnail discovery pass para sa ID na iyon. Kapag may mga public still, lilitaw ang karaniwang preview, quality list, download actions, at share controls. Kapag wala, makukuha mo ang parehong empty/public-not-found outcome gaya ng manual paste.</p>\n  <p>Maaari ka ring makakita ng maikling heading na parang \"thumb-route\" at lead text para sa ID na iyon sa itaas ng tool UI. Inilalarawan ng content na iyon ang result page; bahagi pa rin ito ng karanasan sa site, hindi isang raw image response.</p>"
+    },
+    {
+      "heading": "Paano kopyahin ang link na 11tik",
+      "html": "<ol>\n    <li>Bukas<a href=\"https://www.11tik.com/\">11tik</a>at i-paste ang isang pampublikong URL ng YouTube (o magbukas ng isang umiiral na<code>/thumb/</code>link).</li>\n    <li>Maghintay hanggang sa matapos ang pagkuha at ipapakita ang pinakamahusay na pampublikong imahe.</li>\n    <li>Gamitin ang on-page share control na may label para sa share link (copy share link). Ganito ang hitsura ng value<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Ipadala ang URL na iyan. Mapupunta ang tatanggap sa pahina ng resulta at maaaring patakbuhin muli ang parehong pampublikong pagsusuri.</li>\n  </ol>\n  <p>Maaaring ilantad ng mga bulk extract ang isang share URL sa bawat matagumpay na video ID (kasama na ang mga column sa pag-export ng CSV). Ang bawat ID ay may kanya-kanyang taglay.<code>/thumb/</code>path para hindi mag-collapse ang mga link papunta sa unang resulta.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ibahagi ang daloy ng trabaho: kunin → i-preview → kopyahin<code>/thumb/{id}</code>→ bubuksan ng tatanggap ang pahina ng resulta.</p>"
+    },
+    {
+      "heading": "Talahanayan ng paghahambing ng URL",
+      "html": "<table>\n    <thead>\n      <tr><th>Uri ng URL</th><th>Halimbawa</th><th>Ano ang magbubukas</th><th>Isa ba itong file ng imahe?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Panoorin sa YouTube</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube player / pahina ng panonood</td><td>Hindi</td></tr>\n      <tr><td>11tik ibahagi</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>Resulta ng extractor na 11tik para sa ID na iyon</td><td>Hindi</td></tr>\n      <tr><td>Direktang CDN pa rin</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Mga byte ng imahe (kapag umiiral ang file)</td><td>Oo</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Paano nagkakaiba ang tatlong URL sa pagsasagawa",
+      "html": "<h3>URL ng Panoorin vs. URL ng Pagbabahagi ng 11tik</h3>\n  <p>Ibahagi ang URL ng panonood kapag ang layunin ay panoorin o talakayin ang video sa YouTube. Ibahagi ang 11tik URL kapag ang layunin ay buksan muli ang resulta ng pagkuha ng thumbnail—mga preview, download, at mga napatunayang pampublikong laki—nang hindi hinihiling sa iba na hanapin muna ang extractor.</p>\n  <h3>11tik URL ng pagbabahagi kumpara sa URL ng direktang larawan</h3>\n  <p>Ang direktang URL ng larawan ay kung ano ang ipi-paste mo<code>&lt;img src&gt;</code>, mga CMS media library, o mga design tool pagkatapos mong kumpirmahin na umiiral ang file. Ang trabaho ng<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>Hindi kailanman pinapalitan ng 11tik share URL ang address ng larawang iyon: ginagamit pa rin ng mga tatanggap ang I-download o Kopyahin ang URL ng larawan sa loob ng tool kapag kailangan nila ang mismong file.</p>\n  <h3>URL ng Panonood vs. URL ng Direktang Larawan</h3>\n  <p>Ang URL ng panonood ang tumutukoy sa video. Ang URL ng larawan ang tumutukoy sa isang pampublikong hinango. Hindi sila maaaring palitan, kaya naman ang paghula<code>maxresdefault.jpg</code>madalas na nabibigo kahit na gumagana ang watch page.</p>"
+    },
+    {
+      "heading": "Kailan ibabahagi kung aling link",
+      "html": "<ul>\n    <li><strong>Ibahagi ang URL ng panonood sa YouTube</strong>para sa panonood, pagkomento, o pagbanggit sa video.</li>\n    <li><strong>Ibahagi ang 11tik<code>/thumb/</code>URL</strong>para sa mga collaborator na nangangailangan ng resulta ng extractor, listahan ng kalidad, o mabilisang pag-download muli ng pampublikong still.</li>\n    <li><strong>Ibahagi o i-host ang direktang URL ng larawan / na-download na file</strong>para sa mga itinatampok na larawan sa blog, Open Graph, at mga design comp—pagkatapos ng kumpirmasyon. Tingnan ang<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">gabay sa pag-download</a>at<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">gabay sa laki at resolusyon</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Paano ikinokonekta ng video ID ang lahat ng tatlo",
+      "html": "<p>Ang lahat ay nakasalalay sa parehong 11-character na ID. Kasama ito sa mga URL ng panonood<code>v=</code>(o mga segment ng Shorts/embed/live path). Inilalagay ito ni 11tik<code>/thumb/{id}</code>Inilalagay pa rin ito ng CDN sa pagitan ng<code>/vi/</code>(o<code>/vi_webp/</code>) at ang laki ng pangalan ng file. Kung mali ang ID, lahat ng tatlo ay magkakahiwalay: maling video, maling pahina ng resulta, o mali/nawawalang larawan.</p>"
+    },
+    {
+      "heading": "Paano ito umaangkop sa daloy ng trabaho ng extractor",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Ang share link ay isang bookmark sa workflow na iyon. Hindi nito nilalaktawan ang validation, hindi nito iniimbento ang 4K, o ginagawang pampublikong kuha ang mga pribadong video.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Direktang imahe ba ang https://www.11tik.com/thumb/VIDEO_ID?",
+      "answer": "Hindi. Ito ay isang pahina ng resulta na 11tik para sa ID ng video na iyon. Ang mga direktang larawan ay makikita sa mga host tulad ng i.ytimg.com.",
+      "answerHtml": "<p>Hindi. Ito ay isang pahina ng resulta na 11tik para sa video ID na iyon. Ang mga direktang larawan ay makikita sa mga host tulad ng<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Ano ang mangyayari pagkatapos buksan ng isang tao ang aking share link?",
+      "answer": "Nilo-load ng 11tik ang thumb route, binabasa ang ID, pinapatakbo ang pampublikong thumbnail check para sa ID na iyon, at ipinapakita ang extractor UI kasama ang mga resulta kapag mayroong mga pampublikong still.",
+      "answerHtml": "<p>Nilo-load ng 11tik ang thumb route, binabasa ang ID, pinapatakbo ang pampublikong thumbnail check para sa ID na iyon, at ipinapakita ang extractor UI kasama ang mga resulta kapag mayroong mga pampublikong still.</p>"
+    },
+    {
+      "question": "Maaari ko bang i-hotlink ang /thumb/ sa loob ng isang img tag?",
+      "answer": "Huwag. Gumamit ng nakumpirmang CDN image URL o isang file na iyong na-download. Ang share path ay magbabalik ng HTML app shell, hindi image bytes.",
+      "answerHtml": "<p>Huwag. Gumamit ng nakumpirmang CDN image URL o isang file na iyong na-download. Ang share path ay magbabalik ng HTML app shell, hindi image bytes.</p>"
+    },
+    {
+      "question": "Bakit nagbago ang address bar ko pagkatapos kong mag-extract ng thumbnail?",
+      "answer": "Pagkatapos ng isang single-video extract, isi-sync ng 11tik ang share path sa /thumb/{VIDEO_ID} para madaling kopyahin at buksan muli ang kasalukuyang resulta.",
+      "answerHtml": "<p>Pagkatapos ng isang single-video extract, isi-sync ng 11tik ang share path papunta sa<code>/thumb/{VIDEO_ID}</code>kaya madaling kopyahin at buksan muli ang kasalukuyang resulta.</p>"
+    },
+    {
+      "question": "Gumagamit ba ang Shorts ng ibang share path?",
+      "answer": "Hindi. Ang mga shorts ay may 11-character ID pa rin. Ang share URL ay mananatiling /thumb/{id}; ang orihinal na hugis ng URL sa YouTube lang ang naiiba.",
+      "answerHtml": "<p>Hindi. Ang mga shorts ay may 11-character ID pa rin. Mananatili ang share URL.<code>/thumb/{id}</code>; ang orihinal na hugis ng URL ng YouTube lang ang nagkaiba.</p>"
+    },
+    {
+      "question": "Pareho ba ang /thumb/{id} sa pagkopya ng maxres URL?",
+      "answer": "Hindi. Ang Maxres (kapag mayroon) ay isang posibleng CDN file. Inililista ng pahina ng pagbabahagi ang mga napatunayang pampublikong laki at maaaring may kasamang iba pang mga tier kapag nawawala ang maxres.",
+      "answerHtml": "<p>Hindi. Ang Maxres (kapag mayroon) ay isang posibleng CDN file. Inililista ng pahina ng pagbabahagi ang mga napatunayang pampublikong laki at maaaring may kasamang iba pang mga tier kapag nawawala ang maxres.</p>"
+    },
+    {
+      "question": "Saan mas malalimang ipinapaliwanag ang mga URL ng relo at mga URL ng larawan?",
+      "answer": "Gamitin ang artikulo na may thumbnail URL para sa ID → CDN construction, at ang artikulo na may download para sa pag-save ng mga file.",
+      "answerHtml": "<p>Gamitin ang<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">artikulo ng URL na thumbnail</a>para sa ID → konstruksyon ng CDN, at ang artikulo sa pag-download para sa pag-save ng mga file.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Konklusyon</h2>\n<p>Treat<code>/thumb/{VIDEO_ID}</code>bilang address ng pagbabahagi/resulta ni 11tik: kapaki-pakinabang para sa muling pagbubukas at pagpapadala ng isang extraction, hindi kailanman bilang kapalit ng isang link sa panonood sa YouTube o isang direktang<code>i.ytimg.com</code>hindi gumagalaw. Panatilihing tama ang tatlong uri ng URL at mananatiling tumpak ang iyong mga download, embeds, at collaborator link.</p>\n  <p><a href=\"https://www.11tik.com/\">I-extract ang isang pampublikong thumbnail at kopyahin ang 11tik share link nito →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>Sanggunian ng lumikha:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Mag-upload ng mga custom na thumbnail ng video</a>.</p>"
+}

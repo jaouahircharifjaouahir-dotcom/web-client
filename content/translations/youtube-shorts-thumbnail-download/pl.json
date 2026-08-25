@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "pl",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Jak pobrać miniaturę krótkiego filmu z YouTube w jakości HD | 11tik",
+  "description": "Pobierz miniaturę YouTube Shorts w przeglądarce. Shorts korzystają z tych samych publicznych zdjęć, co adresy URL do oglądania. Plik jest często wyświetlany w orientacji poziomej.",
+  "h1": "Jak pobrać miniaturę krótkiego filmu z YouTube w jakości HD",
+  "ogTitle": "Jak pobrać miniaturę krótkiego filmu z YouTube w jakości HD",
+  "ogDescription": "Pobierz miniaturę YouTube Shorts w przeglądarce. Shorts korzystają z tych samych publicznych zdjęć, co adresy URL do oglądania. Plik jest często wyświetlany w orientacji poziomej.",
+  "imageAlt": "Pobieranie publicznej miniatury YouTube Shorts w 11tik",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Pobieranie publicznej miniatury YouTube Shorts w 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jak pobrać miniaturę YouTube Shorts?",
+      "html": "<p>Skopiuj adres URL zawierający /shorts/ oraz identyfikator filmu i wklej go do<a href=\"https://www.11tik.com/\">11tik</a>i pobierz plik o podanym rozmiarze. Wyodrębnianie rozpocznie się, gdy identyfikator będzie prawidłowy.</p>"
+    },
+    {
+      "heading": "Czy pliki Shorts są tym samym co pliki stron do oglądania?",
+      "html": "<p>Używają tych samych publicznych nazw rozmiarów, kluczowanych identyfikatorem wideo. Zdjęcie może wyglądać na czarne, jeśli YouTube zapisał wersję panoramiczną.</p>"
+    },
+    {
+      "heading": "A co jeśli obraz się nie pojawi?",
+      "html": "<p>Film Short może być prywatny, usunięty lub bez publicznych zdjęć. Ekstraktor nie może ominąć tych ograniczeń.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Jak pobrać</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czy mogę pobrać miniaturę YouTube Shorts?",
+      "answer": "Tak, gdy YouTube opublikował publiczne zdjęcia dla tego filmu Short.",
+      "answerHtml": "Tak, gdy YouTube opublikował publiczne zdjęcia dla tego filmu Short."
+    },
+    {
+      "question": "Dlaczego na zdjęciu nadal widać czarne pasy?",
+      "answer": "YouTube może przechowywać wersję 16:9 nawet w przypadku filmów krótkometrażowych w formacie pionowym. 11tik pokazuje hostowany plik zamiast tworzyć kadr.",
+      "answerHtml": "YouTube może przechowywać wersję 16:9 nawet w przypadku filmów krótkometrażowych w formacie pionowym. 11tik pokazuje hostowany plik zamiast tworzyć kadr."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

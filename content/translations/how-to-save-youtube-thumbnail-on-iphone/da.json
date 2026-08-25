@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "da",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Sådan gemmer du et YouTube-miniaturebillede på iPhone og Android (2026) | 11tik",
+  "description": "Gem det offentlige YouTube-billede på iPhone eller Android uden et skærmbillede og uden en app-downloader. Indsæt en offentlig URL til visning eller Shorts i 11tik i Safari eller Chrome, og download derefter den største billedfil, som YouTube allerede hoster.",
+  "h1": "Sådan gemmer du et YouTube-miniaturebillede på iPhone og Android (2026)",
+  "ogTitle": "Sådan gemmer du et YouTube-miniaturebillede på iPhone og Android (2026)",
+  "ogDescription": "Gem det offentlige YouTube-billede på iPhone eller Android uden et skærmbillede og uden en app-downloader. Indsæt en offentlig URL til visning eller Shorts i 11tik i Safari eller Chrome, og download derefter den største billedfil, som YouTube allerede hoster.",
+  "imageAlt": "Gem et YouTube-miniaturebillede på iPhone og Android med 11tik — offentligt stillbillede, ingen app",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Gem et YouTube-miniaturebillede på iPhone og Android med 11tik — offentligt stillbillede, ingen app",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kan jeg gemme et YouTube-miniaturebillede på min telefon?",
+      "html": "<p>Ja, hvis videoen er offentlig, og YouTube har udgivet et stillbillede. Du behøver ikke en computer, og du behøver ikke en APK eller TestFlight-app. Åbn<a href=\"https://www.11tik.com/\">11tik</a>I den telefonbrowser, du allerede bruger, skal du indsætte linket, trykke på Hent miniaturebillede og derefter gemme den første viste fil. Den fil er den højeste offentlige JPEG- eller WebP-fil, der rent faktisk returnerede et billede.</p>\n  <p>Et langt tryk på skærmbilledet af afspilleren er ikke det samme. Skærmbilledet indeholder krom, bjælker for sikkert område og ekstra komprimering. Offentligheden lever stadig på i.ytimg.com. Se<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skærmbillede vs. rigtigt miniaturebillede</a>hvis du har brug for den sondring til en blog eller et Open Graph-tag.</p>"
+    },
+    {
+      "heading": "Hvad du har brug for, før du starter",
+      "html": "<ul>\n    <li>En offentlig YouTube-afspilnings-, Shorts-, live- eller youtu.be-URL. Ekstra forespørgselsparametre såsom<code>pp=</code>eller et playliste-id er ligegyldigt; 11tik læser video-id'et på 11 tegn.</li>\n    <li>Safari på iPhone eller iPad, eller Chrome, Firefox eller Samsung Internet på Android.</li>\n    <li>Tilladelse til at gemme billeder, hvis browseren beder om det. 11tik uploader aldrig billedet til en 11tik server som originalt medie.</li>\n  </ul>\n  <p>Private videoer, videoer kun for medlemmer eller videoer med aldersbegrænsede rettigheder, der ikke offentliggøres, vil stadig ikke vise en download. Det er en platformregel, ikke en telefonbegrænsning. Brugerdefinerede miniaturebilleder, der stadig behandles i Studio, kan også mangle i kort tid. Bekræft senere med den samme URL. Relateret:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniaturebilleder i 2026</a>.</p>"
+    },
+    {
+      "heading": "Sådan gemmer du et YouTube-miniaturebillede på iPhone",
+      "html": "<ol>\n    <li>I YouTube-appen eller Safari skal du kopiere video- eller Shorts-linket (Del → Kopier link).</li>\n    <li>Åben<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>i Safari. Du installerer ikke noget.</li>\n    <li>Indsæt URL'en, og tryk på Hent miniaturebillede. Vent, indtil der vises en rigtig forhåndsvisning. Tomme grå bokse betyder, at størrelsen aldrig blev offentliggjort.</li>\n    <li>Tryk på den første downloadfunktion. Safari vil nu vælge Åbn eller Download. Vælg Download, og gem derefter billedet i Filer, eller gem det i Fotos fra delingsarket.</li>\n    <li>Hvis du kun skal bruge adressen til et CMS, skal du bruge Kopier billed-URL i stedet for at downloade. Det kopierer et HTTPS i.ytimg.com eller vi_webp link. Vejledning:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube-miniature-URL</a>.</li>\n  </ol>\n  <p>Hvis iOS blokerer en download på tværs af oprindelser, skal du åbne billedets URL i en ny fane og derefter trykke og holde på billedet → Tilføj til fotos. Du gemmer stadig YouTubes offentlige fil, ikke et skærmbillede af 11tik-siden.</p>"
+    },
+    {
+      "heading": "Sådan gemmer du et YouTube-miniaturebillede på Android",
+      "html": "<ol>\n    <li>Kopiér den offentlige afspilnings- eller Shorts-URL fra YouTube-appen.</li>\n    <li>Åbn 11tik i Chrome (eller din standardbrowser).</li>\n    <li>Indsæt, udpak, og tryk derefter på den første download. Chrome skriver normalt filen til Downloads.</li>\n    <li>Åbn meddelelsen om downloads, og flyt billedet til Galleri, hvis du vil have det i Fotos.</li>\n  </ol>\n  <p>Android spørger muligvis, hvilken app der skal åbne en JPEG. Vælg Galleri eller Filer. Vælg ikke en \"videodownloader\", der lover MP4; 11tik leverer ikke video eller lyd.</p>"
+    },
+    {
+      "heading": "Hvilken størrelse skal jeg have på en telefon?",
+      "html": "<p>Behold den første anførte størrelse. 11tik har allerede rangeret filer, der findes. Når YouTube udgiver maxresdefault, er det normalt 1280×720. Hvis filnavnet er 404s, er det ærlige maksimum den næste rigtige fil (ofte hq720, sddefault eller hqdefault). En manglende maxres-fil er normalt. Detaljer:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">hvad maxresdefault.jpg er</a>og<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">miniaturebilledernes størrelser i 2026</a>.</p>\n  <p>Korte videoer afspilles ofte lodret, mens det gemte stillbillede er liggende. Filen er stadig det officielle offentlige miniaturebillede. Se<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniaturebilleder</a>.</p>"
+    },
+    {
+      "heading": "Er det lovligt at gemme et miniaturebillede på min telefon?",
+      "html": "<p>Den typiske brug er at gemme et offentligt hostet stillbillede til personlig reference, forskning eller uddannelse. Billedet forbliver uploaderens ophavsretligt beskyttede værk. Genupload det ikke som dit eget brugerdefinerede miniaturebillede, udskriv det ikke på merchandise eller behandl 11tik som en licens. YouTubes egen hjælp til brugerdefinerede miniaturebilleder er her:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Upload brugerdefinerede videominiaturebilleder</a>11tiks regler:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>og<a href=\"https://www.11tik.com/copyright\">Ophavsret og brug</a>.</p>"
+    },
+    {
+      "heading": "Hvorfor telefon-\"miniature-apps\" fejler",
+      "html": "<p>Mange butiksfortegnelser omslutter en annonceside omkring et gættet<code>maxresdefault.jpg</code>URL. Hvis YouTube aldrig har offentliggjort den fil, får du et ødelagt billede eller en grå standardværdi. 11tik tjekker svar i din browser og skjuler størrelser, der ikke er billeder. Intet er \"låst op\" bag en tilmelding. Privatliv: indsatte URL'er forbliver i browseren; se<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>.</p>"
+    },
+    {
+      "heading": "Gem flere links fra en telefon",
+      "html": "<p>Brug massevisning på den samme hjemmeside, én offentlig URL pr. linje, op til 25. En kanal-URL kan udvides til nylige offentlige uploads på en større skærm; på en telefon kan du indsætte individuelle links, hvis kanalens udvidelse føles trang. Massevisningsguide:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch-download</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Gem et offentligt miniaturebillede på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af browser-udtrækkeren.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg gemme et YouTube-miniaturebillede på min telefon?",
+      "answer": "Ja. Åbn 11tik i Safari eller Chrome, indsæt en offentlig YouTube-URL, udpak og download det første offentlige stillbillede på listen. Der kræves ikke et downloadprogram fra appbutikken.",
+      "answerHtml": "Ja. Åbn 11tik i Safari eller Chrome, indsæt en offentlig YouTube-URL, udpak og download det første offentlige stillbillede på listen. Der kræves ikke et downloadprogram fra appbutikken."
+    },
+    {
+      "question": "Hvordan gemmer man et YouTube-miniaturebillede på iPhone?",
+      "answer": "Kopier linket, åbn https://www.11tik.com/ i Safari, indsæt, udpak, download eller hold derefter billedets URL nede, og tilføj det til Fotos.",
+      "answerHtml": "Kopier linket, åbn https://www.11tik.com/ i Safari, indsæt, udpak, download eller hold derefter billedets URL nede, og tilføj det til Fotos."
+    },
+    {
+      "question": "Hvordan gemmer man et YouTube-miniaturebillede på Android?",
+      "answer": "Kopier linket, åbn 11tik i Chrome, udpak og gem den første download i Downloads eller Galleri.",
+      "answerHtml": "Kopier linket, åbn 11tik i Chrome, udpak og gem den første download i Downloads eller Galleri."
+    },
+    {
+      "question": "Er det lovligt at gemme et miniaturebillede på min telefon?",
+      "answer": "Det er typisk at gemme et offentligt stillbillede til personlig reference eller research. Genudgiv det ikke som dit eget omslagsbillede. Ophavsretten forbliver hos uploaderen.",
+      "answerHtml": "Det er typisk at gemme et offentligt stillbillede til personlig reference eller research. Genudgiv det ikke som dit eget omslagsbillede. Ophavsretten forbliver hos uploaderen."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af browser-udtrækkeren.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+}

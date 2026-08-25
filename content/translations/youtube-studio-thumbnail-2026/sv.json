@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "sv",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "YouTube Studio-miniatyrbild 2026 | 11tik",
+  "description": "År 2026 laddar berättigade YouTube-kanaler fortfarande upp en anpassad miniatyrbild från Studio på en videos detaljsida. Menyetiketterna flyttas, men resultatet är detsamma: YouTube är värd för en ny offentlig stillbild. 11tik laddar inte upp den filen. Den läser bara offentliga bild-URL:er efter att de finns.",
+  "h1": "YouTube Studio-miniatyrbild 2026",
+  "ogTitle": "YouTube Studio-miniatyrbild 2026",
+  "ogDescription": "År 2026 laddar berättigade YouTube-kanaler fortfarande upp en anpassad miniatyrbild från Studio på en videos detaljsida. Menyetiketterna flyttas, men resultatet är detsamma: YouTube är värd för en ny offentlig stillbild. 11tik laddar inte upp den filen. Den läser bara offentliga bild-URL:er efter att de finns.",
+  "imageAlt": "11tik används för att verifiera en offentlig miniatyrbild efter en uppladdning i YouTube Studio",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik används för att verifiera en offentlig miniatyrbild efter en uppladdning i YouTube Studio",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hur laddar jag upp en anpassad miniatyrbild i YouTube Studio?",
+      "html": "<ol>\n    <li>Öppna YouTube Studio och välj videon.</li>\n    <li>Under Detaljer laddar du upp en bild i 16:9-format (YouTubes vanliga mål är 1280×720).</li>\n    <li>Spara och vänta tills bearbetningen är klar.</li>\n  </ol>\n  <p>De exakta knappnamnen kan ändras. Om ditt konto inte är berättigat till anpassade miniatyrbilder kommer Studio inte att erbjuda uppladdningen. 11tik kan inte kringgå det.</p>"
+    },
+    {
+      "heading": "Hur kontrollerar jag en miniatyrbild efter att jag ändrat den i Studio?",
+      "html": "<p>Klistra in klockans URL i<a href=\"https://www.11tik.com/\">11tik</a>Ladda ner eller kopiera den första listade storleken. Om maxresdefault saknas är nästa offentliga fil den ärliga maximumstorleken. Det är YouTubes katalog, inte ett misslyckat extrakt. Se även<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault förklarad</a>.</p>"
+    },
+    {
+      "heading": "Ersätter 11tik YouTube Studio?",
+      "html": "<p>Nej. Studio är där du laddar upp, schemalägger och använder tester när YouTube erbjuder dem. 11tik är till för att förhandsgranska och spara offentliga stillbilder som redan finns, inklusive efter en Studio-ändring.</p>"
+    },
+    {
+      "heading": "Vad ska jag göra när bilden ser gammal ut?",
+      "html": "<p>Bild-CDN:er kan lagga. Kontrollera senare, uppdatera fullständigt eller kopiera URL:en 11tik för att bekräfta. Anta inte en 4K-master; den offentliga maxupplösningen är vanligtvis 1280×720. En skärmdump av Studio är inte den offentliga miniatyrbildsfilen.</p>\n  <p>Släkt:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extraktor vs tillverkare</a>.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Öppna extraktorn</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ersätter 11tik YouTube Studio?",
+      "answer": "Nej. Studio laddar upp anpassad grafik. 11tik läser bara offentliga miniatyrbilder.",
+      "answerHtml": "Nej. Studio laddar upp anpassad grafik. 11tik läser bara offentliga miniatyrbilder."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

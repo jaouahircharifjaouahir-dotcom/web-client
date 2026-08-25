@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "ro",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Cum să descarci o miniatură a unui videoclip YouTube Shorts în HD | 11tik",
+  "description": "Descarcă o miniatură YouTube Shorts în browser. Shorts folosesc aceleași imagini publice ca și adresele URL de vizionare. Fișierul este adesea în modul peisaj.",
+  "h1": "Cum să descarci o miniatură YouTube Shorts în HD",
+  "ogTitle": "Cum să descarci o miniatură YouTube Shorts în HD",
+  "ogDescription": "Descarcă o miniatură YouTube Shorts în browser. Shorts folosesc aceleași imagini publice ca și adresele URL de vizionare. Fișierul este adesea în modul peisaj.",
+  "imageAlt": "Descărcarea unei miniaturi publice de pe YouTube Shorts în 11tik",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Descărcarea unei miniaturi publice de pe YouTube Shorts în 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Cum descarc o miniatură YouTube Shorts?",
+      "html": "<p>Copiați o adresă URL care conține /shorts/ plus un ID de videoclip, lipiți-o în<a href=\"https://www.11tik.com/\">11tik</a>și descărcați o dimensiune listată. Extragerea începe atunci când ID-ul este valid.</p>"
+    },
+    {
+      "heading": "Fișierele Shorts sunt aceleași cu fișierele paginilor de vizionare?",
+      "html": "<p>Folosesc aceleași nume de dimensiuni publice, codificate prin ID-ul videoclipului. Imaginea statică ar putea părea în format letterbox dacă YouTube a stocat o versiune derivată pentru ecran lat.</p>"
+    },
+    {
+      "heading": "Ce se întâmplă dacă nu apare nicio imagine?",
+      "html": "<p>Scurtmetrajul poate fi privat, șters sau fără imagini publice. Extractorul nu poate ocoli aceste limite.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cum se descarcă</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pot descărca o miniatură YouTube Shorts?",
+      "answer": "Da, când YouTube a publicat imagini statice publice pentru ID-ul videoclipului Shorts respectiv.",
+      "answerHtml": "Da, când YouTube a publicat imagini statice publice pentru ID-ul videoclipului Shorts respectiv."
+    },
+    {
+      "question": "De ce arată imaginea în stare statică ca într-o cutie poștală?",
+      "answer": "YouTube poate stoca o variantă derivată 16:9 chiar și pentru un scurtmetraj vertical. 11tik afișează fișierul găzduit în loc să inventeze o decupare.",
+      "answerHtml": "YouTube poate stoca o variantă derivată 16:9 chiar și pentru un scurtmetraj vertical. 11tik afișează fișierul găzduit în loc să inventeze o decupare."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "nl",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Grootte en resolutie van YouTube-thumbnails: complete handleiding | 11tik",
+  "description": "Vergelijk de afmetingen van YouTube-thumbnails van 120×90 tot 1280×720. Maxres en hq720 zijn optioneel; gebruik het grootste openbare bestand dat kan worden geladen.",
+  "h1": "Grootte en resolutie van YouTube-thumbnails: complete handleiding",
+  "ogTitle": "Grootte en resolutie van YouTube-thumbnails: complete handleiding",
+  "ogDescription": "Vergelijk de afmetingen van YouTube-thumbnails van 120×90 tot 1280×720. Maxres en hq720 zijn optioneel; gebruik het grootste openbare bestand dat kan worden geladen.",
+  "imageAlt": "Vergelijkingsgrafiek van de afmetingen van openbare YouTube-thumbnails, van de maximale standaardresolutie van 1280 x 720 tot de standaardresolutie van 120 x 90.",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Vergelijkingsgrafiek van de afmetingen van openbare YouTube-thumbnails, van de maximale standaardresolutie van 1280 x 720 tot de standaardresolutie van 120 x 90.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Een vergelijking naast elkaar van een video met maxresdefault beschikbaar en een video waar alleen een kleiner hqdefault-bestand aanwezig is.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snel antwoord",
+      "html": "<p>Voor een aangepaste upload blijft de helpfunctie van YouTube zich richten op een<strong>16:9</strong>afbeelding—veelal<strong>1280×720</strong>Voor bestanden die je kunt downloaden van een bestaande video, variëren de openbare CDN-varianten. Indien aanwezig,<code>maxresdefault</code>/<code>hq720</code>hebben meestal een resolutie van 1280×720. Veel video's stoppen bij...<code>sddefault</code>(640×480) of<code>hqdefault</code>(480×360). Een hogere bestandsnaam verzint nooit pixels. Plak de URL van het horloge in<a href=\"https://www.11tik.com/\">11tik</a>Alleen formaten weergeven die een realistische afbeelding opleveren.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Relatieve publieksgroottes. Niet elke video publiceert elke trede van deze ladder.</p>"
+    },
+    {
+      "heading": "Aanbevolen afmetingen voor makers",
+      "html": "<p>Als je een aangepaste thumbnail ontwerpt in Studio, volg dan de huidige YouTube-help: streef naar een<strong>16:9</strong>nog steeds. De meest gebruikte werkmaat is<strong>1280×720</strong>pixels. Dat komt overeen met het breedbeeldformaat van de speler en is dezelfde pixelklasse als een gepubliceerde afbeelding.<code>maxresdefault</code>wanneer YouTube er een aanmaakt.</p>\n  <p>Officiële referentie:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Upload aangepaste miniatuurafbeeldingen voor video's</a>Nadat Studio de verwerking heeft voltooid, bevestig je de live openbare bestanden met 11tik in plaats van ervan uit te gaan dat elke afgeleide direct verscheen. Opmerkingen specifiek voor Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-thumbnails in 2026</a>.</p>"
+    },
+    {
+      "heading": "De grootte van openbare CDN's die kijkers daadwerkelijk kunnen ophalen, is aanzienlijk.",
+      "html": "<p>Downloadprogramma's en blogs downloaden niet je Photoshop-master. Ze downloaden openbare afgeleide versies die YouTube-hosts gebruiken om de video-ID te achterhalen. De extractor van 11tik controleert deze bestandsnamen (JPEG en, indien aanwezig, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Variant</th><th>Typische resolutie</th><th>Laag</th><th>Beschikbaarheid</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Best</td><td>Alleen als YouTube WebP maxres publiceert</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Best</td><td>Komt vaak voor bij recentere/hoogwaardige uploads; ontbreekt vaak bij oudere uploads.</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 klasse</td><td>Best</td><td>In sommige video's aanwezig als alternatief bestand met hoge resolutie.</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Hoog</td><td>Vaak beschikbaar wanneer maxres niet beschikbaar is.</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Standaard</td><td>Zeer gebruikelijk</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Voorbeeld</td><td>Korte voorbeelden / lijsten</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Voorbeeld</td><td>Kleinste standaard nog steeds</td></tr>\n    </tbody>\n  </table>\n  <p>Deze verwachte breedtes en hoogtes komen overeen met de kwaliteitsinstellingen van 11tik. De werkelijke resultaten kunnen echter nog steeds afwijken als YouTube een placeholder weergeeft of een bestand volledig overslaat – controleer dit daarom altijd.</p>"
+    },
+    {
+      "heading": "Waarom 16:9 ertoe doet, zelfs als bestanden verschillen",
+      "html": "<p>De videospeler is breedbeeld. Aangepaste afbeeldingen die zijn ontworpen voor een beeldverhouding van 16:9 blijven leesbaar in zoekresultaten, voorgestelde schappen en ingesloten content. Sommige openbare bestanden (met name<code>hqdefault</code>/<code>sddefault</code>) zijn geen strikte 16:9-boxen; het zijn oudere CDN-formaten. Geef de voorkeur aan een echte 1280×720 publieke afbeelding wanneer je een schone 16:9-afbeelding nodig hebt voor Open Graph of een blogheader.</p>\n  <p>Shorts worden verticaal afgespeeld, maar de opgeslagen publieke versie is vaak nog steeds horizontaal. Dat is een gedrag van de host, geen mislukte download. Details:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatuurafbeelding van korte filmpjes downloaden</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault vs hq720 vs “HD”",
+      "html": "<p><code>maxresdefault</code>is de bekende HD-bestandsnaam op<code>i.ytimg.com</code>Als het bestand bestaat, is het meestal 1280×720, niet 4K.<code>hq720</code>is een andere bekende naam die sommige video's tonen met dezelfde resolutie. Geen van beide namen garandeert het bestand. Programma's die een URL met maximale resolutie weergeven zonder te controleren, produceren beschadigde afbeeldingen.</p>\n  <p>Uitgebreidere opmerkingen over bestandsnamen:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">wat maxresdefault.jpg is</a>En<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatuurafbeelding van de hoogste openbare kwaliteit</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Hetzelfde aanvraagpatroon, verschillende resultaten: een hogere bestandsnaam genereert geen extra pixels als het bestand ontbreekt.</p>"
+    },
+    {
+      "heading": "Waarom de ene video meer formaten heeft dan de andere",
+      "html": "<ul>\n    <li>Oudere uploads hebben mogelijk nooit een maxres-versie gekregen.</li>\n    <li>Het bronbestand was kleiner dan 1280×720.</li>\n    <li>De aangepaste miniaturen worden nog steeds verwerkt in Studio.</li>\n    <li>Privévideo's, video's die alleen toegankelijk zijn voor leden of video's met een leeftijdsbeperking mogen geen openbare foto's tonen.</li>\n    <li>WebP-varianten verschijnen alleen wanneer YouTube ze voor die ID heeft gepubliceerd.</li>\n  </ul>\n  <p>Beschikbaarheid is per video. Beschouw een werkende maxres-URL van een concurrent nooit als bewijs dat die van jou ook bestaat.</p>"
+    },
+    {
+      "heading": "Hoe 11tik de “beste” maat kiest",
+      "html": "<p>11tik onderzoekt openbare kandidaten in een vaste kwaliteitsvolgorde (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). Het behoudt bestanden die als afbeeldingen worden gevalideerd en rangschikt de hoogst gekwalificeerde eerst. Het schaalt niet op. Als maxres ontbreekt, kan de eerste kaart hq720 of sd zijn – dat is het eerlijke maximum voor die ID.</p>\n  <p>Om het adres van een gewenste grootte te kopiëren, gebruikt u de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>Om het bestand op te slaan, gebruikt u de<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">downloadhandleiding</a>.</p>"
+    },
+    {
+      "heading": "Welke maat moet je gebruiken?",
+      "html": "<table>\n    <thead>\n      <tr><th>Gebruiksvoorbeeld</th><th>De voorkeur geven aan</th><th>Waarom</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Uitgelichte blogafbeelding / Open Graph</td><td>Grootste gevalideerde resolutie: ~1280×720</td><td>Komt overeen met gangbare sociale gewassen; host uw eigen exemplaar</td></tr>\n      <tr><td>Ontwerp mock-up / thumbnail onderzoek</td><td>Beste beschikbare openbare nog</td><td>Echte verpakking, geen screenshot van een speler.</td></tr>\n      <tr><td>Snelle chatvoorbeeld</td><td>hq of mq</td><td>Kleinere bestanden laden sneller.</td></tr>\n      <tr><td>Aangepaste upload in Studio</td><td>Uw originele afbeelding in 16:9-formaat met een resolutie van 1280×720 (of hoger).</td><td>Jij maakt kunst; CDN-afgeleiden komen later.</td></tr>\n    </tbody>\n  </table>\n  <p>Rek de standaardresolutie (hqdefault) niet uit naar 1280×720 en noem het vervolgens maxres. Voor tips over CMS-hosting:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">uitgelichte afbeelding / Open Graph-workflow</a>Screenshots van de speler zijn een ander (en slechter) onderdeel:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot versus echte miniatuur</a>.</p>"
+    },
+    {
+      "heading": "Volgende stap",
+      "html": "<p>Bekijk een live video op de<a href=\"https://www.11tik.com/\">11tik extractor</a>, dan<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">kopieer de afbeeldings-URL</a>of<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">download de beste beschikbare nog</a>.</p>\n\n  <p class=\"yte-bio\">Geschreven door 11tik. Alleen openbare CDN-formaten; geen upscaling en geen videodownload.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is maxresdefault altijd beschikbaar?",
+      "answer": "Nee. Veel openbare video's publiceren dat bestand nooit. Een 404-foutmelding bij maximale resolutie is normaal.",
+      "answerHtml": "<p>Nee. Veel openbare video's publiceren dat bestand nooit. Een 404-foutmelding bij maximale resolutie is normaal.</p>"
+    },
+    {
+      "question": "Is hq720 beter dan andere miniatuurvarianten?",
+      "answer": "Indien beschikbaar, valt hq720 in dezelfde hoge categorie als maxres (ongeveer 1280×720). Het is niet automatisch \"beter\" dan een gevalideerd maxres-bestand en dat is ook niet gegarandeerd.",
+      "answerHtml": "<p>Indien beschikbaar, valt hq720 in dezelfde hoge categorie als maxres (ongeveer 1280×720). Het is niet automatisch \"beter\" dan een gevalideerd maxres-bestand en dat is ook niet gegarandeerd.</p>"
+    },
+    {
+      "question": "Wat is het beste formaat voor een website?",
+      "answer": "Gebruik de grootste gevalideerde, openbare afbeelding met een beeldverhouding van ongeveer 16:9 (vaak 1280×720) en plaats een kopie daarvan op je website voor stabiele Open Graph- en featured-image-tags.",
+      "answerHtml": "<p>Gebruik de grootste gevalideerde, openbare afbeelding met een beeldverhouding van ongeveer 16:9 (vaak 1280×720) en plaats een kopie daarvan op je website voor stabiele Open Graph- en featured-image-tags.</p>"
+    },
+    {
+      "question": "Waarom laadt een miniatuurafbeelding met hoge resolutie soms niet?",
+      "answer": "De bestandsnaam is geraden. YouTube heeft die afgeleide niet gepubliceerd voor de video-ID. Laad in plaats daarvan een kleiner, bestaand bestand.",
+      "answerHtml": "<p>De bestandsnaam is geraden. YouTube heeft die afgeleide niet gepubliceerd voor de video-ID. Laad in plaats daarvan een kleiner, bestaand bestand.</p>"
+    },
+    {
+      "question": "Betekent \"HD-miniatuur\" 4K?",
+      "answer": "Nee. De maximale resolutie voor publieke media is doorgaans 1280×720. 11tik zal nog geen 4K uitvinden.",
+      "answerHtml": "<p>Nee. De maximale resolutie voor publieke media is doorgaans 1280×720. 11tik zal nog geen 4K uitvinden.</p>"
+    },
+    {
+      "question": "Zijn WebP-miniatuurafbeeldingen van hogere kwaliteit dan JPEG-afbeeldingen?",
+      "answer": "WebP is een andere container voor dezelfde grootteklasse wanneer deze gepubliceerd wordt. Geef de voorkeur aan het gevalideerde bestand 11tik; ga er niet van uit dat WebP altijd bestaat.",
+      "answerHtml": "<p>WebP is een andere container voor dezelfde grootteklasse wanneer deze gepubliceerd wordt. Geef de voorkeur aan het gevalideerde bestand 11tik; ga er niet van uit dat WebP altijd bestaat.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik. Alleen openbare CDN-formaten; geen upscaling en geen videodownload.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "de",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Screenshot vs. echtes YouTube-Vorschaubild: Welche Datei sollten Sie speichern? | 11tik",
+  "description": "Ein Screenshot des Players auf dem Smartphone entspricht nicht dem Vorschaubild, das YouTube bereitstellt. Die eigentliche Nutzerschaft ist weiterhin auf i.ytimg.com aktiv. Nutzen Sie es für Blogs, Open Graph und Forschung – Screenshots fügen UI-Effekte, Komprimierung und ein falsches Seitenverhältnis hinzu.",
+  "h1": "Screenshot vs. echtes YouTube-Vorschaubild: Welche Datei sollten Sie speichern?",
+  "ogTitle": "Screenshot vs. echtes YouTube-Vorschaubild: Welche Datei sollten Sie speichern?",
+  "ogDescription": "Ein Screenshot des Players auf dem Smartphone entspricht nicht dem Vorschaubild, das YouTube bereitstellt. Die eigentliche Nutzerschaft ist weiterhin auf i.ytimg.com aktiv. Nutzen Sie es für Blogs, Open Graph und Forschung – Screenshots fügen UI-Effekte, Komprimierung und ein falsches Seitenverhältnis hinzu.",
+  "imageAlt": "Vergleich eines Spieler-Screenshots mit einer echten öffentlichen YouTube-Miniaturansicht",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Vergleich eines Spieler-Screenshots mit einer echten öffentlichen YouTube-Miniaturansicht",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Worin besteht der Unterschied zwischen einem Screenshot und einem echten Vorschaubild?",
+      "html": "<p>Ein Screenshot erfasst Ihren Bildschirm inklusive Player-Rahmen, Untertiteln und Geräteskalierung. Ein echtes Vorschaubild ist die JPEG- oder WebP-Datei, die YouTube für diese Video-ID veröffentlicht. Nur die CDN-Datei verfügt über eine stabile URL und eine bekannte Pixelgröße.</p>"
+    },
+    {
+      "heading": "Warum funktionieren Screenshots in der Google-Bildersuche und in den Social-Media-Vorschauen nicht?",
+      "html": "<p>Sie haben oft das falsche Seitenverhältnis, beinhalten die Benutzeroberfläche und werden doppelt komprimiert. Open Graph und viele CMS-Felder benötigen ein 16:9-Format mit einer Auflösung von etwa 1280×720. Dies entspricht maxresdefault, sofern vorhanden – siehe<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Größenleitfaden für Miniaturansichten</a>Die</p>"
+    },
+    {
+      "heading": "Wie speichere ich stattdessen das eigentliche Vorschaubild?",
+      "html": "<ol>\n    <li>Kopieren Sie die öffentliche Video-URL, nicht einen Screenshot.</li>\n    <li>Fügen Sie es ein in<a href=\"https://www.11tik.com/\">11tik</a>Die</li>\n    <li>Laden Sie die erste aufgeführte öffentliche Datei herunter oder kopieren Sie die Bild-URL.</li>\n  </ol>"
+    },
+    {
+      "heading": "Wann ist ein Screenshot noch nützlich?",
+      "html": "<p>Verwenden Sie einen Screenshot nur, um einen UI-Fehler oder einen bestimmten Moment im Video zu dokumentieren. Verwenden Sie ihn nicht als offizielles Vorschaubild, Blog-Titelbild oder zum Teilen, falls die Seite noch öffentlich ist.</p>\n  <p><a href=\"https://www.11tik.com/\">Das echte öffentliche Vorschaubild erhalten →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Worin besteht der Unterschied zwischen einem Screenshot und einem echten Vorschaubild?",
+      "answer": "Ein Screenshot erfasst Ihren Bildschirm und die Chrome-Oberfläche des Players. Ein echtes Vorschaubild ist die JPEG- oder WebP-Datei, die YouTube unter i.ytimg.com für diese Video-ID speichert.",
+      "answerHtml": "Ein Screenshot erfasst Ihren Bildschirm und die Chrome-Oberfläche des Players. Ein echtes Vorschaubild ist die JPEG- oder WebP-Datei, die YouTube unter i.ytimg.com für diese Video-ID speichert."
+    },
+    {
+      "question": "Warum funktionieren Screenshots in der Google-Bildersuche und in den Social-Media-Vorschauen nicht?",
+      "answer": "Sie weisen häufig das falsche Seitenverhältnis, zusätzliche Benutzeroberflächen und zusätzliche Komprimierung auf. CMS- und Open-Graph-Bereiche erwarten weiterhin ein sauberes 16:9-Public-Format.",
+      "answerHtml": "Sie weisen häufig das falsche Seitenverhältnis, zusätzliche Benutzeroberflächen und zusätzliche Komprimierung auf. CMS- und Open-Graph-Bereiche erwarten weiterhin ein sauberes 16:9-Public-Format."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+}

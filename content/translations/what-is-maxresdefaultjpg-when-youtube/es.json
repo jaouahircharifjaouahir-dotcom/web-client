@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "es",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "¿Qué es maxresdefault.jpg? ¿Por qué da error 404 y qué descargar en su lugar? | 11tik",
+  "description": "maxresdefault.jpg suele tener una resolución de 1280×720 cuando YouTube lo publica. Un error 404 es normal; utilice la siguiente imagen pública real, no un nombre de archivo adivinado.",
+  "h1": "¿Qué es maxresdefault.jpg? ¿Por qué da error 404 y qué descargar en su lugar?",
+  "ogTitle": "¿Qué es maxresdefault.jpg? ¿Por qué da error 404 y qué descargar en su lugar?",
+  "ogDescription": "maxresdefault.jpg suele tener una resolución de 1280×720 cuando YouTube lo publica. Un error 404 es normal; utilice la siguiente imagen pública real, no un nombre de archivo adivinado.",
+  "imageAlt": "Flujo de solución de problemas desde una URL maxresdefault estimada que devuelve un error 404 hasta el siguiente tamaño de miniatura de YouTube validado.",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Flujo de solución de problemas desde una URL maxresdefault estimada que devuelve un error 404 hasta el siguiente tamaño de miniatura de YouTube validado.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "Escalera de nombres de archivos de miniaturas de YouTube desde maxresdefault hasta default, mostrando que se omiten los peldaños faltantes.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Respuesta rápida",
+      "html": "<p><code>maxresdefault.jpg</code>es un nombre de archivo de miniatura pública en la CDN de imágenes de YouTube. Cuando el archivo existe, normalmente es<strong>1280×720</strong>. Es<strong>no</strong>Garantizado para cada video. Un 404 (o un pequeño marcador de posición gris) significa que ese derivado nunca se publicó para ese ID de video. Pegue la URL de visualización en<a href=\"https://www.11tik.com/\">11tik</a>y descarga el primer tamaño listado; la herramienta ya omitió los nombres faltantes y clasificó a los sobrevivientes como<code>hq720</code>,<code>sddefault</code>, o<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">La ausencia de un archivo maxres es un problema de reserva, no una prueba de que el vídeo no tenga miniatura.</p>"
+    },
+    {
+      "heading": "¿Qué es maxresdefault.jpg?",
+      "html": "<p>Es un nombre de archivo, no una garantía mágica de calidad. La dirección JPEG habitual tiene este aspecto:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Cuando YouTube también publicó una versión WebP, 11tik comprueba:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Ambos se sientan en<code>i.ytimg.com</code>Son imágenes fijas, no la transmisión de video, no una exportación privada de Studio, ni un máster 4K. Las expectativas de píxeles y otros tamaños se tratan en el<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guía de tamaño y resolución de miniaturas</a>La construcción de URL se trata en el<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guía de URL de miniaturas</a>.</p>"
+    },
+    {
+      "heading": "¿Por qué un vídeo real de YouTube puede seguir devolviendo un error 404 para la resolución máxima?",
+      "html": "<ul>\n    <li>Las cargas más antiguas nunca recibieron una versión derivada de máxima resolución.</li>\n    <li>La fuente de la miniatura personalizada era más pequeña que 1280×720.</li>\n    <li>El estudio aún está procesando una nueva carga personalizada.</li>\n    <li>Algunos cortos y fotos generadas automáticamente se detienen en tamaños medianos.</li>\n    <li>El vídeo está restringido y no muestra ninguna imagen pública.</li>\n  </ul>\n  <p>Una página de vigilancia que funcione solo demuestra que el ID del video es válido. No demuestra que cada nombre de archivo sea válido.<code>/vi/</code>existe.</p>"
+    },
+    {
+      "heading": "Cómo reconocer una variante no disponible",
+      "html": "<p>Abra la URL candidata en una nueva pestaña. Los fallos se ven así:</p>\n  <ul>\n    <li>Error HTTP / respuesta en blanco</li>\n    <li>Un mosaico gris muy pequeño o predeterminado cuando se esperaba 1280×720.</li>\n    <li>Una imagen que se carga pero que claramente es un marcador de posición para un archivo de alta resolución que falta.</li>\n  </ul>\n  <p>El validador del navegador de 11tik marca las candidatas como inválidas cuando la imagen no se carga o cuando un tamaño esperado alto se reduce a un marcador de posición diminuto (aproximadamente 120×90). Esas candidatas nunca aparecen como tarjetas \"HD falsas\".</p>"
+    },
+    {
+      "heading": "Variantes de reserva 11tik en realidad comprueba",
+      "html": "<p>Orden de descubrimiento para los candidatos públicos (del más alto al más bajo):</p>\n  <table>\n    <thead>\n      <tr><th>Nombre del archivo</th><th>Patrón de ruta</th><th>Tamaño típico cuando está presente</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>Clase 1280×720</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Las filas faltantes se omiten. La primera descarga listada es la que sobrevive de mayor nivel, no el nombre más largo que haya escrito. La elección de formato entre WebP y JPEG se explica en<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">Miniaturas de YouTube en formato WebP frente a JPEG</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Trata los nombres de archivo como peldaños opcionales. Baja hasta que aparezca una imagen real.</p>"
+    },
+    {
+      "heading": "Cómo 11tik comprueba la disponibilidad",
+      "html": "<ol>\n    <li>Analizar una URL de visualización pública, Shorts, en vivo, incrustada o youtu.be para obtener el ID de 11 caracteres.</li>\n    <li>Crea las URL candidatas a partir de la lista predefinida anterior.</li>\n    <li>Carga cada candidato como una imagen en el navegador.</li>\n    <li>Conservar únicamente los éxitos que no sean marcadores de posición; clasificar por nivel, píxeles y un pequeño ajuste de puntuación WebP.</li>\n    <li>Muestra la lista clasificada para que puedas descargarla o copiar una URL válida.</li>\n  </ol>\n  <p>Por eso, cuando fallan, los enlaces de resolución máxima estimados desaparecen de la interfaz de usuario: el extractor se niega a generar un archivo de 1280×720.</p>"
+    },
+    {
+      "heading": "Lista de verificación práctica para la resolución de problemas",
+      "html": "<ol>\n    <li>Confirma que el vídeo es público y que la identificación es correcta.</li>\n    <li>Prueba<code>maxresdefault.jpg</code>Una vez. Si falla, deja de adivinar.</li>\n    <li>Pegue el mismo enlace en<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Descarga la primera imagen de la lista o copia su URL.</li>\n    <li>Si no aparece nada, es posible que el vídeo sea privado, haya sido eliminado, tenga restricción de edad o no tenga imágenes fijas públicas.</li>\n    <li>Para su uso en CMS, es preferible una copia alojada de una imagen fija validada en lugar de una ruta CDN con enlace directo. Consulte el<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Blog / Guía de Open Graph</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Errores comunes",
+      "html": "<ul>\n    <li>Suponiendo que todos los vídeos tengan resolución máxima solo porque un vídeo popular la tiene.</li>\n    <li>Codificación fija<code>maxresdefault.jpg</code>en HTML de producción sin una verificación.</li>\n    <li>Llamar a un estirado<code>hqdefault</code>“máxima resolución.”</li>\n    <li>Confundir una captura de pantalla del jugador con la imagen fija de la CDN.<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captura de pantalla vs miniatura real</a>.</li>\n    <li>Se espera 4K. La resolución máxima pública suele ser de 1280×720 cuando está disponible.<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">guía de máxima calidad</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Siguiente paso",
+      "html": "<p>Pegue una URL pública de YouTube en el<a href=\"https://www.11tik.com/\">extractor</a>. Si falta maxres, conserve la siguiente imagen fija real; ese es el archivo HD honesto para ese video.</p>\n  <p class=\"yte-bio\">Escrito por 11tik. Solo imágenes fijas públicas; no se permite la descarga del video.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Un error 404 significa que el vídeo no tiene miniatura?",
+      "answer": "No. Normalmente significa que falta un nombre de archivo. Los archivos de tamaño medio suelen seguir existiendo.",
+      "answerHtml": "<p>No. Normalmente significa que falta un nombre de archivo. Los archivos de tamaño medio suelen seguir existiendo.</p>"
+    },
+    {
+      "question": "¿Es hq720 un buen sustituto de maxresdefault?",
+      "answer": "Cuando se valida, sí, está en el mismo nivel alto (~1280×720). Tampoco está garantizado.",
+      "answerHtml": "<p>Cuando se valida, sí, está en el mismo nivel alto (~1280×720). Tampoco está garantizado.</p>"
+    },
+    {
+      "question": "¿Debería volver a intentar maxresdefault más tarde?",
+      "answer": "Sí, una vez que finalice el procesamiento de una nueva carga personalizada en Studio. De lo contrario, mantenga la versión de reserva validada.",
+      "answerHtml": "<p>Sí, una vez que finalice el procesamiento de una nueva carga personalizada en Studio. De lo contrario, mantenga la versión de reserva validada.</p>"
+    },
+    {
+      "question": "¿Puede existir maxres en formato WebP pero no en formato JPEG?",
+      "answer": "Sí. 11tik comprueba la resolución máxima de WebP por separado en /vi_webp/. Puede existir una u otra, ambas o ninguna.",
+      "answerHtml": "<p>Sí. 11tik comprueba WebP maxres por separado en<code>/vi_webp/</code>Puede que existan una u otra, ambas o ninguna.</p>"
+    },
+    {
+      "question": "¿Por qué algunas herramientas siguen mostrando una tarjeta de resolución máxima que falla?",
+      "answer": "Imprimen una URL de plantilla sin cargar la imagen. 11tik solo lista los archivos que responden como imágenes.",
+      "answerHtml": "<p>Imprimen una URL de plantilla sin cargar la imagen. 11tik solo lista los archivos que responden como imágenes.</p>"
+    },
+    {
+      "question": "¿Cómo puedo descargar la versión alternativa rápidamente?",
+      "answer": "Utilice la guía de descarga: pegue, extraiga y guarde el primer archivo que aparece en la lista.",
+      "answerHtml": "<p>Utilice el<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Guía de descarga</a>: pegar, extraer, guardar el primer archivo de la lista.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik. Solo imágenes fijas públicas; no se permite la descarga del video.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+}

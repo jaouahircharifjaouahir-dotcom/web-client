@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "tr",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Küçük resim çıkarıcı mı, yoksa oluşturucu mu? | 11tik",
+  "description": "Küçük resim çıkarıcı, YouTube'un zaten barındırdığı herkese açık görselleri kaydeder. Küçük resim oluşturucu (Canva, Photoshop veya YouTube Studio'nun yükleme özelliği), size ait yeni bir görsel oluşturur. 11tik bir çıkarıcıdır. Sanat eseri tasarlamaz ve kanalınıza özel bir dosya yüklemez.",
+  "h1": "Küçük resim çıkarıcı mı yoksa yenisini mi yapmalı?",
+  "ogTitle": "Küçük resim çıkarıcı mı yoksa yenisini mi yapmalı?",
+  "ogDescription": "Küçük resim çıkarıcı, YouTube'un zaten barındırdığı herkese açık görselleri kaydeder. Küçük resim oluşturucu (Canva, Photoshop veya YouTube Studio'nun yükleme özelliği), size ait yeni bir görsel oluşturur. 11tik bir çıkarıcıdır. Sanat eseri tasarlamaz ve kanalınıza özel bir dosya yüklemez.",
+  "imageAlt": "11tik herkese açık bir YouTube küçük resmini kaydetmek için kullanılan çıkarıcı",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik herkese açık bir YouTube küçük resmini kaydetmek için kullanılan çıkarıcı",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Küçük resim çıkarıcı nedir?",
+      "html": "<p>Bir çıkarıcı, herkese açık bir video URL'sini okur, YouTube'un CDN'sinde görüntü dosyalarını bulur ve çalışan bir görüntü URL'sini önizlemenize, indirmenize veya kopyalamanıza olanak tanır. Yalnızca mevcut boyutları listeler. Video akışından kareleri ayıklamaz.</p>"
+    },
+    {
+      "heading": "Küçük resim oluşturucu nedir?",
+      "html": "<p>Bir \"maker\" (üretici) bir tasarım iş akışıdır. Yazı tiplerini, figürleri ve kontrastı bir araya getirir, 16:9 oranında bir görsel dışa aktarır ve ardından YouTube Studio'ya yüklersiniz. Bu dosyanın sahibi sizsiniz (fontlar, fotoğraflar ve platform kurallarına tabi olarak). Rakip bir platformun görselini alıp yeniden yüklemek bir \"maker\" iş akışı değildir.</p>"
+    },
+    {
+      "heading": "Ekstraksiyon cihazını ne zaman kullanmalıyım?",
+      "html": "<p>Kullanmak<a href=\"https://www.11tik.com/\">11tik</a>Canlı herkese açık dosyaya ihtiyacınız olduğunda: araştırma, kendi yayınladığınız bir fotoğrafın yedeği, bir CMS öne çıkan görseli veya bir Open Graph kontrolü. Herkese açık bir izleme, Shorts, youtu.be, URL yapıştırın ve gerçekten bir görüntü döndüren en yüksek boyutu indirin.</p>"
+    },
+    {
+      "heading": "Ne zaman marker kullanmalıyım?",
+      "html": "<p>Yeni bir yükleme veya küçük resim yenilemesi için orijinal ambalaj oluştururken bir tasarım aracı kullanın. Studio, bu dosyanın resmi özel küçük resim haline geldiği yerdir. YouTube işlemeyi bitirdikten sonra, YouTube'un yayınladığı zamanki maksimum çözünürlük de dahil olmak üzere hangi genel boyutların mevcut olduğunu doğrulamak için izleme URL'sini 11tik'ye yapıştırabilirsiniz.</p>"
+    },
+    {
+      "heading": "Bu ikisi nasıl bir araya geliyor?",
+      "html": "<ol>\n    <li>Nişinizdeki videolardan kamuya açık referansları çıkarın (sadece araştırma amaçlı).</li>\n    <li>Orijinal bir fotoğraf makinesi tasarımı yapın ve bunu bir tasarım aracı kullanarak gerçekleştirin.</li>\n    <li>YouTube Studio'ya yükleyin.</li>\n    <li>İşlem tamamlandıktan sonra genel CDN dosyalarını 11tik ile doğrulayın.</li>\n  </ol>\n  <p>İlgili:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Stüdyosu küçük resim 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ekran görüntüsü ile gerçek küçük resim karşılaştırması</a>.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Çıkarma cihazını açın.</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Küçük resim çıkarıcı nedir?",
+      "answer": "YouTube'un zaten barındırdığı, kamuya açık bir araç. 11tik yalnızca mevcut olan resim dosyalarını listeler.",
+      "answerHtml": "YouTube'un zaten barındırdığı, kamuya açık bir araç. 11tik yalnızca mevcut olan resim dosyalarını listeler."
+    },
+    {
+      "question": "Ne zaman marker kullanmalıyım?",
+      "answer": "YouTube Studio'da özel küçük resim olarak yüklemek üzere orijinal bir sanat eseri oluşturduğunuzda.",
+      "answerHtml": "YouTube Studio'da özel küçük resim olarak yüklemek üzere orijinal bir sanat eseri oluşturduğunuzda."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+}

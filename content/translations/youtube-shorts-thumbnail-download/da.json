@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "da",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Sådan downloader du en YouTube Shorts-miniaturevideo i HD | 11tik",
+  "description": "Download et YouTube Shorts-miniaturebillede i browseren. Shorts bruger de samme offentlige stillbilleder som URL'er til visning. Filen er ofte i liggende format.",
+  "h1": "Sådan downloader du en YouTube Shorts-miniature i HD",
+  "ogTitle": "Sådan downloader du en YouTube Shorts-miniature i HD",
+  "ogDescription": "Download et YouTube Shorts-miniaturebillede i browseren. Shorts bruger de samme offentlige stillbilleder som URL'er til visning. Filen er ofte i liggende format.",
+  "imageAlt": "Download af et offentligt YouTube Shorts-miniaturebillede i 11tik",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Download af et offentligt YouTube Shorts-miniaturebillede i 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hvordan downloader jeg et YouTube Shorts-miniaturebillede?",
+      "html": "<p>Kopér en URL, der indeholder /shorts/ plus et video-ID, og ​​indsæt den i<a href=\"https://www.11tik.com/\">11tik</a>, og download en angivet størrelse. Udtrækningen starter, når ID'et er gyldigt.</p>"
+    },
+    {
+      "heading": "Er Shorts-filer det samme som visningssidefiler?",
+      "html": "<p>De bruger de samme offentlige størrelsesnavne, der er indtastet af video-ID'et. Stillbilledet kan se ud som om det er i letterbox-format, hvis YouTube har gemt en widescreen-afledning.</p>"
+    },
+    {
+      "heading": "Hvad hvis der ikke vises noget billede?",
+      "html": "<p>Kortfilmen kan være privat, slettet eller uden offentlige stillbilleder. Udtrækkeren kan ikke omgå disse begrænsninger.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udsugningsapparat</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Sådan downloader du</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg downloade et YouTube Shorts-miniaturebillede?",
+      "answer": "Ja, når YouTube offentliggjorde offentlige stillbilleder for det pågældende Shorts-video-ID.",
+      "answerHtml": "Ja, når YouTube offentliggjorde offentlige stillbilleder for det pågældende Shorts-video-ID."
+    },
+    {
+      "question": "Hvorfor ser stillbilledet ud som en letterbox?",
+      "answer": "YouTube kan gemme en 16:9-afledning selv for en lodret Short. 11tik viser den hostede fil i stedet for at opfinde en beskæring.",
+      "answerHtml": "YouTube kan gemme en 16:9-afledning selv for en lodret Short. 11tik viser den hostede fil i stedet for at opfinde en beskæring."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+}

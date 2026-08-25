@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "sk",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Ako získať miniatúru YouTube v najvyššej kvalite | 11tik",
+  "description": "Najvyššia kvalita znamená, že YouTube skutočne vráti najväčší verejne dostupný súbor JPEG alebo WebP, nie uhádnutý názov súboru v rozlíšení 4K.",
+  "h1": "Ako získať miniatúru YouTube v najvyššej kvalite",
+  "ogTitle": "Ako získať miniatúru YouTube v najvyššej kvalite",
+  "ogDescription": "Najvyššia kvalita znamená, že YouTube skutočne vráti najväčší verejne dostupný súbor JPEG alebo WebP, nie uhádnutý názov súboru v rozlíšení 4K.",
+  "imageAlt": "Najvyššia dostupná verejná miniatúra YouTube vybraná v 11tik",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Najvyššia dostupná verejná miniatúra YouTube vybraná v 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ako získam miniatúru YouTube v najvyššej kvalite?",
+      "html": "<p>Vložte verejnú URL adresu do<a href=\"https://www.11tik.com/\">11tik</a>a stiahnite si prvú uvedenú veľkosť. Extraktor zoradí prežívajúce verejné súbory; neroztiahne malú statickú fotografiu do falošného HD rozlíšenia.</p>"
+    },
+    {
+      "heading": "Aké je maximálne verejné rozlíšenie?",
+      "html": "<p>Keď YouTube zverejní maxresdefault, zvyčajne je to 1280 × 720. Ak tento súbor chýba, najvyššia kvalita je najbližšia platná veľkosť, napríklad sd alebo hq.</p>"
+    },
+    {
+      "heading": "Záleží na WebP?",
+      "html": "<p>Niektoré videá majú aj varianty WebP s rovnakými názvami veľkostí. 11tik ich dokáže zobraziť, ak existujú. Vyberte súbor, ktorý nástroj overil, nie uhádnutú URL adresu.</p>"
+    },
+    {
+      "heading": "Prečo „HD“ niekedy vyzerá mäkko?",
+      "html": "<p>Verejné rozlíšenie môže byť stále 1280×720 s kompresiou alebo sa môžete pozerať na hqdefault. Predtým, ako budete predpokladať, že sťahovanie zlyhalo, skontrolujte hlásenia o veľkosti pixelov 11tik.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Sprievodca veľkosťami</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ako získam miniatúru YouTube v najvyššej kvalite?",
+      "answer": "Vložte verejnú URL adresu do 11tik a stiahnite prvú uvedenú veľkosť. To je najvyššia verejná veľkosť, ktorú YouTube uložil.",
+      "answerHtml": "Vložte verejnú URL adresu do 11tik a stiahnite prvú uvedenú veľkosť. To je najvyššia verejná veľkosť, ktorú YouTube uložil."
+    },
+    {
+      "question": "Je súbor s najvyššou kvalitou 4K?",
+      "answer": "Zvyčajne nie. Verejné maximálne rozlíšenie je typicky 1280–720. 11tik neprevádza zvýšenie rozlíšenia ani nevytvára väčší master.",
+      "answerHtml": "Zvyčajne nie. Verejné maximálne rozlíšenie je zvyčajne 1280 × 720. 11tik nezvyšuje rozlíšenie ani nevytvára väčší master."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

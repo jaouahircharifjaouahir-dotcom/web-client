@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "nl",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Hoe download je een YouTube-thumbnail in HD? | 11tik",
+  "description": "Sla een openbare YouTube-thumbnail op: plak watch, Shorts, youtu.be of embed-URL's in 11tik en download het grootste bestand dat bestaat.",
+  "h1": "Hoe download je een YouTube-thumbnail in HD?",
+  "ogTitle": "Hoe download je een YouTube-thumbnail in HD?",
+  "ogDescription": "Sla een openbare YouTube-thumbnail op: plak watch, Shorts, youtu.be of embed-URL's in 11tik en download het grootste bestand dat bestaat.",
+  "imageAlt": "Een workflow in vier stappen, van het kopiëren van een YouTube-URL tot het downloaden van een gevalideerde openbare miniatuurafbeelding.",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Een workflow in vier stappen, van het kopiëren van een YouTube-URL tot het downloaden van een gevalideerde openbare miniatuurafbeelding.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Diagram voor probleemoplossing dat laat zien dat een ontbrekend maxresdefault-bestand wordt overgeslagen, zodat de volgende echte miniatuurafbeelding kan worden gedownload.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snel antwoord",
+      "html": "<p>Kopieer een openbare YouTube-link en plak deze in...<a href=\"https://www.11tik.com/\">11tik</a>Wacht op gevalideerde voorbeelden en download vervolgens het eerstgenoemde bestand. Dat bestand is de hoogste openbare JPEG- of WebP-resolutie die YouTube al beschikbaar heeft voor de video-ID – vaak 1280×720 als maxres of hq720 beschikbaar is. Dit bespaart een<strong>miniatuurafbeelding</strong>Niet de video of audio.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktische werkwijze: openbare URL → uitpakken → ware grootte bekijken → afbeeldings-URL downloaden of kopiëren.</p>"
+    },
+    {
+      "heading": "Snelste methode met 11tik",
+      "html": "<ol>\n    <li>Kopieer een URL van een openbare video, Shorts, live-uitzending, ingesloten video of youtu.be-URL (of een kale video-ID van 11 tekens).</li>\n    <li>Open<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>in uw browser.</li>\n    <li>Plak de URL. De extractie start zodra de ID geldig is.</li>\n    <li>Download het eerste resultaat (het beste beschikbare formaat) of kies een ander beschikbaar formaat.</li>\n  </ol>\n  <p>Optioneel: gebruik<strong>Kopieer de URL van de afbeelding</strong>Als je het adres voor een CMS nodig hebt in plaats van een bestand, dan wordt die procedure beschreven in de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>.</p>"
+    },
+    {
+      "heading": "Ondersteunde YouTube-URL-formaten",
+      "html": "<p>11tik leest de video-ID uit dezelfde patronen die de websiteparser accepteert:</p>\n  <table>\n    <thead>\n      <tr><th>Formaat</th><th>Voorbeeldpatroon</th><th>Notities</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Horloge</td><td><code>youtube.com/watch?v=ID</code></td><td>Extra queryparameters worden genegeerd</td></tr>\n      <tr><td>Korte link</td><td><code>youtu.be/ID</code></td><td>Mobiele deelplatformen maken hier vaak gebruik van.</td></tr>\n      <tr><td>Shorts</td><td><code>youtube.com/shorts/ID</code></td><td>Hetzelfde publiek biedt nog steeds onderdak.</td></tr>\n      <tr><td>Insluiten</td><td><code>youtube.com/embed/ID</code></td><td>Vanuit iframe src</td></tr>\n      <tr><td>Live</td><td><code>youtube.com/live/ID</code></td><td>Wanneer een openbare ID aanwezig is</td></tr>\n      <tr><td>nocookie embed</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Behandeld als een ingebedde schijf</td></tr>\n      <tr><td>Onbedekte ID</td><td><code>dQw4w9WgXcQ</code></td><td>Maximaal 11 tekens</td></tr>\n    </tbody>\n  </table>\n  <p>Kanaal- of afspeellijst-URL's zonder video-ID leveren geen enkele miniatuurafbeelding op. Voor meerdere links tegelijk kunt u de functie 'Bulk' gebruiken (tot 25) — zie<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batchdownload</a>Kanaaluitbreiding:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extract uit een kanaal-URL</a>.</p>"
+    },
+    {
+      "heading": "Directe URL-methode (geen extractie-interface)",
+      "html": "<p>Als je het ID al weet, kun je nog steeds direct een kandidaat openen:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Als de afbeelding geladen is, gebruik dan de save-image-opdracht van de browser. Als dat mislukt, ga dan verder naar de volgende stap.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, of<code>hqdefault.jpg</code>Deze handmatige methode is trager en foutgevoeliger dan de gevalideerde lijst van 11tik, maar werkt offline vanuit elke browser zodra je een geldig adres hebt.</p>"
+    },
+    {
+      "heading": "Kwaliteit kiezen bij het downloaden",
+      "html": "<p>Download de eerstgenoemde grootte, tenzij u een reden hebt om een ​​kleinere preview te bewaren. \"HD\" betekent hier de grootste beschikbare publieke resolutie, meestal 1280×720, en niet een 4K-master. De verwachte pixelgrootte en het gedrag bij ontbrekende formaten worden uitgelegd in de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Richtlijnen voor grootte en resolutie</a>.</p>\n  <p>Als u alleen geïnteresseerd bent in het allerhoogste openbare bestand, zie dan ook<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatuurafbeelding van de hoogste kwaliteit</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Als een geschatte grootte niet beschikbaar is, sla deze dan over en gebruik het volgende echte openbare bestand.</p>"
+    },
+    {
+      "heading": "Problemen oplossen met downloads",
+      "html": "<table>\n    <thead>\n      <tr><th>Symptoom</th><th>Waarschijnlijke oorzaak</th><th>Wat te doen</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Geen voorbeeldweergave na het plakken</td><td>Ongeldige URL, geen video-ID of privé-/beperkte video</td><td>Plak een link naar een openbare watch/Shorts/youtu.be</td></tr>\n      <tr><td>Maxres vermist</td><td>YouTube heeft dat bestand nooit gepubliceerd.</td><td>Download in plaats daarvan de eerst vermelde maat.</td></tr>\n      <tr><td>Grijze / placeholder-afbeelding van een handmatig samengestelde URL</td><td>Geraden bestandsnaam</td><td>Gebruik de gevalideerde lijst van 11tik</td></tr>\n      <tr><td>Telefoon opslaan ongemakkelijk</td><td>De gebruikersinterface voor het downloaden van browsers verschilt.</td><td>Zien<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">Handleiding voor het opslaan van gegevens op iPhone/Android</a></td></tr>\n      <tr><td>Het lijkt een screenshot van de gebruikersinterface.</td><td>Je maakt een screenshot van de speler.</td><td>Bewaar het CDN, maar niet het scherm —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot versus de werkelijkheid</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Wat je wel (en niet) downloadt",
+      "html": "<p>Je slaat een openbaar stilstaand beeld op dat YouTube al host. Je ontgrendelt geen privévideo's, bestanden die alleen voor leden toegankelijk zijn, of de MP4/WebM-stream. 11tik is een extractor, geen maker en geen video-downloader — ter vergelijking:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor versus maker</a>.</p>\n  <p>Het auteursrecht blijft bij de uploader. Opslaan voor onderzoeksdoeleinden of persoonlijk gebruik is gebruikelijk; opnieuw publiceren als eigen miniatuur zonder de rechten daarvoor te gebruiken is niet toegestaan. YouTube Help:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">aangepaste videominiaturen</a>. Site regels:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+    },
+    {
+      "heading": "Methodevergelijking",
+      "html": "<table>\n    <thead>\n      <tr><th>Methode</th><th>Snelheid</th><th>Het beste voor</th><th>Heeft 11tik nodig?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik download</td><td>Snel</td><td>Gevalideerd, nog steeds het beste</td><td>Ja</td></tr>\n      <tr><td>11tik URL kopiëren</td><td>Snel</td><td>CMS / embeds</td><td>Ja</td></tr>\n      <tr><td>Handmatig gebouwde i.ytimg.com URL</td><td>Medium</td><td>Snelle tests als je de ID weet</td><td>Nee</td></tr>\n      <tr><td>Screenshot van de speler</td><td>Snel, maar van lage kwaliteit.</td><td>Vermijden voor blogs / OG</td><td>Nee</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Volgende stap",
+      "html": "<p>Open de<a href=\"https://www.11tik.com/\">YouTube-thumbnail-extractor</a>Plak een openbare link en sla het eerste gevalideerde resultaat op. Alleen de link nodig? Lees de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-handleiding</a>Twijfel je tussen twee maten? Gebruik de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">resolutiegids</a>.</p>\n\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser extractor. Alleen openbare afbeeldingen.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan ik een miniatuurafbeelding van een korte video downloaden?",
+      "answer": "Ja, als de Short openbaar is en er stilstaande beelden bestaan ​​voor die ID. Plak de URL /shorts/ in 11tik. Het stilstaande beeld kan liggend zijn, ook al wordt het verticaal afgespeeld.",
+      "answerHtml": "<p>Ja, als de Short openbaar is en er nog steeds bestanden bestaan ​​voor die ID. Plak de<code>/shorts/</code>URL in 11tik. Het beeld kan liggend zijn, ook al wordt het verticaal afgespeeld.</p>"
+    },
+    {
+      "question": "Wat als de beste miniatuurafbeelding niet laadt?",
+      "answer": "Download de eerstvolgende beschikbare resolutie. Het ontbreken van de maximale resolutie komt vaak voor en is geen fout van het programma.",
+      "answerHtml": "<p>Download de eerstvolgende beschikbare resolutie. Het ontbreken van de maximale resolutie komt vaak voor en is geen fout van het programma.</p>"
+    },
+    {
+      "question": "Kan ik de originele openbare miniatuurafbeelding downloaden?",
+      "answer": "Ja, dat is wat het best gevalideerde bestand is. \"Origineel\" betekent dat het bestand nog steeds op de openbare CDN staat, niet een frame dat uit de videostream is gehaald. Zie de originele openbare miniatuur.",
+      "answerHtml": "<p>Ja, dat is wat het best gevalideerde bestand is. \"Origineel\" betekent nog steeds het openbare CDN-bestand, niet een frame dat uit de videostream is gehaald. Zie<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">originele openbare miniatuur</a>.</p>"
+    },
+    {
+      "question": "Kan ik de afbeeldings-URL kopiëren in plaats van de afbeelding te downloaden?",
+      "answer": "Ja. Gebruik 'Afbeeldings-URL kopiëren' op 11tik, of kopieer een geverifieerd adres uit de browser nadat de afbeelding is geladen.",
+      "answerHtml": "<p>Ja. Gebruik 'Afbeeldings-URL kopiëren' op 11tik, of kopieer een geverifieerd adres uit de browser nadat de afbeelding is geladen.</p>"
+    },
+    {
+      "question": "Wordt hiermee het YouTube-videobestand gedownload?",
+      "answer": "Nee. Alleen de openbare miniatuurafbeelding is nog steeds beschikbaar.",
+      "answerHtml": "<p>Nee. Alleen de openbare miniatuurafbeelding is nog steeds beschikbaar.</p>"
+    },
+    {
+      "question": "Zal elke video beschikbaar zijn in een 1280×720-bestand?",
+      "answer": "Nee. Bewaar het grootste openbare bestand dat geldig is voor die ID.",
+      "answerHtml": "<p>Nee. Bewaar het grootste openbare bestand dat geldig is voor die ID.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser extractor. Alleen openbare afbeeldingen.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+}

@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "cs",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Zásady ochrany osobních údajů | 11tik",
+  "description": "Tato zásada se vztahuje na nástroj pro extrakci miniatur YouTube na adrese https://www.11tik.com/ a na hostitelské jazyky, které načítají stejný nástroj pro extrakci.",
+  "h1": "Zásady ochrany osobních údajů",
+  "ogTitle": "Zásady ochrany osobních údajů",
+  "ogDescription": "Tato zásada se vztahuje na nástroj pro extrakci miniatur YouTube na adrese https://www.11tik.com/ a na hostitelské jazyky, které načítají stejný nástroj pro extrakci.",
+  "imageAlt": "",
+  "faqHeading": "Často kladené otázky",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Zpracování v prohlížeči",
+      "html": "<p>Když vložíte URL adresu z YouTube, stránka přečte ID videa a zkontroluje veřejné URL adresy miniatur ve vašem prohlížeči. Tyto vložené odkazy se neukládají jako osobní účet na aplikačním serveru 11tik. Extrakce nevyžaduje přihlášení.</p>"
+    },
+    {
+      "heading": "Volitelný index sdílené stránky",
+      "html": "<p>Po úspěšné extrakci může prohlížeč odeslat našemu Cloudflare Worker pouze veřejné ID videa, název, tagy odvozené z veřejných metadat a veřejnou URL miniatury, aby se video mohlo zobrazit na stránce pro sdílení a v případě, že projde kontrolou kvality, i v souboru Sitemap. Nežádáme vás o nahrání obrazového souboru. Pokud je požadavek blokován vaším prohlížečem, můžete extraktor použít bez tohoto indexu.</p>"
+    },
+    {
+      "heading": "Místní historie",
+      "html": "<p>Extraktor může ukládat nedávné adresy URL do lokálního úložiště tohoto prohlížeče, abyste je mohli znovu otevřít. Tato kopie zůstane ve vašem zařízení. Vymažte ji pomocí historie na stránce nebo vymazáním dat tohoto webu v prohlížeči. Nejedná se o cloudový účet.</p>"
+    },
+    {
+      "heading": "protokoly hostování",
+      "html": "<p>Webové stránky, jazykové hostingy a statické soubory jsou poskytovány poskytovateli hostingu používanými pro 11tik.com (včetně Cloudflare a GitHub Pages). Tito hostingoví poskytovatelé mohou uchovávat běžné webové protokoly, jako je IP adresa, typ prohlížeče a požadovaná stránka, v souladu se svými vlastními zásadami.</p>"
+    },
+    {
+      "heading": "Třetí strany",
+      "html": "<p>Soubory miniatur jsou vyžádány od veřejných hostitelů obrázků na YouTube. Stránka používá Google Analytics 4 (ID měření G-FW7B8NDZZ5) k počítání návštěv a akcí na stránce, jako je extrakce a stahování. Google může nastavit soubory cookie nebo podobné identifikátory. Vložené adresy URL YouTube se neodesílají jako parametry analytických událostí. Fonty nebo skripty se mohou také načítat z CDN používaných k zobrazení stránky.</p>\n  <p>Kontaktní formulář je doručen službou FormSubmit na e-mail operátora. FormSubmit vidí jméno, e-mail a zprávu, kterou odešlete.</p>"
+    },
+    {
+      "heading": "Kontakt",
+      "html": "<p>Dotazy k těmto zásadám: e-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>nebo použijte<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>formulář.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extraktor miniatur YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmínky</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

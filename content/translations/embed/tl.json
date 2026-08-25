@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "tl",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "I-embed ang 11tik Thumbnail Extractor | 11tik",
+  "description": "Magdagdag ng libreng YouTube thumbnail extractor sa iyong blog, mga dokumento, o toolkit ng creator. Naglo-load ang widget mula sa 11tik at binabago ang laki nito. Walang API key.",
+  "h1": "I-embed ang 11tik Thumbnail Extractor",
+  "ogTitle": "I-embed ang 11tik Thumbnail Extractor",
+  "ogDescription": "Magdagdag ng libreng YouTube thumbnail extractor sa iyong blog, mga dokumento, o toolkit ng creator. Naglo-load ang widget mula sa 11tik at binabago ang laki nito. Walang API key.",
+  "imageAlt": "",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [],
+  "sections": [
+    {
+      "heading": "sipi ng iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Mga Panuntunan",
+      "html": "<ul>\n    <li>Panatilihin ang<code>id=\"yte-app\"</code>katangian para gumana ang height sync.</li>\n    <li>Huwag balutin ang iframe sa isang nakapirming taas na pumipigil sa mga download button.</li>\n    <li>Pag-uugnay pabalik sa<a href=\"https://www.11tik.com/\">www.11tik.com</a>tumutulong sa mga gumagamit na buksan ang buong tool.</li>\n  </ul>"
+    },
+    {
+      "heading": "Mga malalalim na link",
+      "html": "<p>Ibahagi ang isang handa nang bunutan sa<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buksan ang pangbunot</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

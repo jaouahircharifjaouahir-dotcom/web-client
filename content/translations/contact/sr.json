@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "sr",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Контакт | [[П2]]",
+  "description": "Користите овај образац за питања о алату за издвајање сличица са YouTube-а. Поруке се шаљу оператеру 11tik путем имејла. Не шаљите видео или аудио датотеке. Алат ради само са јавним сличицама.",
+  "h1": "Контакт",
+  "ogTitle": "Контакт",
+  "ogDescription": "Користите овај образац за питања о алату за издвајање сличица са YouTube-а. Поруке се шаљу оператеру 11tik путем имејла. Не шаљите видео или аудио датотеке. Алат ради само са јавним сличицама.",
+  "imageAlt": "",
+  "faqHeading": "Честа питања",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Контакт",
+      "html": "<h1>Контакт</h1>\n  <p class=\"yte-updated\">Последње ажурирање: 22. август 2026.</p>\n  <p itemprop=\"description\">Користите овај образац за питања о алату за издвајање сличица са YouTube-а. Поруке се шаљу оператеру 11tik путем имејла. Не шаљите видео или аудио датотеке. Алат ради само са јавним сличицама.</p>\n  <p>Директна е-пошта:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">јаоуахирчарифјаоуахир@[[П2]]</a></p>\n  <p>За извештај о одређеном видеу, наведите јавни YouTube URL. 11tik не хостује датотеку сличице; слика се захтева са јавне CDN мреже платформе.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Име<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>Е-пошта<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Порука<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Пошаљи поруку</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Екстрактор сличица са YouTube-а</a>·<a href=\"https://www.11tik.com/p/about.html\">О нама</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Политика приватности</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Услови</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

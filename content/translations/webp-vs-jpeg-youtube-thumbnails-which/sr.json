@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "sr",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "WebP наспрам JPEG YouTube сличица: Који формат треба да користите? | 11tik",
+  "description": "YouTube може да објављује JPEG и WebP датотеке сличица. Преферирајте формат који 11tik потврђује за ваш случај употребе — WebP није увек доступан.",
+  "h1": "WebP наспрам JPEG YouTube сличица: који формат треба да користите?",
+  "ogTitle": "WebP наспрам JPEG YouTube сличица: који формат треба да користите?",
+  "ogDescription": "YouTube може да објављује JPEG и WebP датотеке сличица. Преферирајте формат који 11tik потврђује за ваш случај употребе — WebP није увек доступан.",
+  "imageAlt": "Упоредно поређење URL путања JPEG и WebP YouTube сличица на i.ytimg.com",
+  "faqHeading": "Честа питања",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "Упоредно поређење URL путања JPEG и WebP YouTube сличица на i.ytimg.com",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "Табела случајева употребе која упоређује CMS веб сајта, директне CDN линкове и преузимања архиве за JPEG наспрам WebP YouTube сличица",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Брзи одговор",
+      "html": "<p>За већину преузимања и отпремања у систем за управљање садржајем, задржите<strong>валидирана датотека 11tik се наводи прва</strong>JPEG остаје јавно доступан и даље<code>i.ytimg.com/vi/…</code>WebP се за неке видео записе појављује као<code>maxresdefault.webp</code>испод<code>/vi_webp/</code>WebP је често мањи уз сличан визуелни квалитет, али се не објављује за сваки ID. 11tik то ради<strong>не</strong>конвертовати WebP у JPEG приликом преузимања — штеди бајтове које YouTube већ хостује (JPEG преузимања добијају само мали печат коментара са метаподацима).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Исти ИД видеа, различити контејнери и путање — само када је YouTube објавио оба.</p>"
+    },
+    {
+      "heading": "Како се формати сличица на YouTube-у приказују у 11tik",
+      "html": "<p>Подешавања квалитета за 11tik укључују:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(пантомима<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ испод<code>/vi/</code>(пантомима<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Кандидати се учитавају у прегледач. Неуспеси и резервисана места се одбацују. Рангирање користи ниво, површину пиксела, подударање очекиване величине и мали<strong>−8 поена казне за<code>.webp</code>URL-ови</strong>тако да се JPEG и WebP истог нивоа не разликују непредвидиво — JPEG може да победи у нерешеним ситуацијама када се оба валидирају. Детаљи о величинама:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">водич за величину сличица</a>Недостаје понашање максималних вредности:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Водич за maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "JPEG наспрам WebP-а једноставним језиком",
+      "html": "<table>\n    <thead>\n      <tr><th>Формат</th><th>Најбоље за</th><th>Снага</th><th>Ограничење</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Преузимања, отпремања на WordPress, најшира компатибилност</td><td>Готово универзална подршка; већина CDN фотографија</td><td>Веће датотеке сличног квалитета</td></tr>\n      <tr><td>ВебП</td><td>Модерни сајтови који већ служе WebP-у</td><td>Често мањи за исти ниво резолуције</td><td>Није објављено за сваки видео; неки старији алати то не раде</td></tr>\n    </tbody>\n  </table>\n  <p>Ниједан формат не измишља резолуцију. WebP од 480×360 је и даље 480×360.</p>"
+    },
+    {
+      "heading": "Шта се дешава када преузмете",
+      "html": "<p>Име датотеке за преузимање задржава праву екстензију (<code>.jpg</code>или<code>.webp</code>) из MIME типа / URL-а. За JPEG блобове, 11tik може уметнути кратак JPEG коментар као што је<code>11tik VIDEO_ID quality youtube thumbnail</code>WebP и не-JPEG блобови се чувају без тог корака поновног кодирања. Нема „надоградње“ квалитета и нема присилне конверзије између формата.</p>"
+    },
+    {
+      "heading": "Када преферирати JPEG",
+      "html": "<ul>\n    <li>Отпремате на CMS који очекује JPG у медијској библиотеци.</li>\n    <li>Потребна вам је максимална компатибилност са имејл клијентима или старијим прегледачима.</li>\n    <li>Само JPEG величине су валидиране за тај видео.</li>\n    <li>Штампате или предајете датотеку дизајнеру који је стандардизовао JPG.</li>\n  </ul>"
+    },
+    {
+      "heading": "Када је WebP згодан",
+      "html": "<ul>\n    <li>11tik је навео валидиране WebP максималне вредности и ваш сајт већ служи WebP-у.</li>\n    <li>Желите мању датотеку за исти ниво ~1280×720.</li>\n    <li>Ви контролишете стек и можете се вратити на JPEG ако је потребно.</li>\n  </ul>\n  <p>Ако ваша тема не може да користи WebP, преузмите JPEG уместо тога — или конвертујте локално након преузимања. 11tik неће конвертовати уместо вас.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Изаберите валидирани формат који одговара вашем цевоводу – не претпостављено проширење.</p>"
+    },
+    {
+      "heading": "Директни линкови и веб странице",
+      "html": "<p>URL адреса копираног слике враћа HTTPS CDN адресу валидираног кандидата. Хотлинковање WebP-а или JPEG-а има исту крхкост о којој се говорило у<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">блог / Водич за Open Graph</a>: преферирате да хостујете сопствени текст за трајне објаве. URL обрасци:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Водич за URL-ове сличица</a>.</p>"
+    },
+    {
+      "heading": "Напомене о компатибилности прегледача и CMS-а",
+      "html": "<p>Модерне верзије Chromium-а, Firefox-а и Safari-ја обрађују WebP слике на страницама. Неки застарели додаци, шаблони е-поште или токови рада за штампање и даље преферирају JPEG. WordPress језгро може да служи WebP када је конфигурисано, али многи тимови и даље стандардизују истакнуте слике као JPG ради предвидљивости. Званична WordPress медијска документација је извор истине за вашу верзију – немојте претпостављати да сваки додатак прихвата WebP отпремања.</p>"
+    },
+    {
+      "heading": "Практично дрво одлучивања",
+      "html": "<ol>\n    <li>Издвоји на<a href=\"https://www.11tik.com/\">[[П2]]</a>.</li>\n    <li>Ако вам је потребна истакнута слика за CMS и видите оба формата, изаберите JPEG, осим ако ваш стек није WebP-прво.</li>\n    <li>Ако су само WebP максималне резолуције валидиране на највишем нивоу, користите их — или узмите следећу JPEG величину ако морате да останете на JPG-у.</li>\n    <li>За архиве, сачувајте оригиналну екстензију из преузимања.</li>\n  </ol>\n  <p>Преузмите водич:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">преузмите сличицу са YouTube-а</a>.</p>"
+    },
+    {
+      "heading": "Следећи корак",
+      "html": "<p>Налепите јавни URL у<a href=\"https://www.11tik.com/\">Екстрактор сличица са YouTube-а</a>, обратите пажњу да ли је горњи резултат<code>.jpg</code>или<code>.webp</code>и изаберите на основу вашег CMS-а, а не на основу дужег имена датотеке.</p>\n  <p class=\"yte-bio\">Написао 11tik на основу тренутног понашања екстрактора у прегледачу.<a href=\"https://www.11tik.com/p/about.html\">О нама</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Приватност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Услови</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Да ли сваки YouTube видео има WebP сличицу?",
+      "answer": "Не. WebP maxres је опционалан. Многи видео снимци приказују само JPEG величине.",
+      "answerHtml": "<p>Не. WebP maxres је опционалан. Многи видео снимци приказују само JPEG величине.</p>"
+    },
+    {
+      "question": "Да ли је WebP увек оштрији од JPEG-а?",
+      "answer": "Не. Формат не повећава резолуцију. Упоредите једнаке величине пиксела.",
+      "answerHtml": "<p>Не. Формат не повећава резолуцију. Упоредите једнаке величине пиксела.</p>"
+    },
+    {
+      "question": "Зашто би JPEG могао бити рангиран изнад WebP-а у 11tik?",
+      "answer": "Валидирани WebP URL-ови добијају малу казну (-8) у односу на иначе сличне кандидате, тако да се JPEG може први појавити када оба постоје на истом нивоу.",
+      "answerHtml": "<p>Валидирани WebP URL-ови добијају малу казну (-8) у односу на иначе сличне кандидате, тако да се JPEG може први појавити када оба постоје на истом нивоу.</p>"
+    },
+    {
+      "question": "Да ли преузимање конвертује WebP у JPEG?",
+      "answer": "Не. Сачувана датотека задржава изворни формат. Само JPEG може добити коментар са метаподацима.",
+      "answerHtml": "<p>Не. Сачувана датотека задржава изворни формат. Само JPEG може добити коментар са метаподацима.</p>"
+    },
+    {
+      "question": "Који формат треба да користим за брзо повезивање?",
+      "answer": "Ни једно ни друго, за продукцијске странице које су вам битне. Хостујте копију. Ако морате привремено да направите директну везу, користите URL 11tik који је већ валидиран.",
+      "answerHtml": "<p>Ни једно ни друго, за продукцијске странице које су вам битне. Хостујте копију. Ако морате привремено да направите директну везу, користите URL 11tik који је већ валидиран.</p>"
+    },
+    {
+      "question": "Да ли hq720 може бити WebP?",
+      "answer": "У тренутној листи пресета 11tik, наменски WebP кандидат је maxres WebP. Остале величине се захтевају као JPEG имена датотека у /vi/.",
+      "answerHtml": "<p>У тренутној листи пресета 11tik, наменски WebP кандидат је maxres WebP. Остале величине се захтевају као JPEG имена датотека под<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Написао 11tik на основу тренутног понашања екстрактора у прегледачу.<a href=\"https://www.11tik.com/p/about.html\">О нама</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Приватност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Услови</a>.</p>"
+}

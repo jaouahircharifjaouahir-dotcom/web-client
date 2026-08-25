@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "fi",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Yhteystiedot | 11tik",
+  "description": "Käytä tätä lomaketta, jos sinulla on kysyttävää YouTube-pikkukuvien poimijasta. Viestit lähetetään sähköpostitse 11tik-operaattorille. Älä lähetä video- tai äänitiedostoja. Työkalu toimii vain julkisten pikkukuvien kanssa.",
+  "h1": "Yhteystiedot",
+  "ogTitle": "Yhteystiedot",
+  "ogDescription": "Käytä tätä lomaketta, jos sinulla on kysyttävää YouTube-pikkukuvien poimijasta. Viestit lähetetään sähköpostitse 11tik-operaattorille. Älä lähetä video- tai äänitiedostoja. Työkalu toimii vain julkisten pikkukuvien kanssa.",
+  "imageAlt": "",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Yhteystiedot",
+      "html": "<h1>Yhteystiedot</h1>\n  <p class=\"yte-updated\">Viimeksi päivitetty: 22. elokuuta 2026</p>\n  <p itemprop=\"description\">Käytä tätä lomaketta, jos sinulla on kysyttävää YouTube-pikkukuvien poimijasta. Viestit lähetetään sähköpostitse 11tik-operaattorille. Älä lähetä video- tai äänitiedostoja. Työkalu toimii vain julkisten pikkukuvien kanssa.</p>\n  <p>Suora sähköposti:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Jos haluat tehdä raportin tietystä videosta, sisällytä mukaan julkinen YouTube-URL-osoite. 11tik ei ylläpidä pikkukuvatiedostoa; kuva pyydetään alustan julkisesta CDN:stä.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Nimi<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>Sähköposti<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Viesti<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Lähetä viesti</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>·<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuojakäytäntö</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

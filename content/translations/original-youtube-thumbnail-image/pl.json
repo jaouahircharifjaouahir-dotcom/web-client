@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "pl",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Jak uzyskać oryginalną miniaturę YouTube | 11tik",
+  "description": "Pobierz oryginalną publiczną miniaturę YouTube, którą YouTube już hostuje. To nadal CDN, a nie wyrwana klatka z filmu.",
+  "h1": "Jak uzyskać oryginalny obraz miniatury YouTube",
+  "ogTitle": "Jak uzyskać oryginalny obraz miniatury YouTube",
+  "ogDescription": "Pobierz oryginalną publiczną miniaturę YouTube, którą YouTube już hostuje. To nadal CDN, a nie wyrwana klatka z filmu.",
+  "imageAlt": "Oryginalny publiczny plik miniatury YouTube pokazany w ekstraktorze 11tik",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Oryginalny publiczny plik miniatury YouTube pokazany w ekstraktorze 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jaka jest oryginalna miniatura YouTube?",
+      "html": "<p>To obraz podglądu, który YouTube już przechowuje na swoich serwerach obrazów. To plik używany w wyszukiwarce i sugerowanych półkach, a nie klatka przechwycona przez Print Screen.</p>"
+    },
+    {
+      "heading": "Czym to się różni od zrzutu ekranu?",
+      "html": "<p>Zrzut ekranu zawiera Chrome'a ​​odtwarzacza, interfejs użytkownika przeglądarki i dodatkową kompresję. Oryginalny plik to czysty obraz o rozmiarze pikseli, jaki opublikował YouTube.</p>"
+    },
+    {
+      "heading": "Jak znaleźć oryginalną miniaturę?",
+      "html": "<p>Wklej adres URL zegarka, krótkich filmów, transmisji na żywo lub youtu.be do<a href=\"https://www.11tik.com/\">11tik</a>Narzędzie odczytuje identyfikator wideo, sprawdza pliki publiczne i klasyfikuje najwyższy z istniejących.</p>"
+    },
+    {
+      "heading": "Jak działają adresy URL miniaturek w serwisie YouTube?",
+      "html": "<p>Używają identyfikatora wideo i nazwy rozmiaru, takiej jak maxresdefault.jpg lub hqdefault.jpg w [[P2]. ​​Odgadnięcie rozmiaru, który nigdy nie został opublikowany, powoduje błąd lub wyświetla symbol zastępczy.</p>"
+    },
+    {
+      "heading": "Co to jest maxresdefault.jpg?",
+      "html": "<p>To najpopularniejsza publiczna nazwa pliku, zazwyczaj o rozmiarze 1280×720, gdy YouTube ją stworzył. Nie jest to plik master 4K ani plik wideo.</p>"
+    },
+    {
+      "heading": "Czy oryginał zawsze oznacza 1280&#215;720?",
+      "html": "<p>Nie. Jeśli plik maxres nigdy nie został opublikowany, oryginalny obraz publiczny ma format hq, sd lub inny zachowany plik. 11tik pokazuje rzeczywisty rozmiar pikseli zamiast wymyślać piksele.</p>"
+    },
+    {
+      "heading": "Czy mogę otrzymać oryginalny kadr z Shorts, Live lub youtu.be?",
+      "html": "<p>Tak, jeśli te adresy URL zawierają publiczny identyfikator wideo i publiczne zdjęcia hostowane w serwisie YouTube. Ekstraktor traktuje je tak samo, jak standardowy adres URL do obejrzenia filmu.</p>"
+    },
+    {
+      "heading": "Jak sprawdzić, czy na pewno otrzymałem oryginalny plik?",
+      "html": "<p>Użyj list rozmiarów i wymiarów 11tik po sprawdzeniu pliku. Jeśli obraz wygląda jak zrzut ekranu odtwarzacza, oznacza to, że nie pobrałeś hostowanej miniatury.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Najwyższa jakość</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jaka jest oryginalna miniatura YouTube?",
+      "answer": "Publiczny plik obrazu hostowany przez YouTube dla identyfikatora filmu, taki jak maxresdefault, jeśli istnieje. Nie jest to zrzut ekranu strony odtwarzania.",
+      "answerHtml": "Publiczny plik obrazu hostowany przez YouTube dla identyfikatora filmu, taki jak maxresdefault, jeśli istnieje. Nie jest to zrzut ekranu strony odtwarzania."
+    },
+    {
+      "question": "Czy oryginał zawsze oznacza 1280&#215;720?",
+      "answer": "Nie. Maksymalna rozdzielczość wynosi zazwyczaj 1280&#215;720 w momencie publikacji. Jeśli ten plik zaginie, oryginalny plik publiczny nadal będzie miał rozmiar zgodny z YouTube.",
+      "answerHtml": "Nie. Maxres zazwyczaj ma rozdzielczość 1280×720 w momencie publikacji. Jeśli ten plik zaginie, oryginalny plik publiczny nadal będzie miał rozmiar zgodny z YouTube."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

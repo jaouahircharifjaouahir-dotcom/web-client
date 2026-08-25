@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "tl",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Screenshot vs totoong thumbnail sa YouTube: aling file ang dapat mong i-save? | 11tik",
+  "description": "Hindi ang thumbnail na inilalagay ng YouTube sa screen ng telepono ang screenshot ng player. Ang totoong publiko ay nabubuhay pa rin sa i.ytimg.com. Gamitin ito para sa mga blog, Open Graph, at pananaliksik—ang mga screenshot ay nagdaragdag ng UI chrome, compression, at maling aspect ratio.",
+  "h1": "Screenshot vs totoong thumbnail sa YouTube: aling file ang dapat mong i-save?",
+  "ogTitle": "Screenshot vs totoong thumbnail sa YouTube: aling file ang dapat mong i-save?",
+  "ogDescription": "Hindi ang thumbnail na inilalagay ng YouTube sa screen ng telepono ang screenshot ng player. Ang totoong publiko ay nabubuhay pa rin sa i.ytimg.com. Gamitin ito para sa mga blog, Open Graph, at pananaliksik—ang mga screenshot ay nagdaragdag ng UI chrome, compression, at maling aspect ratio.",
+  "imageAlt": "Paghahambing ng screenshot ng isang player kumpara sa isang totoong pampublikong thumbnail file ng YouTube",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Paghahambing ng screenshot ng isang player kumpara sa isang totoong pampublikong thumbnail file ng YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ano ang pagkakaiba ng screenshot at ng totoong thumbnail?",
+      "html": "<p>Kinukunan ng screenshot ang iyong screen, kasama ang player chrome, mga caption, at pag-scale ng device. Ang isang tunay na thumbnail ay ang JPEG o WebP file na inilathala ng YouTube para sa video ID na iyon. Tanging ang CDN file lamang ang may stable na URL at kilalang laki ng pixel.</p>"
+    },
+    {
+      "heading": "Bakit hindi gumagana ang mga screenshot sa mga imahe ng Google at mga preview sa social media?",
+      "html": "<p>Kadalasan, mali ang aspect ratio, kasama ang UI, at dalawang beses na na-compress ang mga ito. Ang Open Graph at maraming CMS field ay gusto pa rin ng 16:9 na nasa bandang 1280×720. Katumbas iyon ng maxresdefault kapag umiiral na ito—tingnan ang<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">gabay sa laki ng thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Paano ko ise-save ang totoong thumbnail?",
+      "html": "<ol>\n    <li>Kopyahin ang pampublikong URL ng video, hindi ang screenshot.</li>\n    <li>Idikit ito sa<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>I-download ang unang nakalistang pampublikong file o kopyahin ang URL ng larawan.</li>\n  </ol>"
+    },
+    {
+      "heading": "Kailan pa magiging kapaki-pakinabang ang isang screenshot?",
+      "html": "<p>Gumamit lamang ng screenshot para idokumento ang isang UI bug o isang sandali sa loob ng video. Huwag itong gamitin bilang opisyal na thumbnail, blog hero, o share image kung mayroon pa ring public image.</p>\n  <p><a href=\"https://www.11tik.com/\">Kunin ang totoong pampublikong thumbnail →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ano ang pagkakaiba ng screenshot at ng totoong thumbnail?",
+      "answer": "Kinukunan ng screenshot ang iyong screen at player chrome. Ang isang tunay na thumbnail ay ang JPEG o WebP file na hino-host ng YouTube sa i.ytimg.com para sa video ID na iyon.",
+      "answerHtml": "Kinukunan ng screenshot ang iyong screen at player chrome. Ang isang tunay na thumbnail ay ang JPEG o WebP file na hino-host ng YouTube sa i.ytimg.com para sa video ID na iyon."
+    },
+    {
+      "question": "Bakit hindi gumagana ang mga screenshot sa mga imahe ng Google at mga preview sa social media?",
+      "answer": "Madalas silang may maling aspect ratio, dagdag na UI, at dagdag na compression. Inaasahan pa rin ng mga CMS at Open Graph field ang malinis na 16:9 public.",
+      "answerHtml": "Madalas silang may maling aspect ratio, dagdag na UI, at dagdag na compression. Inaasahan pa rin ng mga CMS at Open Graph field ang malinis na 16:9 public."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+}

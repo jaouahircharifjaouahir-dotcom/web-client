@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "ro",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Politica de confidențialitate | 11tik",
+  "description": "Această politică se aplică Extractorului de miniaturi YouTube de la https://www.11tik.com/ și gazdelor lingvistice care încarcă același extractor.",
+  "h1": "Politica de confidențialitate",
+  "ogTitle": "Politica de confidențialitate",
+  "ogDescription": "Această politică se aplică Extractorului de miniaturi YouTube de la https://www.11tik.com/ și gazdelor lingvistice care încarcă același extractor.",
+  "imageAlt": "",
+  "faqHeading": "FAQ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Prelucrarea în browser",
+      "html": "<p>Când inserați o adresă URL YouTube, pagina citește ID-ul videoclipului și verifică adresele URL ale imaginilor miniatură publice din browser. Aceste linkuri inserate nu sunt stocate ca un cont personal pe un server de aplicații 11tik. Extragerea nu necesită autentificare.</p>"
+    },
+    {
+      "heading": "Index opțional al paginilor de partajare",
+      "html": "<p>După o extragere reușită, browserul poate trimite doar un ID public al videoclipului, un titlu, etichete derivate din metadatele publice și o adresă URL publică pentru miniatură către Cloudflare Worker, astfel încât videoclipul să poată apărea pe o pagină de partajare și, dacă trece un control al calității, în harta site-ului. Nu vă solicităm să încărcați fișierul de imagine. Puteți utiliza extractorul fără acel index dacă solicitarea este blocată de browserul dvs.</p>"
+    },
+    {
+      "heading": "Istorie locală",
+      "html": "<p>Este posibil ca extractorul să salveze adrese URL recente în memoria locală a acestui browser, astfel încât să le puteți deschide din nou. Copia respectivă rămâne pe dispozitivul dvs. Ștergeți-o folosind controlul istoricului din pagină sau ștergând datele acestui site în browser. Nu este un cont cloud.</p>"
+    },
+    {
+      "heading": "Jurnalele de găzduire",
+      "html": "<p>Site-ul web, gazdele lingvistice și fișierele statice sunt deservite de furnizorii de găzduire utilizați pentru 11tik.com (inclusiv Cloudflare și GitHub Pages). Acești furnizori de găzduire pot păstra jurnale web obișnuite, cum ar fi adresa IP, tipul de browser și pagina solicitată, conform propriilor politici.</p>"
+    },
+    {
+      "heading": "Terțe părți",
+      "html": "<p>Fișierele miniatură sunt solicitate de la gazdele publice de imagini YouTube. Site-ul utilizează Google Analytics 4 (ID de măsurare G-FW7B8NDZZ5) pentru a număra vizitele și acțiunile din pagină, cum ar fi extragerea și descărcarea. Google poate seta cookie-uri sau identificatori similari. Adresele URL YouTube inserate nu sunt trimise ca parametri de evenimente analitice. Fonturile sau scripturile se pot încărca și din CDN-urile utilizate pentru afișarea paginii.</p>\n  <p>Formularul de contact este livrat de FormSubmit la adresa de e-mail a operatorului. FormSubmit poate vedea numele, adresa de e-mail și mesajul pe care îl trimiteți.</p>"
+    },
+    {
+      "heading": "Contact",
+      "html": "<p>Întrebări despre această politică: e-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>sau folosiți<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>formă.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

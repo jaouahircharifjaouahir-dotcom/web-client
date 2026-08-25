@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "tr",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "11tik Paylaşım Bağlantıları Nasıl Çalışır: /thumb/{VIDEO_ID} ve YouTube İzleme URL'leri | 11tik",
+  "description": "11tik /thumb/{id} bir paylaşım sonuç sayfasıdır. Bu bir YouTube izleme URL'si veya doğrudan bir i.ytimg.com resim dosyası değildir.",
+  "h1": "11tik Paylaşım Bağlantıları Nasıl Çalışır: /thumb/{VIDEO_ID} ve YouTube İzleme URL'leri",
+  "ogTitle": "11tik Paylaşım Bağlantıları Nasıl Çalışır: /thumb/{VIDEO_ID} ve YouTube İzleme URL'leri",
+  "ogDescription": "11tik /thumb/{id} bir paylaşım sonuç sayfasıdır. Bu bir YouTube izleme URL'si veya doğrudan bir i.ytimg.com resim dosyası değildir.",
+  "imageAlt": "YouTube izleme URL'si, 11tik küçük resim paylaşım URL'si ve doğrudan YouTube küçük resim URL'sini karşılaştıran diyagram.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "YouTube izleme URL'si, 11tik küçük resim paylaşım URL'si ve doğrudan YouTube küçük resim URL'sini karşılaştıran diyagram.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "İş akışı, 11tik paylaşım bağlantısının çıkarılmasını, önizlemesini, kopyalanmasını ve alıcının küçük resim sonuç sayfasını açmasını göstermektedir.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>Üç farklı URL aynı YouTube video kimliğini paylaşabilir. Bunlardan sadece biri resim dosyasıdır.</p>\n  <ol>\n    <li><strong>YouTube izleme URL'si</strong>— YouTube'daki videoyu açar.</li>\n    <li><strong>11tik URL'yi paylaş</strong>— o kimlik için 11tik çıkarıcı sonuç sayfasını açar (<code>/thumb/{VIDEO_ID}</code>Bu bir web sayfasıdır, JPEG/WebP dosyası değildir.</li>\n    <li><strong>Doğrudan küçük resim CDN URL'si</strong>— YouTube'un resim barındırma platformundaki herkese açık bir fotoğrafı işaret ediyor (örneğin)<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Herkese açık demo kimliğini kullanarak<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Üçüncü adres, doğrudan resim URL'si kalıbına bir örnektir. Bu belirli maxres dosyasının her video için geçerli olması garanti edilmez; gerçek boyutları doğrulamak için lütfen kontrol edin.<a href=\"https://www.11tik.com/\">11tik</a>veya<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault kılavuzu</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Aynı video kimliği, üç iş: videoyu izlemek, 11tik sonuç sayfasını açmak veya hala bir CDN isteğinde bulunmak.</p>"
+    },
+    {
+      "heading": "/thumb/{VIDEO_ID} nedir?",
+      "html": "<p>11tik'de, tek videodan başarılı bir şekilde çıkarma işlemi, tarayıcı adresini şu şekilde bir yola günceller:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Bu yol, ürünün paylaşım/sonuç URL'sidir. Video kimliğinden oluşturulur (sitenin paylaşım yardımcılarına bakın) ve bu kimliğe odaklanan çıkarıcıyı yeniden açmak içindir. Daha eski sorgu tarzı bağlantılar, örneğin,<code>?v=VIDEO_ID</code>Aynı fikre derin bağlantılar olarak ele alınırlar ve yeniden yazılabilirler.<code>/thumb/</code>biçim.</p>\n  <p><code>/thumb/…</code>dır<strong>Olumsuz</strong>YouTube'un resim CDN'sinde barındırılıyor. Açıldığında asla kendi başına bir resim indirilmiyor; bunun yerine o kimlik için 11tik uygulama rotası yükleniyor.</p>"
+    },
+    {
+      "heading": "Bu sayfanın var olma nedeni",
+      "html": "<p>İnsanların, uzun bir izleme URL'sini sohbete yapıştırmak ve alıcının ne yapacağını bilmesini ummak zorunda kalmadan, \"bu videonun küçük resim sonucu 11tik\" şeklinde bir mesajı yeniden açmak veya göndermek için istikrarlı bir yönteme ihtiyaçları var. Paylaşım sayfası, konuşmayı çıkarıcıda tutar: aynı kimlik, aynı herkese açık iş akışı, indirme ve kopyalama işlemleri tek bir yerde.</p>\n  <p>Ayrıca ana sayfa aracının URL'sini de temiz tutar. Pazarlama ana sayfası genel çıkarıcı olarak kalır;<code>/thumb/{id}</code>Belirli bir kimlik numarasına ait derin bağlantıdır.</p>"
+    },
+    {
+      "heading": "Kullanıcı açtığında ne görür?",
+      "html": "<p>Açılış<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>11tik tek sayfalık uygulamayı küçük resim yolunda yükler. Uygulama, yoldan 11 karakterlik kimliği okur, çıkarıcıyı eşleşen izleme URL'siyle besler ve bu kimlik için genel küçük resim keşif geçişini çalıştırır. Genel resimler mevcut olduğunda, olağan önizleme, kalite listesi, indirme işlemleri ve paylaşım kontrolleri görünür. Mevcut olmadığında, manuel yapıştırmada olduğu gibi boş/genel bulunamadı sonucu alırsınız.</p>\n  <p>Araç arayüzünün üstünde, o kimlik için kısa bir yönlendirme başlığı ve giriş metni de görebilirsiniz. Bu içerik sonuç sayfasını tanımlar; ham bir görüntü yanıtı değil, site deneyiminin bir parçasıdır.</p>"
+    },
+    {
+      "heading": "11tik bağlantısını nasıl kopyalayabilirim?",
+      "html": "<ol>\n    <li>Açık<a href=\"https://www.11tik.com/\">11tik</a>ve herkese açık bir YouTube URL'si yapıştırın (veya mevcut bir URL'yi açın)<code>/thumb/</code>bağlantı).</li>\n    <li>Çıkarma işlemi bitene ve en iyi halka açık fotoğraf gösterilene kadar bekleyin.</li>\n    <li>Sayfada bulunan ve paylaşım bağlantısı için etiketlenmiş paylaşım denetimini kullanın (paylaşım bağlantısını kopyala). Değer şu şekilde görünür:<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Bu URL'yi gönderin. Alıcı sonuç sayfasına yönlendirilecek ve aynı genel denetimi yeniden çalıştırabilecektir.</li>\n  </ol>\n  <p>Toplu veri çıkarma işlemleri, başarılı her video kimliği için (CSV dışa aktarma sütunları dahil) bir paylaşım URL'si ortaya çıkarabilir. Her kimlik kendi URL'sini korur.<code>/thumb/</code>Bağlantıların ilk sonuca çökmemesi için yol.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Paylaşım iş akışı: çıkar → önizle → kopyala<code>/thumb/{id}</code>→ Alıcı sonuç sayfasını açar.</p>"
+    },
+    {
+      "heading": "URL karşılaştırma tablosu",
+      "html": "<table>\n    <thead>\n      <tr><th>URL türü</th><th>Örnek</th><th>Ne açılıyor</th><th>Bu bir resim dosyası mı?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>YouTube izle</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTube oynatıcısı / izleme sayfası</td><td>HAYIR</td></tr>\n      <tr><td>11tik paylaş</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik o kimlik için çıkarıcı sonucu</td><td>HAYIR</td></tr>\n      <tr><td>Doğrudan CDN hala</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Görüntü baytları (dosya mevcutsa)</td><td>Evet</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Üç URL'nin pratikteki farklılıkları nelerdir?",
+      "html": "<h3>URL'yi izle vs 11tik paylaşım URL'si</h3>\n  <p>YouTube'da videoyu izlemek veya tartışmak amaçlandığında izleme URL'sini paylaşın. Küçük resim çıkarma sonucunu (önizlemeler, indirmeler ve doğrulanmış genel boyutlar) bir başkasından önce çıkarıcıyı bulmasını istemeden yeniden açmak amaçlandığında 11tik URL'sini paylaşın.</p>\n  <h3>11tik paylaşım URL'si ile doğrudan resim URL'si karşılaştırması</h3>\n  <p>Doğrudan resim URL'si, yapıştırmanız gereken şeydir.<code>&lt;img src&gt;</code>Dosyanın varlığını onayladıktan sonra CMS medya kütüphanelerine veya tasarım araçlarına CDN URL'leri ekleyebilirsiniz. Bu CDN URL'lerinin kimlikten nasıl oluşturulduğu ise ilgili ekibin görevidir.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>11tik paylaşım URL'si hiçbir zaman resim adresinin yerini almaz: alıcılar, dosyanın kendisine ihtiyaç duyduklarında araç içindeki \"Resim URL'sini İndir\" veya \"Resim URL'sini Kopyala\" seçeneklerini kullanmaya devam ederler.</p>\n  <h3>İzleme URL'si ile doğrudan resim URL'si arasındaki fark</h3>\n  <p>İzleme URL'si videoyu tanımlar. Görüntü URL'si ise herkese açık bir türevi tanımlar. Bunlar birbirinin yerine kullanılamaz, bu yüzden tahmin etmek zordur.<code>maxresdefault.jpg</code>İzleme sayfası çalışsa bile çoğu zaman başarısız olur.</p>"
+    },
+    {
+      "heading": "Hangi bağlantıyı ne zaman paylaşmalı?",
+      "html": "<ul>\n    <li><strong>YouTube izleme bağlantısını paylaşın</strong>Videoyu izlemek, yorum yapmak veya alıntı yapmak için.</li>\n    <li><strong>11tik'yi paylaşın<code>/thumb/</code>URL</strong>Çıkarma sonucuna, kalite listesine veya herkese açık fotoğrafın hızlı bir şekilde yeniden indirilmesine ihtiyaç duyan işbirlikçiler için.</li>\n    <li><strong>Doğrudan resim URL'sini / indirilen dosyayı paylaşın veya barındırın.</strong>Blogda yer alan görseller, Open Graph ve tasarım örnekleri için onay alındıktan sonra erişim sağlanır. Bkz.<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kılavuzu indir</a>Ve<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">boyut ve çözünürlük kılavuzu</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Video kimliğinin bu üçünü nasıl birbirine bağladığı",
+      "html": "<p>Her şey aynı 11 karakterlik kimliğe bağlı. İzleme URL'leri bunu içeriyor.<code>v=</code>(veya Kısa/gömülü/canlı yol segmentleri). 11tik bunu içine yerleştirir<code>/thumb/{id}</code>CDN hala onu arasına koyuyor.<code>/vi/</code>(veya<code>/vi_webp/</code>) ve dosya boyutu. Kimlik yanlışsa, üçü de farklı şekillerde bozulur: yanlış video, yanlış sonuç sayfası veya yanlış/eksik resim.</p>"
+    },
+    {
+      "heading": "Bu, çıkarıcı iş akışına nasıl uyuyor?",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Paylaşım bağlantısı, bu iş akışına bir yer imi görevi görür. Doğrulama işlemini atlamaz, 4K'yı icat etmez veya özel videoları herkese açık fotoğraflara dönüştürmez.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "https://www.11tik.com/thumb/VIDEO_ID doğrudan bir görüntü müdür?",
+      "answer": "Hayır. Bu, o video kimliği için bir 11tik sonuç sayfasıdır. Doğrudan görüntüler i.ytimg.com gibi sunucularda bulunur.",
+      "answerHtml": "<p>Hayır. Bu, o video kimliği için bir 11tik sonuç sayfasıdır. Doğrudan görüntüler, aşağıdaki gibi sunucularda bulunur:<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Birisi paylaşım bağlantımı açtıktan sonra ne olur?",
+      "answer": "11tik küçük resim yolunu yükler, kimliği okur, o kimlik için genel küçük resim kontrolünü çalıştırır ve genel resimler mevcut olduğunda sonuçlarla birlikte çıkarıcı arayüzünü gösterir.",
+      "answerHtml": "<p>11tik küçük resim yolunu yükler, kimliği okur, o kimlik için genel küçük resim kontrolünü çalıştırır ve genel resimler mevcut olduğunda sonuçlarla birlikte çıkarıcı arayüzünü gösterir.</p>"
+    },
+    {
+      "question": "`img` etiketi içinde `/thumb/` bağlantısı verebilir miyim?",
+      "answer": "Yapmayın. Onaylanmış bir CDN görüntü URL'si veya indirdiğiniz bir dosyayı kullanın. Paylaşım yolu, görüntü baytları değil, bir HTML uygulama kabuğu döndürür.",
+      "answerHtml": "<p>Yapmayın. Onaylanmış bir CDN görüntü URL'si veya indirdiğiniz bir dosyayı kullanın. Paylaşım yolu, görüntü baytları değil, bir HTML uygulama kabuğu döndürür.</p>"
+    },
+    {
+      "question": "Küçük resim çıkardıktan sonra adres çubuğum neden değişti?",
+      "answer": "Tek bir video çıkarıldıktan sonra, 11tik paylaşım yolunu /thumb/{VIDEO_ID} ile senkronize eder, böylece mevcut sonuç kolayca kopyalanıp yeniden açılabilir.",
+      "answerHtml": "<p>Tek bir video çıkarımından sonra, 11tik paylaşım yolunu senkronize eder.<code>/thumb/{VIDEO_ID}</code>Dolayısıyla mevcut sonucu kopyalamak ve yeniden açmak kolaydır.</p>"
+    },
+    {
+      "question": "Shorts farklı bir paylaşım yolu mu kullanıyor?",
+      "answer": "Hayır. Kısa videolar hala 11 karakterlik bir kimliğe dönüşüyor. Paylaşım URL'si /thumb/{id} olarak kalıyor; sadece orijinal YouTube URL'sinin şekli farklıydı.",
+      "answerHtml": "<p>Hayır. Kısa dosyalar hala 11 karakterlik bir kimliğe dönüşüyor. Paylaşım URL'si aynı kalıyor.<code>/thumb/{id}</code>Sadece orijinal YouTube URL'sinin şekli farklıydı.</p>"
+    },
+    {
+      "question": "/thumb/{id} ifadesi, maxres URL'sini kopyalamakla aynı şey mi?",
+      "answer": "Hayır. Maxres (mevcut olduğunda) olası bir CDN dosyasıdır. Paylaşım sayfası, doğrulanmış genel boyutları listeler ve maxres eksik olduğunda diğer katmanları da içerebilir.",
+      "answerHtml": "<p>Hayır. Maxres (mevcut olduğunda) olası bir CDN dosyasıdır. Paylaşım sayfası, doğrulanmış genel boyutları listeler ve maxres eksik olduğunda diğer katmanları da içerebilir.</p>"
+    },
+    {
+      "question": "İzleme URL'leri ve resim URL'leri hakkında daha detaylı bilgi nerede bulunuyor?",
+      "answer": "Kimlik oluşturma → CDN kurulumu için küçük resim URL'si makalesini, dosyaları kaydetme için ise indirme makalesini kullanın.",
+      "answerHtml": "<p>Kullanın<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL'si makalesi</a>Kimlik doğrulama → CDN oluşturma için ve dosyaları kaydetmek için indirme makalesi.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Çözüm</h2>\n<p>Davranmak<code>/thumb/{VIDEO_ID}</code>11tik’nin paylaşım/sonuç adresi olarak: bir özeti yeniden açmak ve göndermek için kullanışlıdır, asla bir YouTube izleme bağlantısının veya doğrudan bağlantının yerine geçmez.<code>i.ytimg.com</code>Yine de, üç URL türünü de doğru bir şekilde ayırt edin ve indirmeleriniz, yerleştirmeleriniz ve işbirlikçi bağlantılarınız doğru kalsın.</p>\n  <p><a href=\"https://www.11tik.com/\">Herkese açık küçük resmi çıkarın ve 11tik paylaşım bağlantısını kopyalayın →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>Yaratıcıya ait referans:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Özel video küçük resimleri yükleyin</a>.</p>"
+}

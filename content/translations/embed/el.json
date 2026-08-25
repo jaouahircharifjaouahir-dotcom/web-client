@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "el",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Ενσωματώστε το εργαλείο εξαγωγής μικρογραφιών 11tik | 11tik",
+  "description": "Προσθέστε ένα δωρεάν εργαλείο εξαγωγής μικρογραφιών YouTube στο ιστολόγιό σας, στα έγγραφά σας ή στο κιτ εργαλείων δημιουργού. Το γραφικό στοιχείο φορτώνει από το 11tik και αλλάζει μόνο του μέγεθος. Δεν υπάρχει κλειδί API.",
+  "h1": "Ενσωματώστε το εργαλείο εξαγωγής μικρογραφιών 11tik",
+  "ogTitle": "Ενσωματώστε το εργαλείο εξαγωγής μικρογραφιών 11tik",
+  "ogDescription": "Προσθέστε ένα δωρεάν εργαλείο εξαγωγής μικρογραφιών YouTube στο ιστολόγιό σας, στα έγγραφά σας ή στο κιτ εργαλείων δημιουργού. Το γραφικό στοιχείο φορτώνει από το 11tik και αλλάζει μόνο του μέγεθος. Δεν υπάρχει κλειδί API.",
+  "imageAlt": "",
+  "faqHeading": "Συχνές ερωτήσεις",
+  "images": [],
+  "sections": [
+    {
+      "heading": "απόσπασμα iframe",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Κανόνες",
+      "html": "<ul>\n    <li>Κρατήστε το<code>id=\"yte-app\"</code>χαρακτηριστικό ώστε να λειτουργεί ο συγχρονισμός ύψους.</li>\n    <li>Μην τυλίγετε το iframe σε σταθερό ύψος που να ασφαλίζει τα κουμπιά λήψης.</li>\n    <li>Σύνδεση πίσω σε<a href=\"https://www.11tik.com/\">[[Σ1]]</a>βοηθά τους χρήστες να ανοίξουν το πλήρες εργαλείο.</li>\n  </ul>"
+    },
+    {
+      "heading": "Βαθιές συνδέσεις",
+      "html": "<p>Μοιραστείτε μια έτοιμη εξαγωγή με<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Ανοίξτε τον απορροφητήρα</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

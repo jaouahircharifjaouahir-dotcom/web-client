@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-08-24T22:25:00.000Z",
+  "architecture": "GTX-only simplified parallel pipeline",
+  "gtxSupportedLocales": 135,
+  "ignoredLocales": 47,
+  "contentItems": 23,
+  "totalTranslationJobs": 3105,
+  "throughput": {
+    "baselinePilotMs": 808546,
+    "baselinePilotMin": 13.5,
+    "sequentialBenchmarkMs": 603978,
+    "sequentialSecPerJob": 50.33,
+    "parallelBenchmarkMs": 170489,
+    "parallelSecPerJob": 14.21,
+    "speedupParallelVsSequential": 3.54,
+    "speedupParallelVsBaseline": 4.74,
+    "percentFasterVsSequential": 71.8,
+    "percentFasterVsBaseline": 78.9,
+    "parallelJobsPerSec": 0.07,
+    "failureRateBenchmark": 0
+  },
+  "parallelStrategy": {
+    "translateConcurrency": 4,
+    "gtxHttpConcurrency": 8,
+    "gtxRateLimitMs": 80,
+    "htmlFragmentsParallel": true,
+    "sharedGtxRateGate": true,
+    "removedTripleRateLimit": true
+  },
+  "workerRole": "Optional control-plane only (workers/i18n-orchestrator.js + wrangler.i18n-orchestrator.jsonc). NOT in 11tik-edge run_worker_first. Authenticated POST /i18n/plan returns batch slices; local Node runner executes GTX.",
+  "chosenArchitecture": "E/F hybrid — local parallel GTX runners + optional separate orchestrator Worker for batch planning/trigger. No Queue/Workflow (unnecessary for build-time workload).",
+  "hardware": { "cpus": 4, "ramGiB": 8, "cpuModel": "Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz" },
+  "rolloutEstimateHoursParallel": 12.3,
+  "rolloutEstimateHoursSequential": 43.4,
+  "rolloutStatus": "IN_PROGRESS",
+  "productionSafety": {
+    "wranglerJsoncRunWorkerFirstUnchanged": true,
+    "noLPathInRunWorkerFirst": true,
+    "workerVisitorTranslation": 0,
+    "noCommitNoPushNoDeploy": true
+  }
+}

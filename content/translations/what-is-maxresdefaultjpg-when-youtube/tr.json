@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "tr",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "maxresdefault.jpg nedir? Neden 404 hatası veriyor ve bunun yerine ne indirilmeli? | 11tik",
+  "description": "maxresdefault.jpg genellikle YouTube tarafından yayınlandığında 1280×720 çözünürlüğündedir. 404 hatası normaldir; tahmini dosya adını değil, bir sonraki gerçek herkese açık dosyayı kullanın.",
+  "h1": "maxresdefault.jpg nedir? Neden 404 hatası veriyor ve bunun yerine ne indirilmeli?",
+  "ogTitle": "maxresdefault.jpg nedir? Neden 404 hatası veriyor ve bunun yerine ne indirilmeli?",
+  "ogDescription": "maxresdefault.jpg genellikle YouTube tarafından yayınlandığında 1280×720 çözünürlüğündedir. 404 hatası normaldir; tahmini dosya adını değil, bir sonraki gerçek herkese açık dosyayı kullanın.",
+  "imageAlt": "Tahmini maxresdefault URL'sinden 404 hatasına ve ardından doğrulanmış bir sonraki YouTube küçük resim boyutuna kadar sorun giderme akışı.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Tahmini maxresdefault URL'sinden 404 hatasına ve ardından doğrulanmış bir sonraki YouTube küçük resim boyutuna kadar sorun giderme akışı.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "YouTube küçük resim dosya adlarının maxresdefault'tan default'a doğru sıralanışı, eksik basamakların atlandığını gösteriyor.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p><code>maxresdefault.jpg</code>YouTube'un resim CDN'sinde herkese açık bir küçük resim dosya adıdır. Dosya mevcut olduğunda, genellikle şu şekildedir:<strong>1280×720</strong>Bu,<strong>Olumsuz</strong>Her video için garantilidir. 404 hatası (veya küçük gri bir yer tutucu), söz konusu video kimliği için türetilmiş içeriğin hiç yayınlanmadığı anlamına gelir. İzleme URL'sini yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>ve listelenen ilk boyutu indirin—araç zaten eksik isimleri atladı ve hayatta kalanları şu şekilde sıraladı:<code>hq720</code>,<code>sddefault</code>, veya<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Eksik bir maxres dosyası, yedekleme kaynaklı bir sorundur, videonun küçük resminin olmadığına dair bir kanıt değildir.</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg nedir?",
+      "html": "<p>Bu bir dosya adı, sihirli bir kalite garantisi değil. Normal JPEG adresleri şöyle görünür:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>YouTube ayrıca bir WebP ikizini de yayınladığında, 11tik şunları kontrol eder:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>İkisi de oturuyor.<code>i.ytimg.com</code>Bunlar hareketsiz görüntülerdir; video akışı, stüdyo özel dışa aktarımı veya 4K ana dosya değildir. Piksel beklentileri ve diğer boyutlar ilgili bölümde ele alınmıştır.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Küçük resim boyutu ve çözünürlük kılavuzu</a>URL oluşturma konusu şu bölümde ele alınmaktadır:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Gerçek bir YouTube videosu neden hala maxres için 404 hatası verebiliyor?",
+      "html": "<ul>\n    <li>Eski yüklemeler hiçbir zaman maksimum çözünürlük türevi almadı.</li>\n    <li>Özel küçük resim kaynağı 1280×720'den daha küçüktü.</li>\n    <li>Stüdyo hala yeni bir özel yüklemeyi işliyor.</li>\n    <li>Bazı kısa videolar ve otomatik olarak oluşturulan fotoğraflar orta boyutlarda duruyor.</li>\n    <li>Video kısıtlı erişime açık ve hiçbir şekilde kamuya açık fotoğraflar içermiyor.</li>\n  </ul>\n  <p>Çalışır durumda bir izleme sayfası yalnızca video kimliğinin geçerli olduğunu kanıtlar. Her dosya adının geçerli olduğunu kanıtlamaz.<code>/vi/</code>mevcut.</p>"
+    },
+    {
+      "heading": "Mevcut olmayan bir varyantı nasıl tanıyabiliriz?",
+      "html": "<p>Aday URL'sini yeni bir sekmede açın. Başarısızlık durumları şöyle görünür:</p>\n  <ul>\n    <li>HTTP hatası / boş yanıt</li>\n    <li>Beklediğiniz 1280×720 çözünürlük yerine çok küçük, gri veya varsayılan bir kare görüntü.</li>\n    <li>Yüklenen ancak yüksek çözünürlüklü dosyanın eksikliği nedeniyle yer tutucu olarak kullanıldığı açıkça belli olan bir resim.</li>\n  </ul>\n  <p>11tik'nin tarayıcı doğrulayıcısı, görüntü yüklenmediğinde veya yüksek beklenen boyut küçük bir yer tutucuya (yaklaşık 120×90) düştüğünde adayları geçersiz olarak işaretler. Bu adaylar asla \"sahte HD\" kartlar olarak görünmez.</p>"
+    },
+    {
+      "heading": "Yedek varyantlar 11tik aslında kontrol eder",
+      "html": "<p>Kamu adaylarının başvuru sırası (en yüksekten en düşüğe):</p>\n  <table>\n    <thead>\n      <tr><th>Dosya adı</th><th>Yol deseni</th><th>Mevcut olduğunda tipik boyut</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 sınıfı</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Eksik satırlar atlanır. Listelenen ilk indirme, yazdığınız en uzun isim değil, en yüksek öncelikli olanıdır. WebP ve JPEG formatları arasındaki seçim şu bölümde açıklanmıştır:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP ve JPEG YouTube küçük resimleri</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dosya adlarını isteğe bağlı basamaklar olarak değerlendirin. Gerçek bir görüntü yanıt verene kadar aşağı doğru inin.</p>"
+    },
+    {
+      "heading": "11tik kullanılabilirliği nasıl kontrol eder?",
+      "html": "<ol>\n    <li>Herkese açık bir izleme, kısa video, canlı yayın, gömülü yayın veya youtu.be URL'sinden 11 karakterlik kimliği ayrıştırın.</li>\n    <li>Yukarıdaki önceden belirlenmiş listeden aday URL'ler oluşturun.</li>\n    <li>Her adayı tarayıcıda resim olarak yükleyin.</li>\n    <li>Yalnızca yer tutucu olmayan başarılı sonuçları saklayın; kademeye, piksel sayısına ve küçük bir WebP puanı ayarlamasına göre sıralayın.</li>\n    <li>Sıralı listeyi gösterin, böylece çalışan bir URL'yi indirebilir veya kopyalayabilirsiniz.</li>\n  </ol>\n  <p>Bu nedenle, tahmin edilen maksimum çözünürlük bağlantıları başarısız olduğunda kullanıcı arayüzünden kaybolur: çıkarıcı 1280×720 çözünürlüğünde bir dosya oluşturmayı reddeder.</p>"
+    },
+    {
+      "heading": "Pratik sorun giderme kontrol listesi",
+      "html": "<ol>\n    <li>Videonun herkese açık olduğunu ve kimliğin doğru olduğunu doğrulayın.</li>\n    <li>Test<code>maxresdefault.jpg</code>Bir kere dene. Başarısız olursa, tahmin etmeyi bırak.</li>\n    <li>Aynı bağlantıyı buraya yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Listelenen ilk fotoğrafı indirin veya fotoğrafın URL'sini kopyalayın.</li>\n    <li>Eğer hiçbir şey görünmüyorsa, video özel olabilir, silinmiş olabilir, yaş sınırlaması getirilmiş olabilir veya herkese açık fotoğraflar içermiyor olabilir.</li>\n    <li>CMS kullanımı için, doğrulanmış bir dosyanın barındırılan kopyasını, doğrudan bağlantı verilen bir CDN yoluna tercih edin. Bkz.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Open Graph kılavuzu</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Sık yapılan hatalar",
+      "html": "<ul>\n    <li>Popüler bir videonun maksimum çözünürlüğe sahip olması nedeniyle, her videonun maksimum çözünürlüğe sahip olduğunu varsayıyoruz.</li>\n    <li>Sabit kodlama<code>maxresdefault.jpg</code>Üretim HTML'sinde kontrol yapılmadan.</li>\n    <li>Uzatılmış bir çağrı<code>hqdefault</code>“makslar.”</li>\n    <li>Oyuncu ekran görüntüsünü CDN hala dosyasıyla karıştırmak —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ekran görüntüsü ile gerçek küçük resim karşılaştırması</a>.</li>\n    <li>4K bekleniyor. Genel olarak, mevcut olduğunda maksimum çözünürlük 1280×720'dir.<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">en yüksek kalitede rehber</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sonraki adım",
+      "html": "<p>Herkese açık bir YouTube URL'sini buraya yapıştırın.<a href=\"https://www.11tik.com/\">ekstraktör</a>Eğer maxres dosyası yoksa, bir sonraki gerçek fotoğrafı saklayın; bu, o videonun gerçek HD dosyasıdır.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır. Sadece herkese açık fotoğraflar; video indirme yok.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "404 hatası, videonun hiç küçük resminin olmadığı anlamına mı geliyor?",
+      "answer": "Hayır. Genellikle bir dosya adının eksik olduğu anlamına gelir. Orta boyutlu dosyalar genellikle hala mevcuttur.",
+      "answerHtml": "<p>Hayır. Genellikle bir dosya adının eksik olduğu anlamına gelir. Orta boyutlu dosyalar genellikle hala mevcuttur.</p>"
+    },
+    {
+      "question": "HQ720, MaxResDefault için iyi bir alternatif mi?",
+      "answer": "Doğrulama başarılı olursa, evet, aynı yüksek çözünürlük seviyesinde (~1280×720) yer alır. Ancak bu da garanti edilmez.",
+      "answerHtml": "<p>Doğrulama başarılı olursa, evet, aynı yüksek çözünürlük seviyesinde (~1280×720) yer alır. Ancak bu da garanti edilmez.</p>"
+    },
+    {
+      "question": "Maxresdefault'u daha sonra tekrar denemeli miyim?",
+      "answer": "Evet, Studio'da yeni bir özel yükleme işlemi tamamlandıktan sonra. Aksi takdirde, doğrulanmış yedek dosyayı saklayın.",
+      "answerHtml": "<p>Evet, Studio'da yeni bir özel yükleme işlemi tamamlandıktan sonra. Aksi takdirde, doğrulanmış yedek dosyayı saklayın.</p>"
+    },
+    {
+      "question": "Maxres çözünürlüğü WebP formatında olabilirken JPEG formatında olmayabilir mi?",
+      "answer": "Evet. 11tik, /vi_webp/ altında WebP maxres'i ayrı olarak kontrol eder. Bunlardan biri, ikisi birden veya hiçbiri mevcut olmayabilir.",
+      "answerHtml": "<p>Evet. 11tik, WebP maxres'i ayrı olarak kontrol eder.<code>/vi_webp/</code>İkisi de, her ikisi de veya hiçbiri mevcut olabilir.</p>"
+    },
+    {
+      "question": "Bazı araçlar neden hala bozulabilen bir maxres kartı gösteriyor?",
+      "answer": "Görüntüyü yüklemeden şablon URL'sini yazdırıyorlar. 11tik yalnızca görüntü olarak yanıt veren dosyaları listeliyor.",
+      "answerHtml": "<p>Görüntüyü yüklemeden şablon URL'sini yazdırıyorlar. 11tik yalnızca görüntü olarak yanıt veren dosyaları listeliyor.</p>"
+    },
+    {
+      "question": "Yedek dosyayı hızlıca nasıl indirebilirim?",
+      "answer": "İndirme kılavuzunu kullanın: listede yer alan ilk dosyayı yapıştırın, çıkarın ve kaydedin.",
+      "answerHtml": "<p>Kullanın<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kılavuzu indir</a>: Listelenen ilk dosyayı yapıştırın, çıkarın ve kaydedin.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır. Sadece herkese açık fotoğraflar; video indirme yok.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+}

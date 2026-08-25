@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "ja",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "11tikの共有リンクの仕組み：/thumb/{VIDEO_ID}とYouTube視聴URLの比較 | 11tik",
+  "description": "11tik /thumb/{id} は共有結果ページです。YouTube の視聴 URL ではなく、直接の i.ytimg.com 画像ファイルでもありません。",
+  "h1": "11tik共有リンクの仕組み：/thumb/{VIDEO_ID}とYouTube視聴URLの比較",
+  "ogTitle": "11tik共有リンクの仕組み：/thumb/{VIDEO_ID}とYouTube視聴URLの比較",
+  "ogDescription": "11tik /thumb/{id} は共有結果ページです。YouTube の視聴 URL ではなく、直接の i.ytimg.com 画像ファイルでもありません。",
+  "imageAlt": "YouTubeの視聴URL、11tikサムネイル共有URL、およびYouTubeサムネイル画像の直接URLを比較した図",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "YouTubeの視聴URL、11tikサムネイル共有URL、およびYouTubeサムネイル画像の直接URLを比較した図",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "抽出、プレビュー、コピー11tik共有リンク、受信者がサムネイル結果ページを開くワークフロー",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "簡単な回答",
+      "html": "<p>3つの異なるURLが同じYouTube動画IDを共有できます。そのうち画像ファイルは1つだけです。</p>\n  <ol>\n    <li><strong>YouTube視聴URL</strong>— YouTubeで動画を開きます。</li>\n    <li><strong>11tik共有URL</strong>— そのIDの11tik抽出結果ページを開きます（<code>/thumb/{VIDEO_ID}</code>これはウェブページであり、JPEG/WebPファイルではありません。</li>\n    <li><strong>サムネイルの直接CDN URL</strong>— YouTube の画像ホスト上の公開静止画を指し示す (例:<code>i.ytimg.com</code>)</li>\n  </ol>\n  <p>公開デモIDを使用する<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>3 番目のアドレスは、直接画像 URL パターンの例です。その特定の maxres ファイルはすべてのビデオで保証されているわけではありません。実際のサイズについては、<a href=\"https://www.11tik.com/\">11tik</a>または<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault ガイド</a>。</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">同じビデオ ID で、3 つのジョブを実行します: ビデオを視聴する、11tik 結果ページを開く、または CDN の静止画をリクエストします。</p>"
+    },
+    {
+      "heading": "/thumb/{VIDEO_ID} とは",
+      "html": "<p>11tikでは、単一ビデオの抽出が成功すると、ブラウザのアドレスが次のようなパスに更新されます。</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>そのパスは製品の共有/結果 URL です。これはビデオ ID (サイトの共有ヘルパーを参照) から生成され、その ID に焦点を当てた抽出ツールを再度開くことを目的としています。古いクエリ形式のリンクなど<code>?v=VIDEO_ID</code>同じアイデアへの深いリンクとして扱われ、<code>/thumb/</code>形状。</p>\n  <p><code>/thumb/…</code>は<strong>ない</strong>YouTube の画像 CDN でホストされています。これを開いても画像自体はダウンロードされず、その ID の 11tik アプリのルートが読み込まれます。</p>"
+    },
+    {
+      "heading": "このページが存在する理由",
+      "html": "<p>人々は、長い視聴URLをチャットに貼り付けて受信者が次に何をすべきかを知っていることを期待することなく、「11tik上のこの動画のサムネイル結果」を再度開いたり送信したりするための安定した方法を必要としています。共有ページでは、会話は抽出ツール上で完結します。同じID、同じ公開静止画ワークフロー、ダウンロードとコピー操作がすべて1か所で行えます。</p>\n  <p>また、ホームページツールのURLをクリーンに保ちます。マーケティングホームページは、一般的な抽出ツールとして機能します。<code>/thumb/{id}</code>これは特定のIDへのディープリンクです。</p>"
+    },
+    {
+      "heading": "ユーザーがそれを開いたときに目にするもの",
+      "html": "<p>オープニング<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>サムネイルのルートで11tikシングルページアプリを読み込みます。アプリはパスから11文字のIDを読み取り、一致するウォッチURLを抽出器にシードし、そのIDに対して公開サムネイル検出処理を実行します。公開されている静止画が存在する場合は、通常のプレビュー、品質リスト、ダウンロード操作、共有コントロールが表示されます。存在しない場合は、手動で貼り付けた場合と同じ「空/公開が見つかりません」という結果になります。</p>\n  <p>ツールUIの上部に、そのIDに対応する短いサムネイル見出しとリードテキストが表示される場合もあります。このコンテンツは結果ページの説明であり、生の画像レスポンスではなく、サイト体験の一部です。</p>"
+    },
+    {
+      "heading": "11tikリンクをコピーする方法",
+      "html": "<ol>\n    <li>開ける<a href=\"https://www.11tik.com/\">11tik</a>そして公開されている YouTube URL を貼り付ける (または既存の<code>/thumb/</code>リンク）。</li>\n    <li>抽出が完了し、最適な静止画が表示されるまでお待ちください。</li>\n    <li>共有リンク（共有リンクをコピー）にラベル付けされたページ上の共有コントロールを使用します。値は次のようになります。<code>https://www.11tik.com/thumb/VIDEO_ID</code>。</li>\n    <li>そのURLを送信してください。受信者は結果ページにアクセスし、同じ公開チェックを再度実行できます。</li>\n  </ol>\n  <p>一括抽出では、成功したビデオ ID ごとに 1 つの共有 URL を公開できます (CSV エクスポート列にも含まれます)。各 ID は独自の共有 URL を保持します。<code>/thumb/</code>リンクが最初の結果に重ならないようにパスを指定します。</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">ワークフローの共有：抽出 → プレビュー → コピー<code>/thumb/{id}</code>→受信者は結果ページを開きます。</p>"
+    },
+    {
+      "heading": "URL比較表",
+      "html": "<table>\n    <thead>\n      <tr><th>URLタイプ</th><th>例</th><th>何が開くのか</th><th>画像ファイルですか？</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>YouTube を見る</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>YouTubeプレーヤー／視聴ページ</td><td>いいえ</td></tr>\n      <tr><td>11tik シェア</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>11tik そのIDの抽出結果</td><td>いいえ</td></tr>\n      <tr><td>ダイレクトCDNは依然として</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>画像バイト（ファイルが存在する場合）</td><td>はい</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "3つのURLの実際の違い",
+      "html": "<h3>視聴URLと11tik共有URLの比較</h3>\n  <p>YouTubeで動画を視聴したり議論したりすることが目的の場合は、視聴用URLを共有してください。サムネイル抽出結果（プレビュー、ダウンロード、検証済みの公開サイズなど）を、抽出ツールを探す手間をかけずに再度開きたい場合は、11tik URLを共有してください。</p>\n  <h3>11tik 共有URLと直接画像URLの比較</h3>\n  <p>直接画像のURLは、貼り付けるものです。<code>&lt;img src&gt;</code>ファイルが存在することを確認した後、CMS メディアライブラリまたはデザインツールを使用します。これらの CDN URL が ID からどのように構築されるかは、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>11tik共有URLは画像アドレスを置き換えるものではありません。受信者は、ファイル自体が必要な場合は、ツール内の「画像URLをダウンロード」または「画像URLをコピー」を引き続き使用します。</p>\n  <h3>視聴URLと直接画像URLの比較</h3>\n  <p>ウォッチ URL は動画を識別します。イメージ URL は公開されている派生作品を識別します。これらは互換性がないため、推測することはできません。<code>maxresdefault.jpg</code>ウォッチページが正常に動作している場合でも、しばしば失敗する。</p>"
+    },
+    {
+      "heading": "どのリンクをいつ共有するか",
+      "html": "<ul>\n    <li><strong>YouTubeの視聴URLを共有する</strong>動画の視聴、コメント、引用のために。</li>\n    <li><strong>11tikを共有する<code>/thumb/</code>URL</strong>抽出結果、品質リスト、または公開静止画の迅速な再ダウンロードが必要な共同作業者向け。</li>\n    <li><strong>画像の直接URLまたはダウンロードしたファイルを共有またはホストする</strong>ブログの注目画像、Open Graph、デザイン案については、確認後。<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>そして<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズと解像度ガイド</a>。</li>\n  </ul>"
+    },
+    {
+      "heading": "ビデオIDが3つすべてを繋ぐ方法",
+      "html": "<p>すべては同じ11文字のIDに依存している。URLがそれを運ぶのを見てください<code>v=</code>（またはショート/埋め込み/ライブパスセグメント）。11tikはそれを<code>/thumb/{id}</code>. CDN はまだそれを間に置きます<code>/vi/</code>（または<code>/vi_webp/</code>）とサイズファイル名。IDが間違っている場合、3つすべてが異なる形でエラーになります。間違ったビデオ、間違った結果ページ、または間違った/欠落した画像。</p>"
+    },
+    {
+      "heading": "これが抽出ワークフローにどのように適合するか",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>共有リンクは、そのワークフローへのブックマークのようなものです。検証を省略したり、4K解像度を作り出したり、プライベート動画を公開静止画に変換したりするものではありません。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "https://www.11tik.com/thumb/VIDEO_IDは直接像ですか？",
+      "answer": "いいえ。これはそのビデオ ID の 11tik 結果ページです。直接の画像は i.ytimg.com などのホストにあります。",
+      "answerHtml": "<p>いいえ。これはそのビデオIDの11tik結果ページです。直接画像は、次のようなホストにあります。<code>i.ytimg.com</code>。</p>"
+    },
+    {
+      "question": "誰かが私の共有リンクを開いた後、どうなりますか？",
+      "answer": "11tikはサムネイルのルートを読み込み、IDを読み取り、そのIDの公開サムネイルチェックを実行し、公開静止画が存在する場合は結果とともに抽出器UIを表示します。",
+      "answerHtml": "<p>11tikはサムネイルのルートを読み込み、IDを読み取り、そのIDの公開サムネイルチェックを実行し、公開静止画が存在する場合は結果とともに抽出器UIを表示します。</p>"
+    },
+    {
+      "question": "imgタグの中に/thumb/へのホットリンクを貼ることはできますか？",
+      "answer": "使用しないでください。確認済みのCDN画像URL、またはダウンロードしたファイルを使用してください。共有パスはHTMLアプリシェルを返すため、画像バイトは返されません。",
+      "answerHtml": "<p>使用しないでください。確認済みのCDN画像URL、またはダウンロードしたファイルを使用してください。共有パスはHTMLアプリシェルを返すため、画像バイトは返されません。</p>"
+    },
+    {
+      "question": "サムネイルを抽出した後、アドレスバーが変わったのはなぜですか？",
+      "answer": "単一ビデオの抽出後、11tikは共有パスを/thumb/{VIDEO_ID}に同期するため、現在の結果を簡単にコピーして再度開くことができます。",
+      "answerHtml": "<p>単一ビデオ抽出後、11tikは共有パスを同期します。<code>/thumb/{VIDEO_ID}</code>そのため、現在の結果は簡単にコピーして再度開くことができます。</p>"
+    },
+    {
+      "question": "空売りは別の共有パスを使用しますか？",
+      "answer": "いいえ。ショート動画は引き続き11文字のIDに解決されます。共有URLは/thumb/{id}のままです。元のYouTube URLの形式だけが異なっていました。",
+      "answerHtml": "<p>いいえ。ショートは引き続き11文字のIDに解決されます。共有URLはそのままです。<code>/thumb/{id}</code>元のYouTube URLの形状だけが異なっていた。</p>"
+    },
+    {
+      "question": "/thumb/{id} は、maxres URL をコピーするのと同じですか？",
+      "answer": "いいえ。Maxres（存在する場合）は、CDNファイルの一つです。共有ページには、検証済みの公開サイズが一覧表示され、Maxresが存在しない場合は他のティアが含まれる場合があります。",
+      "answerHtml": "<p>いいえ。Maxres（存在する場合）は、CDNファイルの一つです。共有ページには、検証済みの公開サイズが一覧表示され、Maxresが存在しない場合は他のティアが含まれる場合があります。</p>"
+    },
+    {
+      "question": "ウォッチURLと画像URLについて、より詳しい説明はどこで入手できますか？",
+      "answer": "ID→CDN構築にはサムネイルURLの記事を、ファイルの保存にはダウンロードの記事を使用してください。",
+      "answerHtml": "<p>使用する<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURL記事</a>ID → CDN構築については、およびファイルの保存に関するダウンロード記事を参照してください。</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>結論</h2>\n<p>扱う<code>/thumb/{VIDEO_ID}</code>11tikの共有/結果アドレスとして：抽出を再開して送信するのに役立ちますが、YouTubeの視聴リンクや直接の代替としては決して使用しないでください。<code>i.ytimg.com</code>それでも、3種類のURLを正しく使い分ければ、ダウンロード、埋め込み、共同作業者リンクの精度を維持できます。</p>\n  <p><a href=\"https://www.11tik.com/\">公開されているサムネイルを抽出して、11tik共有リンクをコピーします →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>作成者参照:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>。</p>"
+}

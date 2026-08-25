@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "vi",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Liên hệ | 11tik",
+  "description": "Sử dụng biểu mẫu này để đặt câu hỏi về Trình trích xuất hình thu nhỏ YouTube. Tin nhắn sẽ được gửi đến người điều hành 11tik qua email. Không gửi tệp video hoặc âm thanh. Công cụ này chỉ hoạt động với hình ảnh thu nhỏ công khai.",
+  "h1": "Liên hệ",
+  "ogTitle": "Liên hệ",
+  "ogDescription": "Sử dụng biểu mẫu này để đặt câu hỏi về Trình trích xuất hình thu nhỏ YouTube. Tin nhắn sẽ được gửi đến người điều hành 11tik qua email. Không gửi tệp video hoặc âm thanh. Công cụ này chỉ hoạt động với hình ảnh thu nhỏ công khai.",
+  "imageAlt": "",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Liên hệ",
+      "html": "<h1>Liên hệ</h1>\n  <p class=\"yte-updated\">Cập nhật lần cuối: ngày 22 tháng 8 năm 2026</p>\n  <p itemprop=\"description\">Sử dụng biểu mẫu này để đặt câu hỏi về Trình trích xuất hình thu nhỏ YouTube. Tin nhắn sẽ được gửi đến người điều hành 11tik qua email. Không gửi tệp video hoặc âm thanh. Công cụ này chỉ hoạt động với hình ảnh thu nhỏ công khai.</p>\n  <p>Gửi email trực tiếp:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>Đối với báo cáo về một video cụ thể, hãy bao gồm URL YouTube công khai. 11tik không lưu trữ tệp hình thu nhỏ; hình ảnh được yêu cầu từ CDN công khai của nền tảng.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Tên<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>E-mail<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Tin nhắn<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Gửi tin nhắn</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Công cụ trích xuất hình thu nhỏ YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Chính sách bảo mật</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

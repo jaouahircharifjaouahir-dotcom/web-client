@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "de",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "So speicherst du ein YouTube-Thumbnail auf iPhone und Android (2026) | 11tik",
+  "description": "Speichere das öffentliche YouTube-Standbild auf deinem iPhone oder Android-Gerät ohne Screenshot und ohne App-Store-Downloader. Füge dazu eine öffentliche Wiedergabe- oder Shorts-URL in 11tik in Safari oder Chrome ein und lade anschließend die größte Bilddatei herunter, die YouTube bereits bereitstellt.",
+  "h1": "So speichert man ein YouTube-Thumbnail auf iPhone und Android (2026)",
+  "ogTitle": "So speichert man ein YouTube-Thumbnail auf iPhone und Android (2026)",
+  "ogDescription": "Speichere das öffentliche YouTube-Standbild auf deinem iPhone oder Android-Gerät ohne Screenshot und ohne App-Store-Downloader. Füge dazu eine öffentliche Wiedergabe- oder Shorts-URL in 11tik in Safari oder Chrome ein und lade anschließend die größte Bilddatei herunter, die YouTube bereits bereitstellt.",
+  "imageAlt": "Speichere ein YouTube-Thumbnail auf iPhone und Android mit 11tik – öffentlich noch nicht verfügbar, keine App.",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Speichere ein YouTube-Thumbnail auf iPhone und Android mit 11tik – öffentlich noch nicht verfügbar, keine App.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kann ich ein YouTube-Thumbnail auf meinem Handy speichern?",
+      "html": "<p>Ja, sofern das Video öffentlich ist und YouTube ein Standbild veröffentlicht hat. Sie benötigen weder einen Desktop-Computer noch eine APK- oder TestFlight-App. Öffnen<a href=\"https://www.11tik.com/\">11tik</a>Fügen Sie den Link in Ihrem gewohnten Browser ein, tippen Sie auf „Miniaturbild abrufen“ und speichern Sie die erste angezeigte Datei. Diese Datei ist das beste öffentlich verfügbare JPEG- oder WebP-Bild, das tatsächlich ein Bild liefert.</p>\n  <p>Ein Screenshot des Spielers durch langes Drücken ist nicht dasselbe. Der Screenshot enthält Rahmen, Sicherheitsbalken und zusätzliche Komprimierung. Die Öffentlichkeit ist weiterhin auf i.ytimg.com aktiv. Siehe<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Screenshot vs. echtes Vorschaubild</a>Falls Sie diese Unterscheidung für einen Blog oder ein Open Graph-Tag benötigen.</p>"
+    },
+    {
+      "heading": "Was Sie vor dem Start benötigen",
+      "html": "<ul>\n    <li>Eine öffentliche YouTube-URL (Watch, Shorts, Live oder youtu.be). Zusätzliche Abfrageparameter wie z. B.<code>pp=</code>oder eine Playlist-ID spielt keine Rolle; 11tik liest die 11-stellige Video-ID.</li>\n    <li>Safari auf dem iPhone oder iPad oder Chrome, Firefox oder Samsung Internet auf Android-Geräten.</li>\n    <li>Die Berechtigung zum Speichern von Fotos wird erteilt, falls der Browser danach fragt. 11tik lädt das Bild niemals als Originalmedium auf einen 11tik-Server hoch.</li>\n  </ul>\n  <p>Private, nur für Mitglieder zugängliche oder altersbeschränkte Videos, für die kein öffentliches Standbild veröffentlicht wird, werden nicht als Download angezeigt. Dies ist eine Plattformregel, keine Einschränkung des Telefons. Benutzerdefinierte Vorschaubilder, die noch in Studio verarbeitet werden, können ebenfalls kurzzeitig fehlen; überprüfen Sie dies später mit derselben URL. Siehe auch:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-Thumbnails im Jahr 2026</a>Die</p>"
+    },
+    {
+      "heading": "So speicherst du ein YouTube-Thumbnail auf dem iPhone",
+      "html": "<ol>\n    <li>In der YouTube-App oder in Safari den Video- oder Shorts-Link kopieren (Teilen → Link kopieren).</li>\n    <li>Offen<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>in Safari. Sie müssen nichts installieren.</li>\n    <li>Fügen Sie die URL ein und tippen Sie auf „Miniaturbild abrufen“. Warten Sie, bis eine Vorschau angezeigt wird. Leere graue Kästchen bedeuten, dass diese Größe nie veröffentlicht wurde.</li>\n    <li>Tippen Sie auf das erste Download-Symbol. Safari bietet Ihnen die Optionen „Öffnen“ oder „Herunterladen“ an. Wählen Sie „Herunterladen“ und speichern Sie das Bild anschließend in „Dateien“ oder über das Teilen-Menü in „Fotos“.</li>\n    <li>Wenn Sie nur die Adresse für ein CMS benötigen, verwenden Sie „Bild-URL kopieren“ anstatt „Herunterladen“. Dadurch wird ein HTTPS-Link (i.ytimg.com oder vi_webp-Link) kopiert. Anleitung:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube-Thumbnail-URL</a>Die</li>\n  </ol>\n  <p>Falls iOS einen Download von einer anderen Website blockiert, öffnen Sie die Bild-URL in einem neuen Tab und tippen und halten Sie dann das Bild → Zu Fotos hinzufügen. Sie speichern weiterhin die öffentliche YouTube-Datei und nicht einen Screenshot der 11tik-Seite.</p>"
+    },
+    {
+      "heading": "So speichert man ein YouTube-Thumbnail auf Android",
+      "html": "<ol>\n    <li>Kopieren Sie die öffentliche Video- oder Shorts-URL aus der YouTube-App.</li>\n    <li>Öffnen Sie 11tik in Chrome (oder Ihrem Standardbrowser).</li>\n    <li>Fügen Sie die Datei ein, extrahieren Sie sie und tippen Sie dann auf den ersten Download. Chrome speichert die Datei normalerweise im Ordner „Downloads“.</li>\n    <li>Öffnen Sie die Download-Benachrichtigung und verschieben Sie das Bild in die Galerie, wenn Sie es in Fotos speichern möchten.</li>\n  </ol>\n  <p>Android fragt möglicherweise, welche App eine JPEG-Datei öffnen soll. Wählen Sie „Galerie“ oder „Dateien“. Verwenden Sie keinen „Video-Downloader“, der MP4-Dateien verspricht; 11tik bietet weder Video- noch Audio-Downloads.</p>"
+    },
+    {
+      "heading": "Welche Größe sollte ich auf meinem Handy behalten?",
+      "html": "<p>Behalte die zuerst aufgeführte Größe bei. 11tik Bereits vorhandene Dateien sind in der Rangliste enthalten. Wenn YouTube maxresdefault veröffentlicht, beträgt die Standardauflösung üblicherweise 1280×720. Falls diese Datei einen 404-Fehler verursacht, ist die tatsächliche maximale Auflösung die der nächsten verfügbaren Datei (oft hq720, sddefault oder hqdefault). Das Fehlen einer maxres-Datei ist normal. Details:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">was maxresdefault.jpg ist</a>Und<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Miniaturansichtsgrößen im Jahr 2026</a>Die</p>\n  <p>Kurzfilme werden oft im Hochformat abgespielt, während das gespeicherte Bild im Querformat vorliegt. Die Datei ist weiterhin das offizielle öffentliche Vorschaubild. Siehe<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kurze Vorschaubilder</a>Die</p>"
+    },
+    {
+      "heading": "Ist es legal, ein Vorschaubild auf meinem Handy zu speichern?",
+      "html": "<p>Das Speichern eines öffentlich bereitgestellten Bildes für persönliche Zwecke, Forschung oder Bildung ist die übliche Verwendung. Das Bild bleibt urheberrechtlich geschütztes Werk des Uploaders. Laden Sie es nicht als eigenes Vorschaubild hoch, drucken Sie es nicht auf Merchandise-Artikel und verwenden Sie 11tik nicht als Lizenz. Hilfe zu benutzerdefinierten Vorschaubildern von YouTube finden Sie hier:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Benutzerdefinierte Video-Thumbnails hochladen</a>Die Regeln von 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Bedingungen</a>Und<a href=\"https://www.11tik.com/copyright\">Urheberrecht und Nutzung</a>Die</p>"
+    },
+    {
+      "heading": "Warum Handy-„Miniaturansicht-Apps“ scheitern",
+      "html": "<p>Viele Ladeneinträge verwenden eine Anzeigenseite, die um einen vermuteten Eintrag herum angeordnet ist.<code>maxresdefault.jpg</code>URL. Falls YouTube diese Datei nie veröffentlicht hat, wird ein fehlerhaftes Bild oder ein grauer Standardbildschirm angezeigt. 11tik prüft die Antworten Ihres Browsers und blendet alle Größen aus, die keine Bilder sind. Hinter einer Registrierung werden keine Inhalte „freigeschaltet“. Datenschutz: Eingefügte URLs bleiben im Browser; siehe<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutz</a>Die</p>"
+    },
+    {
+      "heading": "Mehrere Links vom Handy speichern",
+      "html": "<p>Verwenden Sie die Funktion „Massenbeiträge“ auf derselben Startseite, eine öffentliche URL pro Zeile, maximal 25. Eine Kanal-URL kann auf einem größeren Bildschirm zu den neuesten öffentlichen Uploads erweitert werden; auf einem Smartphone fügen Sie einzelne Links ein, falls die Kanalerweiterung zu eng erscheint. Anleitung für Massenbeiträge:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">Stapel-Download</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Speichere ein öffentliches Miniaturbild auf 11tik →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des Browser-Extraktors.<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kann ich ein YouTube-Thumbnail auf meinem Handy speichern?",
+      "answer": "Ja. Öffnen Sie 11tik in Safari oder Chrome, fügen Sie eine öffentliche YouTube-URL ein, extrahieren Sie die Datei und laden Sie das erste aufgelistete öffentliche Bild herunter. Ein App-Store-Downloader ist nicht erforderlich.",
+      "answerHtml": "Ja. Öffnen Sie 11tik in Safari oder Chrome, fügen Sie eine öffentliche YouTube-URL ein, extrahieren Sie die Datei und laden Sie das erste aufgelistete öffentliche Bild herunter. Ein App-Store-Downloader ist nicht erforderlich."
+    },
+    {
+      "question": "Wie speichere ich ein YouTube-Thumbnail auf dem iPhone?",
+      "answer": "Kopieren Sie den Link, öffnen Sie https://www.11tik.com/ in Safari, fügen Sie ihn ein, extrahieren Sie ihn und laden Sie ihn herunter oder tippen Sie lange auf die Bild-URL und fügen Sie sie zu Fotos hinzu.",
+      "answerHtml": "Kopieren Sie den Link, öffnen Sie https://www.11tik.com/ in Safari, fügen Sie ihn ein, extrahieren Sie ihn und laden Sie ihn herunter oder tippen Sie lange auf die Bild-URL und fügen Sie sie zu Fotos hinzu."
+    },
+    {
+      "question": "Wie speichere ich ein YouTube-Thumbnail auf Android?",
+      "answer": "Kopieren Sie den Link, öffnen Sie 11tik in Chrome, extrahieren Sie die Datei und speichern Sie den ersten Download im Ordner „Downloads“ oder „Galerie“.",
+      "answerHtml": "Kopieren Sie den Link, öffnen Sie 11tik in Chrome, extrahieren Sie die Datei und speichern Sie den ersten Download in Downloads oder Galerie."
+    },
+    {
+      "question": "Ist es legal, ein Vorschaubild auf meinem Handy zu speichern?",
+      "answer": "Das Speichern eines öffentlichen Standbildes für persönliche Zwecke oder Forschungszwecke ist üblich. Veröffentlichen Sie es nicht als eigenes Coverbild. Das Urheberrecht verbleibt beim Hochladenden.",
+      "answerHtml": "Das Speichern eines öffentlichen Standbildes für persönliche Zwecke oder Forschungszwecke ist üblich. Veröffentlichen Sie es nicht als eigenes Coverbild. Das Urheberrecht verbleibt beim Hochladenden."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des Browser-Extraktors.<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+}

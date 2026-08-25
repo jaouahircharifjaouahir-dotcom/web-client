@@ -1,0 +1,53 @@
+{
+  "contentId": "highest-quality-youtube-thumbnail",
+  "articleId": "highest-quality-youtube-thumbnail",
+  "locale": "fi",
+  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "status": "ready",
+  "title": "Kuinka saada korkealaatuisin YouTube-pikkukuva | 11tik",
+  "description": "Korkein laatu tarkoittaa, että suurin julkinen JPEG- tai WebP-tiedosto, jonka YouTube itse palauttaa, ei arvattua 4K-tiedostonimeä.",
+  "h1": "Kuinka saada korkealaatuisin YouTube-pikkukuva",
+  "ogTitle": "Kuinka saada korkealaatuisin YouTube-pikkukuva",
+  "ogDescription": "Korkein laatu tarkoittaa, että suurin julkinen JPEG- tai WebP-tiedosto, jonka YouTube itse palauttaa, ei arvattua 4K-tiedostonimeä.",
+  "imageAlt": "Korkein saatavilla oleva julkinen YouTube-pikkukuva valittuna kohdassa 11tik",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Korkein saatavilla oleva julkinen YouTube-pikkukuva valittuna kohdassa 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Miten saan parhaan mahdollisen YouTube-pikkukuvan?",
+      "html": "<p>Liitä julkinen URL-osoite<a href=\"https://www.11tik.com/\">11tik</a>ja lataa ensimmäinen lueteltu koko. Purkaja luokittelee jäljellä olevat julkiset tiedostot; se ei venytä pientä still-kuvaa väärennetyksi HD-tiedostoksi.</p>"
+    },
+    {
+      "heading": "Mikä on suurin julkinen päätöslauselma?",
+      "html": "<p>Kun YouTube julkaisee maxresdefault-arvon, se on yleensä 1280 × 720. Jos tiedosto puuttuu, korkein laatu on seuraava kelvollinen koko, kuten sd tai hq.</p>"
+    },
+    {
+      "heading": "Onko WebP:llä väliä?",
+      "html": "<p>Joillakin videoilla on myös saman kokoisia nimiä sisältäviä WebP-variantteja. 11tik voi nostaa esiin tällaiset, jos niitä on olemassa. Valitse työkalun validoima tiedosto, älä arvattua URL-osoitetta.</p>"
+    },
+    {
+      "heading": "Miksi \"HD\" näyttää joskus pehmeältä?",
+      "html": "<p>Julkinen tiedosto voi edelleen olla 1280×720 pakkauksella, tai saatat tarkastella hqdefault-arvoa. Tarkista pikselikoko 11tik -raportit ennen kuin oletat latauksen epäonnistuneen.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Koko-opas</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Miten saan parhaan mahdollisen YouTube-pikkukuvan?",
+      "answer": "Liitä julkinen URL-osoite 11tik-kansioon ja lataa ensimmäinen lueteltu tiedostokoko. Se on suurin YouTuben tallentama julkinen tiedostokoko.",
+      "answerHtml": "Liitä julkinen URL-osoite 11tik-kansioon ja lataa ensimmäinen lueteltu tiedostokoko. Se on suurin YouTuben tallentama julkinen tiedostokoko."
+    },
+    {
+      "question": "Onko laadukkain tiedosto 4K?",
+      "answer": "Yleensä ei. Julkinen maksimihinta on tyypillisesti 1280&#215;720. 11tik ei skaalaa ylöspäin tai keksi suurempaa masteria.",
+      "answerHtml": "Yleensä ei. Julkinen maksimiresoluutio on tyypillisesti 1280×720. 11tik ei skaalaa ylös tai keksi suurempaa masteria."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+}

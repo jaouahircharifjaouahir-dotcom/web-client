@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "tl",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "Tungkol sa 11tik | 11tik",
+  "description": "Ang 11tik ay ang tagapaglathala ng YouTube Thumbnail Extractor sa www.11tik.com. Ang site ay pinapatakbo para sa mga taong nangangailangan ng pampublikong preview na imahe ng isang video sa YouTube nang hindi nag-i-install ng software o nag-a-upload ng link sa isang processing server.",
+  "h1": "Tungkol sa 11tik",
+  "ogTitle": "Tungkol sa 11tik",
+  "ogDescription": "Ang 11tik ay ang tagapaglathala ng YouTube Thumbnail Extractor sa www.11tik.com. Ang site ay pinapatakbo para sa mga taong nangangailangan ng pampublikong preview na imahe ng isang video sa YouTube nang hindi nag-i-install ng software o nag-a-upload ng link sa isang processing server.",
+  "imageAlt": "11tik Preview ng produkto ng YouTube Thumbnail Extractor sa 1200 by 630 pixels",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Preview ng produkto ng YouTube Thumbnail Extractor sa 1200 by 630 pixels",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Sino ang naglalathala ng site na ito?",
+      "html": "<p>Ang nilalaman at ang extractor ay inilathala sa ilalim ng pangalang 11tik. Walang inimbentong persona ng eksperto at walang gawa-gawang mga marka ng pagsusuri. Ipinapaliwanag ng mga pahina ng editoryal kung paano gumagana ang mga pampublikong thumbnail file; hindi nila inaangkin na YouTube, Google,.</p>"
+    },
+    {
+      "heading": "Ano ang ginagawa ng 11tik?",
+      "html": "<p>Binabasa ng tool ang isang pampublikong video ID sa browser, sinusuri kung aling mga thumbnail file ang umiiral sa mga host ng imahe sa YouTube, at hinahayaan kang mag-download o kopyahin ang mga still na iyon. Ang pag-parse at pagraranggo ay mananatili sa iyong device. Maaari kang gumamit ng isang URL, isang listahan ng mga URL, o isang pampublikong channel feed ng mga kamakailang upload.</p>"
+    },
+    {
+      "heading": "Ano ang hindi nagagawa ng 11tik?",
+      "html": "<ul>\n    <li>Hindi ito nagda-download ng video o audio sa YouTube.</li>\n    <li>Hindi nito nilalaktawan ang mga pribado, naka-gated ayon sa edad, o naka-block na rehiyon na mga video.</li>\n    <li>Hindi ito nangangailangan ng account.</li>\n    <li>Hindi nito inaangkin ang copyright sa thumbnail ng iba.</li>\n  </ul>"
+    },
+    {
+      "heading": "Mga bersyon ng wika",
+      "html": "<p>Ang extractor UI ay makukuha sa mga language host tulad ng<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>at<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>Ang mga legal na pahinang ito ay nananatili sa www.11tik.com kaya mayroong isang kanonikal na URL na Tungkol sa Amin, Pagkapribado, Pakikipag-ugnayan, at Mga Tuntunin.</p>"
+    },
+    {
+      "heading": "Paano ko makokontak ang tagapaglathala?",
+      "html": "<p>I-email<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>o gamitin ang<a href=\"https://www.11tik.com/p/contact.html\">form ng pakikipag-ugnayan</a>Basahin ang<a href=\"https://www.11tik.com/p/privacy.html\">patakaran sa privacy</a>para sa mga detalye ng analytics at hosting, at ang<a href=\"https://www.11tik.com/p/terms-of-use.html\">mga tuntunin ng paggamit</a>para sa katanggap-tanggap na paggamit.</p>\n  <p class=\"yte-bio\">Naglalathala ang 11tik ng mga praktikal na gabay tungkol sa mga pampublikong thumbnail ng YouTube at pinapanatili ang libreng in-browser extractor. Tinatanggap ang mga pagwawasto sa pamamagitan ng email o contact form.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Pang-extract ng Thumbnail ng YouTube</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Naglalathala ang 11tik ng mga praktikal na gabay tungkol sa mga pampublikong thumbnail ng YouTube at pinapanatili ang libreng in-browser extractor. Tinatanggap ang mga pagwawasto sa pamamagitan ng email o contact form.</p>"
+}

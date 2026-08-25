@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "vi",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "Điều khoản sử dụng | 11tik",
+  "description": "Công cụ trích xuất hình thu nhỏ YouTube tại https://www.11tik.com/ được cung cấp nguyên trạng để tìm và lưu hình ảnh thu nhỏ YouTube có sẵn công khai.",
+  "h1": "Điều khoản sử dụng",
+  "ogTitle": "Điều khoản sử dụng",
+  "ogDescription": "Công cụ trích xuất hình thu nhỏ YouTube tại https://www.11tik.com/ được cung cấp nguyên trạng để tìm và lưu hình ảnh thu nhỏ YouTube có sẵn công khai.",
+  "imageAlt": "",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Công cụ này làm gì?",
+      "html": "<p>Chức năng này xác định các URL hình thu nhỏ công khai cho một ID video và cho phép bạn xem trước, sao chép hoặc tải xuống các hình ảnh đó trong trình duyệt của mình. Chế độ hàng loạt chấp nhận một URL công khai trên mỗi dòng. URL kênh công khai có thể được mở rộng để xem các video được tải lên gần đây thông qua nguồn cấp dữ liệu công khai của YouTube.</p>"
+    },
+    {
+      "heading": "Những điều công cụ này không làm được",
+      "html": "<ul>\n    <li>Ứng dụng này không tải xuống video hoặc âm thanh từ YouTube.</li>\n    <li>Nó không bỏ qua nội dung riêng tư, bị giới hạn độ tuổi hoặc không công khai.</li>\n    <li>Việc này không cấp quyền sở hữu đối với hình ảnh thu nhỏ. Bạn chịu trách nhiệm về cách sử dụng hình ảnh, bao gồm cả bản quyền và các điều khoản của YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sử dụng hợp lý",
+      "html": "<p>Không sử dụng 11tik để thu thập dữ liệu với số lượng lớn, mạo danh kênh khác hoặc đăng lại hình thu nhỏ làm ảnh bìa của riêng bạn mà không có sự cho phép của chủ sở hữu bản quyền. Quyền truy cập tự động có thể bị giới hạn tốc độ.</p>"
+    },
+    {
+      "heading": "Chia sẻ trang và API công khai",
+      "html": "<p>Chia sẻ các liên kết như sau:<code>/?v=</code>API hình thu nhỏ mô tả các hình ảnh tĩnh công khai. Chúng không phải là giấy phép để sử dụng lại tác phẩm nghệ thuật cho mục đích thương mại. Tiện ích nhúng phải giữ nguyên dòng ghi chú “Được cung cấp bởi 11tik.com” nếu bạn hiển thị nó trên một trang web khác.</p>"
+    },
+    {
+      "heading": "Tính khả dụng",
+      "html": "<p>Trang web có thể thay đổi, gặp sự cố hoặc ngừng hoạt động. Không có thỏa thuận về mức độ dịch vụ và không có bảo đảm về việc truy cập không bị gián đoạn, phù hợp với mục đích cụ thể hoặc kết quả không có lỗi.</p>"
+    },
+    {
+      "heading": "Liên hệ",
+      "html": "<p>Câu hỏi:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">biểu mẫu liên hệ</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">Chính sách bảo mật</a>·<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/\">Công cụ trích xuất hình thu nhỏ YouTube</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

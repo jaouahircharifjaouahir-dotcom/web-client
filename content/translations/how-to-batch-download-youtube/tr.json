@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "tr",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "YouTube küçük resimlerini toplu olarak nasıl indirebilirsiniz (en fazla 25 herkese açık URL) | 11tik",
+  "description": "Tarayıcıda herkese açık YouTube küçük resimlerini toplu olarak çıkarın. Her satıra bir URL yapıştırın, en iyi kareyi indirin veya en yüksek kalitedeki seti sıkıştırın. Hesap gerekmez ve video dosyası gerekmez.",
+  "h1": "YouTube küçük resimlerini toplu olarak nasıl indirebilirsiniz (en fazla 25 herkese açık URL)?",
+  "ogTitle": "YouTube küçük resimlerini toplu olarak nasıl indirebilirsiniz (en fazla 25 herkese açık URL)?",
+  "ogDescription": "Tarayıcıda herkese açık YouTube küçük resimlerini toplu olarak çıkarın. Her satıra bir URL yapıştırın, en iyi kareyi indirin veya en yüksek kalitedeki seti sıkıştırın. Hesap gerekmez ve video dosyası gerekmez.",
+  "imageAlt": "11tik İndirilmeye hazır çeşitli YouTube URL'leri içeren toplu küçük resim çıkarıcı",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik İndirilmeye hazır çeşitli YouTube URL'leri içeren toplu küçük resim çıkarıcı",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "YouTube küçük resimlerini toplu olarak nasıl indirebilirim?",
+      "html": "<p>Açık<a href=\"https://www.11tik.com/\">11tik</a>Toplu işlemi açın, her satıra bir genel URL yapıştırın, \"Tümünü çıkar\"a tıklayın, ardından en iyi görüntüyü veya en yüksek kalitedeki zip dosyasını indirin. Tarayıcının hızlı yanıt vermesi için her çalıştırmada en fazla 25 URL kullanılabilir.</p>"
+    },
+    {
+      "heading": "Listeye neler dahil edilmeli?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= Kimlikler</li>\n    <li>youtu.be kısa bağlantılar</li>\n    <li>youtube.com/shorts/ Kimlikler</li>\n    </ul>\n  <p>Özel, herkese açık önizlemeleri olmayan veya yaş sınırlaması bulunan videolar için fotoğraf karesi görüntülenmeyecektir. Bu beklenen bir durumdur. Ayrıca bakınız.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kısa filmlerin küçük resimleri</a>.</p>"
+    },
+    {
+      "heading": "Toplu veri çıkarma işlemi nasıl yapılır?",
+      "html": "<ol>\n    <li>Ana sayfada, Toplu İşlem'e tıklayın.</li>\n    <li>Her satıra bir tane olmak üzere en fazla 25 adet herkese açık bağlantı yapıştırın.</li>\n    <li>\"Tümünü çıkar\" seçeneğine tıklayın ve her kartın önizlemesi görünene kadar bekleyin.</li>\n    <li>En iyi karelerin her biri için küçük resim videosunu (N) indirin veya en yüksek kalitedeki tüm videoları zip dosyası olarak indirin.</li>\n    <li>İsteğe bağlı: Araştırma kayıtları için CSV olarak dışa aktarın (video kimliği, başlık, paylaşım URL'si, resim URL'si).</li>\n  </ol>"
+    },
+    {
+      "heading": "Bunu rakip araştırması için kullanabilir miyim?",
+      "html": "<p>Evet, halka açık paketlemeyi incelemek için. Başka bir içerik oluşturucunun küçük resmini kendi yüklemeniz olarak yeniden yayınlamayın. Telif hakkı hak sahibinde kalır. 11tik yalnızca YouTube'un zaten herkese açık olarak barındırdığı dosyaları getirir.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik üzerinde toplu veri çıkarma işlemini açın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "YouTube küçük resimlerini toplu olarak nasıl indirebilirim?",
+      "answer": "11tik üzerinde Toplu İşlem'i kullanın, her satıra bir genel URL yapıştırın, çıkarın ve ardından en yüksek genel kalitedeki fotoğrafları veya zip dosyasını indirin. Her çalıştırmada en fazla 25 URL.",
+      "answerHtml": "11tik üzerinde Toplu İşlem'i kullanın, her satıra bir genel URL yapıştırın, çıkarın ve ardından en yüksek genel kalitedeki fotoğrafları veya zip dosyasını indirin. Her çalıştırmada en fazla 25 URL."
+    },
+    {
+      "question": "Bunu rakip araştırması için kullanabilir miyim?",
+      "answer": "Evet, halka açık ambalajları incelemek için. Başka bir yaratıcının küçük resmini kendi resminizmiş gibi yeniden yayınlamayın. Telif hakkı, hak sahibinde kalır.",
+      "answerHtml": "Evet, halka açık ambalajları incelemek için. Başka bir yaratıcının küçük resmini kendi resminizmiş gibi yeniden yayınlamayın. Telif hakkı, hak sahibinde kalır."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+}

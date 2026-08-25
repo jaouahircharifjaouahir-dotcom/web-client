@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "hu",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "A 11tik-ről | 11tik",
+  "description": "A 11tik a YouTube Thumbnail Extractor kiadója a www.11tik.com oldalon. Az oldalt azok számára üzemeltetik, akiknek szükségük van egy YouTube-videó nyilvános előnézeti képére szoftver telepítése vagy a link feldolgozó szerverre való feltöltése nélkül.",
+  "h1": "A 11tik-ről",
+  "ogTitle": "A 11tik-ről",
+  "ogDescription": "A 11tik a YouTube Thumbnail Extractor kiadója a www.11tik.com oldalon. Az oldalt azok számára üzemeltetik, akiknek szükségük van egy YouTube-videó nyilvános előnézeti képére szoftver telepítése vagy a link feldolgozó szerverre való feltöltése nélkül.",
+  "imageAlt": "11tik YouTube Thumbnail Extractor termék előnézete 1200 x 630 pixel méretben",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik YouTube Thumbnail Extractor termék előnézete 1200 x 630 pixel méretben",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ki teszi közzé ezt az oldalt?",
+      "html": "<p>A tartalom és a kivonatoló program a 11tik név alatt kerül közzétételre. Nincsenek kitalált szakértői személyiségek és kitalált értékelések. A szerkesztőségi oldalak elmagyarázzák, hogyan működnek a nyilvános bélyegképfájlok; nem állítják, hogy a YouTube-ról, a Google-ről származnak.</p>"
+    },
+    {
+      "heading": "Mit csinál a 11tik?",
+      "html": "<p>Az eszköz beolvassa a böngészőben található nyilvános videoazonosítót, ellenőrzi, hogy mely indexképfájlok léteznek a YouTube képtárhelyein, és lehetővé teszi ezeknek az állóképeknek a letöltését vagy másolását. Az elemzés és a rangsorolás az eszközön marad. Dolgozhatsz egyetlen URL-címmel, URL-listával vagy a legutóbbi feltöltéseket tartalmazó nyilvános csatornahírcsatornával.</p>"
+    },
+    {
+      "heading": "Mit nem csinál a 11tik?",
+      "html": "<ul>\n    <li>Nem tölt le YouTube-videókat vagy -hanganyagokat.</li>\n    <li>Nem kerüli meg a privát, korhatáros vagy régiófüggő videókat.</li>\n    <li>Nem igényel fiókot.</li>\n    <li>Nem igényel szerzői jogokat senki más bélyegképére.</li>\n  </ul>"
+    },
+    {
+      "heading": "Nyelvi verziók",
+      "html": "<p>A kinyerő felhasználói felület elérhető olyan nyelvi hosztokon, mint például<a href=\"https://fr.11tik.com/\">11tik.com</a>és<a href=\"https://ar.11tik.com/\">11tik.com</a>Ezek a jogi oldalak a www.11tik.com oldalon maradnak, így egyetlen kanonikus Rólunk, Adatvédelem, Kapcsolat és Felhasználási Feltételek URL-címmel rendelkeznek.</p>"
+    },
+    {
+      "heading": "Hogyan vehetem fel a kapcsolatot a kiadóval?",
+      "html": "<p>Email<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>vagy használja a<a href=\"https://www.11tik.com/p/contact.html\">kapcsolatfelvételi űrlap</a>Olvasd el a<a href=\"https://www.11tik.com/p/privacy.html\">adatvédelmi irányelvek</a>az analitikai és tárhelyadatokért, valamint a<a href=\"https://www.11tik.com/p/terms-of-use.html\">felhasználási feltételek</a>elfogadható használatra.</p>\n  <p class=\"yte-bio\">A 11tik gyakorlati útmutatókat tesz közzé a nyilvános YouTube-bélyegképekről, és karbantartja az ingyenes böngészőn belüli kinyerőt. A javításokat e-mailben vagy a kapcsolatfelvételi űrlapon keresztül szívesen fogadjuk.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>·<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">A 11tik gyakorlati útmutatókat tesz közzé a nyilvános YouTube-bélyegképekről, és karbantartja az ingyenes böngészőn belüli kinyerőt. A javításokat e-mailben vagy a kapcsolatfelvételi űrlapon keresztül szívesen fogadjuk.</p>"
+}

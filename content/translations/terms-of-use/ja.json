@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "ja",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "利用規約 | 11tik",
+  "description": "https://www.11tik.com/にあるYouTubeサムネイル抽出ツールは、公開されているYouTubeサムネイル画像を検索して保存するために現状のまま提供されています。",
+  "h1": "利用規約",
+  "ogTitle": "利用規約",
+  "ogDescription": "https://www.11tik.com/にあるYouTubeサムネイル抽出ツールは、公開されているYouTubeサムネイル画像を検索して保存するために現状のまま提供されています。",
+  "imageAlt": "",
+  "faqHeading": "よくある質問",
+  "images": [],
+  "sections": [
+    {
+      "heading": "このツールの機能",
+      "html": "<p>動画IDに対応する公開サムネイル画像のURLを識別し、ブラウザでそれらの画像をプレビュー、コピー、またはダウンロードできます。一括モードでは、1行につき1つの公開URLを受け付けます。公開チャンネルURLは、YouTubeの公開フィードを通じて最近アップロードされた動画に展開できます。</p>"
+    },
+    {
+      "heading": "このツールができないことは",
+      "html": "<ul>\n    <li>YouTubeの動画や音声はダウンロードしません。</li>\n    <li>これは、非公開コンテンツ、年齢制限付きコンテンツ、またはその他の非公開コンテンツを回避するものではありません。</li>\n    <li>サムネイルの使用権は付与されません。著作権やYouTubeの利用規約を含め、画像の使用方法についてはお客様ご自身が責任を負うものとします。</li>\n  </ul>"
+    },
+    {
+      "heading": "許容される使用",
+      "html": "<p>11tikを使用して、過剰な量のスクレイピングを行ったり、他のチャンネルになりすましたり、権利者の許可なくサムネイルを自分のカバーアートとして再公開したりしないでください。自動アクセスにはレート制限がかかる場合があります。</p>"
+    },
+    {
+      "heading": "ページと公開APIを共有する",
+      "html": "<p>次のようなリンクを共有します<code>/?v=</code>サムネイルAPIは公開されている静止画を記述するものであり、アートワークを商業的に再利用するためのライセンスではありません。埋め込みウィジェットを別のサイトに表示する場合は、「Powered by 11tik.com」のクレジット表記を保持する必要があります。</p>"
+    },
+    {
+      "heading": "可用性",
+      "html": "<p>本サイトは変更、不具合、またはオフラインになる場合があります。サービスレベル契約はなく、中断のないアクセス、特定の目的への適合性、またはエラーのない結果を保証するものではありません。</p>"
+    },
+    {
+      "heading": "接触",
+      "html": "<p>質問:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>または<a href=\"https://www.11tik.com/p/contact.html\">お問い合わせフォーム</a>。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">プライバシーポリシー</a>・<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

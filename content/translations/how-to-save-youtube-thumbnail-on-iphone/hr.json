@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "hr",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Kako spremiti minijaturu s YouTubea na iPhoneu i Androidu (2026.) | 11tik",
+  "description": "Spremite javnu sliku s YouTubea na iPhoneu ili Androidu bez snimke zaslona i bez programa za preuzimanje iz trgovine aplikacija. Zalijepite URL javne stranice za gledanje ili Shorts videozapisa u 11tik u Safariju ili Chromeu, a zatim preuzmite najveću slikovnu datoteku koju YouTube već hostira.",
+  "h1": "Kako spremiti minijaturu s YouTubea na iPhoneu i Androidu (2026.)",
+  "ogTitle": "Kako spremiti minijaturu s YouTubea na iPhoneu i Androidu (2026.)",
+  "ogDescription": "Spremite javnu sliku s YouTubea na iPhoneu ili Androidu bez snimke zaslona i bez programa za preuzimanje iz trgovine aplikacija. Zalijepite URL javne stranice za gledanje ili Shorts videozapisa u 11tik u Safariju ili Chromeu, a zatim preuzmite najveću slikovnu datoteku koju YouTube već hostira.",
+  "imageAlt": "Spremite YouTube minijaturu na iPhoneu i Androidu pomoću 11tik — javno dostupna, bez aplikacije",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Spremite YouTube minijaturu na iPhoneu i Androidu pomoću 11tik — javno dostupna, bez aplikacije",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mogu li spremiti minijaturu s YouTubea na svoj telefon?",
+      "html": "<p>Da, ako je videozapis javan i ako je YouTube objavio fotografiju. Ne trebate računalo i ne trebate APK ili aplikaciju TestFlight. Otvori<a href=\"https://www.11tik.com/\">11tik</a>U pregledniku telefona koji već koristite zalijepite poveznicu, dodirnite Preuzmi sliku minijature, a zatim spremite prvu navedenu datoteku. Ta datoteka je najviši javni JPEG ili WebP format koji je zapravo vratio sliku.</p>\n  <p>Snimka zaslona igrača s dugim pritiskom nije ista stvar. Snimka zaslona uključuje krom, trake sigurnog područja i dodatnu kompresiju. Javnost još uvijek živi na i.ytimg.com. Vidi<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snimka zaslona u odnosu na pravu sličicu</a>ako vam je potrebna ta razlika za blog ili Open Graph oznaku.</p>"
+    },
+    {
+      "heading": "Što vam je potrebno prije nego što počnete",
+      "html": "<ul>\n    <li>Javni URL za gledanje na YouTubeu, Shorts, uživo ili youtu.be. Dodatni parametri upita kao što su<code>pp=</code>ili ID popisa za reprodukciju nisu važni; 11tik čita ID videozapisa od 11 znakova.</li>\n    <li>Safari na iPhoneu ili iPadu, ili Chrome, Firefox ili Samsung Internet na Androidu.</li>\n    <li>Dozvoljeno spremanje fotografija ako preglednik zatraži. 11tik nikada ne prenosi sliku na 11tik poslužitelj kao originalni medij.</li>\n  </ul>\n  <p>Privatni videozapisi, videozapisi samo za članove ili videozapisi s dobnim ograničenjem koji ne objavljuju javni videozapis i dalje se neće prikazivati ​​za preuzimanje. To je pravilo platforme, a ne ograničenje telefona. Prilagođene minijature koje se još uvijek obrađuju u Studiju također mogu kratko vrijeme nedostajati; provjerite kasnije s istim URL-om. Povezano:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Minijature u YouTube Studiju u 2026. godini</a>.</p>"
+    },
+    {
+      "heading": "Kako spremiti minijaturu s YouTubea na iPhoneu",
+      "html": "<ol>\n    <li>U aplikaciji YouTube ili Safariju kopirajte poveznicu na videozapis ili Shorts (Dijeli → Kopiraj poveznicu).</li>\n    <li>Otvoriti<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>u Safariju. Ne instalirate ništa.</li>\n    <li>Zalijepite URL i dodirnite Preuzmi sliku minijature. Pričekajte dok se ne pojavi pravi pregled. Prazni sivi okviri znače da ta veličina nikada nije objavljena.</li>\n    <li>Dodirnite prvu kontrolu za preuzimanje. Safari će ponuditi Otvori ili Preuzmi. Odaberite Preuzmi, a zatim sliku spremite u Datoteke ili je spremite u Fotografije s tablice za dijeljenje.</li>\n    <li>Ako vam je potrebna samo adresa za CMS, umjesto preuzimanja koristite Kopiraj URL slike. To kopira HTTPS i.ytimg.com ili vi_webp poveznicu. Vodič:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL minijature na YouTubeu</a>.</li>\n  </ol>\n  <p>Ako iOS blokira preuzimanje iz različitih izvora, otvorite URL slike u novoj kartici, a zatim dodirnite i držite sliku → Dodaj u fotografije. I dalje spremate javnu datoteku YouTubea, a ne snimku zaslona stranice 11tik.</p>"
+    },
+    {
+      "heading": "Kako spremiti minijaturu s YouTubea na Androidu",
+      "html": "<ol>\n    <li>Kopirajte URL javnog gledanja ili Shorts videozapisa iz aplikacije YouTube.</li>\n    <li>Otvorite 11tik u Chromeu (ili vašem zadanom pregledniku).</li>\n    <li>Zalijepite, izdvojite, a zatim dodirnite prvo preuzimanje. Chrome obično zapisuje datoteku u Preuzimanja.</li>\n    <li>Otvorite obavijest o preuzimanjima i premjestite sliku u Galeriju ako je želite u Fotografijama.</li>\n  </ol>\n  <p>Android može pitati koja aplikacija treba otvoriti JPEG. Odaberite Galeriju ili Datoteke. Nemojte odabrati \"program za preuzimanje videa\" koji obećava MP4; 11tik ne pruža video ili audio.</p>"
+    },
+    {
+      "heading": "Koju veličinu telefona trebam držati?",
+      "html": "<p>Zadržite prvu navedenu veličinu. 11tik već rangirane datoteke koje postoje. Kada YouTube objavi maxresdefault, obično je 1280×720. Ako je naziv datoteke 404s, iskreni maksimum je sljedeća stvarna datoteka (često hq720, sddefault ili hqdefault). Nedostatak maxres datoteke je normalan. Detalji:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">što je maxresdefault.jpg</a>i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">veličine sličica u 2026.</a>.</p>\n  <p>Kratki videozapisi se često reproduciraju vertikalno, dok je pohranjena slika u vodoravnom položaju. Datoteka je i dalje službena javna minijatura. Vidi<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Minijature kratkih videozapisa</a>.</p>"
+    },
+    {
+      "heading": "Je li legalno spremiti minijaturu na telefon?",
+      "html": "<p>Uobičajena upotreba je spremanje javno hostirane fotografije za osobnu referencu, istraživanje ili edukaciju. Slika ostaje zaštićeno autorskim pravom osobe koja je učitala sliku. Nemojte je ponovno prenositi kao vlastitu prilagođenu minijaturu, tiskati je na robi ili tretirati 11tik kao licencu. Pomoć za prilagođene minijature na samom YouTubeu nalazi se ovdje:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prenesite prilagođene minijature videozapisa</a>Pravila korisnika 11tik:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>i<a href=\"https://www.11tik.com/copyright\">Autorska prava i korištenje</a>.</p>"
+    },
+    {
+      "heading": "Zašto \"aplikacije s minijaturama\" na telefonu ne uspijevaju",
+      "html": "<p>Mnogi oglasi u trgovinama omotavaju stranicu s oglasima oko nagađanja<code>maxresdefault.jpg</code>URL. Ako YouTube nikada nije objavio tu datoteku, dobit ćete oštećenu sliku ili sivu zadanu postavku. 11tik provjerava odgovore u vašem pregledniku i skriva veličine koje nisu slike. Ništa nije \"otključano\" nakon registracije. Privatnost: zalijepljeni URL-ovi ostaju u pregledniku; vidi<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>.</p>"
+    },
+    {
+      "heading": "Spremite nekoliko poveznica s telefona",
+      "html": "<p>Koristite skupno na istoj početnoj stranici, jedan javni URL po retku, do 25. URL kanala može se proširiti na nedavne javne prijenose na većem zaslonu; na telefonu zalijepite pojedinačne poveznice ako se proširenje kanala čini skučenim. Vodič za skupno prikazivanje:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">preuzimanje u seriji</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Spremi javnu minijaturu na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač ekstraktora unutar preglednika.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mogu li spremiti minijaturu s YouTubea na svoj telefon?",
+      "answer": "Da. Otvorite 11tik u Safariju ili Chromeu, zalijepite javni YouTube URL, izdvojite i preuzmite prvu navedenu javnu sliku. Nije potreban program za preuzimanje iz trgovine aplikacija.",
+      "answerHtml": "Da. Otvorite 11tik u Safariju ili Chromeu, zalijepite javni YouTube URL, izdvojite i preuzmite prvu navedenu javnu sliku. Nije potreban program za preuzimanje iz trgovine aplikacija."
+    },
+    {
+      "question": "Kako spremiti minijaturu s YouTubea na iPhoneu?",
+      "answer": "Kopirajte poveznicu, otvorite https://www.11tik.com/ u Safariju, zalijepite, izdvojite, a zatim preuzmite ili dugo pritisnite URL slike i dodajte je u Fotografije.",
+      "answerHtml": "Kopirajte poveznicu, otvorite https://www.11tik.com/ u Safariju, zalijepite, izdvojite, a zatim preuzmite ili dugo pritisnite URL slike i dodajte je u Fotografije."
+    },
+    {
+      "question": "Kako spremiti minijaturu s YouTubea na Androidu?",
+      "answer": "Kopirajte poveznicu, otvorite 11tik u Chromeu, izdvojite i spremite prvo preuzimanje u Preuzimanja ili Galeriju.",
+      "answerHtml": "Kopirajte poveznicu, otvorite 11tik u Chromeu, izdvojite i spremite prvo preuzimanje u Preuzimanja ili Galeriju."
+    },
+    {
+      "question": "Je li legalno spremiti minijaturu na telefon?",
+      "answer": "Spremanje javne fotografije za osobnu upotrebu ili istraživanje je uobičajeno. Nemojte je ponovno objavljivati ​​kao vlastitu naslovnicu. Autorska prava ostaju kod osobe koja je prenijela fotografiju.",
+      "answerHtml": "Spremanje javne fotografije za osobnu upotrebu ili istraživanje je uobičajeno. Nemojte je ponovno objavljivati ​​kao vlastitu naslovnicu. Autorska prava ostaju kod osobe koja je prenijela fotografiju."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač ekstraktora unutar preglednika.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

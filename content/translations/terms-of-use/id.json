@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "id",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "Syarat penggunaan | 11tik",
+  "description": "Ekstraktor Gambar Mini YouTube di https://www.11tik.com/ disediakan apa adanya untuk menemukan dan menyimpan gambar mini YouTube yang tersedia untuk umum.",
+  "h1": "Syarat penggunaan",
+  "ogTitle": "Syarat penggunaan",
+  "ogDescription": "Ekstraktor Gambar Mini YouTube di https://www.11tik.com/ disediakan apa adanya untuk menemukan dan menyimpan gambar mini YouTube yang tersedia untuk umum.",
+  "imageAlt": "",
+  "faqHeading": "Pertanyaan yang Sering Diajukan (FAQ)",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Fungsi alat ini",
+      "html": "<p>Fitur ini mengidentifikasi URL gambar thumbnail publik untuk ID video dan memungkinkan Anda untuk melihat pratinjau, menyalin, atau mengunduh gambar tersebut di browser Anda. Mode massal menerima satu URL publik per baris. URL saluran publik dapat diperluas ke unggahan terbaru melalui feed publik YouTube.</p>"
+    },
+    {
+      "heading": "Apa yang tidak dilakukan oleh alat ini",
+      "html": "<ul>\n    <li>Aplikasi ini tidak mengunduh video atau audio YouTube.</li>\n    <li>Hal ini tidak melewati konten pribadi, yang dibatasi usia, atau konten yang tidak bersifat publik.</li>\n    <li>Ini tidak memberikan hak atas gambar mini tersebut. Anda bertanggung jawab atas cara Anda menggunakan gambar tersebut, termasuk hak cipta dan ketentuan YouTube.</li>\n  </ul>"
+    },
+    {
+      "heading": "Penggunaan yang dapat diterima",
+      "html": "<p>Jangan gunakan 11tik untuk melakukan scraping dengan volume yang berlebihan, untuk meniru saluran lain, atau untuk menerbitkan ulang thumbnail sebagai gambar sampul Anda sendiri tanpa izin dari pemegang hak cipta. Akses otomatis mungkin dibatasi laju aksesnya.</p>"
+    },
+    {
+      "heading": "Berbagi halaman dan API publik",
+      "html": "<p>Bagikan tautan seperti<code>/?v=</code>dan API thumbnail menjelaskan gambar diam publik. Ini bukan lisensi untuk menggunakan kembali karya seni secara komersial. Widget penyematan harus tetap mencantumkan atribusi “Didukung oleh 11tik.com” jika Anda menampilkannya di situs lain.</p>"
+    },
+    {
+      "heading": "Tersedianya",
+      "html": "<p>Situs ini dapat berubah, rusak, atau offline. Tidak ada perjanjian tingkat layanan dan tidak ada jaminan akses tanpa gangguan, kesesuaian untuk tujuan tertentu, atau hasil tanpa kesalahan.</p>"
+    },
+    {
+      "heading": "Kontak",
+      "html": "<p>Pertanyaan:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>atau<a href=\"https://www.11tik.com/p/contact.html\">formulir kontak</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">Kebijakan privasi</a>·<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>·<a href=\"https://www.11tik.com/\">Ekstraktor Thumbnail YouTube</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

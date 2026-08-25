@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "sr",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Како користити сличицу са YouTube-а као истакнуту слику блога или преглед Open Graph-а | 11tik",
+  "description": "Потврдите да јавни YouTube још увек постоји, а затим хостујте копију за WordPress, Blogger или og:image. Немојте правити директне линкове ка претпостављеном maxresdefault URL-у.",
+  "h1": "Како користити сличицу са YouTube-а као истакнуту слику блога или преглед Open Graph-а",
+  "ogTitle": "Како користити сличицу са YouTube-а као истакнуту слику блога или преглед Open Graph-а",
+  "ogDescription": "Потврдите да јавни YouTube још увек постоји, а затим хостујте копију за WordPress, Blogger или og:image. Немојте правити директне линкове ка претпостављеном maxresdefault URL-у.",
+  "imageAlt": "Ток посла од потврђивања YouTube сличице на 11tik до њеног отпремања у WordPress или подешавања og:image",
+  "faqHeading": "Честа питања",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Ток посла од потврђивања YouTube сличице на 11tik до њеног отпремања у WordPress или подешавања og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Упоређивање истакнутих слика са WordPress-а у односу на друштвену картицу Open Graph-а користећи стварне димензије пиксела",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Брзи одговор",
+      "html": "<p>Налепите јавни YouTube URL у<a href=\"https://www.11tik.com/\">[[П2]]</a>, сачекајте валидиране величине, а затим било које<strong>преузимање</strong>прву слику и отпремите је на свој CMS, или<strong>копирајте URL адресу слике</strong>тек након што се учита. За трајне објаве, хостујте сопствену копију. Хотлинкови<code>i.ytimg.com</code>погодан је за нацрте и крхак за производњу друштвених картица.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Потврди → копирај или преузми → хостуј → референца у HTML-у / истакнутој слици / Open Graph-у.</p>"
+    },
+    {
+      "heading": "Шта је директна URL адреса сличице",
+      "html": "<p>Директна URL адреса сличице упућује на JPEG или WebP датотеку на YouTube-овој CDN мрежи за пренос садржаја слика, на пример<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>То није страница за праћење. Како су те адресе направљене:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">преузмите URL адресу сличице са YouTube-а</a>Како се величине разликују:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">водич за величину и резолуцију</a>.</p>"
+    },
+    {
+      "heading": "HTML пример",
+      "html": "<p>Након што 11tik потврди датотеку, минимални образац означавања изгледа овако (замените URL, ширину, висину и алт стварним вредностима):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Преферирајте сопствени хостовани URL у продукцији:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Користите извештаје о стварној ширини и висини 11tik. Не измишљајте 1280×720 када постоји само 480×360.</p>"
+    },
+    {
+      "heading": "WordPress ток рада",
+      "html": "<ol>\n    <li>Извуците видео на 11tik и преузмите прву наведену слику.</li>\n    <li>У WordPress-у: Медији → Додај ново → отпреми датотеку.</li>\n    <li>Постави је као истакнуту слику објаве.</li>\n    <li>У Yoast-у, Rank Math-у или сличном, потврдите да друштвени преглед користи тај прилог (или отпремите наменски оригинални обрезак).</li>\n    <li>Напишите алтернативни текст који наводи назив видеа и наводи да је датотека јавна слика са YouTube-а, а не претрпана листа кључних речи.</li>\n  </ol>\n  <p>Избегавајте лепљење сировог<code>maxresdefault.jpg</code>путању у поље медија док се датотека не докаже. Недостатак максималне резолуције је уобичајен —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Водич за maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "Блогер и статички сајтови",
+      "html": "<p><strong>Блогер:</strong>Отпремите слику у уређивач објава, а затим поново употребите ту хостовану URL адресу слике са Блогера за било која поља теме/друштвених исечака која контролишете. Не ослањајте се на претпостављену путању YouTube CDN-а за објављену објаву која вам је важна.</p>\n  <p><strong>Статички генератори:</strong>Пошаљите датотеку у свој репозиторијум или CDN, а затим поставите ознаке front-matter / meta на ту HTTPS имовину. Чувајте нацрте на привременој i.ytimg.com URL адреси ако морате, али их пошаљите са сопственим хостом.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Истакнута слика и og:image могу да деле датотеку, али обема је потребан URL који заиста постоји.</p>"
+    },
+    {
+      "heading": "Разматрања отвореног графикона",
+      "html": "<p>Велике картице са линковима обично циљају на<strong>1200×630</strong>Максимална резолуција YouTube-а је обично<strong>1280×720</strong>(16:9), који стругачи обрезују или поштански сандучић. Сет<code>og:image</code>(и ширину/висину када ваш стек то подржава) до стварних пиксела. Након што поправите неисправни URL, поново га извршите у дебагеру сваке платформе — кеш меморије се задржавају.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Хотлинковање наспрам преузимања",
+      "html": "<table>\n    <thead>\n      <tr><th>Приступ</th><th>Најбоље за</th><th>Ризик</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Врућа веза i.ytimg.com</td><td>Брзи нацрти, истраживачке белешке</td><td>404, промене CDN-а, без контроле усева</td></tr>\n      <tr><td>Преузми + хост</td><td>Рангиране објаве, странице производа</td><td>Морате да сачувате датотеку</td></tr>\n      <tr><td>Снимак екрана играча</td><td>Скоро никад</td><td>Кориснички интерфејс хрома, погрешан однос —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">снимак екрана у односу на стварни снимак</a></td></tr>\n    </tbody>\n  </table>\n  <p>Кораци за преузимање:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">како преузети сличицу са Јутјуба</a>Избор формата када постоје и WebP и JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP наспрам JPEG-а</a>.</p>"
+    },
+    {
+      "heading": "Основе SEO оптимизације за слике за ове фотографије",
+      "html": "<ul>\n    <li><strong>Име датотеке:</strong>описни, као што је<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Алтернативно:</strong>опишите слику и видео; немојте писати „YouTube thumbnail downloader HD 4K“.</li>\n    <li><strong>Димензије:</strong>декларишите стварну ширину/висину.</li>\n    <li><strong>Само HTTPS:</strong>Скрепери одбацују URL-ове слика са мешовитим садржајем.</li>\n    <li><strong>Компресија:</strong>По потреби, мало рекодирајте за вашу CDN мрежу; немојте повећавати hqdefault на лажне максималне резолуције.</li>\n  </ul>"
+    },
+    {
+      "heading": "Поновна употреба и ауторска права (није правни савет)",
+      "html": "<p>Јавни CDN URL није лиценца. Уграђивање YouTube плејера се разликује од копирања слике у ваш херој. Поштена употреба је заснована на чињеницама. Безбеднији уреднички образац: илуструјте коментар о том видеу, наведите канал, повежите страницу за гледање и не продајте слику нити је користите као сопствену слику канала. Званична помоћ за прилагођене сличице:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Отпремите прилагођене сличице видео записа</a>Правила сајта:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Услови</a>.</p>"
+    },
+    {
+      "heading": "Решавање проблема",
+      "html": "<ul>\n    <li>Неисправна друштвена картица → погодене максималне вредности; поново извуците и хостујте валидирану датотеку.</li>\n    <li>Мекана/замагљена картица → користили сте hqdefault; проверите величине.</li>\n    <li>Погрешно исецање → обезбедите посебно исецање од 1200×630 са стварне фотографије формата 16:9.</li>\n    <li>Лепљиви кеш → присилно поновно стругање након промене УРЛ-а.</li>\n  </ul>"
+    },
+    {
+      "heading": "Следећи корак",
+      "html": "<p>Потврдите фотографију на<a href=\"https://www.11tik.com/\">екстрактор 11tik</a>, преузмите га, отпремите га на свој сајт и усмерите истакнуту слику / og:image на ваш HTTPS фајл.</p>\n  <p class=\"yte-bio\">Написао 11tik.<a href=\"https://www.11tik.com/p/about.html\">О нама</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Приватност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Услови</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Могу ли да налепим i.ytimg.com УРЛ адресу у WordPress?",
+      "answer": "Нека поља га прихватају, али је отпремање потврђене локалне датотеке поузданије за истакнуте слике и прегледе на друштвеним мрежама.",
+      "answerHtml": "<p>Нека поља га прихватају, али је отпремање потврђене локалне датотеке поузданије за истакнуте слике и прегледе на друштвеним мрежама.</p>"
+    },
+    {
+      "question": "Да ли ми је потребан maxresdefault за Open Graph?",
+      "answer": "Не. Потребан вам је највећи валидирани јавни и даље. Недостатак максималних вредности је нормалан.",
+      "answerHtml": "<p>Не. Потребан вам је највећи валидирани јавни и даље. Недостатак максималних вредности је нормалан.</p>"
+    },
+    {
+      "question": "Да ли алтернативни текст треба да помиње YouTube?",
+      "answer": "Да када то помаже у опису садржаја („Јавна YouTube сличица за …“). Немојте користити кључне речи.",
+      "answerHtml": "<p>Да када то помаже у опису садржаја („Јавна YouTube сличица за …“). Немојте користити кључне речи.</p>"
+    },
+    {
+      "question": "Да ли је хотлинковање икада у реду?",
+      "answer": "За привремене нацрте или интерне белешке, да. За трајну јавну објаву, сачувајте копију.",
+      "answerHtml": "<p>За привремене нацрте или интерне белешке, да. За трајну јавну објаву, сачувајте копију.</p>"
+    },
+    {
+      "question": "Могу ли да користим слику као омот свог канала?",
+      "answer": "Не без права. То је нечије друго уметничко дело.",
+      "answerHtml": "<p>Не без права. То је нечије друго уметничко дело.</p>"
+    },
+    {
+      "question": "Шта ако је Студио само променио прилагођену сличицу?",
+      "answer": "Сачекајте обраду, па поново проверите на 11tik пре ажурирања ваше CMS копије. Повезано: Сличице YouTube студија.",
+      "answerHtml": "<p>Сачекајте обраду, а затим поново проверите 11tik пре ажурирања ваше CMS копије. Повезано:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Сличице YouTube студија</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Написао 11tik.<a href=\"https://www.11tik.com/p/about.html\">О нама</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Приватност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Услови</a>.</p>"
+}

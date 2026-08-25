@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "fi",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Pikkukuvien poimiminen YouTube-kanavan URL-osoitteesta | 11tik",
+  "description": "Liitä julkinen YouTube-kanavan URL-osoite 11tik Bulk-tiedostoon laajentaaksesi viimeisimmät julkiset lataukset ja lataa sitten kukin paras still-kuva. Tämä on tarkoitettu pakkausten tutkimukseen, ei toisen kanavan mukautetun taiteen kloonaamiseen.",
+  "h1": "Pikkukuvien poimiminen YouTube-kanavan URL-osoitteesta",
+  "ogTitle": "Pikkukuvien poimiminen YouTube-kanavan URL-osoitteesta",
+  "ogDescription": "Liitä julkinen YouTube-kanavan URL-osoite 11tik Bulk-tiedostoon laajentaaksesi viimeisimmät julkiset lataukset ja lataa sitten kukin paras still-kuva. Tämä on tarkoitettu pakkausten tutkimukseen, ei toisen kanavan mukautetun taiteen kloonaamiseen.",
+  "imageAlt": "Poimi pikkukuvat YouTube-kanavan URL-osoitteesta — uusimmat julkiset lataukset 11tik",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Poimi pikkukuvat YouTube-kanavan URL-osoitteesta — uusimmat julkiset lataukset 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Voinko saada pikkukuvia koko YouTube-kanavalta?",
+      "html": "<p>Voit saada still-kuvia uusimmista<em>julkinen</em>lataukset, jotka paljastavat videotunnuksen. 11tik ei kaavi kaikkia kanavan koskaan julkaisemia videoita eikä ohita jäsenyyksiä. Ota etusivulla käyttöön joukkolataus ja liitä kanavan URL-osoite, kuten<code>youtube.com/@handle</code>tai<code>/channel/UC…</code>ja anna työkalun laajentaa julkinen RSS-tyylinen lista. Pura se sitten samalla tavalla kuin kirjoitettu lista. Enimmäismäärä URL-osoitteita on 25 per suorituskerta, jotta selain pysyy käyttökelpoisena.</p>\n  <p>Tämä eroaa yhden katselulinkin tallentamisesta. Yhden URL-osoitteen työnkulku on<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Kuinka ladata YouTube-pikkukuva</a>Rivi kerrallaan tapahtuva joukkolaskenta ilman kanavaa on<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">erälataus</a>.</p>"
+    },
+    {
+      "heading": "Mitkä kanavien URL-osoitteet toimivat?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>kun julkinen sivu paljastaa kanavatunnuksen</li>\n    <li>Perintö<code>/user/name</code>polut, jotka vielä ratkeavat</li>\n  </ul>\n  <p>/playlist-URL-osoite ei ole kanava. Liitä sen sijaan soittolistan yksittäiset katselulinkit. Kahva, joka ei koskaan ratkaise UC-tunnukseksi, ei palauta videoita; avaa kanava tavallisessa selaimessa ja kopioi kanonisen kanavan URL-osoite osoiteriviltä.</p>"
+    },
+    {
+      "heading": "Kanavien pikkukuvien poimiminen 11tik-sivulta",
+      "html": "<ol>\n    <li>Avata<a href=\"https://www.11tik.com/\">11tik</a>ja napsauta Joukkolähetys.</li>\n    <li>Liitä yhden julkisen kanavan URL-osoite. Voit lisätä lisää katselulinkkejä seuraaville riveille.</li>\n    <li>Aloita poiminta. Odota, kunnes työkalu korvaa kanavarivin viimeaikaisilla julkisilla katselu-URL-osoitteilla ja hakee sitten still-kuvia.</li>\n    <li>Lataa jokainen paras still-kuva, lataa korkealaatuisin zip-tiedosto tai vie CSV-tiedosto (tunnus, otsikko, jako-osoite, kuvan URL-osoite) tutkimuslokia varten.</li>\n  </ol>\n  <p>Jaa linkkejä onnistuneen uutteen käytön jälkeen<code>/thumb/VIDEO_ID</code>kun laatuportilla on otsikko, tunnisteet ja live-pikkukuva. Nämä sivut ovat ainutlaatuisia still-kuvia varten, eivät toista kotisivua varten.</p>"
+    },
+    {
+      "heading": "Mitä 11tik ei tee",
+      "html": "<ul>\n    <li>Lataa videoita tai äänitiedostoja. Vain still-kuvia.</li>\n    <li>Listaa listaamattomat tai yksityiset lataukset.</li>\n    <li>Taattu maxresdefault-arvo jokaiselle uusimmalle videolle. Vanhemmat tai pienemmät lähteet pysähtyvät HQ- tai SD-laatuun.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maksimioletusarvo</a>.</li>\n    <li>Myönnä oikeudet taideteoksen uudelleenkäyttöön. Tutkimustarkoituksena on tutkia julkisten pakkausten ruudukkoa. Kilpailijan still-kuvan uudelleenlataaminen omana pienoiskuvana on tekijänoikeus- ja käytäntöongelma.<a href=\"https://www.11tik.com/copyright\">Tekijänoikeudet ja käyttö</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Näin tämä auttaa tutkimusta ilman porttisivuja",
+      "html": "<p>Kanavan otteen luominen on yksi työvaihe: tuoreet julkiset still-kuvat yhdellä istumalla. Se ei ole kilpailevan brändin mukaan luotu sivu. Pysyt työkalussa, säilytät zip- tai CSV-tiedoston ja kirjoitat omat muistiinpanosi. Jos julkaiset kommentteja, mainitse kanavan nimi ja linkitä sen katselusivut. YouTuben pikkukuvien lataussäännöt<em>sinun</em>kanava on sisällä<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">mukautetut videopikkukuvat</a>.</p>"
+    },
+    {
+      "heading": "Vianmääritys",
+      "html": "<p>Tyhjä lista: kanavasyöte ei palauttanut julkisia tunnuksia (katkaistu kanava tai tunniste, jota ratkaisija ei pystynyt yhdistämään). Kokeile UC-kanavan URL-osoitetta YouTuben työpöytäasettelussa.</p>\n  <p>Joitakin kortteja puuttuu: näillä latauksilla ei ole vielä julkista kuvaa tai portti hylkäsi epätäydellisen otteen. Suorita yksittäinen katseluosoite uudelleen. Liitettyjen linkkien tietosuoja:<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>.</p>\n  <p>Extractor vs. suunnittelutyökalu: 11tik ei luo kansikuvia.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Uutin vs. valmistaja</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ota julkisen kanavan still-kuvia 11tik → -palvelusta</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voinko saada pikkukuvia koko YouTube-kanavalta?",
+      "answer": "Kyllä viimeaikaisille julkisille latauksille. Liitä kanavan URL-osoite 11tik Bulk-tiedostoon. Yksityisiä ja vain jäsenille tarkoitettuja videoita ei luetella.",
+      "answerHtml": "Kyllä viimeaikaisille julkisille latauksille. Liitä kanavan URL-osoite 11tik Bulk-tiedostoon. Yksityisiä ja vain jäsenille tarkoitettuja videoita ei luetella."
+    },
+    {
+      "question": "Mitkä kanavien URL-osoitteet toimivat?",
+      "answer": "Julkiset /channel/UC… URL-osoitteet, useita @handle-URL-osoitteita ja joitakin vanhoja /user/-polkuja. Soittolistat eivät ole kanavia.",
+      "answerHtml": "Julkiset /channel/UC… URL-osoitteet, useita @handle-URL-osoitteita ja joitakin vanhoja /user/-polkuja. Soittolistat eivät ole kanavia."
+    },
+    {
+      "question": "Lataako tämä videoita?",
+      "answer": "Ei. 11tik listaa vain YouTuben jo ylläpitämiä julkisia still-kuvia.",
+      "answerHtml": "Ei. 11tik listaa vain YouTuben jo ylläpitämiä julkisia still-kuvia."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+}

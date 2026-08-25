@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "ro",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Cum să descarci o miniatură YouTube în HD | 11tik",
+  "description": "Salvează o miniatură publică de pe YouTube: lipește videoclipul „Vizionează”, videoclipurile scurte, youtu.be sau încorporează adrese URL în 11tik și descarcă cel mai mare fișier existent.",
+  "h1": "Cum să descarci o miniatură YouTube în HD",
+  "ogTitle": "Cum să descarci o miniatură YouTube în HD",
+  "ogDescription": "Salvează o miniatură publică de pe YouTube: lipește videoclipul „Vizionează”, videoclipurile scurte, youtu.be sau încorporează adrese URL în 11tik și descarcă cel mai mare fișier existent.",
+  "imageAlt": "Flux de lucru în patru pași, de la copierea unei adrese URL de pe YouTube până la descărcarea unei imagini statice miniaturale publice validate",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Flux de lucru în patru pași, de la copierea unei adrese URL de pe YouTube până la descărcarea unei imagini statice miniaturale publice validate",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Diagramă de depanare care arată un fișier maxresdefault lipsă omis pentru a putea fi descărcată următoarea dimensiune reală a miniaturii",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Răspuns rapid",
+      "html": "<p>Copiați un link public de pe YouTube, lipiți-l în<a href=\"https://www.11tik.com/\">11tik</a>, așteptați previzualizări validate, apoi descărcați primul fișier listat. Fișierul respectiv este cel mai înalt JPEG sau WebP public pe care YouTube îl găzduiește deja pentru ID-ul videoclipului - adesea 1280 × 720 când există maxres sau hq720. Acest lucru economisește un<strong>miniatură statică</strong>, nu videoclipul sau sunetul.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Cale practică: URL public → extragere → previzualizare dimensiuni reale → descărcare sau copiere URL-ul imaginii.</p>"
+    },
+    {
+      "heading": "Cea mai rapidă metodă cu 11tik",
+      "html": "<ol>\n    <li>Copiați o adresă URL publică pentru vizionare, videoclipuri scurte, live, embed sau youtu.be (sau un ID video simplu de 11 caractere).</li>\n    <li>Deschide<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>în browserul tău.</li>\n    <li>Lipiți adresa URL. Extragerea începe când ID-ul este valid.</li>\n    <li>Descărcați primul rezultat (cel mai bun disponibil) sau alegeți o altă dimensiune existentă.</li>\n  </ol>\n  <p>Opțional: utilizați<strong>Copiați adresa URL a imaginii</strong>dacă aveți nevoie de adresa unui CMS în loc de un fișier. Acest flux este acoperit în<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>.</p>"
+    },
+    {
+      "heading": "Formate URL acceptate pentru YouTube",
+      "html": "<p>11tik citește ID-ul videoclipului din aceleași modele pe care le acceptă analizorul său web:</p>\n  <table>\n    <thead>\n      <tr><th>Format</th><th>Exemplu de model</th><th>Note</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Ceas</td><td><code>youtube.com/watch?v=ID</code></td><td>Parametrii de interogare suplimentari au fost ignorați</td></tr>\n      <tr><td>Legătură scurtă</td><td><code>youtu.be/ID</code></td><td>Partajările mobile folosesc adesea acest lucru</td></tr>\n      <tr><td>Pantaloni scurţi</td><td><code>youtube.com/shorts/ID</code></td><td>Același public încă găzduiește</td></tr>\n      <tr><td>Încorporare</td><td><code>youtube.com/embed/ID</code></td><td>Din sursa iframe</td></tr>\n      <tr><td>Trăi</td><td><code>youtube.com/live/ID</code></td><td>Când este prezent un ID public</td></tr>\n      <tr><td>fără încorporare de cookie-uri</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Tratat ca încorporare</td></tr>\n      <tr><td>ID-ul nud</td><td><code>dQw4w9WgXcQ</code></td><td>Doar 11 caractere</td></tr>\n    </tbody>\n  </table>\n  <p>Adresele URL ale canalului sau listei de redare fără un ID de videoclip nu vor genera nicio miniatură. Pentru mai multe linkuri simultan, utilizați opțiunea Bulk (până la 25) - consultați<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">descărcare în lot</a>Extinderea canalului:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extrage dintr-o adresă URL a canalului</a>.</p>"
+    },
+    {
+      "heading": "Metodă URL directă (fără interfață de extragere)",
+      "html": "<p>Dacă știți deja ID-ul, puteți deschide un candidat direct:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Când se încarcă, folosește comanda save-image a browserului. Dacă eșuează, coboară la<code>hq720.jpg</code>,<code>sddefault.jpg</code>, sau<code>hqdefault.jpg</code>Această cale manuală este mai lentă și predispusă la erori în comparație cu lista validată a lui 11tik, dar funcționează offline din orice browser odată ce aveți o adresă bună.</p>"
+    },
+    {
+      "heading": "Alegerea calității atunci când descărcați",
+      "html": "<p>Descărcați prima dimensiune listată, cu excepția cazului în care aveți un motiv să păstrați o previzualizare mai mică. „HD” aici înseamnă cea mai mare imagine publică existentă - de obicei 1280×720 - nu un master 4K. Așteptările privind pixelii și comportamentul la dimensiunile lipsă sunt explicate în secțiunea<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de dimensiuni și rezoluție</a>.</p>\n  <p>Dacă vă interesează doar fișierul public de top, consultați și<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatură de cea mai înaltă calitate</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Când o dimensiune estimată nu este disponibilă, omiteți-o și păstrați următorul fișier public real.</p>"
+    },
+    {
+      "heading": "Depanarea problemelor de descărcări",
+      "html": "<table>\n    <thead>\n      <tr><th>Simptom</th><th>Cauza probabilă</th><th>Ce să fac</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Fără previzualizare după lipire</td><td>URL nevalid, fără ID video sau videoclip privat/restricționat</td><td>Lipiți un link public de vizionare/shorts/youtu.be</td></tr>\n      <tr><td>Maxres lipsește</td><td>YouTube nu a publicat niciodată fișierul respectiv.</td><td>Descărcați în schimb prima dimensiune afișată</td></tr>\n      <tr><td>Imagine gri / substituentă dintr-o adresă URL creată manual</td><td>Nume de fișier ghicit</td><td>Folosește lista validată a lui 11tik</td></tr>\n      <tr><td>Salvarea telefonului este ciudată</td><td>Interfața de descărcare a browserului este diferită</td><td>Vedea<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">Ghid de salvare pentru iPhone / Android</a></td></tr>\n      <tr><td>Pare a fi o captură de interfață</td><td>Faci o captură de ecran a playerului</td><td>Salvați CDN-ul, nu ecranul —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captură de ecran vs. reală</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Ce descarci (și ce nu descarci)",
+      "html": "<p>Salvezi o imagine publică pe care YouTube o găzduiește deja. Nu deblochezi videoclipuri private, fișiere exclusiv pentru membri sau fluxul MP4/WebM. 11tik este un extractor, nu un creator și nu un program de descărcare video — comparație:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs. producător</a>.</p>\n  <p>Drepturile de autor rămân la cel care a încărcat conținutul. Salvarea pentru cercetare sau referințe personale este utilizarea obișnuită; republicarea ca miniatură personalizată proprie fără drepturi nu este. Ajutor YouTube:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">miniaturi video personalizate</a>Regulile site-ului:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    },
+    {
+      "heading": "Compararea metodelor",
+      "html": "<table>\n    <thead>\n      <tr><th>Metodă</th><th>Viteză</th><th>Cel mai bun pentru</th><th>Are nevoie de 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Descărcare 11tik</td><td>Rapid</td><td>Validată, cea mai bună alambic</td><td>Da</td></tr>\n      <tr><td>11tik copiază URL-ul</td><td>Rapid</td><td>CMS / încorporări</td><td>Da</td></tr>\n      <tr><td>URL i.ytimg.com construit manual</td><td>Mediu</td><td>Teste rapide când știi ID-ul</td><td>Nu</td></tr>\n      <tr><td>Captură de ecran a jucătorului</td><td>Rapid, dar de calitate scăzută</td><td>Evitați pentru bloguri / materiale originale</td><td>Nu</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Pasul următor",
+      "html": "<p>Deschideți<a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>, lipiți un link public și salvați prima imagine statică validată. Aveți nevoie doar de link? Citiți<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Ghid URL</a>Alegeți între dimensiuni? Folosiți<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de rezoluție</a>.</p>\n\n  <p class=\"yte-bio\">Scris de 11tik, editorul extractorului din browser. Doar fotografii publice.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pot descărca o miniatură dintr-un videoclip scurt?",
+      "answer": "Da, când scurtmetrajul este public și există imagini statice pentru acel ID. Inserați adresa URL /shorts/ în 11tik. Imaginea statică poate fi afișată în modul peisaj, chiar dacă redarea este verticală.",
+      "answerHtml": "<p>Da, când Short este public și încă există pentru acel ID. Inserați<code>/shorts/</code>URL în 11tik. Imaginea statică poate fi afișată peisagistic, chiar dacă redarea este verticală.</p>"
+    },
+    {
+      "question": "Ce se întâmplă dacă cea mai bună miniatură nu se încarcă?",
+      "answer": "Descărcați următoarea dimensiune afișată. Lipsa valorilor maxime este frecventă și nu este o eroare a instrumentului.",
+      "answerHtml": "<p>Descărcați următoarea dimensiune afișată. Lipsa valorilor maxime este frecventă și nu este o eroare a instrumentului.</p>"
+    },
+    {
+      "question": "Pot descărca imaginea miniaturală publică originală?",
+      "answer": "Da - acesta este fișierul validat de top. „Original” înseamnă imaginea statică din CDN-ul public, nu un cadru extras din fluxul video. Vedeți miniatura publică originală.",
+      "answerHtml": "<p>Da - acesta este fișierul validat de top. „Original” înseamnă imaginea statică din CDN-ul public, nu un cadru extras din fluxul video. Vedeți<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">miniatură publică originală</a>.</p>"
+    },
+    {
+      "question": "Pot copia adresa URL a imaginii în loc să o descarc?",
+      "answer": "Da. Folosește opțiunea „Copiere URL imagine” pe 11tik sau copiază o adresă verificată din browser după ce se încarcă imaginea.",
+      "answerHtml": "<p>Da. Folosește opțiunea „Copiere URL imagine” pe 11tik sau copiază o adresă verificată din browser după ce se încarcă imaginea.</p>"
+    },
+    {
+      "question": "Descarcă asta fișierul video de la YouTube?",
+      "answer": "Nu. Doar imaginea publică în miniatură.",
+      "answerHtml": "<p>Nu. Doar imaginea publică în miniatură.</p>"
+    },
+    {
+      "question": "Fiecare videoclip va oferi un fișier de 1280×720?",
+      "answer": "Nu. Păstrați orice fișier public mai mare care validează pentru acel ID.",
+      "answerHtml": "<p>Nu. Păstrați orice fișier public mai mare care validează pentru acel ID.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul extractorului din browser. Doar fotografii publice.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+}

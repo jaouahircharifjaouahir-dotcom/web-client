@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "hu",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "Miért nem jelenik meg a YouTube indexképe: Privát, korhatáros vagy feldolgozás alatt álló videók | 11tik",
+  "description": "Ha továbbra sem töltődik be nyilvános YouTube, a videó állapota privát, korlátozott, feldolgozás alatt áll, vagy törölt lehet – nem csupán egy hiányzó maxres fájlnév.",
+  "h1": "Miért nem jelenik meg a YouTube indexképe: Privát, korhatáros vagy feldolgozás alatt álló videók",
+  "ogTitle": "Miért nem jelenik meg a YouTube indexképe: Privát, korhatáros vagy feldolgozás alatt álló videók",
+  "ogDescription": "Ha továbbra sem töltődik be nyilvános YouTube, a videó állapota privát, korlátozott, feldolgozás alatt áll, vagy törölt lehet – nem csupán egy hiányzó maxres fájlnév.",
+  "imageAlt": "Egy YouTube URL-től a videóazonosítón és nyilvános ellenőrzésen keresztül elérhető vagy nem elérhető eredményekig tartó folyamat",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "Egy YouTube URL-től a videóazonosítón és nyilvános ellenőrzésen keresztül elérhető vagy nem elérhető eredményekig tartó folyamat",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Hiányzó indexképméret és a videóhoz nem használható nyilvános indexkép egymás melletti összehasonlítása",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>Egy érvényes YouTube URL igazolja, hogy van videoazonosítód.<strong>nem</strong>bizonyítsa be, hogy a YouTube közzétett egy használható nyilvános bélyegképfájlt a kép CDN-en. Kinyerők, mint például<a href=\"https://www.11tik.com/\">11tik</a>csak a nyilvános állóképeket ellenőrizd. Ha ezek közül a képjelöltek közül egyik sem töltődik be, az eszköz azt jelenti, hogy nem található nyilvános indexkép. Ez az eredmény gyakran a videó elérését vagy állapotát követi nyomon – privát, korhatáros vagy más módon korlátozott, még feldolgozás alatt álló, törölt vagy más módon nem elérhető –, ahelyett, hogy egyetlen hiányzó méretnevet, például<code>maxresdefault.jpg</code>.</p>\n  <p>Fontos őszinteségi ellenőrzés: 11tik igen<strong>nem</strong>a pontos okot privátként, korhatárosként vagy feldolgozás alatt állóként osztályozhatod. Ezek a címkék gyakori magyarázatok, amelyeket a felhasználóknak magán a YouTube-on kell ellenőrizniük. A kivonatoló csak azt mondja meg, hogy a nyilvános ok továbbra is érvényesíthető-e.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Diagnosztikai útvonal: URL → videóazonosító → nyilvános, továbbra is ellenőrizhető → elérhető vagy nem elérhető → mit kell ezután ellenőrizni.</p>"
+    },
+    {
+      "heading": "Mit jelenthet az „indexkép nem érhető el”?",
+      "html": "<p>A gyakorlatban a „nem elérhető” két különböző probléma egyikét jelenti:</p>\n  <ol>\n    <li><strong>Videószint nem érhető el:</strong>A nyilvános jelöltek továbbra is mindenhol kudarcot vallottak. Jelenleg nem kapsz használható, letölthető nyilvános képet ehhez a személyazonosító okmányhoz.</li>\n    <li><strong>Nem elérhető változat:</strong>Egy magas szintű fájlnév hiányzik (gyakran maxres), de egy alacsonyabb nyilvános méret továbbra is betöltődik. Ez egy méret/tartalék probléma, nem pedig a teljes videó hiányzó indexképe.</li>\n  </ol>\n  <p>Ez a cikk az első esetet tárgyalja. A második esetre vonatkozóan – különösen<code>maxresdefault.jpg</code>404-esek – használja a dedikált<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault hibaelhárítási útmutató</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Balra: egy változat hiányzik, a többi nyilvános méret továbbra is működik. Jobbra: a videoazonosítóhoz továbbra sincs használható nyilvános érték.</p>"
+    },
+    {
+      "heading": "Nyilvános állóképek és videók hozzáférési állapota",
+      "html": "<p>A YouTube külön tárolja a videóoldalakat és a kép származékokat. A nyilvános indexképfájlok jellemzően olyan tárhelyek alatt találhatók, mint például<code>i.ytimg.com</code>és a 11 karakteres videoazonosítóval vannak kódolva. Azok az eszközök, amelyek bejelentkezés nélkül képesek bélyegképeket kinyerni, csak ezeket a nyilvános fájlokat tudják lekérni.</p>\n  <p>Amikor egy videó nincs nyilvános csomagolásban közzétéve – vagy amikor a származékai még nem készek –, a képellenőrzések sikertelenek lesznek, még akkor is, ha a beillesztett karakterlánc egy normál videómegtekintési, rövid videós, élő vagy beágyazási linknek tűnik. Az URL-alakzatok azonosítóhoz való kapcsolódásáról a következő részben olvashat bővebben:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube indexkép URL útmutató</a>Hogyan lehet egy már létező állóképet menteni, azt a ... részben tárgyaljuk.<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">útmutató letöltése</a>.</p>"
+    },
+    {
+      "heading": "Privát videók",
+      "html": "<p>A privát feltöltések korlátozott közönségnek szólnak. Ha a YouTube nem tesz közzé nyilvános indexkép-származékokat az adott azonosítóhoz, akkor egy böngészőn belüli nyilvános kivonatoló nem tudja létrehozni azokat. Ha tulajdonosként jelentkezel be, a megtekintési URL megnyitása után is megjelenhet a videó a YouTube-on; ez nem jelenti azt, hogy egy nyilvános CDN továbbra is elérhető a névtelen képkérelmek számára.</p>\n  <p>Mit kell ellenőrizni: kijelentkezve nyissa meg az URL-t privát/inkognitóablakban. Ha a YouTube maga nem tartja vissza a videót, akkor a miniatűrök kinyerését úgy kezelje, mintha az szándékosan blokkolta volna.</p>"
+    },
+    {
+      "heading": "Korhatáros és egyéb hozzáférési korlátozások",
+      "html": "<p>A korhatáros, csak tagoknak szóló vagy hasonlóan korlátozott videók nyilvános képkeresés esetén privát tartalomként viselkedhetnek: az azonosító helyesen elemezhető, de a nyilvános állóképek soha nem érvényesülnek. A régiókorlátok és a fiókkapuk ugyanazt az üres eredményt adhatják egy nyilvános eszköz esetében.</p>\n  <p>A 11tik ismét nem fogja címkézni a korlátozás típusát. A YouTube-on megerősíted a hozzáférési állapotot; a kivonatoló csak azt jelenti, hogy a nyilvános tartalom továbbra is betöltődött-e.</p>"
+    },
+    {
+      "heading": "A videók feldolgozása még folyamatban van",
+      "html": "<p>A „feldolgozás” két kapcsolódó módon jelenik meg:</p>\n  <ul>\n    <li><strong>Vadonatúj feltöltések:</strong>A videóoldal megjelenhet, mielőtt minden nyilvános kép származék elkészülne. Próbáld újra később ugyanazzal az URL-címmel.</li>\n    <li><strong>Egyéni bélyegkép frissítése a Studioban:</strong>A grafika cseréje után a nyilvános CDN-fájlok késleltetve jelenhetnek meg. Az alacsonyabb méretek a nagyobbak előtt jelenhetnek meg, vagy a készlet rövid időre hiányos lehet.</li>\n  </ul>\n  <p>Ha<em>néhány</em>A nyilvános méretek már működnek, és csak a legmagasabb név hiányzik, váltson a következőre:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault cikk</a>Ha<em>nem</em>A nyilvános még mindig érvényesíti a hitelesítést, várjon a feldolgozásra, majd ellenőrizze újra<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Törölt vagy más módon elérhetetlen tartalom",
+      "html": "<p>Az eltávolított videók, a hibás azonosítók és néhány megszakított feltöltés nem hagy megbízható nyilvános csomagolást. Egy könyvjelzővel ellátott megtekintési URL szintaktikailag továbbra is hibátlanul nézhet ki, míg minden képjelölt hibát elbukik. A törölt/nem elérhető állapotot ugyanúgy kezelje, mint a többi videószintű hibát: erősítse meg a megtekintési oldal állapotát a YouTube-on, majd hagyja abba a CDN-üzenetek várását.</p>"
+    },
+    {
+      "heading": "Miért nem elég egy érvényes URL",
+      "html": "<p>Az elemzés sikeres, ha a karakterlánc egy támogatott mintázatú 11 karakteres azonosítót tartalmaz. A kinyerés csak akkor sikeres, ha legalább egy nyilvános bélyegkép-jelölt valódi képként érvényesül. Ezek a lépések függetlenek egymástól:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>A 11tik oldalon egy üres legjobb továbbra is egyértelmű „nincs nyilvános előnézeti kép” stílusú üzenetként jelenik meg. A termék ezt nem eszkalálja privát, korhatáros vagy feldolgozási osztályozóvá.</p>"
+    },
+    {
+      "heading": "Mit kell először ellenőrizni (gyakorlati folyamat)",
+      "html": "<ol>\n    <li>Illeszd be ugyanazt az URL-t ide<a href=\"https://www.11tik.com/\">11tik</a>és várja meg, amíg a nyilvános méret ellenőrzése befejeződik.</li>\n    <li>Ha legalább egy méret megjelenik, akkor igen.<strong>nem</strong>videó szintű elérhetetlenség esetén töltsd le az állóképet, vagy olvasd el a méret/maximális felbontás útmutatókat a minőség kiválasztásához.</li>\n    <li>Ha semmi sem jelenik meg, nyisd meg a videó/Rövid videók oldalt kijelentkezve. Figyeld meg, hogy a YouTube megjeleníti-e a videót, bejelentkezést/életkor megerősítését kéri-e, vagy azt jelzi-e, hogy nem érhető el.</li>\n    <li>Ha a videó a tulajdonod, és most töltöttél fel vagy cseréltél le egy egyéni indexképet, várd meg, amíg a Studio feldolgozza, majd próbáld újra.</li>\n    <li>Ha a YouTube nyilvánosan megjeleníti a videót, és a 11tik továbbra sem talál semmit, próbáld újra később; az állandó üres eredmények általában azt jelentik, hogy az adott azonosítóhoz nem állnak rendelkezésre nyilvános állóképek.</li>\n  </ol>"
+    },
+    {
+      "heading": "Diagnosztikai táblázat",
+      "html": "<table>\n    <thead>\n      <tr><th>Amit látsz</th><th>Valószínű osztály</th><th>Következő lépés</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>A 11tik egy vagy több méretet sorol fel</td><td>Nyilvános állóképek léteznek</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Útmutató letöltése</a>/ méretválasztás</td></tr>\n      <tr><td>Csak a maxres hibázik; a hq/sd működik</td><td>Változat nem elérhető</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Maxres hibaelhárítás</a></td></tr>\n      <tr><td>Nincsenek méretek; a YouTube bejelentkezést kér / korhatár</td><td>Hozzáférés korlátozása</td><td>Használjon nyilvános videót, vagy fogadja el, hogy a nyilvános kinyerés nem történhet meg</td></tr>\n      <tr><td>Nincsenek méretek; a tulajdonos most töltött fel/cserélt ki egy grafikát</td><td>Feldolgozási késés</td><td>Várjon, majd ellenőrizze újra ugyanazt az URL-t</td></tr>\n      <tr><td>Nincsenek méretek; a YouTube privát/nem elérhető üzenetet küld</td><td>Privát vagy törölt állapot</td><td>Nincs még nyilvános kivonás</td></tr>\n      <tr><td>Az URL nem elemezhető</td><td>Hibás vagy nem támogatott link</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL / videoazonosító útmutató</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Hiányzó változat vs. nincs használható nyilvános indexkép",
+      "html": "<p>Az emberek gyakran bemásolnak egy kézzel generált maxres URL-t, 404-es hibát látnak, és arra a következtetésre jutnak, hogy „nincs miniatűr”. Ez a következtetés gyakran téves. A hiányzó magas szintű fájlnév normális. A videó szintű elérhetetlenség azt jelenti, hogy a kivonatoló teljes jelöltje semmi használhatót nem ad vissza.</p>\n  <p>Ökölszabály:</p>\n  <ul>\n    <li>A legjobbra van szükség<em>létező</em>nyilvános fájl → letöltés / méret / maxres útmutatók.</li>\n    <li>Meg kell érteni, miért<em>semmi</em>nyilvános megjelenés → ez a cikk + a YouTube saját hozzáférési üzenete.</li>\n  </ul>"
+    },
+    {
+      "heading": "Mikor melyik 11tik útmutatót használjuk?",
+      "html": "<ul>\n    <li><strong>Ez a cikk:</strong>nulla használható nyilvános állókép; hozzáférési vagy állapotkérdések.</li>\n    <li><strong>Maxres útmutató:</strong>Hiányzik a HD fájlnév, miközben léteznek más nyilvános méretek.</li>\n    <li><strong>URL útmutató:</strong>az azonosító megkeresése és a ténylegesen létező kép URL-címek létrehozása/másolása.</li>\n    <li><strong>Útmutató letöltése:</strong>állókép mentése a méretek megjelenése után.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Egy működő videóoldal garantálja a nyilvános indexképet?",
+      "answer": "Nem. A videónézési élmény és a nyilvános kép CDN-fájlok kapcsolódnak egymáshoz, de nem azonosak. A hozzáférési korlátok és a feldolgozási módok miatt előfordulhat, hogy csak egy videoazonosító marad, de nem lesz kinyerhető nyilvános állókép.",
+      "answerHtml": "<p>Nem. A videónézési élmény és a nyilvános kép CDN-fájlok kapcsolódnak egymáshoz, de nem azonosak. A hozzáférési korlátok és a feldolgozási módok miatt előfordulhat, hogy csak egy videoazonosító marad, de nem lesz kinyerhető nyilvános állókép.</p>"
+    },
+    {
+      "question": "Meg tudná mondani a 11tik, hogy a videó privát vagy korhatáros?",
+      "answer": "Nem. A 11tik csak arról számol be, hogy a nyilvános tartalom továbbra is érvényesíthető-e. Erősítse meg a privát, korhatáros vagy egyéb korlátozásokat a YouTube-on.",
+      "answerHtml": "<p>Nem. A 11tik csak arról számol be, hogy a nyilvános tartalom továbbra is érvényesíthető-e. Erősítse meg a privát, korhatáros vagy egyéb korlátozásokat a YouTube-on.</p>"
+    },
+    {
+      "question": "Épp most töltöttem fel egy egyéni bélyegképet. Miért üres a kibontás?",
+      "answer": "A stúdió feldolgozása késhet. Várj, majd illeszd be újra ugyanazt a nyilvános URL-t. Ha bizonyos méretek megjelennek, de a maxres nem, olvasd el a maxres útmutatót ahelyett, hogy feltételeznéd, hogy a videónak nincs indexképe.",
+      "answerHtml": "<p>A stúdió feldolgozása késhet. Várj, majd illeszd be újra ugyanazt a nyilvános URL-t. Ha bizonyos méretek megjelennek, de a maxres nem, olvasd el a maxres útmutatót ahelyett, hogy feltételeznéd, hogy a videónak nincs indexképe.</p>"
+    },
+    {
+      "question": "Ugyanaz a probléma, mint egy maxresdefault 404-es hiba esetén?",
+      "answer": "Csak néha. A működő tartalékokkal rendelkező maxres 404 egy variáns probléma. Az üres eredmények nyilvános jelöltek között videó szintű elérhetetlenséget jelentenek.",
+      "answerHtml": "<p>Csak néha. A működő tartalékokkal rendelkező maxres 404 egy variáns probléma. Az üres eredmények nyilvános jelöltek között videó szintű elérhetetlenséget jelentenek.</p>"
+    },
+    {
+      "question": "A 11tik-n belüli YouTube-be való bejelentkezés feloldja a privát állóképeket?",
+      "answer": "Nem. A 11tik egy nyilvános, állókép-kicsomagoló a böngészőben. Nem kerüli meg a privát vagy a zárolt csomagolást.",
+      "answerHtml": "<p>Nem. A 11tik egy nyilvános, állókép-kicsomagoló a böngészőben. Nem kerüli meg a privát vagy a zárolt csomagolást.</p>"
+    },
+    {
+      "question": "Mit próbáljak ki, ha az URL helyesnek tűnik?",
+      "answer": "Ellenőrizd, hogy a videó kijelentkezve nyílik-e meg, várj, ha épp most módosítottad a Studio-borítót, majd futtasd újra a kibontást a 11tik oldalon. Az állandó üres eredmények azt jelentik, hogy jelenleg nincs elérhető nyilvános tartalom az adott azonosítóhoz.",
+      "answerHtml": "<p>Ellenőrizd, hogy a videó kijelentkezve nyílik-e meg, várj, ha épp most módosítottad a Studio-borítót, majd futtasd újra a kibontást a 11tik oldalon. Az állandó üres eredmények azt jelentik, hogy jelenleg nincs elérhető nyilvános tartalom az adott azonosítóhoz.</p>"
+    },
+    {
+      "question": "A „nincs nyilvános indexkép” azt jelenti, hogy a videofájl eltűnt?",
+      "answer": "Nem mindig. A videó továbbra is elérhető lehet a jogosult nézők számára, miközben a nyilvános képekből származó származékok visszatartva vannak vagy még nem állnak készen. Nézd meg a YouTube saját oldalüzenetét.",
+      "answerHtml": "<p>Nem mindig. A videó továbbra is elérhető lehet a jogosult nézők számára, miközben a nyilvános képekből származó származékok visszatartva vannak vagy még nem állnak készen. Nézd meg a YouTube saját oldalüzenetét.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Következtetés</h2>\n<p>Amikor egy bélyegkép „nem jelenik meg”, különítsen el két kérdést: Volt-e nyilvános érvényesítés? Vagy csak egy magas szintű fájlnév hibázott? A videó szintű hibák általában a privát, korlátozott, feldolgozás alatt álló, törölt vagy más módon nem nyilvános csomagolásokat követik nyomon – nem egy varázslatos hiány.<code>maxresdefault</code>karakterlánc. Használd a 11tik parancsot a nyilvános elérhetőség őszintén történő teszteléséhez, majd kövesd a maxres, URL vagy letöltési útmutatót a következő lépéshez.</p>\n  <p><a href=\"https://www.11tik.com/\">Ellenőrizd, hogy létezik-e nyilvános YouTube-bélyegkép a 11tik oldalon →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>Hivatalos alkotói segítség az egyéni bélyegképekhez:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Egyéni videóbélyegképek feltöltése</a>.</p>"
+}

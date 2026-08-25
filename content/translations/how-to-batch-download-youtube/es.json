@@ -1,0 +1,53 @@
+{
+  "contentId": "how-to-batch-download-youtube",
+  "articleId": "how-to-batch-download-youtube",
+  "locale": "es",
+  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "status": "ready",
+  "title": "Cómo descargar miniaturas de YouTube en lote (hasta 25 URL públicas) | 11tik",
+  "description": "Extrae masivamente miniaturas públicas de YouTube en tu navegador. Pega una URL por línea, descarga la mejor imagen de cada canal o comprime el conjunto de mayor calidad. No necesitas cuenta ni archivos de vídeo.",
+  "h1": "Cómo descargar miniaturas de YouTube en lote (hasta 25 URL públicas)",
+  "ogTitle": "Cómo descargar miniaturas de YouTube en lote (hasta 25 URL públicas)",
+  "ogDescription": "Extrae masivamente miniaturas públicas de YouTube en tu navegador. Pega una URL por línea, descarga la mejor imagen de cada canal o comprime el conjunto de mayor calidad. No necesitas cuenta ni archivos de vídeo.",
+  "imageAlt": "11tik Extractor de miniaturas en lote con varias URL de YouTube listas para descargar",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Extractor de miniaturas en lote con varias URL de YouTube listas para descargar",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "¿Cómo puedo descargar miniaturas de YouTube en lote?",
+      "html": "<p>Abierto<a href=\"https://www.11tik.com/\">11tik</a>Activa la opción de descarga masiva, pega una URL pública por línea, haz clic en Extraer todo y descarga cada imagen de mejor calidad o el archivo ZIP de mayor calidad. El límite es de 25 URL por ejecución para que el navegador siga respondiendo.</p>"
+    },
+    {
+      "heading": "¿Qué debe incluirse en la lista?",
+      "html": "<ul>\n    <li>youtube.com/watch?v= Identificadores</li>\n    <li>youtu.be enlaces cortos</li>\n    <li>youtube.com/shorts/ Identificaciones</li>\n    </ul>\n  <p>Los videos privados, no listados sin miniaturas públicas o restringidos por edad no mostrarán una imagen fija. Esto es normal. Véase también<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">miniaturas de cortos</a>.</p>"
+    },
+    {
+      "heading": "Cómo realizar una extracción masiva",
+      "html": "<ol>\n    <li>En la página principal, haga clic en \"Masivo\".</li>\n    <li>Pegue hasta 25 enlaces públicos, uno por línea.</li>\n    <li>Haz clic en Extraer todo y espera hasta que se muestre una vista previa de cada tarjeta.</li>\n    <li>Descarga el vídeo en miniatura N para cada mejor imagen fija, o descarga todo en la máxima calidad como un archivo zip.</li>\n    <li>Opcional: Exportar en formato CSV los registros de investigación (ID del vídeo, título, URL para compartir, URL de la imagen).</li>\n  </ol>"
+    },
+    {
+      "heading": "¿Puedo utilizar esto para investigar a la competencia?",
+      "html": "<p>Sí, para estudiar el empaquetado público. No republiques la miniatura de otro creador como si fuera tu propia subida. Los derechos de autor pertenecen al titular de los derechos. 11tik solo descarga archivos que YouTube ya aloja públicamente.</p>\n  <p><a href=\"https://www.11tik.com/\">Abrir extracto masivo en 11tik →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Cómo puedo descargar miniaturas de YouTube en lote?",
+      "answer": "Usa la función de procesamiento masivo en 11tik, pega una URL pública por línea, extrae y luego descarga imágenes fijas o un archivo zip de la más alta calidad pública. Máximo 25 URL por ejecución.",
+      "answerHtml": "Usa la función de procesamiento masivo en 11tik, pega una URL pública por línea, extrae y luego descarga imágenes fijas o un archivo zip de la más alta calidad pública. Máximo 25 URL por ejecución."
+    },
+    {
+      "question": "¿Puedo utilizar esto para investigar a la competencia?",
+      "answer": "Sí, para estudiar el empaquetado público. No republique la miniatura de otro creador como si fuera suya. Los derechos de autor pertenecen al titular de los derechos.",
+      "answerHtml": "Sí, para estudiar el empaquetado público. No republique la miniatura de otro creador como si fuera suya. Los derechos de autor pertenecen al titular de los derechos."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+}

@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "hu",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "Hogyan tölts le egy YouTube indexképet HD minőségben | 11tik",
+  "description": "Nyilvános YouTube-bélyegkép állóképének mentése: illessz be videókat, rövid videókat, youtu.be-t, vagy ágyazz be URL-eket a 11tik-ba, és töltsd le a létező legnagyobb fájlt.",
+  "h1": "Hogyan tölts le egy YouTube indexképet HD minőségben",
+  "ogTitle": "Hogyan tölts le egy YouTube indexképet HD minőségben",
+  "ogDescription": "Nyilvános YouTube-bélyegkép állóképének mentése: illessz be videókat, rövid videókat, youtu.be-t, vagy ágyazz be URL-eket a 11tik-ba, és töltsd le a létező legnagyobb fájlt.",
+  "imageAlt": "Négylépéses munkafolyamat a YouTube URL másolásától egy érvényesített nyilvános indexkép letöltéséig",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "Négylépéses munkafolyamat a YouTube URL másolásától egy érvényesített nyilvános indexkép letöltéséig",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "Hibaelhárítási ábra, amelyen egy hiányzó maxresdefault fájl kimarad, így a következő valós bélyegképméret tölthető le",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>Másolj ki egy nyilvános YouTube-linket, és illeszd be ide:<a href=\"https://www.11tik.com/\">11tik</a>, várjon az érvényesített előnézetekre, majd töltse le az első listázott fájlt. Ez a fájl a legmagasabb nyilvános JPEG vagy WebP fájl, amelyet a YouTube a videóazonosítóhoz tárol – gyakran 1280×720, ha létezik maxres vagy hq720. Ez egy<strong>bélyegkép állókép</strong>, nem a videót vagy a hanganyagot.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Gyakorlati út: nyilvános URL → kibontás → valós méretek előnézete → kép URL-jének letöltése vagy másolása.</p>"
+    },
+    {
+      "heading": "A leggyorsabb módszer a 11tik használatával",
+      "html": "<ol>\n    <li>Másolj le egy nyilvános megtekintés, rövid videó, élő adás, beágyazás vagy youtu.be URL-t (vagy egy sima 11 karakteres videóazonosítót).</li>\n    <li>Nyitott<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>a böngésződben.</li>\n    <li>Illeszd be az URL-t. A kibontás akkor kezdődik, amikor az azonosító érvényes.</li>\n    <li>Töltsd le az első találatot (a legjobb elérhetőt), vagy válassz egy másik fennmaradt méretet.</li>\n  </ol>\n  <p>Opcionális: használat<strong>Kép URL-címének másolása</strong>ha egy CMS címére van szüksége fájl helyett. Ezt a folyamatot a következő részben tárgyaljuk:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>.</p>"
+    },
+    {
+      "heading": "Támogatott YouTube URL-formátumok",
+      "html": "<p>A 11tik ugyanazokból a mintákból olvassa ki a videó azonosítóját, amelyeket a weboldal-elemzője elfogad:</p>\n  <table>\n    <thead>\n      <tr><th>Formátum</th><th>Példaminta</th><th>Megjegyzések</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Óra</td><td><code>youtube.com/watch?v=ID</code></td><td>A további lekérdezési paraméterek figyelmen kívül maradnak.</td></tr>\n      <tr><td>Rövid link</td><td><code>youtu.be/ID</code></td><td>A mobil megosztások gyakran használják ezt a módszert.</td></tr>\n      <tr><td>Rövidnadrág</td><td><code>youtube.com/shorts/ID</code></td><td>Ugyanaz a közönség továbbra is házigazdák</td></tr>\n      <tr><td>Beágyaz</td><td><code>youtube.com/embed/ID</code></td><td>Az iframe src-ből</td></tr>\n      <tr><td>Élő</td><td><code>youtube.com/live/ID</code></td><td>Amikor nyilvános azonosító van jelen</td></tr>\n      <tr><td>nocookie beágyazás</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>Beágyazáshoz hasonlóan kezelve</td></tr>\n      <tr><td>Csupasz azonosító</td><td><code>dQw4w9WgXcQ</code></td><td>Csak 11 karakter</td></tr>\n    </tbody>\n  </table>\n  <p>A videoazonosító nélküli csatorna- vagy lejátszási lista URL-ek nem eredményeznek egyetlen indexképet. Több link egyidejű eléréséhez használd a Tömeges (maximum 25) funkciót — lásd:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">kötegelt letöltés</a>Csatornabővítés:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">kivonat egy csatorna URL-jéből</a>.</p>"
+    },
+    {
+      "heading": "Közvetlen URL-módszer (nincs kinyerő felhasználói felület)",
+      "html": "<p>Ha már ismeri az azonosítót, akkor közvetlenül is megnyithatja a jelöltet:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>Amikor betöltődik, használd a böngésző save-image parancsát. Ha nem sikerül, lépj vissza a következőre:<code>hq720.jpg</code>,<code>sddefault.jpg</code>, vagy<code>hqdefault.jpg</code>Ez a manuális elérési út lassabb és hibalehetőségekkel teli a 11tik által ellenőrzött listához képest, de offline is működik bármely böngészőből, ha van egy jó címed.</p>"
+    },
+    {
+      "heading": "Minőség kiválasztása letöltéskor",
+      "html": "<p>Töltsd le az elsőként felsorolt ​​méretet, kivéve, ha van okod kisebb előnézetet megtartani. A „HD” itt a legnagyobb nyilvános állóképet jelenti – általában 1280×720 –, nem pedig egy 4K-s mesterképet. A pixelszámra vonatkozó elvárások és a hiányzó méret viselkedése a leírásban található.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">méret- és felbontási útmutató</a>.</p>\n  <p>Ha csak a legfelső szintű nyilvános fájl érdekel, lásd még:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">legmagasabb minőségű indexkép</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ha egy becsült méret nem érhető el, akkor hagyja ki, és tartsa meg a következő valódi nyilvános fájlt.</p>"
+    },
+    {
+      "heading": "Letöltések hibaelhárítása",
+      "html": "<table>\n    <thead>\n      <tr><th>Tünet</th><th>Valószínű ok</th><th>Mit kell tenni</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Nincs előnézet a beillesztés után</td><td>Érvénytelen URL, nincs videoazonosító, vagy privát/korlátozott videó</td><td>Illesszen be egy nyilvános megtekintés/rövidvideók/youtu.be linket</td></tr>\n      <tr><td>Maxres eltűnt</td><td>A YouTube soha nem tette közzé azt a fájlt</td><td>Töltsd le inkább az első listázott méretet</td></tr>\n      <tr><td>Szürke / helykitöltő kép egy kézzel létrehozott URL-ből</td><td>Kitalált fájlnév</td><td>Használd a 11tik által ellenőrzött listát</td></tr>\n      <tr><td>Telefonos mentés kínos</td><td>A böngésző letöltési felhasználói felülete eltérő</td><td>Lásd<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone / Android mentési útmutató</a></td></tr>\n      <tr><td>Úgy néz ki, mint egy felhasználói felület által rögzített kép</td><td>Készítettél képernyőképet a lejátszóról</td><td>A CDN-t mentsd el, ne a képernyőt —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">képernyőkép vs. valóság</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Amit letöltesz (és amit nem)",
+      "html": "<p>Egy nyilvános, a YouTube-on már tárolt állóképet mentesz el. Nem oldod fel a privát videókat, a csak tagoknak elérhető fájlokat vagy az MP4/WebM streamet. A 11tik egy videókicsomagoló program, nem készítő és nem letöltő – összehasonlításképpen:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extraktor vs. készítő</a>.</p>\n  <p>A szerzői jogok a feltöltőt illetik. A kutatási vagy személyes használatra való mentés a tipikus felhasználási mód; a saját egyéni indexképként való újraközlés jogok nélkül nem. YouTube Súgó:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">egyéni videóbélyegképek</a>Az oldal szabályai:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    },
+    {
+      "heading": "Módszer-összehasonlítás",
+      "html": "<table>\n    <thead>\n      <tr><th>Módszer</th><th>Sebesség</th><th>Legjobb</th><th>Szükséges 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik letöltés</td><td>Gyors</td><td>Validált legjobb állapotú</td><td>Igen</td></tr>\n      <tr><td>11tik URL másolása</td><td>Gyors</td><td>CMS / beágyazások</td><td>Igen</td></tr>\n      <tr><td>Kézzel készített i.ytimg.com URL</td><td>Közepes</td><td>Gyorstesztek, ha ismeri az azonosítót</td><td>Nem</td></tr>\n      <tr><td>Játékos képernyőképe</td><td>Gyors, de alacsony minőségű</td><td>Kerülje blogok / OG esetén</td><td>Nem</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Következő lépés",
+      "html": "<p>Nyissa meg a<a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>, illesszen be egy nyilvános linket, és mentse el az első érvényesített állóképet. Csak a linkre van szüksége? Olvassa el a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL-útmutató</a>Méretek közül szeretne választani? Használja a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">felbontási útmutató</a>.</p>\n\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőn belüli kinyerő kiadója. Csak nyilvános állóképek.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Letölthetek egy indexképet egy rövid videóból?",
+      "answer": "Igen, ha a rövid videó nyilvános, és léteznek állóképek az adott azonosítóhoz. Illeszd be a /shorts/ URL-t a 11tik-ba. Az állókép fekvő lehet, még akkor is, ha a lejátszás függőleges.",
+      "answerHtml": "<p>Igen, ha a rövid videó nyilvános és még mindig létezik az adott azonosítóhoz. Illeszd be a<code>/shorts/</code>URL a 11tik-be. Az állókép fekvő lehet, még akkor is, ha a lejátszás függőleges.</p>"
+    },
+    {
+      "question": "Mi van, ha a legjobb bélyegkép nem töltődik be?",
+      "answer": "Töltsd le a következő listázott méretet. A hiányzó maximális méret gyakori, és nem szerszámhiba.",
+      "answerHtml": "<p>Töltsd le a következő listázott méretet. A hiányzó maximális méret gyakori, és nem szerszámhiba.</p>"
+    },
+    {
+      "question": "Letölthetem az eredeti nyilvános bélyegképet?",
+      "answer": "Igen, ez a legfelső szintű validált fájl. Az „eredeti” a nyilvános CDN állóképet jelenti, nem a videostreamből kivágott képkockát. Lásd az eredeti nyilvános bélyegképet.",
+      "answerHtml": "<p>Igen, ez a legfelső szintű, ellenőrzött fájl. Az „eredeti” a nyilvános CDN állóképet jelenti, nem pedig a videostreamből kivágott képkockát. Lásd:<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">eredeti nyilvános indexkép</a>.</p>"
+    },
+    {
+      "question": "Lemásolhatom a kép URL-jét a letöltés helyett?",
+      "answer": "Igen. Használd a „Kép URL-címének másolása” funkciót a 11tik oldalon, vagy másold ki a böngészőből az ellenőrzött címet a kép betöltése után.",
+      "answerHtml": "<p>Igen. Használd a „Kép URL-címének másolása” funkciót a 11tik oldalon, vagy másold ki a böngészőből az ellenőrzött címet a kép betöltése után.</p>"
+    },
+    {
+      "question": "Ez letölti a YouTube videófájlt?",
+      "answer": "Nem. Csak a nyilvános bélyegkép marad.",
+      "answerHtml": "<p>Nem. Csak a nyilvános bélyegkép marad.</p>"
+    },
+    {
+      "question": "Minden videó 1280×720 felbontású fájlt fog kínálni?",
+      "answer": "Nem. Tartsa meg a legnagyobb nyilvános fájlt, amelyik érvényes az adott azonosítóhoz.",
+      "answerHtml": "<p>Nem. Tartsa meg a legnagyobb nyilvános fájlt, amelyik érvényes az adott azonosítóhoz.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőn belüli kinyerő kiadója. Csak nyilvános állóképek.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+}

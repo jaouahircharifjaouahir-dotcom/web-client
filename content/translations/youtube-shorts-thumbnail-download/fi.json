@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "fi",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Kuinka ladata YouTube-lyhytvideoiden pikkukuva HD-laadulla | 11tik",
+  "description": "Lataa YouTube Shorts -videoiden pikkukuva selaimeen. Shorts-videoissa käytetään samoja julkisia still-kuvia kuin katselun URL-osoitteissa. Tiedosto on usein vaakasuuntainen.",
+  "h1": "Kuinka ladata YouTube Shorts -pikkukuva HD-laadulla",
+  "ogTitle": "Kuinka ladata YouTube Shorts -pikkukuva HD-laadulla",
+  "ogDescription": "Lataa YouTube Shorts -videoiden pikkukuva selaimeen. Shorts-videoissa käytetään samoja julkisia still-kuvia kuin katselun URL-osoitteissa. Tiedosto on usein vaakasuuntainen.",
+  "imageAlt": "Julkisen YouTube Shorts -pikkukuvan lataaminen 11tik-sovellukseen",
+  "faqHeading": "Usein kysytyt kysymykset",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Julkisen YouTube Shorts -pikkukuvan lataaminen 11tik-sovellukseen",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Miten lataan YouTube Shorts -pikkukuvan?",
+      "html": "<p>Kopioi URL-osoite, joka sisältää /shorts/-päätteen ja videotunnuksen, ja liitä se<a href=\"https://www.11tik.com/\">11tik</a>ja lataa lueteltu koko. Purkaminen alkaa, kun tunnus on kelvollinen.</p>"
+    },
+    {
+      "heading": "Ovatko Shorts-tiedostot samoja kuin katselusivun tiedostot?",
+      "html": "<p>Ne käyttävät samoja julkisia kokonimiä, jotka on avattu videon tunnuksella. Still-kuva saattaa näyttää postilaatikkomaiselta, jos YouTube on tallentanut laajakuvaversion.</p>"
+    },
+    {
+      "heading": "Mitä jos kuvaa ei näy?",
+      "html": "<p>Lyhytvideo voi olla yksityinen, poistettu tai siinä voi olla julkisia still-kuvia. Poimija ei voi ohittaa näitä rajoituksia.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Lataaminen</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voinko ladata YouTube Shorts -pikkukuvan?",
+      "answer": "Kyllä, kun YouTube julkaisi julkisia still-kuvia kyseiselle Shorts-videotunnukselle.",
+      "answerHtml": "Kyllä, kun YouTube julkaisi julkisia still-kuvia kyseiselle Shorts-videotunnukselle."
+    },
+    {
+      "question": "Miksi se näyttää edelleen postilaatikkomaisen näköiseltä?",
+      "answer": "YouTube saattaa tallentaa 16:9-kuvasuhteen muunnelman jopa pystysuuntaisesta lyhytvideosta. 11tik näyttää isännöidyn tiedoston rajauksen keksimisen sijaan.",
+      "answerHtml": "YouTube saattaa tallentaa 16:9-kuvasuhteen muunnelman jopa pystysuuntaisesta lyhytvideosta. 11tik näyttää isännöidyn tiedoston rajauksen keksimisen sijaan."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+}

@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "nl",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "Hoe je miniaturen uit een YouTube-kanaal-URL kunt halen | 11tik",
+  "description": "Plak de URL van een openbaar YouTube-kanaal in 11tik Bulk om recente openbare uploads uit te breiden en download vervolgens de beste screenshots. Dit is bedoeld voor onderzoek naar verpakking, niet om de aangepaste afbeeldingen van een ander kanaal te kopiëren.",
+  "h1": "Hoe je miniaturen kunt extraheren uit een YouTube-kanaal-URL",
+  "ogTitle": "Hoe je miniaturen kunt extraheren uit een YouTube-kanaal-URL",
+  "ogDescription": "Plak de URL van een openbaar YouTube-kanaal in 11tik Bulk om recente openbare uploads uit te breiden en download vervolgens de beste screenshots. Dit is bedoeld voor onderzoek naar verpakking, niet om de aangepaste afbeeldingen van een ander kanaal te kopiëren.",
+  "imageAlt": "Miniatuurafbeeldingen extraheren van een YouTube-kanaal-URL — meest recente openbare uploads op 11tik",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "Miniatuurafbeeldingen extraheren van een YouTube-kanaal-URL — meest recente openbare uploads op 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kan ik thumbnails van een volledig YouTube-kanaal krijgen?",
+      "html": "<p>Je kunt foto's krijgen van de nieuwste<em>publiek</em>uploads die een video-ID onthullen. 11tik verzamelt niet elke video die een kanaal ooit heeft geplaatst en omzeilt geen lidmaatschappen. Schakel op de homepage 'Bulk' in en plak een kanaal-URL, zoals<code>youtube.com/@handle</code>of<code>/channel/UC…</code>En laat de tool de openbare RSS-achtige lijst uitbreiden. Extraheer deze vervolgens zoals je een getypte lijst zou extraheren. De limiet blijft 25 URL's per keer, zodat de browser bruikbaar blijft.</p>\n  <p>Dit is anders dan het opslaan van één link naar een horloge. De workflow met één URL is in<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hoe download je een YouTube-thumbnail?</a>Regel voor regel bulkverwerking zonder kanaal is mogelijk.<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batchdownload</a>.</p>"
+    },
+    {
+      "heading": "Welke kanaal-URL's werken?",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>wanneer de openbare pagina een kanaal-ID weergeeft</li>\n    <li>Nalatenschap<code>/user/name</code>paden die nog steeds opgelost kunnen worden</li>\n  </ul>\n  <p>Een /playlist-URL is geen kanaal. Plak in plaats daarvan de individuele kijklinks van de afspeellijst. Een handle die nooit naar een UC-ID verwijst, levert geen video's op; open het kanaal in een normale browser en kopieer de canonieke kanaal-URL uit de adresbalk.</p>"
+    },
+    {
+      "heading": "Hoe kan ik kanaalminiaturen extraheren op 11tik?",
+      "html": "<ol>\n    <li>Open<a href=\"https://www.11tik.com/\">11tik</a>en klik op Bulk.</li>\n    <li>Plak hier de URL van een openbaar kanaal. Je kunt op de volgende regels meer links toevoegen om het kanaal te bekijken.</li>\n    <li>Start de extractie. Wacht tot de tool de kanaallijn vervangt door recente openbare kijk-URL's en haal vervolgens de stilstaande beelden op.</li>\n    <li>Download de beste foto's, download het zipbestand met de hoogste kwaliteit of exporteer het als CSV-bestand (id, titel, deel-URL, afbeeldings-URL) voor een onderzoekslogboek.</li>\n  </ol>\n  <p>Deel links na een succesvolle extractie.<code>/thumb/VIDEO_ID</code>Wanneer de kwaliteitscontrole een titel, tags en een live thumbnail heeft. Die pagina's zijn nog steeds voor unieke bezoekers, niet voor een tweede homepage.</p>"
+    },
+    {
+      "heading": "Wat 11tik niet zal doen",
+      "html": "<ul>\n    <li>Download de video's of audio. Alleen foto's.</li>\n    <li>Lijst met niet-openbare of privé-uploads.</li>\n    <li>Garandeer maxresdefault voor elke recente video. Oudere of kleinere bronnen worden beperkt tot hq of sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Verleen toestemming voor hergebruik van de afbeelding. Het bestuderen van een raster van openbare verpakkingen is het beoogde onderzoeksdoel. Het opnieuw uploaden van een afbeelding van een concurrent als uw eigen miniatuurafbeelding is een probleem met auteursrecht en beleid.<a href=\"https://www.11tik.com/copyright\">Auteursrecht en gebruiksvoorwaarden</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Hoe dit helpt bij onderzoek zonder pagina's over deuren",
+      "html": "<p>Een kanaalextract is één taak: recente openbare screenshots in één keer. Het is geen gegenereerde pagina per concurrerend merk. Je blijft in de tool, je bewaart een zip- of CSV-bestand en je schrijft je eigen notities. Als je commentaar publiceert, vermeld dan de kanalen en link naar hun kijkpagina's. De uploadregels voor thumbnails van YouTube voor<em>jouw</em>kanalen zijn in<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">aangepaste videominiaturen</a>.</p>"
+    },
+    {
+      "heading": "Probleemoplossing",
+      "html": "<p>Lege lijst: de kanaalfeed heeft geen openbare ID's geretourneerd (kanaal beëindigd, of een handle die de resolver niet kon koppelen). Probeer de UC-kanaal-URL via de desktoplay-out van YouTube.</p>\n  <p>Sommige kaarten ontbreken: deze uploads zijn nog niet openbaar, of de gateway heeft een onvolledige extractie geweigerd. Voer een enkele watch-URL opnieuw uit. Privacy van geplakte links:<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>.</p>\n  <p>Extractor versus ontwerptool: 11tik maakt geen omslagontwerpen aan.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extractor versus maker</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraheer stilstaande beelden van openbare kanalen op 11tik →</a></p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan ik thumbnails van een volledig YouTube-kanaal krijgen?",
+      "answer": "Ja, voor recente openbare uploads. Plak de kanaal-URL in 11tik Bulk. Privévideo's en video's die alleen voor leden toegankelijk zijn, worden niet weergegeven.",
+      "answerHtml": "Ja, voor recente openbare uploads. Plak de kanaal-URL in 11tik Bulk. Privévideo's en video's die alleen voor leden toegankelijk zijn, worden niet weergegeven."
+    },
+    {
+      "question": "Welke kanaal-URL's werken?",
+      "answer": "Openbare /channel/UC… URL's, veel @handle URL's en enkele verouderde /user/ paden. Afspeellijsten zijn geen kanalen.",
+      "answerHtml": "Openbare /channel/UC… URL's, veel @handle URL's en enkele verouderde /user/ paden. Afspeellijsten zijn geen kanalen."
+    },
+    {
+      "question": "Worden de video's hiermee gedownload?",
+      "answer": "Nee. 11tik toont alleen openbare foto's die YouTube al host.",
+      "answerHtml": "Nee. 11tik toont alleen openbare foto's die YouTube al host."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

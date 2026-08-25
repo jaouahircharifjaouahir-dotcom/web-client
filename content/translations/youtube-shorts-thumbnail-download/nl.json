@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "nl",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Hoe download je een miniatuurafbeelding van een YouTube Shorts in HD? | 11tik",
+  "description": "Download een miniatuurafbeelding van een YouTube Shorts in je browser. Shorts gebruiken dezelfde openbare afbeeldingen als de URL's voor video's. Het bestand heeft vaak een liggend formaat.",
+  "h1": "Hoe download je een miniatuurafbeelding van een YouTube Shorts in HD?",
+  "ogTitle": "Hoe download je een miniatuurafbeelding van een YouTube Shorts in HD?",
+  "ogDescription": "Download een miniatuurafbeelding van een YouTube Shorts in je browser. Shorts gebruiken dezelfde openbare afbeeldingen als de URL's voor video's. Het bestand heeft vaak een liggend formaat.",
+  "imageAlt": "Een openbare miniatuurafbeelding van YouTube Shorts downloaden in 11tik",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Een openbare miniatuurafbeelding van YouTube Shorts downloaden in 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hoe download ik een miniatuurafbeelding van YouTube Shorts?",
+      "html": "<p>Kopieer een URL die /shorts/ plus een video-ID bevat en plak deze in<a href=\"https://www.11tik.com/\">11tik</a>en download een opgegeven grootte. Het uitpakken begint zodra de ID geldig is.</p>"
+    },
+    {
+      "heading": "Zijn Shorts-bestanden hetzelfde als watch-page-bestanden?",
+      "html": "<p>Ze gebruiken dezelfde openbare formatnamen, gekoppeld aan de video-ID. Het beeld kan letterboxed lijken als YouTube een breedbeeldversie heeft opgeslagen.</p>"
+    },
+    {
+      "heading": "Wat als er geen afbeelding verschijnt?",
+      "html": "<p>De korte video kan privé zijn, verwijderd of geen openbare afbeeldingen bevatten. De extractor kan deze beperkingen niet omzeilen.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hoe te downloaden</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan ik een miniatuurafbeelding van YouTube Shorts downloaden?",
+      "answer": "Ja, toen YouTube openbare screenshots publiceerde voor die Shorts-video-ID.",
+      "answerHtml": "Ja, toen YouTube openbare screenshots publiceerde voor die Shorts-video-ID."
+    },
+    {
+      "question": "Waarom ziet het er nog steeds uit alsof het met zwarte balken aan de boven- en onderkant is bewerkt?",
+      "answer": "YouTube kan een 16:9-variant opslaan, zelfs voor een verticale Short. 11tik toont het gehoste bestand in plaats van een uitsnede te verzinnen.",
+      "answerHtml": "YouTube kan een 16:9-variant opslaan, zelfs voor een verticale Short. 11tik toont het gehoste bestand in plaats van een uitsnede te verzinnen."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+}

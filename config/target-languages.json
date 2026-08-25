@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "sourceLanguage": "en",
+  "provider": "chrome_gtx",
+  "selectionCriteria": [
+    "Widely used globally (native and/or total speakers at scale)",
+    "Meaningful internet / search / web presence for consumer tools",
+    "Geographic reach across markets relevant to YouTube users",
+    "Commercial SEO value for 11tik (thumbnail / YouTube utility traffic)",
+    "Must map to working Google Translate GTX codes in translator/",
+    "Exclude rare, constructed, historical, and ISO-complete filler languages"
+  ],
+  "notes": [
+    "English is the source language (www.11tik.com), not listed as a translation target.",
+    "Country ≠ language: e.g. Canada → en/fr, Belgium → nl/fr/de, India → hi/en + others.",
+    "Norwegian uses code 'no' (single host); nb/nn are not separate targets.",
+    "Chinese uses code 'zh' → GTX zh-CN. Hebrew 'he' → GTX iw."
+  ],
+  "languages": [
+    {
+      "code": "ar",
+      "language": "Arabic",
+      "nativeName": "العربية",
+      "direction": "rtl",
+      "hostname": "ar.11tik.com",
+      "googleTranslateCode": "ar",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "bn",
+      "language": "Bengali",
+      "nativeName": "বাংলা",
+      "direction": "ltr",
+      "hostname": "bn.11tik.com",
+      "googleTranslateCode": "bn",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "de",
+      "language": "German",
+      "nativeName": "Deutsch",
+      "direction": "ltr",
+      "hostname": "de.11tik.com",
+      "googleTranslateCode": "de",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "es",
+      "language": "Spanish",
+      "nativeName": "Español",
+      "direction": "ltr",
+      "hostname": "es.11tik.com",
+      "googleTranslateCode": "es",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "fa",
+      "language": "Persian",
+      "nativeName": "فارسی",
+      "direction": "rtl",
+      "hostname": "fa.11tik.com",
+      "googleTranslateCode": "fa",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "fr",
+      "language": "French",
+      "nativeName": "Français",
+      "direction": "ltr",
+      "hostname": "fr.11tik.com",
+      "googleTranslateCode": "fr",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "he",
+      "language": "Hebrew",
+      "nativeName": "עברית",
+      "direction": "rtl",
+      "hostname": "he.11tik.com",
+      "googleTranslateCode": "iw",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "hi",
+      "language": "Hindi",
+      "nativeName": "हिन्दी",
+      "direction": "ltr",
+      "hostname": "hi.11tik.com",
+      "googleTranslateCode": "hi",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "id",
+      "language": "Indonesian",
+      "nativeName": "Bahasa Indonesia",
+      "direction": "ltr",
+      "hostname": "id.11tik.com",
+      "googleTranslateCode": "id",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "it",
+      "language": "Italian",
+      "nativeName": "Italiano",
+      "direction": "ltr",
+      "hostname": "it.11tik.com",
+      "googleTranslateCode": "it",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "ja",
+      "language": "Japanese",
+      "nativeName": "日本語",
+      "direction": "ltr",
+      "hostname": "ja.11tik.com",
+      "googleTranslateCode": "ja",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "ko",
+      "language": "Korean",
+      "nativeName": "한국어",
+      "direction": "ltr",
+      "hostname": "ko.11tik.com",
+      "googleTranslateCode": "ko",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "ms",
+      "language": "Malay",
+      "nativeName": "Bahasa Melayu",
+      "direction": "ltr",
+      "hostname": "ms.11tik.com",
+      "googleTranslateCode": "ms",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "nl",
+      "language": "Dutch",
+      "nativeName": "Nederlands",
+      "direction": "ltr",
+      "hostname": "nl.11tik.com",
+      "googleTranslateCode": "nl",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "pl",
+      "language": "Polish",
+      "nativeName": "Polski",
+      "direction": "ltr",
+      "hostname": "pl.11tik.com",
+      "googleTranslateCode": "pl",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "pt",
+      "language": "Portuguese",
+      "nativeName": "Português",
+      "direction": "ltr",
+      "hostname": "pt.11tik.com",
+      "googleTranslateCode": "pt",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "ru",
+      "language": "Russian",
+      "nativeName": "Русский",
+      "direction": "ltr",
+      "hostname": "ru.11tik.com",
+      "googleTranslateCode": "ru",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "th",
+      "language": "Thai",
+      "nativeName": "ไทย",
+      "direction": "ltr",
+      "hostname": "th.11tik.com",
+      "googleTranslateCode": "th",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "tl",
+      "language": "Tagalog",
+      "nativeName": "Tagalog",
+      "direction": "ltr",
+      "hostname": "tl.11tik.com",
+      "googleTranslateCode": "tl",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "tr",
+      "language": "Turkish",
+      "nativeName": "Türkçe",
+      "direction": "ltr",
+      "hostname": "tr.11tik.com",
+      "googleTranslateCode": "tr",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "uk",
+      "language": "Ukrainian",
+      "nativeName": "Українська",
+      "direction": "ltr",
+      "hostname": "uk.11tik.com",
+      "googleTranslateCode": "uk",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "ur",
+      "language": "Urdu",
+      "nativeName": "اردو",
+      "direction": "rtl",
+      "hostname": "ur.11tik.com",
+      "googleTranslateCode": "ur",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "vi",
+      "language": "Vietnamese",
+      "nativeName": "Tiếng Việt",
+      "direction": "ltr",
+      "hostname": "vi.11tik.com",
+      "googleTranslateCode": "vi",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "zh",
+      "language": "Chinese",
+      "nativeName": "中文",
+      "direction": "ltr",
+      "hostname": "zh.11tik.com",
+      "googleTranslateCode": "zh-CN",
+      "enabled": true,
+      "priority": "high",
+      "tier": 1
+    },
+    {
+      "code": "bg",
+      "language": "Bulgarian",
+      "nativeName": "Български",
+      "direction": "ltr",
+      "hostname": "bg.11tik.com",
+      "googleTranslateCode": "bg",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "cs",
+      "language": "Czech",
+      "nativeName": "Čeština",
+      "direction": "ltr",
+      "hostname": "cs.11tik.com",
+      "googleTranslateCode": "cs",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "da",
+      "language": "Danish",
+      "nativeName": "Dansk",
+      "direction": "ltr",
+      "hostname": "da.11tik.com",
+      "googleTranslateCode": "da",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "el",
+      "language": "Greek",
+      "nativeName": "Ελληνικά",
+      "direction": "ltr",
+      "hostname": "el.11tik.com",
+      "googleTranslateCode": "el",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "fi",
+      "language": "Finnish",
+      "nativeName": "Suomi",
+      "direction": "ltr",
+      "hostname": "fi.11tik.com",
+      "googleTranslateCode": "fi",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "hr",
+      "language": "Croatian",
+      "nativeName": "Hrvatski",
+      "direction": "ltr",
+      "hostname": "hr.11tik.com",
+      "googleTranslateCode": "hr",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "hu",
+      "language": "Hungarian",
+      "nativeName": "Magyar",
+      "direction": "ltr",
+      "hostname": "hu.11tik.com",
+      "googleTranslateCode": "hu",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "no",
+      "language": "Norwegian",
+      "nativeName": "Norsk",
+      "direction": "ltr",
+      "hostname": "no.11tik.com",
+      "googleTranslateCode": "no",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "ro",
+      "language": "Romanian",
+      "nativeName": "Română",
+      "direction": "ltr",
+      "hostname": "ro.11tik.com",
+      "googleTranslateCode": "ro",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "sk",
+      "language": "Slovak",
+      "nativeName": "Slovenčina",
+      "direction": "ltr",
+      "hostname": "sk.11tik.com",
+      "googleTranslateCode": "sk",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "sr",
+      "language": "Serbian",
+      "nativeName": "Српски",
+      "direction": "ltr",
+      "hostname": "sr.11tik.com",
+      "googleTranslateCode": "sr",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "sv",
+      "language": "Swedish",
+      "nativeName": "Svenska",
+      "direction": "ltr",
+      "hostname": "sv.11tik.com",
+      "googleTranslateCode": "sv",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    },
+    {
+      "code": "sw",
+      "language": "Swahili",
+      "nativeName": "Kiswahili",
+      "direction": "ltr",
+      "hostname": "sw.11tik.com",
+      "googleTranslateCode": "sw",
+      "enabled": true,
+      "priority": "medium",
+      "tier": 2
+    }
+  ],
+  "unsupportedTargetCandidates": [
+    {
+      "code": "rm",
+      "language": "Romansh",
+      "reason": "Official in Switzerland but low web/SEO scale; no verified GTX mapping in translator/ for project ISO set"
+    }
+  ],
+  "excludedExamples": [
+    {
+      "reason": "Rare / low-resource / not major web languages",
+      "codes": ["aa", "ae", "an", "av", "bi", "bo", "ce", "ch", "cr", "cu", "fo", "gv", "ho", "hz", "ia", "ie", "ii", "ik", "io", "iu", "kg", "ki", "kj", "kl", "kr", "ks", "kv", "kw", "lu", "mh", "na", "nd", "ng", "nv", "oj", "os", "pi", "sc", "se", "to", "ty", "ve", "vo", "wa", "wo", "za"]
+    },
+    {
+      "reason": "GTX-capable but not selected as global major for 11tik (regional / niche / duplicate)",
+      "codes": ["ab", "af", "ak", "am", "as", "ay", "az", "ba", "be", "bm", "br", "bs", "ca", "co", "cv", "cy", "dv", "dz", "ee", "eo", "et", "eu", "ff", "fj", "fy", "ga", "gd", "gl", "gn", "gu", "ha", "ht", "hy", "ig", "is", "jv", "ka", "kk", "km", "kn", "ku", "ky", "la", "lb", "lg", "li", "ln", "lo", "lt", "lv", "mg", "mi", "mk", "ml", "mn", "mr", "mt", "my", "nb", "ne", "nn", "nr", "ny", "oc", "om", "or", "pa", "ps", "qu", "rn", "rw", "sa", "sd", "sg", "si", "sl", "sm", "sn", "so", "sq", "ss", "st", "su", "ta", "te", "tg", "ti", "tk", "tn", "ts", "tt", "tw", "ug", "uz", "xh", "yi", "yo", "zu"]
+    }
+  ]
+}

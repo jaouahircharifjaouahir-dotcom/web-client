@@ -1,0 +1,107 @@
+{
+  "contentId": "11tik-share-links-thumb-vs-youtube",
+  "articleId": "11tik-share-links-thumb-vs-youtube",
+  "locale": "cs",
+  "sourceHash": "83df589c6ee879027668802c0dd81f4b6242ef19f2365677c6a85fd5705276fa",
+  "status": "ready",
+  "title": "Jak fungují odkazy pro sdílení 11tik: /thumb/{VIDEO_ID} vs. URL adresy pro sledování na YouTube | 11tik",
+  "description": "11tik /thumb/{id} je stránka s výsledky sdílení. Nejedná se o URL adresu pro sledování na YouTube ani o přímý obrazový soubor i.ytimg.com.",
+  "h1": "Jak fungují odkazy pro sdílení 11tik: /thumb/{VIDEO_ID} vs. URL adresy pro sledování na YouTube",
+  "ogTitle": "Jak fungují odkazy pro sdílení 11tik: /thumb/{VIDEO_ID} vs. URL adresy pro sledování na YouTube",
+  "ogDescription": "11tik /thumb/{id} je stránka s výsledky sdílení. Nejedná se o URL adresu pro sledování na YouTube ani o přímý obrazový soubor i.ytimg.com.",
+  "imageAlt": "Diagram porovnávající URL pro sledování na YouTube, URL pro sdílení miniatury 11tik a URL pro přímý obrázek miniatury na YouTube",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png",
+      "alt": "Diagram porovnávající URL pro sledování na YouTube, URL pro sdílení miniatury 11tik a URL pro přímý obrázek miniatury na YouTube",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png",
+      "alt": "Pracovní postup zobrazující extrakci, náhled, kopírování odkazu pro sdílení 11tik a otevření stránky s miniaturními výsledky pro příjemce",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rychlá odpověď",
+      "html": "<p>Tři různé adresy URL mohou sdílet stejné ID videa YouTube. Pouze jedna z nich je soubor s obrázkem.</p>\n  <ol>\n    <li><strong>URL adresa pro sledování na YouTube</strong>— otevře video na YouTube.</li>\n    <li><strong>11tik URL pro sdílení</strong>— otevře stránku s výsledky extraktoru 11tik pro dané ID (<code>/thumb/{VIDEO_ID}</code>). Toto je webová stránka, nikoli soubor JPEG/WebP.</li>\n    <li><strong>URL adresa CDN pro přímou miniaturu</strong>— ukazuje na veřejně dostupný záběr na obrazovém serveru YouTube (například<code>i.ytimg.com</code>).</li>\n  </ol>\n  <p>Použití veřejného ID demoverze<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>Třetí adresa je příkladem vzoru URL adresy obrázku. Tento konkrétní soubor maxres není zaručen pro každé video – ověřte si skutečné velikosti pomocí<a href=\"https://www.11tik.com/\">11tik</a>nebo<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Průvodce maxresdefault</a>.</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Stejné ID videa, tři úkoly: shlédnout video, otevřít stránku s výsledky 11tik nebo vyžádat si statický obrázek z CDN.</p>"
+    },
+    {
+      "heading": "Co je /thumb/{VIDEO_ID}",
+      "html": "<p>Na 11tik úspěšná extrakce jednoho videa aktualizuje adresu prohlížeče na cestu ve tvaru:</p>\n  <pre>https://www.11tik.com/thumb/VIDEO_ID</pre>\n  <p>Tato cesta je URL sdílení/výsledku produktu. Je generována z ID videa (viz pomocné nástroje pro sdílení na webu) a slouží k opětovnému otevření extraktoru zaměřeného na toto ID. Starší odkazy ve stylu dotazů, jako například<code>?v=VIDEO_ID</code>jsou považovány za hluboké odkazy na stejnou myšlenku a mohou být přepsány na<code>/thumb/</code>formulář.</p>\n  <p><code>/thumb/…</code>je<strong>ne</strong>hostované na síti CDN obrázků YouTube. Jeho otevření nikdy nestahuje obrázek sám o sobě; načte trasu aplikace 11tik pro dané ID.</p>"
+    },
+    {
+      "heading": "Proč stránka existuje",
+      "html": "<p>Lidé potřebují stabilní způsob, jak znovu otevřít nebo odeslat „výsledek miniatury tohoto videa na 11tik“, aniž by museli do chatu vkládat dlouhou URL adresu pro sledování a doufat, že příjemce bude vědět, co dělat dál. Stránka pro sdílení udržuje konverzaci v extraktoru: stejné ID, stejný pracovní postup pro veřejné statické snímky, akce stahování a kopírování na jednom místě.</p>\n  <p>Také udržuje URL adresu nástroje pro domovskou stránku čistou. Domovská stránka marketingu zůstává obecným extraktorem;<code>/thumb/{id}</code>je přímý odkaz pro konkrétní ID.</p>"
+    },
+    {
+      "heading": "Co uživatel vidí při otevření",
+      "html": "<p>Otevírací<code>https://www.11tik.com/thumb/dQw4w9WgXcQ</code>Načte jednostránkovou aplikaci 11tik na trase miniatur. Aplikace přečte 11místné ID z cesty, do extraktoru vloží odpovídající URL pro sledování a pro toto ID spustí pass pro vyhledávání veřejných miniatur. Pokud existují veřejné statické snímky, zobrazí se obvyklý náhled, seznam kvality, akce stahování a ovládací prvky sdílení. Pokud ne, zobrazí se stejný výsledek „prázdný/veřejný nenalezen“ jako při ručním vložení.</p>\n  <p>Nad uživatelským rozhraním nástroje se také může zobrazit krátký nadpis s nápisem „thumb-route“ a úvodní text pro dané ID. Tento obsah popisuje stránku s výsledky; stále je součástí webového prostředí, nikoliv odpovědí v podobě nezpracovaného obrázku.</p>"
+    },
+    {
+      "heading": "Jak zkopírovat odkaz 11tik",
+      "html": "<ol>\n    <li>OTEVŘENO<a href=\"https://www.11tik.com/\">11tik</a>a vložte veřejnou URL adresu YouTube (nebo otevřete existující<code>/thumb/</code>odkaz).</li>\n    <li>Počkejte, až extrakce dokončí a zobrazí se nejlepší veřejný snímek.</li>\n    <li>Použijte ovládací prvek sdílení na stránce s označením odkazu pro sdílení (kopírovat odkaz pro sdílení). Hodnota vypadá takto<code>https://www.11tik.com/thumb/VIDEO_ID</code>.</li>\n    <li>Odešlete tuto URL adresu. Příjemce se dostane na stránku s výsledky a může znovu spustit stejnou veřejnou kontrolu.</li>\n  </ol>\n  <p>Hromadné extrakce mohou zobrazovat jednu sdílenou URL adresu pro každé úspěšné ID videa (včetně sloupců exportovaných ve formátu CSV). Každé ID si zachovává své vlastní<code>/thumb/</code>cesta, aby se odkazy nesbalily do prvního výsledku.</p>\n\n  <img alt=\"Workflow showing extract, preview, copy 11tik share link, and recipient opening the thumb result page\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-copy-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sdílení pracovního postupu: extrakce → náhled → kopírování<code>/thumb/{id}</code>→ příjemce otevře stránku s výsledky.</p>"
+    },
+    {
+      "heading": "Tabulka porovnání URL adres",
+      "html": "<table>\n    <thead>\n      <tr><th>Typ URL adresy</th><th>Příklad</th><th>Co se otevírá</th><th>Je to obrazový soubor?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Sledování na YouTube</td><td><code>youtube.com/watch?v=dQw4w9WgXcQ</code></td><td>Přehrávač YouTube / stránka sledování</td><td>Žádný</td></tr>\n      <tr><td>Sdílení 11tik</td><td><code>11tik.com/thumb/dQw4w9WgXcQ</code></td><td>Výsledek extraktoru 11tik pro dané ID</td><td>Žádný</td></tr>\n      <tr><td>Přímá CDN stále</td><td><code>i.ytimg.com/vi/…/maxresdefault.jpg</code></td><td>Bajty obrazu (pokud soubor existuje)</td><td>Ano</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Jak se tyto tři adresy URL liší v praxi",
+      "html": "<h3>URL pro sledování vs. URL pro sdílení 11tik</h3>\n  <p>Sdílejte URL adresu pro sledování, pokud je cílem video sledovat nebo o něm diskutovat na YouTube. Sdílejte URL adresu 11tik, pokud je cílem znovu otevřít výsledek extrakce miniatur – náhledy, stahování a ověřené veřejné velikosti – aniž byste někoho nejprve požádali o nalezení extraktoru.</p>\n  <h3>11tik URL pro sdílení vs. URL pro přímý obrázek</h3>\n  <p>Přímá URL adresa obrázku je to, co vložíte do<code>&lt;img src&gt;</code>, knihovny médií CMS nebo návrhové nástroje po ověření existence souboru. Jak se tyto URL adresy CDN sestaví z ID, je úkolem<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Průvodce URL miniatur</a>Sdílená URL adresa 11tik nikdy nenahrazuje adresu obrázku: příjemci stále používají v nástroji URL adresu obrázku pro stažení nebo kopírování, když potřebují samotný soubor.</p>\n  <h3>URL pro sledování vs. URL pro přímý obrázek</h3>\n  <p>URL adresa pro sledování identifikuje video. URL adresa obrázku identifikuje jeden veřejný derivát. Nejsou zaměnitelné, a proto hádání<code>maxresdefault.jpg</code>často selhává, i když stránka sledování funguje.</p>"
+    },
+    {
+      "heading": "Kdy sdílet který odkaz",
+      "html": "<ul>\n    <li><strong>Sdílejte URL adresu pro sledování na YouTube</strong>za zhlédnutí, komentování nebo citování videa.</li>\n    <li><strong>Sdílejte 11tik<code>/thumb/</code>URL</strong>pro spolupracovníky, kteří potřebují výsledek extrakce, seznam kvality nebo rychlé opětovné stažení veřejného snímku.</li>\n    <li><strong>Sdílejte nebo hostujte přímou URL adresu obrázku / stažený soubor</strong>pro doporučené obrázky na blogu, Open Graph a návrhy – po potvrzení. Viz<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stáhnout průvodce</a>a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">průvodce velikostmi a rozlišením</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Jak ID videa propojuje všechny tři",
+      "html": "<p>Všechno závisí na stejném 11místném ID. URL adresy Watch ho obsahují.<code>v=</code>(nebo segmenty krátkých videí/vložených videí/živých videí). 11tik ho vloží do<code>/thumb/{id}</code>Fotografie z CDN to umístily mezi<code>/vi/</code>(nebo<code>/vi_webp/</code>) a název souboru s danou velikostí. Pokud je ID nesprávné, všechny tři chyby se porouchají různými způsoby: nesprávné video, nesprávná stránka s výsledky vyhledávání nebo nesprávný/chybějící obrázek.</p>"
+    },
+    {
+      "heading": "Jak to odpovídá pracovnímu postupu extraktoru",
+      "html": "<pre>Paste watch/Shorts/embed URL\n→ parse video ID\n→ discover public still candidates\n→ show ranked results\n→ browser address becomes /thumb/{id}\n→ copy share link or download image URLs</pre>\n  <p>Odkaz pro sdílení je záložkou v daném pracovním postupu. Nepřeskočí ověření, nevynalezne 4K ani nepřemění soukromá videa na veřejné fotografie.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je https://www.11tik.com/thumb/VIDEO_ID přímý obraz?",
+      "answer": "Ne. Je to stránka s výsledky 11tik pro dané ID videa. Obrázky jsou k dispozici přímo na hostitelích, jako je i.ytimg.com.",
+      "answerHtml": "<p>Ne. Je to stránka s výsledky 11tik pro dané ID videa. Přímé obrázky jsou k dispozici na hostitelích, jako je<code>i.ytimg.com</code>.</p>"
+    },
+    {
+      "question": "Co se stane poté, co někdo otevře můj odkaz pro sdílení?",
+      "answer": "11tik načte trasu miniatury, přečte ID, spustí kontrolu veřejných miniatur pro dané ID a zobrazí uživatelské rozhraní extraktoru s výsledky, pokud existují veřejné statické snímky.",
+      "answerHtml": "<p>11tik načte trasu miniatury, přečte ID, spustí kontrolu veřejných miniatur pro dané ID a zobrazí uživatelské rozhraní extraktoru s výsledky, pokud existují veřejné statické snímky.</p>"
+    },
+    {
+      "question": "Mohu vložit odkaz /miniaturu/ uvnitř tagu img?",
+      "answer": "Nepoužívejte. Použijte ověřenou URL adresu obrázku CDN nebo stažený soubor. Sdílená cesta vrací HTML prostředí aplikace, nikoli bajty obrázku.",
+      "answerHtml": "<p>Nepoužívejte. Použijte ověřenou URL adresu obrázku CDN nebo stažený soubor. Sdílená cesta vrací HTML prostředí aplikace, nikoli bajty obrázku.</p>"
+    },
+    {
+      "question": "Proč se mi po extrahování miniatury změnil adresní řádek?",
+      "answer": "Po extrakci jednoho videa 11tik synchronizuje cestu ke sdílení s /thumb/{VIDEO_ID}, takže aktuální výsledek lze snadno zkopírovat a znovu otevřít.",
+      "answerHtml": "<p>Po extrakci jednoho videa 11tik synchronizuje cestu ke sdílení s<code>/thumb/{VIDEO_ID}</code>takže aktuální výsledek lze snadno zkopírovat a znovu otevřít.</p>"
+    },
+    {
+      "question": "Používají Shorts jinou cestu ke sdílení?",
+      "answer": "Ne. Shorts se stále rozlišují na 11místné ID. URL pro sdílení zůstává /thumb/{id}; lišil se pouze původní tvar URL pro YouTube.",
+      "answerHtml": "<p>Ne. Shorts se stále rozlišují na 11místné ID. URL pro sdílení zůstává.<code>/thumb/{id}</code>; lišil se pouze původní tvar URL adresy YouTube.</p>"
+    },
+    {
+      "question": "Je /thumb/{id} totéž co kopírování URL adresy maxres?",
+      "answer": "Ne. Maxres (pokud je k dispozici) je jeden z možných souborů CDN. Stránka sdílení uvádí ověřené veřejné velikosti a může zahrnovat i další úrovně, pokud maxres chybí.",
+      "answerHtml": "<p>Ne. Maxres (pokud je k dispozici) je jeden z možných souborů CDN. Stránka sdílení uvádí ověřené veřejné velikosti a může zahrnovat i další úrovně, pokud maxres chybí.</p>"
+    },
+    {
+      "question": "Kde jsou podrobněji vysvětleny URL adresy pro sledování a URL adresy obrázků?",
+      "answer": "Pro konstrukci ID → CDN použijte článek s URL miniatur a pro ukládání souborů článek ke stažení.",
+      "answerHtml": "<p>Použijte<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL miniatury článku</a>pro konstrukci ID → CDN a článek ke stažení pro ukládání souborů.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Závěr</h2>\n<p>Zacházet<code>/thumb/{VIDEO_ID}</code>jako adresa pro sdílení/výsledek pro 11tik: užitečné pro opětovné otevření a odeslání extrakce, nikdy ne jako náhrada za odkaz na sledování YouTube nebo přímý<code>i.ytimg.com</code>Přesně tak. Zachovejte správné tři typy URL adres a vaše stahování, vkládání a odkazy pro spolupracovníky zůstanou přesné.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrahujte veřejnou miniaturu a zkopírujte její odkaz pro sdílení 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Soukromí</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmínky</a>Odkaz na tvůrce:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Nahrávání vlastních miniatur videí</a>.</p>"
+}

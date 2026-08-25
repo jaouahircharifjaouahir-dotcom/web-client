@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "he",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "איך להוריד תמונה ממוזערת מיוטיוב באיכות HD | 11tik",
+  "description": "שמרו תמונה ממוזערת ציבורית של יוטיוב: הדבקו את הקבצים 'צפייה', 'קטעים קצרים', youtu.be, או הטמיעו כתובות URL ב-11tik והורידו את הקובץ הגדול ביותר שקיים.",
+  "h1": "איך להוריד תמונה ממוזערת מיוטיוב באיכות HD",
+  "ogTitle": "איך להוריד תמונה ממוזערת מיוטיוב באיכות HD",
+  "ogDescription": "שמרו תמונה ממוזערת ציבורית של יוטיוב: הדבקו את הקבצים 'צפייה', 'קטעים קצרים', youtu.be, או הטמיעו כתובות URL ב-11tik והורידו את הקובץ הגדול ביותר שקיים.",
+  "imageAlt": "תהליך עבודה של ארבעה שלבים, החל מהעתקת כתובת URL של YouTube ועד להורדת תמונה ממוזערת ציבורית מאומתת",
+  "faqHeading": "שאלות נפוצות",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "תהליך עבודה של ארבעה שלבים, החל מהעתקת כתובת URL של YouTube ועד להורדת תמונה ממוזערת ציבורית מאומתת",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "דיאגרמת פתרון בעיות המציגה קובץ maxresdefault חסר שדילג עליו כדי שניתן יהיה להוריד את גודל הממוזערת האמיתי הבא",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "תשובה מהירה",
+      "html": "<p>העתק קישור יוטיוב ציבורי, הדבק אותו לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>, המתן לתצוגות מקדימות מאומתות, לאחר מכן הורד את הקובץ הראשון ברשימה. קובץ זה הוא קובץ ה-JPEG או ה-WebP הציבורי הגבוה ביותר ש-YouTube כבר מארח עבור מזהה הסרטון - לעתים קרובות 1280×720 כאשר קיים רזולוציה מקסימלית או hq720. זה חוסך<strong>תמונה ממוזערת</strong>, לא הווידאו או האודיו.</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">נתיב מעשי: כתובת URL ציבורית → חילוץ → תצוגה מקדימה של גדלים אמיתיים → הורדה או העתקת כתובת URL של התמונה.</p>"
+    },
+    {
+      "heading": "השיטה המהירה ביותר עם 11tik",
+      "html": "<ol>\n    <li>העתק כתובת URL של צפייה ציבורית, Shorts, שידור חי, הטמעה או youtu.be (או מזהה וידאו פשוט בן 11 תווים).</li>\n    <li>לִפְתוֹחַ<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>בדפדפן שלך.</li>\n    <li>הדבק את כתובת האתר. החילוץ מתחיל כאשר המזהה תקף.</li>\n    <li>הורד את התוצאה הראשונה (הטובה ביותר הזמינה), או בחר גודל אחר ששרד.</li>\n  </ol>\n  <p>אופציונלי: שימוש<strong>העתקת כתובת האתר של התמונה</strong>אם אתה צריך את הכתובת של מערכת ניהול תוכן (CMS) במקום קובץ. זרימה זו מכוסה ב<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">מדריך כתובות URL של תמונות ממוזערות</a>.</p>"
+    },
+    {
+      "heading": "פורמטים נתמכים של כתובות URL ביוטיוב",
+      "html": "<p>11tik קורא את מזהה הסרטון מאותם דפוסים שמנתח האתר שלו מקבל:</p>\n  <table>\n    <thead>\n      <tr><th>פוּרמָט</th><th>תבנית לדוגמה</th><th>הערות</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>לִצְפּוֹת</td><td><code>youtube.com/watch?v=ID</code></td><td>פרמטרי שאילתה נוספים הוזנחו</td></tr>\n      <tr><td>קישור קצר</td><td><code>youtu.be/ID</code></td><td>שיתופים ניידים משתמשים בזה לעתים קרובות</td></tr>\n      <tr><td>מִכְנָסַיִים קְצָרִים</td><td><code>youtube.com/shorts/ID</code></td><td>אותו ציבור עדיין מארח</td></tr>\n      <tr><td>לְשַׁבֵּץ</td><td><code>youtube.com/embed/ID</code></td><td>מתוך מקור iframe</td></tr>\n      <tr><td>לִחיוֹת</td><td><code>youtube.com/live/ID</code></td><td>כאשר קיימת תעודת זהות ציבורית</td></tr>\n      <tr><td>הטמעת עוגיות</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>מטופל כמו הטמעה</td></tr>\n      <tr><td>תעודת זהות חשופה</td><td><code>dQw4w9WgXcQ</code></td><td>11 תווים בלבד</td></tr>\n    </tbody>\n  </table>\n  <p>כתובות URL של ערוצים או פלייליסטים ללא מזהה וידאו לא יניבו תמונה ממוזערת אחת. עבור קישורים רבים בו זמנית, השתמשו ב-Bulk (עד 25) - ראה<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">הורדה אצווה</a>הרחבת ערוץ:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">חילוץ מכתובת URL של ערוץ</a>.</p>"
+    },
+    {
+      "heading": "שיטת כתובת URL ישירה (ללא ממשק משתמש לחילוץ)",
+      "html": "<p>אם אתם כבר יודעים את המזהה, תוכלו לפתוח מודעת סטילס ישירות:</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>כאשר הוא נטען, השתמש בפקודת save-image של הדפדפן. כאשר זה נכשל, רד למטה אל<code>hq720.jpg</code>,<code>sddefault.jpg</code>, או<code>hqdefault.jpg</code>נתיב ידני זה איטי יותר ומועד לשגיאות בהשוואה לרשימה המאומתת של 11tik, אך הוא פועל במצב לא מקוון מכל דפדפן ברגע שיש לך כתובת טובה.</p>"
+    },
+    {
+      "heading": "בחירת איכות בעת ההורדה",
+      "html": "<p>הורד את הגודל הראשון המופיע אלא אם כן יש לך סיבה לשמור תצוגה מקדימה קטנה יותר. \"HD\" כאן פירושו הסטיל הציבורי הגדול ביותר שקיים - בדרך כלל 1280×720 - ולא מאסטר 4K. ציפיות פיקסלים והתנהגות גודל חסר מוסברות ב<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך גודל ורזולוציה</a>.</p>\n  <p>אם אכפת לך רק מהקובץ הציבורי המוביל ביותר, ראה גם<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">תמונה ממוזערת באיכות הגבוהה ביותר</a>.</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">כאשר גודל משוער אינו זמין, דלג עליו ושמור את הקובץ הציבורי האמיתי הבא.</p>"
+    },
+    {
+      "heading": "פתרון בעיות הורדות",
+      "html": "<table>\n    <thead>\n      <tr><th>סִימפּטוֹם</th><th>סיבה סבירה</th><th>מה לעשות</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>אין תצוגה מקדימה לאחר ההדבקה</td><td>כתובת URL לא חוקית, אין מזהה וידאו, או וידאו פרטי/מוגבל</td><td>הדבק קישור ציבורי לצפייה/סרטונים קצרים/youtu.be</td></tr>\n      <tr><td>חסר רזולוציות מקסימליות</td><td>יוטיוב מעולם לא פרסם את הקובץ הזה</td><td>הורד את הגודל הראשון המופיע במקום זאת</td></tr>\n      <tr><td>תמונה אפורה / תמונה מציין מיקום מכתובת URL שנבנתה ידנית</td><td>שם קובץ ניחוש</td><td>השתמש ברשימה המאומתת של 11tik</td></tr>\n      <tr><td>שמירת טלפון מביכה</td><td>ממשק המשתמש של הורדת הדפדפן שונה</td><td>לִרְאוֹת<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">מדריך שמירה לאייפון / אנדרואיד</a></td></tr>\n      <tr><td>נראה כמו צילום ממשק משתמש</td><td>צילמת מסך של הנגן</td><td>שמור את ה-CDN עדיין, לא את המסך -<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">צילום מסך לעומת אמיתי</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "מה אתם מורידים (ומה לא)",
+      "html": "<p>אתה שומר קטע סטילס ציבורי שכבר מארח את YouTube. אינך פותח סרטונים פרטיים, קבצים לחברים בלבד או את שידורי MP4/WebM. 11tik הוא כלי לחילוץ סרטונים, לא יוצר סרטונים ולא מוריד סרטונים - השוואה:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">מחלץ לעומת יצרן</a>.</p>\n  <p>זכויות היוצרים נשארות בידי מעלה התמונה. שמירה לצורך מחקר או עיון אישי היא השימוש הנפוץ; פרסום מחדש כתמונה ממוזערת מותאמת אישית משלך ללא זכויות אינו שימוש רלוונטי. עזרה ביוטיוב:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">תמונות ממוזערות של סרטונים מותאמות אישית</a>חוקי האתר:<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    },
+    {
+      "heading": "השוואת שיטות",
+      "html": "<table>\n    <thead>\n      <tr><th>שִׁיטָה</th><th>מְהִירוּת</th><th>הכי טוב עבור</th><th>צריך 11tik?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>הורדה 11tik</td><td>מָהִיר</td><td>מאומת במיטבו</td><td>כֵּן</td></tr>\n      <tr><td>11tik העתקת כתובת URL</td><td>מָהִיר</td><td>מערכת ניהול תוכן / הטמעות</td><td>כֵּן</td></tr>\n      <tr><td>כתובת אתר של i.ytimg.com שנבנתה בעבודת יד</td><td>בֵּינוֹנִי</td><td>בדיקות מהירות כשאתה יודע את המזהה</td><td>לֹא</td></tr>\n      <tr><td>צילום מסך של הנגן</td><td>מהיר אך באיכות נמוכה</td><td>הימנע מבלוגים / OG</td><td>לֹא</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "השלב הבא",
+      "html": "<p>פתח את<a href=\"https://www.11tik.com/\">מחלץ תמונות ממוזערות של יוטיוב</a>, הדבק קישור ציבורי ושמור את התמונה הראשונה שאושרה. צריך רק את הקישור? קרא את<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">מדריך כתובות אתרים</a>בוחרים בין גדלים? השתמשו ב<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך רזולוציה</a>.</p>\n\n  <p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של כלי החילוץ בדפדפן. תמונות סטילס לציבור בלבד.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "האם ניתן להוריד תמונה ממוזערת מסרטון קצר?",
+      "answer": "כן, כאשר התמונות הקצרות ציבוריות וקיימות תמונות סטילס עבור מזהה זה. הדבק את כתובת האתר /shorts/ לתוך 11tik. התמונות עשויות להיות במצב אופקי למרות שההפעלה אנכית.",
+      "answerHtml": "<p>כן, כאשר הקטע הקצר ציבורי ותמונות סטילס קיימות עבור מזהה זה. הדבק את<code>/shorts/</code>כתובת URL לתוך 11tik. התמונה עשויה להיות במצב אופקי למרות שההשמעה אנכית.</p>"
+    },
+    {
+      "question": "מה אם התמונה הממוזערת הטובה ביותר לא נטענת?",
+      "answer": "הורד את הגודל הבא ברשימה. חסרים בגודל מקסימלי זה נפוץ ואינו מעיד על כשל בכלי.",
+      "answerHtml": "<p>הורד את הגודל הבא ברשימה. חסרים בגודל מקסימלי זה נפוץ ואינו מעיד על כשל בכלי.</p>"
+    },
+    {
+      "question": "האם ניתן להוריד את התמונה הממוזערת הציבורית המקורית?",
+      "answer": "כן - זהו הקובץ המאומת המוביל. \"מקורי\" פירושו תמונה סטילס של ה-CDN הציבורי, לא פריים שנקרע משידור הווידאו. ראה תמונה ממוזערת ציבורית מקורית.",
+      "answerHtml": "<p>כן - זהו הקובץ המאומת ביותר. \"מקורי\" פירושו תמונת סטילס של CDN ציבורי, לא פריים שנקרע מזרם הווידאו. ראה<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">תמונה ממוזערת ציבורית מקורית</a>.</p>"
+    },
+    {
+      "question": "האם ניתן להעתיק את כתובת האתר של התמונה במקום להוריד אותה?",
+      "answer": "כן. השתמשו באפשרות \"העתקת כתובת URL של תמונה\" ב-11tik, או העתיקו כתובת מאומתת מהדפדפן לאחר טעינת התמונה.",
+      "answerHtml": "<p>כן. השתמשו באפשרות \"העתקת כתובת URL של תמונה\" ב-11tik, או העתיקו כתובת מאומתת מהדפדפן לאחר טעינת התמונה.</p>"
+    },
+    {
+      "question": "האם זה מוריד את קובץ הסרטון ביוטיוב?",
+      "answer": "לא. עדיין רק התמונה הממוזערת הציבורית.",
+      "answerHtml": "<p>לא. עדיין רק התמונה הממוזערת הציבורית.</p>"
+    },
+    {
+      "question": "האם כל סרטון יציע קובץ ברזולוציה של 1280×720?",
+      "answer": "לא. שמור את הקובץ הציבורי הגדול ביותר שמאמת עבור מזהה זה.",
+      "answerHtml": "<p>לא. שמור את הקובץ הציבורי הגדול ביותר שמאמת עבור מזהה זה.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של כלי החילוץ בדפדפן. תמונות סטילס לציבור בלבד.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+}

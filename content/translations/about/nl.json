@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "nl",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "Over 11tik | 11tik",
+  "description": "11tik is de uitgever van de YouTube Thumbnail Extractor op www.11tik.com . De site is bedoeld voor mensen die de openbare preview-afbeelding van een YouTube-video nodig hebben zonder software te installeren of de link naar een verwerkingsserver te uploaden.",
+  "h1": "Over 11tik",
+  "ogTitle": "Over 11tik",
+  "ogDescription": "11tik is de uitgever van de YouTube Thumbnail Extractor op www.11tik.com . De site is bedoeld voor mensen die de openbare preview-afbeelding van een YouTube-video nodig hebben zonder software te installeren of de link naar een verwerkingsserver te uploaden.",
+  "imageAlt": "11tik Productvoorbeeld van YouTube Thumbnail Extractor op 1200 bij 630 pixels",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Productvoorbeeld van YouTube Thumbnail Extractor op 1200 bij 630 pixels",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Wie beheert deze website?",
+      "html": "<p>De inhoud en de extractor worden gepubliceerd onder de naam 11tik. Er is geen verzonnen expertpersonage en geen gefabriceerde beoordelingsscores. Redactionele pagina's leggen uit hoe openbare thumbnailbestanden werken; ze beweren niet YouTube of Google te zijn.</p>"
+    },
+    {
+      "heading": "Wat doet 11tik?",
+      "html": "<p>De tool leest een openbare video-ID in de browser, controleert welke miniatuurafbeeldingen beschikbaar zijn op YouTube en laat je die afbeeldingen downloaden of kopiëren. Het parsen en rangschikken gebeurt op je eigen apparaat. Je kunt werken met één URL, een lijst met URL's of een openbare kanaalfeed met recente uploads.</p>"
+    },
+    {
+      "heading": "Wat doet 11tik niet?",
+      "html": "<ul>\n    <li>Het downloadt geen YouTube-video's of -audio.</li>\n    <li>Het omzeilt geen privévideo's, video's met leeftijdsbeperkingen of video's die vanwege een regio geblokkeerd zijn.</li>\n    <li>Een account is niet nodig.</li>\n    <li>Het claimt geen auteursrecht op de miniatuurafbeelding van iemand anders.</li>\n  </ul>"
+    },
+    {
+      "heading": "Taalversies",
+      "html": "<p>De extractor-gebruikersinterface is beschikbaar op taalhosts zoals<a href=\"https://fr.11tik.com/\">fr.11tik.com</a>En<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>Deze juridische pagina's blijven op www.11tik.com staan, zodat er één canonieke URL is voor Over ons, Privacy, Contact en Algemene voorwaarden.</p>"
+    },
+    {
+      "heading": "Hoe kan ik contact opnemen met de uitgever?",
+      "html": "<p>E-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>of gebruik de<a href=\"https://www.11tik.com/p/contact.html\">contactformulier</a>Lees de<a href=\"https://www.11tik.com/p/privacy.html\">privacybeleid</a>voor analyse- en hostingdetails, en de<a href=\"https://www.11tik.com/p/terms-of-use.html\">gebruiksvoorwaarden</a>voor aanvaardbaar gebruik.</p>\n  <p class=\"yte-bio\">11tik publiceert praktische handleidingen over openbare YouTube-thumbnails en onderhoudt de gratis extractor voor in de browser. Correcties zijn welkom via e-mail of het contactformulier.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-thumbnail-extractor</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik publiceert praktische handleidingen over openbare YouTube-thumbnails en onderhoudt de gratis extractor voor in de browser. Correcties zijn welkom via e-mail of het contactformulier.</p>"
+}

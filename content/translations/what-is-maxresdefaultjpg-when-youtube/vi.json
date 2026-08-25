@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "vi",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "maxresdefault.jpg là gì? Tại sao lại báo lỗi 404 và nên tải xuống gì thay thế | 11tik",
+  "description": "maxresdefault.jpg thường có kích thước 1280×720 khi YouTube đăng tải. Lỗi 404 là bình thường — hãy sử dụng ảnh tĩnh công khai thực sự tiếp theo, chứ không phải tên tệp được đoán.",
+  "h1": "maxresdefault.jpg là gì? Tại sao nó báo lỗi 404 và nên tải xuống gì thay thế?",
+  "ogTitle": "maxresdefault.jpg là gì? Tại sao nó báo lỗi 404 và nên tải xuống gì thay thế?",
+  "ogDescription": "maxresdefault.jpg thường có kích thước 1280×720 khi YouTube đăng tải. Lỗi 404 là bình thường — hãy sử dụng ảnh tĩnh công khai thực sự tiếp theo, chứ không phải tên tệp được đoán.",
+  "imageAlt": "Quy trình khắc phục sự cố từ URL maxresdefault được dự đoán gây ra lỗi 404 đến kích thước hình thu nhỏ YouTube được xác thực tiếp theo.",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Quy trình khắc phục sự cố từ URL maxresdefault được dự đoán gây ra lỗi 404 đến kích thước hình thu nhỏ YouTube được xác thực tiếp theo.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "Danh sách các tên ảnh thu nhỏ YouTube được sắp xếp từ maxresdefault xuống default, hiển thị các bậc thang bị thiếu.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Câu trả lời nhanh",
+      "html": "<p><code>maxresdefault.jpg</code>là tên tệp hình thu nhỏ công khai trên CDN hình ảnh của YouTube. Khi tệp tồn tại, nó thường có tên như sau:<strong>1280×720</strong>Đó là<strong>không</strong>Đảm bảo cho mọi video. Lỗi 404 (hoặc một chỗ giữ chỗ màu xám nhỏ) có nghĩa là phiên bản phái sinh đó chưa bao giờ được xuất bản cho ID video đó. Dán URL xem vào<a href=\"https://www.11tik.com/\">11tik</a>và tải xuống kích thước đầu tiên được liệt kê — công cụ đã bỏ qua các tên bị thiếu và xếp hạng những người sống sót như<code>hq720</code>,<code>sddefault</code>, hoặc<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Việc thiếu tệp maxres chỉ là vấn đề dự phòng, chứ không phải bằng chứng cho thấy video không có hình thu nhỏ.</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg là gì?",
+      "html": "<p>Đó chỉ là tên tệp, chứ không phải là sự đảm bảo chất lượng kỳ diệu. Địa chỉ JPEG thông thường có dạng:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Khi YouTube cũng phát hành một phiên bản WebP tương tự, 11tik kiểm tra:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Cả hai đều ngồi trên<code>i.ytimg.com</code>Chúng là ảnh tĩnh — không phải luồng video, không phải bản xuất riêng của Studio, và không phải bản master 4K. Thông tin về độ phân giải và các kích thước khác được đề cập trong tài liệu.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">hướng dẫn về kích thước và độ phân giải hình thu nhỏ</a>Việc xây dựng URL được đề cập trong phần này.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL hình thu nhỏ</a>.</p>"
+    },
+    {
+      "heading": "Tại sao một video YouTube thực sự vẫn có thể trả về lỗi 404 khi hiển thị ở độ phân giải tối đa?",
+      "html": "<ul>\n    <li>Các bản tải lên cũ hơn chưa bao giờ nhận được bản phái sinh độ phân giải tối đa.</li>\n    <li>Nguồn ảnh thu nhỏ tùy chỉnh có kích thước nhỏ hơn 1280×720.</li>\n    <li>Studio vẫn đang xử lý một bản tải lên tùy chỉnh mới.</li>\n    <li>Một số ảnh ngắn và ảnh tĩnh tự động chỉ dừng lại ở kích thước trung bình.</li>\n    <li>Video này bị hạn chế truy cập và không tiết lộ bất kỳ hình ảnh nào của công chúng.</li>\n  </ul>\n  <p>Trang theo dõi hoạt động chỉ chứng minh ID video hợp lệ. Nó không chứng minh mọi tên tệp đều hợp lệ.<code>/vi/</code>tồn tại.</p>"
+    },
+    {
+      "heading": "Cách nhận biết biến thể không khả dụng",
+      "html": "<p>Mở URL của ứng viên trong một tab mới. Thông báo lỗi sẽ hiển thị như sau:</p>\n  <ul>\n    <li>Lỗi HTTP / phản hồi trống</li>\n    <li>Một ô màu xám rất nhỏ hoặc ô mặc định trong khi bạn mong đợi kích thước 1280×720.</li>\n    <li>Hình ảnh được tải nhưng rõ ràng chỉ là hình ảnh giữ chỗ cho một tệp hình ảnh độ phân giải cao bị thiếu.</li>\n  </ul>\n  <p>Trình xác thực trình duyệt của 11tik đánh dấu các ứng viên không hợp lệ khi hình ảnh không tải được hoặc khi kích thước dự kiến ​​cao bị thu nhỏ thành một hình ảnh giữ chỗ nhỏ (khoảng 120×90). Những ứng viên đó không bao giờ xuất hiện dưới dạng thẻ “HD giả”.</p>"
+    },
+    {
+      "heading": "Các biến thể dự phòng 11tik thực sự kiểm tra",
+      "html": "<p>Thứ tự tìm kiếm thông tin cho các ứng viên công khai (cao nhất trước):</p>\n  <table>\n    <thead>\n      <tr><th>Tên tệp</th><th>Mẫu đường đi</th><th>Kích thước điển hình (nếu có)</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>Lớp 1280×720</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Các hàng bị thiếu sẽ bị bỏ qua. Tệp tải xuống đầu tiên được liệt kê là tệp còn tồn tại lâu nhất — chứ không phải là tên dài nhất bạn đã nhập. Lựa chọn định dạng giữa WebP và JPEG được đề cập trong phần tiếp theo.<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">Ảnh thu nhỏ YouTube của WebP so với JPEG</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Hãy coi tên tệp như những bậc thang tùy chọn. Leo xuống từng bậc cho đến khi nhận được hình ảnh thực sự.</p>"
+    },
+    {
+      "heading": "Cách 11tik kiểm tra tính khả dụng",
+      "html": "<ol>\n    <li>Phân tích URL xem công khai, Shorts, trực tiếp, nhúng hoặc youtu.be để tìm ID gồm 11 ký tự.</li>\n    <li>Tạo các URL ứng cử viên từ danh sách có sẵn ở trên.</li>\n    <li>Tải từng ứng viên dưới dạng hình ảnh trong trình duyệt.</li>\n    <li>Chỉ giữ lại những kết quả thành công không phải là kết quả tạm thời; xếp hạng theo cấp độ, số pixel và điều chỉnh điểm WebP nhỏ.</li>\n    <li>Hiển thị danh sách được xếp hạng để bạn có thể tải xuống hoặc sao chép URL hoạt động.</li>\n  </ol>\n  <p>Đó là lý do tại sao các liên kết maxres được dự đoán biến mất khỏi giao diện người dùng khi chúng không thành công: trình trích xuất từ ​​chối tạo ra tệp có kích thước 1280×720.</p>"
+    },
+    {
+      "heading": "Danh sách kiểm tra khắc phục sự cố thực tế",
+      "html": "<ol>\n    <li>Hãy xác nhận video đó là công khai và ID là chính xác.</li>\n    <li>Bài kiểm tra<code>maxresdefault.jpg</code>Chỉ một lần thôi. Nếu thất bại, hãy ngừng đoán mò.</li>\n    <li>Dán cùng một đường dẫn vào<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Tải xuống hình ảnh tĩnh đầu tiên trong danh sách, hoặc sao chép URL hình ảnh của nó.</li>\n    <li>Nếu không có gì hiển thị, video có thể là video riêng tư, đã bị xóa, bị giới hạn độ tuổi hoặc không có hình ảnh tĩnh công khai.</li>\n    <li>Đối với việc sử dụng CMS, nên ưu tiên bản sao được lưu trữ của ảnh tĩnh đã được xác thực hơn là đường dẫn CDN được liên kết trực tiếp. Xem thêm<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Hướng dẫn Open Graph</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Những lỗi thường gặp",
+      "html": "<ul>\n    <li>Giả sử mọi video đều có độ phân giải tối đa chỉ vì một video phổ biến nào đó có độ phân giải như vậy.</li>\n    <li>Mã hóa cứng<code>maxresdefault.jpg</code>trong HTML sản xuất mà không có kiểm tra.</li>\n    <li>Gọi một người đã kéo dài<code>hqdefault</code>“maxres.”</li>\n    <li>Vẫn còn nhầm lẫn giữa ảnh chụp màn hình trình phát nhạc với CDN —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">ảnh chụp màn hình so với ảnh thu nhỏ thực tế</a>.</li>\n    <li>Đang mong đợi độ phân giải 4K. Độ phân giải tối đa công khai thường là 1280×720 khi có sẵn —<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">hướng dẫn chất lượng cao nhất</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Bước tiếp theo",
+      "html": "<p>Dán URL YouTube công khai vào<a href=\"https://www.11tik.com/\">máy chiết xuất</a>Nếu thiếu file maxres, hãy giữ lại ảnh tĩnh thực sự tiếp theo — đó mới là file HD chính xác cho video đó.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik. Chỉ hiển thị hình ảnh tĩnh; không cho phép tải xuống video.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Lỗi 404 có nghĩa là video không có hình thu nhỏ phải không?",
+      "answer": "Không. Điều đó thường có nghĩa là thiếu một tên tệp. Các tệp có kích thước trung bình thường vẫn tồn tại.",
+      "answerHtml": "<p>Không. Điều đó thường có nghĩa là thiếu một tên tệp. Các tệp có kích thước trung bình thường vẫn tồn tại.</p>"
+    },
+    {
+      "question": "Liệu hq720 có phải là một sự thay thế tốt cho maxresdefault không?",
+      "answer": "Khi được xác thực, đúng vậy — nó nằm trong cùng cấp độ cao (~1280×720). Tuy nhiên, điều đó cũng không được đảm bảo.",
+      "answerHtml": "<p>Khi được xác thực, đúng vậy — nó nằm trong cùng cấp độ cao (~1280×720). Tuy nhiên, điều đó cũng không được đảm bảo.</p>"
+    },
+    {
+      "question": "Tôi có nên thử lại maxresdefault sau không?",
+      "answer": "Đúng vậy, sau khi quá trình tải lên tùy chỉnh mới trong Studio hoàn tất. Nếu không, hãy giữ nguyên phương án dự phòng đã được xác thực.",
+      "answerHtml": "<p>Đúng vậy, sau khi quá trình tải lên tùy chỉnh mới trong Studio hoàn tất. Nếu không, hãy giữ nguyên phương án dự phòng đã được xác thực.</p>"
+    },
+    {
+      "question": "Liệu maxres có thể tồn tại dưới dạng WebP nhưng không phải JPEG không?",
+      "answer": "Đúng vậy. 11tik kiểm tra độ phân giải tối đa của WebP riêng biệt trong /vi_webp/. Một trong hai, cả hai hoặc không cái nào tồn tại.",
+      "answerHtml": "<p>Vâng. 11tik kiểm tra độ phân giải tối đa của WebP một cách riêng biệt.<code>/vi_webp/</code>Một trong hai, cả hai, hoặc không cái nào tồn tại cả.</p>"
+    },
+    {
+      "question": "Tại sao một số công cụ vẫn hiển thị card đồ họa có độ phân giải tối đa dù nó bị lỗi?",
+      "answer": "Chúng in URL mẫu mà không tải hình ảnh. 11tik chỉ liệt kê các tệp phản hồi dưới dạng hình ảnh.",
+      "answerHtml": "<p>Chúng in URL mẫu mà không tải hình ảnh. 11tik chỉ liệt kê các tệp phản hồi dưới dạng hình ảnh.</p>"
+    },
+    {
+      "question": "Tôi có thể tải bản sao lưu dự phòng nhanh chóng bằng cách nào?",
+      "answer": "Hãy làm theo hướng dẫn tải xuống: dán, giải nén và lưu tệp đầu tiên trong danh sách.",
+      "answerHtml": "<p>Sử dụng<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hướng dẫn tải xuống</a>Sao chép, giải nén và lưu tệp đầu tiên trong danh sách.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik. Chỉ hiển thị hình ảnh tĩnh; không cho phép tải xuống video.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+}

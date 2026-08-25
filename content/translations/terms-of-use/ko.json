@@ -1,0 +1,44 @@
+{
+  "contentId": "terms-of-use",
+  "articleId": "terms-of-use",
+  "locale": "ko",
+  "sourceHash": "7c33f37ab1cb75dae2622bd6e75bc6ce61cc5a8f9c526d0f2ca489ac803e46c8",
+  "status": "ready",
+  "title": "이용약관 | 11tik",
+  "description": "https://www.11tik.com/의 YouTube 썸네일 추출기는 공개적으로 사용 가능한 YouTube 썸네일 이미지를 찾고 저장하기 위해 있는 그대로 제공됩니다.",
+  "h1": "이용약관",
+  "ogTitle": "이용약관",
+  "ogDescription": "https://www.11tik.com/의 YouTube 썸네일 추출기는 공개적으로 사용 가능한 YouTube 썸네일 이미지를 찾고 저장하기 위해 있는 그대로 제공됩니다.",
+  "imageAlt": "",
+  "faqHeading": "자주 묻는 질문",
+  "images": [],
+  "sections": [
+    {
+      "heading": "이 도구의 기능은 무엇인가요?",
+      "html": "<p>이 기능은 동영상 ID에 대한 공개 썸네일 이미지 URL을 식별하고 브라우저에서 해당 이미지를 미리 보거나 복사하거나 다운로드할 수 있도록 합니다. 일괄 처리 모드에서는 한 줄에 하나의 공개 URL만 입력할 수 있습니다. 공개 채널 URL은 YouTube 공개 피드를 통해 최근 업로드된 동영상까지 확장될 수 있습니다.</p>"
+    },
+    {
+      "heading": "이 도구가 하지 못하는 것",
+      "html": "<ul>\n    <li>이 프로그램은 유튜브 동영상이나 오디오를 다운로드하지 않습니다.</li>\n    <li>이 기능은 개인 정보 보호, 연령 제한 또는 기타 비공개 콘텐츠를 우회하지 않습니다.</li>\n    <li>이는 썸네일 이미지에 대한 권리를 부여하는 것이 아닙니다. 이미지 사용에 대한 책임은 사용자에게 있으며, 여기에는 저작권 및 YouTube 약관 준수가 포함됩니다.</li>\n  </ul>"
+    },
+    {
+      "heading": "허용 가능한 사용",
+      "html": "<p>11tik를 사용하여 과도한 양의 데이터를 수집하거나, 다른 채널을 사칭하거나, 저작권자의 허가 없이 썸네일을 자신의 표지 이미지로 재게시하지 마십시오. 자동 접속은 속도 제한을 받을 수 있습니다.</p>"
+    },
+    {
+      "heading": "공유 페이지 및 공개 API",
+      "html": "<p>다음과 같은 링크를 공유하세요.<code>/?v=</code>썸네일 API는 공개된 스틸 이미지를 설명합니다. 이는 해당 이미지를 상업적으로 재사용할 수 있는 라이선스가 아닙니다. 임베드 위젯을 다른 사이트에 표시하는 경우 \"Powered by 11tik.com\"라는 출처 표시를 유지해야 합니다.</p>"
+    },
+    {
+      "heading": "유효성",
+      "html": "<p>사이트는 변경되거나, 작동이 중단되거나, 접속이 불가능해질 수 있습니다. 서비스 수준 계약이 없으며, 중단 없는 접속, 특정 목적에의 적합성 또는 오류 없는 결과에 대한 보증도 제공하지 않습니다.</p>"
+    },
+    {
+      "heading": "연락하다",
+      "html": "<p>질문:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>또는<a href=\"https://www.11tik.com/p/contact.html\">문의 양식</a>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/p/privacy.html\">개인정보 보호정책</a>·<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/\">유튜브 썸네일 추출기</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

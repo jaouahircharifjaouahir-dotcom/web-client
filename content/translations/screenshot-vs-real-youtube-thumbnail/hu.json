@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "hu",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Képernyőkép vs. valódi YouTube-bélyegkép: melyik fájlt érdemes menteni? | 11tik",
+  "description": "A játékos telefonos képernyőképe nem a YouTube által üzemeltetett indexkép. Az igazi közönség továbbra is a i.ytimg.com oldalon él. Használd blogokhoz, Open Graphhoz és kutatáshoz – a képernyőképek krómot, tömörítést és rossz képarányt adnak hozzá.",
+  "h1": "Képernyőkép vs. valódi YouTube-bélyegkép: melyik fájlt érdemes menteni?",
+  "ogTitle": "Képernyőkép vs. valódi YouTube-bélyegkép: melyik fájlt érdemes menteni?",
+  "ogDescription": "A játékos telefonos képernyőképe nem a YouTube által üzemeltetett indexkép. Az igazi közönség továbbra is a i.ytimg.com oldalon él. Használd blogokhoz, Open Graphhoz és kutatáshoz – a képernyőképek krómot, tömörítést és rossz képarányt adnak hozzá.",
+  "imageAlt": "Egy lejátszó képernyőképének és egy valódi nyilvános YouTube bélyegképfájlnak az összehasonlítása",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Egy lejátszó képernyőképének és egy valódi nyilvános YouTube bélyegképfájlnak az összehasonlítása",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mi a különbség egy képernyőkép és egy valódi bélyegkép között?",
+      "html": "<p>A képernyőkép rögzíti a képernyődet, beleértve a lejátszó krómját, a feliratokat és az eszköz méretezését. Az igazi bélyegkép a JPEG vagy WebP fájl, amelyet a YouTube közzétett az adott videóazonosítóhoz. Csak a CDN fájl rendelkezik stabil URL-címmel és ismert pixelmérettel.</p>"
+    },
+    {
+      "heading": "Miért nem jelennek meg a képernyőképek a Google Képekben és a közösségi média előnézeteiben?",
+      "html": "<p>Gyakran rossz a képarányuk, tartalmazzák a felhasználói felületet, és kétszer tömörítik őket. Az Open Graph és sok CMS mező 16:9-es, körülbelül 1280×720-as állóképet szeretne. Ez megegyezik a maxresdefault értékkel, ha létezik – lásd:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">bélyegkép méretének útmutatója</a>.</p>"
+    },
+    {
+      "heading": "Hogyan menthetem el a valódi bélyegképet?",
+      "html": "<ol>\n    <li>A nyilvános videó URL-jét másold le, ne egy képernyőképet.</li>\n    <li>Illeszd be<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Töltsd le az első nyilvános fájlt, vagy másold ki a kép URL-címét.</li>\n  </ol>"
+    },
+    {
+      "heading": "Mikor hasznos még egy képernyőkép?",
+      "html": "<p>Csak felhasználói felületi hibák vagy a videón belüli pillanatok dokumentálására használj képernyőképet. Ne használd hivatalos indexképként, bloghősként vagy megosztási képként, ha még létezik nyilvános kép.</p>\n  <p><a href=\"https://www.11tik.com/\">Szerezd meg a valódi nyilvános bélyegképet →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mi a különbség egy képernyőkép és egy valódi bélyegkép között?",
+      "answer": "A képernyőkép a képernyődet és a lejátszó krómját rögzíti. Az igazi bélyegkép a JPEG vagy WebP fájl, amelyet a YouTube a i.ytimg.com oldalon tárol az adott videóazonosítóhoz.",
+      "answerHtml": "A képernyőkép a képernyődet és a lejátszó krómját rögzíti. Az igazi bélyegkép a JPEG vagy WebP fájl, amelyet a YouTube a i.ytimg.com oldalon tárol az adott videóazonosítóhoz."
+    },
+    {
+      "question": "Miért nem jelennek meg a képernyőképek a Google Képekben és a közösségi média előnézeteiben?",
+      "answer": "Gyakran rossz a képarányuk, extra a felhasználói felületük és a tömörítésük. A CMS és az Open Graph mezők tiszta, 16:9-es nyilvános állóképet várnak el.",
+      "answerHtml": "Gyakran rossz a képarányuk, extra a felhasználói felületük és a tömörítésük. A CMS és az Open Graph mezők tiszta, 16:9-es nyilvános állóképet várnak el."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+}

@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "ro",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Captură de ecran vs. miniatură YouTube reală: ce fișier ar trebui să salvez? | 11tik",
+  "description": "O captură de ecran a playerului făcută pe telefon nu este miniatura gazdelor YouTube. Publicul real încă există pe i.ytimg.com. Folosește-l pentru bloguri, Open Graph și cercetare - capturile de ecran adaugă Chrome în interfața cu utilizatorul, compresie și un raport de aspect greșit.",
+  "h1": "Captură de ecran vs. miniatură YouTube reală: ce fișier ar trebui să salvezi?",
+  "ogTitle": "Captură de ecran vs. miniatură YouTube reală: ce fișier ar trebui să salvezi?",
+  "ogDescription": "O captură de ecran a playerului făcută pe telefon nu este miniatura gazdelor YouTube. Publicul real încă există pe i.ytimg.com. Folosește-l pentru bloguri, Open Graph și cercetare - capturile de ecran adaugă Chrome în interfața cu utilizatorul, compresie și un raport de aspect greșit.",
+  "imageAlt": "Comparație între o captură de ecran a unui player și un fișier miniatură public real de pe YouTube",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Comparație între o captură de ecran a unui player și un fișier miniatură public real de pe YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Care este diferența dintre o captură de ecran și o miniatură reală?",
+      "html": "<p>O captură de ecran capturează ecranul, inclusiv Chrome-ul playerului, subtitrările și scalarea dispozitivului. O miniatură reală este fișierul JPEG sau WebP publicat de YouTube pentru ID-ul videoclipului respectiv. Doar fișierul CDN are o adresă URL stabilă și o dimensiune cunoscută în pixeli.</p>"
+    },
+    {
+      "heading": "De ce eșuează capturile de ecran în imaginile Google și în previzualizările sociale?",
+      "html": "<p>Adesea au un raport de aspect greșit, includ interfața utilizator și se comprimă de două ori. Open Graph și multe câmpuri CMS necesită o imagine statică de 16:9, în jur de 1280×720. Aceasta se potrivește cu maxresdefault atunci când există - vezi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de dimensiuni pentru miniaturi</a>.</p>"
+    },
+    {
+      "heading": "Cum salvez în schimb miniatura reală?",
+      "html": "<ol>\n    <li>Copiați adresa URL a videoclipului public, nu o captură de ecran.</li>\n    <li>Lipește-l în<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Descărcați primul fișier public listat sau copiați adresa URL a imaginii.</li>\n  </ol>"
+    },
+    {
+      "heading": "Când mai este utilă o captură de ecran?",
+      "html": "<p>Folosește o captură de ecran doar pentru a documenta o eroare în interfața cu utilizatorul sau un moment din videoclip. Nu o folosi ca miniatură oficială, imagine principală pentru blog sau imagine de partajare dacă există încă un public.</p>\n  <p><a href=\"https://www.11tik.com/\">Obțineți miniatura publică reală →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Care este diferența dintre o captură de ecran și o miniatură reală?",
+      "answer": "O captură de ecran face o captură de ecran și a playerului Chrome. O miniatură reală este fișierul JPEG sau WebP găzduit de YouTube pe i.ytimg.com pentru ID-ul videoclipului respectiv.",
+      "answerHtml": "O captură de ecran face o captură de ecran și a playerului Chrome. O miniatură reală este fișierul JPEG sau WebP găzduit de YouTube pe i.ytimg.com pentru ID-ul videoclipului respectiv."
+    },
+    {
+      "question": "De ce eșuează capturile de ecran în imaginile Google și în previzualizările sociale?",
+      "answer": "Adesea au un raport de aspect greșit, o interfață de utilizare suplimentară și o compresie suplimentară. Câmpurile CMS și Open Graph așteaptă o imagine publică curată, cu raportul de aspect de 16:9.",
+      "answerHtml": "Adesea au un raport de aspect greșit, o interfață de utilizare suplimentară și o compresie suplimentară. Câmpurile CMS și Open Graph așteaptă o imagine publică curată, cu raportul de aspect de 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+}

@@ -1,0 +1,66 @@
+{
+  "contentId": "how-to-extract-thumbnails-from-youtube",
+  "articleId": "how-to-extract-thumbnails-from-youtube",
+  "locale": "zh",
+  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "status": "ready",
+  "title": "如何从 YouTube 频道 URL 中提取缩略图 | 11tik",
+  "description": "将公开的 YouTube 频道 URL 粘贴到 11tik 批量搜索框中，即可展开最近公开上传的内容，然后下载每张最佳图片。此操作仅用于包装设计研究，不可用于克隆其他频道的自定义图片。",
+  "h1": "如何从 YouTube 频道网址中提取缩略图",
+  "ogTitle": "如何从 YouTube 频道网址中提取缩略图",
+  "ogDescription": "将公开的 YouTube 频道 URL 粘贴到 11tik 批量搜索框中，即可展开最近公开上传的内容，然后下载每张最佳图片。此操作仅用于包装设计研究，不可用于克隆其他频道的自定义图片。",
+  "imageAlt": "从 YouTube 频道 URL 中提取缩略图 — 11tik 上的最新公开上传内容",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png",
+      "alt": "从 YouTube 频道 URL 中提取缩略图 — 11tik 上的最新公开上传内容",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "我可以获取整个 YouTube 频道的缩略图吗？",
+      "html": "<p>你可以获取最新剧照<em>民众</em>上传的视频会暴露视频 ID。11tik 不会抓取频道发布过的所有视频，也不会绕过会员制度。在首页启用批量上传功能，粘贴频道 URL，例如：<code>youtube.com/@handle</code>或者<code>/channel/UC…</code>然后让工具展开公开的 RSS 格式列表。之后，您可以像提取手动输入的列表一样提取它们。每次运行最多只能提取 25 个 URL，以确保浏览器的流畅运行。</p>\n  <p>这与保存单个观看链接不同。单URL流程是这样的。<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">如何下载 YouTube 缩略图</a>逐行批量传输，无需通道。<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">批量下载</a>。</p>"
+    },
+    {
+      "heading": "哪些频道网址可以使用？",
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>当公共页面公开频道 ID 时</li>\n    <li>遗产<code>/user/name</code>仍然解析的路径</li>\n  </ul>\n  <p>/playlist URL 不是频道。请粘贴播放列表的各个观看链接。如果句柄无法解析为 UC ID，则不会返回任何视频；请在普通浏览器中打开频道，并从地址栏复制规范的频道 URL。</p>"
+    },
+    {
+      "heading": "如何在 11tik 上提取频道缩略图",
+      "html": "<ol>\n    <li>打开<a href=\"https://www.11tik.com/\">11tik</a>然后点击批量。</li>\n    <li>粘贴一个公开频道网址。您可以在后续行添加更多观看链接。</li>\n    <li>开始提取。等待工具将频道行替换为最近的公开观看链接，然后提取静帧。</li>\n    <li>下载每张最佳照片，或下载最高质量的 zip 文件，或导出 CSV 文件（id、标题、分享 URL、图像 URL）以创建研究日志。</li>\n  </ol>\n  <p>成功提取后分享链接<code>/thumb/VIDEO_ID</code>当质量门页面包含标题、标签和实时缩略图时，这些页面是为独一无二的页面准备的，而不是第二个首页。</p>"
+    },
+    {
+      "heading": "11tik 不会做什么",
+      "html": "<ul>\n    <li>下载视频或音频。仅限静态图片。</li>\n    <li>列出未公开或私密的上传内容。</li>\n    <li>保证所有近期视频均使用最高分辨率（maxresdefault）。较旧或文件较小的视频源最高仅支持高清（hq）或标清（sd）。<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">最大分辨率默认值</a>。</li>\n    <li>授予艺术作品的再利用权。研究公共包装网格是预期的研究用​​途。将竞争对手的图片重新上传作为​​自定义缩略图，违反了版权和政策规定。<a href=\"https://www.11tik.com/copyright\">版权与使用</a>。</li>\n  </ul>"
+    },
+    {
+      "heading": "这如何帮助进行没有入口页面的研究",
+      "html": "<p>频道内容提取是一项简单的任务：一次性提取近期公开的静态图片。它不是为每个竞争对手品牌生成一个页面。您只需使用该工具，保存一个 zip 或 CSV 文件，并添加您自己的注释。如果您发布评论，请注明频道来源并链接到他们的观看页面。YouTube 的缩略图上传规则<em>你的</em>频道在<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">自定义视频缩略图</a>。</p>"
+    },
+    {
+      "heading": "故障排除",
+      "html": "<p>列表为空：频道源未返回公开 ID（频道已终止，或解析器无法映射该句柄）。请尝试从 YouTube 桌面版界面访问 UC 频道 URL。</p>\n  <p>部分卡片缺失：这些上传内容尚未公开，或者网关拒绝了不完整的提取。请重新运行单个监控 URL。粘贴链接的隐私保护：<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>。</p>\n  <p>提取器与设计工具：11tik 不创建封面图。<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">提取器 vs 制造商</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">从 11tik 提取公共频道静态图像 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "我可以获取整个 YouTube 频道的缩略图吗？",
+      "answer": "是的，仅限近期公开上传的视频。请将频道网址粘贴到 11tik 批量输入框中。私密视频和会员专属视频不会列出。",
+      "answerHtml": "是的，仅限近期公开上传的视频。请将频道网址粘贴到 11tik 批量输入框中。私密视频和会员专属视频不会列出。"
+    },
+    {
+      "question": "哪些频道网址可以使用？",
+      "answer": "公共的 /channel/UC… URL、许多 @handle URL 以及一些旧的 /user/ 路径。播放列表不是频道。",
+      "answerHtml": "公共的 /channel/UC… URL、许多 @handle URL 以及一些旧的 /user/ 路径。播放列表不是频道。"
+    },
+    {
+      "question": "这个功能可以下载视频吗？",
+      "answer": "不。11tik 只列出 YouTube 上已有的公开图片。",
+      "answerHtml": "不。11tik 只列出 YouTube 上已有的公开图片。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+}

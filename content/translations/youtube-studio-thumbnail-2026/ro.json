@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "ro",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "Miniatură YouTube Studio 2026 | 11tik",
+  "description": "În 2026, canalele YouTube eligibile încă încarcă o miniatură personalizată din Studio pe pagina Detalii a unui videoclip. Etichetele meniului se mută, dar rezultatul este același: YouTube găzduiește o nouă imagine statică publică. 11tik nu încarcă acel fișier. Citește adresele URL ale imaginilor publice doar după ce acestea există.",
+  "h1": "Miniatură YouTube Studio 2026",
+  "ogTitle": "Miniatură YouTube Studio 2026",
+  "ogDescription": "În 2026, canalele YouTube eligibile încă încarcă o miniatură personalizată din Studio pe pagina Detalii a unui videoclip. Etichetele meniului se mută, dar rezultatul este același: YouTube găzduiește o nouă imagine statică publică. 11tik nu încarcă acel fișier. Citește adresele URL ale imaginilor publice doar după ce acestea există.",
+  "imageAlt": "11tik folosit pentru a verifica o miniatură publică după o încărcare pe YouTube Studio",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik folosit pentru a verifica o miniatură publică după o încărcare pe YouTube Studio",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Cum încarc o miniatură personalizată în YouTube Studio?",
+      "html": "<ol>\n    <li>Deschide YouTube Studio și selectează videoclipul.</li>\n    <li>În secțiunea Detalii, încărcați o imagine cu raportul de format 16:9 (rezoluția obișnuită pe YouTube este de 1280×720).</li>\n    <li>Salvați și așteptați până la finalizarea procesării.</li>\n  </ol>\n  <p>Numele exacte ale butoanelor se pot schimba. Dacă contul dvs. nu este eligibil pentru miniaturi personalizate, Studio nu va oferi încărcarea. 11tik nu poate ocoli această opțiune.</p>"
+    },
+    {
+      "heading": "Cum verific o miniatură după ce o modific în Studio?",
+      "html": "<p>Lipiți adresa URL a ceasului în<a href=\"https://www.11tik.com/\">11tik</a>Descărcați sau copiați prima dimensiune listată. Dacă lipsește maxresdefault, următorul fișier public este dimensiunea maximă corectă. Acesta este catalogul YouTube, nu un extras eșuat. Vedeți și<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault explicat</a>.</p>"
+    },
+    {
+      "heading": "Înlocuiește 11tik YouTube Studio?",
+      "html": "<p>Nu. Studio este locul unde încarci, programezi și utilizezi teste atunci când YouTube le oferă. 11tik este pentru previzualizarea și salvarea imaginilor statice publice care există deja, inclusiv după o modificare în Studio.</p>"
+    },
+    {
+      "heading": "Ce ar trebui să fac când imaginea pare veche?",
+      "html": "<p>Rețelele CDN de imagini pot avea întârzieri. Verificați din nou mai târziu, actualizați complet sau copiați adresa URL 11tik confirmă. Nu presupuneți o imagine master 4K; rezoluția maximă publică este de obicei 1280×720. O captură de ecran a Studio nu este fișierul public de miniatură.</p>\n  <p>Înrudite:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs. producător</a>.</p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extractorul</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Înlocuiește 11tik YouTube Studio?",
+      "answer": "Nu. Studio încarcă grafică personalizată. 11tik citește doar fișierele publice de miniaturi.",
+      "answerHtml": "Nu. Studio încarcă grafică personalizată. 11tik citește doar fișierele publice de miniaturi."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+}

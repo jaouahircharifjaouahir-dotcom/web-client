@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "zh",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "YouTube Studio 2026 年缩略图 | 11tik",
+  "description": "2026 年，符合条件的 YouTube 频道仍然需要通过 YouTube Studio 在视频详情页面上传自定义缩略图。菜单标签会发生变化，但结果相同：YouTube 会托管一张新的公开图片。11tik 不会上传该文件。它只会在图片公开后读取其 URL。",
+  "h1": "YouTube Studio 缩略图 2026",
+  "ogTitle": "YouTube Studio 缩略图 2026",
+  "ogDescription": "2026 年，符合条件的 YouTube 频道仍然需要通过 YouTube Studio 在视频详情页面上传自定义缩略图。菜单标签会发生变化，但结果相同：YouTube 会托管一张新的公开图片。11tik 不会上传该文件。它只会在图片公开后读取其 URL。",
+  "imageAlt": "11tik 用于在 YouTube Studio 上传后验证公开缩略图",
+  "faqHeading": "常问问题",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik 用于在 YouTube Studio 上传后验证公开缩略图",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "如何在 YouTube 工作室上传自定义缩略图？",
+      "html": "<ol>\n    <li>打开 YouTube 工作室并选择视频。</li>\n    <li>在“详细信息”中，上传一张 16:9 的图片（YouTube 的常用目标是 1280×720）。</li>\n    <li>保存并等待处理完成。</li>\n  </ol>\n  <p>按钮的具体名称可能会更改。如果您的帐户不符合自定义缩略图的条件，Studio 将不会提供上传功能。11tik 无法绕过此限制。</p>"
+    },
+    {
+      "heading": "在 Studio 中更改缩略图后，如何查看缩略图的变化？",
+      "html": "<p>将手表网址粘贴到<a href=\"https://www.11tik.com/\">11tik</a>下载或复制第一个列出的尺寸。如果缺少 maxresdefault，则下一个公开文件即为最大分辨率。这是 YouTube 的目录，而不是提取失败的文件。另请参阅<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">解释 maxresdefault</a>。</p>"
+    },
+    {
+      "heading": "11tik 会取代 YouTube Studio 吗？",
+      "html": "<p>不。“工作室”是用来上传、安排测试以及在 YouTube 提供测试功能时使用测试的地方。11tik 用于预览和保存已有的公开静态图像，包括“工作室”更改后的静态图像。</p>"
+    },
+    {
+      "heading": "图片看起来很旧该怎么办？",
+      "html": "<p>图片 CDN 可能会有延迟。请稍后重试、强制刷新页面或复制 URL 11tik 以确认。请勿假定提供 4K 母版；公开的最大分辨率通常为 1280×720。Studio 的屏幕截图并非公开的缩略图文件。</p>\n  <p>有关的：<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">提取器与制造商</a>。</p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">打开提取器</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "11tik 会取代 YouTube Studio 吗？",
+      "answer": "不。工作室上传的是自定义图片。11tik 只读取公开的缩略图文件。",
+      "answerHtml": "不。工作室上传的是自定义图片。11tik 只读取公开的缩略图文件。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+}

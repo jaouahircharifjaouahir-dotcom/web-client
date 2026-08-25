@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "ur",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "یوٹیوب تھمب نیل کو بطور بلاگ نمایاں تصویر یا اوپن گراف پیش نظارہ کیسے استعمال کریں۔ 11tik",
+  "description": "تصدیق کریں کہ ایک عوامی YouTube اب بھی موجود ہے، پھر WordPress، Blogger، یا og:image کے لیے ایک کاپی کی میزبانی کریں۔ ایک اندازہ شدہ maxresdefault URL کو ہاٹ لنک نہ کریں۔",
+  "h1": "یوٹیوب تھمب نیل کو بطور بلاگ فیچرڈ امیج یا اوپن گراف پیش نظارہ کیسے استعمال کریں۔",
+  "ogTitle": "یوٹیوب تھمب نیل کو بطور بلاگ فیچرڈ امیج یا اوپن گراف پیش نظارہ کیسے استعمال کریں۔",
+  "ogDescription": "تصدیق کریں کہ ایک عوامی YouTube اب بھی موجود ہے، پھر WordPress، Blogger، یا og:image کے لیے ایک کاپی کی میزبانی کریں۔ ایک اندازہ شدہ maxresdefault URL کو ہاٹ لنک نہ کریں۔",
+  "imageAlt": "11tik پر یوٹیوب کے تھمب نیل کی تصدیق کرنے سے لے کر اسے ورڈپریس میں اپ لوڈ کرنے یا og:image کو ترتیب دینے تک ورک فلو",
+  "faqHeading": "اکثر پوچھے گئے سوالات",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "11tik پر یوٹیوب کے تھمب نیل کی تصدیق کرنے سے لے کر اسے ورڈپریس میں اپ لوڈ کرنے یا og:image کو ترتیب دینے تک ورک فلو",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "ورڈپریس کے پہلو بہ پہلو تصویری اپ لوڈ بمقابلہ اوپن گراف سوشل کارڈ اصلی پکسل کے طول و عرض کا استعمال کرتے ہوئے",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "فوری جواب",
+      "html": "<p>میں ایک عوامی YouTube URL چسپاں کریں۔<a href=\"https://www.11tik.com/\">[[پ2]]</a>توثیق شدہ سائز کا انتظار کریں، پھر یا تو<strong>ڈاؤن لوڈ</strong>پہلے اسٹیل اور اسے اپنے CMS پر اپ لوڈ کریں، یا<strong>تصویر کا URL کاپی کریں۔</strong>صرف اس کے لوڈ ہونے کے بعد۔ دیرپا پوسٹس کے لیے، اپنی کاپی کی میزبانی کریں۔ ہاٹ لنکنگ<code>i.ytimg.com</code>ڈرافٹ کے لیے آسان ہے اور سوشل کارڈ پروڈکشن کے لیے نازک ہے۔</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تصدیق کریں → کاپی یا ڈاؤن لوڈ → میزبان → حوالہ HTML / نمایاں تصویر / اوپن گراف میں۔</p>"
+    },
+    {
+      "heading": "براہ راست تھمب نیل URL کیا ہے۔",
+      "html": "<p>مثال کے طور پر YouTube کی تصویر CDN پر ایک براہ راست تھمب نیل یو آر ایل کسی JPEG یا WebP فائل کی طرف اشارہ کرتا ہے۔<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>. یہ دیکھنے کا صفحہ نہیں ہے۔ وہ پتے کیسے بنائے جاتے ہیں:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube تھمب نیل URL حاصل کریں۔</a>. سائز کیسے مختلف ہیں:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">سائز اور ریزولوشن گائیڈ</a>.</p>"
+    },
+    {
+      "heading": "HTML مثال",
+      "html": "<p>11tik فائل کی تصدیق کرنے کے بعد، ایک کم سے کم مارک اپ پیٹرن اس طرح نظر آتا ہے (یو آر ایل، چوڑائی، اونچائی، اور آلٹ کو حقیقی اقدار سے تبدیل کریں):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>پیداوار میں اپنے میزبان URL کو ترجیح دیں:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>حقیقی چوڑائی اور اونچائی 11tik رپورٹس کا استعمال کریں۔ 1280×720 ایجاد نہ کریں جب صرف 480×360 موجود ہو۔</p>"
+    },
+    {
+      "heading": "ورڈپریس ورک فلو",
+      "html": "<ol>\n    <li>ویڈیو کو 11tik پر نکالیں اور سب سے پہلے درج اسٹیل کو ڈاؤن لوڈ کریں۔</li>\n    <li>ورڈپریس میں: میڈیا → نیا شامل کریں → فائل اپ لوڈ کریں۔</li>\n    <li>اسے پوسٹ فیچرڈ امیج کے بطور سیٹ کریں۔</li>\n    <li>Yoast، Rank Math، یا اسی طرح میں، تصدیق کریں کہ سماجی پیش نظارہ اس منسلکہ کو استعمال کرتا ہے (یا ایک وقف شدہ OG فصل اپ لوڈ کریں)۔</li>\n    <li>متبادل متن لکھیں جس میں ویڈیو کا نام ہو اور یہ کہ فائل ایک عوامی یوٹیوب اسٹیل ہے — ایک بھرے ہوئے مطلوبہ الفاظ کی فہرست نہیں۔</li>\n  </ol>\n  <p>خام چسپاں کرنے سے گریز کریں۔<code>maxresdefault.jpg</code>فائل ثابت ہونے تک میڈیا فیلڈ میں راستہ۔ maxres کی کمی عام ہے -<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 گائیڈ</a>.</p>"
+    },
+    {
+      "heading": "بلاگر اور جامد سائٹس",
+      "html": "<p><strong>بلاگر:</strong>اسٹیل کو پوسٹ ایڈیٹر میں اپ لوڈ کریں، پھر اپنے زیر کنٹرول کسی بھی تھیم/سوشل اسنیپٹ فیلڈز کے لیے اس میزبان بلاگر امیج یو آر ایل کو دوبارہ استعمال کریں۔ کسی شائع شدہ پوسٹ کے لیے جس کا آپ کو خیال ہے، اندازہ لگائے ہوئے YouTube CDN راستے پر انحصار نہ کریں۔</p>\n  <p><strong>جامد جنریٹرز:</strong>فائل کو اپنے ریپو یا CDN پر بھیجیں، پھر اس HTTPS اثاثہ پر فرنٹ میٹر/میٹا ٹیگز سیٹ کریں۔ اگر ضروری ہو تو عارضی i.ytimg.com URL پر ڈرافٹ رکھیں، لیکن اپنے میزبان کے ساتھ بھیجیں۔</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">نمایاں تصویر اور og:image ایک فائل کا اشتراک کر سکتے ہیں، لیکن دونوں کو ایک URL کی ضرورت ہے جو حقیقت میں موجود ہو۔</p>"
+    },
+    {
+      "heading": "اوپن گراف پر غور کریں۔",
+      "html": "<p>بڑے لنک کارڈز عام طور پر ہدف بناتے ہیں۔<strong>1200×630</strong>. YouTube maxres عام طور پر ہے<strong>1280×720</strong>(16:9)، جو فصل یا لیٹر باکس کو کھرچتا ہے۔ سیٹ<code>og:image</code>(اور چوڑائی/اونچائی جب آپ کا اسٹیک ان کو سپورٹ کرتا ہے) اصلی پکسلز تک۔ ٹوٹے ہوئے یو آر ایل کو ٹھیک کرنے کے بعد، ہر پلیٹ فارم کے ڈیبگر—کیچ اسٹک میں دوبارہ سکریپ کریں۔</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "ہاٹ لنکنگ بمقابلہ ڈاؤن لوڈنگ",
+      "html": "<table>\n    <thead>\n      <tr><th>نقطہ نظر</th><th>کے لیے بہترین</th><th>خطرہ</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>ہاٹ لنک i.ytimg.com</td><td>فوری مسودے، تحقیقی نوٹ</td><td>404s، CDN تبدیلیاں، کوئی فصل کنٹرول نہیں۔</td></tr>\n      <tr><td>ڈاؤن لوڈ + میزبان</td><td>درجہ بندی شدہ پوسٹس، پروڈکٹ پیجز</td><td>آپ کو فائل کو ذخیرہ کرنا ہوگا۔</td></tr>\n      <tr><td>پلیئر اسکرین شاٹ</td><td>تقریباً کبھی نہیں۔</td><td>UI کروم، غلط تناسب -<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">اسکرین شاٹ بمقابلہ اصلی</a></td></tr>\n    </tbody>\n  </table>\n  <p>ڈاؤن لوڈ کے مراحل:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">یوٹیوب تھمب نیل کیسے ڈاؤن لوڈ کریں۔</a>. جب WebP اور JPEG دونوں موجود ہوں تو فارمیٹ کا انتخاب:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">ویب پی بمقابلہ جے پی ای جی</a>.</p>"
+    },
+    {
+      "heading": "ان اسٹیلز کے لیے تصویری SEO کی بنیادی باتیں",
+      "html": "<ul>\n    <li><strong>فائل کا نام:</strong>وضاحتی، جیسے<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alt:</strong>تصویر اور ویڈیو کی وضاحت کریں؛ \"یوٹیوب تھمب نیل ڈاؤنلوڈر HD 4K\" کو مت بھرو۔</li>\n    <li><strong>طول و عرض:</strong>حقیقی چوڑائی/اونچائی کا اعلان کریں۔</li>\n    <li><strong>صرف HTTPS:</strong>مخلوط مواد والی تصویر کے URLs سکریپرز کے ذریعے گرائے جاتے ہیں۔</li>\n    <li><strong>کمپریشن:</strong>اگر ضرورت ہو تو اپنے CDN کے لیے ہلکے سے دوبارہ انکوڈ کریں۔ hqdefault کو جعلی maxres سے اوپر نہ کریں۔</li>\n  </ul>"
+    },
+    {
+      "heading": "دوبارہ استعمال اور کاپی رائٹ (قانونی مشورہ نہیں)",
+      "html": "<p>عوامی CDN URL لائسنس نہیں ہے۔ یوٹیوب پلیئر کو ایمبیڈ کرنا اسٹیل کو اپنے ہیرو میں کاپی کرنے سے مختلف ہے۔ منصفانہ استعمال حقیقت سے متعلق ہے۔ محفوظ ادارتی نمونہ: اس ویڈیو کے بارے میں تبصرے کی وضاحت کریں، چینل کو کریڈٹ کریں، دیکھنے کے صفحے کو لنک کریں، اور تصویر کو فروخت نہ کریں یا اسے اپنے چینل آرٹ کے طور پر استعمال نہ کریں۔ سرکاری کسٹم تھمب نیل مدد:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">حسب ضرورت ویڈیو تھمب نیلز اپ لوڈ کریں۔</a>. سائٹ کے قوانین:<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرائط</a>.</p>"
+    },
+    {
+      "heading": "خرابی کا سراغ لگانا",
+      "html": "<ul>\n    <li>ٹوٹا ہوا سوشل کارڈ → اندازہ لگایا گیا میکریز؛ ایک تصدیق شدہ فائل کو دوبارہ نکالیں اور میزبانی کریں۔</li>\n    <li>نرم / دھندلا کارڈ → آپ نے hqdefault استعمال کیا ہے۔ سائز چیک کریں.</li>\n    <li>غلط فصل → حقیقی 16:9 سے ایک وقف شدہ 1200×630 فصل فراہم کریں۔</li>\n    <li>چسپاں کیشے → یو آر ایل کی تبدیلی کے بعد دوبارہ سکریپ پر مجبور کریں۔</li>\n  </ul>"
+    },
+    {
+      "heading": "اگلا مرحلہ",
+      "html": "<p>پر اسٹیل کی تصدیق کریں۔<a href=\"https://www.11tik.com/\">11tik نکالنے والا</a>اسے ڈاؤن لوڈ کریں، اسے اپنی سائٹ پر اپ لوڈ کریں، اور اپنی HTTPS فائل پر نمایاں تصویر / og:image کی نشاندہی کریں۔</p>\n  <p class=\"yte-bio\">تحریر کردہ 11tik۔<a href=\"https://www.11tik.com/p/about.html\">کے بارے میں</a>·<a href=\"https://www.11tik.com/p/privacy.html\">رازداری</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرائط</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "کیا میں ورڈپریس میں i.ytimg.com URL پیسٹ کر سکتا ہوں؟",
+      "answer": "کچھ فیلڈز اسے قبول کرتے ہیں، لیکن ایک تصدیق شدہ مقامی فائل کو اپ لوڈ کرنا نمایاں تصاویر اور سماجی مناظر کے لیے زیادہ قابل اعتماد ہے۔",
+      "answerHtml": "<p>کچھ فیلڈز اسے قبول کرتے ہیں، لیکن ایک تصدیق شدہ مقامی فائل کو اپ لوڈ کرنا نمایاں تصاویر اور سماجی مناظر کے لیے زیادہ قابل اعتماد ہے۔</p>"
+    },
+    {
+      "question": "کیا مجھے اوپن گراف کے لیے maxresdefault کی ضرورت ہے؟",
+      "answer": "نہیں، آپ کو اب بھی سب سے بڑی توثیق شدہ عوام کی ضرورت ہے۔ maxres غائب ہونا معمول کی بات ہے۔",
+      "answerHtml": "<p>نہیں، آپ کو اب بھی سب سے بڑی توثیق شدہ عوام کی ضرورت ہے۔ maxres غائب ہونا معمول کی بات ہے۔</p>"
+    },
+    {
+      "question": "کیا Alt متن میں یوٹیوب کا ذکر ہونا چاہیے؟",
+      "answer": "ہاں جب یہ اثاثہ بیان کرنے میں مدد کرتا ہے (\"عوامی یوٹیوب تھمب نیل برائے …\")۔ مطلوبہ الفاظ کی چیزیں نہ کریں۔",
+      "answerHtml": "<p>ہاں جب یہ اثاثہ بیان کرنے میں مدد کرتا ہے (\"عوامی یوٹیوب تھمب نیل برائے …\")۔ مطلوبہ الفاظ کی چیزیں نہ کریں۔</p>"
+    },
+    {
+      "question": "کیا ہاٹ لنکنگ کبھی ٹھیک ہے؟",
+      "answer": "عارضی مسودوں یا اندرونی نوٹوں کے لیے، ہاں۔ دیرپا عوامی پوسٹ کے لیے، ایک کاپی کی میزبانی کریں۔",
+      "answerHtml": "<p>عارضی مسودوں یا اندرونی نوٹوں کے لیے، ہاں۔ دیرپا عوامی پوسٹ کے لیے، ایک کاپی کی میزبانی کریں۔</p>"
+    },
+    {
+      "question": "کیا میں اسٹیل کو اپنے چینل کور کے طور پر استعمال کرسکتا ہوں؟",
+      "answer": "حقوق کے بغیر نہیں۔ یہ کسی اور کا فن ہے۔",
+      "answerHtml": "<p>حقوق کے بغیر نہیں۔ یہ کسی اور کا فن ہے۔</p>"
+    },
+    {
+      "question": "کیا ہوگا اگر اسٹوڈیو نے صرف حسب ضرورت تھمب نیل تبدیل کیا؟",
+      "answer": "پروسیسنگ کا انتظار کریں، پھر اپنی CMS کاپی اپ ڈیٹ کرنے سے پہلے 11tik پر دوبارہ چیک کریں۔ متعلقہ: YouTube اسٹوڈیو کے تھمب نیلز۔",
+      "answerHtml": "<p>پروسیسنگ کا انتظار کریں، پھر اپنی CMS کاپی کو اپ ڈیٹ کرنے سے پہلے 11tik پر دوبارہ چیک کریں۔ متعلقہ:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube اسٹوڈیو کے تھمب نیلز</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">تحریر کردہ 11tik۔<a href=\"https://www.11tik.com/p/about.html\">کے بارے میں</a>·<a href=\"https://www.11tik.com/p/privacy.html\">رازداری</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرائط</a>.</p>"
+}

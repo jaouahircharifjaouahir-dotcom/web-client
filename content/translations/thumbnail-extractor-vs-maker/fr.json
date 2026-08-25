@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "fr",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Extracteur vs créateur de miniatures | 11tik",
+  "description": "Un extracteur de miniatures conserve les images publiques déjà hébergées par YouTube. Un créateur de miniatures (Canva, Photoshop ou l'outil d'importation de YouTube Studio) crée une nouvelle image dont vous êtes propriétaire. 11tik est un extracteur. Il ne crée pas d'illustrations et n'importe pas de fichier personnalisé sur votre chaîne.",
+  "h1": "Extracteur de miniatures vs créateur",
+  "ogTitle": "Extracteur de miniatures vs créateur",
+  "ogDescription": "Un extracteur de miniatures conserve les images publiques déjà hébergées par YouTube. Un créateur de miniatures (Canva, Photoshop ou l'outil d'importation de YouTube Studio) crée une nouvelle image dont vous êtes propriétaire. 11tik est un extracteur. Il ne crée pas d'illustrations et n'importe pas de fichier personnalisé sur votre chaîne.",
+  "imageAlt": "11tik Extracteur utilisé pour enregistrer une miniature YouTube publique",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Extracteur utilisé pour enregistrer une miniature YouTube publique",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Qu'est-ce qu'un extracteur de miniatures ?",
+      "html": "<p>Un extracteur lit l'URL d'une vidéo publique, trouve les fichiers image sur le CDN de YouTube et permet de prévisualiser, télécharger ou copier l'URL d'une image fonctionnelle. Il ne liste que les tailles disponibles et n'extrait pas les images du flux vidéo.</p>"
+    },
+    {
+      "heading": "Qu'est-ce qu'un créateur de miniatures ?",
+      "html": "<p>Un créateur est un processus de conception. Vous composez le texte, les polices et le contraste, exportez une image fixe au format 16:9, puis la téléchargez sur YouTube Studio. Vous êtes propriétaire de ce fichier (sous réserve des droits d'auteur des polices, des photos et des règles de la plateforme). Extraire l'image fixe d'un concurrent et la republier ne constitue pas un processus de création.</p>"
+    },
+    {
+      "heading": "Quand dois-je utiliser un extracteur ?",
+      "html": "<p>Utiliser<a href=\"https://www.11tik.com/\">11tik</a>Lorsque vous avez besoin du fichier public en direct&nbsp;: pour des recherches, une sauvegarde d’une image publiée, une image mise en avant par un CMS ou une vérification Open Graph, collez une URL de surveillance publique, Shorts, youtu.be et téléchargez la version la plus grande permettant d’afficher une image.</p>"
+    },
+    {
+      "heading": "Quand dois-je utiliser un fabricant ?",
+      "html": "<p>Utilisez un outil de conception pour créer un emballage original pour une nouvelle mise en ligne ou une mise à jour de la miniature. C'est dans Studio que ce fichier devient la miniature personnalisée officielle. Une fois le traitement terminé par YouTube, vous pouvez coller l'URL de visionnage dans 11tik pour vérifier les tailles publiques disponibles, y compris la résolution maximale lors de sa publication par YouTube.</p>"
+    },
+    {
+      "heading": "Comment les deux s'articulent-ils ?",
+      "html": "<ol>\n    <li>Extraire les références publiques des vidéos de votre secteur (à des fins de recherche uniquement).</li>\n    <li>Concevoir un alambic original à l'aide d'un outil de création.</li>\n    <li>Téléchargez-le dans YouTube Studio.</li>\n    <li>Confirmez les fichiers CDN publics avec 11tik après traitement.</li>\n  </ol>\n  <p>En rapport:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniature YouTube Studio 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Capture d'écran vs miniature réelle</a>.</p>\n  <p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ouvrez l'extracteur</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qu'est-ce qu'un extracteur de miniatures ?",
+      "answer": "Un outil qui préserve le public, même si YouTube l'héberge déjà. 11tik ne liste que les fichiers image existants.",
+      "answerHtml": "Un outil qui préserve le public, même si YouTube l'héberge déjà. 11tik ne liste que les fichiers image existants."
+    },
+    {
+      "question": "Quand dois-je utiliser un fabricant ?",
+      "answer": "Lorsque vous créez une œuvre originale à télécharger comme miniature personnalisée dans YouTube Studio.",
+      "answerHtml": "Lorsque vous créez une œuvre originale à télécharger comme miniature personnalisée dans YouTube Studio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>"
+}

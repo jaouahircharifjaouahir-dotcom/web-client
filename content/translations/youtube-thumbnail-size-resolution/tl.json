@@ -1,0 +1,98 @@
+{
+  "contentId": "youtube-thumbnail-size-resolution",
+  "articleId": "youtube-thumbnail-size-resolution",
+  "locale": "tl",
+  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "status": "ready",
+  "title": "Laki at Resolusyon ng Thumbnail sa YouTube: Kumpletong Gabay | 11tik",
+  "description": "Paghambingin ang mga laki ng thumbnail ng YouTube mula 120×90 hanggang 1280×720. Opsyonal ang Maxres at hq720—gamitin ang pinakamalaking pampublikong file na naglo-load.",
+  "h1": "Laki at Resolusyon ng Thumbnail sa YouTube: Kumpletong Gabay",
+  "ogTitle": "Laki at Resolusyon ng Thumbnail sa YouTube: Kumpletong Gabay",
+  "ogDescription": "Paghambingin ang mga laki ng thumbnail ng YouTube mula 120×90 hanggang 1280×720. Opsyonal ang Maxres at hq720—gamitin ang pinakamalaking pampublikong file na naglo-load.",
+  "imageAlt": "Tsart ng paghahambing ng mga pampublikong laki ng thumbnail ng YouTube mula sa maxresdefault na 1280 by 720 pababa sa default na 120 by 90",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png",
+      "alt": "Tsart ng paghahambing ng mga pampublikong laki ng thumbnail ng YouTube mula sa maxresdefault na 1280 by 720 pababa sa default na 120 by 90",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png",
+      "alt": "Paghahambing na magkatabi na nagpapakita ng isang video na may maxresdefault na available kumpara sa isang video kung saan mayroon lamang mas maliit na hqdefault na file",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mabilis na sagot",
+      "html": "<p>Para sa isang custom na pag-upload, ang tulong ng YouTube ay nakasentro pa rin sa isang<strong>16:9</strong>imahe—karaniwan<strong>1280×720</strong>Para sa mga file na maaari mong i-download mula sa isang umiiral na video, nag-iiba ang mga pampublikong CDN derivatives. Kapag mayroon,<code>maxresdefault</code>/<code>hq720</code>ay karaniwang 1280×720. Maraming video ang humihinto sa<code>sddefault</code>(640×480) o<code>hqdefault</code>(480×360). Ang mas mataas na pangalan ng file ay hindi kailanman nakakaimbento ng mga pixel. I-paste ang URL ng relo sa<a href=\"https://www.11tik.com/\">11tik</a>para ilista lamang ang mga sukat na nagbabalik ng totoong imahe.</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Relatibong laki ng publiko. Hindi lahat ng video ay naglalathala ng bawat baitang sa hagdan na ito.</p>"
+    },
+    {
+      "heading": "Mga inirerekomendang dimensyon para sa mga tagalikha",
+      "html": "<p>Kung nagdidisenyo ka ng custom na thumbnail sa Studio, sundin ang kasalukuyang Tulong sa YouTube: layunin para sa isang<strong>16:9</strong>pa rin. Ang malawakang ginagamit na laki ng pagtatrabaho ay<strong>1280×720</strong>mga pixel. Na tumutugma sa widescreen frame ng player at kapareho ng klase ng pixel gaya ng isang nai-publish na<code>maxresdefault</code>kapag gumawa ang YouTube ng isa.</p>\n  <p>Opisyal na sanggunian:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Mag-upload ng mga custom na thumbnail ng video</a>Pagkatapos maproseso ng Studio, kumpirmahin ang mga live na pampublikong file gamit ang 11tik sa halip na ipagpalagay na agad na lumitaw ang bawat hinango. Mga tala na nakatuon sa Studio:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Mga thumbnail ng YouTube Studio sa 2026</a>.</p>"
+    },
+    {
+      "heading": "Mga laki ng pampublikong CDN na maaaring makuha ng mga manonood",
+      "html": "<p>Hindi kinukuha ng mga downloader at blog ang iyong Photoshop master. Kinukuha nila ang mga pampublikong derivatives na YouTube host para sa video ID. Sinusuri ng extractor ng 11tik ang mga filename na ito (JPEG at, kapag mayroon, WebP):</p>\n  <table>\n    <thead>\n      <tr><th>Baryante</th><th>Karaniwang resolusyon</th><th>Antas</th><th>Kakayahang magamit</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td>1280×720</td><td>Pinakamahusay</td><td>Kung ang YouTube ay naglathala lamang ng mga WebP maxres</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td>1280×720</td><td>Pinakamahusay</td><td>Karaniwan sa mga mas bago / mataas na kalidad na upload; kadalasang nawawala sa mga mas luma</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720 na klase</td><td>Pinakamahusay</td><td>Ipakita sa ilang mga video bilang alternatibong high file</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>Mataas</td><td>Madalas na magagamit kapag wala ang maxres</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>Pamantayan</td><td>Karaniwan</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>Preview</td><td>Maliliit na preview / listahan</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>Preview</td><td>Pinakamaliit pa rin na pamantayan</td></tr>\n    </tbody>\n  </table>\n  <p>Ang mga inaasahang lapad at taas na ito ay tumutugma sa mga preset ng kalidad ng 11tik. Maaari pa ring magkaiba ang mga totoong tugon kung ang YouTube ay nagsisilbing placeholder o ganap na hindi nag-aalis ng isang file—palaging i-validate.</p>"
+    },
+    {
+      "heading": "Bakit mahalaga ang 16:9 kahit na magkakaiba ang mga file",
+      "html": "<p>Widescreen ang watch player. Ang custom art na dinisenyo sa 16:9 ay nananatiling mababasa sa paghahanap, mga iminungkahing shelf, at mga embed. Ang ilang pampublikong file (kapansin-pansin<code>hqdefault</code>/<code>sddefault</code>) ay hindi mahigpit na 16:9 na mga kahon; mas lumang laki ng CDN ang mga ito. Mas gusto mo pa rin ang isang tunay na 1280×720 na pampublikong imahe kapag kailangan mo ng isang malinis na 16:9 na asset para sa Open Graph o isang header ng blog.</p>\n  <p>Patayo ang mga shorts, pero madalas pa ring naka-landscape ang naka-store public. Iyan ay isang gawi ng host, hindi isang bigong pag-download. Mga Detalye:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Pag-download ng thumbnail ng shorts</a>.</p>"
+    },
+    {
+      "heading": "maxresdefault laban sa hq720 laban sa “HD”",
+      "html": "<p><code>maxresdefault</code>ay ang pamilyar na HD filename sa<code>i.ytimg.com</code>Kapag umiiral na ang file, kadalasan ito ay 1280×720—hindi 4K.<code>hq720</code>ay isa pang mataas na antas ng pangalan na inilalantad ng ilang mga video sa parehong uri ng resolusyon. Walang alinman sa mga pangalang ito ang garantiya ng file. Ang mga tool na nag-i-print ng maxres URL nang hindi sinusuri ay lumilikha ng mga sirang imahe.</p>\n  <p>Mas malalim na mga tala sa pangalan ng file:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ano ang maxresdefault.jpg</a>at<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">pinakamataas na kalidad na pampublikong thumbnail</a>.</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">Parehong pattern ng kahilingan, magkakaibang resulta: ang mas mataas na pangalan ng file ay hindi nag-iimbento ng mga pixel kapag nawawala ang file.</p>"
+    },
+    {
+      "heading": "Bakit mas malaki ang sukat ng isang video kaysa sa iba",
+      "html": "<ul>\n    <li>Ang mga lumang upload ay maaaring hindi kailanman nakatanggap ng maxres derivative.</li>\n    <li>Mas maliit sa 1280×720 ang likhang sining na ginamit.</li>\n    <li>Pinoproseso pa rin ang mga custom na thumbnail sa Studio.</li>\n    <li>Hindi maaaring ilantad ang mga pampublikong litrato ng mga pribado, para sa mga miyembro lamang, o mga video na may limitasyon sa edad.</li>\n    <li>Lumalabas lang ang mga variant ng WebP kapag na-publish na ng YouTube ang mga ito para sa ID na iyon.</li>\n  </ul>\n  <p>Ang availability ay depende sa bawat video. Huwag kailanman ituring ang gumaganang maxres URL ng kakumpitensya bilang patunay na mayroon nito.</p>"
+    },
+    {
+      "heading": "Paano pinipili ni 11tik ang \"pinakamahusay\" na sukat",
+      "html": "<p>Sinusuri ng 11tik ang mga pampublikong kandidato sa isang nakapirming pagkakasunud-sunod ng kalidad (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). Pinapanatili nito ang mga file na nagpapatunay bilang mga imahe at niraranggo muna ang pinakamataas na survivor. Hindi nito ina-upscale. Kung nawawala ang maxres, ang unang card ay maaaring hq720 o sd—iyon ang honest maximum para sa ID na iyon.</p>\n  <p>Para kopyahin ang address ng napiling laki, gamitin ang<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>Para i-save ang file, gamitin ang<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">gabay sa pag-download</a>.</p>"
+    },
+    {
+      "heading": "Aling sukat ang dapat mong gamitin?",
+      "html": "<table>\n    <thead>\n      <tr><th>Kaso ng paggamit</th><th>Mas gusto</th><th>Bakit</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Itinatampok na larawan ng blog / Open Graph</td><td>Pinakamalaking napatunayan ~1280×720</td><td>Tumutugma sa mga karaniwang pananim sa lipunan; i-host ang sarili mong kopya</td></tr>\n      <tr><td>Pananaliksik sa mockup/thumbnail ng disenyo</td><td>Pinakamahusay na magagamit pa rin sa publiko</td><td>Totoong packaging, hindi screenshot ng manlalaro</td></tr>\n      <tr><td>Mabilisang preview ng chat</td><td>hq o mq</td><td>Mas mabilis mag-load ang mas maliliit na file</td></tr>\n      <tr><td>Pasadyang pag-upload sa Studio</td><td>Ang iyong orihinal na 16:9 1280×720 (o mas mataas pa)</td><td>Lumilikha ka ng sining; ang mga hinango ng CDN ay mas huli na</td></tr>\n    </tbody>\n  </table>\n  <p>Huwag i-stretch ang hqdefault sa 1280×720 at tawagin itong maxres. Para sa mga tip sa CMS hosting:<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">tampok na larawan / daloy ng trabaho ng Open Graph</a>Ang mga screenshot ng manlalaro ay ibang (mas masahol) na asset:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot vs totoong thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Susunod na hakbang",
+      "html": "<p>Panoorin ang live na video sa<a href=\"https://www.11tik.com/\">11tik tagabunot</a>, pagkatapos ay alinman sa<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">kopyahin ang URL ng larawan</a>o<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">i-download ang pinakamahusay na magagamit pa rin</a>.</p>\n\n  <p class=\"yte-bio\">Isinulat ni 11tik. Para lamang sa mga pampublikong laki ng CDN; walang upscaling at walang pag-download ng video.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Lagi bang available ang maxresdefault?",
+      "answer": "Hindi. Maraming pampublikong video ang hindi kailanman naglalathala ng file na iyon. Normal lang ang 404 sa maxres.",
+      "answerHtml": "<p>Hindi. Maraming pampublikong video ang hindi kailanman naglalathala ng file na iyon. Normal lang ang 404 sa maxres.</p>"
+    },
+    {
+      "question": "Mas maganda ba ang hq720 kaysa sa ibang thumbnail variants?",
+      "answer": "Kapag umiiral ito, ang hq720 ay nasa parehong mataas na antas ng maxres (mga 1280×720). Hindi ito awtomatikong \"mas mahusay\" kaysa sa isang napatunayang maxres file, at hindi ito garantisado.",
+      "answerHtml": "<p>Kapag umiiral ito, ang hq720 ay nasa parehong mataas na antas ng maxres (mga 1280×720). Hindi ito awtomatikong \"mas mahusay\" kaysa sa isang napatunayang maxres file, at hindi ito garantisado.</p>"
+    },
+    {
+      "question": "Anong laki ang pinakamainam para sa isang website?",
+      "answer": "Gamitin ang pinakamalaking na-validate na ~16:9 public still (madalas ay 1280×720), pagkatapos ay mag-host ng kopya sa iyong site para sa stable na Open Graph at mga featured-image tag.",
+      "answerHtml": "<p>Gamitin ang pinakamalaking na-validate na ~16:9 public still (madalas ay 1280×720), pagkatapos ay mag-host ng kopya sa iyong site para sa stable na Open Graph at mga featured-image tag.</p>"
+    },
+    {
+      "question": "Bakit minsan hindi naglo-load ang isang high-resolution na thumbnail?",
+      "answer": "Nahulaan ang pangalan ng file. Hindi inilathala ng YouTube ang hinango na iyon para sa video ID. Mag-load na lang ng mas maliit na umiiral na laki.",
+      "answerHtml": "<p>Nahulaan ang pangalan ng file. Hindi inilathala ng YouTube ang hinango na iyon para sa video ID. Mag-load na lang ng mas maliit na umiiral na laki.</p>"
+    },
+    {
+      "question": "Ang ibig sabihin ba ng \"HD thumbnail\" ay 4K?",
+      "answer": "Hindi. Ang pampublikong maxres ay karaniwang 1280×720. Hindi pa rin makakaimbento ng 4K ang 11tik.",
+      "answerHtml": "<p>Hindi. Ang pampublikong maxres ay karaniwang 1280×720. Hindi pa rin makakaimbento ng 4K ang 11tik.</p>"
+    },
+    {
+      "question": "Mas mataas ba ang kalidad ng mga thumbnail ng WebP kaysa sa JPEG?",
+      "answer": "Ang WebP ay isa pang lalagyan para sa parehong laki ng antas kapag nai-publish. Mas mainam kung ang file na 11tik ay na-validate; huwag ipagpalagay na laging umiiral ang WebP.",
+      "answerHtml": "<p>Ang WebP ay isa pang lalagyan para sa parehong laki ng antas kapag nai-publish. Mas mainam kung ang file na 11tik ay na-validate; huwag ipagpalagay na laging umiiral ang WebP.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik. Para lamang sa mga pampublikong laki ng CDN; walang upscaling at walang pag-download ng video.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+}

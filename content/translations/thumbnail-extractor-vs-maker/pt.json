@@ -1,0 +1,57 @@
+{
+  "contentId": "thumbnail-extractor-vs-maker",
+  "articleId": "thumbnail-extractor-vs-maker",
+  "locale": "pt",
+  "sourceHash": "5a0744f48e355c53d1031f8b6f569bcc4f871958a09724dcf16e38bff3b0f296",
+  "status": "ready",
+  "title": "Extrator vs. criador de miniaturas | 11tik",
+  "description": "Um extrator de miniaturas salva a imagem pública que o YouTube já hospeda. Um criador de miniaturas (Canva, Photoshop ou upload do YouTube Studio) cria uma nova imagem que você possui. 11tik é um extrator. Ele não cria arte e não envia um arquivo personalizado para o seu canal.",
+  "h1": "Extrator de miniaturas vs. criador de miniaturas",
+  "ogTitle": "Extrator de miniaturas vs. criador de miniaturas",
+  "ogDescription": "Um extrator de miniaturas salva a imagem pública que o YouTube já hospeda. Um criador de miniaturas (Canva, Photoshop ou upload do YouTube Studio) cria uma nova imagem que você possui. 11tik é um extrator. Ele não cria arte e não envia um arquivo personalizado para o seu canal.",
+  "imageAlt": "Extrator 11tik usado para salvar uma miniatura pública do YouTube",
+  "faqHeading": "Perguntas frequentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Extrator 11tik usado para salvar uma miniatura pública do YouTube",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "O que é um extrator de miniaturas?",
+      "html": "<p>Um extrator lê um URL de vídeo público, encontra arquivos de imagem na CDN do YouTube e permite visualizar, baixar ou copiar um URL de imagem válido. Ele lista apenas os tamanhos existentes. Não extrai frames do fluxo de vídeo.</p>"
+    },
+    {
+      "heading": "O que é um criador de miniaturas?",
+      "html": "<p>Um fluxo de trabalho \"maker\" consiste em compor texto, fontes e contraste, exportar uma imagem estática em formato 16:9 e, em seguida, carregá-la no YouTube Studio. Esse arquivo é seu (sujeito às regras de fontes, fotos e da plataforma). Extrair a imagem estática de um concorrente e carregá-la novamente não é um fluxo de trabalho \"maker\".</p>"
+    },
+    {
+      "heading": "Quando devo usar um extrator?",
+      "html": "<p>Usar<a href=\"https://www.11tik.com/\">11tik</a>Quando precisar do arquivo público em tempo real: para pesquisa, backup de uma imagem publicada, imagem em destaque em um CMS ou verificação do Open Graph, cole um link público, Shorts, youtu.be, URL e baixe o arquivo de maior tamanho que retorne uma imagem.</p>"
+    },
+    {
+      "heading": "Quando devo usar um marcador?",
+      "html": "<p>Use uma ferramenta de design ao criar embalagens originais para um novo vídeo ou uma atualização de miniatura. O Studio é onde esse arquivo se torna a miniatura personalizada oficial. Depois que o YouTube terminar o processamento, você pode colar o URL de visualização em 11tik para confirmar quais tamanhos públicos existem, incluindo a resolução máxima (maxres) quando o YouTube o publicou.</p>"
+    },
+    {
+      "heading": "Como é que os dois se encaixam?",
+      "html": "<ol>\n    <li>Extraia referências públicas de vídeos do seu nicho (apenas para pesquisa).</li>\n    <li>Crie uma imagem original usando uma ferramenta de criação.</li>\n    <li>Faça o upload no YouTube Studio.</li>\n    <li>Confirme os arquivos CDN públicos com 11tik após o processamento.</li>\n  </ol>\n  <p>Relacionado:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatura do YouTube Studio 2026</a>·<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">captura de tela vs miniatura real</a>.</p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Abra o extrator</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "O que é um extrator de miniaturas?",
+      "answer": "Uma ferramenta que salva arquivos públicos que o YouTube já hospeda. 11tik lista apenas arquivos de imagem que existem.",
+      "answerHtml": "Uma ferramenta que salva arquivos públicos que o YouTube já hospeda. 11tik lista apenas arquivos de imagem que existem."
+    },
+    {
+      "question": "Quando devo usar um marcador?",
+      "answer": "Ao criar uma obra de arte original para enviar como miniatura personalizada no YouTube Studio.",
+      "answerHtml": "Ao criar uma obra de arte original para enviar como miniatura personalizada no YouTube Studio."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+}

@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "hr",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "Ugradite 11tik alat za izdvajanje sličica | 11tik",
+  "description": "Dodajte besplatni alat za izdvajanje sličica s YouTubea na svoj blog, dokumente ili alate za kreatore. Widget se učitava s 11tik i sam mijenja veličinu. Nema API ključa.",
+  "h1": "Ugradite 11tik alat za izdvajanje sličica",
+  "ogTitle": "Ugradite 11tik alat za izdvajanje sličica",
+  "ogDescription": "Dodajte besplatni alat za izdvajanje sličica s YouTubea na svoj blog, dokumente ili alate za kreatore. Widget se učitava s 11tik i sam mijenja veličinu. Nema API ključa.",
+  "imageAlt": "",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [],
+  "sections": [
+    {
+      "heading": "isječak iframea",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Pravila",
+      "html": "<ul>\n    <li>Zadržite<code>id=\"yte-app\"</code>atribut tako da sinkronizacija visine radi.</li>\n    <li>Nemojte omotavati iframe u fiksnu visinu koja odrezuje gumbe za preuzimanje.</li>\n    <li>Povratno povezivanje na<a href=\"https://www.11tik.com/\">www.11tik.com</a>pomaže korisnicima da otvore cijeli alat.</li>\n  </ul>"
+    },
+    {
+      "heading": "Duboke poveznice",
+      "html": "<p>Podijelite gotovu ekstrakciju s<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otvorite ekstraktor</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

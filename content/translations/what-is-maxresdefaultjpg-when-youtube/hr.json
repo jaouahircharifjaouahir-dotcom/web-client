@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "hr",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "Što je maxresdefault.jpg? Zašto se javlja greška 404 i što preuzeti umjesto toga | 11tik",
+  "description": "maxresdefault.jpg je obično 1280×720 kada ga je YouTube objavio. 404 je normalan - koristite sljedeću pravu javnu sliku, a ne nagađani naziv datoteke.",
+  "h1": "Što je maxresdefault.jpg? Zašto se javlja greška 404 i što preuzeti umjesto toga",
+  "ogTitle": "Što je maxresdefault.jpg? Zašto se javlja greška 404 i što preuzeti umjesto toga",
+  "ogDescription": "maxresdefault.jpg je obično 1280×720 kada ga je YouTube objavio. 404 je normalan - koristite sljedeću pravu javnu sliku, a ne nagađani naziv datoteke.",
+  "imageAlt": "Rješavanje problema s nagađanjem maxresdefault URL-a koji šalje 404 poruke na sljedeću provjerenu veličinu YouTube minijature",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Rješavanje problema s nagađanjem maxresdefault URL-a koji šalje 404 poruke na sljedeću provjerenu veličinu YouTube minijature",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "Ljestvica naziva datoteka sličica YouTubea od maxresdefault do zadanog prikaza preskočenih nedostajućih prečki",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p><code>maxresdefault.jpg</code>je javni naziv datoteke sličica na YouTubeovoj CDN mreži slika. Kada datoteka postoji, obično je<strong>1280×720</strong>To je<strong>ne</strong>zajamčeno za svaki videozapis. 404 (ili mala siva rezervirana oznaka) znači da derivat nikada nije objavljen za taj ID videozapisa. Zalijepite URL za gledanje u<a href=\"https://www.11tik.com/\">11tik</a>i preuzmite prvu navedenu veličinu - alat je već preskočio nedostajuća imena i rangirao preživjele kao što su<code>hq720</code>,<code>sddefault</code>ili<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Nedostajuća maxres datoteka je rezervni problem, a ne dokaz da video nema minijaturu.</p>"
+    },
+    {
+      "heading": "Što je maxresdefault.jpg?",
+      "html": "<p>To je naziv datoteke, a ne čarobno jamstvo kvalitete. Uobičajena JPEG adresa izgleda ovako:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Kada je YouTube objavio i WebP blizanca, 11tik provjerava:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Oboje sjede na<code>i.ytimg.com</code>To su statične slike - ne video stream, ne privatni izvoz iz Studija i ne 4K master. Očekivanja u pikselima i ostale veličine obuhvaćene su u<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu i rezoluciju sličica</a>Izrada URL-ova obuhvaćena je u<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura</a>.</p>"
+    },
+    {
+      "heading": "Zašto pravi YouTube video i dalje može vraćati grešku 404 za maxres?",
+      "html": "<ul>\n    <li>Stariji uploadovi nikada nisu dobili derivat maxres-a.</li>\n    <li>Izvor prilagođene sličice bio je manji od 1280 × 720.</li>\n    <li>Studio još uvijek obrađuje novi prilagođeni prijenos.</li>\n    <li>Neki kratki videozapisi i automatski generirane fotografije zaustavljaju se na srednjim veličinama.</li>\n    <li>Video je ograničen i uopće ne prikazuje javne fotografije.</li>\n  </ul>\n  <p>Funkcionalna stranica za gledanje samo dokazuje da je ID videozapisa valjan. Ne dokazuje svaki naziv datoteke pod<code>/vi/</code>postoji.</p>"
+    },
+    {
+      "heading": "Kako prepoznati nedostupnu varijantu",
+      "html": "<p>Otvorite URL kandidata u novoj kartici. Neuspjesi izgledaju ovako:</p>\n  <ul>\n    <li>HTTP pogreška / prazan odgovor</li>\n    <li>Vrlo mala siva ili zadana pločica kada ste očekivali 1280×720</li>\n    <li>Slika koja se učitava, ali je očito rezervirano mjesto za nedostajuću datoteku visoke rezolucije</li>\n  </ul>\n  <p>11tik-ov validator preglednika označava kandidate nevažećima kada se slika ne učita ili kada se visoka očekivana veličina smanji na sićušno rezervirano mjesto (oko 120×90). Ti kandidati se nikada ne pojavljuju kao \"lažne HD\" kartice.</p>"
+    },
+    {
+      "heading": "Rezervne varijante 11tik zapravo provjeravaju",
+      "html": "<p>Redoslijed otkrivanja za javne kandidate (od najvišeg):</p>\n  <table>\n    <thead>\n      <tr><th>Naziv datoteke</th><th>Uzorak puta</th><th>Tipična veličina kada je prisutna</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 razred</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Nedostajući retci se preskaču. Prvo navedeno preuzimanje je najduže preživjelo - ne najduže ime koje ste upisali. Izbor formata između WebP-a i JPEG-a opisan je u<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP u odnosu na JPEG YouTube minijature</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Tretirajte nazive datoteka kao opcionalne prečke. Spuštajte se dolje dok se ne pojavi prava slika.</p>"
+    },
+    {
+      "heading": "Kako 11tik provjerava dostupnost",
+      "html": "<ol>\n    <li>Analiziraj javni URL za gledanje, Shorts, uživo, ugrađeni ili youtu.be za 11-znakovni ID.</li>\n    <li>Izradite URL-ove kandidata s gornjeg popisa unaprijed definiranih postavki.</li>\n    <li>Učitajte svakog kandidata kao sliku u preglednik.</li>\n    <li>Zadržite samo uspjehe koji nisu rezervirani prostor; rangirajte po razini, pikselima i maloj prilagodbi WebP rezultata.</li>\n    <li>Prikažite rangirani popis kako biste mogli preuzeti ili kopirati funkcionalni URL.</li>\n  </ol>\n  <p>Zato pogođene maxres poveznice nestaju iz korisničkog sučelja kada ne uspiju: ekstraktor odbija izmisliti datoteku od 1280×720.</p>"
+    },
+    {
+      "heading": "Praktična kontrolna lista za rješavanje problema",
+      "html": "<ol>\n    <li>Potvrdite da je videozapis javan i da je ID ispravan.</li>\n    <li>Test<code>maxresdefault.jpg</code>jednom. Ako ne uspije, prestani nagađati.</li>\n    <li>Zalijepite istu poveznicu u<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Preuzmite prvu navedenu fotografiju ili kopirajte URL njezine slike.</li>\n    <li>Ako se ništa ne prikazuje, videozapis može biti privatan, izbrisan, s dobnim ograničenjem ili bez javnih fotografija.</li>\n    <li>Za korištenje CMS-a, preferirajte hostanu kopiju validirane fotografije putem hotlinked CDN puta. Pogledajte<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Vodič za Open Graph</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Uobičajene pogreške",
+      "html": "<ul>\n    <li>Pod pretpostavkom da svaki video ima maksimalnu rezoluciju jer je ima jedan popularan video.</li>\n    <li>Tvrdo kodiranje<code>maxresdefault.jpg</code>u produkcijskom HTML-u bez provjere.</li>\n    <li>Pozivanje rastegnutog<code>hqdefault</code>\"maksimalno\".</li>\n    <li>Zbunjujem snimku zaslona igrača sa slikom iz CDN-a —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snimka zaslona u odnosu na pravu sličicu</a>.</li>\n    <li>Očekuje se 4K. Javna maksimalna rezolucija je obično 1280×720 kada je prisutna —<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">vodič najviše kvalitete</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Sljedeći korak",
+      "html": "<p>Zalijepite javni YouTube URL u<a href=\"https://www.11tik.com/\">ekstraktor</a>Ako nedostaje maxres, zadržite sljedeću pravu fotografiju - to je iskrena HD datoteka za taj video.</p>\n  <p class=\"yte-bio\">Napisao/la 11tik. Samo javne fotografije; preuzimanje videa nije moguće.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Znači li greška 404 da videozapis uopće nema minijaturu?",
+      "answer": "Ne. Obično znači da nedostaje jedno ime datoteke. Srednje veličine često još uvijek postoje.",
+      "answerHtml": "<p>Ne. Obično znači da nedostaje jedno ime datoteke. Srednje veličine često još uvijek postoje.</p>"
+    },
+    {
+      "question": "Je li hq720 dobra zamjena za maxresdefault?",
+      "answer": "Kada se provjeri, da - nalazi se u istoj visokoj razini (~1280×720). Također nije zajamčeno.",
+      "answerHtml": "<p>Kada se provjeri, da - nalazi se u istoj visokoj razini (~1280×720). Također nije zajamčeno.</p>"
+    },
+    {
+      "question": "Trebam li kasnije ponovno pokušati s maxresdefault?",
+      "answer": "Da nakon što se završi obrada novog prilagođenog prijenosa u Studiju. U suprotnom, zadržite provjerenu rezervnu opciju.",
+      "answerHtml": "<p>Da nakon što se završi obrada novog prilagođenog prijenosa u Studiju. U suprotnom, zadržite provjerenu rezervnu opciju.</p>"
+    },
+    {
+      "question": "Mogu li maxres datoteke postojati kao WebP, ali ne i kao JPEG?",
+      "answer": "Da. 11tik zasebno provjerava WebP maxres pod /vi_webp/. Mogu postojati oba, oba ili nijedan.",
+      "answerHtml": "<p>Da. 11tik zasebno provjerava WebP maksimalne vrijednosti pod<code>/vi_webp/</code>Može postojati ili oboje ili nijedno.</p>"
+    },
+    {
+      "question": "Zašto neki alati i dalje prikazuju Maxres karticu koja ne radi?",
+      "answer": "Ispisuju URL predloška bez učitavanja slike. 11tik navodi samo datoteke koje se odazivaju kao slike.",
+      "answerHtml": "<p>Ispisuju URL predloška bez učitavanja slike. 11tik navodi samo datoteke koje se odazivaju kao slike.</p>"
+    },
+    {
+      "question": "Kako brzo preuzeti rezervnu verziju?",
+      "answer": "Koristite vodič za preuzimanje: zalijepite, izdvojite, spremite prvu navedenu datoteku.",
+      "answerHtml": "<p>Koristite<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">preuzimanje vodiča</a>: zalijepi, izdvoji, spremi prvu navedenu datoteku.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik. Samo javne fotografije; preuzimanje videa nije moguće.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+}

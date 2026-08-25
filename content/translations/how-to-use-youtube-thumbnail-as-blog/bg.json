@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "bg",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Как да използвате миниатюра от YouTube като представено изображение в блога или преглед в Open Graph | 11tik",
+  "description": "Уверете се, че все още съществува публичен YouTube канал, след което хоствайте копие за WordPress, Blogger или og:image. Не създавайте хотлинкове към предполагаем URL адрес от maxresdefault.",
+  "h1": "Как да използвате миниатюра от YouTube като представено изображение в блога или преглед в Open Graph",
+  "ogTitle": "Как да използвате миниатюра от YouTube като представено изображение в блога или преглед в Open Graph",
+  "ogDescription": "Уверете се, че все още съществува публичен YouTube канал, след което хоствайте копие за WordPress, Blogger или og:image. Не създавайте хотлинкове към предполагаем URL адрес от maxresdefault.",
+  "imageAlt": "Работен процес от потвърждаване на миниатюра в YouTube на 11tik до качването ѝ в WordPress или задаване на og:image",
+  "faqHeading": "ЧЗВ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Работен процес от потвърждаване на миниатюра в YouTube на 11tik до качването ѝ в WordPress или задаване на og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Качване на изображения в WordPress едновременно с Open Graph социална карта, използваща реални пикселни размери",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Бърз отговор",
+      "html": "<p>Поставете публичен URL адрес на YouTube в<a href=\"https://www.11tik.com/\">11tik</a>, изчакайте валидирани размери, след това или<strong>изтегляне</strong>първото изображение и го качете в системата си за управление на съдържанието (CMS), или<strong>копирайте URL адреса на изображението</strong>само след като се зареди. За трайни публикации, хоствайте свое собствено копие. Хотлинкове<code>i.ytimg.com</code>Удобен е за чернови и крехък за производство на социални карти.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Потвърди → копирай или изтегли → хостнирай → препратка в HTML / препоръчано изображение / Open Graph.</p>"
+    },
+    {
+      "heading": "Какво представлява директният URL адрес на миниатюра",
+      "html": "<p>Директен URL адрес на миниатюра сочи към JPEG или WebP файл в CDN на изображения на YouTube, например<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Това не е страницата за гледане. Как се изграждат тези адреси:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">получаване на URL адрес на миниатюра в YouTube</a>Как се различават размерите:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ръководство за размер и резолюция</a>.</p>"
+    },
+    {
+      "heading": "HTML пример",
+      "html": "<p>След като 11tik потвърди файл, минималният шаблон за маркиране изглежда така (заменете URL адреса, ширината, височината и alt с реалните стойности):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Предпочитайте собствен хостван URL адрес в производствения режим:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Използвайте реалните отчети за ширина и височина 11tik. Не измисляйте 1280×720, когато съществува само 480×360.</p>"
+    },
+    {
+      "heading": "Работен процес в WordPress",
+      "html": "<ol>\n    <li>Извлечете видеото на 11tik и изтеглете първия кадър от списъка.</li>\n    <li>В WordPress: Медия → Добавяне на нов → качване на файла.</li>\n    <li>Задайте го като представено изображение за публикацията.</li>\n    <li>В Yoast, Rank Math или подобен инструмент, потвърдете, че социалният преглед използва този прикачен файл (или качете специален оригинален кадър).</li>\n    <li>Напишете алтернативен текст, който назовава видеото и посочва, че файлът е публичен кадър от YouTube, а не претрупан списък с ключови думи.</li>\n  </ol>\n  <p>Избягвайте да залепвате суров<code>maxresdefault.jpg</code>път в медийното поле, докато файлът не бъде доказан. Липсата на maxres е често срещана —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Ръководство за maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "Блогър и статични сайтове",
+      "html": "<p><strong>Блогър:</strong>Качете снимката в редактора на публикации, след което използвайте повторно URL адреса на изображението от Blogger за всички полета на тема/социален фрагмент, които контролирате. Не разчитайте на предположен път до YouTube CDN за публикувана публикация, която ви интересува.</p>\n  <p><strong>Статични генератори:</strong>Прикачете файла към вашето хранилище или CDN, след което задайте front-matter / meta тагове към този HTTPS ресурс. Запазете черновите на временен i.ytimg.com URL адрес, ако е необходимо, но ги изпратете със собствен хост.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Препоръчаното изображение и og:image могат да споделят файл, но и двете се нуждаят от URL адрес, който действително съществува.</p>"
+    },
+    {
+      "heading": "Съображения за Open Graph",
+      "html": "<p>Големите карти с връзки обикновено са насочени към<strong>1200×630</strong>Максималната резолюция на YouTube обикновено е<strong>1280×720</strong>(16:9), които скрепери изрязват или използват пощенска кутия. Задайте<code>og:image</code>(и ширина/височина, когато вашият стек ги поддържа) до реалните пиксели. След като поправите неработещ URL адрес, изчистете отново в дебъгера на всяка платформа - кешовете се запазват.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Хотлинкинг срещу изтегляне",
+      "html": "<table>\n    <thead>\n      <tr><th>Подход</th><th>Най-добро за</th><th>Риск</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Гореща връзка i.ytimg.com</td><td>Бързи чернови, изследователски бележки</td><td>404, промени в CDN, без контрол на реколтата</td></tr>\n      <tr><td>Изтегляне + хост</td><td>Класирани публикации, продуктови страници</td><td>Трябва да съхраните файла</td></tr>\n      <tr><td>Снимка на екрана на играча</td><td>Почти никога</td><td>Потребителски интерфейс в Chrome, грешно съотношение —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">екранна снимка срещу реално изображение</a></td></tr>\n    </tbody>\n  </table>\n  <p>Стъпки за изтегляне:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">как да изтеглите миниатюра от YouTube</a>Избор на формат, когато съществуват и WebP, и JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP срещу JPEG</a>.</p>"
+    },
+    {
+      "heading": "Основи на SEO оптимизацията за изображения за тези снимки",
+      "html": "<ul>\n    <li><strong>Име на файл:</strong>описателни, като например<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Алтернативно:</strong>опишете изображението и видеото; не използвайте „YouTube thumbnail downloader HD 4K“.</li>\n    <li><strong>Размери:</strong>декларирайте реална ширина/височина.</li>\n    <li><strong>Само HTTPS:</strong>URL адресите на изображения със смесено съдържание се изтриват от скрепери.</li>\n    <li><strong>Компресия:</strong>Прекодирайте леко за вашата CDN, ако е необходимо; не мащабирайте hqdefault до фалшиви максимални резолюции.</li>\n  </ul>"
+    },
+    {
+      "heading": "Повторна употреба и авторски права (не е правен съвет)",
+      "html": "<p>Публичен CDN URL адрес не е лиценз. Вграждането на YouTube плейъра е различно от копирането на снимката във вашия герой. Честната употреба е базирана на факти. По-безопасен редакционен модел: илюстрирайте коментар за това видео, посочете канала, свържете страницата за гледане и не продавайте изображението, нито го използвайте като собствено изображение на канала си. Официална помощ за персонализирани миниатюри:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Качване на персонализирани миниатюри на видеоклипове</a>Правила на сайта:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Условия</a>.</p>"
+    },
+    {
+      "heading": "Отстраняване на неизправности",
+      "html": "<ul>\n    <li>Счупена социална карта → познати максимални стойности; повторно извлечете и хоствайте валидиран файл.</li>\n    <li>Мека/размазана карта → използвали сте hqdefault; проверете размерите.</li>\n    <li>Грешно изрязване → осигурете специално изрязване 1200×630 от истинско 16:9 изображение.</li>\n    <li>Лепкав кеш → принудително повторно извличане на данни след промяна на URL адреса.</li>\n  </ul>"
+    },
+    {
+      "heading": "Следваща стъпка",
+      "html": "<p>Потвърдете снимката на<a href=\"https://www.11tik.com/\">екстрактор 11tik</a>, изтеглете го, качете го на сайта си и насочете featured image / og:image към вашия HTTPS файл.</p>\n  <p class=\"yte-bio\">Написано от 11tik.<a href=\"https://www.11tik.com/p/about.html\">Относно</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Поверителност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Условия</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Мога ли да поставя URL адрес на i.ytimg.com в WordPress?",
+      "answer": "Някои полета го приемат, но качването на потвърден локален файл е по-надеждно за представени изображения и социални прегледи.",
+      "answerHtml": "<p>Някои полета го приемат, но качването на потвърден локален файл е по-надеждно за представени изображения и социални прегледи.</p>"
+    },
+    {
+      "question": "Трябва ли ми maxresdefault за Open Graph?",
+      "answer": "Не. Нуждаете се от най-големия валидиран публичен ресурс. Липсата на максимални стойности е нормална.",
+      "answerHtml": "<p>Не. Нуждаете се от най-големия валидиран публичен ресурс. Липсата на максимални стойности е нормална.</p>"
+    },
+    {
+      "question": "Трябва ли алтернативният текст да споменава YouTube?",
+      "answer": "Да, когато това помага за описанието на актива („Публична миниатюра в YouTube за …“). Не прекалявайте с ключови думи.",
+      "answerHtml": "<p>Да, когато това помага за описанието на актива („Публична миниатюра в YouTube за …“). Не прекалявайте с ключови думи.</p>"
+    },
+    {
+      "question": "Хотлинкването някога добре ли е?",
+      "answer": "За временни чернови или вътрешни бележки, да. За трайна публична публикация, съхранявайте копие.",
+      "answerHtml": "<p>За временни чернови или вътрешни бележки, да. За трайна публична публикация, съхранявайте копие.</p>"
+    },
+    {
+      "question": "Мога ли да използвам снимката като корица на канала си?",
+      "answer": "Не без права. Това е произведение на някой друг.",
+      "answerHtml": "<p>Не без права. Това е произведение на някой друг.</p>"
+    },
+    {
+      "question": "Ами ако Studio просто промени персонализираната миниатюра?",
+      "answer": "Изчакайте обработката, след което проверете отново на 11tik, преди да актуализирате копието си в CMS. Свързано: Миниатюри в YouTube Studio.",
+      "answerHtml": "<p>Изчакайте обработката, след което проверете отново на 11tik, преди да актуализирате копието си в CMS. Свързано:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Миниатюри в YouTube Studio</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Написано от 11tik.<a href=\"https://www.11tik.com/p/about.html\">Относно</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Поверителност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Условия</a>.</p>"
+}

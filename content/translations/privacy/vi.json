@@ -1,0 +1,44 @@
+{
+  "contentId": "privacy",
+  "articleId": "privacy",
+  "locale": "vi",
+  "sourceHash": "ac91e984c14331dd0e608c97a77a303789b84fed8213760c1f5ba6796bff0bb8",
+  "status": "ready",
+  "title": "Chính sách bảo mật | 11tik",
+  "description": "Chính sách này áp dụng cho Trình trích xuất hình thu nhỏ YouTube tại https://www.11tik.com/ và các máy chủ ngôn ngữ tải cùng một trình trích xuất.",
+  "h1": "Chính sách bảo mật",
+  "ogTitle": "Chính sách bảo mật",
+  "ogDescription": "Chính sách này áp dụng cho Trình trích xuất hình thu nhỏ YouTube tại https://www.11tik.com/ và các máy chủ ngôn ngữ tải cùng một trình trích xuất.",
+  "imageAlt": "",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Xử lý trong trình duyệt",
+      "html": "<p>Khi bạn dán URL YouTube, trang sẽ đọc ID video và kiểm tra URL hình thu nhỏ công khai trong trình duyệt của bạn. Các liên kết được dán này không được lưu trữ dưới dạng tài khoản cá nhân trên máy chủ ứng dụng 11tik. Việc trích xuất không yêu cầu đăng nhập.</p>"
+    },
+    {
+      "heading": "Chỉ mục trang chia sẻ tùy chọn",
+      "html": "<p>Sau khi trích xuất thành công, trình duyệt có thể chỉ gửi ID video công khai, tiêu đề, thẻ được tạo từ siêu dữ liệu công khai và URL hình thu nhỏ công khai đến Cloudflare Worker của chúng tôi để video có thể hiển thị trên trang chia sẻ và, nếu vượt qua kiểm tra chất lượng, trong sơ đồ trang web. Chúng tôi không yêu cầu bạn tải lên tệp hình ảnh. Bạn có thể sử dụng trình trích xuất mà không cần chỉ mục đó nếu yêu cầu bị trình duyệt của bạn chặn.</p>"
+    },
+    {
+      "heading": "Lịch sử địa phương",
+      "html": "<p>Trình trích xuất có thể lưu các URL gần đây vào bộ nhớ cục bộ của trình duyệt để bạn có thể mở lại chúng. Bản sao đó vẫn còn trên thiết bị của bạn. Hãy xóa nó bằng công cụ lịch sử duyệt web hoặc bằng cách xóa dữ liệu của trang web này trong trình duyệt. Đây không phải là tài khoản đám mây.</p>"
+    },
+    {
+      "heading": "Nhật ký máy chủ",
+      "html": "<p>Trang web, máy chủ ngôn ngữ và các tệp tĩnh được cung cấp bởi các nhà cung cấp dịch vụ lưu trữ được sử dụng cho 11tik.com (bao gồm Cloudflare và GitHub Pages). Các máy chủ này có thể lưu giữ nhật ký web thông thường như địa chỉ IP, loại trình duyệt và trang được yêu cầu, theo chính sách riêng của họ.</p>"
+    },
+    {
+      "heading": "Bên thứ ba",
+      "html": "<p>Các tệp hình thu nhỏ được yêu cầu từ các máy chủ hình ảnh công cộng của YouTube. Trang web sử dụng Google Analytics 4 (mã định danh đo lường G-FW7B8NDZZ5) để đếm số lượt truy cập và các hành động trên trang như trích xuất và tải xuống. Google có thể đặt cookie hoặc các mã định danh tương tự. Các URL YouTube được dán không được gửi dưới dạng tham số sự kiện phân tích. Phông chữ hoặc tập lệnh cũng có thể được tải từ các CDN được sử dụng để hiển thị trang.</p>\n  <p>Biểu mẫu liên hệ được FormSubmit gửi đến email của người điều hành. FormSubmit có thể xem tên, email và tin nhắn bạn gửi.</p>"
+    },
+    {
+      "heading": "Liên hệ",
+      "html": "<p>Nếu có thắc mắc về chính sách này, vui lòng gửi email.<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>hoặc sử dụng<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>hình thức.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Công cụ trích xuất hình thu nhỏ YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

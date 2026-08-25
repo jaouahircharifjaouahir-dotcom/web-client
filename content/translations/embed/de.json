@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "de",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "11tik Thumbnail Extractor einbetten | 11tik",
+  "description": "Fügen Sie Ihrem Blog, Ihren Dokumenten oder Ihrem Kreativ-Toolkit einen kostenlosen YouTube-Thumbnail-Extraktor hinzu. Das Widget lädt von 11tik und passt seine Größe automatisch an. Kein API-Schlüssel erforderlich.",
+  "h1": "11tik Thumbnail Extractor einbetten",
+  "ogTitle": "11tik Thumbnail Extractor einbetten",
+  "ogDescription": "Fügen Sie Ihrem Blog, Ihren Dokumenten oder Ihrem Kreativ-Toolkit einen kostenlosen YouTube-Thumbnail-Extraktor hinzu. Das Widget lädt von 11tik und passt seine Größe automatisch an. Kein API-Schlüssel erforderlich.",
+  "imageAlt": "",
+  "faqHeading": "Häufig gestellte Fragen",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iFrame-Ausschnitt",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Regeln",
+      "html": "<ul>\n    <li>Behalte die<code>id=\"yte-app\"</code>Attribut, damit die Höhensynchronisierung funktioniert.</li>\n    <li>Vermeiden Sie es, den iFrame in einer festen Höhe einzuschließen, sodass die Download-Schaltflächen abgeschnitten werden.</li>\n    <li>Rückverlinkung zu<a href=\"https://www.11tik.com/\">www.11tik.com</a>Hilft Benutzern, das vollständige Tool zu öffnen.</li>\n  </ul>"
+    },
+    {
+      "heading": "Deep Links",
+      "html": "<p>Teilen Sie eine fertige Extraktion mit<code>https://www.11tik.com/?v=VIDEO_ID</code>Die</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Öffnen Sie den Extraktor</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

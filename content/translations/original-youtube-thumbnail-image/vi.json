@@ -1,0 +1,69 @@
+{
+  "contentId": "original-youtube-thumbnail-image",
+  "articleId": "original-youtube-thumbnail-image",
+  "locale": "vi",
+  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "status": "ready",
+  "title": "Cách lấy ảnh thumbnail YouTube gốc | 11tik",
+  "description": "Lấy ảnh thumbnail gốc mà YouTube đang lưu trữ. Đây vẫn là ảnh thumbnail từ CDN, không phải là một khung hình được trích xuất từ ​​video.",
+  "h1": "Cách lấy ảnh thumbnail gốc của YouTube",
+  "ogTitle": "Cách lấy ảnh thumbnail gốc của YouTube",
+  "ogDescription": "Lấy ảnh thumbnail gốc mà YouTube đang lưu trữ. Đây vẫn là ảnh thumbnail từ CDN, không phải là một khung hình được trích xuất từ ​​video.",
+  "imageAlt": "Tệp hình thu nhỏ YouTube công khai gốc được hiển thị trong trình trích xuất 11tik",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Tệp hình thu nhỏ YouTube công khai gốc được hiển thị trong trình trích xuất 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ảnh thumbnail gốc của YouTube là gì?",
+      "html": "<p>Đây là ảnh xem trước mà YouTube đã lưu trữ trên máy chủ lưu trữ hình ảnh của mình. Đây là tệp được sử dụng trong tìm kiếm và đề xuất nội dung, chứ không phải là khung hình bạn chụp bằng phím Print Screen.</p>"
+    },
+    {
+      "heading": "Điều đó khác gì so với ảnh chụp màn hình?",
+      "html": "<p>Ảnh chụp màn hình bao gồm giao diện người dùng trình phát, giao diện người dùng của trình duyệt và quá trình nén bổ sung. Tệp gốc là ảnh tĩnh sạch với kích thước pixel mà YouTube đã đăng tải.</p>"
+    },
+    {
+      "heading": "Làm sao để tìm lại ảnh thu nhỏ gốc?",
+      "html": "<p>Dán URL của đồng hồ, Shorts, live hoặc youtu.be vào<a href=\"https://www.11tik.com/\">11tik</a>Công cụ này đọc ID video, kiểm tra các tệp công khai và xếp hạng tệp có thứ hạng cao nhất.</p>"
+    },
+    {
+      "heading": "URL hình thu nhỏ trên YouTube hoạt động như thế nào?",
+      "html": "<p>Họ sử dụng ID video cộng với tên kích thước như maxresdefault.jpg hoặc hqdefault.jpg trên i.ytimg.com. Việc đoán một kích thước chưa từng được công bố sẽ trả về lỗi hoặc một phần giữ chỗ.</p>"
+    },
+    {
+      "heading": "maxresdefault.jpg là gì?",
+      "html": "<p>Đây là tên tệp công khai có độ phân giải cao nhất phổ biến, thường là 1280×720 khi YouTube tạo ra nó. Nó không phải là bản gốc 4K và cũng không phải là tệp video thực sự.</p>"
+    },
+    {
+      "heading": "\"Original\" luôn có nghĩa là 1280×720 phải không?",
+      "html": "<p>Không. Nếu maxres chưa từng được công bố, hình ảnh công khai gốc là hq, sd hoặc một tập tin còn tồn tại khác. 11tik hiển thị kích thước pixel thực thay vì tạo ra pixel.</p>"
+    },
+    {
+      "heading": "Tôi có thể lấy ảnh gốc từ Shorts, Live hoặc youtu.be không?",
+      "html": "<p>Đúng vậy, khi các URL đó chứa ID video công khai và hình ảnh tĩnh công khai được lưu trữ trên YouTube. Trình trích xuất sẽ xử lý chúng giống như một URL xem video thông thường.</p>"
+    },
+    {
+      "heading": "Làm sao tôi có thể kiểm tra xem mình đã thực sự nhận được tập tin gốc chưa?",
+      "html": "<p>Sử dụng danh sách kích thước và chiều 11tik sau khi xác thực tệp. Nếu hình ảnh trông giống như ảnh chụp màn hình trình phát, nghĩa là bạn chưa tải xuống hình thu nhỏ được lưu trữ.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/p/about.html\">Về</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Máy chiết xuất</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Chất lượng cao nhất</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Ảnh thumbnail gốc của YouTube là gì?",
+      "answer": "Đây là tệp hình ảnh công khai mà YouTube lưu trữ cho ID video, ví dụ như maxresdefault (nếu có). Nó không phải là ảnh chụp màn hình trang xem video.",
+      "answerHtml": "Đây là tệp hình ảnh công khai mà YouTube lưu trữ cho ID video, ví dụ như maxresdefault (nếu có). Nó không phải là ảnh chụp màn hình trang xem video."
+    },
+    {
+      "question": "\"Original\" luôn có nghĩa là 1280×720 phải không?",
+      "answer": "Không. Độ phân giải tối đa thường là 1280x720 khi được đăng tải. Nếu tập tin đó bị thiếu, phiên bản gốc được công bố vẫn sẽ có kích thước tiếp theo mà YouTube lưu trữ.",
+      "answerHtml": "Không. Maxres thường có độ phân giải 1280×720 khi được đăng tải. Nếu tệp đó bị thiếu, tệp gốc được đăng tải vẫn sẽ có kích thước tiếp theo mà YouTube lưu trữ."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/p/about.html\">Về</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>"
+}

@@ -71,42 +71,56 @@
       <meta content='11tik YouTube Thumbnail Extractor' name='twitter:image:alt'/>
     <b:else/>
       <!-- YTE-POC-SHARE-LINKS-I18N:BEGIN -->
-      <b:if cond='data:view.url contains "11tik-share-links-thumb-vs-youtube"'>
-        <link href='https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html' hreflang='en' rel='alternate'/>
-        <link href='https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html' hreflang='fr' rel='alternate'/>
-        <link href='https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html' hreflang='x-default' rel='alternate'/>
-        <script type='text/javascript'>
+      <script type='text/javascript'>
 (function () {
   try {
     var path = location.pathname.replace(/\/+$/, '') || '/';
-    if (path !== '/2026/08/11tik-share-links-thumb-vs-youtube.html') return;
+    if (/^\/l\//.test(path)) return;
     if (localStorage.getItem('yte-lang')) return;
-    if (sessionStorage.getItem('yte-poc-share-links-fr-redir')) return;
+    if (sessionStorage.getItem('yte-i18n-redir')) return;
     if (/Googlebot|Google-InspectionTool|bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i.test(navigator.userAgent || '')) return;
-    var langs = navigator.languages || (navigator.language ? [navigator.language] : []);
-    var preferFr = false;
-    for (var i = 0; i &lt; langs.length; i++) {
-      if (/^fr\b/i.test(String(langs[i] || ''))) { preferFr = true; break; }
-    }
-    if (!preferFr) return;
-    sessionStorage.setItem('yte-poc-share-links-fr-redir', '1');
-    fetch('https://www.11tik.com/web-client/i18n/poc-share-links-fr.json', { credentials: 'omit', cache: 'no-cache' })
-      .then(function (r) { return r.ok ? r.json() : { ready: false }; })
-      .then(function (meta) {
-        if (!meta || meta.ready !== true || !meta.url) return;
-        localStorage.setItem('yte-lang', 'fr');
-        location.replace(String(meta.url));
+    fetch('https://www.11tik.com/web-client/i18n/publishability.json', { credentials: 'omit', cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (doc) {
+        if (!doc || !doc.contents) return;
+        var entry = null;
+        var id;
+        for (id in doc.contents) {
+          if (doc.contents[id] &amp;&amp; doc.contents[id].path === path) { entry = doc.contents[id]; break; }
+        }
+        if (!entry || !entry.locales) return;
+        var head = document.head || document.getElementsByTagName('head')[0];
+        if (head &amp;&amp; entry.en) {
+          function addAlt(lang, href) {
+            var link = document.createElement('link');
+            link.rel = 'alternate';
+            link.hreflang = lang;
+            link.href = href;
+            head.appendChild(link);
+          }
+          addAlt('en', entry.en);
+          addAlt('x-default', entry.en);
+          for (var loc in entry.locales) addAlt(loc, entry.locales[loc]);
+        }
+        var langs = navigator.languages || (navigator.language ? [navigator.language] : []);
+        for (var i = 0; i &lt; langs.length; i++) {
+          var code = String(langs[i] || '').toLowerCase().split('-')[0];
+          if (code &amp;&amp; code !== 'en' &amp;&amp; entry.locales[code]) {
+            sessionStorage.setItem('yte-i18n-redir', '1');
+            localStorage.setItem('yte-lang', code);
+            location.replace(String(entry.locales[code]));
+            return;
+          }
+        }
       })
       .catch(function () {});
   } catch (e) {}
 })();
-        </script>
-      <b:else/>
+      </script>
         <link href='https://www.11tik.com/' hreflang='en' rel='alternate'/>
         <link href='https://fr.11tik.com/' hreflang='fr' rel='alternate'/>
         <link href='https://es.11tik.com/' hreflang='es' rel='alternate'/>
         <link href='https://www.11tik.com/' hreflang='x-default' rel='alternate'/>
-      </b:if>
       <!-- YTE-POC-SHARE-LINKS-I18N:END -->
       <link expr:href='data:view.url' rel='canonical'/>
       <meta content='article' property='og:type'/>

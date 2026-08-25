@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "th",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "วิธีใช้ภาพขนาดย่อของ YouTube เป็นภาพเด่นของบล็อกหรือภาพตัวอย่าง Open Graph | 11tik",
+  "description": "ตรวจสอบให้แน่ใจว่าช่อง YouTube สาธารณะยังคงมีอยู่ จากนั้นคัดลอกไปไว้ใน WordPress, Blogger หรือ og:image อย่าใช้ URL ที่คาดเดาค่า maxresdefault มาสร้าง hotlink",
+  "h1": "วิธีใช้ภาพขนาดย่อของ YouTube เป็นภาพเด่นของบล็อกหรือภาพตัวอย่าง Open Graph",
+  "ogTitle": "วิธีใช้ภาพขนาดย่อของ YouTube เป็นภาพเด่นของบล็อกหรือภาพตัวอย่าง Open Graph",
+  "ogDescription": "ตรวจสอบให้แน่ใจว่าช่อง YouTube สาธารณะยังคงมีอยู่ จากนั้นคัดลอกไปไว้ใน WordPress, Blogger หรือ og:image อย่าใช้ URL ที่คาดเดาค่า maxresdefault มาสร้าง hotlink",
+  "imageAlt": "ขั้นตอนการทำงานตั้งแต่การยืนยันภาพขนาดย่อของ YouTube บน 11tik ไปจนถึงการอัปโหลดใน WordPress หรือการตั้งค่า og:image",
+  "faqHeading": "คำถามที่พบบ่อย",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "ขั้นตอนการทำงานตั้งแต่การยืนยันภาพขนาดย่อของ YouTube บน 11tik ไปจนถึงการอัปโหลดใน WordPress หรือการตั้งค่า og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "เปรียบเทียบการอัปโหลดภาพเด่นของ WordPress กับการ์ดโซเชียล Open Graph โดยใช้ขนาดพิกเซลจริง",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "คำตอบสั้นๆ",
+      "html": "<p>วาง URL ของ YouTube สาธารณะลงในช่องนี้<a href=\"https://www.11tik.com/\">11tik</a>รอจนกว่าขนาดจะได้รับการยืนยัน จากนั้นจึงดำเนินการอย่างใดอย่างหนึ่ง<strong>ดาวน์โหลด</strong>ภาพนิ่งภาพแรกและอัปโหลดไปยัง CMS ของคุณ หรือ<strong>คัดลอก URL ของรูปภาพ</strong>หลังจากที่โหลดเสร็จแล้วเท่านั้น สำหรับโพสต์ที่คงอยู่ถาวร ให้โฮสต์สำเนาของคุณเอง การเชื่อมโยงโดยตรง (Hotlinking)<code>i.ytimg.com</code>สะดวกสำหรับการร่างเอกสาร แต่เปราะบางสำหรับการผลิตนามบัตร</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">ยืนยัน → คัดลอกหรือดาวน์โหลด → โฮสต์ → อ้างอิงใน HTML / รูปภาพเด่น / Open Graph</p>"
+    },
+    {
+      "heading": "URL รูปภาพขนาดย่อโดยตรงคืออะไร",
+      "html": "<p>ตัวอย่างเช่น URL ของภาพขนาดย่อโดยตรงจะชี้ไปยังไฟล์ JPEG หรือ WebP บน CDN รูปภาพของ YouTube<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>นี่ไม่ใช่หน้าสำหรับดูนาฬิกา วิธีการสร้างที่อยู่เหล่านั้น:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">รับ URL ภาพขนาดย่อของ YouTube</a>ขนาดแตกต่างกันอย่างไร:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">คู่มือขนาดและความละเอียด</a>.</p>"
+    },
+    {
+      "heading": "ตัวอย่าง HTML",
+      "html": "<p>หลังจาก 11tik ยืนยันไฟล์แล้ว รูปแบบมาร์กอัปขั้นต่ำจะมีลักษณะดังนี้ (แทนที่ URL, ความกว้าง, ความสูง และ alt ด้วยค่าจริง):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>ควรเลือกใช้ URL ของคุณเองในการใช้งานจริง:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>ใช้รายงานความกว้างและความสูงจริง 11tik อย่าสร้างขนาด 1280×720 ขึ้นมาเอง ในเมื่อมีเพียงขนาด 480×360 เท่านั้น</p>"
+    },
+    {
+      "heading": "ขั้นตอนการทำงานของ WordPress",
+      "html": "<ol>\n    <li>แยกวิดีโอใน 11tik และดาวน์โหลดภาพนิ่งแรกที่แสดงอยู่</li>\n    <li>ใน WordPress: สื่อ → เพิ่มใหม่ → อัปโหลดไฟล์</li>\n    <li>ตั้งภาพนี้เป็นภาพเด่นของโพสต์</li>\n    <li>ใน Yoast, Rank Math หรือโปรแกรมที่คล้ายกัน ให้ตรวจสอบว่าการแสดงตัวอย่างโซเชียลใช้ไฟล์แนบนั้น (หรืออัปโหลดภาพต้นฉบับที่ตัดแต่งโดยเฉพาะ)</li>\n    <li>เขียนข้อความแสดงแทน (alt text) ที่ระบุชื่อวิดีโอและบอกว่าไฟล์นั้นเป็นภาพนิ่งสาธารณะจาก YouTube ไม่ใช่รายการคำหลักที่ยัดเยียดเข้ามา</li>\n  </ol>\n  <p>หลีกเลี่ยงการวางข้อมูลดิบ<code>maxresdefault.jpg</code>กำหนดเส้นทางไปยังช่องสื่อจนกว่าไฟล์จะได้รับการพิสูจน์แล้ว การขาดค่า maxres เป็นเรื่องปกติ —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">คู่มือ maxresdefault 404</a>.</p>"
+    },
+    {
+      "heading": "บล็อกเกอร์และเว็บไซต์แบบคงที่",
+      "html": "<p><strong>บล็อกเกอร์:</strong>อัปโหลดภาพนิ่งลงในตัวแก้ไขโพสต์ จากนั้นใช้ URL รูปภาพที่โฮสต์ไว้ใน Blogger สำหรับช่องข้อมูลธีม/โซเชียลต่างๆ ที่คุณควบคุม อย่าพึ่งพาเส้นทาง CDN ของ YouTube ที่คาดเดาเอาเองสำหรับโพสต์ที่เผยแพร่แล้วที่คุณให้ความสำคัญ</p>\n  <p><strong>เครื่องกำเนิดไฟฟ้าสถิต:</strong>บันทึกไฟล์ลงใน repository หรือ CDN ของคุณ จากนั้นตั้งค่า front-matter / meta tags ให้กับ asset HTTPS นั้น เก็บฉบับร่างไว้ใน URL ชั่วคราว i.ytimg.com หากจำเป็น แต่ให้ส่งไฟล์ไปยังโฮสต์ของคุณเอง</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Featured image และ og:image สามารถใช้ไฟล์ร่วมกันได้ แต่ทั้งสองอย่างจำเป็นต้องมี URL ที่ใช้งานได้จริง</p>"
+    },
+    {
+      "heading": "ข้อควรพิจารณาเกี่ยวกับ Open Graph",
+      "html": "<p>โดยทั่วไปแล้ว การ์ดลิงก์ขนาดใหญ่จะกำหนดเป้าหมายไปที่ประมาณ<strong>1200×630</strong>YouTube maxres มักจะ<strong>1280×720</strong>(16:9) ซึ่งขูดตัดหรือตั้งกล่องจดหมาย<code>og:image</code>(และความกว้าง/ความสูงเมื่อระบบของคุณรองรับ) ให้เป็นพิกเซลจริง หลังจากแก้ไข URL ที่เสียแล้ว ให้ดึงข้อมูลอีกครั้งในดีบักเกอร์ของแต่ละแพลตฟอร์ม—แคชจะยังคงอยู่</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "การฮอตลิงก์กับการดาวน์โหลด",
+      "html": "<table>\n    <thead>\n      <tr><th>เข้าใกล้</th><th>เหมาะที่สุดสำหรับ</th><th>เสี่ยง</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>ลิงก์ด่วน i.ytimg.com</td><td>ร่างฉบับย่อ บันทึกการวิจัย</td><td>404s, การเปลี่ยนแปลง CDN, ไม่มีการควบคุมพืชผล</td></tr>\n      <tr><td>ดาวน์โหลด + โฮสต์</td><td>บทความจัดอันดับ, หน้าสินค้า</td><td>คุณต้องจัดเก็บไฟล์</td></tr>\n      <tr><td>ภาพหน้าจอผู้เล่น</td><td>แทบจะไม่เลย</td><td>ส่วนประกอบ UI ของ Chrome มีอัตราส่วนที่ไม่ถูกต้อง —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">ภาพหน้าจอเทียบกับภาพจริง</a></td></tr>\n    </tbody>\n  </table>\n  <p>ขั้นตอนการดาวน์โหลด:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">วิธีดาวน์โหลดภาพขนาดย่อของ YouTube</a>. การเลือกรูปแบบไฟล์เมื่อมีทั้ง WebP และ JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP เทียบกับ JPEG</a>.</p>"
+    },
+    {
+      "heading": "หลักการ SEO พื้นฐานสำหรับภาพนิ่งเหล่านี้",
+      "html": "<ul>\n    <li><strong>ชื่อไฟล์:</strong>เชิงพรรณนา เช่น<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>อัลท์:</strong>อธิบายภาพและวิดีโอ อย่าใส่ข้อความซ้ำซากอย่าง “โปรแกรมดาวน์โหลดภาพขนาดย่อ YouTube HD 4K”</li>\n    <li><strong>ขนาด:</strong>กำหนดความกว้าง/ความสูงจริง</li>\n    <li><strong>ใช้ได้เฉพาะ HTTPS เท่านั้น:</strong>URL รูปภาพที่มีเนื้อหาผสมมักถูกโปรแกรมดึงข้อมูลทิ้งไป</li>\n    <li><strong>การบีบอัด:</strong>หากจำเป็น ให้เข้ารหัสใหม่เล็กน้อยสำหรับ CDN ของคุณ อย่าปรับขนาดภาพ hqdefault ให้เป็น maxres ปลอม</li>\n  </ul>"
+    },
+    {
+      "heading": "การนำไปใช้ซ้ำและลิขสิทธิ์ (ไม่ใช่คำแนะนำทางกฎหมาย)",
+      "html": "<p>URL ของ CDN สาธารณะไม่ใช่ใบอนุญาต การฝังโปรแกรมเล่น YouTube แตกต่างจากการคัดลอกภาพนิ่งลงในภาพปกของคุณ การใช้งานอย่างเป็นธรรมนั้นขึ้นอยู่กับข้อเท็จจริงเฉพาะ รูปแบบการนำเสนอที่ปลอดภัยกว่า: อธิบายเกี่ยวกับวิดีโอนั้น ให้เครดิตช่อง ใส่ลิงก์ไปยังหน้ารับชม และอย่าขายภาพหรือใช้เป็นภาพปกช่องของคุณเอง ความช่วยเหลืออย่างเป็นทางการเกี่ยวกับการสร้างภาพขนาดย่อแบบกำหนดเอง:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">อัปโหลดภาพขนาดย่อวิดีโอแบบกำหนดเอง</a>กฎของเว็บไซต์:<a href=\"https://www.11tik.com/p/terms-of-use.html\">เงื่อนไข</a>.</p>"
+    },
+    {
+      "heading": "การแก้ไขปัญหา",
+      "html": "<ul>\n    <li>การ์ดโซเชียลเสียหาย → เดาค่า maxres; แยกไฟล์ใหม่และอัปโหลดไฟล์ที่ตรวจสอบแล้ว</li>\n    <li>ภาพไม่ชัด/เบลอ → คุณใช้ hqdefault โปรดตรวจสอบขนาดอีกครั้ง</li>\n    <li>การครอปภาพผิดพลาด → กรุณาใส่ภาพที่ครอปขนาด 1200×630 จากภาพนิ่งอัตราส่วน 16:9 จริง</li>\n    <li>แคชแบบคงที่ → บังคับให้ดึงข้อมูลใหม่หลังจากมีการเปลี่ยนแปลง URL</li>\n  </ul>"
+    },
+    {
+      "heading": "ขั้นตอนต่อไป",
+      "html": "<p>ยืนยันภาพนิ่งบน<a href=\"https://www.11tik.com/\">11tik ตัวสกัด</a>ดาวน์โหลดไฟล์ อัปโหลดไปยังเว็บไซต์ของคุณ และกำหนดให้ featured image / og:image ชี้ไปยังไฟล์ HTTPS ของคุณ</p>\n  <p class=\"yte-bio\">เขียนโดย 11tik<a href=\"https://www.11tik.com/p/about.html\">เกี่ยวกับ</a>·<a href=\"https://www.11tik.com/p/privacy.html\">ความเป็นส่วนตัว</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">เงื่อนไข</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "ฉันสามารถวาง URL i.ytimg.com ลงใน WordPress ได้หรือไม่?",
+      "answer": "บางช่องอาจยอมรับได้ แต่การอัปโหลดไฟล์ในเครื่องที่ได้รับการยืนยันแล้วจะมีความน่าเชื่อถือมากกว่าสำหรับรูปภาพเด่นและการแสดงตัวอย่างบนโซเชียลมีเดีย",
+      "answerHtml": "<p>บางช่องอาจยอมรับได้ แต่การอัปโหลดไฟล์ในเครื่องที่ได้รับการยืนยันแล้วจะมีความน่าเชื่อถือมากกว่าสำหรับรูปภาพเด่นและการแสดงตัวอย่างบนโซเชียลมีเดีย</p>"
+    },
+    {
+      "question": "ฉันจำเป็นต้องใช้ maxresdefault สำหรับ Open Graph หรือไม่?",
+      "answer": "ไม่ คุณยังคงต้องการข้อมูลสาธารณะที่ได้รับการตรวจสอบแล้วที่ใหญ่ที่สุดอยู่ดี การที่ไม่มีค่า maxres ถือเป็นเรื่องปกติ",
+      "answerHtml": "<p>ไม่ คุณยังคงต้องการข้อมูลสาธารณะที่ได้รับการตรวจสอบแล้วที่ใหญ่ที่สุดอยู่ดี การที่ไม่มีค่า maxres ถือเป็นเรื่องปกติ</p>"
+    },
+    {
+      "question": "ควรระบุ YouTube ในข้อความแสดงแทนรูปภาพหรือไม่?",
+      "answer": "ใช่ เมื่อมันช่วยอธิบายเนื้อหาของภาพ (\"ภาพขนาดย่อสาธารณะสำหรับ YouTube...\") อย่าใส่คำหลักมากเกินไป",
+      "answerHtml": "<p>ใช่ เมื่อมันช่วยอธิบายเนื้อหาของภาพ (\"ภาพขนาดย่อสาธารณะสำหรับ YouTube...\") อย่าใส่คำหลักมากเกินไป</p>"
+    },
+    {
+      "question": "การใช้ลิงก์ตรง (hotlinking) เป็นสิ่งที่ยอมรับได้หรือไม่?",
+      "answer": "สำหรับฉบับร่างชั่วคราวหรือบันทึกภายในนั้นทำได้ แต่สำหรับโพสต์สาธารณะถาวร ควรจัดเก็บสำเนาไว้ด้วย",
+      "answerHtml": "<p>สำหรับฉบับร่างชั่วคราวหรือบันทึกภายในนั้นทำได้ แต่สำหรับโพสต์สาธารณะถาวร ควรจัดเก็บสำเนาไว้ด้วย</p>"
+    },
+    {
+      "question": "ฉันสามารถใช้ภาพนิ่งนี้เป็นภาพปกช่องของฉันได้ไหม?",
+      "answer": "ไม่ใช่ว่าไม่มีสิทธิ์ นั่นเป็นงานศิลปะของคนอื่น",
+      "answerHtml": "<p>ไม่ใช่ว่าไม่มีสิทธิ์ นั่นเป็นงานศิลปะของคนอื่น</p>"
+    },
+    {
+      "question": "แล้วถ้า Studio เปลี่ยนภาพขนาดย่อแบบกำหนดเองล่ะ?",
+      "answer": "รอการประมวลผล จากนั้นตรวจสอบอีกครั้งที่ 11tik ก่อนอัปเดตสำเนา CMS ของคุณ ที่เกี่ยวข้อง: ภาพขนาดย่อของ YouTube Studio",
+      "answerHtml": "<p>รอการประมวลผล จากนั้นตรวจสอบอีกครั้งที่ 11tik ก่อนอัปเดตสำเนา CMS ของคุณ ที่เกี่ยวข้อง:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">ภาพขนาดย่อของ YouTube Studio</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">เขียนโดย 11tik<a href=\"https://www.11tik.com/p/about.html\">เกี่ยวกับ</a>·<a href=\"https://www.11tik.com/p/privacy.html\">ความเป็นส่วนตัว</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">เงื่อนไข</a>.</p>"
+}

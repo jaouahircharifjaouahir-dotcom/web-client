@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "bg",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "Контакт | 11tik",
+  "description": "Използвайте този формуляр за въпроси относно инструмента за извличане на миниатюри в YouTube. Съобщенията се изпращат до оператора 11tik по имейл. Не изпращайте видео или аудио файлове. Инструментът работи само с публични миниатюрни изображения.",
+  "h1": "Контакт",
+  "ogTitle": "Контакт",
+  "ogDescription": "Използвайте този формуляр за въпроси относно инструмента за извличане на миниатюри в YouTube. Съобщенията се изпращат до оператора 11tik по имейл. Не изпращайте видео или аудио файлове. Инструментът работи само с публични миниатюрни изображения.",
+  "imageAlt": "",
+  "faqHeading": "ЧЗВ",
+  "images": [],
+  "sections": [
+    {
+      "heading": "Контакт",
+      "html": "<h1>Контакт</h1>\n  <p class=\"yte-updated\">Последна актуализация: 22 август 2026 г.</p>\n  <p itemprop=\"description\">Използвайте този формуляр за въпроси относно инструмента за извличане на миниатюри в YouTube. Съобщенията се изпращат до оператора 11tik по имейл. Не изпращайте видео или аудио файлове. Инструментът работи само с публични миниатюрни изображения.</p>\n  <p>Директен имейл:<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">джауахирчарифджауахир@gmail.com</a></p>\n  <p>За отчет за конкретен видеоклип, включете публичния URL адрес в YouTube. 11tik не хоства файла с миниатюрата; изображението се изисква от публичната CDN мрежа на платформата.</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>Име<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>Имейл<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>Съобщение<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">Изпрати съобщение</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Извличане на миниатюри от YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Относно</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Политика за поверителност</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Условия</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

@@ -1,0 +1,98 @@
+{
+  "contentId": "how-to-download-youtube-thumbnail",
+  "articleId": "how-to-download-youtube-thumbnail",
+  "locale": "ja",
+  "sourceHash": "bddf6c8da2499edc7abfa5a080c42418f9623a8260394290cad20c50c78ff27f",
+  "status": "ready",
+  "title": "YouTubeのサムネイルをHD画質でダウンロードする方法 | 11tik",
+  "description": "公開されている YouTube サムネイルの静止画を保存します: watch、Shorts、youtu.be を貼り付けるか、11tik に URL を埋め込んで、存在する最大のファイルをダウンロードします。",
+  "h1": "YouTubeのサムネイルをHD画質でダウンロードする方法",
+  "ogTitle": "YouTubeのサムネイルをHD画質でダウンロードする方法",
+  "ogDescription": "公開されている YouTube サムネイルの静止画を保存します: watch、Shorts、youtu.be を貼り付けるか、11tik に URL を埋め込んで、存在する最大のファイルをダウンロードします。",
+  "imageAlt": "YouTube URLのコピーから検証済みの公開サムネイル画像のダウンロードまでの4ステップのワークフロー",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png",
+      "alt": "YouTube URLのコピーから検証済みの公開サムネイル画像のダウンロードまでの4ステップのワークフロー",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png",
+      "alt": "トラブルシューティング図：欠落したmaxresdefaultファイルがスキップされ、次の実際のサムネイルサイズがダウンロードされる。",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "簡単な回答",
+      "html": "<p>公開されている YouTube リンクをコピーして、<a href=\"https://www.11tik.com/\">11tik</a>検証済みのプレビューが表示されるまで待ち、リストされている最初のファイルをダウンロードします。そのファイルは、YouTube が既にビデオ ID 用にホストしている最高解像度のパブリック JPEG または WebP ファイルです。maxres または hq720 が存在する場合は、多くの場合 1280×720 です。これにより、<strong>サムネイル静止画</strong>映像や音声ではなく、</p>\n\n  <img alt=\"Four-step workflow from copying a YouTube URL to downloading a validated public thumbnail still\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">実際の手順：公開URL → 抽出 → 実際のサイズをプレビュー → 画像URLをダウンロードまたはコピー。</p>"
+    },
+    {
+      "heading": "11tikを使った最速の方法",
+      "html": "<ol>\n    <li>公開されているウォッチ、ショート、ライブ、埋め込み、またはyoutu.beのURL（または11文字のビデオID）をコピーします。</li>\n    <li>開ける<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>ブラウザで。</li>\n    <li>URLを貼り付けてください。IDが有効な場合、抽出が開始されます。</li>\n    <li>最初の結果（入手可能な最良のもの）をダウンロードするか、別の利用可能なサイズを選択してください。</li>\n  </ol>\n  <p>オプション: 使用<strong>画像のURLをコピー</strong>ファイルではなくCMSのアドレスが必要な場合。そのフローについては、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>。</p>"
+    },
+    {
+      "heading": "サポートされているYouTube URL形式",
+      "html": "<p>11tikは、ウェブサイトのパーサーが受け入れるのと同じパターンからビデオIDを読み取ります。</p>\n  <table>\n    <thead>\n      <tr><th>形式</th><th>例となるパターン</th><th>注記</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>時計</td><td><code>youtube.com/watch?v=ID</code></td><td>追加のクエリパラメータは無視されます</td></tr>\n      <tr><td>短縮リンク</td><td><code>youtu.be/ID</code></td><td>モバイルシェアはよくこれを使用します</td></tr>\n      <tr><td>ショーツ</td><td><code>youtube.com/shorts/ID</code></td><td>同じ公共の場では依然として</td></tr>\n      <tr><td>埋め込み</td><td><code>youtube.com/embed/ID</code></td><td>iframe src から</td></tr>\n      <tr><td>ライブ</td><td><code>youtube.com/live/ID</code></td><td>公開IDが存在する場合</td></tr>\n      <tr><td>nocookie埋め込み</td><td><code>youtube-nocookie.com/embed/ID</code></td><td>埋め込みのように扱われる</td></tr>\n      <tr><td>裸のID</td><td><code>dQw4w9WgXcQ</code></td><td>11文字のみ</td></tr>\n    </tbody>\n  </table>\n  <p>動画IDのないチャンネルまたはプレイリストのURLでは、サムネイルは生成されません。複数のリンクを一度に処理する場合は、一括処理（最大25件）を使用してください。<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">バッチダウンロード</a>チャネル拡張:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">チャンネルURLから抜粋</a>。</p>"
+    },
+    {
+      "heading": "直接URLを使用する方法（抽出UIなし）",
+      "html": "<p>既にIDが分かっている場合は、候補者を直接開くことができます。</p>\n  <p><code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code></p>\n  <p>読み込みが完了したら、ブラウザのsave-imageコマンドを使用します。失敗した場合は、<code>hq720.jpg</code>、<code>sddefault.jpg</code>、 または<code>hqdefault.jpg</code>この手動の方法は、11tikの検証済みリストに比べて遅く、エラーが発生しやすいですが、正しいアドレスさえ分かれば、どのブラウザからでもオフラインで動作します。</p>"
+    },
+    {
+      "heading": "ダウンロード時に品質を選択する",
+      "html": "<p>小さいプレビューを保持する必要がある理由がない限り、最初にリストされているサイズをダウンロードしてください。ここでいう「HD」とは、4Kマスターではなく、一般的に1280×720である、存在する最大のパブリック静止画を意味します。ピクセルの期待値とサイズが欠落している場合の動作については、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズと解像度ガイド</a>。</p>\n  <p>最上位の公開ファイルのみに関心がある場合は、以下も参照してください。<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品質のサムネイル</a>。</p>\n\n  <img alt=\"Troubleshooting diagram showing a missing maxresdefault file skipped so the next real thumbnail size can be downloaded\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-download-steps.png\" width=\"1200\">\n  <p class=\"yte-caption\">推定サイズが利用できない場合は、それをスキップして、次の実際の公開ファイルを使用します。</p>"
+    },
+    {
+      "heading": "ダウンロードのトラブルシューティング",
+      "html": "<table>\n    <thead>\n      <tr><th>症状</th><th>考えられる原因</th><th>何をするか</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>貼り付け後のプレビューが表示されない</td><td>無効なURL、ビデオIDなし、または非公開/制限付きビデオ</td><td>公開されているウォッチ/ショート/youtu.beリンクを貼り付けてください</td></tr>\n      <tr><td>Maxresが見つかりません</td><td>YouTube はそのファイルを公開していません</td><td>代わりに最初にリストされているサイズをダウンロードしてください</td></tr>\n      <tr><td>グレー / 手動で作成した URL からのプレースホルダー画像</td><td>推測されたファイル名</td><td>11tikの検証済みリストを使用する</td></tr>\n      <tr><td>電話保存は気まずい</td><td>ブラウザのダウンロードUIは異なります</td><td>見る<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone / Android セーブガイド</a></td></tr>\n      <tr><td>UIキャプチャのようです</td><td>プレイヤーのスクリーンショットを撮ります</td><td>CDNは保存するが、画面は保存しない —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">スクリーンショットと実物</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "ダウンロードしているもの（およびダウンロードしていないもの）",
+      "html": "<p>YouTubeが既にホストしている公開静止画を保存します。非公開動画、会員限定ファイル、またはMP4/WebMストリームのロックを解除するものではありません。11tikは抽出ツールであり、作成ツールでも動画ダウンローダーでもありません。比較：<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">抽出器 vs メーカー</a>。</p>\n  <p>著作権はアップロード者に帰属します。研究目的または個人的な参考資料として保存することは一般的な使用方法ですが、権利を侵害して独自のサムネイルとして再公開することは認められていません。YouTube ヘルプ:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイル</a>サイトルール：<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    },
+    {
+      "heading": "方法比較",
+      "html": "<table>\n    <thead>\n      <tr><th>方法</th><th>スピード</th><th>最適</th><th>11tikが必要ですか？</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik ダウンロード</td><td>速い</td><td>検証済み、最高</td><td>はい</td></tr>\n      <tr><td>11tik URLをコピー</td><td>速い</td><td>CMS / 埋め込み</td><td>はい</td></tr>\n      <tr><td>手作りのi.ytimg.com URL</td><td>中くらい</td><td>IDが分かっている場合の簡単なテスト</td><td>いいえ</td></tr>\n      <tr><td>プレイヤーのスクリーンショット</td><td>速いが低品質</td><td>ブログやOGには避けてください</td><td>いいえ</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "次のステップ",
+      "html": "<p>開く<a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>公開リンクを貼り付け、最初の検証済み静止画を保存します。リンクのみが必要ですか？<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URLガイド</a>サイズ選びに迷ったら、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">解決ガイド</a>。</p>\n\n  <p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって執筆されました。公開されている静止画のみ。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "ショート動画のサムネイルをダウンロードできますか？",
+      "answer": "はい、ショート動画が公開されていて、そのIDに対応する静止画が存在する場合です。/shorts/ のURLを11tikに貼り付けてください。再生は縦向きでも、静止画は横向きの場合があります。",
+      "answerHtml": "<p>はい、ショートが公開されていて、そのIDの静止画が存在する場合。<code>/shorts/</code>11tikにURLを入力してください。再生は縦向きでも、静止画は横向きの場合があります。</p>"
+    },
+    {
+      "question": "最適なサムネイルが読み込まれない場合はどうすればいいですか？",
+      "answer": "次にリストされているサイズをダウンロードしてください。maxresが欠落しているのはよくあることで、ツールの不具合ではありません。",
+      "answerHtml": "<p>次にリストされているサイズをダウンロードしてください。maxresが欠落しているのはよくあることで、ツールの不具合ではありません。</p>"
+    },
+    {
+      "question": "元の公開サムネイル画像をダウンロードできますか？",
+      "answer": "はい、それが最も検証されたファイルです。「オリジナル」とは、ビデオストリームから抽出されたフレームではなく、公開されているCDNの静止画を意味します。オリジナルの公開サムネイルを参照してください。",
+      "answerHtml": "<p>はい、それが最も検証されたファイルです。「オリジナル」とは、ビデオストリームから抜き取られたフレームではなく、公開されているCDNの静止画を意味します。参照<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">オリジナルのパブリックサムネイル</a>。</p>"
+    },
+    {
+      "question": "画像をダウンロードする代わりに、画像のURLをコピーすることはできますか？",
+      "answer": "はい。11tikの「画像URLをコピー」を使用するか、画像が読み込まれた後にブラウザから検証済みのURLをコピーしてください。",
+      "answerHtml": "<p>はい。11tikで「画像URLをコピー」を使用するか、画像が読み込まれた後にブラウザから検証済みのURLをコピーしてください。</p>"
+    },
+    {
+      "question": "これはYouTubeの動画ファイルをダウンロードしますか？",
+      "answer": "いいえ。公開されているサムネイル画像のみです。",
+      "answerHtml": "<p>いいえ。公開されているサムネイル画像のみです。</p>"
+    },
+    {
+      "question": "すべての動画で1280×720のファイルが提供されるのでしょうか？",
+      "answer": "いいえ。そのIDに対して検証可能な最大の公開ファイルを保持してください。",
+      "answerHtml": "<p>いいえ。そのIDに対して検証可能な最大の公開ファイルを保持してください。</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって執筆されました。公開されている静止画のみ。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+}

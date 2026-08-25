@@ -1,0 +1,79 @@
+{
+  "contentId": "how-to-save-youtube-thumbnail-on-iphone",
+  "articleId": "how-to-save-youtube-thumbnail-on-iphone",
+  "locale": "no",
+  "sourceHash": "23d34f6aa8bf535778db6e79928dd288102bfc3f8eef146271f7cad0201168c7",
+  "status": "ready",
+  "title": "Slik lagrer du et YouTube-miniatyrbilde på iPhone og Android (2026) | 11tik",
+  "description": "Lagre den offentlige YouTube-filen på iPhone eller Android uten skjermbilde og uten nedlasting i appbutikken. Lim inn en offentlig URL for visning eller Shorts i 11tik i Safari eller Chrome, og last deretter ned den største bildefilen YouTube allerede har.",
+  "h1": "Slik lagrer du et YouTube-miniatyrbilde på iPhone og Android (2026)",
+  "ogTitle": "Slik lagrer du et YouTube-miniatyrbilde på iPhone og Android (2026)",
+  "ogDescription": "Lagre den offentlige YouTube-filen på iPhone eller Android uten skjermbilde og uten nedlasting i appbutikken. Lim inn en offentlig URL for visning eller Shorts i 11tik i Safari eller Chrome, og last deretter ned den største bildefilen YouTube allerede har.",
+  "imageAlt": "Lagre et YouTube-miniatyrbilde på iPhone og Android med 11tik – offentlig stillbilde, ingen app",
+  "faqHeading": "Vanlige spørsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-iphone-android.png",
+      "alt": "Lagre et YouTube-miniatyrbilde på iPhone og Android med 11tik – offentlig stillbilde, ingen app",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kan jeg lagre et YouTube-miniatyrbilde på telefonen min?",
+      "html": "<p>Ja, hvis videoen er offentlig og YouTube publiserte et stillbilde. Du trenger ikke en datamaskin, og du trenger ikke en APK eller TestFlight-app. Åpne<a href=\"https://www.11tik.com/\">11tik</a>I nettleseren du allerede bruker på telefonen, limer du inn lenken, trykker på Hent miniatyrbilde, og lagrer deretter den første filen på listen. Den filen er den høyeste offentlige JPEG- eller WebP-filen som faktisk returnerte et bilde.</p>\n  <p>Et langt trykk på skjermbildet av spilleren er ikke det samme. Skjermbildet inkluderer krom, sikkerhetsfelt og ekstra komprimering. Publikum lever fortsatt på i.ytimg.com. Se<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skjermbilde kontra ekte miniatyrbilde</a>hvis du trenger den distinksjonen for en blogg eller Open Graph-tag.</p>"
+    },
+    {
+      "heading": "Det du trenger før du starter",
+      "html": "<ul>\n    <li>En offentlig YouTube-visnings-, Shorts-, direkte- eller youtu.be-URL. Ekstra søkeparametere som<code>pp=</code>eller en spilleliste-ID spiller ingen rolle; 11tik leser video-ID-en på 11 tegn.</li>\n    <li>Safari på iPhone eller iPad, eller Chrome, Firefox eller Samsung Internet på Android.</li>\n    <li>Tillatelse til å lagre bilder hvis nettleseren ber om det. 11tik laster aldri opp bildet til en 11tik-server som originalt medium.</li>\n  </ul>\n  <p>Private videoer, videoer kun for medlemmer eller videoer med aldersbegrensning som ikke publiserer offentlig, vil fortsatt ikke vise en nedlasting. Det er en plattformregel, ikke en begrensning på telefonen. Tilpassede miniatyrbilder som fortsatt behandles i Studio, kan også mangle i en kort periode. Bekreft senere med samme URL. Relatert:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatyrbilder i 2026</a>.</p>"
+    },
+    {
+      "heading": "Slik lagrer du et YouTube-miniatyrbilde på iPhone",
+      "html": "<ol>\n    <li>I YouTube-appen eller Safari kopierer du video- eller Shorts-lenken (Del → Kopier lenke).</li>\n    <li>Åpne<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>i Safari. Du installerer ingenting.</li>\n    <li>Lim inn URL-en og trykk på Hent miniatyrbilde. Vent til en ekte forhåndsvisning vises. Tomme grå bokser betyr at størrelsen aldri ble publisert.</li>\n    <li>Trykk på den første nedlastingskontrollen. Safari vil da tilby Åpne eller Last ned. Velg Last ned, og behold deretter bildet i Filer eller lagre det i Bilder fra delingsarket.</li>\n    <li>Hvis du bare trenger adressen til et CMS, bruk Kopier bilde-URL i stedet for å laste ned. Det kopierer en HTTPS i.ytimg.com eller vi_webp-lenke. Veiledning:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube-miniatyrnettadresse</a>.</li>\n  </ol>\n  <p>Hvis iOS blokkerer en nedlasting på tvers av opprinnelser, åpner du bildets URL i en ny fane, og trykker deretter og holder inne bildet → Legg til i bilder. Du lagrer fortsatt YouTubes offentlige fil, ikke et skjermbilde av 11tik-siden.</p>"
+    },
+    {
+      "heading": "Slik lagrer du et YouTube-miniatyrbilde på Android",
+      "html": "<ol>\n    <li>Kopier den offentlige visnings- eller Shorts-nettadressen fra YouTube-appen.</li>\n    <li>Åpne 11tik i Chrome (eller standardnettleseren din).</li>\n    <li>Lim inn, pakk ut, og trykk deretter på den første nedlastingen. Chrome skriver vanligvis filen til Nedlastinger.</li>\n    <li>Åpne nedlastingsvarselet og flytt bildet til Galleri hvis du vil ha det i Bilder.</li>\n  </ol>\n  <p>Android kan spørre hvilken app som skal åpne en JPEG. Velg Galleri eller Filer. Ikke velg et «videonedlastingsprogram» som lover MP4; 11tik tilbyr ikke video eller lyd.</p>"
+    },
+    {
+      "heading": "Hvilken størrelse bør jeg ha på en telefon?",
+      "html": "<p>Behold den første størrelsen som er oppført. 11tik har allerede rangert filer som finnes. Når YouTube publiserer maxresdefault, er den vanligvis 1280×720. Hvis filnavnet er 404s, er det ærlige maksimumet den neste virkelige filen (ofte hq720, sddefault eller hqdefault). En manglende maxres-fil er normalt. Detaljer:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">hva maxresdefault.jpg er</a>og<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">miniatyrbildestørrelser i 2026</a>.</p>\n  <p>Kortfilmer spilles ofte av vertikalt, mens det lagrede stillbildet er liggende. Filen er fortsatt det offisielle offentlige miniatyrbildet. Se<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniatyrbilder</a>.</p>"
+    },
+    {
+      "heading": "Er det lovlig å lagre miniatyrbilder på telefonen min?",
+      "html": "<p>Vanlig bruk er å lagre et offentlig lagret stillbilde for personlig referanse, forskning eller utdanning. Bildet forblir opplasterens opphavsrettsbeskyttede verk. Ikke last det opp på nytt som ditt eget tilpassede miniatyrbilde, skriv det ut på merchandise eller behandle 11tik som en lisens. YouTubes egen hjelp om tilpassede miniatyrbilder finner du her:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Last opp egendefinerte videominiatyrbilder</a>11tik sine regler:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>og<a href=\"https://www.11tik.com/copyright\">Opphavsrett og bruk</a>.</p>"
+    },
+    {
+      "heading": "Hvorfor telefon-\"miniatyrbilderapper\" mislykkes",
+      "html": "<p>Mange butikkoppføringer pakker en annonseside rundt en gjettet<code>maxresdefault.jpg</code>URL. Hvis YouTube aldri publiserte den filen, får du et ødelagt bilde eller en grå standardverdi. 11tik sjekker svar i nettleseren din og skjuler størrelser som ikke er bilder. Ingenting er «låst opp» bak en registrering. Personvern: innlimte URL-er forblir i nettleseren; se<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>.</p>"
+    },
+    {
+      "heading": "Lagre flere lenker fra en telefon",
+      "html": "<p>Bruk masseutvidelse på samme hjemmeside, én offentlig URL per linje, opptil 25. En kanal-URL kan utvides til nylige offentlige opplastinger på en større skjerm. På en telefon kan du lime inn individuelle lenker hvis kanalutvidelsen føles trang. Masseutvidelsesveiledning:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">nedlasting av flere enheter</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Lagre et offentlig miniatyrbilde på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet av 11tik, utgiver av nettleseruttrekkeren.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg lagre et YouTube-miniatyrbilde på telefonen min?",
+      "answer": "Ja. Åpne 11tik i Safari eller Chrome, lim inn en offentlig YouTube-URL, trekk ut og last ned det første offentlige stillbildet fra listen. Ingen nedlasting av App Store er nødvendig.",
+      "answerHtml": "Ja. Åpne 11tik i Safari eller Chrome, lim inn en offentlig YouTube-URL, trekk ut og last ned det første offentlige stillbildet fra listen. Ingen nedlasting av App Store er nødvendig."
+    },
+    {
+      "question": "Hvordan lagrer jeg et YouTube-miniatyrbilde på iPhone?",
+      "answer": "Kopier lenken, åpne https://www.11tik.com/ i Safari, lim inn, pakk ut, last ned eller trykk lenge på URL-adressen til bildet og legg det til i Bilder.",
+      "answerHtml": "Kopier lenken, åpne https://www.11tik.com/ i Safari, lim inn, pakk ut, last ned eller trykk lenge på URL-adressen til bildet og legg det til i Bilder."
+    },
+    {
+      "question": "Hvordan lagrer jeg et YouTube-miniatyrbilde på Android?",
+      "answer": "Kopier lenken, åpne 11tik i Chrome, pakk ut og lagre den første nedlastingen i Nedlastinger eller Galleri.",
+      "answerHtml": "Kopier lenken, åpne 11tik i Chrome, pakk ut og lagre den første nedlastingen i Nedlastinger eller Galleri."
+    },
+    {
+      "question": "Er det lovlig å lagre miniatyrbilder på telefonen min?",
+      "answer": "Det er vanlig å lagre et offentlig stillbilde for personlig referanse eller forskning. Ikke publiser det på nytt som ditt eget omslagsbilde. Opphavsretten forblir hos opplasteren.",
+      "answerHtml": "Det er vanlig å lagre et offentlig stillbilde for personlig referanse eller forskning. Ikke publiser det på nytt som ditt eget omslagsbilde. Opphavsretten forblir hos opplasteren."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik, utgiver av nettleseruttrekkeren.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

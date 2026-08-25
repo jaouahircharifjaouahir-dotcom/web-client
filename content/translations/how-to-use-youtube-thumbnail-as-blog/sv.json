@@ -1,0 +1,106 @@
+{
+  "contentId": "how-to-use-youtube-thumbnail-as-blog",
+  "articleId": "how-to-use-youtube-thumbnail-as-blog",
+  "locale": "sv",
+  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "status": "ready",
+  "title": "Hur man använder en YouTube-miniatyrbild som en bloggbild eller förhandsgranskning av öppen graf | 11tik",
+  "description": "Bekräfta att en offentlig YouTube-fil fortfarande finns och lägg sedan till en kopia för WordPress, Blogger eller og:image. Använd inte en hotlink till en gissad maxresdefault-URL.",
+  "h1": "Hur man använder en YouTube-miniatyrbild som en bloggbild eller en förhandsgranskning av öppen graf",
+  "ogTitle": "Hur man använder en YouTube-miniatyrbild som en bloggbild eller en förhandsgranskning av öppen graf",
+  "ogDescription": "Bekräfta att en offentlig YouTube-fil fortfarande finns och lägg sedan till en kopia för WordPress, Blogger eller og:image. Använd inte en hotlink till en gissad maxresdefault-URL.",
+  "imageAlt": "Arbetsflöde från att bekräfta en YouTube-miniatyr på 11tik till att ladda upp den i WordPress eller ställa in og:image",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png",
+      "alt": "Arbetsflöde från att bekräfta en YouTube-miniatyr på 11tik till att ladda upp den i WordPress eller ställa in og:image",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png",
+      "alt": "Sida vid sida av uppladdning av utvalda bilder i WordPress kontra ett Open Graph-socialt kort med verkliga pixeldimensioner",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snabbt svar",
+      "html": "<p>Klistra in en offentlig YouTube-URL i<a href=\"https://www.11tik.com/\">11tik</a>, vänta på validerade storlekar, och sedan antingen<strong>ladda ner</strong>den första stillbilden och ladda upp den till ditt CMS, eller<strong>kopiera bildens URL</strong>först efter att den laddats. För bestående inlägg, värda din egen kopia. Hotlinking<code>i.ytimg.com</code>är praktisk för utkast och ömtålig för sociala kort i produktionen.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Bekräfta → kopiera eller ladda ner → värd → referens i HTML / utvald bild / Open Graph.</p>"
+    },
+    {
+      "heading": "Vad en direkt miniatyr-URL är",
+      "html": "<p>En direkt miniatyr-URL pekar till exempel på en JPEG- eller WebP-fil på YouTubes bild-CDN<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Det är inte visningssidan. Så här är dessa adresser uppbyggda:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hämta en URL för YouTube-miniatyrer</a>Hur storlekarna skiljer sig åt:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide för storlek och upplösning</a>.</p>"
+    },
+    {
+      "heading": "HTML-exempel",
+      "html": "<p>Efter att 11tik bekräftar en fil ser ett minimalt markupmönster ut så här (ersätt URL, width, height och alt med de verkliga värdena):</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>Föredra din egen värdbaserade URL i produktion:</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>Använd rapporterna för verklig bredd och höjd 11tik. Hitta inte på 1280×720 när det bara finns 480×360.</p>"
+    },
+    {
+      "heading": "WordPress-arbetsflöde",
+      "html": "<ol>\n    <li>Extrahera videon på 11tik och ladda ner den första listade stillbilden.</li>\n    <li>I WordPress: Media → Lägg till ny → ladda upp filen.</li>\n    <li>Ställ in den som utvald bild i inlägget.</li>\n    <li>I Yoast, Rank Math eller liknande, bekräfta att den sociala förhandsgranskningen använder den bilagan (eller ladda upp en dedikerad OG-beskärning).</li>\n    <li>Skriv en alt-text som namnger videon och anger att filen är en offentlig YouTube-stillbild – inte en ifylld sökordslista.</li>\n  </ol>\n  <p>Undvik att klistra in en rå<code>maxresdefault.jpg</code>sökvägen in i mediafältet tills filen har bevisats. Det är vanligt att maxres saknas —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404-guide</a>.</p>"
+    },
+    {
+      "heading": "Blogger och statiska webbplatser",
+      "html": "<p><strong>Bloggare:</strong>Ladda upp stillbilden till inläggsredigeraren och återanvänd sedan den värdbaserade Blogger-bildadressen för alla tema-/sociala kodavsnittsfält som du kontrollerar. Förlita dig inte på en gissad YouTube CDN-sökväg för ett publicerat inlägg som du bryr dig om.</p>\n  <p><strong>Statiska generatorer:</strong>Spara filen i ditt repo eller CDN och sätt sedan front-matter/metataggar för HTTPS-resursen. Spara utkast på en tillfällig i.ytimg.com URL om du måste, men skicka med din egen värd.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Utvald bild och og:image kan dela en fil, men båda behöver en URL som faktiskt existerar.</p>"
+    },
+    {
+      "heading": "Att tänka på med Open Graph",
+      "html": "<p>Stora länkkort riktar sig vanligtvis mot ungefär<strong>1200×630</strong>YouTubes maximum är vanligtvis<strong>1280×720</strong>(16:9), som skrapar beskärning eller brevlåda. Ställ in<code>og:image</code>(och bredd/höjd när din stack stöder dem) till de riktiga pixlarna. Efter att ha åtgärdat en trasig URL, skrapa om i varje plattforms felsökare – cacheminnen fastnar.</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>"
+    },
+    {
+      "heading": "Hotlinking kontra nedladdning",
+      "html": "<table>\n    <thead>\n      <tr><th>Närma sig</th><th>Bäst för</th><th>Risk</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hotlink i.ytimg.com</td><td>Snabba utkast, forskningsanteckningar</td><td>404-nummer, CDN-ändringar, ingen grödkontroll</td></tr>\n      <tr><td>Ladda ner + värd</td><td>Rankade inlägg, produktsidor</td><td>Du måste lagra filen</td></tr>\n      <tr><td>Skärmdump av spelaren</td><td>Nästan aldrig</td><td>UI Chrome, fel förhållande —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skärmdump kontra verklighet</a></td></tr>\n    </tbody>\n  </table>\n  <p>Nedladdningssteg:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hur man laddar ner en YouTube-miniatyrbild</a>Formatval när både WebP och JPEG finns:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP kontra JPEG</a>.</p>"
+    },
+    {
+      "heading": "Grunderna i bild-SEO för dessa stillbilder",
+      "html": "<ul>\n    <li><strong>Filnamn:</strong>beskrivande, såsom<code>channel-name-video-topic-thumb.jpg</code>.</li>\n    <li><strong>Alternativ:</strong>beskriv bilden och videon; lägg inte till ”YouTube thumbnail downloader HD 4K”.</li>\n    <li><strong>Mått:</strong>deklarera verklig bredd/höjd.</li>\n    <li><strong>Endast HTTPS:</strong>URL:er för bilder med blandat innehåll tas bort av skrapare.</li>\n    <li><strong>Kompression:</strong>omkoda försiktigt för ditt CDN om det behövs; skala inte upp hqdefault till falska maxres.</li>\n  </ul>"
+    },
+    {
+      "heading": "Återanvändning och upphovsrätt (inte juridisk rådgivning)",
+      "html": "<p>En offentlig CDN-URL är inte en licens. Att bädda in YouTube-spelaren skiljer sig från att kopiera stillbilden till din hero. Fair use är faktaspecifik. Säkrare redaktionellt mönster: illustrera kommentarer om videon, ge kanalen en kredit, länka till visningssidan och sälj inte bilden eller använd den som din egen kanalbild. Officiell hjälp med anpassade miniatyrbilder:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Ladda upp anpassade videominiatyrer</a>Webbplatsens regler:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+    },
+    {
+      "heading": "Felsökning",
+      "html": "<ul>\n    <li>Trasigt socialt kort → gissade maxres; extrahera om och lagra en validerad fil.</li>\n    <li>Mjukt/suddigt kort → du använde hqdefault; kontrollera storlekarna.</li>\n    <li>Fel beskärning → ge en dedikerad 1200×630-beskärning från ett riktigt 16:9-stillbild.</li>\n    <li>Klibbig cache → tvinga fram en ny skrapning efter URL-ändring.</li>\n  </ul>"
+    },
+    {
+      "heading": "Nästa steg",
+      "html": "<p>Bekräfta en stillbild på<a href=\"https://www.11tik.com/\">11tik extraktor</a>, ladda ner den, ladda upp den till din webbplats och peka `featured image / og:image` på din HTTPS-fil.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jag klistra in en i.ytimg.com URL i WordPress?",
+      "answer": "Vissa fält accepterar det, men att ladda upp en bekräftad lokal fil är mer tillförlitligt för utvalda bilder och förhandsvisningar på sociala medier.",
+      "answerHtml": "<p>Vissa fält accepterar det, men att ladda upp en bekräftad lokal fil är mer tillförlitligt för utvalda bilder och förhandsvisningar på sociala medier.</p>"
+    },
+    {
+      "question": "Behöver jag maxresdefault för Open Graph?",
+      "answer": "Nej. Du behöver den största validerade publika stillbilden. Att maxres saknas är normalt.",
+      "answerHtml": "<p>Nej. Du behöver den största validerade publika stillbilden. Att maxres saknas är normalt.</p>"
+    },
+    {
+      "question": "Bör alt-texten nämna YouTube?",
+      "answer": "Ja, när det hjälper till att beskriva tillgången (”Offentlig YouTube-miniatyrbild för …”). Använd inte nyckelord.",
+      "answerHtml": "<p>Ja, när det hjälper till att beskriva tillgången (”Offentlig YouTube-miniatyrbild för …”). Använd inte nyckelord.</p>"
+    },
+    {
+      "question": "Är hotlinking någonsin okej?",
+      "answer": "För tillfälliga utkast eller interna anteckningar, ja. För ett bestående offentligt inlägg, spara en kopia.",
+      "answerHtml": "<p>För tillfälliga utkast eller interna anteckningar, ja. För ett bestående offentligt inlägg, spara en kopia.</p>"
+    },
+    {
+      "question": "Kan jag använda stillbilden som kanalomslag?",
+      "answer": "Inte utan rättigheter. Det är någon annans konstverk.",
+      "answerHtml": "<p>Inte utan rättigheter. Det är någon annans konstverk.</p>"
+    },
+    {
+      "question": "Tänk om Studio bara ändrade den anpassade miniatyrbilden?",
+      "answer": "Vänta på bearbetningen och kontrollera sedan 11tik igen innan du uppdaterar din CMS-kopia. Relaterat: YouTube Studio-miniatyrer.",
+      "answerHtml": "<p>Vänta på bearbetning och kontrollera sedan 11tik igen innan du uppdaterar din CMS-kopia. Relaterat:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatyrer</a>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+}

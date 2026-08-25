@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "pl",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "Co to jest maxresdefault.jpg? Dlaczego występuje błąd 404 i co pobrać zamiast niego | 11tik",
+  "description": "maxresdefault.jpg zazwyczaj ma rozdzielczość 1280×720, gdy został opublikowany na YouTube. Błąd 404 jest normalny — użyj kolejnego prawdziwego publicznego pliku, a nie zgadywanej nazwy pliku.",
+  "h1": "Co to jest maxresdefault.jpg? Dlaczego występuje błąd 404 i co zamiast tego pobrać?",
+  "ogTitle": "Co to jest maxresdefault.jpg? Dlaczego występuje błąd 404 i co zamiast tego pobrać?",
+  "ogDescription": "maxresdefault.jpg zazwyczaj ma rozdzielczość 1280×720, gdy został opublikowany na YouTube. Błąd 404 jest normalny — użyj kolejnego prawdziwego publicznego pliku, a nie zgadywanej nazwy pliku.",
+  "imageAlt": "Rozwiązywanie problemów z przepływem od adresu URL maxresdefault, który powoduje błąd 404, do następnego sprawdzonego rozmiaru miniatury YouTube",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "Rozwiązywanie problemów z przepływem od adresu URL maxresdefault, który powoduje błąd 404, do następnego sprawdzonego rozmiaru miniatury YouTube",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "Drabinka nazw plików miniatur YouTube od maxresdefault do default, pokazująca brakujące szczeble, jest pomijana",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Szybka odpowiedź",
+      "html": "<p><code>maxresdefault.jpg</code>to publiczna nazwa pliku miniatury w sieci CDN obrazów YouTube. Jeśli plik istnieje, zazwyczaj jest<strong>1280×720</strong>. To jest<strong>nie</strong>Gwarantowane dla każdego filmu. Błąd 404 (lub mały szary symbol zastępczy) oznacza, że ​​pochodna nigdy nie została opublikowana dla tego identyfikatora filmu. Wklej adres URL do obejrzenia filmu w<a href=\"https://www.11tik.com/\">11tik</a>i pobierz pierwszy wymieniony rozmiar — narzędzie pominęło już brakujące nazwy i uszeregowane ocalałe, takie jak<code>hq720</code>,<code>sddefault</code>, Lub<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Brak pliku maxres to problem awaryjny, a nie dowód na to, że film nie ma miniaturki.</p>"
+    },
+    {
+      "heading": "Co to jest maxresdefault.jpg?",
+      "html": "<p>To nazwa pliku, a nie magiczna gwarancja jakości. Typowy adres JPEG wygląda tak:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Gdy YouTube opublikował także bliźniaka WebP, 11tik sprawdza:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Obydwa siedzą na<code>i.ytimg.com</code>To są nieruchome obrazy — nie strumień wideo, nie prywatny eksport ze Studia ani nie master 4K. Oczekiwania dotyczące pikseli i inne rozmiary są omówione w<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">przewodnik po rozmiarach i rozdzielczościach miniatur</a>Konstrukcja adresu URL jest omówiona w<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">przewodnik po adresach URL miniatur</a>.</p>"
+    },
+    {
+      "heading": "Dlaczego prawdziwy film na YouTube nadal może zwrócić błąd 404 dla maxres?",
+      "html": "<ul>\n    <li>Starsze przesłane pliki nigdy nie otrzymały wersji pochodnej maxres.</li>\n    <li>Źródło niestandardowej miniatury było mniejsze niż 1280×720.</li>\n    <li>Studio nadal przetwarza nowe, niestandardowe przesłanie.</li>\n    <li>Niektóre krótkie filmy i automatycznie generowane zdjęcia zatrzymują się na średnim rozmiarze.</li>\n    <li>Dostęp do filmu jest ograniczony i nie można na nim umieszczać żadnych publicznych zdjęć.</li>\n  </ul>\n  <p>Działająca strona odtwarzania filmu dowodzi jedynie, że identyfikator filmu jest prawidłowy. Nie dowodzi ona jednak, że każda nazwa pliku w<code>/vi/</code>istnieje.</p>"
+    },
+    {
+      "heading": "Jak rozpoznać niedostępną odmianę",
+      "html": "<p>Otwórz adres URL kandydata w nowej karcie. Niepowodzenia wyglądają następująco:</p>\n  <ul>\n    <li>Błąd HTTP / pusta odpowiedź</li>\n    <li>Bardzo mały szary lub domyślny kafelek, podczas gdy oczekiwałeś 1280×720</li>\n    <li>Obraz, który się ładuje, ale jest wyraźnie symbolem zastępczym brakującego pliku o wysokiej rozdzielczości</li>\n  </ul>\n  <p>Walidator przeglądarki 11tik oznacza kandydatów jako nieprawidłowych, gdy obraz nie załaduje się lub gdy oczekiwany rozmiar zmieści się w małym miejscu (około 120×90). Ci kandydaci nigdy nie pojawiają się jako „fałszywe karty HD”.</p>"
+    },
+    {
+      "heading": "Warianty awaryjne 11tik faktycznie sprawdzają",
+      "html": "<p>Kolejność ujawniania kandydatów publicznych (od najwyższego):</p>\n  <table>\n    <thead>\n      <tr><th>Nazwa pliku</th><th>Wzór ścieżki</th><th>Typowy rozmiar, jeśli występuje</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>Klasa 1280×720</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>Brakujące wiersze są pomijane. Pierwsze pobranie z listy to najdłuższy zachowany plik, a nie najdłuższa wpisana nazwa. Wybór formatu między WebP a JPEG jest omówiony w<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">Miniatury YouTube w formatach WebP i JPEG</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Traktuj nazwy plików jako opcjonalne szczeble. Zejdź w dół, aż pojawi się prawdziwy obraz.</p>"
+    },
+    {
+      "heading": "Jak 11tik sprawdza dostępność",
+      "html": "<ol>\n    <li>Przeanalizuj publiczny podgląd, krótkie filmy, transmisję na żywo, osadzenie lub adres URL youtu.be w celu uzyskania 11-znakowego identyfikatora.</li>\n    <li>Utwórz adresy URL kandydatów na podstawie listy predefiniowanej powyżej.</li>\n    <li>Załaduj każdego kandydata jako obraz w przeglądarce.</li>\n    <li>Zachowaj tylko sukcesy, które nie są symbolami zastępczymi; uporządkowaj według poziomu, pikseli i niewielkiej korekty wyniku WebP.</li>\n    <li>Pokaż listę rankingową, dzięki której będziesz mógł pobrać lub skopiować działający adres URL.</li>\n  </ol>\n  <p>Dlatego też linki do odgadniętych wartości maxres znikają z interfejsu użytkownika, gdy zawiodą: ekstraktor odmawia utworzenia pliku o rozdzielczości 1280×720.</p>"
+    },
+    {
+      "heading": "Praktyczna lista kontrolna rozwiązywania problemów",
+      "html": "<ol>\n    <li>Sprawdź, czy film jest publiczny i czy identyfikator jest poprawny.</li>\n    <li>Test<code>maxresdefault.jpg</code>raz. Jeśli się nie uda, przestań zgadywać.</li>\n    <li>Wklej ten sam link do<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Pobierz pierwszy z wymienionych obrazów lub skopiuj adres URL odpowiadającego mu obrazu.</li>\n    <li>Jeśli nic się nie pojawia, film może być prywatny, usunięty, objęty ograniczeniem wiekowym lub pozbawiony publicznych zdjęć.</li>\n    <li>W przypadku CMS preferuj hostowaną kopię zweryfikowanego obrazu, a nie ścieżkę CDN z linkami hotlink. Zobacz<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / przewodnik Open Graph</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "Typowe błędy",
+      "html": "<ul>\n    <li>Zakładając, że każdy film ma maksymalną rozdzielczość, ponieważ jeden popularny film ją ma.</li>\n    <li>Kodowanie na stałe<code>maxresdefault.jpg</code>w produkcyjnym HTML bez sprawdzania.</li>\n    <li>Nazywanie rozciągniętego<code>hqdefault</code>„maxres.”</li>\n    <li>Mylenie zrzutu ekranu gracza z CDN —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">zrzut ekranu kontra prawdziwa miniatura</a>.</li>\n    <li>Oczekujemy 4K. Maksymalna rozdzielczość publiczna wynosi zazwyczaj 1280×720, jeśli jest dostępna —<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">przewodnik najwyższej jakości</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "Następny krok",
+      "html": "<p>Wklej publiczny adres URL YouTube w<a href=\"https://www.11tik.com/\">ekstraktor</a>. Jeśli brakuje opcji maxres, zachowaj następny prawdziwy obraz — to jest uczciwy plik HD dla tego filmu.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik. Tylko publiczne zdjęcia; nie ma możliwości pobierania filmów.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Prywatność</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czy błąd 404 oznacza, że ​​film w ogóle nie ma miniaturki?",
+      "answer": "Nie. Zwykle oznacza to, że brakuje jednej nazwy pliku. Średnie rozmiary często nadal istnieją.",
+      "answerHtml": "<p>Nie. Zwykle oznacza to, że brakuje jednej nazwy pliku. Średnie rozmiary często nadal istnieją.</p>"
+    },
+    {
+      "question": "Czy hq720 jest dobrym zamiennikiem maxresdefault?",
+      "answer": "Po zatwierdzeniu, tak – jest w tej samej wysokiej warstwie (~1280×720). Nie ma też gwarancji.",
+      "answerHtml": "<p>Po zatwierdzeniu, tak – jest w tej samej wysokiej warstwie (~1280×720). Nie ma też gwarancji.</p>"
+    },
+    {
+      "question": "Czy powinienem później spróbować ponownie użyć maxresdefault?",
+      "answer": "Tak, po zakończeniu przetwarzania nowego, niestandardowego przesłania w Studio. W przeciwnym razie zachowaj zweryfikowaną wersję zapasową.",
+      "answerHtml": "<p>Tak, po zakończeniu przetwarzania nowego, niestandardowego przesłania w Studio. W przeciwnym razie zachowaj zweryfikowaną wersję zapasową.</p>"
+    },
+    {
+      "question": "Czy maxres może istnieć jako WebP, ale nie jako JPEG?",
+      "answer": "Tak. 11tik sprawdza osobno maksymalną liczbę resów WebP w /vi_webp/. Może istnieć jeden z nich, oba lub żaden.",
+      "answerHtml": "<p>Tak. 11tik sprawdza WebP maxres osobno w<code>/vi_webp/</code>. Mogą istnieć albo jedno, albo drugie, albo żadne.</p>"
+    },
+    {
+      "question": "Dlaczego niektóre narzędzia nadal pokazują, że karta maxres ulega uszkodzeniu?",
+      "answer": "Drukują szablonowy adres URL bez ładowania obrazu. 11tik wyświetla tylko pliki, które reagują jako obrazy.",
+      "answerHtml": "<p>Drukują szablonowy adres URL bez ładowania obrazu. 11tik wyświetla tylko pliki, które reagują jako obrazy.</p>"
+    },
+    {
+      "question": "Jak szybko pobrać wersję zapasową?",
+      "answer": "Skorzystaj z przewodnika pobierania: wklej, rozpakuj i zapisz pierwszy wymieniony plik.",
+      "answerHtml": "<p>Użyj<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">pobierz przewodnik</a>:wklej, wyodrębnij, zapisz pierwszy wymieniony plik.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik. Tylko publiczne zdjęcia; nie ma możliwości pobierania filmów.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Prywatność</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>.</p>"
+}

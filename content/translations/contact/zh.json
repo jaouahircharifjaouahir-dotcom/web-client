@@ -1,0 +1,24 @@
+{
+  "contentId": "contact",
+  "articleId": "contact",
+  "locale": "zh",
+  "sourceHash": "c6a763a46141ac519b6dfaf8baf69d23bf7c04488e3a31fae098ad6bcc934076",
+  "status": "ready",
+  "title": "联系方式 | 11tik",
+  "description": "如果您对 YouTube 缩略图提取器有任何疑问，请使用此表格。邮件将发送给 11tik 管理员。请勿发送视频或音频文件。该工具仅适用于公开的缩略图。",
+  "h1": "接触",
+  "ogTitle": "接触",
+  "ogDescription": "如果您对 YouTube 缩略图提取器有任何疑问，请使用此表格。邮件将发送给 11tik 管理员。请勿发送视频或音频文件。该工具仅适用于公开的缩略图。",
+  "imageAlt": "",
+  "faqHeading": "常问问题",
+  "images": [],
+  "sections": [
+    {
+      "heading": "接触",
+      "html": "<h1>接触</h1>\n  <p class=\"yte-updated\">最后更新日期：2026年8月22日</p>\n  <p itemprop=\"description\">如果您对 YouTube 缩略图提取器有任何疑问，请使用此表格。您的信息将通过电子邮件发送给 11tik 管理员。请勿发送视频或音频文件。该工具仅适用于公开的缩略图。</p>\n  <p>直接发送电子邮件：<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a></p>\n  <p>如需报告特定视频，请提供 YouTube 的公开网址。11tik 不托管缩略图文件；图片是从平台的公共 CDN 请求的。</p>\n  <form class=\"yte-form-grid\" action=\"https://formsubmit.co/jaouahircharifjaouahir@gmail.com\" method=\"POST\">\n    <input type=\"hidden\" name=\"_subject\" value=\"11tik contact form\">\n    <input type=\"hidden\" name=\"_template\" value=\"table\">\n    <input type=\"hidden\" name=\"_next\" value=\"https://www.11tik.com/p/contact.html\">\n    <input type=\"hidden\" name=\"_captcha\" value=\"false\">\n    <input class=\"yte-hp\" type=\"text\" name=\"_honey\" tabindex=\"-1\" autocomplete=\"off\">\n    <label>姓名<input type=\"text\" name=\"name\" required=\"required\" autocomplete=\"name\">\n    </label>\n    <label>电子邮件<input type=\"email\" name=\"email\" required=\"required\" autocomplete=\"email\">\n    </label>\n    <label>信息<textarea name=\"message\" required=\"required\"></textarea>\n    </label>\n    <button type=\"submit\">发送消息</button>\n  </form>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>·<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私政策</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

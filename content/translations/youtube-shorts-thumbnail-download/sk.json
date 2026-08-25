@@ -1,0 +1,49 @@
+{
+  "contentId": "youtube-shorts-thumbnail-download",
+  "articleId": "youtube-shorts-thumbnail-download",
+  "locale": "sk",
+  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "status": "ready",
+  "title": "Ako stiahnuť miniatúru krátkych videí YouTube v HD rozlíšení | 11tik",
+  "description": "Stiahnite si miniatúru videoklipov YouTube Shorts v prehliadači. Videoklipy Shorts používajú rovnaké verejné statické zábery ako adresy URL na pozeranie. Súbor je často orientovaný na šírku.",
+  "h1": "Ako stiahnuť miniatúru krátkych videí YouTube v HD rozlíšení",
+  "ogTitle": "Ako stiahnuť miniatúru krátkych videí YouTube v HD rozlíšení",
+  "ogDescription": "Stiahnite si miniatúru videoklipov YouTube Shorts v prehliadači. Videoklipy Shorts používajú rovnaké verejné statické zábery ako adresy URL na pozeranie. Súbor je často orientovaný na šírku.",
+  "imageAlt": "Sťahovanie verejnej miniatúry YouTube Shorts v 11tik",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Sťahovanie verejnej miniatúry YouTube Shorts v 11tik",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ako si stiahnem miniatúru z YouTube Shorts?",
+      "html": "<p>Skopírujte URL adresu, ktorá obsahuje /shorts/ a ID videa, a vložte ju do<a href=\"https://www.11tik.com/\">11tik</a>a stiahnite uvedenú veľkosť. Extrakcia sa spustí, keď je ID platné.</p>"
+    },
+    {
+      "heading": "Sú súbory Shorts to isté ako súbory na stránke pozerania videa?",
+      "html": "<p>Používajú rovnaké verejné názvy veľkostí s kľúčom podľa ID videa. Statický obrázok môže vyzerať ako letterbox, ak YouTube uložil širokouhlý derivát.</p>"
+    },
+    {
+      "heading": "Čo ak sa nezobrazí žiadny obrázok?",
+      "html": "<p>Krátky videoklip môže byť súkromný, vymazaný alebo bez verejných statických záberov. Extraktor nedokáže tieto obmedzenia obísť.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Ako stiahnuť</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Môžem si stiahnuť miniatúru z YouTube Shorts?",
+      "answer": "Áno, keď YouTube zverejnil verejné fotografie z daného ID videa Shorts.",
+      "answerHtml": "Áno, keď YouTube zverejnil verejné fotografie z daného ID videa Shorts."
+    },
+    {
+      "question": "Prečo vyzerá stále ako letterbox?",
+      "answer": "YouTube môže uložiť verziu s pomerom strán 16:9 aj pre vertikálny krátky videoklip. 11tik zobrazuje hostovaný súbor namiesto vymysleného orezania.",
+      "answerHtml": "YouTube môže uložiť verziu s pomerom strán 16:9 aj pre vertikálny krátky videoklip. 11tik zobrazuje hostovaný súbor namiesto vymysleného orezania."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+}

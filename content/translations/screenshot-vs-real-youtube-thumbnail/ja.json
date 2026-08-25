@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "ja",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "スクリーンショットと実際のYouTubeサムネイル：どちらのファイルを保存すべきか？ | 11tik",
+  "description": "プレーヤーのスマートフォンのスクリーンショットは、YouTubeがホストするサムネイルではありません。実際のユーザーは依然としてi.ytimg.comにいます。ブログ、Open Graph、調査などにご利用ください。スクリーンショットはUIの装飾、圧縮、そして間違ったアスペクト比を追加します。",
+  "h1": "スクリーンショットと実際のYouTubeサムネイル：どちらのファイルを保存すべきか？",
+  "ogTitle": "スクリーンショットと実際のYouTubeサムネイル：どちらのファイルを保存すべきか？",
+  "ogDescription": "プレーヤーのスマートフォンのスクリーンショットは、YouTubeがホストするサムネイルではありません。実際のユーザーは依然としてi.ytimg.comにいます。ブログ、Open Graph、調査などにご利用ください。スクリーンショットはUIの装飾、圧縮、そして間違ったアスペクト比を追加します。",
+  "imageAlt": "プレイヤーのスクリーンショットと実際のYouTube公開サムネイルファイルの比較",
+  "faqHeading": "よくある質問",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "プレイヤーのスクリーンショットと実際のYouTube公開サムネイルファイルの比較",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "スクリーンショットと実際のサムネイルの違いは何ですか？",
+      "html": "<p>スクリーンショットは、プレーヤーのフレーム、字幕、デバイスのスケーリングなど、画面全体をキャプチャしたものです。実際のサムネイルは、YouTubeがその動画IDに対して公開したJPEGまたはWebPファイルです。安定したURLと既知のピクセルサイズを持つのは、CDNファイルのみです。</p>"
+    },
+    {
+      "heading": "Google画像検索やソーシャルメディアのプレビューでスクリーンショットがうまく表示されないのはなぜですか？",
+      "html": "<p>これらは多くの場合、アスペクト比が間違っており、UI を含み、2 回圧縮されます。Open Graph や多くの CMS フィールドは、1280×720 程度の 16:9 を必要とします。これは、maxresdefault が存在する場合に一致します。参照<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サムネイルサイズガイド</a>。</p>"
+    },
+    {
+      "heading": "実際のサムネイルを保存するにはどうすればよいですか？",
+      "html": "<ol>\n    <li>スクリーンショットではなく、公開されている動画のURLをコピーしてください。</li>\n    <li>貼り付けて<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>最初にリストされている公開ファイルをダウンロードするか、画像URLをコピーしてください。</li>\n  </ol>"
+    },
+    {
+      "heading": "スクリーンショットはどのような場合にまだ役立つのか？",
+      "html": "<p>スクリーンショットは、UIのバグや動画内の特定の場面を記録する場合にのみ使用してください。公式サムネイル、ブログのメイン画像、または公開設定が残っている共有画像として使用しないでください。</p>\n  <p><a href=\"https://www.11tik.com/\">実際の公開サムネイルを取得する →</a></p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "スクリーンショットと実際のサムネイルの違いは何ですか？",
+      "answer": "スクリーンショットは、画面とプレーヤーのフレームをキャプチャしたものです。実際のサムネイルは、YouTubeがその動画IDに対応するi.ytimg.comにホストしているJPEGまたはWebPファイルです。",
+      "answerHtml": "スクリーンショットは、画面とプレーヤーのフレームをキャプチャしたものです。実際のサムネイルは、YouTubeがその動画IDに対応するi.ytimg.comにホストしているJPEGまたはWebPファイルです。"
+    },
+    {
+      "question": "Google画像検索やソーシャルメディアのプレビューでスクリーンショットがうまく表示されないのはなぜですか？",
+      "answer": "それらはしばしば、アスペクト比が間違っていたり、余分なUIが含まれていたり、過剰な圧縮がかかっていたりします。CMSやOpen Graphのフィールドでは、クリーンな16:9のパブリック静止画が求められます。",
+      "answerHtml": "それらはしばしば、アスペクト比が間違っていたり、余分なUIが含まれていたり、過剰な圧縮がかかっていたりします。CMSやOpen Graphのフィールドでは、クリーンな16:9のパブリック静止画が求められます。"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+}

@@ -1,0 +1,98 @@
+{
+  "contentId": "what-is-maxresdefaultjpg-when-youtube",
+  "articleId": "what-is-maxresdefaultjpg-when-youtube",
+  "locale": "ar",
+  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "status": "ready",
+  "title": "ما هو maxresdefault.jpg؟ ولماذا يُظهر خطأ 404، وماذا يُمكن تحميله بدلاً منه؟ | 11tik",
+  "description": "عادةً ما تكون دقة الصورة maxresdefault.jpg 1280×720 عند نشرها على يوتيوب. ظهور خطأ 404 أمر طبيعي - استخدم الصورة العامة التالية الحقيقية، وليس اسم ملف مُخمن.",
+  "h1": "ما هو maxresdefault.jpg؟ ولماذا يُظهر خطأ 404، وماذا يُمكن تحميله بدلاً منه؟",
+  "ogTitle": "ما هو maxresdefault.jpg؟ ولماذا يُظهر خطأ 404، وماذا يُمكن تحميله بدلاً منه؟",
+  "ogDescription": "عادةً ما تكون دقة الصورة maxresdefault.jpg 1280×720 عند نشرها على يوتيوب. ظهور خطأ 404 أمر طبيعي - استخدم الصورة العامة التالية الحقيقية، وليس اسم ملف مُخمن.",
+  "imageAlt": "استكشاف الأخطاء وإصلاحها من عنوان URL افتراضي ذي دقة قصوى مُفترضة يُظهر خطأ 404 إلى حجم الصورة المصغرة التالي المُعتمد على YouTube",
+  "faqHeading": "التعليمات",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png",
+      "alt": "استكشاف الأخطاء وإصلاحها من عنوان URL افتراضي ذي دقة قصوى مُفترضة يُظهر خطأ 404 إلى حجم الصورة المصغرة التالي المُعتمد على YouTube",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
+      "alt": "سلم أسماء ملفات الصور المصغرة على يوتيوب من maxresdefault إلى default، مع إظهار أن الدرجات المفقودة يتم تخطيها.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "إجابة سريعة",
+      "html": "<p><code>maxresdefault.jpg</code>هو اسم ملف صورة مصغرة عام على شبكة توصيل المحتوى (CDN) الخاصة بالصور على يوتيوب. عندما يكون الملف موجودًا، فإنه عادةً ما يكون<strong>1280×720</strong>. إنها<strong>لا</strong>مضمون لكل فيديو. يشير الخطأ 404 (أو رمز رمادي صغير) إلى أن هذا الفيديو لم يُنشر أبدًا لهذا المعرّف. الصق رابط المشاهدة في<a href=\"https://www.11tik.com/\">11tik</a>ثم قم بتنزيل الحجم الأول المدرج - لقد تجاوزت الأداة بالفعل الأسماء المفقودة ورتبت الناجين مثل<code>hq720</code>،<code>sddefault</code>، أو<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">إن ملف maxres المفقود هو مشكلة احتياطية، وليس دليلاً على أن الفيديو لا يحتوي على صورة مصغرة.</p>"
+    },
+    {
+      "heading": "ما هو maxresdefault.jpg؟",
+      "html": "<p>إنه اسم ملف، وليس ضمانًا سحريًا للجودة. يبدو عنوان ملف JPEG المعتاد كالتالي:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>عندما نشر موقع يوتيوب أيضًا نسخة WebP مماثلة، يقوم 11tik بالتحقق مما يلي:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>كلاهما يجلسان على<code>i.ytimg.com</code>إنها صور ثابتة - وليست بث فيديو مباشر، وليست تصديرًا خاصًا من الاستوديو، وليست نسخة أصلية بدقة 4K. يتم تغطية توقعات البكسل والأحجام الأخرى في<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">دليل حجم ودقة الصور المصغرة</a>يتم تناول موضوع إنشاء عناوين URL في<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">دليل عناوين URL للصور المصغرة</a>.</p>"
+    },
+    {
+      "heading": "لماذا لا يزال بإمكان فيديو حقيقي على يوتيوب أن يُرجع خطأ 404 عند استخدام دقة قصوى؟",
+      "html": "<ul>\n    <li>لم يتم الحصول على نسخة مشتقة من أعلى دقة للملفات المرفوعة سابقاً.</li>\n    <li>كان حجم مصدر الصورة المصغرة المخصصة أصغر من 1280×720.</li>\n    <li>لا يزال الاستوديو يعمل على معالجة ملف تحميل مخصص جديد.</li>\n    <li>تتوقف بعض المقاطع القصيرة والصور الثابتة المولدة تلقائياً عند الأحجام المتوسطة.</li>\n    <li>الفيديو مقيد ولا يعرض صوراً ثابتة للعامة على الإطلاق.</li>\n  </ul>\n  <p>إن صفحة المشاهدة العاملة تثبت فقط صحة مُعرّف الفيديو، ولا تثبت صحة كل اسم ملف ضمنه.<code>/vi/</code>موجود.</p>"
+    },
+    {
+      "heading": "كيفية التعرف على نسخة غير متوفرة",
+      "html": "<p>افتح رابط المرشح في علامة تبويب جديدة. تبدو حالات الفشل كما يلي:</p>\n  <ul>\n    <li>خطأ HTTP / استجابة فارغة</li>\n    <li>بلاطة رمادية صغيرة جدًا أو بلاطة افتراضية بينما كنت تتوقع دقة 1280×720</li>\n    <li>صورة يتم تحميلها ولكن من الواضح أنها صورة مؤقتة لملف عالي الدقة مفقود</li>\n  </ul>\n  <p>يُصنّف مُدقّق المتصفح الخاص بـ 11tik الملفات المرشحة على أنها غير صالحة عندما تفشل الصورة في التحميل أو عندما يتقلص حجمها المتوقع الكبير إلى مساحة صغيرة جدًا (حوالي 120×90). ولا تظهر هذه الملفات المرشحة أبدًا على أنها بطاقات \"عالية الدقة مزيفة\".</p>"
+    },
+    {
+      "heading": "المتغيرات الاحتياطية 11tik تتحقق بالفعل",
+      "html": "<p>ترتيب اكتشاف المرشحين العموميين (من الأعلى إلى الأدنى):</p>\n  <table>\n    <thead>\n      <tr><th>اسم الملف</th><th>نمط المسار</th><th>الحجم النموذجي عند وجوده</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>فئة 1280×720</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>يتم تخطي الصفوف المفقودة. أول تنزيل مدرج هو الأعلى بقاءً - وليس أطول اسم كتبته. يتم شرح اختيار التنسيق بين WebP و JPEG في<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">مقارنة بين صور يوتيوب المصغرة بصيغة WebP و JPEG</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">تعامل مع أسماء الملفات كخطوات اختيارية. انزل إلى الأسفل حتى تستجيب صورة حقيقية.</p>"
+    },
+    {
+      "heading": "كيف يتحقق 11tik من التوافر",
+      "html": "<ol>\n    <li>قم بتحليل عنوان URL للمشاهدة العامة، أو المقاطع القصيرة، أو البث المباشر، أو التضمين، أو youtu.be للحصول على المعرف المكون من 11 حرفًا.</li>\n    <li>قم بإنشاء عناوين URL المرشحة من القائمة المحددة مسبقًا أعلاه.</li>\n    <li>قم بتحميل كل مرشح كصورة في المتصفح.</li>\n    <li>احتفظ فقط بالنجاحات غير المؤقتة؛ قم بالترتيب حسب المستوى، والبكسلات، وتعديل بسيط في درجة WebP.</li>\n    <li>اعرض القائمة المصنفة حتى تتمكن من تنزيل أو نسخ رابط URL يعمل.</li>\n  </ol>\n  <p>ولهذا السبب تختفي روابط maxres التي تم تخمينها من واجهة المستخدم عند فشلها: يرفض المستخرج إنشاء ملف 1280×720.</p>"
+    },
+    {
+      "heading": "قائمة التحقق العملية لحل المشكلات",
+      "html": "<ol>\n    <li>تأكد من أن الفيديو عام وأن المعرف صحيح.</li>\n    <li>امتحان<code>maxresdefault.jpg</code>مرة واحدة. إذا فشلت، فتوقف عن التخمين.</li>\n    <li>ألصق نفس الرابط في<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>قم بتنزيل الصورة الثابتة الأولى المدرجة، أو انسخ رابط الصورة الخاص بها.</li>\n    <li>إذا لم يظهر شيء، فقد يكون الفيديو خاصًا، أو محذوفًا، أو مقيدًا بعمر معين، أو بدون صور ثابتة عامة.</li>\n    <li>للاستخدام مع أنظمة إدارة المحتوى، يُفضّل استخدام نسخة مُستضافة من ملف ثابت مُدقّق بدلاً من مسار CDN مُرتبط مباشرةً. انظر<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">مدونة / دليل Open Graph</a>.</li>\n  </ol>"
+    },
+    {
+      "heading": "الأخطاء الشائعة",
+      "html": "<ul>\n    <li>بافتراض أن كل فيديو له دقة قصوى (maxres) لأن أحد الفيديوهات الشائعة له دقة قصوى.</li>\n    <li>البرمجة الثابتة<code>maxresdefault.jpg</code>في بيئة الإنتاج باستخدام لغة HTML بدون فحص.</li>\n    <li>وصف ممتد<code>hqdefault</code>\"ماكس ريس\".</li>\n    <li>الخلط بين لقطة شاشة للاعب وصورة ثابتة من شبكة توصيل المحتوى (CDN) —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">لقطة الشاشة مقابل الصورة المصغرة الحقيقية</a>.</li>\n    <li>أتوقع دقة 4K. الدقة القصوى العامة عادةً ما تكون 1280×720 عند توفرها.<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">دليل عالي الجودة</a>.</li>\n  </ul>"
+    },
+    {
+      "heading": "الخطوة التالية",
+      "html": "<p>ألصق رابط يوتيوب عام في<a href=\"https://www.11tik.com/\">مستخرج</a>إذا كان ملف maxres مفقودًا، فاحتفظ بالصورة الثابتة التالية - فهذا هو ملف HD الأصلي لهذا الفيديو.</p>\n  <p class=\"yte-bio\">بقلم 11tik. صور ثابتة متاحة للجمهور فقط؛ لا يُسمح بتنزيل الفيديو.<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">خصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "هل تعني رسالة الخطأ 404 أن الفيديو لا يحتوي على صورة مصغرة على الإطلاق؟",
+      "answer": "لا، هذا يعني عادةً أن اسم ملف واحد مفقود. أما الملفات متوسطة الحجم فغالباً ما تكون موجودة.",
+      "answerHtml": "<p>لا، هذا يعني عادةً أن اسم ملف واحد مفقود. أما الملفات متوسطة الحجم فغالباً ما تكون موجودة.</p>"
+    },
+    {
+      "question": "هل يُعدّ hq720 بديلاً جيداً لـ maxresdefault؟",
+      "answer": "عند التحقق من صحتها، نعم، ستكون ضمن نفس الفئة العالية (حوالي 1280×720). لكن هذا ليس مضموناً أيضاً.",
+      "answerHtml": "<p>عند التحقق من صحتها، نعم، ستكون ضمن نفس الفئة العالية (حوالي 1280×720). لكن هذا ليس مضموناً أيضاً.</p>"
+    },
+    {
+      "question": "هل يجب عليّ إعادة محاولة استخدام maxresdefault لاحقاً؟",
+      "answer": "نعم، بعد انتهاء معالجة التحميل المخصص الجديد في Studio. وإلا، فاحتفظ بالنسخة الاحتياطية التي تم التحقق منها.",
+      "answerHtml": "<p>نعم، بعد انتهاء معالجة التحميل المخصص الجديد في Studio. وإلا، فاحتفظ بالنسخة الاحتياطية التي تم التحقق منها.</p>"
+    },
+    {
+      "question": "هل يمكن أن توجد دقة قصوى (maxres) بصيغة WebP ولكن ليس بصيغة JPEG؟",
+      "answer": "نعم. يتحقق 11tik من قيمة WebP maxres بشكل منفصل ضمن /vi_webp/. قد يكون أحدهما موجودًا، أو كلاهما، أو لا شيء منهما.",
+      "answerHtml": "<p>نعم. يتحقق 11tik من قيمة WebP maxres بشكل منفصل ضمن<code>/vi_webp/</code>قد يكون أحدهما موجوداً، أو كلاهما، أو لا شيء منهما موجوداً.</p>"
+    },
+    {
+      "question": "لماذا لا تزال بعض الأدوات تُظهر بطاقة رسومات ذات دقة قصوى معطلة؟",
+      "answer": "يطبعون رابط القالب دون تحميل الصورة. 11tik يعرض فقط الملفات التي تستجيب كصور.",
+      "answerHtml": "<p>يطبعون رابط القالب دون تحميل الصورة. 11tik يعرض فقط الملفات التي تستجيب كصور.</p>"
+    },
+    {
+      "question": "كيف يمكنني تنزيل النسخة الاحتياطية بسرعة؟",
+      "answer": "استخدم دليل التنزيل: الصق الملف، استخرجه، ثم احفظ الملف الأول المدرج.",
+      "answerHtml": "<p>استخدم<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">دليل التنزيل</a>: الصقي، استخرجي، احفظي الملف الأول المدرج.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">بقلم 11tik. صور ثابتة متاحة للجمهور فقط؛ لا يُسمح بتنزيل الفيديو.<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">خصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+}

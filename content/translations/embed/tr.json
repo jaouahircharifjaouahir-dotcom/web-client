@@ -1,0 +1,32 @@
+{
+  "contentId": "embed",
+  "articleId": "embed",
+  "locale": "tr",
+  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "status": "ready",
+  "title": "11tik Küçük Resim Çıkarıcıyı Gömün | 11tik",
+  "description": "Blogunuza, dokümanlarınıza veya içerik oluşturucu araç setinize ücretsiz bir YouTube küçük resim çıkarıcı ekleyin. Widget 11tik'den yüklenir ve kendini yeniden boyutlandırır. API anahtarı gerekmez.",
+  "h1": "11tik Küçük Resim Çıkarıcıyı Gömün",
+  "ogTitle": "11tik Küçük Resim Çıkarıcıyı Gömün",
+  "ogDescription": "Blogunuza, dokümanlarınıza veya içerik oluşturucu araç setinize ücretsiz bir YouTube küçük resim çıkarıcı ekleyin. Widget 11tik'den yüklenir ve kendini yeniden boyutlandırır. API anahtarı gerekmez.",
+  "imageAlt": "",
+  "faqHeading": "SSS",
+  "images": [],
+  "sections": [
+    {
+      "heading": "iframe kod parçası",
+      "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
+    },
+    {
+      "heading": "Tüzük",
+      "html": "<ul>\n    <li>Saklayın<code>id=\"yte-app\"</code>Bu özellik sayesinde yükseklik senkronizasyonu çalışır.</li>\n    <li>İndirme düğmelerini kırpacak şekilde iframe'i sabit bir yüksekliğe sarmayın.</li>\n    <li>Geri bağlantı kurmak<a href=\"https://www.11tik.com/\">www.11tik.com</a>Kullanıcıların aracın tüm özelliklerini açmasına yardımcı olur.</li>\n  </ul>"
+    },
+    {
+      "heading": "Derin bağlantılar",
+      "html": "<p>Hazır bir veri setini paylaşın<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Çıkarma cihazını açın.</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": ""
+}

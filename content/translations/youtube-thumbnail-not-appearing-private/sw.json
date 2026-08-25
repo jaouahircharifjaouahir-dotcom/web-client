@@ -1,0 +1,115 @@
+{
+  "contentId": "youtube-thumbnail-not-appearing-private",
+  "articleId": "youtube-thumbnail-not-appearing-private",
+  "locale": "sw",
+  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "status": "ready",
+  "title": "Kwa Nini Kijipicha cha YouTube Hakitaonekana: Video za Faragha, Zilizowekewa Vizuizi vya Umri, au Zinazosindikwa | 11tik",
+  "description": "Wakati hakuna YouTube ya umma bado inapakia, video inaweza kuwa ya faragha, iliyozuiliwa, iliyosindikwa, au iliyofutwa—sio tu jina la faili la maxres linalokosekana.",
+  "h1": "Kwa Nini Kijipicha cha YouTube Hakitaonekana: Video za Faragha, Zilizowekewa Vizuizi vya Umri, au Zinazosindikwa",
+  "ogTitle": "Kwa Nini Kijipicha cha YouTube Hakitaonekana: Video za Faragha, Zilizowekewa Vizuizi vya Umri, au Zinazosindikwa",
+  "ogDescription": "Wakati hakuna YouTube ya umma bado inapakia, video inaweza kuwa ya faragha, iliyozuiliwa, iliyosindikwa, au iliyofutwa—sio tu jina la faili la maxres linalokosekana.",
+  "imageAlt": "Mtiririko kutoka kwa URL ya YouTube kupitia kitambulisho cha video na umma bado huangalia matokeo yanayopatikana au yasiyopatikana",
+  "faqHeading": "Maswali Yanayoulizwa Mara kwa Mara",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png",
+      "alt": "Mtiririko kutoka kwa URL ya YouTube kupitia kitambulisho cha video na umma bado huangalia matokeo yanayopatikana au yasiyopatikana",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png",
+      "alt": "Ulinganisho wa kando wa ukubwa wa kijipicha unaokosekana dhidi ya kutokuwepo kwa kijipicha cha umma kinachoweza kutumika kwa video",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Jibu la haraka",
+      "html": "<p>URL halali ya YouTube inathibitisha kuwa una kitambulisho cha video. Inathibitisha hivyo<strong>si</strong>kuthibitisha kwamba YouTube ilichapisha faili ya vijipicha vya umma inayoweza kutumika kwenye picha ya CDN. Vichochezi kama<a href=\"https://www.11tik.com/\">11tik</a>angalia tu picha za umma. Ikiwa hakuna kati ya picha hizo zinazopakiwa, kifaa kinaripoti kwamba hakuna kijipicha cha umma kilichopatikana. Matokeo hayo mara nyingi hufuatilia ufikiaji wa video au hali—ya faragha, ya umri au iliyozuiliwa vinginevyo, bado inasindikwa, imefutwa, au haipatikani vinginevyo—badala ya jina moja la ukubwa linalokosekana kama vile<code>maxresdefault.jpg</code>.</p>\n  <p>Ukaguzi muhimu wa uaminifu: 11tik hufanya hivyo<strong>si</strong>ainisha chanzo halisi kama cha faragha, kilichowekewa vikwazo vya umri, au usindikaji. Lebo hizo ni maelezo ya kawaida ambayo watumiaji wanapaswa kuthibitisha kwenye YouTube yenyewe. Kitoa data kinakuambia tu kama umma bado unaweza kuthibitishwa.</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Njia ya utambuzi: URL → Kitambulisho cha video → bado ni ya umma → inapatikana dhidi ya haipatikani → cha kuthibitisha baadaye.</p>"
+    },
+    {
+      "heading": "Maana ya \"kijipicha kidogo hakipatikani\"",
+      "html": "<p>Kwa vitendo, \"kutopatikana\" kunamaanisha moja ya matatizo mawili tofauti:</p>\n  <ol>\n    <li><strong>Kiwango cha video hakipatikani:</strong>wagombea wa umma bado wanashindwa katika kila kitu. Hupati picha ya umma inayoweza kupakuliwa kwa kitambulisho hicho kwa sasa.</li>\n    <li><strong>Lahaja haipatikani:</strong>Jina moja la faili la kiwango cha juu halipo (mara nyingi huwa kubwa), lakini ukubwa mdogo wa umma bado unapakia. Hilo ni suala la ukubwa/fallback, si kijipicha kinachokosekana kwa video nzima.</li>\n  </ol>\n  <p>Makala haya yanashughulikia kesi ya kwanza. Kwa kesi ya pili—hasa<code>maxresdefault.jpg</code>404s—tumia<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">mwongozo wa utatuzi wa matatizo wa maxresdefault</a>.</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kushoto: toleo moja halipo, saizi zingine za umma bado zinafanya kazi. Kulia: hakuna picha ya umma inayoweza kutumika kwa kitambulisho cha video.</p>"
+    },
+    {
+      "heading": "Picha za umma dhidi ya hali ya ufikiaji wa video",
+      "html": "<p>YouTube huhifadhi kurasa za kutazama na picha tofauti. Faili ndogo za umma kwa kawaida huishi chini ya seva kama vile<code>i.ytimg.com</code>na huwekwa funguo na kitambulisho cha video chenye herufi 11. Zana zinazotoa vijipicha bila kuingia katika akaunti yako zinaweza kuomba faili hizo za umma pekee.</p>\n  <p>Wakati video haijaonyeshwa kwenye vifungashio vya umma—au wakati derivatives haziko tayari bado—ukaguzi wa picha hushindwa hata kama mfuatano uliobandikwa ulionekana kama saa ya kawaida, Kaptura, kiungo cha moja kwa moja, au kiungo kilichopachikwa. Jinsi URL hizo zinavyounda ramani ya kitambulisho imefunikwa katika<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL ya kijipicha cha YouTube</a>Jinsi ya kuhifadhi kitu kilichopo wakati kipo imefunikwa katika<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">mwongozo wa kupakua</a>.</p>"
+    },
+    {
+      "heading": "Video za faragha",
+      "html": "<p>Upakiaji wa faragha unalenga hadhira ndogo. Ikiwa YouTube haichapishi vijipicha vya umma kwa ajili ya kitambulisho hicho, kitoaji cha umma cha kivinjari hakiwezi kuvibuni. Kufungua URL ya saa ukiwa umeingia kwani mmiliki bado anaweza kuonyesha video ndani ya YouTube; hiyo haimaanishi kwamba CDN ya umma bado inapatikana kwa maombi ya picha zisizojulikana.</p>\n  <p>Cha kuangalia: fungua URL katika dirisha la faragha/la chinichini ukiwa umetoka. Ikiwa YouTube yenyewe itazuia video, chukulia uchimbaji wa vijipicha kama umezuiwa na muundo.</p>"
+    },
+    {
+      "heading": "Vikwazo vya umri na vikwazo vingine vya ufikiaji",
+      "html": "<p>Video zilizo na umri, wanachama pekee, au zilizo na vikwazo sawa na hivyo zinaweza kutenda kama maudhui ya faragha kwa ajili ya kurejesha picha za umma: kitambulisho kinaweza kuchanganua kwa usahihi, lakini picha za umma hazijawahi kuthibitishwa. Mipaka ya eneo na milango ya akaunti inaweza kutoa matokeo sawa tupu kwa zana ya umma.</p>\n  <p>Tena, 11tik haitaweka lebo kwenye aina ya kizuizi. Unathibitisha hali ya ufikiaji kwenye YouTube; kitoa taarifa tu kama umma bado umepakiwa.</p>"
+    },
+    {
+      "heading": "Video bado zinachakata",
+      "html": "<p>\"Uchakataji\" huonekana kwa njia mbili zinazohusiana:</p>\n  <ul>\n    <li><strong>Vipakiaji vipya kabisa:</strong>Ukurasa wa kutazama unaweza kuonekana kabla ya kila picha inayotokana na umma kuwa tayari. Jaribu tena baadaye ukitumia URL hiyo hiyo.</li>\n    <li><strong>Uboreshaji wa kijipicha maalum katika Studio:</strong>baada ya kubadilisha sanaa, faili za CDN za umma zinaweza kubaki nyuma. Ukubwa wa chini unaweza kuonekana kabla ya zile za juu, au seti inaweza kuwa haijakamilika kwa muda mfupi.</li>\n  </ul>\n  <p>Kama<em>baadhi</em>saizi za umma tayari zinafanya kazi na ni jina la juu zaidi pekee linalokosekana, badilisha hadi<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">makala ya maxresdefault</a>Kama<em>hapana</em>umma bado unathibitisha bado, subiri usindikaji, kisha uangalie tena<a href=\"https://www.11tik.com/\">11tik</a>.</p>"
+    },
+    {
+      "heading": "Maudhui yaliyofutwa au yasiyopatikana vinginevyo",
+      "html": "<p>Video zilizoondolewa, vitambulisho vilivyovunjika, na baadhi ya vipakiaji vilivyositishwa haviachi vifungashio vya umma vinavyoaminika. URL ya saa iliyoalamishwa bado inaweza kuonekana sawa kimtindo huku kila picha ikishindwa. Tibu kufutwa/kutopatikana kwa njia sawa na hitilafu zingine za kiwango cha video: thibitisha hali ya ukurasa wa kutazama kwenye YouTube, kisha acha kutarajia CDN iliyosakinishwa.</p>"
+    },
+    {
+      "heading": "Kwa nini URL halali haitoshi",
+      "html": "<p>Uchanganuzi hufanikiwa wakati mfuatano una kitambulisho cha herufi 11 katika muundo unaoungwa mkono. Utoaji hufanikiwa tu wakati angalau kijipicha kimoja cha umma kinathibitishwa kama picha halisi. Hatua hizo ni huru:</p>\n  <pre>URL parses → video ID known → public image candidates checked → best still ranked (or none)</pre>\n  <p>Kwenye 11tik, picha tupu tupu hujitokeza kama ujumbe wazi wa mtindo wa \"hakuna kijipicha cha umma\". Bidhaa haienezi hilo hadi kuwa kiainishaji cha faragha dhidi ya lango la umri dhidi ya usindikaji.</p>"
+    },
+    {
+      "heading": "Cha kuangalia kwanza (mtiririko wa vitendo)",
+      "html": "<ol>\n    <li>Bandika URL hiyo hiyo kwenye<a href=\"https://www.11tik.com/\">11tik</a>na subiri ukaguzi wa ukubwa wa umma umalizike.</li>\n    <li>Ikiwa angalau ukubwa mmoja utaonekana, unafanya hivyo<strong>si</strong>kuwa na ukosefu wa video katika kiwango cha video—pakua video hiyo tuli au soma miongozo ya ukubwa/upeo kwa ajili ya chaguo la ubora.</li>\n    <li>Ikiwa hakuna kinachoonekana, fungua ukurasa wa saa/Fupi umetoka. Kumbuka ikiwa YouTube inaonyesha video, inaomba uthibitisho wa kuingia/umri, au inasema haipatikani.</li>\n    <li>Ikiwa unamiliki video na umepakia au kubadilisha kijipicha maalum, subiri Studio ichakate kisha ujaribu tena.</li>\n    <li>Ikiwa YouTube itaonyesha video hadharani na 11tik bado haipati chochote, jaribu tena baadaye mara moja; matokeo tupu yanayoendelea kwa kawaida humaanisha kuwa picha za umma hazijafichuliwa kwa kitambulisho hicho.</li>\n  </ol>"
+    },
+    {
+      "heading": "Jedwali la utambuzi",
+      "html": "<table>\n    <thead>\n      <tr><th>Unachokiona</th><th>Darasa linalowezekana</th><th>Hatua inayofuata</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tik inaorodhesha ukubwa mmoja au zaidi</td><td>Picha za umma zipo</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Pakua mwongozo</a>/ chaguo la ukubwa</td></tr>\n      <tr><td>Ni maxres pekee zinazoshindwa; kazi ya hq/sd</td><td>Chaguo halipatikani</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">utatuzi wa matatizo ya maxres</a></td></tr>\n      <tr><td>Hakuna ukubwa; YouTube inaomba kuingia / lango la umri</td><td>Kizuizi cha ufikiaji</td><td>Tumia video ya umma, au ukubali kwamba uchimbaji wa umma hauwezi kuendelea</td></tr>\n      <tr><td>Hakuna ukubwa; mmiliki amepakia/kubadilisha sanaa</td><td>Kuchelewa kwa usindikaji</td><td>Subiri, kisha angalia tena URL hiyo hiyo</td></tr>\n      <tr><td>Hakuna ukubwa; YouTube inasema faragha/haipatikani</td><td>Hali ya faragha au iliyofutwa</td><td>Hakuna umma bado wa kutoa</td></tr>\n      <tr><td>URL haitachanganua</td><td>Kiungo kibaya au kisichoungwa mkono</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL / Kitambulisho cha video</a></td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Tofauti haipo dhidi ya kijipicha cha umma kinachoweza kutumika",
+      "html": "<p>Mara nyingi watu hubandika URL ya maxres iliyotengenezwa kwa mkono, hutazama 404, na kuhitimisha \"hakuna kijipicha.\" Hitimisho hilo mara nyingi huwa si sahihi. Jina la faili la kiwango cha juu linalokosekana ni la kawaida. Kutopatikana kwa kiwango cha video kunamaanisha kuwa pasi kamili ya kitoaji hairudishi chochote kinachoweza kutumika.</p>\n  <p>Kanuni ya kidole gumba:</p>\n  <ul>\n    <li>Nahitaji kilicho bora zaidi<em>zilizopo</em>faili ya umma → upakuaji / ukubwa / miongozo ya maxres.</li>\n    <li>Nahitaji kuelewa kwa nini<em>hakuna kitu</em>umma huonekana → makala haya + ujumbe wa ufikiaji wa YouTube mwenyewe.</li>\n  </ul>"
+    },
+    {
+      "heading": "Wakati wa kutumia mwongozo gani wa 11tik",
+      "html": "<ul>\n    <li><strong>Makala haya:</strong>picha za umma zisizoweza kutumika; maswali ya ufikiaji au ya kueleza.</li>\n    <li><strong>Mwongozo wa Maxres:</strong>Jina la faili la HD halipo wakati ukubwa mwingine wa umma upo.</li>\n    <li><strong>Mwongozo wa URL:</strong>kutafuta kitambulisho na kujenga/kunakili URL za picha ambazo zipo.</li>\n    <li><strong>Pakua mwongozo:</strong>kuokoa picha baada ya ukubwa kuonekana.</li>\n  </ul>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Je, ukurasa wa kutazama unaofanya kazi unahakikisha kijipicha cha umma?",
+      "answer": "Hapana. Uzoefu wa kutazama na faili za CDN zenye picha za umma zinahusiana lakini si sawa. Mipaka ya ufikiaji na usindikaji unaweza kukuacha na kitambulisho cha video na hakuna picha ya umma inayoweza kutolewa.",
+      "answerHtml": "<p>Hapana. Uzoefu wa kutazama na faili za CDN zenye picha za umma zinahusiana lakini si sawa. Mipaka ya ufikiaji na usindikaji unaweza kukuacha na kitambulisho cha video na hakuna picha ya umma inayoweza kutolewa.</p>"
+    },
+    {
+      "question": "Je, 11tik anaweza kuniambia kama video ni ya faragha au imewekewa vikwazo vya umri?",
+      "answer": "Hapana. 11tik inaripoti tu kama umma bado unaweza kuthibitishwa. Thibitisha vikwazo vya faragha, vya umri, au vingine kwenye YouTube.",
+      "answerHtml": "<p>Hapana. 11tik inaripoti tu kama umma bado unaweza kuthibitishwa. Thibitisha vikwazo vya faragha, vya umri, au vingine kwenye YouTube.</p>"
+    },
+    {
+      "question": "Nimepakia kijipicha maalum. Kwa nini uondoaji ni tupu?",
+      "answer": "Usindikaji wa studio unaweza kuchelewa. Subiri, kisha ubandike URL ile ile ya umma tena. Ikiwa baadhi ya ukubwa unaonekana lakini maxres haionekani, soma mwongozo wa maxres badala ya kudhani video haina kijipicha.",
+      "answerHtml": "<p>Usindikaji wa studio unaweza kuchelewa. Subiri, kisha ubandike URL ile ile ya umma tena. Ikiwa baadhi ya ukubwa unaonekana lakini maxres haionekani, soma mwongozo wa maxres badala ya kudhani video haina kijipicha.</p>"
+    },
+    {
+      "question": "Je, hili ni tatizo sawa na maxresdefault 404?",
+      "answer": "Wakati mwingine tu. Kiwango cha juu cha 404 chenye marudio yanayofanya kazi ni suala tofauti. Matokeo tupu kwa wagombea wa umma ni kutopatikana kwa kiwango cha video.",
+      "answerHtml": "<p>Wakati mwingine tu. Kiwango cha juu cha 404 chenye marudio yanayofanya kazi ni suala tofauti. Matokeo tupu kwa wagombea wa umma ni kutopatikana kwa kiwango cha video.</p>"
+    },
+    {
+      "question": "Je, kuingia kwenye YouTube ndani ya 11tik kutafungua picha za faragha?",
+      "answer": "Hapana. 11tik ni kifaa cha kutoa data cha umma kwenye kivinjari. Hakiepuki vifungashio vya faragha au vilivyofungwa.",
+      "answerHtml": "<p>Hapana. 11tik ni kifaa cha kutoa data cha umma kwenye kivinjari. Hakiepuki vifungashio vya faragha au vilivyofungwa.</p>"
+    },
+    {
+      "question": "Nijaribu nini ikiwa URL inaonekana sahihi?",
+      "answer": "Thibitisha video imefunguliwa ikiwa imetoka, subiri ikiwa umebadilisha tu sanaa ya Studio, kisha endesha tena uchimbaji kwenye 11tik. Matokeo tupu yanayoendelea yanamaanisha kuwa hakuna umma unaopatikana kwa kitambulisho hicho kwa sasa.",
+      "answerHtml": "<p>Thibitisha video imefunguliwa ikiwa imetoka, subiri ikiwa umebadilisha tu sanaa ya Studio, kisha endesha tena uchimbaji kwenye 11tik. Matokeo tupu yanayoendelea yanamaanisha kuwa hakuna umma unaopatikana kwa kitambulisho hicho kwa sasa.</p>"
+    },
+    {
+      "question": "Je, \"hakuna kijipicha cha umma\" kinamaanisha faili ya video imepotea?",
+      "answer": "Sio kila wakati. Video inaweza bado kuwepo kwa watazamaji wanaostahiki ilhali picha za umma zimezuiwa au hazijawa tayari. Angalia ujumbe wa ukurasa wa YouTube mwenyewe.",
+      "answerHtml": "<p>Sio kila wakati. Video inaweza bado kuwepo kwa watazamaji wanaostahiki ilhali picha za umma zimezuiwa au hazijawa tayari. Angalia ujumbe wa ukurasa wa YouTube mwenyewe.</p>"
+    }
+  ],
+  "conclusionHtml": "<h2>Hitimisho</h2>\n<p>Wakati kijipicha \"hakitaonekana,\" tenganisha maswali mawili: Je, kuna jina lolote la umma lililothibitishwa bado? Au je, jina moja tu la faili la kiwango cha juu lilishindwa? Kushindwa kwa kiwango cha video kwa kawaida hufuatilia vifungashio vya faragha, vilivyozuiliwa, vilivyosindikwa, vilivyofutwa, au vinginevyo visivyo vya umma—sio jambo la ajabu linalokosekana<code>maxresdefault</code>string. Tumia 11tik kujaribu upatikanaji wa umma kwa uaminifu, kisha fuata maxres, URL, au mwongozo wa kupakua kwa hatua inayofuata ya kulinganisha.</p>\n  <p><a href=\"https://www.11tik.com/\">Angalia kama kijipicha cha umma cha YouTube kipo kwenye 11tik →</a></p>",
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Masharti</a>Usaidizi rasmi wa muundaji wa vijipicha maalum:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Pakia vijipicha maalum vya video</a>.</p>"
+}

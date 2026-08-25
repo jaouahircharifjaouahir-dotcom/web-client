@@ -1,0 +1,102 @@
+{
+  "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
+  "locale": "hu",
+  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "status": "ready",
+  "title": "WebP vs. JPEG YouTube indexképek: Melyik formátumot érdemes használni? | 11tik",
+  "description": "A YouTube közzétehet JPEG és WebP indexképfájlokat. A 11tik formátumot részesítsd előnyben, amelyet az esetedben ellenőrizhetsz – a WebP nem mindig érhető el.",
+  "h1": "WebP vs. JPEG YouTube indexképek: Melyik formátumot érdemes használni?",
+  "ogTitle": "WebP vs. JPEG YouTube indexképek: Melyik formátumot érdemes használni?",
+  "ogDescription": "A YouTube közzétehet JPEG és WebP indexképfájlokat. A 11tik formátumot részesítsd előnyben, amelyet az esetedben ellenőrizhetsz – a WebP nem mindig érhető el.",
+  "imageAlt": "A JPEG és WebP YouTube indexképek URL-útvonalainak egymás melletti összehasonlítása a i.ytimg.com oldalon",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png",
+      "alt": "A JPEG és WebP YouTube indexképek URL-útvonalainak egymás melletti összehasonlítása a i.ytimg.com oldalon",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png",
+      "alt": "Használati eset táblázat, amely összehasonlítja a weboldal CMS-ét, a közvetlen CDN-linkeket és az archív letöltéseket JPEG és WebP YouTube-bélyegképek esetén",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>A legtöbb letöltés és CMS feltöltés esetén tartsa meg a<strong>validált fájl 11tik listázza először</strong>A JPEG továbbra is nyilvánosan elérhető marad.<code>i.ytimg.com/vi/…</code>A WebP egyes videóknál a következőképpen jelenik meg:<code>maxresdefault.webp</code>alatt<code>/vi_webp/</code>A WebP gyakran kisebb, hasonló vizuális minőség mellett, de nem minden ID-hez publikálják. A 11tik igen.<strong>nem</strong>A WebP-t letöltéskor JPEG formátumba konvertálod – ez elmenti a YouTube által már tárolt bájtokat (a JPEG letöltések csak egy kis metaadat-megjegyzést kapnak).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ugyanaz a videoazonosító, különböző tárolók és elérési utak – csak akkor, ha a YouTube mindkettőt közzétette.</p>"
+    },
+    {
+      "heading": "Hogyan jelennek meg a YouTube bélyegkép-formátumai a 11tik-ban",
+      "html": "<p>A 11tik minőségi előbeállításai a következők:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(pantomim<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ alatt<code>/vi/</code>(pantomim<code>image/jpeg</code>)</li>\n  </ul>\n  <p>A jelöltek betöltődnek a böngészőbe. A hibás és helyőrzők elvesznek. A rangsorolás réteget, pixelterületet, várható méretbeli egyezést és egy kis...<strong>−8 pont büntetés<code>.webp</code>URL-ek</strong>így az azonos szintű JPEG és WebP nem verődik össze kiszámíthatatlanul – a JPEG döntetlen esetén is nyerhet, ha mindkettő érvényes. Részletek a méretekről:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">bélyegkép méretének útmutatója</a>Hiányzó maxres viselkedés:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 útmutató</a>.</p>"
+    },
+    {
+      "heading": "JPEG vs. WebP közérthetően",
+      "html": "<table>\n    <thead>\n      <tr><th>Formátum</th><th>Legjobb</th><th>Erő</th><th>Korlátozás</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Letöltések, WordPress feltöltések, a legszélesebb körű kompatibilitás</td><td>Szinte univerzális támogatás; a legtöbb CDN-kép</td><td>Nagyobb fájlok hasonló minőségben</td></tr>\n      <tr><td>WebP</td><td>Modern webhelyek, amelyek már WebP-t használnak</td><td>Gyakran kisebb ugyanahhoz a felbontási szinthez</td><td>Nem minden videóhoz publikálják; néhány régebbi eszköz nem működik.</td></tr>\n    </tbody>\n  </table>\n  <p>Egyik formátum sem találja fel a felbontást. Egy 480×360-as WebP továbbra is 480×360.</p>"
+    },
+    {
+      "heading": "Mi történik letöltéskor",
+      "html": "<p>A letöltött fájlnév megtartja a valódi kiterjesztést (<code>.jpg</code>vagy<code>.webp</code>) a MIME típusból / URL-ből. JPEG blobok esetén a 11tik beszúrhat egy rövid JPEG megjegyzést, például<code>11tik VIDEO_ID quality youtube thumbnail</code>A WebP és a nem JPEG formátumú blobok mentése újrakódolási lépés nélkül történik. Nincs minőségi „frissítés” és nincs kényszerített konverzió a formátumok között.</p>"
+    },
+    {
+      "heading": "Mikor érdemes JPEG-et választani?",
+      "html": "<ul>\n    <li>Egy olyan tartalomkezelő rendszerbe töltesz fel, amely JPG formátumot vár a médiatárban.</li>\n    <li>Maximális kompatibilitásra van szükséged az e-mail kliensekkel vagy a régebbi böngészőkkel.</li>\n    <li>Csak a videóhoz érvényesített JPEG méretek.</li>\n    <li>Kinyomtatod vagy átadod a fájlt egy olyan tervezőnek, aki JPG formátumban szabványosított.</li>\n  </ul>"
+    },
+    {
+      "heading": "Amikor a WebP kényelmes",
+      "html": "<ul>\n    <li>A 11tik listázott egy validált WebP maxres-t, és az oldalad már támogatja a WebP-t.</li>\n    <li>Kisebb fájlt szeretnél ugyanahhoz a ~1280×720-as szinthez.</li>\n    <li>Te irányítod a veremfájlokat, és szükség esetén visszatérhetsz a JPEG-hez.</li>\n  </ul>\n  <p>Ha a témád nem támogatja a WebP-t, töltsd le inkább a JPEG fájlokat – vagy konvertáld őket helyben a letöltés után. A 11tik nem fogja konvertálni.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Válassza ki a folyamatának megfelelő validált formátumot – ne egy kitalált kiterjesztést.</p>"
+    },
+    {
+      "heading": "Közvetlen linkek és weboldalak",
+      "html": "<p>A kép URL-címének másolása visszaadja a validált jelölt HTTPS CDN-címét. A WebP vagy JPEG hotlinkelés ugyanazzal a sérülékenységgel rendelkezik, mint amit a ... részben tárgyalunk.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Nyílt gráf útmutató</a>: a tartós bejegyzésekhez inkább saját példányt használj. URL-minták:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>.</p>"
+    },
+    {
+      "heading": "Böngésző- és tartalomkezelő rendszer kompatibilitási megjegyzések",
+      "html": "<p>A modern Chromium, Firefox és Safari verziók kezelik a WebP képeket az oldalakon. Néhány régebbi bővítmény, e-mail sablon vagy nyomtatási munkafolyamat továbbra is a JPEG formátumot részesíti előnyben. A WordPress magja konfigurálva is képes a WebP formátumot kiszolgálni, de sok csapat továbbra is JPG formátumban szabványosítja a kiemelt képeket a kiszámíthatóság érdekében. A hivatalos WordPress médiadokumentációk az igazság forrásai a te verziódhoz – ne feltételezd, hogy minden bővítmény elfogadja a WebP feltöltéseket.</p>"
+    },
+    {
+      "heading": "Gyakorlati döntési fa",
+      "html": "<ol>\n    <li>Kivonat innen:<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Ha CMS kiemelt képre van szükséged, és mindkét formátumot látod, válaszd a JPEG-et, kivéve, ha a stacked WebP-first.</li>\n    <li>Ha csak a WebP maximális méretet validálták a legfelső szinten, akkor használd azt – vagy válaszd a következő JPEG méretet, ha JPG-nél kell maradnod.</li>\n    <li>Archívumok esetén őrizze meg az eredeti, letöltött fájlból származó kiterjesztést.</li>\n  </ol>\n  <p>Útmutató letöltése:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube indexkép letöltése</a>.</p>"
+    },
+    {
+      "heading": "Következő lépés",
+      "html": "<p>Illesszen be egy nyilvános URL-t a<a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>, figyeld meg, hogy a legfelső találat a következő-e:<code>.jpg</code>vagy<code>.webp</code>, és a CMS-ed alapján válassz – ne a hosszabb fájlnév alapján.</p>\n  <p class=\"yte-bio\">Írta: 11tik a böngészőn belüli kinyerő jelenlegi viselkedése alapján.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Minden YouTube-videónak van WebP indexképe?",
+      "answer": "Nem. A WebP maximáliája opcionális. Sok videó csak JPEG méretben jelenik meg.",
+      "answerHtml": "<p>Nem. A WebP maximáliája opcionális. Sok videó csak JPEG méretben jelenik meg.</p>"
+    },
+    {
+      "question": "A WebP mindig élesebb, mint a JPEG?",
+      "answer": "Nem. A formátum nem növeli a felbontást. Hasonlítsa össze az azonos pixelméreteket.",
+      "answerHtml": "<p>Nem. A formátum nem növeli a felbontást. Hasonlítsa össze az azonos pixelméreteket.</p>"
+    },
+    {
+      "question": "Miért kerülhet a JPEG a WebP fölé a 11tik-ban?",
+      "answer": "A validált WebP URL-ek kis pontszámbüntetést (-8) kapnak az egyébként hasonló jelöltekhez képest, így a JPEG akkor jelenhet meg először, ha mindkettő ugyanazon a szinten létezik.",
+      "answerHtml": "<p>A validált WebP URL-ek kis pontszámbüntetést (-8) kapnak az egyébként hasonló jelöltekhez képest, így a JPEG akkor jelenhet meg először, ha mindkettő ugyanazon a szinten létezik.</p>"
+    },
+    {
+      "question": "A letöltés JPEG formátumra konvertálja a WebP-t?",
+      "answer": "Nem. A mentett fájl megőrzi a forrásformátumot. Csak a JPEG fájlok kaphatnak metaadat-megjegyzést.",
+      "answerHtml": "<p>Nem. A mentett fájl megőrzi a forrásformátumot. Csak a JPEG fájlok kaphatnak metaadat-megjegyzést.</p>"
+    },
+    {
+      "question": "Melyik formátumot érdemes hotlinkelni?",
+      "answer": "Egyik sem, az olyan éles oldalak esetében, amelyek fontosak számodra. Hosztold be egy másolatot. Ha ideiglenesen hotlinkelned kell, használj egy már validált URL-t 11tik.",
+      "answerHtml": "<p>Egyik sem, az olyan éles oldalak esetében, amelyek fontosak számodra. Hosztold be egy másolatot. Ha ideiglenesen hotlinkelni kell, használj egy már validált URL-t 11tik.</p>"
+    },
+    {
+      "question": "Lehet a hq720 WebP?",
+      "answer": "A jelenlegi 11tik előre beállított listában a dedikált WebP jelölt a maxres WebP. Más méreteket JPEG fájlnévként kérünk a /vi/ könyvtárban.",
+      "answerHtml": "<p>A jelenlegi 11tik előre beállított listában a dedikált WebP jelölt a maxres WebP. Más méreteket JPEG fájlnévként kérünk a következő címen:<code>/vi/</code>.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik a böngészőn belüli kinyerő jelenlegi viselkedése alapján.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+}

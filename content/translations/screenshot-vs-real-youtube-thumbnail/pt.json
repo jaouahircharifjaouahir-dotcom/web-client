@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "pt",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Captura de tela versus miniatura real do YouTube: qual arquivo você deve salvar? | 11tik",
+  "description": "Uma captura de tela do player feita com o celular não é a miniatura que o YouTube exibe. O público real ainda está em i.ytimg.com. Use-a para blogs, Open Graph e pesquisas — capturas de tela adicionam elementos da interface, compressão e proporção incorreta.",
+  "h1": "Captura de tela versus miniatura real do YouTube: qual arquivo você deve salvar?",
+  "ogTitle": "Captura de tela versus miniatura real do YouTube: qual arquivo você deve salvar?",
+  "ogDescription": "Uma captura de tela do player feita com o celular não é a miniatura que o YouTube exibe. O público real ainda está em i.ytimg.com. Use-a para blogs, Open Graph e pesquisas — capturas de tela adicionam elementos da interface, compressão e proporção incorreta.",
+  "imageAlt": "Comparação de uma captura de tela de um jogador com um arquivo de miniatura público real do YouTube.",
+  "faqHeading": "Perguntas frequentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Comparação de uma captura de tela de um jogador com um arquivo de miniatura público real do YouTube.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Qual a diferença entre uma captura de tela e uma miniatura real?",
+      "html": "<p>Uma captura de tela mostra a sua tela, incluindo a interface do player, legendas e o dimensionamento do dispositivo. Uma miniatura real é o arquivo JPEG ou WebP que o YouTube publicou para aquele ID de vídeo. Somente o arquivo da CDN possui um URL estável e um tamanho de pixel conhecido.</p>"
+    },
+    {
+      "heading": "Por que as capturas de tela falham nas pré-visualizações do Google Imagens e das redes sociais?",
+      "html": "<p>Muitas vezes, as imagens têm a proporção errada, incluem a interface do usuário e são comprimidas duas vezes. O Open Graph e muitos campos de CMS exigem uma resolução 16:9, que ainda fica em torno de 1280×720. Isso corresponde ao maxresdefault quando ele existe — veja<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guia de tamanho de miniaturas</a>.</p>"
+    },
+    {
+      "heading": "Como faço para salvar a miniatura real?",
+      "html": "<ol>\n    <li>Copie o URL público do vídeo, não uma captura de tela.</li>\n    <li>Cole-o em<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Faça o download do primeiro arquivo público listado ou copie o URL da imagem.</li>\n  </ol>"
+    },
+    {
+      "heading": "Quando é que uma captura de tela ainda é útil?",
+      "html": "<p>Use uma captura de tela apenas para documentar um bug da interface do usuário ou um momento específico do vídeo. Não a utilize como miniatura oficial, imagem principal do blog ou imagem de compartilhamento se o vídeo ainda for público.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtenha a miniatura pública real →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qual a diferença entre uma captura de tela e uma miniatura real?",
+      "answer": "Uma captura de tela mostra sua tela e a interface do player. Uma miniatura real é o arquivo JPEG ou WebP que o YouTube hospeda em i.ytimg.com para aquele ID de vídeo.",
+      "answerHtml": "Uma captura de tela mostra sua tela e a interface do player. Uma miniatura real é o arquivo JPEG ou WebP que o YouTube hospeda em i.ytimg.com para aquele ID de vídeo."
+    },
+    {
+      "question": "Por que as capturas de tela falham nas pré-visualizações do Google Imagens e das redes sociais?",
+      "answer": "Frequentemente, apresentam proporção de tela incorreta, interface de usuário adicional e compressão excessiva. Os sistemas de gerenciamento de conteúdo (CMS) e os campos Open Graph esperam uma imagem pública limpa em 16:9.",
+      "answerHtml": "Frequentemente, apresentam proporção de tela incorreta, interface de usuário adicional e compressão excessiva. Os sistemas de gerenciamento de conteúdo (CMS) e os campos Open Graph esperam uma imagem pública limpa em 16:9."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+}

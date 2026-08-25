@@ -1,0 +1,53 @@
+{
+  "contentId": "screenshot-vs-real-youtube-thumbnail",
+  "articleId": "screenshot-vs-real-youtube-thumbnail",
+  "locale": "sv",
+  "sourceHash": "8b5106f4f707203373d17b8deac2cca2eaaa837cfbb921fdbe584fd85e9a6d23",
+  "status": "ready",
+  "title": "Skärmdump kontra riktig YouTube-miniatyr: vilken fil ska du spara? | 11tik",
+  "description": "En skärmdump av spelaren på telefonen är inte miniatyrbilden för YouTube-värdar. Den verkliga allmänheten lever fortfarande på i.ytimg.com. Använd den för bloggar, Open Graph och forskning – skärmdumpar lägger till UI-krom, komprimering och fel bildförhållande.",
+  "h1": "Skärmdump kontra riktig YouTube-miniatyr: vilken fil ska du spara?",
+  "ogTitle": "Skärmdump kontra riktig YouTube-miniatyr: vilken fil ska du spara?",
+  "ogDescription": "En skärmdump av spelaren på telefonen är inte miniatyrbilden för YouTube-värdar. Den verkliga allmänheten lever fortfarande på i.ytimg.com. Använd den för bloggar, Open Graph och forskning – skärmdumpar lägger till UI-krom, komprimering och fel bildförhållande.",
+  "imageAlt": "Jämförelse av en skärmdump av en spelare kontra en riktig offentlig YouTube-miniatyrfil",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "Jämförelse av en skärmdump av en spelare kontra en riktig offentlig YouTube-miniatyrfil",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Vad är skillnaden mellan en skärmdump och en riktig miniatyrbild?",
+      "html": "<p>En skärmdump visar din skärm, inklusive spelarens Chrome, textning och enhetsskalning. En riktig miniatyrbild är JPEG- eller WebP-filen som YouTube publicerade för det video-ID:t. Endast CDN-filen har en stabil URL och känd pixelstorlek.</p>"
+    },
+    {
+      "heading": "Varför misslyckas skärmdumpar i Google Bilder och förhandsgranskningar på sociala medier?",
+      "html": "<p>De har ofta fel bildförhållande, inkluderar användargränssnitt och komprimeras två gånger. Open Graph och många CMS-fält vill ha en 16:9-stillbild runt 1280×720. Det matchar maxresdefault när det finns – se<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide för miniatyrstorlek</a>.</p>"
+    },
+    {
+      "heading": "Hur sparar jag den riktiga miniatyrbilden istället?",
+      "html": "<ol>\n    <li>Kopiera den offentliga video-URL:en, inte en skärmdump.</li>\n    <li>Klistra in det i<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Ladda ner den första listade offentliga filen eller kopiera bildens URL.</li>\n  </ol>"
+    },
+    {
+      "heading": "När är en skärmdump fortfarande användbar?",
+      "html": "<p>Använd endast en skärmdump för att dokumentera ett UI-fel eller ett ögonblick inuti videon. Använd den inte som en officiell miniatyrbild, en blogghjälte eller en delningsbild om det fortfarande finns en offentlig bild.</p>\n  <p><a href=\"https://www.11tik.com/\">Få den riktiga offentliga miniatyrbilden →</a></p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vad är skillnaden mellan en skärmdump och en riktig miniatyrbild?",
+      "answer": "En skärmdump tar din skärm och spelarens Chrome. En riktig miniatyrbild är JPEG- eller WebP-filen som YouTube lagrar på i.ytimg.com för det video-ID:t.",
+      "answerHtml": "En skärmdump tar din skärm och spelarens Chrome. En riktig miniatyrbild är JPEG- eller WebP-filen som YouTube lagrar på i.ytimg.com för det video-ID:t."
+    },
+    {
+      "question": "Varför misslyckas skärmdumpar i Google Bilder och förhandsgranskningar på sociala medier?",
+      "answer": "De har ofta fel bildförhållande, extra användargränssnitt och extra komprimering. CMS- och Open Graph-fält förväntar sig en ren offentlig stillbild i 16:9-format.",
+      "answerHtml": "De har ofta fel bildförhållande, extra användargränssnitt och extra komprimering. CMS- och Open Graph-fält förväntar sig en ren offentlig stillbild i 16:9-format."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+}

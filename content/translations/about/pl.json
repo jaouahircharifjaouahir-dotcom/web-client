@@ -1,0 +1,46 @@
+{
+  "contentId": "about",
+  "articleId": "about",
+  "locale": "pl",
+  "sourceHash": "ac5beceb26179d686beb46b99844c46271cb40a3593766668317907caf2f7b3b",
+  "status": "ready",
+  "title": "O 11tik | 11tik",
+  "description": "11tik jest wydawcą narzędzia YouTube Thumbnail Extractor dostępnego pod adresem www.11tik.com. Witryna jest przeznaczona dla osób, które potrzebują publicznego podglądu filmu z YouTube bez konieczności instalowania oprogramowania lub przesyłania linku na serwer przetwarzający.",
+  "h1": "O 11tik",
+  "ogTitle": "O 11tik",
+  "ogDescription": "11tik jest wydawcą narzędzia YouTube Thumbnail Extractor dostępnego pod adresem www.11tik.com. Witryna jest przeznaczona dla osób, które potrzebują publicznego podglądu filmu z YouTube bez konieczności instalowania oprogramowania lub przesyłania linku na serwer przetwarzający.",
+  "imageAlt": "11tik Podgląd produktu YouTube Thumbnail Extractor w rozdzielczości 1200 na 630 pikseli",
+  "faqHeading": "Często zadawane pytania",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik Podgląd produktu YouTube Thumbnail Extractor w rozdzielczości 1200 na 630 pikseli",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Kto publikuje tę witrynę?",
+      "html": "<p>Treść i ekstraktor są publikowane pod nazwą 11tik. Nie ma wymyślonej postaci eksperta ani sfabrykowanych ocen. Strony redakcyjne wyjaśniają, jak działają publiczne pliki miniatur; nie podają się za YouTube ani Google.</p>"
+    },
+    {
+      "heading": "Co robi 11tik?",
+      "html": "<p>Narzędzie odczytuje publiczny identyfikator wideo w przeglądarce, sprawdza, które pliki miniatur znajdują się na serwerach obrazów YouTube i umożliwia pobranie lub skopiowanie tych zdjęć. Analiza składniowa i ranking pozostają na Twoim urządzeniu. Możesz pracować z jednym adresem URL, listą adresów URL lub publicznym kanałem z ostatnio przesłanymi materiałami.</p>"
+    },
+    {
+      "heading": "Czego 11tik nie robi?",
+      "html": "<ul>\n    <li>Nie pobiera filmów ani dźwięków z YouTube.</li>\n    <li>Nie omija on filmów prywatnych, objętych blokadą wiekową lub regionalną.</li>\n    <li>Nie wymaga założenia konta.</li>\n    <li>Nie rości sobie praw autorskich do miniaturki innej osoby.</li>\n  </ul>"
+    },
+    {
+      "heading": "Wersje językowe",
+      "html": "<p>Interfejs użytkownika ekstraktora jest dostępny na hostach językowych, takich jak<a href=\"https://fr.11tik.com/\">z 11tik.com</a>I<a href=\"https://ar.11tik.com/\">ar.11tik.com</a>Te strony prawne znajdują się na www.11tik.com, więc istnieje jeden kanoniczny adres URL: „O nas”, „Prywatność”, „Kontakt” i „Warunki”.</p>"
+    },
+    {
+      "heading": "Jak mogę skontaktować się z wydawcą?",
+      "html": "<p>E-mail<a href=\"mailto:jaouahircharifjaouahir@gmail.com\">jaouahircharifjaouahir@gmail.com</a>lub użyj<a href=\"https://www.11tik.com/p/contact.html\">formularz kontaktowy</a>. Przeczytaj<a href=\"https://www.11tik.com/p/privacy.html\">polityka prywatności</a>w celu uzyskania szczegółowych informacji dotyczących analiz i hostingu,<a href=\"https://www.11tik.com/p/terms-of-use.html\">warunki użytkowania</a>do akceptowalnego użytku.</p>\n  <p class=\"yte-bio\">11tik publikuje praktyczne poradniki dotyczące publicznych miniaturek YouTube i utrzymuje darmowy program do ich ekstrakcji w przeglądarce. Poprawki mile widziane e-mailem lub za pomocą formularza kontaktowego.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Narzędzie do ekstrakcji miniatur YouTube</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Prywatność</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>\n  </nav>"
+    }
+  ],
+  "faq": [],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik publikuje praktyczne poradniki dotyczące publicznych miniaturek YouTube i utrzymuje darmowy program do ich ekstrakcji w przeglądarce. Poprawki mile widziane e-mailem lub za pomocą formularza kontaktowego.</p>"
+}

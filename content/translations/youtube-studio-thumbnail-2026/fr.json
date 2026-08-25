@@ -1,0 +1,48 @@
+{
+  "contentId": "youtube-studio-thumbnail-2026",
+  "articleId": "youtube-studio-thumbnail-2026",
+  "locale": "fr",
+  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "status": "ready",
+  "title": "Miniature YouTube Studio 2026 | 11tik",
+  "description": "En 2026, les chaînes YouTube éligibles continuent de télécharger une miniature personnalisée depuis Studio sur la page Détails de la vidéo. Les libellés du menu changent, mais le résultat reste le même : YouTube héberge une nouvelle image fixe publique. 11tik ne télécharge pas ce fichier. Il ne fait que lire les URL des images publiques une fois qu’elles sont disponibles.",
+  "h1": "Miniature YouTube Studio 2026",
+  "ogTitle": "Miniature YouTube Studio 2026",
+  "ogDescription": "En 2026, les chaînes YouTube éligibles continuent de télécharger une miniature personnalisée depuis Studio sur la page Détails de la vidéo. Les libellés du menu changent, mais le résultat reste le même : YouTube héberge une nouvelle image fixe publique. 11tik ne télécharge pas ce fichier. Il ne fait que lire les URL des images publiques une fois qu’elles sont disponibles.",
+  "imageAlt": "11tik utilisé pour vérifier une miniature publique après une mise en ligne sur YouTube Studio",
+  "faqHeading": "FAQ",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+      "alt": "11tik utilisé pour vérifier une miniature publique après une mise en ligne sur YouTube Studio",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Comment puis-je importer une miniature personnalisée dans YouTube Studio ?",
+      "html": "<ol>\n    <li>Ouvrez YouTube Studio et sélectionnez la vidéo.</li>\n    <li>Dans la section Détails, téléchargez une image au format 16:9 (la taille cible habituelle de YouTube est de 1280×720).</li>\n    <li>Enregistrez et attendez la fin du traitement.</li>\n  </ol>\n  <p>Les noms exacts des boutons peuvent changer. Si votre compte n'est pas éligible aux miniatures personnalisées, Studio ne proposera pas l'importation. 11tik ne peut pas contourner cette restriction.</p>"
+    },
+    {
+      "heading": "Comment puis-je vérifier une miniature après l'avoir modifiée dans Studio ?",
+      "html": "<p>Collez l'URL de la montre dans<a href=\"https://www.11tik.com/\">11tik</a>Téléchargez ou copiez le premier fichier listé. Si maxresdefault est absent, le fichier public suivant correspond à la résolution maximale réelle. Il s'agit du catalogue de YouTube, et non d'une extraction ayant échoué. Voir aussi<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Explication de maxresdefault</a>.</p>"
+    },
+    {
+      "heading": "Est-ce que 11tik remplace YouTube Studio ?",
+      "html": "<p>Non. Studio est l'endroit où vous importez, planifiez et utilisez les tests lorsque YouTube les propose. 11tik sert à prévisualiser et à enregistrer les images fixes publiques existantes, même après une modification dans Studio.</p>"
+    },
+    {
+      "heading": "Que faire si l'image paraît ancienne ?",
+      "html": "<p>Les CDN d'images peuvent présenter un délai de latence. Vérifiez plus tard, effectuez un rafraîchissement forcé ou copiez l'URL. 11tik confirme. Ne présumez pas qu'il s'agit d'une image principale en 4K&nbsp;; la résolution maximale publique est généralement de 1280&nbsp;×&nbsp;720. Une capture d'écran de Studio n'est pas le fichier miniature public.</p>\n  <p>En rapport:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extracteur vs fabricant</a>.</p>\n  <p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ouvrez l'extracteur</a></p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Est-ce que 11tik remplace YouTube Studio ?",
+      "answer": "Non. Studio télécharge des illustrations personnalisées. 11tik ne lit que les fichiers miniatures publics.",
+      "answerHtml": "Non. Studio télécharge des illustrations personnalisées. 11tik ne lit que les fichiers miniatures publics."
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik.<a href=\"https://www.11tik.com/p/about.html\">À propos</a>.</p>"
+}

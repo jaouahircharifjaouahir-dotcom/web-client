@@ -56,6 +56,8 @@ export const POST_DESCRIPTIONS = {
     "When no public YouTube still loads, the video may be private, restricted, processing, or deleted—not merely a missing maxres filename.",
   "/2026/08/11tik-share-links-thumb-vs-youtube.html":
     "11tik /thumb/{id} is a share result page. It is not a YouTube watch URL and not a direct i.ytimg.com image file.",
+  "/2026/08/youtube-live-premiere-thumbnail-download.html":
+    "Paste a public YouTube live or premiere URL into 11tik to save the cover still before go-live, during LIVE, or after archive.",
 };
 
 export function descriptionForPath(pathname) {

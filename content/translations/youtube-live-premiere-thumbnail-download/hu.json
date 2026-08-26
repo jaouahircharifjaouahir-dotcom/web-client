@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "hu",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "YouTube élő vagy premier indexkép letöltése (előtte, közben és utána) | 11tik",
+  "description": "Illessz be egy nyilvános YouTube élő vagy premier URL-t a 11tik-be, hogy a borítót a YouTube még mindig tárolja – az élő adás indulása előtt, az ÉLŐ adás alatt, vagy miután a stream ismétléssé válik.",
+  "h1": "YouTube Live vagy Premiere indexkép letöltése (előtte, alatta és utána)",
+  "ogTitle": "YouTube Live vagy Premiere indexkép letöltése (előtte, alatta és utána)",
+  "ogDescription": "Illessz be egy nyilvános YouTube élő vagy premier URL-t a 11tik-be, hogy a borítót a YouTube még mindig tárolja – az élő adás indulása előtt, az ÉLŐ adás alatt, vagy miután a stream ismétléssé válik.",
+  "imageAlt": "Háromlépcsős életciklus-diagram, amely egy YouTube élő vagy premier borítóképét mutatja be az élő adás előtt, az élő jelvény alatt és a VOD-ként archiválás után.",
+  "faqHeading": "GYIK",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Háromlépcsős életciklus-diagram, amely egy YouTube élő vagy premier borítóképét mutatja be az élő adás előtt, az élő jelvény alatt és a VOD-ként archiválás után.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Négylépéses munkafolyamat, amely bemutatja egy élő URL másolását, beillesztését a 11tik-be, a nyilvános CDN-méretek ellenőrzését, majd a kép URL-jének letöltését vagy másolását",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gyors válasz",
+      "html": "<p>Egy YouTube élő közvetítés és egy premier egyaránt 11 karakterből áll.<strong>videóazonosító</strong>, akárcsak egy normál feltöltésnél. Az adott azonosítóhoz tartozó nyilvános borítóképek megtalálhatók a YouTube kép CDN-jén (<code>i.ytimg.com</code>). Másoljon egy nyilvános<code>/live/</code>, nézni vagy megosztani az URL-t, illessze be a<a href=\"https://www.11tik.com/\">11tik</a>, majd töltse le a betöltődő legnagyobb állóképet. Ezzel elmenti a<strong>promóciós borítókép</strong>, nem a sugárzás élő képkockafelvétele és nem a videofájl.</p>\n\n  <img alt=\"Háromlépcsős életciklus-diagram, amely egy YouTube élő vagy premier borítóképét mutatja be az élő adás előtt, az élő jelvény alatt és a VOD-ként archiválás után.\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ugyanaz a videóazonosító, ugyanaz a nyilvános borítócsalád: ütemezett → élő → archivált visszajátszás, kivéve, ha az alkotó később lecseréli az egyéni indexképet.</p>"
+    },
+    {
+      "heading": "Mi az a YouTube Live vagy Premiere indexkép?",
+      "html": "<p>A nyilvános állókép képviseli az eseményt böngészéskor, kereséskor, feliratkozáskor és megosztáskor. Az alkotók általában egyéni borítót töltenek fel a YouTube Studióban, mielőtt élőben megosztanák őket. Ha nem tesznek közzé egyéni fájlt, a YouTube visszatérhet egy automatikusan generált állóképhez, amint a feldolgozás lehetővé teszi – ugyanazok a CDN-fájlnevek, amelyeket a szokásos videóknál használnak (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>, és kisebb méretekben).</p>\n  <p>Az a borító<strong>nem</strong>ugyanaz, mint:</p>\n  <ul>\n    <li>Az élő lejátszó felhasználói felületének képernyőképe</li>\n    <li>Egy középstreamelésű kamerakép, amit te magad rögzítettél</li>\n    <li>Egy csak Stúdióban használható privát eszköz, amely soha nem vált nyilvános CDN-fájllá</li>\n  </ul>\n  <p>A felhasználói felületen rögzített képek és a tárhelyen tárolt állóképek közötti különbségért lásd:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">képernyőkép vs. valódi YouTube-bélyegkép</a>.</p>"
+    },
+    {
+      "heading": "Miben különböznek az élő és premier videók a rövid videóktól és a szokásos feltöltésektől?",
+      "html": "<table>\n    <thead>\n      <tr><th>Tartalomtípus</th><th>Tipikus URL-alakzat</th><th>Nyilvános still host</th><th>Amit általában kapsz</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Rendszeres feltöltés</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Tájképlet nyilvános helyen</td></tr>\n      <tr><td>Rövidnadrág</td><td><code>/shorts/ID</code></td><td>Ugyanaz a CDN-család</td><td>Gyakran fekvő CDN továbbra is, még akkor is, ha a rövid függőlegesen játszik —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek útmutatója</a></td></tr>\n      <tr><td>Élő / Premier</td><td><code>/live/ID</code>vagy<code>/watch?v=ID</code></td><td>Ugyanaz a CDN-család</td><td>Egyedi eseményborító közzétételkor; ugyanazok a maximális/közepes méretű szabályok</td></tr>\n    </tbody>\n  </table>\n  <p>11tik már elemzi<code>youtube.com/live/VIDEO_ID</code>ugyanúgy, ahogy a videó- ​​és rövidvideók linkjeit elemzi. A kivonatolónak nincs szüksége külön „élő módra” – szüksége van egy<strong>nyilvános videoazonosító</strong>és nyilvános állóképek.</p>"
+    },
+    {
+      "heading": "Életciklus: a közvetítés előtt, alatt és után",
+      "html": "<h3>1. Ütemezett / közelgő</h3>\n  <p>Miután a YouTube hozzárendelt egy videóazonosítót, és az esemény nyilvános (vagy nem listázott, megosztható linkkel), egyéni indexkép már létezhet a CDN-en. Illeszd be a közelgő események URL-jét a 11tik oldalra, hogy megtekinthesd a „Közelgő események” polcokon látható borítót.</p>\n  <h3>2. Élőben most</h3>\n  <p>Amíg az élő közvetítés folyik, általában ugyanaz a borítókép képviseli továbbra is az eseményt. A közvetítés közbeni kibontás továbbra is visszaadja a...<strong>tárhelyen található borító</strong>, nem egy friss képkocka abból, ami abban a pillanatban a kamerán van.</p>\n  <h3>3. Archivált visszajátszás (VOD)</h3>\n  <p>A közvetítés befejezése után az esemény jellemzően egy normál megtekintési URL-ként marad ugyanazzal az azonosítóval. A nyilvános borító gyakran addig marad, amíg a készítő le nem cseréli a Studioban. Futtassa újra a 11tik parancsot, ha meg kell erősítenie a közvetítés utáni fájlt.</p>"
+    },
+    {
+      "heading": "Élő és premier borítókhoz használható URL-formátumok",
+      "html": "<table>\n    <thead>\n      <tr><th>Formátum</th><th>Példaminta</th><th>Megjegyzések</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Élő útvonal</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Előnyben részesített, ha a megosztási lapon látható /élő/</td></tr>\n      <tr><td>Óra</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Gyakori premierek és archivált életrajzok esetében</td></tr>\n      <tr><td>Rövid link</td><td><code>youtu.be/VIDEO_ID</code></td><td>Akkor működik, ha ugyanarra az azonosítóra ad eredményt.</td></tr>\n      <tr><td>Beágyaz</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Azonos azonosító kinyerése</td></tr>\n      <tr><td>Csatorna / élő központ</td><td><code>youtube.com/@handle/live</code></td><td>Először nyisd meg a tényleges streamet, hogy a címsávban megjelenjen a videoazonosító.</td></tr>\n    </tbody>\n  </table>\n  <p>Ha a címsorban továbbra is egy csatorna élő központja látható 11 karakteres azonosító nélkül, a 11tik nem tud kitalálni egyet. Nyisd meg a streamet vagy a premierkártyát, amíg meg nem jelenik egy konkrét videó URL-címe, majd másold ki a linket.</p>"
+    },
+    {
+      "heading": "A leggyorsabb módszer a 11tik használatával",
+      "html": "<ol>\n    <li>Másolj ki egy nyilvános élő közvetítést, premiert, megtekintési videót vagy youtu.be URL-t, amely tartalmazza a videó azonosítóját.</li>\n    <li>Nyitott<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Illeszd be az URL-t. A kibontás akkor kezdődik, amikor az azonosító érvényes.</li>\n    <li>Töltsd le az elsőként felsorolt ​​állóképet (a legjobb elérhetőt), vagy másold ki a kép URL-jét egy CMS-hez.</li>\n  </ol>\n  <img alt=\"Négylépéses munkafolyamat, amely bemutatja egy élő URL másolását, beillesztését a 11tik-be, a nyilvános CDN-méretek ellenőrzését, majd a kép URL-jének letöltését vagy másolását\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Gyakorlati út az élő és premier borítókhoz: nyilvános URL → kibontás → validált méretek → letöltés vagy másolás.</p>\n  <p>Sok nyilvános megfigyelési linkre van szüksége egyszerre? Használja a Tömeges (maximum 25) funkciót —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">kötegelt letöltési útmutató</a>Egy csatorna URL-címéről származó legutóbbi feltöltésekhez lásd:<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">csatornabélyegkép-kibontás</a>.</p>"
+    },
+    {
+      "heading": "Közvetlen CDN-ellenőrzés (opcionális)",
+      "html": "<p>Ha már ismeri az azonosítót, akkor is tesztelheti a jelöltet:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Amikor kudarcot vall, lépj le rajta<code>hq720.jpg</code>,<code>sddefault.jpg</code>, és<code>hqdefault.jpg</code>A manuális tippelés lassabb, mint a 11tik által ellenőrzött lista, és gyakori forrása a szürke helyőrzőknek – lásd<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault magyarázata</a>és a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>.</p>\n  <p>A hivatalos YouTube Data API válaszok ugyanazokat a méretosztályokat írják le (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) a<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Indexképek erőforrás</a>A 11tik nem a böngésződben hívja meg az API-t; ​​a nyilvános CDN-fájlokat kliensoldalon validálja.</p>"
+    },
+    {
+      "heading": "Egyedi borító vs. automatikusan generált állókép",
+      "html": "<ul>\n    <li><strong>Egyedi élő/premier borító:</strong>Feltöltötték a Stúdióba az eseményhez. Gyakran feloldja a nagyobb nyilvános méreteket a feldolgozás befejezésekor.</li>\n    <li><strong>Automata állókép:</strong>Akkor keletkezik, amikor a YouTube automatikus képkockát tesz közzé. Közepes méreteknél leállhat; a maximális méret nem garantált.</li>\n  </ul>\n  <p>A „legmagasabb minőség” továbbra is a legnagyobbat jelenti.<em>nyilvános</em>létező fájl – nem privát Studio export. Részletek:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">legmagasabb minőségű indexkép</a>és<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">eredeti nyilvános indexkép</a>.</p>"
+    },
+    {
+      "heading": "Amikor nem jelenik meg az élő miniatűr",
+      "html": "<table>\n    <thead>\n      <tr><th>Helyzet</th><th>Ami általában történik</th><th>Mit kell tenni</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Privát / csak tagoknak / korhatáros csomagolás</td><td>A nyilvánosság még mindig nem érvényesíti</td><td>Használjon nyilvános linket; a 11tik nem tudja megkerülni a hozzáférési szabályokat —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">nem elérhető bélyegkép-útmutató</a></td></tr>\n      <tr><td>Csatorna/élő központ videóazonosító nélkül</td><td>Az elemző nem talál azonosítót</td><td>Először nyissa meg a konkrét stream URL-jét</td></tr>\n      <tr><td>Egyedi borító feldolgozás alatt</td><td>Csak idősebb vagy közepes méretekben</td><td>Újrapróbálkozás a Studio befejezése után; érvényesített tartalék megtartása</td></tr>\n      <tr><td>Guessed maxres 404</td><td>A fájlnév hiányzik</td><td>Használja a 11tik első felsorolt ​​méretét</td></tr>\n      <tr><td>Játékos képernyőképe</td><td>UI króm, hibás képpontok</td><td>Inkább mentsd el a CDN-t</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Felelős újrahasznosítás",
+      "html": "<p>A nyilvános CDN URL nem jogosít fel arra, hogy egy másik alkotó borítóját saját márkajelzésként újra közzétegyük. Személyes kutatáshoz, kommentárokhoz vagy saját streamek archiválásához tárold a fájlt helyben. Blogok és közösségi kártyák esetén inkább olyan másolatot tárolj, amelynek használatára jogosult vagy.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Nyílt gráf útmutató</a>A YouTube áttekintése a következőről:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">egyéni videóbélyegképek</a>a Studio-beli feltöltésekhez használt elsődleges alkotói oldali referencia.</p>"
+    },
+    {
+      "heading": "Következő lépés",
+      "html": "<p>Nyisd meg az élő vagy premier oldalt, amíg az URL-címen meg nem jelenik a videóazonosító, majd illeszd be a<a href=\"https://www.11tik.com/\">YouTube bélyegkép-kivonó</a>, és mentse el az első érvényesített állóképet. Mobil mentési tippekért lásd:<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone és Android</a>Stúdióoldali egyéni feltöltésekhez lásd:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio indexkép 2026</a>.</p>\n  <p class=\"yte-bio\">Írta: 11tik. Csak nyilvános állóképek; videó vagy hanganyag letöltése nem lehetséges.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Letölthetem az indexképet élő közvetítés közben?",
+      "answer": "Igen, ha a közvetítés nyilvános, és a YouTube közzétett nyilvános állóképeket az adott videoazonosítóhoz. A tárhelyen tárolt borítóképet kapod, nem egy élő kameraképet.",
+      "answerHtml": "<p>Igen, ha a közvetítés nyilvános, és a YouTube közzétett nyilvános állóképeket az adott videoazonosítóhoz. A tárhelyen tárolt borítóképet kapod, nem egy élő kameraképet.</p>"
+    },
+    {
+      "question": "A premierek ugyanazt a módszert alkalmazzák, mint az élő közvetítések?",
+      "answer": "Igen. Mindkettő videóazonosítót eredményez. Illeszd be a premier megtekintési vagy megosztási URL-jét a 11tik-be ugyanígy.",
+      "answerHtml": "<p>Igen. Mindkettő videóazonosítót eredményez. Illeszd be a premier megtekintési vagy megosztási URL-jét a 11tik-be ugyanígy.</p>"
+    },
+    {
+      "question": "A youtube.com/live/VIDEO_ID működik a 11tik-ben?",
+      "answer": "Igen. Az elemző a /live/ értéket más, azonosítót hordozó útvonalakhoz hasonlóan kezeli.",
+      "answerHtml": "<p>Igen. Az elemző kezeli<code>/live/</code>mint más azonosítót hordozó útvonalak.</p>"
+    },
+    {
+      "question": "Változik a borító a stream vége után?",
+      "answer": "Gyakran ugyanaz marad, de az alkotók lecserélhetik a Studioban. Ha szükséged van az aktuális nyilvános fájlra, csomagold ki újra.",
+      "answerHtml": "<p>Gyakran ugyanaz marad, de az alkotók lecserélhetik a Studioban. Ha szükséged van az aktuális nyilvános fájlra, csomagold ki újra.</p>"
+    },
+    {
+      "question": "Ugyanaz az élő indexkép, mint egy rövid videó indexképe?",
+      "answer": "Ugyanaz a CDN-ötlet, más termékkontextus. A rövid videók gyakran megtartják a fekvő, nyilvános állóképeket, még akkor is, ha függőleges a lejátszás – lásd a rövid videók indexképeinek útmutatóját.",
+      "answerHtml": "<p>Ugyanaz a CDN-ötlet, más termékkontextus. A rövidfilmek gyakran megtartják a fekvő, nyilvános állóképeket, még függőleges lejátszás esetén is – lásd a<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek indexképeinek útmutatója</a>.</p>"
+    },
+    {
+      "question": "Lehet 11tik kivonatot készíteni egy privát élő közvetítésből?",
+      "answer": "Nem. A nyilvános állóképek nélküli privát, törölt vagy korlátozott csomagolású tartalmak nem jelenítenek meg képeket.",
+      "answerHtml": "<p>Nem. A nyilvános állóképek nélküli privát, törölt vagy korlátozott csomagolású tartalmak nem jelenítenek meg képeket.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik. Csak nyilvános állóképek; videó vagy hanganyag letöltése nem lehetséges.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+}

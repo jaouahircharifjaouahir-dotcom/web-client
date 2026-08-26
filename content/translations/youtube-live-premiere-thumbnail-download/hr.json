@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "hr",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Kako preuzeti minijaturu prijenosa uživo ili premijere na YouTubeu (prije, tijekom i poslije) | 11tik",
+  "description": "Zalijepite javni URL za prijenos uživo ili premijeru na YouTubeu u 11tik kako biste spremili sliku naslovnice koju YouTube već hostira - prije početka prijenosa uživo, dok je prijenos UŽIVO uključen ili nakon što stream postane snimka.",
+  "h1": "Kako preuzeti minijaturu YouTube prijenosa uživo ili premijere (prije, tijekom i poslije)",
+  "ogTitle": "Kako preuzeti minijaturu YouTube prijenosa uživo ili premijere (prije, tijekom i poslije)",
+  "ogDescription": "Zalijepite javni URL za prijenos uživo ili premijeru na YouTubeu u 11tik kako biste spremili sliku naslovnice koju YouTube već hostira - prije početka prijenosa uživo, dok je prijenos UŽIVO uključen ili nakon što stream postane snimka.",
+  "imageAlt": "Dijagram životnog ciklusa u tri faze koji prikazuje naslovnu sliku YouTube prijenosa uživo ili premijere prije početka prijenosa uživo, tijekom prikazivanja značke uživo i nakon arhiviranja kao VOD",
+  "faqHeading": "Često postavljana pitanja",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Dijagram životnog ciklusa u tri faze koji prikazuje naslovnu sliku YouTube prijenosa uživo ili premijere prije početka prijenosa uživo, tijekom prikazivanja značke uživo i nakon arhiviranja kao VOD",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Četverostupanjski tijek rada koji prikazuje kopiranje aktivnog URL-a, lijepljenje u 11tik, provjeru veličina javnog CDN-a, a zatim preuzimanje ili kopiranje URL-a slike",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Brzi odgovor",
+      "html": "<p>YouTube prijenos uživo i premijera imaju po 11 znakova<strong>ID videozapisa</strong>, baš kao i normalan prijenos. Javne fotografije naslovnice za taj ID dostupne su uživo na YouTubeovoj CDN mreži za slike (<code>i.ytimg.com</code>). Kopiraj javni<code>/live/</code>, gledajte ili dijelite URL, zalijepite ga u<a href=\"https://www.11tik.com/\">11tik</a>, a zatim preuzmite najveću sliku koja se zapravo učitava. Spremate<strong>promotivna naslovna slika</strong>, ne snimka uživo emitiranog sadržaja i ne video datoteka.</p>\n\n  <img alt=\"Dijagram životnog ciklusa u tri faze koji prikazuje naslovnu sliku YouTube prijenosa uživo ili premijere prije početka prijenosa uživo, tijekom prikazivanja značke uživo i nakon arhiviranja kao VOD\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Isti ID videozapisa, ista javna obitelj naslovnica: zakazano → uživo → arhivirana snimka, osim ako autor kasnije ne zamijeni prilagođenu minijaturu.</p>"
+    },
+    {
+      "heading": "Što je minijatura za YouTube uživo ili premijeru?",
+      "html": "<p>Javna fotografija predstavlja događaj u pregledavanju, pretraživanju, pretplatama i dijeljenjima. Autori obično prenose prilagođenu naslovnicu u YouTube Studio prije objavljivanja. Ako se ne objavi prilagođena datoteka, YouTube se može vratiti na automatski generiranu fotografiju kada obrada to dopusti - ista obitelj CDN naziva datoteka koja se koristi za obične videozapise (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>, i manje veličine).</p>\n  <p>Taj naslov je<strong>ne</strong>isto što i:</p>\n  <ul>\n    <li>Snimka zaslona korisničkog sučelja playera uživo</li>\n    <li>Snimka kamere usred toka koju ste sami snimili</li>\n    <li>Privatna imovina samo za Studio koja nikada nije postala javna CDN datoteka</li>\n  </ul>\n  <p>Za razliku između snimki korisničkog sučelja i hostanih fotografija pogledajte<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snimka zaslona u odnosu na pravu YouTube minijaturu</a>.</p>"
+    },
+    {
+      "heading": "Po čemu se fotografije uživo i premijere razlikuju od Shorts videozapisa i regularnih prijenosa",
+      "html": "<table>\n    <thead>\n      <tr><th>Vrsta sadržaja</th><th>Tipičan oblik URL-a</th><th>Javni i dalje domaćin</th><th>Što obično dobijete</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Redovni prijenos</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Pokrivenost krajolika kada je javna</td></tr>\n      <tr><td>Kratke hlače</td><td><code>/shorts/ID</code></td><td>Ista CDN obitelj</td><td>Često se pejzažni CDN i dalje prikazuje čak i ako se kratki video reproducira vertikalno —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Vodič za kratke filmove</a></td></tr>\n      <tr><td>Uživo / Premijera</td><td><code>/live/ID</code>ili<code>/watch?v=ID</code></td><td>Ista CDN obitelj</td><td>Prilagođena naslovnica događaja prilikom objave; ista pravila za maksimalnu/srednju rezoluciju</td></tr>\n    </tbody>\n  </table>\n  <p>11tik već parsira<code>youtube.com/live/VIDEO_ID</code>na isti način na koji analizira poveznice za gledanje i kratke videozapise. Alatka za ekstrakciju ne treba zaseban \"način rada uživo\" - potreban joj je<strong>javni ID videozapisa</strong>i javne fotografije.</p>"
+    },
+    {
+      "heading": "Životni ciklus: prije, tijekom i nakon streama",
+      "html": "<h3>1. Planirano / nadolazeće</h3>\n  <p>Nakon što YouTube dodijeli ID videozapisa i događaj postane javan (ili nenaveden s poveznicom za dijeljenje), prilagođena minijatura već može postojati na CDN-u. Zalijepite URL nadolazećeg događaja u 11tik da biste pregledali naslovnicu koju ćete vidjeti na policama \"Nadolazeće\".</p>\n  <h3>2. Živi sada</h3>\n  <p>Dok je stream uživo, ista naslovnica obično nastavlja predstavljati događaj. Izdvajanje tijekom emitiranja i dalje vraća<strong>hostirana naslovnica</strong>, nijedan svježi kadar s onoga što je u tom trenutku snimljeno kamerom.</p>\n  <h3>3. Arhivirana snimka (VOD)</h3>\n  <p>Nakon što stream završi, događaj obično ostaje kao normalan URL za gledanje s istim ID-om. Javna naslovnica često ostaje dok je autor ne zamijeni u Studiju. Ponovno pokrenite 11tik ako trebate potvrditi datoteku nakon streama.</p>"
+    },
+    {
+      "heading": "URL formati koji funkcioniraju za obrade uživo i premijere",
+      "html": "<table>\n    <thead>\n      <tr><th>Format</th><th>Primjer uzorka</th><th>Bilješke</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Put uživo</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Poželjno je kada list za dijeljenje prikazuje /uživo/</td></tr>\n      <tr><td>Gledati</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Uobičajeno za premijere i arhivirane životopise</td></tr>\n      <tr><td>Kratka poveznica</td><td><code>youtu.be/VIDEO_ID</code></td><td>Radi kada se razrješi na isti ID</td></tr>\n      <tr><td>Ugraditi</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Ekstrakcija istog ID-a</td></tr>\n      <tr><td>Kanal/središte uživo</td><td><code>youtube.com/@handle/live</code></td><td>Prvo otvorite stvarni stream tako da adresna traka prikazuje ID videozapisa</td></tr>\n    </tbody>\n  </table>\n  <p>Ako adresna traka i dalje prikazuje kanal uživo bez 11-znakovnog ID-a, 11tik ga ne može izmisliti. Otvorite karticu streama ili premijere dok se ne pojavi konkretan URL videozapisa, a zatim kopirajte tu vezu.</p>"
+    },
+    {
+      "heading": "Najbrža metoda s 11tik",
+      "html": "<ol>\n    <li>Kopirajte javni URL uživo, premijere, gledanja ili youtu.be koji sadrži ID videozapisa.</li>\n    <li>Otvoriti<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Zalijepite URL. Ekstrakcija počinje kada je ID valjan.</li>\n    <li>Preuzmite prvu navedenu fotografiju (najbolju dostupnu) ili kopirajte URL slike za CMS.</li>\n  </ol>\n  <img alt=\"Četverostupanjski tijek rada koji prikazuje kopiranje aktivnog URL-a, lijepljenje u 11tik, provjeru veličina javnog CDN-a, a zatim preuzimanje ili kopiranje URL-a slike\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktičan put za naslovnice uživo i premijere: javni URL → izdvajanje → potvrđene veličine → preuzimanje ili kopiranje.</p>\n  <p>Trebate puno javnih poveznica za gledanje odjednom? Koristite skupno (do 25) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">vodič za preuzimanje u serijama</a>Za nedavne prijenose s URL-a kanala, pogledajte<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">izdvajanje sličica kanala</a>.</p>"
+    },
+    {
+      "heading": "Izravna provjera CDN-a (nije obavezno)",
+      "html": "<p>Ako već znate ID, kandidata možete testirati i dalje:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Kad ne uspije, siđi kroz to<code>hq720.jpg</code>,<code>sddefault.jpg</code>i<code>hqdefault.jpg</code>Ručno pogađanje je sporije od validiranog popisa 11tik i čest je izvor sivih rezerviranih mjesta - vidi<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Objašnjenje maxresdefault-a</a>i<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura</a>.</p>\n  <p>Službeni odgovori YouTube Data API-ja opisuju iste klase veličina (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) na<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Resurs s minijaturama</a>. 11tik ne poziva taj API u vašem pregledniku; provjerava javne CDN datoteke na strani klijenta.</p>"
+    },
+    {
+      "heading": "Prilagođena naslovnica u odnosu na automatski generiranu fotografiju",
+      "html": "<ul>\n    <li><strong>Prilagođena naslovnica za nastup uživo/premijeru:</strong>Preneseno u Studio za događaj. Često otključava veće javne veličine nakon završetka obrade.</li>\n    <li><strong>Automatsko fotografiranje:</strong>Izvodi se kada YouTube objavi automatski okvir. Može se zaustaviti na srednjim veličinama; maksimalna rezolucija nije zajamčena.</li>\n  </ul>\n  <p>„Najviša kvaliteta“ i dalje znači najveća<em>javnost</em>datoteka koja postoji – nije privatni izvoz iz Studija. Detalji:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">sličica najviše kvalitete</a>i<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">originalna javna minijatura</a>.</p>"
+    },
+    {
+      "heading": "Kada se živa minijatura neće pojaviti",
+      "html": "<table>\n    <thead>\n      <tr><th>Situacija</th><th>Što se obično događa</th><th>Što učiniti</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Privatno / samo za članove / pakiranje s dobnim ograničenjem</td><td>Javnost još uvijek ne potvrđuje</td><td>Koristite javnu poveznicu; 11tik ne može zaobići pravila pristupa —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">nedostupan vodič za sličice</a></td></tr>\n      <tr><td>Kanal/središte uživo bez ID-a videozapisa</td><td>Parser ne pronalazi ID</td><td>Prvo otvorite URL konkretnog streama</td></tr>\n      <tr><td>Prilagođena naslovnica se još uvijek obrađuje</td><td>Samo starije ili srednje veličine</td><td>Pokušajte ponovno nakon što Studio završi; zadržite provjerenu rezervnu opciju</td></tr>\n      <tr><td>Pogodili smo maksimalne rezolucije 404</td><td>Nedostaje taj naziv datoteke</td><td>Koristite prvu navedenu veličinu za 11tik</td></tr>\n      <tr><td>Snimka zaslona igrača</td><td>UI chrome, pogrešni pikseli</td><td>Spremi CDN i dalje umjesto toga</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Odgovorna ponovna upotreba",
+      "html": "<p>Javni CDN URL nije licenca za ponovno objavljivanje naslovnice drugog autora kao vlastitog brenda. Za osobna istraživanja, komentare ili arhiviranje vlastitih streamova, datoteku čuvajte lokalno. Za blogove i društvene kartice, radije hostirajte kopiju koju imate pravo koristiti —<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Vodič za Open Graph</a>YouTubeov pregled<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">prilagođene minijature videozapisa</a>je primarna referenca na strani autora za prijenose u Studiju.</p>"
+    },
+    {
+      "heading": "Sljedeći korak",
+      "html": "<p>Otvorite stranicu uživo ili premijere dok URL ne prikaže ID videozapisa, zalijepite ga u<a href=\"https://www.11tik.com/\">Izdvajanje sličica s YouTubea</a>i spremite prvu provjerenu fotografiju. Za savjete o spremanju na mobilne uređaje pogledajte<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone i Android</a>Za prilagođene prijenose sa strane Studija, pogledajte<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Minijatura YouTube Studija 2026.</a>.</p>\n  <p class=\"yte-bio\">Napisao/la 11tik. Samo javne fotografije; preuzimanje videa ili zvuka nije moguće.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mogu li preuzeti sličicu dok je prijenos uživo?",
+      "answer": "Da, kada je stream javan i YouTube je objavio javne fotografije za taj ID videozapisa. Dobivate hostanu naslovnicu, a ne kadar kamere uživo.",
+      "answerHtml": "<p>Da, kada je stream javan i YouTube je objavio javne fotografije za taj ID videozapisa. Dobivate hostanu naslovnicu, a ne kadar kamere uživo.</p>"
+    },
+    {
+      "question": "Koriste li premijere istu metodu kao i prijenosi uživo?",
+      "answer": "Da. Oba se rješavaju ID-om videozapisa. Zalijepite URL za gledanje ili dijeljenje premijere u 11tik na isti način.",
+      "answerHtml": "<p>Da. Oba se rješavaju ID-om videozapisa. Zalijepite URL za gledanje ili dijeljenje premijere u 11tik na isti način.</p>"
+    },
+    {
+      "question": "Radi li youtube.com/live/VIDEO_ID u 11tik?",
+      "answer": "Da. Parser tretira /live/ kao i druge putove koji nose ID.",
+      "answerHtml": "<p>Da. Parser tretira<code>/live/</code>kao i druge staze koje nose ID.</p>"
+    },
+    {
+      "question": "Hoće li se naslovnica promijeniti nakon završetka streama?",
+      "answer": "Često ostaje ista, ali kreatori je mogu zamijeniti u Studiju. Ponovno izdvojite ako vam je potrebna trenutna javna datoteka.",
+      "answerHtml": "<p>Često ostaje ista, ali kreatori je mogu zamijeniti u Studiju. Ponovno izdvojite ako vam je potrebna trenutna javna datoteka.</p>"
+    },
+    {
+      "question": "Je li sličica uživo ista kao sličica Shorts videozapisa?",
+      "answer": "Ista CDN ideja, drugačiji kontekst proizvoda. Kratki videozapisi često zadržavaju javne fotografije u vodoravnom položaju čak i kada se reprodukcija odvija okomito - pogledajte vodič za minijature kratkih videozapisa.",
+      "answerHtml": "<p>Ista CDN ideja, drugačiji kontekst proizvoda. Kratki videozapisi često zadržavaju javne fotografije u vodoravnom položaju čak i kada je reprodukcija vertikalna - pogledajte<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Vodič za minijature kratkih videozapisa</a>.</p>"
+    },
+    {
+      "question": "Može li 11tik izvući iz privatnog života?",
+      "answer": "Ne. Privatno, izbrisano ili ograničeno pakiranje bez javnih fotografija neće vratiti slike.",
+      "answerHtml": "<p>Ne. Privatno, izbrisano ili ograničeno pakiranje bez javnih fotografija neće vratiti slike.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik. Samo javne fotografije; preuzimanje videa ili zvuka nije moguće.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Uvjeti</a>.</p>"
+}

@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "vi",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Cách tải xuống hình thu nhỏ của YouTube Live hoặc Premiere (Trước, Trong và Sau) | 11tik",
+  "description": "Dán URL phát trực tiếp hoặc công chiếu công khai trên YouTube vào 11tik để lưu ảnh bìa mà YouTube đã lưu trữ—trước khi phát trực tiếp, trong khi đang phát TRỰC TIẾP hoặc sau khi luồng phát trở thành bản phát lại.",
+  "h1": "Cách tải ảnh thu nhỏ của video YouTube Live hoặc Premiere (Trước, trong và sau khi phát trực tiếp)",
+  "ogTitle": "Cách tải ảnh thu nhỏ của video YouTube Live hoặc Premiere (Trước, trong và sau khi phát trực tiếp)",
+  "ogDescription": "Dán URL phát trực tiếp hoặc công chiếu công khai trên YouTube vào 11tik để lưu ảnh bìa mà YouTube đã lưu trữ—trước khi phát trực tiếp, trong khi đang phát TRỰC TIẾP hoặc sau khi luồng phát trở thành bản phát lại.",
+  "imageAlt": "Sơ đồ vòng đời ba giai đoạn thể hiện hình ảnh bìa của video phát trực tiếp hoặc ra mắt trên YouTube trước khi phát sóng, trong quá trình hiển thị huy hiệu phát trực tiếp và sau khi được lưu trữ dưới dạng video theo yêu cầu (VOD).",
+  "faqHeading": "Câu hỏi thường gặp",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Sơ đồ vòng đời ba giai đoạn thể hiện hình ảnh bìa của video phát trực tiếp hoặc ra mắt trên YouTube trước khi phát sóng, trong quá trình hiển thị huy hiệu phát trực tiếp và sau khi được lưu trữ dưới dạng video theo yêu cầu (VOD).",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Quy trình làm việc bốn bước hiển thị sao chép URL trực tiếp, dán vào 11tik, xác thực kích thước CDN công cộng, sau đó tải xuống hoặc sao chép URL hình ảnh.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Câu trả lời nhanh",
+      "html": "<p>Mỗi buổi phát trực tiếp trên YouTube và buổi chiếu ra mắt đều có 11 ký tự.<strong>ID video</strong>, giống như một lần tải lên thông thường. Ảnh bìa công khai cho video đó hiện có trên CDN hình ảnh của YouTube (<code>i.ytimg.com</code>Sao chép một mục công khai<code>/live/</code>, xem hoặc chia sẻ URL, dán nó vào<a href=\"https://www.11tik.com/\">11tik</a>Sau đó, tải xuống ảnh tĩnh lớn nhất có thể tải được. Bạn đang tiết kiệm được...<strong>hình ảnh bìa quảng cáo</strong>Đây không phải là ảnh chụp màn hình trực tiếp từ chương trình phát sóng và cũng không phải là tệp video.</p>\n\n  <img alt=\"Sơ đồ vòng đời ba giai đoạn thể hiện hình ảnh bìa của video phát trực tiếp hoặc ra mắt trên YouTube trước khi phát sóng, trong quá trình hiển thị huy hiệu phát trực tiếp và sau khi được lưu trữ dưới dạng video theo yêu cầu (VOD).\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Cùng một ID video, cùng một ảnh bìa công khai: đã lên lịch → trực tiếp → phát lại đã lưu trữ, trừ khi người tạo thay thế hình thu nhỏ tùy chỉnh sau đó.</p>"
+    },
+    {
+      "heading": "Ảnh thu nhỏ của YouTube Live hoặc Premiere là gì?",
+      "html": "<p>Hình ảnh tĩnh công khai đó đại diện cho sự kiện trong quá trình duyệt, tìm kiếm, đăng ký và chia sẻ. Người tạo nội dung thường tải lên ảnh bìa tùy chỉnh trong YouTube Studio trước khi phát trực tiếp. Nếu không có tệp tùy chỉnh nào được xuất bản, YouTube có thể sử dụng ảnh tĩnh tự động tạo sau khi quá trình xử lý cho phép — cùng nhóm tên tệp CDN được sử dụng cho các video thông thường (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>và các kích thước nhỏ hơn).</p>\n  <p>Bìa đó là<strong>không</strong>Tương tự như:</p>\n  <ul>\n    <li>Ảnh chụp màn hình giao diện người dùng của trình phát trực tiếp</li>\n    <li>Một khung hình bạn tự chụp giữa dòng chảy bằng máy ảnh.</li>\n    <li>Đây là tài sản riêng tư chỉ dành cho Studio và chưa bao giờ được công khai trên CDN.</li>\n  </ul>\n  <p>Để hiểu rõ sự khác biệt giữa ảnh chụp giao diện người dùng và ảnh tĩnh được lưu trữ, hãy xem<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ảnh chụp màn hình so với ảnh thu nhỏ YouTube thực tế</a>.</p>"
+    },
+    {
+      "heading": "Ảnh chụp trực tiếp và ảnh chụp buổi ra mắt khác với ảnh chụp nhanh và ảnh tải lên thông thường như thế nào?",
+      "html": "<table>\n    <thead>\n      <tr><th>Loại nội dung</th><th>Hình dạng URL điển hình</th><th>Nơi công cộng vẫn là địa điểm tổ chức.</th><th>Những gì bạn thường nhận được</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Tải lên thường xuyên</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Cảnh quan bao phủ khi công cộng</td></tr>\n      <tr><td>Quần short</td><td><code>/shorts/ID</code></td><td>Cùng một họ CDN</td><td>Thường thì CDN dạng ngang vẫn hoạt động ngay cả khi Short phát nội dung dọc —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Hướng dẫn về quần short</a></td></tr>\n      <tr><td>Trực tiếp / Công chiếu</td><td><code>/live/ID</code>hoặc<code>/watch?v=ID</code></td><td>Cùng một họ CDN</td><td>Ảnh bìa sự kiện tùy chỉnh khi xuất bản; áp dụng cùng quy tắc về độ phân giải tối đa/kích thước trung bình.</td></tr>\n    </tbody>\n  </table>\n  <p>11tik đã được phân tích cú pháp<code>youtube.com/live/VIDEO_ID</code>Tương tự như cách nó phân tích các liên kết xem và video ngắn. Trình trích xuất không cần \"chế độ trực tiếp\" riêng biệt — nó cần một...<strong>ID video công khai</strong>và các thiết bị chưng cất rượu công cộng.</p>"
+    },
+    {
+      "heading": "Vòng đời: trước, trong và sau khi phát trực tuyến",
+      "html": "<h3>1. Đã lên lịch / Sắp tới</h3>\n  <p>Sau khi YouTube gán ID video và sự kiện được công khai (hoặc ẩn danh với liên kết chia sẻ), hình thu nhỏ tùy chỉnh có thể đã tồn tại trên CDN. Dán URL sắp tới vào 11tik để xem trước ảnh bìa bạn sẽ thấy trong mục “Sắp tới”.</p>\n  <h3>2. Đang phát trực tiếp</h3>\n  <p>Trong khi luồng phát trực tiếp đang diễn ra, ảnh bìa thường vẫn giữ nguyên để đại diện cho sự kiện. Việc trích xuất dữ liệu trong quá trình phát sóng vẫn trả về kết quả như cũ.<strong>ảnh bìa được đăng tải</strong>Không phải là một khung hình mới từ bất cứ thứ gì đang được ghi hình vào giây phút đó.</p>\n  <h3>3. Bản ghi phát lại đã lưu trữ (VOD)</h3>\n  <p>Sau khi luồng phát kết thúc, sự kiện thường vẫn giữ nguyên URL xem thông thường với cùng ID. Ảnh bìa công khai thường vẫn còn cho đến khi người tạo thay thế nó trong Studio. Chạy lại 11tik nếu bạn cần xác nhận tệp sau khi phát trực tuyến.</p>"
+    },
+    {
+      "heading": "Các định dạng URL phù hợp cho ảnh bìa trực tiếp và ảnh bìa ra mắt",
+      "html": "<table>\n    <thead>\n      <tr><th>Định dạng</th><th>Ví dụ về mẫu</th><th>Ghi chú</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Đường đi trực tiếp</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Ưu tiên khi bảng chia sẻ hiển thị /live/</td></tr>\n      <tr><td>Đồng hồ</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Thường thấy trong các buổi ra mắt và các sự kiện lưu trữ.</td></tr>\n      <tr><td>Liên kết rút gọn</td><td><code>youtu.be/VIDEO_ID</code></td><td>Hoạt động khi nó được giải quyết thành cùng một ID.</td></tr>\n      <tr><td>Nhúng</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Trích xuất ID giống nhau</td></tr>\n      <tr><td>Kênh/trung tâm trực tiếp</td><td><code>youtube.com/@handle/live</code></td><td>Trước tiên hãy mở luồng phát trực tiếp để thanh địa chỉ hiển thị ID video.</td></tr>\n    </tbody>\n  </table>\n  <p>Nếu thanh địa chỉ vẫn hiển thị trung tâm phát trực tiếp kênh mà không có ID 11 ký tự, 11tik không thể tạo ra ID đó. Mở luồng hoặc thẻ trình chiếu cho đến khi URL video cụ thể xuất hiện, sau đó sao chép liên kết đó.</p>"
+    },
+    {
+      "heading": "Phương pháp nhanh nhất với 11tik",
+      "html": "<ol>\n    <li>Sao chép URL công khai trực tiếp, công chiếu, xem hoặc youtu.be có chứa ID video.</li>\n    <li>Mở<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Dán URL vào đây. Quá trình trích xuất bắt đầu khi ID hợp lệ.</li>\n    <li>Tải xuống ảnh tĩnh đầu tiên trong danh sách (ảnh tốt nhất hiện có), hoặc sao chép URL hình ảnh cho hệ thống quản lý nội dung (CMS).</li>\n  </ol>\n  <img alt=\"Quy trình làm việc bốn bước hiển thị sao chép URL trực tiếp, dán vào 11tik, xác thực kích thước CDN công cộng, sau đó tải xuống hoặc sao chép URL hình ảnh.\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Quy trình thực tế để tải ảnh bìa trực tiếp và ra mắt: URL công khai → trích xuất → kích thước đã được xác thực → tải xuống hoặc sao chép.</p>\n  <p>Cần nhiều liên kết xem công khai cùng lúc? Sử dụng chức năng Số lượng lớn (tối đa 25) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">hướng dẫn tải xuống hàng loạt</a>Để xem các video được tải lên gần đây từ URL kênh, hãy xem...<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">trích xuất hình thu nhỏ kênh</a>.</p>"
+    },
+    {
+      "heading": "Kiểm tra CDN trực tiếp (tùy chọn)",
+      "html": "<p>Nếu bạn đã biết ID, bạn vẫn có thể kiểm tra ứng viên:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Khi nó thất bại, hãy chuyển xuống cấp thấp hơn.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, Và<code>hqdefault.jpg</code>Việc đoán thủ công chậm hơn danh sách đã được xác thực của 11tik và là nguồn gốc phổ biến của các chỗ giữ chỗ màu xám—xem<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault được giải thích</a>và<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL hình thu nhỏ</a>.</p>\n  <p>Các phản hồi API dữ liệu chính thức của YouTube mô tả các nhóm kích thước tương tự (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) trên<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Tài nguyên hình thu nhỏ</a>. 11tik không gọi API đó trong trình duyệt của bạn; nó xác thực các tệp CDN công khai ở phía máy khách.</p>"
+    },
+    {
+      "heading": "Ảnh bìa tùy chỉnh so với ảnh bìa tự động tạo.",
+      "html": "<ul>\n    <li><strong>Bìa đĩa tùy chỉnh cho buổi biểu diễn trực tiếp/ra mắt:</strong>Ảnh được tải lên bằng Studio cho sự kiện. Thường thì ảnh sẽ được mở khóa với kích thước lớn hơn khi quá trình xử lý hoàn tất.</li>\n    <li><strong>Ảnh chụp tự động:</strong>Ảnh được tạo ra khi YouTube tự động đăng tải một khung hình. Có thể dừng lại ở kích thước trung bình; độ phân giải tối đa không được đảm bảo.</li>\n  </ul>\n  <p>\"Chất lượng cao nhất\" vẫn có nghĩa là lớn nhất.<em>công cộng</em>Tệp hiện có — không phải là bản xuất riêng tư của Studio. Chi tiết:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">hình thu nhỏ chất lượng cao nhất</a>Và<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">ảnh thu nhỏ công khai gốc</a>.</p>"
+    },
+    {
+      "heading": "Khi hình thu nhỏ động không hiển thị",
+      "html": "<table>\n    <thead>\n      <tr><th>Tình huống</th><th>Điều thường xảy ra</th><th>Nên làm gì</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Bao bì riêng tư / dành riêng cho thành viên / giới hạn độ tuổi</td><td>Chưa có thông tin công khai nào được xác nhận.</td><td>Sử dụng liên kết công khai; 11tik không thể bỏ qua các quy tắc truy cập —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">hướng dẫn hình thu nhỏ không khả dụng</a></td></tr>\n      <tr><td>Kênh/trung tâm phát trực tiếp không có ID video</td><td>Trình phân tích cú pháp không tìm thấy ID</td><td>Trước tiên hãy mở URL luồng cụ thể.</td></tr>\n      <tr><td>Vỏ bọc tùy chỉnh vẫn đang được xử lý</td><td>Chỉ dành cho người lớn tuổi hoặc người có kích thước trung bình</td><td>Thử lại sau khi Studio hoàn tất; giữ lại phương án dự phòng đã được xác thực.</td></tr>\n      <tr><td>Độ phân giải tối đa ước tính là 404</td><td>Tên tệp đó bị thiếu</td><td>Sử dụng kích thước được liệt kê đầu tiên của 11tik</td></tr>\n      <tr><td>Ảnh chụp màn hình người chơi</td><td>UI chrome, pixel sai</td><td>Thay vào đó, hãy giữ lại CDN.</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Tái sử dụng có trách nhiệm",
+      "html": "<p>URL CDN công khai không phải là giấy phép để bạn đăng lại ảnh bìa của người khác dưới thương hiệu của riêng mình. Đối với mục đích nghiên cứu cá nhân, bình luận hoặc lưu trữ các luồng phát trực tiếp của riêng bạn, hãy giữ tệp tin đó cục bộ. Đối với blog và bài đăng trên mạng xã hội, hãy ưu tiên lưu trữ một bản sao mà bạn có quyền sử dụng —<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Hướng dẫn Open Graph</a>Tổng quan của YouTube về...<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">hình thu nhỏ video tùy chỉnh</a>Đây là tài liệu tham khảo chính dành cho người tạo nội dung khi tải lên trong Studio.</p>"
+    },
+    {
+      "heading": "Bước tiếp theo",
+      "html": "<p>Mở trang phát trực tiếp hoặc trang xem trước cho đến khi URL hiển thị ID video, sau đó dán ID đó vào<a href=\"https://www.11tik.com/\">Công cụ trích xuất hình thu nhỏ YouTube</a>và lưu lại ảnh tĩnh đầu tiên đã được xác thực. Để biết mẹo lưu ảnh trên thiết bị di động, hãy xem<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone và Android</a>Đối với các bản tải lên tùy chỉnh từ phía Studio, vui lòng xem<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Ảnh thu nhỏ của YouTube Studio năm 2026</a>.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik. Chỉ hiển thị hình ảnh tĩnh; không cho phép tải xuống video hoặc âm thanh.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Tôi có thể tải ảnh thu nhỏ xuống trong khi đang phát trực tiếp không?",
+      "answer": "Đúng vậy, khi luồng phát trực tiếp được công khai và YouTube đã đăng tải hình ảnh tĩnh công khai cho video đó. Bạn sẽ thấy ảnh bìa được lưu trữ, chứ không phải khung hình từ camera trực tiếp.",
+      "answerHtml": "<p>Đúng vậy, khi luồng phát trực tiếp được công khai và YouTube đã đăng tải hình ảnh tĩnh công khai cho video đó. Bạn sẽ thấy ảnh bìa được lưu trữ, chứ không phải khung hình từ camera trực tiếp.</p>"
+    },
+    {
+      "question": "Các buổi công chiếu có sử dụng phương pháp tương tự như phát trực tiếp không?",
+      "answer": "Vâng. Cả hai đều quy về ID video. Dán URL xem hoặc chia sẻ buổi ra mắt vào 11tik theo cùng một cách.",
+      "answerHtml": "<p>Vâng. Cả hai đều quy về ID video. Dán URL xem hoặc chia sẻ buổi ra mắt vào 11tik theo cùng một cách.</p>"
+    },
+    {
+      "question": "Liệu youtube.com/live/VIDEO_ID có hoạt động trong 11tik không?",
+      "answer": "Đúng vậy. Trình phân tích cú pháp coi /live/ giống như các đường dẫn có chứa ID khác.",
+      "answerHtml": "<p>Đúng vậy. Trình phân tích cú pháp xử lý<code>/live/</code>Giống như các đường dẫn có mã định danh khác.</p>"
+    },
+    {
+      "question": "Ảnh bìa có thay đổi sau khi buổi phát trực tiếp kết thúc không?",
+      "answer": "Thông thường nó vẫn giữ nguyên, nhưng người tạo có thể thay thế nó trong Studio. Hãy giải nén lại nếu bạn cần tệp công khai hiện tại.",
+      "answerHtml": "<p>Thông thường nó vẫn giữ nguyên, nhưng người tạo có thể thay thế nó trong Studio. Hãy giải nén lại nếu bạn cần tệp công khai hiện tại.</p>"
+    },
+    {
+      "question": "Ảnh thu nhỏ động có giống với ảnh thu nhỏ của video ngắn không?",
+      "answer": "Cùng một ý tưởng về CDN, nhưng bối cảnh sản phẩm khác nhau. Shorts thường giữ nguyên ảnh tĩnh ngang ngay cả khi phát lại theo chiều dọc — xem hướng dẫn về ảnh thu nhỏ của Shorts.",
+      "answerHtml": "<p>Cùng một ý tưởng CDN, nhưng bối cảnh sản phẩm khác nhau. Các video ngắn thường giữ nguyên hình ảnh tĩnh ngang ngay cả khi phát lại theo chiều dọc — xem thêm<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Hướng dẫn thu nhỏ cho quần short</a>.</p>"
+    },
+    {
+      "question": "11tik có thể trích xuất từ ​​một buổi phát trực tiếp riêng tư không?",
+      "answer": "Không. Các gói sản phẩm riêng tư, đã xóa hoặc bị hạn chế mà không có hình ảnh công khai sẽ không được hoàn trả hình ảnh.",
+      "answerHtml": "<p>Không. Các gói sản phẩm riêng tư, đã xóa hoặc bị hạn chế mà không có hình ảnh công khai sẽ không được hoàn trả hình ảnh.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik. Chỉ hiển thị hình ảnh tĩnh; không cho phép tải xuống video hoặc âm thanh.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Điều khoản</a>.</p>"
+}

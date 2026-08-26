@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "es",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Cómo descargar una miniatura de YouTube Live o Premiere (antes, durante y después) | 11tik",
+  "description": "Pegue una URL pública de YouTube Live o de estreno en 11tik para guardar la imagen de portada que YouTube ya aloja, antes de la transmisión en vivo, mientras LIVE está en curso o después de que la transmisión se convierta en una repetición.",
+  "h1": "Cómo descargar una miniatura de YouTube Live o Premiere (antes, durante y después)",
+  "ogTitle": "Cómo descargar una miniatura de YouTube Live o Premiere (antes, durante y después)",
+  "ogDescription": "Pegue una URL pública de YouTube Live o de estreno en 11tik para guardar la imagen de portada que YouTube ya aloja, antes de la transmisión en vivo, mientras LIVE está en curso o después de que la transmisión se convierta en una repetición.",
+  "imageAlt": "Diagrama de ciclo de vida de tres etapas que muestra una imagen de portada de YouTube Live o de estreno antes de la transmisión en vivo, durante la aparición del distintivo de transmisión en vivo y después del archivo como video bajo demanda (VOD).",
+  "faqHeading": "Preguntas frecuentes",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Diagrama de ciclo de vida de tres etapas que muestra una imagen de portada de YouTube Live o de estreno antes de la transmisión en vivo, durante la aparición del distintivo de transmisión en vivo y después del archivo como video bajo demanda (VOD).",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Flujo de trabajo de cuatro pasos que muestra cómo copiar una URL en vivo, pegarla en 11tik, validar los tamaños de la CDN pública y luego descargar o copiar la URL de la imagen.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Respuesta rápida",
+      "html": "<p>Una transmisión en vivo de YouTube y un estreno tienen cada uno 11 caracteres.<strong>ID de vídeo</strong>, igual que una carga normal. Las imágenes de portada públicas para esa identificación están disponibles en la CDN de imágenes de YouTube (<code>i.ytimg.com</code>). Copiar un público<code>/live/</code>, mira o comparte la URL, pégala en<a href=\"https://www.11tik.com/\">11tik</a>, luego descarga el archivo más grande que realmente se carga. Estás guardando el<strong>imagen de portada promocional</strong>No se trata de una captura de pantalla en directo de la retransmisión ni del archivo de vídeo.</p>\n\n  <img alt=\"Diagrama de ciclo de vida de tres etapas que muestra una imagen de portada de YouTube Live o de estreno antes de la transmisión en vivo, durante la aparición del distintivo de transmisión en vivo y después del archivo como video bajo demanda (VOD).\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Mismo ID de vídeo, misma familia de portadas públicas: programada → en directo → repetición archivada, a menos que el creador reemplace la miniatura personalizada más adelante.</p>"
+    },
+    {
+      "heading": "¿Qué es una miniatura de YouTube Live o Premiere?",
+      "html": "<p>Es la imagen pública la que representa el evento en la navegación, búsqueda, suscripciones y comparticiones. Los creadores suelen subir una portada personalizada en YouTube Studio antes de la transmisión en vivo. Si no se publica ningún archivo personalizado, YouTube puede recurrir a una imagen generada automáticamente una vez que el procesamiento lo permita; la misma familia de nombres de archivo CDN que se utiliza para los videos regulares (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>y tamaños más pequeños).</p>\n  <p>Esa portada es<strong>no</strong>lo mismo que:</p>\n  <ul>\n    <li>Captura de pantalla de la interfaz de usuario del reproductor en vivo</li>\n    <li>Un fotograma de cámara grabado por ti mismo a mitad de la transmisión.</li>\n    <li>Un recurso privado exclusivo del estudio que nunca se convirtió en un archivo CDN público.</li>\n  </ul>\n  <p>Para conocer la diferencia entre capturas de interfaz de usuario e imágenes fijas alojadas, consulte<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Captura de pantalla vs. miniatura real de YouTube</a>.</p>"
+    },
+    {
+      "heading": "En qué se diferencian las imágenes fijas de transmisiones en vivo y estrenos de los videos cortos y las cargas regulares.",
+      "html": "<table>\n    <thead>\n      <tr><th>Tipo de contenido</th><th>Formato típico de URL</th><th>El público sigue siendo anfitrión</th><th>Lo que normalmente obtienes</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Carga regular</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Cobertura paisajística cuando es público</td></tr>\n      <tr><td>Bermudas</td><td><code>/shorts/ID</code></td><td>Misma familia de CDN</td><td>A menudo, las CDN de paisaje siguen siendo incluso si los juegos cortos son verticales.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Guía de relatos cortos</a></td></tr>\n      <tr><td>En directo / Estreno</td><td><code>/live/ID</code>o<code>/watch?v=ID</code></td><td>Misma familia de CDN</td><td>Portada personalizada del evento al publicarse; mismas reglas de resolución máxima/tamaño medio.</td></tr>\n    </tbody>\n  </table>\n  <p>11tik ya analiza<code>youtube.com/live/VIDEO_ID</code>de la misma manera que analiza los enlaces de relojes y Shorts. El extractor no necesita un “modo en vivo” separado, necesita un<strong>ID de video público</strong>y fotografías públicas.</p>"
+    },
+    {
+      "heading": "Ciclo de vida: antes, durante y después de la transmisión",
+      "html": "<h3>1. Programado / Próximo</h3>\n  <p>Una vez que YouTube haya asignado un ID de video y el evento sea público (o no listado con un enlace para compartir), ya puede existir una miniatura personalizada en la CDN. Pegue la URL del próximo evento en 11tik para previsualizar la portada que verá en la sección \"Próximos eventos\".</p>\n  <h3>2. En vivo ahora</h3>\n  <p>Mientras la transmisión está en vivo, la misma portada generalmente continúa representando el evento. Extraer durante la transmisión aún devuelve el<strong>portada presentada</strong>, no es un fotograma nuevo de lo que sea que esté en la cámara en ese segundo.</p>\n  <h3>3. Repetición archivada (VOD)</h3>\n  <p>Una vez finalizada la transmisión, el evento suele permanecer como una URL de visualización normal con el mismo ID. La portada pública generalmente se mantiene hasta que el creador la reemplaza en Studio. Vuelva a ejecutar 11tik si necesita confirmar el archivo posterior a la transmisión.</p>"
+    },
+    {
+      "heading": "Formatos de URL que funcionan para portadas en directo y de estreno",
+      "html": "<table>\n    <thead>\n      <tr><th>Formato</th><th>Patrón de ejemplo</th><th>Notas</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Sendero en vivo</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Preferible cuando la hoja de compartir muestra /en vivo/</td></tr>\n      <tr><td>Mirar</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Común para estrenos y vidas archivadas</td></tr>\n      <tr><td>Enlace corto</td><td><code>youtu.be/VIDEO_ID</code></td><td>Funciona cuando se resuelve al mismo ID.</td></tr>\n      <tr><td>Empotrar</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Extracción de la misma ID</td></tr>\n      <tr><td>Canal / centro de transmisión en vivo</td><td><code>youtube.com/@handle/live</code></td><td>Primero abre la transmisión para que la barra de direcciones muestre un ID de video.</td></tr>\n    </tbody>\n  </table>\n  <p>Si la barra de direcciones aún muestra un centro de transmisión en vivo sin un ID de 11 caracteres, 11tik no puede generarlo. Abra la tarjeta de transmisión o estreno hasta que aparezca una URL de video específica y luego copie ese enlace.</p>"
+    },
+    {
+      "heading": "Método más rápido con 11tik",
+      "html": "<ol>\n    <li>Copia una URL pública de transmisión en vivo, estreno, visualización o youtu.be que contenga la ID del video.</li>\n    <li>Abierto<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Pega la URL. La extracción comenzará cuando el ID sea válido.</li>\n    <li>Descarga la primera imagen fija de la lista (la mejor disponible) o copia la URL de la imagen para un CMS.</li>\n  </ol>\n  <img alt=\"Flujo de trabajo de cuatro pasos que muestra cómo copiar una URL en vivo, pegarla en 11tik, validar los tamaños de la CDN pública y luego descargar o copiar la URL de la imagen.\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ruta práctica para portadas en vivo y estrenos: URL pública → extraer → tamaños validados → descargar o copiar.</p>\n  <p>¿Necesitas muchos enlaces de vigilancia pública a la vez? Usa la opción Masiva (hasta 25) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">guía de descarga por lotes</a>Para ver las cargas recientes desde una URL de canal, consulte<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extracción de miniaturas de canales</a>.</p>"
+    },
+    {
+      "heading": "Verificación directa de CDN (opcional)",
+      "html": "<p>Si ya conoces la identificación, aún puedes probar un candidato:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Cuando falle, retroceda<code>hq720.jpg</code>,<code>sddefault.jpg</code>, y<code>hqdefault.jpg</code>. La adivinación manual es más lenta que la lista validada de 11tik y es una fuente común de marcadores de posición grises; consulte<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Explicación de maxresdefault</a>y el<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guía de URL de miniaturas</a>.</p>\n  <p>Las respuestas oficiales de la API de datos de YouTube describen las mismas clases de tamaño (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) en el<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Recurso de miniaturas</a>. 11tik no llama a esa API en su navegador; valida los archivos CDN públicos del lado del cliente.</p>"
+    },
+    {
+      "heading": "Portada personalizada frente a imagen generada automáticamente",
+      "html": "<ul>\n    <li><strong>Portada personalizada para el concierto/estreno:</strong>Subido en Studio para el evento. A menudo desbloquea tamaños públicos mayores cuando finaliza el procesamiento.</li>\n    <li><strong>Automático todavía:</strong>Se obtiene cuando YouTube publica un fotograma automático. Puede detenerse en tamaños intermedios; no se garantiza la resolución máxima.</li>\n  </ul>\n  <p>“Máxima calidad” sigue significando la más grande<em>público</em>Archivo existente, no una exportación privada de Studio. Detalles:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatura de máxima calidad</a>y<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">miniatura pública original</a>.</p>"
+    },
+    {
+      "heading": "Cuando no aparezca una miniatura en vivo",
+      "html": "<table>\n    <thead>\n      <tr><th>Situación</th><th>Lo que suele suceder</th><th>¿Qué hacer?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Embalaje privado / solo para miembros / con restricción de edad</td><td>Ningún público aún lo valida</td><td>Utilice un enlace público; 11tik no puede eludir las reglas de acceso.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">Guía de miniaturas no disponible</a></td></tr>\n      <tr><td>Canal/centro de transmisión en vivo sin ID de video</td><td>El analizador no encuentra ningún ID.</td><td>Primero, abre la URL del flujo concreto.</td></tr>\n      <tr><td>La portada personalizada aún está en proceso.</td><td>Solo tallas grandes o medianas</td><td>Inténtalo de nuevo después de que Studio termine; conserva la reserva validada.</td></tr>\n      <tr><td>Resolución máxima estimada 404</td><td>Falta ese nombre de archivo</td><td>Utilice el primer tamaño listado de 11tik</td></tr>\n      <tr><td>Captura de pantalla del jugador</td><td>Interfaz de usuario Chrome, píxeles incorrectos</td><td>Guarda el CDN en su lugar.</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Reutilización responsable",
+      "html": "<p>Una URL pública de CDN no es una licencia para republicar la portada de otro creador como si fuera tu propia marca. Para investigación personal, comentarios o archivar tus propias transmisiones, guarda el archivo localmente. Para blogs y tarjetas sociales, es preferible alojar una copia que tengas derecho a usar.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">Blog / Guía de Open Graph</a>. Resumen de YouTube<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">miniaturas de vídeo personalizadas</a>es la referencia principal del lado del creador para las cargas en Studio.</p>"
+    },
+    {
+      "heading": "Siguiente paso",
+      "html": "<p>Abra la página en vivo o de estreno hasta que la URL muestre un ID de video, péguelo en el<a href=\"https://www.11tik.com/\">Extractor de miniaturas de YouTube</a>y guarda la primera imagen validada. Para obtener consejos sobre cómo guardar en dispositivos móviles, consulta<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone y Android</a>Para cargas personalizadas del lado del estudio, consulte<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatura de YouTube Studio 2026</a>.</p>\n  <p class=\"yte-bio\">Escrito por 11tik. Solo imágenes fijas públicas; no se permite la descarga de vídeo ni audio.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Puedo descargar la miniatura mientras la transmisión está en directo?",
+      "answer": "Sí, cuando la transmisión es pública y YouTube ha publicado imágenes fijas públicas para ese ID de video. Obtienes la imagen de portada alojada, no un fotograma de la cámara en vivo.",
+      "answerHtml": "<p>Sí, cuando la transmisión es pública y YouTube ha publicado imágenes fijas públicas para ese ID de video. Obtienes la imagen de portada alojada, no un fotograma de la cámara en vivo.</p>"
+    },
+    {
+      "question": "¿Los estrenos utilizan el mismo método que las transmisiones en directo?",
+      "answer": "Sí. Ambos se resuelven en un ID de video. Pegue la URL de visualización o compartición de estreno en 11tik de la misma manera.",
+      "answerHtml": "<p>Sí. Ambos se resuelven en un ID de video. Pegue la URL de visualización o compartición de estreno en 11tik de la misma manera.</p>"
+    },
+    {
+      "question": "¿youtube.com/live/VIDEO_ID funciona en 11tik?",
+      "answer": "Sí. El analizador trata /live/ como cualquier otra ruta que contenga un identificador.",
+      "answerHtml": "<p>Sí. El analizador trata<code>/live/</code>como otras rutas portadoras de ID.</p>"
+    },
+    {
+      "question": "¿Cambiará la portada después de que termine la transmisión?",
+      "answer": "A menudo permanece igual, pero los creadores pueden reemplazarlo en Studio. Vuelva a extraerlo si necesita el archivo público actual.",
+      "answerHtml": "<p>A menudo permanece igual, pero los creadores pueden reemplazarlo en Studio. Vuelva a extraerlo si necesita el archivo público actual.</p>"
+    },
+    {
+      "question": "¿Una miniatura en directo es lo mismo que una miniatura de Shorts?",
+      "answer": "La misma idea de CDN, diferente contexto de producto. Shorts a menudo conserva imágenes públicas horizontales incluso cuando la reproducción es vertical; consulte la guía de miniaturas de Shorts.",
+      "answerHtml": "<p>La misma idea de CDN, diferente contexto de producto. Los cortos a menudo mantienen imágenes públicas horizontales incluso cuando la reproducción es vertical; vea el<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Guía de miniaturas de cortometrajes</a>.</p>"
+    },
+    {
+      "question": "¿Puede 11tik extraer información de una vida privada?",
+      "answer": "No. Los paquetes privados, eliminados o restringidos que no contengan imágenes públicas no devolverán las imágenes.",
+      "answerHtml": "<p>No. Los paquetes privados, eliminados o restringidos que no contengan imágenes públicas no devolverán las imágenes.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik. Solo imágenes fijas públicas; no se permite la descarga de vídeo ni audio.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Términos</a>.</p>"
+}

@@ -25,7 +25,7 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
   it("inventories GUIDE_POSTS + utilities as localizable", () => {
     const inventory = buildContentInventory();
     const localizable = localizableContent(inventory);
-    expect(localizable.filter((i) => i.type === "article")).toHaveLength(17);
+    expect(localizable.filter((i) => i.type === "article")).toHaveLength(18);
     expect(localizable.filter((i) => i.type === "utility")).toHaveLength(6);
     expect(localizable.every((item) => item.localizable && item.indexable)).toBe(true);
     expect(inventory.some((item) => item.type === "homepage" && item.localizable === false)).toBe(true);
@@ -73,7 +73,7 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
     const manifest = scanPublishability();
     const targets = getTargetLocales();
     expect(manifest.localeCount).toBe(targets.length);
-    expect(manifest.theoreticalPages).toBe(23 * targets.length);
+    expect(manifest.theoreticalPages).toBe(24 * targets.length);
     expect(manifest.contents["11tik-share-links-thumb-vs-youtube"].locales.fr).toBeTruthy();
     expect(manifest.contents["11tik-share-links-thumb-vs-youtube"].locales.aa).toBeUndefined();
   });

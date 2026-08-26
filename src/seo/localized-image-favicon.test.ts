@@ -75,7 +75,7 @@ describe("localized image alt + favicon rendering", () => {
     expect(html).toContain('hreflang="ar"');
   });
 
-  it("inventory localizable pages still total 23", () => {
-    expect(localizableContent(buildContentInventory())).toHaveLength(23);
+  it("inventory localizable pages still total 24", () => {
+    expect(localizableContent(buildContentInventory())).toHaveLength(24);
   });
 });

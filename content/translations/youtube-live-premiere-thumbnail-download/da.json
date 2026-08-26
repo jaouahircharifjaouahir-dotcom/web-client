@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "da",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Sådan downloader du et miniaturebillede fra en YouTube Live- eller Premiere-udsendelse (før, under og efter) | 11tik",
+  "description": "Indsæt en offentlig YouTube-live- eller premiere-URL i 11tik for at gemme det cover, som YouTube allerede er vært for – før livestreamen, mens LIVE er aktiv, eller efter streamen bliver til en gengivelse.",
+  "h1": "Sådan downloader du et YouTube Live- eller Premiere-miniaturebillede (før, under og efter)",
+  "ogTitle": "Sådan downloader du et YouTube Live- eller Premiere-miniaturebillede (før, under og efter)",
+  "ogDescription": "Indsæt en offentlig YouTube-live- eller premiere-URL i 11tik for at gemme det cover, som YouTube allerede er vært for – før livestreamen, mens LIVE er aktiv, eller efter streamen bliver til en gengivelse.",
+  "imageAlt": "Tretrins livscyklusdiagram, der viser et YouTube live- eller premierecoverbillede før lancering, under live-badget og efter arkivering som VOD",
+  "faqHeading": "Ofte stillede spørgsmål",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Tretrins livscyklusdiagram, der viser et YouTube live- eller premierecoverbillede før lancering, under live-badget og efter arkivering som VOD",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Firetrins-arbejdsgang, der viser kopiering af en live-URL, indsættelse i 11tik, validering af offentlige CDN-størrelser og derefter download eller kopiering af billed-URL'en",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hurtigt svar",
+      "html": "<p>En YouTube Livestream og en Premiere har hver 11 tegn<strong>video-ID</strong>, ligesom en normal upload. Offentlige coverbilleder for det pågældende ID vises live på YouTubes billed-CDN (<code>i.ytimg.com</code>). Kopiér en offentlig<code>/live/</code>, se eller del URL, indsæt den i<a href=\"https://www.11tik.com/\">11tik</a>, og download derefter det største stillbillede, der rent faktisk indlæses. Du gemmer<strong>reklameforsidebillede</strong>, ikke et live frame grab af udsendelsen og ikke videofilen.</p>\n\n  <img alt=\"Tretrins livscyklusdiagram, der viser et YouTube live- eller premierecoverbillede før lancering, under live-badget og efter arkivering som VOD\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Samme video-ID, samme offentlige coverfamilie: planlagt → live → arkiveret afspilning, medmindre skaberen erstatter det brugerdefinerede miniaturebillede senere.</p>"
+    },
+    {
+      "heading": "Hvad er et YouTube Live- eller Premiere-miniaturebillede?",
+      "html": "<p>Det er det offentlige stillbillede, der repræsenterer begivenheden i browsing, søgning, abonnementer og delinger. YouTubere uploader normalt et brugerdefineret cover i YouTube Studio, før de går live. Hvis der ikke udgives en brugerdefineret fil, kan YouTube vende tilbage til et automatisk genereret stillbillede, når behandlingen tillader det – samme familie af CDN-filnavne, der bruges til almindelige videoer (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>og mindre størrelser).</p>\n  <p>Det cover er<strong>ikke</strong>det samme som:</p>\n  <ul>\n    <li>Et skærmbillede af live-afspillerens brugergrænseflade</li>\n    <li>Et midstream-kamerabillede, du selv har optaget</li>\n    <li>Et privat aktiv, der kun tilhører Studio, og som aldrig blev en offentlig CDN-fil</li>\n  </ul>\n  <p>For forskellen mellem UI-optagelser og hostede stillbilleder, se<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skærmbillede vs. rigtigt YouTube-miniaturebillede</a>.</p>"
+    },
+    {
+      "heading": "Hvordan live- og premierebilleder adskiller sig fra shorts og almindelige uploads",
+      "html": "<table>\n    <thead>\n      <tr><th>Indholdstype</th><th>Typisk URL-form</th><th>Offentlig stadig vært</th><th>Hvad du normalt får</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Regelmæssig upload</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Landskabsdækning når den er offentlig</td></tr>\n      <tr><td>Shorts</td><td><code>/shorts/ID</code></td><td>Samme CDN-familie</td><td>Ofte stadig liggende CDN, selvom Short-versionen afspilles lodret —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-guide</a></td></tr>\n      <tr><td>Live / Premiere</td><td><code>/live/ID</code>eller<code>/watch?v=ID</code></td><td>Samme CDN-familie</td><td>Brugerdefineret begivenhedsomslag ved offentliggørelse; samme regler for maks./mellemstørrelse</td></tr>\n    </tbody>\n  </table>\n  <p>11tik analyserer allerede<code>youtube.com/live/VIDEO_ID</code>på samme måde som den analyserer links til ur og Shorts. Udtrækkeren behøver ikke en separat \"live-tilstand\" – den behøver en<strong>offentligt video-ID</strong>og offentlige stillbilleder.</p>"
+    },
+    {
+      "heading": "Livscyklus: før, under og efter streamen",
+      "html": "<h3>1. Planlagt / kommende</h3>\n  <p>Når YouTube har tildelt et video-ID, og ​​begivenheden er offentlig (eller ikke-offentlig med et delbart link), kan der allerede findes et brugerdefineret miniaturebillede på CDN'et. Indsæt URL'en for kommende video i 11tik for at få vist et eksempel på forsiden, som du vil se på hylderne \"Kommende\".</p>\n  <h3>2. Lev nu</h3>\n  <p>Mens streamen er live, fortsætter det samme cover normalt med at repræsentere begivenheden. Udtrækning under udsendelsen returnerer stadig<strong>værtscover</strong>, ikke et nyt billede fra hvad der er på kameraet i det sekund.</p>\n  <h3>3. Arkiveret gengivelse (VOD)</h3>\n  <p>Når streamen er slut, forbliver begivenheden typisk som en normal URL til visning med samme ID. Det offentlige cover forbliver ofte, indtil skaberen erstatter det i Studio. Kør 11tik igen, hvis du har brug for at bekræfte post-stream-filen.</p>"
+    },
+    {
+      "heading": "URL-formater, der fungerer til live- og premierecovers",
+      "html": "<table>\n    <thead>\n      <tr><th>Format</th><th>Eksempelmønster</th><th>Noter</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Live-sti</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Foretrækkes når delingsarket viser /live/</td></tr>\n      <tr><td>Ur</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Fælles for premierer og arkiverede liveoptrædener</td></tr>\n      <tr><td>Kort link</td><td><code>youtu.be/VIDEO_ID</code></td><td>Fungerer, når det opløses til det samme ID</td></tr>\n      <tr><td>Integrer</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Udtrækning af samme ID</td></tr>\n      <tr><td>Kanal/livehub</td><td><code>youtube.com/@handle/live</code></td><td>Åbn den faktiske stream først, så adresselinjen viser et video-ID</td></tr>\n    </tbody>\n  </table>\n  <p>Hvis adresselinjen stadig viser en kanal live hub uden et ID på 11 tegn, kan 11tik ikke opfinde en. Åbn stream- eller premierekortet, indtil en konkret video-URL vises, og kopier derefter linket.</p>"
+    },
+    {
+      "heading": "Hurtigste metode med 11tik",
+      "html": "<ol>\n    <li>Kopiér en offentlig live-, premiere-, afspilnings- eller youtu.be-URL, der indeholder video-ID'et.</li>\n    <li>Åben<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Indsæt URL'en. Udtrækningen starter, når ID'et er gyldigt.</li>\n    <li>Download det første stillbillede på listen (bedst tilgængelige), eller kopier billed-URL'en til et CMS.</li>\n  </ol>\n  <img alt=\"Firetrins-arbejdsgang, der viser kopiering af en live-URL, indsættelse i 11tik, validering af offentlige CDN-størrelser og derefter download eller kopiering af billed-URL'en\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktisk sti til live- og premierecovers: offentlig URL → uddrag → validerede størrelser → download eller kopier.</p>\n  <p>Har du brug for mange offentlige overvågningslinks på én gang? Brug massevisning (op til 25) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">Guide til batch-download</a>For nylige uploads fra en kanal-URL, se<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">udtrækning af miniaturebilleder fra kanaler</a>.</p>"
+    },
+    {
+      "heading": "Direkte CDN-tjek (valgfrit)",
+      "html": "<p>Hvis du allerede kender ID'et, kan du stadig teste en kandidat:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Når det mislykkes, så træd ned igennem<code>hq720.jpg</code>,<code>sddefault.jpg</code>, og<code>hqdefault.jpg</code>Manuel gætning er langsommere end 11tiks validerede liste og er en almindelig kilde til grå pladsholdere – se<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault forklaret</a>og den<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vejledning til miniature-URL'er</a>.</p>\n  <p>Officielle YouTube Data API-svar beskriver de samme størrelsesklasser (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) på den<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Miniaturebilleder-ressource</a>11tik kalder ikke den API i din browser; den validerer offentlige CDN-filer på klientsiden.</p>"
+    },
+    {
+      "heading": "Brugerdefineret cover vs. automatisk genereret stillbillede",
+      "html": "<ul>\n    <li><strong>Brugerdefineret live-/premierecover:</strong>Uploadet i Studio til begivenheden. Låser ofte op for større offentlige størrelser, når behandlingen er færdig.</li>\n    <li><strong>Automatisk stillbillede:</strong>Udledes, når YouTube udgiver en automatisk frame. Kan stoppe ved mellemstørrelser; maksimal opløsning er ikke garanteret.</li>\n  </ul>\n  <p>\"Højeste kvalitet\" betyder stadig den største<em>offentlig</em>fil der findes – ikke en privat Studio-eksport. Detaljer:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniaturebillede af højeste kvalitet</a>og<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">original offentlig miniature</a>.</p>"
+    },
+    {
+      "heading": "Når et live-miniaturebillede ikke vises",
+      "html": "<table>\n    <thead>\n      <tr><th>Situation</th><th>Hvad der normalt sker</th><th>Hvad skal man gøre</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Privat / kun for medlemmer / aldersbegrænset emballage</td><td>Ingen offentlighed validerer stadig</td><td>Brug et offentligt link; 11tik kan ikke omgå adgangsregler —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">utilgængelig miniatureguide</a></td></tr>\n      <tr><td>Kanal/livehub uden video-ID</td><td>Parser finder intet ID</td><td>Åbn først URL'en til den konkrete strøm</td></tr>\n      <tr><td>Brugerdefineret omslag stadig under behandling</td><td>Kun ældre eller mellemstore størrelser</td><td>Prøv igen efter Studio er færdig; behold den validerede reserve</td></tr>\n      <tr><td>Gættede maks. 404</td><td>Det filnavn mangler</td><td>Brug den første anførte størrelse på 11tik</td></tr>\n      <tr><td>Skærmbillede af spilleren</td><td>Brugergrænsefladen i Chrome, forkerte pixels</td><td>Gem CDN'et stadig i stedet</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Ansvarlig genbrug",
+      "html": "<p>En offentlig CDN-URL er ikke en licens til at genudgive en anden skabers cover som dit eget branding. Til personlig research, kommentarer eller arkivering af dine egne streams, behold filen lokalt. For blogs og sociale kort, foretræk at hoste en kopi, du har ret til at bruge —<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Open Graph-guide</a>YouTubes oversigt over<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">brugerdefinerede videominiaturebilleder</a>er den primære reference for skabersiden til uploads i Studio.</p>"
+    },
+    {
+      "heading": "Næste skridt",
+      "html": "<p>Åbn live- eller premieresiden, indtil URL'en viser et video-ID, og ​​indsæt det i<a href=\"https://www.11tik.com/\">YouTube-miniatureudtrækker</a>, og gem det første validerede stillbillede. For tips til mobillagring, se<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone og Android</a>For brugerdefinerede uploads fra Studio, se<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniaturebillede 2026</a>.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik. Kun offentlige stillbilleder; ingen download af video eller lyd.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jeg downloade miniaturebilledet, mens streamen er live?",
+      "answer": "Ja, når streamen er offentlig, og YouTube har offentliggjort offentlige stillbilleder for det pågældende video-ID. Du får det hostede cover, ikke et live kamerabillede.",
+      "answerHtml": "<p>Ja, når streamen er offentlig, og YouTube har offentliggjort offentlige stillbilleder for det pågældende video-ID. Du får det hostede cover, ikke et live kamerabillede.</p>"
+    },
+    {
+      "question": "Bruger premierer den samme metode som livestreams?",
+      "answer": "Ja. Begge omdannes til et video-ID. Indsæt URL'en til premieren, der vises eller deles, i 11tik på samme måde.",
+      "answerHtml": "<p>Ja. Begge omdannes til et video-ID. Indsæt URL'en til premieren, der vises eller deles, i 11tik på samme måde.</p>"
+    },
+    {
+      "question": "Virker youtube.com/live/VIDEO_ID i 11tik?",
+      "answer": "Ja. Parseren behandler /live/ som andre ID-bærende stier.",
+      "answerHtml": "<p>Ja. Parseren behandler<code>/live/</code>ligesom andre ID-bærende stier.</p>"
+    },
+    {
+      "question": "Vil coveret ændre sig efter streamen slutter?",
+      "answer": "Ofte forbliver den den samme, men skabere kan erstatte den i Studio. Udpak den igen, hvis du har brug for den aktuelle offentlige fil.",
+      "answerHtml": "<p>Ofte forbliver den den samme, men skabere kan erstatte den i Studio. Udpak den igen, hvis du har brug for den aktuelle offentlige fil.</p>"
+    },
+    {
+      "question": "Er et liveminiaturebillede det samme som et Shorts-miniaturebillede?",
+      "answer": "Samme CDN-idé, forskellig produktkontekst. Shorts-videoer bevarer ofte offentlige stillbilleder i liggende format, selv når afspilningen er lodret – se miniatureguiden til shorts-videoer.",
+      "answerHtml": "<p>Samme CDN-idé, forskellig produktkontekst. Kortfilm holder ofte offentlige stillbilleder i landskabet, selv når afspilningen er lodret – se<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Guide til miniaturebilleder af shorts</a>.</p>"
+    },
+    {
+      "question": "Kan 11tik uddrage fra et privatliv?",
+      "answer": "Nej. Privat, slettet eller begrænset emballage uden offentlige stillbilleder returnerer ikke billeder.",
+      "answerHtml": "<p>Nej. Privat, slettet eller begrænset emballage uden offentlige stillbilleder returnerer ikke billeder.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik. Kun offentlige stillbilleder; ingen download af video eller lyd.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+}

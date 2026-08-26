@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "tl",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Paano Mag-download ng Thumbnail sa YouTube Live o Premiere (Bago, Habang, at Pagkatapos) | 11tik",
+  "description": "Mag-paste ng pampublikong YouTube live o premiere URL sa 11tik para i-save ang cover na hino-host na ng YouTube—bago mag-live, habang naka-on ang LIVE, o pagkatapos maging replay ang stream.",
+  "h1": "Paano Mag-download ng Thumbnail sa YouTube Live o Premiere (Bago, Habang, at Pagkatapos)",
+  "ogTitle": "Paano Mag-download ng Thumbnail sa YouTube Live o Premiere (Bago, Habang, at Pagkatapos)",
+  "ogDescription": "Mag-paste ng pampublikong YouTube live o premiere URL sa 11tik para i-save ang cover na hino-host na ng YouTube—bago mag-live, habang naka-on ang LIVE, o pagkatapos maging replay ang stream.",
+  "imageAlt": "Diagram ng tatlong yugto ng lifecycle na nagpapakita ng live o premiere cover image sa YouTube bago ang go-live, habang inilalabas ang live badge, at pagkatapos i-archive bilang VOD",
+  "faqHeading": "Mga Madalas Itanong",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Diagram ng tatlong yugto ng lifecycle na nagpapakita ng live o premiere cover image sa YouTube bago ang go-live, habang inilalabas ang live badge, at pagkatapos i-archive bilang VOD",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Apat na hakbang na daloy ng trabaho na nagpapakita ng pagkopya ng live na URL, pag-paste sa 11tik, pag-validate ng mga pampublikong laki ng CDN, pagkatapos ay i-download o kopyahin ang URL ng larawan",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mabilis na sagot",
+      "html": "<p>Ang isang YouTube Live stream at isang Premiere ay may tig-11 karakter<strong>ID ng bidyo</strong>, tulad ng isang normal na upload. Ang mga pampublikong cover still para sa ID na iyon ay live sa image CDN ng YouTube (<code>i.ytimg.com</code>). Kopyahin ang isang pampublikong<code>/live/</code>, panoorin, o ibahagi ang URL, i-paste ito sa<a href=\"https://www.11tik.com/\">11tik</a>, pagkatapos ay i-download ang pinakamalaking larawan na aktwal na naglo-load. Sine-save mo ang<strong>larawan ng pabalat na pang-promosyon</strong>, hindi isang live frame grab ng broadcast at hindi ang video file.</p>\n\n  <img alt=\"Diagram ng tatlong yugto ng lifecycle na nagpapakita ng live o premiere cover image sa YouTube bago ang go-live, habang inilalabas ang live badge, at pagkatapos i-archive bilang VOD\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Parehong video ID, parehong pampublikong pamilya ng pabalat: naka-iskedyul → live → naka-archive na replay, maliban na lang kung papalitan ng gumawa ang custom na thumbnail sa ibang pagkakataon.</p>"
+    },
+    {
+      "heading": "Ano ang thumbnail ng YouTube Live o Premiere?",
+      "html": "<p>Ang pampublikong still ang kumakatawan sa kaganapan sa pag-browse, paghahanap, mga subscription, at pagbabahagi. Karaniwang nag-a-upload ang mga creator ng custom na cover sa YouTube Studio bago mag-live. Kung walang custom na file na na-publish, maaaring bumalik ang YouTube sa isang awtomatikong nabuong still kapag pinayagan na ng pagproseso—parehong pamilya ng mga CDN filename na ginagamit para sa mga regular na video (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>, at mas maliliit na sukat).</p>\n  <p>Ang takip na iyon ay<strong>hindi</strong>ang parehong bagay tulad ng:</p>\n  <ul>\n    <li>Isang screenshot ng live player UI</li>\n    <li>Isang frame ng kamera sa kalagitnaan ng stream na kinunan mo mismo</li>\n    <li>Isang pribadong asset na pang-Studio lamang na hindi kailanman naging isang pampublikong CDN file</li>\n  </ul>\n  <p>Para sa pagkakaiba sa pagitan ng mga UI capture at mga naka-host na still, tingnan ang<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot vs totoong thumbnail sa YouTube</a>.</p>"
+    },
+    {
+      "heading": "Paano naiiba ang mga live at premiere still sa mga Short at regular na upload",
+      "html": "<table>\n    <thead>\n      <tr><th>Uri ng nilalaman</th><th>Karaniwang hugis ng URL</th><th>Publiko pa rin ang host</th><th>Ang karaniwan mong nakukuha</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Regular na pag-upload</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Pantakip sa tanawin kapag pampubliko</td></tr>\n      <tr><td>Shorts</td><td><code>/shorts/ID</code></td><td>Parehong pamilya ng CDN</td><td>Madalas, ang landscape CDN ay nananatiling vertical kahit na ang Short ay tumutugtog nang patayo —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Gabay sa shorts</a></td></tr>\n      <tr><td>Live / Premiere</td><td><code>/live/ID</code>o<code>/watch?v=ID</code></td><td>Parehong pamilya ng CDN</td><td>Pasadyang pabalat ng kaganapan kapag na-publish; parehong mga panuntunan sa maxres/katamtamang laki</td></tr>\n    </tbody>\n  </table>\n  <p>Nag-parse na ang 11tik<code>youtube.com/live/VIDEO_ID</code>katulad ng pag-parse nito ng mga link ng relo at Shorts. Hindi kailangan ng extractor ng hiwalay na \"live mode\"—kailangan nito ng<strong>pampublikong ID ng video</strong>at mga pampublikong litrato.</p>"
+    },
+    {
+      "heading": "Siklo ng Buhay: bago, habang, at pagkatapos ng stream",
+      "html": "<h3>1. Naka-iskedyul / paparating</h3>\n  <p>Kapag nakapagtalaga na ang YouTube ng video ID at pampubliko na ang kaganapan (o hindi nakalista na may link na maaaring ibahagi), maaari nang magkaroon ng custom na thumbnail sa CDN. I-paste ang paparating na URL sa 11tik para i-preview ang cover na makikita mo sa mga shelf na \"Paparating\".</p>\n  <h3>2. Mabuhay ngayon</h3>\n  <p>Habang live ang stream, ang parehong cover ay karaniwang patuloy na kumakatawan sa kaganapan. Ang pag-extract habang nagbo-broadcast ay nagbabalik pa rin ng<strong>naka-host na pabalat</strong>, walang bagong frame mula sa kung ano man ang nasa kamera sa sandaling iyon.</p>\n  <h3>3. Naka-archive na replay (VOD)</h3>\n  <p>Pagkatapos ng stream, ang kaganapan ay karaniwang nananatili bilang isang normal na watch URL na may parehong ID. Ang pampublikong pabalat ay kadalasang nananatili hanggang sa palitan ito ng creator sa Studio. Patakbuhin muli ang 11tik kung kailangan mong kumpirmahin ang post-stream file.</p>"
+    },
+    {
+      "heading": "Mga format ng URL na gumagana para sa mga live at premiere cover",
+      "html": "<table>\n    <thead>\n      <tr><th>Pormat</th><th>Halimbawang padron</th><th>Mga Tala</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Live na landas</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Mas mainam kapag ang share sheet ay nagpapakita ng /live/</td></tr>\n      <tr><td>Panoorin</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Karaniwan para sa mga premiere at naka-archive na buhay</td></tr>\n      <tr><td>Maikling link</td><td><code>youtu.be/VIDEO_ID</code></td><td>Gumagana kapag nagre-resolve ito sa parehong ID</td></tr>\n      <tr><td>I-embed</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Parehong pagkuha ng ID</td></tr>\n      <tr><td>Channel/live hub</td><td><code>youtube.com/@handle/live</code></td><td>Buksan muna ang aktwal na stream para magpakita ang address bar ng video ID</td></tr>\n    </tbody>\n  </table>\n  <p>Kung ang address bar ay nagpapakita pa rin ng channel live hub na walang 11-character ID, hindi makakagawa ng isa ang 11tik. Buksan ang stream o premiere card hanggang sa lumitaw ang isang konkretong video URL, pagkatapos ay kopyahin ang link na iyon.</p>"
+    },
+    {
+      "heading": "Pinakamabilis na paraan gamit ang 11tik",
+      "html": "<ol>\n    <li>Kopyahin ang pampublikong live, premiere, panonood, o youtu.be URL na naglalaman ng video ID.</li>\n    <li>Bukas<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>I-paste ang URL. Magsisimula ang pagkuha kapag balido na ang ID.</li>\n    <li>I-download ang unang nakalistang still (pinakamahusay na makukuha), o kopyahin ang URL ng larawan para sa isang CMS.</li>\n  </ol>\n  <img alt=\"Apat na hakbang na daloy ng trabaho na nagpapakita ng pagkopya ng live na URL, pag-paste sa 11tik, pag-validate ng mga pampublikong laki ng CDN, pagkatapos ay i-download o kopyahin ang URL ng larawan\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktikal na landas para sa mga live at premiere cover: pampublikong URL → kunin → mga napatunayang laki → i-download o kopyahin.</p>\n  <p>Kailangan mo ba ng maraming pampublikong link sa panonood nang sabay-sabay? Gumamit ng Maramihan (hanggang 25) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">gabay sa pag-download nang maramihan</a>Para sa mga kamakailang upload mula sa URL ng isang channel, tingnan ang<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">pagkuha ng thumbnail ng channel</a>.</p>"
+    },
+    {
+      "heading": "Direktang pagsusuri ng CDN (opsyonal)",
+      "html": "<p>Kung alam mo na ang ID, maaari mo pa ring subukan ang isang kandidato:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Kapag nabigo, bumaba ka na<code>hq720.jpg</code>,<code>sddefault.jpg</code>, at<code>hqdefault.jpg</code>Ang manu-manong paghula ay mas mabagal kaysa sa napatunayang listahan ni 11tik at isang karaniwang pinagmumulan ng mga kulay abong placeholder—tingnan<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ipinaliwanag ang maxresdefault</a>at ang<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>.</p>\n  <p>Inilalarawan ng mga opisyal na tugon ng YouTube Data API ang mga klase na may parehong laki (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) sa<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Mapagkukunan ng mga thumbnail</a>Hindi tinatawag ng 11tik ang API na iyon sa iyong browser; pinapatunayan nito ang mga pampublikong CDN file sa client-side.</p>"
+    },
+    {
+      "heading": "Pasadyang pabalat vs. awtomatikong nabuong pabalat",
+      "html": "<ul>\n    <li><strong>Pasadyang live/premiere cover:</strong>Na-upload sa Studio para sa kaganapan. Madalas na ina-unlock ang mas malalaking pampublikong laki kapag natapos na ang pagproseso.</li>\n    <li><strong>Awtomatikong hindi gumagalaw:</strong>Nakukuha kapag naglathala ang YouTube ng awtomatikong frame. Maaaring huminto sa mga katamtamang laki; hindi garantisado ang maxres.</li>\n  </ul>\n  <p>Ang \"pinakamataas na kalidad\" ay nangangahulugan pa rin ng pinakamalaki<em>publiko</em>file na umiiral—hindi isang pribadong pag-export ng Studio. Mga Detalye:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">pinakamataas na kalidad na thumbnail</a>at<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">orihinal na pampublikong thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Kapag hindi lilitaw ang isang live na thumbnail",
+      "html": "<table>\n    <thead>\n      <tr><th>Sitwasyon</th><th>Ano ang karaniwang nangyayari</th><th>Ano ang gagawin</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Pribado / para sa mga miyembro lamang / packaging na may limitasyon sa edad</td><td>Wala pa ring publikong nag-validate</td><td>Gumamit ng pampublikong link; hindi maaaring malampasan ng 11tik ang mga patakaran sa pag-access —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">hindi magagamit na gabay sa thumbnail</a></td></tr>\n      <tr><td>Channel/live hub na walang video ID</td><td>Walang nakitang ID ang Parser</td><td>Buksan muna ang URL ng kongkretong stream</td></tr>\n      <tr><td>Pinoproseso pa rin ang pasadyang pabalat</td><td>Mas luma o katamtamang laki lamang</td><td>Subukan muli pagkatapos matapos ang Studio; panatilihin ang napatunayang fallback</td></tr>\n      <tr><td>Nahulaan ang maxres 404</td><td>Nawawala ang pangalan ng file na iyon</td><td>Gamitin ang unang nakalistang laki ng 11tik</td></tr>\n      <tr><td>Screenshot ng manlalaro</td><td>UI chrome, maling pixel</td><td>I-save pa rin ang CDN</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Responsableng muling paggamit",
+      "html": "<p>Ang isang pampublikong CDN URL ay hindi lisensya para muling i-publish ang cover ng ibang creator bilang sarili mong branding. Para sa personal na pananaliksik, komentaryo, o pag-archive ng sarili mong mga stream, itago ang file nang lokal. Para sa mga blog at social card, mas mainam na mag-host ng kopya na may karapatan kang gamitin —<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">gabay sa blog / Open Graph</a>Pangkalahatang-ideya ng YouTube tungkol sa<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">mga pasadyang thumbnail ng video</a>ay ang pangunahing sanggunian ng tagalikha para sa mga pag-upload sa Studio.</p>"
+    },
+    {
+      "heading": "Susunod na hakbang",
+      "html": "<p>Buksan ang live o premiere page hanggang sa magpakita ang URL ng video ID, i-paste ito sa<a href=\"https://www.11tik.com/\">Pang-extract ng thumbnail ng YouTube</a>, at i-save ang unang napatunayang still. Para sa mga tip sa pag-save ng mobile, tingnan ang<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone at Android</a>Para sa mga custom na upload sa Studio, tingnan ang<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Thumbnail ng YouTube Studio 2026</a>.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik. Mga pampublikong litrato lamang; walang download ng video o audio.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Maaari ko bang i-download ang thumbnail habang live ang stream?",
+      "answer": "Oo, kapag pampubliko ang stream at naglathala ang YouTube ng mga pampublikong still para sa video ID na iyon. Makukuha mo ang naka-host na cover, hindi ang live camera frame.",
+      "answerHtml": "<p>Oo, kapag pampubliko ang stream at naglathala ang YouTube ng mga pampublikong still para sa video ID na iyon. Makukuha mo ang naka-host na cover, hindi ang live camera frame.</p>"
+    },
+    {
+      "question": "Ginagamit ba ng mga premiere ang parehong paraan gaya ng mga live stream?",
+      "answer": "Oo. Parehong nagre-resolve sa isang video ID. I-paste ang premiere watch o share URL sa 11tik sa parehong paraan.",
+      "answerHtml": "<p>Oo. Parehong nagre-resolve sa isang video ID. I-paste ang premiere watch o share URL sa 11tik sa parehong paraan.</p>"
+    },
+    {
+      "question": "Gumagana ba ang youtube.com/live/VIDEO_ID sa 11tik?",
+      "answer": "Oo. Tinatrato ng parser ang /live/ tulad ng ibang mga path na may ID.",
+      "answerHtml": "<p>Oo. Tinatrato ng parser<code>/live/</code>tulad ng ibang mga landas na may ID.</p>"
+    },
+    {
+      "question": "Magbabago ba ang cover pagkatapos ng stream?",
+      "answer": "Kadalasan ay nananatili itong pareho, ngunit maaaring palitan ito ng mga tagalikha sa Studio. I-re-extract kung kailangan mo ang kasalukuyang pampublikong file.",
+      "answerHtml": "<p>Kadalasan ay nananatili itong pareho, ngunit maaaring palitan ito ng mga tagalikha sa Studio. I-re-extract kung kailangan mo ang kasalukuyang pampublikong file.</p>"
+    },
+    {
+      "question": "Pareho ba ang live thumbnail at ang thumbnail ng Shorts?",
+      "answer": "Parehong ideya ng CDN, magkaibang konteksto ng produkto. Kadalasan, pinapanatili ng mga shorts ang mga pampublikong still ng landscape kahit na patayo ang playback — tingnan ang gabay sa thumbnail ng Shorts.",
+      "answerHtml": "<p>Parehong ideya ng CDN, magkaibang konteksto ng produkto. Kadalasan, pinapanatili ng mga shorts ang mga pampublikong still ng landscape kahit na patayo ang playback — tingnan ang<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Gabay sa thumbnail ng shorts</a>.</p>"
+    },
+    {
+      "question": "Maaari bang kumuha ng 11tik mula sa isang pribadong live na palabas?",
+      "answer": "Hindi. Ang pribado, tinanggal, o pinaghihigpitang packaging na walang pampublikong mga still photo ay hindi magbabalik ng mga larawan.",
+      "answerHtml": "<p>Hindi. Ang pribado, tinanggal, o pinaghihigpitang packaging na walang pampublikong mga still photo ay hindi magbabalik ng mga larawan.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik. Mga pampublikong litrato lamang; walang download ng video o audio.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+}

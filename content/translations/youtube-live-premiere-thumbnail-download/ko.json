@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "ko",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "YouTube 라이브 또는 프리미어 썸네일 다운로드 방법 (전, 도중, 후) | 11tik",
+  "description": "공개 YouTube 라이브 또는 프리미어 URL을 11tik에 붙여넣어 YouTube에서 이미 호스팅하고 있는 커버를 저장합니다. 이는 라이브 시작 전, 라이브 방송 중, 또는 스트림이 다시보기로 바뀐 후에도 가능합니다.",
+  "h1": "YouTube 라이브 또는 프리미어 영상의 썸네일을 다운로드하는 방법 (시작 전, 진행 중, 종료 후)",
+  "ogTitle": "YouTube 라이브 또는 프리미어 영상의 썸네일을 다운로드하는 방법 (시작 전, 진행 중, 종료 후)",
+  "ogDescription": "공개 YouTube 라이브 또는 프리미어 URL을 11tik에 붙여넣어 YouTube에서 이미 호스팅하고 있는 커버를 저장합니다. 이는 라이브 시작 전, 라이브 방송 중, 또는 스트림이 다시보기로 바뀐 후에도 가능합니다.",
+  "imageAlt": "YouTube 라이브 또는 프리미어 커버 이미지의 3단계 수명 주기 다이어그램은 라이브 방송 시작 전, 라이브 배지 표시 중, 그리고 VOD로 보관된 후의 모습을 보여줍니다.",
+  "faqHeading": "자주 묻는 질문",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "YouTube 라이브 또는 프리미어 커버 이미지의 3단계 수명 주기 다이어그램은 라이브 방송 시작 전, 라이브 배지 표시 중, 그리고 VOD로 보관된 후의 모습을 보여줍니다.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "라이브 URL을 복사하고, 11tik에 붙여넣고, 퍼블릭 CDN 크기를 검증한 다음, 이미지 URL을 다운로드하거나 복사하는 4단계 워크플로를 보여줍니다.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "빠른 답변",
+      "html": "<p>YouTube 라이브 스트림과 프리미어는 각각 11자 제한이 있습니다.<strong>비디오 ID</strong>일반 업로드와 마찬가지입니다. 해당 ID의 공개 커버 스틸 이미지는 YouTube 이미지 CDN에서 확인할 수 있습니다.<code>i.ytimg.com</code>). 공개된 내용을 복사하세요<code>/live/</code>시청하거나 URL을 공유하려면 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>그런 다음 실제로 로드되는 가장 큰 스틸컷을 다운로드하세요. 그러면 비용을 절약할 수 있습니다.<strong>홍보용 표지 이미지</strong>방송의 실시간 프레임 캡처도 아니고 비디오 파일도 아닙니다.</p>\n\n  <img alt=\"YouTube 라이브 또는 프리미어 커버 이미지의 3단계 수명 주기 다이어그램은 라이브 방송 시작 전, 라이브 배지 표시 중, 그리고 VOD로 보관된 후의 모습을 보여줍니다.\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">동일한 비디오 ID와 동일한 공개 커버 이미지 패밀리를 사용하면 예약 재생 → 라이브 재생 → 아카이브 재생 순으로 표시됩니다. 단, 제작자가 나중에 사용자 지정 썸네일을 변경하는 경우는 예외입니다.</p>"
+    },
+    {
+      "heading": "YouTube 라이브 또는 프리미어 썸네일이란 무엇인가요?",
+      "html": "<p>공개된 스틸 이미지는 검색, 구독, 공유 등에서 이벤트를 대표하는 이미지입니다. 크리에이터는 일반적으로 라이브 방송 전에 YouTube 스튜디오에 맞춤 커버 이미지를 업로드합니다. 맞춤 파일을 게시하지 않으면 YouTube는 처리가 완료되면 자동으로 생성된 스틸 이미지를 사용할 수 있습니다. 이 이미지는 일반 동영상에 사용되는 것과 동일한 CDN 파일 이름 계열을 사용합니다.<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>(그리고 더 작은 크기들).</p>\n  <p>저 표지는<strong>~ 아니다</strong>다음과 같은 것:</p>\n  <ul>\n    <li>라이브 플레이어 UI의 스크린샷</li>\n    <li>당신이 직접 촬영한 영상의 중간 프레임</li>\n    <li>스튜디오 전용 비공개 자산으로, 공개 CDN 파일로 전환된 적이 없습니다.</li>\n  </ul>\n  <p>UI 캡처와 호스팅된 스틸 이미지의 차이점에 대해서는 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 유튜브 썸네일</a>.</p>"
+    },
+    {
+      "heading": "라이브 및 프리미어 스틸컷이 쇼츠 및 일반 업로드와 어떻게 다른가요?",
+      "html": "<table>\n    <thead>\n      <tr><th>콘텐츠 유형</th><th>일반적인 URL 형태</th><th>공개 호스트</th><th>일반적으로 얻는 것</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>일반 업로드</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>공공시설 이용 시 경관 보호</td></tr>\n      <tr><td>반바지</td><td><code>/shorts/ID</code></td><td>같은 CDN 패밀리</td><td>종종 Short 앱이 세로로 재생되더라도 가로형 CDN이 여전히 사용되는 경우가 있습니다.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">반바지 가이드</a></td></tr>\n      <tr><td>라이브/프리미어</td><td><code>/live/ID</code>또는<code>/watch?v=ID</code></td><td>같은 CDN 패밀리</td><td>게시 시 맞춤형 이벤트 표지 이미지 제공; 최대 해상도/중간 크기 규칙 동일</td></tr>\n    </tbody>\n  </table>\n  <p>11tik 이미 구문 분석됨<code>youtube.com/live/VIDEO_ID</code>시계 및 쇼츠 링크를 파싱하는 방식과 동일합니다. 추출기는 별도의 \"라이브 모드\"가 필요하지 않습니다.<strong>공개 비디오 ID</strong>그리고 공개된 스틸컷들.</p>"
+    },
+    {
+      "heading": "생명주기: 스트림 이전, 도중, 이후",
+      "html": "<h3>1. 예정된/다가오는</h3>\n  <p>YouTube에서 동영상 ID를 할당하고 이벤트가 공개(또는 공유 가능한 링크가 있는 비공개)되면 맞춤 썸네일이 이미 CDN에 존재할 수 있습니다. 예정된 URL을 11tik에 붙여넣어 \"예정\" 선반에 표시될 표지를 미리 보세요.</p>\n  <h3>2. 지금 바로 라이브 방송하세요</h3>\n  <p>생방송 중에는 일반적으로 동일한 표지 이미지가 계속해서 표시됩니다. 방송 중에 추출하더라도 결과는 동일하게 나타납니다.<strong>호스팅 커버</strong>그 순간 카메라에 찍힌 영상의 새로운 프레임이 아닙니다.</p>\n  <h3>3. 다시보기 영상 (VOD)</h3>\n  <p>스트리밍이 종료된 후에는 일반적으로 이벤트가 동일한 ID를 가진 일반 시청 URL로 유지됩니다. 공개 커버는 제작자가 스튜디오에서 교체할 때까지 유지되는 경우가 많습니다. 스트리밍 후 파일을 확인해야 하는 경우 11tik를 다시 실행하세요.</p>"
+    },
+    {
+      "heading": "라이브 및 프리미어 커버에 사용 가능한 URL 형식",
+      "html": "<table>\n    <thead>\n      <tr><th>체재</th><th>예시 패턴</th><th>메모</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>라이브 경로</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>주식 시세표에 /실시간/이 표시될 때 선호됩니다.</td></tr>\n      <tr><td>보다</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>초연 및 기록된 삶에 흔히 사용됩니다.</td></tr>\n      <tr><td>짧은 링크</td><td><code>youtu.be/VIDEO_ID</code></td><td>동일한 ID로 확인될 경우 작동합니다.</td></tr>\n      <tr><td>포함시키다</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>동일 ID 추출</td></tr>\n      <tr><td>채널/라이브 허브</td><td><code>youtube.com/@handle/live</code></td><td>먼저 스트림을 열어 주소 표시줄에 비디오 ID가 표시되도록 하세요.</td></tr>\n    </tbody>\n  </table>\n  <p>주소 표시줄에 11자리 ID가 없는 채널 라이브 허브가 계속 표시되면 11tik는 이를 생성할 수 없습니다. 구체적인 비디오 URL이 나타날 때까지 스트림 또는 프리미어 카드를 열고 해당 링크를 복사합니다.</p>"
+    },
+    {
+      "heading": "11tik를 사용한 가장 빠른 방법",
+      "html": "<ol>\n    <li>비디오 ID가 포함된 공개 라이브, 프리미어, 시청 또는 youtu.be URL을 복사합니다.</li>\n    <li>열려 있는<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>URL을 붙여넣으세요. ID가 유효하면 추출이 시작됩니다.</li>\n    <li>목록에 있는 첫 번째 스틸 이미지(가장 좋은 이미지)를 다운로드하거나 CMS에 사용할 이미지 URL을 복사하세요.</li>\n  </ol>\n  <img alt=\"라이브 URL을 복사하고, 11tik에 붙여넣고, 퍼블릭 CDN 크기를 검증한 다음, 이미지 URL을 다운로드하거나 복사하는 4단계 워크플로를 보여줍니다.\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">라이브 및 프리미어 커버 이미지의 실용적인 경로: 공개 URL → 추출 → 유효성 검사된 크기 → 다운로드 또는 복사.</p>\n  <p>여러 개의 공개 시계 링크가 한 번에 필요하신가요? 일괄 가져오기(최대 25개) 기능을 사용하세요.<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">일괄 다운로드 가이드</a>채널 URL의 최근 업로드 내용을 보려면 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">채널 썸네일 추출</a>.</p>"
+    },
+    {
+      "heading": "CDN 직접 확인 (선택 사항)",
+      "html": "<p>이미 ID를 알고 있다면 후보자를 테스트할 수 있습니다.</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>실패하면, 다음 단계로 넘어가십시오.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, 그리고<code>hqdefault.jpg</code>수동 추측은 11tik의 검증된 목록보다 느리며 회색 자리 표시자가 발생하는 일반적인 원인입니다. 참조<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 설명</a>그리고<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">썸네일 URL 가이드</a>.</p>\n  <p>공식 YouTube 데이터 API 응답에서는 동일한 크기 클래스를 설명합니다.<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>)에<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">썸네일 리소스</a>. 11tik는 브라우저에서 해당 API를 호출하지 않습니다. 클라이언트 측에서 공개 CDN 파일의 유효성을 검사합니다.</p>"
+    },
+    {
+      "heading": "맞춤형 표지 vs 자동 생성 스틸컷",
+      "html": "<ul>\n    <li><strong>맞춤형 라이브/프리미어 커버:</strong>이벤트 진행을 위해 스튜디오에 업로드되었습니다. 처리가 완료되면 더 큰 공개 크기 이미지가 잠금 해제되는 경우가 많습니다.</li>\n    <li><strong>자동 정지:</strong>YouTube가 자동 프레임을 게시할 때 생성됩니다. 중간 크기에서 멈출 수 있으며 최대 해상도는 보장되지 않습니다.</li>\n  </ul>\n  <p>\"최고 품질\"이란 여전히 가장 큰 것을 의미합니다.<em>공공의</em>이미 존재하는 파일입니다. 개인 Studio 내보내기 파일이 아닙니다. 자세한 내용:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">최고 품질 썸네일</a>그리고<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">원본 공개 썸네일</a>.</p>"
+    },
+    {
+      "heading": "라이브 썸네일이 표시되지 않는 경우",
+      "html": "<table>\n    <thead>\n      <tr><th>상황</th><th>일반적으로 발생하는 일</th><th>어떻게 해야 할까요?</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>비공개/회원 전용/연령 제한 포장</td><td>대중은 여전히 ​​이를 인정하지 않습니다.</td><td>공용 링크를 사용하세요. 11tik는 액세스 규칙을 우회할 수 없습니다.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">사용 불가 썸네일 가이드</a></td></tr>\n      <tr><td>비디오 ID가 없는 채널/라이브 허브</td><td>파서가 ID를 찾지 못했습니다</td><td>먼저 구체적인 스트림 URL을 여세요.</td></tr>\n      <tr><td>맞춤 표지 제작은 아직 진행 중입니다.</td><td>나이가 좀 있거나 중간 사이즈인 경우에만 해당됩니다.</td><td>스튜디오 작업이 완료된 후 다시 시도하십시오. 유효성이 검증된 대체 방법을 유지하십시오.</td></tr>\n      <tr><td>최대 해상도를 404로 추측했습니다.</td><td>파일 이름이 누락되었습니다</td><td>11tik에 나열된 첫 번째 크기를 사용하세요</td></tr>\n      <tr><td>플레이어 스크린샷</td><td>UI 크롬, 잘못된 픽셀</td><td>CDN을 그대로 저장하세요.</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "책임감 있는 재사용",
+      "html": "<p>공개 CDN URL은 다른 크리에이터의 커버 이미지를 자신의 브랜드로 재배포할 수 있는 라이선스가 아닙니다. 개인적인 연구, 의견 제시 또는 스트리밍 콘텐츠 보관을 위해서는 파일을 로컬에 저장하세요. 블로그나 소셜 미디어 카드에 사용할 경우에는 사용 권한이 있는 CDN에 사본을 호스팅하는 것이 좋습니다.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">블로그 / 오픈그래프 가이드</a>YouTube의 개요<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">맞춤형 비디오 썸네일</a>Studio에서 업로드에 대한 주요 제작자 측 참조 자료입니다.</p>"
+    },
+    {
+      "heading": "다음 단계",
+      "html": "<p>라이브 또는 프리미어 페이지를 열어 URL에 비디오 ID가 표시될 때까지 기다린 후, 해당 ID를 붙여넣으세요.<a href=\"https://www.11tik.com/\">유튜브 썸네일 추출기</a>그리고 처음으로 유효성 검사를 통과한 스틸컷을 저장하세요. 모바일 저장 팁은 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">아이폰과 안드로이드</a>스튜디오 측 사용자 지정 업로드에 대해서는 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">유튜브 스튜디오 썸네일 2026</a>.</p>\n  <p class=\"yte-bio\">11tik 작성. 공개 스틸 이미지만 제공되며, 동영상이나 오디오 다운로드는 불가합니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "생방송 중에 썸네일을 다운로드할 수 있나요?",
+      "answer": "네, 스트림이 공개되어 있고 YouTube에서 해당 동영상 ID에 대한 공개 스틸컷을 게시한 경우, 실시간 카메라 화면이 아닌 호스팅된 커버 이미지가 표시됩니다.",
+      "answerHtml": "<p>네, 스트림이 공개되어 있고 YouTube에서 해당 동영상 ID에 대한 공개 스틸컷을 게시한 경우, 실시간 카메라 화면이 아닌 호스팅된 커버 이미지가 표시됩니다.</p>"
+    },
+    {
+      "question": "시사회는 라이브 스트리밍과 동일한 방식을 사용하나요?",
+      "answer": "예. 둘 다 비디오 ID로 확인됩니다. 프리미어 시청 또는 공유 URL을 11tik에 같은 방식으로 붙여넣으세요.",
+      "answerHtml": "<p>예. 둘 다 비디오 ID로 연결됩니다. 프리미어 시청 또는 공유 URL을 11tik에 같은 방식으로 붙여넣으세요.</p>"
+    },
+    {
+      "question": "youtube.com/live/VIDEO_ID이 11tik에서 작동하나요?",
+      "answer": "예. 파서는 /live/를 다른 ID가 포함된 경로처럼 처리합니다.",
+      "answerHtml": "<p>예. 파서는 처리합니다.<code>/live/</code>다른 ID 관련 경로와 마찬가지로.</p>"
+    },
+    {
+      "question": "스트리밍이 끝나면 표지가 바뀌나요?",
+      "answer": "일반적으로 파일 이름은 그대로 유지되지만, 제작자는 스튜디오에서 파일을 교체할 수 있습니다. 최신 공개 파일이 필요한 경우 다시 압축을 해제하세요.",
+      "answerHtml": "<p>일반적으로 파일 이름은 그대로 유지되지만, 제작자는 스튜디오에서 파일을 교체할 수 있습니다. 최신 공개 파일이 필요한 경우 다시 압축을 해제하세요.</p>"
+    },
+    {
+      "question": "라이브 썸네일과 쇼츠 썸네일은 같은 건가요?",
+      "answer": "동일한 CDN 개념이지만 제품 환경이 다릅니다. 쇼츠는 재생 방향이 세로일 때도 가로 방향의 공개 스틸 이미지를 유지하는 경우가 많습니다. 쇼츠 썸네일 가이드를 참조하세요.",
+      "answerHtml": "<p>동일한 CDN 개념이지만 제품 환경이 다릅니다. Shorts는 재생이 세로 방향일 때도 가로 방향의 공개 스틸 이미지를 유지하는 경우가 많습니다. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">반바지 썸네일 가이드</a>.</p>"
+    },
+    {
+      "question": "11tik는 개인 라이브에서 추출할 수 있습니까?",
+      "answer": "아니요. 공개 스틸컷이 없는 비공개, 삭제 또는 제한된 패키지의 경우 이미지가 반환되지 않습니다.",
+      "answerHtml": "<p>아니요. 공개 스틸컷이 없는 비공개, 삭제 또는 제한된 패키지의 경우 이미지가 반환되지 않습니다.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik 작성. 공개 스틸 이미지만 제공되며, 동영상이나 오디오 다운로드는 불가합니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+}

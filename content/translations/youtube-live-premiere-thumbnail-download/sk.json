@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "sk",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Ako stiahnuť miniatúru z priameho prenosu alebo premiéry na YouTube (pred, počas a po) | 11tik",
+  "description": "Vložte verejnú URL adresu priameho prenosu alebo premiéry na YouTube do 11tik, aby ste uložili záber z obálky, ktorý už YouTube hostí – pred spustením priameho prenosu, počas priameho prenosu alebo po tom, čo sa stream stane záznamom.",
+  "h1": "Ako stiahnuť miniatúru z priameho prenosu alebo premiéry na YouTube (pred, počas a po)",
+  "ogTitle": "Ako stiahnuť miniatúru z priameho prenosu alebo premiéry na YouTube (pred, počas a po)",
+  "ogDescription": "Vložte verejnú URL adresu priameho prenosu alebo premiéry na YouTube do 11tik, aby ste uložili záber z obálky, ktorý už YouTube hostí – pred spustením priameho prenosu, počas priameho prenosu alebo po tom, čo sa stream stane záznamom.",
+  "imageAlt": "Trojfázový diagram životného cyklu zobrazujúci titulný obrázok pre živé vysielanie alebo premiéru na YouTube pred spustením, počas vysielania odznaku živého vysielania a po archivácii ako VOD",
+  "faqHeading": "Často kladené otázky",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Trojfázový diagram životného cyklu zobrazujúci titulný obrázok pre živé vysielanie alebo premiéru na YouTube pred spustením, počas vysielania odznaku živého vysielania a po archivácii ako VOD",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Štvorkrokový pracovný postup zobrazujúci kopírovanie aktívnej URL adresy, vloženie do 11tik, overenie veľkostí verejnej CDN a následné stiahnutie alebo kopírovanie URL adresy obrázka",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rýchla odpoveď",
+      "html": "<p>Živý prenos na YouTube a premiéra majú každý 11-miestny<strong>ID videa</strong>, rovnako ako bežné nahrávanie. Verejné obrázky z obálok pre daný identifikačný prvok sú zverejnené na stránke CDN obrázkov YouTube (<code>i.ytimg.com</code>). Skopírujte verejný<code>/live/</code>, pozerať alebo zdieľať URL, vložte ju do<a href=\"https://www.11tik.com/\">11tik</a>, potom si stiahnite najväčšiu snímku, ktorá sa skutočne načíta. Uložíte tak<strong>propagačný obrázok na obálke</strong>, nie je to živý záber vysielania ani videosúbor.</p>\n\n  <img alt=\"Trojfázový diagram životného cyklu zobrazujúci titulný obrázok pre živé vysielanie alebo premiéru na YouTube pred spustením, počas vysielania odznaku živého vysielania a po archivácii ako VOD\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Rovnaké ID videa, rovnaká rodina verejných obálok: naplánované → živé vysielanie → archivované prehrávanie, pokiaľ tvorca neskôr nenahradí vlastnú miniatúru.</p>"
+    },
+    {
+      "heading": "Čo je to miniatúra pre YouTube Live alebo Premiéru?",
+      "html": "<p>Je to verejný záber, ktorý reprezentuje udalosť v prehliadaní, vyhľadávaní, odberoch a zdieľaniach. Tvorcovia zvyčajne nahrajú vlastný obal do YouTube Studio pred zverejnením. Ak nie je zverejnený žiadny vlastný súbor, YouTube sa môže vrátiť k automaticky vygenerovanému záberu, keď to spracovanie dovolí – rovnaká rodina názvov súborov CDN, aká sa používa pre bežné videá (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>, a menšie veľkosti).</p>\n  <p>Ten obal je<strong>nie</strong>to isté ako:</p>\n  <ul>\n    <li>Snímka obrazovky používateľského rozhrania prehrávača živého vysielania</li>\n    <li>Záber z kamery uprostred streamu, ktorý ste sami zachytili</li>\n    <li>Súkromný materiál určený len pre Studio, ktorý sa nikdy nestal verejným súborom CDN</li>\n  </ul>\n  <p>Rozdiel medzi snímkami z používateľského rozhrania a hostovanými statickými snímkami nájdete v<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snímka obrazovky verzus skutočná miniatúra YouTube</a>.</p>"
+    },
+    {
+      "heading": "Ako sa živé a premiérové ​​statické zábery líšia od krátkych videí Shorts a bežných nahraných videí",
+      "html": "<table>\n    <thead>\n      <tr><th>Typ obsahu</th><th>Typický tvar URL adresy</th><th>Verejný stále hostiteľ</th><th>Čo zvyčajne dostanete</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Pravidelné nahrávanie</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Krajinný kryt, keď je verejný</td></tr>\n      <tr><td>Šortky</td><td><code>/shorts/ID</code></td><td>Rovnaká rodina CDN</td><td>Často sa na šírku zobrazuje CDN, aj keď sa krátky videoklip prehráva vertikálne —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Sprievodca krátkymi filmami</a></td></tr>\n      <tr><td>Naživo / Premiéra</td><td><code>/live/ID</code>alebo<code>/watch?v=ID</code></td><td>Rovnaká rodina CDN</td><td>Vlastný obal udalosti po publikovaní; rovnaké pravidlá pre maximálne rozlíšenie/strednú veľkosť</td></tr>\n    </tbody>\n  </table>\n  <p>11tik už analyzuje<code>youtube.com/live/VIDEO_ID</code>rovnakým spôsobom analyzuje odkazy na sledovanie a krátke videá. Extraktor nepotrebuje samostatný „režim živého vysielania“ – potrebuje<strong>verejné ID videa</strong>a verejné fotografie.</p>"
+    },
+    {
+      "heading": "Životný cyklus: pred, počas a po streame",
+      "html": "<h3>1. Naplánované / nadchádzajúce</h3>\n  <p>Keď YouTube priradí ID videa a udalosť je verejná (alebo neuvedená s odkazom na zdieľanie), na CDN už môže existovať vlastná miniatúra. Vložte URL adresu pripravovaného videa do 11tik a zobrazte si ukážku obálky, ktorú uvidíte v poličkach „Pripravované“.</p>\n  <h3>2. Ži teraz</h3>\n  <p>Počas živého vysielania zvyčajne rovnaký obal naďalej reprezentuje udalosť. Extrakcia počas vysielania stále vracia<strong>hostovaný obal</strong>, nie je to nový záber z toho, čo je v tej chvíli natočené na kameru.</p>\n  <h3>3. Archivovaný záznam (VOD)</h3>\n  <p>Po skončení streamu udalosť zvyčajne zostáva ako bežná URL adresa na sledovanie s rovnakým ID. Verejný obal často zostáva, kým ho tvorca nenahradí v Štúdiu. Ak potrebujete potvrdiť súbor po streamovaní, znova spustite 11tik.</p>"
+    },
+    {
+      "heading": "Formáty URL adries, ktoré fungujú pre živé a premiérové ​​cover verzie",
+      "html": "<table>\n    <thead>\n      <tr><th>Formát</th><th>Príklad vzoru</th><th>Poznámky</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Živá cesta</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Preferované je, keď sa v hárku na zdieľanie zobrazuje /live/</td></tr>\n      <tr><td>Sledujte</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Spoločné pre premiéry a archivované životopisy</td></tr>\n      <tr><td>Krátky odkaz</td><td><code>youtu.be/VIDEO_ID</code></td><td>Funguje, keď sa preloží na rovnaké ID</td></tr>\n      <tr><td>Vložiť</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Extrakcia rovnakého ID</td></tr>\n      <tr><td>Kanál/živé centrum</td><td><code>youtube.com/@handle/live</code></td><td>Najprv otvorte samotný stream, aby sa v adresnom riadku zobrazovalo ID videa</td></tr>\n    </tbody>\n  </table>\n  <p>Ak sa v adresnom riadku stále zobrazuje kanál s živým vysielaním bez 11-miestneho ID, 11tik si ho nemôže vymyslieť. Otvorte kartu streamu alebo premiéry, kým sa nezobrazí konkrétna URL adresa videa, a potom tento odkaz skopírujte.</p>"
+    },
+    {
+      "heading": "Najrýchlejšia metóda s 11tik",
+      "html": "<ol>\n    <li>Skopírujte verejnú URL adresu živého vysielania, premiéry, pozerania alebo youtu.be, ktorá obsahuje ID videa.</li>\n    <li>OTVORENÉ<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Vložte URL adresu. Extrakcia sa spustí, keď je ID platné.</li>\n    <li>Stiahnite si prvý uvedený statický obrázok (najlepší dostupný) alebo skopírujte URL adresu obrázka pre systém CMS.</li>\n  </ol>\n  <img alt=\"Štvorkrokový pracovný postup zobrazujúci kopírovanie aktívnej URL adresy, vloženie do 11tik, overenie veľkostí verejnej CDN a následné stiahnutie alebo kopírovanie URL adresy obrázka\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktická cesta pre živé a premiérové ​​obálky: verejná URL → extrakcia → overené veľkosti → stiahnutie alebo kopírovanie.</p>\n  <p>Potrebujete naraz veľa verejných odkazov na sledovanie? Použite hromadné pridávanie (až 25) –<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">návod na dávkové sťahovanie</a>. Pre najnovšie nahrané súbory z URL adresy kanála pozri<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extrakcia miniatúr kanálov</a>.</p>"
+    },
+    {
+      "heading": "Priama kontrola CDN (voliteľné)",
+      "html": "<p>Ak už poznáte ID, môžete kandidáta otestovať aj naďalej:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Keď to zlyhá, ustúpte<code>hq720.jpg</code>,<code>sddefault.jpg</code>a<code>hqdefault.jpg</code>Manuálne hádanie je pomalšie ako overený zoznam v 11tik a je bežným zdrojom sivých zástupných symbolov – pozri<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">vysvetlenie maxresdefault</a>a<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Sprievodca URL adresami miniatúr</a>.</p>\n  <p>Oficiálne odpovede rozhrania YouTube Data API opisujú rovnaké veľkostné triedy (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) na<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Zdroj miniatúr</a>. 11tik nevolá toto API vo vašom prehliadači; overuje verejné súbory CDN na strane klienta.</p>"
+    },
+    {
+      "heading": "Vlastný obal verzus automaticky generovaný statický obrázok",
+      "html": "<ul>\n    <li><strong>Vlastný cover pre živé vystúpenie/premiéru:</strong>Nahrané v Štúdiu pre danú udalosť. Po dokončení spracovania sa často odomknú vyššie verejné veľkosti.</li>\n    <li><strong>Automatické statické snímanie:</strong>Odvodené, keď YouTube zverejní automatický snímok. Môže sa zastaviť na stredných veľkostiach; maximálne rozlíšenie nie je zaručené.</li>\n  </ul>\n  <p>„Najvyššia kvalita“ stále znamená najväčšiu<em>verejnosť</em>súbor, ktorý existuje – nie je to súkromný export zo Studia. Podrobnosti:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatúra najvyššej kvality</a>a<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">pôvodná verejná miniatúra</a>.</p>"
+    },
+    {
+      "heading": "Kedy sa nezobrazí živá miniatúra",
+      "html": "<table>\n    <thead>\n      <tr><th>Situácia</th><th>Čo sa zvyčajne stáva</th><th>Čo robiť</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Súkromné ​​/ len pre členov / balenie s vekovým obmedzením</td><td>Žiadna verejnosť to stále nepotvrdzuje</td><td>Použite verejný odkaz; 11tik nemôže obísť pravidlá prístupu —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">nedostupný sprievodca miniatúrami</a></td></tr>\n      <tr><td>Kanál/živé centrum bez ID videa</td><td>Analyzátor nenašiel žiadne ID</td><td>Najprv otvorte URL adresu konkrétneho streamu</td></tr>\n      <tr><td>Spracovanie vlastného obalu</td><td>Iba staršie alebo stredné veľkosti</td><td>Skúste to znova po dokončení aplikácie Studio; ponechajte overenú záložnú verziu</td></tr>\n      <tr><td>Uhádnuté maximálne rozlíšenie 404</td><td>Chýba ten názov súboru</td><td>Použite prvú uvedenú veľkosť 11tik</td></tr>\n      <tr><td>Snímka obrazovky prehrávača</td><td>Používateľské rozhranie Chrome, nesprávne pixely</td><td>Uložte si radšej stále sieť CDN</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Zodpovedné opätovné použitie",
+      "html": "<p>Verejná URL adresa CDN nie je licenciou na opätovné publikovanie cover verzie iného tvorcu ako vlastnej značky. Pre osobný výskum, komentáre alebo archiváciu vlastných streamov si súbor uchovávajte lokálne. Pre blogy a sociálne karty uprednostňujte hosťovanie kópie, ktorú máte oprávnenie používať –<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Sprievodca Open Graphom</a>Prehľad YouTube o<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">vlastné miniatúry videí</a>je primárnym referenčným bodom na strane tvorcu pre nahrávanie v Štúdiu.</p>"
+    },
+    {
+      "heading": "Ďalší krok",
+      "html": "<p>Otvorte stránku s vysielaním alebo premiérou, kým sa v URL nezobrazí ID videa, vložte ho do<a href=\"https://www.11tik.com/\">Extraktor miniatúr YouTube</a>a uložte si prvú overenú statický obrázok. Tipy na ukladanie do mobilného zariadenia nájdete<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone a Android</a>Informácie o vlastných nahrávaniach zo Studio nájdete<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatúra Štúdia YouTube 2026</a>.</p>\n  <p class=\"yte-bio\">Napísal/a 11tik. Iba verejné fotografie; sťahovanie videa ani zvuku nie je možné.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Môžem si stiahnuť miniatúru počas živého streamu?",
+      "answer": "Áno, keď je stream verejný a YouTube zverejnil verejné fotografie pre dané ID videa. Dostanete hostovaný obal, nie záber z kamery naživo.",
+      "answerHtml": "<p>Áno, keď je stream verejný a YouTube zverejnil verejné fotografie pre dané ID videa. Dostanete hostovaný obal, nie záber z kamery naživo.</p>"
+    },
+    {
+      "question": "Používajú premiéry rovnakú metódu ako živé vysielania?",
+      "answer": "Áno. Obe sa prevedú na ID videa. Vložte URL adresu premiéry na pozeranie alebo zdieľanie do 11tik rovnakým spôsobom.",
+      "answerHtml": "<p>Áno. Obe sa prevedú na ID videa. Vložte URL adresu premiéry na pozeranie alebo zdieľanie do 11tik rovnakým spôsobom.</p>"
+    },
+    {
+      "question": "Funguje youtube.com/live/VIDEO_ID v 11tik?",
+      "answer": "Áno. Analyzátor zaobchádza s /live/ ako s inými cestami s ID.",
+      "answerHtml": "<p>Áno. Analyzátor spracováva<code>/live/</code>ako iné cesty nesúce ID.</p>"
+    },
+    {
+      "question": "Zmení sa obal po skončení streamu?",
+      "answer": "Často zostáva rovnaký, ale tvorcovia ho môžu v aplikácii Štúdio nahradiť. Ak potrebujete aktuálny verejný súbor, znova ho extrahujte.",
+      "answerHtml": "<p>Často zostáva rovnaký, ale tvorcovia ho môžu v aplikácii Štúdio nahradiť. Ak potrebujete aktuálny verejný súbor, znova ho extrahujte.</p>"
+    },
+    {
+      "question": "Je živá miniatúra to isté ako miniatúra krátkych videí?",
+      "answer": "Rovnaký nápad na CDN, iný kontext produktu. Krátke videá často uchovávajú verejné statické zábery na šírku, aj keď je prehrávanie vertikálne – pozrite si sprievodcu miniatúrami krátkych videí.",
+      "answerHtml": "<p>Rovnaký nápad na CDN, iný kontext produktu. Krátke videá často uchovávajú verejné zábery na šírku, aj keď je prehrávanie vertikálne – pozri<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Sprievodca miniatúrami krátkych videí</a>.</p>"
+    },
+    {
+      "question": "Môže 11tik získať záznam zo súkromného života?",
+      "answer": "Nie. Súkromné, odstránené alebo obmedzené balenia bez verejných fotografií nevrátia obrázky.",
+      "answerHtml": "<p>Nie. Súkromné, odstránené alebo obmedzené balenia bez verejných fotografií nevrátia obrázky.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik. Iba verejné fotografie; sťahovanie videa ani zvuku nie je možné.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+}

@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "sv",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Hur man laddar ner en miniatyrbild av en YouTube Live- eller Premiärvisning (före, under och efter) | 11tik",
+  "description": "Klistra in en offentlig URL för YouTube-live eller premiär i 11tik för att spara omslaget som YouTube redan har – innan livesändning, medan LIVE-sändningen pågår eller efter att sändningen blir en repris.",
+  "h1": "Hur man laddar ner en miniatyrbild av en YouTube Live- eller Premiärvisning (före, under och efter)",
+  "ogTitle": "Hur man laddar ner en miniatyrbild av en YouTube Live- eller Premiärvisning (före, under och efter)",
+  "ogDescription": "Klistra in en offentlig URL för YouTube-live eller premiär i 11tik för att spara omslaget som YouTube redan har – innan livesändning, medan LIVE-sändningen pågår eller efter att sändningen blir en repris.",
+  "imageAlt": "Livscykeldiagram i tre steg som visar en omslagsbild för en livesändning eller premiär på YouTube före sändning, under livemärket och efter arkivering som VOD",
+  "faqHeading": "Vanliga frågor",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Livscykeldiagram i tre steg som visar en omslagsbild för en livesändning eller premiär på YouTube före sändning, under livemärket och efter arkivering som VOD",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Arbetsflöde i fyra steg som visar kopiera en aktiv URL, klistra in i 11tik, validera storlekar på offentliga CDN och sedan ladda ner eller kopiera bild-URL:en",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snabbt svar",
+      "html": "<p>En YouTube-livestream och en premiär har båda 11 tecken<strong>video-ID</strong>, precis som en vanlig uppladdning. Offentliga omslagsbilder för det ID:t visas på YouTubes bild-CDN (<code>i.ytimg.com</code>). Kopiera en offentlig<code>/live/</code>, titta på eller dela URL:en, klistra in den i<a href=\"https://www.11tik.com/\">11tik</a>och ladda sedan ner den största stillbilden som faktiskt laddas. Du sparar<strong>reklambild för omslag</strong>, inte en live bildruteinspelning av sändningen och inte videofilen.</p>\n\n  <img alt=\"Livscykeldiagram i tre steg som visar en omslagsbild för en livesändning eller premiär på YouTube före sändning, under livemärket och efter arkivering som VOD\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Samma video-ID, samma offentliga omslagsfamilj: schemalagd → live → arkiverad repris, såvida inte skaparen ersätter den anpassade miniatyrbilden senare.</p>"
+    },
+    {
+      "heading": "Vad är en YouTube Live- eller Premiärminiatyr?",
+      "html": "<p>Det är det offentliga stillbildsprogrammet som representerar händelsen i bläddring, sökning, prenumerationer och delningar. Skapare laddar vanligtvis upp ett anpassat omslag i YouTube Studio innan de publiceras. Om ingen anpassad fil publiceras kan YouTube återgå till ett automatiskt genererat stillbildsprogram när bearbetningen tillåter – samma familj av CDN-filnamn som används för vanliga videor (<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>och mindre storlekar).</p>\n  <p>Det omslaget är<strong>inte</strong>samma sak som:</p>\n  <ul>\n    <li>En skärmdump av livespelarens användargränssnitt</li>\n    <li>En bildruta från en midstream-kamera som du själv har tagit</li>\n    <li>En privat tillgång endast för Studio som aldrig blev en offentlig CDN-fil</li>\n  </ul>\n  <p>För skillnaden mellan UI-bilder och värdbaserade stillbilder, se<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skärmdump kontra riktig YouTube-miniatyr</a>.</p>"
+    },
+    {
+      "heading": "Hur live- och premiärstillbilder skiljer sig från Shorts och vanliga uppladdningar",
+      "html": "<table>\n    <thead>\n      <tr><th>Innehållstyp</th><th>Typisk URL-form</th><th>Offentlig fortfarande värd</th><th>Vad du vanligtvis får</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Vanlig uppladdning</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Landskapstäckning när den är offentlig</td></tr>\n      <tr><td>Shorts</td><td><code>/shorts/ID</code></td><td>Samma CDN-familj</td><td>Ofta liggande CDN fortfarande även om Short spelar vertikalt —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shortsguide</a></td></tr>\n      <tr><td>Live / Premiär</td><td><code>/live/ID</code>eller<code>/watch?v=ID</code></td><td>Samma CDN-familj</td><td>Anpassat evenemangsomslag vid publicering; samma regler för maxres/mellanstorlek</td></tr>\n    </tbody>\n  </table>\n  <p>11tik analyserar redan<code>youtube.com/live/VIDEO_ID</code>på samma sätt som den analyserar länkar för tittarläge och Shorts. Extraktorn behöver inte ett separat \"liveläge\" – den behöver en<strong>offentligt video-ID</strong>och offentliga stillbilder.</p>"
+    },
+    {
+      "heading": "Livscykel: före, under och efter strömmen",
+      "html": "<h3>1. Planerad / kommande</h3>\n  <p>När YouTube har tilldelat ett video-ID och evenemanget är offentligt (eller olistat med en delbar länk) kan en anpassad miniatyrbild redan finnas på CDN. Klistra in URL:en för kommande video i 11tik för att förhandsgranska omslaget som du ser i hyllorna \"Kommande\".</p>\n  <h3>2. Lev nu</h3>\n  <p>Medan sändningen pågår fortsätter vanligtvis samma omslag att representera händelsen. Att extrahera under sändningen returnerar fortfarande<strong>värdomslag</strong>, inte en ny bildruta från vad som än är på kameran just då.</p>\n  <h3>3. Arkiverad uppspelning (VOD)</h3>\n  <p>Efter att strömmen är slut finns händelsen vanligtvis kvar som en vanlig visnings-URL med samma ID. Det offentliga omslaget finns ofta kvar tills skaparen ersätter det i Studio. Kör 11tik igen om du behöver bekräfta post-stream-filen.</p>"
+    },
+    {
+      "heading": "URL-format som fungerar för live- och premiäromslag",
+      "html": "<table>\n    <thead>\n      <tr><th>Formatera</th><th>Exempelmönster</th><th>Anteckningar</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Live-sökväg</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Föredras när delningsarket visar /live/</td></tr>\n      <tr><td>Titta</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Vanligt för premiärer och arkiverade konserter</td></tr>\n      <tr><td>Kort länk</td><td><code>youtu.be/VIDEO_ID</code></td><td>Fungerar när det matchar samma ID</td></tr>\n      <tr><td>Bädda in</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Samma ID-extraktion</td></tr>\n      <tr><td>Kanal-/livehub</td><td><code>youtube.com/@handle/live</code></td><td>Öppna den faktiska strömmen först så att adressfältet visar ett video-ID</td></tr>\n    </tbody>\n  </table>\n  <p>Om adressfältet fortfarande visar en kanal live-hubb utan ett 11-tecken långt ID kan 11tik inte hitta på en. Öppna stream- eller premiärkortet tills en konkret video-URL visas och kopiera sedan länken.</p>"
+    },
+    {
+      "heading": "Snabbaste metoden med 11tik",
+      "html": "<ol>\n    <li>Kopiera en offentlig live-, premiär-, visnings- eller youtu.be-URL som innehåller video-ID:t.</li>\n    <li>Öppna<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Klistra in URL:en. Extraheringen startar när ID:t är giltigt.</li>\n    <li>Ladda ner den första listade stillbilden (bästa tillgängliga), eller kopiera bild-URL:en för ett CMS.</li>\n  </ol>\n  <img alt=\"Arbetsflöde i fyra steg som visar kopiera en aktiv URL, klistra in i 11tik, validera storlekar på offentliga CDN och sedan ladda ner eller kopiera bild-URL:en\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktisk väg för live- och premiäromslag: offentlig URL → utdrag → validerade storlekar → nedladdning eller kopiering.</p>\n  <p>Behöver du många offentliga länkar för bevakning samtidigt? Använd massvisning (upp till 25) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">guide för batchnedladdning</a>För senaste uppladdningar från en kanal-URL, se<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extrahering av kanalminiatyrer</a>.</p>"
+    },
+    {
+      "heading": "Direkt CDN-kontroll (valfritt)",
+      "html": "<p>Om du redan vet ID:t kan du fortfarande testa en kandidat:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>När det misslyckas, steg ner genom<code>hq720.jpg</code>,<code>sddefault.jpg</code>och<code>hqdefault.jpg</code>Manuell gissning är långsammare än 11tik:s validerade lista och är en vanlig källa till grå platsmarkörer – se<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault förklarad</a>och den<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>.</p>\n  <p>Officiella svar från YouTube Data API beskriver samma storleksklasser (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) på<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Miniatyrer-resurs</a>11tik anropar inte det API:et i din webbläsare; det validerar publika CDN-filer på klientsidan.</p>"
+    },
+    {
+      "heading": "Anpassat omslag kontra automatiskt genererad stillbild",
+      "html": "<ul>\n    <li><strong>Anpassat omslag för live/premiär:</strong>Uppladdad i Studio för evenemanget. Låser ofta upp större offentliga storlekar när bearbetningen är klar.</li>\n    <li><strong>Automatisk stillbild:</strong>Hämtas när YouTube publicerar en automatisk bildruta. Kan stanna vid medelstora storlekar; maxupplösning garanteras inte.</li>\n  </ul>\n  <p>”Högsta kvalitet” betyder fortfarande störst<em>offentlig</em>fil som finns – inte en privat Studio-export. Detaljer:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatyrbild av högsta kvalitet</a>och<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">original offentlig miniatyrbild</a>.</p>"
+    },
+    {
+      "heading": "När en liveminiatyrbild inte visas",
+      "html": "<table>\n    <thead>\n      <tr><th>Situation</th><th>Vad som vanligtvis händer</th><th>Vad man ska göra</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Privat / endast för medlemmar / åldersbegränsad förpackning</td><td>Ingen publik validerar fortfarande</td><td>Använd en offentlig länk; 11tik kan inte kringgå åtkomstregler —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">otillgänglig miniatyrguide</a></td></tr>\n      <tr><td>Kanal/livehub utan video-ID</td><td>Parsern hittar inget ID</td><td>Öppna den konkreta strömmens URL först</td></tr>\n      <tr><td>Anpassat omslag fortfarande bearbetat</td><td>Endast äldre eller mellanstora storlekar</td><td>Försök igen när Studio är klar; behåll den validerade reservfunktionen</td></tr>\n      <tr><td>Gissade maxres 404</td><td>Det filnamnet saknas</td><td>Använd den första listade storleken på 11tik</td></tr>\n      <tr><td>Skärmdump av spelaren</td><td>UI Chrome, fel pixlar</td><td>Spara CDN:et fortfarande istället</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Ansvarsfull återanvändning",
+      "html": "<p>En offentlig CDN-URL är inte en licens att återpublicera en annan skapares omslag som ditt eget varumärke. För personlig forskning, kommentarer eller arkivering av dina egna streamar, behåll filen lokalt. För bloggar och sociala medier, föredra att ha en kopia som du har rätt att använda —<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blogg / Open Graph-guide</a>YouTubes översikt över<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">anpassade videominiatyrer</a>är den primära referensen på skaparsidan för uppladdningar i Studio.</p>"
+    },
+    {
+      "heading": "Nästa steg",
+      "html": "<p>Öppna live- eller premiärsidan tills URL:en visar ett video-ID, klistra in det i<a href=\"https://www.11tik.com/\">YouTube-miniatyrutdragare</a>och spara det första validerade stillbildsfönstret. För tips om mobilsparning, se<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone och Android</a>För anpassade uppladdningar från Studio, se<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatyrbild 2026</a>.</p>\n  <p class=\"yte-bio\">Skriven av 11tik. Endast offentliga stillbilder; ingen nedladdning av video eller ljud.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan jag ladda ner miniatyrbilden medan sändningen pågår?",
+      "answer": "Ja, när strömmen är offentlig och YouTube har publicerat offentliga stillbilder för det video-ID:t får du det hostade omslaget, inte en bildruta från kameran i realtid.",
+      "answerHtml": "<p>Ja, när strömmen är offentlig och YouTube har publicerat offentliga stillbilder för det video-ID:t får du det hostade omslaget, inte en bildruta från kameran i realtid.</p>"
+    },
+    {
+      "question": "Används samma metod för premiärer som för livestreams?",
+      "answer": "Ja. Båda konverteras till ett video-ID. Klistra in URL:en för premiärvisning eller delning i 11tik på samma sätt.",
+      "answerHtml": "<p>Ja. Båda konverteras till ett video-ID. Klistra in URL:en för premiärvisning eller delning i 11tik på samma sätt.</p>"
+    },
+    {
+      "question": "Fungerar youtube.com/live/VIDEO_ID i 11tik?",
+      "answer": "Ja. Parsern behandlar /live/ som andra ID-bärande sökvägar.",
+      "answerHtml": "<p>Ja. Parsern behandlar<code>/live/</code>liksom andra ID-bärande vägar.</p>"
+    },
+    {
+      "question": "Kommer omslaget att ändras efter att sändningen är slut?",
+      "answer": "Ofta förblir den densamma, men skaparna kan ersätta den i Studio. Extrahera den igen om du behöver den aktuella publika filen.",
+      "answerHtml": "<p>Ofta förblir den densamma, men skaparna kan ersätta den i Studio. Extrahera den igen om du behöver den aktuella publika filen.</p>"
+    },
+    {
+      "question": "Är en liveminiatyrbild samma sak som en Shorts-miniatyrbild?",
+      "answer": "Samma CDN-idé, annan produktkontext. Shorts-bilder behåller ofta offentliga stillbilder i liggande läge även när uppspelningen är vertikal – se guiden för miniatyrbilder för shorts-bilder.",
+      "answerHtml": "<p>Samma CDN-idé, annan produktkontext. Kortfilmer behåller ofta liggande offentliga stillbilder även när uppspelningen är vertikal – se<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Guide till miniatyrbilder för shorts</a>.</p>"
+    },
+    {
+      "question": "Kan 11tik utvinna ur ett privatliv?",
+      "answer": "Nej. Privat, raderad eller begränsad förpackning utan offentliga stillbilder returnerar inte bilder.",
+      "answerHtml": "<p>Nej. Privat, raderad eller begränsad förpackning utan offentliga stillbilder returnerar inte bilder.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Skriven av 11tik. Endast offentliga stillbilder; ingen nedladdning av video eller ljud.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+}

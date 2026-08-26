@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "nl",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "Hoe download je een miniatuurafbeelding van een YouTube Live- of Premiere-uitzending (voor, tijdens en na)? | 11tik",
+  "description": "Plak een openbare YouTube live- of première-URL in 11tik om de coverafbeelding op te slaan die YouTube al host—voordat de livestream begint, tijdens de livestream of nadat de stream een ​​herhaling is geworden.",
+  "h1": "Hoe download je een miniatuurafbeelding van een YouTube Live- of Premiere-uitzending (vóór, tijdens en na)?",
+  "ogTitle": "Hoe download je een miniatuurafbeelding van een YouTube Live- of Premiere-uitzending (vóór, tijdens en na)?",
+  "ogDescription": "Plak een openbare YouTube live- of première-URL in 11tik om de coverafbeelding op te slaan die YouTube al host—voordat de livestream begint, tijdens de livestream of nadat de stream een ​​herhaling is geworden.",
+  "imageAlt": "Diagram met drie levensfasen van een YouTube Live- of première-coverafbeelding: vóór de livegang, tijdens het weergeven van de livebadge en na archivering als VOD.",
+  "faqHeading": "Veelgestelde vragen",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "Diagram met drie levensfasen van een YouTube Live- of première-coverafbeelding: vóór de livegang, tijdens het weergeven van de livebadge en na archivering als VOD.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Een workflow in vier stappen die laat zien hoe je een live URL kopieert, deze in 11tik plakt, de grootte van openbare CDN's valideert en vervolgens de URL van de afbeelding downloadt of kopieert.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Snel antwoord",
+      "html": "<p>Een YouTube Live-stream en een première hebben elk een maximale lengte van 11 tekens.<strong>video-ID</strong>Net als bij een normale upload. Openbare omslagafbeeldingen voor die ID zijn te vinden op het afbeeldings-CDN van YouTube (<code>i.ytimg.com</code>). Kopieer een openbare<code>/live/</code>, bekijk of deel de URL, plak deze in<a href=\"https://www.11tik.com/\">11tik</a>Download vervolgens de grootste afbeelding die daadwerkelijk laadt. Je slaat de<strong>promotionele omslagafbeelding</strong>Het is geen live frame-opname van de uitzending en ook niet het videobestand zelf.</p>\n\n  <img alt=\"Diagram met drie levensfasen van een YouTube Live- of première-coverafbeelding: vóór de livegang, tijdens het weergeven van de livebadge en na archivering als VOD.\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Dezelfde video-ID, dezelfde openbare omslagafbeeldingfamilie: gepland → live → gearchiveerde herhaling, tenzij de maker de aangepaste miniatuur later vervangt.</p>"
+    },
+    {
+      "heading": "Wat is een thumbnail voor een YouTube Live- of Premiere-video?",
+      "html": "<p>Het is de openbare afbeelding die het evenement vertegenwoordigt in de weergave bij het bekijken, zoeken, abonneren en delen. Makers uploaden meestal een aangepaste omslagafbeelding in YouTube Studio voordat ze live gaan. Als er geen aangepast bestand is gepubliceerd, kan YouTube terugvallen op een automatisch gegenereerde afbeelding zodra de verwerking dit toelaat – dezelfde reeks CDN-bestandsnamen die worden gebruikt voor reguliere video's.<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>en kleinere maten).</p>\n  <p>Die omslag is<strong>niet</strong>hetzelfde als:</p>\n  <ul>\n    <li>Een screenshot van de gebruikersinterface van de live speler.</li>\n    <li>Een camerabeeld dat je zelf hebt vastgelegd, midden in de stroom.</li>\n    <li>Een exclusief privébestand voor de studio dat nooit als openbaar CDN-bestand beschikbaar is gekomen.</li>\n  </ul>\n  <p>Zie voor het verschil tussen UI-screenshots en gehoste stilstaande beelden de volgende informatie:<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot versus echte YouTube-thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Hoe live- en premièrefoto's verschillen van korte filmpjes en reguliere uploads.",
+      "html": "<table>\n    <thead>\n      <tr><th>Inhoudstype</th><th>Typische URL-vorm</th><th>Publiek blijft gastheer</th><th>Wat je normaal gesproken krijgt</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Regelmatige upload</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Landschapsbedekking wanneer openbaar</td></tr>\n      <tr><td>Shorts</td><td><code>/shorts/ID</code></td><td>Dezelfde CDN-familie</td><td>Vaak blijft de landschaps-CDN nog steeds van toepassing, zelfs als de korte verticale richting wordt ingenomen —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Gids voor korte broeken</a></td></tr>\n      <tr><td>Live / Première</td><td><code>/live/ID</code>of<code>/watch?v=ID</code></td><td>Dezelfde CDN-familie</td><td>Aangepaste omslag voor het evenement bij publicatie; dezelfde regels voor maximale/middelgrote afmetingen.</td></tr>\n    </tbody>\n  </table>\n  <p>11tik wordt al geparseerd<code>youtube.com/live/VIDEO_ID</code>Op dezelfde manier analyseert het watch- en Shorts-links. De extractor heeft geen aparte \"live-modus\" nodig; hij heeft een<strong>openbare video-ID</strong>en openbare foto's.</p>"
+    },
+    {
+      "heading": "Levenscyclus: vóór, tijdens en na de stream",
+      "html": "<h3>1. Gepland / aankomend</h3>\n  <p>Zodra YouTube een video-ID heeft toegewezen en het evenement openbaar is (of niet-openbaar met een deelbare link), kan er al een aangepaste thumbnail op het CDN aanwezig zijn. Plak de aankomende URL in 11tik om een ​​voorbeeld te bekijken van de cover die je in de sectie 'Aankomend' zult zien.</p>\n  <h3>2. Live nu</h3>\n  <p>Tijdens de livestream wordt meestal dezelfde omslagafbeelding gebruikt om het evenement weer te geven. Het uitpakken tijdens de uitzending levert nog steeds hetzelfde resultaat op.<strong>gehoste cover</strong>, en niet een nieuw beeld van wat er op dat moment op de camera te zien is.</p>\n  <h3>3. Gearchiveerde herhaling (VOD)</h3>\n  <p>Nadat de stream is afgelopen, blijft het evenement doorgaans beschikbaar als een normale kijk-URL met dezelfde ID. De openbare cover blijft vaak zichtbaar totdat de maker deze in Studio vervangt. Voer 11tik opnieuw uit als u het bestand na de stream wilt controleren.</p>"
+    },
+    {
+      "heading": "URL-formaten die werken voor live- en première-covers",
+      "html": "<table>\n    <thead>\n      <tr><th>Formaat</th><th>Voorbeeldpatroon</th><th>Notities</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Live pad</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Bij voorkeur wanneer het deelvenster /live/ weergeeft.</td></tr>\n      <tr><td>Horloge</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Gebruikelijk voor premières en gearchiveerde live-uitzendingen</td></tr>\n      <tr><td>Korte link</td><td><code>youtu.be/VIDEO_ID</code></td><td>Werkt als het naar dezelfde ID verwijst.</td></tr>\n      <tr><td>Insluiten</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Dezelfde ID-extractie</td></tr>\n      <tr><td>Kanaal / live hub</td><td><code>youtube.com/@handle/live</code></td><td>Open eerst de daadwerkelijke stream, zodat in de adresbalk een video-ID wordt weergegeven.</td></tr>\n    </tbody>\n  </table>\n  <p>Als in de adresbalk nog steeds een livekanaal zonder 11-tekens ID wordt weergegeven, kan 11tik er geen aanmaken. Open de stream- of premièrekaart totdat een concrete video-URL verschijnt en kopieer die link.</p>"
+    },
+    {
+      "heading": "Snelste methode met 11tik",
+      "html": "<ol>\n    <li>Kopieer een openbare live-, première-, kijk- of youtu.be-URL die de video-ID bevat.</li>\n    <li>Open<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>Plak de URL. De extractie start zodra de ID geldig is.</li>\n    <li>Download de eerstgenoemde afbeelding (de beste beschikbare) of kopieer de afbeeldings-URL voor gebruik in een CMS.</li>\n  </ol>\n  <img alt=\"Een workflow in vier stappen die laat zien hoe je een live URL kopieert, deze in 11tik plakt, de grootte van openbare CDN's valideert en vervolgens de URL van de afbeelding downloadt of kopieert.\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Praktische procedure voor live- en premièrecovers: openbare URL → uitpakken → formaten controleren → downloaden of kopiëren.</p>\n  <p>Wil je veel openbare kijklinks tegelijk? Gebruik de bulkfunctie (tot 25).<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">Handleiding voor het批量 downloaden</a>Voor recente uploads van een kanaal-URL, zie<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">extractie van miniatuurafbeeldingen van kanalen</a>.</p>"
+    },
+    {
+      "heading": "Directe CDN-controle (optioneel)",
+      "html": "<p>Als je het ID al weet, kun je een kandidaat alsnog testen:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Als het mislukt, ga dan naar beneden.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, En<code>hqdefault.jpg</code>Handmatig raden is trager dan de gevalideerde lijst van 11tik en is een veelvoorkomende bron van grijze plaatsaanduidingen – zie<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault uitgelegd</a>en de<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>.</p>\n  <p>De officiële antwoorden van de YouTube Data API beschrijven dezelfde grootteklassen (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) op de<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Miniatuurafbeeldingen</a>. 11tik roept die API niet aan in uw browser; het valideert openbare CDN-bestanden aan de clientzijde.</p>"
+    },
+    {
+      "heading": "Omslag op maat versus automatisch gegenereerde afbeelding",
+      "html": "<ul>\n    <li><strong>Omslag op maat voor live-/première-uitzending:</strong>Geüpload in Studio voor het evenement. Vaak worden grotere openbare formaten vrijgegeven zodra de verwerking is voltooid.</li>\n    <li><strong>Auto-afbeelding:</strong>Wordt gegenereerd wanneer YouTube een automatisch frame publiceert. Kan stoppen bij middelgrote formaten; maximale resolutie is niet gegarandeerd.</li>\n  </ul>\n  <p>\"Hoogste kwaliteit\" betekent nog steeds het grootste.<em>publiek</em>Het bestand bestaat, het is geen privé-export van Studio. Details:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">miniatuurafbeelding van de hoogste kwaliteit</a>En<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">originele openbare miniatuur</a>.</p>"
+    },
+    {
+      "heading": "Wanneer er geen live miniatuur wordt weergegeven",
+      "html": "<table>\n    <thead>\n      <tr><th>Situatie</th><th>Wat er gewoonlijk gebeurt</th><th>Wat te doen</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Privéverpakking / verpakking alleen voor leden / verpakking met leeftijdsbeperking</td><td>Geen enkel publiek bevestigt dit nog.</td><td>Gebruik een openbare link; 11tik kan de toegangsregels niet omzeilen —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">miniatuurafbeelding niet beschikbaar</a></td></tr>\n      <tr><td>Kanaal/livehub zonder video-ID</td><td>De parser vindt geen ID.</td><td>Open eerst de URL van de concrete stream.</td></tr>\n      <tr><td>De hoes op maat wordt momenteel verwerkt.</td><td>Alleen voor oudere of middelgrote maten.</td><td>Probeer het opnieuw nadat Studio klaar is; behoud de gevalideerde fallback.</td></tr>\n      <tr><td>Geschatte maximale resolutie 404</td><td>Die bestandsnaam ontbreekt</td><td>Gebruik de eerste vermelde maat van 11tik.</td></tr>\n      <tr><td>Screenshot van de speler</td><td>UI-chrome, verkeerde pixels</td><td>Bewaar de CDN nog steeds.</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Verantwoord hergebruik",
+      "html": "<p>Een openbare CDN-URL geeft je geen licentie om de cover van een andere maker als je eigen merk te publiceren. Bewaar het bestand lokaal voor persoonlijk onderzoek, commentaar of het archiveren van je eigen streams. Voor blogs en social media-profielen kun je beter een kopie hosten waarvoor je de gebruiksrechten hebt.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Open Graph-handleiding</a>YouTube's overzicht van<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">aangepaste videominiaturen</a>is de belangrijkste referentiebron voor makers bij het uploaden in Studio.</p>"
+    },
+    {
+      "heading": "Volgende stap",
+      "html": "<p>Open de live- of premièrepagina totdat de URL een video-ID weergeeft, plak deze in het veld.<a href=\"https://www.11tik.com/\">YouTube thumbnail extractor</a>en sla de eerste gevalideerde foto op. Voor tips over opslaan op mobiele apparaten, zie<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone en Android</a>Voor aangepaste uploads aan de Studio-zijde, zie<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio miniatuur 2026</a>.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik. Alleen openbare foto's; geen video- of audiodownloads.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan ik de miniatuurafbeelding downloaden terwijl de stream live is?",
+      "answer": "Ja, als de stream openbaar is en YouTube openbare stilstaande beelden voor die video-ID heeft gepubliceerd. Je krijgt dan de gehoste cover te zien, niet een live camerabeeld.",
+      "answerHtml": "<p>Ja, als de stream openbaar is en YouTube openbare stilstaande beelden voor die video-ID heeft gepubliceerd. Je krijgt dan de gehoste cover te zien, niet een live camerabeeld.</p>"
+    },
+    {
+      "question": "Worden premières op dezelfde manier uitgezonden als livestreams?",
+      "answer": "Ja. Beide verwijzen naar een video-ID. Plak de URL voor het bekijken of delen van de première op dezelfde manier in 11tik.",
+      "answerHtml": "<p>Ja. Beide verwijzen naar een video-ID. Plak de URL voor het bekijken of delen van de première op dezelfde manier in 11tik.</p>"
+    },
+    {
+      "question": "Werkt youtube.com/live/VIDEO_ID in 11tik?",
+      "answer": "Ja. De parser behandelt /live/ net als andere paden met een ID.",
+      "answerHtml": "<p>Ja. De parser behandelt<code>/live/</code>net als andere paden die een ID bevatten.</p>"
+    },
+    {
+      "question": "Zal de cover veranderen nadat de livestream is afgelopen?",
+      "answer": "Het blijft vaak hetzelfde, maar makers kunnen het in Studio vervangen. Pak het bestand opnieuw uit als je het actuele openbare bestand nodig hebt.",
+      "answerHtml": "<p>Het blijft vaak hetzelfde, maar makers kunnen het in Studio vervangen. Pak het bestand opnieuw uit als je het actuele openbare bestand nodig hebt.</p>"
+    },
+    {
+      "question": "Is een live thumbnail hetzelfde als een Shorts thumbnail?",
+      "answer": "Hetzelfde CDN-idee, maar een andere productcontext. Shorts bewaren vaak openbare stilstaande beelden in liggend formaat, zelfs wanneer de weergave verticaal is — zie de handleiding voor miniatuurafbeeldingen van Shorts.",
+      "answerHtml": "<p>Hetzelfde CDN-idee, maar een andere productcontext. Shorts bewaren vaak openbare stilstaande beelden in liggend formaat, zelfs wanneer de weergave verticaal is — zie de<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatuurgids voor korte filmpjes</a>.</p>"
+    },
+    {
+      "question": "Kan 11tik informatie uit een privé-livestream halen?",
+      "answer": "Nee. Privé-, verwijderde of beperkte verpakkingen zonder openbare foto's zullen geen afbeeldingen retourneren.",
+      "answerHtml": "<p>Nee. Privé-, verwijderde of beperkte verpakkingen zonder openbare foto's zullen geen afbeeldingen retourneren.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik. Alleen openbare foto's; geen video- of audiodownloads.<a href=\"https://www.11tik.com/p/about.html\">Over</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Voorwaarden</a>.</p>"
+}

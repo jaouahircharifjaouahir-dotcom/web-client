@@ -101,4 +101,10 @@ export const GUIDE_POSTS = [
     summary:
       "11tik /thumb/{id} is a share result page for one video ID. It is not a YouTube watch URL and not a direct i.ytimg.com image file. Learn when to share each.",
   },
+  {
+    title: "How to Download a YouTube Live or Premiere Thumbnail (Before, During, and After)",
+    href: "https://www.11tik.com/2026/08/youtube-live-premiere-thumbnail-download.html",
+    summary:
+      "Live streams and premieres use the same public CDN stills as regular uploads once a video ID exists. Paste a /live/, watch, or youtu.be URL into 11tik to save the cover before go-live, during the stream, or after it becomes a replay—not a player screenshot and not the video file.",
+  },
 ] as const;

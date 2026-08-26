@@ -1,0 +1,106 @@
+{
+  "contentId": "youtube-live-premiere-thumbnail-download",
+  "articleId": "youtube-live-premiere-thumbnail-download",
+  "locale": "tr",
+  "sourceHash": "d157094f773e596f62eb791a2db87e1801ecff322c7d8b9ac9a237a065a28bb0",
+  "status": "ready",
+  "title": "YouTube Canlı Yayın veya Premiere Küçük Resmini Nasıl İndirebilirsiniz (Öncesi, Sırasında ve Sonrasında) | 11tik",
+  "description": "YouTube'un zaten barındırdığı kapak fotoğrafını kaydetmek için 11tik'e herkese açık bir YouTube canlı yayın veya prömiyer URL'si yapıştırın; bu kayıtlar canlı yayından önce, canlı yayın sırasında veya yayın tekrarı haline geldikten sonra yapılabilir.",
+  "h1": "YouTube Canlı Yayın veya Premiere Videosunun Küçük Resmini Nasıl İndirebilirsiniz (Öncesi, Sırasında ve Sonrasında)",
+  "ogTitle": "YouTube Canlı Yayın veya Premiere Videosunun Küçük Resmini Nasıl İndirebilirsiniz (Öncesi, Sırasında ve Sonrasında)",
+  "ogDescription": "YouTube'un zaten barındırdığı kapak fotoğrafını kaydetmek için 11tik'e herkese açık bir YouTube canlı yayın veya prömiyer URL'si yapıştırın; bu kayıtlar canlı yayından önce, canlı yayın sırasında veya yayın tekrarı haline geldikten sonra yapılabilir.",
+  "imageAlt": "YouTube canlı yayın veya prömiyer kapak görselinin yayına başlamadan önceki, canlı yayın sırasındaki ve VOD olarak arşivlendikten sonraki üç aşamalı yaşam döngüsü diyagramı.",
+  "faqHeading": "SSS",
+  "images": [
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png",
+      "alt": "YouTube canlı yayın veya prömiyer kapak görselinin yayına başlamadan önceki, canlı yayın sırasındaki ve VOD olarak arşivlendikten sonraki üç aşamalı yaşam döngüsü diyagramı.",
+      "captionHtml": ""
+    },
+    {
+      "src": "https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png",
+      "alt": "Canlı bir URL'yi kopyalamayı, 11tik'e yapıştırmayı, genel CDN boyutlarını doğrulamayı ve ardından resim URL'sini indirmeyi veya kopyalamayı gösteren dört adımlı iş akışı.",
+      "captionHtml": ""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hızlı cevap",
+      "html": "<p>YouTube canlı yayınlarının ve Premiere yayınlarının her birinde 11 karakter bulunur.<strong>video kimliği</strong>Tıpkı normal bir yükleme gibi. Bu kimlik için herkese açık kapak fotoğrafları YouTube'un görüntü CDN'sinde ( ) yer alıyor.<code>i.ytimg.com</code>Herkese açık bir kopyayı kopyala.<code>/live/</code>İzlemek veya paylaşmak için URL'yi yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Ardından, gerçekten yüklenen en büyük fotoğrafı indirin. Böylece kaydediyorsunuz.<strong>tanıtım kapağı görseli</strong>Bu, yayının canlı kare görüntüsü veya video dosyası değil.</p>\n\n  <img alt=\"YouTube canlı yayın veya prömiyer kapak görselinin yayına başlamadan önceki, canlı yayın sırasındaki ve VOD olarak arşivlendikten sonraki üç aşamalı yaşam döngüsü diyagramı.\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png\" width=\"1200\">\n  <p class=\"yte-caption\">Aynı video kimliği, aynı herkese açık kapak resmi ailesi: planlanmış → canlı → arşivlenmiş tekrar, içerik oluşturucu özel küçük resmi daha sonra değiştirmediği sürece.</p>"
+    },
+    {
+      "heading": "YouTube Canlı Yayın veya Premiere küçük resmi nedir?",
+      "html": "<p>Bu, etkinliği göz atma, arama, abonelikler ve paylaşımlarda temsil eden herkese açık olan fotoğraftır. İçerik oluşturucular genellikle canlı yayına geçmeden önce YouTube Studio'da özel bir kapak resmi yüklerler. Özel bir dosya yayınlanmazsa, YouTube işlem tamamlandığında otomatik olarak oluşturulmuş bir fotoğrafa geri dönebilir; bu fotoğraf, normal videolar için kullanılan CDN dosya adlarıyla aynıdır.<code>maxresdefault</code>,<code>hq720</code>,<code>sddefault</code>,<code>hqdefault</code>ve daha küçük boyutlar).</p>\n  <p>Bu kapak<strong>Olumsuz</strong>aynı şey:</p>\n  <ul>\n    <li>Canlı oynatıcı arayüzünün ekran görüntüsü.</li>\n    <li>Kendiniz çektiğiniz, akışın ortasından bir kamera karesi.</li>\n    <li>Stüdyoya özel, hiçbir zaman herkese açık bir CDN dosyası haline gelmemiş bir varlık.</li>\n  </ul>\n  <p>Kullanıcı arayüzü yakalamaları ve barındırılan fotoğraflar arasındaki fark için bkz.<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">Ekran görüntüsü ile gerçek YouTube küçük resmi arasındaki fark</a>.</p>"
+    },
+    {
+      "heading": "Canlı yayın ve prömiyer fotoğrafları, kısa videolar ve normal yüklemelerden nasıl farklıdır?",
+      "html": "<table>\n    <thead>\n      <tr><th>İçerik türü</th><th>Tipik URL şekli</th><th>Halk hala ev sahibi</th><th>Genellikle elde ettiğiniz şey</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Düzenli yükleme</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Kamuya açık alanlarda peyzaj örtüsü</td></tr>\n      <tr><td>Şort</td><td><code>/shorts/ID</code></td><td>Aynı CDN ailesi</td><td>Genellikle Short dikey oynatım yapsa bile yatay CDN hala mevcuttur —<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Şort rehberi</a></td></tr>\n      <tr><td>Canlı Yayın / İlk Gösterim</td><td><code>/live/ID</code>veya<code>/watch?v=ID</code></td><td>Aynı CDN ailesi</td><td>Yayınlandığında özel etkinlik kapağı; aynı maksimum çözünürlük/orta boyut kuralları.</td></tr>\n    </tbody>\n  </table>\n  <p>11tik zaten ayrıştırılıyor<code>youtube.com/live/VIDEO_ID</code>Aynı şekilde saat ve kısa vadeli bağlantıları da ayrıştırır. Çıkarıcı ayrı bir \"canlı moda\" ihtiyaç duymaz; tek bir şeye ihtiyaç duyar.<strong>herkese açık video kimliği</strong>ve kamuya açık fotoğraflar.</p>"
+    },
+    {
+      "heading": "Yaşam döngüsü: akıştan önce, akış sırasında ve akıştan sonra",
+      "html": "<h3>1. Planlanan / yaklaşan</h3>\n  <p>YouTube bir video kimliği atadıktan ve etkinlik herkese açık hale geldikten sonra (veya paylaşılabilir bir bağlantıyla gizli hale getirildikten sonra), CDN'de özel bir küçük resim zaten mevcut olabilir. \"Yaklaşan\" raflarında göreceğiniz kapağı önizlemek için yaklaşan URL'yi 11tik'ye yapıştırın.</p>\n  <h3>2. Şimdi canlı yayında</h3>\n  <p>Yayın canlıyken, genellikle aynı kapak resmi etkinliği temsil etmeye devam eder. Yayın sırasında çıkarma işlemi yine aynı sonucu verir.<strong>ev sahipliği yapan kapak</strong>Bu, o an kamerada ne varsa ondan alınmış yeni bir kare değil.</p>\n  <h3>3. Arşivlenmiş tekrar izleme (VOD)</h3>\n  <p>Yayın sona erdikten sonra, etkinlik genellikle aynı kimliğe sahip normal bir izleme URL'si olarak kalır. Genel kapak resmi, oluşturucu Studio'da değiştirene kadar genellikle kalır. Yayın sonrası dosyayı onaylamanız gerekiyorsa 11tik'yi yeniden çalıştırın.</p>"
+    },
+    {
+      "heading": "Canlı ve prömiyer kapak resimleri için geçerli URL formatları",
+      "html": "<table>\n    <thead>\n      <tr><th>Biçim</th><th>Örnek desen</th><th>Notlar</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Canlı yol</td><td><code>youtube.com/live/VIDEO_ID</code></td><td>Paylaşım sayfasında /live/ ifadesi göründüğünde tercih edilir.</td></tr>\n      <tr><td>Kol saati</td><td><code>youtube.com/watch?v=VIDEO_ID</code></td><td>Prömiyerler ve arşivlenmiş canlı yayınlar için yaygın olarak kullanılır.</td></tr>\n      <tr><td>Kısa bağlantı</td><td><code>youtu.be/VIDEO_ID</code></td><td>Aynı kimliğe çözümlendiğinde çalışır.</td></tr>\n      <tr><td>Göm</td><td><code>youtube.com/embed/VIDEO_ID</code></td><td>Aynı kimlik çıkarma</td></tr>\n      <tr><td>Kanal /canlı yayın merkezi</td><td><code>youtube.com/@handle/live</code></td><td>Öncelikle asıl yayın akışını açın, böylece adres çubuğunda video kimliği görünür.</td></tr>\n    </tbody>\n  </table>\n  <p>Eğer adres çubuğunda hala 11 karakterlik bir kimlik numarası olmayan bir kanal canlı yayın merkezi görünüyorsa, 11tik böyle bir kimlik numarası oluşturamaz. Somut bir video URL'si görünene kadar yayın veya Premiere kartını açın, ardından bu bağlantıyı kopyalayın.</p>"
+    },
+    {
+      "heading": "11tik ile en hızlı yöntem",
+      "html": "<ol>\n    <li>Video kimliğini içeren herkese açık bir canlı yayın, prömiyer, izleme veya youtu.be URL'sini kopyalayın.</li>\n    <li>Açık<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>.</li>\n    <li>URL'yi yapıştırın. Kimlik geçerli olduğunda çıkarma işlemi başlar.</li>\n    <li>Listelenen ilk fotoğrafı (en iyi olanı) indirin veya bir CMS için fotoğraf URL'sini kopyalayın.</li>\n  </ol>\n  <img alt=\"Canlı bir URL'yi kopyalamayı, 11tik'e yapıştırmayı, genel CDN boyutlarını doğrulamayı ve ardından resim URL'sini indirmeyi veya kopyalamayı gösteren dört adımlı iş akışı.\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Canlı ve prömiyer cover'ları için pratik yol: herkese açık URL → çıkar → boyutları doğrula → indir veya kopyala.</p>\n  <p>Aynı anda çok sayıda herkese açık izleme bağlantısına mı ihtiyacınız var? Toplu İşlem özelliğini kullanın (en fazla 25 adet) —<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">toplu indirme kılavuzu</a>Bir kanal URL'sinden yapılan son yüklemeler için bkz.<a href=\"https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html\">kanal küçük resim çıkarma</a>.</p>"
+    },
+    {
+      "heading": "Doğrudan CDN kontrolü (isteğe bağlı)",
+      "html": "<p>Kimlik numarasını zaten biliyorsanız, yine de adayı test edebilirsiniz:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Başarısız olduğunda, bir alt kademeye geçin.<code>hq720.jpg</code>,<code>sddefault.jpg</code>, Ve<code>hqdefault.jpg</code>. Manuel tahmin, 11tik'nin doğrulanmış listesinden daha yavaştır ve gri yer tutucuların yaygın bir kaynağıdır—bkz.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault açıklandı</a>ve<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>.</p>\n  <p>YouTube'un resmi Veri API yanıtları aynı boyut sınıflarını tanımlıyor (<code>default</code>,<code>medium</code>,<code>high</code>,<code>standard</code>,<code>maxres</code>) üzerinde<a href=\"https://developers.google.com/youtube/v3/docs/thumbnails\" rel=\"noopener noreferrer\">Küçük resimler kaynağı</a>11tik tarayıcınızda bu API'yi çağırmaz; genel CDN dosyalarını istemci tarafında doğrular.</p>"
+    },
+    {
+      "heading": "Özel kapak resmi mi yoksa otomatik oluşturulan kapak resmi mi?",
+      "html": "<ul>\n    <li><strong>Özel canlı/prömiyer kapağı:</strong>Etkinlik için Studio'ya yüklendi. İşlem tamamlandığında genellikle daha yüksek genel boyutlara erişim sağlanır.</li>\n    <li><strong>Otomatik hareketsiz:</strong>YouTube otomatik olarak bir kare yayınladığında elde edilir. Orta boyutlarda durabilir; maksimum çözünürlük garanti edilmez.</li>\n  </ul>\n  <p>“En yüksek kalite” hala en büyük anlamına geliyor.<em>halk</em>Var olan dosya—özel bir Studio dışa aktarımı değil. Ayrıntılar:<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">en yüksek kalitede küçük resim</a>Ve<a href=\"https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html\">orijinal herkese açık küçük resim</a>.</p>"
+    },
+    {
+      "heading": "Canlı önizleme resmi görünmediğinde",
+      "html": "<table>\n    <thead>\n      <tr><th>Durum</th><th>Genellikle ne olur?</th><th>Ne yapalım</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Özel / üyelere özel / yaş sınırlı ambalaj</td><td>Henüz kamuoyu tarafından doğrulanmıyor.</td><td>Herkese açık bir bağlantı kullanın; 11tik erişim kurallarını atlayamaz —<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">kullanılamayan küçük resim kılavuzu</a></td></tr>\n      <tr><td>Video kimliği olmayan kanal /canlı yayın merkezi</td><td>Ayrıştırıcı hiçbir kimlik bulamadı.</td><td>Öncelikle somut akış URL'sini açın.</td></tr>\n      <tr><td>Özel kapak hala işleniyor.</td><td>Sadece büyük veya orta bedenler için</td><td>Studio işlemi bittikten sonra tekrar deneyin; doğrulanmış yedek seçeneği saklayın.</td></tr>\n      <tr><td>Tahmini maksimum çözünürlük 404</td><td>Dosya adı eksik.</td><td>11tik'nin ilk listelenen boyutunu kullanın</td></tr>\n      <tr><td>Oyuncu ekran görüntüsü</td><td>Kullanıcı arayüzü kromu, yanlış pikseller</td><td>CDN'yi yine de kaydedin.</td></tr>\n    </tbody>\n  </table>"
+    },
+    {
+      "heading": "Sorumlu yeniden kullanım",
+      "html": "<p>Herkese açık bir CDN URL'si, başka bir içerik oluşturucunun kapağını kendi markanız olarak yeniden yayınlama lisansı anlamına gelmez. Kişisel araştırma, yorum veya kendi yayınlarınızı arşivlemek için dosyayı yerel olarak saklayın. Bloglar ve sosyal medya kartları için, kullanma hakkına sahip olduğunuz bir kopyayı barındırmayı tercih edin.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Open Graph kılavuzu</a>YouTube'un genel bakışı<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">özel video küçük resimleri</a>Studio'daki yüklemeler için içerik oluşturucu tarafındaki birincil referans noktasıdır.</p>"
+    },
+    {
+      "heading": "Sonraki adım",
+      "html": "<p>Canlı yayın veya prömiyer sayfasını açın ve URL'de bir video kimliği görünene kadar bekleyin, ardından bu kimliği yapıştırın.<a href=\"https://www.11tik.com/\">YouTube küçük resim çıkarıcı</a>ve onaylanan ilk fotoğrafı kaydedin. Mobil cihazlarda kaydetme ipuçları için bkz.<a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">iPhone ve Android</a>Stüdyo tarafında özel yüklemeler için bkz.<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Stüdyosu küçük resim 2026</a>.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır. Sadece herkese açık fotoğraflar; video veya ses indirme yok.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Canlı yayın sırasında önizleme resmini indirebilir miyim?",
+      "answer": "Evet, yayın herkese açık olduğunda ve YouTube o video kimliği için herkese açık fotoğraflar yayınladığında, canlı kamera görüntüsü değil, yayınlanan kapak fotoğrafını görürsünüz.",
+      "answerHtml": "<p>Evet, yayın herkese açık olduğunda ve YouTube o video kimliği için herkese açık fotoğraflar yayınladığında, canlı kamera görüntüsü değil, yayınlanan kapak fotoğrafını görürsünüz.</p>"
+    },
+    {
+      "question": "Film galaları canlı yayınlarla aynı yöntemi mi kullanıyor?",
+      "answer": "Evet. Her ikisi de bir video kimliğine dönüşüyor. İlk gösterim izleme veya paylaşma URL'sini 11tik'e aynı şekilde yapıştırın.",
+      "answerHtml": "<p>Evet. Her ikisi de bir video kimliğine dönüşüyor. İlk gösterim izleme veya paylaşma URL'sini 11tik'ye aynı şekilde yapıştırın.</p>"
+    },
+    {
+      "question": "youtube.com/live/VIDEO_ID, 11tik'te çalışıyor mu?",
+      "answer": "Evet. Ayrıştırıcı, /live/ yolunu diğer kimlik içeren yollar gibi ele alıyor.",
+      "answerHtml": "<p>Evet. Ayrıştırıcı şu şekilde davranır:<code>/live/</code>Diğer kimlik taşıyan yollar gibi.</p>"
+    },
+    {
+      "question": "Yayın bittikten sonra kapak resmi değişecek mi?",
+      "answer": "Genellikle aynı kalır, ancak içerik oluşturucular bunu Studio'da değiştirebilirler. Mevcut genel dosyaya ihtiyacınız varsa yeniden çıkarın.",
+      "answerHtml": "<p>Genellikle aynı kalır, ancak içerik oluşturucular bunu Studio'da değiştirebilirler. Mevcut genel dosyaya ihtiyacınız varsa yeniden çıkarın.</p>"
+    },
+    {
+      "question": "Canlı önizleme resmi ile Shorts önizleme resmi aynı şey midir?",
+      "answer": "Aynı CDN fikri, farklı ürün bağlamı. Shorts genellikle dikey oynatma yapıldığında bile yatay genel görselleri saklar — Shorts küçük resim kılavuzuna bakın.",
+      "answerHtml": "<p>Aynı CDN fikri, farklı ürün bağlamı. Kısa filmler genellikle oynatma dikey olduğunda bile yatay halka açık fotoğrafları saklar — bkz.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kısa film önizleme kılavuzu</a>.</p>"
+    },
+    {
+      "question": "11tik özel bir canlı yayından veri çekebilir mi?",
+      "answer": "Hayır. Herkese açık görseller içermeyen özel, silinmiş veya kısıtlanmış paketlere ait görseller geri döndürülmeyecektir.",
+      "answerHtml": "<p>Hayır. Herkese açık görseller içermeyen özel, silinmiş veya kısıtlanmış paketlere ait görseller geri döndürülmeyecektir.</p>"
+    }
+  ],
+  "conclusionHtml": "",
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır. Sadece herkese açık fotoğraflar; video veya ses indirme yok.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Şartlar</a>.</p>"
+}

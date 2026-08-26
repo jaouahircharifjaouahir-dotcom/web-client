@@ -221,25 +221,21 @@
       });
     }
 
-    var posts = document.getElementById("yte-posts-btn");
-    if (posts) {
-      posts.addEventListener("click", function (event) {
-        if (window.__yteAppReady && isSpaHomeContext()) {
-          event.preventDefault();
-          dispatchApp("yte:navigate-view", { view: "posts" });
-        }
+    // Posts/Bulk are real <a href="?posts=1|?bulk=1"> links.
+    // Only soft-navigate when the SPA registers a handshake; otherwise allow
+    // native navigation so clicks never die if the app bundle is stale/cached.
+    function enhanceViewLink(el, view) {
+      if (!el) return;
+      el.addEventListener("click", function (event) {
+        var nav = window.__yteNavigateView;
+        if (typeof nav !== "function" || !isSpaHomeContext()) return;
+        event.preventDefault();
+        nav(view);
+        syncViewButtons();
       });
     }
-
-    var bulk = document.getElementById("yte-bulk-btn");
-    if (bulk) {
-      bulk.addEventListener("click", function (event) {
-        if (window.__yteAppReady && isSpaHomeContext()) {
-          event.preventDefault();
-          dispatchApp("yte:navigate-view", { view: "bulk" });
-        }
-      });
-    }
+    enhanceViewLink(document.getElementById("yte-posts-btn"), "posts");
+    enhanceViewLink(document.getElementById("yte-bulk-btn"), "bulk");
 
     window.addEventListener("popstate", syncViewButtons);
 

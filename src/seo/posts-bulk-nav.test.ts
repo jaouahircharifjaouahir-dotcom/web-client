@@ -9,6 +9,7 @@ import { postsFromCatalog } from "../i18n/localeCatalog";
 import { resolveLocaleDestination } from "../i18n/publishability";
 import { homeViewHref, readHomeView, withHomeView } from "../routing/homeView";
 import { localeHomeUrl } from "../i18n/ui";
+import { renderSiteHeaderHtml } from "../../scripts/i18n/site-header.mjs";
 
 describe("home view URL state", () => {
   it("reads posts and bulk as mutually exclusive views", () => {
@@ -122,5 +123,45 @@ describe("localized content catalogs", () => {
     const doc = buildLocaleCatalogDoc("en");
     expect(doc.items.every((i) => i.ready)).toBe(true);
     expect(doc.items.map((i) => i.url)).toEqual(GUIDE_POSTS.map((g) => g.href));
+  });
+});
+
+describe("Posts/Bulk clickability (static anchors)", () => {
+  it("Posts and Bulk are <a> tags, not buttons, with correct query hrefs", () => {
+    const html = renderSiteHeaderHtml({ locale: "en" });
+    expect(html).toContain('<a class="yte-chip" id="yte-posts-btn"');
+    expect(html).toContain('<a class="yte-chip" id="yte-bulk-btn"');
+    expect(html).not.toMatch(/<button[^>]*id="yte-posts-btn"/);
+    expect(html).not.toMatch(/<button[^>]*id="yte-bulk-btn"/);
+    expect(html).toContain("?posts=1");
+    expect(html).toContain("?bulk=1");
+  });
+
+  it("preserves English, Arabic, and French locale homes in Posts/Bulk hrefs", () => {
+    expect(renderSiteHeaderHtml({ locale: "en" })).toContain("https://www.11tik.com/?posts=1");
+    expect(renderSiteHeaderHtml({ locale: "en" })).toContain("https://www.11tik.com/?bulk=1");
+    expect(renderSiteHeaderHtml({ locale: "ar" })).toContain("https://ar.11tik.com/l/ar/?posts=1");
+    expect(renderSiteHeaderHtml({ locale: "ar" })).toContain("https://ar.11tik.com/l/ar/?bulk=1");
+    expect(renderSiteHeaderHtml({ locale: "fr" })).toContain("https://fr.11tik.com/l/fr/?posts=1");
+    expect(renderSiteHeaderHtml({ locale: "fr" })).toContain("https://fr.11tik.com/l/fr/?bulk=1");
+  });
+
+  it("site-header.js never blocks link navigation without SPA handshake", () => {
+    const src = readFileSync(join(process.cwd(), "public/site-header.js"), "utf8");
+    expect(src).toContain("__yteNavigateView");
+    expect(src).not.toMatch(/__yteAppReady && isSpaHomeContext\(\)[\s\S]{0,80}preventDefault/);
+  });
+
+  it("cache-busts blogger-app.js so immutable CDN cannot keep a stale SPA", () => {
+    const src = readFileSync(join(process.cwd(), "scripts/generate-static-site.mjs"), "utf8");
+    expect(src).toMatch(/APP_ASSET_V\s*=\s*"56"/);
+  });
+
+  it("Back/Forward helpers remain URL-driven (refresh-safe)", () => {
+    const posts = withHomeView("https://www.11tik.com/", "posts");
+    const bulk = withHomeView(posts, "bulk");
+    expect(readHomeView(posts)).toBe("posts");
+    expect(readHomeView(bulk)).toBe("bulk");
+    expect(readHomeView(withHomeView(bulk, "posts"))).toBe("posts");
   });
 });

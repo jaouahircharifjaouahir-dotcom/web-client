@@ -9,6 +9,7 @@ import {
   localeHomeUrl,
   renderSiteHeaderHtml,
   SITE_HEADER_CSS,
+  siteHeaderScriptTag,
 } from "../../scripts/i18n/site-header.mjs";
 import { getTargetLocales } from "../../scripts/i18n/target-languages.mjs";
 import { resolveLocaleDestination } from "../../src/i18n/publishability";
@@ -127,12 +128,42 @@ describe("global site header", () => {
     expect(SITE_HEADER_CSS).toContain("overflow-x:clip");
   });
 
-  it("ships site-header.js in public/", () => {
+  it("ships site-header.js with Posts/Bulk anchors enhanced only via handshake", () => {
     const src = readFileSync(join(process.cwd(), "public/site-header.js"), "utf8");
     expect(src).toContain("publishability.json");
     expect(src).toContain("yte-theme");
-    expect(src).toContain("yte:navigate-view");
+    expect(src).toContain("__yteNavigateView");
     expect(src).toContain("posts");
     expect(src).toContain("bulk");
+    // Must not block native <a> navigation when the SPA handshake is missing
+    expect(src).toMatch(/typeof nav !== "function"/);
+  });
+
+  it("Posts/Bulk controls are real anchors with locale-preserving hrefs", () => {
+    const en = renderSiteHeaderHtml({ locale: "en", variant: "spa-shell" });
+    expect(en).toMatch(/<a class="yte-chip" id="yte-posts-btn"[^>]*href="https:\/\/www\.11tik\.com\/\?posts=1"/);
+    expect(en).toMatch(/<a class="yte-chip" id="yte-bulk-btn"[^>]*href="https:\/\/www\.11tik\.com\/\?bulk=1"/);
+    expect(en).not.toMatch(/id="yte-posts-btn"[^>]*disabled/);
+    expect(en).not.toMatch(/id="yte-bulk-btn"[^>]*aria-disabled="true"/);
+
+    const ar = renderSiteHeaderHtml({ locale: "ar", variant: "spa-shell" });
+    expect(ar).toContain('href="https://ar.11tik.com/l/ar/?posts=1"');
+    expect(ar).toContain('href="https://ar.11tik.com/l/ar/?bulk=1"');
+
+    const fr = renderSiteHeaderHtml({ locale: "fr", variant: "spa-shell" });
+    expect(fr).toContain('href="https://fr.11tik.com/l/fr/?posts=1"');
+    expect(fr).toContain('href="https://fr.11tik.com/l/fr/?bulk=1"');
+  });
+
+  it("header CSS keeps chips pointer-interactive (no pointer-events:none)", () => {
+    expect(SITE_HEADER_CSS).toContain("cursor:pointer");
+    expect(SITE_HEADER_CSS).not.toMatch(/\.yte-chip\{[^}]*pointer-events:\s*none/);
+    expect(SITE_HEADER_CSS).not.toMatch(/\.yte-actions\{[^}]*pointer-events:\s*none/);
+  });
+
+  it("bumps site-header.js cache version so CDN immutable entries refresh", () => {
+    const src = readFileSync(join(process.cwd(), "scripts/i18n/site-header.mjs"), "utf8");
+    expect(src).toMatch(/SITE_HEADER_ASSET_V\s*=\s*"3"/);
+    expect(siteHeaderScriptTag()).toContain("site-header.js?v=3");
   });
 });

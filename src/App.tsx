@@ -155,25 +155,21 @@ export default function App() {
 
   useEffect(() => {
     window.__yteAppReady = true;
+    const applyView = (view: HomeView) => {
+      if (view !== "posts" && view !== "bulk" && view !== "home") return;
+      navigateHomeView(view);
+    };
+    window.__yteNavigateView = applyView;
     const onNavigate = (event: Event) => {
       const detail = (event as CustomEvent<{ view?: HomeView }>).detail;
       const view = detail?.view;
-      if (view !== "posts" && view !== "bulk" && view !== "home") return;
-      const next = new URL(withHomeView(window.location.href, view));
-      if (view === "posts" || view === "bulk") {
-        next.searchParams.delete("k");
-        next.searchParams.delete("v");
-        next.searchParams.delete("m");
-      }
-      const href = `${next.pathname}${next.search}${next.hash}`;
-      window.history.pushState({ homeView: view }, "", href);
-      setHomeView(view);
-      if (view === "posts" || view === "bulk") setKeywordSlug(null);
+      if (view === "posts" || view === "bulk" || view === "home") applyView(view);
     };
     const onTheme = () => setTheme(readTheme());
     window.addEventListener("yte:navigate-view", onNavigate);
     window.addEventListener("yte:theme-change", onTheme);
     return () => {
+      delete window.__yteNavigateView;
       window.removeEventListener("yte:navigate-view", onNavigate);
       window.removeEventListener("yte:theme-change", onTheme);
     };

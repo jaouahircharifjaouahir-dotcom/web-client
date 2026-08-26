@@ -13,6 +13,8 @@ declare global {
     cookieOptions?: Record<string, unknown>;
     __yteRights?: number;
     __yteAppReady?: boolean;
+    /** Soft-nav Posts/Bulk from static header; absence means use native <a href>. */
+    __yteNavigateView?: (view: "home" | "posts" | "bulk") => void;
     __yteWireSiteHeader?: () => void;
   }
 }

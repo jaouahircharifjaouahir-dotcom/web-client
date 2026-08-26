@@ -11,7 +11,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const CATALOG = JSON.parse(readFileSync(join(ROOT, "src", "i18n", "catalog.json"), "utf8"));
 const NATIVE_NAMES = JSON.parse(readFileSync(join(ROOT, "src", "i18n", "native-names.json"), "utf8"));
 
-const SITE_HEADER_ASSET_V = "2";
+const SITE_HEADER_ASSET_V = "3";
 
 function xmlEscape(value) {
   return String(value || "")

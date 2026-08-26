@@ -12,8 +12,8 @@ describe("page translations", () => {
   it("uses French titles on fr", () => {
     expect(pageString("fr", "guidePillar")).toContain("miniatures");
     expect(pageString("fr", "trustPrivacy")).toBe("Confidentialité");
-    expect(legalHrefs("fr").about).toBe("/p/about.html");
-    expect(legalHrefs("ch").privacy).toBe("/p/privacy.html");
+    expect(legalHrefs("fr").about).toBe("https://fr.11tik.com/l/fr/p/about.html");
+    expect(legalHrefs("ch").privacy).toBe("https://ch.11tik.com/l/ch/p/privacy.html");
     expect(legalHrefs("en").terms).toBe("https://www.11tik.com/p/terms-of-use.html");
     expect(pageFill("en", "thumbHeading", { title: "Demo clip" })).toBe("Demo clip thumbnail");
   });

@@ -76,6 +76,7 @@
   try {
     var path = location.pathname.replace(/\/+$/, '') || '/';
     if (/^\/l\//.test(path)) return;
+    if (!/\.html$/i.test(path) && /^\/(2026|p)\//.test(path)) path = path + '.html';
     if (localStorage.getItem('yte-lang')) return;
     if (sessionStorage.getItem('yte-i18n-redir')) return;
     if (/Googlebot|Google-InspectionTool|bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i.test(navigator.userAgent || '')) return;
@@ -117,10 +118,8 @@
   } catch (e) {}
 })();
       </script>
-        <link href='https://www.11tik.com/' hreflang='en' rel='alternate'/>
-        <link href='https://fr.11tik.com/' hreflang='fr' rel='alternate'/>
-        <link href='https://es.11tik.com/' hreflang='es' rel='alternate'/>
-        <link href='https://www.11tik.com/' hreflang='x-default' rel='alternate'/>
+      <!-- Article/utility hreflang + optional redirect are injected from publishability.json above.
+           Do not emit homepage-only alternates here (they conflict with article-level URLs). -->
       <!-- YTE-POC-SHARE-LINKS-I18N:END -->
       <link expr:href='data:view.url' rel='canonical'/>
       <meta content='article' property='og:type'/>

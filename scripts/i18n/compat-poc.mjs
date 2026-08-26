@@ -163,7 +163,8 @@ function genericArticleHreflangXml() {
 /**
  * Manifest-driven EN Blogger integration.
  * Compact /web-client/i18n/publishability.json supplies ready locales only.
- * Static generic host hreflang remains as crawlable fallback; JS adds page-specific alts.
+ * Injects article-level hreflang + optional browser-language redirect.
+ * Skips /l/* pages, crawlers, and visitors who already chose yte-lang (no loops).
  */
 function readyManifestDrivenHreflangAndRedirectXml() {
   return `      <script type='text/javascript'>
@@ -171,6 +172,7 @@ function readyManifestDrivenHreflangAndRedirectXml() {
   try {
     var path = location.pathname.replace(/\\/+$/, '') || '/';
     if (/^\\/l\\//.test(path)) return;
+    if (!/\\.html$/i.test(path) && /^\\/(2026|p)\\//.test(path)) path = path + '.html';
     if (localStorage.getItem('yte-lang')) return;
     if (sessionStorage.getItem('yte-i18n-redir')) return;
     if (/Googlebot|Google-InspectionTool|bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i.test(navigator.userAgent || '')) return;
@@ -212,7 +214,8 @@ function readyManifestDrivenHreflangAndRedirectXml() {
   } catch (e) {}
 })();
       </script>
-${genericArticleHreflangXml()}`;
+      <!-- Article/utility hreflang + optional redirect are injected from publishability.json above.
+           Do not emit homepage-only alternates here (they conflict with article-level URLs). -->`;
 }
 
 export function buildBloggerPocThemeFragment(frenchPublishable) {

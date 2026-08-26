@@ -609,14 +609,18 @@ export function legalHrefs(locale: string): {
   guide: string;
   stats: string;
 } {
-  const root = locale === "en" ? "https://www.11tik.com" : "";
+  const code = String(locale || "en").toLowerCase();
+  const utility = (slug: string) =>
+    code === "en"
+      ? `https://www.11tik.com/p/${slug}.html`
+      : `https://${code}.11tik.com/l/${code}/p/${slug}.html`;
   return {
-    about: `${root}/p/about.html`,
-    privacy: `${root}/p/privacy.html`,
-    terms: `${root}/p/terms-of-use.html`,
-    contact: `${root}/p/contact.html`,
-    embed: `${root}/p/embed.html`,
-    keywords: `${root}/p/keyword-tools.html`,
+    about: utility("about"),
+    privacy: utility("privacy"),
+    terms: utility("terms-of-use"),
+    contact: utility("contact"),
+    embed: utility("embed"),
+    keywords: utility("keyword-tools"),
     copyright: "/copyright",
     trending: "/trending-tags",
     guide: "/guide/youtube-thumbnails",

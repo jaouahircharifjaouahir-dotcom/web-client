@@ -24,7 +24,17 @@ import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { QUALITY_PRESETS } from "./engines/presets";
-import { guidePosts, isRtl, languageOptions, localeHomeUrl, publicOrigin, readLocale, switchLocale, t } from "./i18n/ui";
+import {
+  guidePosts,
+  isRtl,
+  languageOptions,
+  localeHomeUrl,
+  publicOrigin,
+  readLocale,
+  switchLocale,
+  t,
+  warmPublishabilityCache,
+} from "./i18n/ui";
 import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
 
@@ -112,6 +122,10 @@ export default function App() {
     return [];
   }, [bulk, bulkParsed, parsed]);
   const deepLinkBoot = useRef(false);
+
+  useEffect(() => {
+    warmPublishabilityCache();
+  }, []);
 
   useEffect(() => {
     const mode = resolvedTheme(theme);

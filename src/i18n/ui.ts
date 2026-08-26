@@ -2,8 +2,17 @@ import catalog from "./catalog.json";
 import nativeNames from "./native-names.json";
 import { ISO6391, ISO6391_CODES, RTL_CODES } from "../../workers/iso6391.js";
 import { GUIDE_POSTS } from "../content/posts";
+import {
+  getPublishabilityCache,
+  loadPublishability,
+  resolveLocaleDestination,
+  resolveLocalizedHref,
+  warmPublishabilityCache,
+} from "./publishability";
 
 export type UiKey = keyof (typeof catalog)["en"]["ui"];
+
+export { warmPublishabilityCache };
 
 function hostLocale(): string {
   if (typeof window === "undefined") return "";
@@ -69,14 +78,20 @@ export function isRtl(code = readLocale()): boolean {
 export function guidePosts() {
   const locale = readLocale();
   const pack = catalog[locale as keyof typeof catalog] || catalog.en;
+  const doc = getPublishabilityCache();
   return GUIDE_POSTS.map((post, index) => ({
     ...post,
+    href: resolveLocalizedHref(post.href, locale, doc),
     title: pack.posts[index]?.title || post.title,
     summary: pack.posts[index]?.summary || post.summary,
   }));
 }
 
-export function switchLocale(code: string): void {
+/**
+ * Path-aware language switch: ready publishability URL when the current page
+ * maps to localizable content; otherwise locale home.
+ */
+export async function switchLocale(code: string): Promise<void> {
   if (!ISO6391_CODES.has(code)) return;
   try {
     localStorage.setItem("yte-lang", code);
@@ -86,14 +101,13 @@ export function switchLocale(code: string): void {
   if (typeof window === "undefined") return;
   const here = new URL(window.location.href);
   const onProduct = /(^|\.)11tik\.com$/i.test(here.hostname);
-  if (onProduct) {
-    const dest = new URL(localeHomeUrl(code));
-    dest.search = here.search;
-    dest.hash = here.hash;
-    dest.searchParams.delete("lang");
-    window.location.assign(dest.href);
+  if (!onProduct) {
+    here.searchParams.set("lang", code);
+    window.location.assign(here.href);
     return;
   }
-  here.searchParams.set("lang", code);
-  window.location.assign(here.href);
+
+  const doc = (await loadPublishability()) || getPublishabilityCache();
+  const dest = resolveLocaleDestination(here.href, code, doc, localeHomeUrl);
+  window.location.assign(dest);
 }

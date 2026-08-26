@@ -1,6 +1,7 @@
 import catalog from "./catalog.json";
 import nativeNames from "./native-names.json";
-import { ISO6391, ISO6391_CODES, RTL_CODES } from "../../workers/iso6391.js";
+import targetLanguages from "../../config/target-languages.json";
+import { ISO6391_CODES, RTL_CODES } from "../../workers/iso6391.js";
 import { GUIDE_POSTS } from "../content/posts";
 import {
   getPublishabilityCache,
@@ -65,11 +66,20 @@ export function t(key: UiKey): string {
   return pack.ui[key] || catalog.en.ui[key];
 }
 
+/** English + enabled target locales from config/target-languages.json (native labels). */
 export function languageOptions(): { code: string; label: string }[] {
-  return ISO6391.map(([code, english]) => ({
-    code,
-    label: (nativeNames as Record<string, string>)[code] || english,
-  }));
+  const targets = (targetLanguages.languages || [])
+    .filter((row: { enabled?: boolean }) => row.enabled !== false)
+    .map((row: { code: string; nativeName?: string; language?: string }) => ({
+      code: row.code,
+      label:
+        row.nativeName ||
+        (nativeNames as Record<string, string>)[row.code] ||
+        row.language ||
+        row.code,
+    }))
+    .sort((a: { label: string }, b: { label: string }) => a.label.localeCompare(b.label, "en"));
+  return [{ code: "en", label: (nativeNames as Record<string, string>).en || "English" }, ...targets];
 }
 
 export function isRtl(code = readLocale()): boolean {

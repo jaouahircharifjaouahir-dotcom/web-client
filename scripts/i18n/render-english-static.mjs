@@ -8,7 +8,12 @@ import { fileURLToPath } from "node:url";
 import { clipDescription } from "../../workers/html-meta.js";
 import { descriptionForPath } from "../../workers/post-descriptions.js";
 import { extractStructuredSource } from "./extract-source.mjs";
-import { LOCALIZED_PAGE_ICONS, buildHreflangLinks } from "./render-localized.mjs";
+import { LOCALIZED_PAGE_ICONS, buildHreflangLinks, standardArticleStyleTag } from "./render-localized.mjs";
+import {
+  siteHeaderBodyClose,
+  siteHeaderBodyOpen,
+  siteHeaderHeadTags,
+} from "./site-header.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
@@ -27,12 +32,15 @@ function rewriteGithubAssets(html) {
   return String(html || "").split(GH_PAGES).join(EDGE_ASSETS);
 }
 
-function extractStyleAndArticle(raw) {
-  const styleMatch = /<style\b[^>]*>([\s\S]*?)<\/style>/i.exec(raw);
-  const articleMatch = /<article\b[^>]*>[\s\S]*?<\/article>/i.exec(raw);
-  const style = styleMatch ? `<style>${styleMatch[1]}</style>` : "";
-  const article = articleMatch ? rewriteGithubAssets(articleMatch[0]) : "";
-  return { style, article };
+/**
+ * Prefer the content <article class="yte-page"> over any other article in a full Blogger dump.
+ * Do not copy source <style> — Blogger theme CSS (max-width:none / 920px shells) must not win.
+ */
+function extractArticleHtml(raw) {
+  const preferred =
+    /<article\b[^>]*class=["'][^"']*\byte-page\b[^"']*["'][^>]*>[\s\S]*?<\/article>/i.exec(raw) ||
+    /<article\b[^>]*>[\s\S]*?<\/article>/i.exec(raw);
+  return preferred ? rewriteGithubAssets(preferred[0]) : "";
 }
 
 function buildFaviconLinks() {
@@ -112,8 +120,9 @@ export function renderEnglishStaticHtml(item, options = {}) {
   if (!existsSync(abs)) throw new Error(`Missing English source: ${item.sourceRel}`);
   const raw = readFileSync(abs, "utf8");
   const structured = extractStructuredSource(raw, { contentType: item.type === "utility" ? "utility" : "article" });
-  const { style, article } = extractStyleAndArticle(raw);
+  const article = extractArticleHtml(raw);
   if (!article) throw new Error(`No <article> in source: ${item.sourceRel}`);
+  const style = standardArticleStyleTag();
 
   const canonical = item.canonicalUrl;
   const h1 = structured.h1 || structured.title || item.contentId;
@@ -161,11 +170,14 @@ export function renderEnglishStaticHtml(item, options = {}) {
   <meta name="twitter:description" content="${xmlEscape(ogDescription)}"/>
   <meta name="twitter:image" content="${xmlEscape(ogImageSrc)}"/>
   ${buildFaviconLinks()}
+  ${siteHeaderHeadTags()}
   ${style}
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>
+${siteHeaderBodyOpen({ locale: "en", contentPath: item.canonicalPath, variant: "static" })}
 ${article}
+${siteHeaderBodyClose()}
 </body>
 </html>
 `;

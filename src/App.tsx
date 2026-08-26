@@ -24,7 +24,10 @@ import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { QUALITY_PRESETS } from "./engines/presets";
-import { guidePosts, isRtl, languageOptions, localeHomeUrl, publicOrigin, readLocale, switchLocale, t } from "./i18n/ui";
+import { SiteHeader } from "./components/SiteHeader";
+import { hasStaticSiteHeader } from "./components/hasStaticSiteHeader";
+import { guidePosts, localeHomeUrl, publicOrigin, readLocale, t } from "./i18n/ui";
+import { isRtl } from "./i18n/ui";
 import { usePublishabilityDoc } from "./i18n/usePublishabilityDoc";
 import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
@@ -87,9 +90,16 @@ export default function App() {
   const embed = isEmbedMode();
   const [theme, setTheme] = useState<ThemeMode>(() => readTheme());
   const [input, setInput] = useState("");
-  const [postsOpen, setPostsOpen] = useState(false);
+  const [postsOpen, setPostsOpen] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return new URLSearchParams(window.location.search).get("posts") === "1";
+  });
   const [keywordSlug, setKeywordSlug] = useState(() => readKeywordSlug());
-  const [bulk, setBulk] = useState(false);
+  const [bulk, setBulk] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return new URLSearchParams(window.location.search).get("bulk") === "1";
+  });
+  const [staticHeader] = useState(() => hasStaticSiteHeader());
   const [power, setPower] = useState(false);
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState("");
@@ -124,6 +134,47 @@ export default function App() {
     document.getElementById("yte-root")?.setAttribute("data-yte-theme", mode);
     saveTheme(theme);
   }, [theme]);
+
+  useEffect(() => {
+    window.__yteAppReady = true;
+    const onPosts = () => setPostsOpen((v) => !v);
+    const onBulk = () => setBulk((v) => !v);
+    const onTheme = () => setTheme(readTheme());
+    window.addEventListener("yte:toggle-posts", onPosts);
+    window.addEventListener("yte:toggle-bulk", onBulk);
+    window.addEventListener("yte:theme-change", onTheme);
+    return () => {
+      window.removeEventListener("yte:toggle-posts", onPosts);
+      window.removeEventListener("yte:toggle-bulk", onBulk);
+      window.removeEventListener("yte:theme-change", onTheme);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!staticHeader) return;
+    const postsBtn = document.getElementById("yte-posts-btn");
+    const bulkBtn = document.getElementById("yte-bulk-btn");
+    postsBtn?.setAttribute("aria-expanded", postsOpen ? "true" : "false");
+    postsBtn?.setAttribute("aria-pressed", postsOpen ? "true" : "false");
+    bulkBtn?.setAttribute("aria-pressed", bulk ? "true" : "false");
+  }, [staticHeader, postsOpen, bulk]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    let dirty = false;
+    if (url.searchParams.get("posts") === "1") {
+      url.searchParams.delete("posts");
+      dirty = true;
+    }
+    if (url.searchParams.get("bulk") === "1") {
+      url.searchParams.delete("bulk");
+      dirty = true;
+    }
+    if (dirty) {
+      window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+    }
+  }, []);
 
   useEffect(() => {
     document.body.dataset.ytePosts = postsOpen ? "1" : "";
@@ -417,37 +468,18 @@ export default function App() {
   return (
     <div className={`yte-app${embed ? " yte-embed" : ""}`}>
       <div className="yte-shell">
-        <header className="yte-top">
-          <a className="yte-brand" href={localeHomeUrl()}>
-            <span className="yte-mark" aria-hidden="true">11</span>
-            <span>{config.siteName}</span>
-          </a>
-          <div className="yte-actions">
-            <button className="yte-chip" type="button" aria-expanded={postsOpen} aria-pressed={postsOpen} onClick={() => setPostsOpen((v) => !v)}>
-              {t("posts")}
-            </button>
-            <button className="yte-chip" type="button" aria-pressed={bulk} onClick={() => setBulk((v) => !v)}>
-              {t("bulk")}
-            </button>
-            <button className="yte-chip" type="button" onClick={() => setTheme(theme === "dark" ? "light" : theme === "light" ? "system" : "dark")}>
-              {t("theme")}: {themeLabel}
-            </button>
-            <label className="yte-chip yte-lang">
-              <span className="yte-sr">{t("language")}</span>
-              <select
-                aria-label={t("language")}
-                value={locale}
-                onChange={(event) => switchLocale(event.target.value)}
-              >
-                {languageOptions().map((item) => (
-                  <option key={item.code} value={item.code}>
-                    {item.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-        </header>
+        {staticHeader ? null : (
+          <SiteHeader
+            postsOpen={postsOpen}
+            bulk={bulk}
+            theme={theme}
+            themeLabel={themeLabel}
+            onTogglePosts={() => setPostsOpen((v) => !v)}
+            onToggleBulk={() => setBulk((v) => !v)}
+            onCycleTheme={() => setTheme(theme === "dark" ? "light" : theme === "light" ? "system" : "dark")}
+            locale={locale}
+          />
+        )}
 
         {postsOpen ? (
           <section className="yte-panel yte-posts" aria-label={t("kicker")}>

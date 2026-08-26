@@ -12,6 +12,8 @@ declare global {
     cookieChoices?: CookieChoices;
     cookieOptions?: Record<string, unknown>;
     __yteRights?: number;
+    __yteAppReady?: boolean;
+    __yteWireSiteHeader?: () => void;
   }
 }
 

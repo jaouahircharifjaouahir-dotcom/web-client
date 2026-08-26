@@ -1,5 +1,39 @@
 import { RTL_CODES } from "../../workers/iso6391.js";
 import { localizeInternalLinksInHtml } from "./internal-links.mjs";
+import {
+  localeHomeUrl,
+  siteHeaderBodyClose,
+  siteHeaderBodyOpen,
+  siteHeaderHeadTags,
+} from "./site-header.mjs";
+
+/** Shared article column CSS — English static + localized pages. */
+export const STANDARD_ARTICLE_PAGE_CSS = `.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
+.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
+.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
+.yte-page h3{font-size:1.05rem;margin:18px 0 6px}
+.yte-page p,.yte-page li,.yte-page td,.yte-page th{color:#5c5666}
+.yte-page a{color:#c2410c}
+.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
+.yte-hero{display:block;width:100%;max-width:100%;height:auto;margin:12px 0 8px;border-radius:12px}
+.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
+.yte-page table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:15px}
+.yte-page th,.yte-page td{border:1px solid #d9d3dc;padding:10px 12px;text-align:left;vertical-align:top}
+.yte-page th{background:#f6f1ea;color:#17141c;font-weight:700}
+.yte-page code{font-size:0.92em;background:#f6f1ea;padding:0.1em 0.35em;border-radius:4px}
+.yte-page pre{background:#17141c;color:#f6f1ea;padding:14px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.45}
+.yte-page ol,.yte-page ul{padding-left:1.25rem}
+.yte-page nav{margin-top:28px}
+.yte-form-grid{display:grid;gap:14px;margin:24px 0 8px}
+.yte-form-grid label{display:grid;gap:6px;font-weight:600;color:#17141c}
+.yte-form-grid input,.yte-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d9d3dc;border-radius:16px;padding:12px 14px;font:inherit;color:#17141c;background:#fff}
+.yte-form-grid textarea{min-height:140px;resize:vertical}
+.yte-form-grid button{border:0;border-radius:999px;padding:12px 18px;cursor:pointer;font-weight:700;background:#17141c;color:#fff;justify-self:start}
+.yte-hp{position:absolute;left:-9999px;height:0;width:0;overflow:hidden}`;
+
+export function standardArticleStyleTag() {
+  return `<style>\n${STANDARD_ARTICLE_PAGE_CSS}\n</style>`;
+}
 
 /** Canonical site favicons (same assets as English SPA / Blogger). */
 export const LOCALIZED_PAGE_ICONS = {
@@ -198,26 +232,17 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   <meta name="twitter:description" content="${ogDescription}"/>
   <meta name="twitter:image" content="${xmlEscape(hero.src)}"/>
   ${buildFaviconLinks()}
-  <style>
-.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
-.yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}
-.yte-page h2{font-size:1.2rem;margin:28px 0 8px}
-.yte-page h3{font-size:1.05rem;margin:18px 0 6px}
-.yte-page p,.yte-page li,.yte-page td,.yte-page th{color:#5c5666}
-.yte-page a{color:#c2410c}
-.yte-byline,.yte-updated,.yte-caption{font-size:14px;color:#5c5666;margin:0 0 8px}
-.yte-hero{display:block;width:100%;max-width:1200px;height:auto;margin:12px 0 8px;border-radius:12px}
-.yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
-.yte-page table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:15px}
-.yte-page th,.yte-page td{border:1px solid #d9d3dc;padding:10px 12px;text-align:left;vertical-align:top}
-.yte-page th{background:#f6f1ea;color:#17141c;font-weight:700}
-.yte-page code{font-size:0.92em;background:#f6f1ea;padding:0.1em 0.35em;border-radius:4px}
-.yte-page pre{background:#17141c;color:#f6f1ea;padding:14px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.45}
-.yte-page ol,.yte-page ul{padding-left:1.25rem}
-  </style>
+  ${siteHeaderHeadTags()}
+  ${standardArticleStyleTag()}
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>
+${siteHeaderBodyOpen({
+    locale,
+    homeUrl: localeHomeUrl(locale),
+    contentPath: item.canonicalPath,
+    variant: "static",
+  })}
 <article class="yte-page" itemscope itemtype="https://schema.org/${schemaType}">
   <h1 itemprop="headline name">${xmlEscape(artifact.h1)}</h1>
   <p itemprop="description">${description}</p>
@@ -226,6 +251,7 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   ${localize(artifact.conclusionHtml || "")}
   ${artifact.bioHtml ? `<p class="yte-bio">${localize(artifact.bioHtml)}</p>` : ""}
 </article>
+${siteHeaderBodyClose()}
 </body>
 </html>
 `;

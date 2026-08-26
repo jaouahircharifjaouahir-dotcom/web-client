@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { buildContentInventory, localizableContent } from "../../scripts/i18n/content-inventory.mjs";
 import { renderEnglishStaticHtml } from "../../scripts/i18n/render-english-static.mjs";
+import { STANDARD_ARTICLE_PAGE_CSS } from "../../scripts/i18n/render-localized.mjs";
 import {
   assertEnglishStaticCoverage,
   assessShadowSitemap,
@@ -11,6 +12,13 @@ import {
   writeEnglishStaticPages,
 } from "../../scripts/i18n/write-english-static.mjs";
 import { INDEXABLE_UTILITY_PATHS, loadGuidePostHrefsFromFile } from "../../workers/sitemap-canonicals.js";
+
+/** Former Blogger-full-export sources that previously leaked theme CSS into English static HTML. */
+const FORMER_THEME_DUMP_SLUGS = [
+  "youtube-shorts-thumbnail-download",
+  "highest-quality-youtube-thumbnail",
+  "original-youtube-thumbnail-image",
+];
 
 describe("English static shadow generation", () => {
   const inventory = buildContentInventory();
@@ -44,6 +52,33 @@ describe("English static shadow generation", () => {
     expect(html).toMatch(/<h1\b/i);
     expect(html).toContain("application/ld+json");
     expect(html).toContain('rel="icon"');
+    expect(html).toContain('id="yte-site-header"');
+    expect(html).toContain("/web-client/site-header.js");
+  });
+
+  it("uses shared 720px article column CSS for every English page including former theme dumps", () => {
+    expect(STANDARD_ARTICLE_PAGE_CSS).toMatch(/\.yte-page\{[^}]*max-width:720px/);
+    expect(STANDARD_ARTICLE_PAGE_CSS).toMatch(/\.yte-hero\{[^}]*max-width:100%/);
+    for (const item of items.filter((i) => i.type === "article")) {
+      const html = renderEnglishStaticHtml(item, { alternates: [{ locale: "en", url: item.canonicalUrl }] });
+      expect(html, item.contentId).toContain("max-width:720px");
+      expect(html, item.contentId).toMatch(/class="yte-page"/);
+      // Must not ship Blogger theme shell CSS that blows out the reading column.
+      expect(html, item.contentId).not.toMatch(/max-width:\s*none/);
+      expect(html, item.contentId).not.toContain(".yte-seo");
+      // Header chrome may use min(920px); article column stays 720.
+      expect(html, item.contentId).toMatch(/\.yte-page\{[^}]*max-width:720px/);
+      expect(html, item.contentId).toContain('id="yte-site-header"');
+    }
+    for (const slug of FORMER_THEME_DUMP_SLUGS) {
+      const item = items.find((i) => i.contentId === slug);
+      expect(item, slug).toBeTruthy();
+      const html = renderEnglishStaticHtml(item!, { alternates: [{ locale: "en", url: item!.canonicalUrl }] });
+      expect(html).toContain("max-width:720px");
+      expect(html).toMatch(/\.yte-page\{[^}]*max-width:720px/);
+      expect(html).not.toMatch(/max-width:\s*none/);
+      expect(html).toContain('id="yte-site-header"');
+    }
   });
 
   it("writes all English files and passes coverage assert", () => {

@@ -19,6 +19,13 @@ import {
   assertEnglishStaticCoverage,
   writeEnglishStaticPages,
 } from "./i18n/write-english-static.mjs";
+import {
+  localeHomeUrl as headerLocaleHomeUrl,
+  renderSiteHeaderHtml,
+  siteHeaderScriptTag,
+  siteHeaderStyleTag,
+  siteHeaderThemeBootScript,
+} from "./i18n/site-header.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
@@ -102,13 +109,22 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <link rel="icon" type="image/png" sizes="16x16" href="${ICON_16}"/>
   <link rel="apple-touch-icon" sizes="180x180" href="${ICON_APPLE}"/>
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
-  <style>html,body{margin:0;background:#f4efe6}#yte-root{display:block;min-height:100vh}</style>
+  ${siteHeaderThemeBootScript()}
+  ${siteHeaderStyleTag()}
+  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}</style>
   <link rel="preload" href="${css}" as="style"/>
   <link rel="preload" href="${js}" as="script"/>
   <script type="application/ld+json">${schema}</script>
 </head>
 <body>
+  ${renderSiteHeaderHtml({
+    locale: code,
+    homeUrl: headerLocaleHomeUrl(code),
+    contentPath: "/",
+    variant: "spa-shell",
+  })}
   <div id="yte-root"></div>
+  ${siteHeaderScriptTag()}
   <script defer fetchpriority="high" src="${js}"></script>
   <script defer src="/web-client/ga-boot.js?v=${APP_ASSET_V}"></script>
 </body>

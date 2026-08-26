@@ -20,6 +20,6 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "workers/iso6391.js"],
+  "include": ["src", "workers/iso6391.js", "config/target-languages.json"],
   "exclude": ["src/**/*.test.ts"]
 }

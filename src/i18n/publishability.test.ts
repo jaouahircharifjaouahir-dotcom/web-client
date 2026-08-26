@@ -1,7 +1,10 @@
-import { describe, expect, it, beforeEach } from "vitest";
+import { describe, expect, it, beforeEach, vi } from "vitest";
 import {
   findPublishabilityEntry,
+  loadPublishability,
   normalizeContentPath,
+  PUBLISHABILITY_PATH,
+  PUBLISHABILITY_URL,
   resolveLocaleDestination,
   resolveLocalizedHref,
   setPublishabilityCache,
@@ -43,6 +46,46 @@ const DOC: PublishabilityDoc = {
 function home(code: string) {
   return code === "en" ? "https://www.11tik.com/" : `https://${code}.11tik.com/l/${code}/`;
 }
+
+describe("publishability same-origin manifest URL", () => {
+  beforeEach(() => {
+    setPublishabilityCache(null);
+  });
+
+  it("uses a same-origin relative path (not hardcoded www)", () => {
+    expect(PUBLISHABILITY_PATH).toBe("/web-client/i18n/publishability.json");
+    expect(PUBLISHABILITY_URL).toBe(PUBLISHABILITY_PATH);
+    expect(PUBLISHABILITY_PATH.startsWith("/")).toBe(true);
+    expect(PUBLISHABILITY_PATH).not.toMatch(/^https?:\/\//);
+    expect(PUBLISHABILITY_PATH).not.toContain("www.11tik.com");
+  });
+
+  it("loadPublishability fetches the same-origin path (EN + locale hosts)", async () => {
+    const fetchImpl = vi.fn(async (url: string) => {
+      expect(url).toBe(PUBLISHABILITY_PATH);
+      return {
+        ok: true,
+        json: async () => DOC,
+      } as Response;
+    });
+    const doc = await loadPublishability(fetchImpl as unknown as typeof fetch);
+    expect(doc?.contents["youtube-thumbnail-url"]?.locales.ar).toBe(
+      "https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html",
+    );
+    expect(fetchImpl).toHaveBeenCalledWith(PUBLISHABILITY_PATH, {
+      credentials: "omit",
+      cache: "no-cache",
+    });
+  });
+
+  it("loadPublishability returns null on fetch failure (missing translation fallback path)", async () => {
+    setPublishabilityCache(null);
+    const fetchImpl = vi.fn(async () => {
+      throw new TypeError("Failed to fetch");
+    });
+    await expect(loadPublishability(fetchImpl as unknown as typeof fetch)).resolves.toBeNull();
+  });
+});
 
 describe("publishability path normalization", () => {
   it("normalizes locale-prefixed and extensionless paths", () => {

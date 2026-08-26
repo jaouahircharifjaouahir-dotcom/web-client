@@ -28,6 +28,12 @@ writeFileSync(
   Cache-Control: public, max-age=31536000, immutable
 /web-client/images/*
   Cache-Control: public, max-age=604800
+# Public ready-locale map (no secrets). ACAO allows legacy absolute www fetches
+# from locale hosts until caches clear; primary clients use same-origin relative URL.
+/web-client/i18n/publishability.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD
+  Cache-Control: public, max-age=300, must-revalidate
 `,
 );
 

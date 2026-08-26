@@ -1,6 +1,9 @@
 /**
  * Client-side lookup against /web-client/i18n/publishability.json
  * (compact ready-locale URLs only). Build-time source of truth remains scripts/i18n/publish.mjs.
+ *
+ * Same-origin relative path: every *.11tik.com host already serves this Workers asset,
+ * so locale shells never cross-origin to www.
  */
 
 export type PublishabilityEntry = {
@@ -14,7 +17,9 @@ export type PublishabilityDoc = {
   contents: Record<string, PublishabilityEntry>;
 };
 
-export const PUBLISHABILITY_URL = "https://www.11tik.com/web-client/i18n/publishability.json";
+/** Same-origin on www and every locale host (avoids CORS). */
+export const PUBLISHABILITY_PATH = "/web-client/i18n/publishability.json";
+export const PUBLISHABILITY_URL = PUBLISHABILITY_PATH;
 
 let cachedDoc: PublishabilityDoc | null = null;
 let inflight: Promise<PublishabilityDoc | null> | null = null;
@@ -126,7 +131,7 @@ export async function loadPublishability(fetchImpl: typeof fetch = fetch): Promi
   if (inflight) return inflight;
   inflight = (async () => {
     try {
-      const res = await fetchImpl(PUBLISHABILITY_URL, { credentials: "omit", cache: "no-cache" });
+      const res = await fetchImpl(PUBLISHABILITY_PATH, { credentials: "omit", cache: "no-cache" });
       if (!res.ok) return null;
       const doc = (await res.json()) as PublishabilityDoc;
       if (!doc || typeof doc !== "object" || !doc.contents) return null;

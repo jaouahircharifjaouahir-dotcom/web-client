@@ -172,11 +172,11 @@ function readyManifestDrivenHreflangAndRedirectXml() {
   try {
     var path = location.pathname.replace(/\\/+$/, '') || '/';
     if (/^\\/l\\//.test(path)) return;
-    if (!/\\.html$/i.test(path) && /^\\/(2026|p)\\//.test(path)) path = path + '.html';
+    if (!/\\.html$/i.test(path) &amp;&amp; /^\\/(2026|p)\\//.test(path)) path = path + '.html';
     if (localStorage.getItem('yte-lang')) return;
     if (sessionStorage.getItem('yte-i18n-redir')) return;
     if (/Googlebot|Google-InspectionTool|bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i.test(navigator.userAgent || '')) return;
-    fetch('https://www.11tik.com/web-client/i18n/publishability.json', { credentials: 'omit', cache: 'no-cache' })
+    fetch('/web-client/i18n/publishability.json', { credentials: 'omit', cache: 'no-cache' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (doc) {
         if (!doc || !doc.contents) return;

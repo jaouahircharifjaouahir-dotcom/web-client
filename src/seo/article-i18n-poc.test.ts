@@ -183,9 +183,12 @@ describe("POC French share-links article i18n (regression)", () => {
     expect(ready).toBe(true);
     const synced = applyBloggerPocTheme(theme, ready);
     expect(synced).toContain("publishability.json");
+    expect(synced).toContain("fetch('/web-client/i18n/publishability.json'");
+    expect(synced).not.toContain("https://www.11tik.com/web-client/i18n/publishability.json");
     expect(synced).toContain("yte-i18n-redir");
     expect(synced).toContain("YTE-POC-SHARE-LINKS-I18N:BEGIN");
     expect(synced).toContain("Googlebot");
+    expect(synced).toContain("/^\\/l\\//");
     const notReady = applyBloggerPocTheme(theme, false);
     expect(notReady).not.toContain("publishability.json");
     expect(buildBloggerPocThemeFragment(true)).toContain("publishability.json");

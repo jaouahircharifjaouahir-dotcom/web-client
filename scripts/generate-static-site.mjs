@@ -19,6 +19,7 @@ import {
   assertEnglishStaticCoverage,
   writeEnglishStaticPages,
 } from "./i18n/write-english-static.mjs";
+import { writeLocaleCatalogs } from "./i18n/write-locale-catalogs.mjs";
 import {
   localeHomeUrl as headerLocaleHomeUrl,
   renderSiteHeaderHtml,
@@ -195,6 +196,8 @@ export function generateStaticSite(staged) {
     throw new Error(`English static missing source files: ${englishShadow.missingSource.join(", ")}`);
   }
   assertEnglishStaticCoverage(staged);
+
+  writeLocaleCatalogs(writeFile, staged);
 
   // Ready translations only (status=ready + sourceHash match + validation). Missing/stale skipped.
   const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged);

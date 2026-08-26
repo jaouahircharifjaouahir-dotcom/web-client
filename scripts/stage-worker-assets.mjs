@@ -34,6 +34,10 @@ writeFileSync(
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD
   Cache-Control: public, max-age=300, must-revalidate
+/web-client/i18n/catalog/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD
+  Cache-Control: public, max-age=300, must-revalidate
 `,
 );
 

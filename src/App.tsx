@@ -28,7 +28,9 @@ import { SiteHeader } from "./components/SiteHeader";
 import { hasStaticSiteHeader } from "./components/hasStaticSiteHeader";
 import { guidePosts, localeHomeUrl, publicOrigin, readLocale, t } from "./i18n/ui";
 import { isRtl } from "./i18n/ui";
+import { useLocaleCatalog } from "./i18n/useLocaleCatalog";
 import { usePublishabilityDoc } from "./i18n/usePublishabilityDoc";
+import { readHomeView, withHomeView, type HomeView } from "./routing/homeView";
 import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
 
@@ -90,15 +92,10 @@ export default function App() {
   const embed = isEmbedMode();
   const [theme, setTheme] = useState<ThemeMode>(() => readTheme());
   const [input, setInput] = useState("");
-  const [postsOpen, setPostsOpen] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return new URLSearchParams(window.location.search).get("posts") === "1";
-  });
+  const [homeView, setHomeView] = useState<HomeView>(() => readHomeView());
+  const postsOpen = homeView === "posts";
+  const bulk = homeView === "bulk";
   const [keywordSlug, setKeywordSlug] = useState(() => readKeywordSlug());
-  const [bulk, setBulk] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return new URLSearchParams(window.location.search).get("bulk") === "1";
-  });
   const [staticHeader] = useState(() => hasStaticSiteHeader());
   const [power, setPower] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -124,7 +121,28 @@ export default function App() {
   }, [bulk, bulkParsed, parsed]);
   const deepLinkBoot = useRef(false);
   const publishability = usePublishabilityDoc();
-  const localizedGuides = guidePosts({ doc: publishability });
+  const localeCatalog = useLocaleCatalog(readLocale());
+  const localizedGuides = localeCatalog.posts.length
+    ? localeCatalog.posts
+    : guidePosts({ doc: publishability });
+
+  const navigateHomeView = (view: HomeView, historyMode: "push" | "replace" = "push") => {
+    if (typeof window === "undefined") {
+      setHomeView(view);
+      return;
+    }
+    const next = new URL(withHomeView(window.location.href, view));
+    if (view === "posts" || view === "bulk") {
+      next.searchParams.delete("k");
+      next.searchParams.delete("v");
+      next.searchParams.delete("m");
+    }
+    const href = `${next.pathname}${next.search}${next.hash}`;
+    if (historyMode === "push") window.history.pushState({ homeView: view }, "", href);
+    else window.history.replaceState({ homeView: view }, "", href);
+    setHomeView(view);
+    if (view === "posts" || view === "bulk") setKeywordSlug(null);
+  };
 
   useEffect(() => {
     const mode = resolvedTheme(theme);
@@ -137,15 +155,26 @@ export default function App() {
 
   useEffect(() => {
     window.__yteAppReady = true;
-    const onPosts = () => setPostsOpen((v) => !v);
-    const onBulk = () => setBulk((v) => !v);
+    const onNavigate = (event: Event) => {
+      const detail = (event as CustomEvent<{ view?: HomeView }>).detail;
+      const view = detail?.view;
+      if (view !== "posts" && view !== "bulk" && view !== "home") return;
+      const next = new URL(withHomeView(window.location.href, view));
+      if (view === "posts" || view === "bulk") {
+        next.searchParams.delete("k");
+        next.searchParams.delete("v");
+        next.searchParams.delete("m");
+      }
+      const href = `${next.pathname}${next.search}${next.hash}`;
+      window.history.pushState({ homeView: view }, "", href);
+      setHomeView(view);
+      if (view === "posts" || view === "bulk") setKeywordSlug(null);
+    };
     const onTheme = () => setTheme(readTheme());
-    window.addEventListener("yte:toggle-posts", onPosts);
-    window.addEventListener("yte:toggle-bulk", onBulk);
+    window.addEventListener("yte:navigate-view", onNavigate);
     window.addEventListener("yte:theme-change", onTheme);
     return () => {
-      window.removeEventListener("yte:toggle-posts", onPosts);
-      window.removeEventListener("yte:toggle-bulk", onBulk);
+      window.removeEventListener("yte:navigate-view", onNavigate);
       window.removeEventListener("yte:theme-change", onTheme);
     };
   }, []);
@@ -154,27 +183,13 @@ export default function App() {
     if (!staticHeader) return;
     const postsBtn = document.getElementById("yte-posts-btn");
     const bulkBtn = document.getElementById("yte-bulk-btn");
-    postsBtn?.setAttribute("aria-expanded", postsOpen ? "true" : "false");
     postsBtn?.setAttribute("aria-pressed", postsOpen ? "true" : "false");
+    if (postsOpen) postsBtn?.setAttribute("aria-current", "page");
+    else postsBtn?.removeAttribute("aria-current");
     bulkBtn?.setAttribute("aria-pressed", bulk ? "true" : "false");
+    if (bulk) bulkBtn?.setAttribute("aria-current", "page");
+    else bulkBtn?.removeAttribute("aria-current");
   }, [staticHeader, postsOpen, bulk]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const url = new URL(window.location.href);
-    let dirty = false;
-    if (url.searchParams.get("posts") === "1") {
-      url.searchParams.delete("posts");
-      dirty = true;
-    }
-    if (url.searchParams.get("bulk") === "1") {
-      url.searchParams.delete("bulk");
-      dirty = true;
-    }
-    if (dirty) {
-      window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
-    }
-  }, []);
 
   useEffect(() => {
     document.body.dataset.ytePosts = postsOpen ? "1" : "";
@@ -186,7 +201,11 @@ export default function App() {
   }, [postsOpen]);
 
   useEffect(() => {
-    const sync = () => setRoute(parseAppRoute());
+    const sync = () => {
+      setRoute(parseAppRoute());
+      setHomeView(readHomeView());
+      setKeywordSlug(readKeywordSlug());
+    };
     window.addEventListener("popstate", sync);
     return () => window.removeEventListener("popstate", sync);
   }, []);
@@ -229,9 +248,11 @@ export default function App() {
     url.searchParams.set("k", slug);
     url.searchParams.delete("m");
     url.searchParams.delete("v");
-    history.pushState({ k: slug }, "", `${url.pathname}${url.search}${url.hash}`);
+    url.searchParams.delete("posts");
+    url.searchParams.delete("bulk");
+    history.pushState({ k: slug, homeView: "home" }, "", `${url.pathname}${url.search}${url.hash}`);
     setKeywordSlug(slug);
-    setPostsOpen(false);
+    setHomeView("home");
     analytics.pageView();
   };
 
@@ -294,7 +315,7 @@ export default function App() {
 
   const runOne = async (raw: string) => {
     if (looksLikeChannelUrl(raw)) {
-      setBulk(true);
+      navigateHomeView("bulk", "replace");
       await runBulk(raw);
       return;
     }
@@ -359,7 +380,7 @@ export default function App() {
         return;
       }
       raw = urls.join("\n");
-      setBulk(true);
+      navigateHomeView("bulk", "replace");
       setInput(raw);
     }
     const items = parseMediaMany(raw).filter((item) => item.valid);
@@ -470,12 +491,10 @@ export default function App() {
       <div className="yte-shell">
         {staticHeader ? null : (
           <SiteHeader
-            postsOpen={postsOpen}
-            bulk={bulk}
+            homeView={homeView}
             theme={theme}
             themeLabel={themeLabel}
-            onTogglePosts={() => setPostsOpen((v) => !v)}
-            onToggleBulk={() => setBulk((v) => !v)}
+            onNavigateView={(view) => navigateHomeView(view)}
             onCycleTheme={() => setTheme(theme === "dark" ? "light" : theme === "light" ? "system" : "dark")}
             locale={locale}
           />
@@ -486,7 +505,7 @@ export default function App() {
             <p className="yte-kicker">{t("kicker")}</p>
             <div className="yte-post-list">
               {localizedGuides.map((post) => (
-                <article className="yte-post" key={post.href}>
+                <article className="yte-post" key={String(("contentId" in post && post.contentId) || post.href)}>
                   <a className="yte-post-title" href={post.href}>
                     {post.title}
                   </a>

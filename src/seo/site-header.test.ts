@@ -131,7 +131,8 @@ describe("global site header", () => {
     const src = readFileSync(join(process.cwd(), "public/site-header.js"), "utf8");
     expect(src).toContain("publishability.json");
     expect(src).toContain("yte-theme");
-    expect(src).toContain("yte:toggle-posts");
-    expect(src).toContain("yte:toggle-bulk");
+    expect(src).toContain("yte:navigate-view");
+    expect(src).toContain("posts");
+    expect(src).toContain("bulk");
   });
 });

@@ -5,9 +5,10 @@ import { tx } from "../i18n/extra";
 import { KEYWORD_LANDINGS } from "../content/keywordLandings";
 import { applyDocumentMeta } from "../seo/documentMeta";
 import { pageFill, pageString } from "../i18n/pages";
-import { guidePosts, localeHomeUrl, readLocale, t } from "../i18n/ui";
-import { usePublishabilityDoc } from "../i18n/usePublishabilityDoc";
+import { localeHomeUrl, readLocale, t } from "../i18n/ui";
+import { useLocaleCatalog } from "../i18n/useLocaleCatalog";
 import { readTheme, resolvedTheme, saveTheme, type ThemeMode } from "../hooks/theme";
+import { homeViewHref, type HomeView } from "../routing/homeView";
 import type { AppRoute } from "../routing/path";
 import { thumbPath } from "../routing/thumb";
 
@@ -30,9 +31,8 @@ function PageShell({ origin, children }: { origin: string; children: ReactNode }
     saveTheme(theme);
   }, [theme]);
 
-  const goHomeMode = (param: "posts" | "bulk") => {
-    const base = origin.endsWith("/") ? origin : `${origin}/`;
-    window.location.assign(`${base}?${param}=1`);
+  const goView = (view: HomeView) => {
+    window.location.assign(homeViewHref(view, origin));
   };
 
   return (
@@ -40,12 +40,10 @@ function PageShell({ origin, children }: { origin: string; children: ReactNode }
       <div className="yte-shell">
         {staticHeader ? null : (
           <SiteHeader
-            postsOpen={false}
-            bulk={false}
+            homeView="home"
             theme={theme}
             themeLabel={themeLabel}
-            onTogglePosts={() => goHomeMode("posts")}
-            onToggleBulk={() => goHomeMode("bulk")}
+            onNavigateView={goView}
             onCycleTheme={() => setTheme(theme === "dark" ? "light" : theme === "light" ? "system" : "dark")}
             locale={locale}
           />
@@ -84,8 +82,7 @@ export function SitePages({ route }: { route: Exclude<AppRoute, { name: "home" }
 }
 
 function Article({ title, body, origin }: { title: string; body: string; origin: string }) {
-  const publishability = usePublishabilityDoc();
-  const guides = guidePosts({ doc: publishability });
+  const { posts: guides } = useLocaleCatalog(readLocale());
   useEffect(() => {
     const desc = body.split("\n").map((line) => line.trim()).find((line) => line.length > 40) || body.slice(0, 160);
     applyDocumentMeta(`${title} · 11tik`, desc);

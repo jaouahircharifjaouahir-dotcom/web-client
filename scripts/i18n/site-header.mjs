@@ -11,7 +11,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const CATALOG = JSON.parse(readFileSync(join(ROOT, "src", "i18n", "catalog.json"), "utf8"));
 const NATIVE_NAMES = JSON.parse(readFileSync(join(ROOT, "src", "i18n", "native-names.json"), "utf8"));
 
-const SITE_HEADER_ASSET_V = "1";
+const SITE_HEADER_ASSET_V = "2";
 
 function xmlEscape(value) {
   return String(value || "")
@@ -121,18 +121,18 @@ export function renderSiteHeaderHtml(options = {}) {
     })
     .join("");
 
-  const postsHref = `${homeUrl}${homeUrl.includes("?") ? "&" : "?"}posts=1`;
-  const bulkHref = `${homeUrl}${homeUrl.includes("?") ? "&" : "?"}bulk=1`;
+  const postsUrl = new URL(homeUrl);
+  postsUrl.searchParams.delete("bulk");
+  postsUrl.searchParams.set("posts", "1");
+  const bulkUrl = new URL(homeUrl);
+  bulkUrl.searchParams.delete("posts");
+  bulkUrl.searchParams.set("bulk", "1");
+  const postsHref = postsUrl.href;
+  const bulkHref = bulkUrl.href;
 
-  // Static pages: crawlable links to home with mode query. SPA shells: buttons + events.
-  const postsControl =
-    variant === "spa-shell"
-      ? `<button class="yte-chip" type="button" id="yte-posts-btn" data-yte-action="posts" aria-expanded="false" aria-pressed="false">${xmlEscape(labels.posts)}</button>`
-      : `<a class="yte-chip" id="yte-posts-btn" data-yte-action="posts" href="${xmlEscape(postsHref)}">${xmlEscape(labels.posts)}</a>`;
-  const bulkControl =
-    variant === "spa-shell"
-      ? `<button class="yte-chip" type="button" id="yte-bulk-btn" data-yte-action="bulk" aria-pressed="false">${xmlEscape(labels.bulk)}</button>`
-      : `<a class="yte-chip" id="yte-bulk-btn" data-yte-action="bulk" href="${xmlEscape(bulkHref)}">${xmlEscape(labels.bulk)}</a>`;
+  // Always real links (URL-addressable). Active aria state synced by App / site-header.js.
+  const postsControl = `<a class="yte-chip" id="yte-posts-btn" data-yte-action="posts" href="${xmlEscape(postsHref)}" aria-pressed="false">${xmlEscape(labels.posts)}</a>`;
+  const bulkControl = `<a class="yte-chip" id="yte-bulk-btn" data-yte-action="bulk" href="${xmlEscape(bulkHref)}" aria-pressed="false">${xmlEscape(labels.bulk)}</a>`;
 
   return `<div class="yte-static-chrome" data-yte-header-root>
 <header id="yte-site-header" class="yte-top" role="banner" data-yte-locale="${xmlEscape(locale)}" data-yte-home="${xmlEscape(homeUrl)}" data-yte-content-path="${xmlEscape(contentPath)}" data-yte-variant="${variant}">

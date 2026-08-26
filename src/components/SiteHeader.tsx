@@ -1,49 +1,65 @@
+import type { MouseEvent } from "react";
 import { config } from "../config";
 import { languageOptions, localeHomeUrl, switchLocale, t } from "../i18n/ui";
+import { homeViewHref, type HomeView } from "../routing/homeView";
 import type { ThemeMode } from "../hooks/theme";
 
 type SiteHeaderProps = {
-  postsOpen: boolean;
-  bulk: boolean;
+  homeView: HomeView;
   theme: ThemeMode;
   themeLabel: string;
-  onTogglePosts: () => void;
-  onToggleBulk: () => void;
   onCycleTheme: () => void;
+  onNavigateView?: (view: HomeView) => void;
   locale: string;
 };
 
-/** Shared SPA header — same chrome as scripts/i18n/site-header.mjs static markup. */
+/** Shared SPA header — Posts/Bulk are URL links (?posts=1 / ?bulk=1). */
 export function SiteHeader({
-  postsOpen,
-  bulk,
+  homeView,
   themeLabel,
-  onTogglePosts,
-  onToggleBulk,
   onCycleTheme,
+  onNavigateView,
   locale,
 }: SiteHeaderProps) {
+  const home = localeHomeUrl();
+  const postsHref = homeViewHref("posts", home);
+  const bulkHref = homeViewHref("bulk", home);
+  const postsActive = homeView === "posts";
+  const bulkActive = homeView === "bulk";
+
+  const onViewClick = (view: HomeView, event: MouseEvent<HTMLAnchorElement>) => {
+    if (!onNavigateView) return;
+    event.preventDefault();
+    onNavigateView(view);
+  };
+
   return (
     <header className="yte-top" role="banner">
-      <a className="yte-brand" href={localeHomeUrl()}>
+      <a className="yte-brand" href={home}>
         <span className="yte-mark" aria-hidden="true">
           11
         </span>
         <span>{config.siteName}</span>
       </a>
       <nav className="yte-actions" aria-label="Site">
-        <button
+        <a
           className="yte-chip"
-          type="button"
-          aria-expanded={postsOpen}
-          aria-pressed={postsOpen}
-          onClick={onTogglePosts}
+          href={postsHref}
+          aria-pressed={postsActive}
+          aria-current={postsActive ? "page" : undefined}
+          onClick={(event) => onViewClick("posts", event)}
         >
           {t("posts")}
-        </button>
-        <button className="yte-chip" type="button" aria-pressed={bulk} onClick={onToggleBulk}>
+        </a>
+        <a
+          className="yte-chip"
+          href={bulkHref}
+          aria-pressed={bulkActive}
+          aria-current={bulkActive ? "page" : undefined}
+          onClick={(event) => onViewClick("bulk", event)}
+        >
           {t("bulk")}
-        </button>
+        </a>
         <button className="yte-chip" type="button" onClick={onCycleTheme} aria-label={t("theme")}>
           {t("theme")}: {themeLabel}
         </button>

@@ -198,7 +198,9 @@ describe("POC French share-links article i18n (regression)", () => {
   it("documents Worker-zero path: FR article outside run_worker_first", () => {
     const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
-    expect(wrangler.assets.run_worker_first).toContain("/2026/*");
+    // Phase A: English /2026/* is static; utilities /p/* remain Worker-first for now.
+    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/l/*");
     expect(wrangler.assets.run_worker_first.some((p) => String(p).includes("/l/"))).toBe(false);
     expect(wrangler.kv_namespaces).toBeUndefined();

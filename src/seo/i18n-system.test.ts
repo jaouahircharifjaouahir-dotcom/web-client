@@ -204,7 +204,9 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
 
   it("does not put localized article paths in run_worker_first", () => {
     const raw = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
-    expect(raw).toContain('"/2026/*"');
+    // Phase A: English guides are asset-first; do not reintroduce /2026/* Worker-first.
+    expect(raw).not.toMatch(/"\/2026\/\*"/);
+    expect(raw).toContain('"/p/*"');
     expect(raw).not.toMatch(/"\/l\/\*"/);
   });
 });

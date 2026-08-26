@@ -93,6 +93,7 @@ export function syncLocalizedImageAltsIntoArtifact(artifact) {
   };
 }
 
+/** Shared by localized and English shadow static renderers. */
 export function buildHreflangLinks({ englishUrl, alternates }) {
   const lines = [
     `<link rel="alternate" hreflang="en" href="${xmlEscape(englishUrl)}"/>`,

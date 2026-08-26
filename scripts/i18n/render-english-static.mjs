@@ -1,0 +1,178 @@
+/**
+ * English static pages for /2026/* and /p/* (repo-first, no Blogger runtime).
+ * Phase A: /2026/* removed from run_worker_first; /p/* remains Worker-first until Phase C.
+ */
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { clipDescription } from "../../workers/html-meta.js";
+import { descriptionForPath } from "../../workers/post-descriptions.js";
+import { extractStructuredSource } from "./extract-source.mjs";
+import { LOCALIZED_PAGE_ICONS, buildHreflangLinks } from "./render-localized.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
+const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
+const EDGE_ASSETS = "https://www.11tik.com/web-client/";
+const DEFAULT_OG = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
+
+function xmlEscape(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function rewriteGithubAssets(html) {
+  return String(html || "").split(GH_PAGES).join(EDGE_ASSETS);
+}
+
+function extractStyleAndArticle(raw) {
+  const styleMatch = /<style\b[^>]*>([\s\S]*?)<\/style>/i.exec(raw);
+  const articleMatch = /<article\b[^>]*>[\s\S]*?<\/article>/i.exec(raw);
+  const style = styleMatch ? `<style>${styleMatch[1]}</style>` : "";
+  const article = articleMatch ? rewriteGithubAssets(articleMatch[0]) : "";
+  return { style, article };
+}
+
+function buildFaviconLinks() {
+  const { png16, png32, apple180 } = LOCALIZED_PAGE_ICONS;
+  return [
+    `<link rel="icon" type="image/png" sizes="32x32" href="${xmlEscape(png32)}"/>`,
+    `<link rel="icon" type="image/png" sizes="16x16" href="${xmlEscape(png16)}"/>`,
+    `<link rel="apple-touch-icon" sizes="180x180" href="${xmlEscape(apple180)}"/>`,
+  ].join("\n  ");
+}
+
+function resolveDescription(pathname, structured) {
+  const mapped = clipDescription(descriptionForPath(pathname) || "");
+  if (mapped.length > 40) return mapped;
+  return clipDescription(structured.description || structured.ogDescription || "");
+}
+
+function resolveTitle(structured, h1, postTitle) {
+  const fromPosts = String(postTitle || "").trim();
+  if (fromPosts) return fromPosts.includes("| 11tik") ? fromPosts : `${fromPosts} | 11tik`;
+  const raw = String(structured.title || "").trim();
+  if (raw) return raw.includes("| 11tik") ? raw : `${raw.replace(/\s*\|\s*11tik\s*$/i, "")} | 11tik`;
+  if (h1) return `${h1} | 11tik`;
+  return "11tik";
+}
+
+/** Prefer theme/default social OG (matches live Blogger) over in-article hero. */
+function resolveOgImage(_rawHtml, _structured) {
+  return DEFAULT_OG;
+}
+
+function buildSchema({ item, canonical, h1, description, hero, structured }) {
+  const schemaType = item.type === "utility" ? "WebPage" : "Article";
+  const faqLd = (structured.faq || []).map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: String(faq.answer || "").replace(/<[^>]+>/g, ""),
+    },
+  }));
+  const graph = [
+    {
+      "@type": schemaType,
+      headline: h1,
+      name: h1,
+      description,
+      inLanguage: "en",
+      mainEntityOfPage: canonical,
+      author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/p/about.html" },
+      publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
+      image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
+    },
+  ];
+  if (item.type === "article") {
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.11tik.com/" },
+        { "@type": "ListItem", position: 2, name: h1, item: canonical },
+      ],
+    });
+  }
+  if (faqLd.length) {
+    graph.push({ "@type": "FAQPage", mainEntity: faqLd });
+  }
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
+/**
+ * @param {{ contentId: string, type: string, canonicalPath: string, canonicalUrl: string, sourceRel: string|null, title?: string }} item
+ * @param {{ alternates?: { locale: string, url: string }[], postTitle?: string }} [options]
+ */
+export function renderEnglishStaticHtml(item, options = {}) {
+  if (!item?.sourceRel) throw new Error(`Missing sourceRel for ${item?.contentId || "unknown"}`);
+  const abs = join(ROOT, item.sourceRel);
+  if (!existsSync(abs)) throw new Error(`Missing English source: ${item.sourceRel}`);
+  const raw = readFileSync(abs, "utf8");
+  const structured = extractStructuredSource(raw, { contentType: item.type === "utility" ? "utility" : "article" });
+  const { style, article } = extractStyleAndArticle(raw);
+  if (!article) throw new Error(`No <article> in source: ${item.sourceRel}`);
+
+  const canonical = item.canonicalUrl;
+  const h1 = structured.h1 || structured.title || item.contentId;
+  const description = resolveDescription(item.canonicalPath, structured);
+  const title = resolveTitle(structured, h1, options.postTitle);
+  const ogTitle = options.postTitle || structured.ogTitle || h1;
+  const ogDescription = clipDescription(description);
+  const images = Array.isArray(structured.images) ? structured.images : [];
+  const bodyHero =
+    images.find((img) => String(img.src || "").includes("/images/blog/")) ||
+    images[0] ||
+    { src: DEFAULT_OG, alt: structured.imageAlt || "" };
+  const ogImageSrc = resolveOgImage(raw, structured);
+  const schemaImageSrc = ogImageSrc;
+
+  const alternates = Array.isArray(options.alternates) ? options.alternates : [{ locale: "en", url: canonical }];
+  const schema = buildSchema({
+    item,
+    canonical,
+    h1,
+    description,
+    hero: { src: schemaImageSrc, alt: bodyHero.alt || structured.imageAlt || "" },
+    structured,
+  });
+
+  return `<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>${xmlEscape(title)}</title>
+  <meta name="description" content="${xmlEscape(description)}"/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="${xmlEscape(canonical)}"/>
+  ${buildHreflangLinks({ englishUrl: canonical, alternates })}
+  <meta property="og:type" content="${item.type === "utility" ? "website" : "article"}"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="11tik"/>
+  <meta property="og:title" content="${xmlEscape(ogTitle)}"/>
+  <meta property="og:description" content="${xmlEscape(ogDescription)}"/>
+  <meta property="og:url" content="${xmlEscape(canonical)}"/>
+  <meta property="og:image" content="${xmlEscape(ogImageSrc)}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="${xmlEscape(ogTitle)}"/>
+  <meta name="twitter:description" content="${xmlEscape(ogDescription)}"/>
+  <meta name="twitter:image" content="${xmlEscape(ogImageSrc)}"/>
+  ${buildFaviconLinks()}
+  ${style}
+  <script type="application/ld+json">${JSON.stringify(schema)}</script>
+</head>
+<body>
+${article}
+</body>
+</html>
+`;
+}
+
+export function englishStaticAssetRel(item) {
+  const path = String(item.canonicalPath || "").replace(/^\//, "");
+  if (!path || path.includes("..")) throw new Error(`Invalid canonicalPath: ${item.canonicalPath}`);
+  return path;
+}

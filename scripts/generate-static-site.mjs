@@ -15,6 +15,10 @@ import {
   writePocFrReadinessManifest,
   assertLocaleSitemapLocsHaveFiles,
 } from "./article-i18n.mjs";
+import {
+  assertEnglishStaticCoverage,
+  writeEnglishStaticPages,
+} from "./i18n/write-english-static.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
@@ -169,6 +173,13 @@ export function generateStaticSite(staged) {
       }),
     );
   }
+  // English static pages at canonical /2026/* and /p/* paths (Phase A serves /2026 from Assets).
+  const englishShadow = writeEnglishStaticPages(writeFile, staged);
+  if (englishShadow.missingSource.length) {
+    throw new Error(`English static missing source files: ${englishShadow.missingSource.join(", ")}`);
+  }
+  assertEnglishStaticCoverage(staged);
+
   // Ready translations only (status=ready + sourceHash match + validation). Missing/stale skipped.
   const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged);
   const publishable = collectPublishableLocaleArticleLocs().filter((loc) => localeArticleLocs.includes(loc));

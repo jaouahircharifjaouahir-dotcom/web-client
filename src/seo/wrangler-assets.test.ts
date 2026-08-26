@@ -8,7 +8,6 @@ describe("Workers Static Assets routing", () => {
   it("uses official SPA fallback and Worker-first Blogger paths only", () => {
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
     expect(wrangler.assets.run_worker_first).toEqual([
-      "/2026/*",
       "/p/*",
       "/feeds/*",
       "/sitemap-pages.xml",
@@ -19,6 +18,9 @@ describe("Workers Static Assets routing", () => {
       "/terms",
       "/contact",
     ]);
+    // Phase A: English /2026/* articles are Static Assets (shadow → cutover).
+    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/thumb/*");
     expect(wrangler.kv_namespaces).toBeUndefined();

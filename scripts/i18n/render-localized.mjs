@@ -1,12 +1,96 @@
 import { RTL_CODES } from "../../workers/iso6391.js";
 import { localizeInternalLinksInHtml } from "./internal-links.mjs";
 
+/** Canonical site favicons (same assets as English SPA / Blogger). */
+export const LOCALIZED_PAGE_ICONS = {
+  png32:
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png",
+  png16:
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png",
+  apple180:
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png",
+};
+
 function xmlEscape(value) {
   return String(value || "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function attrEscape(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+/**
+ * Replace img alt (and optional title) from artifact.images matched by src.
+ * Preserves intentional empty alt. Does not change src/srcset/dimensions/classes.
+ */
+export function applyLocalizedImageMetadata(html, images = []) {
+  const list = Array.isArray(images) ? images : [];
+  if (!String(html || "") || !list.length) return html;
+  const bySrc = new Map();
+  for (const img of list) {
+    const src = String(img?.src || "").trim();
+    if (!src) continue;
+    bySrc.set(src, img);
+  }
+  if (!bySrc.size) return html;
+
+  return String(html).replace(/<img\b([^>]*)>/gi, (full, attrs) => {
+    const srcMatch = /\bsrc\s*=\s*(["'])(.*?)\1/i.exec(attrs);
+    if (!srcMatch) return full;
+    const src = srcMatch[2];
+    const meta = bySrc.get(src);
+    if (!meta) return full;
+
+    let next = attrs;
+    const hasAlt = /\balt\s*=/i.test(next);
+    const localizedAlt = meta.alt != null ? String(meta.alt) : null;
+
+    if (localizedAlt !== null) {
+      if (hasAlt) {
+        next = next.replace(/\balt\s*=\s*(["'])[\s\S]*?\1/i, `alt="${attrEscape(localizedAlt)}"`);
+      } else if (localizedAlt !== "") {
+        next = `${next} alt="${attrEscape(localizedAlt)}"`;
+      }
+    }
+
+    if (meta.title != null && String(meta.title).length) {
+      if (/\btitle\s*=/i.test(next)) {
+        next = next.replace(/\btitle\s*=\s*(["'])[\s\S]*?\1/i, `title="${attrEscape(meta.title)}"`);
+      } else {
+        next = `${next} title="${attrEscape(meta.title)}"`;
+      }
+    }
+
+    return `<img${next}>`;
+  });
+}
+
+/** Apply images[].alt into HTML fields of an artifact (no network / no GTX). */
+export function syncLocalizedImageAltsIntoArtifact(artifact) {
+  if (!artifact || typeof artifact !== "object") return artifact;
+  const images = Array.isArray(artifact.images) ? artifact.images : [];
+  if (!images.length) return artifact;
+  const apply = (html) => applyLocalizedImageMetadata(html, images);
+  return {
+    ...artifact,
+    sections: Array.isArray(artifact.sections)
+      ? artifact.sections.map((section) =>
+          section && typeof section === "object"
+            ? { ...section, html: apply(section.html || "") }
+            : section,
+        )
+      : artifact.sections,
+    conclusionHtml: apply(artifact.conclusionHtml || ""),
+    bioHtml: artifact.bioHtml != null ? apply(artifact.bioHtml) : artifact.bioHtml,
+  };
 }
 
 export function buildHreflangLinks({ englishUrl, alternates }) {
@@ -21,6 +105,15 @@ export function buildHreflangLinks({ englishUrl, alternates }) {
   return lines.join("\n  ");
 }
 
+function buildFaviconLinks() {
+  const { png16, png32, apple180 } = LOCALIZED_PAGE_ICONS;
+  return [
+    `<link rel="icon" type="image/png" sizes="32x32" href="${xmlEscape(png32)}"/>`,
+    `<link rel="icon" type="image/png" sizes="16x16" href="${xmlEscape(png16)}"/>`,
+    `<link rel="apple-touch-icon" sizes="180x180" href="${xmlEscape(apple180)}"/>`,
+  ].join("\n  ");
+}
+
 /**
  * Generic localized page renderer for article/utility artifacts.
  */
@@ -29,14 +122,17 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   const dir = RTL_CODES.has(locale) ? "rtl" : "ltr";
   const canonical = alternates.find((a) => a.locale === locale)?.url;
   if (!canonical) throw new Error("missing self alternate for render");
-  const localize = (html) =>
-    pathLinkIndex ? localizeInternalLinksInHtml(html, locale, pathLinkIndex) : html;
+  const images = Array.isArray(artifact.images) ? artifact.images : [];
+  const localize = (html) => {
+    const withAlts = applyLocalizedImageMetadata(html, images);
+    return pathLinkIndex ? localizeInternalLinksInHtml(withAlts, locale, pathLinkIndex) : withAlts;
+  };
   const title = xmlEscape(artifact.title);
   const description = xmlEscape(artifact.description);
   const ogTitle = xmlEscape(artifact.ogTitle || artifact.title);
   const ogDescription = xmlEscape(artifact.ogDescription || artifact.description);
   const hero =
-    artifact.images?.[0] || {
+    images[0] || {
       src: "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
       alt: artifact.imageAlt || "",
     };
@@ -100,6 +196,7 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   <meta name="twitter:title" content="${ogTitle}"/>
   <meta name="twitter:description" content="${ogDescription}"/>
   <meta name="twitter:image" content="${xmlEscape(hero.src)}"/>
+  ${buildFaviconLinks()}
   <style>
 .yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
 .yte-page h1{font-size:2rem;line-height:1.15;margin:0 0 12px}

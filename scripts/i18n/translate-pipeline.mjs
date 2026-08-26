@@ -22,6 +22,7 @@ import { assertProviderReady, providerConfigReport, readProviderEnv } from "./pr
 import { validateTranslationOutput } from "./translate-quality.mjs";
 import { runPool } from "./concurrency-pool.mjs";
 import { getTargetLocales } from "./target-languages.mjs";
+import { syncLocalizedImageAltsIntoArtifact } from "./render-localized.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 export const CHECKPOINT_REL = join("tmp", "i18n-translate-checkpoint.json");
@@ -259,7 +260,10 @@ async function translateContentUnitInner(unit, options = {}) {
     return { ok: false, artifact: failed, error: failed.error, usage };
   }
 
-  const artifact = buildArtifact(contentId, locale, sourceHash, translated, "draft");
+  // Merge localized images[].alt into section HTML so future regenerations stay consistent.
+  // Does not call GTX again — only applies already-translated metadata into <img alt>.
+  const withImageAlts = syncLocalizedImageAltsIntoArtifact(translated);
+  const artifact = buildArtifact(contentId, locale, sourceHash, withImageAlts, "draft");
   const quality = validateTranslationOutput(artifact, structured, {
     contentId,
     locale,

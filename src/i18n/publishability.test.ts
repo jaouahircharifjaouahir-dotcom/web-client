@@ -5,9 +5,11 @@ import {
   resolveLocaleDestination,
   resolveLocalizedHref,
   setPublishabilityCache,
+  subscribePublishability,
   type PublishabilityDoc,
 } from "./publishability";
 import { legalHrefs } from "./pages";
+import { guidePosts } from "./ui";
 
 const DOC: PublishabilityDoc = {
   v: 1,
@@ -167,6 +169,34 @@ describe("localized guide links", () => {
     const href = resolveLocalizedHref("https://www.11tik.com/2026/08/missing-post.html", "ar", DOC);
     expect(href).toBe("https://www.11tik.com/2026/08/missing-post.html");
     expect(href).not.toContain("/l/ar/");
+  });
+
+  it("guidePosts rewrites hrefs once publishability doc is supplied", () => {
+    setPublishabilityCache(null);
+    const before = guidePosts({ locale: "ar", doc: null });
+    expect(before.find((p) => p.href.includes("youtube-thumbnail-url"))?.href).toBe(
+      "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
+    );
+
+    const after = guidePosts({ locale: "ar", doc: DOC });
+    expect(after.find((p) => p.href.includes("youtube-thumbnail-url"))?.href).toBe(
+      "https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html",
+    );
+
+    const englishHome = guidePosts({ locale: "en", doc: DOC });
+    expect(englishHome.find((p) => p.href.includes("youtube-thumbnail-url"))?.href).toBe(
+      "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
+    );
+  });
+
+  it("notifies subscribers when publishability cache is set", () => {
+    let seen: PublishabilityDoc | null | undefined;
+    const unsub = subscribePublishability((doc) => {
+      seen = doc;
+    });
+    setPublishabilityCache(DOC);
+    expect(seen).toBe(DOC);
+    unsub();
   });
 });
 

@@ -102,6 +102,23 @@ export function getPublishabilityCache(): PublishabilityDoc | null {
 
 export function setPublishabilityCache(doc: PublishabilityDoc | null): void {
   cachedDoc = doc;
+  notifyPublishabilityListeners();
+}
+
+type PublishabilityListener = (doc: PublishabilityDoc | null) => void;
+const listeners = new Set<PublishabilityListener>();
+
+function notifyPublishabilityListeners(): void {
+  for (const listener of listeners) listener(cachedDoc);
+}
+
+/** Subscribe to cache updates (SPA re-render when manifest finishes loading). */
+export function subscribePublishability(listener: PublishabilityListener): () => void {
+  listeners.add(listener);
+  listener(cachedDoc);
+  return () => {
+    listeners.delete(listener);
+  };
 }
 
 export async function loadPublishability(fetchImpl: typeof fetch = fetch): Promise<PublishabilityDoc | null> {
@@ -114,6 +131,7 @@ export async function loadPublishability(fetchImpl: typeof fetch = fetch): Promi
       const doc = (await res.json()) as PublishabilityDoc;
       if (!doc || typeof doc !== "object" || !doc.contents) return null;
       cachedDoc = doc;
+      notifyPublishabilityListeners();
       return doc;
     } catch {
       return null;

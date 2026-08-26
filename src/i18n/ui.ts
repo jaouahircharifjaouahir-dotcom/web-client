@@ -8,6 +8,7 @@ import {
   resolveLocaleDestination,
   resolveLocalizedHref,
   warmPublishabilityCache,
+  type PublishabilityDoc,
 } from "./publishability";
 
 export type UiKey = keyof (typeof catalog)["en"]["ui"];
@@ -75,13 +76,13 @@ export function isRtl(code = readLocale()): boolean {
   return RTL_CODES.has(code);
 }
 
-export function guidePosts() {
-  const locale = readLocale();
+export function guidePosts(options?: { locale?: string; doc?: PublishabilityDoc | null }) {
+  const locale = options?.locale ?? readLocale();
   const pack = catalog[locale as keyof typeof catalog] || catalog.en;
-  const doc = getPublishabilityCache();
+  const doc = options && "doc" in options ? options.doc : getPublishabilityCache();
   return GUIDE_POSTS.map((post, index) => ({
     ...post,
-    href: resolveLocalizedHref(post.href, locale, doc),
+    href: resolveLocalizedHref(post.href, locale, doc ?? null),
     title: pack.posts[index]?.title || post.title,
     summary: pack.posts[index]?.summary || post.summary,
   }));

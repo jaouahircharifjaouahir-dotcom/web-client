@@ -24,17 +24,8 @@ import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { QUALITY_PRESETS } from "./engines/presets";
-import {
-  guidePosts,
-  isRtl,
-  languageOptions,
-  localeHomeUrl,
-  publicOrigin,
-  readLocale,
-  switchLocale,
-  t,
-  warmPublishabilityCache,
-} from "./i18n/ui";
+import { guidePosts, isRtl, languageOptions, localeHomeUrl, publicOrigin, readLocale, switchLocale, t } from "./i18n/ui";
+import { usePublishabilityDoc } from "./i18n/usePublishabilityDoc";
 import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
 
@@ -122,10 +113,8 @@ export default function App() {
     return [];
   }, [bulk, bulkParsed, parsed]);
   const deepLinkBoot = useRef(false);
-
-  useEffect(() => {
-    warmPublishabilityCache();
-  }, []);
+  const publishability = usePublishabilityDoc();
+  const localizedGuides = guidePosts({ doc: publishability });
 
   useEffect(() => {
     const mode = resolvedTheme(theme);
@@ -464,7 +453,7 @@ export default function App() {
           <section className="yte-panel yte-posts" aria-label={t("kicker")}>
             <p className="yte-kicker">{t("kicker")}</p>
             <div className="yte-post-list">
-              {guidePosts().map((post) => (
+              {localizedGuides.map((post) => (
                 <article className="yte-post" key={post.href}>
                   <a className="yte-post-title" href={post.href}>
                     {post.title}
@@ -859,7 +848,7 @@ export default function App() {
           <a href={legalHrefs(locale).embed}>{pageString(locale, "embedTitle")}</a>
           <a href={legalHrefs(locale).keywords}>{pageString(locale, "keywordsTitle")}</a>
           <a href={legalHrefs(locale).copyright}>{tx(locale, "legalTitle")}</a>
-          {guidePosts().slice(0, 6).map((post) => (
+          {localizedGuides.slice(0, 6).map((post) => (
             <a href={post.href} key={post.href}>
               {post.title}
             </a>

@@ -13,6 +13,7 @@ describe("Workers Static Assets routing", () => {
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
       "/sitemap.xml",
+      "/robots.txt",
       "/p/*",
       "/feeds/*",
       "/sitemap-pages.xml",
@@ -24,6 +25,8 @@ describe("Workers Static Assets routing", () => {
       "/contact",
       "/copyright*",
     ]);
+    // File 8 root: /robots.txt must be Worker-first Assets (not Blogger origin).
+    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/robots.txt")).toBe(true);
     expect(wrangler.assets.binding).toBe("ASSETS");
     // Phase A: English /2026/* articles are Static Assets (Worker-zero).
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");

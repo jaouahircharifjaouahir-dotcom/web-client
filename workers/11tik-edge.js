@@ -168,6 +168,13 @@ export default {
       return env.ASSETS.fetch(request);
     }
 
+    // Same pattern as sitemap.xml: Worker-first + ASSETS so /robots.txt never falls
+    // through to Blogger origin (Mediapartners-Google /share-widget). Zone route alone
+    // without run_worker_first was insufficient once Managed robots prepend was off.
+    if (url.pathname === "/robots.txt" && env?.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
+
     // Homepage (incl. ?bulk=1 / ?posts=1): Worker-first so http→https always runs here
     // if zone Always Use HTTPS is ever off (Ahrefs File 18).
     if (url.pathname === "/" && env?.ASSETS) {

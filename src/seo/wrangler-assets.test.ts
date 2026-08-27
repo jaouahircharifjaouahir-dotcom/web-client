@@ -22,6 +22,7 @@ describe("Workers Static Assets routing", () => {
       "/privacy",
       "/terms",
       "/contact",
+      "/copyright*",
     ]);
     expect(wrangler.assets.binding).toBe("ASSETS");
     // Phase A: English /2026/* articles are Static Assets (Worker-zero).
@@ -31,8 +32,10 @@ describe("Workers Static Assets routing", () => {
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/thumb/*");
-    // SPA legal page: must be on the Worker/Assets route map (otherwise www falls through to Blogger 404).
-    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/copyright")).toBe(true);
+    // Exact routes omit query-string URLs; trailing * is required (CF routes docs).
+    // Otherwise /copyright?m=1 falls through to Blogger and 404s.
+    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/copyright*")).toBe(true);
+    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/copyright")).toBe(false);
     expect(wrangler.kv_namespaces).toBeUndefined();
     expect(wrangler.triggers).toBeUndefined();
   });

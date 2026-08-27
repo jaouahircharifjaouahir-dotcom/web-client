@@ -19,7 +19,8 @@
       "/about",
       "/privacy",
       "/terms",
-      "/contact"
+      "/contact",
+      "/copyright*"
     ]
   },
   "routes": [
@@ -35,7 +36,7 @@
     { "pattern": "www.11tik.com/privacy", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/terms", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/contact", "zone_name": "11tik.com" },
-    { "pattern": "www.11tik.com/copyright", "zone_name": "11tik.com" },
+    { "pattern": "www.11tik.com/copyright*", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/thumb/*", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/l/*", "zone_name": "11tik.com" },
     { "pattern": "*.11tik.com/*", "zone_name": "11tik.com" },

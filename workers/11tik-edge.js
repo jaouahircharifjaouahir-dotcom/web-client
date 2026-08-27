@@ -174,6 +174,13 @@ export default {
       return env.ASSETS.fetch(request);
     }
 
+    // Exact zone routes without a trailing * do not match query strings (CF routes docs).
+    // www.11tik.com/copyright therefore missed /copyright?m=1 → Blogger origin 404.
+    // Route is copyright*; canonicalize any query to the clean SPA URL (canonical /copyright).
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright" && url.search) {
+      return Response.redirect(`${SITE}/copyright`, 301);
+    }
+
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
       const toHtml = extensionlessPPathToHtml(url.pathname);
       if (toHtml) {

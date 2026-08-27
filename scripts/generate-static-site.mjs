@@ -32,7 +32,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
 
 const SITE = "https://www.11tik.com";
-const APP_ASSET_V = "56";
+const APP_ASSET_V = "57";
 const OG_IMAGE = `${SITE}/web-client/images/social/og-image-1200x630.png`;
 const ICON_32 =
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png";

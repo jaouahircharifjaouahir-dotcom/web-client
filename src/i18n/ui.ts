@@ -66,6 +66,14 @@ export function t(key: UiKey): string {
   return pack.ui[key] || catalog.en.ui[key];
 }
 
+export function tFill(key: UiKey, vars: Record<string, string | number>): string {
+  let text = t(key);
+  for (const [name, value] of Object.entries(vars)) {
+    text = text.replaceAll(`{${name}}`, String(value));
+  }
+  return text;
+}
+
 /** English + enabled target locales from config/target-languages.json (native labels). */
 export function languageOptions(): { code: string; label: string }[] {
   const targets = (targetLanguages.languages || [])

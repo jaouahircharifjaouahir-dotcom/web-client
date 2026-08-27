@@ -26,7 +26,7 @@ import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { QUALITY_PRESETS } from "./engines/presets";
 import { SiteHeader } from "./components/SiteHeader";
 import { hasStaticSiteHeader } from "./components/hasStaticSiteHeader";
-import { guidePosts, localeHomeUrl, publicOrigin, readLocale, t } from "./i18n/ui";
+import { guidePosts, localeHomeUrl, publicOrigin, readLocale, t, tFill } from "./i18n/ui";
 import { isRtl } from "./i18n/ui";
 import { useLocaleCatalog } from "./i18n/useLocaleCatalog";
 import { usePublishabilityDoc } from "./i18n/usePublishabilityDoc";
@@ -528,7 +528,7 @@ export default function App() {
               {` · ${result.meta?.title || result.videoId}`}
             </p>
           ) : null}
-          <nav aria-label="Keyword links" className="yte-kw">
+          <nav aria-label={t("ariaKeywordLinks")} className="yte-kw">
             {KEYWORD_LANDINGS.map((item) => (
               <a
                 className={item.slug === keywordSlug ? "is-on" : undefined}
@@ -561,7 +561,7 @@ export default function App() {
                   setInput(event.target.value);
                 }}
                 placeholder={t("pasteBulkPh") + " · " + tx(locale, "channelHint")}
-                aria-label="YouTube URLs"
+                aria-label={t("ariaYoutubeUrls")}
                 spellCheck={false}
                 autoCorrect="off"
                 autoCapitalize="off"
@@ -581,7 +581,7 @@ export default function App() {
                   void runOne(text);
                 }}
                 placeholder={t("pasteOnePh")}
-                aria-label="YouTube URL"
+                aria-label={t("ariaYoutubeUrl")}
                 autoComplete="off"
                 inputMode="url"
                 spellCheck={false}
@@ -596,7 +596,7 @@ export default function App() {
                   <button
                     className="yte-ghost"
                     type="button"
-                    onClick={() => void showCopied(liveShareUrls.length > 1 ? "Share links copied" : "Share link copied", liveShareUrls.join("\n"))}
+                    onClick={() => void showCopied(liveShareUrls.length > 1 ? t("copiedShares") : t("copiedShare"), liveShareUrls.join("\n"))}
                   >
                     {t("copyShare")}
                   </button>
@@ -617,7 +617,7 @@ export default function App() {
 
         {!bulk && result?.thumbnails.length ? (
           <section className="yte-panel yte-stack-wrap">
-            <p className="yte-kicker">THUMBNAILS</p>
+            <p className="yte-kicker">{t("thumbnailsKicker")}</p>
             <div className="yte-stack">
               {result.thumbnails.map((item, index) => (
                 <article className="yte-shot" key={item.url}>
@@ -660,7 +660,7 @@ export default function App() {
                     >
                       {t("download")}
                     </button>
-                    <button className="yte-ghost" type="button" onClick={() => void showCopied("Copied!", item.url)}>
+                    <button className="yte-ghost" type="button" onClick={() => void showCopied(t("copiedImage"), item.url)}>
                       {t("copyImage")}
                     </button>
                     <button className="yte-ghost" type="button" onClick={() => openFullImage(item.url)}>
@@ -699,7 +699,7 @@ export default function App() {
                     </div>
                   ) : null}
                   <div className="yte-meta">
-                    <span>Video {index + 1}</span>
+                    <span>{tFill("videoLabel", { n: index + 1 })}</span>
                     <span>
                       {formatSize(item.bestThumbnail?.width ?? null, item.bestThumbnail?.height ?? null)} ·{" "}
                       {item.bestThumbnail?.quality ?? "best"}
@@ -720,7 +720,7 @@ export default function App() {
                             .catch(() => setError(userMessage("DOWNLOAD_FAILED")));
                         }}
                       >
-                        Download thumbnail video {index + 1} {item.bestThumbnail.quality}
+                        {tFill("downloadThumbVideo", { n: index + 1, quality: item.bestThumbnail.quality })}
                       </button>
                     </div>
                   ) : null}
@@ -804,7 +804,7 @@ export default function App() {
                           .catch(() => setError(userMessage("DOWNLOAD_FAILED")));
                       }}
                     >
-                      Download thumbnail video {item.videoNumber} {row.quality}
+                      {tFill("downloadThumbVideo", { n: item.videoNumber, quality: row.quality })}
                     </button>
                   ))}
                 </div>
@@ -813,14 +813,14 @@ export default function App() {
           </section>
         ) : null}
 
-        <aside className="yte-ad" aria-label="Advertisement">Ad space</aside>
+        <aside className="yte-ad" aria-label={t("adSpace")}>{t("adSpace")}</aside>
 
         {recentHistory.length ? (
           <section className="yte-panel yte-history">
             <div className="yte-row" style={{ justifyContent: "space-between" }}>
-              <p className="yte-kicker" style={{ margin: 0 }}>LOCAL HISTORY</p>
+              <p className="yte-kicker" style={{ margin: 0 }}>{t("localHistoryKicker")}</p>
               <button className="yte-ghost" type="button" onClick={() => setRecentHistory(historyStore.clear())}>
-                Clear history
+                {t("clearHistory")}
               </button>
             </div>
             <div className="yte-list" style={{ marginTop: 12 }}>
@@ -845,7 +845,7 @@ export default function App() {
           <section className="yte-panel yte-power">
             <p className="yte-kicker">POWER MODE</p>
             <div className="yte-row">
-              <button className="yte-ghost" type="button" onClick={() => void showCopied("Copied all URLs", result.thumbnails.map((item) => item.url).join("\n"))}>
+              <button className="yte-ghost" type="button" onClick={() => void showCopied(t("copiedAllUrls"), result.thumbnails.map((item) => item.url).join("\n"))}>
                 Copy all URLs
               </button>
               <button

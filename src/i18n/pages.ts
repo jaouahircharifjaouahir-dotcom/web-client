@@ -1,5 +1,6 @@
 import catalog from "./catalog.json";
 import { ISO6391 } from "../../workers/iso6391.js";
+import { THUMB_LOCALE_PACKS } from "./thumb-locale-packs";
 
 export type PageKey =
   | "trendingTags"
@@ -37,7 +38,8 @@ export type PageKey =
   | "thumbBody"
   | "thumbRights"
   | "thumbSizes"
-  | "thumbCta";
+  | "thumbCta"
+  | "thumbImgAlt";
 
 type Pack = Partial<Record<PageKey, string>>;
 
@@ -90,6 +92,7 @@ const EN: Record<PageKey, string> = {
     "The thumbnail stays the copyrighted work of the uploader. Personal reference, research, and fair study are typical uses. Do not republish it as your own cover art or merchandise.",
   thumbSizes: "Checked public sizes: maxresdefault, hq720, sddefault, hqdefault, mqdefault, default.",
   thumbCta: "Extract another thumbnail",
+  thumbImgAlt: "{title} thumbnail | 11tik",
 };
 
 const PACKS: Record<string, Pack> = {
@@ -138,6 +141,7 @@ const PACKS: Record<string, Pack> = {
     thumbRights: "حقوق الصورة تبقى لصاحبها. للاطلاع والبحث عادة. لا تعِد نشرها كغلافك.",
     thumbSizes: "الأحجام العامة: maxresdefault وhq720 وsddefault وhqdefault وmqdefault وdefault.",
     thumbCta: "استخرج صورة أخرى",
+    thumbImgAlt: "صورة «{title}» المصغرة | 11tik",
   },
   fr: {
     trendingTags: "Tags tendance",
@@ -187,6 +191,7 @@ const PACKS: Record<string, Pack> = {
       "La miniature reste l’œuvre de l’auteur. Usage typique : référence et recherche. Ne la republiez pas comme votre propre miniature.",
     thumbSizes: "Tailles publiques : maxresdefault, hq720, sddefault, hqdefault, mqdefault, default.",
     thumbCta: "Extraire une autre miniature",
+    thumbImgAlt: "Miniature de {title} | 11tik",
   },
   es: {
     trendingTags: "Etiquetas en tendencia",
@@ -234,6 +239,7 @@ const PACKS: Record<string, Pack> = {
       "La miniatura sigue siendo del autor. Uso típico: consulta e investigación. No la republices como tu propia portada.",
     thumbSizes: "Tamaños públicos: maxresdefault, hq720, sddefault, hqdefault, mqdefault, default.",
     thumbCta: "Extraer otra miniatura",
+    thumbImgAlt: "Miniatura de {title} | 11tik",
   },
   de: {
     trendingTags: "Trending-Tags",
@@ -561,8 +567,14 @@ function catalogBits(locale: string): { intro: string; foot: string } {
   };
 }
 
+function thumbPackString(locale: string, key: PageKey): string | undefined {
+  const pack = THUMB_LOCALE_PACKS[locale];
+  if (!pack) return undefined;
+  return (pack as Partial<Record<PageKey, string>>)[key];
+}
+
 export function pageString(locale: string, key: PageKey): string {
-  const direct = PACKS[locale]?.[key] || NAV[locale]?.[key];
+  const direct = PACKS[locale]?.[key] || NAV[locale]?.[key] || thumbPackString(locale, key);
   if (direct) return direct;
   if (key === "aboutBody" || key === "privacyBody" || key === "termsBody" || key === "guideBody" || key === "statsBody") {
     const { intro, foot } = catalogBits(locale);

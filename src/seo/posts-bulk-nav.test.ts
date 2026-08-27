@@ -154,7 +154,7 @@ describe("Posts/Bulk clickability (static anchors)", () => {
 
   it("cache-busts blogger-app.js so immutable CDN cannot keep a stale SPA", () => {
     const src = readFileSync(join(process.cwd(), "scripts/generate-static-site.mjs"), "utf8");
-    expect(src).toMatch(/APP_ASSET_V\s*=\s*"56"/);
+    expect(src).toMatch(/APP_ASSET_V\s*=\s*"57"/);
   });
 
   it("Back/Forward helpers remain URL-driven (refresh-safe)", () => {

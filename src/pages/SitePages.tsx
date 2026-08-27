@@ -186,7 +186,7 @@ export function ThumbArticle({
       {thumb ? (
         <p>
           <img
-            alt={`${title} thumbnail | 11tik`}
+            alt={pageFill(locale, "thumbImgAlt", { title })}
             title={heading}
             src={thumb}
             width={640}

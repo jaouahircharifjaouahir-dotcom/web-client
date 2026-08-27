@@ -7,6 +7,7 @@ import {
   resolveLocalePublishState,
   readEnglishSourceHash,
 } from "./article-i18n.mjs";
+import { runIndexNowAfterStaticGeneration } from "./i18n/indexnow-submit.mjs";
 
 const root = join(import.meta.dirname, "..");
 const dist = join(root, "dist");
@@ -38,6 +39,10 @@ writeFileSync(
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD
   Cache-Control: public, max-age=300, must-revalidate
+/web-client/i18n/indexnow-snapshot.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD
+  Cache-Control: public, max-age=300, must-revalidate
 /r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
@@ -52,6 +57,12 @@ writeFileSync(
 );
 
 generateStaticSite(staged);
+
+// IndexNow: after HTML is fully written. Submits only when WORKERS_CI/INDEXNOW_SUBMIT=1.
+// Local npm run build / dry-run does not notify search engines.
+await runIndexNowAfterStaticGeneration(staged, {
+  postsTsPath: join(root, "src", "content", "posts.ts"),
+});
 
 const sourceHash = readEnglishSourceHash();
 const frenchReady = resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", sourceHash).publishable;

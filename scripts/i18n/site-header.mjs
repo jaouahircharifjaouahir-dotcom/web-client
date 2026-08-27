@@ -5,6 +5,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { ahrefsAnalyticsHeadTag } from "./ahrefs-analytics.mjs";
 import { getTargetLanguageEntries } from "./target-languages.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -159,7 +160,8 @@ export function renderSiteHeaderHtml(options = {}) {
 
 /** Head fragments for static article/utility pages. */
 export function siteHeaderHeadTags() {
-  return `${siteHeaderThemeBootScript()}
+  return `${ahrefsAnalyticsHeadTag()}
+  ${siteHeaderThemeBootScript()}
   ${siteHeaderStyleTag()}`;
 }
 

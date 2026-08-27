@@ -29,6 +29,7 @@ import {
 } from "./i18n/write-english-static.mjs";
 import { writeLocaleCatalogs } from "./i18n/write-locale-catalogs.mjs";
 import { buildHtmlExtensionRedirects } from "./html-extension-redirects.mjs";
+import { ahrefsAnalyticsHeadTag } from "./i18n/ahrefs-analytics.mjs";
 import {
   localeHomeUrl as headerLocaleHomeUrl,
   renderSiteHeaderHtml,
@@ -167,6 +168,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <script src="/web-client/rights-boot.js?v=${APP_ASSET_V}"></script>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  ${ahrefsAnalyticsHeadTag()}
   <title>${headTitle}</title>
   <meta name="description" content="${headDesc}"/>
   <meta name="robots" content="${robots}"/>

@@ -2,20 +2,24 @@
   "contentId": "keyword-tools",
   "articleId": "keyword-tools",
   "locale": "pt",
-  "sourceHash": "95f4f53ccddd0edf3bf018dbbf6b74eb0d91855ea756105194b8379ba182f10f",
+  "sourceHash": "57d04494bace3f4f5a218d1424904bfda2c5a679eaac50223c8ca144d224f80e",
   "status": "ready",
   "title": "Ferramentas de palavras-chave | 11tik",
-  "description": "Cada link abre o Extrator de Miniaturas do YouTube com uma introdução sobre o assunto.",
+  "description": "Esses links abrem o mesmo Extrator de Miniaturas do YouTube com uma breve introdução na página sobre o assunto. São atalhos convenientes, não sites separados. O ranking permanece na página inicial e nos guias completos.",
   "h1": "Ferramentas de palavras-chave",
   "ogTitle": "Ferramentas de palavras-chave",
-  "ogDescription": "Cada link abre o Extrator de Miniaturas do YouTube com uma introdução sobre o assunto.",
+  "ogDescription": "Esses links abrem o mesmo Extrator de Miniaturas do YouTube com uma breve introdução na página sobre o assunto. São atalhos convenientes, não sites separados. O ranking permanece na página inicial e nos guias completos.",
   "imageAlt": "",
   "faqHeading": "Perguntas frequentes",
   "images": [],
   "sections": [
     {
-      "heading": "Ferramentas de palavras-chave",
-      "html": "<h1>Ferramentas de palavras-chave</h1>\n  <p>Cada link abre o Extrator de Miniaturas do YouTube com uma introdução sobre o assunto.</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">Baixador de miniaturas do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">download de miniaturas do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">Miniatura do YouTube Shorts</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">URL da miniatura do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">tamanho da miniatura do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">Miniatura HD do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">miniatura maxresdefault</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">Miniatura do YouTube Live</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be miniatura</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">Miniatura original do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">Miniaturas em massa do YouTube</a></li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extrator de miniaturas do YouTube</a>\n  </nav>"
+      "heading": "Para que servem esses links?",
+      "html": "<p>Cada URL adiciona um<code>k</code>parâmetro para que o extrator possa exibir uma introdução correspondente. Use-os se você já souber o nome do tópico. Para pesquisa, prefira a página inicial ou os artigos vinculados abaixo.</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">Baixador de miniaturas do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">download de miniaturas do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">Miniatura do YouTube Shorts</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">URL da miniatura do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">tamanho da miniatura do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">Miniatura HD do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">miniatura maxresdefault</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">Miniatura do YouTube Live</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be miniatura</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">Miniatura original do YouTube</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">Miniaturas em massa do YouTube</a></li>\n  </ul>"
+    },
+    {
+      "heading": "Onde posso encontrar os guias completos?",
+      "html": "<p><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Como baixar</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL da miniatura</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Tamanhos</a></p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Extrator de miniaturas do YouTube</a>·<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>\n  </nav>"
     }
   ],
   "faq": [],

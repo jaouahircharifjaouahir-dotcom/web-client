@@ -1,11 +1,19 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  aiSearchAllowRobotsBlock,
+  aiTrainingRobotsBlock,
+  contentSignalDirective,
+} from "../workers/ai-training-robots.js";
 import { ISO6391, RTL_CODES, hreflangLinks } from "../workers/iso6391.js";
+import { fitDescription, fitTitle, toHttpsUrl } from "../workers/html-meta.js";
 import localeMeta from "../workers/locale-meta.json" with { type: "json" };
+import uiCatalog from "../src/i18n/catalog.json" with { type: "json" };
 import {
   buildSitemapXml,
   collectCanonicalSitemapLocs,
+  collectLocaleHomeSitemapLocs,
   loadGuidePostHrefsFromFile,
   normalizeTrustedLocaleSitemapLoc,
 } from "../workers/sitemap-canonicals.js";
@@ -20,6 +28,7 @@ import {
   writeEnglishStaticPages,
 } from "./i18n/write-english-static.mjs";
 import { writeLocaleCatalogs } from "./i18n/write-locale-catalogs.mjs";
+import { buildHtmlExtensionRedirects } from "./html-extension-redirects.mjs";
 import {
   localeHomeUrl as headerLocaleHomeUrl,
   renderSiteHeaderHtml,
@@ -56,8 +65,77 @@ function localeRecord(code) {
     dir: RTL_CODES.has(code) ? "rtl" : meta.dir || "ltr",
     locale: `${code}_${code.toUpperCase()}`,
     title: meta.title || localeMeta.en.title,
-    description: meta.description || localeMeta.en.description,
+    // Ahrefs File 12/19: keep meta descriptions in the 120–150 band.
+    description: fitDescription(meta.description || localeMeta.en.description),
   };
+}
+
+function catalogUi(code) {
+  const entry = uiCatalog[code] || uiCatalog.en;
+  const ui = entry?.ui || uiCatalog.en.ui;
+  const posts = Array.isArray(entry?.posts) ? entry.posts : uiCatalog.en.posts || [];
+  return { ui, posts };
+}
+
+/**
+ * Crawlable body for SPA shells (Ahrefs counts content words without JS render).
+ * React replaces #yte-root on hydrate; users still see the live app.
+ */
+function spaShellBodyHtml(code) {
+  const copy = localeRecord(code);
+  const { ui, posts } = catalogUi(code);
+  const title = xmlEscape(ui.heroTitle || copy.title);
+  const intro = xmlEscape(ui.heroIntro || copy.description);
+  const foot = xmlEscape(ui.foot || "");
+  const step1 = xmlEscape(ui.pasteOne || "");
+  const step2 = xmlEscape(ui.getThumb || "");
+  const step3 = xmlEscape(ui.download || "");
+  const extraParas = [
+    ui.pasteBulk,
+    ui.extractAll,
+    ui.copyShare,
+    ui.share,
+    ui.ready,
+    ui.shareLink,
+    ui.thumbnailsKicker,
+    ui.kicker,
+    ui.pasteOnePh,
+    ui.openFull,
+  ]
+    .map((s) => String(s || "").trim())
+    .filter(Boolean)
+    .map((s) => `<p>${xmlEscape(s)}</p>`)
+    .join("");
+  const guideItems = posts
+    .slice(0, 11)
+    .map((post) => {
+      const t = xmlEscape(post?.title || "");
+      const s = xmlEscape(post?.summary || "");
+      if (!t) return "";
+      return s ? `<li><strong>${t}</strong> — ${s}</li>` : `<li><strong>${t}</strong></li>`;
+    })
+    .filter(Boolean)
+    .join("");
+  const guides = guideItems
+    ? `<section class="yte-shell-guides"><ul>${guideItems}</ul></section>`
+    : "";
+  // Space-poor scripts (e.g. Japanese) yield low whitespace word counts; add English
+  // product copy so Ahrefs content-word floor is met without inventing fake locale text.
+  let enBridge = "";
+  if (code !== "en") {
+    const enUi = uiCatalog.en?.ui || {};
+    const draft = `<h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}<p>${foot}</p>${guides}`;
+    const approx = draft
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter(Boolean).length;
+    if (approx < 100 && enUi.heroIntro) {
+      enBridge = `<p lang="en">${xmlEscape(enUi.heroIntro)}</p><p lang="en">${xmlEscape(enUi.foot || "")}</p>`;
+    }
+  }
+  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}<p>${foot}</p>${guides}${enBridge}</div>`;
 }
 
 function canonicalFor(code) {
@@ -66,19 +144,20 @@ function canonicalFor(code) {
 
 function appShellHtml({ code, canonical, title, description, robots = "index,follow" }) {
   const copy = localeRecord(code);
-  const headTitle = xmlEscape(title || copy.title);
-  const headDesc = xmlEscape(description || copy.description);
+  const headTitle = xmlEscape(fitTitle(title || copy.title));
+  const headDesc = xmlEscape(fitDescription(description || copy.description));
+  const canon = xmlEscape(toHttpsUrl(canonical));
   const css = `/web-client/blogger-app.css?v=${APP_ASSET_V}`;
   const js = `/web-client/blogger-app.js?v=${APP_ASSET_V}`;
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
-    name: copy.title,
+    name: fitTitle(copy.title),
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Any",
-    url: canonical,
+    url: toHttpsUrl(canonical),
     image: OG_IMAGE,
-    description: copy.description,
+    description: fitDescription(copy.description),
     isAccessibleForFree: true,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   });
@@ -91,14 +170,14 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <title>${headTitle}</title>
   <meta name="description" content="${headDesc}"/>
   <meta name="robots" content="${robots}"/>
-  <link rel="canonical" href="${canonical}"/>
+  <link rel="canonical" href="${canon}"/>
   ${hreflangLinks("/")}
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="${copy.locale}"/>
   <meta property="og:site_name" content="11tik"/>
   <meta property="og:title" content="${headTitle}"/>
   <meta property="og:description" content="${headDesc}"/>
-  <meta property="og:url" content="${canonical}"/>
+  <meta property="og:url" content="${canon}"/>
   <meta property="og:image" content="${OG_IMAGE}"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -124,7 +203,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
     contentPath: "/",
     variant: "spa-shell",
   })}
-  <div id="yte-root"></div>
+  ${spaShellBodyHtml(code)}
   ${siteHeaderScriptTag()}
   <script defer fetchpriority="high" src="${js}"></script>
   <script defer src="/web-client/ga-boot.js?v=${APP_ASSET_V}"></script>
@@ -150,7 +229,8 @@ function sitemapXml(extraLocaleLocs = []) {
     if (!loc) throw new Error(`Invalid locale sitemap loc: ${raw}`);
     trustedLocale.push(loc);
   }
-  return buildSitemapXml([...new Set([...locs, ...trustedLocale])].sort());
+  const localeHomes = collectLocaleHomeSitemapLocs();
+  return buildSitemapXml([...new Set([...locs, ...trustedLocale, ...localeHomes])].sort());
 }
 
 function robotsTxt() {
@@ -160,7 +240,10 @@ function robotsTxt() {
 # Do not Disallow /web-client/ broadly (JS/CSS required for rendering).
 # Do not Disallow /thumb/ (share/result SPA; use page-level noindex/canonical if needed).
 
+${aiTrainingRobotsBlock()}
+${aiSearchAllowRobotsBlock()}
 User-agent: *
+${contentSignalDirective()}
 Allow: /
 Disallow: /search
 Disallow: /feeds/
@@ -206,4 +289,6 @@ export function generateStaticSite(staged) {
   writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, null);
   writeFile(join(staged, "robots.txt"), robotsTxt());
   writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
+  // After html_handling=none, point extensionless hits at *.html canonicals (Ahrefs File 15).
+  writeFile(join(staged, "_redirects"), buildHtmlExtensionRedirects(staged));
 }

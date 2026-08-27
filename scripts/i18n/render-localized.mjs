@@ -1,4 +1,6 @@
 import { RTL_CODES } from "../../workers/iso6391.js";
+import { protectEmailsInHtml } from "../../workers/email-obfuscation.js";
+import { fitDescription, fitTitle, toHttpsUrl } from "../../workers/html-meta.js";
 import { localizeInternalLinksInHtml } from "./internal-links.mjs";
 import {
   localeHomeUrl,
@@ -59,6 +61,36 @@ function attrEscape(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
+}
+
+function normalizeHeadingText(value) {
+  return String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+/**
+ * Page templates already emit one document <h1>. Utility/article section HTML often
+ * still includes the source <h1> (and extract may repeat it as an <h2> heading).
+ * Strip duplicates; demote any other nested H1 to H2 so Ahrefs sees a single H1.
+ */
+export function stripNestedDocumentH1(html, pageH1) {
+  const pageNorm = normalizeHeadingText(pageH1);
+  return String(html || "")
+    .replace(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi, (_, inner) => {
+      const text = normalizeHeadingText(inner);
+      if (!text || (pageNorm && text === pageNorm)) return "";
+      return `<h2>${inner}</h2>`;
+    })
+    .replace(/^\s+|\s+$/g, "");
+}
+
+function headingsMatch(a, b) {
+  const left = normalizeHeadingText(a);
+  const right = normalizeHeadingText(b);
+  return Boolean(left && right && left === right);
 }
 
 /**
@@ -162,19 +194,23 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
     const withAlts = applyLocalizedImageMetadata(html, images);
     return pathLinkIndex ? localizeInternalLinksInHtml(withAlts, locale, pathLinkIndex) : withAlts;
   };
-  const title = xmlEscape(artifact.title);
-  const description = xmlEscape(artifact.description);
-  const ogTitle = xmlEscape(artifact.ogTitle || artifact.title);
-  const ogDescription = xmlEscape(artifact.ogDescription || artifact.description);
+  const title = xmlEscape(fitTitle(artifact.title));
+  const description = xmlEscape(fitDescription(artifact.description));
+  const ogTitle = xmlEscape(fitTitle(artifact.ogTitle || artifact.title));
+  const ogDescription = xmlEscape(fitDescription(artifact.ogDescription || artifact.description));
+  const canonHref = xmlEscape(toHttpsUrl(canonical));
   const hero =
     images[0] || {
       src: "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
       alt: artifact.imageAlt || "",
     };
+  const pageH1 = artifact.h1 || "";
   const sectionsHtml = (artifact.sections || [])
     .map((section) => {
-      const heading = section.heading ? `<h2>${xmlEscape(section.heading)}</h2>` : "";
-      return `${heading}\n${localize(section.html || "")}`;
+      const skipHeading = !section.heading || headingsMatch(section.heading, pageH1);
+      const heading = skipHeading ? "" : `<h2>${xmlEscape(section.heading)}</h2>`;
+      const body = stripNestedDocumentH1(localize(section.html || ""), pageH1);
+      return [heading, body].filter(Boolean).join("\n");
     })
     .join("\n");
   const faqHtml = (artifact.faq || [])
@@ -201,7 +237,7 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
         name: artifact.h1,
         description: artifact.description,
         inLanguage: locale,
-        mainEntityOfPage: canonical,
+        mainEntityOfPage: toHttpsUrl(canonical),
         author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/p/about.html" },
         publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
         image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
@@ -209,8 +245,12 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
       ...(faqLd.length ? [{ "@type": "FAQPage", mainEntity: faqLd }] : []),
     ],
   };
+  const conclusionHtml = stripNestedDocumentH1(localize(artifact.conclusionHtml || ""), pageH1);
+  const bioInner = artifact.bioHtml
+    ? stripNestedDocumentH1(localize(artifact.bioHtml), pageH1)
+    : "";
 
-  return `<!DOCTYPE html>
+  return protectEmailsInHtml(`<!DOCTYPE html>
 <html lang="${xmlEscape(locale)}" dir="${dir}">
 <head>
   <meta charset="utf-8"/>
@@ -218,14 +258,14 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   <title>${title}</title>
   <meta name="description" content="${description}"/>
   <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="${xmlEscape(canonical)}"/>
+  <link rel="canonical" href="${canonHref}"/>
   ${buildHreflangLinks({ englishUrl: item.canonicalUrl, alternates })}
   <meta property="og:type" content="${item.type === "utility" ? "website" : "article"}"/>
   <meta property="og:locale" content="${xmlEscape(`${locale}_${locale.toUpperCase()}`)}"/>
   <meta property="og:site_name" content="11tik"/>
   <meta property="og:title" content="${ogTitle}"/>
   <meta property="og:description" content="${ogDescription}"/>
-  <meta property="og:url" content="${xmlEscape(canonical)}"/>
+  <meta property="og:url" content="${canonHref}"/>
   <meta property="og:image" content="${xmlEscape(hero.src)}"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="${ogTitle}"/>
@@ -248,11 +288,11 @@ ${siteHeaderBodyOpen({
   <p itemprop="description">${description}</p>
   ${sectionsHtml}
   ${faqHtml ? `<h2>${xmlEscape(artifact.faqHeading || "FAQ")}</h2>\n${faqHtml}` : ""}
-  ${localize(artifact.conclusionHtml || "")}
-  ${artifact.bioHtml ? `<p class="yte-bio">${localize(artifact.bioHtml)}</p>` : ""}
+  ${conclusionHtml}
+  ${bioInner ? `<p class="yte-bio">${bioInner}</p>` : ""}
 </article>
 ${siteHeaderBodyClose()}
 </body>
 </html>
-`;
+`);
 }

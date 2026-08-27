@@ -1,9 +1,9 @@
-import { clipDescription } from "./html-meta.js";
+import { fitDescription } from "./html-meta.js";
 
-/** Unique search snippets (≤150 chars) for www posts and static pages. Home stays in the theme. */
+/** Unique search snippets (120–150 chars) for www posts and static pages. Home stays in the theme. */
 export const POST_DESCRIPTIONS = {
   "/p/about.html":
-    "11tik publishes the free in-browser YouTube thumbnail extractor. Public stills only. No account and no video download.",
+    "11tik publishes the free in-browser YouTube thumbnail extractor. Public stills only — no account, no video download, copyright stays with the uploader.",
   "/p/privacy.html":
     "11tik processes pasted URLs in your browser. Optional analytics use the 11tik.com cookie domain. Original thumbnail files are not stored.",
   "/p/terms-of-use.html":
@@ -13,15 +13,15 @@ export const POST_DESCRIPTIONS = {
   "/p/embed.html":
     "Embed a free YouTube thumbnail extractor iframe on your site. No API key. Keep id=yte-app so the widget can resize itself.",
   "/p/keyword-tools.html":
-    "Open the 11tik extractor with a ready intro for common YouTube thumbnail search topics.",
+    "Open the 11tik extractor with a ready intro for common YouTube thumbnail search topics, then paste a public URL to download the best available still.",
   "/p/how-to-download-youtube-thumbnail.html":
-    "Paste a public YouTube URL into 11tik and download the highest public still that exists. No app and no video file.",
+    "Paste a public YouTube URL into 11tik and download the highest public still that exists. No app install and no video file download.",
   "/p/youtube-thumbnail-url.html":
     "Copy a working YouTube thumbnail URL from i.ytimg.com after 11tik confirms the file exists. Guessed maxres links often 404.",
   "/p/youtube-thumbnail-size.html":
-    "YouTube thumbnail sizes in 2026: default, mq, hq, sd, and maxresdefault when published. 11tik lists only real files.",
+    "YouTube thumbnail sizes in 2026: default, mq, hq, sd, and maxresdefault when published. 11tik lists only real public files.",
   "/p/youtube-shorts-thumbnail.html":
-    "Download a public YouTube Shorts thumbnail in the browser. Same image hosts as watch URLs. No video download.",
+    "Download a public YouTube Shorts thumbnail in the browser. Same image hosts as watch URLs — stills only, no video download.",
   "/2026/08/how-to-download-youtube-thumbnail.html":
     "Save a public YouTube thumbnail still: paste watch, Shorts, youtu.be, or embed URLs into 11tik and download the largest file that exists.",
   "/2026/08/youtube-thumbnail-url.html":
@@ -31,21 +31,21 @@ export const POST_DESCRIPTIONS = {
   "/2026/08/youtube-shorts-thumbnail-download.html":
     "Download a YouTube Shorts thumbnail in the browser. Shorts use the same public stills as watch URLs. The file is often landscape.",
   "/2026/08/highest-quality-youtube-thumbnail.html":
-    "Highest quality means the largest public JPEG or WebP YouTube actually returns, not a guessed 4K filename.",
+    "Highest quality means the largest public JPEG or WebP YouTube actually returns for that video — not a guessed 4K filename.",
   "/2026/08/original-youtube-thumbnail-image.html":
     "Get the original public YouTube thumbnail YouTube already hosts. This is the CDN still, not a frame ripped from the video.",
   "/2026/08/what-is-maxresdefaultjpg-when-youtube.html":
-    "maxresdefault.jpg is usually 1280×720 when published. A 404 is normal—use the next real public still 11tik validates.",
+    "maxresdefault.jpg is usually 1280×720 when published. A 404 is normal — use the next real public still 11tik validates.",
   "/2026/08/how-to-batch-download-youtube.html":
-    "Batch download public YouTube thumbnails: up to 25 URLs per run on 11tik Bulk, then zip or save each best still.",
+    "Batch download public YouTube thumbnails: up to 25 URLs per run on 11tik Bulk, then zip or save each best available still.",
   "/2026/08/screenshot-vs-real-youtube-thumbnail.html":
-    "A player screenshot is not the YouTube thumbnail. Save the public still on i.ytimg.com instead of a phone capture.",
+    "A player screenshot is not the YouTube thumbnail. Save the public still on i.ytimg.com instead of a phone or desktop capture.",
   "/2026/08/thumbnail-extractor-vs-maker.html":
-    "An extractor saves the public still YouTube hosts. A maker creates original art. 11tik is an extractor only.",
+    "An extractor saves the public still YouTube hosts. A maker creates original art. 11tik is an extractor only — stills, not video.",
   "/2026/08/youtube-studio-thumbnail-2026.html":
-    "How custom thumbnails work in YouTube Studio in 2026, and how to confirm the public files with 11tik.",
+    "How custom thumbnails work in YouTube Studio in 2026, and how to confirm the public CDN files afterward with 11tik.",
   "/2026/08/how-to-save-youtube-thumbnail-on-iphone.html":
-    "Save a public YouTube thumbnail on iPhone or Android in Safari or Chrome. No app store downloader.",
+    "Save a public YouTube thumbnail on iPhone or Android in Safari or Chrome. No app-store downloader and no video file.",
   "/2026/08/how-to-use-youtube-thumbnail-as-blog.html":
     "Confirm a YouTube still, then host it for WordPress, Blogger, or og:image. Avoid hotlinking a guessed maxres URL.",
   "/2026/08/how-to-extract-thumbnails-from-youtube.html":
@@ -55,18 +55,18 @@ export const POST_DESCRIPTIONS = {
   "/2026/08/youtube-thumbnail-not-appearing-private.html":
     "When no public YouTube still loads, the video may be private, restricted, processing, or deleted—not merely a missing maxres filename.",
   "/2026/08/11tik-share-links-thumb-vs-youtube.html":
-    "11tik /thumb/{id} is a share result page. It is not a YouTube watch URL and not a direct i.ytimg.com image file.",
+    "11tik /thumb/{id} is a share result page. It is not a YouTube watch URL and not a direct i.ytimg.com image file link.",
   "/2026/08/youtube-live-premiere-thumbnail-download.html":
     "Paste a public YouTube live or premiere URL into 11tik to save the cover still before go-live, during LIVE, or after archive.",
 };
 
 export function descriptionForPath(pathname) {
   const path = String(pathname || "").replace(/\/+$/, "") || "/";
-  if (POST_DESCRIPTIONS[path]) return clipDescription(POST_DESCRIPTIONS[path]);
+  if (POST_DESCRIPTIONS[path]) return fitDescription(POST_DESCRIPTIONS[path]);
   const base = path.split("/").pop();
   if (!base) return "";
   for (const [key, value] of Object.entries(POST_DESCRIPTIONS)) {
-    if (key.endsWith(`/${base}`)) return clipDescription(value);
+    if (key.endsWith(`/${base}`)) return fitDescription(value);
   }
   return "";
 }

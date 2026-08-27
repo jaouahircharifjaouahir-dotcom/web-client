@@ -12,11 +12,14 @@ import {
   SITE_ORIGIN,
   buildSitemapXml,
   collectCanonicalSitemapLocs,
+  collectLocaleHomeSitemapLocs,
   loadGuidePostHrefsFromFile,
+  normalizeLocaleHomeSitemapLoc,
   normalizeSitemapLoc,
   normalizeTrustedLocaleSitemapLoc,
   parseSitemapLocs,
 } from "../../workers/sitemap-canonicals.js";
+import { ISO6391 } from "../../workers/iso6391.js";
 
 function locsFromGeneratedSite() {
   const dir = mkdtempSync(join(tmpdir(), "11tik-sitemap-"));
@@ -46,6 +49,21 @@ describe("sitemap canonical inventory", () => {
     ).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
     expect(normalizeTrustedLocaleSitemapLoc("https://fr.11tik.com/l/fr/")).toBeNull();
     expect(normalizeTrustedLocaleSitemapLoc("https://example.com/l/fr/2026/08/x.html")).toBeNull();
+  });
+
+  it("normalizes and collects every non-English locale home", () => {
+    expect(normalizeLocaleHomeSitemapLoc("https://fr.11tik.com/l/fr/")).toBe("https://fr.11tik.com/l/fr/");
+    expect(normalizeLocaleHomeSitemapLoc("https://fr.11tik.com/l/fr")).toBe("https://fr.11tik.com/l/fr/");
+    expect(normalizeLocaleHomeSitemapLoc("https://www.11tik.com/")).toBeNull();
+    expect(normalizeLocaleHomeSitemapLoc("https://en.11tik.com/l/en/")).toBeNull();
+    expect(
+      normalizeLocaleHomeSitemapLoc("https://fr.11tik.com/l/fr/2026/08/how-to-download-youtube-thumbnail.html"),
+    ).toBeNull();
+    const homes = collectLocaleHomeSitemapLocs();
+    expect(homes).toHaveLength(ISO6391.length - 1);
+    expect(homes).toContain("https://fr.11tik.com/l/fr/");
+    expect(homes).toContain("https://ar.11tik.com/l/ar/");
+    expect(homes.some((loc) => loc.includes("en.11tik.com"))).toBe(false);
   });
 
   it("does not treat POST_DESCRIPTIONS keys as sitemap membership", () => {
@@ -80,15 +98,22 @@ describe("sitemap canonical inventory", () => {
     expect(locs).toContain(`${SITE_ORIGIN}/p/keyword-tools.html`);
   });
 
-  it("has no duplicates; includes all ready target-language localized URLs", () => {
+  it("has no duplicates; includes locale homes and all ready localized article URLs", () => {
     const locs = locsFromGeneratedSite();
     const manifest = scanPublishability();
+    const homes = collectLocaleHomeSitemapLocs();
     expect(new Set(locs).size).toBe(locs.length);
-    const localeLocs = locs.filter((loc) => /\/l\/[a-z]{2,3}\//.test(loc));
-    expect(localeLocs.length).toBe(manifest.counts.ready);
-    expect(localeLocs.length).toBeGreaterThanOrEqual(851);
-    for (const loc of localeLocs) {
-      expect(loc).toMatch(/^https:\/\/[a-z]{2,3}\.11tik\.com\/l\/[a-z]{2,3}\//);
+    for (const home of homes) {
+      expect(locs).toContain(home);
+    }
+    const localeArticleLocs = locs.filter(
+      (loc) => /https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/.+\.html$/.test(loc),
+    );
+    expect(localeArticleLocs.length).toBe(manifest.counts.ready);
+    // Ready count tracks inventory×locales minus stale/missing (not a frozen 851).
+    expect(localeArticleLocs.length).toBeGreaterThan(0);
+    for (const loc of localeArticleLocs) {
+      expect(loc).toMatch(/^https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\//);
       expect(loc.includes("?")).toBe(false);
     }
     for (const loc of locs.filter((l) => l.startsWith("https://www.11tik.com"))) {

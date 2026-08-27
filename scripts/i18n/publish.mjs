@@ -1,4 +1,4 @@
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { buildContentInventory, localizableContent } from "./content-inventory.mjs";
 import {
@@ -10,7 +10,10 @@ import {
 import { resolvePublishState } from "./validate-artifact.mjs";
 import { renderLocalizedHtml } from "./render-localized.mjs";
 import { buildPathLinkIndex } from "./internal-links.mjs";
-import { normalizeTrustedLocaleSitemapLoc } from "../../workers/sitemap-canonicals.js";
+import {
+  normalizeLocaleHomeSitemapLoc,
+  normalizeTrustedLocaleSitemapLoc,
+} from "../../workers/sitemap-canonicals.js";
 import { getTargetLocales } from "./target-languages.mjs";
 
 export const PUBLISH_MANIFEST_REL = join("web-client", "i18n", "publishability.json");
@@ -135,7 +138,29 @@ export function writePublishabilityManifest(writeFile, staged, manifest = scanPu
   return compact;
 }
 
+/**
+ * Drop previously generated localized article/utility HTML so stale/unpublished
+ * pages cannot linger when the ready set shrinks (deterministic publication).
+ * Locale SPA shells (`l/{lang}/index.html`) are left for generateStaticSite.
+ */
+export function wipeStaleLocalizedContentPages(staged) {
+  const lRoot = join(staged, "l");
+  if (!existsSync(lRoot)) return { removedRoots: 0 };
+  let removedRoots = 0;
+  for (const code of readdirSync(lRoot, { withFileTypes: true })) {
+    if (!code.isDirectory()) continue;
+    for (const sub of ["2026", "p"]) {
+      const target = join(lRoot, code.name, sub);
+      if (!existsSync(target)) continue;
+      rmSync(target, { recursive: true, force: true });
+      removedRoots += 1;
+    }
+  }
+  return { removedRoots };
+}
+
 export function writeReadyLocalizedPages(writeFile, staged, inventory = buildContentInventory()) {
+  wipeStaleLocalizedContentPages(staged);
   const manifest = scanPublishability(inventory);
   const pathLinkIndex = buildPathLinkIndex(manifest.contents);
   const written = [];
@@ -165,13 +190,19 @@ export function writeReadyLocalizedPages(writeFile, staged, inventory = buildCon
 export function assertLocaleSitemapLocsHaveFiles(staged, locs) {
   const missing = [];
   for (const loc of locs) {
-    const normalized = normalizeTrustedLocaleSitemapLoc(loc);
-    if (!normalized) {
-      missing.push(loc);
+    const article = normalizeTrustedLocaleSitemapLoc(loc);
+    if (article) {
+      const rel = new URL(article).pathname.replace(/^\//, "");
+      if (!existsSync(join(staged, rel))) missing.push(loc);
       continue;
     }
-    const rel = new URL(normalized).pathname.replace(/^\//, "");
-    if (!existsSync(join(staged, rel))) missing.push(loc);
+    const home = normalizeLocaleHomeSitemapLoc(loc);
+    if (home) {
+      const code = new URL(home).hostname.split(".")[0];
+      if (!existsSync(join(staged, "l", code, "index.html"))) missing.push(loc);
+      continue;
+    }
+    missing.push(loc);
   }
   if (missing.length) throw new Error(`Locale sitemap locs without generated files: ${missing.join(", ")}`);
 }

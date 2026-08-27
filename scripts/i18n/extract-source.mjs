@@ -106,6 +106,7 @@ function parseJsonLd(html) {
     const graph = doc["@graph"] || [doc];
     const article = graph.find((n) => n["@type"] === "Article" || n["@type"]?.includes?.("Article"));
     const faqPage = graph.find((n) => n["@type"] === "FAQPage");
+    const howTo = graph.find((n) => n["@type"] === "HowTo");
     const faq =
       faqPage?.mainEntity?.map((q) => ({
         question: q.name,
@@ -115,6 +116,10 @@ function parseJsonLd(html) {
     return {
       title: article?.headline || "",
       description: article?.description || "",
+      datePublished: article?.datePublished || "",
+      dateModified: article?.dateModified || "",
+      image: article?.image || null,
+      howTo: howTo || null,
       faq,
     };
   } catch {
@@ -142,6 +147,13 @@ function sanitizeContentHtml(html) {
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, "")
     .replace(/<\s*(iframe|object|embed|link|meta|base)\b[^>]*>/gi, "")
     .replace(/\son[a-z]+\s*=\s*(['"]).*?\1/gi, "")
+    .trim();
+}
+
+/** Drop document H1 from body fragments — renderer emits a single page-level H1. */
+function stripDocumentH1(html) {
+  return String(html || "")
+    .replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/gi, "")
     .trim();
 }
 
@@ -195,7 +207,10 @@ export function extractStructuredSource(html, { contentType = "article" } = {}) 
       const h = s.heading.toLowerCase();
       return h !== "faq" && h !== "conclusion";
     })
-    .map((s) => ({ heading: s.heading, html: sanitizeContentHtml(s.html) }));
+    .map((s) => ({
+      heading: s.heading,
+      html: sanitizeContentHtml(stripDocumentH1(s.html)),
+    }));
 
   const faq = extractFaq(inner, jsonLd).map((item) => ({
     ...item,
@@ -209,12 +224,25 @@ export function extractStructuredSource(html, { contentType = "article" } = {}) 
     ? trimConclusionHtml(`<h2>${conclusionParts[0].heading}</h2>\n${conclusionParts[0].html}`)
     : "";
 
+  const datePublished =
+    jsonLd.datePublished ||
+    firstMatch(inner, /<time\b[^>]*itemprop=["']datePublished["'][^>]*datetime=["']([^"']+)["']/i) ||
+    firstMatch(inner, /<time\b[^>]*datetime=["']([^"']+)["'][^>]*itemprop=["']datePublished["']/i);
+  const dateModified =
+    jsonLd.dateModified ||
+    firstMatch(inner, /<time\b[^>]*itemprop=["']dateModified["'][^>]*datetime=["']([^"']+)["']/i) ||
+    firstMatch(inner, /<time\b[^>]*datetime=["']([^"']+)["'][^>]*itemprop=["']dateModified["']/i) ||
+    datePublished;
+
   return {
     title: title ? `${title} | 11tik` : "",
     description: desc,
     h1: h1 || title,
     ogTitle: h1 || title,
     ogDescription: ogDesc,
+    datePublished: datePublished || "",
+    dateModified: dateModified || "",
+    howTo: jsonLd.howTo || null,
     imageAlt: hero?.alt || "",
     faqHeading: "FAQ",
     images: images.map((img) => ({
@@ -225,8 +253,16 @@ export function extractStructuredSource(html, { contentType = "article" } = {}) 
     sections: sections.length
       ? sections
       : bodySections.length
-        ? bodySections.map((s) => ({ heading: s.heading, html: sanitizeContentHtml(s.html) }))
-        : [{ heading: title || h1 || "Content", html: sanitizeContentHtml(inner) }],
+        ? bodySections.map((s) => ({
+            heading: s.heading,
+            html: sanitizeContentHtml(stripDocumentH1(s.html)),
+          }))
+        : [
+            {
+              heading: "",
+              html: sanitizeContentHtml(stripDocumentH1(inner)),
+            },
+          ],
     faq: contentType === "article" ? faq : faq.length ? faq : [],
     conclusionHtml,
     bioHtml,

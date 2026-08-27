@@ -2,20 +2,24 @@
   "contentId": "keyword-tools",
   "articleId": "keyword-tools",
   "locale": "ja",
-  "sourceHash": "95f4f53ccddd0edf3bf018dbbf6b74eb0d91855ea756105194b8379ba182f10f",
+  "sourceHash": "57d04494bace3f4f5a218d1424904bfda2c5a679eaac50223c8ca144d224f80e",
   "status": "ready",
   "title": "キーワードツール | 11tik",
-  "description": "各リンクをクリックすると、そのトピックに関する紹介文とともにYouTubeサムネイル抽出ツールが開きます。",
+  "description": "これらのリンクをクリックすると、同じYouTubeサムネイル抽出ツールが開き、そのトピックに関する短いページ内紹介が表示されます。これらは便利なショートカットであり、別のウェブサイトではありません。ランキングはホームページと実際のガイドに表示されています。",
   "h1": "キーワードツール",
   "ogTitle": "キーワードツール",
-  "ogDescription": "各リンクをクリックすると、そのトピックに関する紹介文とともにYouTubeサムネイル抽出ツールが開きます。",
+  "ogDescription": "これらのリンクをクリックすると、同じYouTubeサムネイル抽出ツールが開き、そのトピックに関する短いページ内紹介が表示されます。これらは便利なショートカットであり、別のウェブサイトではありません。ランキングはホームページと実際のガイドに表示されています。",
   "imageAlt": "",
   "faqHeading": "よくある質問",
   "images": [],
   "sections": [
     {
-      "heading": "キーワードツール",
-      "html": "<h1>キーワードツール</h1>\n  <p>各リンクをクリックすると、そのトピックに関する紹介文とともにYouTubeサムネイル抽出ツールが開きます。</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">YouTubeサムネイルダウンローダー</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">YouTubeサムネイルのダウンロード</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">YouTubeショート動画のサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">YouTubeサムネイルURL</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">YouTubeのサムネイルサイズ</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">HD YouTubeサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">maxresdefault サムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">YouTubeライブのサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be サムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">オリジナルのYouTubeサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">YouTubeサムネイルの一括作成</a></li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>\n  </nav>"
+      "heading": "これらのリンクは何をするものですか？",
+      "html": "<p>各URLは<code>k</code>抽出ツールが一致する導入部分を表示できるようにするためのパラメータです。トピック名が分かっている場合に使用してください。検索には、ホームページまたは下記のリンク先の記事を優先してください。</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">YouTubeサムネイルダウンローダー</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">YouTubeサムネイルのダウンロード</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">YouTubeショート動画のサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">YouTubeサムネイルURL</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">YouTubeのサムネイルサイズ</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">HD YouTubeサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">maxresdefault サムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">YouTubeライブのサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be サムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">オリジナルのYouTubeサムネイル</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">YouTubeサムネイルの一括作成</a></li>\n  </ul>"
+    },
+    {
+      "heading": "詳しいガイドはどこで読めばいいですか？",
+      "html": "<p><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロード方法</a>・<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURL</a>・<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズ</a></p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>・<a href=\"https://www.11tik.com/p/about.html\">について</a>\n  </nav>"
     }
   ],
   "faq": [],

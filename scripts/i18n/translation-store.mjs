@@ -17,10 +17,16 @@ export const LEGACY_POC_FR = join(
 
 export const NON_EN_LOCALES = ISO6391.map(([code]) => code).filter((code) => code !== "en");
 
+/**
+ * Normalize English source for hashing / staleness.
+ * Strip Cloudflare email_off transport markers — they are non-semantic and
+ * applied again at HTML emit via protectEmailsInHtml / wrapMailtoWithEmailOff.
+ */
 export function normalizeSource(raw) {
   return `${String(raw || "")
     .replace(/\r\n/g, "\n")
     .replace(/\r/g, "\n")
+    .replace(/<!--\s*\/?\s*email_off\s*-->/gi, "")
     .trim()}\n`;
 }
 

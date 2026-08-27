@@ -40,13 +40,22 @@ describe("robots.txt", () => {
     const body = robotsTxt({ urlShards: 1, imageShards: 1 });
     expect(body).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
     expect(body).not.toContain("sitemap-1.xml");
+    // File 17: do not advertise Blogger sitemap-pages.xml (duplicate page locs).
+    expect(body).not.toContain("sitemap-pages.xml");
+    expect(allPublicSitemapUrls(1, 1)).not.toContain(
+      "https://www.11tik.com/sitemap-pages.xml",
+    );
   });
 
   it("lists the index and every current child sitemap", () => {
     const body = robotsTxt({ urlShards: 2, imageShards: 1, host: "www.11tik.com" });
     expect(body).toContain("User-agent: Googlebot");
     expect(body).toContain("Allow: /");
-    expect(body).not.toMatch(/^Disallow: \/$/m);
+    // Sitewide Allow stays; Disallow: / is only for named AI-training user-agents.
+    expect(body).toMatch(/^User-agent: \*\r?\n(?:Content-Signal:[^\n]*\r?\n)?Allow: \//m);
+    expect(body).not.toMatch(/^User-agent: \*\r?\nDisallow: \/$/m);
+    expect(body).not.toMatch(/^User-agent: Googlebot\r?\nDisallow: \/$/m);
+    expect(body).toMatch(/^User-agent: Amazonbot\r?\nAllow: \//m);
     expect(body).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
     expect(body).toContain("Sitemap: https://www.11tik.com/sitemap-2.xml");
     expect(allPublicSitemapUrls(2, 1).every((loc) => body.includes(`Sitemap: ${loc}`) || body.includes(loc))).toBe(true);

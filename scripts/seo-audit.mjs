@@ -189,8 +189,18 @@ if (live) {
       pass("live-fetch", `${res.status} ${url}${loc ? ` → ${loc}` : ""}`);
       if (url === CANONICAL && res.status !== 200) error("live-home", "Preferred URL did not return 200");
       if (url === "https://11tik.com/" && ![301, 302, 308].includes(res.status)) warn("www-host", "Apex host should redirect to www");
-      if (url === "http://www.11tik.com/" && res.status === 200) {
-        warn("https-redirect", "http://www.11tik.com/ still returns 200. Enable Blogger HTTPS redirect so HTTP is not indexable.");
+      if (url === "http://www.11tik.com/") {
+        // Ahrefs File 18: HTTP 200 HTML page with internal outlinks.
+        if ([301, 302, 307, 308].includes(res.status) && loc.startsWith("https://")) {
+          pass("https-redirect", `http://www.11tik.com/ → ${res.status} ${loc}`);
+        } else if (res.status === 200) {
+          error(
+            "https-redirect",
+            "http://www.11tik.com/ still returns 200. Enable Cloudflare Always Use HTTPS (Ahrefs File 18).",
+          );
+        } else {
+          warn("https-redirect", `Unexpected http homepage status ${res.status} ${loc}`);
+        }
       }
       if (url.endsWith("robots.txt") && res.ok) {
         const body = await res.text();

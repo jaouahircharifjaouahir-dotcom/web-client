@@ -6,7 +6,10 @@ describe("article head descriptions", () => {
   it("injects a unique description after the title", () => {
     const html = "<html><head><title>Demo | 11tik</title></head><body></body></html>";
     const next = upsertHeadDescription(html, "Save a public YouTube thumbnail on iPhone without an app.");
-    expect(next).toContain("<meta content='Save a public YouTube thumbnail on iPhone without an app.' name='description'/>");
+    // upsertHeadDescription runs fitDescription (120–150) before emit.
+    expect(next).toMatch(/name='description'\/>/);
+    expect(next).toContain("Save a public YouTube thumbnail on iPhone without an app.");
+    expect(next).toContain("Free YouTube thumbnail extractor on 11tik");
     expect(next).not.toContain("Download YouTube thumbnails instantly");
   });
 

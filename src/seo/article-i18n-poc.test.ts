@@ -19,6 +19,7 @@ import {
   resolveLocalePublishState,
   shouldRedirectEnArticleToFr,
 } from "../../scripts/article-i18n.mjs";
+import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import { normalizeTrustedLocaleSitemapLoc, parseSitemapLocs } from "../../workers/sitemap-canonicals.js";
 
 const FR_URL = "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html";
@@ -91,7 +92,8 @@ describe("POC French share-links article i18n (regression)", () => {
       const frLocs = locs.filter((loc) => loc === FR_URL);
       expect(frLocs).toHaveLength(1);
       expect(locs).toContain(SHARE_LINKS_EN_HREF);
-      expect(locs.filter((loc) => loc.includes("/l/")).length).toBeGreaterThanOrEqual(851);
+      const ready = scanPublishability().counts.ready;
+      expect(locs.filter((loc) => loc.includes("/l/")).length).toBeGreaterThanOrEqual(ready);
       assertLocaleSitemapLocsHaveFiles(
         dir,
         locs.filter((loc) => loc.includes("/l/")),
@@ -199,7 +201,10 @@ describe("POC French share-links article i18n (regression)", () => {
     const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
     // Phase A: English /2026/* is static; utilities /p/* remain Worker-first for now.
+    // File 22: article *.html stay Worker-zero — html_handling:none is the root fix.
+    expect(wrangler.assets.html_handling).toBe("none");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/l/*");
     expect(wrangler.assets.run_worker_first.some((p) => String(p).includes("/l/"))).toBe(false);

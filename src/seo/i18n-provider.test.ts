@@ -108,10 +108,16 @@ describe("i18n translation provider abstraction (GTX + TARGET_LANGUAGES)", () =>
     expect(plan.rolloutMode).toBe("locale-first");
     if (plan.queue.length >= 2) {
       const firstLocale = plan.queue[0].locale;
-      const sameLocaleBlock = plan.queue.filter((q) => q.locale === firstLocale);
-      expect(sameLocaleBlock.length).toBeGreaterThan(1);
+      const firstOther = plan.queue.findIndex((q) => q.locale !== firstLocale);
+      const sameLocaleBlock =
+        firstOther === -1 ? plan.queue : plan.queue.slice(0, firstOther);
+      expect(sameLocaleBlock.length).toBeGreaterThanOrEqual(1);
       for (const job of sameLocaleBlock) {
         expect(job.locale).toBe(firstLocale);
+      }
+      // Next jobs (if any) must not mix the first locale again after switching.
+      if (firstOther !== -1) {
+        expect(plan.queue.slice(firstOther).every((q) => q.locale !== firstLocale)).toBe(true);
       }
     }
   });

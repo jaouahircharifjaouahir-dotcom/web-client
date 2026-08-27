@@ -22,12 +22,13 @@ Sources (intentional, explicit):
 1. **Homepage** — `https://www.11tik.com/`
 2. **Published blog posts** — every `href` in `src/content/posts.ts` (`GUIDE_POSTS`)
 3. **Indexable utility allowlist** — `INDEXABLE_UTILITY_PATHS` in `workers/sitemap-canonicals.js`
+4. **Locale homes** — every non-English ISO 639-1 shell `https://{xx}.11tik.com/l/{xx}/` (self-canonical, hreflang)
+5. **Ready locale articles/utilities** — publishable translations only (`normalizeTrustedLocaleSitemapLoc`)
 
 Not a source:
 
 - `workers/post-descriptions.js` (`POST_DESCRIPTIONS`) — **metadata only** (description lookup / HTML polishing). A key there must **not** imply sitemap inclusion.
 - Unpublished local HTML under `docs/blogger-pages/`
-- Locale hosts (`ar.11tik.com`, `fr.11tik.com`, …)
 - Query-string or `#fragment` URLs
 
 ### Utility allowlist (current)
@@ -65,7 +66,7 @@ These paths may still exist in `POST_DESCRIPTIONS` for compatibility. They **mus
 - `/search`, feeds, UTM copies
 - Known 404s / abandoned legacy `/p/` article paths
 - Duplicate `<loc>` values
-- Locale subdomain URLs in the www sitemap
+- English locale host `https://en.11tik.com/…` (English stays on www)
 
 ## Blogger `sitemap-pages.xml`
 

@@ -5,7 +5,8 @@
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { clipDescription } from "../../workers/html-meta.js";
+import { fitDescription, fitTitle } from "../../workers/html-meta.js";
+import { protectEmailsInHtml } from "../../workers/email-obfuscation.js";
 import { descriptionForPath } from "../../workers/post-descriptions.js";
 import { extractStructuredSource } from "./extract-source.mjs";
 import { LOCALIZED_PAGE_ICONS, buildHreflangLinks, standardArticleStyleTag } from "./render-localized.mjs";
@@ -35,12 +36,83 @@ function rewriteGithubAssets(html) {
 /**
  * Prefer the content <article class="yte-page"> over any other article in a full Blogger dump.
  * Do not copy source <style> — Blogger theme CSS (max-width:none / 920px shells) must not win.
+ * Strip nested JSON-LD + microdata so the page has one head schema (Ahrefs File 16).
  */
 function extractArticleHtml(raw) {
   const preferred =
     /<article\b[^>]*class=["'][^"']*\byte-page\b[^"']*["'][^>]*>[\s\S]*?<\/article>/i.exec(raw) ||
     /<article\b[^>]*>[\s\S]*?<\/article>/i.exec(raw);
-  return preferred ? rewriteGithubAssets(preferred[0]) : "";
+  if (!preferred) return "";
+  return stripArticleStructuredDataNoise(rewriteGithubAssets(preferred[0]));
+}
+
+/** Remove body JSON-LD / microdata that duplicate the head @graph. */
+export function stripArticleStructuredDataNoise(html) {
+  return String(html || "")
+    .replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/\s+itemscope\b/gi, "")
+    .replace(/\s+itemtype\s*=\s*(["'])[^"']*\1/gi, "")
+    .replace(/\s+itemprop\s*=\s*(["'])[^"']*\1/gi, "");
+}
+
+function decodeEntities(text) {
+  return String(text || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
+}
+
+function buildSchema({ item, canonical, h1, description, hero, structured }) {
+  const schemaType = item.type === "utility" ? "WebPage" : "Article";
+  const cleanH1 = decodeEntities(h1);
+  const cleanDesc = decodeEntities(description);
+  const faqLd = (structured.faq || []).map((faq) => ({
+    "@type": "Question",
+    name: decodeEntities(faq.question),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: decodeEntities(String(faq.answer || "").replace(/<[^>]+>/g, "")),
+    },
+  }));
+  const primary = {
+    "@type": schemaType,
+    headline: cleanH1,
+    name: cleanH1,
+    description: cleanDesc,
+    inLanguage: "en",
+    mainEntityOfPage: canonical,
+    author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/p/about.html" },
+    publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
+    image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
+  };
+  if (structured.datePublished) primary.datePublished = structured.datePublished;
+  if (structured.dateModified || structured.datePublished) {
+    primary.dateModified = structured.dateModified || structured.datePublished;
+  }
+
+  const graph = [primary];
+  if (item.type === "article") {
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.11tik.com/" },
+        { "@type": "ListItem", position: 2, name: cleanH1, item: canonical },
+      ],
+    });
+  }
+  if (structured.howTo && typeof structured.howTo === "object") {
+    const howTo = { ...structured.howTo };
+    delete howTo["@context"];
+    if (howTo.name) howTo.name = decodeEntities(howTo.name);
+    graph.push(howTo);
+  }
+  if (faqLd.length) {
+    graph.push({ "@type": "FAQPage", mainEntity: faqLd });
+  }
+  return { "@context": "https://schema.org", "@graph": graph };
 }
 
 function buildFaviconLinks() {
@@ -53,61 +125,27 @@ function buildFaviconLinks() {
 }
 
 function resolveDescription(pathname, structured) {
-  const mapped = clipDescription(descriptionForPath(pathname) || "");
-  if (mapped.length > 40) return mapped;
-  return clipDescription(structured.description || structured.ogDescription || "");
+  const mapped = fitDescription(descriptionForPath(pathname) || "");
+  if (mapped.length >= 120) return mapped;
+  return fitDescription(structured.description || structured.ogDescription || "");
 }
 
 function resolveTitle(structured, h1, postTitle) {
   const fromPosts = String(postTitle || "").trim();
-  if (fromPosts) return fromPosts.includes("| 11tik") ? fromPosts : `${fromPosts} | 11tik`;
+  if (fromPosts) {
+    return fitTitle(fromPosts.includes("| 11tik") ? fromPosts : `${fromPosts} | 11tik`);
+  }
   const raw = String(structured.title || "").trim();
-  if (raw) return raw.includes("| 11tik") ? raw : `${raw.replace(/\s*\|\s*11tik\s*$/i, "")} | 11tik`;
-  if (h1) return `${h1} | 11tik`;
-  return "11tik";
+  if (raw) {
+    return fitTitle(raw.includes("| 11tik") ? raw : `${raw.replace(/\s*\|\s*11tik\s*$/i, "")} | 11tik`);
+  }
+  if (h1) return fitTitle(`${h1} | 11tik`);
+  return fitTitle("11tik");
 }
 
 /** Prefer theme/default social OG (matches live Blogger) over in-article hero. */
 function resolveOgImage(_rawHtml, _structured) {
   return DEFAULT_OG;
-}
-
-function buildSchema({ item, canonical, h1, description, hero, structured }) {
-  const schemaType = item.type === "utility" ? "WebPage" : "Article";
-  const faqLd = (structured.faq || []).map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: String(faq.answer || "").replace(/<[^>]+>/g, ""),
-    },
-  }));
-  const graph = [
-    {
-      "@type": schemaType,
-      headline: h1,
-      name: h1,
-      description,
-      inLanguage: "en",
-      mainEntityOfPage: canonical,
-      author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/p/about.html" },
-      publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
-      image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
-    },
-  ];
-  if (item.type === "article") {
-    graph.push({
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.11tik.com/" },
-        { "@type": "ListItem", position: 2, name: h1, item: canonical },
-      ],
-    });
-  }
-  if (faqLd.length) {
-    graph.push({ "@type": "FAQPage", mainEntity: faqLd });
-  }
-  return { "@context": "https://schema.org", "@graph": graph };
 }
 
 /**
@@ -129,14 +167,15 @@ export function renderEnglishStaticHtml(item, options = {}) {
   const description = resolveDescription(item.canonicalPath, structured);
   const title = resolveTitle(structured, h1, options.postTitle);
   const ogTitle = options.postTitle || structured.ogTitle || h1;
-  const ogDescription = clipDescription(description);
+  const ogDescription = fitDescription(description);
   const images = Array.isArray(structured.images) ? structured.images : [];
   const bodyHero =
     images.find((img) => String(img.src || "").includes("/images/blog/")) ||
     images[0] ||
     { src: DEFAULT_OG, alt: structured.imageAlt || "" };
   const ogImageSrc = resolveOgImage(raw, structured);
-  const schemaImageSrc = ogImageSrc;
+  // Article JSON-LD: prefer in-article hero; OG meta stays on the default social image.
+  const schemaImageSrc = bodyHero?.src || ogImageSrc;
 
   const alternates = Array.isArray(options.alternates) ? options.alternates : [{ locale: "en", url: canonical }];
   const schema = buildSchema({
@@ -148,7 +187,7 @@ export function renderEnglishStaticHtml(item, options = {}) {
     structured,
   });
 
-  return `<!DOCTYPE html>
+  return protectEmailsInHtml(`<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8"/>
@@ -180,7 +219,7 @@ ${article}
 ${siteHeaderBodyClose()}
 </body>
 </html>
-`;
+`);
 }
 
 export function englishStaticAssetRel(item) {

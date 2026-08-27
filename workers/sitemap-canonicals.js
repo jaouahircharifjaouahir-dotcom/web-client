@@ -3,8 +3,12 @@
  *
  * Blog posts: hrefs from src/content/posts.ts (GUIDE_POSTS) — not POST_DESCRIPTIONS.
  * Utilities: explicit allowlist only.
+ * Locale homes: every ISO 639-1 SPA shell https://{xx}.11tik.com/l/{xx}/ (xx ≠ en).
+ * Locale articles: ready publishable translations only.
  * Metadata (POST_DESCRIPTIONS) is independent and must never drive sitemap locs.
  */
+
+import { ISO6391 } from "./iso6391.js";
 
 export const SITE_ORIGIN = "https://www.11tik.com";
 
@@ -102,6 +106,7 @@ export function collectCanonicalSitemapLocs(input = {}) {
 /**
  * Allow only https://{xx}.11tik.com/l/{xx}/…html (xx ≠ en).
  * Rejects www, apex, arbitrary hosts, and bare locale homes (/l/xx/).
+ * Locale homes are collected separately via collectLocaleHomeSitemapLocs().
  */
 export function normalizeTrustedLocaleSitemapLoc(raw) {
   try {
@@ -120,6 +125,39 @@ export function normalizeTrustedLocaleSitemapLoc(raw) {
   } catch {
     return null;
   }
+}
+
+/**
+ * Allow only https://{xx}.11tik.com/l/{xx}/ (xx ≠ en) — indexable locale SPA homes.
+ */
+export function normalizeLocaleHomeSitemapLoc(raw) {
+  try {
+    const url = new URL(String(raw || ""));
+    if (url.protocol !== "https:") return null;
+    if (url.search || url.hash) return null;
+    const host = url.hostname.toLowerCase();
+    const match = /^([a-z]{2})\.11tik\.com$/.exec(host);
+    if (!match) return null;
+    const code = match[1];
+    if (code === "en") return null;
+    const path = url.pathname.replace(/\/+$/, "") || "/";
+    if (path !== `/l/${code}`) return null;
+    return `https://${code}.11tik.com/l/${code}/`;
+  } catch {
+    return null;
+  }
+}
+
+/** Every non-English ISO 639-1 locale home that generateStaticSite writes. */
+export function collectLocaleHomeSitemapLocs() {
+  const locs = [];
+  for (const [code] of ISO6391) {
+    if (code === "en") continue;
+    const loc = normalizeLocaleHomeSitemapLoc(`https://${code}.11tik.com/l/${code}/`);
+    if (!loc) throw new Error(`Invalid locale home for sitemap: ${code}`);
+    locs.push(loc);
+  }
+  return locs.sort();
 }
 
 export function buildSitemapXml(locs) {

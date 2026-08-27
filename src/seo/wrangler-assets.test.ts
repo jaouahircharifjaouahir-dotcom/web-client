@@ -7,7 +7,12 @@ describe("Workers Static Assets routing", () => {
 
   it("uses official SPA fallback and Worker-first Blogger paths only", () => {
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
+    // Canonical URLs are *.html (sitemap/hreflang/internal links). Do not 307 strip .html.
+    // File 1 / File 22 root fix: html_handling none — no Worker-first for /2026/*.html.
+    expect(wrangler.assets.html_handling).toBe("none");
     expect(wrangler.assets.run_worker_first).toEqual([
+      "/",
+      "/sitemap.xml",
       "/p/*",
       "/feeds/*",
       "/sitemap-pages.xml",
@@ -18,11 +23,16 @@ describe("Workers Static Assets routing", () => {
       "/terms",
       "/contact",
     ]);
-    // Phase A: English /2026/* articles are Static Assets (shadow → cutover).
+    expect(wrangler.assets.binding).toBe("ASSETS");
+    // Phase A: English /2026/* articles are Static Assets (Worker-zero).
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
+    expect(wrangler.assets.run_worker_first).not.toContain("/l/*/2026/*.html");
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/thumb/*");
+    // SPA legal page: must be on the Worker/Assets route map (otherwise www falls through to Blogger 404).
+    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/copyright")).toBe(true);
     expect(wrangler.kv_namespaces).toBeUndefined();
     expect(wrangler.triggers).toBeUndefined();
   });

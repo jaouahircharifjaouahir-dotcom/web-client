@@ -633,7 +633,7 @@ export function legalHrefs(locale: string): {
     contact: utility("contact"),
     embed: utility("embed"),
     keywords: utility("keyword-tools"),
-    copyright: "/copyright",
+    copyright: "https://www.11tik.com/copyright",
     trending: "/trending-tags",
     guide: "/guide/youtube-thumbnails",
     stats: "/stats",

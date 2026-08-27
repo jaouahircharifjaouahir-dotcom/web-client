@@ -2,32 +2,33 @@ import { descriptionForPath } from "./post-descriptions.js";
 
 const PAGES = {
   "/p/about.html": {
-    title: "About 11tik",
+    title: "About 11tik · YouTube Thumbnail Extractor",
     description:
       "11tik is a free in-browser YouTube thumbnail extractor. Public stills only. No account and no video download.",
   },
   "/p/privacy.html": {
-    title: "Privacy · 11tik",
+    title: "Privacy · YouTube Thumbnail Extractor | 11tik",
     description:
       "11tik processes pasted URLs in your browser. Optional analytics use the 11tik.com cookie domain. Thumbnail files are not stored as original media.",
   },
   "/p/terms-of-use.html": {
-    title: "Terms of use · 11tik",
+    title: "Terms of use · YouTube Thumbnail Extractor | 11tik",
     description:
       "Use 11tik with public URLs you may open. The tool is not a license to reuse a thumbnail. Copyright stays with the uploader.",
   },
   "/p/contact.html": {
-    title: "Contact · 11tik",
+    title: "Contact · YouTube Thumbnail Extractor | 11tik",
     description: "Email 11tik at jaouahircharifjaouahir@gmail.com for product questions, privacy requests, or rights notices.",
   },
   "/p/embed.html": {
-    title: "Embed the 11tik extractor",
+    title: "Embed the 11tik YouTube thumbnail extractor",
     description:
       "Embed a free YouTube thumbnail extractor iframe on your site. No API key. Keep id=yte-app so height sync works.",
   },
   "/p/keyword-tools.html": {
-    title: "Keyword tools · 11tik",
-    description: "Open the 11tik extractor with a ready intro for common YouTube thumbnail search topics.",
+    title: "Keyword tools · YouTube Thumbnail Extractor | 11tik",
+    description:
+      "Open the 11tik extractor with a ready intro for common YouTube thumbnail search topics, then paste a public URL to download the best available still.",
   },
   "/copyright": {
     title: "Copyright & usage · 11tik",

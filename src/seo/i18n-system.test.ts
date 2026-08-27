@@ -124,8 +124,13 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
         manifest.counts.ready,
       );
       const locs = parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
-      expect(locs.filter((loc) => loc.includes("/l/"))).toHaveLength(manifest.counts.ready);
-      expect(locs.every((loc) => !loc.includes(".aa.11tik.com") && !loc.includes("/l/aa/"))).toBe(true);
+      const localeArticleLocs = locs.filter((loc) =>
+        /https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/.+\.html$/.test(loc),
+      );
+      expect(localeArticleLocs).toHaveLength(manifest.counts.ready);
+      // Non-target ISO homes (e.g. aa) may appear as /l/aa/ shells, never as .html articles.
+      expect(localeArticleLocs.some((loc) => loc.includes("/l/aa/"))).toBe(false);
+      expect(locs).toContain("https://aa.11tik.com/l/aa/");
       expect(readFileSync(join(dir, "robots.txt"), "utf8")).toContain("Allow: /");
     } finally {
       rmSync(dir, { recursive: true, force: true });

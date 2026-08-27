@@ -5,9 +5,12 @@
   "compatibility_date": "2026-08-21",
   "assets": {
     "directory": "./dist-assets",
-    "html_handling": "auto-trailing-slash",
+    "binding": "ASSETS",
+    "html_handling": "none",
     "not_found_handling": "single-page-application",
     "run_worker_first": [
+      "/",
+      "/sitemap.xml",
       "/p/*",
       "/feeds/*",
       "/sitemap-pages.xml",
@@ -32,6 +35,7 @@
     { "pattern": "www.11tik.com/privacy", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/terms", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/contact", "zone_name": "11tik.com" },
+    { "pattern": "www.11tik.com/copyright", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/thumb/*", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/l/*", "zone_name": "11tik.com" },
     { "pattern": "*.11tik.com/*", "zone_name": "11tik.com" },

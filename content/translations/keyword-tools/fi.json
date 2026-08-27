@@ -2,20 +2,24 @@
   "contentId": "keyword-tools",
   "articleId": "keyword-tools",
   "locale": "fi",
-  "sourceHash": "95f4f53ccddd0edf3bf018dbbf6b74eb0d91855ea756105194b8379ba182f10f",
+  "sourceHash": "57d04494bace3f4f5a218d1424904bfda2c5a679eaac50223c8ca144d224f80e",
   "status": "ready",
   "title": "Avainsanatyökalut | 11tik",
-  "description": "Jokainen linkki avaa YouTube-pikkukuvien poimijan, jossa on kyseisen aiheen johdanto.",
+  "description": "Nämä linkit avaavat saman YouTube-pikkukuvien poimijan, jossa on lyhyt esittely kyseisestä aiheesta. Ne ovat käteviä oikopolkuja, eivät erillisiä verkkosivustoja. Sijoitus pysyy etusivulla ja varsinaisissa oppaissa.",
   "h1": "Avainsanatyökalut",
   "ogTitle": "Avainsanatyökalut",
-  "ogDescription": "Jokainen linkki avaa YouTube-pikkukuvien poimijan, jossa on kyseisen aiheen johdanto.",
+  "ogDescription": "Nämä linkit avaavat saman YouTube-pikkukuvien poimijan, jossa on lyhyt esittely kyseisestä aiheesta. Ne ovat käteviä oikopolkuja, eivät erillisiä verkkosivustoja. Sijoitus pysyy etusivulla ja varsinaisissa oppaissa.",
   "imageAlt": "",
   "faqHeading": "Usein kysytyt kysymykset",
   "images": [],
   "sections": [
     {
-      "heading": "Avainsanatyökalut",
-      "html": "<h1>Avainsanatyökalut</h1>\n  <p>Jokainen linkki avaa YouTube-pikkukuvien poimijan, jossa on kyseisen aiheen johdanto.</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">YouTube-pikkukuvien latausohjelma</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">YouTube-pikkukuvan lataus</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">YouTube Shorts -pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">YouTube-pikkukuvan URL-osoite</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">YouTube-pikkukuvan koko</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">HD YouTube -pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">maxresdefault-pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">YouTube Liven pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">Alkuperäinen YouTube-pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">YouTube-pikkukuvien joukkotallennus</a></li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>\n  </nav>"
+      "heading": "Mitä nämä linkit tekevät?",
+      "html": "<p>Jokainen URL-osoite lisää<code>k</code>parametri, jotta poimija voi näyttää vastaavan johdannon. Käytä niitä, jos tiedät jo aiheen nimen. Hakua varten suosi kotisivua tai alla linkitettyjä artikkeleita.</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">YouTube-pikkukuvien latausohjelma</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">YouTube-pikkukuvan lataus</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">YouTube Shorts -pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">YouTube-pikkukuvan URL-osoite</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">YouTube-pikkukuvan koko</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">HD YouTube -pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">maxresdefault-pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">YouTube Liven pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">Alkuperäinen YouTube-pikkukuva</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">YouTube-pikkukuvien joukkotallennus</a></li>\n  </ul>"
+    },
+    {
+      "heading": "Mistä minun pitäisi lukea täydelliset oppaat?",
+      "html": "<p><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Lataaminen</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Pienoiskuvan URL-osoite</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Koot</a></p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>·<a href=\"https://www.11tik.com/p/about.html\">Noin</a>\n  </nav>"
     }
   ],
   "faq": [],

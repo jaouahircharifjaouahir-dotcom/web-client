@@ -2,20 +2,24 @@
   "contentId": "keyword-tools",
   "articleId": "keyword-tools",
   "locale": "zh",
-  "sourceHash": "95f4f53ccddd0edf3bf018dbbf6b74eb0d91855ea756105194b8379ba182f10f",
+  "sourceHash": "57d04494bace3f4f5a218d1424904bfda2c5a679eaac50223c8ca144d224f80e",
   "status": "ready",
   "title": "关键词工具 | 11tik",
-  "description": "每个链接都会打开 YouTube 缩略图提取器，并显示该主题的简介。",
+  "description": "这些链接会打开同一个 YouTube 缩略图提取器，并附带该主题的简短页面介绍。它们只是便捷的快捷方式，并非独立的网站。排名信息仍然保留在首页和真正的指南页面上。",
   "h1": "关键词工具",
   "ogTitle": "关键词工具",
-  "ogDescription": "每个链接都会打开 YouTube 缩略图提取器，并显示该主题的简介。",
+  "ogDescription": "这些链接会打开同一个 YouTube 缩略图提取器，并附带该主题的简短页面介绍。它们只是便捷的快捷方式，并非独立的网站。排名信息仍然保留在首页和真正的指南页面上。",
   "imageAlt": "",
   "faqHeading": "常问问题",
   "images": [],
   "sections": [
     {
-      "heading": "关键词工具",
-      "html": "<h1>关键词工具</h1>\n  <p>每个链接都会打开 YouTube 缩略图提取器，并显示该主题的简介。</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">YouTube缩略图下载器</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">YouTube缩略图下载</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">YouTube Shorts 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">YouTube缩略图网址</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">YouTube缩略图尺寸</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">高清 YouTube 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">maxresdefault 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">YouTube 直播缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">原 YouTube 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">批量生成 YouTube 缩略图</a></li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>\n  </nav>"
+      "heading": "这些链接是做什么用的？",
+      "html": "<p>每个 URL 都会添加一个<code>k</code>参数以便提取器显示匹配的介绍。如果您已经知道主题名称，请使用此参数。对于搜索，建议使用首页或下方链接的文章。</p>\n  <ul>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-downloader\">YouTube缩略图下载器</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-download\">YouTube缩略图下载</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-shorts-thumbnail\">YouTube Shorts 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-url\">YouTube缩略图网址</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-thumbnail-size\">YouTube缩略图尺寸</a></li>\n    <li><a href=\"https://www.11tik.com/?k=hd-youtube-thumbnail\">高清 YouTube 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=maxresdefault-thumbnail\">maxresdefault 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtube-live-thumbnail\">YouTube 直播缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=youtu-be-thumbnail\">youtu.be 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=original-youtube-thumbnail\">原 YouTube 缩略图</a></li>\n    <li><a href=\"https://www.11tik.com/?k=bulk-youtube-thumbnails\">批量生成 YouTube 缩略图</a></li>\n  </ul>"
+    },
+    {
+      "heading": "我应该在哪里阅读完整指南？",
+      "html": "<p><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">如何下载</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图网址</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">尺寸</a></p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>·<a href=\"https://www.11tik.com/p/about.html\">关于</a>\n  </nav>"
     }
   ],
   "faq": [],

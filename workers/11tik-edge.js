@@ -1,6 +1,9 @@
 import { ISO6391_CODES } from "./iso6391.js";
 import { descriptionForPath } from "./post-descriptions.js";
-import { resolvePageDescription, upsertHeadDescription } from "./html-meta.js";
+import { resolvePageDescription, upsertHeadDescription, upgradeHttpCanonicals } from "./html-meta.js";
+import { protectEmailsInHtml, wrapMailtoWithEmailOff } from "./email-obfuscation.js";
+
+export { wrapMailtoWithEmailOff, protectEmailsInHtml };
 
 const SITE = "https://www.11tik.com";
 const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
@@ -38,6 +41,14 @@ function legalPageRedirect(pathname) {
   return "";
 }
 
+/** /p/about → /p/about.html (Worker-first paths skip Assets `_redirects`). */
+export function extensionlessPPathToHtml(pathname) {
+  const path = String(pathname || "").replace(/\/+$/, "") || "/";
+  if (path.endsWith(".html")) return "";
+  const m = /^\/p\/([a-z0-9-]+)$/i.exec(path);
+  return m ? `/p/${m[1]}.html` : "";
+}
+
 function fetchBlogger(request) {
   const headers = new Headers(request.headers);
   headers.set("x-11tik-pass", "1");
@@ -57,18 +68,21 @@ function bloggerRuntimeStubs() {
 
 async function polishBloggerHtml(response, pathname = "/") {
   const path = String(pathname || "/").replace(/\/+$/, "") || "/";
-  let input = response;
+  let html = await response.text();
+  html = upgradeHttpCanonicals(html);
+  html = protectEmailsInHtml(html);
   if (path !== "/") {
-    const html = await response.text();
     const desc = resolvePageDescription(path, html, descriptionForPath(path));
-    const headers = new Headers(response.headers);
-    headers.set("Cache-Control", "public, max-age=120, must-revalidate");
-    input = new Response(desc ? upsertHeadDescription(html, desc) : html, {
-      status: response.status,
-      statusText: response.statusText,
-      headers,
-    });
+    if (desc) html = upsertHeadDescription(html, desc);
   }
+  const headers = new Headers(response.headers);
+  // no-transform: Cloudflare skips Email Obfuscation on this response.
+  headers.set("Cache-Control", "public, max-age=120, must-revalidate, no-transform");
+  const input = new Response(html, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
   return new HTMLRewriter()
     .on("head", {
       element(el) {
@@ -87,6 +101,9 @@ async function polishBloggerHtml(response, pathname = "/") {
       element(el) {
         const rel = (el.getAttribute("rel") || "").toLowerCase();
         const href = el.getAttribute("href") || "";
+        if (rel === "canonical" && href.startsWith("http://") && href.includes("11tik.com")) {
+          el.setAttribute("href", href.replace(/^http:\/\//i, "https://"));
+        }
         if (rel === "preconnect") {
           if (href.includes("www.11tik.com") || href.includes("i.ytimg.com")) el.remove();
           return;
@@ -96,6 +113,16 @@ async function polishBloggerHtml(response, pathname = "/") {
         }
       },
     })
+    .on("meta[property]", {
+      element(el) {
+        const prop = (el.getAttribute("property") || "").toLowerCase();
+        const content = el.getAttribute("content") || "";
+        if (prop === "og:url" && content.startsWith("http://") && content.includes("11tik.com")) {
+          el.setAttribute("content", content.replace(/^http:\/\//i, "https://"));
+        }
+        rewriteGithubAsset(el, "content");
+      },
+    })
     .on("img[src]", {
       element(el) {
         rewriteGithubAsset(el, "src");
@@ -103,14 +130,32 @@ async function polishBloggerHtml(response, pathname = "/") {
     })
     .on("meta[content]", {
       element(el) {
+        const prop = (el.getAttribute("property") || "").toLowerCase();
+        if (prop === "og:url") return;
         rewriteGithubAsset(el, "content");
       },
     })
     .transform(input);
 }
 
+/**
+ * 301 http → https.
+ * File 17: http sitemap must not be a second 200 listing.
+ * File 18: http homepage must not be a 200 HTML page with internal outlinks.
+ * File 21: http homepage must not be a 200 page carrying a canonical (http or https).
+ */
+export function httpsRedirectIfNeeded(request) {
+  const url = new URL(request.url);
+  if (url.protocol !== "http:") return null;
+  url.protocol = "https:";
+  return Response.redirect(url.toString(), 301);
+}
+
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
+    const httpsRedirect = httpsRedirectIfNeeded(request);
+    if (httpsRedirect) return httpsRedirect;
+
     const url = new URL(request.url);
     const host = url.hostname.toLowerCase();
     const lang = localeHostCode(host);
@@ -118,13 +163,37 @@ export default {
       return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });
     }
 
+    // Assets-backed sitemap must not be reachable as a second http:// sitemap copy.
+    if (url.pathname === "/sitemap.xml" && env?.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
+
+    // Homepage (incl. ?bulk=1 / ?posts=1): Worker-first so http→https always runs here
+    // if zone Always Use HTTPS is ever off (Ahrefs File 18).
+    if (url.pathname === "/" && env?.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
+
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
+      const toHtml = extensionlessPPathToHtml(url.pathname);
+      if (toHtml) {
+        const dest = new URL(toHtml, `${SITE}/`);
+        dest.search = url.search;
+        return Response.redirect(dest.toString(), 301);
+      }
       return polishBloggerHtml(await fetchBlogger(request), url.pathname);
     }
 
     if (host === "www.11tik.com") {
       const legal = legalPageRedirect(url.pathname);
       if (legal) return Response.redirect(legal, 301);
+    }
+
+    // SPA + static assets: /copyright, /thumb/*, /l/*, /2026/*.html, /web-client/*, …
+    // Explicit zone routes (e.g. www.11tik.com/copyright) invoke this Worker; without
+    // ASSETS passthrough the Worker used to hard-404 and Blogger never saw the request.
+    if (env?.ASSETS) {
+      return env.ASSETS.fetch(request);
     }
 
     return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });

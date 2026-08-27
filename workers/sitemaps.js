@@ -1,3 +1,9 @@
+import {
+  aiSearchAllowRobotsBlock,
+  aiTrainingRobotsBlock,
+  contentSignalDirective,
+} from "./ai-training-robots.js";
+
 /** Sitemap protocol cap is 50_000 URLs. Stay under so a new file opens before Google rejects the old one. */
 export const SITEMAP_PAGE_SIZE = 40000;
 export const SITE_ORIGIN = "https://www.11tik.com";
@@ -65,8 +71,10 @@ export function childSitemapUrls(kind, count, origin = SITE_ORIGIN) {
 }
 
 export function allPublicSitemapUrls(urlShards = 1, imageShards = 1, origin = SITE_ORIGIN) {
-  const urls = [`${origin}/sitemap.xml`, `${origin}/image-sitemap.xml`];
-  if (origin === SITE_ORIGIN) urls.push(`${SITE_ORIGIN}/sitemap-pages.xml`);
+  // Single canonical page sitemap only (https). Do not also list sitemap-pages.xml —
+  // it duplicates /p/* locs and Ahrefs flags "page in multiple sitemaps".
+  const urls = [`${origin}/sitemap.xml`];
+  if (imageShards >= 1) urls.push(`${origin}/image-sitemap.xml`);
   if (urlShards > 1) urls.push(...childSitemapUrls("pages", urlShards, origin));
   if (imageShards > 1) {
     urls.push(`${origin}/sitemap-images.xml`, ...childSitemapUrls("images", imageShards, origin));
@@ -82,6 +90,8 @@ export function robotsTxt({ urlShards = 1, imageShards = 1 } = {}) {
 # Clear crawl rules for the YouTube Thumbnail Extractor.
 # New sitemap files are listed here automatically when a file fills up.
 
+${aiTrainingRobotsBlock()}
+${aiSearchAllowRobotsBlock()}
 User-agent: Googlebot
 Allow: /
 Disallow: /search
@@ -104,6 +114,7 @@ Disallow: /hold-queue
 Disallow: /web-client/hold-queue.json
 
 User-agent: *
+${contentSignalDirective()}
 Allow: /
 Disallow: /search
 Disallow: /search?

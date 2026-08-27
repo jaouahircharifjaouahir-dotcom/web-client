@@ -8,6 +8,7 @@ import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import {
   LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP,
   collectCanonicalSitemapLocs,
+  collectLocaleHomeSitemapLocs,
   parseSitemapLocs,
 } from "../../workers/sitemap-canonicals.js";
 
@@ -29,13 +30,19 @@ describe("build-time static site", () => {
 
       expect(home).toContain('lang="en"');
       expect(home).toContain('rel="canonical" href="https://www.11tik.com/"');
+      expect(home).toMatch(/<div id="yte-root"><h1>[^<]+<\/h1><p>/);
+      expect(home).toContain("<h1>YouTube Thumbnail Extractor</h1>");
+      expect(home).toContain("yte-shell-guides");
       expect(ar).toContain('lang="ar"');
       expect(ar).toContain('dir="rtl"');
       expect(ar).toContain('rel="canonical" href="https://ar.11tik.com/l/ar/"');
       expect(ar).toContain('hreflang="ar" href="https://ar.11tik.com/l/ar/"');
+      expect(ar).toMatch(/<div id="yte-root"><h1>[^<]+<\/h1><p>/);
       expect(fr).toContain('lang="fr"');
       expect(fr).toContain('rel="canonical" href="https://fr.11tik.com/l/fr/"');
       expect(fr).not.toContain('rel="canonical" href="https://fr.11tik.com/"');
+      expect(fr).toContain("<h1>Extracteur de miniatures YouTube</h1>");
+      expect(fr).toContain("yte-shell-guides");
       expect(robots).toContain("User-agent: *");
       expect(robots).toContain("Allow: /");
       expect(robots).toContain("Disallow: /search");
@@ -43,6 +50,13 @@ describe("build-time static site", () => {
       expect(robots).toContain("Disallow: /hold-queue");
       expect(robots).toContain("Disallow: /web-client/hold-queue.json");
       expect(robots).toContain("Disallow: /web-client/__extracts.json");
+      expect(robots).toContain("User-agent: GPTBot");
+      expect(robots).toContain("User-agent: DeepseekBot");
+      expect(robots).toContain("User-agent: anthropic-ai");
+      expect(robots).toContain("User-agent: xAI-Bot");
+      expect(robots).toContain("User-agent: Amazonbot");
+      expect(robots).toMatch(/^User-agent: Amazonbot\r?\nAllow: \//m);
+      expect(robots).toContain("Content-Signal: search=yes,ai-train=no,use=reference");
       expect(robots).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
       expect(robots).not.toMatch(/^Host:/m);
       expect(robots).not.toContain("Disallow: /search?");
@@ -58,15 +72,23 @@ describe("build-time static site", () => {
       expect(sitemap).toContain("https://www.11tik.com/");
       expect(sitemap).toContain("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
       expect(sitemap).toContain("https://ar.11tik.com/l/ar/2026/08/how-to-download-youtube-thumbnail.html");
-      expect(locs).toHaveLength(englishLocs.length + manifest.counts.ready);
-      expect(locs.filter((loc) => loc.includes("/l/"))).toHaveLength(manifest.counts.ready);
+      expect(locs).toHaveLength(englishLocs.length + manifest.counts.ready + collectLocaleHomeSitemapLocs().length);
+      expect(locs.filter((loc) => /https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/.+\.html$/.test(loc))).toHaveLength(
+        manifest.counts.ready,
+      );
+      expect(locs).toContain("https://fr.11tik.com/l/fr/");
+      expect(locs).toContain("https://ar.11tik.com/l/ar/");
       expect(existsSync(join(dir, "l", "fr", "2026", "08", "11tik-share-links-thumb-vs-youtube.html"))).toBe(
         true,
       );
       for (const path of LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP) {
         expect(sitemap).not.toContain(path);
       }
-      expect(existsSync(join(dir, "_redirects"))).toBe(false);
+      expect(existsSync(join(dir, "_redirects"))).toBe(true);
+      const redirects = readFileSync(join(dir, "_redirects"), "utf8");
+      expect(redirects).toContain(
+        "/2026/08/youtube-thumbnail-url /2026/08/youtube-thumbnail-url.html 301",
+      );
       expect(existsSync(join(dir, "thumb", "index.html"))).toBe(false);
       expect(existsSync(join(dir, "utility", "thumb", "index.html"))).toBe(false);
     } finally {

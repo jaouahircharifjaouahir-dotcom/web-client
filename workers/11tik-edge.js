@@ -175,6 +175,11 @@ export default {
       return env.ASSETS.fetch(request);
     }
 
+    // IndexNow ownership key — Worker-first Assets so SPA fallback / Blogger never wrap it.
+    if (url.pathname === "/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt" && env?.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
+
     // Homepage (incl. ?bulk=1 / ?posts=1): Worker-first so http→https always runs here
     // if zone Always Use HTTPS is ever off (Ahrefs File 18).
     if (url.pathname === "/" && env?.ASSETS) {

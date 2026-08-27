@@ -30,6 +30,7 @@ import {
 import { writeLocaleCatalogs } from "./i18n/write-locale-catalogs.mjs";
 import { buildHtmlExtensionRedirects } from "./html-extension-redirects.mjs";
 import { ahrefsAnalyticsHeadTag } from "./i18n/ahrefs-analytics.mjs";
+import { indexNowKeyBody, indexNowKeyFilename } from "./i18n/indexnow-key.mjs";
 import {
   localeHomeUrl as headerLocaleHomeUrl,
   renderSiteHeaderHtml,
@@ -291,6 +292,8 @@ export function generateStaticSite(staged) {
   writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, null);
   writeFile(join(staged, "robots.txt"), robotsTxt());
   writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
+  // IndexNow ownership key at site root (plain text only).
+  writeFile(join(staged, indexNowKeyFilename()), indexNowKeyBody());
   // After html_handling=none, point extensionless hits at *.html canonicals (Ahrefs File 15).
   writeFile(join(staged, "_redirects"), buildHtmlExtensionRedirects(staged));
 }

@@ -38,6 +38,9 @@ writeFileSync(
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD
   Cache-Control: public, max-age=300, must-revalidate
+/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
 `,
 );
 

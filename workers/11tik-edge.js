@@ -198,8 +198,9 @@ export default {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
-    // Homepage (incl. ?bulk=1 / ?posts=1): Worker-first so http→https always runs here
-    // if zone Always Use HTTPS is ever off (Ahrefs File 18).
+    // Homepage (incl. ?bulk=1 / ?posts=1 / ?embed=1): Worker-first so http→https always runs here
+    // if zone Always Use HTTPS is ever off (Ahrefs File 18). Zone route www.11tik.com/* required
+    // so query-string URLs reach this handler (exact www.11tik.com/ omits them — Semrush SD).
     if (url.pathname === "/" && env?.ASSETS) {
       const withoutMobile = homepageUrlWithoutBloggerMobileParam(url);
       if (withoutMobile) return Response.redirect(withoutMobile.toString(), 301);

@@ -28,6 +28,7 @@
   },
   "routes": [
     { "pattern": "www.11tik.com/", "zone_name": "11tik.com" },
+    { "pattern": "www.11tik.com/*", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/sitemap.xml", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/robots.txt", "zone_name": "11tik.com" },
     { "pattern": "www.11tik.com/llms.txt", "zone_name": "11tik.com" },

@@ -47,6 +47,8 @@ describe("Workers Static Assets routing", () => {
     // Otherwise /copyright?m=1 falls through to Blogger and 404s.
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/copyright*")).toBe(true);
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/copyright")).toBe(false);
+    // Homepage query shells (/ ?bulk=1, ?posts=1, ?embed=1, ?m=1) need www.11tik.com/* route.
+    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/*")).toBe(true);
     expect(wrangler.kv_namespaces).toBeUndefined();
     expect(wrangler.triggers).toBeUndefined();
   });

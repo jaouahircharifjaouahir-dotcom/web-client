@@ -163,7 +163,7 @@ describe("global site header", () => {
 
   it("bumps site-header.js cache version so CDN immutable entries refresh", () => {
     const src = readFileSync(join(process.cwd(), "scripts/i18n/site-header.mjs"), "utf8");
-    expect(src).toMatch(/SITE_HEADER_ASSET_V\s*=\s*"3"/);
-    expect(siteHeaderScriptTag()).toContain("site-header.js?v=3");
+    expect(src).toMatch(/SITE_HEADER_ASSET_V\s*=\s*"4"/);
+    expect(siteHeaderScriptTag()).toContain("site-header.js?v=4");
   });
 });

@@ -1,9 +1,8 @@
-import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { GUIDE_POSTS } from "../content/posts";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import {
   LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP,
@@ -14,10 +13,8 @@ import {
 
 describe("build-time static site", () => {
   it("writes locale shells, robots, and sitemap without thumb redirects", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-static-"));
-    try {
-      generateStaticSite(dir);
-      const home = readFileSync(join(dir, "index.html"), "utf8");
+    const dir = getStagedStaticSite();
+    const home = readFileSync(join(dir, "index.html"), "utf8");
       const ar = readFileSync(join(dir, "l", "ar", "index.html"), "utf8");
       const fr = readFileSync(join(dir, "l", "fr", "index.html"), "utf8");
       const robots = readFileSync(join(dir, "robots.txt"), "utf8");
@@ -91,8 +88,5 @@ describe("build-time static site", () => {
       );
       expect(existsSync(join(dir, "thumb", "index.html"))).toBe(false);
       expect(existsSync(join(dir, "utility", "thumb", "index.html"))).toBe(false);
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 });

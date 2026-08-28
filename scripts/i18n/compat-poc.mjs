@@ -106,8 +106,8 @@ export function collectPublishableLocaleArticleLocs(_currentSourceHash) {
   return collectReadyLocaleLocs();
 }
 
-export function writePublishableLocaleArticles(writeFile, staged, _currentSourceHash) {
-  const { written } = writeReadyLocalizedPages(writeFile, staged);
+export function writePublishableLocaleArticles(writeFile, staged, _currentSourceHash, options = {}) {
+  const { written } = writeReadyLocalizedPages(writeFile, staged, options.inventory, options);
   return written.map((row) => row.url);
 }
 

@@ -12,7 +12,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const CATALOG = JSON.parse(readFileSync(join(ROOT, "src", "i18n", "catalog.json"), "utf8"));
 const NATIVE_NAMES = JSON.parse(readFileSync(join(ROOT, "src", "i18n", "native-names.json"), "utf8"));
 
-const SITE_HEADER_ASSET_V = "3";
+const SITE_HEADER_ASSET_V = "4";
 
 function xmlEscape(value) {
   return String(value || "")
@@ -137,7 +137,7 @@ export function renderSiteHeaderHtml(options = {}) {
 
   return `<div class="yte-static-chrome" data-yte-header-root>
 <header id="yte-site-header" class="yte-top" role="banner" data-yte-locale="${xmlEscape(locale)}" data-yte-home="${xmlEscape(homeUrl)}" data-yte-content-path="${xmlEscape(contentPath)}" data-yte-variant="${variant}">
-  <a class="yte-brand" href="${xmlEscape(homeUrl)}">
+  <a class="yte-brand" href="${xmlEscape(homeUrl)}" aria-label="11tik — YouTube Thumbnail Extractor home">
     <span class="yte-mark" aria-hidden="true">11</span>
     <span>11tik</span>
   </a>

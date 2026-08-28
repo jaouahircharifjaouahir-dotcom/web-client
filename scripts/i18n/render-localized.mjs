@@ -1,7 +1,8 @@
 import { RTL_CODES } from "../../workers/iso6391.js";
 import { protectEmailsInHtml } from "../../workers/email-obfuscation.js";
-import { fitDescription, fitTitle, toHttpsUrl } from "../../workers/html-meta.js";
+import { clampImgAltsInHtml, fitAlt, fitDescription, fitTitle, toHttpsUrl } from "../../workers/html-meta.js";
 import { localizeInternalLinksInHtml } from "./internal-links.mjs";
+import { renderLocaleCrawlNavHtml } from "./locale-crawl-nav.mjs";
 import {
   localeHomeUrl,
   siteHeaderBodyClose,
@@ -25,7 +26,10 @@ export const STANDARD_ARTICLE_PAGE_CSS = `.yte-page{max-width:720px;margin:32px 
 .yte-page code{font-size:0.92em;background:#f6f1ea;padding:0.1em 0.35em;border-radius:4px}
 .yte-page pre{background:#17141c;color:#f6f1ea;padding:14px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.45}
 .yte-page ol,.yte-page ul{padding-left:1.25rem}
-.yte-page nav{margin-top:28px}
+.yte-page nav,.yte-crawl-nav{margin-top:28px}
+.yte-crawl-nav ul{padding-left:1.25rem;margin:12px 0 0}
+.yte-shell-guides ul{padding-left:1.25rem;margin:16px 0 0}
+.yte-shell-guides a{color:#c2410c;font-weight:600}
 .yte-form-grid{display:grid;gap:14px;margin:24px 0 8px}
 .yte-form-grid label{display:grid;gap:6px;font-weight:600;color:#17141c}
 .yte-form-grid input,.yte-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d9d3dc;border-radius:16px;padding:12px 14px;font:inherit;color:#17141c;background:#fff}
@@ -117,7 +121,7 @@ export function applyLocalizedImageMetadata(html, images = []) {
 
     let next = attrs;
     const hasAlt = /\balt\s*=/i.test(next);
-    const localizedAlt = meta.alt != null ? String(meta.alt) : null;
+    const localizedAlt = meta.alt != null ? fitAlt(String(meta.alt)) : null;
 
     if (localizedAlt !== null) {
       if (hasAlt) {
@@ -184,14 +188,14 @@ function buildFaviconLinks() {
 /**
  * Generic localized page renderer for article/utility artifacts.
  */
-export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkIndex = null } = {}) {
+export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkIndex = null, buildContext = null, crawlNavHtml = null } = {}) {
   const locale = artifact.locale;
   const dir = RTL_CODES.has(locale) ? "rtl" : "ltr";
   const canonical = alternates.find((a) => a.locale === locale)?.url;
   if (!canonical) throw new Error("missing self alternate for render");
   const images = Array.isArray(artifact.images) ? artifact.images : [];
   const localize = (html) => {
-    const withAlts = applyLocalizedImageMetadata(html, images);
+    const withAlts = clampImgAltsInHtml(applyLocalizedImageMetadata(html, images));
     return pathLinkIndex ? localizeInternalLinksInHtml(withAlts, locale, pathLinkIndex) : withAlts;
   };
   const title = xmlEscape(fitTitle(artifact.title));
@@ -290,6 +294,10 @@ ${siteHeaderBodyOpen({
   ${faqHtml ? `<h2>${xmlEscape(artifact.faqHeading || "FAQ")}</h2>\n${faqHtml}` : ""}
   ${conclusionHtml}
   ${bioInner ? `<p class="yte-bio">${bioInner}</p>` : ""}
+  ${crawlNavHtml ?? renderLocaleCrawlNavHtml(locale, {
+    ...(buildContext || {}),
+    catalogDoc: buildContext?.catalogByLocale?.[locale],
+  })}
 </article>
 ${siteHeaderBodyClose()}
 </body>

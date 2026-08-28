@@ -1,8 +1,7 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 
 /** Ahrefs "Low word count" export used ~49 content words; clear well above 100. */
 const MIN_CONTENT_WORDS = 100;
@@ -38,18 +37,13 @@ function contentWords(html: string): number {
 
 describe("SPA shell content word count", () => {
   it("keeps Ahrefs-flagged locale homes above the low-word-count floor", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-wc-"));
-    try {
-      generateStaticSite(dir);
-      for (const code of AHREFS_FLAGGED) {
+    const dir = getStagedStaticSite();
+    for (const code of AHREFS_FLAGGED) {
         const html = readFileSync(join(dir, "l", code, "index.html"), "utf8");
         const words = contentWords(html);
         expect(words, `${code} words=${words}`).toBeGreaterThanOrEqual(MIN_CONTENT_WORDS);
         expect(html).toContain('id="yte-root"');
         expect(html).toContain("yte-shell-guides");
       }
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 });

@@ -1,8 +1,7 @@
-import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import {
   SHARE_LINKS_ARTICLE_ID,
   SHARE_LINKS_EN_HREF,
@@ -58,10 +57,8 @@ describe("POC French share-links article i18n (regression)", () => {
   });
 
   it("generates French static HTML with canonical and reciprocal hreflang", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-fr-poc-"));
-    try {
-      generateStaticSite(dir);
-      expect(existsSync(join(dir, FR_REL))).toBe(true);
+    const dir = getStagedStaticSite();
+    expect(existsSync(join(dir, FR_REL))).toBe(true);
       const html = readFileSync(join(dir, FR_REL), "utf8");
       expect(html).toContain('lang="fr"');
       expect(html).toContain('dir="ltr"');
@@ -79,16 +76,11 @@ describe("POC French share-links article i18n (regression)", () => {
       expect(FR_URL).toContain("fr.11tik.com/l/fr/");
       const manifest = JSON.parse(readFileSync(join(dir, "web-client/i18n/poc-share-links-fr.json"), "utf8"));
       expect(manifest).toEqual(buildPocFrReadinessManifest(true, readEnglishSourceHash()));
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 
   it("includes ready locale sitemap locs with matching generated files", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-fr-sm-"));
-    try {
-      generateStaticSite(dir);
-      const locs = parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
+    const dir = getStagedStaticSite();
+    const locs = parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
       const frLocs = locs.filter((loc) => loc === FR_URL);
       expect(frLocs).toHaveLength(1);
       expect(locs).toContain(SHARE_LINKS_EN_HREF);
@@ -104,16 +96,12 @@ describe("POC French share-links article i18n (regression)", () => {
         const html = readFileSync(join(dir, localeArticleLocToAssetRel(loc)), "utf8");
         expect(html).toContain(`hreflang="fr" href="${loc}"`);
       }
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
     expect(hashArticleSource("x")).not.toBe(readEnglishSourceHash());
   });
 
   it("writes ready:false manifest helpers and rejects orphan sitemap locs", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-fr-stale-"));
-    try {
-      const staleHash = "0".repeat(64);
+    const dir = getStagedStaticSite();
+    const staleHash = "0".repeat(64);
       expect(resolveLocalePublishState(SHARE_LINKS_ARTICLE_ID, "fr", staleHash).reason).toBe("stale");
       const manifest = buildPocFrReadinessManifest(false, staleHash);
       expect(manifest.ready).toBe(false);
@@ -122,13 +110,9 @@ describe("POC French share-links article i18n (regression)", () => {
       expect(themeNotReady).not.toContain("publishability.json");
       expect(themeNotReady).not.toContain("yte-i18n-redir");
       expect(themeNotReady).toContain("https://fr.11tik.com/");
-      generateStaticSite(dir);
       expect(() => assertLocaleSitemapLocsHaveFiles(dir, [FR_URL.replace("youtube", "missing")])).toThrow(
         /without generated files/,
       );
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 
   it("prevents redirect loops and requires frenchPublishable", () => {

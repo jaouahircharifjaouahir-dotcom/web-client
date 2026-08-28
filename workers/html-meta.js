@@ -11,6 +11,9 @@ export const META_TITLE_MIN = 30;
 /** Ahrefs commonly flags titles over ~60 characters. */
 export const META_TITLE_MAX = 60;
 
+/** Ahrefs Site Audit flags img alt text longer than 100 characters (File 26). */
+export const ALT_TEXT_MAX = 100;
+
 const META_DESCRIPTION_PAD =
   "Free YouTube thumbnail extractor on 11tik — public stills only, no signup.";
 const TITLE_PRODUCT_PAD = "YouTube Thumbnail Extractor";
@@ -76,6 +79,44 @@ export function fitTitle(value) {
     out = `${core} · ${TITLE_PRODUCT_PAD} | 11tik`;
   }
   return clipTitle(out);
+}
+
+/** Keep img alt text within Ahrefs-safe length without keyword-stuffing. */
+export function fitAlt(value) {
+  const text = String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text) return "";
+  if (text.length <= ALT_TEXT_MAX) return text;
+  const cut = text.slice(0, ALT_TEXT_MAX);
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace >= Math.floor(ALT_TEXT_MAX * 0.55)) {
+    return cut.slice(0, lastSpace).trim();
+  }
+  return cut.trim();
+}
+
+function altAttrEscape(value) {
+  return String(value || "").replace(/"/g, "&quot;");
+}
+
+/** Clamp every img alt in static HTML (English + localized render output). */
+export function clampImgAltsInHtml(html) {
+  return String(html || "").replace(/<img\b([^>]*)\/?>/gi, (full, attrs) => {
+    const altMatch = /\balt\s*=\s*(["'])([\s\S]*?)\1/i.exec(attrs);
+    if (!altMatch) return full;
+    const fitted = fitAlt(altMatch[2]);
+    const nextAttrs = attrs.replace(
+      /\balt\s*=\s*(["'])[\s\S]*?\1/i,
+      `alt="${altAttrEscape(fitted)}"`,
+    );
+    return `<img${nextAttrs}>`;
+  });
 }
 
 export function isGarbageDescription(value) {

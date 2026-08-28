@@ -1,5 +1,4 @@
-import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { buildContentInventory, localizableContent } from "../../scripts/i18n/content-inventory.mjs";
@@ -9,7 +8,7 @@ import { validateTranslationArtifact } from "../../scripts/i18n/validate-artifac
 import { loadTranslationArtifact } from "../../scripts/i18n/translation-store.mjs";
 import { planTranslationWork } from "../../scripts/i18n/translate-pipeline.mjs";
 import { rewriteInternalHref, classifyInternalLinksInHtml, buildPathLinkIndex } from "../../scripts/i18n/internal-links.mjs";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { normalizeTrustedLocaleSitemapLoc, parseSitemapLocs } from "../../workers/sitemap-canonicals.js";
 import { ISO6391_CODES } from "../../workers/iso6391.js";
 import {
@@ -111,10 +110,8 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
   });
 
   it("generates ready localized pages for all target languages", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-i18n-"));
-    try {
-      generateStaticSite(dir);
-      const manifest = scanPublishability();
+    const dir = getStagedStaticSite();
+    const manifest = scanPublishability();
       const frRel = "l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html";
       const arRel = "l/ar/2026/08/how-to-download-youtube-thumbnail.html";
       expect(existsSync(join(dir, frRel))).toBe(true);
@@ -132,9 +129,6 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
       expect(localeArticleLocs.some((loc) => loc.includes("/l/aa/"))).toBe(false);
       expect(locs).toContain("https://aa.11tik.com/l/aa/");
       expect(readFileSync(join(dir, "robots.txt"), "utf8")).toContain("Allow: /");
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 
   it("redirect helper prefers ready browser locale and preserves explicit choice", () => {
@@ -184,10 +178,8 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
   });
 
   it("localizes internal body links in generated HTML", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-i18n-links-"));
-    try {
-      generateStaticSite(dir);
-      const manifest = scanPublishability();
+    const dir = getStagedStaticSite();
+    const manifest = scanPublishability();
       const pathIndex = buildPathLinkIndex(manifest.contents);
       const arHtml = readFileSync(
         join(dir, "l/ar/2026/08/how-to-download-youtube-thumbnail.html"),
@@ -202,9 +194,6 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
       expect(arHtml).not.toMatch(
         /<article[\s\S]*https:\/\/www\.11tik\.com\/2026\/08\/youtube-thumbnail-url\.html/,
       );
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 
   it("does not put localized article paths in run_worker_first", () => {

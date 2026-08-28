@@ -1,8 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { renderLocalizedHtml } from "../../scripts/i18n/render-localized.mjs";
 import {
   META_TITLE_MAX,
@@ -48,15 +47,10 @@ describe("Document title length (Ahrefs File 20)", () => {
   });
 
   it("emits zh SPA home titles in band", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-title-"));
-    try {
-      generateStaticSite(dir);
-      const t = titleFromHtml(readFileSync(join(dir, "l", "zh", "index.html"), "utf8"));
-      expect(t.length).toBeGreaterThanOrEqual(META_TITLE_MIN);
-      expect(t.length).toBeLessThanOrEqual(META_TITLE_MAX);
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
+    const dir = getStagedStaticSite();
+    const t = titleFromHtml(readFileSync(join(dir, "l", "zh", "index.html"), "utf8"));
+    expect(t.length).toBeGreaterThanOrEqual(META_TITLE_MIN);
+    expect(t.length).toBeLessThanOrEqual(META_TITLE_MAX);
   });
 
   it("renderLocalizedHtml expands short utility titles", () => {

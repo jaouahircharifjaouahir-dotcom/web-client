@@ -159,7 +159,7 @@ export function wipeStaleLocalizedContentPages(staged) {
   return { removedRoots };
 }
 
-export function writeReadyLocalizedPages(writeFile, staged, inventory = buildContentInventory()) {
+export function writeReadyLocalizedPages(writeFile, staged, inventory = buildContentInventory(), options = {}) {
   wipeStaleLocalizedContentPages(staged);
   const manifest = scanPublishability(inventory);
   const pathLinkIndex = buildPathLinkIndex(manifest.contents);
@@ -178,7 +178,12 @@ export function writeReadyLocalizedPages(writeFile, staged, inventory = buildCon
       const artifact = loadTranslationArtifact(contentId, locale);
       if (!artifact) continue;
       const rel = localizedAssetRelPath(item, locale);
-      const html = renderLocalizedHtml(item, artifact, { alternates: readyAlternates, pathLinkIndex });
+      const html = renderLocalizedHtml(item, artifact, {
+        alternates: readyAlternates,
+        pathLinkIndex,
+        buildContext: options.buildContext,
+        crawlNavHtml: options.buildContext?.crawlNavByLocale?.[locale],
+      });
       writeFile(join(staged, rel), html);
       written.push({ contentId, locale, url: row.url, rel });
     }

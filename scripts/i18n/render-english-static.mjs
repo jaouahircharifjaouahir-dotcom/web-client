@@ -5,7 +5,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { fitDescription, fitTitle } from "../../workers/html-meta.js";
+import { clampImgAltsInHtml, fitAlt, fitDescription, fitTitle } from "../../workers/html-meta.js";
 import { protectEmailsInHtml } from "../../workers/email-obfuscation.js";
 import { descriptionForPath } from "../../workers/post-descriptions.js";
 import { extractStructuredSource } from "./extract-source.mjs";
@@ -15,11 +15,99 @@ import {
   siteHeaderBodyOpen,
   siteHeaderHeadTags,
 } from "./site-header.mjs";
+import { renderLocaleCrawlNavHtml } from "./locale-crawl-nav.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
 const EDGE_ASSETS = "https://www.11tik.com/web-client/";
 const DEFAULT_OG = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
+
+const UTILITY_PREVIEW_ALTS = {
+  "/p/embed.html": "11tik thumbnail extractor embed widget preview",
+  "/p/about.html": "11tik YouTube Thumbnail Extractor product preview at 1200 by 630 pixels",
+};
+
+/** Utility/article pages referenced only via og:image need a crawlable img+alt (Ahrefs File 26). */
+function ensureBodyHeroImg(article, item, structured) {
+  if (/<img\b/i.test(article)) return article;
+  const alt = fitAlt(
+    UTILITY_PREVIEW_ALTS[item.canonicalPath] ||
+      structured.imageAlt ||
+      structured.h1 ||
+      "11tik YouTube thumbnail preview",
+  );
+  const tag = `<img alt="${xmlEscape(alt)}" class="yte-hero" height="630" loading="lazy" src="${DEFAULT_OG}" width="1200"/>`;
+  return article.replace(/(<(?:article|div)[^>]*class="yte-page"[^>]*>)/i, `$1\n  ${tag}`);
+}
+
+/**
+ * Semrush #8 follow-up: English-only utility prose without mutating Blogger source
+ * (keeps translation sourceHash stable — localized /l/{xx}/p/embed.html already pass).
+ */
+const ENGLISH_UTILITY_CONTENT_PATCHES = {
+  embed: `<p>The embed loads the same in-browser extractor as <a href="https://www.11tik.com/?embed=1">www.11tik.com</a> with <code>?embed=1</code>. Visitors paste a public watch, Shorts, or youtu.be URL and download the largest still YouTube returns. No API key, no server-side storage of pasted links, and no video or audio download.</p>
+  <p>Use this on a blog sidebar, documentation page, or creator toolkit where a self-contained widget helps. Thumbnail copyright stays with the uploader — see <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>. For product background, read <a href="https://www.11tik.com/p/about.html">About 11tik</a>.</p>`,
+};
+
+export function applyEnglishUtilityContentPatches(article, contentId) {
+  const insert = ENGLISH_UTILITY_CONTENT_PATCHES[contentId];
+  if (!insert) return article;
+  if (article.includes(insert)) return article;
+  const anchor =
+    "<p>Add a free YouTube thumbnail extractor to your blog, docs, or creator toolkit. The widget loads from 11tik and resizes itself. No API key.</p>";
+  if (!article.includes(anchor)) {
+    throw new Error(`English utility content patch anchor missing for ${contentId}`);
+  }
+  return article.replace(anchor, `${anchor}\n  ${insert}`);
+}
+
+/** Ahrefs File 23: English-only href inlinks without mutating Blogger source (keeps translation sourceHash stable). */
+const ENGLISH_ORPHAN_INLINK_PATCHES = {
+  "youtube-thumbnail-url": [
+    {
+      before:
+        "not <code>youtube.com/watch?v=…</code>. If you only need the file on disk, use the <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">download guide</a> instead of this URL-focused page.",
+      after:
+        "not <code>youtube.com/watch?v=…</code>. 11tik also uses a third URL shape — <code>/thumb/{VIDEO_ID}</code> — to reopen an extractor result page; that path is not a watch link and not a direct image file. See the <a href=\"https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html\">share link guide</a> for when to copy each type. If you only need the file on disk, use the <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">download guide</a> instead of this URL-focused page.",
+    },
+  ],
+  "how-to-download-youtube-thumbnail": [
+    {
+      before:
+        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+      after:
+        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For live streams and premieres — saving the cover before go-live, during the broadcast, or after replay — see the <a href=\"https://www.11tik.com/2026/08/youtube-live-premiere-thumbnail-download.html\">live and premiere thumbnail guide</a>. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+    },
+    {
+      before:
+        "You save a public still YouTube already hosts. You do not unlock private videos, members-only files, or the MP4/WebM stream. 11tik is an extractor, not a maker and not a video downloader — comparison: <a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs maker</a>.",
+      after:
+        "You save a public still YouTube already hosts. You do not unlock private videos, members-only files, or the MP4/WebM stream — see <a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">why a thumbnail will not appear</a> when every size fails. 11tik is an extractor, not a maker and not a video downloader — comparison: <a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs maker</a>.",
+    },
+  ],
+  "how-to-extract-thumbnails-from-youtube": [
+    {
+      before:
+        "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">how to download a YouTube thumbnail</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+      after:
+        "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">how to download a YouTube thumbnail</a>. On a phone, see <a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">save on iPhone and Android</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+    },
+  ],
+};
+
+export function applyEnglishOrphanInlinkPatches(html, contentId) {
+  const patches = ENGLISH_ORPHAN_INLINK_PATCHES[contentId];
+  if (!patches?.length) return html;
+  let out = String(html || "");
+  for (const patch of patches) {
+    if (out.includes(patch.after)) continue;
+    if (!out.includes(patch.before)) {
+      throw new Error(`English orphan inlink patch anchor missing for ${contentId}`);
+    }
+    out = out.replace(patch.before, patch.after);
+  }
+  return out;
+}
 
 function xmlEscape(value) {
   return String(value || "")
@@ -130,17 +218,43 @@ function resolveDescription(pathname, structured) {
   return fitDescription(structured.description || structured.ogDescription || "");
 }
 
+function normalizeHeadingText(value) {
+  return String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
 function resolveTitle(structured, h1, postTitle) {
   const fromPosts = String(postTitle || "").trim();
+  let base = "";
   if (fromPosts) {
-    return fitTitle(fromPosts.includes("| 11tik") ? fromPosts : `${fromPosts} | 11tik`);
+    base = fromPosts.includes("| 11tik") ? fromPosts : `${fromPosts} | 11tik`;
+  } else {
+    const raw = String(structured.title || "").trim();
+    if (raw) {
+      base = raw.includes("| 11tik") ? raw : `${raw.replace(/\s*\|\s*11tik\s*$/i, "")} | 11tik`;
+    } else if (h1) {
+      base = `${h1} | 11tik`;
+    } else {
+      base = "11tik";
+    }
   }
-  const raw = String(structured.title || "").trim();
-  if (raw) {
-    return fitTitle(raw.includes("| 11tik") ? raw : `${raw.replace(/\s*\|\s*11tik\s*$/i, "")} | 11tik`);
+  const title = fitTitle(base);
+  const h1Norm = normalizeHeadingText(h1);
+  let titleNorm = normalizeHeadingText(title.replace(/\s*\|\s*11tik\s*$/i, ""));
+  if (h1Norm && titleNorm && h1Norm === titleNorm) {
+    const withoutYear = h1.replace(/\s*\(20\d{2}\)\s*$/, "").trim();
+    const brand = " | 11tik";
+    const maxCore = 60 - brand.length;
+    let core = withoutYear;
+    if (core.length > maxCore) {
+      core = `${core.slice(0, Math.max(1, maxCore - 1)).trim()}…`;
+    }
+    return `${core}${brand}`;
   }
-  if (h1) return fitTitle(`${h1} | 11tik`);
-  return fitTitle("11tik");
+  return title;
 }
 
 /** Prefer theme/default social OG (matches live Blogger) over in-article hero. */
@@ -158,7 +272,16 @@ export function renderEnglishStaticHtml(item, options = {}) {
   if (!existsSync(abs)) throw new Error(`Missing English source: ${item.sourceRel}`);
   const raw = readFileSync(abs, "utf8");
   const structured = extractStructuredSource(raw, { contentType: item.type === "utility" ? "utility" : "article" });
-  const article = extractArticleHtml(raw);
+  const article = clampImgAltsInHtml(
+    ensureBodyHeroImg(
+      applyEnglishUtilityContentPatches(
+        applyEnglishOrphanInlinkPatches(extractArticleHtml(raw), item.contentId),
+        item.contentId,
+      ),
+      item,
+      structured,
+    ),
+  );
   if (!article) throw new Error(`No <article> in source: ${item.sourceRel}`);
   const style = standardArticleStyleTag();
 
@@ -216,6 +339,7 @@ export function renderEnglishStaticHtml(item, options = {}) {
 <body>
 ${siteHeaderBodyOpen({ locale: "en", contentPath: item.canonicalPath, variant: "static" })}
 ${article}
+${options.crawlNavHtml ?? renderLocaleCrawlNavHtml("en", options.buildContext || {})}
 ${siteHeaderBodyClose()}
 </body>
 </html>

@@ -7,7 +7,7 @@ export function imageSeoAttrs(input: {
   const heading = String(input.title || input.fallback || "YouTube thumbnail").trim();
   const quality = input.quality ? ` ${input.quality}` : "";
   const keywords = (input.tags || []).map((tag) => String(tag).trim()).filter(Boolean).slice(0, 12);
-  const alt = `${heading}${quality} | 11tik`.slice(0, 180);
+  const alt = `${heading}${quality} | 11tik`.slice(0, 100);
   const title = (keywords.length ? `${heading} – ${keywords.join(", ")}` : alt).slice(0, 220);
   return { alt, title };
 }

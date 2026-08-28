@@ -1,8 +1,7 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import {
   META_DESCRIPTION_MAX,
   META_DESCRIPTION_MIN,
@@ -27,10 +26,8 @@ describe("SPA shell meta description length", () => {
   });
 
   it("keeps generated home shells within the max for Ahrefs-flagged locales", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-meta-len-"));
-    try {
-      generateStaticSite(dir);
-      for (const code of AHREFS_SAMPLE) {
+    const dir = getStagedStaticSite();
+    for (const code of AHREFS_SAMPLE) {
         const path = code === "en" ? join(dir, "index.html") : join(dir, "l", code, "index.html");
         const html = readFileSync(path, "utf8");
         const desc = metaDescriptionFromHtml(html);
@@ -40,8 +37,5 @@ describe("SPA shell meta description length", () => {
       }
       // Source locale-meta may still be long; emit path must clip.
       expect((localeMeta.en.description || "").length).toBeGreaterThan(META_DESCRIPTION_MAX);
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 });

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import worker from "../../workers/11tik-edge.js";
 
 describe("Worker ASSETS passthrough (copyright SPA)", () => {
-  it("serves clean /copyright via ASSETS", async () => {
+  it("serves clean /copyright via ASSETS copyright/index.html", async () => {
     const seen: string[] = [];
     const env = {
       ASSETS: {
@@ -15,7 +15,7 @@ describe("Worker ASSETS passthrough (copyright SPA)", () => {
     };
     const a = await worker.fetch(new Request("https://www.11tik.com/copyright"), env);
     expect(a.status).toBe(200);
-    expect(seen).toEqual(["/copyright"]);
+    expect(seen).toEqual(["/copyright/index.html"]);
   });
 
   it("301-canonicalizes /copyright?m=1 (and any query) away from Blogger", async () => {
@@ -33,13 +33,16 @@ describe("Worker ASSETS passthrough (copyright SPA)", () => {
     }
   });
 
-  it("does not strip homepage SPA queries (?bulk=1 / ?posts=1 / ?k=)", async () => {
+  it("still serves homepage query views via Worker shell patch (ASSETS base /)", async () => {
     const seen: string[] = [];
     const env = {
       ASSETS: {
         fetch(req: Request) {
           seen.push(new URL(req.url).pathname + new URL(req.url).search);
-          return new Response("ok", { status: 200 });
+          return new Response(
+            '<!doctype html><html><head><title>Home</title></head><body><div id="yte-root"><h1>YouTube Thumbnail Extractor</h1><p>Generic.</p></div></body></html>',
+            { status: 200, headers: { "content-type": "text/html" } },
+          );
         },
       },
     };
@@ -47,10 +50,6 @@ describe("Worker ASSETS passthrough (copyright SPA)", () => {
       const res = await worker.fetch(new Request(`https://www.11tik.com/${q}`), env);
       expect(res.status).toBe(200);
     }
-    expect(seen).toEqual([
-      "/?bulk=1",
-      "/?posts=1",
-      "/?k=youtube-thumbnail-download",
-    ]);
+    expect(seen).toEqual(["/", "/", "/"]);
   });
 });

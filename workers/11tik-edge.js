@@ -2,6 +2,11 @@ import { ISO6391_CODES } from "./iso6391.js";
 import { descriptionForPath } from "./post-descriptions.js";
 import { resolvePageDescription, upsertHeadDescription, upgradeHttpCanonicals } from "./html-meta.js";
 import { protectEmailsInHtml, wrapMailtoWithEmailOff } from "./email-obfuscation.js";
+import {
+  homepageUrlWithoutBloggerMobileParam,
+  patchHomepageShellHtml,
+  resolveHomepageQueryShell,
+} from "./homepage-query-shell.mjs";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
 
@@ -151,6 +156,15 @@ export function httpsRedirectIfNeeded(request) {
   return Response.redirect(url.toString(), 301);
 }
 
+/** HSTS for Semrush no_hsts_support (Cloudflare terminates TLS; Worker sets policy on HTML/assets). */
+export function withSecurityHeaders(response) {
+  const headers = new Headers(response.headers);
+  if (!headers.has("strict-transport-security")) {
+    headers.set("strict-transport-security", "max-age=31536000; includeSubDomains; preload");
+  }
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
 export default {
   async fetch(request, env) {
     const httpsRedirect = httpsRedirectIfNeeded(request);
@@ -165,25 +179,41 @@ export default {
 
     // Assets-backed sitemap must not be reachable as a second http:// sitemap copy.
     if (url.pathname === "/sitemap.xml" && env?.ASSETS) {
-      return env.ASSETS.fetch(request);
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
     // Same pattern as sitemap.xml: Worker-first + ASSETS so /robots.txt never falls
     // through to Blogger origin (Mediapartners-Google /share-widget). Zone route alone
     // without run_worker_first was insufficient once Managed robots prepend was off.
     if (url.pathname === "/robots.txt" && env?.ASSETS) {
-      return env.ASSETS.fetch(request);
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
+    }
+
+    if (url.pathname === "/llms.txt" && env?.ASSETS) {
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
     // IndexNow ownership key — Worker-first Assets so SPA fallback / Blogger never wrap it.
     if (url.pathname === "/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt" && env?.ASSETS) {
-      return env.ASSETS.fetch(request);
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
     // Homepage (incl. ?bulk=1 / ?posts=1): Worker-first so http→https always runs here
     // if zone Always Use HTTPS is ever off (Ahrefs File 18).
     if (url.pathname === "/" && env?.ASSETS) {
-      return env.ASSETS.fetch(request);
+      const withoutMobile = homepageUrlWithoutBloggerMobileParam(url);
+      if (withoutMobile) return Response.redirect(withoutMobile.toString(), 301);
+
+      const assetUrl = new URL(url.origin + "/");
+      const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
+      const variant = resolveHomepageQueryShell(url.searchParams);
+      if (!variant || !res.ok) return withSecurityHeaders(res);
+
+      const headers = new Headers(res.headers);
+      headers.set("content-type", "text/html; charset=utf-8");
+      headers.set("cache-control", "public, max-age=120, must-revalidate");
+      const html = patchHomepageShellHtml(await res.text(), variant);
+      return withSecurityHeaders(new Response(html, { status: res.status, headers }));
     }
 
     // Exact zone routes without a trailing * do not match query strings (CF routes docs).
@@ -191,6 +221,13 @@ export default {
     // Route is copyright*; canonicalize any query to the clean SPA URL (canonical /copyright).
     if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright" && url.search) {
       return Response.redirect(`${SITE}/copyright`, 301);
+    }
+
+    // Serve static legal page explicitly so ASSETS SPA fallback never injects homepage hreflang.
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright" && env?.ASSETS) {
+      const assetUrl = new URL("/copyright/index.html", url.origin);
+      const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
+      if (res.ok) return withSecurityHeaders(res);
     }
 
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
@@ -212,7 +249,7 @@ export default {
     // Explicit zone routes (e.g. www.11tik.com/copyright) invoke this Worker; without
     // ASSETS passthrough the Worker used to hard-404 and Blogger never saw the request.
     if (env?.ASSETS) {
-      return env.ASSETS.fetch(request);
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
     return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });

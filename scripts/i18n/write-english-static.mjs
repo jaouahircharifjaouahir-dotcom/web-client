@@ -47,8 +47,8 @@ function readyAlternatesForItem(item, manifestEntry) {
 /**
  * @returns {{ written: { contentId: string, rel: string, url: string, type: string }[], missingSource: string[], manifest: object }}
  */
-export function writeEnglishStaticPages(writeFile, staged, inventory = buildContentInventory()) {
-  const manifest = scanPublishability(inventory);
+export function writeEnglishStaticPages(writeFile, staged, inventory = buildContentInventory(), options = {}) {
+  const manifest = options.manifest || scanPublishability(inventory);
   const items = localizableContent(inventory);
   const titles = guideTitlesByPath();
   const written = [];
@@ -62,7 +62,12 @@ export function writeEnglishStaticPages(writeFile, staged, inventory = buildCont
     const entry = manifest.contents[item.contentId];
     const alternates = readyAlternatesForItem(item, entry);
     const postTitle = titles.get(item.canonicalPath) || "";
-    const html = renderEnglishStaticHtml(item, { alternates, postTitle });
+    const html = renderEnglishStaticHtml(item, {
+      alternates,
+      postTitle,
+      buildContext: options.buildContext || { inventory, manifest },
+      crawlNavHtml: options.buildContext?.crawlNavByLocale?.en,
+    });
     const rel = englishStaticAssetRel(item);
     writeFile(join(staged, rel), html);
     written.push({ contentId: item.contentId, rel, url: item.canonicalUrl, type: item.type });

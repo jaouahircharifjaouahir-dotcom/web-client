@@ -1,8 +1,7 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import {
   INDEXNOW_KEY,
   INDEXNOW_KEY_PATH,
@@ -24,17 +23,12 @@ describe("IndexNow root verification key", () => {
   });
 
   it("writes the exact key-only body into staged Static Assets", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-indexnow-"));
-    try {
-      generateStaticSite(dir);
-      const file = join(dir, indexNowKeyFilename());
-      const body = readFileSync(file, "utf8");
-      expect(body).toBe(INDEXNOW_KEY);
-      expect(body).toBe("r1nu3dmfdwyzm6u39zktu5gtww7zvv1z");
-      expect(body.length).toBe(INDEXNOW_KEY.length);
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
+    const dir = getStagedStaticSite();
+    const file = join(dir, indexNowKeyFilename());
+    const body = readFileSync(file, "utf8");
+    expect(body).toBe(INDEXNOW_KEY);
+    expect(body).toBe("r1nu3dmfdwyzm6u39zktu5gtww7zvv1z");
+    expect(body.length).toBe(INDEXNOW_KEY.length);
   });
 
   it("301s http IndexNow URL to https", () => {
@@ -47,14 +41,8 @@ describe("IndexNow root verification key", () => {
   });
 
   it("serves the key via Worker ASSETS passthrough at the exact production path", async () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-indexnow-assets-"));
-    let assetBody = "";
-    try {
-      generateStaticSite(dir);
-      assetBody = readFileSync(join(dir, indexNowKeyFilename()), "utf8");
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
+    const dir = getStagedStaticSite();
+    const assetBody = readFileSync(join(dir, indexNowKeyFilename()), "utf8");
 
     const seen: string[] = [];
     const env = {

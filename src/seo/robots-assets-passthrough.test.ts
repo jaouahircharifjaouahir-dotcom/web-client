@@ -1,8 +1,7 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import worker, { httpsRedirectIfNeeded } from "../../workers/11tik-edge.js";
 
 describe("Worker ASSETS passthrough (robots.txt)", () => {
@@ -14,14 +13,8 @@ describe("Worker ASSETS passthrough (robots.txt)", () => {
   });
 
   it("serves application robots from ASSETS (never Blogger Mediapartners)", async () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-robots-"));
-    let assetBody = "";
-    try {
-      generateStaticSite(dir);
-      assetBody = readFileSync(join(dir, "robots.txt"), "utf8");
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
+    const dir = getStagedStaticSite();
+    const assetBody = readFileSync(join(dir, "robots.txt"), "utf8");
 
     expect(assetBody).toMatch(/^# 11tik robots\.txt/m);
     expect(assetBody).toMatch(/^User-agent: Amazonbot\r?\nAllow: \//m);

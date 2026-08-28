@@ -1,9 +1,8 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { GUIDE_POSTS } from "../content/posts";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import { POST_DESCRIPTIONS } from "../../workers/post-descriptions.js";
 import {
@@ -22,13 +21,8 @@ import {
 import { ISO6391 } from "../../workers/iso6391.js";
 
 function locsFromGeneratedSite() {
-  const dir = mkdtempSync(join(tmpdir(), "11tik-sitemap-"));
-  try {
-    generateStaticSite(dir);
-    return parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
-  } finally {
-    rmSync(dir, { recursive: true, force: true });
-  }
+  const dir = getStagedStaticSite();
+  return parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
 }
 
 describe("sitemap canonical inventory", () => {

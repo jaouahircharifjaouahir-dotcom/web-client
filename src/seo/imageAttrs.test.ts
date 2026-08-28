@@ -10,6 +10,7 @@ describe("imageSeoAttrs", () => {
     });
     expect(attrs.alt).toContain("Despacito");
     expect(attrs.alt).toContain("maxresdefault");
+    expect(attrs.alt.length).toBeLessThanOrEqual(100);
     expect(attrs.title).toContain("Luis Fonsi");
   });
 });

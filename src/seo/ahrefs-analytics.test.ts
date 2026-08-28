@@ -1,5 +1,4 @@
-import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
@@ -9,7 +8,7 @@ import {
   ahrefsAnalyticsHeadTagBlogger,
 } from "../../scripts/i18n/ahrefs-analytics.mjs";
 import { buildContentInventory, localizableContent } from "../../scripts/i18n/content-inventory.mjs";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { loadTranslationArtifact } from "../../scripts/i18n/translation-store.mjs";
 import { renderEnglishStaticHtml } from "../../scripts/i18n/render-english-static.mjs";
 import { renderLocalizedHtml } from "../../scripts/i18n/render-localized.mjs";
@@ -94,10 +93,8 @@ describe("Ahrefs Web Analytics head injection", () => {
   });
 
   it("injects Ahrefs exactly once on every generated public HTML page", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-ahrefs-"));
-    try {
-      generateStaticSite(dir);
-      const htmlFiles = walkHtmlFiles(dir);
+    const dir = getStagedStaticSite();
+    const htmlFiles = walkHtmlFiles(dir);
       // Homepage + locale homes + English static + localized content.
       expect(htmlFiles.length).toBeGreaterThan(900);
 
@@ -131,9 +128,6 @@ describe("Ahrefs Web Analytics head injection", () => {
       if (existsSync(pub)) {
         expect(readFileSync(pub, "utf8")).not.toContain("analytics.ahrefs.com");
       }
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 
   it("includes Ahrefs once in Blogger theme source head (XML-safe)", () => {

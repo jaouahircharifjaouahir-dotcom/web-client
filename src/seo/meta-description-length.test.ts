@@ -1,8 +1,7 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { generateStaticSite } from "../../scripts/generate-static-site.mjs";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import {
   META_DESCRIPTION_MAX,
   META_DESCRIPTION_MIN,
@@ -42,18 +41,13 @@ describe("Meta description length band (Ahrefs File 12 + 19)", () => {
   });
 
   it("emits SPA shells in the Ahrefs-safe band for flagged locales", () => {
-    const dir = mkdtempSync(join(tmpdir(), "11tik-meta-short-"));
-    try {
-      generateStaticSite(dir);
-      for (const code of ["zh", "ii", "en", "fr"] as const) {
+    const dir = getStagedStaticSite();
+    for (const code of ["zh", "ii", "en", "fr"] as const) {
         const path =
           code === "en" ? join(dir, "index.html") : join(dir, "l", code, "index.html");
         const desc = metaDescriptionFromHtml(readFileSync(path, "utf8"));
         expect(desc.length, code).toBeGreaterThanOrEqual(META_DESCRIPTION_MIN);
         expect(desc.length, code).toBeLessThanOrEqual(META_DESCRIPTION_MAX);
       }
-    } finally {
-      rmSync(dir, { recursive: true, force: true });
-    }
   });
 });

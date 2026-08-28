@@ -29,6 +29,7 @@ import {
 } from "./i18n/write-english-static.mjs";
 import { writeLocaleCatalogs } from "./i18n/write-locale-catalogs.mjs";
 import { buildHtmlExtensionRedirects } from "./html-extension-redirects.mjs";
+import { writeCopyrightStaticPage } from "./write-copyright-static.mjs";
 import { ahrefsAnalyticsHeadTag } from "./i18n/ahrefs-analytics.mjs";
 import { indexNowKeyBody, indexNowKeyFilename } from "./i18n/indexnow-key.mjs";
 import {
@@ -38,6 +39,15 @@ import {
   siteHeaderStyleTag,
   siteHeaderThemeBootScript,
 } from "./i18n/site-header.mjs";
+import { ensureHomepagePreviewImg } from "../workers/homepage-query-shell.mjs";
+import {
+  renderLocaleCrawlNavHtml,
+  renderShellGuideListHtml,
+} from "./i18n/locale-crawl-nav.mjs";
+import { scanPublishability } from "./i18n/publish.mjs";
+import { buildContentInventory } from "./i18n/content-inventory.mjs";
+import { buildLocaleCatalogDoc } from "./i18n/write-locale-catalogs.mjs";
+import { getTargetLocales } from "./i18n/target-languages.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
@@ -83,9 +93,9 @@ function catalogUi(code) {
  * Crawlable body for SPA shells (Ahrefs counts content words without JS render).
  * React replaces #yte-root on hydrate; users still see the live app.
  */
-function spaShellBodyHtml(code) {
+function spaShellBodyHtml(code, buildContext) {
   const copy = localeRecord(code);
-  const { ui, posts } = catalogUi(code);
+  const { ui } = catalogUi(code);
   const title = xmlEscape(ui.heroTitle || copy.title);
   const intro = xmlEscape(ui.heroIntro || copy.description);
   const foot = xmlEscape(ui.foot || "");
@@ -108,19 +118,9 @@ function spaShellBodyHtml(code) {
     .filter(Boolean)
     .map((s) => `<p>${xmlEscape(s)}</p>`)
     .join("");
-  const guideItems = posts
-    .slice(0, 11)
-    .map((post) => {
-      const t = xmlEscape(post?.title || "");
-      const s = xmlEscape(post?.summary || "");
-      if (!t) return "";
-      return s ? `<li><strong>${t}</strong> — ${s}</li>` : `<li><strong>${t}</strong></li>`;
-    })
-    .filter(Boolean)
-    .join("");
-  const guides = guideItems
-    ? `<section class="yte-shell-guides"><ul>${guideItems}</ul></section>`
-    : "";
+  const catalogDoc = buildContext?.catalogByLocale?.[code];
+  const guides = renderShellGuideListHtml(code, { ...buildContext, catalogDoc });
+  const crawlNav = renderLocaleCrawlNavHtml(code, { ...buildContext, catalogDoc });
   // Space-poor scripts (e.g. Japanese) yield low whitespace word counts; add English
   // product copy so Ahrefs content-word floor is met without inventing fake locale text.
   let enBridge = "";
@@ -137,14 +137,14 @@ function spaShellBodyHtml(code) {
       enBridge = `<p lang="en">${xmlEscape(enUi.heroIntro)}</p><p lang="en">${xmlEscape(enUi.foot || "")}</p>`;
     }
   }
-  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}<p>${foot}</p>${guides}${enBridge}</div>`;
+  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
 }
 
 function canonicalFor(code) {
   return code === "en" ? `${SITE}/` : `https://${code}.11tik.com/l/${code}/`;
 }
 
-function appShellHtml({ code, canonical, title, description, robots = "index,follow" }) {
+function appShellHtml({ code, canonical, title, description, robots = "index,follow", buildContext = null }) {
   const copy = localeRecord(code);
   const headTitle = xmlEscape(fitTitle(title || copy.title));
   const headDesc = xmlEscape(fitDescription(description || copy.description));
@@ -153,7 +153,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   const js = `/web-client/blogger-app.js?v=${APP_ASSET_V}`;
   const schema = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": ["WebApplication", "SoftwareApplication"],
+    "@type": "WebApplication",
     name: fitTitle(copy.title),
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Any",
@@ -194,7 +194,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   ${siteHeaderThemeBootScript()}
   ${siteHeaderStyleTag()}
-  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}</style>
+  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a{color:#c2410c;font-weight:600}</style>
   <link rel="preload" href="${css}" as="style"/>
   <link rel="preload" href="${js}" as="script"/>
   <script type="application/ld+json">${schema}</script>
@@ -206,7 +206,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
     contentPath: "/",
     variant: "spa-shell",
   })}
-  ${spaShellBodyHtml(code)}
+  ${ensureHomepagePreviewImg(spaShellBodyHtml(code, buildContext))}
   ${siteHeaderScriptTag()}
   <script defer fetchpriority="high" src="${js}"></script>
   <script defer src="/web-client/ga-boot.js?v=${APP_ASSET_V}"></script>
@@ -258,11 +258,54 @@ Sitemap: ${SITE}/sitemap.xml
 `;
 }
 
+function llmsTxtBody() {
+  return `# 11tik
+> Free in-browser YouTube Thumbnail Extractor — public stills only, no video download.
+
+## Product
+- [Homepage](https://www.11tik.com/): Paste a public YouTube URL and save the largest thumbnail still YouTube hosts.
+- [About](https://www.11tik.com/p/about.html): What 11tik is and is not.
+- [Copyright](https://www.11tik.com/copyright): Thumbnail reuse and copyright notes.
+
+## Guides
+- [How to download a YouTube thumbnail](https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html)
+- [YouTube thumbnail URL formats](https://www.11tik.com/2026/08/youtube-thumbnail-url.html)
+- [Batch download up to 25 URLs](https://www.11tik.com/2026/08/how-to-batch-download-youtube.html)
+
+## Policies
+- [Privacy](https://www.11tik.com/p/privacy.html)
+- [Terms](https://www.11tik.com/p/terms-of-use.html)
+- [Contact](https://www.11tik.com/p/contact.html)
+`;
+}
+
 export function generateStaticSite(staged) {
+  const inventory = buildContentInventory();
+  const manifest = scanPublishability(inventory);
+  const catalogByLocale = { en: buildLocaleCatalogDoc("en", { inventory }) };
+  for (const locale of getTargetLocales()) {
+    catalogByLocale[locale] = buildLocaleCatalogDoc(locale, { inventory });
+  }
+  for (const [code] of ISO6391) {
+    if (!catalogByLocale[code]) catalogByLocale[code] = catalogByLocale.en;
+  }
+  const buildContext = { inventory, manifest, catalogByLocale };
+  const crawlNavByLocale = {};
+  for (const locale of ["en", ...getTargetLocales()]) {
+    crawlNavByLocale[locale] = renderLocaleCrawlNavHtml(locale, buildContext);
+  }
+  buildContext.crawlNavByLocale = crawlNavByLocale;
+
   const en = localeRecord("en");
   writeFile(
     join(staged, "index.html"),
-    appShellHtml({ code: "en", canonical: `${SITE}/`, title: en.title, description: en.description }),
+    appShellHtml({
+      code: "en",
+      canonical: `${SITE}/`,
+      title: en.title,
+      description: en.description,
+      buildContext,
+    }),
   );
   for (const [code] of ISO6391) {
     const copy = localeRecord(code);
@@ -273,11 +316,12 @@ export function generateStaticSite(staged) {
         canonical: canonicalFor(code),
         title: copy.title,
         description: copy.description,
+        buildContext,
       }),
     );
   }
   // English static pages at canonical /2026/* and /p/* paths (Phase A serves /2026 from Assets).
-  const englishShadow = writeEnglishStaticPages(writeFile, staged);
+  const englishShadow = writeEnglishStaticPages(writeFile, staged, inventory, { manifest, buildContext });
   if (englishShadow.missingSource.length) {
     throw new Error(`English static missing source files: ${englishShadow.missingSource.join(", ")}`);
   }
@@ -286,11 +330,16 @@ export function generateStaticSite(staged) {
   writeLocaleCatalogs(writeFile, staged);
 
   // Ready translations only (status=ready + sourceHash match + validation). Missing/stale skipped.
-  const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged);
+  const localeArticleLocs = writePublishableLocaleArticles(writeFile, staged, null, {
+    inventory,
+    buildContext,
+  });
   const publishable = collectPublishableLocaleArticleLocs().filter((loc) => localeArticleLocs.includes(loc));
   assertLocaleSitemapLocsHaveFiles(staged, publishable);
   writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, null);
   writeFile(join(staged, "robots.txt"), robotsTxt());
+  writeFile(join(staged, "llms.txt"), llmsTxtBody());
+  writeCopyrightStaticPage(writeFile, staged);
   writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
   // IndexNow ownership key at site root (plain text only).
   writeFile(join(staged, indexNowKeyFilename()), indexNowKeyBody());

@@ -14,6 +14,7 @@ describe("Workers Static Assets routing", () => {
       "/",
       "/sitemap.xml",
       "/robots.txt",
+      "/llms.txt",
       "/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt",
       "/p/*",
       "/feeds/*",
@@ -28,6 +29,9 @@ describe("Workers Static Assets routing", () => {
     ]);
     // File 8 root: /robots.txt must be Worker-first Assets (not Blogger origin).
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/robots.txt")).toBe(true);
+    // Semrush #15: /llms.txt must be Worker-first Assets (not Blogger 404).
+    expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/llms.txt")).toBe(true);
+    expect(wrangler.assets.run_worker_first).toContain("/llms.txt");
     expect(
       wrangler.routes.some((r) => r.pattern === "www.11tik.com/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt"),
     ).toBe(true);

@@ -48,6 +48,36 @@ describe("Worker ASSETS passthrough (robots.txt)", () => {
     expect(body).toMatch(/^User-agent: \*\r?\nContent-Signal:[^\n]*\r?\nAllow: \//m);
   });
 
+  it("serves generated llms.txt from ASSETS (Worker-first, not Blogger/SPA)", async () => {
+    const dir = getStagedStaticSite();
+    const assetBody = readFileSync(join(dir, "llms.txt"), "utf8");
+
+    expect(assetBody).toMatch(/^# 11tik/m);
+    expect(assetBody).toContain("https://www.11tik.com/");
+    expect(assetBody).not.toMatch(/<html/i);
+
+    const seen: string[] = [];
+    const env = {
+      ASSETS: {
+        fetch(req: Request) {
+          seen.push(new URL(req.url).pathname);
+          return new Response(assetBody, {
+            status: 200,
+            headers: { "content-type": "text/plain; charset=utf-8" },
+          });
+        },
+      },
+    };
+
+    const res = await worker.fetch(new Request("https://www.11tik.com/llms.txt"), env);
+    expect(res.status).toBe(200);
+    expect(seen).toEqual(["/llms.txt"]);
+    const body = await res.text();
+    expect(body).toBe(assetBody);
+    expect(body).not.toMatch(/<html/i);
+    expect(res.headers.get("strict-transport-security")).toMatch(/max-age=31536000/);
+  });
+
   it("still serves Assets sitemap alongside robots", async () => {
     const seen: string[] = [];
     const env = {

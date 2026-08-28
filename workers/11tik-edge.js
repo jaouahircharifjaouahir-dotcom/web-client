@@ -230,6 +230,16 @@ export default {
       if (res.ok) return withSecurityHeaders(res);
     }
 
+    // Semrush #8: EN contact from staged static (expanded prose). Blogger page is stale (~77 words).
+    // Canonicalize query variants (?m=1, etc.) to the clean URL — same pattern as /copyright.
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/contact.html" && url.search) {
+      return Response.redirect(`${SITE}/p/contact.html`, 301);
+    }
+
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/contact.html" && env?.ASSETS) {
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
+    }
+
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
       const toHtml = extensionlessPPathToHtml(url.pathname);
       if (toHtml) {

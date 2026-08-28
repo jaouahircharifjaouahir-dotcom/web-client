@@ -240,6 +240,15 @@ export default {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
+    // Semrush hreflang: EN embed from staged static (39 server-side alternates). Blogger injects hreflang client-side only.
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/embed.html" && url.search) {
+      return Response.redirect(`${SITE}/p/embed.html`, 301);
+    }
+
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/embed.html" && env?.ASSETS) {
+      return withSecurityHeaders(await env.ASSETS.fetch(request));
+    }
+
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
       const toHtml = extensionlessPPathToHtml(url.pathname);
       if (toHtml) {

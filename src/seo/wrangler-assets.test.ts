@@ -12,10 +12,6 @@ describe("Workers Static Assets routing", () => {
     expect(wrangler.assets.html_handling).toBe("none");
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
-      "/sitemap.xml",
-      "/robots.txt",
-      "/llms.txt",
-      "/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt",
       "/feeds/*",
       "/sitemap-pages.xml",
       "/search",
@@ -34,11 +30,13 @@ describe("Workers Static Assets routing", () => {
     // Phase 2B: /p/* Worker-first with six utility .html exclusions → direct Assets.
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
-    // File 8 root: /robots.txt must be Worker-first Assets (not Blogger origin).
+    // Phase 4A: robots/llms/sitemap/IndexNow are direct Assets (zone HSTS); zone routes remain.
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/robots.txt")).toBe(true);
-    // Semrush #15: /llms.txt must be Worker-first Assets (not Blogger 404).
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/llms.txt")).toBe(true);
-    expect(wrangler.assets.run_worker_first).toContain("/llms.txt");
+    expect(wrangler.assets.run_worker_first).not.toContain("/robots.txt");
+    expect(wrangler.assets.run_worker_first).not.toContain("/llms.txt");
+    expect(wrangler.assets.run_worker_first).not.toContain("/sitemap.xml");
+    expect(wrangler.assets.run_worker_first).not.toContain("/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt");
     expect(
       wrangler.routes.some((r) => r.pattern === "www.11tik.com/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt"),
     ).toBe(true);

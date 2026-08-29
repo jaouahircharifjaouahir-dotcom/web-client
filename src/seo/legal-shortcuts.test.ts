@@ -222,14 +222,15 @@ describe("Phase 3B — legal shortcuts regression guards", () => {
     expect(matchesRunWorkerFirst("/search")).toBe(true);
   });
 
-  it("robots.txt, llms.txt, sitemap.xml, sitemap-pages.xml remain Worker-first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/robots.txt");
-    expect(wrangler.assets.run_worker_first).toContain("/llms.txt");
-    expect(wrangler.assets.run_worker_first).toContain("/sitemap.xml");
+  it("SEO infra direct Assets; sitemap-pages.xml remains Worker-first", () => {
+    expect(wrangler.assets.run_worker_first).not.toContain("/robots.txt");
+    expect(wrangler.assets.run_worker_first).not.toContain("/llms.txt");
+    expect(wrangler.assets.run_worker_first).not.toContain("/sitemap.xml");
+    expect(wrangler.assets.run_worker_first).not.toContain("/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt");
+    expect(matchesRunWorkerFirst("/robots.txt")).toBe(false);
+    expect(matchesRunWorkerFirst("/llms.txt")).toBe(false);
+    expect(matchesRunWorkerFirst("/sitemap.xml")).toBe(false);
     expect(wrangler.assets.run_worker_first).toContain("/sitemap-pages.xml");
-    expect(matchesRunWorkerFirst("/robots.txt")).toBe(true);
-    expect(matchesRunWorkerFirst("/llms.txt")).toBe(true);
-    expect(matchesRunWorkerFirst("/sitemap.xml")).toBe(true);
     expect(matchesRunWorkerFirst("/sitemap-pages.xml")).toBe(true);
   });
 

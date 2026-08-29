@@ -15,6 +15,7 @@ import worker, {
   extensionlessPPathToHtml,
   handlePrimaryPPathRequest,
   legacyPRedirectUrl,
+  utilityTrailingSlashCanonicalRedirect,
 } from "../../workers/11tik-edge.js";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 
@@ -386,4 +387,91 @@ describe("Phase 2B — critical routing simulation matrix (A–L)", () => {
       }
     });
   }
+});
+
+describe("Phase 2C — trailing-slash utility URLs", () => {
+  for (const page of UTILITIES) {
+    const clean = `/p/${page.slug}.html`;
+    const slashed = `${clean}/`;
+
+    it(`${clean} remains Worker-excluded (direct Asset)`, () => {
+      expect(matchesRunWorkerFirst(clean)).toBe(false);
+    });
+
+    it(`${slashed} is Worker-first and 301 → clean canonical`, async () => {
+      expect(matchesRunWorkerFirst(slashed)).toBe(true);
+      expect(utilityTrailingSlashCanonicalRedirect(new URL(`${SITE_ORIGIN}${slashed}`))).toBe(
+        `${SITE_ORIGIN}${clean}`,
+      );
+
+      const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}${slashed}`), {});
+      expect(res?.status).toBe(301);
+      expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}${clean}`);
+
+      const assetCalls: string[] = [];
+      const env = {
+        ASSETS: {
+          fetch(req: Request) {
+            assetCalls.push(new URL(req.url).pathname);
+            return new Response("homepage spa", { status: 200 });
+          },
+        },
+      };
+      const blocked = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}${slashed}`), env);
+      expect(blocked?.status).toBe(301);
+      expect(assetCalls).toEqual([]);
+    });
+  }
+
+  it("unknown /p/random.html/ stays 404 (not homepage SPA)", async () => {
+    expect(utilityTrailingSlashCanonicalRedirect(new URL(`${SITE_ORIGIN}/p/random.html/`))).toBe("");
+    const env = {
+      ASSETS: {
+        fetch() {
+          return new Response("<html id=\"root\">homepage</html>", { status: 200 });
+        },
+      },
+    };
+    const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}/p/random.html/`), env);
+    expect(res?.status).toBe(404);
+    expect(await res!.text()).toContain("404 Not Found");
+  });
+
+  it("/p/about.html/?m=1 → 301 clean (no loop, no SPA body)", async () => {
+    const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}/p/about.html/?m=1`), {});
+    expect(res?.status).toBe(301);
+    expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
+    const route = simulatePProductionRouting("/p/about.html", "m=1");
+    expect(route.edgeRedirect).toBe(true);
+    expect(route.status).toBe(301);
+  });
+
+  it("/p/about.html/?foo=1 → 301 clean canonical only", async () => {
+    const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}/p/about.html/?foo=1`), {});
+    expect(res?.status).toBe(301);
+    expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
+  });
+
+  it("localized /l/fr/p/about.html/ is unaffected (not www /p/ handler)", async () => {
+    const dir = getStagedStaticSite();
+    const body = readFileSync(join(dir, "l/fr/p/about.html"), "utf8");
+    const seen: string[] = [];
+    const env = {
+      ASSETS: {
+        fetch(req: Request) {
+          seen.push(new URL(req.url).pathname);
+          return new Response(body, { status: 200 });
+        },
+      },
+    };
+    const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html/"), env);
+    expect(res.status).toBe(200);
+    expect(seen[0]).toBe("/l/fr/p/about.html/");
+  });
+
+  it("/thumb/* and / remain unchanged", () => {
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+    expect(matchesRunWorkerFirst("/")).toBe(true);
+    expect(wrangler.assets.not_found_handling).toBe("single-page-application");
+  });
 });

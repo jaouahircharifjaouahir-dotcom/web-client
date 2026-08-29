@@ -63,13 +63,28 @@ function pPathNotFoundResponse() {
   );
 }
 
+/** @returns {string} absolute redirect URL when indexable utility has trailing slash, else "" */
+export function utilityTrailingSlashCanonicalRedirect(url) {
+  const rawPath = String(url.pathname || "");
+  const path = rawPath.replace(/\/+$/, "") || "/";
+  if (rawPath === path || !path.startsWith("/p/")) return "";
+  if (!INDEXABLE_UTILITY_SET.has(path)) return "";
+  return `${SITE}${path}`;
+}
+
 /**
  * Phase 2B: www /p/* Worker fallback when negative run_worker_first excludes only six utilities.
  * Never calls fetchBlogger(); unknown paths return a true 404 (not SPA).
  */
 export async function handlePrimaryPPathRequest(url, env) {
-  const path = url.pathname.replace(/\/+$/, "") || "/";
+  const rawPath = url.pathname;
+  const path = rawPath.replace(/\/+$/, "") || "/";
   if (!path.startsWith("/p/")) return null;
+
+  const trailingSlashRedirect = utilityTrailingSlashCanonicalRedirect(url);
+  if (trailingSlashRedirect) {
+    return Response.redirect(trailingSlashRedirect, 301);
+  }
 
   const legacy = legacyPRedirectUrl(path);
   if (legacy) {
@@ -90,7 +105,8 @@ export async function handlePrimaryPPathRequest(url, env) {
   }
 
   if (INDEXABLE_UTILITY_SET.has(path) && env?.ASSETS) {
-    return withSecurityHeaders(await env.ASSETS.fetch(new Request(url.toString())));
+    const assetUrl = new URL(path, url.origin);
+    return withSecurityHeaders(await env.ASSETS.fetch(new Request(assetUrl.toString())));
   }
 
   return pPathNotFoundResponse();

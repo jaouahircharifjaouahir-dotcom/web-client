@@ -274,13 +274,15 @@ export default {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
-    // Semrush uncompressed_pages: EN about/privacy/terms from staged static (no Blogger no-transform).
+    // Phase C: EN keyword-tools from staged static (last indexable /p/ on Blogger).
+    // Semrush uncompressed_pages: EN about/privacy/terms/keyword-tools from staged static (no Blogger no-transform).
     const enStaticUtility = url.pathname.replace(/\/+$/, "");
     if (
       isPrimaryHost(host) &&
       (enStaticUtility === "/p/about.html" ||
         enStaticUtility === "/p/privacy.html" ||
-        enStaticUtility === "/p/terms-of-use.html")
+        enStaticUtility === "/p/terms-of-use.html" ||
+        enStaticUtility === "/p/keyword-tools.html")
     ) {
       if (url.search) {
         return Response.redirect(`${SITE}${enStaticUtility}`, 301);

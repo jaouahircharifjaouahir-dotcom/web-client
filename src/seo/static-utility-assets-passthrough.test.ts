@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import worker, { withSecurityHeaders } from "../../workers/11tik-edge.js";
@@ -29,6 +29,14 @@ const UTILITIES = [
     localePath: "l/de/p/terms-of-use.html",
     localeHost: "https://de.11tik.com/l/de/p/terms-of-use.html",
     manifestKey: "terms-of-use" as const,
+  },
+  {
+    slug: "keyword-tools",
+    canon: "https://www.11tik.com/p/keyword-tools.html",
+    h1: "Keyword tools",
+    localePath: "l/fr/p/keyword-tools.html",
+    localeHost: "https://fr.11tik.com/l/fr/p/keyword-tools.html",
+    manifestKey: "keyword-tools" as const,
   },
 ] as const;
 
@@ -82,6 +90,7 @@ describe("Worker ASSETS passthrough (www EN static utilities)", () => {
         expect(html).toMatch(/hreflang="fr"/);
         expect(countHreflang(html)).toBe(39);
         expect(countAhrefs(html)).toBe(1);
+        expect(html).toMatch(/<a class="yte-brand"[^>]*>\s*<span class="yte-mark"[^>]*>11<\/span>\s*11tik\s*<\/a>/);
 
         const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
         expect(jsonLd.length).toBeGreaterThanOrEqual(1);
@@ -136,6 +145,38 @@ describe("Worker ASSETS passthrough (www EN static utilities)", () => {
     );
     expect(res.headers.get("cache-control")).not.toMatch(/no-transform/i);
     expect(res.headers.get("strict-transport-security")).toMatch(/max-age=31536000/);
+  });
+
+  it("generic /p/* still uses Blogger fallback for unknown pages", async () => {
+    const bloggerHtml = "<html><body>Blogger</body></html>";
+    const fetchSpy = vi.fn(async () => new Response(bloggerHtml, { status: 200, headers: { "content-type": "text/html" } }));
+    vi.stubGlobal("fetch", fetchSpy);
+    vi.stubGlobal(
+      "HTMLRewriter",
+      class {
+        on() {
+          return this;
+        }
+        transform(input: Response) {
+          return input;
+        }
+      },
+    );
+    try {
+      const env = {
+        ASSETS: {
+          fetch() {
+            throw new Error("ASSETS must not run for unknown /p/ pages");
+          },
+        },
+      };
+      const res = await worker.fetch(new Request("https://www.11tik.com/p/not-a-static-utility.html"), env);
+      expect(res.status).toBe(200);
+      expect(fetchSpy).toHaveBeenCalled();
+      expect(await res.text()).toContain("Blogger");
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 
   it("does not change utility translation readiness (888 matrix, 37 locales each)", () => {

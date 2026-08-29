@@ -7,6 +7,7 @@ import {
   patchHomepageShellHtml,
   resolveHomepageQueryShell,
 } from "./homepage-query-shell.mjs";
+import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
 
@@ -29,12 +30,70 @@ function isPrimaryHost(host) {
 function isBloggerContentPath(pathname) {
   return (
     pathname.startsWith("/2026/") ||
-    pathname.startsWith("/p/") ||
     pathname.startsWith("/feeds/") ||
     pathname === "/sitemap-pages.xml" ||
     pathname === "/search" ||
     pathname.startsWith("/search/")
   );
+}
+
+const LEGACY_P_REDIRECT_BY_PATH = new Map(LEGACY_P_REDIRECTS.map((rule) => [rule.from, rule.to]));
+const INDEXABLE_UTILITY_SET = new Set(INDEXABLE_UTILITY_PATHS);
+
+const P_PATH_NOT_FOUND_HTML =
+  "<!DOCTYPE html><html lang=\"en\"><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>";
+
+/** @returns {string} absolute redirect URL, or "" */
+export function legacyPRedirectUrl(pathname) {
+  const path = String(pathname || "").replace(/\/+$/, "") || "/";
+  const to = LEGACY_P_REDIRECT_BY_PATH.get(path);
+  if (!to) return "";
+  return to === "/" ? `${SITE}/` : `${SITE}${to}`;
+}
+
+function pPathNotFoundResponse() {
+  return withSecurityHeaders(
+    new Response(P_PATH_NOT_FOUND_HTML, {
+      status: 404,
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store",
+      },
+    }),
+  );
+}
+
+/**
+ * Phase 2B: www /p/* Worker fallback when negative run_worker_first excludes only six utilities.
+ * Never calls fetchBlogger(); unknown paths return a true 404 (not SPA).
+ */
+export async function handlePrimaryPPathRequest(url, env) {
+  const path = url.pathname.replace(/\/+$/, "") || "/";
+  if (!path.startsWith("/p/")) return null;
+
+  const legacy = legacyPRedirectUrl(path);
+  if (legacy) {
+    const dest = new URL(legacy);
+    dest.search = url.search;
+    return Response.redirect(dest.toString(), 301);
+  }
+
+  if (INDEXABLE_UTILITY_SET.has(path) && url.search) {
+    return Response.redirect(`${SITE}${path}`, 301);
+  }
+
+  const toHtml = extensionlessPPathToHtml(path);
+  if (toHtml) {
+    const dest = new URL(toHtml, `${SITE}/`);
+    dest.search = url.search;
+    return Response.redirect(dest.toString(), 301);
+  }
+
+  if (INDEXABLE_UTILITY_SET.has(path) && env?.ASSETS) {
+    return withSecurityHeaders(await env.ASSETS.fetch(new Request(url.toString())));
+  }
+
+  return pPathNotFoundResponse();
 }
 
 function legalPageRedirect(pathname) {
@@ -46,12 +105,12 @@ function legalPageRedirect(pathname) {
   return "";
 }
 
-/** /p/about → /p/about.html (Worker-first paths skip Assets `_redirects`). */
+/** Extensionless indexable utility → .html (Worker-first /p/* skips Assets `_redirects`). */
 export function extensionlessPPathToHtml(pathname) {
   const path = String(pathname || "").replace(/\/+$/, "") || "/";
   if (path.endsWith(".html")) return "";
-  const m = /^\/p\/([a-z0-9-]+)$/i.exec(path);
-  return m ? `/p/${m[1]}.html` : "";
+  const withHtml = `${path}.html`;
+  return INDEXABLE_UTILITY_SET.has(withHtml) ? withHtml : "";
 }
 
 /**
@@ -255,50 +314,14 @@ export default {
       if (res.ok) return withSecurityHeaders(res);
     }
 
-    // Semrush #8: EN contact from staged static (expanded prose). Blogger page is stale (~77 words).
-    // Canonicalize query variants (?m=1, etc.) to the clean URL — same pattern as /copyright.
-    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/contact.html" && url.search) {
-      return Response.redirect(`${SITE}/p/contact.html`, 301);
-    }
-
-    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/contact.html" && env?.ASSETS) {
-      return withSecurityHeaders(await env.ASSETS.fetch(request));
-    }
-
-    // Semrush hreflang: EN embed from staged static (39 server-side alternates). Blogger injects hreflang client-side only.
-    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/embed.html" && url.search) {
-      return Response.redirect(`${SITE}/p/embed.html`, 301);
-    }
-
-    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/embed.html" && env?.ASSETS) {
-      return withSecurityHeaders(await env.ASSETS.fetch(request));
-    }
-
-    // Phase C: EN keyword-tools from staged static (last indexable /p/ on Blogger).
-    // Semrush uncompressed_pages: EN about/privacy/terms/keyword-tools from staged static (no Blogger no-transform).
-    const enStaticUtility = url.pathname.replace(/\/+$/, "");
-    if (
-      isPrimaryHost(host) &&
-      (enStaticUtility === "/p/about.html" ||
-        enStaticUtility === "/p/privacy.html" ||
-        enStaticUtility === "/p/terms-of-use.html" ||
-        enStaticUtility === "/p/keyword-tools.html")
-    ) {
-      if (url.search) {
-        return Response.redirect(`${SITE}${enStaticUtility}`, 301);
-      }
-      if (env?.ASSETS) {
-        return withSecurityHeaders(await env.ASSETS.fetch(request));
-      }
+    // Phase 2B: www /p/* Worker fallback (legacy 301, extensionless utility 301, unknown 404).
+    // Six clean utility .html paths are excluded via negative run_worker_first → direct Assets.
+    if (isPrimaryHost(host) && url.pathname.startsWith("/p/")) {
+      const pResponse = await handlePrimaryPPathRequest(url, env);
+      if (pResponse) return pResponse;
     }
 
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
-      const toHtml = extensionlessPPathToHtml(url.pathname);
-      if (toHtml) {
-        const dest = new URL(toHtml, `${SITE}/`);
-        dest.search = url.search;
-        return Response.redirect(dest.toString(), 301);
-      }
       return polishBloggerHtml(await fetchBlogger(request), url.pathname);
     }
 

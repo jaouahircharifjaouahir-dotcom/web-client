@@ -1,5 +1,6 @@
 import { readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { LEGACY_P_REDIRECTS } from "../workers/sitemap-canonicals.js";
 
 /**
  * Build Cloudflare Workers Assets `_redirects` rules that consolidate
@@ -51,11 +52,15 @@ export function buildHtmlExtensionRedirects(staged) {
   }
 
   walk(staged);
-  rules.sort();
+
+  const legacyRules = LEGACY_P_REDIRECTS.map(({ from, to }) => `${from} ${to} 301`);
+  const merged = [...new Set([...rules, ...legacyRules])].sort();
+
   const header = [
     "# Generated: extensionless → *.html canonicals",
     "# Pairs with wrangler assets.html_handling=none (File 1 / File 15).",
     "# Do not use :placeholders here — they match dots and would loop *.html.",
+    "# Legacy /p/ → canonical article or / (Phase 2). .html sources are intentional.",
   ];
-  return `${header.join("\n")}\n${rules.join("\n")}${rules.length ? "\n" : ""}`;
+  return `${header.join("\n")}\n${merged.join("\n")}${merged.length ? "\n" : ""}`;
 }

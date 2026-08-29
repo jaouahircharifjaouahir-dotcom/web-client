@@ -184,12 +184,12 @@ describe("POC French share-links article i18n (regression)", () => {
   it("documents Worker-first /l/* for locale directory homes; articles passthrough ASSETS", () => {
     const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
-    // Phase A: English /2026/* is static; utilities /p/* remain Worker-first for now.
-    // File 22: article *.html stay Worker-zero — html_handling:none is the root fix.
     expect(wrangler.assets.html_handling).toBe("none");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
+    // Phase 2B: /p/* Worker-first with six utility .html exclusions → direct Assets.
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
+    expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
     // Locale directory homes (/l/fr/) need Worker before Assets SPA fallback; explicit
     // /l/fr/2026/*.html still reach ASSETS via Worker passthrough (not locale-home rewrite).
     expect(wrangler.assets.run_worker_first).toContain("/l/*");

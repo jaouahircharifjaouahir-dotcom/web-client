@@ -16,7 +16,6 @@ describe("Workers Static Assets routing", () => {
       "/robots.txt",
       "/llms.txt",
       "/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt",
-      "/p/*",
       "/feeds/*",
       "/sitemap-pages.xml",
       "/search",
@@ -26,9 +25,19 @@ describe("Workers Static Assets routing", () => {
       "/terms",
       "/contact",
       "/copyright*",
+      "/p/*",
+      "!/p/about.html",
+      "!/p/privacy.html",
+      "!/p/terms-of-use.html",
+      "!/p/contact.html",
+      "!/p/embed.html",
+      "!/p/keyword-tools.html",
       "/l/*",
     ]);
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
+    // Phase 2B: /p/* Worker-first with six utility .html exclusions → direct Assets.
+    expect(wrangler.assets.run_worker_first).toContain("/p/*");
+    expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
     // File 8 root: /robots.txt must be Worker-first Assets (not Blogger origin).
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/robots.txt")).toBe(true);
     // Semrush #15: /llms.txt must be Worker-first Assets (not Blogger 404).
@@ -43,6 +52,7 @@ describe("Workers Static Assets routing", () => {
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
     expect(wrangler.assets.run_worker_first).not.toContain("/l/*/2026/*.html");
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
+    expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
     expect(wrangler.assets.run_worker_first).not.toContain("/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/thumb/*");
     // Exact routes omit query-string URLs; trailing * is required (CF routes docs).

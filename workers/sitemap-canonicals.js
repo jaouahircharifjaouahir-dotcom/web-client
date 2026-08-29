@@ -33,6 +33,55 @@ export const LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP = Object.freeze([
   "/p/youtube-shorts-thumbnail.html",
 ]);
 
+/**
+ * Legacy /p/ URLs → canonical static destinations (301 via dist-assets/_redirects).
+ * Targets verified against GUIDE_POSTS hrefs in src/content/posts.ts.
+ */
+export const LEGACY_P_REDIRECTS = Object.freeze([
+  {
+    from: "/p/how-to-download-youtube-thumbnail",
+    to: "/2026/08/how-to-download-youtube-thumbnail.html",
+  },
+  {
+    from: "/p/how-to-download-youtube-thumbnail.html",
+    to: "/2026/08/how-to-download-youtube-thumbnail.html",
+  },
+  { from: "/p/youtube-thumbnail-url", to: "/2026/08/youtube-thumbnail-url.html" },
+  { from: "/p/youtube-thumbnail-url.html", to: "/2026/08/youtube-thumbnail-url.html" },
+  {
+    from: "/p/youtube-thumbnail-size",
+    to: "/2026/08/youtube-thumbnail-size-resolution.html",
+  },
+  {
+    from: "/p/youtube-thumbnail-size.html",
+    to: "/2026/08/youtube-thumbnail-size-resolution.html",
+  },
+  {
+    from: "/p/youtube-shorts-thumbnail",
+    to: "/2026/08/youtube-shorts-thumbnail-download.html",
+  },
+  {
+    from: "/p/youtube-shorts-thumbnail.html",
+    to: "/2026/08/youtube-shorts-thumbnail-download.html",
+  },
+  { from: "/p/youtube-thumbnail-extractor", to: "/" },
+  { from: "/p/youtube-thumbnail-extractor.html", to: "/" },
+  { from: "/p/copyright.html", to: "/copyright" },
+]);
+
+/** Paths allowed through the unknown-/p/* edge 404 rule (utilities + legacy redirect sources). */
+export function collectPAllowlistPaths() {
+  const paths = new Set();
+  for (const utility of INDEXABLE_UTILITY_PATHS) {
+    paths.add(utility);
+    paths.add(utility.replace(/\.html$/i, ""));
+  }
+  for (const { from } of LEGACY_P_REDIRECTS) {
+    paths.add(from);
+  }
+  return [...paths].sort();
+}
+
 function xmlEscape(value) {
   return String(value || "")
     .replaceAll("&", "&amp;")

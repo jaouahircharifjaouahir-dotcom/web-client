@@ -200,7 +200,9 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
     const raw = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
     // Phase A: English guides are asset-first; do not reintroduce /2026/* Worker-first.
     expect(raw).not.toMatch(/"\/2026\/\*"/);
+    // Phase 2B: /p/* Worker-first with six utility .html exclusions.
     expect(raw).toContain('"/p/*"');
+    expect(raw).toContain('"!/p/about.html"');
     expect(raw).toContain('"/l/*"');
     expect(raw).not.toMatch(/"\/l\/\*\/2026\/\*\.html"/);
   });

@@ -54,6 +54,19 @@ export function extensionlessPPathToHtml(pathname) {
   return m ? `/p/${m[1]}.html` : "";
 }
 
+/**
+ * Directory-style locale home (/l/fr/) has no exact asset key; ASSETS SPA fallback
+ * would serve English index.html. Map to staged l/{code}/index.html instead.
+ */
+export function localeHomeIndexAssetPath(pathname) {
+  const path = String(pathname || "").replace(/\/+$/, "") || "/";
+  const m = /^\/l\/([a-z]{2})$/i.exec(path);
+  if (!m) return "";
+  const code = m[1].toLowerCase();
+  if (!ISO6391_CODES.has(code)) return "";
+  return `/l/${code}/index.html`;
+}
+
 function fetchBlogger(request) {
   const headers = new Headers(request.headers);
   headers.set("x-11tik-pass", "1");
@@ -290,6 +303,27 @@ export default {
     if (host === "www.11tik.com") {
       const legal = legalPageRedirect(url.pathname);
       if (legal) return Response.redirect(legal, 301);
+    }
+
+    // Locale home directories (/l/fr/) must resolve to l/fr/index.html before ASSETS SPA fallback.
+    const localeHomeAsset = localeHomeIndexAssetPath(url.pathname);
+    if (localeHomeAsset && env?.ASSETS) {
+      const withoutMobile = homepageUrlWithoutBloggerMobileParam(url);
+      if (withoutMobile) return Response.redirect(withoutMobile.toString(), 301);
+
+      const assetUrl = new URL(localeHomeAsset, url.origin);
+      const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
+      if (!res.ok) return withSecurityHeaders(res);
+
+      const variant = resolveHomepageQueryShell(url.searchParams);
+      if (variant) {
+        const headers = new Headers(res.headers);
+        headers.set("content-type", "text/html; charset=utf-8");
+        headers.set("cache-control", "public, max-age=120, must-revalidate");
+        const html = patchHomepageShellHtml(await res.text(), variant);
+        return withSecurityHeaders(new Response(html, { status: res.status, headers }));
+      }
+      return withSecurityHeaders(res);
     }
 
     // SPA + static assets: /copyright, /thumb/*, /l/*, /2026/*.html, /web-client/*, …

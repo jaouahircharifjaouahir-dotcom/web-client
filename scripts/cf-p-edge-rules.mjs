@@ -10,8 +10,36 @@ export const RULE_PREFIX_QUERY = "11tik-p2-query:";
 /** Unknown /p/* hard 404 — single rule. */
 export const RULE_PREFIX_404 = "11tik-p2-404:";
 
+/** Phase 3 legal shortcuts — /about → /p/about.html, etc. */
+export const RULE_PREFIX_LEGAL = "11tik-p3-legal:";
+
 export const QUERY_PHASE = "http_request_dynamic_redirect";
 export const UNKNOWN_404_PHASE = "http_request_firewall_custom";
+
+/** www legal shortcut paths → indexable utility .html destinations. */
+export const LEGAL_SHORTCUT_REDIRECTS = Object.freeze([
+  { from: "/about", to: "/p/about.html", slug: "about" },
+  { from: "/privacy", to: "/p/privacy.html", slug: "privacy" },
+  { from: "/terms", to: "/p/terms-of-use.html", slug: "terms" },
+  { from: "/contact", to: "/p/contact.html", slug: "contact" },
+]);
+
+export function buildLegalShortcutRules() {
+  return LEGAL_SHORTCUT_REDIRECTS.map(({ from, to, slug }) => ({
+    description: `${RULE_PREFIX_LEGAL}${slug}`,
+    expression: `(http.host eq "www.11tik.com" and http.request.uri.path eq "${from}")`,
+    action: "redirect",
+    action_parameters: {
+      from_value: {
+        status_code: 301,
+        preserve_query_string: false,
+        target_url: {
+          value: `${SITE_ORIGIN}${to}`,
+        },
+      },
+    },
+  }));
+}
 
 export function buildQueryCanonicalizeRules() {
   return INDEXABLE_UTILITY_PATHS.map((path) => {
@@ -57,4 +85,8 @@ export function isQueryOwnedRule(rule) {
 
 export function is404OwnedRule(rule) {
   return String(rule?.description || "").startsWith(RULE_PREFIX_404);
+}
+
+export function isLegalOwnedRule(rule) {
+  return String(rule?.description || "").startsWith(RULE_PREFIX_LEGAL);
 }

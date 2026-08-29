@@ -18,6 +18,7 @@ import worker, {
   utilityTrailingSlashCanonicalRedirect,
 } from "../../workers/11tik-edge.js";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
+import { matchesRunWorkerFirst } from "./test-helpers/run-worker-first.ts";
 
 const UTILITIES = [
   { slug: "about", h1: "About 11tik" },
@@ -46,32 +47,6 @@ function countHreflang(html: string): number {
 function countAhrefs(html: string): number {
   return [...html.matchAll(/<script\b[^>]*\bsrc=["']https:\/\/analytics\.ahrefs\.com\/analytics\.js["'][^>]*>/gi)]
     .length;
-}
-
-function pathMatchesPattern(pathname: string, pattern: string): boolean {
-  if (pattern.endsWith("/*")) {
-    const prefix = pattern.slice(0, -1);
-    return pathname === prefix.slice(0, -1) || pathname.startsWith(prefix);
-  }
-  if (pattern.endsWith("*")) {
-    return pathname.startsWith(pattern.slice(0, -1));
-  }
-  return pathname === pattern;
-}
-
-/** Simulates Cloudflare negative run_worker_first: positive match minus exclusions. */
-export function matchesRunWorkerFirst(pathname: string): boolean {
-  const patterns = wrangler.assets.run_worker_first as string[];
-  let positive = false;
-  let negative = false;
-  for (const pattern of patterns) {
-    if (pattern.startsWith("!/")) {
-      if (pathMatchesPattern(pathname, pattern.slice(1))) negative = true;
-    } else if (pathMatchesPattern(pathname, pattern)) {
-      positive = true;
-    }
-  }
-  return positive && !negative;
 }
 
 /** Phase 2B routing: negative RWF + Worker /p/* fallback + edge query redirect design. */

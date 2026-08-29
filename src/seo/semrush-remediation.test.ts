@@ -110,10 +110,18 @@ describe("Semrush remediation (ranks #1–#15)", () => {
       }
   });
 
-  it("Rank #3: robots Content-Signal is intentional (not removed)", () => {
+  it("Rank #3: robots omits Content-Signal (Semrush malformed_robots fix)", () => {
     const staged = getStagedStaticSite();
       const robots = readFileSync(join(staged, "robots.txt"), "utf8");
-      expect(robots).toContain("Content-Signal: search=yes,ai-train=no,use=reference");
+      expect(robots).not.toContain("Content-Signal:");
+      expect(robots).toMatch(/^User-agent: \*\r?\nAllow: \//m);
+      expect(robots).toMatch(/^User-agent: Amazonbot\r?\nAllow: \//m);
+      expect(robots).toMatch(/^User-agent: GPTBot\r?\nDisallow: \//m);
+      expect(robots).toContain("Disallow: /search");
+      expect(robots).toContain("Disallow: /feeds/");
+      expect(robots).not.toMatch(/^Disallow: \/l\//m);
+      expect(robots).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
+      expect(robots).not.toMatch(/^Host:/m);
   });
 
   it("Rank #4: homepage schema is WebApplication only (no SoftwareApplication)", () => {
@@ -150,7 +158,7 @@ describe("Semrush remediation (ranks #1–#15)", () => {
         const rel = new URL(url).pathname.replace(/^\//, "");
         const html = readFileSync(join(staged, rel), "utf8");
         expect(html).toMatch(/class="yte-brand"[^>]*aria-label="11tik — YouTube Thumbnail Extractor home"/);
-        expect(html).toMatch(/class="yte-brand"[^>]*>\s*<span class="yte-mark"[^>]*>11<\/span>\s*<span>11tik<\/span>/);
+        expect(html).toMatch(/class="yte-brand"[^>]*>\s*<span class="yte-mark"[^>]*>11<\/span>\s*11tik\s*<\/a>/);
       }
   });
 

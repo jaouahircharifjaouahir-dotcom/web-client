@@ -1,8 +1,4 @@
-import {
-  aiSearchAllowRobotsBlock,
-  aiTrainingRobotsBlock,
-  contentSignalDirective,
-} from "./ai-training-robots.js";
+import { aiSearchAllowRobotsBlock, aiTrainingRobotsBlock } from "./ai-training-robots.js";
 
 /** Sitemap protocol cap is 50_000 URLs. Stay under so a new file opens before Google rejects the old one. */
 export const SITEMAP_PAGE_SIZE = 40000;
@@ -114,7 +110,6 @@ Disallow: /hold-queue
 Disallow: /web-client/hold-queue.json
 
 User-agent: *
-${contentSignalDirective()}
 Allow: /
 Disallow: /search
 Disallow: /search?

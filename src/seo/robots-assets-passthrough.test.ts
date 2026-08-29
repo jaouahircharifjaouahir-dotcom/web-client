@@ -21,7 +21,7 @@ describe("Worker ASSETS passthrough (robots.txt)", () => {
     expect(assetBody).toMatch(/^User-agent: GPTBot\r?\nDisallow: \//m);
     expect(assetBody).toMatch(/^User-agent: ClaudeBot\r?\nDisallow: \//m);
     expect(assetBody).toMatch(/^User-agent: Google-Extended\r?\nDisallow: \//m);
-    expect(assetBody).toContain("Content-Signal: search=yes,ai-train=no,use=reference");
+    expect(assetBody).not.toContain("Content-Signal:");
     expect(assetBody).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
     expect(assetBody).not.toMatch(/^Disallow: \/l\//m);
     expect(assetBody).not.toContain("Mediapartners-Google");
@@ -45,7 +45,7 @@ describe("Worker ASSETS passthrough (robots.txt)", () => {
     expect(seen).toEqual(["/robots.txt"]);
     const body = await res.text();
     expect(body).toBe(assetBody);
-    expect(body).toMatch(/^User-agent: \*\r?\nContent-Signal:[^\n]*\r?\nAllow: \//m);
+    expect(body).toMatch(/^User-agent: \*\r?\nAllow: \//m);
   });
 
   it("serves generated llms.txt from ASSETS (Worker-first, not Blogger/SPA)", async () => {

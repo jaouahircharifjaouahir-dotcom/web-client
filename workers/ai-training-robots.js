@@ -3,7 +3,7 @@
  *
  * - Block ALL known AI *training* bots consistently (Ahrefs "Inconsistent AI training bots").
  * - Keep AI *search* bots allowed on indexable pages (Ahrefs "Indexable page blocked from …").
- * - Content-Signal: search=yes, ai-train=no (same intent as Cloudflare Managed, without Amazonbot Disallow).
+ * - Enforced via explicit User-agent Allow/Disallow (not Content-Signal — Semrush malformed_robots).
  *
  * Cloudflare Managed robots.txt also Disallows Amazonbot. That must be turned off
  * (dashboard or scripts/cf-managed-robots.mjs) or Ahrefs will keep flagging Amazonbot
@@ -34,8 +34,6 @@ export const AHREFS_PREVIOUSLY_ALLOWED_TRAINING_BOTS = Object.freeze([
 /** Ahrefs "Blocked AI search bots" on indexable pages in the 27-aug-2026 export. */
 export const AHREFS_BLOCKED_AI_SEARCH_BOTS = Object.freeze(["Amazonbot"]);
 
-export const CONTENT_SIGNAL = "search=yes,ai-train=no,use=reference";
-
 export function aiTrainingRobotsBlock() {
   const lines = [
     "# AI training crawlers — block all consistently (ai-train=no).",
@@ -57,8 +55,4 @@ export function aiSearchAllowRobotsBlock() {
     lines.push(`User-agent: ${ua}`, "Allow: /", "");
   }
   return lines.join("\n").trimEnd() + "\n";
-}
-
-export function contentSignalDirective() {
-  return `Content-Signal: ${CONTENT_SIGNAL}`;
 }

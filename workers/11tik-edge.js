@@ -156,6 +156,14 @@ export function httpsRedirectIfNeeded(request) {
   return Response.redirect(url.toString(), 301);
 }
 
+/** Semrush HSTS: apex is not www; canonical host is www with path/query preserved. */
+export function apexToWwwRedirectIfNeeded(request) {
+  const url = new URL(request.url);
+  if (url.hostname.toLowerCase() !== "11tik.com") return null;
+  url.hostname = "www.11tik.com";
+  return withSecurityHeaders(Response.redirect(url.toString(), 301));
+}
+
 /** HSTS for Semrush no_hsts_support (Cloudflare terminates TLS; Worker sets policy on HTML/assets). */
 export function withSecurityHeaders(response) {
   const headers = new Headers(response.headers);
@@ -169,6 +177,9 @@ export default {
   async fetch(request, env) {
     const httpsRedirect = httpsRedirectIfNeeded(request);
     if (httpsRedirect) return httpsRedirect;
+
+    const apexRedirect = apexToWwwRedirectIfNeeded(request);
+    if (apexRedirect) return apexRedirect;
 
     const url = new URL(request.url);
     const host = url.hostname.toLowerCase();
@@ -248,6 +259,22 @@ export default {
 
     if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/p/embed.html" && env?.ASSETS) {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
+    }
+
+    // Semrush uncompressed_pages: EN about/privacy/terms from staged static (no Blogger no-transform).
+    const enStaticUtility = url.pathname.replace(/\/+$/, "");
+    if (
+      isPrimaryHost(host) &&
+      (enStaticUtility === "/p/about.html" ||
+        enStaticUtility === "/p/privacy.html" ||
+        enStaticUtility === "/p/terms-of-use.html")
+    ) {
+      if (url.search) {
+        return Response.redirect(`${SITE}${enStaticUtility}`, 301);
+      }
+      if (env?.ASSETS) {
+        return withSecurityHeaders(await env.ASSETS.fetch(request));
+      }
     }
 
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {

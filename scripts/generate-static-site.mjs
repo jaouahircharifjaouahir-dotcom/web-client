@@ -1,11 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import {
-  aiSearchAllowRobotsBlock,
-  aiTrainingRobotsBlock,
-  contentSignalDirective,
-} from "../workers/ai-training-robots.js";
+import { aiSearchAllowRobotsBlock, aiTrainingRobotsBlock } from "../workers/ai-training-robots.js";
 import { ISO6391, RTL_CODES, hreflangLinks } from "../workers/iso6391.js";
 import { fitDescription, fitTitle, toHttpsUrl } from "../workers/html-meta.js";
 import localeMeta from "../workers/locale-meta.json" with { type: "json" };
@@ -246,7 +242,6 @@ function robotsTxt() {
 ${aiTrainingRobotsBlock()}
 ${aiSearchAllowRobotsBlock()}
 User-agent: *
-${contentSignalDirective()}
 Allow: /
 Disallow: /search
 Disallow: /feeds/

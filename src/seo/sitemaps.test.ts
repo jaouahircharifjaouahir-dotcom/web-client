@@ -52,7 +52,7 @@ describe("robots.txt", () => {
     expect(body).toContain("User-agent: Googlebot");
     expect(body).toContain("Allow: /");
     // Sitewide Allow stays; Disallow: / is only for named AI-training user-agents.
-    expect(body).toMatch(/^User-agent: \*\r?\n(?:Content-Signal:[^\n]*\r?\n)?Allow: \//m);
+    expect(body).toMatch(/^User-agent: \*\r?\nAllow: \//m);
     expect(body).not.toMatch(/^User-agent: \*\r?\nDisallow: \/$/m);
     expect(body).not.toMatch(/^User-agent: Googlebot\r?\nDisallow: \/$/m);
     expect(body).toMatch(/^User-agent: Amazonbot\r?\nAllow: \//m);

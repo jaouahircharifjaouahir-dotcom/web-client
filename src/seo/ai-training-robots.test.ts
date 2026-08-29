@@ -3,10 +3,8 @@ import {
   AHREFS_BLOCKED_AI_SEARCH_BOTS,
   AHREFS_PREVIOUSLY_ALLOWED_TRAINING_BOTS,
   AI_TRAINING_USER_AGENTS,
-  CONTENT_SIGNAL,
   aiSearchAllowRobotsBlock,
   aiTrainingRobotsBlock,
-  contentSignalDirective,
 } from "../../workers/ai-training-robots.js";
 import { robotsTxt as workerRobotsTxt } from "../../workers/sitemaps.js";
 
@@ -73,16 +71,34 @@ describe("AI training robots consistency", () => {
     }
   });
 
-  it("embeds training Disallow, Amazonbot Allow, and Content-Signal in worker robots", () => {
+  it("embeds training Disallow, Amazonbot Allow, and omits Content-Signal in worker robots", () => {
     const worker = workerRobotsTxt({ urlShards: 1, imageShards: 1 });
     for (const ua of AI_TRAINING_USER_AGENTS) {
       expect(isDisallowedForUa(worker, ua), ua).toBe(true);
     }
     expect(isAllowedForUa(worker, "Amazonbot")).toBe(true);
     expect(isDisallowedForUa(worker, "Amazonbot")).toBe(false);
-    expect(worker).toContain(contentSignalDirective());
-    expect(worker).toContain(CONTENT_SIGNAL);
+    expect(worker).not.toContain("Content-Signal:");
     expect(worker).toContain("User-agent: *");
     expect(worker).toContain("Allow: /");
+  });
+
+  it("keeps named training bots Disallowed and search bots Allowed", () => {
+    const worker = workerRobotsTxt({ urlShards: 1, imageShards: 1 });
+    const trainingBots = [
+      "GPTBot",
+      "ClaudeBot",
+      "Google-Extended",
+      "CCBot",
+      "DeepseekBot",
+      "anthropic-ai",
+      "cohere-ai",
+      "xAI-Bot",
+    ] as const;
+    for (const ua of trainingBots) {
+      expect(isDisallowedForUa(worker, ua), ua).toBe(true);
+    }
+    expect(isAllowedForUa(worker, "Amazonbot")).toBe(true);
+    expect(worker).toMatch(/^User-agent: \*\r?\nAllow: \//m);
   });
 });

@@ -139,7 +139,7 @@ export function renderSiteHeaderHtml(options = {}) {
 <header id="yte-site-header" class="yte-top" role="banner" data-yte-locale="${xmlEscape(locale)}" data-yte-home="${xmlEscape(homeUrl)}" data-yte-content-path="${xmlEscape(contentPath)}" data-yte-variant="${variant}">
   <a class="yte-brand" href="${xmlEscape(homeUrl)}" aria-label="11tik — YouTube Thumbnail Extractor home">
     <span class="yte-mark" aria-hidden="true">11</span>
-    <span>11tik</span>
+    11tik
   </a>
   <nav class="yte-actions" aria-label="Site">
     ${postsControl}

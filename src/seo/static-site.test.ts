@@ -53,7 +53,7 @@ describe("build-time static site", () => {
       expect(robots).toContain("User-agent: xAI-Bot");
       expect(robots).toContain("User-agent: Amazonbot");
       expect(robots).toMatch(/^User-agent: Amazonbot\r?\nAllow: \//m);
-      expect(robots).toContain("Content-Signal: search=yes,ai-train=no,use=reference");
+      expect(robots).not.toContain("Content-Signal:");
       expect(robots).toContain("Sitemap: https://www.11tik.com/sitemap.xml");
       expect(robots).not.toMatch(/^Host:/m);
       expect(robots).not.toContain("Disallow: /search?");

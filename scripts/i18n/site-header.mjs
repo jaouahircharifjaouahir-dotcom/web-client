@@ -107,7 +107,7 @@ export function siteHeaderScriptTag() {
  */
 export function renderSiteHeaderHtml(options = {}) {
   const locale = String(options.locale || "en").toLowerCase();
-  const homeUrl = options.homeUrl || localeHomeUrl(locale);
+  const brandHomeUrl = localeHomeUrl(locale);
   const contentPath = options.contentPath || "";
   const variant = options.variant === "spa-shell" ? "spa-shell" : "static";
   const labels = uiPack(locale);
@@ -122,10 +122,10 @@ export function renderSiteHeaderHtml(options = {}) {
     })
     .join("");
 
-  const postsUrl = new URL(homeUrl);
+  const postsUrl = new URL(brandHomeUrl);
   postsUrl.searchParams.delete("bulk");
   postsUrl.searchParams.set("posts", "1");
-  const bulkUrl = new URL(homeUrl);
+  const bulkUrl = new URL(brandHomeUrl);
   bulkUrl.searchParams.delete("posts");
   bulkUrl.searchParams.set("bulk", "1");
   const postsHref = postsUrl.href;
@@ -136,8 +136,8 @@ export function renderSiteHeaderHtml(options = {}) {
   const bulkControl = `<a class="yte-chip" id="yte-bulk-btn" data-yte-action="bulk" href="${xmlEscape(bulkHref)}" aria-pressed="false">${xmlEscape(labels.bulk)}</a>`;
 
   return `<div class="yte-static-chrome" data-yte-header-root>
-<header id="yte-site-header" class="yte-top" role="banner" data-yte-locale="${xmlEscape(locale)}" data-yte-home="${xmlEscape(homeUrl)}" data-yte-content-path="${xmlEscape(contentPath)}" data-yte-variant="${variant}">
-  <a class="yte-brand" href="${xmlEscape(homeUrl)}" aria-label="11tik — YouTube Thumbnail Extractor home">
+<header id="yte-site-header" class="yte-top" role="banner" data-yte-locale="${xmlEscape(locale)}" data-yte-home="${xmlEscape(brandHomeUrl)}" data-yte-content-path="${xmlEscape(contentPath)}" data-yte-variant="${variant}">
+  <a class="yte-brand" href="${xmlEscape(brandHomeUrl)}" aria-label="11tik — YouTube Thumbnail Extractor home">
     <span class="yte-mark" aria-hidden="true">11</span>
     11tik
   </a>

@@ -70,16 +70,9 @@ export function homepagePreviewImgHtml() {
   return `<p class="yte-preview-wrap"><img alt="${xmlEscape(alt)}" class="yte-preview" decoding="async" height="336" loading="lazy" src="${HOMEPAGE_PREVIEW.src}" width="640"/></p>`;
 }
 
-/** Crawlable homepage preview img (Ahrefs File 26 — alt present, not meta-only). */
+/** Visible homepage preview img removed (UX); og:image meta unchanged. Kept as identity for callers. */
 export function ensureHomepagePreviewImg(html) {
-  const out = String(html || "");
-  if (new RegExp(HOMEPAGE_PREVIEW.src.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(out)) {
-    return out;
-  }
-  if (/<div id="yte-root">/i.test(out)) {
-    return out.replace(/(<div id="yte-root">)/i, `${homepagePreviewImgHtml()}$1`);
-  }
-  return `${out}${homepagePreviewImgHtml()}`;
+  return String(html || "");
 }
 
 function upsertMetaContent(html, selectorAttr, selectorValue, content) {
@@ -121,5 +114,5 @@ export function patchHomepageShellHtml(html, variant) {
     /(<div id="yte-root"><h1>)[^<]*(<\/h1><p>)[^<]*(<\/p>)/i,
     `$1${h1}$2${intro}$3`,
   );
-  return ensureHomepagePreviewImg(stripHeadJsonLd(stripHreflangLinks(out)));
+  return stripHeadJsonLd(stripHreflangLinks(out));
 }

@@ -48,12 +48,10 @@ describe("Ahrefs alt texts (File 26)", () => {
     expect(alt.length).toBeLessThanOrEqual(100);
   });
 
-  it("homepage shell includes crawlable preview img with alt", () => {
-    const html = ensureHomepagePreviewImg('<div id="yte-root"><h1>Home</h1></div>');
-    expect(html).toContain(HOMEPAGE_PREVIEW.src);
-    const alt = /alt=["']([^"']*)["']/i.exec(html)?.[1] || "";
-    expect(alt.length).toBeGreaterThan(0);
-    expect(alt.length).toBeLessThanOrEqual(100);
+  it("ensureHomepagePreviewImg is a no-op (visible preview removed; og:image retained)", () => {
+    const base = '<div id="yte-root"><h1>Home</h1></div>';
+    expect(ensureHomepagePreviewImg(base)).toBe(base);
+    expect(ensureHomepagePreviewImg(base)).not.toContain(HOMEPAGE_PREVIEW.src);
   });
 
   it.skipIf(!FILE26_ROWS)("canonical CSV pages have img alt ≤100 for each flagged image target", () => {

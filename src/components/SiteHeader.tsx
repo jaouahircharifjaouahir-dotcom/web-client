@@ -21,7 +21,7 @@ export function SiteHeader({
   onNavigateView,
   locale,
 }: SiteHeaderProps) {
-  const home = localeHomeUrl();
+  const home = localeHomeUrl(locale);
   const postsHref = homeViewHref("posts", home);
   const bulkHref = homeViewHref("bulk", home);
   const postsActive = homeView === "posts";
@@ -35,11 +35,11 @@ export function SiteHeader({
 
   return (
     <header className="yte-top" role="banner">
-      <a className="yte-brand" href={home}>
+      <a className="yte-brand" href={home} aria-label="11tik — YouTube Thumbnail Extractor home">
         <span className="yte-mark" aria-hidden="true">
           11
         </span>
-        <span>{config.siteName}</span>
+        {config.siteName}
       </a>
       <nav className="yte-actions" aria-label="Site">
         <a

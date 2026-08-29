@@ -35,7 +35,6 @@ import {
   siteHeaderStyleTag,
   siteHeaderThemeBootScript,
 } from "./i18n/site-header.mjs";
-import { ensureHomepagePreviewImg } from "../workers/homepage-query-shell.mjs";
 import {
   renderLocaleCrawlNavHtml,
   renderShellGuideListHtml,
@@ -202,7 +201,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
     contentPath: "/",
     variant: "spa-shell",
   })}
-  ${ensureHomepagePreviewImg(spaShellBodyHtml(code, buildContext))}
+  ${spaShellBodyHtml(code, buildContext)}
   ${siteHeaderScriptTag()}
   <script defer fetchpriority="high" src="${js}"></script>
   <script defer src="/web-client/ga-boot.js?v=${APP_ASSET_V}"></script>

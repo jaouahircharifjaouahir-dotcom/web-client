@@ -196,11 +196,12 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
       );
   });
 
-  it("does not put localized article paths in run_worker_first", () => {
+  it("run_worker_first includes /l/* for locale homes, not article subpaths", () => {
     const raw = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
     // Phase A: English guides are asset-first; do not reintroduce /2026/* Worker-first.
     expect(raw).not.toMatch(/"\/2026\/\*"/);
     expect(raw).toContain('"/p/*"');
-    expect(raw).not.toMatch(/"\/l\/\*"/);
+    expect(raw).toContain('"/l/*"');
+    expect(raw).not.toMatch(/"\/l\/\*\/2026\/\*\.html"/);
   });
 });

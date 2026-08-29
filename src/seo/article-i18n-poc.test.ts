@@ -181,7 +181,7 @@ describe("POC French share-links article i18n (regression)", () => {
     expect(buildBloggerPocThemeFragment(false)).not.toContain("publishability.json");
   });
 
-  it("documents Worker-zero path: FR article outside run_worker_first", () => {
+  it("documents Worker-first /l/* for locale directory homes; articles passthrough ASSETS", () => {
     const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
     // Phase A: English /2026/* is static; utilities /p/* remain Worker-first for now.
@@ -190,8 +190,10 @@ describe("POC French share-links article i18n (regression)", () => {
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
-    expect(wrangler.assets.run_worker_first).not.toContain("/l/*");
-    expect(wrangler.assets.run_worker_first.some((p) => String(p).includes("/l/"))).toBe(false);
+    // Locale directory homes (/l/fr/) need Worker before Assets SPA fallback; explicit
+    // /l/fr/2026/*.html still reach ASSETS via Worker passthrough (not locale-home rewrite).
+    expect(wrangler.assets.run_worker_first).toContain("/l/*");
+    expect(wrangler.assets.run_worker_first).not.toContain("/l/*/2026/*.html");
     expect(wrangler.kv_namespaces).toBeUndefined();
     expect(wrangler.triggers).toBeUndefined();
   });

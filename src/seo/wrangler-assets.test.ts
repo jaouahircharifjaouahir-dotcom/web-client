@@ -26,7 +26,9 @@ describe("Workers Static Assets routing", () => {
       "/terms",
       "/contact",
       "/copyright*",
+      "/l/*",
     ]);
+    expect(wrangler.assets.run_worker_first).toContain("/l/*");
     // File 8 root: /robots.txt must be Worker-first Assets (not Blogger origin).
     expect(wrangler.routes.some((r) => r.pattern === "www.11tik.com/robots.txt")).toBe(true);
     // Semrush #15: /llms.txt must be Worker-first Assets (not Blogger 404).

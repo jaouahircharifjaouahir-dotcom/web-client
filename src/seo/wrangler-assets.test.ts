@@ -12,7 +12,8 @@ describe("Workers Static Assets routing", () => {
     expect(wrangler.assets.html_handling).toBe("none");
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
-      "/feeds/*",
+      "/feeds/pages/*",
+      "/feeds/posts/default",
       "/sitemap-pages.xml",
       "/search",
       "/search/*",

@@ -216,7 +216,9 @@ describe("Phase 3B — legal shortcuts regression guards", () => {
   });
 
   it("Blogger /feeds/* and /search remain Worker-first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/*");
+    expect(wrangler.assets.run_worker_first).toContain("/feeds/pages/*");
+    expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
+    expect(wrangler.assets.run_worker_first).not.toContain("/feeds/*");
     expect(wrangler.assets.run_worker_first).toContain("/search");
     expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
     expect(matchesRunWorkerFirst("/search")).toBe(true);

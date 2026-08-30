@@ -46,6 +46,12 @@ writeFileSync(
 /r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+/feeds/posts/default
+  Content-Type: application/atom+xml; charset=UTF-8
+  Cache-Control: public, max-age=3600, must-revalidate
+/feeds/posts/default.rss
+  Content-Type: application/rss+xml; charset=UTF-8
+  Cache-Control: public, max-age=3600, must-revalidate
 `,
 );
 

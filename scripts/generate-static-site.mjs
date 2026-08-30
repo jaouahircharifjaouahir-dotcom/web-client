@@ -41,6 +41,7 @@ import {
 } from "./i18n/locale-crawl-nav.mjs";
 import { scanPublishability } from "./i18n/publish.mjs";
 import { buildContentInventory } from "./i18n/content-inventory.mjs";
+import { writePostsFeeds } from "../workers/feed-generation.js";
 import { buildLocaleCatalogDoc } from "./i18n/write-locale-catalogs.mjs";
 import { getTargetLocales } from "./i18n/target-languages.mjs";
 
@@ -335,6 +336,7 @@ export function generateStaticSite(staged) {
   writeFile(join(staged, "llms.txt"), llmsTxtBody());
   writeCopyrightStaticPage(writeFile, staged);
   writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
+  writePostsFeeds(writeFile, staged, { inventory });
   // IndexNow ownership key at site root (plain text only).
   writeFile(join(staged, indexNowKeyFilename()), indexNowKeyBody());
   // After html_handling=none, point extensionless hits at *.html canonicals (Ahrefs File 15).

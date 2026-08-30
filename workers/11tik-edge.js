@@ -8,6 +8,7 @@ import {
   resolveHomepageQueryShell,
 } from "./homepage-query-shell.mjs";
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
+import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
 
@@ -30,7 +31,7 @@ function isPrimaryHost(host) {
 function isBloggerContentPath(pathname) {
   return (
     pathname.startsWith("/2026/") ||
-    pathname.startsWith("/feeds/") ||
+    (pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname)) ||
     pathname === "/sitemap-pages.xml" ||
     pathname === "/search" ||
     pathname.startsWith("/search/")
@@ -335,6 +336,12 @@ export default {
     if (isPrimaryHost(host) && url.pathname.startsWith("/p/")) {
       const pResponse = await handlePrimaryPPathRequest(url, env);
       if (pResponse) return pResponse;
+    }
+
+    // Phase 6B: static posts feed (Atom passthrough + ?alt=rss RSS asset). Never fetchBlogger().
+    if (isPrimaryHost(host) && isPostsFeedPath(url.pathname)) {
+      const feedResponse = await handlePostsFeedRequest(url, env);
+      if (feedResponse) return withSecurityHeaders(feedResponse);
     }
 
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {

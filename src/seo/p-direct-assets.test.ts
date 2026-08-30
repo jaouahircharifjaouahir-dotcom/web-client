@@ -286,7 +286,9 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
   });
 
   it("Blogger paths /feeds/* and /search remain Worker-first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/*");
+    expect(wrangler.assets.run_worker_first).toContain("/feeds/pages/*");
+    expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
+    expect(wrangler.assets.run_worker_first).not.toContain("/feeds/*");
     expect(wrangler.assets.run_worker_first).toContain("/search");
     expect(wrangler.assets.run_worker_first).toContain("/search/*");
     expect(wrangler.assets.run_worker_first).toContain("/sitemap-pages.xml");
@@ -427,21 +429,20 @@ describe("Phase 2C — trailing-slash utility URLs", () => {
     expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
   });
 
-  it("localized /l/fr/p/about.html/ is unaffected (not www /p/ handler)", async () => {
-    const dir = getStagedStaticSite();
-    const body = readFileSync(join(dir, "l/fr/p/about.html"), "utf8");
-    const seen: string[] = [];
+  it("localized /l/fr/p/about.html/ → 301 via Worker slash handler (not www /p/ handler)", async () => {
+    const assetCalls: string[] = [];
     const env = {
       ASSETS: {
         fetch(req: Request) {
-          seen.push(new URL(req.url).pathname);
-          return new Response(body, { status: 200 });
+          assetCalls.push(new URL(req.url).pathname);
+          return new Response("homepage spa", { status: 200 });
         },
       },
     };
     const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html/"), env);
-    expect(res.status).toBe(200);
-    expect(seen[0]).toBe("/l/fr/p/about.html/");
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe("https://fr.11tik.com/l/fr/p/about.html");
+    expect(assetCalls).toEqual([]);
   });
 
   it("/thumb/* and / remain unchanged", () => {

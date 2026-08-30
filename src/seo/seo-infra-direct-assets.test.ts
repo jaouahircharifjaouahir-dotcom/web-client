@@ -44,7 +44,8 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
   it("keeps unrelated RWF entries unchanged", () => {
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
-      "/feeds/*",
+      "/feeds/pages/*",
+      "/feeds/posts/default",
       "/sitemap-pages.xml",
       "/search",
       "/search/*",

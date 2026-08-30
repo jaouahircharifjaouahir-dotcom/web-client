@@ -27,6 +27,9 @@ describe("production smoke lib", () => {
     }
     expect(cases.some((c) => c.id === "D-en-unknown-2026")).toBe(true);
     expect(cases.some((c) => c.id === "H-pages-feed-410")).toBe(true);
+    expect(cases.some((c) => c.id === "H-sitemap-images-410")).toBe(true);
+    expect(cases.some((c) => c.id === "H-feeds-comments-410")).toBe(true);
+    expect(cases.some((c) => c.id === "H-copyright")).toBe(true);
     expect(cases.some((c) => c.id === "L-indexnow-key")).toBe(true);
     expect(cases.some((c) => c.id === "W-thumb-spa")).toBe(true);
   });
@@ -37,6 +40,7 @@ describe("production smoke lib", () => {
     expect(ids.length).toBeLessThanOrEqual(10);
     expect(ids).toContain("J-robots");
     expect(ids).toContain("K-sitemap");
+    expect(ids).toContain("H-sitemap-images-410");
   });
 
   it("assertStatus and assertLocation helpers", () => {

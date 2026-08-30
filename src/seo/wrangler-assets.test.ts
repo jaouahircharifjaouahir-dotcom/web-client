@@ -13,7 +13,10 @@ describe("Workers Static Assets routing", () => {
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
       "/feeds/pages/*",
+      "/feeds/comments/*",
+      "/feeds/other/*",
       "/feeds/posts/default",
+      "/sitemap-images.xml",
       "/sitemap-pages.xml",
       "/search",
       "/search/*",

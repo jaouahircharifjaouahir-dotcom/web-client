@@ -289,12 +289,18 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
 
   it("retired feed/search paths remain Worker-first", () => {
     expect(wrangler.assets.run_worker_first).toContain("/feeds/pages/*");
+    expect(wrangler.assets.run_worker_first).toContain("/feeds/comments/*");
+    expect(wrangler.assets.run_worker_first).toContain("/feeds/other/*");
     expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
+    expect(wrangler.assets.run_worker_first).toContain("/sitemap-images.xml");
     expect(wrangler.assets.run_worker_first).not.toContain("/feeds/*");
     expect(wrangler.assets.run_worker_first).toContain("/search");
     expect(wrangler.assets.run_worker_first).toContain("/search/*");
     expect(wrangler.assets.run_worker_first).toContain("/sitemap-pages.xml");
     expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/feeds/comments/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
     expect(matchesRunWorkerFirst("/search")).toBe(true);
     expect(matchesRunWorkerFirst("/search/label/youtube")).toBe(true);
   });
@@ -304,14 +310,16 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(matchesRunWorkerFirst("/2026/08/youtube-thumbnail-url.html")).toBe(true);
   });
 
-  it("sitemap 1095 and IndexNow 1095 unchanged", () => {
+  it("sitemap 1095 and IndexNow 1096 (copyright in IndexNow only)", () => {
     const dir = getStagedStaticSite();
     const sitemap = readFileSync(join(dir, "sitemap.xml"), "utf8");
     expect([...sitemap.matchAll(/<loc>/g)].length).toBe(1095);
     expect(sitemap).not.toMatch(/<loc>https:\/\/www\.11tik\.com\/p\/youtube-thumbnail-url\.html<\/loc>/);
+    expect(sitemap).not.toContain("/copyright");
 
     const snap = buildIndexNowSnapshot(dir);
-    expect(snap.urlCount).toBe(1095);
+    expect(snap.urlCount).toBe(1096);
+    expect(snap.urls["https://www.11tik.com/copyright"]).toMatch(/^[a-f0-9]{64}$/);
   });
 
   it("translation matrix 888/888 unchanged", () => {

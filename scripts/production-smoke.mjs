@@ -16,6 +16,7 @@ import {
   buildSmokeCases,
   evaluateSmokeCase,
   filterSmokeCases,
+  assertCanonical,
   resolveGitSha,
   scheduledSmokeCaseIds,
   smokeOrigins,
@@ -94,8 +95,11 @@ async function probeCase(testCase) {
       headers: { "User-Agent": SMOKE_USER_AGENT, "Cache-Control": "no-cache" },
     });
     const headers = headerRecord(res);
+    const needsBody = testCase.expectHtml || testCase.robotsCheck || testCase.sitemapCheck || testCase.feedAtom || testCase.feedRss;
     const body =
-      redirectManual || testCase.status === 301 || testCase.status === 410 ? "" : await res.text();
+      redirectManual || testCase.status === 301 || (testCase.status === 410 && !needsBody)
+        ? ""
+        : await res.text();
 
     result.status = res.status;
     result.location = headers.location ?? null;
@@ -135,6 +139,10 @@ async function probeCase(testCase) {
         }
         if (vf.urlPrefix && !chain.final.url.startsWith(vf.urlPrefix)) {
           result.block.push(`final url=${chain.final.url}`);
+        }
+        if (vf.canonicalIncludes) {
+          const c = assertCanonical(chain.body ?? "", { includes: vf.canonicalIncludes });
+          if (!c.ok) result.block.push(`final ${c.message}`);
         }
       }
     }

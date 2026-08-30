@@ -160,8 +160,11 @@ describe("Phase 6E.2 — pages feed retirement", () => {
     }
   });
 
-  it("IndexNow snapshot remains 1095 URLs", () => {
-    expect(buildIndexNowSnapshot(staged).urlCount).toBe(1095);
+  it("IndexNow snapshot includes copyright (1096 URLs)", () => {
+    const snap = buildIndexNowSnapshot(staged);
+    expect(snap.urlCount).toBe(1096);
+    expect(snap.urls["https://www.11tik.com/copyright"]).toMatch(/^[a-f0-9]{64}$/);
+    expect(snap.urls["https://www.11tik.com/sitemap-images.xml"]).toBeUndefined();
   });
 
   it("robots.txt disallows /feeds/ and advertises only sitemap.xml", async () => {

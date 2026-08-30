@@ -75,7 +75,9 @@ describe("Phase 6B — posts feed routing", () => {
     expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
     expect(matchesRunWorkerFirst("/feeds/pages/default")).toBe(true);
     expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
-    expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(false);
+    expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/feeds/comments/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
   });
 
   it("confirms staged static feed assets exist with 18 entries each", () => {

@@ -45,7 +45,10 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
       "/feeds/pages/*",
+      "/feeds/comments/*",
+      "/feeds/other/*",
       "/feeds/posts/default",
+      "/sitemap-images.xml",
       "/sitemap-pages.xml",
       "/search",
       "/search/*",
@@ -68,6 +71,9 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
     expect(matchesRunWorkerFirst("/l/fr/")).toBe(true);
     expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
     expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/feeds/comments/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(true);
+    expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
     expect(matchesRunWorkerFirst("/search")).toBe(true);
     expect(matchesRunWorkerFirst("/sitemap-pages.xml")).toBe(true);
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
@@ -122,8 +128,10 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
     expect(indexNowKeyBody()).toBe(INDEXNOW_KEY);
   });
 
-  it("IndexNow snapshot remains 1095 URLs", () => {
-    expect(buildIndexNowSnapshot(staged).urlCount).toBe(1095);
+  it("IndexNow snapshot includes copyright (1096 URLs)", () => {
+    const snap = buildIndexNowSnapshot(staged);
+    expect(snap.urlCount).toBe(1096);
+    expect(snap.urls["https://www.11tik.com/copyright"]).toMatch(/^[a-f0-9]{64}$/);
   });
 
   it("zone routes for SEO infra remain (Worker binding unchanged)", () => {

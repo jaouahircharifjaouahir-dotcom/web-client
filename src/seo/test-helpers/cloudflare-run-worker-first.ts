@@ -23,7 +23,10 @@ export const PHASE5_BROAD_LOCALE_RWF_NEGATIVES = [
 const SHARED_RUN_WORKER_FIRST = [
   "/",
   "/feeds/pages/*",
+  "/feeds/comments/*",
+  "/feeds/other/*",
   "/feeds/posts/default",
+  "/sitemap-images.xml",
   "/sitemap-pages.xml",
   "/search",
   "/search/*",

@@ -9,6 +9,7 @@ export const SMOKE_USER_AGENT = "11tik-production-smoke/1.0";
 export const REQUEST_TIMEOUT_MS = 15_000;
 export const REDIRECT_MAX_HOPS = 5;
 export const DEFAULT_EXPECTED_SITEMAP_LOCS = 1095;
+export const DEFAULT_EXPECTED_INDEXNOW_URLS = 1096;
 export const DEFAULT_EXPECTED_FEED_ENTRIES = 18;
 
 /** Runtime Blogger/CMS markers — not filenames like blogger-app.js */
@@ -50,6 +51,12 @@ export function buildSmokeCases(origins) {
     { id: "G-feed-rss", category: "G", severity: "BLOCK", url: `${www}/feeds/posts/default?alt=rss`, status: 200, contentTypeIncludes: "rss", feedRss: true },
     { id: "H-search-410", category: "H", severity: "BLOCK", url: `${www}/search`, status: 410 },
     { id: "H-pages-feed-410", category: "H", severity: "BLOCK", url: `${www}/feeds/pages/default`, status: 410 },
+    { id: "H-sitemap-images-410", category: "H", severity: "BLOCK", url: `${www}/sitemap-images.xml`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
+    { id: "H-feeds-comments-410", category: "H", severity: "BLOCK", url: `${www}/feeds/comments/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
+    { id: "H-feeds-other-410", category: "H", severity: "BLOCK", url: `${www}/feeds/other/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
+    { id: "H-copyright", category: "H", severity: "BLOCK", url: `${www}/copyright`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true, canonicalIncludes: "/copyright" },
+    { id: "H-copyright-slash", category: "H", severity: "BLOCK", url: `${www}/copyright/`, status: 301, redirectManual: true, location: `${www}/copyright`, verifyFinal: { status: 200, canonicalIncludes: "/copyright" } },
+    { id: "H-copyright-slash-query", category: "H", severity: "BLOCK", url: `${www}/copyright/?m=1`, status: 301, redirectManual: true, location: `${www}/copyright` },
     { id: "I-sitemap-pages", category: "I", severity: "BLOCK", url: `${www}/sitemap-pages.xml`, status: 301, redirectManual: true, locationIncludes: "sitemap.xml", verifyFinal: { status: 200, contentTypeIncludes: "xml" } },
     { id: "J-robots", category: "J", severity: "BLOCK", url: `${www}/robots.txt`, status: 200, contentTypeIncludes: "text/plain", robotsCheck: true },
     { id: "K-sitemap", category: "K", severity: "BLOCK", url: `${www}/sitemap.xml`, status: 200, contentTypeIncludes: "xml", sitemapCheck: true },
@@ -77,7 +84,7 @@ export function buildSmokeCases(origins) {
 
 /** @returns {string[]} subset IDs for low-traffic scheduled checks */
 export function scheduledSmokeCaseIds() {
-  return ["A-home", "J-robots", "K-sitemap", "N-fr-utility", "G-feed-rss", "D-en-unknown-2026"];
+  return ["A-home", "J-robots", "K-sitemap", "H-sitemap-images-410", "N-fr-utility", "G-feed-rss", "D-en-unknown-2026"];
 }
 
 export function filterSmokeCases(allCases, { onlyIds = null, minSeverity = null } = {}) {
@@ -309,6 +316,10 @@ export function evaluateSmokeCase(testCase, { status, headers, body, location })
     if (testCase.noBanned) {
       const b = assertBannedMarkers(body);
       if (!b.ok) push(block, b.message);
+    }
+    if (testCase.noCanonical) {
+      const canonical = extractCanonical(body);
+      if (canonical) push(block, `unexpected canonical: ${canonical}`);
     }
     if (testCase.contains) {
       for (const needle of testCase.contains) {

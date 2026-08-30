@@ -115,7 +115,9 @@ describe("Phase 6A — static posts feeds", () => {
     it("uses narrow RWF: pages Worker-first, posts default for query RSS branch", () => {
       expect(matchesRunWorkerFirst("/feeds/pages/default")).toBe(true);
       expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
-      expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(false);
+      expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(true);
+      expect(matchesRunWorkerFirst("/feeds/comments/default")).toBe(true);
+      expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
     });
 
     it("documents ?alt=rss: Worker serves static default.rss sidecar", () => {

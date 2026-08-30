@@ -8,8 +8,10 @@ import {
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
 import { handlePrimary2026PathRequest } from "./article-2026-path.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
+import { feedsCommentsOtherRetireResponse } from "./feeds-comments-other-retire.js";
 import { pagesFeedRetireResponse } from "./pages-feed-retire.js";
 import { searchRetireResponse } from "./search-retire.js";
+import { sitemapImagesRetireResponse } from "./sitemap-images-retire.js";
 import { sitemapPagesRedirectResponse } from "./sitemap-pages-redirect.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
@@ -224,6 +226,12 @@ export default {
 
       const pagesFeedRetire = pagesFeedRetireResponse(url.pathname);
       if (pagesFeedRetire) return withSecurityHeaders(pagesFeedRetire);
+
+      const sitemapImagesRetire = sitemapImagesRetireResponse(url.pathname);
+      if (sitemapImagesRetire) return withSecurityHeaders(sitemapImagesRetire);
+
+      const feedsCommentsOtherRetire = feedsCommentsOtherRetireResponse(url.pathname);
+      if (feedsCommentsOtherRetire) return withSecurityHeaders(feedsCommentsOtherRetire);
     }
 
     // Static SEO files — passthrough to ASSETS when fetch() runs (asset-first when file exists).
@@ -260,13 +268,15 @@ export default {
     }
 
     // Exact zone routes without a trailing * do not match query strings (CF routes docs).
-    // Route is copyright*; canonicalize any query to the clean URL (canonical /copyright).
-    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright" && url.search) {
-      return Response.redirect(`${SITE}/copyright`, 301);
+    // Route is copyright*; trailing slash and query → clean canonical /copyright.
+    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright") {
+      if (url.pathname !== "/copyright" || url.search) {
+        return Response.redirect(`${SITE}/copyright`, 301);
+      }
     }
 
     // Serve static legal page explicitly so ASSETS SPA fallback never injects homepage hreflang.
-    if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright" && env?.ASSETS) {
+    if (isPrimaryHost(host) && url.pathname === "/copyright" && env?.ASSETS) {
       const assetUrl = new URL("/copyright/index.html", url.origin);
       const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
       if (res.ok) return withSecurityHeaders(res);

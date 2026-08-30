@@ -1,6 +1,6 @@
 /**
  * Local-only Google Indexing API notify. Do not commit the service-account JSON.
- * Reads every <loc> from https://www.11tik.com/sitemap.xml (and sitemap-images.xml)
+ * Reads every <loc> from https://www.11tik.com/sitemap.xml
  * and notifies Google Indexing API. Local only.
  *
  *   set GOOGLE_INDEXING_JSON=C:\Users\ADMIN\Desktop\secrets\google-indexing.json
@@ -12,10 +12,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const SITEMAP_URLS = [
-  "https://www.11tik.com/sitemap.xml",
-  "https://www.11tik.com/sitemap-images.xml",
-];
+const SITEMAP_URLS = ["https://www.11tik.com/sitemap.xml"];
 
 const DEFAULT_JSON = join(homedir(), "Desktop", "secrets", "google-indexing.json");
 const jsonPath = process.env.GOOGLE_INDEXING_JSON || DEFAULT_JSON;

@@ -20,6 +20,9 @@ export const INDEXNOW_LIVE_SNAPSHOT_URL =
 
 const SITE = "https://www.11tik.com";
 
+/** Indexable legal page — in IndexNow but excluded from sitemap.xml by design. */
+export const INDEXNOW_COPYRIGHT_URL = `${SITE}/copyright`;
+
 function sha256(text) {
   return createHash("sha256").update(text, "utf8").digest("hex");
 }
@@ -36,6 +39,8 @@ export function stagedHtmlRelToPublicUrl(relPosix) {
   const rel = toPosix(relPosix).replace(/^\/+/, "");
   if (!rel.endsWith(".html")) return null;
   if (rel === "index.html") return `${SITE}/`;
+
+  if (rel === "copyright/index.html") return INDEXNOW_COPYRIGHT_URL;
 
   const localeHome = rel.match(/^l\/([a-z]{2})\/index\.html$/i);
   if (localeHome) {
@@ -111,6 +116,8 @@ export function collectAllowedPublicUrls(staged, { postsTsPath } = {}) {
     if (code === "en") continue;
     allowed.add(`https://${code}.11tik.com/l/${code}/`);
   }
+
+  allowed.add(INDEXNOW_COPYRIGHT_URL);
 
   return allowed;
 }

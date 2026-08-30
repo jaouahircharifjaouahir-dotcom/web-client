@@ -285,7 +285,7 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
   });
 
-  it("Blogger paths /feeds/* and /search remain Worker-first", () => {
+  it("retired feed/search paths remain Worker-first", () => {
     expect(wrangler.assets.run_worker_first).toContain("/feeds/pages/*");
     expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
     expect(wrangler.assets.run_worker_first).not.toContain("/feeds/*");

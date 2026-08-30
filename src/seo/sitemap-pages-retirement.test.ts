@@ -30,20 +30,6 @@ function stagedAssetFetch(staged: string) {
   };
 }
 
-function mockHtmlRewriter() {
-  vi.stubGlobal(
-    "HTMLRewriter",
-    class {
-      on() {
-        return this;
-      }
-      transform(input: Response) {
-        return input;
-      }
-    },
-  );
-}
-
 describe("Phase 6C.1 — sitemap-pages.xml retirement", () => {
   const wrangler = readWranglerConfig();
   const staged = getStagedStaticSite();
@@ -113,19 +99,13 @@ describe("Phase 6C.1 — regression routing matrix", () => {
   const staged = getStagedStaticSite();
   const env = { ASSETS: stagedAssetFetch(staged) };
 
-  it("/feeds/pages/default still reaches Blogger (fetch invoked)", async () => {
-    mockHtmlRewriter();
-    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(
-        `<?xml version='1.0'?><feed xmlns='http://www.w3.org/2005/Atom'><generator>Blogger</generator></feed>`,
-        { status: 200, headers: { "content-type": "application/atom+xml" } },
-      ),
-    );
+  it("/feeds/pages/default returns 410 (Phase 6E.2; no fetchBlogger)", async () => {
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("fetchBlogger must not run"));
     const res = await worker.fetch(new Request("https://www.11tik.com/feeds/pages/default"), env);
-    expect(res.status).toBe(200);
-    expect(fetchSpy).toHaveBeenCalled();
+    expect(res.status).toBe(410);
+    expect(await res.text()).toContain("410 Gone");
+    expect(fetchSpy).not.toHaveBeenCalled();
     fetchSpy.mockRestore();
-    vi.unstubAllGlobals();
   });
 
   it("/search returns 410 (Phase 6C.2; no fetchBlogger)", async () => {
@@ -171,7 +151,7 @@ describe("Phase 6C.1 — live-safety expected matrix (pre-deploy)", () => {
       "/sitemap-pages.xml": { status: 301, location: SITEMAP_CANONICAL_URL },
       "/sitemap-pages.xml?x=1": { status: 301, location: SITEMAP_CANONICAL_URL },
       "/sitemap.xml": { status: 200, type: "static-xml" },
-      "/feeds/pages/default": { status: 200, source: "blogger" },
+      "/feeds/pages/default": { status: 410, source: "worker" },
     }).toMatchObject({
       "/sitemap-pages.xml": { status: 301 },
       "/sitemap.xml": { status: 200 },

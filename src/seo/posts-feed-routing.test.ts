@@ -187,7 +187,7 @@ describe("Phase 6B — posts feed routing", () => {
 });
 
 describe("Phase 6B — feed regression (RWF unchanged for non-post paths)", () => {
-  it("preserves Worker-first for remaining Blogger routes", () => {
+  it("preserves Worker-first for retired feed/search routes", () => {
     expect(matchesRunWorkerFirst("/feeds/pages/default")).toBe(true);
     expect(matchesRunWorkerFirst("/search")).toBe(true);
     expect(matchesRunWorkerFirst("/search/label/foo")).toBe(true);

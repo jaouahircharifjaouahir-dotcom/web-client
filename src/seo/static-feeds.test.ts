@@ -125,10 +125,10 @@ describe("Phase 6A — static posts feeds", () => {
   });
 
   describe("pages feed /feeds/pages/default", () => {
-    it("is referenced only by scripts/site-urls.mjs in-repo (recommend retire)", () => {
+    it("is retired via Worker 410 (Phase 6E.2); site-urls no longer references it", () => {
       const siteUrlsSource = readFileSync(join(process.cwd(), "scripts/site-urls.mjs"), "utf8");
-      expect(siteUrlsSource).toContain("/feeds/pages/default");
-      expect(siteUrlsSource).not.toContain("feeds/pages/default in HTML");
+      expect(siteUrlsSource).not.toContain("/feeds/pages/default");
+      expect(siteUrlsSource).not.toContain("collectSiteUrls");
     });
   });
 });

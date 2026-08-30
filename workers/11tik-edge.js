@@ -1,6 +1,4 @@
 import { ISO6391_CODES } from "./iso6391.js";
-import { descriptionForPath } from "./post-descriptions.js";
-import { resolvePageDescription, upsertHeadDescription, upgradeHttpCanonicals } from "./html-meta.js";
 import { protectEmailsInHtml, wrapMailtoWithEmailOff } from "./email-obfuscation.js";
 import {
   homepageUrlWithoutBloggerMobileParam,
@@ -10,14 +8,13 @@ import {
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
 import { handlePrimary2026PathRequest } from "./article-2026-path.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
+import { pagesFeedRetireResponse } from "./pages-feed-retire.js";
 import { searchRetireResponse } from "./search-retire.js";
 import { sitemapPagesRedirectResponse } from "./sitemap-pages-redirect.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
 
 const SITE = "https://www.11tik.com";
-const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
-const EDGE_ASSETS = "https://www.11tik.com/web-client/";
 
 function localeHostCode(host) {
   const match = /^([a-z]{2})\.11tik\.com$/i.exec(host || "");
@@ -29,10 +26,6 @@ function localeHostCode(host) {
 
 function isPrimaryHost(host) {
   return host === "www.11tik.com" || host === "11tik.com";
-}
-
-function isBloggerContentPath(pathname) {
-  return pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname);
 }
 
 const LEGACY_P_REDIRECT_BY_PATH = new Map(LEGACY_P_REDIRECTS.map((rule) => [rule.from, rule.to]));
@@ -140,95 +133,6 @@ export function localeHomeIndexAssetPath(pathname) {
   return `/l/${code}/index.html`;
 }
 
-function fetchBlogger(request) {
-  const headers = new Headers(request.headers);
-  headers.set("x-11tik-pass", "1");
-  return fetch(new Request(request.url, { method: "GET", headers }), {
-    cf: { resolveOverride: "ghs.googlehosted.com", cacheEverything: true, cacheTtl: 0 },
-  });
-}
-
-function rewriteGithubAsset(el, attr) {
-  const value = el.getAttribute(attr) || "";
-  if (value.startsWith(GH_PAGES)) el.setAttribute(attr, EDGE_ASSETS + value.slice(GH_PAGES.length));
-}
-
-function bloggerRuntimeStubs() {
-  return `<script>window.cookieChoices=window.cookieChoices||{};function _WidgetInfo(){return this;}window._WidgetInfo=window._WidgetInfo||_WidgetInfo;window._WidgetManager=window._WidgetManager||new Proxy({},{get:function(t,p){if(p==="then")return;return function(){return t;}}});</script>`;
-}
-
-async function polishBloggerHtml(response, pathname = "/") {
-  const path = String(pathname || "/").replace(/\/+$/, "") || "/";
-  let html = await response.text();
-  html = upgradeHttpCanonicals(html);
-  html = protectEmailsInHtml(html);
-  if (path !== "/") {
-    const desc = resolvePageDescription(path, html, descriptionForPath(path));
-    if (desc) html = upsertHeadDescription(html, desc);
-  }
-  const headers = new Headers(response.headers);
-  // no-transform: Cloudflare skips Email Obfuscation on this response.
-  headers.set("Cache-Control", "public, max-age=120, must-revalidate, no-transform");
-  const input = new Response(html, {
-    status: response.status,
-    statusText: response.statusText,
-    headers,
-  });
-  return new HTMLRewriter()
-    .on("head", {
-      element(el) {
-        el.prepend(bloggerRuntimeStubs(), { html: true });
-      },
-    })
-    .on("script[src]", {
-      element(el) {
-        const src = el.getAttribute("src") || "";
-        if (src.includes("widgets.js") || src.includes("/static/v1/widgets/") || src.includes("cookienotice.js")) {
-          el.remove();
-        }
-      },
-    })
-    .on("link[rel]", {
-      element(el) {
-        const rel = (el.getAttribute("rel") || "").toLowerCase();
-        const href = el.getAttribute("href") || "";
-        if (rel === "canonical" && href.startsWith("http://") && href.includes("11tik.com")) {
-          el.setAttribute("href", href.replace(/^http:\/\//i, "https://"));
-        }
-        if (rel === "preconnect") {
-          if (href.includes("www.11tik.com") || href.includes("i.ytimg.com")) el.remove();
-          return;
-        }
-        if (rel.includes("alternate") && el.getAttribute("hreflang") && !href.startsWith("https://www.11tik.com") && !href.includes(".11tik.com/")) {
-          el.remove();
-        }
-      },
-    })
-    .on("meta[property]", {
-      element(el) {
-        const prop = (el.getAttribute("property") || "").toLowerCase();
-        const content = el.getAttribute("content") || "";
-        if (prop === "og:url" && content.startsWith("http://") && content.includes("11tik.com")) {
-          el.setAttribute("content", content.replace(/^http:\/\//i, "https://"));
-        }
-        rewriteGithubAsset(el, "content");
-      },
-    })
-    .on("img[src]", {
-      element(el) {
-        rewriteGithubAsset(el, "src");
-      },
-    })
-    .on("meta[content]", {
-      element(el) {
-        const prop = (el.getAttribute("property") || "").toLowerCase();
-        if (prop === "og:url") return;
-        rewriteGithubAsset(el, "content");
-      },
-    })
-    .transform(input);
-}
-
 /**
  * 301 http → https.
  * File 17: http sitemap must not be a second 200 listing.
@@ -281,12 +185,16 @@ export default {
 
     // Phase 6C.1: legacy Blogger pages sitemap → canonical static sitemap (query stripped).
     // Phase 6C.2: legacy Blogger search → 410 Gone (query variants included).
+    // Phase 6E.2: legacy Blogger pages feed → 410 Gone (query variants included).
     if (isPrimaryHost(host)) {
       const sitemapPagesRedirect = sitemapPagesRedirectResponse(url.pathname);
       if (sitemapPagesRedirect) return withSecurityHeaders(sitemapPagesRedirect);
 
       const searchRetire = searchRetireResponse(url.pathname);
       if (searchRetire) return withSecurityHeaders(searchRetire);
+
+      const pagesFeedRetire = pagesFeedRetireResponse(url.pathname);
+      if (pagesFeedRetire) return withSecurityHeaders(pagesFeedRetire);
     }
 
     // Same pattern as sitemap.xml: Worker-first + ASSETS so /robots.txt never falls
@@ -358,10 +266,6 @@ export default {
         withSecurityHeaders,
       });
       if (article2026Response) return article2026Response;
-    }
-
-    if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {
-      return polishBloggerHtml(await fetchBlogger(request), url.pathname);
     }
 
     if (host === "www.11tik.com") {

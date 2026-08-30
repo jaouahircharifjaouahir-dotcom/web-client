@@ -1,0 +1,22 @@
+name: production-smoke-scheduled
+
+on:
+  schedule:
+    # Twice daily — low-traffic subset only (does not gate Cloudflare deploys)
+    - cron: "0 6,18 * * *"
+  workflow_dispatch:
+
+jobs:
+  smoke-subset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Production smoke (scheduled subset)
+        run: npm run production:smoke:scheduled
+        env:
+          SMOKE_EXPECTED_SITEMAP_LOCS: "1095"

@@ -9,6 +9,7 @@ import {
 } from "./homepage-query-shell.mjs";
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
+import { searchRetireResponse } from "./search-retire.js";
 import { sitemapPagesRedirectResponse } from "./sitemap-pages-redirect.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
@@ -32,9 +33,7 @@ function isPrimaryHost(host) {
 function isBloggerContentPath(pathname) {
   return (
     pathname.startsWith("/2026/") ||
-    (pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname)) ||
-    pathname === "/search" ||
-    pathname.startsWith("/search/")
+    (pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname))
   );
 }
 
@@ -283,9 +282,13 @@ export default {
     }
 
     // Phase 6C.1: legacy Blogger pages sitemap → canonical static sitemap (query stripped).
+    // Phase 6C.2: legacy Blogger search → 410 Gone (query variants included).
     if (isPrimaryHost(host)) {
       const sitemapPagesRedirect = sitemapPagesRedirectResponse(url.pathname);
       if (sitemapPagesRedirect) return withSecurityHeaders(sitemapPagesRedirect);
+
+      const searchRetire = searchRetireResponse(url.pathname);
+      if (searchRetire) return withSecurityHeaders(searchRetire);
     }
 
     // Same pattern as sitemap.xml: Worker-first + ASSETS so /robots.txt never falls

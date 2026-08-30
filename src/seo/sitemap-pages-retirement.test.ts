@@ -128,19 +128,13 @@ describe("Phase 6C.1 — regression routing matrix", () => {
     vi.unstubAllGlobals();
   });
 
-  it("/search still reaches Blogger", async () => {
-    mockHtmlRewriter();
-    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response("<html><body>search</body></html>", {
-        status: 200,
-        headers: { "content-type": "text/html" },
-      }),
-    );
+  it("/search returns 410 (Phase 6C.2; no fetchBlogger)", async () => {
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("fetchBlogger must not run"));
     const res = await worker.fetch(new Request("https://www.11tik.com/search"), env);
-    expect(res.status).toBe(200);
-    expect(fetchSpy).toHaveBeenCalled();
+    expect(res.status).toBe(410);
+    expect(await res.text()).toContain("410 Gone");
+    expect(fetchSpy).not.toHaveBeenCalled();
     fetchSpy.mockRestore();
-    vi.unstubAllGlobals();
   });
 
   it("/feeds/posts/default stays static (no fetchBlogger)", async () => {

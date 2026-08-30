@@ -9,6 +9,7 @@ import {
 } from "./homepage-query-shell.mjs";
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
+import { sitemapPagesRedirectResponse } from "./sitemap-pages-redirect.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
 
@@ -32,7 +33,6 @@ function isBloggerContentPath(pathname) {
   return (
     pathname.startsWith("/2026/") ||
     (pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname)) ||
-    pathname === "/sitemap-pages.xml" ||
     pathname === "/search" ||
     pathname.startsWith("/search/")
   );
@@ -280,6 +280,12 @@ export default {
     // Assets-backed sitemap must not be reachable as a second http:// sitemap copy.
     if (url.pathname === "/sitemap.xml" && env?.ASSETS) {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
+    }
+
+    // Phase 6C.1: legacy Blogger pages sitemap → canonical static sitemap (query stripped).
+    if (isPrimaryHost(host)) {
+      const sitemapPagesRedirect = sitemapPagesRedirectResponse(url.pathname);
+      if (sitemapPagesRedirect) return withSecurityHeaders(sitemapPagesRedirect);
     }
 
     // Same pattern as sitemap.xml: Worker-first + ASSETS so /robots.txt never falls

@@ -15,7 +15,6 @@ export const SITE = {
   themeColor: "#c2410c",
   backgroundColor: "#f4efe6",
   sitemap: "https://www.11tik.com/sitemap.xml",
-  sitemapPages: "https://www.11tik.com/sitemap-pages.xml",
   sitemapImages: "https://www.11tik.com/sitemap-images.xml",
   robots: "https://www.11tik.com/robots.txt",
   pages: {

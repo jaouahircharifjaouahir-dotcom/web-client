@@ -224,7 +224,7 @@ describe("Phase 3B — legal shortcuts regression guards", () => {
     expect(matchesRunWorkerFirst("/search")).toBe(true);
   });
 
-  it("SEO infra direct Assets; sitemap-pages.xml remains Worker-first", () => {
+  it("sitemap-pages.xml remains Worker-first for 301 redirect (not Blogger)", () => {
     expect(wrangler.assets.run_worker_first).not.toContain("/robots.txt");
     expect(wrangler.assets.run_worker_first).not.toContain("/llms.txt");
     expect(wrangler.assets.run_worker_first).not.toContain("/sitemap.xml");

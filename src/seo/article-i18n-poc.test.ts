@@ -185,7 +185,7 @@ describe("POC French share-links article i18n (regression)", () => {
     const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
     expect(wrangler.assets.not_found_handling).toBe("single-page-application");
     expect(wrangler.assets.html_handling).toBe("none");
-    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
     // Phase 2B: /p/* Worker-first with six utility .html exclusions → direct Assets.
     expect(wrangler.assets.run_worker_first).toContain("/p/*");

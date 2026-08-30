@@ -297,9 +297,9 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(matchesRunWorkerFirst("/search/label/youtube")).toBe(true);
   });
 
-  it("/2026/* articles remain direct Assets (not Worker-first)", () => {
-    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
-    expect(matchesRunWorkerFirst("/2026/08/youtube-thumbnail-url.html")).toBe(false);
+  it("/2026/* articles are Worker-first for hard 404 on miss (Phase 6D)", () => {
+    expect(wrangler.assets.run_worker_first).toContain("/2026/*");
+    expect(matchesRunWorkerFirst("/2026/08/youtube-thumbnail-url.html")).toBe(true);
   });
 
   it("sitemap 1095 and IndexNow 1095 unchanged", () => {

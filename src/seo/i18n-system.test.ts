@@ -198,8 +198,8 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
 
   it("run_worker_first includes /l/* for locale homes, not article subpaths", () => {
     const raw = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
-    // Phase A: English guides are asset-first; do not reintroduce /2026/* Worker-first.
-    expect(raw).not.toMatch(/"\/2026\/\*"/);
+    // Phase 6D: English /2026/* Worker-first for hard 404 on miss.
+    expect(raw).toContain('"/2026/*"');
     // Phase 2B: /p/* Worker-first with six utility .html exclusions.
     expect(raw).toContain('"/p/*"');
     expect(raw).toContain('"!/p/about.html"');

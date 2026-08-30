@@ -8,6 +8,7 @@ import {
   resolveHomepageQueryShell,
 } from "./homepage-query-shell.mjs";
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
+import { handlePrimary2026PathRequest } from "./article-2026-path.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
 import { searchRetireResponse } from "./search-retire.js";
 import { sitemapPagesRedirectResponse } from "./sitemap-pages-redirect.js";
@@ -31,10 +32,7 @@ function isPrimaryHost(host) {
 }
 
 function isBloggerContentPath(pathname) {
-  return (
-    pathname.startsWith("/2026/") ||
-    (pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname))
-  );
+  return pathname.startsWith("/feeds/") && !isPostsFeedPath(pathname);
 }
 
 const LEGACY_P_REDIRECT_BY_PATH = new Map(LEGACY_P_REDIRECTS.map((rule) => [rule.from, rule.to]));
@@ -351,6 +349,15 @@ export default {
     if (isPrimaryHost(host) && isPostsFeedPath(url.pathname)) {
       const feedResponse = await handlePostsFeedRequest(url, env);
       if (feedResponse) return withSecurityHeaders(feedResponse);
+    }
+
+    // Phase 6D: root /2026/* static articles — exact asset or hard 404 (no Blogger, no SPA).
+    if (isPrimaryHost(host)) {
+      const article2026Response = await handlePrimary2026PathRequest(url, env, {
+        siteOrigin: SITE,
+        withSecurityHeaders,
+      });
+      if (article2026Response) return article2026Response;
     }
 
     if (isPrimaryHost(host) && request.headers.get("x-11tik-pass") !== "1" && isBloggerContentPath(url.pathname)) {

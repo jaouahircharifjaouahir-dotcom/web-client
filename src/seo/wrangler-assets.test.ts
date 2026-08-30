@@ -25,6 +25,7 @@ describe("Workers Static Assets routing", () => {
       "!/p/contact.html",
       "!/p/embed.html",
       "!/p/keyword-tools.html",
+      "/2026/*",
       "/l/*",
     ]);
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
@@ -42,8 +43,8 @@ describe("Workers Static Assets routing", () => {
       wrangler.routes.some((r) => r.pattern === "www.11tik.com/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt"),
     ).toBe(true);
     expect(wrangler.assets.binding).toBe("ASSETS");
-    // Phase A: English /2026/* articles are Static Assets (Worker-zero).
-    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    // Phase 6D: English /2026/* Worker-first for hard 404 on miss (no SPA soft-200).
+    expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
     expect(wrangler.assets.run_worker_first).not.toContain("/l/*/2026/*.html");
     expect(wrangler.assets.run_worker_first).toContain("/p/*");

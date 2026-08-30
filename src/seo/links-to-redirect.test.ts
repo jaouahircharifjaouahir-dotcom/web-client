@@ -12,10 +12,10 @@ const BLOCKER_HTML = [
 ] as const;
 
 describe("Links to redirect (Ahrefs File 22) — File 1 root fix only", () => {
-  it("keeps html_handling none and Worker-zero for article *.html", () => {
+  it("keeps html_handling none; Phase 6D Worker-first /2026/* for hard 404 on miss", () => {
     const wrangler = JSON.parse(readFileSync(join(ROOT, "wrangler.jsonc"), "utf8"));
     expect(wrangler.assets.html_handling).toBe("none");
-    expect(wrangler.assets.run_worker_first).not.toContain("/2026/*");
+    expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
     expect(wrangler.assets.run_worker_first).not.toContain("/l/*/2026/*.html");
   });

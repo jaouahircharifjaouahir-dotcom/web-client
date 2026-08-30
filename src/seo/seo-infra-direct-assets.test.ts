@@ -57,6 +57,7 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
       "!/p/contact.html",
       "!/p/embed.html",
       "!/p/keyword-tools.html",
+      "/2026/*",
       "/l/*",
     ]);
     expect(matchesRunWorkerFirst("/")).toBe(true);

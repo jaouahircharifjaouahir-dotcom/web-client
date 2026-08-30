@@ -199,9 +199,9 @@ describe("Phase 3B — legal shortcuts regression guards", () => {
     expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
   });
 
-  it("/l/fr/ localized home and /l/fr/p/about.html remain /l/* Worker-first", () => {
+  it("/l/fr/ locale home Worker-first; clean localized utility asset-first (Phase 7B)", () => {
     expect(matchesRunWorkerFirst("/l/fr/")).toBe(true);
-    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(true);
+    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
   });
 
   it("/thumb/* SPA and / homepage unchanged", () => {

@@ -27,8 +27,18 @@ describe("Workers Static Assets routing", () => {
       "!/p/keyword-tools.html",
       "/2026/*",
       "/l/*",
+      "!/l/*/2026/*/*.html",
+      "!/l/*/p/*.html",
     ]);
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
+    expect(wrangler.assets.run_worker_first).toContain("!/l/*/2026/*/*.html");
+    expect(wrangler.assets.run_worker_first).toContain("!/l/*/p/*.html");
+    // Phase 7B: locale RWF must include narrow negatives — not blanket /l/* alone.
+    expect(
+      wrangler.assets.run_worker_first.filter((r: string) => r === "/l/*" || r.startsWith("!/l/")),
+    ).toEqual(["/l/*", "!/l/*/2026/*/*.html", "!/l/*/p/*.html"]);
+    expect(wrangler.assets.run_worker_first).not.toContain("!/l/*/2026/*");
+    expect(wrangler.assets.run_worker_first).not.toContain("!/l/*/p/*");
     // Phase 2B: /p/* Worker-first with six utility .html exclusions → direct Assets.
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
@@ -46,6 +56,7 @@ describe("Workers Static Assets routing", () => {
     // Phase 6D: English /2026/* Worker-first for hard 404 on miss (no SPA soft-200).
     expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");
+    expect(wrangler.assets.run_worker_first).toContain("!/l/*/2026/*/*.html");
     expect(wrangler.assets.run_worker_first).not.toContain("/l/*/2026/*.html");
     expect(wrangler.assets.run_worker_first).toContain("/p/*");
     expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");

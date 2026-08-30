@@ -243,8 +243,9 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(queryFallback?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
   });
 
-  it("localized /l/*/p/* utilities remain on /l/* Worker-first path", () => {
+  it("localized /l/*/p/*.html utilities are asset-first under Phase 7B RWF", () => {
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
+    expect(wrangler.assets.run_worker_first).toContain("!/l/*/p/*.html");
 
     const dir = getStagedStaticSite();
     const locales = ["fr", "de", "ar"] as const;
@@ -255,7 +256,8 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
       }
     }
 
-    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(true);
+    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
+    expect(matchesRunWorkerFirst("/l/fr/p/about")).toBe(true);
   });
 
   it("/l/fr/p/* still served via Worker locale passthrough (unchanged)", async () => {

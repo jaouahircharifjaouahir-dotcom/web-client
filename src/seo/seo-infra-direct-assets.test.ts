@@ -59,11 +59,14 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
       "!/p/keyword-tools.html",
       "/2026/*",
       "/l/*",
+      "!/l/*/2026/*/*.html",
+      "!/l/*/p/*.html",
     ]);
     expect(matchesRunWorkerFirst("/")).toBe(true);
     expect(matchesRunWorkerFirst("/p/random.html")).toBe(true);
     expect(matchesRunWorkerFirst("/p/about.html")).toBe(false);
     expect(matchesRunWorkerFirst("/l/fr/")).toBe(true);
+    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
     expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
     expect(matchesRunWorkerFirst("/search")).toBe(true);
     expect(matchesRunWorkerFirst("/sitemap-pages.xml")).toBe(true);

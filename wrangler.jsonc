@@ -24,7 +24,9 @@
       "!/p/embed.html",
       "!/p/keyword-tools.html",
       "/2026/*",
-      "/l/*"
+      "/l/*",
+      "!/l/*/2026/*/*.html",
+      "!/l/*/p/*.html"
     ]
   },
   "routes": [

@@ -8,20 +8,15 @@ import worker, {
 } from "../../workers/11tik-edge.js";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { matchesRunWorkerFirst } from "./test-helpers/run-worker-first.ts";
+import {
+  matchesPhase7bRunWorkerFirst,
+  PHASE7B_LOCALE_RWF_NEGATIVES,
+  PHASE7B_RUN_WORKER_FIRST,
+} from "./test-helpers/cloudflare-run-worker-first.ts";
 
 const SITE = "https://www.11tik.com";
 const FR = "https://fr.11tik.com";
 const AR = "https://ar.11tik.com";
-
-/** Phase 5 canary RWF — middle-segment wildcards (docs-aligned). */
-export function matchesPhase5CanaryRunWorkerFirst(pathname: string): boolean {
-  if (!pathname.startsWith("/l/")) return false;
-  // Malformed `.html/` keys are not excluded — Worker handles slash redirect first.
-  if (pathname.endsWith(".html/")) return true;
-  const excludeArticle = /^\/l\/[a-z]{2}\/2026\/.+\.html$/i.test(pathname);
-  const excludeUtility = /^\/l\/[a-z]{2}\/p\/[^/]+\.html$/i.test(pathname);
-  return !excludeArticle && !excludeUtility;
-}
 
 function assetsEnv(onFetch: (pathname: string) => Response | Promise<Response>) {
   const seen: string[] = [];
@@ -251,55 +246,35 @@ describe("Phase 5.3B — Worker fetch integration", () => {
   });
 });
 
-/** Phase 5 canary RWF (future Phase 7B) — not production wrangler.jsonc. */
-const PHASE5_CANARY_RUN_WORKER_FIRST = [
-  "/",
-  "/feeds/pages/*",
-  "/feeds/posts/default",
-  "/sitemap-pages.xml",
-  "/search",
-  "/search/*",
-  "/copyright*",
-  "/p/*",
-  "!/p/about.html",
-  "!/p/privacy.html",
-  "!/p/terms-of-use.html",
-  "!/p/contact.html",
-  "!/p/embed.html",
-  "!/p/keyword-tools.html",
-  "/2026/*",
-  "/l/*",
-  "!/l/*/2026/*",
-  "!/l/*/p/*",
-];
-
-describe("Phase 5.3B — Phase 5 canary RWF interaction", () => {
-  it("E. clean localized utility → Asset-first under Phase 5 RWF", () => {
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
+describe("Phase 7B — Phase 7B narrow locale RWF interaction", () => {
+  it("E. clean localized utility → Asset-first under Phase 7B RWF", () => {
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
   });
 
-  it("F. clean localized article → Asset-first under Phase 5 RWF", () => {
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html")).toBe(
+  it("F. clean localized article → Asset-first under Phase 7B RWF", () => {
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html")).toBe(
       false,
     );
   });
 
   it("trailing-slash localized paths stay Worker-first (negative excludes clean paths only)", () => {
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/p/about.html/")).toBe(true);
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html/")).toBe(
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/p/about.html/")).toBe(true);
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html/")).toBe(
       true,
     );
   });
 
   it("locale home and unknown paths stay Worker-first", () => {
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/")).toBe(true);
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/random.html")).toBe(true);
-    expect(matchesPhase5CanaryRunWorkerFirst("/l/fr/random.html/")).toBe(true);
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/")).toBe(true);
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/random.html")).toBe(true);
+    expect(matchesPhase7bRunWorkerFirst("/l/fr/random.html/")).toBe(true);
   });
 
-  it("canary wrangler config includes Phase 5 negative RWF entries", () => {
-    expect(PHASE5_CANARY_RUN_WORKER_FIRST).toContain("/l/*");
-    expect(PHASE5_CANARY_RUN_WORKER_FIRST).toContain("!/l/*/2026/*");
-    expect(PHASE5_CANARY_RUN_WORKER_FIRST).toContain("!/l/*/p/*");
+  it("Phase 7B canary fixture includes narrow locale negative RWF entries", () => {
+    expect(PHASE7B_RUN_WORKER_FIRST).toContain("/l/*");
+    expect(PHASE7B_RUN_WORKER_FIRST).toContain(PHASE7B_LOCALE_RWF_NEGATIVES[0]);
+    expect(PHASE7B_RUN_WORKER_FIRST).toContain(PHASE7B_LOCALE_RWF_NEGATIVES[1]);
+    expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/2026/*");
+    expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/p/*");
   });
 });

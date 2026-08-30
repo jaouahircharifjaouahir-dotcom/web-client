@@ -63,10 +63,10 @@ describe("Phase 6D — Worker routing", () => {
   const staged = getStagedStaticSite();
   const env = { ASSETS: stagedAssetFetch(staged) };
 
-  it("H. keeps /2026/* in RWF before SPA fallback", () => {
+  it("H. keeps /2026/* in RWF; English articles Worker-first, localized .html asset-first (Phase 7B)", () => {
     expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(matchesRunWorkerFirst(SAMPLE_ARTICLE)).toBe(true);
-    expect(matchesRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html")).toBe(true);
+    expect(matchesRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html")).toBe(false);
   });
 
   it("B. valid .html → 200 static article", async () => {

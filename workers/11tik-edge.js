@@ -64,8 +64,39 @@ export function utilityTrailingSlashCanonicalRedirect(url) {
 }
 
 /**
+ * Phase 5.3B / Phase 7A: localized `.html/` → clean `.html` on same host (query stripped).
+ * Matches indexable `/l/{locale}/p/*.html/` utilities and `/l/{locale}/2026/…html/` articles only.
+ *
+ * @param {URL} url
+ * @param {string} host normalized lowercase hostname
+ * @returns {string} absolute redirect URL, or ""
+ */
+export function localizedHtmlTrailingSlashCanonicalRedirect(url, host) {
+  const rawPath = String(url.pathname || "");
+  if (!rawPath.endsWith(".html/")) return "";
+
+  const path = rawPath.replace(/\/+$/, "") || "/";
+  const pathLocaleMatch = /^\/l\/([a-z]{2})\/(p\/[^/]+\.html|2026\/.+\.html)$/i.exec(path);
+  if (!pathLocaleMatch) return "";
+
+  const pathLocale = pathLocaleMatch[1].toLowerCase();
+  if (!ISO6391_CODES.has(pathLocale)) return "";
+
+  const hostLocale = localeHostCode(host);
+  if (hostLocale && hostLocale !== pathLocale) return "";
+  if (!hostLocale && !isPrimaryHost(host)) return "";
+
+  if (pathLocaleMatch[2].startsWith("p/")) {
+    const utilityPath = `/p/${pathLocaleMatch[2].slice(2)}`;
+    if (!INDEXABLE_UTILITY_SET.has(utilityPath)) return "";
+  }
+
+  return `${url.protocol}//${url.host}${path}`;
+}
+
+/**
  * Phase 2B: www /p/* Worker fallback when negative run_worker_first excludes only six utilities.
- * Never calls fetchBlogger(); unknown paths return a true 404 (not SPA).
+ * Unknown paths return a true 404 (not SPA).
  */
 export async function handlePrimaryPPathRequest(url, env) {
   const rawPath = url.pathname;
@@ -95,10 +126,8 @@ export async function handlePrimaryPPathRequest(url, env) {
     return Response.redirect(dest.toString(), 301);
   }
 
-  if (INDEXABLE_UTILITY_SET.has(path) && env?.ASSETS) {
-    const assetUrl = new URL(path, url.origin);
-    return withSecurityHeaders(await env.ASSETS.fetch(new Request(assetUrl.toString())));
-  }
+  // Six indexable utilities are asset-first (negative RWF); when fetch() still runs, defer to ASSETS passthrough.
+  if (INDEXABLE_UTILITY_SET.has(path)) return null;
 
   return pPathNotFoundResponse();
 }
@@ -197,9 +226,7 @@ export default {
       if (pagesFeedRetire) return withSecurityHeaders(pagesFeedRetire);
     }
 
-    // Same pattern as sitemap.xml: Worker-first + ASSETS so /robots.txt never falls
-    // through to Blogger origin (Mediapartners-Google /share-widget). Zone route alone
-    // without run_worker_first was insufficient once Managed robots prepend was off.
+    // Static SEO files — passthrough to ASSETS when fetch() runs (asset-first when file exists).
     if (url.pathname === "/robots.txt" && env?.ASSETS) {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
@@ -208,7 +235,7 @@ export default {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
 
-    // IndexNow ownership key — Worker-first Assets so SPA fallback / Blogger never wrap it.
+    // IndexNow ownership key — passthrough so SPA fallback never wraps it.
     if (url.pathname === "/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt" && env?.ASSETS) {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }
@@ -233,8 +260,7 @@ export default {
     }
 
     // Exact zone routes without a trailing * do not match query strings (CF routes docs).
-    // www.11tik.com/copyright therefore missed /copyright?m=1 → Blogger origin 404.
-    // Route is copyright*; canonicalize any query to the clean SPA URL (canonical /copyright).
+    // Route is copyright*; canonicalize any query to the clean URL (canonical /copyright).
     if (isPrimaryHost(host) && url.pathname.replace(/\/+$/, "") === "/copyright" && url.search) {
       return Response.redirect(`${SITE}/copyright`, 301);
     }
@@ -253,13 +279,13 @@ export default {
       if (pResponse) return pResponse;
     }
 
-    // Phase 6B: static posts feed (Atom passthrough + ?alt=rss RSS asset). Never fetchBlogger().
+    // Phase 6B: static posts feed (Atom passthrough + ?alt=rss RSS asset).
     if (isPrimaryHost(host) && isPostsFeedPath(url.pathname)) {
       const feedResponse = await handlePostsFeedRequest(url, env);
       if (feedResponse) return withSecurityHeaders(feedResponse);
     }
 
-    // Phase 6D: root /2026/* static articles — exact asset or hard 404 (no Blogger, no SPA).
+    // Phase 6D: root /2026/* static articles — exact asset or hard 404 (no SPA).
     if (isPrimaryHost(host)) {
       const article2026Response = await handlePrimary2026PathRequest(url, env, {
         siteOrigin: SITE,
@@ -271,6 +297,12 @@ export default {
     if (host === "www.11tik.com") {
       const legal = legalPageRedirect(url.pathname);
       if (legal) return Response.redirect(legal, 301);
+    }
+
+    // Phase 7A: localized `.html/` → clean `.html` before ASSETS / SPA fallback.
+    const localizedSlashRedirect = localizedHtmlTrailingSlashCanonicalRedirect(url, host);
+    if (localizedSlashRedirect) {
+      return withSecurityHeaders(Response.redirect(localizedSlashRedirect, 301));
     }
 
     // Locale home directories (/l/fr/) must resolve to l/fr/index.html before ASSETS SPA fallback.
@@ -295,8 +327,6 @@ export default {
     }
 
     // SPA + static assets: /copyright, /thumb/*, /l/*, /2026/*.html, /web-client/*, …
-    // Explicit zone routes (e.g. www.11tik.com/copyright) invoke this Worker; without
-    // ASSETS passthrough the Worker used to hard-404 and Blogger never saw the request.
     if (env?.ASSETS) {
       return withSecurityHeaders(await env.ASSETS.fetch(request));
     }

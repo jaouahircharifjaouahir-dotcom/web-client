@@ -9,6 +9,8 @@ import {
   siteHeaderBodyOpen,
   siteHeaderHeadTags,
 } from "./site-header.mjs";
+import { upgradeStaticImagesToPicture } from "./image-delivery.mjs";
+import { SITE_ICONS } from "./site-icons.mjs";
 
 /** Shared article column CSS — English static + localized pages. */
 export const STANDARD_ARTICLE_PAGE_CSS = `.yte-page{max-width:720px;margin:32px auto 64px;padding:0 20px;font-family:system-ui,Segoe UI,sans-serif;color:#17141c;line-height:1.65}
@@ -41,15 +43,8 @@ export function standardArticleStyleTag() {
   return `<style>\n${STANDARD_ARTICLE_PAGE_CSS}\n</style>`;
 }
 
-/** Canonical site favicons (same assets as English SPA / Blogger). */
-export const LOCALIZED_PAGE_ICONS = {
-  png32:
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ow8HyWy9yRQFsg4KZb6tJUZwxmUUEuEBv5FzGZMbQrZ9wzK7tCB5GfEPlvGu4fTNSqAPeke2IJdpwubgUfq7XdryvcebCtYraxd6l2vUDo8hG3RimtLewbO1R4TB1_WehF-PziUil11Sb_rPJZ1YqlS5ikOWvartEdOCVK6s8SsmZaT-qK-HlzzAtG1n/s32/favicon-2.png",
-  png16:
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihb_sRR2V8NIZeXgIcfoASdqkVpP_dJJw0aWqqyrfEScm_bdpf5JrwNRLoEqlNhoM9S1c04HkxXeuNcwipE6U4uHtuoqmeMBHTC_oYjQfVuwE8vGuQd-HO9wQrnbT8FjnRanV5l12qwI7oQDo-79aeYKW1RsMZzgcWd-ECWdqJiRy0VCTeNVhycwFxz5bB/s16/favicon-1.png",
-  apple180:
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK_kbqmn-MxxqHuxGNn_zB550uVfsk6tOxxn5aOqdpfctXcSb7v38a3W-jVKYS7plgByL7Ab2mslJd3juenu64QRnDc5qmC2yUtFTasYuGEqeJKwkPaag4XazIwU98clI_a6pOvlJ6uFjd9PsOGqW-spiCqDU11skry2hbU9inYPr3k8WUY64rqwl0wNx/s180/apple-touch-icon.png",
-};
+/** Canonical self-hosted favicons (same assets as English SPA). */
+export const LOCALIZED_PAGE_ICONS = { ...SITE_ICONS };
 
 function xmlEscape(value) {
   return String(value || "")
@@ -196,7 +191,8 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   const images = Array.isArray(artifact.images) ? artifact.images : [];
   const localize = (html) => {
     const withAlts = clampImgAltsInHtml(applyLocalizedImageMetadata(html, images));
-    return pathLinkIndex ? localizeInternalLinksInHtml(withAlts, locale, pathLinkIndex) : withAlts;
+    const linked = pathLinkIndex ? localizeInternalLinksInHtml(withAlts, locale, pathLinkIndex) : withAlts;
+    return upgradeStaticImagesToPicture(linked);
   };
   const title = xmlEscape(fitTitle(artifact.title));
   const description = xmlEscape(fitDescription(artifact.description));

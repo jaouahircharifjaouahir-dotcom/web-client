@@ -9,8 +9,11 @@ import {
 } from "./article-i18n.mjs";
 import { runIndexNowAfterStaticGeneration } from "./i18n/indexnow-submit.mjs";
 import { buildGlobalAssetsSecurityHeadersBlock } from "./security-headers.mjs";
+import { generateWebpVariants } from "./generate-blog-webp.mjs";
 
 const root = join(import.meta.dirname, "..");
+
+await generateWebpVariants({ log: false });
 const dist = join(root, "dist");
 const staged = join(root, "dist-assets");
 const webClient = join(staged, "web-client");
@@ -29,7 +32,7 @@ writeFileSync(
 /web-client/*.css
   Cache-Control: public, max-age=31536000, immutable
 /web-client/images/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=2592000
 # Public ready-locale map (no secrets). ACAO allows legacy absolute www fetches
 # from locale hosts until caches clear; primary clients use same-origin relative URL.
 /web-client/i18n/publishability.json

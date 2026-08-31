@@ -16,6 +16,7 @@ import {
   siteHeaderHeadTags,
 } from "./site-header.mjs";
 import { renderLocaleCrawlNavHtml } from "./locale-crawl-nav.mjs";
+import { upgradeStaticImagesToPicture } from "./image-delivery.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
@@ -36,7 +37,7 @@ function ensureBodyHeroImg(article, item, structured) {
       structured.h1 ||
       "11tik YouTube thumbnail preview",
   );
-  const tag = `<img alt="${xmlEscape(alt)}" class="yte-hero" height="630" loading="lazy" src="${DEFAULT_OG}" width="1200"/>`;
+  const tag = `<img alt="${xmlEscape(alt)}" class="yte-hero" height="630" loading="${item.canonicalPath === "/p/embed.html" ? "eager" : "lazy"}" src="${DEFAULT_OG}" width="1200"/>`;
   return article.replace(/(<(?:article|div)[^>]*class="yte-page"[^>]*>)/i, `$1\n  ${tag}`);
 }
 
@@ -272,14 +273,16 @@ export function renderEnglishStaticHtml(item, options = {}) {
   if (!existsSync(abs)) throw new Error(`Missing English source: ${item.sourceRel}`);
   const raw = readFileSync(abs, "utf8");
   const structured = extractStructuredSource(raw, { contentType: item.type === "utility" ? "utility" : "article" });
-  const article = clampImgAltsInHtml(
-    ensureBodyHeroImg(
-      applyEnglishUtilityContentPatches(
-        applyEnglishOrphanInlinkPatches(extractArticleHtml(raw), item.contentId),
-        item.contentId,
+  const article = upgradeStaticImagesToPicture(
+    clampImgAltsInHtml(
+      ensureBodyHeroImg(
+        applyEnglishUtilityContentPatches(
+          applyEnglishOrphanInlinkPatches(extractArticleHtml(raw), item.contentId),
+          item.contentId,
+        ),
+        item,
+        structured,
       ),
-      item,
-      structured,
     ),
   );
   if (!article) throw new Error(`No <article> in source: ${item.sourceRel}`);

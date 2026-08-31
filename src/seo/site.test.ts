@@ -15,9 +15,10 @@ describe("preferred public URL", () => {
     expect(SITE.ogHeight).toBe(630);
   });
 
-  it("keeps the hosted favicon identity", () => {
-    expect(SITE.icons.png32).toContain("/s32/favicon-2.png");
-    expect(SITE.icons.png16).toContain("/s16/favicon-1.png");
-    expect(SITE.icons.apple180).toContain("/s180/apple-touch-icon.png");
+  it("keeps self-hosted favicon identity", () => {
+    expect(SITE.icons.png32).toContain("/web-client/icons/favicon-32.png");
+    expect(SITE.icons.png16).toContain("/web-client/icons/favicon-16.png");
+    expect(SITE.icons.apple180).toContain("/web-client/icons/apple-touch-icon-180.png");
+    expect(SITE.icons.png32).not.toContain("blogger.googleusercontent.com");
   });
 });

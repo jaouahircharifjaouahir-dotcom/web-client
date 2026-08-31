@@ -210,7 +210,7 @@ describe("locale home routing", () => {
     const sitemap = readFileSync(join(getStagedStaticSite(), "sitemap.xml"), "utf8");
     expect(sitemap).toContain("https://fr.11tik.com/l/fr/");
     expect(sitemap).not.toMatch(/<loc>https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/index\.html<\/loc>/);
-    expect([...sitemap.matchAll(/<loc>/g)].length).toBe(1095);
+    expect([...sitemap.matchAll(/<loc>/g)].length).toBe(1096);
   });
 
   it("/thumb/... still passes through to ASSETS unchanged", async () => {

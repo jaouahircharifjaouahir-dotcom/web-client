@@ -310,15 +310,15 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(matchesRunWorkerFirst("/2026/08/youtube-thumbnail-url.html")).toBe(true);
   });
 
-  it("sitemap 1095 and IndexNow 1096 (copyright in IndexNow only)", () => {
+  it("sitemap 1096 and IndexNow 1097 (copyright in IndexNow only)", () => {
     const dir = getStagedStaticSite();
     const sitemap = readFileSync(join(dir, "sitemap.xml"), "utf8");
-    expect([...sitemap.matchAll(/<loc>/g)].length).toBe(1095);
+    expect([...sitemap.matchAll(/<loc>/g)].length).toBe(1096);
     expect(sitemap).not.toMatch(/<loc>https:\/\/www\.11tik\.com\/p\/youtube-thumbnail-url\.html<\/loc>/);
     expect(sitemap).not.toContain("/copyright");
 
     const snap = buildIndexNowSnapshot(dir);
-    expect(snap.urlCount).toBe(1096);
+    expect(snap.urlCount).toBe(1097);
     expect(snap.urls["https://www.11tik.com/copyright"]).toMatch(/^[a-f0-9]{64}$/);
   });
 

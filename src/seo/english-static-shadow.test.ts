@@ -26,8 +26,8 @@ describe("English static shadow generation", () => {
   const postsTs = readFileSync(join(process.cwd(), "src/content/posts.ts"), "utf8");
   const postHrefs = loadGuidePostHrefsFromFile(postsTs);
 
-  it("inventories 18 guides + 6 utilities", () => {
-    expect(postHrefs.length).toBe(18);
+  it("inventories 19 guides + 6 utilities (study EN-only)", () => {
+    expect(postHrefs.length).toBe(19);
     expect(INDEXABLE_UTILITY_PATHS.length).toBe(6);
     expect(items.filter((i) => i.type === "article").length).toBe(18);
     expect(items.filter((i) => i.type === "utility").length).toBe(6);
@@ -90,7 +90,7 @@ describe("English static shadow generation", () => {
       };
       const result = writeEnglishStaticPages(writeOk, dir, inventory);
       expect(result.missingSource).toEqual([]);
-      expect(result.written.length).toBe(24);
+      expect(result.written.length).toBe(25);
       assertEnglishStaticCoverage(dir, inventory);
       for (const item of items) {
         const rel = item.canonicalPath.replace(/^\//, "");
@@ -102,11 +102,11 @@ describe("English static shadow generation", () => {
     }
   });
 
-  it("shadow sitemap counts 24 English content URLs plus homepage", () => {
+  it("shadow sitemap counts 19 English guide URLs + 6 utilities plus homepage", () => {
     const shadow = assessShadowSitemap(inventory, []);
-    expect(shadow.articleCount).toBe(18);
+    expect(shadow.articleCount).toBe(19);
     expect(shadow.utilityCount).toBe(6);
-    expect(shadow.englishCanonicalCount).toBe(1 + 18 + 6);
+    expect(shadow.englishCanonicalCount).toBe(1 + 19 + 6);
   });
 
   it("countHreflangOnHtml tallies alternates", () => {

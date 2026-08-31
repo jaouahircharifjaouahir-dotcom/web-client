@@ -63,6 +63,7 @@ const ANCHOR_BY_PATH = Object.freeze({
   "/2026/08/11tik-share-links-thumb-vs-youtube.html": "share links (/thumb vs watch)",
   "/2026/08/screenshot-vs-real-youtube-thumbnail.html": "screenshot vs real CDN still",
   "/2026/08/thumbnail-extractor-vs-maker.html": "extractor vs maker",
+  "/2026/08/youtube-thumbnail-sizes-resolutions-study.html": "300-video size study",
 });
 
 /**
@@ -94,12 +95,25 @@ export const CONTEXTUAL_LINK_PLAN = Object.freeze({
   "youtube-thumbnail-size-resolution": {
     parent: { path: "/2026/08/youtube-thumbnail-url.html", reason: "url co-pillar" },
     siblings: [
+      { path: "/2026/08/youtube-thumbnail-sizes-resolutions-study.html", reason: "measured sample data" },
       { path: "/2026/08/highest-quality-youtube-thumbnail.html", reason: "quality workflow" },
       { path: "/2026/08/original-youtube-thumbnail-image.html", reason: "original still semantics" },
       { path: "/2026/08/what-is-maxresdefaultjpg-when-youtube.html", reason: "maxres troubleshooting" },
       { path: "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html", reason: "format choice" },
     ],
     utility: null,
+    home: true,
+  },
+  "youtube-thumbnail-sizes-resolutions-study": {
+    parent: { path: "/2026/08/youtube-thumbnail-size-resolution.html", reason: "evergreen size guide" },
+    siblings: [
+      { path: "/2026/08/what-is-maxresdefaultjpg-when-youtube.html", reason: "maxres availability" },
+      { path: "/2026/08/youtube-thumbnail-url.html", reason: "CDN URL patterns" },
+      { path: "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html", reason: "format bytes" },
+      { path: "/2026/08/highest-quality-youtube-thumbnail.html", reason: "per-video workflow" },
+      { path: "/2026/08/how-to-download-youtube-thumbnail.html", reason: "download steps" },
+    ],
+    utility: { path: "/p/embed.html", reason: "developer embed" },
     home: true,
   },
   "highest-quality-youtube-thumbnail": {

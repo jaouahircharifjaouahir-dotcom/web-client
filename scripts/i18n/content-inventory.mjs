@@ -22,6 +22,9 @@ export const ARTICLE_SOURCE_OVERRIDES = Object.freeze({
   "webp-vs-jpeg-youtube-thumbnails-which": "docs/blogger-pages/blog/youtube-thumbnail-webp-vs-jpeg.html",
 });
 
+/** English-only research articles — indexed on www but excluded from locale translation rollout. */
+export const EN_ONLY_ARTICLE_IDS = Object.freeze(["youtube-thumbnail-sizes-resolutions-study"]);
+
 export const UTILITY_SOURCE_MAP = Object.freeze({
   "/p/about.html": "docs/blogger-pages/about.html",
   "/p/contact.html": "docs/blogger-pages/contact.html",
@@ -86,7 +89,7 @@ export function buildContentInventory(options = {}) {
       title: contentId,
       sourceRel,
       indexable: true,
-      localizable: true,
+      localizable: !EN_ONLY_ARTICLE_IDS.includes(contentId),
     });
   }
 

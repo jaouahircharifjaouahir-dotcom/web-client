@@ -80,13 +80,13 @@ describe("Phase 6B — posts feed routing", () => {
     expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
   });
 
-  it("confirms staged static feed assets exist with 18 entries each", () => {
+  it("confirms staged static feed assets exist with 19 entries each", () => {
     const atom = readFileSync(join(staged, "feeds/posts/default"), "utf8");
     const rss = readFileSync(join(staged, "feeds/posts/default.rss"), "utf8");
     expect(atom.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true);
     expect(rss.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true);
-    expect(extractAtomEntryLinks(atom)).toHaveLength(18);
-    expect(extractRssItemLinks(rss)).toHaveLength(18);
+    expect(extractAtomEntryLinks(atom)).toHaveLength(19);
+    expect(extractRssItemLinks(rss)).toHaveLength(19);
     for (const marker of BLOGGER_MARKERS) {
       expect(atom).not.toMatch(marker);
       expect(rss).not.toMatch(marker);
@@ -109,7 +109,7 @@ describe("Phase 6B — posts feed routing", () => {
     expect(res?.headers.get("content-type")).toBe(FEED_ATOM_CONTENT_TYPE);
     expect(body).toContain(`<id>${FEED_POSTS_ATOM_URL}</id>`);
     expect(body).not.toMatch(BLOGGER_MARKERS[0]);
-    expect(extractAtomEntryLinks(body)).toHaveLength(18);
+    expect(extractAtomEntryLinks(body)).toHaveLength(19);
   });
 
   it("serves RSS for ?alt=rss with RSS content type (no Blogger)", async () => {
@@ -120,7 +120,7 @@ describe("Phase 6B — posts feed routing", () => {
     expect(res?.headers.get("content-type")).toBe(FEED_RSS_CONTENT_TYPE);
     expect(body).toContain("<rss");
     expect(body).toContain(`href="${FEED_POSTS_RSS_URL}"`);
-    expect(extractRssItemLinks(body)).toHaveLength(18);
+    expect(extractRssItemLinks(body)).toHaveLength(19);
   });
 
   it("never calls global fetch (fetchBlogger) for post feed variants", async () => {

@@ -10,6 +10,7 @@ Single-language English site. Terms are topic guidance, not stuffing targets.
 | youtube thumbnail | Mixed | `https://www.11tik.com/` | size + URL guides | Keep the homepage as the default. |
 | youtube thumbnail url | Informational | `/2026/08/youtube-thumbnail-url.html` | homepage | How the public image URL is built / copied. |
 | youtube thumbnail size / resolution / dimensions / quality | Informational | `/2026/08/youtube-thumbnail-size-resolution.html` | homepage | Explain maxres vs hq vs missing files. |
+| youtube thumbnail sizes resolutions study / measured availability | Informational (research) | `/2026/08/youtube-thumbnail-sizes-resolutions-study.html` | size-resolution guide | 300-video sample measurements; do not merge with evergreen guide. |
 | youtube shorts thumbnail | Informational + tool | `/2026/08/youtube-shorts-thumbnail-download.html` | homepage | Shorts-specific URL patterns. |
 | how to download / get / find a youtube thumbnail | Tutorial | `/2026/08/how-to-download-youtube-thumbnail.html` | homepage | Steps, then CTA to the tool. |
 | thumbnail extractor vs maker | Comparison | `/2026/08/thumbnail-extractor-vs-maker.html` | homepage | Extractor is not Canva/Studio upload. |

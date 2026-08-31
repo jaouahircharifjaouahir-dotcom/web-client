@@ -11,7 +11,7 @@ import {
   collectCanonicalSitemapLocs,
   loadGuidePostHrefsFromFile,
 } from "../../workers/sitemap-canonicals.js";
-import { buildContentInventory, localizableContent } from "./content-inventory.mjs";
+import { buildContentInventory, localizableContent, EN_ONLY_ARTICLE_IDS, contentIdFromWwwPath, resolveArticleSourceRel } from "./content-inventory.mjs";
 import { scanPublishability } from "./publish.mjs";
 import { englishStaticAssetRel, renderEnglishStaticHtml } from "./render-english-static.mjs";
 
@@ -71,6 +71,34 @@ export function writeEnglishStaticPages(writeFile, staged, inventory = buildCont
     const rel = englishStaticAssetRel(item);
     writeFile(join(staged, rel), html);
     written.push({ contentId: item.contentId, rel, url: item.canonicalUrl, type: item.type });
+  }
+
+  const postHrefs = loadGuidePostHrefsFromFile(readFileSync(POSTS_TS, "utf8"));
+  for (const href of postHrefs) {
+    const canonicalPath = new URL(href).pathname;
+    const contentId = contentIdFromWwwPath(canonicalPath);
+    if (!EN_ONLY_ARTICLE_IDS.includes(contentId)) continue;
+    const sourceRel = resolveArticleSourceRel(contentId, canonicalPath);
+    if (!sourceRel || !existsSync(join(ROOT, sourceRel))) {
+      missingSource.push(contentId);
+      continue;
+    }
+    const item = {
+      contentId,
+      type: "article",
+      canonicalPath,
+      canonicalUrl: href,
+      sourceRel,
+    };
+    const html = renderEnglishStaticHtml(item, {
+      alternates: [{ locale: "en", url: href }],
+      postTitle: titles.get(canonicalPath) || "",
+      buildContext: options.buildContext || { inventory, manifest },
+      crawlNavHtml: options.buildContext?.crawlNavByLocale?.en,
+    });
+    const rel = englishStaticAssetRel(item);
+    writeFile(join(staged, rel), html);
+    written.push({ contentId, rel, url: href, type: "article" });
   }
 
   return { written, missingSource, manifest };

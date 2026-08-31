@@ -147,17 +147,17 @@ describe("Phase 10D — copyright slash normalization", () => {
 describe("Phase 10D — IndexNow and sitemap policy", () => {
   const staged = getStagedStaticSite();
 
-  it("sitemap remains 1095 without /copyright", () => {
+  it("sitemap remains 1096 without /copyright", () => {
     const locs = parseSitemapLocs(readFileSync(join(staged, "sitemap.xml"), "utf8"));
-    expect(locs).toHaveLength(1095);
+    expect(locs).toHaveLength(1096);
     expect(locs).not.toContain(INDEXNOW_COPYRIGHT_URL);
     expect(locs.some((loc) => loc.includes("sitemap-images"))).toBe(false);
     expect(locs.some((loc) => loc.includes("/feeds/"))).toBe(false);
   });
 
-  it("IndexNow includes /copyright (1096 total)", () => {
+  it("IndexNow includes /copyright (1097 total)", () => {
     const snap = buildIndexNowSnapshot(staged);
-    expect(snap.urlCount).toBe(1096);
+    expect(snap.urlCount).toBe(1097);
     expect(snap.urls[INDEXNOW_COPYRIGHT_URL]).toMatch(/^[a-f0-9]{64}$/);
     expect(snap.urls["https://www.11tik.com/sitemap-images.xml"]).toBeUndefined();
     expect(snap.urls["https://www.11tik.com/feeds/comments/default"]).toBeUndefined();

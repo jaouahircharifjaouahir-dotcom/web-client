@@ -119,9 +119,9 @@ describe("Phase 6C.2 — search retirement", () => {
     fetchSpy.mockRestore();
   });
 
-  it("sitemap remains 1095 locs with no /search URLs", () => {
+  it("sitemap remains 1096 locs with no /search URLs", () => {
     const locs = parseSitemapLocs(readFileSync(join(staged, "sitemap.xml"), "utf8"));
-    expect(locs).toHaveLength(1095);
+    expect(locs).toHaveLength(1096);
     expect(locs.some((loc) => loc.includes("/search"))).toBe(false);
     for (const path of INDEXABLE_UTILITY_PATHS) {
       expect(locs).toContain(`${SITE_ORIGIN}${path}`);

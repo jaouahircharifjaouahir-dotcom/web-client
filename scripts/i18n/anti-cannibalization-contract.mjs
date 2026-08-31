@@ -49,11 +49,32 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     primary: "YouTube thumbnail size / resolution / dimensions",
     secondary: ["quality tiers", "pixel matrix"],
     protectedKeywords: ["youtube thumbnail size", "youtube thumbnail resolution", "dimensions"],
-    forbiddenOverlap: ["maxres 404 troubleshooting", "highest quality workflow"],
+    forbiddenOverlap: ["maxres 404 troubleshooting", "highest quality workflow", "measured sample study"],
     preferredLinks: [
+      "/2026/08/youtube-thumbnail-sizes-resolutions-study.html",
       "/2026/08/highest-quality-youtube-thumbnail.html",
       "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
       "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
+    ],
+  },
+  "youtube-thumbnail-sizes-resolutions-study": {
+    primary: "Measured YouTube thumbnail variant availability (300-video sample)",
+    secondary: ["empirical resolution ladder", "JPEG vs WebP byte medians"],
+    protectedKeywords: [
+      "youtube thumbnail sizes study",
+      "thumbnail resolution measurement",
+      "300 video sample",
+    ],
+    forbiddenOverlap: [
+      "evergreen size matrix ownership",
+      "download tutorial",
+      "highest quality workflow",
+    ],
+    preferredLinks: [
+      "/2026/08/youtube-thumbnail-size-resolution.html",
+      "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
+      "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
+      "/p/embed.html",
     ],
   },
   "what-is-maxresdefaultjpg-when-youtube": {

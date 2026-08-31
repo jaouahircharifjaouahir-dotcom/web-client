@@ -108,10 +108,10 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
     expect(robots).not.toMatch(/^Host:/m);
   });
 
-  it("sitemap.xml has 1095 URLs without index.html pollution", () => {
+  it("sitemap.xml has 1096 URLs without index.html pollution", () => {
     const sitemap = readFileSync(join(staged, "sitemap.xml"), "utf8");
     const locs = parseSitemapLocs(sitemap);
-    expect(locs.length).toBe(1095);
+    expect(locs.length).toBe(1096);
     expect(locs.some((loc) => loc.includes("/index.html"))).toBe(false);
     expect(locs.some((loc) => /\/l\/[a-z]{2}\/index\.html/.test(loc))).toBe(false);
     expect(locs.some((loc) => loc.includes("/p/index.html"))).toBe(false);
@@ -128,9 +128,9 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
     expect(indexNowKeyBody()).toBe(INDEXNOW_KEY);
   });
 
-  it("IndexNow snapshot includes copyright (1096 URLs)", () => {
+  it("IndexNow snapshot includes copyright (1097 URLs)", () => {
     const snap = buildIndexNowSnapshot(staged);
-    expect(snap.urlCount).toBe(1096);
+    expect(snap.urlCount).toBe(1097);
     expect(snap.urls["https://www.11tik.com/copyright"]).toMatch(/^[a-f0-9]{64}$/);
   });
 

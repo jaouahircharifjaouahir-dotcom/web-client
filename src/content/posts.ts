@@ -18,6 +18,12 @@ export const GUIDE_POSTS = [
       "Public YouTube thumbnail sizes from 120×90 to 1280×720, including maxresdefault and hq720. Explains 16:9 uploads, why some variants are missing, and how 11tik ranks only files that actually load.",
   },
   {
+    title: "YouTube Thumbnail Sizes & Resolutions: 300-Video Study",
+    href: "https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html",
+    summary:
+      "Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.",
+  },
+  {
     title: "How to Download a YouTube Shorts Thumbnail in HD – Free & Fast",
     href: "https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html",
     summary:

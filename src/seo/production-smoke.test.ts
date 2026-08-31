@@ -87,10 +87,10 @@ describe("production smoke lib", () => {
   });
 
   it("validateFeedXml counts atom entries and rss items", () => {
-    const atom = `<feed>${"<entry></entry>".repeat(18)}</feed>`;
-    expect(validateFeedXml(atom, { kind: "atom", expectedEntries: 18 })).toEqual([]);
-    const rss = `<rss><channel>${"<item></item>".repeat(18)}</channel></rss>`;
-    expect(validateFeedXml(rss, { kind: "rss", expectedEntries: 18 })).toEqual([]);
+    const atom = `<feed>${"<entry></entry>".repeat(19)}</feed>`;
+    expect(validateFeedXml(atom, { kind: "atom", expectedEntries: 19 })).toEqual([]);
+    const rss = `<rss><channel>${"<item></item>".repeat(19)}</channel></rss>`;
+    expect(validateFeedXml(rss, { kind: "rss", expectedEntries: 19 })).toEqual([]);
   });
 
   it("evaluateSmokeCase flags English article SPA regression as BLOCK", () => {

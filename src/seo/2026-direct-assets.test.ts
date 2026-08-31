@@ -41,8 +41,8 @@ function stagedAssetFetch(staged: string) {
 describe("Phase 6D — /2026 static coverage", () => {
   const staged = getStagedStaticSite();
 
-  it("A. 18/18 canonical article assets exist under dist-assets", () => {
-    expect(GUIDE_PATHS).toHaveLength(18);
+  it("A. 19/19 canonical article assets exist under staged static", () => {
+    expect(GUIDE_PATHS).toHaveLength(19);
     for (const path of GUIDE_PATHS) {
       const rel = path.replace(/^\//, "");
       expect(existsSync(join(staged, rel)), path).toBe(true);
@@ -178,9 +178,9 @@ describe("Phase 6D — regressions", () => {
     fetchSpy.mockRestore();
   });
 
-  it("J. sitemap remains 1095 with all English guides", () => {
+  it("J. sitemap remains 1096 with all English guides", () => {
     const locs = parseSitemapLocs(readFileSync(join(staged, "sitemap.xml"), "utf8"));
-    expect(locs).toHaveLength(1095);
+    expect(locs).toHaveLength(1096);
     for (const path of GUIDE_PATHS) {
       expect(locs).toContain(`${SITE_ORIGIN}${path}`);
     }

@@ -147,9 +147,9 @@ describe("Phase 6E.2 — pages feed retirement", () => {
     }
   });
 
-  it("sitemap remains 1095 locs with no /search or feed URLs", () => {
+  it("sitemap remains 1096 locs with no /search or feed URLs", () => {
     const locs = parseSitemapLocs(readFileSync(join(staged, "sitemap.xml"), "utf8"));
-    expect(locs).toHaveLength(1095);
+    expect(locs).toHaveLength(1096);
     expect(locs.some((loc) => loc.includes("/search"))).toBe(false);
     expect(locs.some((loc) => loc.includes("/feeds/"))).toBe(false);
     for (const path of GUIDE_PATHS) {
@@ -160,9 +160,9 @@ describe("Phase 6E.2 — pages feed retirement", () => {
     }
   });
 
-  it("IndexNow snapshot includes copyright (1096 URLs)", () => {
+  it("IndexNow snapshot includes copyright (1097 URLs)", () => {
     const snap = buildIndexNowSnapshot(staged);
-    expect(snap.urlCount).toBe(1096);
+    expect(snap.urlCount).toBe(1097);
     expect(snap.urls["https://www.11tik.com/copyright"]).toMatch(/^[a-f0-9]{64}$/);
     expect(snap.urls["https://www.11tik.com/sitemap-images.xml"]).toBeUndefined();
   });

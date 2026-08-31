@@ -4,7 +4,7 @@
  * Output: dist-assets/web-client/i18n/catalog/{locale}.json
  */
 import { join } from "node:path";
-import { buildContentInventory, localizableContent } from "./content-inventory.mjs";
+import { buildContentInventory, localizableContent, EN_ONLY_ARTICLE_IDS, contentIdFromWwwPath, resolveArticleSourceRel } from "./content-inventory.mjs";
 import { loadTranslationArtifact, localizedPublicUrl, readSourceHash } from "./translation-store.mjs";
 import { resolvePublishState } from "./validate-artifact.mjs";
 import { getTargetLocales } from "./target-languages.mjs";
@@ -48,8 +48,22 @@ export function buildLocaleCatalogDoc(locale, options = {}) {
 
   for (const guide of guides) {
     const path = new URL(guide.href).pathname;
+    const contentId = contentIdFromWwwPath(path);
     const item = byPath.get(path);
-    if (!item) continue;
+    if (!item) {
+      if (locale === "en" && EN_ONLY_ARTICLE_IDS.includes(contentId)) {
+        items.push({
+          contentId,
+          type: "article",
+          url: guide.href,
+          title: guide.title,
+          description: guide.summary,
+          ready: true,
+          sourceHash: readSourceHash(resolveArticleSourceRel(contentId, path)) || null,
+        });
+      }
+      continue;
+    }
 
     const enTitle = guide.title;
     const enDescription = guide.summary;

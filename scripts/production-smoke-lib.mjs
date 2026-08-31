@@ -9,9 +9,9 @@ import { validateSecurityHeaders } from "./security-headers.mjs";
 export const SMOKE_USER_AGENT = "11tik-production-smoke/1.0";
 export const REQUEST_TIMEOUT_MS = 15_000;
 export const REDIRECT_MAX_HOPS = 5;
-export const DEFAULT_EXPECTED_SITEMAP_LOCS = 1095;
-export const DEFAULT_EXPECTED_INDEXNOW_URLS = 1096;
-export const DEFAULT_EXPECTED_FEED_ENTRIES = 18;
+export const DEFAULT_EXPECTED_SITEMAP_LOCS = 1096;
+export const DEFAULT_EXPECTED_INDEXNOW_URLS = 1097;
+export const DEFAULT_EXPECTED_FEED_ENTRIES = 19;
 
 /** Runtime Blogger/CMS markers — not filenames like blogger-app.js */
 export const BANNED_BODY_MARKERS = Object.freeze([

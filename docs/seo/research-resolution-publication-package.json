@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-08-31T23:25:00.000Z",
+  "phase": "18C",
+  "status": "ready_for_publication_local_only",
+  "title": "YouTube Thumbnail Sizes & Resolutions: 300-Video Study",
+  "h1": "YouTube Thumbnail Sizes & Resolutions: A 300-Video Study",
+  "slug": "youtube-thumbnail-sizes-resolutions-study.html",
+  "canonical": "https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html",
+  "robots": "index,follow",
+  "metaDescription": "Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.",
+  "ogTitle": "YouTube Thumbnail Sizes & Resolutions: 300-Video Study",
+  "ogDescription": "Variant availability, resolution ladder, and JPEG vs WebP byte medians from a measured 300-video sample. Results describe this sample only.",
+  "ogImage": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png",
+  "twitterImage": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png",
+  "heroImage": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png",
+  "ladderImage": "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder-study.png",
+  "articleHtml": "docs/blogger-pages/blog/youtube-thumbnail-sizes-resolutions-study.html",
+  "postDescriptionDraft": "Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only results—not a random YouTube census.",
+  "schema": ["Article", "BreadcrumbList"],
+  "hreflang": "en-only — no new locale URLs in Phase 18C",
+  "differentiation": {
+    "existingGuide": "https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html",
+    "newStudy": "https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html",
+    "strategy": "Separate intents — no merge, no redirect. Reciprocal contextual links added."
+  },
+  "internalLinks": [
+    { "label": "Size & resolution guide (existing)", "href": "https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html" },
+    { "label": "maxresdefault guide", "href": "https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html" },
+    { "label": "Thumbnail URL guide", "href": "https://www.11tik.com/2026/08/youtube-thumbnail-url.html" },
+    { "label": "WebP vs JPEG", "href": "https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html" },
+    { "label": "Highest quality", "href": "https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html" },
+    { "label": "Download guide", "href": "https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html" },
+    { "label": "Embed utility", "href": "https://www.11tik.com/p/embed.html" }
+  ],
+  "notPublished": true,
+  "notCommitted": true,
+  "indexingDeferred": true
+}

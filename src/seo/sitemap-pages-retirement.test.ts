@@ -81,7 +81,7 @@ describe("Phase 6C.1 — sitemap-pages.xml retirement", () => {
 
   it("utility URLs remain in static sitemap after removing sitemap-pages source", () => {
     const locs = parseSitemapLocs(readFileSync(join(staged, "sitemap.xml"), "utf8"));
-    expect(locs).toHaveLength(1095);
+    expect(locs).toHaveLength(1096);
     expect(locs.some((loc) => loc.includes("/index.html"))).toBe(false);
     for (const path of INDEXABLE_UTILITY_PATHS) {
       expect(locs).toContain(`${SITE_ORIGIN}${path}`);

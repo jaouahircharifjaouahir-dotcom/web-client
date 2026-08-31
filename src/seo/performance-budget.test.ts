@@ -85,7 +85,7 @@ describe("performance budget (Phase 12C/12D initial JS)", () => {
   it("baseline file documents Phase 12C commit and budgets", () => {
     expect(baseline.baselineCommit.startsWith("9435601")).toBe(true);
     expect(baseline.javascript.budgets.totalInitialJsBrotliFail).toBe(400 * 1024);
-    expect(baseline.seo.sitemapUrlCount).toBe(1095);
-    expect(baseline.seo.indexNowUrlCount).toBe(1096);
+    expect(baseline.seo.sitemapUrlCount).toBe(1096);
+    expect(baseline.seo.indexNowUrlCount).toBe(1097);
   });
 });

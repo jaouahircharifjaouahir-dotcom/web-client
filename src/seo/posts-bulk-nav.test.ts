@@ -51,10 +51,12 @@ describe("home view URL state", () => {
 });
 
 describe("localized content catalogs", () => {
+  const localizedGuideCount = GUIDE_POSTS.length - 1;
+
   it("builds Arabic catalog with localized titles/snippets/urls for ready articles", () => {
     const doc = buildLocaleCatalogDoc("ar");
     expect(doc.locale).toBe("ar");
-    expect(doc.items.length).toBe(GUIDE_POSTS.length);
+    expect(doc.items.length).toBe(localizedGuideCount);
     const ready = doc.items.filter((item) => item.ready);
     expect(ready.length).toBeGreaterThan(10);
     for (const item of ready) {
@@ -72,7 +74,7 @@ describe("localized content catalogs", () => {
   it("builds French and Spanish catalogs with localized URLs", () => {
     for (const locale of ["fr", "es"] as const) {
       const doc = buildLocaleCatalogDoc(locale);
-      expect(doc.items.length).toBe(GUIDE_POSTS.length);
+      expect(doc.items.length).toBe(localizedGuideCount);
       const ready = doc.items.filter((i) => i.ready);
       expect(ready.length).toBeGreaterThan(5);
       expect(ready.every((i) => i.url.includes(`${locale}.11tik.com/l/${locale}/`))).toBe(true);
@@ -100,7 +102,7 @@ describe("localized content catalogs", () => {
       const ar = JSON.parse(readFileSync(join(dir, "web-client/i18n/catalog/ar.json"), "utf8"));
       const ids = ar.items.map((i: { contentId: string }) => i.contentId);
       expect(new Set(ids).size).toBe(ids.length);
-      expect(ids.length).toBe(GUIDE_POSTS.length);
+      expect(ids.length).toBe(localizedGuideCount);
       // latest guide present
       const last = GUIDE_POSTS[GUIDE_POSTS.length - 1];
       const lastId = last.href.split("/").pop()!.replace(/\.html$/, "");
@@ -113,7 +115,7 @@ describe("localized content catalogs", () => {
   it("postsFromCatalog maps catalog items for Posts UI", () => {
     const doc = buildLocaleCatalogDoc("fr");
     const posts = postsFromCatalog(doc, "fr");
-    expect(posts.length).toBe(GUIDE_POSTS.length);
+    expect(posts.length).toBe(localizedGuideCount);
     expect(posts[0].title).toBeTruthy();
     expect(posts[0].href).toBeTruthy();
     expect(posts[0].summary).toBeTruthy();

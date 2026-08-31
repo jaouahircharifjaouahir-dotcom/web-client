@@ -28,6 +28,8 @@ export const POST_DESCRIPTIONS = {
     "Build or copy a working YouTube thumbnail URL from the video ID on i.ytimg.com. Confirm the size exists before you hotlink it.",
   "/2026/08/youtube-thumbnail-size-resolution.html":
     "Compare YouTube thumbnail sizes from 120×90 to 1280×720. Maxres and hq720 are optional—use the largest public file that loads.",
+  "/2026/08/youtube-thumbnail-sizes-resolutions-study.html":
+    "Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.",
   "/2026/08/youtube-shorts-thumbnail-download.html":
     "Download a YouTube Shorts thumbnail in the browser. Shorts use the same public stills as watch URLs. The file is often landscape.",
   "/2026/08/highest-quality-youtube-thumbnail.html":

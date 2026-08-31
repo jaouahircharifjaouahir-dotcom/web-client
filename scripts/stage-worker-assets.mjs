@@ -10,10 +10,12 @@ import {
 import { runIndexNowAfterStaticGeneration } from "./i18n/indexnow-submit.mjs";
 import { buildGlobalAssetsSecurityHeadersBlock } from "./security-headers.mjs";
 import { generateWebpVariants } from "./generate-blog-webp.mjs";
+import { splitUiCatalog } from "./split-ui-catalog.mjs";
 
 const root = join(import.meta.dirname, "..");
 
 await generateWebpVariants({ log: false });
+splitUiCatalog();
 const dist = join(root, "dist");
 const staged = join(root, "dist-assets");
 const webClient = join(staged, "web-client");
@@ -21,6 +23,16 @@ const webClient = join(staged, "web-client");
 rmSync(staged, { recursive: true, force: true });
 mkdirSync(webClient, { recursive: true });
 cpSync(dist, webClient, { recursive: true });
+
+/** Dev/main Vite entry output — production HTML loads blogger-app.js only. */
+const assetsDir = join(webClient, "assets");
+if (assetsDir) {
+  try {
+    rmSync(assetsDir, { recursive: true, force: true });
+  } catch {
+    /* no assets dir */
+  }
+}
 
 writeFileSync(
   join(staged, "_headers"),

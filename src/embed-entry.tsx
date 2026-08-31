@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { stampSeoImages } from "./seo/imageAttrs";
 import { keepDomGuards } from "./embed/dom-guard";
+import { preloadUiCatalog } from "./i18n/uiCatalog";
+import { readLocale } from "./i18n/ui";
 import "./index.css";
 
 bootLite();
@@ -65,12 +67,11 @@ function mount(): void {
 
   const useShadow = "attachShadow" in host && host.id === "yte-root";
   const rootNode = useShadow ? host.shadowRoot ?? host.attachShadow({ mode: "open" }) : host;
-  if (useShadow) {
-    void applyShadowCss(rootNode as ShadowRoot).then(() => paintApp(rootNode));
-    return;
-  }
-
-  paintApp(rootNode);
+  const start = () => {
+    if (useShadow) void applyShadowCss(rootNode as ShadowRoot);
+    paintApp(rootNode);
+  };
+  void preloadUiCatalog(readLocale()).finally(start);
 }
 
 if (document.readyState === "loading") {

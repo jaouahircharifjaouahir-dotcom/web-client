@@ -160,7 +160,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   return `<!DOCTYPE html>
 <html lang="${copy.code}" dir="${copy.dir}">
 <head>
-  <script src="/web-client/rights-boot.js?v=${APP_ASSET_V}"></script>
+  <script defer src="/web-client/rights-boot.js?v=${APP_ASSET_V}"></script>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   ${ahrefsAnalyticsHeadTag()}
@@ -190,7 +190,6 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   ${siteHeaderStyleTag()}
   <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a{color:#c2410c;font-weight:600}</style>
   <link rel="preload" href="${css}" as="style"/>
-  <link rel="preload" href="${js}" as="script"/>
   <script type="application/ld+json">${schema}</script>
 </head>
 <body>

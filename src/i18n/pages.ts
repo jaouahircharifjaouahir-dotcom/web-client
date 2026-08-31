@@ -1,6 +1,6 @@
-import catalog from "./catalog.json";
 import { ISO6391 } from "../../workers/iso6391.js";
 import { THUMB_LOCALE_PACKS } from "./thumb-locale-packs";
+import { uiFoot, uiHeroIntro } from "./uiCatalog";
 
 export type PageKey =
   | "trendingTags"
@@ -560,11 +560,7 @@ const NAV: Record<string, Pack> = {
 };
 
 function catalogBits(locale: string): { intro: string; foot: string } {
-  const pack = (catalog as Record<string, { ui?: { heroIntro?: string; foot?: string } }>)[locale] || catalog.en;
-  return {
-    intro: pack.ui?.heroIntro || catalog.en.ui.heroIntro,
-    foot: pack.ui?.foot || catalog.en.ui.foot,
-  };
+  return { intro: uiHeroIntro(locale), foot: uiFoot(locale) };
 }
 
 function thumbPackString(locale: string, key: PageKey): string | undefined {

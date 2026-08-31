@@ -1,0 +1,106 @@
+{
+  "ui": {
+    "posts": "Posts",
+    "bulk": "Bulk",
+    "theme": "Theme",
+    "language": "Language",
+    "themeLight": "light",
+    "themeDark": "dark",
+    "themeSystem": "system",
+    "kicker": "POSTS",
+    "pasteOne": "Paste a YouTube URL (Shorts, live, youtu.be).",
+    "pasteBulk": "Paste one YouTube URL per line.",
+    "pasteBulkPh": "Paste one YouTube URL per line",
+    "pasteOnePh": "Paste YouTube URL",
+    "finding": "Finding thumbnail…",
+    "extractAll": "Extract all",
+    "getThumb": "Get Thumbnail Image",
+    "copyShare": "Copy share link",
+    "share": "Share",
+    "extracting": "Extracting thumbnails",
+    "ready": "Thumbnail ready",
+    "download": "Download",
+    "copyImage": "Copy image URL",
+    "openFull": "Open full resolution",
+    "unknownSize": "Unknown size",
+    "best": "BEST ·",
+    "shareLink": "SHARE LINK",
+    "idsOk": "valid video ID",
+    "idsOkPlural": "valid video IDs",
+    "noIds": "No video IDs found yet.",
+    "validId": "Valid",
+    "noId": "No supported video ID found in that text.",
+    "foot": "Public YouTube thumbnails only. No accounts, no video download, no tracking of pasted URLs.",
+    "heroTitle": "YouTube Thumbnail Extractor",
+    "heroIntro": "Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any public YouTube video or Shorts URL with one click. Paste a link below, click Get Thumbnail Image, then download or share a ready link.",
+    "INVALID_URL": "Paste a public YouTube URL (TikTok/Instagram thumbnails are not supported yet).",
+    "UNSUPPORTED_HOST": "Only YouTube public URLs are supported right now.",
+    "INVALID_VIDEO_ID": "Could not find a valid video ID in that link.",
+    "THUMBNAIL_NOT_FOUND": "No public thumbnail was found for this video.",
+    "NETWORK_ERROR": "A network error stopped thumbnail discovery. Try again.",
+    "TIMEOUT": "Thumbnail discovery timed out. Try again.",
+    "IMAGE_VALIDATION_FAILED": "The thumbnail could not be verified as a valid image.",
+    "DOWNLOAD_FAILED": "The file could not be downloaded. Try opening the image instead.",
+    "CHANNEL_OR_PLAYLIST": "Paste video URLs, not a channel or playlist link.",
+    "copiedShare": "Share link copied",
+    "copiedShares": "Share links copied",
+    "exportCsv": "Export CSV",
+    "ariaKeywordLinks": "Keyword links",
+    "ariaYoutubeUrl": "YouTube URL",
+    "ariaYoutubeUrls": "YouTube URLs",
+    "copiedImage": "Copied!",
+    "copiedAllUrls": "Copied all URLs",
+    "thumbnailsKicker": "THUMBNAILS",
+    "downloadThumbVideo": "Download thumbnail video {n} {quality}",
+    "videoLabel": "Video {n}",
+    "adSpace": "Ad space",
+    "localHistoryKicker": "LOCAL HISTORY",
+    "clearHistory": "Clear history"
+  },
+  "posts": [
+    {
+      "title": "How to Download a YouTube Thumbnail in HD – Free & Fast",
+      "summary": "This guide walks through the full path from a public YouTube watch link, Shorts URL, or youtu.be short link to an HD still you can save on any device."
+    },
+    {
+      "title": "How to Get a YouTube Thumbnail URL – Easy, Fast & Free",
+      "summary": "A YouTube thumbnail URL is the direct address of an image on i.ytimg.com, not the watch page."
+    },
+    {
+      "title": "YouTube Thumbnail Size & Resolution: Complete 2026 Guide",
+      "summary": "YouTube does not serve one thumbnail size. Public stills commonly include 120×90 through 1280×720."
+    },
+    {
+      "title": "How to Download a YouTube Shorts Thumbnail in HD – Free & Fast",
+      "summary": "Shorts URLs use the same public image hosts as regular videos."
+    },
+    {
+      "title": "How to Get the Highest Quality YouTube Thumbnail – HD & Maximum Resolution",
+      "summary": "Highest quality means the largest public JPEG YouTube actually returns."
+    },
+    {
+      "title": "How to Get the Original YouTube Thumbnail Image – Full Quality Guide",
+      "summary": "Creators upload one source thumbnail; tools only receive public derivatives."
+    },
+    {
+      "title": "What is maxresdefault.jpg? When YouTube actually publishes an HD thumbnail",
+      "summary": "maxresdefault.jpg is YouTube’s common 1280×720 public still, not guaranteed for every video."
+    },
+    {
+      "title": "How to batch download YouTube thumbnails (up to 25 public URLs)",
+      "summary": "Bulk mode accepts one public URL per line, cap 25."
+    },
+    {
+      "title": "Screenshot vs real YouTube thumbnail: which file should you save?",
+      "summary": "A player screenshot is not the thumbnail YouTube hosts."
+    },
+    {
+      "title": "Thumbnail extractor vs maker",
+      "summary": "An extractor saves the public still. A maker creates original art. 11tik is an extractor only."
+    },
+    {
+      "title": "YouTube Studio thumbnail 2026",
+      "summary": "How custom thumbnails work in YouTube Studio in 2026."
+    }
+  ]
+}

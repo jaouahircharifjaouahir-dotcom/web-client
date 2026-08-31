@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && vite build --config vite.embed.config.ts && node scripts/obfuscate-public.mjs && node scripts/stage-worker-assets.mjs",
+    "build": "node scripts/split-ui-catalog.mjs && tsc -b && vite build && vite build --config vite.embed.config.ts && node scripts/obfuscate-public.mjs && node scripts/stage-worker-assets.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "i18n:dry-run": "node scripts/i18n/dry-run-report.mjs",

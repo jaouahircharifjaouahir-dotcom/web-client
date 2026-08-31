@@ -31,7 +31,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: "blogger-app.css",
-        inlineDynamicImports: true,
         footer: "\n//# sourceMappingURL=blogger-app.js.map\n",
       },
     },

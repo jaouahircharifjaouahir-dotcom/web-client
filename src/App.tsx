@@ -1,16 +1,13 @@
-import { startTransition, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, startTransition, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { analytics } from "./analytics";
 import { ThumbnailPreview } from "./components/ThumbnailPreview";
-import { findKeywordLanding, KEYWORD_LANDINGS, readKeywordSlug } from "./content/keywordLandings";
+import { readKeywordSlug, type KeywordLanding } from "./content/keywordLandings";
 import { config, isEmbedMode } from "./config";
 import { startEmbedResize } from "./embed/resize";
 import { extractThumbnails } from "./engines/extract";
-import { expandChannelVideos, looksLikeChannelUrl } from "./channels/feed";
-import { bulkResultsCsv, downloadCsv } from "./export/csv";
-import { bulkResultsJson, downloadText } from "./export/json";
+import { looksLikeChannelUrl } from "./channels/feed";
 import { tx } from "./i18n/extra";
 import { legalHrefs, pageString } from "./i18n/pages";
-import { SitePages, ThumbArticle } from "./pages/SitePages";
 import { parseAppRoute } from "./routing/path";
 import { calculateConsistencyScore } from "./score/consistency";
 import { buildShareUrls } from "./share/social";
@@ -35,6 +32,9 @@ import { userMessage } from "./types/errors";
 import type { HistoryEntry, ThumbnailCandidate, ThumbnailExtractionResult } from "./types";
 
 const QUALITY_ORDER = QUALITY_PRESETS.map((item) => item.quality);
+
+const LazySitePages = lazy(() => import("./pages/SitePages").then((m) => ({ default: m.SitePages })));
+const LazyThumbArticle = lazy(() => import("./pages/SitePages").then((m) => ({ default: m.ThumbArticle })));
 
 function formatSize(width: number | null, height: number | null): string {
   if (!width || !height) return t("unknownSize");
@@ -96,6 +96,7 @@ export default function App() {
   const postsOpen = homeView === "posts";
   const bulk = homeView === "bulk";
   const [keywordSlug, setKeywordSlug] = useState(() => readKeywordSlug());
+  const [keywordLinks, setKeywordLinks] = useState<KeywordLanding[]>([]);
   const [staticHeader] = useState(() => hasStaticSiteHeader());
   const [power, setPower] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -233,7 +234,22 @@ export default function App() {
     return () => window.removeEventListener("popstate", sync);
   }, []);
 
-  const landing = readLocale() === "en" ? findKeywordLanding(keywordSlug) : undefined;
+  useEffect(() => {
+    if (readLocale() !== "en") {
+      setKeywordLinks([]);
+      return;
+    }
+    let cancelled = false;
+    void import("./content/keywordLandings").then((mod) => {
+      if (!cancelled) setKeywordLinks(mod.KEYWORD_LANDINGS);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [route.name, homeView]);
+
+  const landing =
+    readLocale() === "en" && keywordSlug ? keywordLinks.find((item) => item.slug === keywordSlug) : undefined;
   const heroTitle = landing?.title ?? t("heroTitle");
   const heroIntro = landing?.intro ?? t("heroIntro");
   const locale = readLocale();
@@ -369,6 +385,7 @@ export default function App() {
     let raw = source;
     if (looksLikeChannelUrl(source)) {
       setBusy(true);
+      const { expandChannelVideos } = await import("./channels/feed");
       const urls = await expandChannelVideos(source.trim().split(/[\s\n]+/)[0] || source, 20);
       if (!urls.length) {
         setBusy(false);
@@ -479,7 +496,11 @@ export default function App() {
   };
 
   if (route.name !== "home" && route.name !== "thumb") {
-    return <SitePages route={route} />;
+    return (
+      <Suspense fallback={<div className="yte-app"><div className="yte-shell" aria-busy="true" /></div>}>
+        <LazySitePages route={route} />
+      </Suspense>
+    );
   }
 
   return (
@@ -514,7 +535,9 @@ export default function App() {
           <>
         <section className="yte-hero">
           {route.name === "thumb" ? (
-            <ThumbArticle platform={route.platform} videoId={route.videoId} origin={localeHomeUrl()} />
+            <Suspense fallback={<p aria-busy="true">…</p>}>
+              <LazyThumbArticle platform={route.platform} videoId={route.videoId} origin={localeHomeUrl()} />
+            </Suspense>
           ) : (
             <>
               <h1>{heroTitle}</h1>
@@ -529,7 +552,7 @@ export default function App() {
             </p>
           ) : null}
           <nav aria-label={t("ariaKeywordLinks")} className="yte-kw">
-            {KEYWORD_LANDINGS.map((item) => (
+            {keywordLinks.map((item) => (
               <a
                 className={item.slug === keywordSlug ? "is-on" : undefined}
                 href={`/?k=${item.slug}`}
@@ -776,14 +799,22 @@ export default function App() {
               <button
                 className="yte-ghost"
                 type="button"
-                onClick={() => downloadCsv("11tik-bulk-thumbnails.csv", bulkResultsCsv(bulkResults))}
+                onClick={() => {
+                  void import("./export/csv").then(({ downloadCsv, bulkResultsCsv }) =>
+                    downloadCsv("11tik-bulk-thumbnails.csv", bulkResultsCsv(bulkResults)),
+                  );
+                }}
               >
                 {t("exportCsv")}
               </button>
               <button
                 className="yte-ghost"
                 type="button"
-                onClick={() => downloadText("11tik-bulk-thumbnails.json", bulkResultsJson(bulkResults), "application/json")}
+                onClick={() => {
+                  void import("./export/json").then(({ downloadText, bulkResultsJson }) =>
+                    downloadText("11tik-bulk-thumbnails.json", bulkResultsJson(bulkResults), "application/json"),
+                  );
+                }}
               >
                 {tx(locale, "exportJson")}
               </button>

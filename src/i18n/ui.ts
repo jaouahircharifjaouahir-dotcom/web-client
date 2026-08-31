@@ -1,4 +1,4 @@
-import catalog from "./catalog.json";
+import enPack from "./catalog-en.json";
 import nativeNames from "./native-names.json";
 import targetLanguages from "../../config/target-languages.json";
 import { ISO6391_CODES, RTL_CODES } from "../../workers/iso6391.js";
@@ -11,8 +11,9 @@ import {
   warmPublishabilityCache,
   type PublishabilityDoc,
 } from "./publishability";
+import { loadUiCatalog, uiPackFor } from "./uiCatalog";
 
-export type UiKey = keyof (typeof catalog)["en"]["ui"];
+export type UiKey = keyof typeof enPack.ui;
 
 export { warmPublishabilityCache };
 
@@ -62,8 +63,8 @@ export function publicOrigin(): string {
 
 export function t(key: UiKey): string {
   const locale = readLocale();
-  const pack = catalog[locale as keyof typeof catalog] || catalog.en;
-  return pack.ui[key] || catalog.en.ui[key];
+  const pack = uiPackFor(locale);
+  return pack.ui[key] || enPack.ui[key];
 }
 
 export function tFill(key: UiKey, vars: Record<string, string | number>): string {
@@ -96,7 +97,7 @@ export function isRtl(code = readLocale()): boolean {
 
 export function guidePosts(options?: { locale?: string; doc?: PublishabilityDoc | null }) {
   const locale = options?.locale ?? readLocale();
-  const pack = catalog[locale as keyof typeof catalog] || catalog.en;
+  const pack = uiPackFor(locale);
   const doc = options && "doc" in options ? options.doc : getPublishabilityCache();
   return GUIDE_POSTS.map((post, index) => ({
     ...post,
@@ -104,6 +105,11 @@ export function guidePosts(options?: { locale?: string; doc?: PublishabilityDoc 
     title: pack.posts[index]?.title || post.title,
     summary: pack.posts[index]?.summary || post.summary,
   }));
+}
+
+/** Warm UI strings for the active locale (no-op for English). */
+export function warmUiCatalog(locale = readLocale()): Promise<void> {
+  return loadUiCatalog(locale).then(() => undefined);
 }
 
 /**

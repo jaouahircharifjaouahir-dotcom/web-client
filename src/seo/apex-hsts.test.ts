@@ -5,7 +5,7 @@ import worker, {
   withSecurityHeaders,
 } from "../../workers/11tik-edge.js";
 
-const HSTS = "max-age=31536000; includeSubDomains; preload";
+const HSTS = "max-age=31536000; includeSubDomains";
 
 const env = {
   ASSETS: {

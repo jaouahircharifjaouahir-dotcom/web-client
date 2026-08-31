@@ -36,6 +36,7 @@ describe("production smoke lib", () => {
     expect(cases.some((c) => c.id === "SEC-embed-page")).toBe(true);
     expect(cases.some((c) => c.id === "SEC-embed-widget")).toBe(true);
     expect(cases.filter((c) => c.securityHeaders).length).toBeGreaterThanOrEqual(8);
+    expect(cases.filter((c) => c.workerHsts).length).toBeGreaterThanOrEqual(8);
   });
 
   it("scheduled subset is small and asset-first heavy", () => {
@@ -141,6 +142,34 @@ describe("production smoke lib", () => {
       "content-security-policy-report-only": CSP_REPORT_ONLY,
     };
     const out = evaluateSmokeCase(testCase, { status: 200, headers, body: "<html></html>", location: null });
+    expect(out.block.filter((m) => m.startsWith("security:"))).toEqual([]);
+  });
+
+  it("evaluateSmokeCase blocks HSTS preload on workerHsts cases", () => {
+    const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "H-search-410");
+    const out = evaluateSmokeCase(testCase, {
+      status: 410,
+      headers: {
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": CSP_REPORT_ONLY,
+      },
+      body: "",
+      location: null,
+    });
+    expect(out.block.some((m) => m.includes("preload"))).toBe(true);
+  });
+
+  it("evaluateSmokeCase passes workerHsts zone-aligned policy", () => {
+    const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "I-sitemap-pages");
+    const out = evaluateSmokeCase(testCase, {
+      status: 301,
+      headers: { "strict-transport-security": "max-age=31536000; includeSubDomains", location: "https://www.11tik.com/sitemap.xml" },
+      body: "",
+      location: "https://www.11tik.com/sitemap.xml",
+    });
     expect(out.block.filter((m) => m.startsWith("security:"))).toEqual([]);
   });
 });

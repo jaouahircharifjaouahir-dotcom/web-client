@@ -45,27 +45,27 @@ export function buildSmokeCases(origins) {
     { id: "A-home", category: "A", severity: "BLOCK", url: `${www}/`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true },
     { id: "B-en-utility", category: "B", severity: "BLOCK", url: `${www}/p/about.html`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true, securityHeaders: true },
     { id: "C-en-article", category: "C", severity: "BLOCK", url: `${www}/2026/08/how-to-download-youtube-thumbnail.html`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true, canonicalIncludes: "/2026/08/how-to-download-youtube-thumbnail.html" },
-    { id: "D-en-unknown-p", category: "D", severity: "BLOCK", url: `${www}/p/random.html`, status: 404, expectHtml: true, noSpaShell: true },
-    { id: "D-en-unknown-2026", category: "D", severity: "BLOCK", url: `${www}/2026/08/this-page-does-not-exist-unique-test.html`, status: 404, expectHtml: true, noSpaShell: true },
+    { id: "D-en-unknown-p", category: "D", severity: "BLOCK", url: `${www}/p/random.html`, status: 404, expectHtml: true, noSpaShell: true, workerHsts: true },
+    { id: "D-en-unknown-2026", category: "D", severity: "BLOCK", url: `${www}/2026/08/this-page-does-not-exist-unique-test.html`, status: 404, expectHtml: true, noSpaShell: true, workerHsts: true },
     { id: "E-en-about-redirect", category: "E", severity: "BLOCK", url: `${www}/about`, status: 301, redirectManual: true, locationIncludes: "/p/about.html", verifyFinal: { status: 200 } },
     { id: "F-feed-atom", category: "F", severity: "BLOCK", url: `${www}/feeds/posts/default`, status: 200, contentTypeIncludes: "atom", feedAtom: true, securityHeaders: true },
     { id: "G-feed-rss", category: "G", severity: "BLOCK", url: `${www}/feeds/posts/default?alt=rss`, status: 200, contentTypeIncludes: "rss", feedRss: true },
-    { id: "H-search-410", category: "H", severity: "BLOCK", url: `${www}/search`, status: 410, securityHeaders: true },
-    { id: "H-pages-feed-410", category: "H", severity: "BLOCK", url: `${www}/feeds/pages/default`, status: 410 },
-    { id: "H-sitemap-images-410", category: "H", severity: "BLOCK", url: `${www}/sitemap-images.xml`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
-    { id: "H-feeds-comments-410", category: "H", severity: "BLOCK", url: `${www}/feeds/comments/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
-    { id: "H-feeds-other-410", category: "H", severity: "BLOCK", url: `${www}/feeds/other/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
+    { id: "H-search-410", category: "H", severity: "BLOCK", url: `${www}/search`, status: 410, securityHeaders: true, workerHsts: true },
+    { id: "H-pages-feed-410", category: "H", severity: "BLOCK", url: `${www}/feeds/pages/default`, status: 410, workerHsts: true },
+    { id: "H-sitemap-images-410", category: "H", severity: "BLOCK", url: `${www}/sitemap-images.xml`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true, workerHsts: true },
+    { id: "H-feeds-comments-410", category: "H", severity: "BLOCK", url: `${www}/feeds/comments/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true, workerHsts: true },
+    { id: "H-feeds-other-410", category: "H", severity: "BLOCK", url: `${www}/feeds/other/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true, workerHsts: true },
     { id: "H-copyright", category: "H", severity: "BLOCK", url: `${www}/copyright`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true, canonicalIncludes: "/copyright" },
-    { id: "H-copyright-slash", category: "H", severity: "BLOCK", url: `${www}/copyright/`, status: 301, redirectManual: true, location: `${www}/copyright`, verifyFinal: { status: 200, canonicalIncludes: "/copyright" } },
+    { id: "H-copyright-slash", category: "H", severity: "BLOCK", url: `${www}/copyright/`, status: 301, redirectManual: true, location: `${www}/copyright`, verifyFinal: { status: 200, canonicalIncludes: "/copyright" }, workerHsts: true },
     { id: "H-copyright-slash-query", category: "H", severity: "BLOCK", url: `${www}/copyright/?m=1`, status: 301, redirectManual: true, location: `${www}/copyright` },
-    { id: "I-sitemap-pages", category: "I", severity: "BLOCK", url: `${www}/sitemap-pages.xml`, status: 301, redirectManual: true, locationIncludes: "sitemap.xml", verifyFinal: { status: 200, contentTypeIncludes: "xml" } },
+    { id: "I-sitemap-pages", category: "I", severity: "BLOCK", url: `${www}/sitemap-pages.xml`, status: 301, redirectManual: true, locationIncludes: "sitemap.xml", verifyFinal: { status: 200, contentTypeIncludes: "xml" }, workerHsts: true },
     { id: "J-robots", category: "J", severity: "BLOCK", url: `${www}/robots.txt`, status: 200, contentTypeIncludes: "text/plain", robotsCheck: true, securityHeaders: true },
     { id: "K-sitemap", category: "K", severity: "BLOCK", url: `${www}/sitemap.xml`, status: 200, contentTypeIncludes: "xml", sitemapCheck: true },
     { id: "L-indexnow-key", category: "L", severity: "BLOCK", url: `${www}/${INDEXNOW_KEY}.txt`, status: 200, contentTypeIncludes: "text/plain", bodyIncludes: INDEXNOW_KEY },
     { id: "M-fr-home", category: "M", severity: "BLOCK", url: `${fr}/l/fr/`, status: 200, expectHtml: true, lang: "fr", locale: "fr", h1Fr: true, canonicalIncludes: "/l/fr/", securityHeaders: true },
     { id: "N-fr-utility", category: "N", severity: "BLOCK", url: `${fr}/l/fr/p/about.html`, status: 200, expectHtml: true, lang: "fr", locale: "fr", noBanned: true, canonicalIncludes: "/l/fr/p/about.html" },
     { id: "O-fr-article", category: "O", severity: "BLOCK", url: `${fr}/l/fr/2026/08/how-to-download-youtube-thumbnail.html`, status: 200, expectHtml: true, lang: "fr", locale: "fr", h1Fr: true, noSpaShell: true, noBanned: true, canonicalIncludes: "/l/fr/2026/08/how-to-download-youtube-thumbnail.html" },
-    { id: "P-fr-utility-slash", category: "P", severity: "BLOCK", url: `${fr}/l/fr/p/about.html/`, status: 301, redirectManual: true, location: `${fr}/l/fr/p/about.html`, verifyFinal: { status: 200 } },
+    { id: "P-fr-utility-slash", category: "P", severity: "BLOCK", url: `${fr}/l/fr/p/about.html/`, status: 301, redirectManual: true, location: `${fr}/l/fr/p/about.html`, verifyFinal: { status: 200 }, workerHsts: true },
     { id: "P-fr-article-slash", category: "P", severity: "BLOCK", url: `${fr}/l/fr/2026/08/how-to-download-youtube-thumbnail.html/`, status: 301, redirectManual: true, locationSuffix: "how-to-download-youtube-thumbnail.html", verifyFinal: { status: 200 } },
     { id: "Q-fr-mobile", category: "Q", severity: "BLOCK", url: `${fr}/l/fr/?m=1`, status: 301, redirectManual: true, location: `${fr}/l/fr/` },
     { id: "R-ar-home", category: "R", severity: "BLOCK", url: `${ar}/l/ar/`, status: 200, expectHtml: true, lang: "ar", locale: "ar", dir: "rtl" },
@@ -77,7 +77,7 @@ export function buildSmokeCases(origins) {
     { id: "SEC-embed-page", category: "SEC", severity: "BLOCK", url: `${www}/p/embed.html`, status: 200, expectHtml: true, noSpaShell: true, securityHeaders: true, embedSurface: true },
     { id: "SEC-embed-widget", category: "SEC", severity: "BLOCK", url: `${www}/?embed=1`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true, embedSurface: true },
     { id: "X-http-redirect", category: "X", severity: "BLOCK", url: "http://www.11tik.com/", status: 301, redirectManual: true, locationStartsWith: "https://", verifyFinal: { status: 200, urlPrefix: "https://www.11tik.com" } },
-    { id: "Y-apex-redirect", category: "Y", severity: "BLOCK", url: "https://11tik.com/", status: 301, redirectManual: true, locationIncludes: "www.11tik.com", verifyFinal: { status: 200, urlPrefix: "https://www.11tik.com" } },
+    { id: "Y-apex-redirect", category: "Y", severity: "BLOCK", url: "https://11tik.com/", status: 301, redirectManual: true, locationIncludes: "www.11tik.com", verifyFinal: { status: 200, urlPrefix: "https://www.11tik.com" }, workerHsts: true },
     // Supplementary high-value checks (Phase 7B parity)
     { id: "INFO-fr-posts-shell", category: "M", severity: "INFO", url: `${fr}/l/fr/?posts=1`, status: 200, expectHtml: true, lang: "fr" },
     { id: "WARN-hsts-en-utility", category: "B", severity: "WARN", url: `${www}/p/about.html`, status: 200, hsts: true },
@@ -376,6 +376,19 @@ export function evaluateSmokeCase(testCase, { status, headers, body, location })
     if (sts.includes("preload")) push(warn, "HSTS includes preload (zone policy is preload=false)");
   }
 
+  if (testCase.workerHsts) {
+    const sts = headers["strict-transport-security"] ?? "";
+    if (!sts.includes("max-age=31536000")) {
+      push(block, `security: HSTS missing max-age=31536000 (${sts || "absent"})`);
+    }
+    if (!sts.includes("includeSubDomains")) {
+      push(block, "security: HSTS missing includeSubDomains");
+    }
+    if (sts.includes("preload")) {
+      push(block, "security: HSTS must not include preload (zone policy is preload=false)");
+    }
+  }
+
   if (testCase.securityHeaders) {
     for (const issue of validateSecurityHeaders(headers, {
       requireCspReportOnly: true,
@@ -389,6 +402,9 @@ export function evaluateSmokeCase(testCase, { status, headers, body, location })
     }
     if (!sts.includes("includeSubDomains")) {
       push(block, "security: HSTS missing includeSubDomains");
+    }
+    if (sts.includes("preload")) {
+      push(block, "security: HSTS must not include preload (zone policy is preload=false)");
     }
   }
 

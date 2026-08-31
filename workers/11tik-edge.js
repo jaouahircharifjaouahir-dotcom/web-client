@@ -189,7 +189,7 @@ export function apexToWwwRedirectIfNeeded(request) {
 export function withSecurityHeaders(response) {
   const headers = new Headers(response.headers);
   if (!headers.has("strict-transport-security")) {
-    headers.set("strict-transport-security", "max-age=31536000; includeSubDomains; preload");
+    headers.set("strict-transport-security", "max-age=31536000; includeSubDomains");
   }
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }

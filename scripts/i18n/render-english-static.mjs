@@ -17,6 +17,7 @@ import {
 } from "./site-header.mjs";
 import { renderLocaleCrawlNavHtml } from "./locale-crawl-nav.mjs";
 import { upgradeStaticImagesToPicture } from "./image-delivery.mjs";
+import { applyContextualInternalLinks } from "./contextual-internal-links.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
@@ -47,7 +48,15 @@ function ensureBodyHeroImg(article, item, structured) {
  */
 const ENGLISH_UTILITY_CONTENT_PATCHES = {
   embed: `<p>The embed loads the same in-browser extractor as <a href="https://www.11tik.com/?embed=1">www.11tik.com</a> with <code>?embed=1</code>. Visitors paste a public watch, Shorts, or youtu.be URL and download the largest still YouTube returns. No API key, no server-side storage of pasted links, and no video or audio download.</p>
-  <p>Use this on a blog sidebar, documentation page, or creator toolkit where a self-contained widget helps. Thumbnail copyright stays with the uploader — see <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>. For product background, read <a href="https://www.11tik.com/p/about.html">About 11tik</a>.</p>`,
+  <p>Use this on a blog sidebar, documentation page, or creator toolkit where a self-contained widget helps. Thumbnail copyright stays with the uploader — see <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>. For product background, read <a href="https://www.11tik.com/p/about.html">About 11tik</a>.</p>
+  <h2>What the embed does</h2>
+  <p>The iframe loads the public 11tik extractor UI. Height sync uses <code>id="yte-app"</code> plus <code>embed.js</code> so download buttons stay visible as results expand. Processing stays in the visitor&apos;s browser; pasted URLs are not stored on 11tik servers.</p>
+  <h2>URL structure and video IDs</h2>
+  <p>Public YouTube stills live on <code>i.ytimg.com/vi/{VIDEO_ID}/</code> with predictable filenames (<code>maxresdefault.jpg</code>, <code>hqdefault.jpg</code>, and others). The embed does not expose a private YouTube API — it uses the same client-side checks as the homepage. For the full URL anatomy, see the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+  <h2>maxres fallback and validation</h2>
+  <p><code>maxresdefault.jpg</code> is not guaranteed for every video. 11tik probes public variants and lists only files that validate — it does not invent 4K or guess missing sizes. See <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault and fallbacks</a>.</p>
+  <h2>CORS, CMS, and Open Graph</h2>
+  <p>Direct hotlinking to <code>i.ytimg.com</code> can break in CMS previews or social cards. For blog featured images and <code>og:image</code>, download a confirmed still and host a copy on your domain. Walkthrough: <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">YouTube thumbnail as blog / Open Graph image</a>. WebP vs JPEG notes: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">format comparison</a>.</p>`,
 };
 
 export function applyEnglishUtilityContentPatches(article, contentId) {
@@ -276,9 +285,13 @@ export function renderEnglishStaticHtml(item, options = {}) {
   const article = upgradeStaticImagesToPicture(
     clampImgAltsInHtml(
       ensureBodyHeroImg(
-        applyEnglishUtilityContentPatches(
-          applyEnglishOrphanInlinkPatches(extractArticleHtml(raw), item.contentId),
+        applyContextualInternalLinks(
+          applyEnglishUtilityContentPatches(
+            applyEnglishOrphanInlinkPatches(extractArticleHtml(raw), item.contentId),
+            item.contentId,
+          ),
           item.contentId,
+          item.canonicalPath,
         ),
         item,
         structured,

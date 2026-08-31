@@ -2,6 +2,7 @@ import { RTL_CODES } from "../../workers/iso6391.js";
 import { protectEmailsInHtml } from "../../workers/email-obfuscation.js";
 import { clampImgAltsInHtml, fitAlt, fitDescription, fitTitle, toHttpsUrl } from "../../workers/html-meta.js";
 import { localizeInternalLinksInHtml } from "./internal-links.mjs";
+import { renderContextualLinksNav, CONTEXTUAL_LINK_PLAN } from "./contextual-internal-links.mjs";
 import { renderLocaleCrawlNavHtml } from "./locale-crawl-nav.mjs";
 import {
   localeHomeUrl,
@@ -249,6 +250,10 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
   const bioInner = artifact.bioHtml
     ? stripNestedDocumentH1(localize(artifact.bioHtml), pageH1)
     : "";
+  const contextualNavHtml =
+    CONTEXTUAL_LINK_PLAN[item.contentId]
+      ? localize(renderContextualLinksNav(item.contentId, item.canonicalPath))
+      : "";
 
   return protectEmailsInHtml(`<!DOCTYPE html>
 <html lang="${xmlEscape(locale)}" dir="${dir}">
@@ -290,6 +295,7 @@ ${siteHeaderBodyOpen({
   ${faqHtml ? `<h2>${xmlEscape(artifact.faqHeading || "FAQ")}</h2>\n${faqHtml}` : ""}
   ${conclusionHtml}
   ${bioInner ? `<p class="yte-bio">${bioInner}</p>` : ""}
+  ${contextualNavHtml}
   ${crawlNavHtml ?? renderLocaleCrawlNavHtml(locale, {
     ...(buildContext || {}),
     catalogDoc: buildContext?.catalogByLocale?.[locale],

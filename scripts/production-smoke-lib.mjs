@@ -4,6 +4,7 @@
  */
 import { execSync } from "node:child_process";
 import { INDEXNOW_KEY } from "./i18n/indexnow-key.mjs";
+import { validateSecurityHeaders } from "./security-headers.mjs";
 
 export const SMOKE_USER_AGENT = "11tik-production-smoke/1.0";
 export const REQUEST_TIMEOUT_MS = 15_000;
@@ -41,15 +42,15 @@ export function sitemapCountIsStrictBlock(env = process.env) {
 export function buildSmokeCases(origins) {
   const { www, fr, ar } = origins;
   return [
-    { id: "A-home", category: "A", severity: "BLOCK", url: `${www}/`, status: 200, expectHtml: true, contains: ['id="yte-root"'] },
-    { id: "B-en-utility", category: "B", severity: "BLOCK", url: `${www}/p/about.html`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true },
+    { id: "A-home", category: "A", severity: "BLOCK", url: `${www}/`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true },
+    { id: "B-en-utility", category: "B", severity: "BLOCK", url: `${www}/p/about.html`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true, securityHeaders: true },
     { id: "C-en-article", category: "C", severity: "BLOCK", url: `${www}/2026/08/how-to-download-youtube-thumbnail.html`, status: 200, expectHtml: true, noSpaShell: true, noBanned: true, canonicalIncludes: "/2026/08/how-to-download-youtube-thumbnail.html" },
     { id: "D-en-unknown-p", category: "D", severity: "BLOCK", url: `${www}/p/random.html`, status: 404, expectHtml: true, noSpaShell: true },
     { id: "D-en-unknown-2026", category: "D", severity: "BLOCK", url: `${www}/2026/08/this-page-does-not-exist-unique-test.html`, status: 404, expectHtml: true, noSpaShell: true },
     { id: "E-en-about-redirect", category: "E", severity: "BLOCK", url: `${www}/about`, status: 301, redirectManual: true, locationIncludes: "/p/about.html", verifyFinal: { status: 200 } },
-    { id: "F-feed-atom", category: "F", severity: "BLOCK", url: `${www}/feeds/posts/default`, status: 200, contentTypeIncludes: "atom", feedAtom: true },
+    { id: "F-feed-atom", category: "F", severity: "BLOCK", url: `${www}/feeds/posts/default`, status: 200, contentTypeIncludes: "atom", feedAtom: true, securityHeaders: true },
     { id: "G-feed-rss", category: "G", severity: "BLOCK", url: `${www}/feeds/posts/default?alt=rss`, status: 200, contentTypeIncludes: "rss", feedRss: true },
-    { id: "H-search-410", category: "H", severity: "BLOCK", url: `${www}/search`, status: 410 },
+    { id: "H-search-410", category: "H", severity: "BLOCK", url: `${www}/search`, status: 410, securityHeaders: true },
     { id: "H-pages-feed-410", category: "H", severity: "BLOCK", url: `${www}/feeds/pages/default`, status: 410 },
     { id: "H-sitemap-images-410", category: "H", severity: "BLOCK", url: `${www}/sitemap-images.xml`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
     { id: "H-feeds-comments-410", category: "H", severity: "BLOCK", url: `${www}/feeds/comments/default`, status: 410, expectHtml: true, noSpaShell: true, noCanonical: true },
@@ -58,10 +59,10 @@ export function buildSmokeCases(origins) {
     { id: "H-copyright-slash", category: "H", severity: "BLOCK", url: `${www}/copyright/`, status: 301, redirectManual: true, location: `${www}/copyright`, verifyFinal: { status: 200, canonicalIncludes: "/copyright" } },
     { id: "H-copyright-slash-query", category: "H", severity: "BLOCK", url: `${www}/copyright/?m=1`, status: 301, redirectManual: true, location: `${www}/copyright` },
     { id: "I-sitemap-pages", category: "I", severity: "BLOCK", url: `${www}/sitemap-pages.xml`, status: 301, redirectManual: true, locationIncludes: "sitemap.xml", verifyFinal: { status: 200, contentTypeIncludes: "xml" } },
-    { id: "J-robots", category: "J", severity: "BLOCK", url: `${www}/robots.txt`, status: 200, contentTypeIncludes: "text/plain", robotsCheck: true },
+    { id: "J-robots", category: "J", severity: "BLOCK", url: `${www}/robots.txt`, status: 200, contentTypeIncludes: "text/plain", robotsCheck: true, securityHeaders: true },
     { id: "K-sitemap", category: "K", severity: "BLOCK", url: `${www}/sitemap.xml`, status: 200, contentTypeIncludes: "xml", sitemapCheck: true },
     { id: "L-indexnow-key", category: "L", severity: "BLOCK", url: `${www}/${INDEXNOW_KEY}.txt`, status: 200, contentTypeIncludes: "text/plain", bodyIncludes: INDEXNOW_KEY },
-    { id: "M-fr-home", category: "M", severity: "BLOCK", url: `${fr}/l/fr/`, status: 200, expectHtml: true, lang: "fr", locale: "fr", h1Fr: true, canonicalIncludes: "/l/fr/" },
+    { id: "M-fr-home", category: "M", severity: "BLOCK", url: `${fr}/l/fr/`, status: 200, expectHtml: true, lang: "fr", locale: "fr", h1Fr: true, canonicalIncludes: "/l/fr/", securityHeaders: true },
     { id: "N-fr-utility", category: "N", severity: "BLOCK", url: `${fr}/l/fr/p/about.html`, status: 200, expectHtml: true, lang: "fr", locale: "fr", noBanned: true, canonicalIncludes: "/l/fr/p/about.html" },
     { id: "O-fr-article", category: "O", severity: "BLOCK", url: `${fr}/l/fr/2026/08/how-to-download-youtube-thumbnail.html`, status: 200, expectHtml: true, lang: "fr", locale: "fr", h1Fr: true, noSpaShell: true, noBanned: true, canonicalIncludes: "/l/fr/2026/08/how-to-download-youtube-thumbnail.html" },
     { id: "P-fr-utility-slash", category: "P", severity: "BLOCK", url: `${fr}/l/fr/p/about.html/`, status: 301, redirectManual: true, location: `${fr}/l/fr/p/about.html`, verifyFinal: { status: 200 } },
@@ -72,7 +73,9 @@ export function buildSmokeCases(origins) {
     { id: "T-ar-article", category: "T", severity: "BLOCK", url: `${ar}/l/ar/2026/08/how-to-download-youtube-thumbnail.html`, status: 200, expectHtml: true, lang: "ar", locale: "ar", noSpaShell: true, noBanned: true },
     { id: "U-ar-utility-slash", category: "U", severity: "BLOCK", url: `${ar}/l/ar/p/about.html/`, status: 301, redirectManual: true, location: `${ar}/l/ar/p/about.html` },
     { id: "V-fr-unknown-soft404", category: "V", severity: "WARN", url: `${fr}/l/fr/random.html`, status: 200, expectHtml: true, soft404: true },
-    { id: "W-thumb-spa", category: "W", severity: "BLOCK", url: `${www}/thumb/dQw4w9WgXcQ`, status: 200, expectHtml: true, contains: ['id="yte-root"'] },
+    { id: "W-thumb-spa", category: "W", severity: "BLOCK", url: `${www}/thumb/dQw4w9WgXcQ`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true },
+    { id: "SEC-embed-page", category: "SEC", severity: "BLOCK", url: `${www}/p/embed.html`, status: 200, expectHtml: true, noSpaShell: true, securityHeaders: true, embedSurface: true },
+    { id: "SEC-embed-widget", category: "SEC", severity: "BLOCK", url: `${www}/?embed=1`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true, embedSurface: true },
     { id: "X-http-redirect", category: "X", severity: "BLOCK", url: "http://www.11tik.com/", status: 301, redirectManual: true, locationStartsWith: "https://", verifyFinal: { status: 200, urlPrefix: "https://www.11tik.com" } },
     { id: "Y-apex-redirect", category: "Y", severity: "BLOCK", url: "https://11tik.com/", status: 301, redirectManual: true, locationIncludes: "www.11tik.com", verifyFinal: { status: 200, urlPrefix: "https://www.11tik.com" } },
     // Supplementary high-value checks (Phase 7B parity)
@@ -84,7 +87,7 @@ export function buildSmokeCases(origins) {
 
 /** @returns {string[]} subset IDs for low-traffic scheduled checks */
 export function scheduledSmokeCaseIds() {
-  return ["A-home", "J-robots", "K-sitemap", "H-sitemap-images-410", "N-fr-utility", "G-feed-rss", "D-en-unknown-2026"];
+  return ["A-home", "J-robots", "K-sitemap", "H-sitemap-images-410", "B-en-utility", "N-fr-utility", "G-feed-rss", "D-en-unknown-2026"];
 }
 
 export function filterSmokeCases(allCases, { onlyIds = null, minSeverity = null } = {}) {
@@ -371,6 +374,22 @@ export function evaluateSmokeCase(testCase, { status, headers, body, location })
     if (!h.ok) push(warn, h.message);
     if (!sts.includes("includeSubDomains")) push(warn, "HSTS missing includeSubDomains");
     if (sts.includes("preload")) push(warn, "HSTS includes preload (zone policy is preload=false)");
+  }
+
+  if (testCase.securityHeaders) {
+    for (const issue of validateSecurityHeaders(headers, {
+      requireCspReportOnly: true,
+      allowFrameDeny: Boolean(testCase.embedSurface),
+    })) {
+      push(block, `security: ${issue}`);
+    }
+    const sts = headers["strict-transport-security"] ?? "";
+    if (!sts.includes("max-age=31536000")) {
+      push(block, `security: HSTS missing max-age=31536000 (${sts || "absent"})`);
+    }
+    if (!sts.includes("includeSubDomains")) {
+      push(block, "security: HSTS missing includeSubDomains");
+    }
   }
 
   return { block: block.filter(Boolean), warn: warn.filter(Boolean), info: info.filter(Boolean) };

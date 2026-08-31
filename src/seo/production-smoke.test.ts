@@ -17,6 +17,7 @@ import {
   validateRobotsTxt,
   validateSitemapXml,
 } from "../../scripts/production-smoke-lib.mjs";
+import { CSP_REPORT_ONLY } from "../../scripts/security-headers.mjs";
 
 describe("production smoke lib", () => {
   it("buildSmokeCases covers categories A–Y plus extra probes", () => {
@@ -32,6 +33,9 @@ describe("production smoke lib", () => {
     expect(cases.some((c) => c.id === "H-copyright")).toBe(true);
     expect(cases.some((c) => c.id === "L-indexnow-key")).toBe(true);
     expect(cases.some((c) => c.id === "W-thumb-spa")).toBe(true);
+    expect(cases.some((c) => c.id === "SEC-embed-page")).toBe(true);
+    expect(cases.some((c) => c.id === "SEC-embed-widget")).toBe(true);
+    expect(cases.filter((c) => c.securityHeaders).length).toBeGreaterThanOrEqual(8);
   });
 
   it("scheduled subset is small and asset-first heavy", () => {
@@ -114,5 +118,29 @@ describe("production smoke lib", () => {
     const body = `<html><script src="/web-client/blogger-app.js"></script></html>`;
     const out = evaluateSmokeCase(testCase, { status: 200, headers: {}, body, location: null });
     expect(out.block.some((m) => m.includes("blogger-app"))).toBe(false);
+  });
+
+  it("evaluateSmokeCase flags missing security headers as BLOCK", () => {
+    const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "B-en-utility");
+    const out = evaluateSmokeCase(testCase, {
+      status: 200,
+      headers: { "strict-transport-security": "max-age=31536000; includeSubDomains" },
+      body: "<html></html>",
+      location: null,
+    });
+    expect(out.block.some((m) => m.startsWith("security:"))).toBe(true);
+  });
+
+  it("evaluateSmokeCase passes security headers when present", () => {
+    const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "B-en-utility");
+    const headers = {
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+      "content-security-policy-report-only": CSP_REPORT_ONLY,
+    };
+    const out = evaluateSmokeCase(testCase, { status: 200, headers, body: "<html></html>", location: null });
+    expect(out.block.filter((m) => m.startsWith("security:"))).toEqual([]);
   });
 });

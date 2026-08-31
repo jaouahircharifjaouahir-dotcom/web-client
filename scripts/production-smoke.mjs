@@ -106,6 +106,11 @@ async function probeCase(testCase) {
     result.headers = {
       "content-type": headers["content-type"] ?? null,
       "strict-transport-security": headers["strict-transport-security"] ?? null,
+      "x-content-type-options": headers["x-content-type-options"] ?? null,
+      "referrer-policy": headers["referrer-policy"] ?? null,
+      "permissions-policy": headers["permissions-policy"] ?? null,
+      "content-security-policy-report-only": headers["content-security-policy-report-only"] ?? null,
+      "x-frame-options": headers["x-frame-options"] ?? null,
       "cf-cache-status": headers["cf-cache-status"] ?? null,
       "cache-control": headers["cache-control"] ?? null,
       "content-encoding": headers["content-encoding"] ?? null,

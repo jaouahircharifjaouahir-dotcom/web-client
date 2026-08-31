@@ -8,6 +8,7 @@ import {
   readEnglishSourceHash,
 } from "./article-i18n.mjs";
 import { runIndexNowAfterStaticGeneration } from "./i18n/indexnow-submit.mjs";
+import { buildGlobalAssetsSecurityHeadersBlock } from "./security-headers.mjs";
 
 const root = join(import.meta.dirname, "..");
 const dist = join(root, "dist");
@@ -52,7 +53,7 @@ writeFileSync(
 /feeds/posts/default.rss
   Content-Type: application/rss+xml; charset=UTF-8
   Cache-Control: public, max-age=3600, must-revalidate
-`,
+${buildGlobalAssetsSecurityHeadersBlock()}`,
 );
 
 writeFileSync(

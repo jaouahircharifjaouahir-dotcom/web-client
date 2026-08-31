@@ -25,6 +25,7 @@
     "seo:audit": "node scripts/seo-audit.mjs",
     "production:smoke": "node scripts/production-smoke.mjs",
     "production:smoke:scheduled": "node scripts/production-smoke.mjs --subset=scheduled",
+    "production:performance": "node scripts/production-performance.mjs",
     "asset:manifest": "node scripts/asset-manifest.mjs",
     "google:index": "node scripts/google-indexing.mjs",
     "themes:locales": "node scripts/build-locale-themes.mjs",

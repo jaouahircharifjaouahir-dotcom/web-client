@@ -110,6 +110,42 @@ export function buildAssetManifest(stagedDir = STAGED, options = {}) {
   const webClientJs = webClient.filter((f) => f.rel.endsWith(".js"));
   const webClientCss = webClient.filter((f) => f.rel.endsWith(".css"));
 
+  const bloggerPath = join(stagedDir, "web-client", "blogger-app.js");
+  const bloggerApp = existsSync(bloggerPath)
+    ? { path: "web-client/blogger-app.js", bytes: statSync(bloggerPath).size }
+    : null;
+
+  const indexHtmlPath = join(stagedDir, "index.html");
+  let initialJs = null;
+  if (existsSync(indexHtmlPath)) {
+    const html = readFileSync(indexHtmlPath, "utf8");
+    const srcRe = /<script[^>]+defer[^>]+src="(\/web-client\/[^"?]+\.js[^"]*)"/gi;
+    const refs = [];
+    let m;
+    while ((m = srcRe.exec(html))) {
+      const rel = m[1].replace(/^\//, "").replace(/\?.*$/, "");
+      if (!refs.includes(rel)) refs.push(rel);
+    }
+    let raw = 0;
+    for (const rel of refs) {
+      const abs = join(stagedDir, rel);
+      if (existsSync(abs)) raw += statSync(abs).size;
+    }
+    initialJs = { files: refs, rawBytes: raw };
+  }
+
+  const imageFiles = files.filter((f) => f.rel.startsWith("web-client/images/"));
+  const webpFiles = imageFiles.filter((f) => f.rel.endsWith(".webp"));
+  const pngFiles = imageFiles.filter((f) => f.rel.endsWith(".png"));
+  const sumBytes = (list) => list.reduce((s, f) => s + f.size, 0);
+  const largestOf = (list) =>
+    [...list].sort((a, b) => b.size - a.size).slice(0, 5).map((f) => ({ path: f.rel, bytes: f.size }));
+
+  const uiDir = join(stagedDir, "web-client", "i18n", "ui");
+  const uiLocalePacks = existsSync(uiDir)
+    ? readdirSync(uiDir).filter((n) => n.endsWith(".json")).length
+    : 0;
+
   let gitSha = null;
   try {
     gitSha = execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
@@ -120,10 +156,16 @@ export function buildAssetManifest(stagedDir = STAGED, options = {}) {
   return {
     gitSha,
     stagedDir,
+    /** Physical files on disk (Node readdir). */
+    physicalFileCount: files.length,
     fileCount: files.length,
-    /** Physical files on disk (Node readdir). Wrangler dry-run may report a higher upload count. */
+    /**
+     * Wrangler dry-run often reports a higher asset count than physical files
+     * (routing-derived keys). Track separately; do not fail on delta alone.
+     */
+    wranglerAssetCount: options.wranglerAssetCount ?? null,
     wranglerAssetCountNote:
-      "Compare `npx wrangler deploy --dry-run` Read N files line; delta vs fileCount is normal (redirect indexing).",
+      "Compare `npx wrangler deploy --dry-run` Read N files line; delta vs physicalFileCount is normal (redirect indexing).",
     totalBytes,
     htmlFileCount: files.filter((f) => f.rel.endsWith(".html")).length,
     sitemapUrlCount,
@@ -132,6 +174,17 @@ export function buildAssetManifest(stagedDir = STAGED, options = {}) {
     duplicateGroups: findDuplicateContentGroups(files),
     criticalFiles,
     criticalMissing,
+    bloggerApp,
+    initialJs,
+    images: {
+      webpCount: webpFiles.length,
+      pngCount: pngFiles.length,
+      webpTotalBytes: sumBytes(webpFiles),
+      pngTotalBytes: sumBytes(pngFiles),
+      largestWebp: largestOf(webpFiles),
+      largestPng: largestOf(pngFiles),
+    },
+    uiLocalePacks,
     webClient: {
       fileCount: webClient.length,
       jsCount: webClientJs.length,
@@ -147,8 +200,14 @@ function main() {
   writeFileSync(REPORT_PATH, `${JSON.stringify(manifest, null, 2)}\n`);
 
   console.log("Asset manifest");
-  console.log(`fileCount=${manifest.fileCount} totalBytes=${manifest.totalBytes}`);
+  console.log(`physicalFileCount=${manifest.physicalFileCount} totalBytes=${manifest.totalBytes}`);
   console.log(`sitemapUrlCount=${manifest.sitemapUrlCount} indexNowUrlCount=${manifest.indexNowUrlCount}`);
+  console.log(
+    `bloggerAppBytes=${manifest.bloggerApp?.bytes ?? "missing"} initialJsRaw=${manifest.initialJs?.rawBytes ?? "n/a"}`,
+  );
+  console.log(
+    `webpTotal=${manifest.images.webpTotalBytes} pngTotal=${manifest.images.pngTotalBytes} uiLocalePacks=${manifest.uiLocalePacks}`,
+  );
   console.log(`criticalMissing=${manifest.criticalMissing.length}`);
   if (manifest.criticalMissing.length) {
     for (const m of manifest.criticalMissing) console.log(`  missing: ${m}`);

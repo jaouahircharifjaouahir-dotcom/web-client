@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "phase": "12D",
+  "baselineCommit": "9435601ad678e6c44fe27adb2e44acc766e18097",
+  "baselineLabel": "Phase 12C JavaScript diet (post-deploy)",
+  "notes": [
+    "Tracked budgets for regression detection. Not a live RUM snapshot.",
+    "Do not hard-code CF-Cache-Status or transient edge timings here.",
+    "Worker bytes are dry-run / wrangler upload sizes for the edge Worker script only."
+  ],
+  "worker": {
+    "name": "11tik-edge",
+    "rawBytes": 36680,
+    "gzipBytes": 9288,
+    "approxKiBRaw": 35.82,
+    "approxKiBGzip": 9.07
+  },
+  "seo": {
+    "sitemapUrlCount": 1095,
+    "indexNowUrlCount": 1096,
+    "translationsReady": 888
+  },
+  "javascript": {
+    "bloggerAppRawBytes": 712403,
+    "bloggerAppBrotliBytes": 174666,
+    "totalInitialJsRawBytes": 733989,
+    "totalInitialJsBrotliBytes": 182603,
+    "budgets": {
+      "bloggerAppBrotliFail": 409600,
+      "bloggerAppBrotliWarn": 358400,
+      "totalInitialJsBrotliFail": 409600,
+      "totalInitialJsBrotliWarn": 358400,
+      "totalInitialJsRawFail": 1258291
+    },
+    "parserBlockingExternalJs": 0,
+    "jsPreload": 0,
+    "cssPreload": 1
+  },
+  "images": {
+    "blogHeroWebpTargetBytes": 122880,
+    "blogWebpDeliverySetTargetBytes": 3145728,
+    "imageCacheMaxAgeSeconds": 2592000
+  },
+  "catalog": {
+    "bundledLocale": "en",
+    "runtimeLocalePacks": 182
+  }
+}

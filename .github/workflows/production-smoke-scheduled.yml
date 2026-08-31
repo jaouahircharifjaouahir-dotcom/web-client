@@ -23,3 +23,15 @@ jobs:
         run: npm run production:smoke:scheduled
         env:
           SMOKE_EXPECTED_SITEMAP_LOCS: "1095"
+      - name: Production performance probe (lightweight)
+        run: npm run production:performance -- --samples=3
+        # Observational: probe exits 1 only on CRITICAL (homepage/JS missing or JS budget fail).
+        continue-on-error: true
+      - name: Upload performance probe artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: production-performance
+          path: reports/production-performance.json
+          if-no-files-found: ignore
+          retention-days: 14

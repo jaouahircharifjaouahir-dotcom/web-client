@@ -1,8 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 
 const ROOT = process.cwd();
+
+/** Prefer full build output; fall back to vitest globalSetup staging. */
+function stagedRoot(): string {
+  const dist = join(ROOT, "dist-assets");
+  if (existsSync(join(dist, "sitemap.xml"))) return dist;
+  return getStagedStaticSite();
+}
 
 /** Outlinks from Ahrefs File 22 that still 307 in production. */
 const BLOCKER_HTML = [
@@ -27,21 +35,16 @@ describe("Links to redirect (Ahrefs File 22) — File 1 root fix only", () => {
       expect(kw).not.toContain(`https://www.11tik.com${path.replace(/\.html$/, "")}"`);
     }
 
-    const sitemapCandidates = [
-      join(ROOT, "dist-assets/sitemap.xml"),
-      join(ROOT, "dist-assets-pilot/sitemap.xml"),
-    ];
-    const sitemapPath = sitemapCandidates.find((p) => existsSync(p));
-    expect(sitemapPath, "dist-assets sitemap present").toBeTruthy();
-    const sitemap = readFileSync(sitemapPath!, "utf8");
+    const sitemap = readFileSync(join(stagedRoot(), "sitemap.xml"), "utf8");
     for (const path of BLOCKER_HTML) {
       expect(sitemap).toContain(`https://www.11tik.com${path}`);
     }
   });
 
   it("staged article *.html assets exist for Assets (Worker-zero) serving", () => {
+    const root = stagedRoot();
     for (const path of BLOCKER_HTML) {
-      const file = join(ROOT, "dist-assets", ...path.split("/").filter(Boolean));
+      const file = join(root, ...path.split("/").filter(Boolean));
       expect(existsSync(file), file).toBe(true);
     }
   });

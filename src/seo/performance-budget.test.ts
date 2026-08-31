@@ -3,15 +3,17 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
+import baseline from "./performance-baseline.json";
 
 const ROOT = process.cwd();
 const STAGE = existsSync(join(ROOT, "dist-assets"))
   ? join(ROOT, "dist-assets")
   : getStagedStaticSite();
 
-const INITIAL_JS_BROTLI_FAIL = 400 * 1024;
-const INITIAL_JS_BROTLI_WARN = 350 * 1024;
-const INITIAL_JS_RAW_FAIL = 1.2 * 1024 * 1024;
+const INITIAL_JS_BROTLI_FAIL = baseline.javascript.budgets.totalInitialJsBrotliFail;
+const INITIAL_JS_BROTLI_WARN = baseline.javascript.budgets.totalInitialJsBrotliWarn;
+const INITIAL_JS_RAW_FAIL = baseline.javascript.budgets.totalInitialJsRawFail;
+const BLOGGER_BROTLI_FAIL = baseline.javascript.budgets.bloggerAppBrotliFail;
 
 /** Initial JS = defer scripts referenced by the production SPA shell (not lazy chunks). */
 function initialJsFromShell(htmlPath: string): { files: string[]; raw: number; brotli: number } {
@@ -35,7 +37,7 @@ function initialJsFromShell(htmlPath: string): { files: string[]; raw: number; b
   return { files, raw, brotli };
 }
 
-describe("performance budget (Phase 12C initial JS)", () => {
+describe("performance budget (Phase 12C/12D initial JS)", () => {
   it("SPA shell defers web-client JS, drops JS preload, keeps CSS preload", () => {
     const html = readFileSync(join(STAGE, "index.html"), "utf8");
     const webClientScripts = [...html.matchAll(/<script[^>]+src="(\/web-client\/[^"]+\.js[^"]*)"[^>]*>/gi)].map(
@@ -62,6 +64,13 @@ describe("performance budget (Phase 12C initial JS)", () => {
     expect(brotli).toBeLessThanOrEqual(INITIAL_JS_BROTLI_FAIL);
   });
 
+  it("blogger-app.js alone stays within Brotli fail budget", () => {
+    const abs = join(STAGE, "web-client", "blogger-app.js");
+    expect(existsSync(abs)).toBe(true);
+    const brotli = brotliCompressSync(readFileSync(abs)).length;
+    expect(brotli).toBeLessThanOrEqual(BLOGGER_BROTLI_FAIL);
+  });
+
   it("does not reference dead main-build assets/index- chunks in SPA shells", () => {
     for (const rel of ["index.html", "l/fr/index.html", "l/ar/index.html"]) {
       const html = readFileSync(join(STAGE, rel), "utf8");
@@ -71,5 +80,12 @@ describe("performance budget (Phase 12C initial JS)", () => {
 
   it("fails if orphaned web-client/assets/ is staged", () => {
     expect(existsSync(join(STAGE, "web-client", "assets"))).toBe(false);
+  });
+
+  it("baseline file documents Phase 12C commit and budgets", () => {
+    expect(baseline.baselineCommit.startsWith("9435601")).toBe(true);
+    expect(baseline.javascript.budgets.totalInitialJsBrotliFail).toBe(400 * 1024);
+    expect(baseline.seo.sitemapUrlCount).toBe(1095);
+    expect(baseline.seo.indexNowUrlCount).toBe(1096);
   });
 });

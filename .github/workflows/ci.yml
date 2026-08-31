@@ -20,6 +20,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm test
+      # Build before tests: performance + asset gates require dist-assets (full stage).
+      # Vitest globalSetup only generates HTML shells and is not a substitute for npm run build.
       - run: npm run build
+      - run: npm test
       - run: npm run asset:manifest

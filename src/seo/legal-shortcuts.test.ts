@@ -166,6 +166,12 @@ describe("Phase 3B — legal shortcuts removed from RWF (Worker-zero after deplo
     });
   }
 
+  it("legalPageRedirect() maps /embed to /p/embed.html", async () => {
+    const res = await worker.fetch(new Request(`${SITE}/embed`), {});
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe(`${SITE}/p/embed.html`);
+  });
+
   it("legalPageRedirect() remains in Worker as rollback fallback (direct Worker fetch)", async () => {
     const res = await worker.fetch(new Request(`${SITE}/about`), {});
     expect(res.status).toBe(301);

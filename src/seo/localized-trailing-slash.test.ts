@@ -220,11 +220,11 @@ describe("Phase 5.3B — Worker fetch integration", () => {
   it("I. /thumb/* serves explicit English SPA shell (Phase R2)", async () => {
     const enHome = readFileSync(join(getStagedStaticSite(), "index.html"), "utf8");
     const { env, seen } = assetsEnv((pathname) =>
-      pathname === "/" ? new Response(enHome, { status: 200 }) : new Response("x", { status: 404 }),
+      pathname === "/index.html" ? new Response(enHome, { status: 200 }) : new Response("x", { status: 404 }),
     );
     const res = await worker.fetch(new Request(`${SITE}/thumb/dQw4w9WgXcQ`), env);
     expect(res.status).toBe(200);
-    expect(seen).toEqual(["/"]);
+    expect(seen).toEqual(["/index.html"]);
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
   });
 

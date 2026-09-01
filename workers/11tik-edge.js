@@ -140,6 +140,7 @@ function legalPageRedirect(pathname) {
   if (path === "/privacy") return `${SITE}/p/privacy.html`;
   if (path === "/contact") return `${SITE}/p/contact.html`;
   if (path === "/terms") return `${SITE}/p/terms-of-use.html`;
+  if (path === "/embed") return `${SITE}/p/embed.html`;
   return "";
 }
 
@@ -261,7 +262,7 @@ export default {
       const withoutMobile = homepageUrlWithoutBloggerMobileParam(url);
       if (withoutMobile) return Response.redirect(withoutMobile.toString(), 301);
 
-      const assetUrl = new URL(url.origin + "/");
+      const assetUrl = new URL("/index.html", url.origin);
       const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
       const variant = resolveHomepageQueryShell(url.searchParams);
       if (!variant || !res.ok) return withSecurityHeaders(res);
@@ -350,7 +351,7 @@ export default {
 
     // Phase R2: /thumb/{id} share SPA — explicit English index shell (not global SPA fallback).
     if (isThumbShareSpaPath(url.pathname) && env?.ASSETS) {
-      const assetUrl = new URL("/", url.origin);
+      const assetUrl = new URL("/index.html", url.origin);
       const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
       if (!res.ok) return pPathNotFoundResponse();
       return withSecurityHeaders(res);

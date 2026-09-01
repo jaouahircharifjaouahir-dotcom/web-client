@@ -28,13 +28,22 @@
   <img alt="Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes" class="yte-hero" height="630" itemprop="image" loading="eager" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png" width="1200"/>
   <p class="yte-caption">Diagnostic path: URL → video ID → public still check → available vs unavailable → what to verify next.</p>
 
+  <h2>Diagnostic decision tree</h2>
+  <p>Use this tree before blaming a single filename:</p>
+  <ol>
+    <li><strong>Paste URL into 11tik.</strong> Did any public thumbnail variant validate?</li>
+    <li><strong>If yes → video available.</strong> Is the high tier you wanted (e.g. maxres) missing while hq/sd still load? → <strong>Variant unavailable</strong> → <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxres fallback guide</a>.</li>
+    <li><strong>If no → video unavailable for public stills.</strong> Open the watch page signed out. Private / removed / restricted / still processing? → <strong>No usable public thumbnail</strong> → verify on YouTube; retry after Studio processing via <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">Studio guide</a>.</li>
+  </ol>
+  <p>Do not collapse “maxres 404” with “video has no thumbnail.” The first is a fallback problem; the second is access or state.</p>
+
   <h2>What “thumbnail unavailable” can mean</h2>
   <p>In practice, “unavailable” means one of two different problems:</p>
   <ol>
     <li><strong>Video-level unavailable:</strong> public still candidates fail across the board. You do not get a usable downloadable public image for that ID right now.</li>
     <li><strong>Variant unavailable:</strong> one high-tier filename is missing (often maxres), but a lower public size still loads. That is a size/fallback issue, not a missing thumbnail for the whole video.</li>
   </ol>
-  <p>This article covers the first case. For the second case—especially <code>maxresdefault.jpg</code> 404s—use the dedicated <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault troubleshooting guide</a>.</p>
+  <p>This article covers the first case. For the second case—especially <code>maxresdefault.jpg</code> 404s—use the dedicated <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault troubleshooting guide</a>. In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, <strong>14 of 300</strong> IDs lacked a valid <code>maxresdefault</code> while lower variants still loaded—sample-scoped evidence of variant-level gaps, not proof that every “missing maxres” video is private or deleted.</p>
 
   <img alt="Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png" width="1200"/>
   <p class="yte-caption">Left: one variant missing, other public sizes still work. Right: no usable public still for the video ID.</p>

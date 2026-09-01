@@ -26,7 +26,14 @@
     <li>Linking back to <a href="https://www.11tik.com/">www.11tik.com</a> helps users open the full tool.</li>
   </ul>
   <h2>Deep links</h2>
-  <p>Share a ready extraction with <code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>
+  <p>Share a ready extraction with <code>https://www.11tik.com/?v=VIDEO_ID</code>. The embed uses the same client-side ID extraction as the main tool for watch, Shorts, live, youtu.be, and embed URLs—then probes public stills on <code>i.ytimg.com</code> (never a private YouTube API). URL anatomy: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>. Measured variant availability in our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a> (sample-scoped, not universal).</p>
+  <h2>Browser and host limitations</h2>
+  <ul>
+    <li><strong>Same-origin iframe:</strong> Parent pages cannot read thumbnail bytes from the embedded app due to browser same-origin policy. 11tik does not expose a cross-origin postMessage API—users download or copy inside the iframe.</li>
+    <li><strong>No server API key:</strong> ID parsing and CDN checks run in the visitor’s browser. There is no authenticated backend endpoint to call from your CMS.</li>
+    <li><strong>Keep the snippet intact:</strong> Host the iframe with <code>id="yte-app"</code> and load <code>embed.js</code> with <code>defer</code> so height sync works on narrow layouts.</li>
+    <li><strong>Direct CDN hotlinks:</strong> <code>&lt;img src="https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg"&gt;</code> often works, but some CMS optimizers, canvas exports, or CSP rules block third-party image hosts. When you need a guaranteed local file, use the embed or main tool download button instead of assuming hotlink permanence.</li>
+  </ul>
   <nav>
     <a href="https://www.11tik.com/">Open the extractor</a>
   </nav>

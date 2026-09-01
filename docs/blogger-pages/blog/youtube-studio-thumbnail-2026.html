@@ -22,12 +22,19 @@
     <li>Save and wait until processing finishes.</li>
   </ol>
   <p>Exact button names can change. If your account is not eligible for custom thumbnails, Studio will not offer the upload. 11tik cannot bypass that.</p>
+  <h2>Diagnostic tree: Studio change vs public still</h2>
+  <ol>
+    <li>After uploading custom art in Studio, wait for processing to finish.</li>
+    <li>Paste the public watch URL into <a href="https://www.11tik.com/">11tik</a>.</li>
+    <li><strong>Some sizes appear, maxres missing?</strong> → variant/fallback issue, not a failed Studio upload. See <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault explained</a>.</li>
+    <li><strong>No sizes at all?</strong> → video may still be processing, private, or restricted for public CDN stills. See <a href="https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html">thumbnail not appearing</a>.</li>
+  </ol>
   <h2>How do I check a thumbnail after I change it in Studio?</h2>
   <p>Paste the watch URL into <a href="https://www.11tik.com/">11tik</a>. Download or copy the first listed size. If maxresdefault is missing, the next public file is the honest maximum. That is YouTube’s catalog, not a failed extract. See also <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault explained</a>.</p>
   <h2>Does 11tik replace YouTube Studio?</h2>
   <p>No. Studio is where you upload, schedule, and use tests when YouTube offers them. 11tik is for previewing and saving public stills that already exist, including after a Studio change.</p>
   <h2>What should I do when the image looks old?</h2>
-  <p>Image CDNs can lag. Recheck later, hard-refresh, or copy the URL 11tik confirms. Do not assume a 4K master; public maxres is usually 1280×720. A screenshot of Studio is not the public thumbnail file.</p>
+  <p>Image CDNs can lag. Recheck later, hard-refresh, or copy the URL 11tik confirms. Do not assume a 4K master; public maxres is usually 1280×720. A screenshot of Studio is not the public thumbnail file. In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, <code>maxresdefault</code> validated for <strong>286 of 300</strong> IDs (<strong>95.33%</strong>)—sample-scoped availability after public CDN checks, not a promise for every fresh Studio upload.</p>
   <p>Related: <a href="https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html">extractor vs maker</a>.</p>
   <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a>.</p>
   <p><a href="https://www.11tik.com/">Open the extractor</a></p>

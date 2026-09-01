@@ -23,6 +23,9 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const GH_PAGES = "https://jaouahircharifjaouahir-dotcom.github.io/web-client/";
 const EDGE_ASSETS = "https://www.11tik.com/web-client/";
 const DEFAULT_OG = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
+const STUDY_OG_IMAGE =
+  "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png";
+const STUDY_CONTENT_ID = "youtube-thumbnail-sizes-resolutions-study";
 
 const UTILITY_PREVIEW_ALTS = {
   "/p/embed.html": "11tik thumbnail extractor embed widget preview",
@@ -56,7 +59,8 @@ const ENGLISH_UTILITY_CONTENT_PATCHES = {
   <h2>maxres fallback and validation</h2>
   <p><code>maxresdefault.jpg</code> is not guaranteed for every video. 11tik probes public variants and lists only files that validate — it does not invent 4K or guess missing sizes. See <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault and fallbacks</a>.</p>
   <h2>CORS, CMS, and Open Graph</h2>
-  <p>Direct hotlinking to <code>i.ytimg.com</code> can break in CMS previews or social cards. For blog featured images and <code>og:image</code>, download a confirmed still and host a copy on your domain. Walkthrough: <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">YouTube thumbnail as blog / Open Graph image</a>. WebP vs JPEG notes: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">format comparison</a>.</p>`,
+  <p>Direct hotlinking to <code>i.ytimg.com</code> can break in CMS previews or social cards. For blog featured images and <code>og:image</code>, download a confirmed still and host a copy on your domain. Walkthrough: <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">YouTube thumbnail as blog / Open Graph image</a>. WebP vs JPEG notes: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">format comparison</a>.</p>
+  <p>For measured availability rates across eight public variants in a 300-video sample, see the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video thumbnail size study</a> (sample-only statistics).</p>`,
 };
 
 export function applyEnglishUtilityContentPatches(article, contentId) {
@@ -267,8 +271,14 @@ function resolveTitle(structured, h1, postTitle) {
   return title;
 }
 
-/** Prefer theme/default social OG (matches live Blogger) over in-article hero. */
-function resolveOgImage(_rawHtml, _structured) {
+/** Global default social OG; study article uses its own hero PNG for og/twitter only. */
+function resolveOgImage(_rawHtml, structured, contentId) {
+  if (contentId === STUDY_CONTENT_ID) {
+    const blogHero = (structured?.images || []).find((img) =>
+      String(img.src || "").includes("sizes-resolutions-study-og"),
+    );
+    return blogHero?.src || STUDY_OG_IMAGE;
+  }
   return DEFAULT_OG;
 }
 
@@ -312,7 +322,7 @@ export function renderEnglishStaticHtml(item, options = {}) {
     images.find((img) => String(img.src || "").includes("/images/blog/")) ||
     images[0] ||
     { src: DEFAULT_OG, alt: structured.imageAlt || "" };
-  const ogImageSrc = resolveOgImage(raw, structured);
+  const ogImageSrc = resolveOgImage(raw, structured, item.contentId);
   // Article JSON-LD: prefer in-article hero; OG meta stays on the default social image.
   const schemaImageSrc = bodyHero?.src || ogImageSrc;
 

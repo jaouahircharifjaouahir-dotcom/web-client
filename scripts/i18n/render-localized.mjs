@@ -252,7 +252,7 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
     : "";
   const contextualNavHtml =
     CONTEXTUAL_LINK_PLAN[item.contentId]
-      ? localize(renderContextualLinksNav(item.contentId, item.canonicalPath))
+      ? localize(renderContextualLinksNav(item.contentId, item.canonicalPath, { locale }))
       : "";
 
   return protectEmailsInHtml(`<!DOCTYPE html>

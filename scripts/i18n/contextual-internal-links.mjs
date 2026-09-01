@@ -8,6 +8,7 @@ import {
   SITE_ORIGIN,
 } from "../../workers/sitemap-canonicals.js";
 import { contractForContentId } from "./anti-cannibalization-contract.mjs";
+import { EN_ONLY_ARTICLE_IDS, contentIdFromWwwPath } from "./content-inventory.mjs";
 
 const HOME = `${SITE_ORIGIN}/`;
 const EMBED = `${SITE_ORIGIN}/p/embed.html`;
@@ -78,6 +79,7 @@ export const CONTEXTUAL_LINK_PLAN = Object.freeze({
       { path: "/2026/08/youtube-shorts-thumbnail-download.html", reason: "shorts format" },
       { path: "/2026/08/how-to-batch-download-youtube.html", reason: "bulk workflow" },
       { path: "/2026/08/youtube-live-premiere-thumbnail-download.html", reason: "live/premiere" },
+      { path: "/2026/08/youtube-thumbnail-sizes-resolutions-study.html", reason: "resolution reference data" },
     ],
     utility: null,
     home: false,
@@ -85,6 +87,7 @@ export const CONTEXTUAL_LINK_PLAN = Object.freeze({
   "youtube-thumbnail-url": {
     parent: { path: "/2026/08/youtube-thumbnail-size-resolution.html", reason: "resolution pillar" },
     siblings: [
+      { path: "/2026/08/youtube-thumbnail-sizes-resolutions-study.html", reason: "measured CDN variants" },
       { path: "/2026/08/what-is-maxresdefaultjpg-when-youtube.html", reason: "maxres fallback" },
       { path: "/2026/08/11tik-share-links-thumb-vs-youtube.html", reason: "share URL shapes" },
       { path: "/2026/08/how-to-download-youtube-thumbnail.html", reason: "download workflow" },
@@ -119,6 +122,7 @@ export const CONTEXTUAL_LINK_PLAN = Object.freeze({
   "highest-quality-youtube-thumbnail": {
     parent: { path: "/2026/08/youtube-thumbnail-size-resolution.html", reason: "size pillar" },
     siblings: [
+      { path: "/2026/08/youtube-thumbnail-sizes-resolutions-study.html", reason: "measured variant ladder" },
       { path: "/2026/08/original-youtube-thumbnail-image.html", reason: "original vs highest" },
       { path: "/2026/08/how-to-download-youtube-thumbnail.html", reason: "download steps" },
       { path: "/2026/08/what-is-maxresdefaultjpg-when-youtube.html", reason: "missing maxres" },
@@ -139,6 +143,7 @@ export const CONTEXTUAL_LINK_PLAN = Object.freeze({
   "what-is-maxresdefaultjpg-when-youtube": {
     parent: { path: "/2026/08/youtube-thumbnail-size-resolution.html", reason: "resolution pillar" },
     siblings: [
+      { path: "/2026/08/youtube-thumbnail-sizes-resolutions-study.html", reason: "measured maxres availability" },
       { path: "/2026/08/youtube-thumbnail-not-appearing-private.html", reason: "video-level unavailability" },
       { path: "/2026/08/youtube-studio-thumbnail-2026.html", reason: "studio confirmation" },
       { path: "/2026/08/youtube-thumbnail-url.html", reason: "url anatomy" },
@@ -149,6 +154,7 @@ export const CONTEXTUAL_LINK_PLAN = Object.freeze({
   "webp-vs-jpeg-youtube-thumbnails-which": {
     parent: { path: "/2026/08/youtube-thumbnail-size-resolution.html", reason: "format pillar" },
     siblings: [
+      { path: "/2026/08/youtube-thumbnail-sizes-resolutions-study.html", reason: "measured byte comparison" },
       { path: "/2026/08/how-to-use-youtube-thumbnail-as-blog.html", reason: "CMS / OG use" },
       { path: "/2026/08/youtube-thumbnail-url.html", reason: "url paths" },
     ],
@@ -300,7 +306,8 @@ function pathToCanonicalUrl(path) {
   return p === "/" ? HOME : `${SITE_ORIGIN}${p}`;
 }
 
-export function resolveContextualLinks(contentId, selfCanonicalPath) {
+export function resolveContextualLinks(contentId, selfCanonicalPath, options = {}) {
+  const locale = options.locale || "en";
   const plan = CONTEXTUAL_LINK_PLAN[contentId];
   if (!plan) return [];
 
@@ -313,6 +320,8 @@ export function resolveContextualLinks(contentId, selfCanonicalPath) {
     if (!path || path === selfPath) return;
     if (seen.has(path)) return;
     if (isBlockedInternalTarget(path)) return;
+    const targetContentId = contentIdFromWwwPath(path);
+    if (locale !== "en" && EN_ONLY_ARTICLE_IDS.includes(targetContentId)) return;
     seen.add(path);
     rows.push({
       sourceContentId: contentId,
@@ -333,8 +342,8 @@ export function resolveContextualLinks(contentId, selfCanonicalPath) {
   return rows;
 }
 
-export function renderContextualLinksNav(contentId, selfCanonicalPath) {
-  const links = resolveContextualLinks(contentId, selfCanonicalPath);
+export function renderContextualLinksNav(contentId, selfCanonicalPath, options = {}) {
+  const links = resolveContextualLinks(contentId, selfCanonicalPath, options);
   if (!links.length) return "";
 
   const items = links

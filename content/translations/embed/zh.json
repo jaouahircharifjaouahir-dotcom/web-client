@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "zh",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "嵌入 11tik 缩略图提取器 | 11tik",
   "description": "为您的博客、文档或创作工具包添加一个免费的 YouTube 缩略图提取器。该小部件从 11tik 加载并自动调整大小。无需 API 密钥。",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "深度链接",
-      "html": "<p>分享一个已准备好的提取文件<code>https://www.11tik.com/?v=VIDEO_ID</code>。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">打开提取器</a>\n  </nav>"
+      "html": "<p>分享一个已准备好的提取文件<code>https://www.11tik.com/?v=VIDEO_ID</code>嵌入功能使用与主工具相同的客户端 ID 提取方式，用于获取观看、短视频、直播、youtu.be 和嵌入 URL，然后探测公开的静态图像。<code>i.ytimg.com</code>（绝非私有 YouTube API）。URL 结构：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>在我们的产品中衡量变体可用性<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300个视频样本</a>（样本范围，非普遍适用）。</p>"
+    },
+    {
+      "heading": "浏览器和主机限制",
+      "html": "<ul>\n    <li><strong>同源 iframe：</strong>由于浏览器同源策略的限制，父页面无法读取嵌入式应用中的缩略图字节。11tik 不提供跨域的 postMessage API——用户需要在 iframe 内部下载或复制。</li>\n    <li><strong>没有服务器 API 密钥：</strong>ID解析和CDN检查在访客浏览器中运行。您的CMS无需调用任何经过身份验证的后端端点。</li>\n    <li><strong>保留这段代码片段：</strong>使用以下方式托管 iframe<code>id=\"yte-app\"</code>并加载<code>embed.js</code>和<code>defer</code>所以高度同步在窄版布局中也能正常工作。</li>\n    <li><strong>CDN 直链：</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>通常情况下有效，但某些内容管理系统 (CMS) 优化器、画布导出功能或云安全策略 (CSP) 规则会屏蔽第三方图片托管服务。如果您需要确保本地文件可用，请使用嵌入或主工具的下载按钮，而不是依赖外链的永久有效性。</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">打开提取器</a>\n  </nav>"
     }
   ],
   "faq": [],

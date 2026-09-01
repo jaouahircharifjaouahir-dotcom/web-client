@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "he",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "הטמע את כלי חילוץ התמונות הממוזערות 11tik | 11tik",
   "description": "הוסף כלי חינמי לחילוץ תמונות ממוזערות מיוטיוב לבלוג, למסמכים או לערכת הכלים ליוצרים שלך. הווידג'ט נטען מ-11tik ומשנה את גודלו. אין צורך במפתח API.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "קישורים עמוקים",
-      "html": "<p>שתף חילוץ מוכן עם<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">פתח את המחלץ</a>\n  </nav>"
+      "html": "<p>שתף חילוץ מוכן עם<code>https://www.11tik.com/?v=VIDEO_ID</code>ההטמעה משתמשת באותו חילוץ מזהים בצד הלקוח כמו הכלי העיקרי לצפייה, סרטונים קצרים, שידור חי, youtu.be וכתובות URL להטמעה - לאחר מכן בודקת סטילס ציבוריים ב<code>i.ytimg.com</code>(לעולם לא ממשק API פרטי של YouTube). מבנה כתובות URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">מדריך כתובות URL של תמונות ממוזערות</a>זמינות גרסאות מדודה אצלנו<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">דגימה של 300 סרטונים</a>(מבוסס על מדגם, לא אוניברסלי).</p>"
+    },
+    {
+      "heading": "מגבלות דפדפן ומארח",
+      "html": "<ul>\n    <li><strong>iframe מאותו מקור:</strong>דפי אב אינם יכולים לקרוא בתים של תמונות ממוזערות מהאפליקציה המוטמעת עקב מדיניות אותו מקור של הדפדפן. 11tik אינו חושף API של postMessage חוצה מקורות - משתמשים מורידים או מעתיקים בתוך ה-iframe.</li>\n    <li><strong>אין מפתח API לשרת:</strong>ניתוח מזהים ובדיקות CDN פועלות בדפדפן של המבקר. אין נקודת קצה אחורית מאומתת שניתן לקרוא לה ממערכת ניהול התוכן שלך.</li>\n    <li><strong>שמור את הקטע שלם:</strong>אירוח ה-iframe עם<code>id=\"yte-app\"</code>ולטעון<code>embed.js</code>עִם<code>defer</code>אז סנכרון גובה עובד על פריסות צרות.</li>\n    <li><strong>קישורים ישירים ל-CDN:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>לעיתים קרובות עובד, אך חלק ממטביי CMS, ייצוא קנבס או כללי CSP חוסמים מארחי תמונות של צד שלישי. כאשר אתם זקוקים לקובץ מקומי מובטח, השתמשו בכפתור ההטמעה או הורדת הכלי הראשי במקום להניח קביעות של קישורים חמים.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">פתח את המחלץ</a>\n  </nav>"
     }
   ],
   "faq": [],

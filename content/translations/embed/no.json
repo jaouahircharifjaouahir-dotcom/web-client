@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "no",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Bygg inn 11tik miniatyrbildeuttrekkeren | 11tik",
   "description": "Legg til et gratis YouTube-miniatyruttrekk i bloggen, dokumentene eller verktøysettet for skapere. Widgeten lastes inn fra 11tik og endrer størrelsen på seg selv. Ingen API-nøkkel.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Dype lenker",
-      "html": "<p>Del et ferdig uttrekk med<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Åpne avtrekkeren</a>\n  </nav>"
+      "html": "<p>Del et ferdig uttrekk med<code>https://www.11tik.com/?v=VIDEO_ID</code>Innebyggingen bruker samme ID-uttrekking på klientsiden som hovedverktøyet for visning, Shorts, direktesendinger, youtu.be og innebygde URL-er – og undersøker deretter offentlige stillbilder på<code>i.ytimg.com</code>(aldri et privat YouTube API). URL-anatomi:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Veiledning for miniatyr-URL-er</a>Målt varianttilgjengelighet i vår<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300-videoeksempel</a>(utvalgsomfang, ikke universell).</p>"
+    },
+    {
+      "heading": "Begrensninger for nettleser og vert",
+      "html": "<ul>\n    <li><strong>Iframe med samme opprinnelse:</strong>Overordnede sider kan ikke lese miniatyrbildebyte fra den innebygde appen på grunn av nettleserens policy for samme opprinnelse. 11tik eksponerer ikke et postMessage API for kryssopprinnelse – brukere laster ned eller kopierer inne i iframe-en.</li>\n    <li><strong>Ingen server-API-nøkkel:</strong>ID-parsing og CDN-sjekker kjører i den besøkendes nettleser. Det finnes ikke noe autentisert backend-sluttpunkt å kalle fra CMS-et ditt.</li>\n    <li><strong>Behold utdraget intakt:</strong>Host iframe-en med<code>id=\"yte-app\"</code>og last<code>embed.js</code>med<code>defer</code>så høydesynkronisering fungerer på smale oppsett.</li>\n    <li><strong>Direkte CDN-lenker:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>fungerer ofte, men noen CMS-optimalisatorer, eksport av lerret eller CSP-regler blokkerer tredjeparts bildeverter. Når du trenger en garantert lokal fil, bruk innebyggingsknappen eller nedlastingsknappen for hovedverktøyet i stedet for å anta at hurtiglenkene er varige.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Åpne avtrekkeren</a>\n  </nav>"
     }
   ],
   "faq": [],

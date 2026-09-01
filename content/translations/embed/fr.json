@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "fr",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Intégrez l'extracteur de miniatures 11tik | 11tik",
   "description": "Ajoutez un extracteur de miniatures YouTube gratuit à votre blog, vos documents ou votre boîte à outils de création. Le widget se charge depuis 11tik et s'adapte automatiquement à votre taille. Aucune clé API requise.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Liens profonds",
-      "html": "<p>Partager une extraction prête à l'emploi avec<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Ouvrez l'extracteur</a>\n  </nav>"
+      "html": "<p>Partager une extraction prête à l'emploi avec<code>https://www.11tik.com/?v=VIDEO_ID</code>L'intégration utilise la même extraction d'identifiant côté client que l'outil principal pour les URL de visionnage, Shorts, en direct, youtu.be et d'intégration, puis analyse les images fixes publiques sur<code>i.ytimg.com</code>(Jamais une API YouTube privée). Structure de l'URL&nbsp;:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guide des URL des vignettes</a>Disponibilité des variantes mesurée dans notre<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300 échantillons vidéo</a>(limité à un échantillon, non universel).</p>"
+    },
+    {
+      "heading": "Limitations du navigateur et de l'hôte",
+      "html": "<ul>\n    <li><strong>iframe de même origine&nbsp;:</strong>Les pages parentes ne peuvent pas lire les octets de la miniature depuis l'application intégrée en raison de la politique d'origine identique du navigateur. 11tik n'expose pas d'API postMessage inter-origines&nbsp;; les utilisateurs téléchargent ou copient le contenu à l'intérieur de l'iframe.</li>\n    <li><strong>Aucune clé API serveur&nbsp;:</strong>L’analyse de l’identifiant et les vérifications du CDN s’effectuent dans le navigateur du visiteur. Il n’existe aucun point de terminaison backend authentifié à appeler depuis votre CMS.</li>\n    <li><strong>Conservez l'extrait intact&nbsp;:</strong>Hébergez l'iframe avec<code>id=\"yte-app\"</code>et charger<code>embed.js</code>avec<code>defer</code>La synchronisation de la hauteur fonctionne donc sur les mises en page étroites.</li>\n    <li><strong>Liens directs vers les CDN&nbsp;:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>Cela fonctionne souvent, mais certains optimiseurs de CMS, les exportations Canvas ou les règles CSP bloquent l'hébergement d'images tiers. Si vous avez besoin d'un fichier local garanti, utilisez l'intégration ou le bouton de téléchargement de l'outil principal plutôt que de supposer la permanence du lien direct.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Ouvrez l'extracteur</a>\n  </nav>"
     }
   ],
   "faq": [],

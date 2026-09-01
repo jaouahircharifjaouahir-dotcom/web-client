@@ -151,10 +151,12 @@ describe("Phase 40 embed defer", () => {
     expect(md).toMatch(/DEFER|do not auto-repair/i);
   });
 
-  it("embed still stale", () => {
+  it("embed repaired post-Phase-44 (was 37/37 stale in Phase 40)", () => {
+    const md = readFileSync(join(PHASE40, "EMBED_REPAIR_RECOMMENDATION.md"), "utf8");
+    expect(md).toMatch(/37\/37/);
     const e = auditEmbedStale();
     expect(e.autoRepair).toBe(false);
-    expect(e.staleCount).toBe(37);
+    expect(e.staleCount).toBe(0);
   });
 
   it("embed requires refresh not hash sync", () => {

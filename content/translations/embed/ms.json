@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "ms",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Benamkan Pengekstrak Gambar Kecil 11tik | 11tik",
   "description": "Tambahkan pengekstrak lakaran kecil YouTube percuma pada blog, dokumen atau toolkit pencipta anda. Widget dimuatkan dari 11tik dan mengubah saiznya sendiri. Tiada kunci API.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Pautan dalam",
-      "html": "<p>Kongsikan pengekstrakan yang sedia ada dengan<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buka pengekstrak</a>\n  </nav>"
+      "html": "<p>Kongsikan pengekstrakan yang sedia ada dengan<code>https://www.11tik.com/?v=VIDEO_ID</code>Benaman menggunakan pengekstrakan ID sisi klien yang sama seperti alat utama untuk URL tontonan, Seluar Pendek, siaran langsung, youtu.be dan benam—kemudian menyiasat gambar pegun awam pada<code>i.ytimg.com</code>(bukan sekali-kali API YouTube peribadi). Anatomi URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">panduan URL lakaran kecil</a>Ketersediaan varian yang diukur dalam kami<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Sampel 300 video</a>(berskop sampel, bukan universal).</p>"
+    },
+    {
+      "heading": "Had pelayar dan hos",
+      "html": "<ul>\n    <li><strong>Iframe asal yang sama:</strong>Halaman induk tidak boleh membaca bait kecil daripada aplikasi terbenam disebabkan oleh dasar asal-sama pelayar. 11tik tidak mendedahkan API postMessage silang asal—pengguna memuat turun atau menyalin di dalam iframe.</li>\n    <li><strong>Tiada kunci API pelayan:</strong>Penghuraian ID dan semakan CDN dijalankan dalam pelayar pelawat. Tiada titik akhir backend yang disahkan untuk dipanggil daripada CMS anda.</li>\n    <li><strong>Pastikan petikan itu utuh:</strong>Hoskan iframe dengan<code>id=\"yte-app\"</code>dan beban<code>embed.js</code>dengan<code>defer</code>jadi penyegerakan ketinggian berfungsi pada susun atur yang sempit.</li>\n    <li><strong>Pautan panas CDN langsung:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>selalunya berfungsi, tetapi sesetengah pengoptimum CMS, eksport kanvas atau peraturan CSP menyekat hos imej pihak ketiga. Apabila anda memerlukan fail setempat yang dijamin, gunakan butang muat turun benam atau alat utama dan bukannya menganggap pautan pintas kekal.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buka pengekstrak</a>\n  </nav>"
     }
   ],
   "faq": [],

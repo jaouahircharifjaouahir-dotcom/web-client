@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "tr",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "11tik Küçük Resim Çıkarıcıyı Gömün | 11tik",
   "description": "Blogunuza, dokümanlarınıza veya içerik oluşturucu araç setinize ücretsiz bir YouTube küçük resim çıkarıcı ekleyin. Widget 11tik'den yüklenir ve kendini yeniden boyutlandırır. API anahtarı gerekmez.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Derin bağlantılar",
-      "html": "<p>Hazır bir veri setini paylaşın<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Çıkarma cihazını açın.</a>\n  </nav>"
+      "html": "<p>Hazır bir veri setini paylaşın<code>https://www.11tik.com/?v=VIDEO_ID</code>. Bu yerleştirme, izleme, kısa videolar, canlı yayın, youtu.be ve yerleştirme URL'leri için ana araçla aynı istemci tarafı kimlik çıkarma yöntemini kullanır ve ardından herkese açık fotoğrafları inceler.<code>i.ytimg.com</code>(Asla özel bir YouTube API'si değildir). URL yapısı:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>Ölçülen varyant mevcudiyeti bizim sistemimizde<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300 video örneği</a>(Örneklem kapsamlı, evrensel değil).</p>"
+    },
+    {
+      "heading": "Tarayıcı ve sunucu sınırlamaları",
+      "html": "<ul>\n    <li><strong>Aynı kaynaktan gelen iframe:</strong>Üst sayfalar, tarayıcının aynı kaynak politikası nedeniyle gömülü uygulamadan küçük resim baytlarını okuyamaz. 11tik çapraz kaynaklı bir postMessage API'si sunmaz; kullanıcılar bunu iframe içinde indirir veya kopyalar.</li>\n    <li><strong>Sunucu API anahtarı yok:</strong>Kimlik doğrulama ve CDN kontrolleri ziyaretçinin tarayıcısında çalışır. CMS'nizden çağrılacak kimlik doğrulamalı bir arka uç noktası yoktur.</li>\n    <li><strong>Aşağıdaki metni olduğu gibi bırakın:</strong>iframe'i şu şekilde barındırın:<code>id=\"yte-app\"</code>ve yükle<code>embed.js</code>ile<code>defer</code>Bu nedenle yükseklik senkronizasyonu dar düzenlerde de çalışır.</li>\n    <li><strong>Doğrudan CDN bağlantıları:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>Genellikle işe yarar, ancak bazı CMS optimizasyon araçları, canvas dışa aktarımları veya CSP kuralları üçüncü taraf resim barındırma sitelerini engeller. Garantili yerel bir dosyaya ihtiyacınız olduğunda, doğrudan bağlantının kalıcı olacağını varsaymak yerine, yerleştirme veya ana araç indirme düğmesini kullanın.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Çıkarma cihazını açın.</a>\n  </nav>"
     }
   ],
   "faq": [],

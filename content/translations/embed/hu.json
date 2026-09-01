@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "hu",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "A 11tik Indexkép-kivonó beágyazása | 11tik",
   "description": "Adj hozzá egy ingyenes YouTube bélyegkép-kivonót a blogodhoz, dokumentumaidhoz vagy alkotói eszköztáradhoz. A widget a 11tik oldalról töltődik be és átméretezi magát. Nincs API-kulcs.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Mélylinkek",
-      "html": "<p>Ossza meg a kész extrakciót a következővel:<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Nyissa ki az elszívót</a>\n  </nav>"
+      "html": "<p>Ossza meg a kész extrakciót a következővel:<code>https://www.11tik.com/?v=VIDEO_ID</code>A beágyazás ugyanazt a kliensoldali azonosítókinyerési eszközt használja, mint a videónézés, rövid videók, élő videók, youtu.be és beágyazási URL-ek fő eszköze – majd nyilvános állóképeket vizsgál a következőn:<code>i.ytimg.com</code>(soha nem privát YouTube API). Az URL felépítése:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>A variánsok elérhetőségét mértük a miénkben.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300 videós minta</a>(minta hatókörű, nem univerzális).</p>"
+    },
+    {
+      "heading": "Böngésző és tárhely korlátozásai",
+      "html": "<ul>\n    <li><strong>Azonos eredetű iframe:</strong>A szülőoldalak nem tudják beolvasni a beágyazott alkalmazás bélyegkép-bájtjait a böngésző azonos eredetű szabályzata miatt. A 11tik nem tesz elérhetővé kereszt-eredetű postMessage API-t – a felhasználók az iframe-en belül tölthetik le vagy másolhatják le.</li>\n    <li><strong>Nincs szerver API kulcs:</strong>Az azonosítóelemzés és a CDN-ellenőrzések a látogató böngészőjében futnak. Nincs hitelesített háttér-végpont, amelyet a CMS-ből meg lehetne hívni.</li>\n    <li><strong>A kódrészletet érintetlenül kell tartani:</strong>Az iframe tárolása a következővel:<code>id=\"yte-app\"</code>és terhelés<code>embed.js</code>-vel<code>defer</code>Tehát a magasság szinkronizálása keskeny elrendezéseken is működik.</li>\n    <li><strong>Közvetlen CDN hotlinkek:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>gyakran működik, de egyes CMS-optimalizálók, vászonexportálások vagy CSP-szabályok blokkolják a harmadik féltől származó képtárhelyeket. Ha garantáltan helyi fájlra van szüksége, használja a beágyazás vagy a fő eszköz letöltési gombját ahelyett, hogy feltételezné a hotlink állandóságát.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Nyissa ki az elszívót</a>\n  </nav>"
     }
   ],
   "faq": [],

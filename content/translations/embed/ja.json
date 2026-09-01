@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "ja",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "11tikサムネイル抽出ツールを埋め込む | 11tik",
   "description": "ブログ、ドキュメント、クリエイターツールキットに、無料のYouTubeサムネイル抽出ツールを追加しましょう。ウィジェットは11tikから読み込まれ、自動的にサイズ調整されます。APIキーは不要です。",
@@ -19,11 +19,15 @@
     },
     {
       "heading": "ルール",
-      "html": "<ul>\n    <li>保つ<code>id=\"yte-app\"</code>高さ同期が機能するように属性を設定します。</li>\n    <li>ダウンロードボタンが隠れてしまうような固定高さの要素でiframeを囲まないでください。</li>\n    <li>リンク先<a href=\"https://www.11tik.com/\">www.11tik.com</a>ユーザーがツール全体を開くのに役立ちます。</li>\n  </ul>"
+      "html": "<ul>\n    <li>保つ<code>id=\"yte-app\"</code>高さ同期が機能するように属性を設定します。</li>\n    <li>ダウンロードボタンが隠れてしまうような固定高さのiframeで囲まないでください。</li>\n    <li>リンク先<a href=\"https://www.11tik.com/\">www.11tik.com</a>ユーザーがツール全体を開くのに役立ちます。</li>\n  </ul>"
     },
     {
       "heading": "ディープリンク",
-      "html": "<p>準備ができた抽出を共有します<code>https://www.11tik.com/?v=VIDEO_ID</code>。</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">抽出ツールを開く</a>\n  </nav>"
+      "html": "<p>準備ができた抽出を共有します<code>https://www.11tik.com/?v=VIDEO_ID</code>埋め込みは、ウォッチ、ショート、ライブ、youtu.be、埋め込みURLのメインツールと同じクライアント側ID抽出を使用し、次に公開されている静止画をプローブします。<code>i.ytimg.com</code>（決してプライベートなYouTube APIではありません）。URLの構造：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>. 測定されたバリアントの可用性<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300本の動画サンプル</a>（サンプル範囲に限定され、普遍的なものではない。）</p>"
+    },
+    {
+      "heading": "ブラウザとホストの制限",
+      "html": "<ul>\n    <li><strong>同一オリジンのiframe:</strong>ブラウザの同一オリジンポリシーにより、親ページは埋め込みアプリからサムネイルバイトを読み取ることができません。11tikはクロスオリジンのpostMessage APIを公開していないため、ユーザーはiframe内でダウンロードまたはコピーする必要があります。</li>\n    <li><strong>サーバーAPIキーがありません：</strong>ID解析とCDNチェックは訪問者のブラウザで実行されます。CMSから呼び出す認証済みのバックエンドエンドポイントはありません。</li>\n    <li><strong>抜粋部分はそのままにしてください。</strong>iframeをホストするには<code>id=\"yte-app\"</code>ロード<code>embed.js</code>と<code>defer</code>つまり、高さ同期は狭いレイアウトでも機能するということです。</li>\n    <li><strong>CDNへの直接リンク：</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>多くの場合機能しますが、一部のCMSオプティマイザー、キャンバスエクスポート、またはCSPルールによってサードパーティの画像ホストがブロックされる場合があります。ローカルファイルが確実に必要な場合は、ホットリンクの永続性を前提とするのではなく、埋め込みボタンまたはメインツールのダウンロードボタンを使用してください。</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">抽出ツールを開く</a>\n  </nav>"
     }
   ],
   "faq": [],

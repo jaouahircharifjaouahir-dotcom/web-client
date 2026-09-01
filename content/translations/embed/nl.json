@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "nl",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Sluit de 11tik Thumbnail Extractor in | 11tik",
   "description": "Voeg een gratis tool voor het extraheren van YouTube-thumbnails toe aan je blog, documentatie of toolkit voor contentmakers. De widget laadt vanuit 11tik en past zich automatisch aan de grootte aan. Geen API-sleutel nodig.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Diepe links",
-      "html": "<p>Deel een kant-en-klare extractie met<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Open de afzuiger.</a>\n  </nav>"
+      "html": "<p>Deel een kant-en-klare extractie met<code>https://www.11tik.com/?v=VIDEO_ID</code>De embed gebruikt dezelfde client-side ID-extractie als de hoofdtool voor watch, Shorts, live, youtu.be en embed-URL's en onderzoekt vervolgens openbare stilstaande beelden op<code>i.ytimg.com</code>(nooit een privé YouTube API). URL-structuur:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>De beschikbaarheid van varianten in onze metingen is vastgesteld.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Voorbeeld van 300 video's</a>(beperkt tot de steekproef, niet universeel).</p>"
+    },
+    {
+      "heading": "Browser- en hostbeperkingen",
+      "html": "<ul>\n    <li><strong>Same-origin iframe:</strong>Ouderpagina's kunnen geen miniatuurafbeeldingen van de ingesloten app lezen vanwege het same-origin-beleid van de browser. 11tik biedt geen cross-origin postMessage API aan; gebruikers downloaden of kopiëren binnen de iframe.</li>\n    <li><strong>Geen server-API-sleutel:</strong>ID-parsing en CDN-controles worden uitgevoerd in de browser van de bezoeker. Er is geen geauthenticeerd backend-eindpunt dat vanuit uw CMS kan worden aangeroepen.</li>\n    <li><strong>Laat het fragment intact:</strong>Host de iframe met<code>id=\"yte-app\"</code>en laden<code>embed.js</code>met<code>defer</code>Hoogtesynchronisatie werkt dus ook op smalle lay-outs.</li>\n    <li><strong>Directe CDN-hotlinks:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>Het werkt vaak, maar sommige CMS-optimizers, canvas-exports of CSP-regels blokkeren externe afbeeldingshosts. Als je een gegarandeerd lokaal bestand nodig hebt, gebruik dan de insluitknop of de downloadknop van de hoofdtool in plaats van uit te gaan van een permanente hotlink.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Open de afzuiger.</a>\n  </nav>"
     }
   ],
   "faq": [],

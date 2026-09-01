@@ -2,12 +2,12 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "ro",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Încorporează extractorul de miniaturi 11tik | 11tik",
   "description": "Adaugă un extractor gratuit de miniaturi YouTube la blogul, documentele sau setul de instrumente pentru creatori. Widgetul se încarcă din 11tik și se redimensionează singur. Nu necesită cheie API.",
-  "h1": "Încorporați extractorul de miniaturi 11tik",
-  "ogTitle": "Încorporați extractorul de miniaturi 11tik",
+  "h1": "Încorporează extractorul de miniaturi 11tik",
+  "ogTitle": "Încorporează extractorul de miniaturi 11tik",
   "ogDescription": "Adaugă un extractor gratuit de miniaturi YouTube la blogul, documentele sau setul de instrumente pentru creatori. Widgetul se încarcă din 11tik și se redimensionează singur. Nu necesită cheie API.",
   "imageAlt": "",
   "faqHeading": "FAQ",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Linkuri profunde",
-      "html": "<p>Distribuiți o extracție gata preparată cu<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Deschideți extractorul</a>\n  </nav>"
+      "html": "<p>Distribuiți o extracție gata preparată cu<code>https://www.11tik.com/?v=VIDEO_ID</code>Instrumentul embed folosește aceeași extragere a ID-ului din partea clientului ca instrumentul principal pentru URL-uri de vizionare, Shorts, live, youtu.be și embed — apoi verifică imaginile statice publice de pe<code>i.ytimg.com</code>(niciodată un API YouTube privat). Anatomia URL-ului:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>Disponibilitatea variantelor măsurate în<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">eșantion de 300 de videoclipuri</a>(cu scop eșantion, nu universal).</p>"
+    },
+    {
+      "heading": "Limitări ale browserului și ale gazdei",
+      "html": "<ul>\n    <li><strong>iframe cu aceeași origine:</strong>Paginile părinte nu pot citi octeți de miniatură din aplicația încorporată din cauza politicii browserului privind aceeași origine. 11tik nu expune o API postMessage cu origini multiple - utilizatorii descarcă sau copiază în interiorul iframe-ului.</li>\n    <li><strong>Nicio cheie API a serverului:</strong>Analiza ID-ului și verificările CDN rulează în browserul vizitatorului. Nu există un endpoint backend autentificat care să poată fi apelat din CMS-ul dvs.</li>\n    <li><strong>Păstrați fragmentul intact:</strong>Găzduiți iframe-ul cu<code>id=\"yte-app\"</code>și încărcați<code>embed.js</code>cu<code>defer</code>Deci sincronizarea înălțimii funcționează pe machete înguste.</li>\n    <li><strong>Linkuri directe către CDN:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>funcționează adesea, dar unele optimizatoare CMS, exporturi canvas sau reguli CSP blochează gazdele de imagini terțe. Când aveți nevoie de un fișier local garantat, utilizați butonul de embed sau de descărcare a instrumentului principal în loc să presupuneți permanența linkului direct.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Deschideți extractorul</a>\n  </nav>"
     }
   ],
   "faq": [],

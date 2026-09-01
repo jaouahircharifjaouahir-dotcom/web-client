@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "ko",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "11tik썸네일 추출기 삽입 | 11tik",
   "description": "블로그, 문서 또는 크리에이터 툴킷에 무료 YouTube 썸네일 추출기를 추가하세요. 이 위젯은 11tik에서 로드되어 자동으로 크기가 조정됩니다. API 키가 필요하지 않습니다.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "딥 링크",
-      "html": "<p>준비된 추출본을 공유하세요<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">추출기를 여세요</a>\n  </nav>"
+      "html": "<p>준비된 추출본을 공유하세요<code>https://www.11tik.com/?v=VIDEO_ID</code>이 임베드는 시청, 쇼츠, 라이브, youtu.be 및 임베드 URL에 대한 기본 도구와 동일한 클라이언트 측 ID 추출을 사용한 다음 공개 스틸 이미지를 조사합니다.<code>i.ytimg.com</code>(절대 비공개 YouTube API가 아닙니다.) URL 구조:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">썸네일 URL 가이드</a>측정된 변형 가용성은 당사에서 확인할 수 있습니다.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300개 비디오 샘플</a>(샘플에 한정된 범위이며, 보편적인 것은 아닙니다.)</p>"
+    },
+    {
+      "heading": "브라우저 및 호스트 제한 사항",
+      "html": "<ul>\n    <li><strong>동일 출처 iframe:</strong>상위 페이지는 브라우저의 동일 출처 정책으로 인해 내장된 앱에서 썸네일 바이트를 읽을 수 없습니다. 11tik는 교차 출처 postMessage API를 노출하지 않습니다. 사용자는 iframe 내부에서 다운로드하거나 복사합니다.</li>\n    <li><strong>서버 API 키가 없습니다.</strong>ID 파싱 및 CDN 검사는 방문자의 브라우저에서 실행됩니다. CMS에서 호출할 인증된 백엔드 엔드포인트는 없습니다.</li>\n    <li><strong>해당 코드 조각을 그대로 유지하세요:</strong>iframe을 호스팅하려면 다음을 사용하세요.<code>id=\"yte-app\"</code>그리고 로드<code>embed.js</code>~와 함께<code>defer</code>따라서 높이 동기화는 좁은 레이아웃에서도 작동합니다.</li>\n    <li><strong>CDN 직접 링크:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>대부분의 경우 작동하지만, 일부 CMS 최적화 도구, 캔버스 내보내기 또는 CSP 규칙에서 타사 이미지 호스팅 서비스를 차단할 수 있습니다. 로컬 파일에 안전하게 저장해야 하는 경우, 핫링크의 영구성을 가정하지 말고 임베드 또는 메인 도구의 다운로드 버튼을 사용하세요.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">추출기를 여세요</a>\n  </nav>"
     }
   ],
   "faq": [],

@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "tl",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "I-embed ang 11tik Thumbnail Extractor | 11tik",
   "description": "Magdagdag ng libreng YouTube thumbnail extractor sa iyong blog, mga dokumento, o toolkit ng creator. Naglo-load ang widget mula sa 11tik at binabago ang laki nito. Walang API key.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Mga malalalim na link",
-      "html": "<p>Ibahagi ang isang handa nang bunutan sa<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buksan ang pangbunot</a>\n  </nav>"
+      "html": "<p>Ibahagi ang isang handa nang bunutan sa<code>https://www.11tik.com/?v=VIDEO_ID</code>Gumagamit ang embed ng parehong client-side ID extraction gaya ng pangunahing tool para sa mga URL ng panonood, Shorts, live, youtu.be, at embed—pagkatapos ay sinusuri ang mga pampublikong still sa<code>i.ytimg.com</code>(hindi kailanman isang pribadong YouTube API). Anatomiya ng URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>Sinukat ang pagkakaroon ng variant sa aming<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300-video na sample</a>(saklaw ng sample, hindi pangkalahatan).</p>"
+    },
+    {
+      "heading": "Mga limitasyon ng browser at host",
+      "html": "<ul>\n    <li><strong>Iframe na may parehong pinagmulan:</strong>Hindi mababasa ng mga parent page ang mga thumbnail bytes mula sa naka-embed na app dahil sa patakaran ng browser same-origin. Hindi inilalantad ng 11tik ang isang cross-origin postMessage API—dina-download o kinokopya ng mga user ang loob ng iframe.</li>\n    <li><strong>Walang API key ng server:</strong>Ang pag-parse ng ID at mga pagsusuri ng CDN ay tumatakbo sa browser ng bisita. Walang authenticated backend endpoint na matatawagan mula sa iyong CMS.</li>\n    <li><strong>Panatilihing buo ang snippet:</strong>I-host ang iframe gamit ang<code>id=\"yte-app\"</code>at karga<code>embed.js</code>kasama<code>defer</code>kaya gumagana ang height sync sa makikitid na layout.</li>\n    <li><strong>Mga direktang hotlink ng CDN:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>kadalasang gumagana, ngunit ang ilang CMS optimizer, canvas export, o CSP rules ay humaharang sa mga third-party image host. Kapag kailangan mo ng garantisadong lokal na file, gamitin ang embed o main tool download button sa halip na ipagpalagay na permanente ang hotlink.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Buksan ang pangbunot</a>\n  </nav>"
     }
   ],
   "faq": [],

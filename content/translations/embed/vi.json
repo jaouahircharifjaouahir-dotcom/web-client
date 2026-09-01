@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "vi",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Nhúng Trình trích xuất hình thu nhỏ 11tik | 11tik",
   "description": "Thêm công cụ trích xuất hình thu nhỏ YouTube miễn phí vào blog, tài liệu hoặc bộ công cụ sáng tạo của bạn. Tiện ích được tải từ 11tik và tự điều chỉnh kích thước. Không cần khóa API.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Liên kết sâu",
-      "html": "<p>Chia sẻ một bản trích xuất sẵn sàng với<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Mở máy hút</a>\n  </nav>"
+      "html": "<p>Chia sẻ một bản trích xuất sẵn sàng với<code>https://www.11tik.com/?v=VIDEO_ID</code>. Phần nhúng sử dụng cùng một phương pháp trích xuất ID phía máy khách như công cụ chính dành cho các URL xem, Shorts, trực tiếp, youtu.be và nhúng—sau đó dò tìm các hình ảnh tĩnh công khai trên<code>i.ytimg.com</code>(Không bao giờ là API YouTube riêng tư). Cấu trúc URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL hình thu nhỏ</a>. Đo lường mức độ khả dụng của các biến thể trong hệ thống của chúng tôi.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Mẫu 300 video</a>(Chỉ áp dụng trong phạm vi ví dụ, không phải toàn diện).</p>"
+    },
+    {
+      "heading": "Các hạn chế của trình duyệt và máy chủ",
+      "html": "<ul>\n    <li><strong>iframe cùng nguồn gốc:</strong>Các trang cha không thể đọc byte hình thu nhỏ từ ứng dụng được nhúng do chính sách cùng nguồn gốc của trình duyệt. 11tik không hiển thị API postMessage xuyên nguồn gốc — người dùng tải xuống hoặc sao chép bên trong iframe.</li>\n    <li><strong>Không có khóa API máy chủ:</strong>Việc phân tích ID và kiểm tra CDN được thực hiện trên trình duyệt của người truy cập. Không có điểm cuối máy chủ được xác thực nào để gọi từ hệ thống quản lý nội dung (CMS) của bạn.</li>\n    <li><strong>Giữ nguyên đoạn trích:</strong>Đặt iframe vào máy chủ với<code>id=\"yte-app\"</code>và tải<code>embed.js</code>với<code>defer</code>Vì vậy, tính năng đồng bộ chiều cao hoạt động trên các bố cục hẹp.</li>\n    <li><strong>Liên kết trực tiếp CDN:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>Thường thì cách này hiệu quả, nhưng một số trình tối ưu hóa CMS, trình xuất canvas hoặc quy tắc CSP chặn các máy chủ hình ảnh của bên thứ ba. Khi bạn cần một tệp cục bộ được đảm bảo, hãy sử dụng nút nhúng hoặc nút tải xuống của công cụ chính thay vì giả định liên kết trực tiếp sẽ tồn tại mãi mãi.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Mở máy hút</a>\n  </nav>"
     }
   ],
   "faq": [],

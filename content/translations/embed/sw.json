@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "sw",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Ingiza Kitoa Picha Kidogo cha 11tik | 11tik",
   "description": "Ongeza kitoa vijipicha cha YouTube bila malipo kwenye blogu yako, hati, au zana ya uundaji. Wijeti hupakia kutoka 11tik na kujibadilisha ukubwa. Hakuna ufunguo wa API.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Viungo vya kina",
-      "html": "<p>Shiriki dondoo iliyo tayari na<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Fungua kifaa cha kutoa</a>\n  </nav>"
+      "html": "<p>Shiriki dondoo iliyo tayari na<code>https://www.11tik.com/?v=VIDEO_ID</code>Kiambatisho hutumia uondoaji sawa wa kitambulisho cha upande wa mteja kama zana kuu ya saa, Fupi, moja kwa moja, youtu.be, na URL za kupachika—kisha huchunguza picha za umma kwenye<code>i.ytimg.com</code>(kamwe si API ya YouTube ya faragha). Anatomia ya URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL ndogo</a>Upatikanaji wa aina tofauti ulipimwa katika yetu<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Sampuli ya video 300</a>(sampuli-scope, si ya ulimwengu wote).</p>"
+    },
+    {
+      "heading": "Vikwazo vya kivinjari na seva pangishi",
+      "html": "<ul>\n    <li><strong>Iframe ya asili moja:</strong>Kurasa za wazazi haziwezi kusoma baiti ndogo kutoka kwa programu iliyopachikwa kutokana na sera ya kivinjari cha asili moja. 11tik haifichui API ya postMessage ya asili mtambuka—watumiaji hupakua au kunakili ndani ya iframe.</li>\n    <li><strong>Hakuna ufunguo wa API ya seva:</strong>Uchanganuzi wa vitambulisho na ukaguzi wa CDN huendeshwa kwenye kivinjari cha mgeni. Hakuna sehemu ya mwisho ya nyuma iliyothibitishwa ya kupiga simu kutoka kwa CMS yako.</li>\n    <li><strong>Weka kipande kikiwa sawa:</strong>Panga iframe kwa kutumia<code>id=\"yte-app\"</code>na mzigo<code>embed.js</code>na<code>defer</code>kwa hivyo usawazishaji wa urefu hufanya kazi kwenye mipangilio nyembamba.</li>\n    <li><strong>Viungo vya moja kwa moja vya CDN:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>mara nyingi hufanya kazi, lakini baadhi ya viboreshaji vya CMS, uhamishaji wa turubai, au sheria za CSP huzuia mwenyeji wa picha za watu wengine. Unapohitaji faili ya ndani iliyohakikishwa, tumia kitufe cha kupachika au cha kupakua zana kuu badala ya kudhani kuwa kiungo cha kudumu ni cha kudumu.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Fungua kifaa cha kutoa</a>\n  </nav>"
     }
   ],
   "faq": [],

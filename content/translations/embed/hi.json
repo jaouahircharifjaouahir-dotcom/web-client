@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "hi",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "11tik थंबनेल एक्सट्रैक्टर को एम्बेड करें | 11tik",
   "description": "अपने ब्लॉग, दस्तावेज़ या क्रिएटर टूलकिट में एक निःशुल्क YouTube थंबनेल एक्सट्रैक्टर जोड़ें। विजेट 11tik से लोड होता है और स्वयं को रीसाइज़ करता है। किसी API कुंजी की आवश्यकता नहीं है।",
@@ -14,16 +14,20 @@
   "images": [],
   "sections": [
     {
-      "heading": "आईफ़्रेम स्निपेट",
+      "heading": "आईफ्रेम स्निपेट",
       "html": "<pre>&lt;iframe\r\n  id=\"yte-app\"\r\n  title=\"11tik YouTube Thumbnail Extractor\"\r\n  src=\"https://www.11tik.com/?embed=1\"\r\n  loading=\"lazy\"\r\n  style=\"width:100%;min-height:720px;border:0;border-radius:16px;\"\r\n&gt;&lt;/iframe&gt;\r\n&lt;script src=\"https://www.11tik.com/web-client/embed.js\" defer&gt;&lt;/script&gt;</pre>"
     },
     {
       "heading": "नियम",
-      "html": "<ul>\n    <li>अपने पास रखें<code>id=\"yte-app\"</code>विशेषता ताकि ऊंचाई का सिंक्रनाइज़ेशन काम करे।</li>\n    <li>डाउनलोड बटन को ढकने वाली निश्चित ऊंचाई वाले फ्रेम में iframe को रैप न करें।</li>\n    <li>वापस लिंक करना<a href=\"https://www.11tik.com/\">[[पी1]]</a>यह उपयोगकर्ताओं को पूरे टूल को खोलने में मदद करता है।</li>\n  </ul>"
+      "html": "<ul>\n    <li>अपने पास रखें<code>id=\"yte-app\"</code>विशेषता ताकि ऊंचाई का सिंक्रनाइज़ेशन काम करे।</li>\n    <li>डाउनलोड बटन को ढकने वाली निश्चित ऊंचाई वाले आईफ्रेम में रैप न करें।</li>\n    <li>वापस लिंक करना<a href=\"https://www.11tik.com/\">[[पी1]]</a>यह उपयोगकर्ताओं को पूरे टूल को खोलने में मदद करता है।</li>\n  </ul>"
     },
     {
       "heading": "डीप लिंक्स",
-      "html": "<p>तैयार निष्कर्षण साझा करें<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">एक्सट्रैक्टर खोलें</a>\n  </nav>"
+      "html": "<p>तैयार निष्कर्षण साझा करें<code>https://www.11tik.com/?v=VIDEO_ID</code>यह एम्बेड वॉच, शॉर्ट्स, लाइव, youtu.be और एम्बेड यूआरएल के लिए मुख्य टूल के समान क्लाइंट-साइड आईडी निष्कर्षण का उपयोग करता है—फिर सार्वजनिक स्टिल्स की जांच करता है।<code>i.ytimg.com</code>(कभी भी निजी YouTube API नहीं)। URL संरचना:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">थंबनेल यूआरएल गाइड</a>हमारे द्वारा मापी गई वेरिएंट की उपलब्धता<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300 वीडियो का नमूना</a>(नमूने तक सीमित, सार्वभौमिक नहीं)।</p>"
+    },
+    {
+      "heading": "ब्राउज़र और होस्ट की सीमाएँ",
+      "html": "<ul>\n    <li><strong>समान मूल iframe:</strong>ब्राउज़र की समान-उत्पत्ति नीति के कारण पैरेंट पेज एम्बेडेड ऐप से थंबनेल बाइट्स नहीं पढ़ सकते। 11tik क्रॉस-उत्पत्ति पोस्टमैसेज एपीआई को उजागर नहीं करता है—उपयोगकर्ता आईफ्रेम के अंदर डाउनलोड या कॉपी करते हैं।</li>\n    <li><strong>कोई सर्वर एपीआई कुंजी नहीं:</strong>आईडी पार्सिंग और सीडीएन जांच विज़िटर के ब्राउज़र में चलती हैं। आपके सीएमएस से कॉल करने के लिए कोई प्रमाणित बैकएंड एंडपॉइंट नहीं है।</li>\n    <li><strong>इस अंश को यथावत रखें:</strong>iframe को होस्ट करें<code>id=\"yte-app\"</code>और लोड करें<code>embed.js</code>साथ<code>defer</code>इसलिए हाइट सिंक संकीर्ण लेआउट पर काम करता है।</li>\n    <li><strong>डायरेक्ट सीडीएन हॉटलिंक:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>यह अक्सर काम करता है, लेकिन कुछ CMS ऑप्टिमाइज़र, कैनवास एक्सपोर्ट या CSP नियम थर्ड-पार्टी इमेज होस्ट को ब्लॉक कर देते हैं। जब आपको गारंटीशुदा लोकल फ़ाइल की आवश्यकता हो, तो हॉटलिंक की स्थायीता मानकर चलने के बजाय एम्बेड या मुख्य टूल डाउनलोड बटन का उपयोग करें।</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">एक्सट्रैक्टर खोलें</a>\n  </nav>"
     }
   ],
   "faq": [],

@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "sk",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Vložte nástroj na extrahovanie miniatúr 11tik | 11tik",
   "description": "Pridajte si do blogu, dokumentov alebo tvorcovského nástroja bezplatný extraktor miniatúr z YouTube. Widget sa načíta z 11tik a sám zmení veľkosť. Žiadny kľúč API.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Priame odkazy",
-      "html": "<p>Zdieľajte pripravenú extrakciu s<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otvorte extraktor</a>\n  </nav>"
+      "html": "<p>Zdieľajte pripravenú extrakciu s<code>https://www.11tik.com/?v=VIDEO_ID</code>Vložený obsah používa rovnakú extrakciu ID na strane klienta ako hlavný nástroj pre URL adresy na sledovanie, krátke videá, živé vysielanie, youtu.be a vložené súbory – potom skúma verejné statické zábery na<code>i.ytimg.com</code>(nikdy nie súkromné ​​rozhranie API služby YouTube). Anatómia URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Sprievodca URL adresami miniatúr</a>Dostupnosť meraných variantov v našich<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Ukážka 300 videí</a>(rozsah vzorky, nie univerzálne).</p>"
+    },
+    {
+      "heading": "Obmedzenia prehliadača a hostiteľa",
+      "html": "<ul>\n    <li><strong>Prvek iframe s rovnakým pôvodom:</strong>Nadradené stránky nemôžu čítať bajty miniatúr z vloženej aplikácie kvôli politike prehliadača rovnakého pôvodu. 11tik nesprístupňuje rozhranie API postMessage pre rôzne pôvody – používatelia sťahujú alebo kopírujú vo vnútri prvku iframe.</li>\n    <li><strong>Žiadny kľúč API servera:</strong>Analýza ID a kontroly CDN prebiehajú v prehliadači návštevníka. Neexistuje žiadny overený backendový endpoint, ktorý by sa dal volať z vášho CMS.</li>\n    <li><strong>Úryvok kódu ponechajte neporušený:</strong>Hostujte iframe pomocou<code>id=\"yte-app\"</code>a načítať<code>embed.js</code>s<code>defer</code>takže synchronizácia výšok funguje na úzkych rozloženiach.</li>\n    <li><strong>Priame odkazy na CDN:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>často funguje, ale niektoré optimalizátory CMS, exporty plátna alebo pravidlá CSP blokujú hostiteľov obrázkov tretích strán. Ak potrebujete zaručený lokálny súbor, použite tlačidlo na vloženie alebo stiahnutie hlavného nástroja namiesto predpokladu trvalosti odkazu.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otvorte extraktor</a>\n  </nav>"
     }
   ],
   "faq": [],

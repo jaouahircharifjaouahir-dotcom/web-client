@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "sv",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Bädda in 11tik miniatyrutdragaren | 11tik",
   "description": "Lägg till en gratis YouTube-miniatyrutdragare till din blogg, dina dokument eller din verktygslåda för skapare. Widgeten laddas från 11tik och ändrar storlek på sig själv. Ingen API-nyckel.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Djuplänkar",
-      "html": "<p>Dela en färdig extraktion med<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Öppna extraktorn</a>\n  </nav>"
+      "html": "<p>Dela en färdig extraktion med<code>https://www.11tik.com/?v=VIDEO_ID</code>Inbäddningen använder samma ID-extraktion på klientsidan som huvudverktyget för att titta på, Shorts, live, youtu.be och inbäddnings-URL:er – och undersöker sedan offentliga stillbilder på<code>i.ytimg.com</code>(aldrig ett privat YouTube API). URL-anatomi:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>Uppmätt varianttillgänglighet i vår<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300-videoprov</a>(urvalsbaserat, inte universellt).</p>"
+    },
+    {
+      "heading": "Begränsningar för webbläsare och värd",
+      "html": "<ul>\n    <li><strong>Iframe med samma ursprung:</strong>Överordnade sidor kan inte läsa miniatyrbyte från den inbäddade appen på grund av webbläsarens policy för samma ursprung. 11tik exponerar inte ett postMessage API för flera ursprung – användare laddar ner eller kopierar inuti iframen.</li>\n    <li><strong>Ingen server-API-nyckel:</strong>ID-parsning och CDN-kontroller körs i besökarens webbläsare. Det finns ingen autentiserad backend-slutpunkt att anropa från ditt CMS.</li>\n    <li><strong>Behåll utdraget intakt:</strong>Hosta iframe-rutan med<code>id=\"yte-app\"</code>och lasta<code>embed.js</code>med<code>defer</code>så höjdsynkronisering fungerar på smala layouter.</li>\n    <li><strong>Direkta CDN-länkar:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>fungerar ofta, men vissa CMS-optimerare, canvas-exporter eller CSP-regler blockerar bildvärdar från tredje part. När du behöver en garanterad lokal fil, använd inbäddningsknappen eller nedladdningsknappen för huvudverktyget istället för att anta att hotlink-varaktighet.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Öppna extraktorn</a>\n  </nav>"
     }
   ],
   "faq": [],

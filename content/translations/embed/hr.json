@@ -2,7 +2,7 @@
   "contentId": "embed",
   "articleId": "embed",
   "locale": "hr",
-  "sourceHash": "2231dd9f3ed056573424d7cc1761b8dad1392242d14a6381bee4b6498eb9497d",
+  "sourceHash": "0a1e5a2e8d8069e58a850d34de8e5456379b83a562a8c8996bf1e308e9976263",
   "status": "ready",
   "title": "Ugradite 11tik alat za izdvajanje sličica | 11tik",
   "description": "Dodajte besplatni alat za izdvajanje sličica s YouTubea na svoj blog, dokumente ili alate za kreatore. Widget se učitava s 11tik i sam mijenja veličinu. Nema API ključa.",
@@ -23,7 +23,11 @@
     },
     {
       "heading": "Duboke poveznice",
-      "html": "<p>Podijelite gotovu ekstrakciju s<code>https://www.11tik.com/?v=VIDEO_ID</code>.</p>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otvorite ekstraktor</a>\n  </nav>"
+      "html": "<p>Podijelite gotovu ekstrakciju s<code>https://www.11tik.com/?v=VIDEO_ID</code>Ugradnja koristi isto izdvajanje ID-a na strani klijenta kao i glavni alat za URL-ove za gledanje, Shorts, uživo, youtu.be i ugradnju - zatim ispituje javne fotografije na<code>i.ytimg.com</code>(nikada privatni YouTube API). Anatomija URL-a:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura</a>Izmjerena dostupnost varijanti u našoj<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Uzorak od 300 videozapisa</a>(obuhvatno na uzorku, nije univerzalno).</p>"
+    },
+    {
+      "heading": "Ograničenja preglednika i hosta",
+      "html": "<ul>\n    <li><strong>iframe istog porijekla:</strong>Nadređene stranice ne mogu čitati bajtove sličica iz ugrađene aplikacije zbog pravila preglednika o istom podrijetlu. 11tik ne otkriva postMessage API s više izvora - korisnici preuzimaju ili kopiraju unutar iframea.</li>\n    <li><strong>Nema API ključa poslužitelja:</strong>Parsiranje ID-a i provjere CDN-a izvode se u pregledniku posjetitelja. Ne postoji autentificirana pozadinska krajnja točka za pozivanje iz vašeg CMS-a.</li>\n    <li><strong>Ostavite isječak netaknut:</strong>Hostirajte iframe s<code>id=\"yte-app\"</code>i učitavanje<code>embed.js</code>s<code>defer</code>pa sinkronizacija visine radi na uskim rasporedima.</li>\n    <li><strong>Izravne CDN veze:</strong> <code>&lt;img src=\"https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg\"&gt;</code>često radi, ali neki CMS optimizatori, izvozi platna ili CSP pravila blokiraju hostove slika trećih strana. Kada vam je potrebna zajamčena lokalna datoteka, upotrijebite gumb za ugrađivanje ili preuzimanje glavnog alata umjesto da pretpostavljate trajnost poveznice.</li>\n  </ul>\n  <nav>\n    <a href=\"https://www.11tik.com/\">Otvorite ekstraktor</a>\n  </nav>"
     }
   ],
   "faq": [],

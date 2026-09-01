@@ -21,6 +21,7 @@ import { copyText } from "./services/clipboard";
 import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { QUALITY_PRESETS } from "./engines/presets";
+import { HomeFaq } from "./components/HomeFaq";
 import { SiteHeader } from "./components/SiteHeader";
 import { hasStaticSiteHeader } from "./components/hasStaticSiteHeader";
 import { guidePosts, localeHomeUrl, publicOrigin, readLocale, t, tFill } from "./i18n/ui";
@@ -905,6 +906,8 @@ export default function App() {
             </pre>
           </section>
         ) : null}
+
+        <HomeFaq />
 
         <p className="yte-foot">
           {t("foot")}

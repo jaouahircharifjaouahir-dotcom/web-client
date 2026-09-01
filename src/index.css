@@ -286,6 +286,11 @@ a.yte-brand:focus-visible {
 .yte-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .yte-embed .yte-top, .yte-embed .yte-ad, .yte-embed .yte-foot { display: none; }
 .yte-foot { margin-top: 28px; color: var(--yte-muted); font-size: 13px; }
+.yte-home-faq { margin-top: 20px; }
+.yte-home-faq h2 { margin: 0 0 12px; font-size: 1.15rem; }
+.yte-home-faq h3 { margin: 16px 0 6px; font-size: 1rem; }
+.yte-home-faq p { margin: 0 0 8px; color: var(--yte-muted); font-size: 14px; line-height: 1.55; }
+.yte-home-faq a { color: #c2410c; font-weight: 600; }
 .yte-pulse { animation: ytePulse 1s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) {
   .yte-pulse { animation: none; }

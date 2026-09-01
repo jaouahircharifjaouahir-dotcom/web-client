@@ -39,6 +39,7 @@ import {
   renderLocaleCrawlNavHtml,
   renderShellGuideListHtml,
 } from "./i18n/locale-crawl-nav.mjs";
+import { renderHomeFaqShellHtml } from "./i18n/home-faq-shell.mjs";
 import { scanPublishability } from "./i18n/publish.mjs";
 import { buildContentInventory } from "./i18n/content-inventory.mjs";
 import { writePostsFeeds } from "../workers/feed-generation.js";
@@ -113,6 +114,7 @@ function spaShellBodyHtml(code, buildContext) {
     .map((s) => `<p>${xmlEscape(s)}</p>`)
     .join("");
   const catalogDoc = buildContext?.catalogByLocale?.[code];
+  const homeFaq = renderHomeFaqShellHtml(code);
   const guides = renderShellGuideListHtml(code, { ...buildContext, catalogDoc });
   const crawlNav = renderLocaleCrawlNavHtml(code, { ...buildContext, catalogDoc });
   // Space-poor scripts (e.g. Japanese) yield low whitespace word counts; add English
@@ -131,7 +133,7 @@ function spaShellBodyHtml(code, buildContext) {
       enBridge = `<p lang="en">${xmlEscape(enUi.heroIntro)}</p><p lang="en">${xmlEscape(enUi.foot || "")}</p>`;
     }
   }
-  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
+  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}${homeFaq}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
 }
 
 function canonicalFor(code) {
@@ -188,7 +190,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   ${siteHeaderThemeBootScript()}
   ${siteHeaderStyleTag()}
-  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a{color:#c2410c;font-weight:600}</style>
+  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a,.yte-home-faq a{color:#c2410c;font-weight:600}.yte-home-faq{margin:20px 0}.yte-home-faq h2{font-size:1.15rem;margin:0 0 12px}.yte-home-faq h3{font-size:1rem;margin:16px 0 6px}.yte-home-faq p{margin:0 0 8px;line-height:1.55}</style>
   <link rel="preload" href="${css}" as="style"/>
   <script type="application/ld+json">${schema}</script>
 </head>

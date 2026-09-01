@@ -190,7 +190,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   ${siteHeaderThemeBootScript()}
   ${siteHeaderStyleTag()}
-  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a,.yte-home-faq a{color:#c2410c;font-weight:600}.yte-home-faq{margin:20px 0}.yte-home-faq h2{font-size:1.15rem;margin:0 0 12px}.yte-home-faq h3{font-size:1rem;margin:16px 0 6px}.yte-home-faq p{margin:0 0 8px;line-height:1.55}</style>
+  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}#yte-root:not([data-yte-mounted]){visibility:hidden}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a,.yte-home-faq a{color:#c2410c;font-weight:600}.yte-home-faq{margin:20px 0}.yte-home-faq h2{font-size:1.15rem;margin:0 0 12px}.yte-home-faq h3{font-size:1rem;margin:16px 0 6px}.yte-home-faq p{margin:0 0 8px;line-height:1.55}</style>
   <link rel="preload" href="${css}" as="style"/>
   <script type="application/ld+json">${schema}</script>
 </head>

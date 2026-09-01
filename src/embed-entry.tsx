@@ -62,7 +62,8 @@ async function applyShadowCss(rootNode: ShadowRoot): Promise<void> {
 function mount(): void {
   const host = document.getElementById("yte-root") || document.getElementById("root");
   if (!host || host.getAttribute("data-yte-mounted") === "1") return;
-  host.setAttribute("data-yte-mounted", "1");
+  if (host.getAttribute("data-yte-mounting") === "1") return;
+  host.setAttribute("data-yte-mounting", "1");
   keepDomGuards();
 
   const useShadow = "attachShadow" in host && host.id === "yte-root";
@@ -70,6 +71,8 @@ function mount(): void {
   const start = () => {
     if (useShadow) void applyShadowCss(rootNode as ShadowRoot);
     paintApp(rootNode);
+    host.setAttribute("data-yte-mounted", "1");
+    host.removeAttribute("data-yte-mounting");
   };
   void preloadUiCatalog(readLocale()).finally(start);
 }

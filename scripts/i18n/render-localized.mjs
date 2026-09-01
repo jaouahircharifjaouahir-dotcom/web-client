@@ -29,8 +29,14 @@ export const STANDARD_ARTICLE_PAGE_CSS = `.yte-page{max-width:720px;margin:32px 
 .yte-page code{font-size:0.92em;background:#f6f1ea;padding:0.1em 0.35em;border-radius:4px}
 .yte-page pre{background:#17141c;color:#f6f1ea;padding:14px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.45}
 .yte-page ol,.yte-page ul{padding-left:1.25rem}
-.yte-page nav,.yte-crawl-nav{margin-top:28px}
-.yte-crawl-nav ul{padding-left:1.25rem;margin:12px 0 0}
+.yte-page nav,.yte-crawl-nav{margin-top:28px;padding-top:20px;border-top:1px solid #d9d3dc}
+body>.yte-crawl-nav{max-width:720px;margin:28px auto 64px;padding-inline:20px;box-sizing:border-box;color:#17141c;line-height:1.65}
+.yte-page .yte-crawl-nav{margin:28px 0 0;padding:0}
+.yte-crawl-nav ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px 16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.yte-crawl-nav li{margin:0}
+.yte-crawl-nav a{color:#c2410c;font-weight:600;text-decoration:none;line-height:1.45}
+.yte-crawl-nav a:hover{text-decoration:underline}
+.yte-crawl-nav a:focus-visible{outline:3px solid #0f766e;outline-offset:2px;border-radius:4px}
 .yte-shell-guides ul{padding-left:1.25rem;margin:16px 0 0}
 .yte-shell-guides a{color:#c2410c;font-weight:600}
 .yte-form-grid{display:grid;gap:14px;margin:24px 0 8px}

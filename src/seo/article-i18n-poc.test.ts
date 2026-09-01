@@ -183,7 +183,7 @@ describe("POC French share-links article i18n (regression)", () => {
 
   it("documents Worker-first /l/* for locale directory homes; articles passthrough ASSETS", () => {
     const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
-    expect(wrangler.assets.not_found_handling).toBe("404");
+    expect(wrangler.assets.not_found_handling).toBe("404-page");
     expect(wrangler.assets.html_handling).toBe("none");
     expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(wrangler.assets.run_worker_first).not.toContain("/2026/*.html");

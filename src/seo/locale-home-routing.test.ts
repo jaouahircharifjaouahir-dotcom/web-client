@@ -47,7 +47,7 @@ describe("locale home routing", () => {
     expect(WRANGLER.assets.run_worker_first).toContain("/l/*");
     expect(WRANGLER.assets.run_worker_first).not.toContain("/*");
     expect(WRANGLER.assets.run_worker_first).toContain("/thumb/*");
-    expect(WRANGLER.assets.not_found_handling).toBe("404");
+    expect(WRANGLER.assets.not_found_handling).toBe("404-page");
   });
 
   it("production-like: Worker resolves /l/fr/ before Assets would SPA-fallback to English /", async () => {

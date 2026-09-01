@@ -6,7 +6,7 @@ describe("Workers Static Assets routing", () => {
   const wrangler = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
 
   it("uses hard 404 asset fallback and Worker-first retirement paths", () => {
-    expect(wrangler.assets.not_found_handling).toBe("404");
+    expect(wrangler.assets.not_found_handling).toBe("404-page");
     // Canonical URLs are *.html (sitemap/hreflang/internal links). Do not 307 strip .html.
     // File 1 / File 22 root fix: html_handling none — no Worker-first for /2026/*.html.
     expect(wrangler.assets.html_handling).toBe("none");

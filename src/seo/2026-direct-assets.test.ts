@@ -266,8 +266,8 @@ describe("Phase R2 — global SPA fallback removed (opt-in homepage + thumb only
   const staged = getStagedStaticSite();
   const env = { ASSETS: stagedAssetFetch(staged) };
 
-  it("wrangler not_found_handling is 404", () => {
-    expect(readWranglerConfig().assets.not_found_handling).toBe("404");
+  it("wrangler not_found_handling is 404-page", () => {
+    expect(readWranglerConfig().assets.not_found_handling).toBe("404-page");
   });
 
   const junk404: Array<[string, string]> = [

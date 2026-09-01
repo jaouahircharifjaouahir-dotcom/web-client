@@ -92,7 +92,7 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     }
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
     expect(wrangler.assets.run_worker_first).toContain("/");
-    expect(wrangler.assets.not_found_handling).toBe("404");
+    expect(wrangler.assets.not_found_handling).toBe("404-page");
     expect(wrangler.assets.html_handling).toBe("none");
   });
 
@@ -281,7 +281,7 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
   it("/thumb/* and homepage query shells stay Worker-first (Phase R2)", () => {
     expect(wrangler.assets.run_worker_first).toContain("/thumb/*");
     expect(wrangler.assets.run_worker_first).toContain("/");
-    expect(wrangler.assets.not_found_handling).toBe("404");
+    expect(wrangler.assets.not_found_handling).toBe("404-page");
 
     expect(matchesRunWorkerFirst("/")).toBe(true);
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
@@ -458,6 +458,6 @@ describe("Phase 2C — trailing-slash utility URLs", () => {
   it("/thumb/* and / remain Worker-first (Phase R2)", () => {
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
     expect(matchesRunWorkerFirst("/")).toBe(true);
-    expect(wrangler.assets.not_found_handling).toBe("404");
+    expect(wrangler.assets.not_found_handling).toBe("404-page");
   });
 });

@@ -6,7 +6,7 @@ import {
   resolveHomepageQueryShell,
 } from "./homepage-query-shell.mjs";
 import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
-import { handlePrimary2026PathRequest } from "./article-2026-path.js";
+import { handlePrimary2026PathRequest, handleLocalized2026PathRequest } from "./article-2026-path.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
 import { feedsCommentsOtherRetireResponse } from "./feeds-comments-other-retire.js";
 import { pagesFeedRetireResponse } from "./pages-feed-retire.js";
@@ -164,6 +164,12 @@ export function localeHomeIndexAssetPath(pathname) {
   return `/l/${code}/index.html`;
 }
 
+/** Share/result SPA route — explicit opt-in shell (Phase R2; not global SPA fallback). */
+export function isThumbShareSpaPath(pathname) {
+  const path = String(pathname || "").replace(/\/+$/, "") || "/";
+  return /^\/thumb\/[^/]+$/i.test(path);
+}
+
 /**
  * 301 http → https.
  * File 17: http sitemap must not be a second 200 listing.
@@ -315,6 +321,12 @@ export default {
       return withSecurityHeaders(Response.redirect(localizedSlashRedirect, 301));
     }
 
+    // Phase R1: localized /l/{locale}/2026/* — exact asset or hard 404 (no SPA).
+    const localized2026Response = await handleLocalized2026PathRequest(url, env, {
+      withSecurityHeaders,
+    });
+    if (localized2026Response) return localized2026Response;
+
     // Locale home directories (/l/fr/) must resolve to l/fr/index.html before ASSETS SPA fallback.
     const localeHomeAsset = localeHomeIndexAssetPath(url.pathname);
     if (localeHomeAsset && env?.ASSETS) {
@@ -336,9 +348,19 @@ export default {
       return withSecurityHeaders(res);
     }
 
-    // SPA + static assets: /copyright, /thumb/*, /l/*, /2026/*.html, /web-client/*, …
+    // Phase R2: /thumb/{id} share SPA — explicit English index shell (not global SPA fallback).
+    if (isThumbShareSpaPath(url.pathname) && env?.ASSETS) {
+      const assetUrl = new URL("/", url.origin);
+      const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
+      if (!res.ok) return pPathNotFoundResponse();
+      return withSecurityHeaders(res);
+    }
+
+    // Phase R2: static asset passthrough — unknown paths hard 404 (no SPA homepage).
     if (env?.ASSETS) {
-      return withSecurityHeaders(await env.ASSETS.fetch(request));
+      const res = await env.ASSETS.fetch(request);
+      if (res.ok) return withSecurityHeaders(res);
+      return pPathNotFoundResponse();
     }
 
     return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });

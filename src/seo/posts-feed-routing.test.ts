@@ -196,7 +196,7 @@ describe("Phase 6B — feed regression (RWF unchanged for non-post paths)", () =
     expect(matchesRunWorkerFirst("/sitemap-pages.xml")).toBe(true);
     expect(matchesRunWorkerFirst("/p/about.html")).toBe(false);
     expect(matchesRunWorkerFirst("/l/fr/")).toBe(true);
-    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
     expect(matchesRunWorkerFirst("/robots.txt")).toBe(false);
     expect(matchesRunWorkerFirst("/sitemap.xml")).toBe(false);
   });

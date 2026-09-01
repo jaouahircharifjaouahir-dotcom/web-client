@@ -43,11 +43,11 @@ function assetsEnv(onFetch: (pathname: string) => Response | Promise<Response>) 
 }
 
 describe("locale home routing", () => {
-  it("wrangler run_worker_first includes /l/* only (not global /* or /thumb/*)", () => {
+  it("wrangler run_worker_first includes /l/* and /thumb/* (not global /*)", () => {
     expect(WRANGLER.assets.run_worker_first).toContain("/l/*");
     expect(WRANGLER.assets.run_worker_first).not.toContain("/*");
-    expect(WRANGLER.assets.run_worker_first).not.toContain("/thumb/*");
-    expect(WRANGLER.assets.not_found_handling).toBe("single-page-application");
+    expect(WRANGLER.assets.run_worker_first).toContain("/thumb/*");
+    expect(WRANGLER.assets.not_found_handling).toBe("404");
   });
 
   it("production-like: Worker resolves /l/fr/ before Assets would SPA-fallback to English /", async () => {
@@ -213,16 +213,16 @@ describe("locale home routing", () => {
     expect([...sitemap.matchAll(/<loc>/g)].length).toBe(1096);
   });
 
-  it("/thumb/... still passes through to ASSETS unchanged", async () => {
-    const thumbBody = "<!doctype html><html><body>thumb spa</body></html>";
+  it("/thumb/... serves explicit English SPA shell (Phase R2)", async () => {
+    const enHome = readFileSync(join(getStagedStaticSite(), "index.html"), "utf8");
     const { env, seen } = assetsEnv((pathname) =>
-      pathname === "/thumb/dQw4w9WgXcQ" ? new Response(thumbBody, { status: 200 }) : new Response("x", { status: 404 }),
+      pathname === "/" ? new Response(enHome, { status: 200 }) : new Response("x", { status: 404 }),
     );
 
     const res = await worker.fetch(new Request("https://www.11tik.com/thumb/dQw4w9WgXcQ"), env);
     expect(res.status).toBe(200);
-    expect(seen).toEqual(["/thumb/dQw4w9WgXcQ"]);
-    expect(await res.text()).toBe(thumbBody);
+    expect(seen).toEqual(["/"]);
+    expect(await res.text()).toBe(enHome);
   });
 
   it("English / homepage routing unchanged", async () => {

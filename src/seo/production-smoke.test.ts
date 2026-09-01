@@ -101,11 +101,12 @@ describe("production smoke lib", () => {
     expect(out.block.some((m) => m.includes("SPA"))).toBe(true);
   });
 
-  it("evaluateSmokeCase treats unknown localized soft-404 as WARN baseline", () => {
-    const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "V-fr-unknown-soft404");
-    const body = `<html><head><link rel="canonical" href="https://www.11tik.com/"/></head><body><div id="yte-root"></div></body></html>`;
-    const out = evaluateSmokeCase(testCase, { status: 200, headers: {}, body, location: null });
-    expect(out.warn.length + out.block.length).toBeGreaterThanOrEqual(0);
+  it("evaluateSmokeCase treats unknown localized URL as hard 404 (Phase R2)", () => {
+    const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "V-fr-unknown-404");
+    const body = `<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>`;
+    const headers = { "strict-transport-security": "max-age=31536000; includeSubDomains; preload" };
+    const out = evaluateSmokeCase(testCase, { status: 404, headers, body, location: null });
+    expect(out.block).toEqual([]);
   });
 
   it("filterSmokeCases supports scheduled ids", () => {

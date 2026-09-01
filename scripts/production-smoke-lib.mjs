@@ -72,7 +72,7 @@ export function buildSmokeCases(origins) {
     { id: "S-ar-utility", category: "S", severity: "BLOCK", url: `${ar}/l/ar/p/about.html`, status: 200, expectHtml: true, lang: "ar", locale: "ar", noBanned: true },
     { id: "T-ar-article", category: "T", severity: "BLOCK", url: `${ar}/l/ar/2026/08/how-to-download-youtube-thumbnail.html`, status: 200, expectHtml: true, lang: "ar", locale: "ar", noSpaShell: true, noBanned: true },
     { id: "U-ar-utility-slash", category: "U", severity: "BLOCK", url: `${ar}/l/ar/p/about.html/`, status: 301, redirectManual: true, location: `${ar}/l/ar/p/about.html` },
-    { id: "V-fr-unknown-soft404", category: "V", severity: "WARN", url: `${fr}/l/fr/random.html`, status: 200, expectHtml: true, soft404: true },
+    { id: "V-fr-unknown-404", category: "V", severity: "BLOCK", url: `${fr}/l/fr/random.html`, status: 404, expectHtml: true, noSpaShell: true, workerHsts: true },
     { id: "W-thumb-spa", category: "W", severity: "BLOCK", url: `${www}/thumb/dQw4w9WgXcQ`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true },
     { id: "SEC-embed-page", category: "SEC", severity: "BLOCK", url: `${www}/p/embed.html`, status: 200, expectHtml: true, noSpaShell: true, securityHeaders: true, embedSurface: true },
     { id: "SEC-embed-widget", category: "SEC", severity: "BLOCK", url: `${www}/?embed=1`, status: 200, expectHtml: true, contains: ['id="yte-root"'], securityHeaders: true, embedSurface: true },

@@ -92,7 +92,7 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     }
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
     expect(wrangler.assets.run_worker_first).toContain("/");
-    expect(wrangler.assets.not_found_handling).toBe("single-page-application");
+    expect(wrangler.assets.not_found_handling).toBe("404");
     expect(wrangler.assets.html_handling).toBe("none");
   });
 
@@ -278,13 +278,13 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(seen).toEqual(["/l/fr/p/about.html"]);
   });
 
-  it("/thumb/* and homepage query shells stay Worker-first / SPA (unchanged)", () => {
-    expect(wrangler.assets.run_worker_first).not.toContain("/thumb/*");
+  it("/thumb/* and homepage query shells stay Worker-first (Phase R2)", () => {
+    expect(wrangler.assets.run_worker_first).toContain("/thumb/*");
     expect(wrangler.assets.run_worker_first).toContain("/");
-    expect(wrangler.assets.not_found_handling).toBe("single-page-application");
+    expect(wrangler.assets.not_found_handling).toBe("404");
 
     expect(matchesRunWorkerFirst("/")).toBe(true);
-    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
   });
 
   it("retired feed/search paths remain Worker-first", () => {
@@ -455,9 +455,9 @@ describe("Phase 2C — trailing-slash utility URLs", () => {
     expect(assetCalls).toEqual([]);
   });
 
-  it("/thumb/* and / remain unchanged", () => {
-    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+  it("/thumb/* and / remain Worker-first (Phase R2)", () => {
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
     expect(matchesRunWorkerFirst("/")).toBe(true);
-    expect(wrangler.assets.not_found_handling).toBe("single-page-application");
+    expect(wrangler.assets.not_found_handling).toBe("404");
   });
 });

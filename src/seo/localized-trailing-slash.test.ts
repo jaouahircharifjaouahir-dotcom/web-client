@@ -197,43 +197,35 @@ describe("Phase 5.3B — Worker fetch integration", () => {
     }
   });
 
-  it("H. unknown /l/fr/random.html/ unchanged (soft-404 passthrough, not slash helper)", async () => {
-    const enSpa = readFileSync(join(getStagedStaticSite(), "index.html"), "utf8");
-    const { env, seen } = assetsEnv((pathname) =>
-      pathname === "/l/fr/random.html/"
-        ? new Response(enSpa, { status: 200 })
-        : new Response("x", { status: 404 }),
-    );
+  it("H. unknown /l/fr/random.html/ → hard 404 (Phase R2)", async () => {
+    const { env, seen } = assetsEnv(() => new Response("x", { status: 404 }));
     const res = await worker.fetch(new Request(`${FR}/l/fr/random.html/`), env);
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(404);
     expect(seen).toEqual(["/l/fr/random.html/"]);
     expect(localizedHtmlTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/random.html/`), "fr.11tik.com")).toBe(
       "",
     );
   });
 
-  it("H2. unknown localized path without .html/ → unchanged passthrough", async () => {
-    const enSpa = readFileSync(join(getStagedStaticSite(), "index.html"), "utf8");
-    const { env, seen } = assetsEnv((pathname) =>
-      pathname === "/l/fr/random" ? new Response(enSpa, { status: 200 }) : new Response("x", { status: 404 }),
-    );
+  it("H2. unknown localized path without .html → hard 404 (Phase R2)", async () => {
+    const { env, seen } = assetsEnv(() => new Response("x", { status: 404 }));
     const res = await worker.fetch(new Request(`${FR}/l/fr/random`), env);
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(404);
     expect(seen).toEqual(["/l/fr/random"]);
     expect(localizedHtmlTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/random`), "fr.11tik.com")).toBe(
       "",
     );
   });
 
-  it("I. /thumb/* unchanged", async () => {
-    const thumb = "<html><body>thumb</body></html>";
+  it("I. /thumb/* serves explicit English SPA shell (Phase R2)", async () => {
+    const enHome = readFileSync(join(getStagedStaticSite(), "index.html"), "utf8");
     const { env, seen } = assetsEnv((pathname) =>
-      pathname === "/thumb/dQw4w9WgXcQ" ? new Response(thumb, { status: 200 }) : new Response("x", { status: 404 }),
+      pathname === "/" ? new Response(enHome, { status: 200 }) : new Response("x", { status: 404 }),
     );
     const res = await worker.fetch(new Request(`${SITE}/thumb/dQw4w9WgXcQ`), env);
     expect(res.status).toBe(200);
-    expect(seen).toEqual(["/thumb/dQw4w9WgXcQ"]);
-    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+    expect(seen).toEqual(["/"]);
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
   });
 
   it("J. English /p/about.html/ still uses www utility handler", async () => {
@@ -251,13 +243,13 @@ describe("Phase 7B — Phase 7B narrow locale RWF interaction", () => {
     expect(matchesPhase7bRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
   });
 
-  it("F. clean localized article → Asset-first under Phase 7B RWF", () => {
+  it("F. clean localized article → Worker-first under Phase R1 RWF", () => {
     expect(matchesPhase7bRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html")).toBe(
-      false,
+      true,
     );
   });
 
-  it("trailing-slash localized paths stay Worker-first (negative excludes clean paths only)", () => {
+  it("trailing-slash localized article paths stay Worker-first", () => {
     expect(matchesPhase7bRunWorkerFirst("/l/fr/p/about.html/")).toBe(true);
     expect(matchesPhase7bRunWorkerFirst("/l/fr/2026/08/how-to-download-youtube-thumbnail.html/")).toBe(
       true,
@@ -270,10 +262,9 @@ describe("Phase 7B — Phase 7B narrow locale RWF interaction", () => {
     expect(matchesPhase7bRunWorkerFirst("/l/fr/random.html/")).toBe(true);
   });
 
-  it("Phase 7B canary fixture includes narrow locale negative RWF entries", () => {
+  it("Phase R1 canary fixture includes utility-only locale negative RWF entry", () => {
     expect(PHASE7B_RUN_WORKER_FIRST).toContain("/l/*");
     expect(PHASE7B_RUN_WORKER_FIRST).toContain(PHASE7B_LOCALE_RWF_NEGATIVES[0]);
-    expect(PHASE7B_RUN_WORKER_FIRST).toContain(PHASE7B_LOCALE_RWF_NEGATIVES[1]);
     expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/2026/*");
     expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/p/*");
   });

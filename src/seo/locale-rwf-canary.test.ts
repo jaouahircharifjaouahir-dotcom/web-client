@@ -61,12 +61,11 @@ describe("Phase 7B.1 — cloudflarePathMatchesPattern", () => {
 });
 
 describe("Phase 7C — production wrangler.jsonc Phase 7B locale RWF", () => {
-  it("production RWF matches live Phase 7B narrow locale negatives", () => {
+  it("production RWF matches live Phase R1 locale routing", () => {
     const wrangler = readWranglerConfig();
     expect(wrangler.assets.run_worker_first).toEqual([...PRODUCTION_RUN_WORKER_FIRST]);
     expect(wrangler.assets.run_worker_first).toContain("/l/*");
     expect(wrangler.assets.run_worker_first).toContain(PHASE7B_LOCALE_RWF_NEGATIVES[0]);
-    expect(wrangler.assets.run_worker_first).toContain(PHASE7B_LOCALE_RWF_NEGATIVES[1]);
     expect(
       wrangler.assets.run_worker_first.filter((r: string) => r === "/l/*" || r.startsWith("!/l/")),
     ).toEqual(["/l/*", ...PHASE7B_LOCALE_RWF_NEGATIVES]);
@@ -97,18 +96,18 @@ describe("Phase 7B.1 — Phase 7B narrow locale RWF matrix", () => {
     { path: LOCALIZED_UTILITY, workerFirst: false },
     { path: "/l/ar/p/contact.html", workerFirst: false },
     { path: "/l/fr/p/keyword-tools.html", workerFirst: false },
-    { path: LOCALIZED_ARTICLE, workerFirst: false },
-    { path: "/l/de/2026/08/youtube-thumbnail-url.html", workerFirst: false },
   ];
 
   const workerFirst: Expectation[] = [
     { path: "/l/fr/", workerFirst: true, note: "locale home directory" },
     { path: "/l/ar/", workerFirst: true },
+    { path: LOCALIZED_ARTICLE, workerFirst: true, note: "Phase R1 localized 2026 hard 404" },
+    { path: "/l/de/2026/08/youtube-thumbnail-url.html", workerFirst: true },
     { path: "/l/fr/p/about.html/", workerFirst: true, note: "7A slash redirect" },
     { path: "/l/fr/2026/08/how-to-download-youtube-thumbnail.html/", workerFirst: true },
     { path: "/l/fr/p/about", workerFirst: true, note: "extensionless utility" },
     { path: "/l/fr/2026/08/how-to-download-youtube-thumbnail", workerFirst: true, note: "extensionless article" },
-    { path: "/l/fr/random.html", workerFirst: true, note: "unknown localized soft-404" },
+    { path: "/l/fr/random.html", workerFirst: true, note: "unknown localized hard 404" },
     { path: "/l/fr/random.html/", workerFirst: true },
     { path: "/l/fr/random", workerFirst: true },
   ];
@@ -127,13 +126,13 @@ describe("Phase 7B.1 — Phase 7B narrow locale RWF matrix", () => {
     });
   }
 
-  it("all sitemap localized article paths → asset-first under Phase 7B", () => {
+  it("all sitemap localized article paths → Worker-first under Phase R1", () => {
     const xml = readFileSync(join(getStagedStaticSite(), "sitemap.xml"), "utf8");
     const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]!).pathname);
     const localizedArticles = locs.filter((loc) => /^\/l\/[a-z]{2}\/2026\/\d{2}\/[^/]+\.html$/.test(loc));
     expect(localizedArticles.length).toBeGreaterThan(0);
     for (const path of localizedArticles.slice(0, 24)) {
-      expect(matchesPhase7bRunWorkerFirst(path), path).toBe(false);
+      expect(matchesPhase7bRunWorkerFirst(path), path).toBe(true);
     }
   });
 
@@ -157,14 +156,14 @@ describe("Phase 7B.1 — Phase 7B narrow locale RWF matrix", () => {
     const assetFirst = [
       "/l/fr/p/about.html",
       "/l/fr/p/keyword-tools.html",
-      "/l/fr/2026/08/how-to-download-youtube-thumbnail.html",
       "/l/ar/p/about.html",
-      "/l/ar/2026/08/how-to-download-youtube-thumbnail.html",
     ];
     const workerFirstPaths = [
       "/l/fr/",
       "/l/ar/",
       "/l/fr/p/about",
+      "/l/fr/2026/08/how-to-download-youtube-thumbnail.html",
+      "/l/ar/2026/08/how-to-download-youtube-thumbnail.html",
       "/l/fr/2026/08/how-to-download-youtube-thumbnail",
       "/l/fr/p/about.html/",
       "/l/fr/2026/08/how-to-download-youtube-thumbnail.html/",
@@ -182,11 +181,11 @@ describe("Phase 7B.1 — Phase 7B narrow locale RWF matrix", () => {
 });
 
 describe("Phase 7C — production matches Phase 7B vs broad Phase 5 contrast", () => {
-  it("production: clean localized .html is asset-first (Phase 7B)", () => {
+  it("production: clean localized utility asset-first; localized article Worker-first (Phase R1)", () => {
     expect(matchesRunWorkerFirst(LOCALIZED_UTILITY)).toBe(false);
-    expect(matchesRunWorkerFirst(LOCALIZED_ARTICLE)).toBe(false);
+    expect(matchesRunWorkerFirst(LOCALIZED_ARTICLE)).toBe(true);
     expect(matchesPhase7bRunWorkerFirst(LOCALIZED_UTILITY)).toBe(false);
-    expect(matchesPhase7bRunWorkerFirst(LOCALIZED_ARTICLE)).toBe(false);
+    expect(matchesPhase7bRunWorkerFirst(LOCALIZED_ARTICLE)).toBe(true);
   });
 
   it("narrow Phase 7B keeps extensionless paths Worker-first; broad Phase 5 does not", () => {
@@ -198,10 +197,10 @@ describe("Phase 7C — production matches Phase 7B vs broad Phase 5 contrast", (
     expect(matchesPhase5BroadRunWorkerFirst(extensionlessArticle)).toBe(false);
   });
 
-  it("Phase 7B fixture lists exact narrow negatives (not broad Phase 5)", () => {
+  it("Phase R1 fixture: utility negative only (localized 2026 Worker-first)", () => {
     expect(PHASE7B_RUN_WORKER_FIRST).toContain("/l/*");
-    expect(PHASE7B_RUN_WORKER_FIRST).toContain("!/l/*/2026/*/*.html");
     expect(PHASE7B_RUN_WORKER_FIRST).toContain("!/l/*/p/*.html");
+    expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/2026/*/*.html");
     expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/2026/*");
     expect(PHASE7B_RUN_WORKER_FIRST).not.toContain("!/l/*/p/*");
     expect(PHASE5_BROAD_RUN_WORKER_FIRST).toContain("!/l/*/2026/*");
@@ -220,7 +219,7 @@ describe("Phase 7B.1 — non-locale production paths unchanged under Phase 7B fi
     { path: "/search", workerFirst: true },
     { path: "/sitemap-pages.xml", workerFirst: true },
     { path: "/robots.txt", workerFirst: false },
-    { path: "/thumb/dQw4w9WgXcQ", workerFirst: false },
+    { path: "/thumb/dQw4w9WgXcQ", workerFirst: true },
   ];
 
   for (const { path, workerFirst } of unchanged) {

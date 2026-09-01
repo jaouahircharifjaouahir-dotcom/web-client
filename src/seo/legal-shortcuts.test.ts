@@ -204,10 +204,10 @@ describe("Phase 3B — legal shortcuts regression guards", () => {
     expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
   });
 
-  it("/thumb/* SPA and / homepage unchanged", () => {
-    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+  it("/thumb/* SPA and / homepage Worker-first (Phase R2)", () => {
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
     expect(matchesRunWorkerFirst("/")).toBe(true);
-    expect(wrangler.assets.run_worker_first).not.toContain("/thumb/*");
+    expect(wrangler.assets.run_worker_first).toContain("/thumb/*");
   });
 
   it("/copyright* remains Worker-first", () => {

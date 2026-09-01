@@ -44,6 +44,7 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
   it("keeps unrelated RWF entries unchanged", () => {
     expect(wrangler.assets.run_worker_first).toEqual([
       "/",
+      "/thumb/*",
       "/feeds/pages/*",
       "/feeds/comments/*",
       "/feeds/other/*",
@@ -62,7 +63,6 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
       "!/p/keyword-tools.html",
       "/2026/*",
       "/l/*",
-      "!/l/*/2026/*/*.html",
       "!/l/*/p/*.html",
     ]);
     expect(matchesRunWorkerFirst("/")).toBe(true);
@@ -76,7 +76,7 @@ describe("Phase 4A — SEO infrastructure Worker-zero", () => {
     expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
     expect(matchesRunWorkerFirst("/search")).toBe(true);
     expect(matchesRunWorkerFirst("/sitemap-pages.xml")).toBe(true);
-    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(false);
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
   });
 
   it("documents post-deploy routing: direct Asset → zone HSTS, Worker ZERO", () => {

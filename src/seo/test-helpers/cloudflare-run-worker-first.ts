@@ -7,9 +7,8 @@
  * @see https://developers.cloudflare.com/workers/static-assets/binding/#run_worker_first
  */
 
-/** Phase 7B narrow locale negatives (future gradual-deploy canary). */
+/** Phase 7B utility negative; Phase R1 removed localized 2026 .html asset-first exclusion. */
 export const PHASE7B_LOCALE_RWF_NEGATIVES = [
-  "!/l/*/2026/*/*.html",
   "!/l/*/p/*.html",
 ] as const;
 
@@ -22,6 +21,7 @@ export const PHASE5_BROAD_LOCALE_RWF_NEGATIVES = [
 /** Pre-Phase-7B shared rules (through /2026/*). */
 const SHARED_RUN_WORKER_FIRST = [
   "/",
+  "/thumb/*",
   "/feeds/pages/*",
   "/feeds/comments/*",
   "/feeds/other/*",

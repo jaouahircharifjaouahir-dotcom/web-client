@@ -1,0 +1,25 @@
+{
+  "heading": "Pertanyaan yang sering diajukan",
+  "items": [
+    {
+      "question": "Apa itu ekstraktor thumbnail YouTube?",
+      "answerHtml": "Ekstraktor thumbnail adalah alat peramban yang mengambil gambar diam publik yang sudah dihosting YouTube di CDN-nya—bukan file video. Anda menempelkan tautan, alat tersebut memeriksa ukuran mana yang ada, dan Anda melihat pratinjau atau menyimpan file sebenarnya yang terbesar. 11tik hanya merupakan ekstraktor; ia tidak mengambil frame dari pemutaran atau menjanjikan ukuran yang tidak pernah dipublikasikan YouTube."
+    },
+    {
+      "question": "URL YouTube mana yang didukung oleh 11tik?",
+      "answerHtml": "Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, atau tautan pendek youtu.be. Alat ini membaca ID video dari jalur dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat<a href=\"https://id.11tik.com/l/id/2026/08/youtube-thumbnail-url.html\">Panduan URL thumbnail</a>."
+    },
+    {
+      "question": "Apakah 11tik mengunggah thumbnail atau video saya?",
+      "answerHtml": "Tidak. URL yang disalin diproses di browser Anda. 11tik tidak memerlukan akun, tidak menyimpan file thumbnail asli di servernya, dan tidak mengunggah video Anda. Gambar diambil dari CDN publik YouTube dalam sesi yang sama. Riwayat lokal opsional tetap ada di perangkat Anda hingga Anda menghapusnya."
+    },
+    {
+      "question": "Bisakah saya mengunduh thumbnail dari YouTube Shorts?",
+      "answerHtml": "Ya. Tautan Shorts menggunakan host gambar publik yang sama dengan video biasa, jadi Anda dapat menempelkan URL /shorts/ dan mengunduh gambar diam terbaik yang ada. Pratinjau mungkin terlihat lebih lebar daripada klip vertikal yang Anda tonton karena YouTube menyimpan gambar diam dalam format lanskap. Shorts pribadi atau yang dibatasi usia tanpa thumbnail publik tidak akan mengembalikan file. Lihat<a href=\"https://id.11tik.com/l/id/2026/08/youtube-shorts-thumbnail-download.html\">Panduan thumbnail celana pendek</a>untuk bantuan langkah demi langkah."
+    },
+    {
+      "question": "Apa yang terjadi jika kualitas thumbnail tertinggi tidak tersedia?",
+      "answerHtml": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Untuk mengetahui mengapa maxres menghasilkan error 404 dan bagaimana fallback bekerja, baca<a href=\"https://id.11tik.com/l/id/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">panduan maxresdefault</a>."
+    }
+  ]
+}

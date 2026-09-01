@@ -1,0 +1,25 @@
+{
+  "heading": "Vanliga frågor",
+  "items": [
+    {
+      "question": "Vad är en YouTube-miniatyrutdragare?",
+      "answerHtml": "En miniatyrextraktor är ett webbläsarverktyg som hämtar de offentliga stillbilder som YouTube redan lagrar på sitt CDN – inte videofilen. Du klistrar in en länk, verktyget kontrollerar vilka storlekar som finns och förhandsgranskar eller sparar den största riktiga filen. 11tik är endast en extraktor; den ripper inte bildrutor från uppspelning eller lovar storlekar som YouTube aldrig publicerat."
+    },
+    {
+      "question": "Vilka YouTube-URL:er stöder 11tik?",
+      "answerHtml": "Klistra in en offentlig visningslänk, Shorts-URL, live- eller premiärsida eller en kort länk till youtu.be. Verktyget läser video-ID:t från sökvägen och söker upp offentliga filer på i.ytimg.com. URL:er som endast är till kanaler och spellistor stöds inte. För URL-anatomi och en fullständig lista över mönster, se<a href=\"https://sv.11tik.com/l/sv/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>."
+    },
+    {
+      "question": "Laddar 11tik upp min miniatyrbild eller video?",
+      "answerHtml": "Nej. Inklistrade webbadresser bearbetas i din webbläsare. 11tik kräver inget konto, lagrar inte de ursprungliga miniatyrfilerna på sina servrar och laddar inte upp din video. Bilder hämtas från YouTubes offentliga CDN i samma session. Valfri lokal historik finns kvar på din enhet tills du rensar den."
+    },
+    {
+      "question": "Kan jag ladda ner miniatyrbilder från YouTube Shorts?",
+      "answerHtml": "Ja. Shorts-länkar använder samma offentliga bildvärdar som vanliga videor, så du kan klistra in en /shorts/-URL och ladda ner det bästa stillbildsklippet som finns. Förhandsgranskningen kan se bredare ut än det vertikala klippet du tittade på eftersom YouTube lagrar ett liggande stillbildsklipp. Privata eller åldersbegränsade Shorts-videor utan en offentlig miniatyrbild returnerar inte en fil. Se<a href=\"https://sv.11tik.com/l/sv/2026/08/youtube-shorts-thumbnail-download.html\">Guide till miniatyrbilder för shorts</a>för steg-för-steg-hjälp."
+    },
+    {
+      "question": "Vad händer när den högsta miniatyrbildskvaliteten inte är tillgänglig?",
+      "answerHtml": "11tik begär varje publikt filnamn och behåller endast svar som returnerar en riktig bild – inga gissade maxres-URL:er. Om maxresdefault saknas visar verktyget nästa största storlek som faktiskt laddas, till exempel hq720 eller sddefault. Det är det ärliga maximumet för den videon. För varför maxres 404:or och hur alternativ fungerar, läs<a href=\"https://sv.11tik.com/l/sv/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-guide</a>."
+    }
+  ]
+}

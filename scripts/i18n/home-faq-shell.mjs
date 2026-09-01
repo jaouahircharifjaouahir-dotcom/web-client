@@ -1,7 +1,10 @@
-/**
- * Build-time homepage FAQ HTML for English SPA shells only.
- */
-import homeFaqEn from "../../src/i18n/home-faq.en.json" with { type: "json" };
+import { readFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+import { loadHomeFaqArtifact } from "./translate-home-faq.mjs";
+import { isTargetLocale } from "./target-languages.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
 function xmlEscape(value) {
   return String(value || "")
@@ -11,7 +14,6 @@ function xmlEscape(value) {
     .replaceAll('"', "&quot;");
 }
 
-/** Preserve intentional <a href="..."> links; escape everything else. */
 function localizeAnswerHtml(html) {
   const parts = String(html || "").split(/(<a\s+[^>]+>[\s\S]*?<\/a>)/gi);
   return parts
@@ -19,9 +21,29 @@ function localizeAnswerHtml(html) {
     .join("");
 }
 
+function toDoc(artifact) {
+  if (!artifact?.faq?.length) return null;
+  return {
+    heading: artifact.faqHeading || "FAQ",
+    items: artifact.faq.map((row) => ({
+      question: row.question,
+      answerHtml: row.answerHtml || row.answer || "",
+    })),
+  };
+}
+
+export function loadHomeFaqDoc(locale) {
+  const code = String(locale || "en").toLowerCase();
+  const artifact = loadHomeFaqArtifact(code);
+  const doc = toDoc(artifact);
+  if (doc) return doc;
+  if (code === "en") return null;
+  if (isTargetLocale(code)) return toDoc(loadHomeFaqArtifact("en"));
+  return null;
+}
+
 export function renderHomeFaqShellHtml(locale) {
-  if (String(locale || "en").toLowerCase() !== "en") return "";
-  const doc = homeFaqEn;
+  const doc = loadHomeFaqDoc(locale);
   if (!doc?.items?.length) return "";
   const blocks = doc.items
     .map(

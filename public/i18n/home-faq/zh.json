@@ -1,0 +1,25 @@
+{
+  "heading": "常见问题解答",
+  "items": [
+    {
+      "question": "什么是 YouTube 缩略图提取器？",
+      "answerHtml": "缩略图提取器是一种浏览器工具，它会抓取 YouTube 已托管在其 CDN 上的公开静态图像，而不是视频文件。你粘贴一个链接，该工具会检查有哪些尺寸的缩略图存在，然后你可以预览或保存最大的实际文件。11tik 仅是一个提取器；它不会从播放中提取帧，也不会提供 YouTube 从未发布过的尺寸。"
+    },
+    {
+      "question": "11tik 支持哪些 YouTube 网址？",
+      "answerHtml": "粘贴公开观看链接、Shorts URL、直播或首映页面，或 youtu.be 短链接。该工具会从路径中读取视频 ID，并在 i.ytimg.com 上查找公开文件。不支持频道和播放列表 URL。有关 URL 结构和完整模式列表，请参阅[此处]。<a href=\"https://zh.11tik.com/l/zh/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>。"
+    },
+    {
+      "question": "11tik 会上传我的缩略图或视频吗？",
+      "answerHtml": "不。粘贴的 URL 会在您的浏览器中处理。11tik 不需要帐户，不会将原始缩略图文件存储在其服务器上，也不会上传您的视频。图像会在同一会话中从 YouTube 的公共 CDN 获取。可选的本地历史记录会保留在您的设备上，直到您将其清除。"
+    },
+    {
+      "question": "我可以下载 YouTube Shorts 的缩略图吗？",
+      "answerHtml": "是的。短视频链接使用与普通视频相同的公共图片托管服务，因此您可以粘贴 /shorts/ URL 并下载最佳静态图片。预览图可能看起来比您观看的竖屏视频更宽，因为 YouTube 存储的是横屏静态图片。没有公开缩略图的私有或年龄限制短视频将不会返回文件。请参阅<a href=\"https://zh.11tik.com/l/zh/2026/08/youtube-shorts-thumbnail-download.html\">短片缩略图指南</a>提供分步指导。"
+    },
+    {
+      "question": "如果无法提供最高质量的缩略图怎么办？",
+      "answerHtml": "11tik 会请求每个公开文件名，并且只保留返回真实图像的响应——不保留猜测的 maxres URL。如果 maxresdefault 不存在，该工具会显示实际加载的下一个最大尺寸，例如 hq720 或 sddefault。这才是该视频的真实最大分辨率。有关 maxres 404 错误的原因以及回退机制的工作原理，请阅读相关文档。<a href=\"https://zh.11tik.com/l/zh/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 指南</a>。"
+    }
+  ]
+}

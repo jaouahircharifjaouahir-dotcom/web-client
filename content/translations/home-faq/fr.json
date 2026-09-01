@@ -1,0 +1,35 @@
+{
+  "contentId": "home-faq",
+  "locale": "fr",
+  "status": "ready",
+  "sourceHash": "phase48-en-faq-v1",
+  "faqHeading": "Foire aux questions",
+  "faq": [
+    {
+      "question": "Qu'est-ce qu'un extracteur de miniatures YouTube ?",
+      "answer": "Un extracteur de vignettes est un outil de navigateur qui récupère les images fixes publiques déjà hébergées par YouTube sur son CDN, et non le fichier vidéo. Il suffit de coller un lien : l’outil vérifie les tailles disponibles et vous permet de prévisualiser ou d’enregistrer le fichier le plus grand. 11tik est un simple extracteur ; il n’extrait pas d’images de la lecture et ne propose pas de tailles non publiées par YouTube.",
+      "answerHtml": "Un extracteur de vignettes est un outil de navigateur qui récupère les images fixes publiques déjà hébergées par YouTube sur son CDN, et non le fichier vidéo. Il suffit de coller un lien&nbsp;: l’outil vérifie les tailles disponibles et vous permet de prévisualiser ou d’enregistrer le fichier le plus grand. 11tik est un simple extracteur&nbsp;; il n’extrait pas d’images de la lecture et ne propose pas de tailles non publiées par YouTube."
+    },
+    {
+      "question": "Quelles URL YouTube sont prises en charge par 11tik ?",
+      "answer": "Collez un lien de visionnage public, une URL de Short, une page de diffusion en direct ou de première, ou un lien court youtu.be. L'outil lit l'identifiant vidéo dans le chemin et recherche les fichiers publics sur i.ytimg.com. Les URL de chaînes et de listes de lecture uniquement ne sont pas prises en charge. Pour plus d'informations sur la structure des URL et la liste complète des modèles, consultez le guide des URL miniatures.",
+      "answerHtml": "Collez un lien de visionnage public, une URL de Shorts, une page de diffusion en direct ou de première, ou un lien court youtu.be. L'outil lit l'identifiant vidéo à partir du chemin et recherche les fichiers publics sur i.ytimg.com. Les URL de chaînes et de listes de lecture uniquement ne sont pas prises en charge. Pour plus d'informations sur la structure des URL et la liste complète des modèles, consultez la documentation.<a href=\"https://fr.11tik.com/l/fr/2026/08/youtube-thumbnail-url.html\">Guide des URL des vignettes</a>."
+    },
+    {
+      "question": "Est-ce que 11tik télécharge ma miniature ou ma vidéo ?",
+      "answer": "Non. Les URL collées sont traitées dans votre navigateur. 11tik ne nécessite pas de compte, ne stocke pas les fichiers miniatures originaux sur ses serveurs et ne télécharge pas votre vidéo. Les images sont récupérées depuis le CDN public de YouTube au cours de la même session. L'historique local (facultatif) reste enregistré sur votre appareil jusqu'à ce que vous l'effaciez.",
+      "answerHtml": "Non. Les URL collées sont traitées dans votre navigateur. 11tik ne nécessite pas de compte, ne stocke pas les fichiers miniatures originaux sur ses serveurs et ne télécharge pas votre vidéo. Les images sont récupérées depuis le CDN public de YouTube au cours de la même session. L'historique local (facultatif) reste enregistré sur votre appareil jusqu'à ce que vous l'effaciez."
+    },
+    {
+      "question": "Puis-je télécharger les miniatures de YouTube Shorts ?",
+      "answer": "Oui. Les liens Shorts utilisent les mêmes hébergeurs d'images publics que les vidéos classiques. Vous pouvez donc coller une URL /shorts/ et télécharger la meilleure image fixe disponible. L'aperçu peut paraître plus large que la vidéo verticale que vous avez visionnée, car YouTube enregistre les images fixes au format paysage. Les vidéos Shorts privées ou soumises à une restriction d'âge sans vignette publique ne renverront aucun fichier. Consultez le guide des vignettes Shorts pour obtenir de l'aide étape par étape.",
+      "answerHtml": "Oui. Les liens Shorts utilisent les mêmes hébergeurs d'images publics que les vidéos classiques. Vous pouvez donc coller une URL /shorts/ et télécharger la meilleure image fixe disponible. L'aperçu peut paraître plus large que la vidéo verticale que vous avez visionnée, car YouTube enregistre les images fixes au format paysage. Les Shorts privés ou soumis à une restriction d'âge sans vignette publique ne renverront pas de fichier. Voir la section<a href=\"https://fr.11tik.com/l/fr/2026/08/youtube-shorts-thumbnail-download.html\">Guide des vignettes des courts métrages</a>pour une aide étape par étape."
+    },
+    {
+      "question": "Que se passe-t-il lorsque la qualité maximale des vignettes n'est pas disponible ?",
+      "answer": "11tik interroge chaque nom de fichier public et ne conserve que les réponses renvoyant une image réelle, sans tenir compte des URL de résolution maximale estimées. Si la résolution maximale par défaut est manquante, l'outil affiche la résolution maximale immédiatement supérieure qui se charge, par exemple hq720 ou sddefault. Il s'agit de la résolution maximale réelle pour cette vidéo. Pour comprendre les erreurs 404 liées à la résolution maximale et le fonctionnement des solutions de repli, consultez le guide sur la résolution maximale par défaut.",
+      "answerHtml": "11tik interroge chaque nom de fichier public et ne conserve que les réponses renvoyant une image réelle, sans utiliser d'URL maxres devinées. Si maxresdefault est absent, l'outil affiche la résolution maximale immédiatement supérieure qui se charge, par exemple hq720 ou sddefault. Il s'agit de la résolution maximale réelle pour cette vidéo. Pour comprendre les erreurs 404 liées à maxres et le fonctionnement des solutions de repli, consultez la documentation.<a href=\"https://fr.11tik.com/l/fr/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">guide maxresdefault</a>."
+    }
+  ],
+  "articleId": "home-faq"
+}

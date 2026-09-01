@@ -1,0 +1,35 @@
+{
+  "contentId": "home-faq",
+  "locale": "no",
+  "status": "ready",
+  "sourceHash": "phase48-en-faq-v1",
+  "faqHeading": "Ofte stilte spørsmål",
+  "faq": [
+    {
+      "question": "Hva er et YouTube-miniatyruttrekk?",
+      "answer": "Et miniatyruttrekk er et nettleserverktøy som henter de offentlige stillbildene YouTube allerede har på CDN-et sitt – ikke videofilen. Du limer inn en lenke, verktøyet sjekker hvilke størrelser som finnes, og du forhåndsviser eller lagrer den største virkelige filen. 11tik er kun et uttrekk; det ripper ikke bilder fra avspilling eller lover størrelser YouTube aldri har publisert.",
+      "answerHtml": "Et miniatyruttrekk er et nettleserverktøy som henter de offentlige stillbildene YouTube allerede har på CDN-et sitt – ikke videofilen. Du limer inn en lenke, verktøyet sjekker hvilke størrelser som finnes, og du forhåndsviser eller lagrer den største virkelige filen. 11tik er kun et uttrekk; det ripper ikke bilder fra avspilling eller lover størrelser YouTube aldri har publisert."
+    },
+    {
+      "question": "Hvilke YouTube-nettadresser støtter 11tik?",
+      "answer": "Lim inn en offentlig visningslenke, en URL for korte videoer, en side for direktesending eller premiere, eller en kort lenke til youtu.be. Verktøyet leser video-ID-en fra banen og slår opp offentlige filer på i.ytimg.com. URL-er som kun er for kanaler og spillelister støttes ikke. Se veiledningen for miniatyr-URL-er for URL-anatomi og en fullstendig liste over mønstre.",
+      "answerHtml": "Lim inn en offentlig visningslenke, en URL for korte videoer, en side for direktesending eller premiere, eller en kort lenke til youtu.be. Verktøyet leser video-ID-en fra banen og slår opp offentlige filer på i.ytimg.com. URL-er som kun er for kanaler og spillelister støttes ikke. Se URL-anatomi og en fullstendig liste over mønstre.<a href=\"https://no.11tik.com/l/no/2026/08/youtube-thumbnail-url.html\">Veiledning for miniatyr-URL-er</a>."
+    },
+    {
+      "question": "Laster 11tik opp miniatyrbildet eller videoen min?",
+      "answer": "Nei. Innlimte URL-er behandles i nettleseren din. 11tik krever ikke en konto, lagrer ikke de originale miniatyrbildefilene på serverne sine og laster ikke opp videoen din. Bilder hentes fra YouTubes offentlige CDN i samme økt. Valgfri lokal historikk forblir på enheten din til du sletter den.",
+      "answerHtml": "Nei. Innlimte URL-er behandles i nettleseren din. 11tik krever ikke en konto, lagrer ikke de originale miniatyrbildefilene på serverne sine og laster ikke opp videoen din. Bilder hentes fra YouTubes offentlige CDN i samme økt. Valgfri lokal historikk forblir på enheten din til du sletter den."
+    },
+    {
+      "question": "Kan jeg laste ned miniatyrbilder fra YouTube Shorts?",
+      "answer": "Ja. Shorts-lenker bruker de samme offentlige bildevertene som vanlige videoer, så du kan lime inn en /shorts/-URL og laste ned det beste stillbildet som finnes. Forhåndsvisningen kan se bredere ut enn det vertikale klippet du så fordi YouTube lagrer et liggende stillbilde. Private eller aldersbegrensede Shorts-videoer uten en offentlig miniatyrbilde vil ikke returnere en fil. Se miniatyrbildeveiledningen for Shorts-videoer for trinnvis hjelp.",
+      "answerHtml": "Ja. Shorts-lenker bruker de samme offentlige bildevertene som vanlige videoer, så du kan lime inn en /shorts/-URL og laste ned det beste stillbildet som finnes. Forhåndsvisningen kan se bredere ut enn det vertikale klippet du så fordi YouTube lagrer et liggende stillbilde. Private eller aldersbegrensede Shorts-videoer uten en offentlig miniatyr vil ikke returnere en fil. Se<a href=\"https://no.11tik.com/l/no/2026/08/youtube-shorts-thumbnail-download.html\">Guide til miniatyrbilder av shorts</a>for trinnvis hjelp."
+    },
+    {
+      "question": "Hva skjer når miniatyrbildekvaliteten på høyeste nivå ikke er tilgjengelig?",
+      "answer": "11tik ber om hvert offentlige filnavn og beholder bare svar som returnerer et ekte bilde – ingen gjettede maxres-URL-er. Hvis maxresdefault mangler, viser verktøyet den nest største størrelsen som faktisk lastes inn, for eksempel hq720 eller sddefault. Det er det ærlige maksimumet for den videoen. For hvorfor maxres 404-er og hvordan alternativer fungerer, les maxresdefault-veiledningen.",
+      "answerHtml": "11tik ber om hvert offentlige filnavn og beholder bare svar som returnerer et ekte bilde – ingen gjettede maxres-URL-er. Hvis maxresdefault mangler, viser verktøyet den nest største størrelsen som faktisk lastes inn, for eksempel hq720 eller sddefault. Det er det ærlige maksimumet for den videoen. For hvorfor maxres 404-er og hvordan alternativer fungerer, les<a href=\"https://no.11tik.com/l/no/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-guide</a>."
+    }
+  ],
+  "articleId": "home-faq"
+}

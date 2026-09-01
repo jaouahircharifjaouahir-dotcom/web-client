@@ -1,0 +1,25 @@
+{
+  "heading": "Ofte stillede spørgsmål",
+  "items": [
+    {
+      "question": "Hvad er en YouTube-miniatureudtrækker?",
+      "answerHtml": "En miniatureudtrækker er et browserværktøj, der henter de offentlige stillbilleder, som YouTube allerede hoster på sit CDN – ikke videofilen. Du indsætter et link, værktøjet kontrollerer, hvilke størrelser der findes, og du forhåndsviser eller gemmer den største virkelige fil. 11tik er kun en udtrækker; den ripper ikke billeder fra afspilning eller lover størrelser, som YouTube aldrig har offentliggjort."
+    },
+    {
+      "question": "Hvilke YouTube-URL'er understøtter 11tik?",
+      "answerHtml": "Indsæt et offentligt link til visning, en URL til korte videoer, en live- eller premiereside eller et kort link til youtu.be. Værktøjet læser video-ID'et fra stien og slår offentlige filer op på i.ytimg.com. URL'er kun til kanaler og playlister understøttes ikke. Se URL-anatomi og den fulde liste over mønstre på<a href=\"https://da.11tik.com/l/da/2026/08/youtube-thumbnail-url.html\">Vejledning til miniature-URL'er</a>."
+    },
+    {
+      "question": "Uploader 11tik mit miniaturebillede eller min video?",
+      "answerHtml": "Nej. Indsatte URL'er behandles i din browser. 11tik kræver ikke en konto, gemmer ikke de originale miniaturefiler på sine servere og uploader ikke din video. Billeder hentes fra YouTubes offentlige CDN i samme session. Valgfri lokal historik forbliver på din enhed, indtil du rydder den."
+    },
+    {
+      "question": "Kan jeg downloade miniaturebilleder fra YouTube Shorts?",
+      "answerHtml": "Ja. Shorts-links bruger de samme offentlige billedhosts som almindelige videoer, så du kan indsætte en /shorts/ URL og downloade det bedste stillbillede, der findes. Forhåndsvisningen kan se bredere ud end det lodrette klip, du har set, fordi YouTube gemmer et liggende stillbillede. Private eller aldersbegrænsede Shorts-videoer uden en offentlig miniature vil ikke returnere en fil. Se<a href=\"https://da.11tik.com/l/da/2026/08/youtube-shorts-thumbnail-download.html\">Guide til miniaturebilleder af shorts</a>for trinvis hjælp."
+    },
+    {
+      "question": "Hvad sker der, når den højeste miniaturekvalitet ikke er tilgængelig?",
+      "answerHtml": "11tik anmoder om hvert offentligt filnavn og gemmer kun svar, der returnerer et rigtigt billede – ingen gættede maxres-URL'er. Hvis maxresdefault mangler, viser værktøjet den næststørste størrelse, der rent faktisk indlæses, f.eks. hq720 eller sddefault. Det er det ærlige maksimum for den video. For at få oplysninger om, hvorfor maxres 404'er og hvordan fallbacks fungerer, læs<a href=\"https://da.11tik.com/l/da/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-guide</a>."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "heading": "Maswali yanayoulizwa mara kwa mara",
+  "items": [
+    {
+      "question": "Kitoa vijipicha cha YouTube ni nini?",
+      "answerHtml": "Kitoa picha ndogo ni kifaa cha kivinjari kinachochukua picha za umma ambazo tayari YouTube inahifadhi kwenye CDN yake—sio faili ya video. Unabandika kiungo, kifaa huangalia ni ukubwa gani uliopo, na unahakiki au kuhifadhi faili halisi kubwa zaidi. 11tik ni kitoa picha pekee; haichani fremu kutoka kwa uchezaji au ahadi ya ukubwa ambao YouTube haijawahi kuchapisha."
+    },
+    {
+      "question": "Ni URL zipi za YouTube zinazoungwa mkono na [[P4]?",
+      "answerHtml": "Bandika kiungo cha kutazama hadharani, URL ya Fupi, ukurasa wa moja kwa moja au wa kwanza, au kiungo kifupi cha youtu.be. Kifaa hiki husoma kitambulisho cha video kutoka kwenye njia na kutafuta faili za umma kwenye i.ytimg.com. URL za chaneli na orodha ya nyimbo pekee hazitumiki. Kwa anatomia ya URL na orodha kamili ya ruwaza, tazama<a href=\"https://sw.11tik.com/l/sw/2026/08/youtube-thumbnail-url.html\">Mwongozo wa URL ndogo</a>."
+    },
+    {
+      "question": "Je, 11tik inapakia kijipicha changu au video?",
+      "answerHtml": "Hapana. URL zilizobandikwa huchakatwa kwenye kivinjari chako. 11tik haihitaji akaunti, haihifadhi faili za vijipicha asili kwenye seva zake, na haipakii video yako. Picha huchukuliwa kutoka kwa CDN ya umma ya YouTube katika kipindi hicho hicho. Historia ya hiari ya eneo lako hubaki kwenye kifaa chako hadi utakapokiondoa."
+    },
+    {
+      "question": "Je, ninaweza kupakua vijipicha kutoka kwa Video Fupi za YouTube?",
+      "answerHtml": "Ndiyo. Viungo vya Shorts hutumia wapangishi sawa wa picha za umma kama video za kawaida, kwa hivyo unaweza kubandika URL ya /shorts/ na kupakua picha bora zaidi iliyopo. Onyesho la awali linaweza kuonekana pana zaidi ya klipu ya wima uliyotazama kwa sababu YouTube huhifadhi picha ya mandhari. Shorts za faragha au zenye kizuizi cha umri bila kidole gumba cha umma hazitarudisha faili. Tazama<a href=\"https://sw.11tik.com/l/sw/2026/08/youtube-shorts-thumbnail-download.html\">Mwongozo wa vijipicha vya Shorts</a>kwa usaidizi wa hatua kwa hatua."
+    },
+    {
+      "question": "Nini hutokea wakati ubora wa juu zaidi wa kijipicha haupatikani?",
+      "answerHtml": "11tik huomba kila jina la faili la umma na huhifadhi majibu tu yanayorudisha picha halisi—hakuna URL za maxres zilizokadiriwa. Ikiwa maxresdefault haipo, kifaa huonyesha ukubwa unaofuata mkubwa zaidi ambao hupakia, kama vile hq720 au sddefault. Hiyo ndiyo kiwango cha juu cha uaminifu kwa video hiyo. Kwa nini maxres 404s na jinsi marudio yanavyofanya kazi, soma<a href=\"https://sw.11tik.com/l/sw/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">mwongozo wa maxresdefault</a>."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "contentId": "home-faq",
+  "locale": "ro",
+  "status": "ready",
+  "sourceHash": "phase48-en-faq-v1",
+  "faqHeading": "Întrebări frecvente",
+  "faq": [
+    {
+      "question": "Ce este un extractor de miniaturi YouTube?",
+      "answer": "Un extractor de miniaturi este un instrument de browser care preia imaginile statice publice pe care YouTube le găzduiește deja pe CDN-ul său - nu fișierul video. Lipiți un link, instrumentul verifică ce dimensiuni există și previzualizați sau salvați cel mai mare fișier real. 11tik este doar un extractor; nu extrage cadre din redare și nu promite dimensiuni pe care YouTube nu le-a publicat niciodată.",
+      "answerHtml": "Un extractor de miniaturi este un instrument de browser care preia imaginile statice publice pe care YouTube le găzduiește deja pe CDN-ul său - nu fișierul video. Lipiți un link, instrumentul verifică ce dimensiuni există și previzualizați sau salvați cel mai mare fișier real. 11tik este doar un extractor; nu extrage cadre din redare și nu promite dimensiuni pe care YouTube nu le-a publicat niciodată."
+    },
+    {
+      "question": "Ce adrese URL YouTube sunt acceptate de 11tik?",
+      "answer": "Inserează un link public de vizionare, o adresă URL Shorts, o pagină live sau de premieră sau un link scurt youtu.be. Instrumentul citește ID-ul videoclipului din cale și caută fișiere publice pe i.ytimg.com. Adresele URL exclusive pentru canale și playlisturi nu sunt acceptate. Pentru anatomia adreselor URL și lista completă de modele, consultă ghidul de adrese URL miniatură.",
+      "answerHtml": "Inserează un link public de vizionare, o adresă URL Shorts, o pagină live sau de premieră sau un link scurt youtu.be. Instrumentul citește ID-ul videoclipului din cale și caută fișiere publice pe i.ytimg.com. Adresele URL exclusive pentru canale și playlisturi nu sunt acceptate. Pentru anatomia adreselor URL și lista completă de modele, consultă<a href=\"https://ro.11tik.com/l/ro/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>."
+    },
+    {
+      "question": "Încarcă 11tik miniatura sau videoclipul meu?",
+      "answer": "Nu. URL-urile lipite sunt procesate în browserul dvs. 11tik nu necesită un cont, nu stochează fișierele miniatură originale pe serverele sale și nu încarcă videoclipul dvs. Imaginile sunt preluate din CDN-ul public al YouTube în aceeași sesiune. Istoricul local opțional rămâne pe dispozitiv până când îl ștergeți.",
+      "answerHtml": "Nu. URL-urile lipite sunt procesate în browserul dvs. 11tik nu necesită un cont, nu stochează fișierele miniatură originale pe serverele sale și nu încarcă videoclipul dvs. Imaginile sunt preluate din CDN-ul public al YouTube în aceeași sesiune. Istoricul local opțional rămâne pe dispozitiv până când îl ștergeți."
+    },
+    {
+      "question": "Pot descărca miniaturi din YouTube Shorts?",
+      "answer": "Da. Linkurile pentru videoclipurile Shorts folosesc aceleași gazde de imagini publice ca și videoclipurile obișnuite, așa că poți lipi o adresă URL /shorts/ și descărca cea mai bună imagine statică existentă. Previzualizarea poate părea mai lată decât clipul vertical pe care l-ai vizionat, deoarece YouTube stochează o imagine statică de tip peisaj. Videoclipurile Shorts private sau restricționate în funcție de vârstă, fără o miniatură publică, nu vor returna un fișier. Consultați ghidul de miniaturi Shorts pentru ajutor pas cu pas.",
+      "answerHtml": "Da. Linkurile pentru videoclipurile scurte folosesc aceleași gazde de imagini publice ca și videoclipurile obișnuite, așa că poți lipi o adresă URL /shorts/ și descărca cea mai bună imagine statică existentă. Previzualizarea poate părea mai lată decât clipul vertical pe care l-ai vizionat, deoarece YouTube stochează o imagine statică peisaj. Videoclipurile scurte private sau restricționate în funcție de vârstă, fără o imagine publică, nu vor returna un fișier. Vezi<a href=\"https://ro.11tik.com/l/ro/2026/08/youtube-shorts-thumbnail-download.html\">Ghid de miniaturi pentru scurtmetraje</a>pentru ajutor pas cu pas."
+    },
+    {
+      "question": "Ce se întâmplă când cea mai înaltă calitate a miniaturilor nu este disponibilă?",
+      "answer": "11tik solicită fiecare nume de fișier public și păstrează doar răspunsurile care returnează o imagine reală - fără adrese URL maxres ghicite. Dacă lipsește maxresdefault, instrumentul afișează următoarea dimensiune cea mai mare care se încarcă efectiv, cum ar fi hq720 sau sddefault. Aceasta este dimensiunea maximă corectă pentru videoclipul respectiv. Pentru a afla de ce funcționează fișierele 404 maxres și cum funcționează opțiunile de rezervă, citiți ghidul maxresdefault.",
+      "answerHtml": "11tik solicită fiecare nume de fișier public și păstrează doar răspunsurile care returnează o imagine reală - fără adrese URL maxres ghicite. Dacă maxresdefault lipsește, instrumentul afișează următoarea dimensiune cea mai mare care se încarcă efectiv, cum ar fi hq720 sau sddefault. Aceasta este dimensiunea maximă corectă pentru videoclipul respectiv. Pentru a afla de ce funcționează maxres 404 și cum funcționează opțiunile de rezervă, citiți...<a href=\"https://ro.11tik.com/l/ro/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ghid maxresdefault</a>."
+    }
+  ],
+  "articleId": "home-faq"
+}

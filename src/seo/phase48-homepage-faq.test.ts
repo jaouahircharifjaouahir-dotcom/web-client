@@ -51,7 +51,7 @@ describe("Phase 48 FAQ data", () => {
     }
   });
   it("homeFaqFor en returns doc", () => expect(homeFaqFor("en")?.items.length).toBe(5));
-  it("homeFaqFor fr null", () => expect(homeFaqFor("fr")).toBeNull());
+  it("homeFaqFor fr null at import (loads async)", () => expect(homeFaqFor("fr")).toBeNull());
   it("homeFaqItems en", () => expect(homeFaqItems("en").length).toBe(5));
   it("homeFaqItems ar empty", () => expect(homeFaqItems("ar").length).toBe(0));
 });
@@ -191,8 +191,8 @@ describe("Phase 48 shell HTML", () => {
   it("en shell has FAQ section", () => {
     expect(loadHomeHtml("en")?.html).toMatch(/<section class="yte-home-faq"/);
   });
-  it("fr shell no FAQ section", () => {
-    expect(loadHomeHtml("fr")?.html).not.toMatch(/<section class="yte-home-faq"/);
+  it("fr shell has FAQ section (phase 49.1)", () => {
+    expect(loadHomeHtml("fr")?.html).toMatch(/<section class="yte-home-faq"/);
   });
   it("FAQ before foot in shell", () => {
     const html = loadHomeHtml("en")?.html ?? "";
@@ -204,8 +204,8 @@ describe("Phase 48 shell HTML", () => {
   it("renderHomeFaqShellHtml en non-empty", () => {
     expect(renderHomeFaqShellHtml("en").length).toBeGreaterThan(200);
   });
-  it("renderHomeFaqShellHtml fr empty", () => {
-    expect(renderHomeFaqShellHtml("fr")).toBe("");
+  it("renderHomeFaqShellHtml fr non-empty (phase 49.1)", () => {
+    expect(renderHomeFaqShellHtml("fr").length).toBeGreaterThan(200);
   });
   it("shell has h2 FAQ heading", () => {
     expect(renderHomeFaqShellHtml("en")).toContain("<h2");
@@ -245,8 +245,8 @@ describe("Phase 48 performance", () => {
   it("css delta zero", () => {
     expect(measurePerformanceDelta().cssDelta).toBe(0);
   });
-  it("locale fr unchanged", () => {
-    expect(measurePerformanceDelta().localeFrUnchanged).toBe(true);
+  it("locale fr has FAQ (phase 49.1 expanded scope)", () => {
+    expect(measurePerformanceDelta().localeFrUnchanged).toBe(false);
   });
   it("faq section under 4kb", () => {
     expect(measurePerformanceDelta().after.faqSectionBytes).toBeLessThan(4096);

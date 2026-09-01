@@ -1,0 +1,25 @@
+{
+  "heading": "Domande frequenti",
+  "items": [
+    {
+      "question": "Che cos'è un estrattore di miniature di YouTube?",
+      "answerHtml": "Un estrattore di miniature è uno strumento per browser che recupera le immagini statiche pubbliche già presenti su YouTube tramite la sua CDN, non il file video. Basta incollare un link, lo strumento verifica quali dimensioni esistono e permette di visualizzare in anteprima o salvare il file reale più grande. 11tik è solo un estrattore; non estrae fotogrammi dalla riproduzione né promette dimensioni mai pubblicate da YouTube."
+    },
+    {
+      "question": "Quali URL di YouTube supporta 11tik?",
+      "answerHtml": "Incolla un link di visualizzazione pubblico, un URL di Shorts, una pagina live o di anteprima o un link breve youtu.be. Lo strumento legge l'ID del video dal percorso e cerca i file pubblici su i.ytimg.com. Gli URL di canali e playlist soltanto non sono supportati. Per l'anatomia dell'URL e l'elenco completo dei modelli, vedere<a href=\"https://it.11tik.com/l/it/2026/08/youtube-thumbnail-url.html\">Guida URL miniatura</a>."
+    },
+    {
+      "question": "11tik carica la mia miniatura o il mio video?",
+      "answerHtml": "No. Gli URL incollati vengono elaborati nel tuo browser. 11tik non richiede un account, non memorizza i file delle miniature originali sui suoi server e non carica il tuo video. Le immagini vengono scaricate dalla CDN pubblica di YouTube nella stessa sessione. La cronologia locale facoltativa rimane sul tuo dispositivo finché non la cancelli."
+    },
+    {
+      "question": "Posso scaricare le miniature dai video brevi di YouTube?",
+      "answerHtml": "Sì. I link ai video brevi utilizzano gli stessi host di immagini pubbliche dei video normali, quindi puoi incollare un URL /shorts/ e scaricare l'immagine migliore disponibile. L'anteprima potrebbe apparire più ampia della clip verticale che hai guardato perché YouTube memorizza un'immagine fissa in orizzontale. I video brevi privati ​​o con restrizioni di età senza un'anteprima pubblica non restituiranno un file. Vedi la<a href=\"https://it.11tik.com/l/it/2026/08/youtube-shorts-thumbnail-download.html\">Guida rapida ai cortometraggi</a>per assistenza passo passo."
+    },
+    {
+      "question": "Cosa succede quando non è disponibile la massima qualità per le miniature?",
+      "answerHtml": "11tik richiede ogni nome file pubblico e mantiene solo le risposte che restituiscono un'immagine reale, senza URL maxres ipotizzati. Se maxresdefault non è presente, lo strumento mostra la dimensione successiva più grande che viene effettivamente caricata, come hq720 o sddefault. Questa è la dimensione massima effettiva per quel video. Per informazioni sul perché maxres restituisce errori 404 e su come funzionano i fallback, leggere il documento<a href=\"https://it.11tik.com/l/it/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">guida maxresdefault</a>."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "heading": "Soalan lazim",
+  "items": [
+    {
+      "question": "Apakah pengekstrak lakaran kecil YouTube?",
+      "answerHtml": "Pengekstrak lakaran kecil ialah alat pelayar yang mengambil imej pegun awam yang telah dihoskan oleh YouTube pada CDNnya—bukan fail video. Anda menampal pautan, alat tersebut menyemak saiz yang wujud dan anda pratonton atau menyimpan fail sebenar yang terbesar. 11tik hanyalah pengekstrak; ia tidak mengoyak bingkai daripada main balik atau menjanjikan saiz yang tidak pernah diterbitkan oleh YouTube."
+    },
+    {
+      "question": "URL YouTube manakah yang disokong oleh 11tik?",
+      "answerHtml": "Tampal pautan tontonan awam, URL Siaran Pendek, halaman siaran langsung atau tayangan perdana atau pautan pendek youtu.be. Alat ini membaca ID video daripada laluan dan mencari fail awam pada i.ytimg.com. URL saluran dan senarai main sahaja tidak disokong. Untuk anatomi URL dan senarai penuh corak, lihat<a href=\"https://ms.11tik.com/l/ms/2026/08/youtube-thumbnail-url.html\">panduan URL lakaran kecil</a>."
+    },
+    {
+      "question": "Adakah 11tik memuat naik lakaran kecil atau video saya?",
+      "answerHtml": "Tidak. URL yang ditampal diproses dalam pelayar anda. 11tik tidak memerlukan akaun, tidak menyimpan fail lakaran kecil asal pada pelayannya dan tidak memuat naik video anda. Imej diambil daripada CDN awam YouTube dalam sesi yang sama. Sejarah setempat pilihan kekal pada peranti anda sehingga anda mengosongkannya."
+    },
+    {
+      "question": "Bolehkah saya memuat turun lakaran kecil daripada YouTube Shorts?",
+      "answerHtml": "Ya. Pautan Shorts menggunakan hos imej awam yang sama seperti video biasa, jadi anda boleh menampal URL /shorts/ dan memuat turun gambar terbaik yang sedia ada. Pratonton mungkin kelihatan lebih lebar daripada klip menegak yang anda tonton kerana YouTube menyimpan gambar landskap. Gambar Shorts peribadi atau yang dikawal umur tanpa ibu jari awam tidak akan mengembalikan fail. Lihat<a href=\"https://ms.11tik.com/l/ms/2026/08/youtube-shorts-thumbnail-download.html\">Panduan lakaran kecil seluar pendek</a>untuk bantuan langkah demi langkah."
+    },
+    {
+      "question": "Apa yang berlaku apabila kualiti lakaran kecil tertinggi tidak tersedia?",
+      "answerHtml": "11tik meminta setiap nama fail awam dan hanya menyimpan respons yang mengembalikan imej sebenar—tiada URL maxres yang diteka. Jika maxresdefault tiada, alat tersebut akan menunjukkan saiz terbesar seterusnya yang sebenarnya dimuatkan, seperti hq720 atau sddefault. Itulah maksimum yang jujur ​​untuk video tersebut. Untuk mengetahui sebab maxres 404s dan cara sandaran berfungsi, baca<a href=\"https://ms.11tik.com/l/ms/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">panduan lalai maksres</a>."
+    }
+  ]
+}

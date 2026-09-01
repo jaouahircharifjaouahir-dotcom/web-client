@@ -1,0 +1,25 @@
+{
+  "heading": "Często zadawane pytania",
+  "items": [
+    {
+      "question": "Czym jest narzędzie do wyodrębniania miniaturek z YouTube?",
+      "answerHtml": "Ekstraktor miniatur to narzędzie przeglądarki, które pobiera publiczne statyczne obrazy, które YouTube już hostuje w swojej sieci CDN, a nie plik wideo. Wklejasz link, narzędzie sprawdza, jakie rozmiary istnieją, a następnie wyświetla podgląd lub zapisuje największy rzeczywisty plik. 11tik to tylko ekstraktor; nie wyrywa klatek z odtwarzania ani nie obiecuje rozmiarów, których YouTube nigdy nie opublikował."
+    },
+    {
+      "question": "Które adresy URL YouTube obsługuje 11tik?",
+      "answerHtml": "Wklej publiczny link do oglądania, adres URL Shorts, stronę transmisji na żywo lub premiery albo krótki link youtu.be. Narzędzie odczyta identyfikator filmu ze ścieżki i wyszuka pliki publiczne w i.ytimg.com. Adresy URL tylko dla kanałów i playlist nie są obsługiwane. Anatomię adresów URL i pełną listę wzorców znajdziesz w<a href=\"https://pl.11tik.com/l/pl/2026/08/youtube-thumbnail-url.html\">przewodnik po adresach URL miniatur</a>."
+    },
+    {
+      "question": "Czy 11tik przesyła moją miniaturkę lub wideo?",
+      "answerHtml": "Nie. Wklejone adresy URL są przetwarzane w Twojej przeglądarce. 11tik nie wymaga konta, nie przechowuje oryginalnych plików miniatur na swoich serwerach ani nie przesyła Twojego filmu. Obrazy są pobierane z publicznej sieci CDN YouTube w tej samej sesji. Opcjonalna historia lokalna pozostaje na Twoim urządzeniu, dopóki jej nie wyczyścisz."
+    },
+    {
+      "question": "Czy mogę pobrać miniatury z YouTube Shorts?",
+      "answerHtml": "Tak. Linki do filmów Short korzystają z tych samych publicznych hostów obrazów, co zwykłe filmy, więc możesz wkleić adres URL /shorts/ i pobrać najlepszy dostępny kadr. Podgląd może wydawać się szerszy niż oglądany klip w orientacji pionowej, ponieważ YouTube przechowuje kadr w orientacji poziomej. Prywatne lub objęte ograniczeniami wiekowymi filmy Short bez publicznego miniatury nie zwrócą pliku. Zobacz<a href=\"https://pl.11tik.com/l/pl/2026/08/youtube-shorts-thumbnail-download.html\">Przewodnik po miniaturach filmów krótkometrażowych</a>aby uzyskać pomoc krok po kroku."
+    },
+    {
+      "question": "Co się stanie, gdy najwyższa jakość miniatury będzie niedostępna?",
+      "answerHtml": "11tik żąda każdej publicznej nazwy pliku i zachowuje tylko odpowiedzi zwracające prawdziwy obraz — bez zgadywanych adresów URL maxres. Jeśli brakuje wartości maxresdefault, narzędzie wyświetla kolejny największy rozmiar, który faktycznie się ładuje, taki jak hq720 lub sddefault. To jest uczciwa wartość maksymalna dla tego filmu. Aby dowiedzieć się, dlaczego maxres 404 i jak działają rozwiązania awaryjne, przeczytaj<a href=\"https://pl.11tik.com/l/pl/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">przewodnik maxresdefault</a>."
+    }
+  ]
+}

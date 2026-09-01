@@ -1,0 +1,35 @@
+{
+  "contentId": "home-faq",
+  "locale": "nl",
+  "status": "ready",
+  "sourceHash": "phase48-en-faq-v1",
+  "faqHeading": "Veelgestelde vragen",
+  "faq": [
+    {
+      "question": "Wat is een tool om YouTube-thumbnails te extraheren?",
+      "answer": "Een thumbnail-extractor is een browsertool die de openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen een extractor; het haalt geen frames uit de weergave en belooft geen formaten die YouTube nooit heeft gepubliceerd.",
+      "answerHtml": "Een thumbnail-extractor is een browsertool die de openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen een extractor; het haalt geen frames uit de weergave en belooft geen formaten die YouTube nooit heeft gepubliceerd."
+    },
+    {
+      "question": "Welke YouTube-URL's ondersteunt 11tik?",
+      "answer": "Plak een link naar een openbare video, een Shorts-URL, een live- of premièrepagina of een youtu.be-shortlink. De tool leest de video-ID uit het pad en zoekt openbare bestanden op i.ytimg.com. URL's die alleen voor kanalen of afspeellijsten bedoeld zijn, worden niet ondersteund. Zie de handleiding voor thumbnail-URL's voor de structuur van URL's en een volledige lijst met patronen.",
+      "answerHtml": "Plak een link naar een openbare video, een Shorts-URL, een live- of premièrepagina of een youtu.be-shortlink. De tool leest de video-ID uit het pad en zoekt openbare bestanden op i.ytimg.com. URL's die alleen voor kanalen of afspeellijsten bedoeld zijn, worden niet ondersteund. Zie voor de URL-structuur en de volledige lijst met patronen de<a href=\"https://nl.11tik.com/l/nl/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>."
+    },
+    {
+      "question": "Uploadt 11tik mijn miniatuurafbeelding of video?",
+      "answer": "Nee. Geplakte URL's worden in uw browser verwerkt. 11tik vereist geen account, slaat de originele miniatuurbestanden niet op zijn servers op en uploadt uw video niet. Afbeeldingen worden in dezelfde sessie opgehaald van het openbare CDN van YouTube. Optionele lokale geschiedenis blijft op uw apparaat staan ​​totdat u deze wist.",
+      "answerHtml": "Nee. Geplakte URL's worden in uw browser verwerkt. 11tik vereist geen account, slaat de originele miniatuurbestanden niet op zijn servers op en uploadt uw video niet. Afbeeldingen worden in dezelfde sessie opgehaald van het openbare CDN van YouTube. Optionele lokale geschiedenis blijft op uw apparaat staan ​​totdat u deze wist."
+    },
+    {
+      "question": "Kan ik miniaturen van YouTube Shorts downloaden?",
+      "answer": "Ja. Shorts-links gebruiken dezelfde openbare afbeeldingshosts als gewone video's, dus je kunt een /shorts/-URL plakken en de beste beschikbare afbeelding downloaden. De preview kan breder lijken dan de verticale video die je hebt bekeken, omdat YouTube een afbeelding in liggend formaat opslaat. Privé- of leeftijdsbeperkte Shorts zonder openbare thumbnail leveren geen bestand op. Raadpleeg de handleiding voor thumbnails van Shorts voor stapsgewijze instructies.",
+      "answerHtml": "Ja. Shorts-links gebruiken dezelfde openbare afbeeldingshosts als gewone video's, dus je kunt een /shorts/-URL plakken en de beste beschikbare afbeelding downloaden. De preview kan breder lijken dan de verticale clip die je hebt bekeken, omdat YouTube een afbeelding in liggend formaat opslaat. Privé- of leeftijdsbeperkte Shorts zonder openbare thumbnail leveren geen bestand op. Zie de<a href=\"https://nl.11tik.com/l/nl/2026/08/youtube-shorts-thumbnail-download.html\">Miniatuurgids voor korte filmpjes</a>voor stapsgewijze hulp."
+    },
+    {
+      "question": "Wat gebeurt er als de hoogste miniatuurkwaliteit niet beschikbaar is?",
+      "answer": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen URL's met een geschatte maximale resolutie. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is de werkelijke maximale resolutie voor die video. Lees de maxresdefault-handleiding voor meer informatie over de reden voor maxres 404-fouten en hoe fallback-mechanismen werken.",
+      "answerHtml": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen gegokte maxres-URL's. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is de werkelijke maximale resolutie voor die video. Lees meer over de reden waarom maxres 404-fouten optreden en hoe fallback-mechanismen werken.<a href=\"https://nl.11tik.com/l/nl/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault handleiding</a>."
+    }
+  ],
+  "articleId": "home-faq"
+}

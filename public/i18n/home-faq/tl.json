@@ -1,0 +1,25 @@
+{
+  "heading": "Mga Madalas Itanong",
+  "items": [
+    {
+      "question": "Ano ang isang pang-extract ng thumbnail ng YouTube?",
+      "answerHtml": "Ang thumbnail extractor ay isang browser tool na kumukuha ng mga pampublikong still image na hino-host na ng YouTube sa CDN nito—hindi ang video file. Magpe-paste ka ng link, susuriin ng tool kung aling mga laki ang umiiral, at ipi-preview o ise-save mo ang pinakamalaking totoong file. Ang 11tik ay isang extractor lamang; hindi nito niri-rip ang mga frame mula sa playback o nangangako ng mga laki na hindi kailanman nai-publish ng YouTube."
+    },
+    {
+      "question": "Aling mga URL sa YouTube ang sinusuportahan ng 11tik?",
+      "answerHtml": "Mag-paste ng pampublikong link sa panonood, URL ng Shorts, live o premiere page, o maikling link na youtu.be. Binabasa ng tool ang video ID mula sa path at hinahanap ang mga pampublikong file sa i.ytimg.com. Hindi sinusuportahan ang mga URL para sa channel at playlist lamang. Para sa anatomiya ng URL at ang kumpletong listahan ng mga pattern, tingnan ang<a href=\"https://tl.11tik.com/l/tl/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>."
+    },
+    {
+      "question": "Ina-upload ba ng 11tik ang aking thumbnail o video?",
+      "answerHtml": "Hindi. Ang mga naka-paste na URL ay pinoproseso sa iyong browser. Ang 11tik ay hindi nangangailangan ng account, hindi nag-iimbak ng mga orihinal na thumbnail file sa mga server nito, at hindi ina-upload ang iyong video. Ang mga imahe ay kinukuha mula sa pampublikong CDN ng YouTube sa parehong session. Ang opsyonal na lokal na kasaysayan ay mananatili sa iyong device hanggang sa i-clear mo ito."
+    },
+    {
+      "question": "Maaari ba akong mag-download ng mga thumbnail mula sa YouTube Shorts?",
+      "answerHtml": "Oo. Gumagamit ang mga link ng Shorts ng parehong pampublikong image host gaya ng mga regular na video, kaya maaari kang mag-paste ng URL na /shorts/ at i-download ang pinakamahusay na still na umiiral. Maaaring magmukhang mas malapad ang preview kaysa sa patayong clip na iyong pinanood dahil nag-iimbak ang YouTube ng still na landscape. Ang mga pribado o naka-gated na Shorts na walang pampublikong thumb ay hindi magbabalik ng file. Tingnan ang<a href=\"https://tl.11tik.com/l/tl/2026/08/youtube-shorts-thumbnail-download.html\">Gabay sa thumbnail ng shorts</a>para sa sunud-sunod na tulong."
+    },
+    {
+      "question": "Ano ang mangyayari kapag hindi magagamit ang pinakamataas na kalidad ng thumbnail?",
+      "answerHtml": "Hinihiling ng 11tik ang bawat pampublikong pangalan ng file at pinapanatili lamang ang mga tugon na nagbabalik ng isang totoong imahe—walang nahulaang mga URL ng maxres. Kung nawawala ang maxresdefault, ipapakita ng tool ang susunod na pinakamalaking laki na aktwal na naglo-load, tulad ng hq720 o sddefault. Iyan ang tapat na maximum para sa video na iyon. Para sa kung bakit gumagana ang maxres 404s at kung paano gumagana ang mga fallback, basahin ang<a href=\"https://tl.11tik.com/l/tl/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">gabay sa default na maxres</a>."
+    }
+  ]
+}

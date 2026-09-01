@@ -1,0 +1,35 @@
+{
+  "contentId": "home-faq",
+  "locale": "es",
+  "status": "ready",
+  "sourceHash": "phase48-en-faq-v1",
+  "faqHeading": "Preguntas frecuentes",
+  "faq": [
+    {
+      "question": "¿Qué es un extractor de miniaturas de YouTube?",
+      "answer": "Un extractor de miniaturas es una herramienta para navegadores que obtiene las imágenes fijas públicas que YouTube ya aloja en su CDN, no el archivo de video. Al pegar un enlace, la herramienta verifica qué tamaños existen y usted puede previsualizar o guardar el archivo real de mayor tamaño. 11tik es solo un extractor; no extrae fotogramas de la reproducción ni garantiza tamaños que YouTube nunca haya publicado.",
+      "answerHtml": "Un extractor de miniaturas es una herramienta para navegadores que obtiene las imágenes fijas públicas que YouTube ya aloja en su CDN, no el archivo de video. Al pegar un enlace, la herramienta verifica qué tamaños existen y usted puede previsualizar o guardar el archivo real de mayor tamaño. 11tik es solo un extractor; no extrae fotogramas de la reproducción ni garantiza tamaños que YouTube nunca haya publicado."
+    },
+    {
+      "question": "¿Qué URL de YouTube admite 11tik?",
+      "answer": "Pegue un enlace de visualización pública, una URL de Shorts, una página de transmisión en vivo o estreno, o un enlace corto youtu.be. La herramienta lee el ID del video desde la ruta y busca archivos públicos en i.ytimg.com. No se admiten URL de canales ni listas de reproducción. Para obtener información sobre la estructura de las URL y la lista completa de patrones, consulte la guía de URL de miniaturas.",
+      "answerHtml": "Pegue un enlace de visualización pública, URL de Shorts, página de transmisión en vivo o estreno, o enlace corto youtu.be. La herramienta lee el ID del video de la ruta y busca archivos públicos en i.ytimg.com. No se admiten URL solo de canal y lista de reproducción. Para obtener información sobre la anatomía de la URL y la lista completa de patrones, consulte la<a href=\"https://es.11tik.com/l/es/2026/08/youtube-thumbnail-url.html\">Guía de URL de miniaturas</a>."
+    },
+    {
+      "question": "¿11tik sube mi miniatura o mi video?",
+      "answer": "No. Las URL pegadas se procesan en tu navegador. 11tik no requiere cuenta, no almacena los archivos de miniaturas originales en sus servidores y no sube tu video. Las imágenes se obtienen de la CDN pública de YouTube en la misma sesión. El historial local opcional permanece en tu dispositivo hasta que lo borres.",
+      "answerHtml": "No. Las URL pegadas se procesan en tu navegador. 11tik no requiere cuenta, no almacena los archivos de miniaturas originales en sus servidores y no sube tu video. Las imágenes se obtienen de la CDN pública de YouTube en la misma sesión. El historial local opcional permanece en tu dispositivo hasta que lo borres."
+    },
+    {
+      "question": "¿Puedo descargar miniaturas de YouTube Shorts?",
+      "answer": "Sí. Los enlaces de Shorts utilizan los mismos servidores de imágenes públicas que los vídeos normales, así que puedes pegar una URL de /shorts/ y descargar la mejor imagen disponible. La vista previa puede parecer más ancha que el vídeo vertical que viste porque YouTube guarda la imagen en formato horizontal. Los Shorts privados o con restricción de edad que no tengan una miniatura pública no generarán ningún archivo. Consulta la guía de miniaturas de Shorts para obtener ayuda paso a paso.",
+      "answerHtml": "Sí. Los enlaces de Shorts utilizan los mismos servidores de imágenes públicas que los vídeos normales, por lo que puede pegar una URL de /shorts/ y descargar la mejor imagen fija disponible. La vista previa puede parecer más ancha que el clip vertical que vio porque YouTube almacena una imagen fija horizontal. Los Shorts privados o con restricción de edad sin una miniatura pública no devolverán un archivo. Consulte la<a href=\"https://es.11tik.com/l/es/2026/08/youtube-shorts-thumbnail-download.html\">Guía de miniaturas de cortometrajes</a>para obtener ayuda paso a paso."
+    },
+    {
+      "question": "¿Qué ocurre cuando no está disponible la miniatura de mayor calidad?",
+      "answer": "11tik solicita cada nombre de archivo público y solo conserva las respuestas que devuelven una imagen real, sin URL de maxres adivinadas. Si no se encuentra maxresdefault, la herramienta muestra el siguiente tamaño más grande que se carga correctamente, como hq720 o sddefault. Ese es el máximo real para ese video. Para saber por qué se producen errores 404 de maxres y cómo funcionan las alternativas, consulte la guía de maxresdefault.",
+      "answerHtml": "11tik solicita cada nombre de archivo público y conserva solo las respuestas que devuelven una imagen real, sin URL de maxres adivinadas. Si maxresdefault no está disponible, la herramienta muestra el siguiente tamaño más grande que realmente se carga, como hq720 o sddefault. Ese es el máximo real para ese video. Para saber por qué se producen los errores 404 de maxres y cómo funcionan las alternativas, lea la<a href=\"https://es.11tik.com/l/es/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">guía maxresdefault</a>."
+    }
+  ],
+  "articleId": "home-faq"
+}

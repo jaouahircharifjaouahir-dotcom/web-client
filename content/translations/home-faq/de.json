@@ -1,0 +1,35 @@
+{
+  "contentId": "home-faq",
+  "locale": "de",
+  "status": "ready",
+  "sourceHash": "phase48-en-faq-v1",
+  "faqHeading": "Häufig gestellte Fragen",
+  "faq": [
+    {
+      "question": "Was ist ein YouTube-Thumbnail-Extraktor?",
+      "answer": "Ein Thumbnail-Extraktor ist ein Browser-Tool, das die öffentlich zugänglichen Standbilder abruft, die YouTube bereits auf seinem CDN hostet – nicht die Videodatei. Sie fügen einen Link ein, das Tool prüft die verfügbaren Größen, und Sie können die größte verfügbare Datei in der Vorschau anzeigen oder speichern. 11tik ist lediglich ein Extraktor; es extrahiert keine Einzelbilder aus der Wiedergabe und verspricht keine Größen, die YouTube nie veröffentlicht hat.",
+      "answerHtml": "Ein Thumbnail-Extraktor ist ein Browser-Tool, das die öffentlich zugänglichen Standbilder abruft, die YouTube bereits auf seinem CDN hostet – nicht die Videodatei. Sie fügen einen Link ein, das Tool prüft die verfügbaren Größen, und Sie können die größte verfügbare Datei in der Vorschau anzeigen oder speichern. 11tik ist lediglich ein Extraktor; er extrahiert keine Einzelbilder aus der Wiedergabe und verspricht keine Größen, die YouTube nie veröffentlicht hat."
+    },
+    {
+      "question": "Welche YouTube-URLs unterstützt 11tik?",
+      "answer": "Fügen Sie einen öffentlichen Wiedergabelink, eine Shorts-URL, eine Live- oder Premiere-Seite oder einen youtu.be-Kurzlink ein. Das Tool liest die Video-ID aus dem Pfad und sucht nach öffentlichen Dateien auf i.ytimg.com. Kanal- und Playlist-URLs werden nicht unterstützt. Informationen zum URL-Aufbau und eine vollständige Liste der Muster finden Sie im Leitfaden für Thumbnail-URLs.",
+      "answerHtml": "Fügen Sie einen öffentlichen Wiedergabelink, eine Shorts-URL, eine Live- oder Premiere-Seite oder einen youtu.be-Shortlink ein. Das Tool liest die Video-ID aus dem Pfad und sucht nach öffentlichen Dateien auf i.ytimg.com. Kanal- und Playlist-URLs werden nicht unterstützt. Informationen zum URL-Aufbau und eine vollständige Liste der Muster finden Sie unter [Link einfügen].<a href=\"https://de.11tik.com/l/de/2026/08/youtube-thumbnail-url.html\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Die"
+    },
+    {
+      "question": "Lädt 11tik mein Vorschaubild oder mein Video hoch?",
+      "answer": "Nein. Eingefügte URLs werden in Ihrem Browser verarbeitet. 11tik benötigt kein Konto, speichert die Original-Thumbnail-Dateien nicht auf seinen Servern und lädt Ihr Video nicht hoch. Bilder werden in derselben Sitzung vom öffentlichen CDN von YouTube abgerufen. Der optionale lokale Verlauf bleibt auf Ihrem Gerät gespeichert, bis Sie ihn löschen.",
+      "answerHtml": "Nein. Eingefügte URLs werden in Ihrem Browser verarbeitet. 11tik benötigt kein Konto, speichert die Original-Thumbnail-Dateien nicht auf seinen Servern und lädt Ihr Video nicht hoch. Bilder werden in derselben Sitzung vom öffentlichen CDN von YouTube abgerufen. Der optionale lokale Verlauf bleibt auf Ihrem Gerät gespeichert, bis Sie ihn löschen."
+    },
+    {
+      "question": "Kann ich Vorschaubilder von YouTube Shorts herunterladen?",
+      "answer": "Ja. Shorts-Links verwenden dieselben öffentlichen Bildhosts wie reguläre Videos. Sie können also eine /shorts/-URL einfügen und das beste verfügbare Standbild herunterladen. Die Vorschau kann breiter erscheinen als der vertikale Clip, den Sie angesehen haben, da YouTube ein Standbild im Querformat speichert. Für private oder altersbeschränkte Shorts ohne öffentliches Vorschaubild wird keine Datei bereitgestellt. Eine Schritt-für-Schritt-Anleitung finden Sie im Leitfaden für Shorts-Vorschaubilder.",
+      "answerHtml": "Ja. Shorts-Links verwenden dieselben öffentlichen Bildhosts wie reguläre Videos. Sie können also eine /shorts/-URL einfügen und das beste verfügbare Standbild herunterladen. Die Vorschau kann breiter erscheinen als der vertikale Clip, den Sie angesehen haben, da YouTube ein Standbild im Querformat speichert. Private oder altersbeschränkte Shorts ohne öffentliches Vorschaubild liefern keine Datei. Siehe die<a href=\"https://de.11tik.com/l/de/2026/08/youtube-shorts-thumbnail-download.html\">Kurz-Thumbnail-Leitfaden</a>für eine schrittweise Anleitung."
+    },
+    {
+      "question": "Was passiert, wenn die höchste Vorschaubildqualität nicht verfügbar ist?",
+      "answer": "11tik fragt jeden öffentlichen Dateinamen ab und speichert nur Antworten, die ein tatsächliches Bild zurückgeben – keine URLs mit geschätzter maximaler Auflösung. Fehlt die Angabe für maxresdefault, zeigt das Tool die nächstgrößere Auflösung an, die tatsächlich geladen wird, z. B. hq720 oder sddefault. Dies ist die tatsächliche maximale Auflösung für dieses Video. Informationen zu den Ursachen von 404-Fehlern bei maxres und zur Funktionsweise von Fallback-Lösungen finden Sie im Leitfaden zu maxresdefault.",
+      "answerHtml": "11tik fragt jeden öffentlichen Dateinamen ab und speichert nur Antworten, die ein tatsächliches Bild zurückgeben – keine URLs mit geschätzter maximaler Auflösung. Falls maxresdefault fehlt, zeigt das Tool die nächstgrößere Auflösung an, die tatsächlich geladen wird, z. B. hq720 oder sddefault. Dies ist die tatsächliche maximale Auflösung für dieses Video. Informationen zu den Ursachen von 404-Fehlern bei maxres und zur Funktionsweise von Fallback-Lösungen finden Sie in der Dokumentation.<a href=\"https://de.11tik.com/l/de/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-Leitfaden</a>Die"
+    }
+  ],
+  "articleId": "home-faq"
+}

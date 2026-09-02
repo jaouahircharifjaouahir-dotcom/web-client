@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   buildPhaseEntrypointPutBody,
@@ -14,6 +16,7 @@ import {
   isQueryOwnedRule,
 } from "../../scripts/cf-p-edge-rules.mjs";
 import worker from "../../workers/11tik-edge.js";
+import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { matchesRunWorkerFirst, readWranglerConfig } from "./test-helpers/run-worker-first.ts";
 
 const SITE = "https://www.11tik.com";
@@ -22,246 +25,204 @@ function unrelatedRule(description: string) {
   return { description, expression: "true", action: "log" };
 }
 
-/** Production path after Phase 3B deploy: CF edge redirect → direct static Asset (Worker-zero). */
-function simulateLegalShortcutProduction(pathname: string, search = "") {
+/** Phase 53: no CF edge redirect; Worker serves canonical clean path directly. */
+function simulateLegalShortcutProduction(pathname: string) {
   const clean = pathname.replace(/\/+$/, "") || "/";
   const shortcut = LEGAL_SHORTCUT_REDIRECTS.find((r) => r.from === clean);
-  const workerFirst = matchesRunWorkerFirst(clean);
   if (!shortcut) {
-    return { workerFirst, edgeRedirect: false, status: 0, destination: "", stripsQuery: false, destinationWorkerZero: false };
+    return { workerFirst: matchesRunWorkerFirst(clean), edgeRedirect: false, destination: "" };
   }
-  const rule = buildLegalShortcutRules().find((r) => r.description === `${RULE_PREFIX_LEGAL}${shortcut.slug}`);
-  const preserveQuery = rule?.action_parameters.from_value.preserve_query_string ?? true;
   return {
-    workerFirst,
-    edgeRedirect: true,
-    status: 301,
+    workerFirst: matchesRunWorkerFirst(clean),
+    edgeRedirect: false,
     destination: shortcut.to,
-    stripsQuery: !preserveQuery && search.length > 0,
-    destinationWorkerZero: !matchesRunWorkerFirst(shortcut.to),
   };
 }
 
-describe("Phase 3 — legal shortcut Single Redirect rules", () => {
-  const legalRules = buildLegalShortcutRules();
+function assetsEnv(onFetch: (pathname: string) => Response | Promise<Response>) {
+  const seen: string[] = [];
+  return {
+    seen,
+    env: {
+      ASSETS: {
+        fetch(req: Request) {
+          seen.push(new URL(req.url).pathname);
+          return onFetch(new URL(req.url).pathname);
+        },
+      },
+    },
+  };
+}
+
+describe("Phase 53 — legal shortcut CF rules retired", () => {
   const queryRules = buildQueryCanonicalizeRules();
 
-  it("defines exactly 4 rules with isolated prefix 11tik-p3-legal:", () => {
-    expect(RULE_PREFIX_LEGAL).toBe("11tik-p3-legal:");
-    expect(legalRules).toHaveLength(4);
-    expect(legalRules.map((r) => r.description)).toEqual([
-      "11tik-p3-legal:about",
-      "11tik-p3-legal:privacy",
-      "11tik-p3-legal:terms",
-      "11tik-p3-legal:contact",
-    ]);
-    expect(legalRules.every((r) => r.description.startsWith(RULE_PREFIX_LEGAL))).toBe(true);
-    expect(legalRules.some((r) => isQueryOwnedRule(r))).toBe(false);
+  it("buildLegalShortcutRules returns no CF edge redirects", () => {
+    expect(buildLegalShortcutRules()).toEqual([]);
   });
 
-  it("maps exact paths to utility .html destinations with 301 and no query preservation", () => {
-    for (const { from, to, slug } of LEGAL_SHORTCUT_REDIRECTS) {
-      const rule = legalRules.find((r) => r.description === `${RULE_PREFIX_LEGAL}${slug}`);
-      expect(rule, from).toBeDefined();
-      expect(rule!.expression).toBe(
-        `(http.host eq "www.11tik.com" and http.request.uri.path eq "${from}")`,
-      );
-      expect(rule!.action).toBe("redirect");
-      expect(rule!.action_parameters.from_value.status_code).toBe(301);
-      expect(rule!.action_parameters.from_value.preserve_query_string).toBe(false);
-      expect(rule!.action_parameters.from_value.target_url.value).toBe(`${SITE}${to}`);
+  it("LEGAL_SHORTCUT_REDIRECTS documents clean canonical targets only", () => {
+    expect(LEGAL_SHORTCUT_REDIRECTS).toEqual([
+      { from: "/about", to: "/about", slug: "about" },
+      { from: "/privacy", to: "/privacy", slug: "privacy" },
+      { from: "/terms", to: "/terms-of-use", slug: "terms" },
+      { from: "/contact", to: "/contact", slug: "contact" },
+    ]);
+    for (const { to } of LEGAL_SHORTCUT_REDIRECTS) {
+      expect(to.startsWith("/p/")).toBe(false);
+      expect(to.includes(".html")).toBe(false);
     }
   });
 
-  it("terms shortcut targets /p/terms-of-use.html (not /p/terms.html)", () => {
-    const terms = legalRules.find((r) => r.description === "11tik-p3-legal:terms");
-    expect(terms?.action_parameters.from_value.target_url.value).toBe(`${SITE}/p/terms-of-use.html`);
-  });
-
-  it("merge is idempotent and --remove deletes only legal-owned rules", () => {
+  it("merge --remove deletes only legal-owned rules without touching query rules", () => {
+    const legacyLegal = [
+      {
+        description: "11tik-p3-legal:about",
+        expression: '(http.host eq "www.11tik.com" and http.request.uri.path eq "/about")',
+        action: "redirect",
+        action_parameters: {
+          from_value: {
+            status_code: 301,
+            target_url: { value: `${SITE}/p/about.html` },
+          },
+        },
+      },
+    ];
     const indexNow = unrelatedRule("IndexNow key");
-    let rules = [...queryRules, indexNow];
-    rules = mergeRulesByDescription(rules, legalRules, RULE_PREFIX_LEGAL);
-    rules = mergeRulesByDescription(rules, legalRules, RULE_PREFIX_LEGAL);
-    expect(ownedRules(rules, RULE_PREFIX_LEGAL)).toHaveLength(4);
+    let rules = [...queryRules, indexNow, ...legacyLegal];
+    rules = mergeRulesByDescription(rules, [], RULE_PREFIX_LEGAL);
+    expect(rules.filter(isLegalOwnedRule)).toHaveLength(0);
     expect(rules.filter(isQueryOwnedRule)).toHaveLength(6);
     expect(rules).toContain(indexNow);
-
-    const removed = mergeRulesByDescription(rules, [], RULE_PREFIX_LEGAL);
-    expect(removed.filter(isLegalOwnedRule)).toHaveLength(0);
-    expect(removed.filter(isQueryOwnedRule)).toHaveLength(6);
-    expect(removed).toContain(indexNow);
   });
 
-  it("legal apply does not touch 11tik-p2-query:* rules (cross-family simulation)", () => {
-    const unrelated = unrelatedRule("customer: legacy");
-    const existing = [...queryRules, unrelated];
-    const merged = mergeRulesByDescription(existing, legalRules, RULE_PREFIX_LEGAL);
-    expect(merged.filter(isQueryOwnedRule)).toHaveLength(6);
-    expect(merged.filter(isLegalOwnedRule)).toHaveLength(4);
-    expect(merged).toContain(unrelated);
+  it("plan against live zone shape: apply removes legacy 11tik-p3-legal:* rules", () => {
+    const legacyLegal = [
+      {
+        description: "11tik-p3-legal:about",
+        expression: "true",
+        action: "redirect",
+      },
+    ];
+    const plan = planRulesetMerge(legacyLegal, buildLegalShortcutRules(), RULE_PREFIX_LEGAL);
+    expect(plan.toCreate).toHaveLength(0);
+    expect(plan.toRemove.map((r) => r.description)).toEqual(["11tik-p3-legal:about"]);
   });
 
-  it("PUT body is valid for http_request_dynamic_redirect entrypoint", () => {
-    const merged = mergeRulesByDescription(queryRules, legalRules, RULE_PREFIX_LEGAL);
+  it("PUT body with empty legal rules is valid for http_request_dynamic_redirect entrypoint", () => {
+    const merged = mergeRulesByDescription(queryRules, buildLegalShortcutRules(), RULE_PREFIX_LEGAL);
     const body = buildPhaseEntrypointPutBody({ rules: merged, defaultName: "Redirect rules ruleset" });
-    expect(body.rules.filter(isLegalOwnedRule)).toHaveLength(4);
+    expect(body.rules.filter(isLegalOwnedRule)).toHaveLength(0);
     expect(body.rules.filter(isQueryOwnedRule)).toHaveLength(6);
-  });
-
-  it("plan against live zone shape: legal rules are additive (plan only)", () => {
-    const indexNow = unrelatedRule("IndexNow key");
-    const existing = [...queryRules, indexNow];
-    const plan = planRulesetMerge(existing, legalRules, RULE_PREFIX_LEGAL);
-    expect(plan.toCreate.map((r) => r.description)).toEqual([
-      "11tik-p3-legal:about",
-      "11tik-p3-legal:privacy",
-      "11tik-p3-legal:terms",
-      "11tik-p3-legal:contact",
-    ]);
-    expect(plan.toRemove).toHaveLength(0);
-    expect(plan.kept.filter(isQueryOwnedRule)).toHaveLength(6);
-    expect(plan.kept).toContain(indexNow);
   });
 });
 
-describe("Phase 3B — legal shortcuts removed from RWF (Worker-zero after deploy)", () => {
-  const wrangler = readWranglerConfig();
-  const legalRules = buildLegalShortcutRules();
-
-  it("RWF no longer lists /about, /privacy, /terms, /contact", () => {
-    expect(wrangler.assets.run_worker_first).not.toContain("/about");
-    expect(wrangler.assets.run_worker_first).not.toContain("/privacy");
-    expect(wrangler.assets.run_worker_first).not.toContain("/terms");
-    expect(wrangler.assets.run_worker_first).not.toContain("/contact");
-  });
-
-  it("documents post-deploy ordering: CF Single Redirect → .html Asset → Worker ZERO", () => {
-    for (const { from, to } of LEGAL_SHORTCUT_REDIRECTS) {
-      const route = simulateLegalShortcutProduction(from);
-      expect(route.workerFirst, `${from} must not be Worker-first`).toBe(false);
-      expect(route.edgeRedirect, `${from} CF legal rule`).toBe(true);
-      expect(route.status).toBe(301);
-      expect(route.destination).toBe(to);
-      expect(route.destinationWorkerZero, `${to} direct Asset`).toBe(true);
-    }
-  });
-
+describe("Phase 53 — legal shortcuts served by Worker (no CF hop)", () => {
   for (const { from, to } of LEGAL_SHORTCUT_REDIRECTS) {
-    it(`${from} → not Worker-first; CF 301 → ${to}`, () => {
-      expect(matchesRunWorkerFirst(from)).toBe(false);
+    it(`${from} is Worker-first with no CF edge redirect`, () => {
       const route = simulateLegalShortcutProduction(from);
-      expect(route.edgeRedirect).toBe(true);
+      expect(route.edgeRedirect).toBe(false);
+      expect(route.workerFirst).toBe(true);
       expect(route.destination).toBe(to);
-      expect(matchesRunWorkerFirst(to)).toBe(false);
-    });
-
-    it(`${from}?x=1 → CF strips query → ${to}`, () => {
-      const route = simulateLegalShortcutProduction(from, "x=1");
-      expect(route.workerFirst).toBe(false);
-      expect(route.stripsQuery).toBe(true);
-      expect(route.destination).toBe(to);
-      const rule = legalRules.find((r) => r.expression.includes(`path eq "${from}"`));
-      expect(rule?.action_parameters.from_value.preserve_query_string).toBe(false);
     });
   }
 
-  it("legalPageRedirect() maps /embed to /p/embed.html", async () => {
-    const res = await worker.fetch(new Request(`${SITE}/embed`), {});
-    expect(res.status).toBe(301);
-    expect(res.headers.get("location")).toBe(`${SITE}/p/embed.html`);
+  it("/about → 200 clean HTML (no /p/about.html hop)", async () => {
+    const dir = getStagedStaticSite();
+    const body = readFileSync(join(dir, "about.html"), "utf8");
+    const { env, seen } = assetsEnv((pathname) =>
+      pathname === "/about.html" ? new Response(body, { status: 200 }) : new Response("x", { status: 404 }),
+    );
+    const res = await worker.fetch(new Request(`${SITE}/about`), env);
+    expect(res.status).toBe(200);
+    expect(seen).toEqual(["/about.html"]);
+    expect(await res.text()).toContain('rel="canonical" href="https://www.11tik.com/about"');
   });
 
-  it("legalPageRedirect() remains in Worker as rollback fallback (direct Worker fetch)", async () => {
-    const res = await worker.fetch(new Request(`${SITE}/about`), {});
+  it("/embed → 200 clean HTML (no /p/embed.html hop)", async () => {
+    const dir = getStagedStaticSite();
+    const body = readFileSync(join(dir, "embed.html"), "utf8");
+    const { env, seen } = assetsEnv((pathname) =>
+      pathname === "/embed.html" ? new Response(body, { status: 200 }) : new Response("x", { status: 404 }),
+    );
+    const res = await worker.fetch(new Request(`${SITE}/embed`), env);
+    expect(res.status).toBe(200);
+    expect(seen).toEqual(["/embed.html"]);
+  });
+
+  it("/terms → one-hop atomic 301 to /terms-of-use then 200", async () => {
+    const dir = getStagedStaticSite();
+    const termsBody = readFileSync(join(dir, "terms-of-use.html"), "utf8");
+    const { env, seen } = assetsEnv((pathname) =>
+      pathname === "/terms-of-use.html"
+        ? new Response(termsBody, { status: 200 })
+        : new Response("x", { status: 404 }),
+    );
+    const res = await worker.fetch(new Request(`${SITE}/terms`), env);
     expect(res.status).toBe(301);
-    expect(res.headers.get("location")).toBe(`${SITE}/p/about.html`);
+    expect(res.headers.get("location")).toBe(`${SITE}/terms-of-use`);
+    expect(seen).toEqual([]);
+
+    seen.length = 0;
+    const res2 = await worker.fetch(new Request(`${SITE}/terms-of-use`), env);
+    expect(res2.status).toBe(200);
+    expect(seen).toEqual(["/terms-of-use.html"]);
+  });
+
+  it("legacy /p/about.html → one-hop atomic 301 to /about", async () => {
+    const { env, seen } = assetsEnv(() => new Response("x", { status: 404 }));
+    const res = await worker.fetch(new Request(`${SITE}/p/about.html`), env);
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe(`${SITE}/about`);
+    expect(seen).toEqual([]);
   });
 });
 
-describe("Phase 3B — legal shortcuts regression guards", () => {
+describe("Phase 53 — legal shortcut regression guards", () => {
   const wrangler = readWranglerConfig();
 
-  it("six /p/*.html utilities remain Worker-zero", () => {
-    for (const path of [
-      "/p/about.html",
-      "/p/privacy.html",
-      "/p/terms-of-use.html",
-      "/p/contact.html",
-      "/p/embed.html",
-      "/p/keyword-tools.html",
-    ]) {
-      expect(matchesRunWorkerFirst(path)).toBe(false);
+  it("RWF does not list /about, /privacy, /terms, /contact as separate entries", () => {
+    for (const path of ["/about", "/privacy", "/terms", "/contact"]) {
+      expect(wrangler.assets.run_worker_first).not.toContain(path);
     }
+  });
+
+  it("clean utility paths are Worker-first via global /* catch-all", () => {
+    for (const path of ["/about", "/privacy", "/contact", "/embed", "/terms-of-use"]) {
+      expect(matchesRunWorkerFirst(path)).toBe(true);
+    }
+  });
+
+  it("legacy /p/about.html is Worker-first (atomic redirect before asset)", () => {
+    expect(matchesRunWorkerFirst("/p/about.html")).toBe(true);
   });
 
   it("/p/* unknown paths remain Worker-first (404 handler)", () => {
     expect(matchesRunWorkerFirst("/p/random.html")).toBe(true);
-    expect(matchesRunWorkerFirst("/p/youtube-thumbnail-url.html")).toBe(true);
   });
 
-  it("/p/about.html remains Worker-excluded direct Asset", () => {
-    expect(matchesRunWorkerFirst("/p/about.html")).toBe(false);
-    expect(wrangler.assets.run_worker_first).toContain("!/p/about.html");
-  });
-
-  it("/l/fr/ locale home Worker-first; clean localized utility asset-first (Phase 7B)", () => {
+  it("/l/fr/ locale home Worker-first; clean localized utility Worker-first (Phase 53)", () => {
     expect(matchesRunWorkerFirst("/l/fr/")).toBe(true);
-    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
+    expect(matchesRunWorkerFirst("/l/fr/about")).toBe(true);
   });
 
-  it("/thumb/* SPA and / homepage Worker-first (Phase R2)", () => {
+  it("/thumb/* SPA and / homepage Worker-first", () => {
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
     expect(matchesRunWorkerFirst("/")).toBe(true);
-    expect(wrangler.assets.run_worker_first).toContain("/thumb/*");
   });
 
-  it("/copyright* remains Worker-first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/copyright*");
-    expect(matchesRunWorkerFirst("/copyright")).toBe(true);
-  });
-
-  it("Blogger /feeds/* and /search remain Worker-first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/pages/*");
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/comments/*");
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/other/*");
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
-    expect(wrangler.assets.run_worker_first).toContain("/sitemap-images.xml");
-    expect(wrangler.assets.run_worker_first).not.toContain("/feeds/*");
-    expect(wrangler.assets.run_worker_first).toContain("/search");
-    expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
-    expect(matchesRunWorkerFirst("/feeds/comments/default")).toBe(true);
-    expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(true);
-    expect(matchesRunWorkerFirst("/sitemap-images.xml")).toBe(true);
-    expect(matchesRunWorkerFirst("/search")).toBe(true);
-  });
-
-  it("sitemap-pages.xml remains Worker-first for 301 redirect (not Blogger)", () => {
-    expect(wrangler.assets.run_worker_first).not.toContain("/robots.txt");
-    expect(wrangler.assets.run_worker_first).not.toContain("/llms.txt");
-    expect(wrangler.assets.run_worker_first).not.toContain("/sitemap.xml");
-    expect(wrangler.assets.run_worker_first).not.toContain("/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt");
-    expect(matchesRunWorkerFirst("/robots.txt")).toBe(false);
-    expect(matchesRunWorkerFirst("/llms.txt")).toBe(false);
-    expect(matchesRunWorkerFirst("/sitemap.xml")).toBe(false);
-    expect(wrangler.assets.run_worker_first).toContain("/sitemap-pages.xml");
-    expect(matchesRunWorkerFirst("/sitemap-pages.xml")).toBe(true);
-  });
-
-  it("apex 11tik.com routes unchanged (Worker HSTS/www redirect)", () => {
-    expect(wrangler.routes.some((r: { pattern: string }) => r.pattern === "11tik.com")).toBe(true);
-    expect(wrangler.routes.some((r: { pattern: string }) => r.pattern === "11tik.com/*")).toBe(true);
-  });
-
-  it("Phase 2 query rules unchanged (6 rules, distinct prefix)", () => {
+  it("Phase 2 query rules target clean utility paths with query required", () => {
     const queryRules = buildQueryCanonicalizeRules();
     expect(queryRules).toHaveLength(6);
-    expect(queryRules.every((r) => r.description.startsWith("11tik-p2-query:"))).toBe(true);
-    expect(queryRules.some((r) => isLegalOwnedRule(r))).toBe(false);
+    for (const rule of queryRules) {
+      expect(rule.expression).toContain('http.host eq "www.11tik.com"');
+      expect(rule.expression).not.toContain('"/p/');
+      expect(rule.expression).toContain("len(http.request.uri.query) > 0");
+    }
+    expect(queryRules.some((r) => r.expression.includes('"/about"'))).toBe(true);
   });
 
-  it("Cloudflare legal rules depend on live 11tik-p3-legal:* (not RWF)", () => {
-    expect(buildLegalShortcutRules()).toHaveLength(4);
-    expect(wrangler.assets.run_worker_first).not.toContain("/about");
+  it("Cloudflare legal rules must be absent after Phase 53 deploy prep", () => {
+    expect(buildLegalShortcutRules()).toHaveLength(0);
   });
 });

@@ -18,26 +18,26 @@ const DOC: PublishabilityDoc = {
   v: 1,
   contents: {
     "youtube-thumbnail-url": {
-      path: "/2026/08/youtube-thumbnail-url.html",
-      en: "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
+      path: "/youtube-thumbnail-url",
+      en: "https://www.11tik.com/youtube-thumbnail-url",
       locales: {
-        ar: "https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html",
-        fr: "https://fr.11tik.com/l/fr/2026/08/youtube-thumbnail-url.html",
-        es: "https://es.11tik.com/l/es/2026/08/youtube-thumbnail-url.html",
+        ar: "https://ar.11tik.com/l/ar/youtube-thumbnail-url",
+        fr: "https://fr.11tik.com/l/fr/youtube-thumbnail-url",
+        es: "https://es.11tik.com/l/es/youtube-thumbnail-url",
       },
     },
     about: {
-      path: "/p/about.html",
-      en: "https://www.11tik.com/p/about.html",
+      path: "/about",
+      en: "https://www.11tik.com/about",
       locales: {
-        ar: "https://ar.11tik.com/l/ar/p/about.html",
-        fr: "https://fr.11tik.com/l/fr/p/about.html",
-        es: "https://es.11tik.com/l/es/p/about.html",
+        ar: "https://ar.11tik.com/l/ar/about",
+        fr: "https://fr.11tik.com/l/fr/about",
+        es: "https://es.11tik.com/l/es/about",
       },
     },
     "english-only-guide": {
-      path: "/2026/08/english-only-guide.html",
-      en: "https://www.11tik.com/2026/08/english-only-guide.html",
+      path: "/english-only-guide",
+      en: "https://www.11tik.com/english-only-guide",
       locales: {},
     },
   },
@@ -70,7 +70,7 @@ describe("publishability same-origin manifest URL", () => {
     });
     const doc = await loadPublishability(fetchImpl as unknown as typeof fetch);
     expect(doc?.contents["youtube-thumbnail-url"]?.locales.ar).toBe(
-      "https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html",
+      "https://ar.11tik.com/l/ar/youtube-thumbnail-url",
     );
     expect(fetchImpl).toHaveBeenCalledWith(PUBLISHABILITY_PATH, {
       credentials: "omit",
@@ -88,17 +88,15 @@ describe("publishability same-origin manifest URL", () => {
 });
 
 describe("publishability path normalization", () => {
-  it("normalizes locale-prefixed and extensionless paths", () => {
+  it("normalizes locale-prefixed, legacy, and clean paths to manifest keys", () => {
+    expect(normalizeContentPath("/l/ar/youtube-thumbnail-url")).toBe("/youtube-thumbnail-url");
     expect(normalizeContentPath("/l/ar/2026/08/youtube-thumbnail-url.html")).toBe(
-      "/2026/08/youtube-thumbnail-url.html",
+      "/youtube-thumbnail-url",
     );
-    expect(normalizeContentPath("/l/ar/2026/08/youtube-thumbnail-url")).toBe(
-      "/2026/08/youtube-thumbnail-url.html",
-    );
-    expect(normalizeContentPath("/l/fr/p/about")).toBe("/p/about.html");
-    expect(normalizeContentPath("/2026/08/youtube-thumbnail-url.html")).toBe(
-      "/2026/08/youtube-thumbnail-url.html",
-    );
+    expect(normalizeContentPath("/l/fr/about")).toBe("/about");
+    expect(normalizeContentPath("/l/fr/p/about.html")).toBe("/about");
+    expect(normalizeContentPath("/2026/08/youtube-thumbnail-url.html")).toBe("/youtube-thumbnail-url");
+    expect(normalizeContentPath("/youtube-thumbnail-url")).toBe("/youtube-thumbnail-url");
   });
 });
 
@@ -110,7 +108,7 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(dest).toBe("https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html");
+    expect(dest).toBe("https://ar.11tik.com/l/ar/youtube-thumbnail-url");
   });
 
   it("maps English article → French localized URL", () => {
@@ -120,17 +118,17 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(dest).toBe("https://fr.11tik.com/l/fr/2026/08/youtube-thumbnail-url.html");
+    expect(dest).toBe("https://fr.11tik.com/l/fr/youtube-thumbnail-url");
   });
 
   it("maps English utility → Arabic utility URL", () => {
     const dest = resolveLocaleDestination("https://www.11tik.com/p/about.html", "ar", DOC, home);
-    expect(dest).toBe("https://ar.11tik.com/l/ar/p/about.html");
+    expect(dest).toBe("https://ar.11tik.com/l/ar/about");
   });
 
   it("maps Arabic utility → French utility URL", () => {
     const dest = resolveLocaleDestination("https://ar.11tik.com/l/ar/p/about.html", "fr", DOC, home);
-    expect(dest).toBe("https://fr.11tik.com/l/fr/p/about.html");
+    expect(dest).toBe("https://fr.11tik.com/l/fr/about");
   });
 
   it("maps Arabic article → English canonical on explicit English selection", () => {
@@ -140,7 +138,7 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(dest).toBe("https://www.11tik.com/2026/08/youtube-thumbnail-url.html");
+    expect(dest).toBe("https://www.11tik.com/youtube-thumbnail-url");
   });
 
   it("falls back to English when target locale is not ready", () => {
@@ -150,7 +148,7 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(dest).toBe("https://www.11tik.com/2026/08/english-only-guide.html");
+    expect(dest).toBe("https://www.11tik.com/english-only-guide");
   });
 
   it("falls back to locale homepage for unknown/non-localizable pages", () => {
@@ -165,7 +163,7 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(dest).toBe("https://es.11tik.com/l/es/2026/08/youtube-thumbnail-url.html?ref=nav#faq");
+    expect(dest).toBe("https://es.11tik.com/l/es/youtube-thumbnail-url?ref=nav#faq");
 
     const back = resolveLocaleDestination(
       "https://es.11tik.com/l/es/2026/08/youtube-thumbnail-url?ref=nav#faq",
@@ -173,7 +171,7 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(back).toBe("https://es.11tik.com/l/es/2026/08/youtube-thumbnail-url.html?ref=nav#faq");
+    expect(back).toBe("https://es.11tik.com/l/es/youtube-thumbnail-url?ref=nav#faq");
   });
 
   it("drops lang query param on product hosts", () => {
@@ -183,7 +181,7 @@ describe("path-aware locale switching", () => {
       DOC,
       home,
     );
-    expect(dest).toBe("https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html?x=1");
+    expect(dest).toBe("https://ar.11tik.com/l/ar/youtube-thumbnail-url?x=1");
   });
 });
 
@@ -196,7 +194,7 @@ describe("localized guide links", () => {
       "ar",
       DOC,
     );
-    expect(href).toBe("https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html");
+    expect(href).toBe("https://ar.11tik.com/l/ar/youtube-thumbnail-url");
   });
 
   it("uses English fallback when locale is not ready", () => {
@@ -205,7 +203,7 @@ describe("localized guide links", () => {
       "ar",
       DOC,
     );
-    expect(href).toBe("https://www.11tik.com/2026/08/english-only-guide.html");
+    expect(href).toBe("https://www.11tik.com/english-only-guide");
   });
 
   it("never invents a broken localized URL without a manifest entry", () => {
@@ -218,17 +216,17 @@ describe("localized guide links", () => {
     setPublishabilityCache(null);
     const before = guidePosts({ locale: "ar", doc: null });
     expect(before.find((p) => p.href.includes("youtube-thumbnail-url"))?.href).toBe(
-      "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
+      "https://www.11tik.com/youtube-thumbnail-url",
     );
 
     const after = guidePosts({ locale: "ar", doc: DOC });
     expect(after.find((p) => p.href.includes("youtube-thumbnail-url"))?.href).toBe(
-      "https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html",
+      "https://ar.11tik.com/l/ar/youtube-thumbnail-url",
     );
 
     const englishHome = guidePosts({ locale: "en", doc: DOC });
     expect(englishHome.find((p) => p.href.includes("youtube-thumbnail-url"))?.href).toBe(
-      "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
+      "https://www.11tik.com/youtube-thumbnail-url",
     );
   });
 
@@ -245,25 +243,23 @@ describe("localized guide links", () => {
 
 describe("publishability lookup", () => {
   it("finds entries by English or locale path", () => {
-    expect(findPublishabilityEntry(DOC, "/2026/08/youtube-thumbnail-url.html")?.path).toBe(
-      "/2026/08/youtube-thumbnail-url.html",
-    );
-    expect(findPublishabilityEntry(DOC, "/l/ar/p/about.html")?.path).toBe("/p/about.html");
+    expect(findPublishabilityEntry(DOC, "/youtube-thumbnail-url")?.path).toBe("/youtube-thumbnail-url");
+    expect(findPublishabilityEntry(DOC, "/l/ar/about")?.path).toBe("/about");
   });
 });
 
 describe("legalHrefs localized utilities", () => {
   it("keeps English absolute utility URLs", () => {
-    expect(legalHrefs("en").about).toBe("https://www.11tik.com/p/about.html");
-    expect(legalHrefs("en").terms).toBe("https://www.11tik.com/p/terms-of-use.html");
+    expect(legalHrefs("en").about).toBe("https://www.11tik.com/about");
+    expect(legalHrefs("en").terms).toBe("https://www.11tik.com/terms-of-use");
   });
 
-  it("uses /l/{lang}/p/… for Arabic, French, Spanish", () => {
-    expect(legalHrefs("ar").about).toBe("https://ar.11tik.com/l/ar/p/about.html");
-    expect(legalHrefs("fr").about).toBe("https://fr.11tik.com/l/fr/p/about.html");
-    expect(legalHrefs("es").contact).toBe("https://es.11tik.com/l/es/p/contact.html");
-    expect(legalHrefs("fr").privacy).toBe("https://fr.11tik.com/l/fr/p/privacy.html");
-    expect(legalHrefs("ar").embed).toBe("https://ar.11tik.com/l/ar/p/embed.html");
-    expect(legalHrefs("ar").keywords).toBe("https://ar.11tik.com/l/ar/p/keyword-tools.html");
+  it("uses /l/{lang}/{slug} clean URLs for Arabic, French, Spanish", () => {
+    expect(legalHrefs("ar").about).toBe("https://ar.11tik.com/l/ar/about");
+    expect(legalHrefs("fr").about).toBe("https://fr.11tik.com/l/fr/about");
+    expect(legalHrefs("es").contact).toBe("https://es.11tik.com/l/es/contact");
+    expect(legalHrefs("fr").privacy).toBe("https://fr.11tik.com/l/fr/privacy");
+    expect(legalHrefs("ar").embed).toBe("https://ar.11tik.com/l/ar/embed");
+    expect(legalHrefs("ar").keywords).toBe("https://ar.11tik.com/l/ar/keyword-tools");
   });
 });

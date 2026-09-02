@@ -9,22 +9,21 @@
  */
 
 import { ISO6391 } from "./iso6391.js";
+import { INDEXABLE_UTILITY_CLEAN_PATHS, INDEXABLE_UTILITY_IDS, enLegacyPagePath } from "./clean-url-paths.js";
 
 export const SITE_ORIGIN = "https://www.11tik.com";
 
-/** Intentionally indexable utility pages (Blogger /p/ pages that are live and meant for discovery). */
-export const INDEXABLE_UTILITY_PATHS = Object.freeze([
-  "/p/about.html",
-  "/p/contact.html",
-  "/p/embed.html",
-  "/p/privacy.html",
-  "/p/terms-of-use.html",
-  "/p/keyword-tools.html",
-]);
+/** Indexable utility pages at final clean public paths. */
+export const INDEXABLE_UTILITY_PATHS = INDEXABLE_UTILITY_CLEAN_PATHS;
+
+/** Legacy /p/*.html paths still allowed through the /p/* Worker handler. */
+export const LEGACY_INDEXABLE_UTILITY_PATHS = Object.freeze(
+  INDEXABLE_UTILITY_IDS.map((id) => enLegacyPagePath(id)),
+);
 
 /**
  * Legacy /p/ guide paths that may still exist in POST_DESCRIPTIONS for meta polishing
- * but must never appear in sitemap.xml (they 404; canonicals are /2026/08/…).
+ * but must never appear in sitemap.xml (they 404; canonicals are clean /{slug}).
  */
 export const LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP = Object.freeze([
   "/p/how-to-download-youtube-thumbnail.html",
@@ -34,35 +33,35 @@ export const LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP = Object.freeze([
 ]);
 
 /**
- * Legacy /p/ URLs → canonical static destinations (301 via dist-assets/_redirects).
+ * Legacy /p/ URLs → final clean destinations (301 via Worker atomic map + _redirects).
  * Targets verified against GUIDE_POSTS hrefs in src/content/posts.ts.
  */
 export const LEGACY_P_REDIRECTS = Object.freeze([
   {
     from: "/p/how-to-download-youtube-thumbnail",
-    to: "/2026/08/how-to-download-youtube-thumbnail.html",
+    to: "/how-to-download-youtube-thumbnail",
   },
   {
     from: "/p/how-to-download-youtube-thumbnail.html",
-    to: "/2026/08/how-to-download-youtube-thumbnail.html",
+    to: "/how-to-download-youtube-thumbnail",
   },
-  { from: "/p/youtube-thumbnail-url", to: "/2026/08/youtube-thumbnail-url.html" },
-  { from: "/p/youtube-thumbnail-url.html", to: "/2026/08/youtube-thumbnail-url.html" },
+  { from: "/p/youtube-thumbnail-url", to: "/youtube-thumbnail-url" },
+  { from: "/p/youtube-thumbnail-url.html", to: "/youtube-thumbnail-url" },
   {
     from: "/p/youtube-thumbnail-size",
-    to: "/2026/08/youtube-thumbnail-size-resolution.html",
+    to: "/youtube-thumbnail-size-resolution",
   },
   {
     from: "/p/youtube-thumbnail-size.html",
-    to: "/2026/08/youtube-thumbnail-size-resolution.html",
+    to: "/youtube-thumbnail-size-resolution",
   },
   {
     from: "/p/youtube-shorts-thumbnail",
-    to: "/2026/08/youtube-shorts-thumbnail-download.html",
+    to: "/youtube-shorts-thumbnail-download",
   },
   {
     from: "/p/youtube-shorts-thumbnail.html",
-    to: "/2026/08/youtube-shorts-thumbnail-download.html",
+    to: "/youtube-shorts-thumbnail-download",
   },
   { from: "/p/youtube-thumbnail-extractor", to: "/" },
   { from: "/p/youtube-thumbnail-extractor.html", to: "/" },
@@ -72,7 +71,7 @@ export const LEGACY_P_REDIRECTS = Object.freeze([
 /** Paths allowed through the unknown-/p/* edge 404 rule (utilities + legacy redirect sources). */
 export function collectPAllowlistPaths() {
   const paths = new Set();
-  for (const utility of INDEXABLE_UTILITY_PATHS) {
+  for (const utility of LEGACY_INDEXABLE_UTILITY_PATHS) {
     paths.add(utility);
     paths.add(utility.replace(/\.html$/i, ""));
   }
@@ -153,7 +152,7 @@ export function collectCanonicalSitemapLocs(input = {}) {
 }
 
 /**
- * Allow only https://{xx}.11tik.com/l/{xx}/…html (xx ≠ en).
+ * Allow only https://{xx}.11tik.com/l/{xx}/{slug} (xx ≠ en).
  * Rejects www, apex, arbitrary hosts, and bare locale homes (/l/xx/).
  * Locale homes are collected separately via collectLocaleHomeSitemapLocs().
  */
@@ -168,8 +167,7 @@ export function normalizeTrustedLocaleSitemapLoc(raw) {
     const code = match[1];
     if (code === "en") return null;
     const path = url.pathname.replace(/\/+$/, "") || "/";
-    // Require /l/{code}/…/*.html (articles or utilities), not the SPA locale home alone.
-    if (!new RegExp(`^/l/${code}/.+\.html$`).test(path)) return null;
+    if (!new RegExp(`^/l/${code}/[a-z0-9]+(?:-[a-z0-9]+)*$`, "i").test(path)) return null;
     return `https://${code}.11tik.com${path}`;
   } catch {
     return null;

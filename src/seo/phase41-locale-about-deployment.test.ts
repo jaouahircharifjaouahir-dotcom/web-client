@@ -189,17 +189,56 @@ describe("Phase 41 rollback", () => {
   });
 });
 
-describe("Phase 41 unknown handling", () => {
-  it("GSC does not block deploy decision", () => {
-    expect(true).toBe(true);
-  });
-});
-
 describe("Phase 41 executive report", () => {
+  it("PHASE41_EXECUTIVE_REPORT exists", () => {
+    expect(existsSync(join(PHASE41, "PHASE41_EXECUTIVE_REPORT.md"))).toBe(true);
+  });
+
   it("PHASE41_EXECUTIVE_REPORT when generated", () => {
     if (existsSync(join(PHASE41, "PHASE41_EXECUTIVE_REPORT.md"))) {
       const md = readFileSync(join(PHASE41, "PHASE41_EXECUTIVE_REPORT.md"), "utf8");
       expect(md).toMatch(/Phase 42|PHASE 42/i);
     }
+  });
+
+  it("decision A success", () => {
+    if (existsSync(join(PHASE41, "PHASE41_DECISION.json"))) {
+      const j = JSON.parse(readFileSync(join(PHASE41, "PHASE41_DECISION.json"), "utf8"));
+      expect(j.classification).toMatch(/SUCCESS/);
+    }
+  });
+});
+
+describe("Phase 41 deployment artifacts", () => {
+  it("DEPLOYMENT.json records worker version", () => {
+    expect(existsSync(join(PHASE41, "DEPLOYMENT.json"))).toBe(true);
+    const j = JSON.parse(readFileSync(join(PHASE41, "DEPLOYMENT.json"), "utf8"));
+    expect(j.workerVersionId).toBeTruthy();
+  });
+
+  it("LIVE_ABOUT_MATRIX 37 rows", () => {
+    const lines = readFileSync(join(PHASE41, "LIVE_ABOUT_MATRIX.csv"), "utf8").trim().split("\n");
+    expect(lines.length - 1).toBe(37);
+  });
+
+  it("GATE_RECOVERY resolved", () => {
+    const j = JSON.parse(readFileSync(join(PHASE41, "GATE_RECOVERY.json"), "utf8"));
+    expect(j.recovered).toBe(true);
+  });
+
+  it("POST_DEPLOY_SMOKE zero fail", () => {
+    const j = JSON.parse(readFileSync(join(PHASE41, "POST_DEPLOY_SMOKE.json"), "utf8"));
+    expect(j.fail).toBe(0);
+  });
+
+  it("GIT_IDENTITY head matches origin", () => {
+    const j = JSON.parse(readFileSync(join(PHASE41, "GIT_IDENTITY.json"), "utf8"));
+    expect(j.match).toBe(true);
+  });
+});
+
+describe("Phase 41 unknown handling", () => {
+  it("GSC does not block deploy decision", () => {
+    expect(true).toBe(true);
   });
 });

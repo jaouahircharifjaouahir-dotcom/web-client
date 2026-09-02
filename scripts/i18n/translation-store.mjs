@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { localizedAssetRel, localizedCleanPath } from "./clean-urls.mjs";
 import { ISO6391, ISO6391_CODES, RTL_CODES } from "../../workers/iso6391.js";
 import { SITE_ORIGIN } from "../../workers/sitemap-canonicals.js";
 
@@ -86,14 +87,12 @@ export function saveTranslationArtifact(artifact) {
 export function localizedPublicUrl(item, locale) {
   if (locale === "en") return item.canonicalUrl;
   if (item.type === "homepage") return `https://${locale}.11tik.com/l/${locale}/`;
-  const path = item.canonicalPath.startsWith("/") ? item.canonicalPath : `/${item.canonicalPath}`;
-  return `https://${locale}.11tik.com/l/${locale}${path}`;
+  return `https://${locale}.11tik.com${localizedCleanPath(locale, item.contentId)}`;
 }
 
 export function localizedAssetRelPath(item, locale) {
   if (item.type === "homepage") return join("l", locale, "index.html");
-  const path = item.canonicalPath.replace(/^\//, "");
-  return join("l", locale, path);
+  return localizedAssetRel(locale, item.contentId);
 }
 
 export function isRtl(locale) {

@@ -1,7 +1,18 @@
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { INDEXABLE_UTILITY_PATHS, SITE_ORIGIN, loadGuidePostHrefsFromFile } from "../../workers/sitemap-canonicals.js";
+import {
+  LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP,
+  SITE_ORIGIN,
+  loadGuidePostHrefsFromFile,
+} from "../../workers/sitemap-canonicals.js";
+import {
+  INDEXABLE_UTILITY_IDS,
+  enAssetRel,
+  enCleanPath,
+  enLegacyArticlePath,
+  enLegacyPagePath,
+} from "./clean-urls.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const POSTS_TS = join(ROOT, "src", "content", "posts.ts");
@@ -26,12 +37,12 @@ export const ARTICLE_SOURCE_OVERRIDES = Object.freeze({
 export const EN_ONLY_ARTICLE_IDS = Object.freeze(["youtube-thumbnail-sizes-resolutions-study"]);
 
 export const UTILITY_SOURCE_MAP = Object.freeze({
-  "/p/about.html": "docs/blogger-pages/about.html",
-  "/p/contact.html": "docs/blogger-pages/contact.html",
-  "/p/embed.html": "docs/blogger-pages/embed.html",
-  "/p/privacy.html": "docs/blogger-pages/privacy.html",
-  "/p/terms-of-use.html": "docs/blogger-pages/terms.html",
-  "/p/keyword-tools.html": "docs/blogger-pages/keyword-tools.html",
+  about: "docs/blogger-pages/about.html",
+  contact: "docs/blogger-pages/contact.html",
+  embed: "docs/blogger-pages/embed.html",
+  privacy: "docs/blogger-pages/privacy.html",
+  "terms-of-use": "docs/blogger-pages/terms.html",
+  "keyword-tools": "docs/blogger-pages/keyword-tools.html",
 });
 
 export function contentIdFromWwwPath(pathname) {
@@ -61,7 +72,7 @@ export function resolveArticleSourceRel(contentId, canonicalPath) {
 export function buildContentInventory(options = {}) {
   const postsTs = options.postsTsContents ?? readFileSync(POSTS_TS, "utf8");
   const postHrefs = options.postHrefs ?? loadGuidePostHrefsFromFile(postsTs);
-  const utilityPaths = options.utilityPaths ?? INDEXABLE_UTILITY_PATHS;
+  const utilityIds = options.utilityIds ?? INDEXABLE_UTILITY_IDS;
   const items = [];
 
   items.push({
@@ -69,6 +80,8 @@ export function buildContentInventory(options = {}) {
     type: "homepage",
     canonicalPath: "/",
     canonicalUrl: `${SITE_ORIGIN}/`,
+    legacyPath: "/",
+    assetRel: null,
     title: "11tik homepage",
     sourceRel: null,
     indexable: true,
@@ -78,14 +91,16 @@ export function buildContentInventory(options = {}) {
 
   for (const href of postHrefs) {
     const url = new URL(href);
-    const canonicalPath = url.pathname;
-    const contentId = contentIdFromWwwPath(canonicalPath);
+    const contentId = contentIdFromWwwPath(url.pathname);
+    const canonicalPath = enCleanPath(contentId);
     const sourceRel = resolveArticleSourceRel(contentId, canonicalPath);
     items.push({
       contentId,
       type: "article",
       canonicalPath,
       canonicalUrl: href,
+      legacyPath: enLegacyArticlePath(contentId),
+      assetRel: enAssetRel(contentId),
       title: contentId,
       sourceRel,
       indexable: true,
@@ -93,15 +108,17 @@ export function buildContentInventory(options = {}) {
     });
   }
 
-  for (const path of utilityPaths) {
-    const contentId = contentIdFromWwwPath(path);
+  for (const contentId of utilityIds) {
+    const canonicalPath = enCleanPath(contentId);
     items.push({
       contentId,
       type: "utility",
-      canonicalPath: path,
-      canonicalUrl: `${SITE_ORIGIN}${path}`,
+      canonicalPath,
+      canonicalUrl: `${SITE_ORIGIN}${canonicalPath}`,
+      legacyPath: enLegacyPagePath(contentId),
+      assetRel: enAssetRel(contentId),
       title: contentId,
-      sourceRel: UTILITY_SOURCE_MAP[path] || null,
+      sourceRel: UTILITY_SOURCE_MAP[contentId] || null,
       indexable: true,
       localizable: true,
     });
@@ -113,3 +130,5 @@ export function buildContentInventory(options = {}) {
 export function localizableContent(inventory = buildContentInventory()) {
   return inventory.filter((item) => item.localizable && item.indexable);
 }
+
+export { LEGACY_GUIDE_PATHS_EXCLUDED_FROM_SITEMAP };

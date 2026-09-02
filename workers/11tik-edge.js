@@ -5,16 +5,29 @@ import {
   patchHomepageShellHtml,
   resolveHomepageQueryShell,
 } from "./homepage-query-shell.mjs";
-import { INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
-import { handlePrimary2026PathRequest, handleLocalized2026PathRequest } from "./article-2026-path.js";
+import { INDEXABLE_UTILITY_PATHS, LEGACY_INDEXABLE_UTILITY_PATHS, LEGACY_P_REDIRECTS } from "./sitemap-canonicals.js";
+import { handlePrimary2026PathRequest, handleLocalized2026PathRequest, isSpaFallbackHtml } from "./article-2026-path.js";
 import { handlePostsFeedRequest, isPostsFeedPath } from "./posts-feed.js";
 import { feedsCommentsOtherRetireResponse } from "./feeds-comments-other-retire.js";
 import { pagesFeedRetireResponse } from "./pages-feed-retire.js";
 import { searchRetireResponse } from "./search-retire.js";
 import { sitemapImagesRetireResponse } from "./sitemap-images-retire.js";
 import { sitemapPagesRedirectResponse } from "./sitemap-pages-redirect.js";
+import {
+  parseCleanUrlRequest,
+  resolveCleanUrl,
+  ROUTE_LOOKUP_STATUS,
+} from "./clean-url-resolver.js";
+import { resolveLegacyCleanRedirect } from "./clean-url-legacy-redirects.js";
 
 export { wrapMailtoWithEmailOff, protectEmailsInHtml };
+export { resolveCleanUrl } from "./clean-url-resolver.js";
+export {
+  buildAtomicRedirectMap,
+  buildLegacyPRedirectsClean,
+  resolveLegacyCleanRedirect,
+  validateAtomicRedirectMap,
+} from "./clean-url-legacy-redirects.js";
 
 const SITE = "https://www.11tik.com";
 
@@ -32,6 +45,7 @@ function isPrimaryHost(host) {
 
 const LEGACY_P_REDIRECT_BY_PATH = new Map(LEGACY_P_REDIRECTS.map((rule) => [rule.from, rule.to]));
 const INDEXABLE_UTILITY_SET = new Set(INDEXABLE_UTILITY_PATHS);
+const LEGACY_INDEXABLE_UTILITY_SET = new Set(LEGACY_INDEXABLE_UTILITY_PATHS);
 
 const P_PATH_NOT_FOUND_HTML =
   "<!DOCTYPE html><html lang=\"en\"><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>";
@@ -56,13 +70,78 @@ function pPathNotFoundResponse() {
   );
 }
 
+function legacyAtomicRedirectResponse(url) {
+  const rule = resolveLegacyCleanRedirect(url.pathname);
+  if (!rule) return null;
+  const dest = new URL(rule.to, url.origin);
+  dest.search = url.search;
+  return withSecurityHeaders(Response.redirect(dest.toString(), 301));
+}
+
+/** Phase 53: serve manifest-backed clean EN/localized content URLs. */
+async function handleCleanUrlRequest(url, env, host) {
+  if (!env?.ASSETS) return null;
+
+  const rawPath = url.pathname;
+  const path = rawPath.replace(/\/+$/, "") || "/";
+  if (rawPath !== path) {
+    const parsed = parseCleanUrlRequest(path, host);
+    if (parsed.pattern === "en-content" || parsed.pattern === "localized-content") {
+      const dest = new URL(path, url.origin);
+      dest.search = url.search;
+      return withSecurityHeaders(Response.redirect(dest.toString(), 301));
+    }
+  }
+
+  const result = resolveCleanUrl(path, { host });
+  if (result.status === ROUTE_LOOKUP_STATUS.RESERVED_ROUTE) return null;
+
+  const parsed = parseCleanUrlRequest(path, host);
+  if (parsed.pattern !== "en-content" && parsed.pattern !== "localized-content") return null;
+
+  if (result.status !== ROUTE_LOOKUP_STATUS.EXISTS) {
+    return pPathNotFoundResponse();
+  }
+
+  const assetRel = result.assetRel || result.entry?.assetRel;
+  if (!assetRel) return pPathNotFoundResponse();
+
+  const assetPath = `/${String(assetRel).replace(/^\/+/, "")}`;
+  const res = await env.ASSETS.fetch(new Request(new URL(assetPath, url.origin).toString()));
+  if (!res.ok) return pPathNotFoundResponse();
+  const html = await res.text();
+  if (isSpaFallbackHtml(html)) return pPathNotFoundResponse();
+  return withSecurityHeaders(new Response(html, { status: res.status, headers: res.headers }));
+}
+
 /** @returns {string} absolute redirect URL when indexable utility has trailing slash, else "" */
 export function utilityTrailingSlashCanonicalRedirect(url) {
   const rawPath = String(url.pathname || "");
   const path = rawPath.replace(/\/+$/, "") || "/";
-  if (rawPath === path || !path.startsWith("/p/")) return "";
+  if (rawPath === path) return "";
   if (!INDEXABLE_UTILITY_SET.has(path)) return "";
   return `${SITE}${path}`;
+}
+
+/**
+ * Phase 53: localized clean `/l/{locale}/{slug}/` → `/l/{locale}/{slug}`.
+ */
+export function localizedCleanTrailingSlashCanonicalRedirect(url, host) {
+  const rawPath = String(url.pathname || "");
+  if (!rawPath.endsWith("/")) return "";
+
+  const path = rawPath.replace(/\/+$/, "") || "/";
+  const match = /^\/l\/([a-z]{2})\/([a-z0-9][a-z0-9-]*)$/i.exec(path);
+  if (!match) return "";
+
+  const pathLocale = match[1].toLowerCase();
+  if (!ISO6391_CODES.has(pathLocale)) return "";
+
+  const hostLocale = localeHostCode(host);
+  if (hostLocale && hostLocale !== pathLocale) return "";
+  if (!hostLocale && !isPrimaryHost(host)) return "";
+
+  return `${url.protocol}//${url.host}${path}`;
 }
 
 /**
@@ -90,7 +169,7 @@ export function localizedHtmlTrailingSlashCanonicalRedirect(url, host) {
 
   if (pathLocaleMatch[2].startsWith("p/")) {
     const utilityPath = `/p/${pathLocaleMatch[2].slice(2)}`;
-    if (!INDEXABLE_UTILITY_SET.has(utilityPath)) return "";
+    if (!LEGACY_INDEXABLE_UTILITY_SET.has(utilityPath)) return "";
   }
 
   return `${url.protocol}//${url.host}${path}`;
@@ -105,9 +184,10 @@ export async function handlePrimaryPPathRequest(url, env) {
   const path = rawPath.replace(/\/+$/, "") || "/";
   if (!path.startsWith("/p/")) return null;
 
-  const trailingSlashRedirect = utilityTrailingSlashCanonicalRedirect(url);
-  if (trailingSlashRedirect) {
-    return Response.redirect(trailingSlashRedirect, 301);
+  if (rawPath !== path && LEGACY_INDEXABLE_UTILITY_SET.has(path)) {
+    const dest = new URL(path, `${SITE}/`);
+    dest.search = url.search;
+    return Response.redirect(dest.toString(), 301);
   }
 
   const legacy = legacyPRedirectUrl(path);
@@ -117,10 +197,6 @@ export async function handlePrimaryPPathRequest(url, env) {
     return Response.redirect(dest.toString(), 301);
   }
 
-  if (INDEXABLE_UTILITY_SET.has(path) && url.search) {
-    return Response.redirect(`${SITE}${path}`, 301);
-  }
-
   const toHtml = extensionlessPPathToHtml(path);
   if (toHtml) {
     const dest = new URL(toHtml, `${SITE}/`);
@@ -128,28 +204,17 @@ export async function handlePrimaryPPathRequest(url, env) {
     return Response.redirect(dest.toString(), 301);
   }
 
-  // Six indexable utilities are asset-first (negative RWF); when fetch() still runs, defer to ASSETS passthrough.
-  if (INDEXABLE_UTILITY_SET.has(path)) return null;
+  if (LEGACY_INDEXABLE_UTILITY_SET.has(path)) return null;
 
   return pPathNotFoundResponse();
 }
 
-function legalPageRedirect(pathname) {
-  const path = pathname.replace(/\/+$/, "") || "/";
-  if (path === "/about") return `${SITE}/p/about.html`;
-  if (path === "/privacy") return `${SITE}/p/privacy.html`;
-  if (path === "/contact") return `${SITE}/p/contact.html`;
-  if (path === "/terms") return `${SITE}/p/terms-of-use.html`;
-  if (path === "/embed") return `${SITE}/p/embed.html`;
-  return "";
-}
-
-/** Extensionless indexable utility → .html (Worker-first /p/* skips Assets `_redirects`). */
+/** Extensionless legacy /p/* utility → .html before atomic redirect on extensionless sources. */
 export function extensionlessPPathToHtml(pathname) {
   const path = String(pathname || "").replace(/\/+$/, "") || "/";
   if (path.endsWith(".html")) return "";
   const withHtml = `${path}.html`;
-  return INDEXABLE_UTILITY_SET.has(withHtml) ? withHtml : "";
+  return LEGACY_INDEXABLE_UTILITY_SET.has(withHtml) ? withHtml : "";
 }
 
 /**
@@ -214,6 +279,19 @@ export default {
     const lang = localeHostCode(host);
     if (!isPrimaryHost(host) && !lang) {
       return new Response("Not found", { status: 404, headers: { "cache-control": "no-store" } });
+    }
+
+    const legacyAtomic = legacyAtomicRedirectResponse(url);
+    if (legacyAtomic) return legacyAtomic;
+
+    const cleanTrailingSlash = localizedCleanTrailingSlashCanonicalRedirect(url, host);
+    if (cleanTrailingSlash) {
+      return withSecurityHeaders(Response.redirect(cleanTrailingSlash, 301));
+    }
+
+    const utilityTrailingSlash = utilityTrailingSlashCanonicalRedirect(url);
+    if (utilityTrailingSlash) {
+      return withSecurityHeaders(Response.redirect(utilityTrailingSlash, 301));
     }
 
     // Assets-backed sitemap must not be reachable as a second http:// sitemap copy.
@@ -289,8 +367,10 @@ export default {
       if (res.ok) return withSecurityHeaders(res);
     }
 
-    // Phase 2B: www /p/* Worker fallback (legacy 301, extensionless utility 301, unknown 404).
-    // Six clean utility .html paths are excluded via negative run_worker_first → direct Assets.
+    const cleanResponse = await handleCleanUrlRequest(url, env, host);
+    if (cleanResponse) return cleanResponse;
+
+    // Phase 2B: www /p/* Worker fallback (legacy 301, unknown 404).
     if (isPrimaryHost(host) && url.pathname.startsWith("/p/")) {
       const pResponse = await handlePrimaryPPathRequest(url, env);
       if (pResponse) return pResponse;
@@ -309,11 +389,6 @@ export default {
         withSecurityHeaders,
       });
       if (article2026Response) return article2026Response;
-    }
-
-    if (host === "www.11tik.com") {
-      const legal = legalPageRedirect(url.pathname);
-      if (legal) return Response.redirect(legal, 301);
     }
 
     // Phase 7A: localized `.html/` → clean `.html` before ASSETS / SPA fallback.

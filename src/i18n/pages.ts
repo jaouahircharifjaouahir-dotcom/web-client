@@ -620,8 +620,8 @@ export function legalHrefs(locale: string): {
   const code = String(locale || "en").toLowerCase();
   const utility = (slug: string) =>
     code === "en"
-      ? `https://www.11tik.com/p/${slug}.html`
-      : `https://${code}.11tik.com/l/${code}/p/${slug}.html`;
+      ? `https://www.11tik.com/${slug}`
+      : `https://${code}.11tik.com/l/${code}/${slug}`;
   return {
     about: utility("about"),
     privacy: utility("privacy"),

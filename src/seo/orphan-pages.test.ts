@@ -5,11 +5,11 @@ import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 
 /** Ahrefs File 23 — href inlinks must exist on www English static HTML (not sitemap/hreflang). */
 const ORPHAN_ARTICLE_TARGETS = [
-  "https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html",
-  "https://www.11tik.com/2026/08/youtube-live-premiere-thumbnail-download.html",
+  "https://www.11tik.com/11tik-share-links-thumb-vs-youtube",
+  "https://www.11tik.com/youtube-live-premiere-thumbnail-download",
 ] as const;
 
-const INTENTIONALLY_ISOLATED = "https://www.11tik.com/p/keyword-tools.html";
+const KEYWORD_TOOLS = "https://www.11tik.com/keyword-tools";
 
 function walkHtml(dir: string, acc: string[] = []): string[] {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -22,7 +22,8 @@ function walkHtml(dir: string, acc: string[] = []): string[] {
 
 function isSelfRef(sourceRel: string, targetPath: string): boolean {
   const normalized = sourceRel.replace(/\\/g, "/");
-  return normalized.endsWith(targetPath.slice(1));
+  const slug = targetPath.replace(/^\//, "");
+  return normalized === `${slug}.html` || normalized.endsWith(`/${slug}.html`);
 }
 
 function htmlLinksToTarget(html: string, targetUrl: string): boolean {
@@ -50,16 +51,16 @@ function externalInlinkSources(staged: string, targetUrl: string): string[] {
 describe("Ahrefs orphan pages (File 23)", () => {
   it("article canonicals have at least one non-self href inlink in staged static HTML", () => {
     const dir = getStagedStaticSite();
-      for (const url of ORPHAN_ARTICLE_TARGETS) {
-        const refs = externalInlinkSources(dir, url);
-        expect(refs.length, `${url} inlinks`).toBeGreaterThan(0);
-      }
+    for (const url of ORPHAN_ARTICLE_TARGETS) {
+      const refs = externalInlinkSources(dir, url);
+      expect(refs.length, `${url} inlinks`).toBeGreaterThan(0);
+    }
   });
 
-  it("keyword-tools stays intentionally isolated (no static href inlinks)", () => {
+  it("keyword-tools page exists and is linked from homepage", () => {
     const dir = getStagedStaticSite();
-      const refs = externalInlinkSources(dir, INTENTIONALLY_ISOLATED);
-      expect(refs).toEqual([]);
-      expect(existsSync(join(dir, "p", "keyword-tools.html"))).toBe(true);
+    expect(existsSync(join(dir, "keyword-tools.html"))).toBe(true);
+    const home = readFileSync(join(dir, "index.html"), "utf8");
+    expect(home).toContain(KEYWORD_TOOLS);
   });
 });

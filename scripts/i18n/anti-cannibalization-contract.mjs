@@ -21,7 +21,7 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
       "youtube thumbnail url anatomy",
       "maxresdefault troubleshooting",
     ],
-    preferredLinks: ["/2026/08/how-to-download-youtube-thumbnail.html", "/p/embed.html"],
+    preferredLinks: ["/how-to-download-youtube-thumbnail", "/embed"],
   },
   "how-to-download-youtube-thumbnail": {
     primary: "How to download / save a YouTube thumbnail image",
@@ -29,9 +29,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["how to download youtube thumbnail", "save youtube thumbnail"],
     forbiddenOverlap: ["tool homepage H1", "url anatomy deep dive", "maxres 404 essay"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-url.html",
-      "/2026/08/youtube-shorts-thumbnail-download.html",
-      "/2026/08/how-to-batch-download-youtube.html",
+      "/youtube-thumbnail-url",
+      "/youtube-shorts-thumbnail-download",
+      "/how-to-batch-download-youtube",
     ],
   },
   "youtube-thumbnail-url": {
@@ -40,9 +40,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["youtube thumbnail url", "thumbnail url format"],
     forbiddenOverlap: ["download steps tutorial", "size matrix ownership"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-size-resolution.html",
-      "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
-      "/p/embed.html",
+      "/youtube-thumbnail-size-resolution",
+      "/what-is-maxresdefaultjpg-when-youtube",
+      "/embed",
     ],
   },
   "youtube-thumbnail-size-resolution": {
@@ -51,10 +51,10 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["youtube thumbnail size", "youtube thumbnail resolution", "dimensions"],
     forbiddenOverlap: ["maxres 404 troubleshooting", "highest quality workflow", "measured sample study"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-sizes-resolutions-study.html",
-      "/2026/08/highest-quality-youtube-thumbnail.html",
-      "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
-      "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
+      "/youtube-thumbnail-sizes-resolutions-study",
+      "/highest-quality-youtube-thumbnail",
+      "/what-is-maxresdefaultjpg-when-youtube",
+      "/webp-vs-jpeg-youtube-thumbnails-which",
     ],
   },
   "youtube-thumbnail-sizes-resolutions-study": {
@@ -71,10 +71,13 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
       "highest quality workflow",
     ],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-size-resolution.html",
-      "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
-      "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
-      "/p/embed.html",
+      "/youtube-thumbnail-size-resolution",
+      "/youtube-thumbnail-url",
+      "/original-youtube-thumbnail-image",
+      "/youtube-shorts-thumbnail-download",
+      "/highest-quality-youtube-thumbnail",
+      "/how-to-download-youtube-thumbnail",
+      "/embed",
     ],
   },
   "what-is-maxresdefaultjpg-when-youtube": {
@@ -83,9 +86,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["maxresdefault", "maxres 404", "maxres missing"],
     forbiddenOverlap: ["full size matrix", "video private diagnosis"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-size-resolution.html",
-      "/2026/08/youtube-thumbnail-not-appearing-private.html",
-      "/2026/08/youtube-studio-thumbnail-2026.html",
+      "/youtube-thumbnail-size-resolution",
+      "/youtube-thumbnail-not-appearing-private",
+      "/youtube-studio-thumbnail-2026",
     ],
   },
   "highest-quality-youtube-thumbnail": {
@@ -94,9 +97,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["highest quality youtube thumbnail", "maximum resolution"],
     forbiddenOverlap: ["original upload semantics", "size reference table"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-size-resolution.html",
-      "/2026/08/original-youtube-thumbnail-image.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
+      "/youtube-thumbnail-size-resolution",
+      "/original-youtube-thumbnail-image",
+      "/how-to-download-youtube-thumbnail",
     ],
   },
   "original-youtube-thumbnail-image": {
@@ -105,9 +108,11 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["original youtube thumbnail", "original image"],
     forbiddenOverlap: ["highest quality workflow duplicate", "size matrix"],
     preferredLinks: [
-      "/2026/08/highest-quality-youtube-thumbnail.html",
-      "/2026/08/youtube-thumbnail-size-resolution.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
+      "/highest-quality-youtube-thumbnail",
+      "/youtube-thumbnail-size-resolution",
+      "/how-to-download-youtube-thumbnail",
+      "/youtube-thumbnail-sizes-resolutions-study",
+      "/youtube-thumbnail-url",
     ],
   },
   "webp-vs-jpeg-youtube-thumbnails-which": {
@@ -116,9 +121,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["webp vs jpeg youtube thumbnail"],
     forbiddenOverlap: ["full resolution matrix", "OG hosting guide"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-size-resolution.html",
-      "/2026/08/how-to-use-youtube-thumbnail-as-blog.html",
-      "/p/embed.html",
+      "/youtube-thumbnail-size-resolution",
+      "/how-to-use-youtube-thumbnail-as-blog",
+      "/embed",
     ],
   },
   "youtube-shorts-thumbnail-download": {
@@ -127,9 +132,10 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["youtube shorts thumbnail", "download shorts thumbnail"],
     forbiddenOverlap: ["generic download tutorial", "live stream cover"],
     preferredLinks: [
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/how-to-batch-download-youtube.html",
-      "/2026/08/youtube-live-premiere-thumbnail-download.html",
+      "/how-to-download-youtube-thumbnail",
+      "/how-to-batch-download-youtube",
+      "/youtube-thumbnail-url",
+      "/youtube-thumbnail-sizes-resolutions-study",
     ],
   },
   "how-to-batch-download-youtube": {
@@ -138,9 +144,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["batch download youtube thumbnails", "bulk thumbnail"],
     forbiddenOverlap: ["channel expansion workflow", "single-url tutorial"],
     preferredLinks: [
-      "/2026/08/how-to-extract-thumbnails-from-youtube.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/youtube-shorts-thumbnail-download.html",
+      "/how-to-extract-thumbnails-from-youtube",
+      "/how-to-download-youtube-thumbnail",
+      "/youtube-shorts-thumbnail-download",
     ],
   },
   "how-to-extract-thumbnails-from-youtube": {
@@ -149,9 +155,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["extract thumbnails from youtube channel", "channel thumbnail"],
     forbiddenOverlap: ["line-by-line batch without channel", "competitor cloning"],
     preferredLinks: [
-      "/2026/08/how-to-batch-download-youtube.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/thumbnail-extractor-vs-maker.html",
+      "/how-to-batch-download-youtube",
+      "/how-to-download-youtube-thumbnail",
+      "/thumbnail-extractor-vs-maker",
     ],
   },
   "how-to-save-youtube-thumbnail-on-iphone": {
@@ -160,8 +166,8 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["save youtube thumbnail iphone", "youtube thumbnail android"],
     forbiddenOverlap: ["desktop download tutorial", "url anatomy"],
     preferredLinks: [
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/youtube-shorts-thumbnail-download.html",
+      "/how-to-download-youtube-thumbnail",
+      "/youtube-shorts-thumbnail-download",
       "/",
     ],
   },
@@ -171,9 +177,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["youtube thumbnail featured image", "og image youtube"],
     forbiddenOverlap: ["url construction guide", "webp format essay"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-url.html",
-      "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
-      "/p/embed.html",
+      "/youtube-thumbnail-url",
+      "/webp-vs-jpeg-youtube-thumbnails-which",
+      "/embed",
     ],
   },
   embed: {
@@ -182,9 +188,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["embed youtube thumbnail extractor", "iframe widget"],
     forbiddenOverlap: ["download tutorial", "competitor roundup"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-url.html",
-      "/2026/08/11tik-share-links-thumb-vs-youtube.html",
-      "/2026/08/how-to-use-youtube-thumbnail-as-blog.html",
+      "/youtube-thumbnail-url",
+      "/11tik-share-links-thumb-vs-youtube",
+      "/how-to-use-youtube-thumbnail-as-blog",
     ],
   },
   "youtube-studio-thumbnail-2026": {
@@ -193,9 +199,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["youtube studio thumbnail 2026"],
     forbiddenOverlap: ["maxres 404 deep dive", "private video diagnosis"],
     preferredLinks: [
-      "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
-      "/2026/08/highest-quality-youtube-thumbnail.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
+      "/what-is-maxresdefaultjpg-when-youtube",
+      "/highest-quality-youtube-thumbnail",
+      "/how-to-download-youtube-thumbnail",
     ],
   },
   "youtube-thumbnail-not-appearing-private": {
@@ -207,9 +213,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     ],
     forbiddenOverlap: ["maxres filename 404", "download how-to"],
     preferredLinks: [
-      "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/youtube-studio-thumbnail-2026.html",
+      "/what-is-maxresdefaultjpg-when-youtube",
+      "/how-to-download-youtube-thumbnail",
+      "/youtube-studio-thumbnail-2026",
     ],
   },
   "11tik-share-links-thumb-vs-youtube": {
@@ -218,8 +224,8 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["11tik share link", "thumb vs watch"],
     forbiddenOverlap: ["generic url anatomy", "download tutorial"],
     preferredLinks: [
-      "/2026/08/youtube-thumbnail-url.html",
-      "/2026/08/how-to-download-youtube-thumbnail.html",
+      "/youtube-thumbnail-url",
+      "/how-to-download-youtube-thumbnail",
       "/",
     ],
   },
@@ -229,9 +235,9 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["youtube live thumbnail", "premiere thumbnail download"],
     forbiddenOverlap: ["shorts vertical", "batch workflow"],
     preferredLinks: [
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/youtube-shorts-thumbnail-download.html",
-      "/2026/08/how-to-batch-download-youtube.html",
+      "/how-to-download-youtube-thumbnail",
+      "/youtube-shorts-thumbnail-download",
+      "/how-to-batch-download-youtube",
     ],
   },
   "screenshot-vs-real-youtube-thumbnail": {
@@ -240,8 +246,8 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     protectedKeywords: ["screenshot vs real youtube thumbnail"],
     forbiddenOverlap: ["download tutorial", "quality workflow"],
     preferredLinks: [
-      "/2026/08/how-to-download-youtube-thumbnail.html",
-      "/2026/08/highest-quality-youtube-thumbnail.html",
+      "/how-to-download-youtube-thumbnail",
+      "/highest-quality-youtube-thumbnail",
       "/",
     ],
   },
@@ -250,7 +256,7 @@ export const ANTI_CANNIBALIZATION_CONTRACT = Object.freeze({
     secondary: ["product category"],
     protectedKeywords: ["thumbnail extractor vs maker"],
     forbiddenOverlap: ["tool homepage", "studio guide"],
-    preferredLinks: ["/", "/2026/08/how-to-download-youtube-thumbnail.html"],
+    preferredLinks: ["/", "/how-to-download-youtube-thumbnail"],
   },
 });
 

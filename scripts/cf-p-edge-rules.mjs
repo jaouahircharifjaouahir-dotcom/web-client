@@ -10,40 +10,34 @@ export const RULE_PREFIX_QUERY = "11tik-p2-query:";
 /** Unknown /p/* hard 404 — single rule. */
 export const RULE_PREFIX_404 = "11tik-p2-404:";
 
-/** Phase 3 legal shortcuts — /about → /p/about.html, etc. */
+/** Phase 53: legal shortcuts — canonical clean paths; CF 11tik-p3-legal:* rules must be removed in production. */
 export const RULE_PREFIX_LEGAL = "11tik-p3-legal:";
+
+/** Phase 5.3 localized trailing-slash .html/ → clean .html (all locale hosts). */
+export const RULE_PREFIX_LSLASH = "11tik-p5-lslash:";
 
 export const QUERY_PHASE = "http_request_dynamic_redirect";
 export const UNKNOWN_404_PHASE = "http_request_firewall_custom";
 
-/** www legal shortcut paths → indexable utility .html destinations. */
+/** www legal shortcut paths and their canonical clean targets (Worker-served; no CF redirect). */
 export const LEGAL_SHORTCUT_REDIRECTS = Object.freeze([
-  { from: "/about", to: "/p/about.html", slug: "about" },
-  { from: "/privacy", to: "/p/privacy.html", slug: "privacy" },
-  { from: "/terms", to: "/p/terms-of-use.html", slug: "terms" },
-  { from: "/contact", to: "/p/contact.html", slug: "contact" },
+  { from: "/about", to: "/about", slug: "about" },
+  { from: "/privacy", to: "/privacy", slug: "privacy" },
+  { from: "/terms", to: "/terms-of-use", slug: "terms" },
+  { from: "/contact", to: "/contact", slug: "contact" },
 ]);
 
+/**
+ * Phase 53: returns no CF edge rules — clean shortcuts are served by the Worker resolver.
+ * Remove any live 11tik-p3-legal:* rules via `node scripts/cf-legal-shortcuts.mjs apply --confirm --remove`.
+ */
 export function buildLegalShortcutRules() {
-  return LEGAL_SHORTCUT_REDIRECTS.map(({ from, to, slug }) => ({
-    description: `${RULE_PREFIX_LEGAL}${slug}`,
-    expression: `(http.host eq "www.11tik.com" and http.request.uri.path eq "${from}")`,
-    action: "redirect",
-    action_parameters: {
-      from_value: {
-        status_code: 301,
-        preserve_query_string: false,
-        target_url: {
-          value: `${SITE_ORIGIN}${to}`,
-        },
-      },
-    },
-  }));
+  return [];
 }
 
 export function buildQueryCanonicalizeRules() {
   return INDEXABLE_UTILITY_PATHS.map((path) => {
-    const slug = path.replace(/^\/p\//, "").replace(/\.html$/, "");
+    const slug = path.replace(/^\/p\//, "").replace(/\.html$/, "").replace(/^\//, "");
     return {
       description: `${RULE_PREFIX_QUERY}${slug}`,
       expression: `(http.host eq "www.11tik.com" and http.request.uri.path eq "${path}" and len(http.request.uri.query) > 0)`,
@@ -59,6 +53,41 @@ export function buildQueryCanonicalizeRules() {
       },
     };
   });
+}
+
+/** Phase 5.3: /l/{locale}/p/*.html/ and /l/{locale}/2026/…html/ → same-host clean .html */
+export function buildLocalizedTrailingSlashRules() {
+  const target = {
+    expression: 'concat("https://", http.host, regex_replace(http.request.uri.path, "/$", ""))',
+  };
+  return [
+    {
+      description: `${RULE_PREFIX_LSLASH}util`,
+      expression:
+        '(ends_with(http.request.uri.path, ".html/") and http.request.uri.path matches "^/l/[a-z]{2}/p/[^/]+\\.html/$")',
+      action: "redirect",
+      action_parameters: {
+        from_value: {
+          status_code: 301,
+          preserve_query_string: false,
+          target_url: target,
+        },
+      },
+    },
+    {
+      description: `${RULE_PREFIX_LSLASH}article`,
+      expression:
+        '(ends_with(http.request.uri.path, ".html/") and http.request.uri.path matches "^/l/[a-z]{2}/2026/.+\\.html/$")',
+      action: "redirect",
+      action_parameters: {
+        from_value: {
+          status_code: 301,
+          preserve_query_string: false,
+          target_url: target,
+        },
+      },
+    },
+  ];
 }
 
 export function buildUnknown404Rule() {
@@ -89,4 +118,8 @@ export function is404OwnedRule(rule) {
 
 export function isLegalOwnedRule(rule) {
   return String(rule?.description || "").startsWith(RULE_PREFIX_LEGAL);
+}
+
+export function isLslashOwnedRule(rule) {
+  return String(rule?.description || "").startsWith(RULE_PREFIX_LSLASH);
 }

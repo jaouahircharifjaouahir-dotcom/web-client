@@ -17,8 +17,10 @@ import worker, {
   legacyPRedirectUrl,
   utilityTrailingSlashCanonicalRedirect,
 } from "../../workers/11tik-edge.js";
+import { resolveLegacyCleanRedirect } from "../../workers/clean-url-legacy-redirects.js";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { matchesRunWorkerFirst } from "./test-helpers/run-worker-first.ts";
+import { PHASE53_RUN_WORKER_FIRST } from "./test-helpers/cloudflare-run-worker-first.ts";
 
 const UTILITIES = [
   { slug: "about", h1: "About 11tik" },
@@ -49,69 +51,68 @@ function countAhrefs(html: string): number {
     .length;
 }
 
-/** Phase 2B routing: negative RWF + Worker /p/* fallback + edge query redirect design. */
+/** Phase 53 routing: legacy /p/* redirects + clean utility URLs via Worker. */
 export function simulatePProductionRouting(pathname: string, search = "") {
   const clean = pathname.replace(/\/+$/, "") || "/";
   const workerFirst = matchesRunWorkerFirst(clean);
-  const isUtilityHtml = INDEXABLE_UTILITY_PATHS.includes(
+  const isCleanUtility = INDEXABLE_UTILITY_PATHS.includes(
     clean as (typeof INDEXABLE_UTILITY_PATHS)[number],
   );
 
-  if (isUtilityHtml && search && !workerFirst) {
-    return { worker: false, assets: false, edgeRedirect: true, status: 301, hard404: false };
+  if (isCleanUtility) {
+    return {
+      worker: workerFirst,
+      assets: !workerFirst,
+      edgeRedirect: false,
+      status: search ? 301 : 200,
+      hard404: false,
+    };
   }
 
   if (workerFirst && clean.startsWith("/p/")) {
-    if (LEGACY_P_REDIRECTS.some((r) => r.from === clean)) {
-      return { worker: true, assets: false, edgeRedirect: false, status: 301, hard404: false };
-    }
-    if (isUtilityHtml && search) {
+    if (resolveLegacyCleanRedirect(clean) || LEGACY_P_REDIRECTS.some((r) => r.from === clean)) {
       return { worker: true, assets: false, edgeRedirect: false, status: 301, hard404: false };
     }
     if (extensionlessPPathToHtml(clean)) {
       return { worker: true, assets: false, edgeRedirect: false, status: 301, hard404: false };
     }
-    if (isUtilityHtml) {
-      return { worker: true, assets: true, edgeRedirect: false, status: 200, hard404: false };
-    }
     return { worker: true, assets: false, edgeRedirect: false, status: 404, hard404: true };
-  }
-
-  if (!workerFirst && isUtilityHtml) {
-    return { worker: false, assets: true, edgeRedirect: false, status: 200, hard404: false };
   }
 
   return { worker: workerFirst, assets: !workerFirst, edgeRedirect: false, status: 200, hard404: false };
 }
 
 describe("Phase 2B — negative run_worker_first /p/* routing", () => {
-  it("includes /p/* with six exact utility exclusions in run_worker_first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/p/*");
-    for (const path of P_DIRECT_ASSET_PATHS) {
-      expect(wrangler.assets.run_worker_first).toContain(`!${path}`);
-    }
-    expect(wrangler.assets.run_worker_first).toContain("/l/*");
-    expect(wrangler.assets.run_worker_first).toContain("/");
+  it("uses catch-all /* with asset-first exclusions (Phase 53)", () => {
+    expect(wrangler.assets.run_worker_first).toEqual([...PHASE53_RUN_WORKER_FIRST]);
+    expect(matchesRunWorkerFirst("/p/about.html")).toBe(true);
+    expect(matchesRunWorkerFirst("/about")).toBe(true);
+    expect(matchesRunWorkerFirst("/l/fr/about")).toBe(true);
+    expect(matchesRunWorkerFirst("/")).toBe(true);
     expect(wrangler.assets.not_found_handling).toBe("404-page");
     expect(wrangler.assets.html_handling).toBe("none");
   });
 
-  it("excludes six clean utility .html paths from Worker-first", () => {
-    for (const path of P_DIRECT_ASSET_PATHS) {
-      expect(matchesRunWorkerFirst(path), path).toBe(false);
+  it("clean utility paths are indexable", () => {
+    for (const { slug } of UTILITIES) {
+      expect(INDEXABLE_UTILITY_PATHS).toContain(`/${slug}`);
     }
+  });
+
+  it("legacy /p/* paths remain Worker-first for atomic redirects", () => {
     expect(matchesRunWorkerFirst("/p/youtube-thumbnail-url.html")).toBe(true);
     expect(matchesRunWorkerFirst("/p/random.html")).toBe(true);
     expect(matchesRunWorkerFirst("/p/about")).toBe(true);
+    expect(matchesRunWorkerFirst("/about")).toBe(true);
   });
 
   for (const page of UTILITIES) {
     describe(page.slug, () => {
-      const canon = `${SITE_ORIGIN}/p/${page.slug}.html`;
+      const canon = `${SITE_ORIGIN}/${page.slug}`;
 
-      it("serves staged static asset directly (Worker excluded)", () => {
+      it("serves staged static asset at clean root path", () => {
         const dir = getStagedStaticSite();
-        const assetPath = join(dir, "p", `${page.slug}.html`);
+        const assetPath = join(dir, `${page.slug}.html`);
         expect(existsSync(assetPath)).toBe(true);
 
         const html = readFileSync(assetPath, "utf8");
@@ -133,32 +134,22 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
         expect(html).toMatch(/property="og:/);
         expect(html).toMatch(/name="twitter:/);
 
-        const route = simulatePProductionRouting(`/p/${page.slug}.html`);
-        expect(route.worker).toBe(false);
-        expect(route.assets).toBe(true);
+        const route = simulatePProductionRouting(`/${page.slug}`);
+        expect(route.worker).toBe(true);
         expect(route.status).toBe(200);
       });
     });
   }
 
-  it("query on .html uses edge redirect design (Worker excluded on clean path after redirect)", () => {
+  it("query on clean utility uses Worker redirect strip", () => {
     for (const page of UTILITIES) {
-      const route = simulatePProductionRouting(`/p/${page.slug}.html`, "?m=1");
-      expect(route.worker).toBe(false);
-      expect(route.edgeRedirect).toBe(true);
+      const route = simulatePProductionRouting(`/${page.slug}`, "?m=1");
+      expect(route.worker).toBe(true);
       expect(route.status).toBe(301);
-      expect(route.assets).toBe(false);
     }
-
-    const expressions = INDEXABLE_UTILITY_PATHS.map(
-      (path) =>
-        `(http.host eq "www.11tik.com" and http.request.uri.path eq "${path}" and len(http.request.uri.query) > 0)`,
-    );
-    expect(expressions).toHaveLength(6);
-    expect(expressions[0]).toContain("/p/about.html");
   });
 
-  it("extensionless valid utility redirects via Worker (Assets _redirects skipped)", () => {
+  it("extensionless legacy /p/* redirects via Worker atomic map", () => {
     for (const page of UTILITIES) {
       expect(extensionlessPPathToHtml(`/p/${page.slug}`)).toBe(`/p/${page.slug}.html`);
       const route = simulatePProductionRouting(`/p/${page.slug}`);
@@ -168,13 +159,10 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(extensionlessPPathToHtml("/p/random")).toBe("");
   });
 
-  it("extensionless+query resolves via Worker then edge (canonical chain)", () => {
+  it("extensionless legacy /p/*+query resolves via Worker", () => {
     const hop1 = simulatePProductionRouting("/p/about", "?m=1");
     expect(hop1.worker).toBe(true);
     expect(hop1.status).toBe(301);
-    const hop2 = simulatePProductionRouting("/p/about.html", "?m=1");
-    expect(hop2.edgeRedirect).toBe(true);
-    expect(hop2.status).toBe(301);
   });
 
   it("legacy /p/* redirects to verified canonical targets via Worker", () => {
@@ -223,64 +211,41 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     globalThis.fetch = originalFetch;
   });
 
-  it("Worker /p/* fallback: legacy 301, extensionless 301, query strip fallback", async () => {
-    const legacy = await handlePrimaryPPathRequest(
-      new URL("https://www.11tik.com/p/youtube-thumbnail-url.html"),
-      {},
-    );
-    expect(legacy?.status).toBe(301);
-    expect(legacy?.headers.get("location")).toBe(`${SITE_ORIGIN}/2026/08/youtube-thumbnail-url.html`);
+  it("Worker /p/* fallback: legacy 301 to clean URL", async () => {
+    const legacy = await worker.fetch(new Request("https://www.11tik.com/p/youtube-thumbnail-url.html"), {
+      ASSETS: { fetch: async () => new Response("x", { status: 404 }) },
+    });
+    expect(legacy.status).toBe(301);
+    expect(legacy.headers.get("location")).toBe(`${SITE_ORIGIN}/youtube-thumbnail-url`);
 
-    const ext = await handlePrimaryPPathRequest(new URL("https://www.11tik.com/p/about"), {});
-    expect(ext?.status).toBe(301);
-    expect(ext?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
-
-    const queryFallback = await handlePrimaryPPathRequest(
-      new URL("https://www.11tik.com/p/about.html?m=1"),
-      {},
-    );
-    expect(queryFallback?.status).toBe(301);
-    expect(queryFallback?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
+    const ext = await worker.fetch(new Request("https://www.11tik.com/p/about"), {
+      ASSETS: { fetch: async () => new Response("x", { status: 404 }) },
+    });
+    expect(ext.status).toBe(301);
+    expect(ext.headers.get("location")).toBe(`${SITE_ORIGIN}/about`);
   });
 
-  it("localized /l/*/p/*.html utilities are asset-first under Phase 7B RWF", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/l/*");
-    expect(wrangler.assets.run_worker_first).toContain("!/l/*/p/*.html");
-
+  it("localized utilities staged at clean paths (Phase 53)", () => {
+    expect(matchesRunWorkerFirst("/l/fr/about")).toBe(true);
     const dir = getStagedStaticSite();
     const locales = ["fr", "de", "ar"] as const;
     for (const locale of locales) {
       for (const page of UTILITIES) {
-        const rel = `l/${locale}/p/${page.slug}.html`;
+        const rel = `l/${locale}/${page.slug}.html`;
         expect(existsSync(join(dir, rel)), rel).toBe(true);
       }
     }
-
-    expect(matchesRunWorkerFirst("/l/fr/p/about.html")).toBe(false);
-    expect(matchesRunWorkerFirst("/l/fr/p/about")).toBe(true);
   });
 
-  it("/l/fr/p/* still served via Worker locale passthrough (unchanged)", async () => {
-    const dir = getStagedStaticSite();
-    const localizedBody = readFileSync(join(dir, "l/fr/p/about.html"), "utf8");
-    const seen: string[] = [];
-    const env = {
-      ASSETS: {
-        fetch(req: Request) {
-          seen.push(new URL(req.url).pathname);
-          return new Response(localizedBody, { status: 200 });
-        },
-      },
-    };
-
-    const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html"), env);
-    expect(res.status).toBe(200);
-    expect(seen).toEqual(["/l/fr/p/about.html"]);
+  it("legacy /l/fr/p/about.html 301 to localized clean URL", async () => {
+    const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html"), {
+      ASSETS: { fetch: async () => new Response("x", { status: 404 }) },
+    });
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe("https://fr.11tik.com/l/fr/about");
   });
 
   it("/thumb/* and homepage query shells stay Worker-first (Phase R2)", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/thumb/*");
-    expect(wrangler.assets.run_worker_first).toContain("/");
     expect(wrangler.assets.not_found_handling).toBe("404-page");
 
     expect(matchesRunWorkerFirst("/")).toBe(true);
@@ -288,15 +253,7 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
   });
 
   it("retired feed/search paths remain Worker-first", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/pages/*");
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/comments/*");
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/other/*");
-    expect(wrangler.assets.run_worker_first).toContain("/feeds/posts/default");
-    expect(wrangler.assets.run_worker_first).toContain("/sitemap-images.xml");
     expect(wrangler.assets.run_worker_first).not.toContain("/feeds/*");
-    expect(wrangler.assets.run_worker_first).toContain("/search");
-    expect(wrangler.assets.run_worker_first).toContain("/search/*");
-    expect(wrangler.assets.run_worker_first).toContain("/sitemap-pages.xml");
     expect(matchesRunWorkerFirst("/feeds/posts/default")).toBe(true);
     expect(matchesRunWorkerFirst("/feeds/comments/default")).toBe(true);
     expect(matchesRunWorkerFirst("/feeds/other/default")).toBe(true);
@@ -306,7 +263,6 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
   });
 
   it("/2026/* articles are Worker-first for hard 404 on miss (Phase 6D)", () => {
-    expect(wrangler.assets.run_worker_first).toContain("/2026/*");
     expect(matchesRunWorkerFirst("/2026/08/youtube-thumbnail-url.html")).toBe(true);
   });
 
@@ -330,12 +286,12 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
     expect(manifest.counts.failed).toBe(0);
   });
 
-  it("no /index.html pollution in utility canonicals or sitemap", () => {
+  it("utility clean URLs appear in sitemap without legacy /p/ duplicates", () => {
     const dir = getStagedStaticSite();
     const locs = parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
     for (const path of INDEXABLE_UTILITY_PATHS) {
       expect(locs).toContain(`${SITE_ORIGIN}${path}`);
-      expect(locs).not.toContain(`${SITE_ORIGIN}${path.replace(".html", "/index.html")}`);
+      expect(locs).not.toContain(`${SITE_ORIGIN}/p${path}.html`);
     }
   });
 
@@ -350,17 +306,12 @@ describe("Phase 2B — negative run_worker_first /p/* routing", () => {
   });
 });
 
-describe("Phase 2B — critical routing simulation matrix (A–L)", () => {
+describe("Phase 53 — critical routing simulation matrix", () => {
   const cases: Array<[string, string, Partial<ReturnType<typeof simulatePProductionRouting>>]> = [
-    ["/p/about.html", "", { worker: false, assets: true, status: 200 }],
-    ["/p/privacy.html", "", { worker: false, assets: true, status: 200 }],
-    ["/p/terms-of-use.html", "", { worker: false, assets: true, status: 200 }],
-    ["/p/contact.html", "", { worker: false, assets: true, status: 200 }],
-    ["/p/embed.html", "", { worker: false, assets: true, status: 200 }],
-    ["/p/keyword-tools.html", "", { worker: false, assets: true, status: 200 }],
-    ["/p/about.html", "?m=1", { worker: false, edgeRedirect: true, status: 301 }],
+    ["/about", "", { worker: true, status: 200 }],
+    ["/embed", "", { worker: true, status: 200 }],
+    ["/p/about.html", "", { worker: true, status: 301 }],
     ["/p/about", "", { worker: true, status: 301 }],
-    ["/p/about", "?m=1", { worker: true, status: 301 }],
     ["/p/youtube-thumbnail-url.html", "", { worker: true, status: 301 }],
     ["/p/random.html", "", { worker: true, hard404: true, status: 404 }],
     ["/p/random", "", { worker: true, hard404: true, status: 404 }],
@@ -376,83 +327,33 @@ describe("Phase 2B — critical routing simulation matrix (A–L)", () => {
   }
 });
 
-describe("Phase 2C — trailing-slash utility URLs", () => {
+describe("Phase 53 — trailing-slash utility URLs", () => {
   for (const page of UTILITIES) {
-    const clean = `/p/${page.slug}.html`;
+    const clean = `/${page.slug}`;
     const slashed = `${clean}/`;
-
-    it(`${clean} remains Worker-excluded (direct Asset)`, () => {
-      expect(matchesRunWorkerFirst(clean)).toBe(false);
-    });
 
     it(`${slashed} is Worker-first and 301 → clean canonical`, async () => {
       expect(matchesRunWorkerFirst(slashed)).toBe(true);
       expect(utilityTrailingSlashCanonicalRedirect(new URL(`${SITE_ORIGIN}${slashed}`))).toBe(
         `${SITE_ORIGIN}${clean}`,
       );
-
-      const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}${slashed}`), {});
-      expect(res?.status).toBe(301);
-      expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}${clean}`);
-
-      const assetCalls: string[] = [];
-      const env = {
-        ASSETS: {
-          fetch(req: Request) {
-            assetCalls.push(new URL(req.url).pathname);
-            return new Response("homepage spa", { status: 200 });
-          },
-        },
-      };
-      const blocked = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}${slashed}`), env);
-      expect(blocked?.status).toBe(301);
-      expect(assetCalls).toEqual([]);
     });
   }
 
-  it("unknown /p/random.html/ stays 404 (not homepage SPA)", async () => {
-    expect(utilityTrailingSlashCanonicalRedirect(new URL(`${SITE_ORIGIN}/p/random.html/`))).toBe("");
-    const env = {
-      ASSETS: {
-        fetch() {
-          return new Response("<html id=\"root\">homepage</html>", { status: 200 });
-        },
-      },
-    };
-    const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}/p/random.html/`), env);
-    expect(res?.status).toBe(404);
-    expect(await res!.text()).toContain("404 Not Found");
-  });
-
-  it("/p/about.html/?m=1 → 301 clean (no loop, no SPA body)", async () => {
-    const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}/p/about.html/?m=1`), {});
-    expect(res?.status).toBe(301);
-    expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
-    const route = simulatePProductionRouting("/p/about.html", "m=1");
-    expect(route.edgeRedirect).toBe(true);
-    expect(route.status).toBe(301);
-  });
-
-  it("/p/about.html/?foo=1 → 301 clean canonical only", async () => {
-    const res = await handlePrimaryPPathRequest(new URL(`${SITE_ORIGIN}/p/about.html/?foo=1`), {});
-    expect(res?.status).toBe(301);
-    expect(res?.headers.get("location")).toBe(`${SITE_ORIGIN}/p/about.html`);
-  });
-
-  it("localized /l/fr/p/about.html/ → 301 via Worker slash handler (not www /p/ handler)", async () => {
-    const assetCalls: string[] = [];
-    const env = {
-      ASSETS: {
-        fetch(req: Request) {
-          assetCalls.push(new URL(req.url).pathname);
-          return new Response("homepage spa", { status: 200 });
-        },
-      },
-    };
-    const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html/"), env);
+  it("legacy /p/about.html/ strips slash then atomic-redirects to /about", async () => {
+    const res = await worker.fetch(new Request(`${SITE_ORIGIN}/p/about.html/`), {
+      ASSETS: { fetch: async () => new Response("x", { status: 404 }) },
+    });
     expect(res.status).toBe(301);
-    expect(res.headers.get("location")).toBe("https://fr.11tik.com/l/fr/p/about.html");
-    expect(assetCalls).toEqual([]);
+    expect(res.headers.get("location")).toBe(`${SITE_ORIGIN}/about`);
+  });
+
+  it("localized legacy /l/fr/p/about.html/ → 301 localized clean", async () => {
+    const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html/"), {
+      ASSETS: { fetch: async () => new Response("x", { status: 404 }) },
+    });
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe("https://fr.11tik.com/l/fr/about");
   });
 
   it("/thumb/* and / remain Worker-first (Phase R2)", () => {

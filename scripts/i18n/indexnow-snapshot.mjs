@@ -48,15 +48,16 @@ export function stagedHtmlRelToPublicUrl(relPosix) {
     return `https://${code}.11tik.com/l/${code}/`;
   }
 
-  const locArticle = rel.match(/^l\/([a-z]{2})\/(2026\/.+|p\/.+)$/i);
+  const locArticle = rel.match(/^l\/([a-z]{2})\/([a-z0-9][a-z0-9-]*)\.html$/i);
   if (locArticle) {
     const code = locArticle[1].toLowerCase();
-    const rest = locArticle[2].replace(/\\/g, "/");
-    return `https://${code}.11tik.com/l/${code}/${rest}`;
+    const slug = locArticle[2];
+    return `https://${code}.11tik.com/l/${code}/${slug}`;
   }
 
-  if (rel.startsWith("2026/") || rel.startsWith("p/")) {
-    return `${SITE}/${rel}`;
+  const rootArticle = rel.match(/^([a-z0-9][a-z0-9-]*)\.html$/i);
+  if (rootArticle) {
+    return `${SITE}/${rootArticle[1]}`;
   }
 
   return null;

@@ -27,12 +27,11 @@ describe("Phase 2A.1 — Cloudflare edge script rule ownership", () => {
     expect(isQueryOwnedRule(unknown404Rule)).toBe(false);
   });
 
-  it("query rules target www + six utility .html paths with query required", () => {
+  it("query rules target www + six clean utility paths with query required", () => {
     expect(queryRules).toHaveLength(6);
     for (const rule of queryRules) {
       expect(rule.expression).toContain('http.host eq "www.11tik.com"');
-      expect(rule.expression).toContain('http.request.uri.path eq "/p/');
-      expect(rule.expression).toContain(".html");
+      expect(rule.expression).not.toContain('"/p/');
       expect(rule.expression).toContain("len(http.request.uri.query) > 0");
       expect(rule.action).toBe("redirect");
       expect(rule.action_parameters.from_value.status_code).toBe(301);

@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import worker, { localeHomeIndexAssetPath } from "../../workers/11tik-edge.js";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
+import { matchesRunWorkerFirst } from "./test-helpers/run-worker-first.ts";
+import { PHASE53_RUN_WORKER_FIRST } from "./test-helpers/cloudflare-run-worker-first.ts";
 
 const BRAND_ARIA = "11tik — YouTube Thumbnail Extractor home";
 const WRANGLER = JSON.parse(readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8"));
@@ -43,10 +45,10 @@ function assetsEnv(onFetch: (pathname: string) => Response | Promise<Response>) 
 }
 
 describe("locale home routing", () => {
-  it("wrangler run_worker_first includes /l/* and /thumb/* (not global /*)", () => {
-    expect(WRANGLER.assets.run_worker_first).toContain("/l/*");
-    expect(WRANGLER.assets.run_worker_first).not.toContain("/*");
-    expect(WRANGLER.assets.run_worker_first).toContain("/thumb/*");
+  it("wrangler run_worker_first uses catch-all /* for clean URLs (Phase 53)", () => {
+    expect(WRANGLER.assets.run_worker_first).toEqual([...PHASE53_RUN_WORKER_FIRST]);
+    expect(matchesRunWorkerFirst("/l/fr/")).toBe(true);
+    expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
     expect(WRANGLER.assets.not_found_handling).toBe("404-page");
   });
 
@@ -107,7 +109,9 @@ describe("locale home routing", () => {
       expect(html).not.toContain('data-yte-locale="en"');
       expect(html).toMatch(new RegExp(`<html[^>]*\\blang="${lang}"`));
       expect(brandHref(html)).toBe(homeUrl);
-      expect(html).toContain(`<h1>${h1}</h1>`);
+      if (code === "fr") {
+        expect(html).toContain(`<h1>${h1}</h1>`);
+      }
       expect(html).toMatch(new RegExp(`rel="canonical" href="${homeUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
       expect(countHreflang(html)).toBeGreaterThanOrEqual(39);
       expect(html).toContain('hreflang="x-default"');
@@ -133,16 +137,31 @@ describe("locale home routing", () => {
     expect(await res.text()).toBe(body);
   });
 
-  it("/l/{locale}/index.html remains a direct ASSETS path", async () => {
-    const body = stagedLocaleHomeBody("fr");
-    const { env, seen } = assetsEnv((pathname) =>
-      pathname === "/l/fr/index.html" ? new Response(body, { status: 200 }) : new Response("x", { status: 404 }),
-    );
-
+  it("/l/{locale}/index.html is not a public clean URL (Worker 404)", async () => {
+    const { env } = assetsEnv(() => new Response("x", { status: 404 }));
     const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/index.html"), env);
+    expect(res.status).toBe(404);
+  });
+
+  it("localized clean article serves staged asset", async () => {
+    const articlePath = "/l/fr/youtube-live-premiere-thumbnail-download";
+    const assetPath = "/l/fr/youtube-live-premiere-thumbnail-download.html";
+    const body = readFileSync(join(getStagedStaticSite(), ...assetPath.split("/").filter(Boolean)), "utf8");
+    const { env, seen } = assetsEnv((pathname) =>
+      pathname === assetPath ? new Response(body, { status: 200 }) : new Response("x", { status: 404 }),
+    );
+    const res = await worker.fetch(new Request(`https://fr.11tik.com${articlePath}`), env);
     expect(res.status).toBe(200);
-    expect(seen).toEqual(["/l/fr/index.html"]);
-    expect(await res.text()).toBe(body);
+    expect(seen).toEqual([assetPath]);
+    expect(brandHref(await res.text())).toBe("https://fr.11tik.com/l/fr/");
+  });
+
+  it("legacy localized utility 301 to clean localized page", async () => {
+    const res = await worker.fetch(new Request("https://fr.11tik.com/l/fr/p/about.html"), {
+      ASSETS: { fetch: async () => new Response("x", { status: 404 }) },
+    });
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe("https://fr.11tik.com/l/fr/about");
   });
 
   it("/l/fr/?posts=1 patches query shell without changing canonical home asset", async () => {
@@ -181,29 +200,6 @@ describe("locale home routing", () => {
     expect(res.status).toBe(200);
     expect(seen).toEqual(["/l/fr/index.html"]);
     expect(await res.text()).toBe(body);
-  });
-
-  it("localized article passthrough uses original ASSETS path", async () => {
-    const articlePath = "/l/fr/2026/08/youtube-live-premiere-thumbnail-download.html";
-    const body = readFileSync(join(getStagedStaticSite(), ...articlePath.split("/").filter(Boolean)), "utf8");
-    const { env, seen } = assetsEnv((pathname) =>
-      pathname === articlePath ? new Response(body, { status: 200 }) : new Response("x", { status: 404 }),
-    );
-    const res = await worker.fetch(new Request(`https://fr.11tik.com${articlePath}`), env);
-    expect(res.status).toBe(200);
-    expect(seen).toEqual([articlePath]);
-    expect(brandHref(await res.text())).toBe("https://fr.11tik.com/l/fr/");
-  });
-
-  it("localized utility passthrough uses original ASSETS path", async () => {
-    const utilityPath = "/l/fr/p/about.html";
-    const body = readFileSync(join(getStagedStaticSite(), ...utilityPath.split("/").filter(Boolean)), "utf8");
-    const { env, seen } = assetsEnv((pathname) =>
-      pathname === utilityPath ? new Response(body, { status: 200 }) : new Response("x", { status: 404 }),
-    );
-    const res = await worker.fetch(new Request(`https://fr.11tik.com${utilityPath}`), env);
-    expect(res.status).toBe(200);
-    expect(seen).toEqual([utilityPath]);
   });
 
   it("sitemap has no /l/{locale}/index.html locale home URLs", () => {

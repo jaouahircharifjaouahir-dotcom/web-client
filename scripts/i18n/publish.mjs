@@ -197,7 +197,13 @@ export function assertLocaleSitemapLocsHaveFiles(staged, locs) {
   for (const loc of locs) {
     const article = normalizeTrustedLocaleSitemapLoc(loc);
     if (article) {
-      const rel = new URL(article).pathname.replace(/^\//, "");
+      const pathname = new URL(article).pathname.replace(/\/+$/, "") || "/";
+      const match = /^\/l\/([a-z]{2})\/([a-z0-9][a-z0-9-]*)$/i.exec(pathname);
+      if (!match) {
+        missing.push(loc);
+        continue;
+      }
+      const rel = `l/${match[1].toLowerCase()}/${match[2]}.html`;
       if (!existsSync(join(staged, rel))) missing.push(loc);
       continue;
     }

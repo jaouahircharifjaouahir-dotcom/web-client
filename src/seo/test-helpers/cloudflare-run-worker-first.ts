@@ -7,6 +7,16 @@
  * @see https://developers.cloudflare.com/workers/static-assets/binding/#run_worker_first
  */
 
+/** Phase 53 production `run_worker_first` — catch-all Worker-first with asset-first exclusions. */
+export const PHASE53_RUN_WORKER_FIRST = [
+  "/*",
+  "!/web-client/*",
+  "!/sitemap.xml",
+  "!/robots.txt",
+  "!/llms.txt",
+  "!/r1nu3dmfdwyzm6u39zktu5gtww7zvv1z.txt",
+] as const;
+
 /** Phase 7B utility negative; Phase R1 removed localized 2026 .html asset-first exclusion. */
 export const PHASE7B_LOCALE_RWF_NEGATIVES = [
   "!/l/*/p/*.html",

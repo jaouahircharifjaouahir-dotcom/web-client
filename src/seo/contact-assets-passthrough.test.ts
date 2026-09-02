@@ -5,7 +5,7 @@ import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { scanPublishability } from "../../scripts/i18n/publish.mjs";
 import worker from "../../workers/11tik-edge.js";
 
-const CONTACT_CANON = "https://www.11tik.com/p/contact.html";
+const CONTACT_CANON = "https://www.11tik.com/contact";
 
 /** Semrush page_has_a_low_word_count: article prose excluding pre/nav (form labels included). */
 function articleContentWords(html: string): number {
@@ -36,10 +36,10 @@ function countAhrefs(html: string): number {
     .length;
 }
 
-describe("Worker ASSETS passthrough (www /p/contact.html)", () => {
+describe("Worker ASSETS passthrough (www /contact clean URL)", () => {
   it("serves staged contact from ASSETS (never Blogger)", async () => {
     const dir = getStagedStaticSite();
-    const assetBody = readFileSync(join(dir, "p", "contact.html"), "utf8");
+    const assetBody = readFileSync(join(dir, "contact.html"), "utf8");
 
     expect(assetBody).toContain("Common topics:");
     expect(assetBody).toContain("We cannot remove a thumbnail from YouTube");
@@ -61,7 +61,7 @@ describe("Worker ASSETS passthrough (www /p/contact.html)", () => {
 
     const res = await worker.fetch(new Request(CONTACT_CANON), env);
     expect(res.status).toBe(200);
-    expect(seen).toEqual(["/p/contact.html"]);
+    expect(seen).toEqual(["/contact.html"]);
     expect(bloggerCalled).toBe(false);
 
     const html = await res.text();
@@ -70,7 +70,7 @@ describe("Worker ASSETS passthrough (www /p/contact.html)", () => {
     expect(html).toContain("We cannot remove a thumbnail from YouTube");
 
     expect([...html.matchAll(/<h1\b/gi)].length).toBe(1);
-    expect(html).toMatch(/rel="canonical" href="https:\/\/www\.11tik\.com\/p\/contact\.html"/);
+    expect(html).toMatch(/rel="canonical" href="https:\/\/www\.11tik\.com\/contact"/);
     expect(html).toMatch(/name="robots" content="index,follow"/);
     expect(html).toMatch(/hreflang="x-default"/);
     expect(html).toMatch(/hreflang="fr"/);
@@ -88,7 +88,7 @@ describe("Worker ASSETS passthrough (www /p/contact.html)", () => {
     expect(articleContentWords(html)).toBeGreaterThanOrEqual(150);
   });
 
-  it("301-canonicalizes /p/contact.html query variants (no duplicate URLs)", async () => {
+  it("301-canonicalizes legacy /p/contact.html query variants to clean /contact", async () => {
     const env = {
       ASSETS: {
         fetch() {
@@ -99,7 +99,7 @@ describe("Worker ASSETS passthrough (www /p/contact.html)", () => {
     for (const q of ["?m=1", "?m=0", "?foo=1"]) {
       const res = await worker.fetch(new Request(`https://www.11tik.com/p/contact.html${q}`), env);
       expect(res.status).toBe(301);
-      expect(res.headers.get("location")).toBe(CONTACT_CANON);
+      expect(res.headers.get("location")).toBe(`${CONTACT_CANON}${q}`);
     }
   });
 

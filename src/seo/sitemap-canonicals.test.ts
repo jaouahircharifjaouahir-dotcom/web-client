@@ -38,11 +38,11 @@ describe("sitemap canonical inventory", () => {
   it("normalizes trusted locale article locs only", () => {
     expect(
       normalizeTrustedLocaleSitemapLoc(
-        "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html",
+        "https://fr.11tik.com/l/fr/11tik-share-links-thumb-vs-youtube",
       ),
-    ).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
+    ).toBe("https://fr.11tik.com/l/fr/11tik-share-links-thumb-vs-youtube");
     expect(normalizeTrustedLocaleSitemapLoc("https://fr.11tik.com/l/fr/")).toBeNull();
-    expect(normalizeTrustedLocaleSitemapLoc("https://example.com/l/fr/2026/08/x.html")).toBeNull();
+    expect(normalizeTrustedLocaleSitemapLoc("https://example.com/l/fr/11tik-share-links-thumb-vs-youtube")).toBeNull();
   });
 
   it("normalizes and collects every non-English locale home", () => {
@@ -89,7 +89,7 @@ describe("sitemap canonical inventory", () => {
     for (const path of INDEXABLE_UTILITY_PATHS) {
       expect(locs).toContain(`${SITE_ORIGIN}${path}`);
     }
-    expect(locs).toContain(`${SITE_ORIGIN}/p/keyword-tools.html`);
+    expect(locs).toContain(`${SITE_ORIGIN}/keyword-tools`);
   });
 
   it("has no duplicates; includes locale homes and all ready localized article URLs", () => {
@@ -101,7 +101,7 @@ describe("sitemap canonical inventory", () => {
       expect(locs).toContain(home);
     }
     const localeArticleLocs = locs.filter(
-      (loc) => /https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/.+\.html$/.test(loc),
+      (loc) => /^https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/[a-z0-9][a-z0-9-]*$/.test(loc),
     );
     expect(localeArticleLocs.length).toBe(manifest.counts.ready);
     // Ready count tracks inventory×locales minus stale/missing (not a frozen 851).

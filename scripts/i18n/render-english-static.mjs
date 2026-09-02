@@ -28,8 +28,8 @@ const STUDY_OG_IMAGE =
 const STUDY_CONTENT_ID = "youtube-thumbnail-sizes-resolutions-study";
 
 const UTILITY_PREVIEW_ALTS = {
-  "/p/embed.html": "11tik thumbnail extractor embed widget preview",
-  "/p/about.html": "11tik YouTube Thumbnail Extractor product preview at 1200 by 630 pixels",
+  "/embed": "11tik thumbnail extractor embed widget preview",
+  "/about": "11tik YouTube Thumbnail Extractor product preview at 1200 by 630 pixels",
 };
 
 /** Utility/article pages referenced only via og:image need a crawlable img+alt (Ahrefs File 26). */
@@ -41,26 +41,31 @@ function ensureBodyHeroImg(article, item, structured) {
       structured.h1 ||
       "11tik YouTube thumbnail preview",
   );
-  const tag = `<img alt="${xmlEscape(alt)}" class="yte-hero" height="630" loading="${item.canonicalPath === "/p/embed.html" ? "eager" : "lazy"}" src="${DEFAULT_OG}" width="1200"/>`;
+  const tag = `<img alt="${xmlEscape(alt)}" class="yte-hero" height="630" loading="${item.canonicalPath === "/embed" ? "eager" : "lazy"}" src="${DEFAULT_OG}" width="1200"/>`;
   return article.replace(/(<(?:article|div)[^>]*class="yte-page"[^>]*>)/i, `$1\n  ${tag}`);
 }
 
 /**
  * Semrush #8 follow-up: English-only utility prose without mutating Blogger source
- * (keeps translation sourceHash stable — localized /l/{xx}/p/embed.html already pass).
+ * (keeps translation sourceHash stable — localized /l/{xx}/embed already pass).
  */
 const ENGLISH_UTILITY_CONTENT_PATCHES = {
   embed: `<p>The embed loads the same in-browser extractor as <a href="https://www.11tik.com/?embed=1">www.11tik.com</a> with <code>?embed=1</code>. Visitors paste a public watch, Shorts, or youtu.be URL and download the largest still YouTube returns. No API key, no server-side storage of pasted links, and no video or audio download.</p>
-  <p>Use this on a blog sidebar, documentation page, or creator toolkit where a self-contained widget helps. Thumbnail copyright stays with the uploader — see <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>. For product background, read <a href="https://www.11tik.com/p/about.html">About 11tik</a>.</p>
+  <p>Use this on a blog sidebar, documentation page, or creator toolkit where a self-contained widget helps. Thumbnail copyright stays with the uploader — see <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>. For product background, read <a href="https://www.11tik.com/about">About 11tik</a>.</p>
   <h2>What the embed does</h2>
-  <p>The iframe loads the public 11tik extractor UI. Height sync uses <code>id="yte-app"</code> plus <code>embed.js</code> so download buttons stay visible as results expand. Processing stays in the visitor&apos;s browser; pasted URLs are not stored on 11tik servers.</p>
-  <h2>URL structure and video IDs</h2>
-  <p>Public YouTube stills live on <code>i.ytimg.com/vi/{VIDEO_ID}/</code> with predictable filenames (<code>maxresdefault.jpg</code>, <code>hqdefault.jpg</code>, and others). The embed does not expose a private YouTube API — it uses the same client-side checks as the homepage. For the full URL anatomy, see the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
-  <h2>maxres fallback and validation</h2>
-  <p><code>maxresdefault.jpg</code> is not guaranteed for every video. 11tik probes public variants and lists only files that validate — it does not invent 4K or guess missing sizes. See <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault and fallbacks</a>.</p>
-  <h2>CORS, CMS, and Open Graph</h2>
-  <p>Direct hotlinking to <code>i.ytimg.com</code> can break in CMS previews or social cards. For blog featured images and <code>og:image</code>, download a confirmed still and host a copy on your domain. Walkthrough: <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">YouTube thumbnail as blog / Open Graph image</a>. WebP vs JPEG notes: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">format comparison</a>.</p>
-  <p>For measured availability rates across eight public variants in a 300-video sample, see the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video thumbnail size study</a> (sample-only statistics).</p>`,
+  <p>The iframe loads the public 11tik extractor UI. Height sync uses <code>id="yte-app"</code> plus <code>embed.js</code> so download buttons stay visible as results expand. Processing stays in the visitor&apos;s browser; pasted URLs are not stored on 11tik servers. There is no private YouTube API—only the same client-side image validation as the homepage.</p>
+  <h2>iframe usage and URL structure</h2>
+  <p>Point <code>src</code> at <code>https://www.11tik.com/?embed=1</code>. Deep-link a video with <code>?v=VIDEO_ID&amp;embed=1</code>. Keep <code>id="yte-app"</code> and load <code>embed.js</code> for automatic height sync. Do not clip the iframe with a fixed short height.</p>
+  <h2>Video ID extraction</h2>
+  <p>The widget accepts watch, Shorts, live, embed, and youtu.be URLs—the same parser as the main tool. Channel-only URLs need Bulk on the full site; the embed focuses on single-ID extraction.</p>
+  <h2>Thumbnail variant logic and maxres fallback</h2>
+  <p>Public stills use <code>i.ytimg.com/vi/{VIDEO_ID}/{filename}.jpg</code> (and WebP under <code>/vi_webp/</code> when published). The embed probes preset variants and lists only files that validate—it does not invent maxres or 4K. In our <a href="https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study">300-video sample</a>, maxres validated for 286/300 IDs (sample-scoped). Details: <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxres and fallbacks</a>, <a href="https://www.11tik.com/youtube-thumbnail-size-resolution">size guide</a>.</p>
+  <h2>Validation and browser-side processing</h2>
+  <p>Each candidate loads as an image in the visitor&apos;s browser. Placeholders and 404s are dropped before any download button appears. Validate before hotlinking in your CMS.</p>
+  <h2>CORS, CMS integration, and Open Graph</h2>
+  <p>Cross-origin image loads work for display; canvas pixel reads may be restricted. For WordPress featured images and <code>og:image</code>, download a confirmed still and host on your domain—do not rely on long-lived <code>i.ytimg.com</code> hotlinks. Walkthrough: <a href="https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog">blog / Open Graph guide</a>. URL anatomy: <a href="https://www.11tik.com/youtube-thumbnail-url">thumbnail URL guide</a>. WebP vs JPEG: <a href="https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which">format comparison</a>.</p>
+  <h2>Security and trust</h2>
+  <p>The embed runs on 11tik over HTTPS. It does not execute arbitrary scripts from pasted URLs, does not request YouTube account cookies, and does not bypass private or age-gated videos. Only use the official <code>embed.js</code> from <code>www.11tik.com</code> so height sync and updates stay trustworthy.</p>`,
 };
 
 export function applyEnglishUtilityContentPatches(article, contentId) {
@@ -82,7 +87,7 @@ const ENGLISH_ORPHAN_INLINK_PATCHES = {
       before:
         "not <code>youtube.com/watch?v=…</code>. If you only need the file on disk, use the <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">download guide</a> instead of this URL-focused page.",
       after:
-        "not <code>youtube.com/watch?v=…</code>. 11tik also uses a third URL shape — <code>/thumb/{VIDEO_ID}</code> — to reopen an extractor result page; that path is not a watch link and not a direct image file. See the <a href=\"https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html\">share link guide</a> for when to copy each type. If you only need the file on disk, use the <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">download guide</a> instead of this URL-focused page.",
+        "not <code>youtube.com/watch?v=…</code>. 11tik also uses a third URL shape — <code>/thumb/{VIDEO_ID}</code> — to reopen an extractor result page; that path is not a watch link and not a direct image file. See the <a href=\"https://www.11tik.com/11tik-share-links-thumb-vs-youtube\">share link guide</a> for when to copy each type. If you only need the file on disk, use the <a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">download guide</a> instead of this URL-focused page.",
     },
   ],
   "how-to-download-youtube-thumbnail": [
@@ -90,13 +95,13 @@ const ENGLISH_ORPHAN_INLINK_PATCHES = {
       before:
         "Channel or playlist URLs without a video ID will not yield a single thumbnail. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
       after:
-        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For live streams and premieres — saving the cover before go-live, during the broadcast, or after replay — see the <a href=\"https://www.11tik.com/2026/08/youtube-live-premiere-thumbnail-download.html\">live and premiere thumbnail guide</a>. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For live streams and premieres — saving the cover before go-live, during the broadcast, or after replay — see the <a href=\"https://www.11tik.com/youtube-live-premiere-thumbnail-download\">live and premiere thumbnail guide</a>. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download</a>.",
     },
     {
       before:
         "You save a public still YouTube already hosts. You do not unlock private videos, members-only files, or the MP4/WebM stream. 11tik is an extractor, not a maker and not a video downloader — comparison: <a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs maker</a>.",
       after:
-        "You save a public still YouTube already hosts. You do not unlock private videos, members-only files, or the MP4/WebM stream — see <a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html\">why a thumbnail will not appear</a> when every size fails. 11tik is an extractor, not a maker and not a video downloader — comparison: <a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs maker</a>.",
+        "You save a public still YouTube already hosts. You do not unlock private videos, members-only files, or the MP4/WebM stream — see <a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">why a thumbnail will not appear</a> when every size fails. 11tik is an extractor, not a maker and not a video downloader — comparison: <a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extractor vs maker</a>.",
     },
   ],
   "how-to-extract-thumbnails-from-youtube": [
@@ -104,7 +109,7 @@ const ENGLISH_ORPHAN_INLINK_PATCHES = {
       before:
         "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">how to download a YouTube thumbnail</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
       after:
-        "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">how to download a YouTube thumbnail</a>. On a phone, see <a href=\"https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html\">save on iPhone and Android</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+        "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">how to download a YouTube thumbnail</a>. On a phone, see <a href=\"https://www.11tik.com/how-to-save-youtube-thumbnail-on-iphone\">save on iPhone and Android</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download</a>.",
     },
   ],
 };
@@ -186,7 +191,7 @@ function buildSchema({ item, canonical, h1, description, hero, structured }) {
     description: cleanDesc,
     inLanguage: "en",
     mainEntityOfPage: canonical,
-    author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/p/about.html" },
+    author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/about" },
     publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
     image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
   };
@@ -373,7 +378,8 @@ ${siteHeaderBodyClose()}
 }
 
 export function englishStaticAssetRel(item) {
-  const path = String(item.canonicalPath || "").replace(/^\//, "");
-  if (!path || path.includes("..")) throw new Error(`Invalid canonicalPath: ${item.canonicalPath}`);
-  return path;
+  if (item.assetRel) return item.assetRel;
+  const contentId = item.contentId || String(item.canonicalPath || "").replace(/^\//, "").replace(/\.html$/i, "");
+  if (!contentId || contentId.includes("..")) throw new Error(`Invalid content item for asset rel: ${item.canonicalPath}`);
+  return `${contentId}.html`;
 }

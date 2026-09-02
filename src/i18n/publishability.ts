@@ -24,15 +24,19 @@ export const PUBLISHABILITY_URL = PUBLISHABILITY_PATH;
 let cachedDoc: PublishabilityDoc | null = null;
 let inflight: Promise<PublishabilityDoc | null> | null = null;
 
-/** Strip /l/{lang} prefix and restore .html for article/utility paths when CF strips the extension. */
+/** Strip /l/{lang} prefix and normalize legacy + clean public content paths for manifest lookup. */
 export function normalizeContentPath(pathname: string): string {
   let path = String(pathname || "").replace(/\/+$/, "") || "/";
   const localePrefixed = path.match(/^\/l\/([a-z]{2})(\/.*)?$/i);
   if (localePrefixed) {
     path = localePrefixed[2] || "/";
   }
-  if (path !== "/" && !/\.html$/i.test(path) && /^\/(2026|p)\//i.test(path)) {
-    path = `${path}.html`;
+  const legacyArticle = /^\/2026\/\d{2}\/([^/]+?)(?:\.html)?$/i.exec(path);
+  if (legacyArticle) return `/${legacyArticle[1]}`;
+  const legacyPage = /^\/p\/([^/]+?)(?:\.html)?$/i.exec(path);
+  if (legacyPage) return `/${legacyPage[1]}`;
+  if (/^\/[^/]+$/.test(path) && path !== "/") {
+    return path.replace(/\.html$/i, "");
   }
   return path;
 }

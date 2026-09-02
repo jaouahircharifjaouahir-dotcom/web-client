@@ -42,6 +42,8 @@ import {
 import { renderHomeFaqShellHtml } from "./i18n/home-faq-shell.mjs";
 import { scanPublishability } from "./i18n/publish.mjs";
 import { buildContentInventory } from "./i18n/content-inventory.mjs";
+import { buildRouteManifest, writeRouteManifest } from "./i18n/build-route-manifest.mjs";
+import { writeAtomicRedirectsArtifact } from "./i18n/build-atomic-redirects.mjs";
 import { writePostsFeeds } from "../workers/feed-generation.js";
 import { buildLocaleCatalogDoc } from "./i18n/write-locale-catalogs.mjs";
 import { getTargetLocales } from "./i18n/target-languages.mjs";
@@ -258,18 +260,18 @@ function llmsTxtBody() {
 
 ## Product
 - [Homepage](https://www.11tik.com/): Paste a public YouTube URL and save the largest thumbnail still YouTube hosts.
-- [About](https://www.11tik.com/p/about.html): What 11tik is and is not.
+- [About](https://www.11tik.com/about): What 11tik is and is not.
 - [Copyright](https://www.11tik.com/copyright): Thumbnail reuse and copyright notes.
 
 ## Guides
-- [How to download a YouTube thumbnail](https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html)
-- [YouTube thumbnail URL formats](https://www.11tik.com/2026/08/youtube-thumbnail-url.html)
-- [Batch download up to 25 URLs](https://www.11tik.com/2026/08/how-to-batch-download-youtube.html)
+- [How to download a YouTube thumbnail](https://www.11tik.com/how-to-download-youtube-thumbnail)
+- [YouTube thumbnail URL formats](https://www.11tik.com/youtube-thumbnail-url)
+- [Batch download up to 25 URLs](https://www.11tik.com/how-to-batch-download-youtube)
 
 ## Policies
-- [Privacy](https://www.11tik.com/p/privacy.html)
-- [Terms](https://www.11tik.com/p/terms-of-use.html)
-- [Contact](https://www.11tik.com/p/contact.html)
+- [Privacy](https://www.11tik.com/privacy)
+- [Terms](https://www.11tik.com/terms-of-use)
+- [Contact](https://www.11tik.com/contact)
 `;
 }
 
@@ -314,7 +316,7 @@ export function generateStaticSite(staged) {
       }),
     );
   }
-  // English static pages at canonical /2026/* and /p/* paths (Phase A serves /2026 from Assets).
+  // English static pages at clean root paths (Phase 53).
   const englishShadow = writeEnglishStaticPages(writeFile, staged, inventory, { manifest, buildContext });
   if (englishShadow.missingSource.length) {
     throw new Error(`English static missing source files: ${englishShadow.missingSource.join(", ")}`);
@@ -338,6 +340,8 @@ export function generateStaticSite(staged) {
   writePostsFeeds(writeFile, staged, { inventory });
   // IndexNow ownership key at site root (plain text only).
   writeFile(join(staged, indexNowKeyFilename()), indexNowKeyBody());
-  // After html_handling=none, point extensionless hits at *.html canonicals (Ahrefs File 15).
-  writeFile(join(staged, "_redirects"), buildHtmlExtensionRedirects(staged));
+  const routeManifest = buildRouteManifest(inventory, manifest);
+  writeRouteManifest(writeFile, staged, routeManifest);
+  writeAtomicRedirectsArtifact(writeFile, staged, routeManifest);
+  writeFile(join(staged, "_redirects"), buildHtmlExtensionRedirects(staged, { manifest: routeManifest }));
 }

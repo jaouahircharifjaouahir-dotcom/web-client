@@ -1,17 +1,14 @@
 /**
- * Phase 3: www legal shortcuts → indexable utility .html (zero Worker after RWF removal).
- *
- * /about → 301 https://www.11tik.com/p/about.html (query stripped — matches Worker today)
+ * Phase 53: remove legacy CF legal-shortcut rules (11tik-p3-legal:*) from production.
+ * Clean paths (/about, /privacy, /terms, /contact) are served by the Worker resolver.
  *
  * Usage:
  *   node scripts/cf-legal-shortcuts.mjs plan [--dry-run]
  *   node scripts/cf-legal-shortcuts.mjs status
- *   node scripts/cf-legal-shortcuts.mjs apply --confirm
+ *   node scripts/cf-legal-shortcuts.mjs apply --confirm --remove
  *
  * Requires CLOUDFLARE_API_TOKEN with Dynamic URL Redirects Write for 11tik.com.
  * NEVER run apply without --confirm.
- *
- * Rollback: node scripts/cf-legal-shortcuts.mjs apply --confirm --remove
  */
 import {
   ZONE_NAME,
@@ -121,7 +118,7 @@ async function main() {
   assertValidPhaseEntrypointPutBody(body);
 
   await cfFetch(token, `/zones/${zoneId}/rulesets/phases/${PHASE}/entrypoint`, "PUT", body);
-  console.log("applied — verify /about → 301 /p/about.html (no query preserved)");
+  console.log("applied — verify 11tik-p3-legal:* rules removed; /about serves clean URL via Worker");
 }
 
 main().catch((err) => {

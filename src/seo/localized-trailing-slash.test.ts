@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import worker, {
-  handlePrimaryPPathRequest,
+  localizedCleanTrailingSlashCanonicalRedirect,
   localizedHtmlTrailingSlashCanonicalRedirect,
   utilityTrailingSlashCanonicalRedirect,
 } from "../../workers/11tik-edge.js";
@@ -96,6 +96,9 @@ describe("Phase 5.3B — localizedHtmlTrailingSlashCanonicalRedirect", () => {
     expect(
       localizedHtmlTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/p/about.html`), "fr.11tik.com"),
     ).toBe("");
+    expect(localizedCleanTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/about/`), "fr.11tik.com")).toBe(
+      `${FR}/l/fr/about`,
+    );
     expect(localizedHtmlTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/`), "fr.11tik.com")).toBe(
       "",
     );
@@ -115,15 +118,15 @@ describe("Phase 5.3B — localizedHtmlTrailingSlashCanonicalRedirect", () => {
 });
 
 describe("Phase 5.3B — Worker fetch integration", () => {
-  it("A–D. slashed localized URLs 301 before Assets (L. no fetch, M. no SPA body)", async () => {
+  it("A–D. slashed legacy localized URLs 301 atomically to clean URLs (L. no fetch, M. no SPA body)", async () => {
     const cases = [
-      [`${FR}/l/fr/p/about.html/`, `${FR}/l/fr/p/about.html`],
-      [`${AR}/l/ar/p/about.html/`, `${AR}/l/ar/p/about.html`],
+      [`${FR}/l/fr/p/about.html/`, `${FR}/l/fr/about`],
+      [`${AR}/l/ar/p/about.html/`, `${AR}/l/ar/about`],
       [
         `${FR}/l/fr/2026/08/how-to-download-youtube-thumbnail.html/`,
-        `${FR}/l/fr/2026/08/how-to-download-youtube-thumbnail.html`,
+        `${FR}/l/fr/how-to-download-youtube-thumbnail`,
       ],
-      [`${FR}/l/fr/p/about.html/?m=1`, `${FR}/l/fr/p/about.html`],
+      [`${FR}/l/fr/p/about.html/?m=1`, `${FR}/l/fr/about?m=1`],
     ] as const;
 
     for (const [reqUrl, location] of cases) {
@@ -171,17 +174,17 @@ describe("Phase 5.3B — Worker fetch integration", () => {
   });
 
   it("F. clean localized utility and article → no redirect, passthrough", async () => {
-    const utilBody = readFileSync(join(getStagedStaticSite(), "l/fr/p/about.html"), "utf8");
+    const utilBody = readFileSync(join(getStagedStaticSite(), "l/fr/about.html"), "utf8");
     const articleBody = readFileSync(
-      join(getStagedStaticSite(), "l/fr/2026/08/how-to-download-youtube-thumbnail.html"),
+      join(getStagedStaticSite(), "l/fr/how-to-download-youtube-thumbnail.html"),
       "utf8",
     );
     const cases = [
-      [`${FR}/l/fr/p/about.html`, "/l/fr/p/about.html", utilBody],
-      [`${FR}/l/fr/p/keyword-tools.html`, "/l/fr/p/keyword-tools.html", utilBody],
+      [`${FR}/l/fr/about`, "/l/fr/about.html", utilBody],
+      [`${FR}/l/fr/keyword-tools`, "/l/fr/keyword-tools.html", utilBody],
       [
-        `${FR}/l/fr/2026/08/how-to-download-youtube-thumbnail.html`,
-        "/l/fr/2026/08/how-to-download-youtube-thumbnail.html",
+        `${FR}/l/fr/how-to-download-youtube-thumbnail`,
+        "/l/fr/how-to-download-youtube-thumbnail.html",
         articleBody,
       ],
     ] as const;
@@ -197,21 +200,19 @@ describe("Phase 5.3B — Worker fetch integration", () => {
     }
   });
 
-  it("H. unknown /l/fr/random.html/ → hard 404 (Phase R2)", async () => {
+  it("H. unknown /l/fr/random.html/ → legacy slash strip 301 (not SPA)", async () => {
     const { env, seen } = assetsEnv(() => new Response("x", { status: 404 }));
     const res = await worker.fetch(new Request(`${FR}/l/fr/random.html/`), env);
-    expect(res.status).toBe(404);
-    expect(seen).toEqual(["/l/fr/random.html/"]);
-    expect(localizedHtmlTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/random.html/`), "fr.11tik.com")).toBe(
-      "",
-    );
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe(`${FR}/l/fr/random.html`);
+    expect(seen).toEqual([]);
   });
 
-  it("H2. unknown localized path without .html → hard 404 (Phase R2)", async () => {
+  it("H2. unknown localized clean path → hard 404 (Phase R2 / Phase 53)", async () => {
     const { env, seen } = assetsEnv(() => new Response("x", { status: 404 }));
     const res = await worker.fetch(new Request(`${FR}/l/fr/random`), env);
     expect(res.status).toBe(404);
-    expect(seen).toEqual(["/l/fr/random"]);
+    expect(seen).toEqual([]);
     expect(localizedHtmlTrailingSlashCanonicalRedirect(new URL(`${FR}/l/fr/random`), "fr.11tik.com")).toBe(
       "",
     );
@@ -228,13 +229,13 @@ describe("Phase 5.3B — Worker fetch integration", () => {
     expect(matchesRunWorkerFirst("/thumb/dQw4w9WgXcQ")).toBe(true);
   });
 
-  it("J. English /p/about.html/ still uses www utility handler", async () => {
-    expect(utilityTrailingSlashCanonicalRedirect(new URL(`${SITE}/p/about.html/`))).toBe(
-      `${SITE}/p/about.html`,
-    );
-    const res = await handlePrimaryPPathRequest(new URL(`${SITE}/p/about.html/`), {});
-    expect(res?.status).toBe(301);
-    expect(res?.headers.get("location")).toBe(`${SITE}/p/about.html`);
+  it("J. English /p/about.html/ → one-hop atomic redirect to clean /about", async () => {
+    expect(utilityTrailingSlashCanonicalRedirect(new URL(`${SITE}/about/`))).toBe(`${SITE}/about`);
+    const { env, seen } = assetsEnv(() => new Response("x", { status: 404 }));
+    const res = await worker.fetch(new Request(`${SITE}/p/about.html/`), env);
+    expect(res.status).toBe(301);
+    expect(res.headers.get("location")).toBe(`${SITE}/about`);
+    expect(seen).toEqual([]);
   });
 });
 

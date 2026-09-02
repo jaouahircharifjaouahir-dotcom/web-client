@@ -11,6 +11,7 @@ import {
   countHreflangOnHtml,
   writeEnglishStaticPages,
 } from "../../scripts/i18n/write-english-static.mjs";
+import { englishStaticAssetRel } from "../../scripts/i18n/render-english-static.mjs";
 import { INDEXABLE_UTILITY_PATHS, loadGuidePostHrefsFromFile } from "../../workers/sitemap-canonicals.js";
 
 /** Former Blogger-full-export sources that previously leaked theme CSS into English static HTML. */
@@ -93,7 +94,7 @@ describe("English static shadow generation", () => {
       expect(result.written.length).toBe(25);
       assertEnglishStaticCoverage(dir, inventory);
       for (const item of items) {
-        const rel = item.canonicalPath.replace(/^\//, "");
+        const rel = englishStaticAssetRel(item);
         expect(existsSync(join(dir, rel)), rel).toBe(true);
         expect(rel.startsWith("l/en")).toBe(false);
       }

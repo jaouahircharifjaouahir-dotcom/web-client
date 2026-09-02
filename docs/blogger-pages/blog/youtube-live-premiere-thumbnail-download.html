@@ -17,7 +17,7 @@
 </style>
 <article class="yte-page" itemscope itemtype="https://schema.org/Article">
   <h1 itemprop="headline">How to Download a YouTube Live or Premiere Thumbnail (Before, During, and After)</h1>
-  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-byline">By <a href="https://www.11tik.com/about" itemprop="author">11tik</a></p>
   <p class="yte-updated"><time datetime="2026-08-26" itemprop="datePublished">Published 26 August 2026</time> · <time datetime="2026-08-26" itemprop="dateModified">Updated 26 August 2026</time></p>
   <p itemprop="description">Paste a public YouTube live or premiere URL into 11tik to save the cover still YouTube already hosts—before go-live, while LIVE is on, or after the stream becomes a replay.</p>
 
@@ -35,7 +35,7 @@
     <li>A mid-stream camera frame you captured yourself</li>
     <li>A Studio-only private asset that never became a public CDN file</li>
   </ul>
-  <p>For the difference between UI captures and hosted stills, see <a href="https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html">screenshot vs real YouTube thumbnail</a>.</p>
+  <p>For the difference between UI captures and hosted stills, see <a href="https://www.11tik.com/screenshot-vs-real-youtube-thumbnail">screenshot vs real YouTube thumbnail</a>.</p>
 
   <h2>How live and premiere stills differ from Shorts and regular uploads</h2>
   <table>
@@ -44,7 +44,7 @@
     </thead>
     <tbody>
       <tr><td>Regular upload</td><td><code>/watch?v=ID</code></td><td><code>i.ytimg.com/vi/…</code></td><td>Landscape cover when public</td></tr>
-      <tr><td>Shorts</td><td><code>/shorts/ID</code></td><td>Same CDN family</td><td>Often landscape CDN still even if the Short plays vertical — <a href="https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html">Shorts guide</a></td></tr>
+      <tr><td>Shorts</td><td><code>/shorts/ID</code></td><td>Same CDN family</td><td>Often landscape CDN still even if the Short plays vertical — <a href="https://www.11tik.com/youtube-shorts-thumbnail-download">Shorts guide</a></td></tr>
       <tr><td>Live / Premiere</td><td><code>/live/ID</code> or <code>/watch?v=ID</code></td><td>Same CDN family</td><td>Custom event cover when published; same maxres/mid-size rules</td></tr>
     </tbody>
   </table>
@@ -82,12 +82,12 @@
   </ol>
   <img alt="Four-step workflow showing copy a live URL, paste into 11tik, validate public CDN sizes, then download or copy the image URL" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-live-thumbnail-extract-workflow.png" width="1200"/>
   <p class="yte-caption">Practical path for live and premiere covers: public URL → extract → validated sizes → download or copy.</p>
-  <p>Need many public watch links at once? Use Bulk (up to 25) — <a href="https://www.11tik.com/2026/08/how-to-batch-download-youtube.html">batch download guide</a>. For recent uploads from a channel URL, see <a href="https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html">channel thumbnail extraction</a>.</p>
+  <p>Need many public watch links at once? Use Bulk (up to 25) — <a href="https://www.11tik.com/how-to-batch-download-youtube">batch download guide</a>. For recent uploads from a channel URL, see <a href="https://www.11tik.com/how-to-extract-thumbnails-from-youtube">channel thumbnail extraction</a>.</p>
 
   <h2>Direct CDN check (optional)</h2>
   <p>If you already know the ID, you can test a candidate still:</p>
   <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>
-  <p>When it fails, step down through <code>hq720.jpg</code>, <code>sddefault.jpg</code>, and <code>hqdefault.jpg</code>. Manual guessing is slower than 11tik’s validated list and is a common source of grey placeholders—see <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault explained</a> and the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+  <p>When it fails, step down through <code>hq720.jpg</code>, <code>sddefault.jpg</code>, and <code>hqdefault.jpg</code>. Manual guessing is slower than 11tik’s validated list and is a common source of grey placeholders—see <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxresdefault explained</a> and the <a href="https://www.11tik.com/youtube-thumbnail-url">thumbnail URL guide</a>.</p>
   <p>Official YouTube Data API responses describe the same size classes (<code>default</code>, <code>medium</code>, <code>high</code>, <code>standard</code>, <code>maxres</code>) on the <a href="https://developers.google.com/youtube/v3/docs/thumbnails" rel="noopener noreferrer">Thumbnails resource</a>. 11tik does not call that API in your browser; it validates public CDN files client-side.</p>
 
   <h2>Custom cover vs auto-generated still</h2>
@@ -95,7 +95,7 @@
     <li><strong>Custom live/premiere cover:</strong> Uploaded in Studio for the event. Often unlocks higher public sizes when processing finishes.</li>
     <li><strong>Auto still:</strong> Derived when YouTube publishes an automatic frame. May stop at mid sizes; maxres is not guaranteed.</li>
   </ul>
-  <p>“Highest quality” still means the largest <em>public</em> file that exists—not a private Studio export. Details: <a href="https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html">highest quality thumbnail</a> and <a href="https://www.11tik.com/2026/08/original-youtube-thumbnail-image.html">original public thumbnail</a>.</p>
+  <p>“Highest quality” still means the largest <em>public</em> file that exists—not a private Studio export. Details: <a href="https://www.11tik.com/highest-quality-youtube-thumbnail">highest quality thumbnail</a> and <a href="https://www.11tik.com/original-youtube-thumbnail-image">original public thumbnail</a>.</p>
 
   <h2>When a live thumbnail will not appear</h2>
   <table>
@@ -103,7 +103,7 @@
       <tr><th>Situation</th><th>What usually happens</th><th>What to do</th></tr>
     </thead>
     <tbody>
-      <tr><td>Private / members-only / age-restricted packaging</td><td>No public still validates</td><td>Use a public link; 11tik cannot bypass access rules — <a href="https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html">unavailable thumbnail guide</a></td></tr>
+      <tr><td>Private / members-only / age-restricted packaging</td><td>No public still validates</td><td>Use a public link; 11tik cannot bypass access rules — <a href="https://www.11tik.com/youtube-thumbnail-not-appearing-private">unavailable thumbnail guide</a></td></tr>
       <tr><td>Channel /live hub without a video ID</td><td>Parser finds no ID</td><td>Open the concrete stream URL first</td></tr>
       <tr><td>Custom cover still processing</td><td>Older or mid sizes only</td><td>Retry after Studio finishes; keep the validated fallback</td></tr>
       <tr><td>Guessed maxres 404</td><td>That filename missing</td><td>Use 11tik’s first listed size</td></tr>
@@ -112,7 +112,7 @@
   </table>
 
   <h2>Responsible reuse</h2>
-  <p>A public CDN URL is not a license to republish another creator’s cover as your own branding. For personal research, commentary, or archiving your own streams, keep the file locally. For blogs and social cards, prefer hosting a copy you are entitled to use — <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">blog / Open Graph guide</a>. YouTube’s overview of <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">custom video thumbnails</a> is the primary creator-side reference for uploads in Studio.</p>
+  <p>A public CDN URL is not a license to republish another creator’s cover as your own branding. For personal research, commentary, or archiving your own streams, keep the file locally. For blogs and social cards, prefer hosting a copy you are entitled to use — <a href="https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog">blog / Open Graph guide</a>. YouTube’s overview of <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">custom video thumbnails</a> is the primary creator-side reference for uploads in Studio.</p>
 
   <h2>FAQ</h2>
   <h3>Can I download the thumbnail while the stream is live?</h3>
@@ -124,16 +124,16 @@
   <h3>Will the cover change after the stream ends?</h3>
   <p>Often it stays the same, but creators can replace it in Studio. Re-extract if you need the current public file.</p>
   <h3>Is a live thumbnail the same as a Shorts thumbnail?</h3>
-  <p>Same CDN idea, different product context. Shorts often keep landscape public stills even when playback is vertical — see the <a href="https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html">Shorts thumbnail guide</a>.</p>
+  <p>Same CDN idea, different product context. Shorts often keep landscape public stills even when playback is vertical — see the <a href="https://www.11tik.com/youtube-shorts-thumbnail-download">Shorts thumbnail guide</a>.</p>
   <h3>Can 11tik extract from a private live?</h3>
   <p>No. Private, deleted, or restricted packaging without public stills will not return images.</p>
 
   <h2>Next step</h2>
-  <p>Open the live or premiere page until the URL shows a video ID, paste it into the <a href="https://www.11tik.com/">YouTube thumbnail extractor</a>, and save the first validated still. For mobile save tips, see <a href="https://www.11tik.com/2026/08/how-to-save-youtube-thumbnail-on-iphone.html">iPhone and Android</a>. For Studio-side custom uploads, see <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">YouTube Studio thumbnail 2026</a>.</p>
-  <p class="yte-bio">Written by 11tik. Public stills only; no video or audio download. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <p>Open the live or premiere page until the URL shows a video ID, paste it into the <a href="https://www.11tik.com/">YouTube thumbnail extractor</a>, and save the first validated still. For mobile save tips, see <a href="https://www.11tik.com/how-to-save-youtube-thumbnail-on-iphone">iPhone and Android</a>. For Studio-side custom uploads, see <a href="https://www.11tik.com/youtube-studio-thumbnail-2026">YouTube Studio thumbnail 2026</a>.</p>
+  <p class="yte-bio">Written by 11tik. Public stills only; no video or audio download. <a href="https://www.11tik.com/about">About</a> · <a href="https://www.11tik.com/privacy">Privacy</a> · <a href="https://www.11tik.com/terms-of-use">Terms</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"How to Download a YouTube Live or Premiere Thumbnail (Before, During, and After)","description":"Paste a public YouTube live or premiere URL into 11tik to save the cover still YouTube already hosts—before go-live, while LIVE is on, or after the stream becomes a replay.","datePublished":"2026-08-26","dateModified":"2026-08-26","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/youtube-live-premiere-thumbnail-download.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"How to Download a YouTube Live or Premiere Thumbnail (Before, During, and After)","description":"Paste a public YouTube live or premiere URL into 11tik to save the cover still YouTube already hosts—before go-live, while LIVE is on, or after the stream becomes a replay.","datePublished":"2026-08-26","dateModified":"2026-08-26","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/youtube-live-premiere-thumbnail-download","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-live-premiere-thumbnail-lifecycle.png","width":1200,"height":630}},
   {"@type":"HowTo","name":"Download a YouTube live or premiere thumbnail with 11tik","totalTime":"PT2M","step":[
     {"@type":"HowToStep","position":1,"name":"Copy a public live or premiere URL","text":"Use a /live/, watch, youtu.be, or embed URL that contains the 11-character video ID."},
     {"@type":"HowToStep","position":2,"name":"Paste into 11tik","text":"Open https://www.11tik.com/ and paste the URL."},

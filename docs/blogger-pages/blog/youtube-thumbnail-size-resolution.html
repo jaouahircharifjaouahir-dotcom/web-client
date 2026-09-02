@@ -15,7 +15,7 @@
 </style>
 <article class="yte-page" itemscope itemtype="https://schema.org/Article">
   <h1 itemprop="headline">YouTube Thumbnail Size &amp; Resolution: Complete Guide</h1>
-  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-byline">By <a href="https://www.11tik.com/about" itemprop="author">11tik</a></p>
   <p class="yte-updated"><time datetime="2026-08-19" itemprop="datePublished">Published 19 August 2026</time> · <time datetime="2026-08-23" itemprop="dateModified">Updated 23 August 2026</time></p>
   <p itemprop="description">Compare YouTube thumbnail sizes from 120×90 to 1280×720. Maxres and hq720 are optional—use the largest public file that loads.</p>
 
@@ -26,11 +26,11 @@
   <p class="yte-caption">Relative public sizes. Not every video publishes every rung on this ladder.</p>
 
   <h2>How this guide relates to our measured study</h2>
-  <p>This page is the evergreen <strong>conceptual reference</strong> for public thumbnail sizes. For measured availability and byte-size observations, see the separate <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample study</a> (English only; sample-scoped, not a population claim). In that 300-video sample, validated public dimensions included <strong>1280×720</strong>, <strong>640×480</strong>, <strong>480×360</strong>, <strong>320×180</strong>, and <strong>120×90</strong>—observed on the CDN, not re-stated here as an official YouTube specification table. YouTube Help still centers creator uploads on a 16:9 target (commonly 1280×720); public derivatives per video ID can stop at any rung below that.</p>
+  <p>This page is the evergreen <strong>conceptual reference</strong> for public thumbnail sizes. For measured availability and byte-size observations, see the separate <a href="https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study">300-video sample study</a> (English only; sample-scoped, not a population claim). In that 300-video sample, validated public dimensions included <strong>1280×720</strong>, <strong>640×480</strong>, <strong>480×360</strong>, <strong>320×180</strong>, and <strong>120×90</strong>—observed on the CDN, not re-stated here as an official YouTube specification table. YouTube Help still centers creator uploads on a 16:9 target (commonly 1280×720); public derivatives per video ID can stop at any rung below that.</p>
 
   <h2>Recommended dimensions for creators</h2>
   <p>If you are designing a custom thumbnail in Studio, follow current YouTube Help: aim for a <strong>16:9</strong> still. The widely used working size is <strong>1280×720</strong> pixels. That matches the player’s widescreen frame and is the same pixel class as a published <code>maxresdefault</code> when YouTube creates one.</p>
-  <p>Official reference: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">Upload custom video thumbnails</a>. After Studio finishes processing, confirm the live public files with 11tik rather than assuming every derivative appeared instantly. Studio-focused notes: <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">YouTube Studio thumbnails in 2026</a>.</p>
+  <p>Official reference: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">Upload custom video thumbnails</a>. After Studio finishes processing, confirm the live public files with 11tik rather than assuming every derivative appeared instantly. Studio-focused notes: <a href="https://www.11tik.com/youtube-studio-thumbnail-2026">YouTube Studio thumbnails in 2026</a>.</p>
 
   <h2>Public CDN sizes viewers can actually fetch</h2>
   <p>Downloaders and blogs do not pull your Photoshop master. They pull public derivatives YouTube hosts for the video ID. 11tik’s extractor checks these filenames (JPEG and, when present, WebP):</p>
@@ -52,11 +52,11 @@
 
   <h2>Why 16:9 matters even when files differ</h2>
   <p>The watch player is widescreen. Custom art designed at 16:9 stays readable in search, suggested shelves, and embeds. Some public files (notably <code>hqdefault</code> / <code>sddefault</code>) are not strict 16:9 boxes; they are older CDN sizes. Prefer a true 1280×720 public still when you need a clean 16:9 asset for Open Graph or a blog header.</p>
-  <p>Shorts play vertical, but the stored public still is often landscape. That is a host behavior, not a failed download. Details: <a href="https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html">Shorts thumbnail download</a>.</p>
+  <p>Shorts play vertical, but the stored public still is often landscape. That is a host behavior, not a failed download. Details: <a href="https://www.11tik.com/youtube-shorts-thumbnail-download">Shorts thumbnail download</a>.</p>
 
   <h2>maxresdefault vs hq720 vs “HD”</h2>
   <p><code>maxresdefault</code> is the familiar HD filename on <code>i.ytimg.com</code>. When the file exists it is usually 1280×720—not 4K. <code>hq720</code> is another high-tier name some videos expose at the same class of resolution. Neither name guarantees the file. Tools that print a maxres URL without checking produce broken images.</p>
-  <p>Deeper filename notes: <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">what maxresdefault.jpg is</a> and <a href="https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html">highest quality public thumbnail</a>.</p>
+  <p>Deeper filename notes: <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">what maxresdefault.jpg is</a> and <a href="https://www.11tik.com/highest-quality-youtube-thumbnail">highest quality public thumbnail</a>.</p>
 
   <img alt="Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png" width="1200"/>
   <p class="yte-caption">Same request pattern, different results: a higher filename does not invent pixels when the file is missing.</p>
@@ -73,7 +73,7 @@
 
   <h2>How 11tik picks the “best” size</h2>
   <p>11tik probes public candidates in a fixed quality order (WebP maxres → JPEG maxres → hq720 → sd → hq → mq → default). It keeps files that validate as images and ranks the highest survivor first. It does not upscale. If maxres is missing, the first card may be hq720 or sd—that is the honest maximum for that ID.</p>
-  <p>To copy the address of a chosen size, use the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>. To save the file, use the <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">download guide</a>.</p>
+  <p>To copy the address of a chosen size, use the <a href="https://www.11tik.com/youtube-thumbnail-url">thumbnail URL guide</a>. To save the file, use the <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download guide</a>.</p>
 
   <h2>Which size should you use?</h2>
   <table>
@@ -87,7 +87,7 @@
       <tr><td>Custom upload in Studio</td><td>Your 16:9 1280×720 (or higher) original</td><td>You create art; CDN derivatives come later</td></tr>
     </tbody>
   </table>
-  <p>Do not stretch hqdefault to 1280×720 and call it maxres. For CMS hosting tips: <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">featured image / Open Graph workflow</a>. Screenshots of the player are a different (worse) asset: <a href="https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html">screenshot vs real thumbnail</a>.</p>
+  <p>Do not stretch hqdefault to 1280×720 and call it maxres. For CMS hosting tips: <a href="https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog">featured image / Open Graph workflow</a>. Screenshots of the player are a different (worse) asset: <a href="https://www.11tik.com/screenshot-vs-real-youtube-thumbnail">screenshot vs real thumbnail</a>.</p>
 
   <h2>FAQ</h2>
   <h3>Is maxresdefault always available?</h3>
@@ -104,12 +104,12 @@
   <p>WebP is another container for the same size tier when published. Prefer the file 11tik validated; do not assume WebP always exists.</p>
 
   <h2>Next step</h2>
-  <p>Check a live video on the <a href="https://www.11tik.com/">11tik extractor</a>, then either <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">copy the image URL</a> or <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">download the best available still</a>.</p>
+  <p>Check a live video on the <a href="https://www.11tik.com/">11tik extractor</a>, then either <a href="https://www.11tik.com/youtube-thumbnail-url">copy the image URL</a> or <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download the best available still</a>.</p>
 
-  <p class="yte-bio">Written by 11tik. Public CDN sizes only; no upscaling and no video download. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <p class="yte-bio">Written by 11tik. Public CDN sizes only; no upscaling and no video download. <a href="https://www.11tik.com/about">About</a> · <a href="https://www.11tik.com/privacy">Privacy</a> · <a href="https://www.11tik.com/terms-of-use">Terms</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"YouTube Thumbnail Size & Resolution: Complete Guide","description":"Compare YouTube thumbnail sizes from 120×90 to 1280×720. Maxres and hq720 are optional—use the largest public file that loads.","datePublished":"2026-08-19","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"YouTube Thumbnail Size & Resolution: Complete Guide","description":"Compare YouTube thumbnail sizes from 120×90 to 1280×720. Maxres and hq720 are optional—use the largest public file that loads.","datePublished":"2026-08-19","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/youtube-thumbnail-size-resolution","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png","width":1200,"height":630}},
   {"@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"Is maxresdefault always available?","acceptedAnswer":{"@type":"Answer","text":"No. Many public videos never publish that file. A 404 on maxres is normal."}},
     {"@type":"Question","name":"Is hq720 better than other thumbnail variants?","acceptedAnswer":{"@type":"Answer","text":"When it exists, hq720 is in the same high tier as maxres (about 1280×720). It is not automatically better than a validated maxres file, and it is not guaranteed."}},

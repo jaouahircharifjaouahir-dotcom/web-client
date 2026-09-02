@@ -16,7 +16,7 @@
 </style>
 <article class="yte-page" itemscope itemtype="https://schema.org/Article">
   <h1 itemprop="headline">How to Use a YouTube Thumbnail as a Blog Featured Image or Open Graph Preview</h1>
-  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-byline">By <a href="https://www.11tik.com/about" itemprop="author">11tik</a></p>
   <p class="yte-updated"><time datetime="2026-08-22" itemprop="datePublished">Published 22 August 2026</time> · <time datetime="2026-08-23" itemprop="dateModified">Updated 23 August 2026</time></p>
   <p itemprop="description">Confirm a public YouTube still exists, then host a copy for WordPress, Blogger, or og:image. Do not hotlink a guessed maxresdefault URL.</p>
 
@@ -27,7 +27,7 @@
   <p class="yte-caption">Confirm → copy or download → host → reference in HTML / featured image / Open Graph.</p>
 
   <h2>What a direct thumbnail URL is</h2>
-  <p>A direct thumbnail URL points at a JPEG or WebP file on YouTube’s image CDN, for example <code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>. It is not the watch page. How those addresses are built: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">get a YouTube thumbnail URL</a>. How sizes differ: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">size and resolution guide</a>.</p>
+  <p>A direct thumbnail URL points at a JPEG or WebP file on YouTube’s image CDN, for example <code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>. It is not the watch page. How those addresses are built: <a href="https://www.11tik.com/youtube-thumbnail-url">get a YouTube thumbnail URL</a>. How sizes differ: <a href="https://www.11tik.com/youtube-thumbnail-size-resolution">size and resolution guide</a>.</p>
 
   <h2>HTML example</h2>
   <p>After 11tik confirms a file, a minimal markup pattern looks like this (replace the URL, width, height, and alt with the real values):</p>
@@ -56,7 +56,7 @@
     <li>In Yoast, Rank Math, or similar, confirm the social preview uses that attachment (or upload a dedicated OG crop).</li>
     <li>Write alt text that names the video and that the file is a public YouTube still—not a stuffed keyword list.</li>
   </ol>
-  <p>Avoid pasting a raw <code>maxresdefault.jpg</code> path into the media field until the file has been proven. Missing maxres is common — <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault 404 guide</a>.</p>
+  <p>Avoid pasting a raw <code>maxresdefault.jpg</code> path into the media field until the file has been proven. Missing maxres is common — <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxresdefault 404 guide</a>.</p>
 
   <h2>Blogger and static sites</h2>
   <p><strong>Blogger:</strong> Upload the still into the post editor, then reuse that hosted Blogger image URL for any theme/social snippet fields you control. Do not rely on a guessed YouTube CDN path for a published post you care about.</p>
@@ -67,7 +67,7 @@
 
   <h2>Practical examples by platform</h2>
   <h3>Copying the image (confirmed URL first)</h3>
-  <p>On 11tik, use <strong>Copy image URL</strong> only after the size validates in your browser. Paste that HTTPS address into a draft—or better, download the file and upload it. Guessing <code>maxresdefault.jpg</code> breaks Open Graph when the file was never published. URL construction: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+  <p>On 11tik, use <strong>Copy image URL</strong> only after the size validates in your browser. Paste that HTTPS address into a draft—or better, download the file and upload it. Guessing <code>maxresdefault.jpg</code> breaks Open Graph when the file was never published. URL construction: <a href="https://www.11tik.com/youtube-thumbnail-url">thumbnail URL guide</a>.</p>
   <h3>Hosting locally (recommended for production)</h3>
   <p>Download the validated still, upload to your media library or static CDN, and reference your domain in <code>&lt;img&gt;</code> and <code>og:image</code>. Avoid fragile long-term hotlinks to <code>i.ytimg.com</code> on posts you care about.</p>
   <h3>WordPress featured image + og:image</h3>
@@ -80,7 +80,7 @@
 &lt;meta property="og:image:width" content="1280" /&gt;
 &lt;meta property="og:image:height" content="720" /&gt;</pre>
   <h3>When hotlinking is acceptable</h3>
-  <p>Internal notes, quick drafts, or temporary research pages may hotlink a validated <code>i.ytimg.com</code> URL. Production articles, product pages, and email campaigns should host a copy. Embed widget for on-page extraction: <a href="https://www.11tik.com/p/embed.html">embed guide</a>.</p>
+  <p>Internal notes, quick drafts, or temporary research pages may hotlink a validated <code>i.ytimg.com</code> URL. Production articles, product pages, and email campaigns should host a copy. Embed widget for on-page extraction: <a href="https://www.11tik.com/embed">embed guide</a>.</p>
 
   <h2>Open Graph considerations</h2>
   <p>Large link cards commonly target about <strong>1200×630</strong>. YouTube maxres is usually <strong>1280×720</strong> (16:9), which scrapers crop or letterbox. Set <code>og:image</code> (and width/height when your stack supports them) to the real pixels. After fixing a broken URL, re-scrape in each platform’s debugger—caches stick.</p>
@@ -96,10 +96,10 @@
     <tbody>
       <tr><td>Hotlink i.ytimg.com</td><td>Quick drafts, research notes</td><td>404s, CDN changes, no crop control</td></tr>
       <tr><td>Download + host</td><td>Ranked posts, product pages</td><td>You must store the file</td></tr>
-      <tr><td>Player screenshot</td><td>Almost never</td><td>UI chrome, wrong ratio — <a href="https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html">screenshot vs real</a></td></tr>
+      <tr><td>Player screenshot</td><td>Almost never</td><td>UI chrome, wrong ratio — <a href="https://www.11tik.com/screenshot-vs-real-youtube-thumbnail">screenshot vs real</a></td></tr>
     </tbody>
   </table>
-  <p>Download steps: <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">how to download a YouTube thumbnail</a>. Format choice when both WebP and JPEG exist: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">WebP vs JPEG</a>.</p>
+  <p>Download steps: <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">how to download a YouTube thumbnail</a>. Format choice when both WebP and JPEG exist: <a href="https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which">WebP vs JPEG</a>.</p>
 
   <h2>Image SEO basics for these stills</h2>
   <ul>
@@ -111,7 +111,7 @@
   </ul>
 
   <h2>Reuse and copyright (not legal advice)</h2>
-  <p>A public CDN URL is not a license. Embedding the YouTube player is different from copying the still into your hero. Fair use is fact-specific. Safer editorial pattern: illustrate commentary about that video, credit the channel, link the watch page, and do not sell the image or use it as your own channel art. Official custom-thumbnail help: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">Upload custom video thumbnails</a>. Site rules: <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <p>A public CDN URL is not a license. Embedding the YouTube player is different from copying the still into your hero. Fair use is fact-specific. Safer editorial pattern: illustrate commentary about that video, credit the channel, link the watch page, and do not sell the image or use it as your own channel art. Official custom-thumbnail help: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">Upload custom video thumbnails</a>. Site rules: <a href="https://www.11tik.com/terms-of-use">Terms</a>.</p>
 
   <h2>Troubleshooting</h2>
   <ul>
@@ -133,14 +133,14 @@
   <h3>Can I use the still as my channel cover?</h3>
   <p>Not without rights. That is someone else’s artwork.</p>
   <h3>What if Studio just changed the custom thumbnail?</h3>
-  <p>Wait for processing, then re-check on 11tik before updating your CMS copy. Related: <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">YouTube Studio thumbnails</a>.</p>
+  <p>Wait for processing, then re-check on 11tik before updating your CMS copy. Related: <a href="https://www.11tik.com/youtube-studio-thumbnail-2026">YouTube Studio thumbnails</a>.</p>
 
   <h2>Next step</h2>
   <p>Confirm a still on the <a href="https://www.11tik.com/">11tik extractor</a>, download it, upload it to your site, and point featured image / og:image at your HTTPS file.</p>
-  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/about">About</a> · <a href="https://www.11tik.com/privacy">Privacy</a> · <a href="https://www.11tik.com/terms-of-use">Terms</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"How to Use a YouTube Thumbnail as a Blog Featured Image or Open Graph Preview","description":"Confirm a public YouTube still exists, then host a copy for WordPress, Blogger, or og:image. Do not hotlink a guessed maxresdefault URL.","datePublished":"2026-08-22","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"How to Use a YouTube Thumbnail as a Blog Featured Image or Open Graph Preview","description":"Confirm a public YouTube still exists, then host a copy for WordPress, Blogger, or og:image. Do not hotlink a guessed maxresdefault URL.","datePublished":"2026-08-22","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png","width":1200,"height":630}},
   {"@type":"HowTo","name":"Use a confirmed YouTube thumbnail on a website","totalTime":"PT5M","step":[
     {"@type":"HowToStep","position":1,"name":"Extract a public still","text":"Paste a public YouTube URL into https://www.11tik.com/ and extract."},
     {"@type":"HowToStep","position":2,"name":"Download or copy a validated URL","text":"Download the first listed still or copy its image URL after it loads."},

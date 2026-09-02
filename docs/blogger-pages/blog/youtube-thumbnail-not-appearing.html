@@ -17,7 +17,7 @@
 </style>
 <article class="yte-page" itemscope itemtype="https://schema.org/Article">
   <h1 itemprop="headline">Why a YouTube Thumbnail Won’t Appear: Private, Age-Restricted, or Processing Videos</h1>
-  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-byline">By <a href="https://www.11tik.com/about" itemprop="author">11tik</a></p>
   <p class="yte-updated"><time datetime="2026-08-23" itemprop="datePublished">Published 23 August 2026</time> · <time datetime="2026-08-23" itemprop="dateModified">Updated 23 August 2026</time></p>
   <p itemprop="description">When no public YouTube still loads, the video may be private, restricted, processing, or deleted—not merely a missing maxres filename.</p>
 
@@ -32,8 +32,8 @@
   <p>Use this tree before blaming a single filename:</p>
   <ol>
     <li><strong>Paste URL into 11tik.</strong> Did any public thumbnail variant validate?</li>
-    <li><strong>If yes → video available.</strong> Is the high tier you wanted (e.g. maxres) missing while hq/sd still load? → <strong>Variant unavailable</strong> → <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxres fallback guide</a>.</li>
-    <li><strong>If no → video unavailable for public stills.</strong> Open the watch page signed out. Private / removed / restricted / still processing? → <strong>No usable public thumbnail</strong> → verify on YouTube; retry after Studio processing via <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">Studio guide</a>.</li>
+    <li><strong>If yes → video available.</strong> Is the high tier you wanted (e.g. maxres) missing while hq/sd still load? → <strong>Variant unavailable</strong> → <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxres fallback guide</a>.</li>
+    <li><strong>If no → video unavailable for public stills.</strong> Open the watch page signed out. Private / removed / restricted / still processing? → <strong>No usable public thumbnail</strong> → verify on YouTube; retry after Studio processing via <a href="https://www.11tik.com/youtube-studio-thumbnail-2026">Studio guide</a>.</li>
   </ol>
   <p>Do not collapse “maxres 404” with “video has no thumbnail.” The first is a fallback problem; the second is access or state.</p>
 
@@ -43,14 +43,14 @@
     <li><strong>Video-level unavailable:</strong> public still candidates fail across the board. You do not get a usable downloadable public image for that ID right now.</li>
     <li><strong>Variant unavailable:</strong> one high-tier filename is missing (often maxres), but a lower public size still loads. That is a size/fallback issue, not a missing thumbnail for the whole video.</li>
   </ol>
-  <p>This article covers the first case. For the second case—especially <code>maxresdefault.jpg</code> 404s—use the dedicated <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault troubleshooting guide</a>. In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, <strong>14 of 300</strong> IDs lacked a valid <code>maxresdefault</code> while lower variants still loaded—sample-scoped evidence of variant-level gaps, not proof that every “missing maxres” video is private or deleted.</p>
+  <p>This article covers the first case. For the second case—especially <code>maxresdefault.jpg</code> 404s—use the dedicated <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxresdefault troubleshooting guide</a>. In our <a href="https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study">300-video sample</a>, <strong>14 of 300</strong> IDs lacked a valid <code>maxresdefault</code> while lower variants still loaded—sample-scoped evidence of variant-level gaps, not proof that every “missing maxres” video is private or deleted.</p>
 
   <img alt="Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png" width="1200"/>
   <p class="yte-caption">Left: one variant missing, other public sizes still work. Right: no usable public still for the video ID.</p>
 
   <h2>Public stills vs video access state</h2>
   <p>YouTube hosts watch pages and image derivatives separately. Public thumbnail files typically live under hosts such as <code>i.ytimg.com</code> and are keyed by the 11-character video ID. Tools that extract thumbnails without signing into your account can only request those public files.</p>
-  <p>When a video is not exposed with public packaging—or when derivatives are not ready yet—image checks fail even if the pasted string looked like a normal watch, Shorts, live, or embed link. How those URL shapes map to an ID is covered in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">YouTube thumbnail URL guide</a>. How to save a still when one exists is covered in the <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">download guide</a>.</p>
+  <p>When a video is not exposed with public packaging—or when derivatives are not ready yet—image checks fail even if the pasted string looked like a normal watch, Shorts, live, or embed link. How those URL shapes map to an ID is covered in the <a href="https://www.11tik.com/youtube-thumbnail-url">YouTube thumbnail URL guide</a>. How to save a still when one exists is covered in the <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download guide</a>.</p>
 
   <h2>Private videos</h2>
   <p>Private uploads are meant for a limited audience. If YouTube does not publish public thumbnail derivatives for that ID, an in-browser public extractor cannot invent them. Opening the watch URL while signed in as the owner may still show the video inside YouTube; that does not mean a public CDN still is available for anonymous image requests.</p>
@@ -66,7 +66,7 @@
     <li><strong>Brand-new uploads:</strong> the watch page may appear before every public image derivative is ready. Retry later with the same URL.</li>
     <li><strong>Custom thumbnail refresh in Studio:</strong> after you replace art, public CDN files can lag. Lower sizes may appear before higher ones, or the set may be incomplete briefly.</li>
   </ul>
-  <p>If <em>some</em> public sizes already work and only the highest name is missing, switch to the <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxresdefault article</a>. If <em>no</em> public still validates yet, wait for processing, then re-check on <a href="https://www.11tik.com/">11tik</a>.</p>
+  <p>If <em>some</em> public sizes already work and only the highest name is missing, switch to the <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxresdefault article</a>. If <em>no</em> public still validates yet, wait for processing, then re-check on <a href="https://www.11tik.com/">11tik</a>.</p>
 
   <h2>Deleted or otherwise unavailable content</h2>
   <p>Removed videos, broken IDs, and some terminated uploads leave no reliable public packaging. A bookmarked watch URL can still look syntactically fine while every image candidate fails. Treat deleted/unavailable the same way as other video-level failures: confirm the watch page status on YouTube, then stop expecting a CDN still.</p>
@@ -91,12 +91,12 @@
       <tr><th>What you see</th><th>Likely class</th><th>Next step</th></tr>
     </thead>
     <tbody>
-      <tr><td>11tik lists one or more sizes</td><td>Public stills exist</td><td><a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">Download guide</a> / size choice</td></tr>
-      <tr><td>Only maxres fails; hq/sd work</td><td>Variant unavailable</td><td><a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxres troubleshooting</a></td></tr>
+      <tr><td>11tik lists one or more sizes</td><td>Public stills exist</td><td><a href="https://www.11tik.com/how-to-download-youtube-thumbnail">Download guide</a> / size choice</td></tr>
+      <tr><td>Only maxres fails; hq/sd work</td><td>Variant unavailable</td><td><a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxres troubleshooting</a></td></tr>
       <tr><td>No sizes; YouTube asks to sign in / age-gate</td><td>Access restriction</td><td>Use a public video, or accept that public extraction cannot proceed</td></tr>
       <tr><td>No sizes; owner just uploaded/replaced art</td><td>Processing lag</td><td>Wait, then re-check the same URL</td></tr>
       <tr><td>No sizes; YouTube says private/unavailable</td><td>Private or deleted state</td><td>No public still to extract</td></tr>
-      <tr><td>URL will not parse</td><td>Bad or unsupported link</td><td><a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">URL / video ID guide</a></td></tr>
+      <tr><td>URL will not parse</td><td>Bad or unsupported link</td><td><a href="https://www.11tik.com/youtube-thumbnail-url">URL / video ID guide</a></td></tr>
     </tbody>
   </table>
 
@@ -142,10 +142,10 @@
   <p>When a thumbnail “won’t appear,” separate two questions: Did any public still validate? Or did only one high-tier filename fail? Video-level failures usually track private, restricted, processing, deleted, or otherwise non-public packaging—not a magic missing <code>maxresdefault</code> string. Use 11tik to test public availability honestly, then follow the maxres, URL, or download guide for the matching next step.</p>
   <p><a href="https://www.11tik.com/">Check whether a public YouTube thumbnail exists on 11tik →</a></p>
 
-  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>. Official creator help for custom thumbnails: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">Upload custom video thumbnails</a>.</p>
+  <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/about">About</a> · <a href="https://www.11tik.com/privacy">Privacy</a> · <a href="https://www.11tik.com/terms-of-use">Terms</a>. Official creator help for custom thumbnails: <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">Upload custom video thumbnails</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"Why a YouTube Thumbnail Won’t Appear: Private, Age-Restricted, or Processing Videos","description":"When no public YouTube still loads, the video may be private, restricted, processing, or deleted—not merely a missing maxres filename.","datePublished":"2026-08-23","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"Why a YouTube Thumbnail Won’t Appear: Private, Age-Restricted, or Processing Videos","description":"When no public YouTube still loads, the video may be private, restricted, processing, or deleted—not merely a missing maxres filename.","datePublished":"2026-08-23","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/youtube-thumbnail-not-appearing-private","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png","width":1200,"height":630}},
   {"@type":"HowTo","name":"Check why a YouTube thumbnail will not appear","description":"Separate video-level unavailability from a missing thumbnail size variant.","step":[
     {"@type":"HowToStep","position":1,"name":"Run a public still check","text":"Paste the same URL into 11tik and wait for the public-size check to finish."},
     {"@type":"HowToStep","position":2,"name":"See if any size appears","text":"If sizes appear, download or use the size and maxres guides. If nothing appears, continue."},

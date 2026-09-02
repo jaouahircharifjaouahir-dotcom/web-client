@@ -16,7 +16,7 @@
 </style>
 <article class="yte-page" itemscope itemtype="https://schema.org/Article">
   <h1 itemprop="headline">How to Get a YouTube Thumbnail URL Directly From a Video</h1>
-  <p class="yte-byline">By <a href="https://www.11tik.com/p/about.html" itemprop="author">11tik</a></p>
+  <p class="yte-byline">By <a href="https://www.11tik.com/about" itemprop="author">11tik</a></p>
   <p class="yte-updated"><time datetime="2026-08-19" itemprop="datePublished">Published 19 August 2026</time> · <time datetime="2026-08-23" itemprop="dateModified">Updated 23 August 2026</time></p>
   <p itemprop="description">Build or copy a working YouTube thumbnail URL from the video ID on i.ytimg.com. Confirm the size exists before you hotlink it.</p>
 
@@ -28,7 +28,7 @@
 
   <h2>What a YouTube thumbnail URL is</h2>
   <p>A YouTube thumbnail URL points at a still image file, not at the video player. It lives on YouTube’s public image CDN (commonly <code>i.ytimg.com</code>). When the address works, your browser downloads a JPEG or WebP. When it does not, you get a missing file or a grey placeholder—not “HD” invented out of nowhere.</p>
-  <p>That matters for blogs, Open Graph previews, design mockups, and CMS featured-image fields: those systems need an image URL, not <code>youtube.com/watch?v=…</code>. If you only need the file on disk, use the <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">download guide</a> instead of this URL-focused page.</p>
+  <p>That matters for blogs, Open Graph previews, design mockups, and CMS featured-image fields: those systems need an image URL, not <code>youtube.com/watch?v=…</code>. If you only need the file on disk, use the <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download guide</a> instead of this URL-focused page.</p>
 
   <h2>How the URL relates to the video ID</h2>
   <p>YouTube keys public stills by video ID. The usual JPEG pattern is:</p>
@@ -72,7 +72,7 @@
       <tr><td><code>default.jpg</code></td><td>120×90</td><td>Smallest standard still</td></tr>
     </tbody>
   </table>
-  <p>For pixel-level detail and when to prefer one size over another, see the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">thumbnail size and resolution guide</a>. For why <code>maxresdefault.jpg</code> is often missing, see <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">what maxresdefault is</a>.</p>
+  <p>For pixel-level detail and when to prefer one size over another, see the <a href="https://www.11tik.com/youtube-thumbnail-size-resolution">thumbnail size and resolution guide</a>. For why <code>maxresdefault.jpg</code> is often missing, see <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">what maxresdefault is</a>.</p>
 
   <h2>Worked example with a public video ID</h2>
   <p>Take the public demo ID <code>dQw4w9WgXcQ</code>. A watch URL is:</p>
@@ -103,23 +103,23 @@
   <h3>B) CDN host and path anatomy</h3>
   <p>JPEG stills: <code>https://i.ytimg.com/vi/{VIDEO_ID}/{FILENAME}.jpg</code>. WebP maxres when published: <code>https://i.ytimg.com/vi_webp/{VIDEO_ID}/maxresdefault.webp</code>. The host is an image CDN, not the watch page or video stream.</p>
   <h3>C) Variant filename logic</h3>
-  <p>Filenames (<code>maxresdefault</code>, <code>hq720</code>, <code>sddefault</code>, <code>hqdefault</code>, <code>mqdefault</code>, <code>default</code>) describe optional public derivatives. A longer name does not create pixels. Full tier notes: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">size guide</a>.</p>
+  <p>Filenames (<code>maxresdefault</code>, <code>hq720</code>, <code>sddefault</code>, <code>hqdefault</code>, <code>mqdefault</code>, <code>default</code>) describe optional public derivatives. A longer name does not create pixels. Full tier notes: <a href="https://www.11tik.com/youtube-thumbnail-size-resolution">size guide</a>.</p>
   <h3>D) Fallback sequence</h3>
-  <p>Probe highest tier first, then step down until an image loads. In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, maxres validated for 286/300 IDs; the 14 without maxres still had hqdefault—sample-scoped, not a universal rule. Missing maxres behavior: <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxres guide</a>.</p>
+  <p>Probe highest tier first, then step down until an image loads. In our <a href="https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study">300-video sample</a>, maxres validated for 286/300 IDs; the 14 without maxres still had hqdefault—sample-scoped, not a universal rule. Missing maxres behavior: <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxres guide</a>.</p>
   <h3>E) Validation before display or download</h3>
   <p>Load the candidate URL as an image (or use 11tik’s in-browser check). Reject HTTP errors, blank tiles, and tiny grey placeholders when you expected a high tier. Do not hard-code maxres in production HTML without a check.</p>
   <h3>F) WebP variant relationship</h3>
-  <p>WebP maxres lives under <code>/vi_webp/</code> with a separate filename extension. JPEG and WebP of the same tier can coexist, or only one may publish. Format choice: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">WebP vs JPEG</a>.</p>
+  <p>WebP maxres lives under <code>/vi_webp/</code> with a separate filename extension. JPEG and WebP of the same tier can coexist, or only one may publish. Format choice: <a href="https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which">WebP vs JPEG</a>.</p>
   <h3>G) Browser and client-side limits</h3>
-  <p>Public extractors validate by loading images in the visitor’s browser—no private YouTube API. CORS and canvas read rules apply if you process pixels in JS; hotlinking <code>i.ytimg.com</code> in CMS or Open Graph can fail when filenames 404. For embed integration, see <a href="https://www.11tik.com/p/embed.html">embed the extractor</a>.</p>
+  <p>Public extractors validate by loading images in the visitor’s browser—no private YouTube API. CORS and canvas read rules apply if you process pixels in JS; hotlinking <code>i.ytimg.com</code> in CMS or Open Graph can fail when filenames 404. For embed integration, see <a href="https://www.11tik.com/embed">embed the extractor</a>.</p>
 
   <h2>Choosing the best available URL</h2>
   <p>“Best” means the largest public file that actually exists, not the longest filename you can type. Prefer a validated maxres or hq720 link when present. If those fail, step down to sd, hq, mq, or default. Upscaling a 480×360 still to 1280×720 in an editor does not create a true maxres URL.</p>
-  <p>Creators uploading custom art should still confirm the live public derivatives afterward—Studio processing can lag. Related: <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">YouTube Studio thumbnails in 2026</a>.</p>
+  <p>Creators uploading custom art should still confirm the live public derivatives afterward—Studio processing can lag. Related: <a href="https://www.11tik.com/youtube-studio-thumbnail-2026">YouTube Studio thumbnails in 2026</a>.</p>
 
   <h2>Using the URL on another website</h2>
-  <p>You can paste a working <code>i.ytimg.com</code> URL into many CMS fields, but hotlinking has risks: YouTube can change CDN paths, and some networks block third-party hosts. For a durable blog featured image or Open Graph tag, download the confirmed still and host a copy on your own domain. Walkthrough: <a href="https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html">YouTube thumbnail as blog / Open Graph image</a>.</p>
-  <p>Copyright stays with the uploader. A public URL is not a license to republish the art as your own cover. See YouTube’s help on <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">custom video thumbnails</a> and 11tik <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <p>You can paste a working <code>i.ytimg.com</code> URL into many CMS fields, but hotlinking has risks: YouTube can change CDN paths, and some networks block third-party hosts. For a durable blog featured image or Open Graph tag, download the confirmed still and host a copy on your own domain. Walkthrough: <a href="https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog">YouTube thumbnail as blog / Open Graph image</a>.</p>
+  <p>Copyright stays with the uploader. A public URL is not a license to republish the art as your own cover. See YouTube’s help on <a href="https://support.google.com/youtube/answer/72431" rel="noopener noreferrer">custom video thumbnails</a> and 11tik <a href="https://www.11tik.com/terms-of-use">Terms</a>.</p>
 
   <h2>Troubleshooting broken thumbnail URLs</h2>
   <ul>
@@ -134,7 +134,7 @@
   <h3>Can I copy the direct thumbnail URL without downloading the file?</h3>
   <p>Yes. On 11tik, use Copy image URL. That copies the HTTPS image address for a size that already validated in your browser.</p>
   <h3>Can I get a thumbnail URL from a YouTube Short?</h3>
-  <p>Yes, when the Short is public and YouTube published stills for that ID. Paste a <code>/shorts/</code> link the same way you paste a watch URL. See also <a href="https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html">Shorts thumbnails</a>.</p>
+  <p>Yes, when the Short is public and YouTube published stills for that ID. Paste a <code>/shorts/</code> link the same way you paste a watch URL. See also <a href="https://www.11tik.com/youtube-shorts-thumbnail-download">Shorts thumbnails</a>.</p>
   <h3>Why does one thumbnail URL work while another returns an error?</h3>
   <p>Filenames are optional public derivatives. <code>hqdefault.jpg</code> may exist when <code>maxresdefault.jpg</code> does not. A working mid-size URL does not imply a working maxres URL.</p>
   <h3>Can I use the direct image URL on my website?</h3>
@@ -145,12 +145,12 @@
   <p>No. It only lists public files that respond as images. Missing maxres means that URL should not be copied.</p>
 
   <h2>Next step</h2>
-  <p>Paste a public YouTube URL into the <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a>, copy the validated image link, or <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">download the still</a> if you need a local file. For resolution choices, open the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">size and quality guide</a>.</p>
+  <p>Paste a public YouTube URL into the <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a>, copy the validated image link, or <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download the still</a> if you need a local file. For resolution choices, open the <a href="https://www.11tik.com/youtube-thumbnail-size-resolution">size and quality guide</a>.</p>
 
-  <p class="yte-bio">Written by 11tik, publisher of the in-browser extractor. Public stills only—no video or audio download. <a href="https://www.11tik.com/p/about.html">About</a> · <a href="https://www.11tik.com/p/privacy.html">Privacy</a> · <a href="https://www.11tik.com/p/terms-of-use.html">Terms</a>.</p>
+  <p class="yte-bio">Written by 11tik, publisher of the in-browser extractor. Public stills only—no video or audio download. <a href="https://www.11tik.com/about">About</a> · <a href="https://www.11tik.com/privacy">Privacy</a> · <a href="https://www.11tik.com/terms-of-use">Terms</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"How to Get a YouTube Thumbnail URL Directly From a Video","description":"Build or copy a working YouTube thumbnail URL from the video ID on i.ytimg.com. Confirm the size exists before you hotlink it.","datePublished":"2026-08-19","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/2026/08/youtube-thumbnail-url.html","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/p/about.html"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"How to Get a YouTube Thumbnail URL Directly From a Video","description":"Build or copy a working YouTube thumbnail URL from the video ID on i.ytimg.com. Confirm the size exists before you hotlink it.","datePublished":"2026-08-19","dateModified":"2026-08-23","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/youtube-thumbnail-url","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png","width":1200,"height":630}},
   {"@type":"HowTo","name":"How to get a YouTube thumbnail URL","totalTime":"PT1M","step":[
     {"@type":"HowToStep","position":1,"name":"Copy a public YouTube URL","text":"Copy a public watch, Shorts, live, embed, or youtu.be URL."},
     {"@type":"HowToStep","position":2,"name":"Paste into 11tik","text":"Open https://www.11tik.com/ and paste the URL."},

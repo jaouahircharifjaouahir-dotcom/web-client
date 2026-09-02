@@ -97,6 +97,22 @@
   <h3>3. Build the URL by hand</h3>
   <p>You can concatenate host + <code>/vi/</code> + ID + filename yourself. Hand-built URLs are fine for testing, but they are unsafe to paste into production HTML until you verify the response. Availability varies by upload age, source artwork, and processing state in YouTube Studio.</p>
 
+  <h2>Developer reference: URL anatomy and validation</h2>
+  <h3>A) Video ID extraction</h3>
+  <p>Parse the 11-character ID from watch (<code>v=</code>), Shorts (<code>/shorts/</code>), live (<code>/live/</code>), embed (<code>/embed/</code>), or youtu.be path segments. Strip tracking query params—they do not change the thumbnail host path. Channel and playlist URLs need a watch link per video.</p>
+  <h3>B) CDN host and path anatomy</h3>
+  <p>JPEG stills: <code>https://i.ytimg.com/vi/{VIDEO_ID}/{FILENAME}.jpg</code>. WebP maxres when published: <code>https://i.ytimg.com/vi_webp/{VIDEO_ID}/maxresdefault.webp</code>. The host is an image CDN, not the watch page or video stream.</p>
+  <h3>C) Variant filename logic</h3>
+  <p>Filenames (<code>maxresdefault</code>, <code>hq720</code>, <code>sddefault</code>, <code>hqdefault</code>, <code>mqdefault</code>, <code>default</code>) describe optional public derivatives. A longer name does not create pixels. Full tier notes: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">size guide</a>.</p>
+  <h3>D) Fallback sequence</h3>
+  <p>Probe highest tier first, then step down until an image loads. In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, maxres validated for 286/300 IDs; the 14 without maxres still had hqdefault—sample-scoped, not a universal rule. Missing maxres behavior: <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxres guide</a>.</p>
+  <h3>E) Validation before display or download</h3>
+  <p>Load the candidate URL as an image (or use 11tik’s in-browser check). Reject HTTP errors, blank tiles, and tiny grey placeholders when you expected a high tier. Do not hard-code maxres in production HTML without a check.</p>
+  <h3>F) WebP variant relationship</h3>
+  <p>WebP maxres lives under <code>/vi_webp/</code> with a separate filename extension. JPEG and WebP of the same tier can coexist, or only one may publish. Format choice: <a href="https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html">WebP vs JPEG</a>.</p>
+  <h3>G) Browser and client-side limits</h3>
+  <p>Public extractors validate by loading images in the visitor’s browser—no private YouTube API. CORS and canvas read rules apply if you process pixels in JS; hotlinking <code>i.ytimg.com</code> in CMS or Open Graph can fail when filenames 404. For embed integration, see <a href="https://www.11tik.com/p/embed.html">embed the extractor</a>.</p>
+
   <h2>Choosing the best available URL</h2>
   <p>“Best” means the largest public file that actually exists, not the longest filename you can type. Prefer a validated maxres or hq720 link when present. If those fail, step down to sd, hq, mq, or default. Upscaling a 480×360 still to 1280×720 in an editor does not create a true maxres URL.</p>
   <p>Creators uploading custom art should still confirm the live public derivatives afterward—Studio processing can lag. Related: <a href="https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html">YouTube Studio thumbnails in 2026</a>.</p>

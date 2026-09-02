@@ -33,6 +33,10 @@
   <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>
   <p>Both sit on <code>i.ytimg.com</code>. They are still images—not the video stream, not a Studio private export, and not a 4K master. Pixel expectations and other sizes are covered in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">thumbnail size and resolution guide</a>. URL construction is covered in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
 
+  <h2>What our 300-video sample showed (not a universal rule)</h2>
+  <p>In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video thumbnail size study</a>, we measured public variant availability for eight filenames per ID. In that sample only, <code>maxresdefault</code> validated for <strong>286 of 300</strong> video IDs (<strong>95.33%</strong>). The other <strong>14 of 300</strong> had no usable maxres file—but every one of those 14 still returned a valid <code>hqdefault</code> public still. That pattern is sample-scoped evidence for fallback behavior, not a guarantee for every YouTube upload.</p>
+  <p>When maxres is missing in your own check, treat it as a <strong>thumbnail variant</strong> problem: step down to the next validated public filename rather than assuming the video has no thumbnail at all. Video-level failures (private, deleted, restricted) are a separate diagnosis—see the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html">thumbnail not appearing guide</a>.</p>
+
   <h2>Why can a real YouTube video still return 404 for maxres?</h2>
   <ul>
     <li>Older uploads never received a maxres derivative.</li>

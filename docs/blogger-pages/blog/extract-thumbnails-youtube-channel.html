@@ -16,6 +16,24 @@
   <img alt="Extract thumbnails from a YouTube channel URL — latest public uploads on 11tik" class="yte-hero" height="630" itemprop="image" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-channel-extract.png" width="1200"/>
   <p class="yte-caption">A channel link becomes a short list of public video ids. Each card is a real still, not a guessed filename.</p>
 
+  <h2>RSS discovery scope</h2>
+  <p>Channel expansion uses YouTube’s public channel feed (RSS-style) to list recent uploads with a resolvable video ID. That feed reflects <strong>public items YouTube exposes</strong>—not every video ever uploaded, not members-only posts, and not a guaranteed complete archive.</p>
+
+  <h2>Public items only</h2>
+  <p>Private, unlisted-without-public-stills, and age-gated uploads typically never appear in the expanded list. Empty expansion usually means the handle did not resolve, the channel is terminated, or no public ids were returned—not a 11tik scraping failure.</p>
+
+  <h2>Channel URL vs explicit watch URLs</h2>
+  <p>One channel line expands into multiple watch URLs before extract, still subject to the <strong>25-URL Bulk cap</strong>. Pasting individual watch links skips RSS discovery but gives precise control. Compare with line-by-line bulk: <a href="https://www.11tik.com/2026/08/how-to-batch-download-youtube.html">batch download guide</a>.</p>
+
+  <h2>Missing or removed items</h2>
+  <p>Deleted videos drop out of feeds over time. A card that fails extract may be processing, restricted, or removed—re-run a single watch URL or see <a href="https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html">thumbnail not appearing</a>.</p>
+
+  <h2>Ethical usage</h2>
+  <p>Studying public packaging for research is the intended use. Re-uploading a competitor’s custom art as your thumbnail violates copyright and platform policy. Credit channels in published commentary; link their watch pages. Site rules: <a href="https://www.11tik.com/copyright">Copyright &amp; Usage</a>.</p>
+
+  <h2>Relationship with batch extraction</h2>
+  <p>Channel extract is Bulk mode with RSS pre-fill. Same client-side validation, same 25-URL cap, same CSV/zip exports—no unlimited channel scrape and no server-side private API.</p>
+
   <h2>Can I get thumbnails from a whole YouTube channel?</h2>
   <p>You can get stills for the latest <em>public</em> uploads that expose a video id. 11tik does not scrape every video a channel ever posted and does not bypass memberships. On the homepage, turn on Bulk, paste a channel URL such as <code>youtube.com/@handle</code> or <code>/channel/UC…</code>, and let the tool expand the public RSS-style list. Then extract as you would a typed list. Cap remains 25 URLs per run so the browser stays usable.</p>
   <p>This is different from saving one watch link. The single-URL flow is in <a href="https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html">how to download a YouTube thumbnail</a>. Line-by-line bulk without a channel is in <a href="https://www.11tik.com/2026/08/how-to-batch-download-youtube.html">batch download</a>.</p>

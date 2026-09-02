@@ -65,6 +65,23 @@
   <img alt="Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png" width="1200"/>
   <p class="yte-caption">Featured image and og:image can share a file, but both need a URL that actually exists.</p>
 
+  <h2>Practical examples by platform</h2>
+  <h3>Copying the image (confirmed URL first)</h3>
+  <p>On 11tik, use <strong>Copy image URL</strong> only after the size validates in your browser. Paste that HTTPS address into a draft—or better, download the file and upload it. Guessing <code>maxresdefault.jpg</code> breaks Open Graph when the file was never published. URL construction: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+  <h3>Hosting locally (recommended for production)</h3>
+  <p>Download the validated still, upload to your media library or static CDN, and reference your domain in <code>&lt;img&gt;</code> and <code>og:image</code>. Avoid fragile long-term hotlinks to <code>i.ytimg.com</code> on posts you care about.</p>
+  <h3>WordPress featured image + og:image</h3>
+  <p>Media → Add New → upload the downloaded JPEG or WebP → set Featured image → confirm Yoast/Rank Math social preview uses that attachment. Re-scrape Facebook/Twitter/LinkedIn debuggers after URL changes.</p>
+  <h3>Blogger</h3>
+  <p>Insert the image in the post composer so Blogger hosts the file, then reuse that Blogger CDN URL in theme meta if your template exposes social fields. Do not rely on an external YouTube image URL for a permanent post.</p>
+  <h3>Static sites (Hugo, Eleventy, etc.)</h3>
+  <p>Commit the image under <code>/assets</code> or your CDN, reference it in front matter, and emit <code>og:image</code> with real width/height. Example meta block:</p>
+  <pre>&lt;meta property="og:image" content="https://www.example.com/media/thumb.jpg" /&gt;
+&lt;meta property="og:image:width" content="1280" /&gt;
+&lt;meta property="og:image:height" content="720" /&gt;</pre>
+  <h3>When hotlinking is acceptable</h3>
+  <p>Internal notes, quick drafts, or temporary research pages may hotlink a validated <code>i.ytimg.com</code> URL. Production articles, product pages, and email campaigns should host a copy. Embed widget for on-page extraction: <a href="https://www.11tik.com/p/embed.html">embed guide</a>.</p>
+
   <h2>Open Graph considerations</h2>
   <p>Large link cards commonly target about <strong>1200×630</strong>. YouTube maxres is usually <strong>1280×720</strong> (16:9), which scrapers crop or letterbox. Set <code>og:image</code> (and width/height when your stack supports them) to the real pixels. After fixing a broken URL, re-scrape in each platform’s debugger—caches stick.</p>
   <pre>&lt;meta property="og:image" content="https://www.example.com/media/thumb.jpg" /&gt;

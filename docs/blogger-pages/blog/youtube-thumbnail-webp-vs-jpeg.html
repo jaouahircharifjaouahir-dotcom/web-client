@@ -46,6 +46,9 @@
   </table>
   <p>Neither format invents resolution. A 480×360 WebP is still 480×360.</p>
 
+  <h2>Measured byte-size comparison (300-video sample only)</h2>
+  <p>In the same <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, the median maxres WebP observation was <strong>60,345 bytes</strong> versus <strong>141,111 bytes</strong> for JPEG maxres—making the WebP median about <strong>57.2% smaller by byte size</strong> in that dataset. This is a <strong>sample-scoped byte comparison</strong>, not a universal compression guarantee: your video may publish only JPEG, only WebP, both, or neither at the maxres tier. Pixel dimensions for each tier are covered in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html">size and resolution guide</a>; URL paths differ under <code>/vi/</code> versus <code>/vi_webp/</code> as explained in the <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+
   <h2>What happens when you download</h2>
   <p>The download filename keeps the real extension (<code>.jpg</code> or <code>.webp</code>) from the mime type / URL. For JPEG blobs, 11tik may insert a short JPEG comment such as <code>11tik VIDEO_ID quality youtube thumbnail</code>. WebP and non-JPEG blobs are saved without that re-encode step. There is no quality “upgrade” and no forced conversion between formats.</p>
 

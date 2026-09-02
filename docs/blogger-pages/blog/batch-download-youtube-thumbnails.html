@@ -17,6 +17,42 @@
   <p class="yte-caption">Bulk mode on 11tik lists each video’s best public still first, then lower sizes that exist.</p>
   <h2>How do I batch download YouTube thumbnails?</h2>
   <p>Open <a href="https://www.11tik.com/">11tik</a>, turn on Bulk, paste one public URL per line, click Extract all, then download each best still or the zip of highest quality. The cap is 25 URLs per run so the browser stays responsive.</p>
+
+  <h2>What the tool processes</h2>
+  <p>Bulk mode runs the same client-side public-still check as single-URL extract: parse each video ID, build candidate thumbnail URLs, load them as images in your browser, drop failures and placeholders, rank survivors, and show the best still first. It does not download video or audio, does not call a private YouTube API, and does not store pasted links on 11tik servers.</p>
+
+  <h2>25-URL cap</h2>
+  <p>Each Bulk run accepts up to <strong>25 lines</strong>. That limit keeps image validation responsive in the browser. For more IDs, run multiple batches or export CSV from each run and merge offline. There is no 500- or 1000-URL server batch.</p>
+
+  <h2>Client-side processing</h2>
+  <p>Every extract happens in your session. Network requests go from your browser to public <code>i.ytimg.com</code> (and related) hosts. Pasted URLs are not uploaded to 11tik for server-side scraping.</p>
+
+  <h2>CSV and JSON export</h2>
+  <p>After a successful run, optional export includes video id, title, share URL, and validated image URL per row—useful for research logs. Export reflects what validated in that session, not a guaranteed maxres column for every ID.</p>
+
+  <h2>Failure taxonomy</h2>
+  <ul>
+    <li><strong>Parse failure:</strong> line is not a supported watch, Shorts, live, embed, youtu.be, or channel-expandable URL.</li>
+    <li><strong>Video unavailable:</strong> private, removed, restricted, or processing—no public still validates. See <a href="https://www.11tik.com/2026/08/youtube-thumbnail-not-appearing-private.html">why a thumbnail won’t appear</a>.</li>
+    <li><strong>Variant missing:</strong> video is public but maxres (or another high tier) 404s; a lower size still works. See <a href="https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html">maxres fallback</a>.</li>
+    <li><strong>Placeholder rejected:</strong> URL responded but looked like a tiny grey missing-file tile.</li>
+  </ul>
+
+  <h2>Invalid, private, and unavailable videos</h2>
+  <p>11tik only surfaces public CDN stills. Unlisted videos without public packaging, members-only uploads, age-gated content, and deleted videos typically produce empty cards—not a smaller “secret” file. Do not expect Bulk to bypass access controls.</p>
+
+  <h2>Channel URLs vs manually supplied watch links</h2>
+  <p>Paste a public channel URL on one line and Bulk expands recent public uploads via RSS-style discovery, then extracts each ID—subject to the same 25-URL cap after expansion. Manually pasted watch links skip channel discovery. Full channel workflow: <a href="https://www.11tik.com/2026/08/how-to-extract-thumbnails-from-youtube.html">channel extract guide</a>.</p>
+
+  <h2>Privacy</h2>
+  <p>Pasted URLs are processed locally in your browser for extraction. Read <a href="https://www.11tik.com/p/privacy.html">Privacy</a> for site analytics; Bulk does not add a separate server-side private API.</p>
+
+  <h2>Retry guidance</h2>
+  <p>After a new Studio custom thumbnail or fresh upload, wait for processing and re-run the same watch URL. Transient CDN lag sometimes clears on a second attempt; persistent empty results usually mean no public still exists for that ID.</p>
+
+  <h2>Realistic expectations</h2>
+  <p>Not every public video publishes maxres. In our <a href="https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html">300-video sample</a>, maxres validated for 286/300 IDs (sample-scoped). Bulk returns the highest validated public file per line—not a guaranteed 1280×720 for every row. URL anatomy: <a href="https://www.11tik.com/2026/08/youtube-thumbnail-url.html">thumbnail URL guide</a>.</p>
+
   <h2>What belongs in the list?</h2>
   <ul>
     <li>youtube.com/watch?v= IDs</li>

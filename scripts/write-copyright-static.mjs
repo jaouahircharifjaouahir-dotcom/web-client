@@ -60,7 +60,7 @@ ${renderSiteHeaderHtml({ locale: "en", homeUrl: `${SITE}/`, contentPath: "/copyr
   <p>${xmlEscape(LEGAL.a2)}</p>
   <h2>${xmlEscape(LEGAL.q3)}</h2>
   <p>${xmlEscape(LEGAL.a3)}</p>
-  <p><a href="${SITE}/">YouTube Thumbnail Extractor</a> · <a href="${SITE}/p/about.html">About</a> · <a href="${SITE}/p/privacy.html">Privacy</a> · <a href="${SITE}/p/terms-of-use.html">Terms</a></p>
+  <p><a href="${SITE}/">YouTube Thumbnail Extractor</a> · <a href="${SITE}/about">About</a> · <a href="${SITE}/privacy">Privacy</a> · <a href="${SITE}/terms-of-use">Terms</a></p>
 </article>
 ${siteHeaderScriptTag()}
 <script defer fetchpriority="high" src="/web-client/blogger-app.js?v=${APP_ASSET_V}"></script>

@@ -114,18 +114,60 @@ const ENGLISH_ORPHAN_INLINK_PATCHES = {
   ],
 };
 
+/**
+ * Rewrite legacy www article/utility hrefs inside a patch `before` anchor to clean paths.
+ * Used so Ahrefs orphan-inlink enrichment still applies after Phase 57B source migration.
+ */
+export function migrateOrphanPatchAnchorHrefs(anchor) {
+  return String(anchor || "")
+    .replace(
+      /https:\/\/www\.11tik\.com\/2026\/(?:\d{2}\/)?([a-z0-9-]+)\.html/gi,
+      "https://www.11tik.com/$1",
+    )
+    .replace(/https:\/\/www\.11tik\.com\/p\/([a-z0-9-]+)\.html/gi, "https://www.11tik.com/$1");
+}
+
+/**
+ * Idempotent Ahrefs File 23 inlink patches.
+ * CASE A: legacy `before` present → replace with `after`
+ * CASE A′: clean-migrated `before` present → replace with `after` (same final output)
+ * CASE B: `after` already present → no-op
+ * CASE C: neither → throw with patch identity
+ */
 export function applyEnglishOrphanInlinkPatches(html, contentId) {
   const patches = ENGLISH_ORPHAN_INLINK_PATCHES[contentId];
   if (!patches?.length) return html;
   let out = String(html || "");
+  let patchIndex = 0;
   for (const patch of patches) {
+    patchIndex += 1;
+    const patchId = `${contentId}#${patchIndex}`;
     if (out.includes(patch.after)) continue;
-    if (!out.includes(patch.before)) {
-      throw new Error(`English orphan inlink patch anchor missing for ${contentId}`);
+    if (out.includes(patch.before)) {
+      out = out.replace(patch.before, patch.after);
+      continue;
     }
-    out = out.replace(patch.before, patch.after);
+    const migratedBefore = migrateOrphanPatchAnchorHrefs(patch.before);
+    if (migratedBefore !== patch.before && out.includes(migratedBefore)) {
+      out = out.replace(migratedBefore, patch.after);
+      continue;
+    }
+    throw new Error(
+      [
+        `English orphan inlink patch anchor missing for ${patchId}`,
+        `expectedLegacyAnchor: ${JSON.stringify(patch.before)}`,
+        `expectedMigratedAnchor: ${JSON.stringify(migratedBefore)}`,
+        `expectedFinalAnchor: ${JSON.stringify(patch.after)}`,
+        `sourceFile: scripts/i18n/render-english-static.mjs (ENGLISH_ORPHAN_INLINK_PATCHES)`,
+      ].join("\n"),
+    );
   }
   return out;
+}
+
+/** @returns {number} total patch definitions across all contentIds */
+export function countEnglishOrphanInlinkPatches() {
+  return Object.values(ENGLISH_ORPHAN_INLINK_PATCHES).reduce((n, list) => n + (list?.length || 0), 0);
 }
 
 function xmlEscape(value) {

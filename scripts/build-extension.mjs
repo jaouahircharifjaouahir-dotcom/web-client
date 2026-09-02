@@ -12,7 +12,26 @@ const ROOT = join(__dirname, "..");
 const SRC = join(ROOT, "extensions", "11tik-youtube-thumbnail");
 const OUT = join(ROOT, "dist-extension");
 
-const COPY_IGNORE = new Set(["shared/extension.test.js", "shared/extension.vitest.ts", "README.md"]);
+const COPY_IGNORE = new Set([
+  "shared/extension.test.js",
+  "shared/extension.vitest.ts",
+  "README.md",
+  "vitest.config.ts",
+]);
+
+/** Directory names never copied into extension packages. */
+const COPY_IGNORE_DIRS = new Set(["node_modules", ".git", ".vite", ".vite-temp"]);
+
+/** Dev/tooling filenames skipped anywhere in the tree. */
+const COPY_IGNORE_NAMES = new Set([".DS_Store", "Thumbs.db"]);
+
+function shouldSkipCopy(relPath, entry) {
+  const normalized = relPath.replace(/\\/g, "/");
+  if (COPY_IGNORE.has(normalized)) return true;
+  if (COPY_IGNORE_NAMES.has(entry.name)) return true;
+  if (entry.isDirectory() && COPY_IGNORE_DIRS.has(entry.name)) return true;
+  return false;
+}
 
 function copyExtension(targetDir) {
   rmSync(targetDir, { recursive: true, force: true });
@@ -22,7 +41,7 @@ function copyExtension(targetDir) {
     const abs = join(SRC, relDir);
     for (const entry of readdirSync(abs, { withFileTypes: true })) {
       const relPath = join(relDir, entry.name).replace(/\\/g, "/");
-      if (COPY_IGNORE.has(relPath)) continue;
+      if (shouldSkipCopy(relPath, entry)) continue;
       const dest = join(targetDir, relPath);
       if (entry.isDirectory()) {
         mkdirSync(dest, { recursive: true });
@@ -34,6 +53,34 @@ function copyExtension(targetDir) {
   }
 
   walk();
+}
+
+function validatePackageContents(dir, label) {
+  const banned = [];
+  function walk(absDir, relDir = "") {
+    for (const entry of readdirSync(absDir, { withFileTypes: true })) {
+      const relPath = join(relDir, entry.name).replace(/\\/g, "/");
+      const absPath = join(absDir, entry.name);
+      if (entry.isDirectory()) {
+        if (COPY_IGNORE_DIRS.has(entry.name)) {
+          banned.push(relPath);
+          continue;
+        }
+        walk(absPath, relPath);
+        continue;
+      }
+      if (relPath === "vitest.config.ts" || relPath.endsWith("/vitest.config.ts")) {
+        banned.push(relPath);
+      }
+      if (/\.(test|vitest)\.(js|ts|mjs|cjs)$/i.test(entry.name)) {
+        banned.push(relPath);
+      }
+    }
+  }
+  walk(dir);
+  if (banned.length) {
+    throw new Error(`${label}: package contains non-production files: ${banned.join(", ")}`);
+  }
 }
 
 function validateManifest(dir, label) {
@@ -91,23 +138,15 @@ export async function buildExtension(targetBrowsers = ["chrome", "firefox"]) {
   if (targetBrowsers.includes("chrome")) {
     const chromeDir = join(OUT, "chrome");
     copyExtension(chromeDir);
-    // Chrome ignores gecko settings; strip Firefox-only AMO metadata so the
-    // Chrome package stays free of Firefox-specific declaration fields.
+    // Chrome ignores gecko settings; remove Firefox-only manifest keys from the
+    // Chrome package while leaving the source manifest unchanged for Firefox.
     const chromeManifestPath = join(chromeDir, "manifest.json");
     const chromeManifest = JSON.parse(readFileSync(chromeManifestPath, "utf8"));
-    if (chromeManifest.browser_specific_settings?.gecko) {
-      delete chromeManifest.browser_specific_settings.gecko.data_collection_permissions;
-    }
-    if (chromeManifest.browser_specific_settings?.gecko_android) {
-      delete chromeManifest.browser_specific_settings.gecko_android;
-    }
-    if (
-      chromeManifest.browser_specific_settings &&
-      Object.keys(chromeManifest.browser_specific_settings).length === 0
-    ) {
+    if (chromeManifest.browser_specific_settings) {
       delete chromeManifest.browser_specific_settings;
     }
     writeFileSync(chromeManifestPath, `${JSON.stringify(chromeManifest, null, 2)}\n`);
+    validatePackageContents(chromeDir, "chrome");
     results.chrome = validateManifest(chromeDir, "chrome");
     zipDirectory(chromeDir, join(OUT, "11tik-chrome.zip"));
   }

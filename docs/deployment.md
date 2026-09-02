@@ -50,6 +50,8 @@ This cannot be finished from the repository. Connect GitHub in the Cloudflare da
 
 4. Under **Build watch paths** ([official docs](https://developers.cloudflare.com/workers/ci-cd/builds/build-watch-paths/)), set include/exclude (API names: `path_includes` / `path_excludes`):
 
+Cloudflare evaluates **excludes first**, then **includes**. A push builds only when at least one remaining path matches an include.
+
 Include:
 
 ```text
@@ -57,6 +59,7 @@ src/**
 public/**
 workers/**
 scripts/**
+docs/blogger-pages/**
 wrangler.jsonc
 package.json
 package-lock.json
@@ -71,11 +74,21 @@ tsconfig.node.json
 Exclude:
 
 ```text
-docs/**
+node_modules/**
+.git/**
 .cursor/**
 README.md
 **/*.md
 ```
+
+Notes:
+
+- `docs/blogger-pages/**` must be included: English article/utility HTML under that tree is a build input (`sourceHash` / static generation). Excluding all of `docs/**` skips docs-only corrective commits (Phase 54).
+- Do **not** re-add a blanket `docs/**` exclude — it would cancel the `docs/blogger-pages/**` include.
+- Research/markdown docs stay out via `**/*.md` and by not listing `docs/seo/**` in includes.
+- Translation JSON under `content/translations/**` is not a watch include yet; pair translation-only commits with a watched path (e.g. `scripts/**` / `src/**`) or extend includes in a later change.
+
+Canonical machine-readable copy of the intended paths: `config/workers-builds-watch-paths.json`. Applying or updating the live Cloudflare trigger still requires Dashboard/API (this file is not auto-synced).
 
 5. Save. Cloudflare should start a first build from `main`. After that succeeds, GitHub Pages can be disabled (Settings → Pages) because production no longer uses github.io.
 

@@ -1,0 +1,49 @@
+{
+  "worker": "11tik-edge",
+  "account_id": "f9da186fc6cbf157fd99d88fe700d0c4",
+  "production_trigger_uuid": "f7d11840-1f7e-48af-b2aa-baa4c9de5941",
+  "production_branch": "main",
+  "build_command": "npm run build",
+  "deploy_command": "npx wrangler deploy",
+  "notes": [
+    "Cloudflare Workers Builds watch paths live on the production trigger, not in wrangler.jsonc.",
+    "Excludes are applied before includes. Do not add a blanket docs/** exclude.",
+    "docs/blogger-pages/** is a required include: EN HTML sources drive publishability and static generation.",
+    "This file is the intended config for humans/agents. Applying it requires Dashboard or Builds API PATCH — not auto-synced on git push."
+  ],
+  "path_includes": [
+    "src/**",
+    "public/**",
+    "workers/**",
+    "scripts/**",
+    "docs/blogger-pages/**",
+    "wrangler.jsonc",
+    "package.json",
+    "package-lock.json",
+    "vite.config.ts",
+    "vite.embed.config.ts",
+    "index.html",
+    "tsconfig.json",
+    "tsconfig.app.json",
+    "tsconfig.node.json"
+  ],
+  "path_excludes": [
+    "node_modules/**",
+    ".git/**",
+    ".cursor/**",
+    "README.md",
+    "**/*.md"
+  ],
+  "phase56_delta_from_live": {
+    "add_to_path_includes": ["docs/blogger-pages/**"],
+    "remove_from_path_excludes": ["docs/**"],
+    "keep_path_excludes": [
+      "node_modules/**",
+      ".git/**",
+      ".cursor/**",
+      "README.md",
+      "**/*.md"
+    ],
+    "why": "Phase 54 commit 6eebb27 touched only docs/blogger-pages/blog/*.html; live path_excludes docs/** skipped the automatic Workers Build."
+  }
+}

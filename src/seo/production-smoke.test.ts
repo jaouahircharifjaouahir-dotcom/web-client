@@ -104,7 +104,8 @@ describe("production smoke lib", () => {
   it("evaluateSmokeCase treats unknown localized URL as hard 404 (Phase R2)", () => {
     const testCase = buildSmokeCases(smokeOrigins()).find((c) => c.id === "V-fr-unknown-404");
     const body = `<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>`;
-    const headers = { "strict-transport-security": "max-age=31536000; includeSubDomains; preload" };
+    // Zone policy is preload=false; workerHsts cases must use the aligned HSTS fixture.
+    const headers = { "strict-transport-security": "max-age=31536000; includeSubDomains" };
     const out = evaluateSmokeCase(testCase, { status: 404, headers, body, location: null });
     expect(out.block).toEqual([]);
   });

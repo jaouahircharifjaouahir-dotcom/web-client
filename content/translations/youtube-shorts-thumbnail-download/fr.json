@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "fr",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Comment télécharger une miniature YouTube Shorts en HD | 11tik",
   "description": "Téléchargez la miniature d'une vidéo YouTube Shorts directement dans votre navigateur. Les vidéos Shorts utilisent les mêmes images fixes publiques que les URL de visionnage. Le fichier est généralement au format paysage.",
@@ -21,15 +21,19 @@
   "sections": [
     {
       "heading": "Comment télécharger une miniature de YouTube Shorts ?",
-      "html": "<p>Copiez une URL contenant /shorts/ et un identifiant vidéo, puis collez-la dans<a href=\"https://www.11tik.com/\">11tik</a>Téléchargez ensuite la taille indiquée. L'extraction commence lorsque l'identifiant est valide.</p>"
+      "html": "<p>Copiez une URL contenant /shorts/ suivi d'un identifiant vidéo, puis collez-la dans<a href=\"https://www.11tik.com/\">11tik</a>Téléchargez ensuite la taille indiquée. L'extraction commence lorsque l'identifiant est valide.</p>"
     },
     {
       "heading": "Les fichiers Shorts sont-ils identiques aux fichiers de page de surveillance ?",
-      "html": "<p>Ils utilisent les mêmes noms de format publics, identifiés par l'identifiant vidéo. L'image peut apparaître avec des bandes noires si YouTube a enregistré une version au format écran large.</p>"
+      "html": "<p>Ils utilisent les mêmes noms de taille publique indexés par l'identifiant vidéo sur<code>i.ytimg.com</code>L'image peut apparaître avec des bandes noires si YouTube a enregistré une version grand écran. La structure des URL pour les liens Shorts, Watch et youtu.be est expliquée dans la documentation.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Guide des URL des vignettes</a>.</p>"
+    },
+    {
+      "heading": "Les fichiers Shorts sont-ils toujours publiés en résolution maximale ?",
+      "html": "<p>Non. Dans notre<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 échantillons vidéo</a>, maxresdefault validé pour<strong>286 sur 300</strong>Identifiants (<strong>95,33%</strong>); le<strong>14 sur 300</strong>Même sans maxres, une résolution publique inférieure valide existait. Il s'agit d'un exemple de comportement de repli, et non d'une règle universelle pour Shorts.</p>"
     },
     {
       "heading": "Que se passe-t-il si aucune image n'apparaît ?",
-      "html": "<p>Le court-métrage peut être privé, supprimé ou ne pas comporter d'images fixes publiques. L'extracteur ne peut pas contourner ces limitations.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Comment télécharger</a></p>"
+      "html": "<p>Le court-métrage peut être privé, supprimé ou ne pas comporter d'images fixes publiques. L'extracteur ne peut pas contourner ces limitations.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/about\">À propos</a>ou<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Comment télécharger</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/about\">À propos</a>ou<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

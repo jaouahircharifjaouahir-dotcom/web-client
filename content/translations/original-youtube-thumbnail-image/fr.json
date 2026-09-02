@@ -2,13 +2,13 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "fr",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Comment obtenir l'image miniature originale de YouTube | 11tik",
-  "description": "Récupérez la miniature YouTube publique originale, déjà hébergée par YouTube. Il s'agit d'une image fixe du CDN, et non d'une image extraite de la vidéo.",
+  "description": "Récupérez la miniature YouTube publique originale hébergée par YouTube. Il s'agit d'une image fixe du CDN, et non d'une image extraite de la vidéo.",
   "h1": "Comment obtenir l'image miniature originale de YouTube",
   "ogTitle": "Comment obtenir l'image miniature originale de YouTube",
-  "ogDescription": "Récupérez la miniature YouTube publique originale, déjà hébergée par YouTube. Il s'agit d'une image fixe du CDN, et non d'une image extraite de la vidéo.",
+  "ogDescription": "Récupérez la miniature YouTube publique originale hébergée par YouTube. Il s'agit d'une image fixe du CDN, et non d'une image extraite de la vidéo.",
   "imageAlt": "Fichier miniature YouTube public original affiché dans l'extracteur 11tik",
   "faqHeading": "FAQ",
   "images": [
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Quelle est la miniature originale de YouTube ?",
-      "html": "<p>Il s'agit de l'image de prévisualisation que YouTube stocke déjà sur ses serveurs d'images. C'est le fichier utilisé pour la recherche et les suggestions de lecture, et non une capture d'écran.</p>"
+      "html": "<p>Il s'agit de l'image de prévisualisation que YouTube stocke déjà sur ses serveurs d'images publics pour l'identifiant d'une vidéo&nbsp;— le même type de fichier utilisé dans la recherche et les suggestions. Dans le vocabulaire de 11tik, «&nbsp;original&nbsp;» signifie que<strong>dérivé de CDN public</strong>, et non aucun des éléments suivants&nbsp;:</p>\n  <ul>\n    <li>Fichier source original téléchargé par l'utilisateur depuis YouTube Studio</li>\n    <li>Un fichier de projet brut (PSD, AI, etc.)</li>\n    <li>Image extraite du flux vidéo</li>\n    <li>Un fichier source garanti en résolution ou un master 4K</li>\n  </ul>\n  <p>Pour le<strong>plus grand fichier public validé</strong>Si la résolution maximale est manquante, consultez le manuel.<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">guide de la plus haute qualité</a>Pour les niveaux de pixels et les noms de fichiers, voir le<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">guide des tailles</a>.</p>"
     },
     {
       "heading": "En quoi est-ce différent d'une capture d'écran ?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Comment puis-je vérifier que j'ai bien reçu le fichier original ?",
-      "html": "<p>Utilisez les indications de taille et de dimensions 11tik après la validation du fichier. Si l'image ressemble à une capture d'écran d'un lecteur, vous n'avez pas téléchargé la miniature hébergée.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Qualité supérieure</a></p>"
+      "html": "<p>Utilisez les indications de taille et de dimensions 11tik après la validation du fichier. Si l'image ressemble à une capture d'écran d'un lecteur, vous n'avez pas téléchargé la miniature hébergée.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/about\">À propos</a>ou<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Qualité supérieure</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/about\">À propos</a>ou<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

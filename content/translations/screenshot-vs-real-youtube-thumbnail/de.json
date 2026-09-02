@@ -25,7 +25,7 @@
     },
     {
       "heading": "Warum funktionieren Screenshots in der Google-Bildersuche und in den Social-Media-Vorschauen nicht?",
-      "html": "<p>Sie haben oft das falsche Seitenverhältnis, beinhalten die Benutzeroberfläche und werden doppelt komprimiert. Open Graph und viele CMS-Felder benötigen ein 16:9-Format mit einer Auflösung von etwa 1280×720. Dies entspricht maxresdefault, sofern vorhanden – siehe<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Größenleitfaden für Miniaturansichten</a>Die</p>"
+      "html": "<p>Sie haben oft das falsche Seitenverhältnis, beinhalten die Benutzeroberfläche und werden doppelt komprimiert. Open Graph und viele CMS-Felder benötigen ein 16:9-Format mit einer Auflösung von etwa 1280×720. Dies entspricht maxresdefault, sofern vorhanden – siehe<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Größenleitfaden für Miniaturansichten</a>Die</p>"
     },
     {
       "heading": "Wie speichere ich stattdessen das eigentliche Vorschaubild?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Wann ist ein Screenshot noch nützlich?",
-      "html": "<p>Verwenden Sie einen Screenshot nur, um einen UI-Fehler oder einen bestimmten Moment im Video zu dokumentieren. Verwenden Sie ihn nicht als offizielles Vorschaubild, Blog-Titelbild oder zum Teilen, falls die Seite noch öffentlich ist.</p>\n  <p><a href=\"https://www.11tik.com/\">Das echte öffentliche Vorschaubild erhalten →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+      "html": "<p>Verwenden Sie einen Screenshot nur, um einen UI-Fehler oder einen bestimmten Moment im Video zu dokumentieren. Verwenden Sie ihn nicht als offizielles Vorschaubild, Blog-Titelbild oder zum Teilen, falls die Seite noch öffentlich ist.</p>\n  <p><a href=\"https://www.11tik.com/\">Das echte öffentliche Vorschaubild erhalten →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>Die</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>Die</p>"
 }

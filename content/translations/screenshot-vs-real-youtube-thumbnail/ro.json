@@ -25,7 +25,7 @@
     },
     {
       "heading": "De ce eșuează capturile de ecran în imaginile Google și în previzualizările sociale?",
-      "html": "<p>Adesea au un raport de aspect greșit, includ interfața utilizator și se comprimă de două ori. Open Graph și multe câmpuri CMS necesită o imagine statică de 16:9, în jur de 1280×720. Aceasta se potrivește cu maxresdefault atunci când există - vezi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de dimensiuni pentru miniaturi</a>.</p>"
+      "html": "<p>Adesea au un raport de aspect greșit, includ interfața utilizator și se comprimă de două ori. Open Graph și multe câmpuri CMS necesită o imagine statică de 16:9, în jur de 1280×720. Aceasta se potrivește cu maxresdefault atunci când există - vezi<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">ghid de dimensiuni pentru miniaturi</a>.</p>"
     },
     {
       "heading": "Cum salvez în schimb miniatura reală?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Când mai este utilă o captură de ecran?",
-      "html": "<p>Folosește o captură de ecran doar pentru a documenta o eroare în interfața cu utilizatorul sau un moment din videoclip. Nu o folosi ca miniatură oficială, imagine principală pentru blog sau imagine de partajare dacă există încă un public.</p>\n  <p><a href=\"https://www.11tik.com/\">Obțineți miniatura publică reală →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+      "html": "<p>Folosește o captură de ecran doar pentru a documenta o eroare în interfața cu utilizatorul sau un moment din videoclip. Nu o folosi ca miniatură oficială, imagine principală pentru blog sau imagine de partajare dacă există încă un public.</p>\n  <p><a href=\"https://www.11tik.com/\">Obțineți miniatura publică reală →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/about\">Despre</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/about\">Despre</a>.</p>"
 }

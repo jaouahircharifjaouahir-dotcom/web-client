@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "no",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Slik får du tak i det originale YouTube-miniatyrbildet | 11tik",
   "description": "Skaff deg det originale offentlige YouTube-miniatyrbildet som YouTube allerede er vert for. Dette er CDN-stillbildet, ikke et bilde som er revet fra videoen.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Hva er det originale YouTube-miniatyrbildet?",
-      "html": "<p>Det er forhåndsvisningsbildet som YouTube allerede lagrer på bildeserverne sine. Det er filen som brukes i søk og foreslåtte hyller, ikke et bilde du tar med Print Screen.</p>"
+      "html": "<p>Det er forhåndsvisningsbildet som YouTube allerede lagrer på sine offentlige bildeverter for en video-ID – den samme filklassen som brukes i søk og foreslåtte hyller. I 11tiks vokabular betyr «original» at<strong>offentlig CDN-derivat</strong>, ikke noe av det følgende:</p>\n  <ul>\n    <li>Opplasterens originale opplastede kildefil fra YouTube Studio</li>\n    <li>En rå prosjektfil (PSD, AI, osv.)</li>\n    <li>Et bilde tatt fra videostrømmen</li>\n    <li>En garantert kildeoppløsningsressurs eller 4K-master</li>\n  </ul>\n  <p>For den<strong>største validerte offentlige fil</strong>når maksverdier mangler, les av<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">guide av høyeste kvalitet</a>For pikselnivåer og filnavn, se<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">størrelsesguide</a>.</p>"
     },
     {
       "heading": "Hvordan er det forskjellig fra et skjermbilde?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Hvordan kan jeg sjekke at jeg faktisk fikk tak i originalfilen?",
-      "html": "<p>Bruk størrelses- og dimensjonslistene 11tik etter at filen er validert. Hvis bildet ser ut som et skjermbilde fra spilleren, lastet du ikke ned det hostede miniatyrbildet.</p>\n  <p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avtrekker</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Høyeste kvalitet</a></p>"
+      "html": "<p>Bruk størrelses- og dimensjonslistene 11tik etter at filen er validert. Hvis bildet ser ut som et skjermbilde fra spilleren, lastet du ikke ned det hostede miniatyrbildet.</p>\n  <p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avtrekker</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Høyeste kvalitet</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

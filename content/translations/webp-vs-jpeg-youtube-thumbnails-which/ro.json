@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "ro",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "Miniaturi YouTube WebP vs JPEG: Ce format ar trebui să utilizați? | 11tik",
   "description": "YouTube poate publica fișiere miniatură JPEG și WebP. Preferați formatul 11tik validat pentru cazul dvs. de utilizare - WebP nu este întotdeauna disponibil.",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "Răspuns rapid",
-      "html": "<p>Pentru majoritatea descărcărilor și încărcărilor CMS, păstrați<strong>fișierul validat 11tik listează primul</strong>JPEG rămâne publicul larg încă activ.<code>i.ytimg.com/vi/…</code>WebP apare pentru unele videoclipuri ca<code>maxresdefault.webp</code>sub<code>/vi_webp/</code>WebP este adesea mai mic la o calitate vizuală similară, dar nu este publicat pentru fiecare ID. 11tik o face.<strong>nu</strong>convertiți fișierul WebP în JPEG la descărcare - salvează octeții pe care YouTube îi găzduiește deja (descărcările JPEG primesc doar o mică ștampilă de comentarii cu metadate).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Același ID video, containere și căi diferite — doar când YouTube le-a publicat pe ambele.</p>"
+      "html": "<p>Pentru majoritatea descărcărilor și încărcărilor CMS, păstrați<strong>fișierul validat 11tik listează primul</strong>JPEG rămâne publicul larg încă activ.<code>i.ytimg.com/vi/…</code>WebP apare pentru unele videoclipuri ca<code>maxresdefault.webp</code>sub<code>/vi_webp/</code>WebP este adesea mai mic la o calitate vizuală similară, dar nu este publicat pentru fiecare ID. 11tik o face.<strong>nu</strong>convertiți fișierul WebP în JPEG la descărcare - salvează octeții pe care YouTube îi găzduiește deja (descărcările JPEG primesc doar o mică ștampilă de comentarii cu metadate).</p>\n\n  <img alt=\"Comparație alăturată a căilor URL ale miniaturilor YouTube JPEG și WebP pe i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Același ID video, containere și căi diferite — doar când YouTube le-a publicat pe ambele.</p>"
     },
     {
       "heading": "Cum apar formatele de miniaturi YouTube în 11tik",
-      "html": "<p>Presetările de calitate ale 11tik includ:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mima<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ sub<code>/vi/</code>(mima<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Candidații sunt încărcați în browser. Eșecurile și substituenții sunt eliminați. Clasificarea folosește nivelul, suprafața pixelilor, potrivirea dimensiunii așteptate și o mică<strong>Penalizare de −8 puncte pentru<code>.webp</code>URL-uri</strong>astfel încât JPEG și WebP de același nivel să nu se modifice imprevizibil - JPEG poate câștiga egalitate atunci când ambele se validează. Detalii despre dimensiuni:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">ghid de dimensiuni pentru miniaturi</a>Comportament maxres lipsă:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Ghid maxresdefault 404</a>.</p>"
+      "html": "<p>Presetările de calitate ale 11tik includ:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mima<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ sub<code>/vi/</code>(mima<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Candidații sunt încărcați în browser. Eșecurile și substituenții sunt eliminați. Clasificarea folosește nivelul, suprafața pixelilor, potrivirea dimensiunii așteptate și o mică<strong>Penalizare de −8 puncte pentru<code>.webp</code>URL-uri</strong>astfel încât JPEG și WebP de același nivel să nu se modifice imprevizibil - JPEG poate câștiga egalitate atunci când ambele se validează. Detalii despre dimensiuni:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">ghid de dimensiuni pentru miniaturi</a>Comportament maxres lipsă:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Ghid maxresdefault 404</a>.</p>"
     },
     {
       "heading": "JPEG vs WebP în limbaj simplu",
       "html": "<table>\n    <thead>\n      <tr><th>Format</th><th>Cel mai bun pentru</th><th>Rezistenţă</th><th>Prescripţie</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Descărcări, încărcări WordPress, cea mai largă compatibilitate</td><td>Suport aproape universal; majoritatea imaginilor statice CDN</td><td>Fișiere mai mari la o calitate similară</td></tr>\n      <tr><td>WebP</td><td>Site-uri moderne care deja deservesc WebP</td><td>Adesea mai mici pentru același nivel de rezoluție</td><td>Nu este publicat pentru fiecare videoclip; unele instrumente mai vechi se opun</td></tr>\n    </tbody>\n  </table>\n  <p>Niciunul dintre formate nu inventează rezoluția. Un WebP de 480×360 este tot 480×360.</p>"
+    },
+    {
+      "heading": "Comparație a dimensiunii măsurate în octeți (doar pentru un eșantion de 300 de videoclipuri)",
+      "html": "<p>În același<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">eșantion de 300 de videoclipuri</a>, observația WebP mediană maxres a fost<strong>60.345 octeți</strong>contra<strong>141.111 octeți</strong>pentru rezoluții maxime JPEG — ceea ce face ca mediana WebP să fie de aproximativ<strong>cu 57,2% mai mic ca dimensiune în octeți</strong>în acel set de date. Acesta este un<strong>comparație de octeți cu scop de eșantionare</strong>, nu este o garanție universală de compresie: videoclipul dvs. poate publica doar JPEG, doar WebP, ambele sau niciunul la nivelul maxres. Dimensiunile în pixeli pentru fiecare nivel sunt acoperite în<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">ghid de dimensiuni și rezoluție</a>Căile URL diferă în funcție de<code>/vi/</code>contra<code>/vi_webp/</code>așa cum este explicat în<a href=\"https://www.11tik.com/youtube-thumbnail-url\">ghid pentru URL-uri miniatură</a>.</p>"
     },
     {
       "heading": "Ce se întâmplă când descarci",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "Când WebP este convenabil",
-      "html": "<ul>\n    <li>11tik a listat o rezoluție maximă WebP validată, iar site-ul dvs. deja deservește WebP.</li>\n    <li>Doriți un fișier mai mic pentru același nivel de ~1280 × 720.</li>\n    <li>Tu controlezi stiva și poți reveni la JPEG dacă este necesar.</li>\n  </ul>\n  <p>Dacă tema ta nu poate utiliza WebP, descarcă JPEG în schimb sau convertește local după descărcare. 11tik nu va face conversia automată.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Alegeți formatul validat care se potrivește cu canalul dvs. de lucru - nu o extensie ghicită.</p>"
+      "html": "<ul>\n    <li>11tik a listat o rezoluție maximă WebP validată, iar site-ul dvs. deja deservește WebP.</li>\n    <li>Doriți un fișier mai mic pentru același nivel de ~1280 × 720.</li>\n    <li>Tu controlezi stiva și poți reveni la JPEG dacă este necesar.</li>\n  </ul>\n  <p>Dacă tema ta nu poate utiliza WebP, descarcă JPEG în schimb sau convertește local după descărcare. 11tik nu va face conversia automată.</p>\n\n  <img alt=\"Diagramă de utilizare care compară CMS-ul site-ului web, link-urile CDN directe și descărcările de\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Alegeți formatul validat care se potrivește cu canalul dvs. de lucru - nu o extensie ghicită.</p>"
     },
     {
       "heading": "Linkuri directe și site-uri web",
-      "html": "<p>Copiere URL imagine returnează adresa CDN HTTPS a candidatului validat. Hotlinking-ul WebP sau JPEG are aceeași fragilitate discutată în<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Ghid Open Graph</a>: preferați să găzduiți propria copie pentru postări durabile. Modele URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>.</p>"
+      "html": "<p>Copiere URL imagine returnează adresa CDN HTTPS a candidatului validat. Hotlinking-ul WebP sau JPEG are aceeași fragilitate discutată în<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">blog / Ghid Open Graph</a>: preferați să găzduiți propria copie pentru postări durabile. Modele URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">ghid pentru URL-uri miniatură</a>.</p>"
     },
     {
       "heading": "Note de compatibilitate cu browserele și CMS-urile",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "Arbore de decizie practic",
-      "html": "<ol>\n    <li>Extras pe<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Dacă aveți nevoie de o imagine recomandată în CMS și vedeți ambele formate, alegeți JPEG, cu excepția cazului în care stiva dvs. este WebP-first.</li>\n    <li>Dacă doar rezoluțiile maxime WebP sunt validate la nivelul superior, folosește-l pe acesta sau alege următoarea dimensiune JPEG dacă trebuie să rămâi la JPG.</li>\n    <li>Pentru arhive, păstrați extensia originală din descărcare.</li>\n  </ol>\n  <p>Descărcați ghidul:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">descărcați o miniatură YouTube</a>.</p>"
+      "html": "<ol>\n    <li>Extras pe<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Dacă aveți nevoie de o imagine recomandată în CMS și vedeți ambele formate, alegeți JPEG, cu excepția cazului în care stiva dvs. este WebP-first.</li>\n    <li>Dacă doar rezoluțiile maxime WebP sunt validate la nivelul superior, folosește-l pe acesta sau alege următoarea dimensiune JPEG dacă trebuie să rămâi la JPG.</li>\n    <li>Pentru arhive, păstrați extensia originală din descărcare.</li>\n  </ol>\n  <p>Descărcați ghidul:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">descărcați o miniatură YouTube</a>.</p>"
     },
     {
-      "heading": "Pasul următor",
-      "html": "<p>Lipiți o adresă URL publică în<a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>, observați dacă rezultatul principal este<code>.jpg</code>sau<code>.webp</code>și alegeți în funcție de CMS-ul dvs. — nu în funcție de numele mai lung al fișierului.</p>\n  <p class=\"yte-bio\">Scris de 11tik pe baza comportamentului actual al extractorului din browser.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+      "heading": "Următorul pas",
+      "html": "<p>Lipiți o adresă URL publică în<a href=\"https://www.11tik.com/\">Extractor de miniaturi YouTube</a>, observați dacă rezultatul principal este<code>.jpg</code>sau<code>.webp</code>și alegeți în funcție de CMS-ul dvs. — nu în funcție de numele mai lung al fișierului.</p>\n  <p class=\"yte-bio\">Scris de 11tik pe baza comportamentului actual al extractorului din browser.<a href=\"https://www.11tik.com/about\">Despre</a>·<a href=\"https://www.11tik.com/privacy\">Confidențialitate</a>·<a href=\"https://www.11tik.com/terms-of-use\">Termeni</a>.</p>"
     }
   ],
   "faq": [
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik pe baza comportamentului actual al extractorului din browser.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Confidențialitate</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Termeni</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik pe baza comportamentului actual al extractorului din browser.<a href=\"https://www.11tik.com/about\">Despre</a>·<a href=\"https://www.11tik.com/privacy\">Confidențialitate</a>·<a href=\"https://www.11tik.com/terms-of-use\">Termeni</a>.</p>"
 }

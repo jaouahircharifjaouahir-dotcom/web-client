@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "hu",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Hogyan szerezd meg az eredeti YouTube indexképet | 11tik",
   "description": "Szerezd meg az eredeti nyilvános YouTube-bélyegképet, amelyet a YouTube már tárol. Ez a CDN állóképe, nem a videóból kivágott képkocka.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Mi az eredeti YouTube indexkép?",
-      "html": "<p>Ez az előnézeti kép, amelyet a YouTube már tárol a képtárhelyein. Ez a keresésben és a javasolt polcokon használt fájl, nem pedig egy képkocka, amelyet a Print Screen segítségével rögzítesz.</p>"
+      "html": "<p>Ez az az előnézeti kép, amelyet a YouTube már tárol a nyilvános képtárhelyein videóazonosítóként – ugyanaz a fájltípus, amelyet a keresésben és a javasolt polcokon használnak. A 11tik szókincsében az „eredeti” azt jelenti, hogy<strong>nyilvános CDN-származék</strong>, a következők egyike sem:</p>\n  <ul>\n    <li>A feltöltő eredetileg feltöltött forrásfájlja a YouTube Studióból</li>\n    <li>Nyers projektfájl (PSD, AI stb.)</li>\n    <li>Egy képkocka, amelyet a videostreamből rögzítettek</li>\n    <li>Garantált forrásfelbontású eszköz vagy 4K master</li>\n  </ul>\n  <p>A<strong>legnagyobb validált nyilvános fájl</strong>Ha a maxres hiányozhat, olvassa el a<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">legmagasabb minőségű útmutató</a>A képpontszintekkel és fájlnevekkel kapcsolatban lásd a<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">mérettáblázat</a>.</p>"
     },
     {
       "heading": "Miben különbözik ez egy képernyőképtől?",
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Hogyan találom meg az eredeti miniatűrképet?",
-      "html": "<p>Illeszd be a videó, rövid videó, élő videók vagy a youtu.be URL-címét ide:<a href=\"https://www.11tik.com/\">[[3. oldal]]</a>Az eszköz beolvassa a videoazonosítót, ellenőrzi a nyilvános fájlokat, és rangsorolja a legmagasabb értékű videót.</p>"
+      "html": "<p>Illeszd be a videó, rövid videó, élő videó vagy youtu.be URL-jét ide<a href=\"https://www.11tik.com/\">[[3. oldal]]</a>Az eszköz beolvassa a videoazonosítót, ellenőrzi a nyilvános fájlokat, és rangsorolja a legmagasabb értékű videót.</p>"
     },
     {
       "heading": "Hogyan működnek a YouTube indexképek URL-jei?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Hogyan tudom ellenőrizni, hogy valóban az eredeti fájlt kaptam-e meg?",
-      "html": "<p>A fájl érvényesítése után használd a méret és dimenziók 11tik listákat. Ha a kép egy lejátszó képernyőképére hasonlít, akkor nem töltötted le a tárolt bélyegképet.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Legmagasabb minőség</a></p>"
+      "html": "<p>A fájl érvényesítése után használd a méret és dimenziók 11tik listákat. Ha a kép egy lejátszó képernyőképére hasonlít, akkor nem töltötted le a tárolt bélyegképet.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/about\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Legmagasabb minőség</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/about\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>"
 }

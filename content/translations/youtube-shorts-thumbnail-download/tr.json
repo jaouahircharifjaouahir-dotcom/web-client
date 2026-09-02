@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "tr",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "YouTube Shorts Küçük Resmini HD Olarak Nasıl İndirebilirsiniz? | 11tik",
   "description": "Tarayıcınızda bir YouTube Shorts küçük resmini indirin. Shorts, izleme URL'leriyle aynı herkese açık görselleri kullanır. Dosya genellikle yataydır.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Kısa pozisyon dosyaları ile izleme sayfası dosyaları aynı mıdır?",
-      "html": "<p>Video kimliğine göre anahtarlanmış aynı genel boyut adlarını kullanırlar. YouTube geniş ekran bir türevi saklamışsa, görüntü siyah bantlı (letterboxed) görünebilir.</p>"
+      "html": "<p>Video kimliğine göre anahtarlanmış aynı genel boyut adlarını kullanıyorlar.<code>i.ytimg.com</code>YouTube geniş ekran bir sürüm saklamışsa, görüntü siyah bantlı görünebilir. Shorts, watch ve youtu.be bağlantıları için URL yapısı şurada açıklanmıştır:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">küçük resim URL kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Shorts her zaman maksimum çözünürlükte yayın yapıyor mu?",
+      "html": "<p>Hayır. Bizim<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 video örneği</a>maxresdefault için doğrulama yapıldı.<strong>300'den 286</strong>Kimlikler (<strong>%95,33</strong>);<strong>300'den 14.</strong>Maxres olmadan bile geçerli bir alt kamuoyu hala mevcuttu. Bu, yedek davranış için örneklem kapsamlı bir kanıttır, evrensel bir Kısa Pozisyon kuralı değildir.</p>"
     },
     {
       "heading": "Ya hiç görüntü görünmezse?",
-      "html": "<p>Kısa film özel olabilir, silinmiş olabilir veya herkese açık görüntüler içermeyebilir. Çıkarma aracı bu sınırlamaları aşamaz.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>veya<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktör</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Nasıl indirilir?</a></p>"
+      "html": "<p>Kısa film özel olabilir, silinmiş olabilir veya herkese açık görüntüler içermeyebilir. Çıkarma aracı bu sınırlamaları aşamaz.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/about\">Hakkında</a>veya<a href=\"https://www.11tik.com/contact\">Temas etmek</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktör</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Nasıl indirilir?</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>veya<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/about\">Hakkında</a>veya<a href=\"https://www.11tik.com/contact\">Temas etmek</a>.</p>"
 }

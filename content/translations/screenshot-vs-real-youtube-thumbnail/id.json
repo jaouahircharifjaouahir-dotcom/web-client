@@ -25,7 +25,7 @@
     },
     {
       "heading": "Mengapa tangkapan layar gagal di Google Images dan pratinjau media sosial?",
-      "html": "<p>Gambar-gambar tersebut seringkali memiliki rasio aspek yang salah, menyertakan UI, dan dikompresi dua kali. Open Graph dan banyak bidang CMS menginginkan rasio 16:9 yang masih sekitar 1280×720. Itu sesuai dengan maxresdefault jika ada—lihat<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">panduan ukuran thumbnail</a>.</p>"
+      "html": "<p>Gambar-gambar tersebut seringkali memiliki rasio aspek yang salah, menyertakan UI, dan dikompresi dua kali. Open Graph dan banyak bidang CMS menginginkan rasio 16:9 yang masih sekitar 1280×720. Itu sesuai dengan maxresdefault jika ada—lihat<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">panduan ukuran thumbnail</a>.</p>"
     },
     {
       "heading": "Bagaimana cara menyimpan gambar mini aslinya?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Kapan tangkapan layar masih berguna?",
-      "html": "<p>Gunakan tangkapan layar hanya untuk mendokumentasikan bug UI atau momen tertentu di dalam video. Jangan gunakan sebagai thumbnail resmi, gambar utama blog, atau gambar untuk dibagikan jika masih tersedia untuk umum.</p>\n  <p><a href=\"https://www.11tik.com/\">Dapatkan thumbnail publik yang sebenarnya →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>.</p>"
+      "html": "<p>Gunakan tangkapan layar hanya untuk mendokumentasikan bug UI atau momen tertentu di dalam video. Jangan gunakan sebagai thumbnail resmi, gambar utama blog, atau gambar untuk dibagikan jika masih tersedia untuk umum.</p>\n  <p><a href=\"https://www.11tik.com/\">Dapatkan thumbnail publik yang sebenarnya →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Tentang</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Tentang</a>.</p>"
 }

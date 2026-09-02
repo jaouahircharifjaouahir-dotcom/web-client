@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "ms",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Cara Mendapatkan Gambar Kecil YouTube Berkualiti Tinggi | 11tik",
   "description": "Kualiti tertinggi bermaksud JPEG awam atau WebP YouTube terbesar sebenarnya mengembalikan, bukan nama fail 4K yang diteka.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Apakah resolusi awam maksimum?",
-      "html": "<p>Apabila YouTube menerbitkan maxresdefault, ia biasanya 1280×720. Jika fail itu tiada, kualiti tertinggi ialah saiz sah seterusnya seperti sd atau hq.</p>"
+      "html": "<p>Apabila YouTube menerbitkan maxresdefault, ia biasanya 1280×720. Jika fail itu tiada, kualiti tertinggi ialah saiz sah seterusnya seperti sd atau hq. \"Kualiti tertinggi\" bermaksud<strong>imej boleh diambil semula secara umum yang disahkan terbesar</strong>untuk ID video itu—bukan fail master 4K, bukan fail bersaiz sederhana yang dinaik taraf dan bukan tangkapan skrin pemain.</p>"
+    },
+    {
+      "heading": "Kualiti tertinggi vs lakaran kecil \"asal\"",
+      "html": "<p><strong>Kualiti tertinggi</strong>(panduan ini): derivatif CDN awam teratas 11tik mengesahkan—selalunya maxres atau hq720 apabila ada.<strong>Asal</strong>(niat berbeza): juga merupakan CDN awam, tetapi perkataan itu menggoda orang ramai untuk mengharapkan fail sumber pemuat naik. Ia bukan Photoshop/PNG mentah dari Studio, bukan riasan bingkai video, dan tidak dijamin seni resolusi sumber. Lihat<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">maksud dan had lakaran kecil asal</a>dan<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">rujukan saiz</a>Dalam kami<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Sampel 300 video</a>, maxres disahkan untuk 286/300 ID—ketersediaan skop sampel, bukan janji untuk setiap muat naik.</p>"
     },
     {
       "heading": "Adakah WebP penting?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Mengapakah \"HD\" kadangkala kelihatan lembut?",
-      "html": "<p>Paparan awam mungkin masih 1280×720 dengan pemampatan, atau anda mungkin sedang melihat hqdefault. Semak laporan saiz piksel 11tik sebelum anda menganggap muat turun gagal.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Pengekstrak</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Panduan saiz</a></p>"
+      "html": "<p>Paparan awam mungkin masih 1280×720 dengan pemampatan, atau anda mungkin sedang melihat hqdefault. Semak laporan saiz piksel 11tik sebelum anda menganggap muat turun gagal.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/about\">Mengenai</a>atau<a href=\"https://www.11tik.com/contact\">Hubungi</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Pengekstrak</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Panduan saiz</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/about\">Mengenai</a>atau<a href=\"https://www.11tik.com/contact\">Hubungi</a>.</p>"
 }

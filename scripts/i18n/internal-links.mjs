@@ -1,6 +1,7 @@
 /**
  * Internal link localization for generated HTML.
  * Prefer localized URL when target locale is ready; else English canonical.
+ * Phase 54: legacy /2026/ and /p/ hrefs map to clean canonical paths before lookup.
  */
 import { SITE_ORIGIN } from "../../workers/sitemap-canonicals.js";
 
@@ -47,6 +48,21 @@ export function normalizeInternalPath(pathname) {
   return path || "/";
 }
 
+/** Map legacy public path segments to Phase 53 clean canonical path. */
+export function legacyPublicPathToCanonicalPath(pathname) {
+  const path = normalizeInternalPath(pathname);
+  const article = /^\/2026\/(?:\d{2}\/)?([a-z0-9-]+)\.html$/i.exec(path);
+  if (article) return `/${article[1]}`;
+  const page = /^\/p\/([a-z0-9-]+)\.html$/i.exec(path);
+  if (page) return `/${page[1]}`;
+  return path;
+}
+
+function localeHostCode(hostname) {
+  const match = /^([a-z]{2})\.11tik\.com$/i.exec(String(hostname || "").toLowerCase());
+  return match ? match[1].toLowerCase() : "";
+}
+
 function isBlockedPath(path) {
   return BLOCKED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`));
 }
@@ -79,16 +95,15 @@ export function rewriteInternalHref(href, locale, indexOrPathMap) {
 
   if (!url.hostname.endsWith("11tik.com")) return href;
 
-  // Already localized — leave unchanged.
-  if (url.hostname !== "www.11tik.com") return href;
+  const canonPath = canonicalPathFromInternalHref(href);
+  if (!canonPath || canonPath === "/" || isBlockedPath(canonPath)) return href;
 
-  const path = normalizeInternalPath(url.pathname);
-  if (isBlockedPath(path)) return href;
-
-  const row = pathIndex.get(path);
+  const row = pathIndex.get(canonPath);
   if (!row) return href;
 
-  const localized = row.locales?.[locale];
+  const hostLocale = localeHostCode(url.hostname);
+  const targetLocale = hostLocale || locale;
+  const localized = row.locales?.[targetLocale];
   const base = localized || row.en;
   if (!base) return href;
 
@@ -112,13 +127,13 @@ export function localizeInternalLinksInHtml(html, locale, indexOrPathMap) {
   });
 }
 
-/** Strip `/l/{locale}` prefix so localized hrefs map to inventory canonical paths. */
-function canonicalPathFromInternalHref(href) {
+/** Strip `/l/{locale}` prefix and normalize legacy segments to clean canonical paths. */
+export function canonicalPathFromInternalHref(href) {
   try {
     const url = new URL(href, SITE_ORIGIN);
     const path = normalizeInternalPath(url.pathname);
-    const localized = path.match(/^\/l\/[a-z]{2,3}(\/.+)$/);
-    return localized ? normalizeInternalPath(localized[1]) : path;
+    const localized = path.match(/^\/l\/[a-z]{2,3}(\/.+)$/i);
+    return localized ? legacyPublicPathToCanonicalPath(localized[1]) : legacyPublicPathToCanonicalPath(path);
   } catch {
     return null;
   }

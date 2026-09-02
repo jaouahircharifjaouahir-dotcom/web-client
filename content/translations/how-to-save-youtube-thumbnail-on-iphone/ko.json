@@ -21,15 +21,15 @@
   "sections": [
     {
       "heading": "유튜브 썸네일을 휴대폰에 저장할 수 있나요?",
-      "html": "<p>네, 동영상이 공개되어 있고 YouTube에서 스틸컷을 게시했다면 가능합니다. 데스크톱이나 APK 파일, TestFlight 앱도 필요하지 않습니다. 열기<a href=\"https://www.11tik.com/\">11tik</a>이미 사용 중인 휴대폰 브라우저에 링크를 붙여넣고 '썸네일 이미지 가져오기'를 탭한 다음, 목록에 있는 첫 번째 파일을 저장하세요. 이 파일이 실제로 이미지를 반환한 가장 상위의 공개 JPEG 또는 WebP 파일입니다.</p>\n  <p>플레이어를 길게 눌러 캡처한 스크린샷은 동일한 것이 아닙니다. 스크린샷에는 크롬, 안전 영역 막대 및 추가 압축이 포함됩니다. 공개 정보는 여전히 i.ytimg.com에 있습니다. 참조<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 썸네일</a>블로그나 오픈 그래프 태그에 그러한 구분이 필요한 경우입니다.</p>"
+      "html": "<p>네, 동영상이 공개되어 있고 YouTube에서 스틸컷을 게시했다면 가능합니다. 데스크톱이나 APK 파일, TestFlight 앱도 필요하지 않습니다. 열기<a href=\"https://www.11tik.com/\">11tik</a>이미 사용 중인 휴대폰 브라우저에 링크를 붙여넣고 '썸네일 이미지 가져오기'를 탭한 다음, 목록에 있는 첫 번째 파일을 저장하세요. 이 파일이 실제로 이미지를 반환한 가장 상위의 공개 JPEG 또는 WebP 파일입니다.</p>\n  <p>플레이어를 길게 눌러 캡처한 스크린샷은 동일한 것이 아닙니다. 스크린샷에는 크롬, 안전 영역 막대 및 추가 압축이 포함됩니다. 공개 정보는 여전히 i.ytimg.com에 있습니다. 참조<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">스크린샷 vs 실제 썸네일</a>블로그나 오픈 그래프 태그에 그러한 구분이 필요한 경우입니다.</p>"
     },
     {
       "heading": "시작하기 전에 필요한 것",
-      "html": "<ul>\n    <li>공개 YouTube 시청, 쇼츠, 라이브 또는 youtu.be URL. 추가 쿼리 매개변수(예: ...)<code>pp=</code>또는 재생 목록 ID는 중요하지 않습니다. 11tik은 11자리의 비디오 ID를 읽습니다.</li>\n    <li>iPhone 또는 iPad에서는 Safari를, Android에서는 Chrome, Firefox 또는 Samsung Internet을 사용하세요.</li>\n    <li>브라우저에서 요청하는 경우 사진 저장을 허용합니다. 11tik은 원본 미디어로 이미지를 11tik 서버에 업로드하지 않습니다.</li>\n  </ul>\n  <p>공개되지 않은 비공개, 회원 전용 또는 연령 제한 동영상은 다운로드 옵션이 표시되지 않습니다. 이는 플랫폼 정책이며, 휴대전화의 제한 사항이 아닙니다. 스튜디오에서 처리 중인 맞춤 썸네일도 잠시 동안 표시되지 않을 수 있습니다. 나중에 동일한 URL로 다시 확인하세요. 관련 항목:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026년 유튜브 스튜디오 썸네일</a>.</p>"
+      "html": "<ul>\n    <li>공개 YouTube 시청, 쇼츠, 라이브 또는 youtu.be URL. 추가 쿼리 매개변수(예: ...)<code>pp=</code>또는 재생 목록 ID는 중요하지 않습니다. 11tik은 11자리의 비디오 ID를 읽습니다.</li>\n    <li>iPhone 또는 iPad에서는 Safari를, Android에서는 Chrome, Firefox 또는 Samsung Internet을 사용하세요.</li>\n    <li>브라우저에서 요청하는 경우 사진 저장을 허용합니다. 11tik은 원본 미디어로 이미지를 11tik 서버에 업로드하지 않습니다.</li>\n  </ul>\n  <p>공개되지 않은 비공개, 회원 전용 또는 연령 제한 동영상은 다운로드 옵션이 표시되지 않습니다. 이는 플랫폼 정책이며, 휴대전화의 제한 사항이 아닙니다. 스튜디오에서 처리 중인 맞춤 썸네일도 잠시 동안 표시되지 않을 수 있습니다. 나중에 동일한 URL로 다시 확인하세요. 관련 항목:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">2026년 유튜브 스튜디오 썸네일</a>.</p>"
     },
     {
       "heading": "아이폰에서 유튜브 썸네일을 저장하는 방법",
-      "html": "<ol>\n    <li>YouTube 앱이나 Safari에서 동영상 또는 Shorts 링크를 복사하세요(공유 → 링크 복사).</li>\n    <li>열려 있는<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>사파리에서 사용하세요. 아무것도 설치할 필요가 없습니다.</li>\n    <li>URL을 붙여넣고 '썸네일 이미지 가져오기'를 탭하세요. 실제 미리보기가 나타날 때까지 기다리세요. 회색 빈 상자는 해당 이미지 크기가 게시되지 않았음을 의미합니다.</li>\n    <li>첫 번째 다운로드 컨트롤을 탭하세요. Safari에서 열기 또는 다운로드 옵션이 표시됩니다. 다운로드를 선택한 다음, 이미지를 파일 폴더에 보관하거나 공유 시트에서 사진 폴더에 저장하세요.</li>\n    <li>CMS 주소만 필요한 경우 다운로드 대신 이미지 URL 복사를 사용하세요. 그러면 HTTPS i.ytimg.com 또는 vi_webp 링크가 복사됩니다. 가이드:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">유튜브 썸네일 URL</a>.</li>\n  </ol>\n  <p>iOS에서 교차 출처 다운로드를 차단하는 경우 이미지 URL을 새 탭에서 열고 사진을 길게 누른 다음 사진에 추가를 선택합니다. 그러면 11tik 페이지의 스크린샷이 아니라 YouTube의 공개 파일이 저장됩니다.</p>"
+      "html": "<ol>\n    <li>YouTube 앱이나 Safari에서 동영상 또는 Shorts 링크를 복사하세요(공유 → 링크 복사).</li>\n    <li>열려 있는<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>사파리에서 사용하세요. 아무것도 설치할 필요가 없습니다.</li>\n    <li>URL을 붙여넣고 '썸네일 이미지 가져오기'를 탭하세요. 실제 미리보기가 나타날 때까지 기다리세요. 회색 빈 상자는 해당 이미지 크기가 게시되지 않았음을 의미합니다.</li>\n    <li>첫 번째 다운로드 컨트롤을 탭하세요. Safari에서 열기 또는 다운로드 옵션이 표시됩니다. 다운로드를 선택한 다음, 이미지를 파일 폴더에 보관하거나 공유 시트에서 사진 폴더에 저장하세요.</li>\n    <li>CMS 주소만 필요한 경우 다운로드 대신 이미지 URL 복사를 사용하세요. 그러면 HTTPS i.ytimg.com 또는 vi_webp 링크가 복사됩니다. 가이드:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">유튜브 썸네일 URL</a>.</li>\n  </ol>\n  <p>iOS에서 교차 출처 다운로드를 차단하는 경우 이미지 URL을 새 탭에서 열고 사진을 길게 누른 다음 사진에 추가를 선택합니다. 그러면 11tik 페이지의 스크린샷이 아니라 YouTube의 공개 파일이 저장됩니다.</p>"
     },
     {
       "heading": "안드로이드에서 유튜브 썸네일을 저장하는 방법",
@@ -37,19 +37,19 @@
     },
     {
       "heading": "휴대폰에는 어떤 크기를 유지해야 할까요?",
-      "html": "<p>첫 번째로 나열된 크기를 유지하세요. 11tik 이미 존재하는 파일들의 순위가 매겨져 있습니다. YouTube에서 maxresdefault를 게시할 때 일반적으로 1280×720입니다. 해당 파일 이름이 404 오류를 발생시키는 경우, 실제 최대 해상도는 다음으로 존재하는 파일(대개 hq720, sddefault 또는 hqdefault)입니다. maxres 파일이 없는 것은 정상입니다. 자세한 내용:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpg는 무엇인가</a>그리고<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">2026년 썸네일 크기</a>.</p>\n  <p>짧은 영상은 종종 세로로 재생되지만 저장된 이미지는 가로 방향입니다. 해당 파일은 여전히 ​​공식 공개 썸네일입니다. 참조하세요.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">쇼츠 썸네일</a>.</p>"
+      "html": "<p>첫 번째로 나열된 크기를 유지하세요. 11tik 이미 존재하는 파일들의 순위가 매겨져 있습니다. YouTube에서 maxresdefault를 게시할 때 일반적으로 1280×720입니다. 해당 파일 이름이 404 오류를 발생시키는 경우, 실제 최대 해상도는 다음으로 존재하는 파일(대개 hq720, sddefault 또는 hqdefault)입니다. maxres 파일이 없는 것은 정상입니다. 자세한 내용:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault.jpg는 무엇인가</a>그리고<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">2026년 썸네일 크기</a>.</p>\n  <p>짧은 영상은 종종 세로로 재생되지만 저장된 이미지는 가로 방향입니다. 해당 파일은 여전히 ​​공식 공개 썸네일입니다. 참조하세요.<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">쇼츠 썸네일</a>.</p>"
     },
     {
       "heading": "휴대폰에 썸네일을 저장하는 것이 합법인가요?",
-      "html": "<p>공개적으로 호스팅된 스틸 이미지를 개인적인 참고, 연구 또는 교육 목적으로 저장하는 것이 일반적인 사용 목적입니다. 이미지는 업로더의 저작권으로 보호됩니다. 해당 이미지를 자신의 맞춤 썸네일로 재업로드하거나, 상품에 인쇄하거나, 11tik를 라이선스처럼 사용하지 마십시오. 맞춤 썸네일에 대한 YouTube의 도움말은 여기에서 확인할 수 있습니다.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">사용자 지정 동영상 썸네일을 업로드하세요</a>. 11tik의 규칙:<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>그리고<a href=\"https://www.11tik.com/copyright\">저작권 및 이용 약관</a>.</p>"
+      "html": "<p>공개적으로 호스팅된 스틸 이미지를 개인적인 참고, 연구 또는 교육 목적으로 저장하는 것이 일반적인 사용 목적입니다. 이미지는 업로더의 저작권으로 보호됩니다. 해당 이미지를 자신의 맞춤 썸네일로 재업로드하거나, 상품에 인쇄하거나, 11tik를 라이선스처럼 사용하지 마십시오. 맞춤 썸네일에 대한 YouTube의 도움말은 여기에서 확인할 수 있습니다.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">사용자 지정 동영상 썸네일을 업로드하세요</a>. 11tik의 규칙:<a href=\"https://www.11tik.com/terms-of-use\">자귀</a>그리고<a href=\"https://www.11tik.com/copyright\">저작권 및 이용 약관</a>.</p>"
     },
     {
       "heading": "스마트폰 \"썸네일 앱\"이 실패하는 이유",
-      "html": "<p>많은 상점 목록은 예상 구매자를 위해 광고 페이지를 포함하고 있습니다.<code>maxresdefault.jpg</code>URL. YouTube에서 해당 파일을 게시하지 않은 경우 깨진 이미지나 회색 기본값이 표시됩니다. 11tik는 브라우저의 응답을 확인하고 이미지가 아닌 크기를 숨깁니다. 가입을 통해 \"잠금 해제\"되는 기능은 없습니다. 개인정보 보호: 붙여넣은 URL은 브라우저에 유지됩니다. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>.</p>"
+      "html": "<p>많은 상점 목록은 예상 구매자를 위해 광고 페이지를 포함하고 있습니다.<code>maxresdefault.jpg</code>URL. YouTube에서 해당 파일을 게시하지 않은 경우 깨진 이미지나 회색 기본값이 표시됩니다. 11tik는 브라우저의 응답을 확인하고 이미지가 아닌 크기를 숨깁니다. 가입을 통해 \"잠금 해제\"되는 기능은 없습니다. 개인정보 보호: 붙여넣은 URL은 브라우저에 유지됩니다. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/privacy\">은둔</a>.</p>"
     },
     {
       "heading": "휴대폰에 여러 링크를 저장하세요",
-      "html": "<p>홈페이지에서 한 줄에 공개 URL 하나씩, 최대 25개까지 일괄 입력 기능을 사용하세요. 큰 화면에서는 채널 URL이 최근 공개 업로드 영상까지 확장되어 표시됩니다. 휴대폰에서는 채널 확장 화면이 좁게 느껴질 경우 개별 링크를 붙여넣으세요. 일괄 입력 가이드:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">일괄 다운로드</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik에 공개 썸네일을 저장하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다. 브라우저 내 추출기를 발행한 사람입니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+      "html": "<p>홈페이지에서 한 줄에 공개 URL 하나씩, 최대 25개까지 일괄 입력 기능을 사용하세요. 큰 화면에서는 채널 URL이 최근 공개 업로드 영상까지 확장되어 표시됩니다. 휴대폰에서는 채널 확장 화면이 좁게 느껴질 경우 개별 링크를 붙여넣으세요. 일괄 입력 가이드:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">일괄 다운로드</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik에 공개 썸네일을 저장하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다. 브라우저 내 추출기를 발행한 사람입니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
     }
   ],
   "faq": [
@@ -75,5 +75,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다. 브라우저 내 추출기를 발행한 사람입니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다. 브라우저 내 추출기를 발행한 사람입니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
 }

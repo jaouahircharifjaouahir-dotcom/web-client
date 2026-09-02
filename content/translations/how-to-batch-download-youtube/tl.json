@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "tl",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Paano mag-batch download ng mga thumbnail ng YouTube (hanggang 25 pampublikong URL) | 11tik",
   "description": "Maramihang pagkuha ng mga pampublikong thumbnail ng YouTube sa browser. I-paste ang isang URL bawat linya, i-download ang bawat pinakamahusay na still, o i-zip ang set na may pinakamataas na kalidad. Walang account at walang mga video file.",
@@ -24,8 +24,48 @@
       "html": "<p>Bukas<a href=\"https://www.11tik.com/\">11tik</a>, i-on ang Bulk, i-paste ang isang pampublikong URL bawat linya, i-click ang I-extract lahat, pagkatapos ay i-download ang bawat pinakamahusay na still o ang zip na may pinakamataas na kalidad. Ang limitasyon ay 25 URL bawat pagpapatakbo kaya mananatiling responsive ang browser.</p>"
     },
     {
+      "heading": "Ano ang proseso ng kagamitan",
+      "html": "<p>Ang bulk mode ay nagpapatakbo ng parehong client-side public-still check bilang single-URL extract: i-parse ang bawat video ID, bumuo ng mga candidate thumbnail URL, i-load ang mga ito bilang mga imahe sa iyong browser, i-drop ang mga failure at placeholder, i-rank ang mga survivors, at ipapakita muna ang pinakamahusay na still. Hindi ito nagda-download ng video o audio, hindi tumatawag ng pribadong YouTube API, at hindi nag-iimbak ng mga na-paste na link sa mga 11tik server.</p>"
+    },
+    {
+      "heading": "25-URL na limitasyon",
+      "html": "<p>Ang bawat Bulk run ay tumatanggap ng hanggang<strong>25 linya</strong>Pinapanatili ng limitasyong iyon na responsive ang pagpapatunay ng imahe sa browser. Para sa higit pang mga ID, magpatakbo ng maraming batch o mag-export ng CSV mula sa bawat pagpapatakbo at pagsamahin offline. Walang 500- o 1000-URL server batch.</p>"
+    },
+    {
+      "heading": "Pagproseso sa panig ng kliyente",
+      "html": "<p>Ang bawat sipi ay nangyayari sa iyong sesyon. Ang mga kahilingan sa network ay napupunta mula sa iyong browser patungo sa publiko<code>i.ytimg.com</code>(at mga kaugnay na) host. Ang mga naka-paste na URL ay hindi ina-upload sa 11tik para sa server-side scraping.</p>"
+    },
+    {
+      "heading": "Pag-export ng CSV at JSON",
+      "html": "<p>Pagkatapos ng matagumpay na pagpapatakbo, kasama sa opsyonal na pag-export ang video id, pamagat, share URL, at validated image URL bawat row—kapaki-pakinabang para sa mga research log. Ipinapakita ng pag-export kung ano ang na-validate sa session na iyon, hindi isang garantisadong maxres column para sa bawat ID.</p>"
+    },
+    {
+      "heading": "Taksonomiya ng pagkabigo",
+      "html": "<ul>\n    <li><strong>Pagkabigo sa pag-parse:</strong>Ang line ay hindi isang sinusuportahang URL para sa panonood, Shorts, live, embed, youtu.be, o channel-expandable.</li>\n    <li><strong>Hindi magagamit ang video:</strong>pribado, inalis, pinaghihigpitan, o pinoproseso—wala pa ring pampublikong nag-validate. Tingnan<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">bakit hindi lumalabas ang thumbnail</a>.</li>\n    <li><strong>Kulang ang variant:</strong>Pampubliko ang video ngunit ang mga maxres (o iba pang mataas na antas) ay 404s; gumagana pa rin ang mas mababang laki. Tingnan<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Maxres fallback</a>.</li>\n    <li><strong>Tinanggihan ang placeholder:</strong>Tumugon ang URL ngunit mukhang isang maliit na kulay abong tile ng nawawalang file.</li>\n  </ul>"
+    },
+    {
+      "heading": "Mga video na hindi wasto, pribado, at hindi available",
+      "html": "<p>Ang 11tik ay nagpapakita lamang ng mga pampublikong CDN still. Ang mga hindi nakalistang video na walang pampublikong packaging, mga upload na para lamang sa mga miyembro, nilalamang may limitasyon sa edad, at mga nabura na video ay karaniwang lumilikha ng mga walang laman na card—hindi isang mas maliit na \"lihim\" na file. Huwag asahan na lalampasan ng Bulk ang mga kontrol sa pag-access.</p>"
+    },
+    {
+      "heading": "Mga URL ng Channel vs. mga link sa panonood na manu-manong ibinigay",
+      "html": "<p>Mag-paste ng URL ng pampublikong channel sa isang linya at palalawakin ng Bulk ang mga kamakailang pampublikong upload sa pamamagitan ng RSS-style discovery, pagkatapos ay kukunin ang bawat ID—napapailalim sa parehong 25-URL cap pagkatapos ng expansion. Nilalaktawan ng manu-manong pag-paste ng mga link sa panonood ang pagtuklas ng channel. Buong daloy ng trabaho ng channel:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">gabay sa pagkuha ng channel</a>.</p>"
+    },
+    {
+      "heading": "Pagkapribado",
+      "html": "<p>Ang mga naka-paste na URL ay lokal na pinoproseso sa iyong browser para sa pagkuha. Basahin<a href=\"https://www.11tik.com/privacy\">Pagkapribado</a>para sa site analytics; Hindi nagdaragdag ang Bulk ng hiwalay na server-side private API.</p>"
+    },
+    {
+      "heading": "Subukan muli ang gabay",
+      "html": "<p>Pagkatapos ng isang bagong custom thumbnail ng Studio o bagong upload, hintaying maproseso at patakbuhin muli ang parehong URL ng panonood. Minsan, nawawala ang pansamantalang lag ng CDN sa pangalawang pagsubok; ang patuloy na walang laman na resulta ay karaniwang nangangahulugan na wala pa ring pampublikong umiiral para sa ID na iyon.</p>"
+    },
+    {
+      "heading": "Makatotohanang mga inaasahan",
+      "html": "<p>Hindi lahat ng pampublikong video ay naglalathala ng mga maxres. Sa aming<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-video na sample</a>, ang maxres ay napatunayan para sa 286/300 ID (sample-scoped). Ibinabalik ng bulk ang pinakamataas na napatunayang pampublikong file bawat linya—hindi isang garantisadong 1280×720 para sa bawat hilera. Anatomiya ng URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">gabay sa URL ng thumbnail</a>.</p>"
+    },
+    {
       "heading": "Ano ang kabilang sa listahan?",
-      "html": "<ul>\n    <li>Mga ID na youtube.com/watch?v=</li>\n    <li>youtu.be maiikling link</li>\n    <li>Mga ID ng youtube.com/shorts/</li>\n    </ul>\n  <p>Ang mga pribado, hindi nakalistang-walang-pampublikong-thumbs, o mga video na may limitasyon sa edad ay hindi magbabalik ng still. Inaasahan iyan. Tingnan din<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Mga thumbnail ng shorts</a>.</p>"
+      "html": "<ul>\n    <li>Mga ID na youtube.com/watch?v=</li>\n    <li>youtu.be maiikling link</li>\n    <li>Mga ID ng youtube.com/shorts/</li>\n    </ul>\n  <p>Ang mga pribado, hindi nakalistang-walang-pampublikong-thumbs, o mga video na may limitasyon sa edad ay hindi magbabalik ng still. Inaasahan iyan. Tingnan din<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Mga thumbnail ng shorts</a>.</p>"
     },
     {
       "heading": "Paano magpatakbo ng bulk extract",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Maaari ko ba itong gamitin para sa pananaliksik sa mga kakumpitensya?",
-      "html": "<p>Oo, para sa pag-aaral ng pampublikong packaging. Huwag muling i-publish ang thumbnail ng ibang creator bilang sarili mong upload. Ang copyright ay nananatili sa may-ari ng mga karapatan. Kinukuha lamang ng 11tik ang mga file na pampublikong hino-host na ng YouTube.</p>\n  <p><a href=\"https://www.11tik.com/\">Buksan ang bulk extract sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+      "html": "<p>Oo, para sa pag-aaral ng pampublikong packaging. Huwag muling i-publish ang thumbnail ng ibang creator bilang sarili mong upload. Ang copyright ay nananatili sa may-ari ng mga karapatan. Kinukuha lamang ng 11tik ang mga file na pampublikong hino-host na ng YouTube.</p>\n  <p><a href=\"https://www.11tik.com/\">Buksan ang bulk extract sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/about\">Tungkol sa</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/about\">Tungkol sa</a>.</p>"
 }

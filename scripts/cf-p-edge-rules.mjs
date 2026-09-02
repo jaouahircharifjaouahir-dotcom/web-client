@@ -13,7 +13,11 @@ export const RULE_PREFIX_404 = "11tik-p2-404:";
 /** Phase 53: legal shortcuts — canonical clean paths; CF 11tik-p3-legal:* rules must be removed in production. */
 export const RULE_PREFIX_LEGAL = "11tik-p3-legal:";
 
-/** Phase 5.3 localized trailing-slash .html/ → clean .html (all locale hosts). */
+/** Phase 5.3 localized trailing-slash .html/ → strip slash on same host (legacy paths).
+ *  With Phase 53 Worker-first (`run_worker_first: /*`), atomic legacy redirects usually handle
+ *  `.html/` → clean URL in one hop before this CF rule runs. Rules remain defense-in-depth if
+ *  RWF changes; production removal is optional — see Phase 54 runbook in legal-shortcuts.test.ts.
+ */
 export const RULE_PREFIX_LSLASH = "11tik-p5-lslash:";
 
 export const QUERY_PHASE = "http_request_dynamic_redirect";

@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "hu",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Hogyan lehet bélyegképeket kinyerni egy YouTube-csatorna URL-jéből | 11tik",
   "description": "Másold be egy nyilvános YouTube-csatorna URL-jét a 11tik Bulk-ba a legutóbbi nyilvános feltöltések kibontásához, majd töltsd le az egyes legjobb képeket. Ez a csomagolással kapcsolatos kutatáshoz szükséges, nem egy másik csatorna egyéni grafikájának klónozásához.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS-felderítési hatókör",
+      "html": "<p>A csatornabővítés a YouTube nyilvános csatornahírcsatornáját (RSS-stílus) használja a legutóbbi feltöltések listázására egy feloldható videoazonosítóval. Ez a hírcsatorna tükrözi a következőket:<strong>A YouTube által nyilvánosságra hozott elemek</strong>—nem minden feltöltött videó, nem csak tagoknak szóló bejegyzések, és nem garantált a teljes archívum.</p>"
+    },
+    {
+      "heading": "Csak nyilvános elemek",
+      "html": "<p>A privát, a nem listázott, nyilvános fotók és a korhatáros feltöltések általában soha nem jelennek meg a kibontott listában. Az üres kibontás általában azt jelenti, hogy a handle nem oldódott fel, a csatorna megszűnt, vagy nem érkezett vissza nyilvános azonosító – nem pedig 11tik adatgyűjtési hiba.</p>"
+    },
+    {
+      "heading": "Csatorna URL vs. explicit megtekintési URL-ek",
+      "html": "<p>Egy csatorna sora több megfigyelési URL-re bővül a kinyerés előtt, továbbra is a feltételek hatálya alá tartozik.<strong>25 URL-ből álló tömeges korlátozás</strong>Az egyes megfigyelési linkek beillesztése kihagyja az RSS-keresést, de pontos irányítást biztosít. Hasonlítsa össze a soronkénti tömeges beillesztéssel:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">kötegelt letöltési útmutató</a>.</p>"
+    },
+    {
+      "heading": "Hiányzó vagy eltávolított elemek",
+      "html": "<p>A törölt videók idővel eltűnnek a hírfolyamokból. A sikertelenül kinyerhető kártyák feldolgozás alatt állhatnak, korlátozottak lehetnek, vagy eltávolításra kerülhetnek – futtasd újra egyetlen megtekintési URL-t, vagy nézd meg<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">bélyegkép nem jelenik meg</a>.</p>"
+    },
+    {
+      "heading": "Etikus használat",
+      "html": "<p>A tervezett felhasználás a nyilvános csomagolások kutatási célú tanulmányozása. Egy versenytárs egyéni grafikájának újrafeltöltése indexképként sérti a szerzői jogi és platformszabályzatot. A közzétett kommentárokban tüntesd fel a csatornákat; linkeld a videóoldalaikat. Az oldal szabályai:<a href=\"https://www.11tik.com/copyright\">Szerzői jogok és felhasználás</a>.</p>"
+    },
+    {
+      "heading": "Kapcsolat a kötegelt extrakcióval",
+      "html": "<p>A csatornakinyerés tömeges módban történik RSS előre kitöltéssel. Ugyanaz a kliensoldali validáció, ugyanaz a 25 URL-korlát, ugyanazok a CSV/zip exportok – nincs korlátlan csatornakinyerés és nincs szerveroldali privát API.</p>"
+    },
+    {
       "heading": "Lekérhetek indexképeket egy egész YouTube-csatornáról?",
-      "html": "<p>A legújabb képekhez képeket készíthetsz<em>nyilvános</em>olyan feltöltések, amelyek felfedik a videó azonosítóját. A 11tik nem gyűjti össze az összes videót, amit egy csatorna valaha is közzétett, és nem kerüli meg a tagságokat. A kezdőlapon kapcsold be a Tömeges feltöltés funkciót, illeszd be a csatorna URL-jét, például<code>youtube.com/@handle</code>vagy<code>/channel/UC…</code>, és hagyd, hogy az eszköz kibontsa a nyilvános RSS-stílusú listát. Ezután vond ki, mint egy beírt listát. Futtatásonként továbbra is legfeljebb 25 URL maradhat, így a böngésző használható marad.</p>\n  <p>Ez különbözik egyetlen megfigyelési link mentésétől. Az egyetlen URL-címes folyamat a következőben található:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hogyan lehet letölteni egy YouTube indexképet</a>Soronkénti tömeges csatorna nélküli nyomtatás van benne.<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">kötegelt letöltés</a>.</p>"
+      "html": "<p>A legújabb képekhez képeket készíthetsz<em>nyilvános</em>olyan feltöltések, amelyek felfedik a videó azonosítóját. A 11tik nem gyűjti össze az összes videót, amit egy csatorna valaha is közzétett, és nem kerüli meg a tagságokat. A kezdőlapon kapcsold be a Tömeges feltöltés funkciót, illeszd be a csatorna URL-jét, például<code>youtube.com/@handle</code>vagy<code>/channel/UC…</code>, és hagyd, hogy az eszköz kibontsa a nyilvános RSS-stílusú listát. Ezután vond ki, mint egy beírt listát. Futtatásonként továbbra is legfeljebb 25 URL maradhat, így a böngésző használható marad.</p>\n  <p>Ez különbözik egyetlen megfigyelési link mentésétől. Az egyetlen URL-címes folyamat a következőben található:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Hogyan lehet letölteni egy YouTube indexképet</a>Soronkénti tömeges csatorna nélküli nyomtatás van benne.<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">kötegelt letöltés</a>.</p>"
     },
     {
       "heading": "Melyik csatorna URL-ek működnek?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Amit a 11tik nem fog megtenni",
-      "html": "<ul>\n    <li>Töltsd le a videókat vagy hanganyagokat. Csak állóképek.</li>\n    <li>Nem listázott vagy privát feltöltések listázása.</li>\n    <li>Garantáltan maxresdefault minden új videónál. A régebbi vagy kisebb források hq vagy sd felbontásban állnak meg.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresalapértelmezett</a>.</li>\n    <li>Adj jogokat a műalkotás újrafelhasználásához. A kutatási cél a nyilvános csomagolások rácsának tanulmányozása. Egy versenytárs állóképének újrafeltöltése egyéni bélyegképként szerzői jogi és szabályzati probléma.<a href=\"https://www.11tik.com/copyright\">Szerzői jogok és felhasználás</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Töltsd le a videókat vagy hanganyagokat. Csak állóképek.</li>\n    <li>Nem listázott vagy privát feltöltések listázása.</li>\n    <li>Garantáltan maxresdefault minden új videónál. A régebbi vagy kisebb források hq vagy sd felbontásban állnak meg.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Adj jogokat a műalkotás újrafelhasználásához. A kutatási cél a nyilvános csomagolások rácsának tanulmányozása. Egy versenytárs állóképének újrafeltöltése egyéni bélyegképként szerzői jogi és szabályzati probléma.<a href=\"https://www.11tik.com/copyright\">Szerzői jogok és felhasználás</a>.</li>\n  </ul>"
     },
     {
       "heading": "Hogyan segít ez a kutatásban előszobaoldalak nélkül?",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Hibaelhárítás",
-      "html": "<p>Üres lista: a csatorna hírfolyama nem adott vissza nyilvános azonosítókat (leállított csatorna, vagy olyan azonosító, amelyet a feloldó nem tudott leképezni). Próbáld ki az UC csatorna URL-jét a YouTube asztali elrendezéséből.</p>\n  <p>Néhány kártya hiányzik: ezek a feltöltéseknek még nincs nyilvános képük, vagy a kapu elutasított egy hiányos kivonatot. Futtass újra egyetlen megfigyelési URL-t. A beillesztett linkek adatvédelme:<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>.</p>\n  <p>Extractor vs. tervezőeszköz: A 11tik nem készít borítóképeket.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extractor vs. maker</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Nyilvános csatorna állóképeinek kinyerése a 11tik oldalon →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>"
+      "html": "<p>Üres lista: a csatorna hírfolyama nem adott vissza nyilvános azonosítókat (leállított csatorna, vagy olyan azonosító, amelyet a feloldó nem tudott leképezni). Próbáld ki az UC csatorna URL-jét a YouTube asztali elrendezéséből.</p>\n  <p>Néhány kártya hiányzik: ezek a feltöltéseknek még nincs nyilvános képük, vagy a kapu elutasított egy hiányos kivonatot. Futtass újra egyetlen megfigyelési URL-t. A beillesztett linkek adatvédelme:<a href=\"https://www.11tik.com/privacy\">Magánélet</a>.</p>\n  <p>Kivonó vs. tervezőeszköz: A 11tik nem készít borítóképeket.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Extractor vs. maker</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Nyilvános csatorna állóképeinek kinyerése a 11tik oldalon →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>·<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>·<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>"
 }

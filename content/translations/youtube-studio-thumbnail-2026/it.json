@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "it",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Miniatura di YouTube Studio 2026 | 11tik",
   "description": "Nel 2026, i canali YouTube idonei caricano ancora un'immagine di anteprima personalizzata da Studio nella pagina dei dettagli di un video. Le etichette del menu cambiano, ma il risultato è lo stesso: YouTube ospita una nuova immagine pubblica. 11tik non carica quel file. Legge solo gli URL delle immagini pubbliche dopo che sono stati creati.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Apri YouTube Studio e seleziona il video.</li>\n    <li>Nella sezione Dettagli, carica un'immagine in formato 16:9 (il formato standard di YouTube è 1280×720).</li>\n    <li>Salva e attendi il completamento dell'elaborazione.</li>\n  </ol>\n  <p>I nomi esatti dei pulsanti possono cambiare. Se il tuo account non è idoneo per le miniature personalizzate, Studio non offrirà il caricamento. 11tik non può aggirare questo problema.</p>"
     },
     {
+      "heading": "Albero diagnostico: cambio di studio vs fermo immagine pubblico",
+      "html": "<ol>\n    <li>Dopo aver caricato la grafica personalizzata in Studio, attendi il completamento dell'elaborazione.</li>\n    <li>Incolla l'URL della visualizzazione pubblica in<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Alcune dimensioni sono presenti, ma manca la risoluzione massima?</strong>→ problema di variante/fallback, non un caricamento di Studio non riuscito. Vedi<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">spiegazione di maxresdefault</a>.</li>\n    <li><strong>Nessuna taglia disponibile?</strong>→ Il video potrebbe essere ancora in fase di elaborazione, privato o soggetto a restrizioni per le immagini fisse della CDN pubblica. Vedi<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatura non visualizzata</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Come faccio a controllare un'anteprima dopo averla modificata in Studio?",
-      "html": "<p>Incolla l'URL dell'orologio in<a href=\"https://www.11tik.com/\">11tik</a>. Scarica o copia la prima dimensione elencata. Se maxresdefault non è presente, il file pubblico successivo è il massimo effettivo. Si tratta del catalogo di YouTube, non di un'estrazione non riuscita. Vedi anche<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">spiegazione di maxresdefault</a>.</p>"
+      "html": "<p>Incolla l'URL dell'orologio in<a href=\"https://www.11tik.com/\">11tik</a>. Scarica o copia la prima dimensione elencata. Se maxresdefault non è presente, il file pubblico successivo è il massimo effettivo. Si tratta del catalogo di YouTube, non di un'estrazione non riuscita. Vedi anche<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">spiegazione di maxresdefault</a>.</p>"
     },
     {
       "heading": "11tik sostituisce YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Cosa devo fare quando l'immagine appare vecchia?",
-      "html": "<p>Le CDN delle immagini possono essere lente. Ricontrolla più tardi, aggiorna forzatamente la pagina o copia l'URL che 11tik conferma. Non dare per scontato un master 4K; la risoluzione massima pubblica è solitamente 1280×720. Uno screenshot di Studio non è il file miniatura pubblico.</p>\n  <p>Imparentato:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">estrattore contro produttore</a>.</p>\n  <p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Aprire l'estrattore</a></p>"
+      "html": "<p>Le CDN delle immagini possono essere lente. Ricontrolla più tardi, aggiorna forzatamente la pagina o copia l'URL che 11tik conferma. Non dare per scontato un master 4K; la risoluzione massima pubblica è solitamente 1280×720. Uno screenshot di Studio non è il file miniatura pubblico.</p>\n  <p>Imparentato:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">estrattore contro produttore</a>.</p>\n  <p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/about\">Di</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Aprire l'estrattore</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/about\">Di</a>.</p>"
 }

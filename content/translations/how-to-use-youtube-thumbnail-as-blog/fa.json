@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "fa",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "نحوه استفاده از تصویر بندانگشتی یوتیوب به عنوان تصویر ویژه وبلاگ یا پیش‌نمایش نمودار باز | 11tik",
   "description": "تأیید کنید که یک یوتیوب عمومی هنوز وجود دارد، سپس یک کپی از آن را برای وردپرس، بلاگر یا og:image میزبانی کنید. یک URL حدسی maxresdefault را هات لینک نکنید.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "پاسخ سریع",
-      "html": "<p>یک URL عمومی YouTube را در آن جایگذاری کنید<a href=\"https://www.11tik.com/\">[[صفحه ۲]]</a>، منتظر اندازه‌های معتبر باشید، سپس یا<strong>دانلود</strong>اولین عکس را بگیرید و آن را در CMS خود آپلود کنید، یا<strong>آدرس تصویر را کپی کنید</strong>فقط پس از بارگیری. برای پست‌های ماندگار، نسخه خودتان را میزبانی کنید. هات‌لینکینگ<code>i.ytimg.com</code>برای پیش‌نویس‌ها مناسب و برای تولید کارت‌های اجتماعی شکننده است.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تأیید → کپی یا دانلود → میزبانی → ارجاع در HTML / تصویر شاخص / نمودار باز.</p>"
+      "html": "<p>یک URL عمومی YouTube را در آن جایگذاری کنید<a href=\"https://www.11tik.com/\">[[صفحه ۲]]</a>، منتظر اندازه‌های معتبر باشید، سپس یا<strong>دانلود</strong>اولین عکس را بگیرید و آن را در CMS خود آپلود کنید، یا<strong>آدرس تصویر را کپی کنید</strong>فقط پس از بارگیری. برای پست‌های ماندگار، نسخه خودتان را میزبانی کنید. هات‌لینکینگ<code>i.ytimg.com</code>برای پیش‌نویس‌ها مناسب و برای تولید کارت‌های اجتماعی شکننده است.</p>\n\n  <img alt=\"گردش کار از تأیید تصویر بندانگشتی یوتیوب در 11tik تا آپلود آن در وردپرس یا تنظیم og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تأیید → کپی یا دانلود → میزبانی → ارجاع در HTML / تصویر شاخص / نمودار باز.</p>"
     },
     {
       "heading": "URL تصویر بندانگشتی مستقیم چیست؟",
-      "html": "<p>برای مثال، یک URL تصویر بندانگشتی مستقیم به یک فایل JPEG یا WebP در CDN تصویر یوتیوب اشاره می‌کند.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>این صفحه تماشا نیست. نحوه ساخت این آدرس‌ها:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">دریافت آدرس اینترنتی تصویر بندانگشتی یوتیوب</a>تفاوت اندازه‌ها:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">راهنمای اندازه و وضوح تصویر</a>.</p>"
+      "html": "<p>برای مثال، یک URL تصویر بندانگشتی مستقیم به یک فایل JPEG یا WebP در CDN تصویر یوتیوب اشاره می‌کند.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>این صفحه تماشا نیست. نحوه ساخت این آدرس‌ها:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">دریافت آدرس اینترنتی تصویر بندانگشتی یوتیوب</a>تفاوت اندازه‌ها:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">راهنمای اندازه و وضوح تصویر</a>.</p>"
     },
     {
       "heading": "مثال HTML",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "گردش کار وردپرس",
-      "html": "<ol>\n    <li>ویدیو را در 11tik استخراج کنید و اولین فایل ثابت ذکر شده را دانلود کنید.</li>\n    <li>در وردپرس: رسانه → افزودن → آپلود فایل.</li>\n    <li>آن را به عنوان تصویر ویژه پست تنظیم کنید.</li>\n    <li>در Yoast، Rank Math یا موارد مشابه، پیش‌نمایش شبکه‌های اجتماعی که از آن پیوست استفاده می‌کند را تأیید کنید (یا یک برش OG اختصاصی بارگذاری کنید).</li>\n    <li>متن جایگزین (alt text) را بنویسید که نام ویدیو را مشخص کند و نشان دهد که فایل هنوز یک فایل عمومی یوتیوب است - نه یک لیست پر از کلمات کلیدی.</li>\n  </ol>\n  <p>از چسباندن خام خودداری کنید<code>maxresdefault.jpg</code>مسیر را تا زمانی که فایل اثبات شود، به فیلد رسانه وارد کنید. گم شدن maxres رایج است —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">راهنمای خطای ۴۰۴ با حداکثر مقدار پیش‌فرض</a>.</p>"
+      "html": "<ol>\n    <li>ویدیو را در 11tik استخراج کنید و اولین فایل ثابت ذکر شده را دانلود کنید.</li>\n    <li>در وردپرس: رسانه → افزودن → آپلود فایل.</li>\n    <li>آن را به عنوان تصویر ویژه پست تنظیم کنید.</li>\n    <li>در Yoast، Rank Math یا موارد مشابه، پیش‌نمایش شبکه‌های اجتماعی که از آن پیوست استفاده می‌کند را تأیید کنید (یا یک برش OG اختصاصی بارگذاری کنید).</li>\n    <li>متن جایگزین (alt text) را بنویسید که نام ویدیو را مشخص کند و نشان دهد که فایل هنوز یک فایل عمومی یوتیوب است - نه یک لیست پر از کلمات کلیدی.</li>\n  </ol>\n  <p>از چسباندن خام خودداری کنید<code>maxresdefault.jpg</code>مسیر را تا زمانی که فایل اثبات شود، به فیلد رسانه وارد کنید. گم شدن maxres رایج است —<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">راهنمای خطای ۴۰۴ با حداکثر مقدار پیش‌فرض</a>.</p>"
     },
     {
       "heading": "بلاگر و سایت‌های استاتیک",
-      "html": "<p><strong>وبلاگ نویس:</strong>فایل عکس را در ویرایشگر پست آپلود کنید، سپس از آن آدرس اینترنتی تصویر بلاگر میزبانی شده برای هر فیلد قالب/قطعه اجتماعی که کنترل می‌کنید، استفاده مجدد کنید. برای پست منتشر شده‌ای که برایتان مهم است، به مسیر CDN حدسی یوتیوب تکیه نکنید.</p>\n  <p><strong>مولدهای استاتیک:</strong>فایل را به مخزن یا CDN خود منتقل کنید، سپس تگ‌های front-matter / meta را روی آن فایل HTTPS تنظیم کنید. در صورت لزوم، پیش‌نویس‌ها را روی یک URL موقت i.ytimg.com نگه دارید، اما با هاست خودتان ارسال کنید.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تصویر شاخص و og:image می‌توانند یک فایل را به اشتراک بگذارند، اما هر دو به یک URL نیاز دارند که واقعاً وجود داشته باشد.</p>"
+      "html": "<p><strong>وبلاگ نویس:</strong>فایل عکس را در ویرایشگر پست آپلود کنید، سپس از آن آدرس اینترنتی تصویر بلاگر میزبانی شده برای هر فیلد قطعه کد قالب/شبکه ​​اجتماعی که کنترل می‌کنید، استفاده مجدد کنید. برای پست منتشر شده‌ای که برایتان مهم است، به مسیر CDN حدسی یوتیوب تکیه نکنید.</p>\n  <p><strong>مولدهای استاتیک:</strong>فایل را به مخزن یا CDN خود منتقل کنید، سپس تگ‌های front-matter / meta را روی آن فایل HTTPS تنظیم کنید. در صورت لزوم، پیش‌نویس‌ها را روی یک URL موقت i.ytimg.com نگه دارید، اما با هاست خودتان ارسال کنید.</p>\n\n  <img alt=\"مقایسه آپلود تصویر ویژه وردپرس در مقابل کارت اجتماعی Open Graph با استفاده از ابعاد پیکسل واقعی\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تصویر شاخص و og:image می‌توانند یک فایل را به اشتراک بگذارند، اما هر دو به یک URL نیاز دارند که واقعاً وجود داشته باشد.</p>"
+    },
+    {
+      "heading": "مثال‌های عملی بر اساس پلتفرم",
+      "html": "<h3>کپی کردن تصویر (ابتدا URL تأیید شده)</h3>\n  <p>در 11tik، از<strong>کپی کردن آدرس تصویر</strong>فقط پس از تأیید اندازه در مرورگر شما. آن آدرس HTTPS را در پیش‌نویس قرار دهید - یا بهتر است، فایل را دانلود و آپلود کنید. حدس زدن<code>maxresdefault.jpg</code>وقتی فایل هرگز منتشر نشده باشد، Open Graph را از کار می‌اندازد. ساختار URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">راهنمای URL تصویر بندانگشتی</a>.</p>\n  <h3>میزبانی محلی (برای محیط عملیاتی توصیه می‌شود)</h3>\n  <p>فایل تایید شده را دانلود کنید، در کتابخانه رسانه یا CDN استاتیک خود آپلود کنید و دامنه خود را در آن ارجاع دهید.<code>&lt;img&gt;</code>و<code>og:image</code>از لینک‌های طولانی‌مدت و شکننده به ... خودداری کنید.<code>i.ytimg.com</code>در پست‌هایی که برایتان مهم هستند.</p>\n  <h3>تصویر شاخص وردپرس + og:image</h3>\n  <p>رسانه → افزودن جدید → آپلود فایل JPEG یا WebP دانلود شده → تنظیم تصویر شاخص → تأیید کنید که پیش‌نمایش اجتماعی Yoast/Rank Math از آن پیوست استفاده کند. پس از تغییر URL، اشکال‌زداهای فیس‌بوک/توییتر/لینکدین را دوباره بررسی کنید.</p>\n  <h3>بلاگر</h3>\n  <p>تصویر را در بخش آهنگساز پست قرار دهید تا بلاگر فایل را میزبانی کند، سپس اگر قالب شما فیلدهای شبکه‌های اجتماعی را نمایش می‌دهد، از آن آدرس CDN بلاگر در متای قالب دوباره استفاده کنید. برای یک پست دائمی به آدرس تصویر یوتیوب خارجی تکیه نکنید.</p>\n  <h3>سایت‌های استاتیک (هوگو، الونتی و غیره)</h3>\n  <p>تصویر زیر را کامیت کنید<code>/assets</code>یا CDN شما، آن را در ابتدای مطلب ارجاع دهید و منتشر کنید<code>og:image</code>با عرض/ارتفاع واقعی. مثال بلوک متا:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>چه زمانی هات لینکینگ قابل قبول است؟</h3>\n  <p>یادداشت‌های داخلی، پیش‌نویس‌های سریع یا صفحات تحقیقاتی موقت ممکن است یک لینک معتبر را به صورت هات‌لینک ارسال کنند.<code>i.ytimg.com</code>URL. مقالات تولیدی، صفحات محصول و کمپین‌های ایمیلی باید یک نسخه داشته باشند. ویجت را برای استخراج در صفحه جاسازی کنید:<a href=\"https://www.11tik.com/embed\">راهنمای جاسازی</a>.</p>"
     },
     {
       "heading": "ملاحظات مربوط به Open Graph",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "هات لینکینگ در مقابل دانلود",
-      "html": "<table>\n    <thead>\n      <tr><th>رویکرد</th><th>بهترین برای</th><th>ریسک</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>لینک مستقیم i.ytimg.com</td><td>پیش‌نویس‌های سریع، یادداشت‌های تحقیقاتی</td><td>خطاهای ۴۰۴، تغییرات CDN، عدم کنترل کراپ</td></tr>\n      <tr><td>دانلود + هاست</td><td>پست‌های رتبه‌بندی‌شده، صفحات محصول</td><td>شما باید فایل را ذخیره کنید</td></tr>\n      <tr><td>اسکرین شات بازیکن</td><td>تقریباً هرگز</td><td>رابط کاربری کروم، نسبت تصویر اشتباه —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">اسکرین شات در مقابل واقعی</a></td></tr>\n    </tbody>\n  </table>\n  <p>مراحل دانلود:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">چگونه یک تصویر بندانگشتی یوتیوب را دانلود کنیم</a>انتخاب فرمت زمانی که هر دو فرمت WebP و JPEG وجود دارند:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP در مقابل JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>رویکرد</th><th>بهترین برای</th><th>ریسک</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>لینک مستقیم i.ytimg.com</td><td>پیش‌نویس‌های سریع، یادداشت‌های تحقیقاتی</td><td>خطاهای ۴۰۴، تغییرات CDN، عدم کنترل کراپ</td></tr>\n      <tr><td>دانلود + هاست</td><td>پست‌های رتبه‌بندی‌شده، صفحات محصول</td><td>شما باید فایل را ذخیره کنید</td></tr>\n      <tr><td>اسکرین شات بازیکن</td><td>تقریباً هرگز</td><td>رابط کاربری کروم، نسبت تصویر اشتباه —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">اسکرین شات در مقابل واقعی</a></td></tr>\n    </tbody>\n  </table>\n  <p>مراحل دانلود:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">چگونه یک تصویر بندانگشتی یوتیوب را دانلود کنیم</a>انتخاب فرمت زمانی که هر دو فرمت WebP و JPEG وجود دارند:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP در مقابل JPEG</a>.</p>"
     },
     {
       "heading": "اصول اولیه سئو تصویر برای این عکس‌های ثابت",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "استفاده مجدد و حق نشر (توصیه حقوقی نیست)",
-      "html": "<p>یک URL عمومی CDN مجوز محسوب نمی‌شود. جاسازی پخش‌کننده یوتیوب با کپی کردن تصویر ثابت در ویدیوی اصلی شما متفاوت است. استفاده منصفانه منوط به رعایت واقعیت است. الگوی ویرایشی ایمن‌تر: توضیحات مربوط به آن ویدیو را شرح دهید، به کانال اعتبار دهید، به صفحه تماشا لینک دهید و تصویر را نفروشید یا از آن به عنوان اثر هنری کانال خود استفاده نکنید. راهنمای رسمی تصویر بندانگشتی سفارشی:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">تصاویر کوچک ویدیوی سفارشی را بارگذاری کنید</a>قوانین سایت:<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرایط</a>.</p>"
+      "html": "<p>یک URL عمومی CDN مجوز محسوب نمی‌شود. جاسازی پخش‌کننده یوتیوب با کپی کردن تصویر ثابت در ویدیوی اصلی شما متفاوت است. استفاده منصفانه منوط به رعایت واقعیت است. الگوی ویرایشی ایمن‌تر: توضیحات مربوط به آن ویدیو را شرح دهید، به کانال اعتبار دهید، به صفحه تماشا لینک دهید و تصویر را نفروشید یا از آن به عنوان اثر هنری کانال خود استفاده نکنید. راهنمای رسمی تصویر بندانگشتی سفارشی:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">تصاویر کوچک ویدیوی سفارشی را بارگذاری کنید</a>قوانین سایت:<a href=\"https://www.11tik.com/terms-of-use\">شرایط</a>.</p>"
     },
     {
       "heading": "عیب‌یابی",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "مرحله بعدی",
-      "html": "<p>هنوز روی آن تأیید کنید<a href=\"https://www.11tik.com/\">استخراج‌کننده 11tik</a>، آن را دانلود کنید، در سایت خود آپلود کنید و تصویر شاخص / og:image را به فایل HTTPS خود ارجاع دهید.</p>\n  <p class=\"yte-bio\">نوشته شده توسط 11tik.<a href=\"https://www.11tik.com/p/about.html\">درباره ما</a>·<a href=\"https://www.11tik.com/p/privacy.html\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرایط</a>.</p>"
+      "html": "<p>هنوز روی آن تأیید کنید<a href=\"https://www.11tik.com/\">استخراج‌کننده 11tik</a>، آن را دانلود کنید، در سایت خود آپلود کنید و تصویر شاخص / og:image را به فایل HTTPS خود ارجاع دهید.</p>\n  <p class=\"yte-bio\">نوشته شده توسط 11tik.<a href=\"https://www.11tik.com/about\">درباره ما</a>·<a href=\"https://www.11tik.com/privacy\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/terms-of-use\">شرایط</a>.</p>"
     }
   ],
   "faq": [
@@ -82,7 +86,7 @@
     },
     {
       "question": "آیا متن جایگزین باید به یوتیوب اشاره کند؟",
-      "answer": "بله، وقتی که به توصیف دارایی کمک کند («تصویر بندانگشتی عمومی یوتیوب برای ...»). از کلمات کلیدی زیاد استفاده نکنید.",
+      "answer": "بله، وقتی که به توصیف محتوا کمک کند (مثلاً «تصویر بندانگشتی عمومی یوتیوب برای ...»). از کلمات کلیدی زیاد استفاده نکنید.",
       "answerHtml": "<p>بله، وقتی که به توصیف دارایی کمک کند («تصویر بندانگشتی عمومی یوتیوب برای ...»). از کلمات کلیدی زیاد استفاده نکنید.</p>"
     },
     {
@@ -98,9 +102,9 @@
     {
       "question": "چه می‌شود اگر استودیو فقط تصویر کوچک سفارشی را تغییر دهد؟",
       "answer": "منتظر پردازش باشید، سپس قبل از به‌روزرسانی نسخه CMS خود، 11tik را دوباره بررسی کنید. مرتبط: تصاویر کوچک YouTube Studio.",
-      "answerHtml": "<p>منتظر پردازش باشید، سپس قبل از به‌روزرسانی نسخه CMS خود، 11tik را دوباره بررسی کنید. مرتبط:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">تصاویر کوچک یوتیوب استودیو</a>.</p>"
+      "answerHtml": "<p>منتظر پردازش باشید، سپس قبل از به‌روزرسانی نسخه CMS خود، 11tik را دوباره بررسی کنید. مرتبط:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">تصاویر کوچک یوتیوب استودیو</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">نوشته شده توسط 11tik.<a href=\"https://www.11tik.com/p/about.html\">درباره ما</a>·<a href=\"https://www.11tik.com/p/privacy.html\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرایط</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">نوشته شده توسط 11tik.<a href=\"https://www.11tik.com/about\">درباره ما</a>·<a href=\"https://www.11tik.com/privacy\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/terms-of-use\">شرایط</a>.</p>"
 }

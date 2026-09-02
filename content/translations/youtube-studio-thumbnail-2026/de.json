@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "de",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Studio-Thumbnail 2026 | 11tik",
   "description": "Im Jahr 2026 laden berechtigte YouTube-Kanäle weiterhin ein benutzerdefiniertes Vorschaubild aus Studio auf die Detailseite eines Videos hoch. Die Menübezeichnungen ändern sich, das Ergebnis bleibt jedoch gleich: YouTube hostet ein neues öffentliches Bild. 11tik lädt diese Datei nicht hoch. Es liest öffentliche Bild-URLs erst, nachdem diese erstellt wurden.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Öffne YouTube Studio und wähle das Video aus.</li>\n    <li>Laden Sie unter „Details“ ein Bild im 16:9-Format hoch (das gängige Zielformat für YouTube ist 1280×720).</li>\n    <li>Speichern und warten, bis die Verarbeitung abgeschlossen ist.</li>\n  </ol>\n  <p>Die genauen Schaltflächennamen können sich ändern. Wenn Ihr Konto nicht für benutzerdefinierte Miniaturansichten berechtigt ist, bietet Studio den Upload nicht an. 11tik kann dies nicht umgehen.</p>"
     },
     {
+      "heading": "Diagnosebaum: Studioänderung vs. öffentliche Stille",
+      "html": "<ol>\n    <li>Nach dem Hochladen der benutzerdefinierten Grafiken in Studio warten Sie bitte, bis die Verarbeitung abgeschlossen ist.</li>\n    <li>Fügen Sie die öffentliche Watch-URL ein in<a href=\"https://www.11tik.com/\">11tik</a>Die</li>\n    <li><strong>Einige Größen werden angezeigt, maxres fehlt?</strong>→ Varianten-/Fallback-Problem, kein fehlgeschlagener Studio-Upload. Siehe<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault erklärt</a>Die</li>\n    <li><strong>Gar keine Größenangaben?</strong>→ Das Video wird möglicherweise noch verarbeitet, ist privat oder für öffentliche CDN-Standbilder eingeschränkt. Siehe<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Vorschaubild wird nicht angezeigt</a>Die</li>\n  </ol>"
+    },
+    {
       "heading": "Wie kann ich ein Miniaturbild überprüfen, nachdem ich es in Studio geändert habe?",
-      "html": "<p>Fügen Sie die Uhren-URL ein in<a href=\"https://www.11tik.com/\">11tik</a>Laden Sie die erste aufgeführte Größe herunter oder kopieren Sie sie. Falls „maxresdefault“ fehlt, ist die nächste öffentliche Datei die tatsächliche maximale Größe. Dies ist der YouTube-Katalog, kein fehlgeschlagener Extraktionsvorgang. Siehe auch<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault erklärt</a>Die</p>"
+      "html": "<p>Fügen Sie die Uhren-URL ein in<a href=\"https://www.11tik.com/\">11tik</a>Laden Sie die erste aufgeführte Größe herunter oder kopieren Sie sie. Falls „maxresdefault“ fehlt, ist die nächste öffentliche Datei die tatsächliche maximale Größe. Dies ist der YouTube-Katalog, kein fehlgeschlagener Extraktionsvorgang. Siehe auch<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault erklärt</a>Die</p>"
     },
     {
       "heading": "Ersetzt 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Was soll ich tun, wenn das Bild alt aussieht?",
-      "html": "<p>Bild-CDNs können verzögert laden. Überprüfen Sie dies später erneut, führen Sie eine vollständige Aktualisierung durch oder kopieren Sie die URL, die 11tik bestätigt. Gehen Sie nicht von einem 4K-Master aus; die maximale öffentliche Auflösung beträgt üblicherweise 1280×720. Ein Screenshot aus Studio ist nicht die öffentliche Miniaturansicht.</p>\n  <p>Verwandt:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extraktor vs. Hersteller</a>Die</p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Öffnen Sie den Extraktor</a></p>"
+      "html": "<p>Bild-CDNs können verzögert laden. Überprüfen Sie dies später erneut, führen Sie eine vollständige Aktualisierung durch oder kopieren Sie die URL, die 11tik bestätigt. Gehen Sie nicht von einem 4K-Master aus; die maximale öffentliche Auflösung beträgt üblicherweise 1280×720. Ein Screenshot aus Studio ist nicht die öffentliche Miniaturansicht.</p>\n  <p>Verwandt:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Extraktor vs. Hersteller</a>Die</p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Öffnen Sie den Extraktor</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>Die</p>"
 }

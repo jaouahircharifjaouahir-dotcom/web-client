@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "ja",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "最高品質のYouTubeサムネイルを取得する方法 | 11tik",
   "description": "最高品質とは、YouTubeが実際に返す最大の公開JPEGまたはWebPファイルを意味し、推測された4Kファイル名ではありません。",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "最大規模の公共決議はどのようなものですか？",
-      "html": "<p>YouTubeがmaxresdefaultを公開する場合、通常は1280×720です。そのファイルが存在しない場合は、sdやhqなど、次に有効なサイズが最高画質となります。</p>"
+      "html": "<p>YouTube が maxresdefault を公開する場合、通常は 1280×720 です。そのファイルが見つからない場合は、sd や hq などの次の有効なサイズが最高品質になります。「最高品質」とは、<strong>公開されている画像の中で最大の検証済み画像</strong>そのビデオIDの場合、4Kマスターでもなく、アップスケールされた中サイズファイルでもなく、プレーヤーのスクリーンショットでもありません。</p>"
+    },
+    {
+      "heading": "最高品質 vs 「オリジナル」サムネイル",
+      "html": "<p><strong>最高品質</strong>（このガイド）：トップパブリックCDN派生11tikが検証します。多くの場合、maxresまたはhq720が存在します。<strong>オリジナル</strong>（意図が異なる）：これもパブリックCDNですが、この言葉はアップロード者のソースファイルを期待させる可能性があります。これはStudioからの生のPhotoshop/PNGではなく、ビデオフレームのリッピングでもなく、ソース解像度のアートを保証するものでもありません。参照<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">オリジナルのサムネイルの意味と制限</a>そして<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サイズ参考</a>. 私たちの<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300本の動画サンプル</a>maxresは286/300 IDで検証済みです。これはサンプル範囲での利用可能性であり、すべてのアップロードで保証されるものではありません。</p>"
     },
     {
       "heading": "WebPは重要ですか？",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "「HD」映像が時々ぼやけて見えるのはなぜですか？",
-      "html": "<p>圧縮された状態では、公開されている解像度は1280×720のままかもしれませんし、hqdefaultで表示されている可能性もあります。ダウンロードが失敗したと判断する前に、11tikで報告されるピクセルサイズを確認してください。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズガイド</a></p>"
+      "html": "<p>圧縮された状態では、公開されている解像度は1280×720のままかもしれませんし、hqdefaultで表示されている可能性もあります。ダウンロードが失敗したと判断する前に、11tikで報告されるピクセルサイズを確認してください。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/about\">について</a>または<a href=\"https://www.11tik.com/contact\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サイズガイド</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/about\">について</a>または<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

@@ -25,7 +25,7 @@
     },
     {
       "heading": "Dlaczego zrzuty ekranu nie działają w Google Grafika i podglądach w mediach społecznościowych?",
-      "html": "<p>Często mają niewłaściwy współczynnik proporcji, zawierają interfejs użytkownika i są kompresowane dwukrotnie. Open Graph i wiele systemów CMS wymaga formatu 16:9, który nadal mieści się w granicach 1280×720. To pasuje do wartości maxresdefault, jeśli istnieje — patrz<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">przewodnik po rozmiarach miniatur</a>.</p>"
+      "html": "<p>Często mają niewłaściwy współczynnik proporcji, zawierają interfejs użytkownika i są kompresowane dwukrotnie. Open Graph i wiele systemów CMS wymaga formatu 16:9, który nadal mieści się w granicach 1280×720. To pasuje do wartości maxresdefault, jeśli istnieje — patrz<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">przewodnik po rozmiarach miniatur</a>.</p>"
     },
     {
       "heading": "Jak mogę zapisać prawdziwą miniaturę?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Kiedy zrzut ekranu jest nadal przydatny?",
-      "html": "<p>Zrzut ekranu należy używać wyłącznie do udokumentowania błędu interfejsu użytkownika lub fragmentu filmu. Nie należy go używać jako oficjalnej miniatury, bohatera bloga ani obrazu do udostępnienia, jeśli nadal istnieje.</p>\n  <p><a href=\"https://www.11tik.com/\">Pobierz prawdziwą publiczną miniaturę →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+      "html": "<p>Zrzut ekranu należy używać wyłącznie do udokumentowania błędu interfejsu użytkownika lub fragmentu filmu. Nie należy go używać jako oficjalnej miniatury, bohatera bloga ani obrazu do udostępnienia, jeśli nadal istnieje.</p>\n  <p><a href=\"https://www.11tik.com/\">Pobierz prawdziwą publiczną miniaturę →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
 }

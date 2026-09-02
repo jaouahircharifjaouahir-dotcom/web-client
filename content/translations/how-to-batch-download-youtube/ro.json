@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "ro",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Cum se descarcă în serie miniaturi YouTube (până la 25 de adrese URL publice) | 11tik",
   "description": "Extrageți în bloc miniaturi publice de pe YouTube în browser. Lipiți câte o adresă URL pe fiecare rând, descărcați fiecare dintre cele mai bune imagini statice sau arhivați setul de cea mai înaltă calitate. Fără cont și fără fișiere video.",
@@ -24,8 +24,48 @@
       "html": "<p>Deschide<a href=\"https://www.11tik.com/\">11tik</a>, activează opțiunea În bloc, lipește câte o adresă URL publică pe rând, dă clic pe Extrage tot, apoi descarcă fiecare cea mai bună imagine statică sau fișierul zip de cea mai înaltă calitate. Limita este de 25 de adrese URL per rulare, astfel încât browserul să rămână receptiv.</p>"
     },
     {
+      "heading": "Ce procesează instrumentul",
+      "html": "<p>Modul în bloc rulează aceeași verificare publică a imaginilor statice pe partea clientului ca și extragerea unei singure adrese URL: analizează fiecare ID de videoclip, creează adrese URL pentru miniaturi candidate, le încarcă ca imagini în browser, elimină erorile și substituenții, clasifică supraviețuitorii și afișează primele cele mai bune imagini statice. Nu descarcă videoclipuri sau audio, nu apelează la un API YouTube privat și nu stochează linkuri lipite pe serverele 11tik.</p>"
+    },
+    {
+      "heading": "Limită de 25 de URL-uri",
+      "html": "<p>Fiecare rulare în vrac acceptă până la<strong>25 de linii</strong>Această limită menține validarea imaginilor receptivă în browser. Pentru mai multe ID-uri, rulați mai multe seturi sau exportați fișierul CSV din fiecare rulare și îmbinați-l offline. Nu există un set de server cu 500 sau 1000 de adrese URL.</p>"
+    },
+    {
+      "heading": "Procesare pe partea clientului",
+      "html": "<p>Fiecare extragere are loc în sesiunea dvs. Solicitările de rețea sunt trimise de la browserul dvs. către rețeaua publică<code>i.ytimg.com</code>(și gazdele aferente). URL-urile lipite nu sunt încărcate în 11tik pentru extragerea datelor de pe server.</p>"
+    },
+    {
+      "heading": "Export CSV și JSON",
+      "html": "<p>După o rulare reușită, exportul opțional include ID-ul videoclipului, titlul, adresa URL de partajare și adresa URL validată a imaginii pe rând – util pentru jurnalele de cercetare. Exportul reflectă ce a fost validat în sesiunea respectivă, nu o coloană cu rezoluție maximă garantată pentru fiecare ID.</p>"
+    },
+    {
+      "heading": "Taxonomia eșecurilor",
+      "html": "<ul>\n    <li><strong>Eroare de analiză:</strong>linia nu este o adresă URL extinsă pentru vizionare, scurtmetraje, transmisiuni live, încorporare, youtu.be sau canal acceptată.</li>\n    <li><strong>Videoclip indisponibil:</strong>privat, eliminat, restricționat sau procesat — niciun public nu validează în continuare. Consultați<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">de ce nu apare o miniatură</a>.</li>\n    <li><strong>Variantă lipsă:</strong>videoclipul este public, dar are maxres (sau alte 404 de nivel înalt); o dimensiune mai mică tot funcționează. Vezi<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres rezerv</a>.</li>\n    <li><strong>Substitut respins:</strong>URL-ul a răspuns, dar arăta ca o mică dală gri cu fișiere lipsă.</li>\n  </ul>"
+    },
+    {
+      "heading": "Videoclipuri nevalide, private și indisponibile",
+      "html": "<p>11tik afișează doar imagini statice publice pe rețeaua CDN. Videoclipurile nelistate fără ambalaj public, încărcările exclusive pentru membri, conținutul restricționat în funcție de vârstă și videoclipurile șterse produc de obicei carduri goale - nu un fișier „secret” mai mic. Nu vă așteptați ca Bulk să ocolească controalele de acces.</p>"
+    },
+    {
+      "heading": "URL-uri de canal vs. link-uri de vizionare furnizate manual",
+      "html": "<p>Inserați adresa URL a unui canal public pe o singură linie, iar funcția „Bulk” extinde încărcările publice recente prin intermediul descoperirii în stil RSS, apoi extrage fiecare ID - sub rezerva aceleiași limite de 25 de adrese URL după extindere. Linkurile de urmărire inserate manual omit descoperirea canalului. Flux de lucru complet pentru canal:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">ghid de extragere a canalului</a>.</p>"
+    },
+    {
+      "heading": "Confidențialitate",
+      "html": "<p>URL-urile lipite sunt procesate local în browser pentru extragere. Citiți<a href=\"https://www.11tik.com/privacy\">Confidențialitate</a>pentru analiza site-ului; Bulk nu adaugă o API privată separată pe server.</p>"
+    },
+    {
+      "heading": "Reîncercați instrucțiunile",
+      "html": "<p>După o nouă miniatură personalizată în Studio sau o încărcare nouă, așteptați procesarea și rulați din nou aceeași adresă URL de vizionare. O întârziere tranzitorie a CDN dispare uneori la a doua încercare; rezultatele persistente goale înseamnă de obicei că nu mai există niciun public pentru ID-ul respectiv.</p>"
+    },
+    {
+      "heading": "Așteptări realiste",
+      "html": "<p>Nu fiecare videoclip publică rezoluții maxime. În versiunea noastră<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">eșantion de 300 de videoclipuri</a>, maxres validat pentru 286/300 ID-uri (cu eșantion). Returnează în bloc fișierul public cu cea mai mare valoare validată pe rând - nu se garantează o rezoluție de 1280×720 pentru fiecare rând. Anatomia URL-ului:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">ghid pentru URL-uri miniatură</a>.</p>"
+    },
+    {
       "heading": "Ce aparține listei?",
-      "html": "<ul>\n    <li>ID-uri youtube.com/watch?v=</li>\n    <li>youtu.be linkuri scurte</li>\n    <li>ID-uri youtube.com/shorts/</li>\n    </ul>\n  <p>Videoclipurile private, nelistate fără imagini publice sau restricționate în funcție de vârstă nu vor afișa imagini statice. Acest lucru este de așteptat. Vedeți și<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniaturi pentru scurtmetraje</a>.</p>"
+      "html": "<ul>\n    <li>ID-uri youtube.com/watch?v=</li>\n    <li>youtu.be linkuri scurte</li>\n    <li>ID-uri youtube.com/shorts/</li>\n    </ul>\n  <p>Videoclipurile private, nelistate fără imagini publice sau restricționate în funcție de vârstă nu vor afișa imagini statice. Acest lucru este de așteptat. Vedeți și<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Miniaturi pentru scurtmetraje</a>.</p>"
     },
     {
       "heading": "Cum se execută o extragere în vrac",
@@ -33,14 +73,14 @@
     },
     {
       "heading": "Pot folosi asta pentru studiul concurenței?",
-      "html": "<p>Da, pentru studierea ambalajelor publice. Nu republicați miniatura altui creator ca fiind propria încărcare. Drepturile de autor rămân la deținătorul drepturilor. 11tik preia doar fișierele pe care YouTube le găzduiește deja public.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extrasul în vrac pe 11tik →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+      "html": "<p>Da, pentru studierea ambalajelor publice. Nu republicați miniatura altui creator ca fiind propria încărcare. Drepturile de autor rămân la deținătorul drepturilor. 11tik preia doar fișierele pe care YouTube le găzduiește deja public.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extrasul în vrac pe 11tik →</a></p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/about\">Despre</a>.</p>"
     }
   ],
   "faq": [
     {
       "question": "Cum descarc în serie miniaturi de la YouTube?",
-      "answer": "Folosește opțiunea Bulk pe 11tik, lipește o adresă URL publică pe rând, extrage, apoi descarcă imagini statice sau un fișier zip de cea mai înaltă calitate publică. Maxim 25 de adrese URL per rulare.",
-      "answerHtml": "Folosește opțiunea Bulk pe 11tik, lipește o adresă URL publică pe rând, extrage, apoi descarcă imagini statice sau un fișier zip de cea mai înaltă calitate publică. Maxim 25 de adrese URL per rulare."
+      "answer": "Folosește opțiunea Bulk pe 11tik, lipește o adresă URL publică pe rând, extrage fișierul, apoi descarcă imagini statice sau un fișier zip de cea mai înaltă calitate publică. Maxim 25 de adrese URL per rulare.",
+      "answerHtml": "Folosește opțiunea Bulk pe 11tik, lipește o adresă URL publică pe rând, extrage fișierul, apoi descarcă imagini statice sau un fișier zip de cea mai înaltă calitate publică. Maxim 25 de adrese URL per rulare."
     },
     {
       "question": "Pot folosi asta pentru studiul concurenței?",
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/about\">Despre</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "de",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Wie man Thumbnails aus einer YouTube-Kanal-URL extrahiert | 11tik",
   "description": "Fügen Sie in 11tik Bulk die URL eines öffentlichen YouTube-Kanals ein, um die neuesten öffentlichen Uploads anzuzeigen, und laden Sie dann die besten Standbilder herunter. Dies dient der Recherche zum Thema Verpackung und nicht dem Kopieren von Grafiken anderer Kanäle.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS-Erkennungsbereich",
+      "html": "<p>Die Kanalerweiterung nutzt den öffentlichen YouTube-Kanalfeed (RSS-Format), um die neuesten Uploads mit einer auflösbaren Video-ID aufzulisten. Dieser Feed spiegelt wider<strong>Öffentliche Inhalte, die YouTube enthüllt</strong>—nicht jedes jemals hochgeladene Video, nicht nur Beiträge für Mitglieder und kein garantiertes vollständiges Archiv.</p>"
+    },
+    {
+      "heading": "Nur öffentliche Artikel",
+      "html": "<p>Private, nicht gelistete (ohne öffentliche Standbilder) und altersbeschränkte Uploads erscheinen normalerweise nie in der erweiterten Liste. Eine leere Liste bedeutet in der Regel, dass der Handle nicht aufgelöst werden konnte, der Kanal gelöscht wurde oder keine öffentlichen IDs zurückgegeben wurden – kein Fehler beim 11tik-Scraping.</p>"
+    },
+    {
+      "heading": "Kanal-URL vs. explizite Watch-URLs",
+      "html": "<p>Eine Kanalzeile wird vor dem Extrahieren in mehrere Watch-URLs aufgespalten, wobei dies weiterhin den folgenden Bedingungen unterliegt:<strong>25-URL-Bulk-Limit</strong>Das Einfügen einzelner Watch-Links umgeht die RSS-Erkennung, ermöglicht aber eine präzise Steuerung. Vergleichen Sie dies mit der zeilenweisen Massenverarbeitung:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Anleitung zum Batch-Download</a>Die</p>"
+    },
+    {
+      "heading": "Fehlende oder entfernte Gegenstände",
+      "html": "<p>Gelöschte Videos verschwinden mit der Zeit aus den Feeds. Eine Karte, deren Extraktion fehlschlägt, wird möglicherweise gerade verarbeitet, ist eingeschränkt oder wurde entfernt – versuchen Sie es erneut mit einer einzelnen Wiedergabe-URL oder sehen Sie nach<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Vorschaubild wird nicht angezeigt</a>Die</p>"
+    },
+    {
+      "heading": "Ethische Nutzung",
+      "html": "<p>Die Untersuchung öffentlicher Verpackungen zu Forschungszwecken ist der vorgesehene Zweck. Das erneute Hochladen von Grafiken eines Mitbewerbers als Vorschaubild verstößt gegen das Urheberrecht und die Plattformrichtlinien. Quellenangaben in veröffentlichten Kommentaren sind erforderlich; verlinken Sie deren Beobachtungsseiten. Website-Regeln:<a href=\"https://www.11tik.com/copyright\">Urheberrecht und Nutzung</a>Die</p>"
+    },
+    {
+      "heading": "Beziehung zur Batch-Extraktion",
+      "html": "<p>Der Kanal-Extraktionsprozess erfolgt im Bulk-Modus mit RSS-Vorbefüllung. Gleiche clientseitige Validierung, gleiche Beschränkung auf 25 URLs, gleiche CSV-/ZIP-Exporte – kein unbegrenztes Kanal-Scraping und keine serverseitige private API.</p>"
+    },
+    {
       "heading": "Kann ich Vorschaubilder von einem ganzen YouTube-Kanal erhalten?",
-      "html": "<p>Sie können Standbilder der neuesten<em>öffentlich</em>Uploads, die eine Video-ID offenlegen. 11tik erfasst nicht jedes jemals von einem Kanal veröffentlichte Video und umgeht keine Mitgliedschaften. Aktivieren Sie auf der Startseite die Option „Massenverarbeitung“ und fügen Sie eine Kanal-URL wie z. B. ein.<code>youtube.com/@handle</code>oder<code>/channel/UC…</code>Lassen Sie das Tool die öffentliche RSS-Liste erweitern. Anschließend können Sie die URLs wie bei einer manuell eingegebenen Liste extrahieren. Die Beschränkung auf 25 URLs pro Durchlauf bleibt bestehen, damit der Browser weiterhin nutzbar bleibt.</p>\n  <p>Dies unterscheidet sich vom Speichern eines einzelnen Watch-Links. Der Ablauf mit einer einzelnen URL ist in<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">So laden Sie ein YouTube-Thumbnail herunter</a>. Zeilenweiser Massenversand ohne Kanal ist in<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">Stapel-Download</a>Die</p>"
+      "html": "<p>Sie können Standbilder der neuesten<em>öffentlich</em>Uploads, die eine Video-ID offenlegen. 11tik erfasst nicht jedes jemals von einem Kanal veröffentlichte Video und umgeht keine Mitgliedschaften. Aktivieren Sie auf der Startseite die Option „Massenverarbeitung“ und fügen Sie eine Kanal-URL wie z. B. ein.<code>youtube.com/@handle</code>oder<code>/channel/UC…</code>Lassen Sie das Tool die öffentliche RSS-Liste erweitern. Anschließend können Sie die URLs wie bei einer manuell eingegebenen Liste extrahieren. Die Beschränkung auf 25 URLs pro Durchlauf bleibt bestehen, damit der Browser weiterhin nutzbar bleibt.</p>\n  <p>Dies unterscheidet sich vom Speichern eines einzelnen Watch-Links. Der Ablauf mit einer einzelnen URL ist in<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">So laden Sie ein YouTube-Thumbnail herunter</a>. Zeilenweiser Massenversand ohne Kanal ist in<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Stapel-Download</a>Die</p>"
     },
     {
       "heading": "Welche Kanal-URLs funktionieren?",
@@ -29,11 +53,11 @@
     },
     {
       "heading": "Wie extrahiert man Kanalminiaturen auf 11tik?",
-      "html": "<ol>\n    <li>Offen<a href=\"https://www.11tik.com/\">11tik</a>und klicken Sie auf Massenverarbeitung.</li>\n    <li>Fügen Sie eine öffentliche Kanal-URL ein. Sie können weitere Links zum Ansehen in den folgenden Zeilen hinzufügen.</li>\n    <li>Starten Sie die Extraktion. Warten Sie, bis das Tool die Kanalzeile durch aktuelle öffentliche Watch-URLs ersetzt hat, und laden Sie dann Standbilder herunter.</li>\n    <li>Laden Sie jedes beste Standbild herunter, laden Sie die ZIP-Datei in höchster Qualität herunter oder exportieren Sie eine CSV-Datei (ID, Titel, Freigabe-URL, Bild-URL) für ein Forschungsprotokoll.</li>\n  </ol>\n  <p>Teilen Sie Links nach erfolgreicher Extraktion.<code>/thumb/VIDEO_ID</code>Wenn die Qualitätsseite einen Titel, Schlagwörter und ein Live-Vorschaubild hat, sind diese Seiten für einzigartige Fotos gedacht, nicht als zweite Homepage.</p>"
+      "html": "<ol>\n    <li>Offen<a href=\"https://www.11tik.com/\">11tik</a>und klicken Sie auf „Massenware“.</li>\n    <li>Fügen Sie eine öffentliche Kanal-URL ein. Sie können weitere Links zum Ansehen in den folgenden Zeilen hinzufügen.</li>\n    <li>Starten Sie die Extraktion. Warten Sie, bis das Tool die Kanalzeile durch aktuelle öffentliche Watch-URLs ersetzt hat, und laden Sie dann Standbilder herunter.</li>\n    <li>Laden Sie jedes beste Standbild herunter, laden Sie die ZIP-Datei in höchster Qualität herunter oder exportieren Sie eine CSV-Datei (ID, Titel, Freigabe-URL, Bild-URL) für ein Forschungsprotokoll.</li>\n  </ol>\n  <p>Teilen Sie Links nach erfolgreicher Extraktion.<code>/thumb/VIDEO_ID</code>Wenn die Qualitätsseite einen Titel, Schlagwörter und ein Live-Vorschaubild hat, sind diese Seiten für einzigartige Fotos gedacht, nicht als zweite Homepage.</p>"
     },
     {
       "heading": "Was 11tik nicht tun wird",
-      "html": "<ul>\n    <li>Laden Sie die Videos oder Audiodateien herunter. Nur Standbilder.</li>\n    <li>Liste nicht gelisteter oder privater Uploads.</li>\n    <li>Für jedes aktuelle Video wird die maximale Auflösung (maxresdefault) garantiert. Ältere oder kleinere Quellen beschränken sich auf HQ oder SD.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>Die</li>\n    <li>Gewähren Sie die Rechte zur Wiederverwendung des Bildmaterials. Die Untersuchung eines Rasters öffentlicher Verpackungen ist der vorgesehene Forschungszweck. Das erneute Hochladen eines Bildes eines Mitbewerbers als eigenes Vorschaubild stellt ein urheberrechtliches und datenschutzrechtliches Problem dar.<a href=\"https://www.11tik.com/copyright\">Urheberrecht und Nutzung</a>Die</li>\n  </ul>"
+      "html": "<ul>\n    <li>Laden Sie die Videos oder Audiodateien herunter. Nur Standbilder.</li>\n    <li>Liste nicht gelisteter oder privater Uploads.</li>\n    <li>Für jedes aktuelle Video wird die maximale Auflösung (maxresdefault) garantiert. Ältere oder kleinere Quellen beschränken sich auf HQ oder SD.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>Die</li>\n    <li>Gewähren Sie die Rechte zur Wiederverwendung des Bildmaterials. Die Untersuchung eines Rasters öffentlicher Verpackungen ist der vorgesehene Forschungszweck. Das erneute Hochladen eines Bildes eines Mitbewerbers als eigenes Vorschaubild stellt ein urheberrechtliches und datenschutzrechtliches Problem dar.<a href=\"https://www.11tik.com/copyright\">Urheberrecht und Nutzung</a>Die</li>\n  </ul>"
     },
     {
       "heading": "Wie dies die Recherche ohne Türöffnungsseiten erleichtert",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Fehlerbehebung",
-      "html": "<p>Leere Liste: Der Kanal-Feed lieferte keine öffentlichen IDs (beendeter Kanal oder ein Handle, das der Resolver nicht zuordnen konnte). Versuchen Sie die UC-Kanal-URL in der Desktop-Ansicht von YouTube.</p>\n  <p>Einige Karten fehlen: Diese Uploads sind noch nicht öffentlich, oder das Portal hat einen unvollständigen Extrakt abgelehnt. Führen Sie eine einzelne Watch-URL erneut aus. Datenschutz der eingefügten Links:<a href=\"https://www.11tik.com/p/privacy.html\">Datenschutz</a>Die</p>\n  <p>Extraktor vs. Design-Tool: 11tik erstellt kein Coverbild.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extraktor vs. Hersteller</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Öffentliche Kanalbilder extrahieren auf 11tik →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+      "html": "<p>Leere Liste: Der Kanal-Feed lieferte keine öffentlichen IDs (beendeter Kanal oder ein Handle, das der Resolver nicht zuordnen konnte). Versuchen Sie die UC-Kanal-URL in der Desktop-Ansicht von YouTube.</p>\n  <p>Einige Karten fehlen: Diese Uploads sind noch nicht öffentlich, oder das Portal hat einen unvollständigen Extrakt abgelehnt. Führen Sie eine einzelne Watch-URL erneut aus. Datenschutz der eingefügten Links:<a href=\"https://www.11tik.com/privacy\">Datenschutz</a>Die</p>\n  <p>Extraktor vs. Design-Tool: 11tik erstellt kein Coverbild.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Extraktor vs. Hersteller</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Öffentliche Kanalbilder extrahieren auf 11tik →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>·<a href=\"https://www.11tik.com/contact\">Kontakt</a>Die</p>"
     }
   ],
   "faq": [
@@ -57,10 +81,10 @@
     },
     {
       "question": "Werden dadurch die Videos heruntergeladen?",
-      "answer": "Nein. 11tik listet nur öffentliche Standbilder auf, die YouTube bereits hostet.",
-      "answerHtml": "Nein. 11tik listet nur öffentliche Standbilder auf, die YouTube bereits hostet."
+      "answer": "Nein. 11tik listet nur öffentliche Standbilder auf, die bereits auf YouTube verfügbar sind.",
+      "answerHtml": "Nein. 11tik listet nur öffentliche Standbilder auf, die bereits auf YouTube verfügbar sind."
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>·<a href=\"https://www.11tik.com/contact\">Kontakt</a>Die</p>"
 }

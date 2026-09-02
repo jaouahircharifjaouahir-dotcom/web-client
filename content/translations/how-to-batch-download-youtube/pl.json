@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "pl",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Jak pobrać zbiorczo miniaturki z YouTube (do 25 publicznych adresów URL) | 11tik",
   "description": "Masowo wyodrębniaj publiczne miniatury z YouTube w przeglądarce. Wklej jeden adres URL w każdym wierszu, pobierz każde najlepsze zdjęcie lub spakuj zestaw w najwyższej jakości. Bez konta i plików wideo.",
@@ -24,8 +24,48 @@
       "html": "<p>Otwarte<a href=\"https://www.11tik.com/\">11tik</a>Włącz opcję „Zbiorcze”, wklej jeden publiczny adres URL w każdym wierszu, kliknij „Wyodrębnij wszystkie”, a następnie pobierz każdy najlepszy obraz lub plik ZIP o najwyższej jakości. Limit wynosi 25 adresów URL na jedno uruchomienie, aby przeglądarka działała płynnie.</p>"
     },
     {
+      "heading": "Co narzędzie przetwarza",
+      "html": "<p>Tryb zbiorczy uruchamia po stronie klienta tę samą kontrolę publicznej klatki, co w przypadku wyodrębniania pojedynczego adresu URL: analizuje każdy identyfikator wideo, tworzy adresy URL potencjalnych miniatur, ładuje je jako obrazy w przeglądarce, usuwa błędy i symbole zastępcze, klasyfikuje ocalałe klatki i wyświetla najlepsze klatki jako pierwsze. Nie pobiera wideo ani audio, nie wywołuje prywatnego interfejsu API YouTube i nie przechowuje wklejonych linków na serwerach 11tik.</p>"
+    },
+    {
+      "heading": "Limit 25 adresów URL",
+      "html": "<p>Każda seria zbiorcza przyjmuje do<strong>25 linii</strong>Ten limit zapewnia responsywność walidacji obrazów w przeglądarce. Aby uzyskać więcej identyfikatorów, uruchom wiele partii lub wyeksportuj plik CSV z każdej partii i scal offline. Nie ma partii serwera zawierającej 500 lub 1000 adresów URL.</p>"
+    },
+    {
+      "heading": "Przetwarzanie po stronie klienta",
+      "html": "<p>Każdy ekstrakt ma miejsce w Twojej sesji. Żądania sieciowe są przesyłane z Twojej przeglądarki do sieci publicznej.<code>i.ytimg.com</code>(i powiązanych) hostów. Wklejone adresy URL nie są przesyłane do 11tik w celu scrapowania po stronie serwera.</p>"
+    },
+    {
+      "heading": "Eksport CSV i JSON",
+      "html": "<p>Po pomyślnym uruchomieniu, opcjonalny eksport obejmuje identyfikator wideo, tytuł, adres URL udostępniania i zweryfikowany adres URL obrazu dla każdego wiersza – przydatne w przypadku dzienników badań. Eksport odzwierciedla elementy zweryfikowane w danej sesji, a nie gwarantowaną kolumnę maksymalnej rozdzielczości dla każdego identyfikatora.</p>"
+    },
+    {
+      "heading": "Taksonomia niepowodzeń",
+      "html": "<ul>\n    <li><strong>Błąd analizy:</strong>linia nie jest obsługiwanym typem transmisji: oglądanie, krótkie filmy, transmisja na żywo, osadzanie, youtu.be ani rozwijany adres URL kanału.</li>\n    <li><strong>Wideo niedostępne:</strong>prywatne, usunięte, ograniczone lub przetwarzane — brak publicznego nadal weryfikuje. Zobacz<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">dlaczego miniatura się nie wyświetla</a>.</li>\n    <li><strong>Brak wariantu:</strong>Wideo jest publiczne, ale maxres (lub inny wyższy poziom) powoduje błąd 404; mniejszy rozmiar nadal działa. Zobacz<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">powrót do maxres</a>.</li>\n    <li><strong>Odrzucono symbol zastępczy:</strong>Adres URL odpowiedział, ale wyglądał jak mały, szary kafelek informujący o brakującym pliku.</li>\n  </ul>"
+    },
+    {
+      "heading": "Nieprawidłowe, prywatne i niedostępne filmy",
+      "html": "<p>11tik wyświetla tylko publiczne zdjęcia z CDN. Filmy nieudostępnione publicznie, bez publicznego opakowania, przesłane tylko dla członków, treści z ograniczeniami wiekowymi i usunięte filmy zazwyczaj generują puste karty, a nie mniejszy „tajny” plik. Nie spodziewaj się, że Bulk ominie kontrolę dostępu.</p>"
+    },
+    {
+      "heading": "Adresy URL kanałów a ręcznie podawane linki do oglądania",
+      "html": "<p>Wklej adres URL kanału publicznego w jednym wierszu, a Bulk rozszerzy ostatnio przesłane treści publiczne za pomocą funkcji wyszukiwania w stylu RSS, a następnie wyodrębni każdy identyfikator – z zastrzeżeniem tego samego limitu 25 adresów URL po rozwinięciu. Ręcznie wklejone linki do oglądania pomijają wyszukiwanie kanałów. Pełny przepływ pracy z kanałem:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">przewodnik po wyciągach z kanałów</a>.</p>"
+    },
+    {
+      "heading": "Prywatność",
+      "html": "<p>Wklejone adresy URL są przetwarzane lokalnie w Twojej przeglądarce w celu ich wyodrębnienia. Przeczytaj<a href=\"https://www.11tik.com/privacy\">Prywatność</a>do analizy witryny; Bulk nie dodaje oddzielnego prywatnego interfejsu API po stronie serwera.</p>"
+    },
+    {
+      "heading": "Wskazówki dotyczące ponawiania prób",
+      "html": "<p>Po dodaniu nowej, niestandardowej miniatury Studio lub ponownym przesłaniu, poczekaj na przetworzenie i ponownie uruchom ten sam adres URL do obejrzenia. Przejściowe opóźnienie CDN czasami znika przy drugiej próbie; ciągłe puste wyniki zazwyczaj oznaczają, że dla tego identyfikatora nie istnieje już żaden wpis publiczny.</p>"
+    },
+    {
+      "heading": "Realistyczne oczekiwania",
+      "html": "<p>Nie każdy publiczny film publikuje pliki w formacie maxres. W naszym<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Próbka 300 filmów</a>, maxres zweryfikowany dla 286/300 identyfikatorów (w zakresie próbki). Bulk zwraca najwyższy zweryfikowany plik publiczny w wierszu — nie gwarantuje rozdzielczości 1280×720 dla każdego wiersza. Anatomia adresu URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">przewodnik po adresach URL miniatur</a>.</p>"
+    },
+    {
       "heading": "Co należy umieścić na liście?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= Identyfikatory</li>\n    <li>youtu.be krótkie linki</li>\n    <li>youtube.com/shorts/ Identyfikatory</li>\n    </ul>\n  <p>Filmy prywatne, niepubliczne, bez publicznych kciuków lub z ograniczeniami wiekowymi nie zwrócą klatki. To normalne. Zobacz też<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatury krótkich filmów</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= Identyfikatory</li>\n    <li>youtu.be krótkie linki</li>\n    <li>youtube.com/shorts/ Identyfikatory</li>\n    </ul>\n  <p>Filmy prywatne, niepubliczne, bez publicznych kciuków lub z ograniczeniami wiekowymi nie zwrócą klatki. To normalne. Zobacz też<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Miniatury krótkich filmów</a>.</p>"
     },
     {
       "heading": "Jak uruchomić ekstrakcję zbiorczą",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Czy mogę wykorzystać to do badania konkurencji?",
-      "html": "<p>Tak, w celu zbadania publicznego pakowania. Nie publikuj ponownie miniatury innego twórcy jako swojego własnego pliku. Prawa autorskie pozostają przy właścicielu praw. 11tik pobiera tylko pliki, które YouTube już udostępnia publicznie.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstrakt zbiorczy na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+      "html": "<p>Tak, w celu zbadania publicznego pakowania. Nie publikuj ponownie miniatury innego twórcy jako swojego własnego pliku. Prawa autorskie pozostają przy właścicielu praw. 11tik pobiera tylko pliki, które YouTube już udostępnia publicznie.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstrakt zbiorczy na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "sr",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Како добити најквалитетнију сличицу на YouTube-у | 11tik",
   "description": "Највиши квалитет значи да се највећи јавни JPEG или WebP YouTube заправо враћа, а не претпостављено име 4K датотеке.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Која је максимална јавна резолуција?",
-      "html": "<p>Када YouTube објави maxresdefault, обично је 1280×720. Ако та датотека недостаје, највиши квалитет је следећа валидна величина, као што је sd или hq.</p>"
+      "html": "<p>Када YouTube објави maxresdefault, обично је 1280×720. Ако та датотека недостаје, највиши квалитет је следећа важећа величина, као што је sd или hq. „Највиши квалитет“ значи<strong>највећа валидирана јавно доступна слика</strong>за тај ИД видеа — не 4K мастер, не надограђену датотеку средње величине и не снимак екрана плејера.</p>"
+    },
+    {
+      "heading": "Највиши квалитет у односу на „оригиналну“ сличицу",
+      "html": "<p><strong>Највиши квалитет</strong>(овај водич): валидира се најважнији јавни CDN дериват 11tik — често maxres или hq720 када су присутни.<strong>Оригинал</strong>(другачија намера): такође и даље јавна CDN мрежа, али реч мами људе да очекују изворни фајл особе која је поставила садржај. То није сирови Photoshop/PNG из Студија, није рип видео кадра, нити је загарантована уметност изворне резолуције. Види<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">значење и ограничења оригиналне сличице</a>и<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">референца величине</a>У нашем<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Узорак од 300 видео снимака</a>, maxres валидиран за 286/300 ID-ова — доступност на нивоу узорка, а не обећање за свако отпремање.</p>"
     },
     {
       "heading": "Да ли је WebP важан?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Зашто „HD“ понекад изгледа меко?",
-      "html": "<p>Јавна слика може бити 1280×720 са компресијом, или можда гледате hqdefault. Проверите извештаје о величини пиксела 11tik пре него што претпоставите да преузимање није успело.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Водич за величине</a></p>"
+      "html": "<p>Јавна слика може бити 1280×720 са компресијом, или можда гледате hqdefault. Проверите извештаје о величини пиксела 11tik пре него што претпоставите да преузимање није успело.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/about\">О нама</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Водич за величине</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/about\">О нама</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>"
 }

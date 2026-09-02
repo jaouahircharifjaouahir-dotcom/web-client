@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "cs",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Jak hromadně stahovat miniatury z YouTube (až 25 veřejných URL adres) | 11tik",
   "description": "Hromadně extrahujte veřejné miniatury z YouTube v prohlížeči. Vložte jednu URL adresu na řádek, stáhněte si každý nejlepší statický obrázek nebo zkomprimujte sadu nejvyšší kvality. Bez účtu a video souborů.",
@@ -24,8 +24,48 @@
       "html": "<p>OTEVŘENO<a href=\"https://www.11tik.com/\">11tik</a>, zapněte hromadné nastavení, vložte jednu veřejnou URL adresu na řádek, klikněte na Extrahovat vše a poté stáhněte každou nejlepší fotografii nebo zip soubor nejvyšší kvality. Limit je 25 URL adres na spuštění, aby prohlížeč zůstal responzivní.</p>"
     },
     {
+      "heading": "Co nástroj zpracovává",
+      "html": "<p>Hromadný režim spouští stejnou kontrolu veřejných fotografií na straně klienta jako extrakce jednotlivých URL adres: analyzuje každé ID videa, vytváří URL adresy kandidátů na miniatury, načítá je jako obrázky do prohlížeče, odstraňuje selhání a zástupné symboly, seřazuje přeživší a zobrazuje nejlepší statické snímky jako první. Nestahuje video ani zvuk, nevolá soukromé API YouTube a neukládá vložené odkazy na servery 11tik.</p>"
+    },
+    {
+      "heading": "Limit 25 URL adres",
+      "html": "<p>Každý hromadný běh akceptuje až<strong>25 řádků</strong>Díky tomuto limitu ověření obrázků v prohlížeči reaguje. Pro více ID spusťte více dávek nebo exportujte CSV z každého spuštění a sloučte je offline. Neexistuje žádná serverová dávka s 500 nebo 1000 URL.</p>"
+    },
+    {
+      "heading": "Zpracování na straně klienta",
+      "html": "<p>Každá extrakce probíhá během vaší relace. Síťové požadavky směřují z vašeho prohlížeče k veřejným<code>i.ytimg.com</code>(a související) hostingy. Vložené URL adresy se nenahrávají na 11tik pro účely scrapingu na straně serveru.</p>"
+    },
+    {
+      "heading": "Export do CSV a JSON",
+      "html": "<p>Po úspěšném spuštění volitelný export obsahuje ID videa, název, URL sdílení a ověřenou URL obrázku na řádek – což je užitečné pro výzkumné protokoly. Export odráží to, co bylo v dané relaci ověřeno, nikoli sloupec s garantovaným maxres pro každé ID.</p>"
+    },
+    {
+      "heading": "Taxonomie selhání",
+      "html": "<ul>\n    <li><strong>Chyba analýzy:</strong>Řádek není podporovanou URL adresou pro sledování, krátká videa, živá vysílání, vkládání, youtu.be ani URL adresou pro rozšíření kanálu.</li>\n    <li><strong>Video není k dispozici:</strong>soukromé, odstraněné, omezené nebo zpracované – žádné veřejné stále neověřuje. Viz<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Proč se nezobrazuje miniatura</a>.</li>\n    <li><strong>Chybí varianta:</strong>Video je veřejné, ale s chybami 404 (maxres nebo jiné vyšší úrovně) se počítá; nižší velikost stále funguje. Viz<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">záložní maxres</a>.</li>\n    <li><strong>Zástupný symbol odmítnut:</strong>URL odpověděla, ale vypadala jako malá šedá dlaždice s chybějícím souborem.</li>\n  </ul>"
+    },
+    {
+      "heading": "Neplatná, soukromá a nedostupná videa",
+      "html": "<p>11tik zobrazuje pouze veřejné statické snímky z CDN. Neuvedená videa bez veřejného balení, videa nahraná pouze pro členy, obsah s věkovým omezením a smazaná videa obvykle vytvářejí prázdné karty – nikoli menší „tajný“ soubor. Neočekávejte, že hromadné vyhledávání obejde řízení přístupu.</p>"
+    },
+    {
+      "heading": "URL adresy kanálů vs. ručně zadané odkazy na sledování",
+      "html": "<p>Vložte URL adresu veřejného kanálu na jeden řádek a hromadně se rozbalí nedávné veřejné nahrané příspěvky pomocí vyhledávání ve stylu RSS a poté se extrahují jednotlivá ID – s výhradou stejného limitu 25 URL adres po rozbalení. Ručně vložené odkazy pro sledování přeskočí vyhledávání kanálů. Celý pracovní postup kanálu:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">průvodce extrakcí kanálu</a>.</p>"
+    },
+    {
+      "heading": "Soukromí",
+      "html": "<p>Vložené adresy URL jsou zpracovány lokálně ve vašem prohlížeči pro extrakci. Číst<a href=\"https://www.11tik.com/privacy\">Soukromí</a>pro analýzu webu; Bulk nepřidává samostatné soukromé API na straně serveru.</p>"
+    },
+    {
+      "heading": "Pokyny k opakování",
+      "html": "<p>Po vytvoření nové vlastní miniatury ve Studiu nebo novém nahrání počkejte na zpracování a znovu spusťte stejnou URL pro sledování. Dočasné zpoždění CDN se někdy při druhém pokusu vyřeší; trvale prázdné výsledky obvykle znamenají, že pro dané ID stále neexistuje žádný veřejný záznam.</p>"
+    },
+    {
+      "heading": "Realistická očekávání",
+      "html": "<p>Ne každé veřejné video zveřejňuje maximální rozlišení. V našem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Ukázka 300 videí</a>, maxres ověřeno pro 286/300 ID (v rozsahu vzorku). Hromadně vrací nejvyšší ověřený veřejný soubor na řádek – ne garantovaných 1280×720 pro každý řádek. Anatomie URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Průvodce URL miniatur</a>.</p>"
+    },
+    {
       "heading": "Co patří do seznamu?",
-      "html": "<ul>\n    <li>ID youtube.com/watch?v=</li>\n    <li>youtu.be krátké odkazy</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>Soukromá, neuvedená videa bez veřejných miniatur nebo videa s věkovým omezením nevrátí statický obrázek. To se očekává. Viz také.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatury krátkých filmů</a>.</p>"
+      "html": "<ul>\n    <li>ID youtube.com/watch?v=</li>\n    <li>youtu.be krátké odkazy</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>Soukromá, neuvedená videa bez veřejných miniatur nebo videa s věkovým omezením nevrátí statický obrázek. To se očekává. Viz také.<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Miniatury krátkých filmů</a>.</p>"
     },
     {
       "heading": "Jak spustit hromadnou extrakci",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Mohu to použít pro výzkum konkurence?",
-      "html": "<p>Ano, pro studium veřejných formátů. Nezveřejňujte náhledy jiných tvůrců jako své vlastní video. Autorská práva zůstávají u držitele práv. 11tik načítá pouze soubory, které YouTube již veřejně hostuje.</p>\n  <p><a href=\"https://www.11tik.com/\">Otevřít hromadný výpis na 11tik →</a></p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+      "html": "<p>Ano, pro studium veřejných formátů. Nezveřejňujte náhledy jiných tvůrců jako své vlastní video. Autorská práva zůstávají u držitele práv. 11tik načítá pouze soubory, které YouTube již veřejně hostuje.</p>\n  <p><a href=\"https://www.11tik.com/\">Otevřít hromadný výpis na 11tik →</a></p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
 }

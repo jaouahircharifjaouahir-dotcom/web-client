@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "tr",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "YouTube küçük resimlerini toplu olarak nasıl indirebilirsiniz (en fazla 25 herkese açık URL) | 11tik",
   "description": "Tarayıcıda herkese açık YouTube küçük resimlerini toplu olarak çıkarın. Her satıra bir URL yapıştırın, en iyi kareyi indirin veya en yüksek kalitedeki seti sıkıştırın. Hesap gerekmez ve video dosyası gerekmez.",
@@ -24,8 +24,48 @@
       "html": "<p>Açık<a href=\"https://www.11tik.com/\">11tik</a>Toplu işlemi açın, her satıra bir genel URL yapıştırın, \"Tümünü çıkar\"a tıklayın, ardından en iyi görüntüyü veya en yüksek kalitedeki zip dosyasını indirin. Tarayıcının hızlı yanıt vermesi için her çalıştırmada en fazla 25 URL kullanılabilir.</p>"
     },
     {
+      "heading": "Bu aracın işlediği şey",
+      "html": "<p>Toplu mod, tek URL'den çıkarma işlemiyle aynı istemci tarafı genel görüntü kontrolünü gerçekleştirir: her video kimliğini ayrıştırır, aday küçük resim URL'leri oluşturur, bunları tarayıcınızda resim olarak yükler, başarısız olanları ve yer tutucuları atar, başarılı olanları sıralar ve en iyi görüntüyü ilk önce gösterir. Video veya ses indirmez, özel bir YouTube API'sini çağırmaz ve yapıştırılan bağlantıları 11tik sunucularında saklamaz.</p>"
+    },
+    {
+      "heading": "25 URL sınırı",
+      "html": "<p>Her toplu sevkiyat en fazla şu kadar kişiyi kabul eder:<strong>25 satır</strong>Bu sınır, görüntü doğrulamasının tarayıcıda duyarlı kalmasını sağlar. Daha fazla kimlik için, birden fazla toplu işlem çalıştırın veya her çalıştırmadan CSV olarak dışa aktarın ve çevrimdışı olarak birleştirin. 500 veya 1000 URL'lik sunucu toplu işlemi yoktur.</p>"
+    },
+    {
+      "heading": "İstemci tarafı işleme",
+      "html": "<p>Her veri çıkarma işlemi oturumunuzda gerçekleşir. Ağ istekleri tarayıcınızdan genel ağa gider.<code>i.ytimg.com</code>(ve ilgili) sunucular. Yapıştırılan URL'ler sunucu tarafı kazıma için 11tik'ye yüklenmez.</p>"
+    },
+    {
+      "heading": "CSV ve JSON dışa aktarımı",
+      "html": "<p>Başarılı bir çalıştırmanın ardından, isteğe bağlı dışa aktarma işlemi, her satır için video kimliği, başlık, paylaşım URL'si ve doğrulanmış resim URL'sini içerir; bu, araştırma kayıtları için kullanışlıdır. Dışa aktarma, her kimlik için garantili bir maksimum çözünürlük sütunu değil, o oturumda doğrulananları yansıtır.</p>"
+    },
+    {
+      "heading": "Başarısızlık sınıflandırması",
+      "html": "<ul>\n    <li><strong>Ayrıştırma hatası:</strong>Bu satır, desteklenen bir izleme, kısa video, canlı yayın, yerleştirme, youtu.be veya kanal genişletilebilir URL'si değildir.</li>\n    <li><strong>Video kullanılamıyor:</strong>Özel, kaldırılmış, kısıtlanmış veya işleme alınmış—halka açık olmayan doğrulamalar hala geçerlidir. Bkz.<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Küçük resim neden görünmüyor?</a>.</li>\n    <li><strong>Eksik varyant:</strong>Video herkese açık ancak maxres (veya başka bir yüksek çözünürlük) 404 hatası veriyor; daha düşük çözünürlük yine de çalışıyor. Bakınız.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres yedek</a>.</li>\n    <li><strong>Yer tutucu reddedildi:</strong>URL yanıt verdi ancak küçük, gri, eksik dosya simgesi gibi görünüyordu.</li>\n  </ul>"
+    },
+    {
+      "heading": "Geçersiz, özel ve kullanılamayan videolar",
+      "html": "<p>11tik yalnızca herkese açık CDN görsellerini gösterir. Herkese açık paketlemesi olmayan listelenmemiş videolar, yalnızca üyelere özel yüklemeler, yaş kısıtlamalı içerik ve silinmiş videolar genellikle daha küçük bir \"gizli\" dosya değil, boş kartlar üretir. Toplu işlemin erişim kontrollerini atlamasını beklemeyin.</p>"
+    },
+    {
+      "heading": "Kanal URL'leri ile manuel olarak sağlanan izleme bağlantıları arasındaki fark",
+      "html": "<p>Herkese açık bir kanal URL'sini tek satıra yapıştırın ve Bulk, RSS tarzı keşif yoluyla son herkese açık yüklemeleri genişletir ve ardından her bir kimliği çıkarır; genişletmeden sonra da aynı 25 URL sınırı geçerlidir. Manuel olarak yapıştırılan izleme bağlantıları kanal keşfini atlar. Tam kanal iş akışı:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">kanal özeti kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Mahremiyet",
+      "html": "<p>Yapıştırılan URL'ler, çıkarılmak üzere tarayıcınızda yerel olarak işlenir. Okuyun<a href=\"https://www.11tik.com/privacy\">Mahremiyet</a>Site analizleri için; Bulk, ayrı bir sunucu tarafı özel API'si eklemez.</p>"
+    },
+    {
+      "heading": "Yeniden deneme kılavuzu",
+      "html": "<p>Yeni bir Studio özel küçük resmi veya yeni bir yükleme sonrasında, işlemeyi bekleyin ve aynı izleme URL'sini yeniden çalıştırın. Geçici CDN gecikmesi bazen ikinci denemede düzelir; sürekli boş sonuçlar genellikle o kimlik için hala halka açık bir içerik bulunmadığı anlamına gelir.</p>"
+    },
+    {
+      "heading": "Gerçekçi beklentiler",
+      "html": "<p>Her herkese açık video maksimum çözünürlüğü yayınlamaz. Bizim sistemimizde<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 video örneği</a>, maxres 286/300 kimlik için doğrulandı (örnek kapsamlı). Toplu işlem, her satır için garantili 1280×720 çözünürlük değil, satır başına en yüksek doğrulanmış genel dosyayı döndürür. URL yapısı:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">küçük resim URL kılavuzu</a>.</p>"
+    },
+    {
       "heading": "Listeye neler dahil edilmeli?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= Kimlikler</li>\n    <li>youtu.be kısa bağlantılar</li>\n    <li>youtube.com/shorts/ Kimlikler</li>\n    </ul>\n  <p>Özel, herkese açık önizlemeleri olmayan veya yaş sınırlaması bulunan videolar için fotoğraf karesi görüntülenmeyecektir. Bu beklenen bir durumdur. Ayrıca bakınız.<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kısa filmlerin küçük resimleri</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= Kimlikler</li>\n    <li>youtu.be kısa bağlantılar</li>\n    <li>youtube.com/shorts/ Kimlikler</li>\n    </ul>\n  <p>Özel, herkese açık önizlemeleri olmayan veya yaş sınırlaması bulunan videolar için fotoğraf karesi görüntülenmeyecektir. Bu beklenen bir durumdur. Ayrıca bakınız.<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Kısa filmlerin küçük resimleri</a>.</p>"
     },
     {
       "heading": "Toplu veri çıkarma işlemi nasıl yapılır?",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Bunu rakip araştırması için kullanabilir miyim?",
-      "html": "<p>Evet, halka açık paketlemeyi incelemek için. Başka bir içerik oluşturucunun küçük resmini kendi yüklemeniz olarak yeniden yayınlamayın. Telif hakkı hak sahibinde kalır. 11tik yalnızca YouTube'un zaten herkese açık olarak barındırdığı dosyaları getirir.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik üzerinde toplu veri çıkarma işlemini açın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+      "html": "<p>Evet, halka açık paketlemeyi incelemek için. Başka bir içerik oluşturucunun küçük resmini kendi yüklemeniz olarak yeniden yayınlamayın. Telif hakkı hak sahibinde kalır. 11tik yalnızca YouTube'un zaten herkese açık olarak barındırdığı dosyaları getirir.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik üzerinde toplu çıkarma işlemini açın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/about\">Hakkında</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/about\">Hakkında</a>.</p>"
 }

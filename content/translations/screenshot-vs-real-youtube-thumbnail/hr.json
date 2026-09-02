@@ -25,7 +25,7 @@
     },
     {
       "heading": "Zašto snimke zaslona ne uspijevaju u Google slikama i pregledima društvenih mreža?",
-      "html": "<p>Često imaju pogrešan omjer slike, uključuju korisničko sučelje i komprimiraju se dvaput. Open Graph i mnoga CMS polja žele sliku omjera 16:9 oko 1280×720. To odgovara maxresdefaultu kada postoji - vidi<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">vodič za veličinu sličica</a>.</p>"
+      "html": "<p>Često imaju pogrešan omjer slike, uključuju korisničko sučelje i komprimiraju se dvaput. Open Graph i mnoga CMS polja žele sliku omjera 16:9 oko 1280×720. To odgovara maxresdefaultu kada postoji - vidi<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">vodič za veličinu sličica</a>.</p>"
     },
     {
       "heading": "Kako da umjesto toga spremim pravu sličicu?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Kada je snimka zaslona još uvijek korisna?",
-      "html": "<p>Snimku zaslona koristite samo za dokumentiranje pogreške korisničkog sučelja ili trenutka unutar videa. Nemojte je koristiti kao službenu minijaturu, naslovnicu bloga ili sliku za dijeljenje ako još uvijek postoji javna slika.</p>\n  <p><a href=\"https://www.11tik.com/\">Nabavite pravu javnu minijaturu →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+      "html": "<p>Snimku zaslona koristite samo za dokumentiranje pogreške korisničkog sučelja ili trenutka unutar videa. Nemojte je koristiti kao službenu minijaturu, naslovnicu bloga ili sliku za dijeljenje ako još uvijek postoji javna slika.</p>\n  <p><a href=\"https://www.11tik.com/\">Nabavite pravu javnu minijaturu →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>.</p>"
 }

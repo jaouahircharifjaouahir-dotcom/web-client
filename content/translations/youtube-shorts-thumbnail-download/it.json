@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "it",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Come scaricare la miniatura di un video breve di YouTube in HD | 11tik",
   "description": "Scarica l'anteprima di un video YouTube Shorts direttamente nel browser. Gli Shorts utilizzano le stesse immagini fisse pubbliche degli URL di visualizzazione. Il file è spesso in formato orizzontale.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "I file Shorts sono uguali ai file watch-page?",
-      "html": "<p>Utilizzano gli stessi nomi di dimensioni pubbliche, identificati tramite ID video. L'immagine fissa potrebbe apparire con bande nere laterali se YouTube ha memorizzato una versione widescreen.</p>"
+      "html": "<p>Utilizzano gli stessi nomi di dimensioni pubbliche indicizzati dall'ID video su<code>i.ytimg.com</code>. L'immagine fissa potrebbe apparire con bande nere se YouTube ha memorizzato una versione widescreen. L'anatomia degli URL per i collegamenti Shorts, watch e youtu.be è trattata in<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Guida URL miniatura</a>.</p>"
+    },
+    {
+      "heading": "Shorts pubblica sempre immagini a risoluzione massima?",
+      "html": "<p>No. Nel nostro<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Esempio di 300 video</a>, maxresdefault convalidato per<strong>286 di 300</strong>ID (<strong>95,33%</strong>); IL<strong>14 di 300</strong>Senza maxres esisteva comunque un pubblico inferiore valido. Questa è una prova limitata al campione per il comportamento di ripiego, non una regola universale di Shorts.</p>"
     },
     {
       "heading": "Cosa succede se non compare nessuna immagine?",
-      "html": "<p>Il cortometraggio potrebbe essere privato, eliminato o privo di immagini fisse pubbliche. L'estrattore non può aggirare tali limitazioni.</p>\n  <p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrattore</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Come scaricare</a></p>"
+      "html": "<p>Il cortometraggio potrebbe essere privato, eliminato o privo di immagini fisse pubbliche. L'estrattore non può aggirare tali limitazioni.</p>\n  <p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/about\">Di</a>O<a href=\"https://www.11tik.com/contact\">Contatto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrattore</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Come scaricare</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/about\">Di</a>O<a href=\"https://www.11tik.com/contact\">Contatto</a>.</p>"
 }

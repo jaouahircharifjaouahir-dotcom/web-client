@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "fi",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Kuinka saada alkuperäinen YouTube-pikkukuva | 11tik",
   "description": "Hanki alkuperäinen julkinen YouTube-pikkukuva, jota YouTube jo ylläpitää. Tämä on CDN-kuvake, ei videosta kopioitu ruutu.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Mikä on alkuperäinen YouTube-pikkukuva?",
-      "html": "<p>Se on esikatselukuva, jonka YouTube tallentaa jo kuvapalveluihinsa. Se on haussa ja ehdotettujen hyllyjen tiedosto, ei Print Screen -toiminnolla kaapattu ruutu.</p>"
+      "html": "<p>Se on esikatselukuva, jonka YouTube jo tallentaa julkisille kuvapalvelimilleen videotunnisteeksi – samaa tiedostoluokkaa käytetään haussa ja ehdotetuissa hyllyissä. 11tik:n sanastossa \"alkuperäinen\" tarkoittaa, että<strong>julkinen CDN-johdannainen</strong>, ei mitään seuraavista:</p>\n  <ul>\n    <li>Lataajan alkuperäinen YouTube Studiosta lataama lähdetiedosto</li>\n    <li>Raaka projektitiedosto (PSD, AI jne.)</li>\n    <li>Videostriimistä kaapattu ruutu</li>\n    <li>Taattu lähderesoluutio tai 4K-master</li>\n  </ul>\n  <p>Sillä<strong>suurin validoitu julkinen tiedosto</strong>Jos maxres saattaa puuttua, lue<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">korkealaatuisin opas</a>Pikselitasojen ja tiedostonimien osalta katso<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">koko-opas</a>.</p>"
     },
     {
       "heading": "Miten se eroaa kuvakaappauksesta?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Miten tarkistan, että sain todella alkuperäisen tiedoston?",
-      "html": "<p>Käytä koko- ja mitat 11tik-luetteloita tiedoston validoinnin jälkeen. Jos kuva näyttää pelaajan kuvakaappaukselta, et ladannut isännöityä pikkukuvaa.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Korkein laatu</a></p>"
+      "html": "<p>Käytä koko- ja mitat 11tik-luetteloita tiedoston validoinnin jälkeen. Jos kuva näyttää pelaajan kuvakaappaukselta, et ladannut isännöityä pikkukuvaa.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/about\">Noin</a>tai<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Korkein laatu</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/about\">Noin</a>tai<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>"
 }

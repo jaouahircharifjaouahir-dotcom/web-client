@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "zh",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "如何获得最高质量的 YouTube 视频缩略图 | 11tik",
   "description": "最高质量指的是 YouTube 实际返回的最大公开 JPEG 或 WebP 文件，而不是猜测的 4K 文件名。",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "公众决议的最高版本是什么？",
-      "html": "<p>YouTube 发布 maxresdefault 时，通常为 1280×720。如果该文件缺失，则最高质量为下一个有效尺寸，例如 sd 或 hq。</p>"
+      "html": "<p>YouTube 发布 maxresdefault 时，通常为 1280×720。如果该文件缺失，则最高画质为下一个有效尺寸，例如 sd 或 hq。“最高画质”是指<strong>最大的已验证公开可检索图像</strong>对于该视频 ID 而言——既不是 4K 母带，也不是放大后的中等尺寸文件，更不是播放器截图。</p>"
+    },
+    {
+      "heading": "最高质量对比“原始”缩略图",
+      "html": "<p><strong>最高品质</strong>（本指南）：顶级公共 CDN 衍生品 11tik 验证——通常是 maxres 或 hq720（如果存在）。<strong>原来的</strong>（意图不同）：虽然仍然是公共 CDN，但“上传”一词容易让人误以为是上传者的源文件。它并非 Studio 生成的原始 Photoshop/PNG 文件，也不是视频帧提取，更不能保证是源分辨率的图片。参见<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">原始缩略图含义和限制</a>和<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">尺寸参考</a>在我们的<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300个视频样本</a>已验证 286/300 个 ID 的最大分辨率——仅限样本范围，并非每次上传都可保证。</p>"
     },
     {
       "heading": "WebP 重要吗？",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "为什么“高清”有时看起来很柔和？",
-      "html": "<p>公开的图片分辨率可能仍然是 1280×720（压缩后），或者您可能看到的是 hqdefault 分辨率。在断定下载失败之前，请检查像素大小 11tik 报告。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">尺码指南</a></p>"
+      "html": "<p>公开的图片分辨率可能仍然是 1280×720（压缩后），或者您可能看到的是 hqdefault 分辨率。在断定下载失败之前，请检查像素大小 11tik 报告。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/about\">关于</a>或者<a href=\"https://www.11tik.com/contact\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">尺码指南</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/about\">关于</a>或者<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

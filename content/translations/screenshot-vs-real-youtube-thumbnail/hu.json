@@ -25,7 +25,7 @@
     },
     {
       "heading": "Miért nem jelennek meg a képernyőképek a Google Képekben és a közösségi média előnézeteiben?",
-      "html": "<p>Gyakran rossz a képarányuk, tartalmazzák a felhasználói felületet, és kétszer tömörítik őket. Az Open Graph és sok CMS mező 16:9-es, körülbelül 1280×720-as állóképet szeretne. Ez megegyezik a maxresdefault értékkel, ha létezik – lásd:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">bélyegkép méretének útmutatója</a>.</p>"
+      "html": "<p>Gyakran rossz a képarányuk, tartalmazzák a felhasználói felületet, és kétszer tömörítik őket. Az Open Graph és sok CMS mező 16:9-es, körülbelül 1280×720-as állóképet szeretne. Ez megegyezik a maxresdefault értékkel, ha létezik – lásd:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">bélyegkép méretének útmutatója</a>.</p>"
     },
     {
       "heading": "Hogyan menthetem el a valódi bélyegképet?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Mikor hasznos még egy képernyőkép?",
-      "html": "<p>Csak felhasználói felületi hibák vagy a videón belüli pillanatok dokumentálására használj képernyőképet. Ne használd hivatalos indexképként, bloghősként vagy megosztási képként, ha még létezik nyilvános kép.</p>\n  <p><a href=\"https://www.11tik.com/\">Szerezd meg a valódi nyilvános bélyegképet →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+      "html": "<p>Csak felhasználói felületi hibák vagy a videón belüli pillanatok dokumentálására használj képernyőképet. Ne használd hivatalos indexképként, bloghősként vagy megosztási képként, ha még létezik nyilvános kép.</p>\n  <p><a href=\"https://www.11tik.com/\">Szerezd meg a valódi nyilvános bélyegképet →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>.</p>"
 }

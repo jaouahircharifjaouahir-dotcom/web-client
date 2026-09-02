@@ -2,14 +2,14 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "vi",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Cách trích xuất hình thu nhỏ từ URL kênh YouTube | 11tik",
   "description": "Dán URL kênh YouTube công khai vào 11tik Bulk để mở rộng các video tải lên công khai gần đây, sau đó tải xuống từng ảnh tĩnh đẹp nhất. Việc này dành cho nghiên cứu về bao bì, không phải để sao chép hình ảnh tùy chỉnh của kênh khác.",
   "h1": "Cách trích xuất hình thu nhỏ từ URL kênh YouTube",
   "ogTitle": "Cách trích xuất hình thu nhỏ từ URL kênh YouTube",
   "ogDescription": "Dán URL kênh YouTube công khai vào 11tik Bulk để mở rộng các video tải lên công khai gần đây, sau đó tải xuống từng ảnh tĩnh đẹp nhất. Việc này dành cho nghiên cứu về bao bì, không phải để sao chép hình ảnh tùy chỉnh của kênh khác.",
-  "imageAlt": "Trích xuất hình thu nhỏ từ URL kênh YouTube — các video được công khai mới nhất trên 11tik",
+  "imageAlt": "Trích xuất hình thu nhỏ từ URL kênh YouTube — các video được tải lên công khai gần đây nhất trên 11tik",
   "faqHeading": "Câu hỏi thường gặp",
   "images": [
     {
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "phạm vi khám phá RSS",
+      "html": "<p>Tính năng mở rộng kênh sử dụng nguồn cấp dữ liệu kênh công khai của YouTube (kiểu RSS) để liệt kê các video được tải lên gần đây với ID video có thể phân giải được. Nguồn cấp dữ liệu đó phản ánh...<strong>Các mục công khai mà YouTube tiết lộ</strong>—Không phải tất cả video từng được tải lên, không phải bài đăng chỉ dành cho thành viên, và không đảm bảo đây là kho lưu trữ hoàn chỉnh.</p>"
+    },
+    {
+      "heading": "Chỉ dành cho mục đích công cộng",
+      "html": "<p>Các nội dung tải lên riêng tư, không được liệt kê mà không có hình ảnh tĩnh công khai và bị giới hạn độ tuổi thường không bao giờ xuất hiện trong danh sách mở rộng. Việc mở rộng trống thường có nghĩa là tên người dùng không được phân giải, kênh đã bị chấm dứt hoặc không có ID công khai nào được trả về — chứ không phải là lỗi quét 11tik.</p>"
+    },
+    {
+      "heading": "URL kênh so với URL xem nội dung khiêu dâm",
+      "html": "<p>Một dòng kênh được mở rộng thành nhiều URL xem trước khi trích xuất, vẫn tuân theo quy tắc nào đó.<strong>Giới hạn số lượng lớn 25 URL</strong>Việc dán từng liên kết xem riêng lẻ sẽ bỏ qua tính năng tìm kiếm RSS nhưng cho phép kiểm soát chính xác hơn. So sánh với việc dán hàng loạt từng dòng:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">hướng dẫn tải xuống hàng loạt</a>.</p>"
+    },
+    {
+      "heading": "Các mục bị thiếu hoặc bị mất",
+      "html": "<p>Các video đã xóa sẽ biến mất khỏi nguồn cấp dữ liệu theo thời gian. Thẻ không thể trích xuất có thể đang được xử lý, bị hạn chế hoặc bị xóa — hãy chạy lại URL xem một lần hoặc xem<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">hình thu nhỏ không hiển thị</a>.</p>"
+    },
+    {
+      "heading": "Sử dụng có đạo đức",
+      "html": "<p>Mục đích sử dụng là nghiên cứu bao bì công cộng. Việc tải lại hình ảnh tùy chỉnh của đối thủ cạnh tranh làm hình thu nhỏ của bạn vi phạm bản quyền và chính sách của nền tảng. Ghi nguồn trong các bài bình luận đã đăng; liên kết đến trang theo dõi của họ. Quy tắc trang web:<a href=\"https://www.11tik.com/copyright\">Bản quyền &amp; Sử dụng</a>.</p>"
+    },
+    {
+      "heading": "Mối liên hệ với quá trình chiết xuất theo lô",
+      "html": "<p>Việc trích xuất kênh được thực hiện ở chế độ hàng loạt với tính năng điền trước RSS. Vẫn sử dụng cùng quy trình xác thực phía máy khách, cùng giới hạn 25 URL, cùng kiểu xuất CSV/zip — không có tính năng trích xuất kênh không giới hạn và không có API riêng phía máy chủ.</p>"
+    },
+    {
       "heading": "Tôi có thể lấy ảnh thu nhỏ từ toàn bộ kênh YouTube không?",
-      "html": "<p>Bạn có thể xem ảnh tĩnh của những tác phẩm mới nhất.<em>công cộng</em>các video tải lên làm lộ ID video. 11tik không thu thập mọi video mà kênh đã từng đăng và không bỏ qua tư cách thành viên. Trên trang chủ, bật Hàng loạt, dán URL kênh như sau:<code>youtube.com/@handle</code>hoặc<code>/channel/UC…</code>và để công cụ tự động mở rộng danh sách công khai theo kiểu RSS. Sau đó trích xuất như bạn vẫn làm với một danh sách đã nhập. Giới hạn vẫn là 25 URL mỗi lần chạy để trình duyệt vẫn hoạt động được.</p>\n  <p>Điều này khác với việc lưu một liên kết xem. Luồng URL đơn nằm ở...<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cách tải ảnh thu nhỏ YouTube</a>. Việc truyền dữ liệu từng dòng một mà không qua kênh là ở dạng .<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">tải xuống hàng loạt</a>.</p>"
+      "html": "<p>Bạn có thể xem ảnh tĩnh của những tác phẩm mới nhất.<em>công cộng</em>các video tải lên làm lộ ID video. 11tik không thu thập mọi video mà kênh đã từng đăng và không bỏ qua tư cách thành viên. Trên trang chủ, bật Hàng loạt, dán URL kênh như sau:<code>youtube.com/@handle</code>hoặc<code>/channel/UC…</code>và để công cụ tự động mở rộng danh sách công khai theo kiểu RSS. Sau đó trích xuất như bạn vẫn làm với một danh sách đã nhập. Giới hạn vẫn là 25 URL mỗi lần chạy để trình duyệt vẫn hoạt động được.</p>\n  <p>Điều này khác với việc lưu một liên kết xem. Luồng URL đơn nằm ở...<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Cách tải ảnh thu nhỏ YouTube</a>. Việc truyền dữ liệu từng dòng một mà không qua kênh là như thế này:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">tải xuống hàng loạt</a>.</p>"
     },
     {
       "heading": "Những URL kênh nào hoạt động?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Điều mà 11tik sẽ không làm",
-      "html": "<ul>\n    <li>Tải xuống video hoặc âm thanh. Chỉ ảnh tĩnh.</li>\n    <li>Liệt kê các nội dung tải lên chưa được công khai hoặc riêng tư.</li>\n    <li>Đảm bảo độ phân giải tối đa cho mọi video mới nhất. Các nguồn cũ hơn hoặc dung lượng nhỏ hơn sẽ chỉ hỗ trợ độ phân giải cao (HQ) hoặc độ phân giải tiêu chuẩn (SD).<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">độ phân giải tối đa mặc định</a>.</li>\n    <li>Cấp quyền tái sử dụng tác phẩm nghệ thuật. Mục đích nghiên cứu dự định là nghiên cứu một lưới các bao bì công cộng. Việc tải lại hình ảnh tĩnh của đối thủ cạnh tranh làm hình thu nhỏ tùy chỉnh của bạn là vi phạm bản quyền và chính sách.<a href=\"https://www.11tik.com/copyright\">Bản quyền &amp; Sử dụng</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Tải xuống video hoặc âm thanh. Chỉ ảnh tĩnh.</li>\n    <li>Liệt kê các nội dung tải lên chưa được công khai hoặc riêng tư.</li>\n    <li>Đảm bảo độ phân giải tối đa cho mọi video mới nhất. Các nguồn cũ hơn hoặc dung lượng nhỏ hơn sẽ chỉ hỗ trợ độ phân giải cao (HQ) hoặc độ phân giải tiêu chuẩn (SD).<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">độ phân giải tối đa mặc định</a>.</li>\n    <li>Cấp quyền tái sử dụng tác phẩm nghệ thuật. Nghiên cứu về lưới bao bì công cộng là mục đích sử dụng cho mục đích nghiên cứu. Việc tải lại hình ảnh tĩnh của đối thủ cạnh tranh làm hình thu nhỏ tùy chỉnh của bạn là vi phạm bản quyền và chính sách.<a href=\"https://www.11tik.com/copyright\">Bản quyền &amp; Sử dụng</a>.</li>\n  </ul>"
     },
     {
       "heading": "Điều này giúp ích như thế nào cho việc nghiên cứu mà không cần các trang trung gian",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Khắc phục sự cố",
-      "html": "<p>Danh sách trống: nguồn cấp dữ liệu kênh không trả về ID công khai (kênh đã bị chấm dứt hoặc mã định danh mà trình phân giải không thể ánh xạ). Hãy thử URL kênh UC từ giao diện máy tính để bàn của YouTube.</p>\n  <p>Một số thẻ bị thiếu: các nội dung tải lên đó vẫn chưa được công khai hoặc cổng đã từ chối trích xuất dữ liệu chưa đầy đủ. Hãy chạy lại URL theo dõi đơn lẻ. Bảo mật các liên kết đã dán:<a href=\"https://www.11tik.com/p/privacy.html\">Sự riêng tư</a>.</p>\n  <p>Công cụ trích xuất so với công cụ thiết kế: 11tik không tạo ra ảnh bìa.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Máy trích xuất so với máy tạo</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Trích xuất hình ảnh tĩnh của kênh công cộng trên 11tik →</a></p>\n  <p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>"
+      "html": "<p>Danh sách trống: nguồn cấp dữ liệu kênh không trả về ID công khai (kênh đã bị chấm dứt hoặc mã định danh mà trình phân giải không thể ánh xạ). Hãy thử URL kênh UC từ giao diện máy tính để bàn của YouTube.</p>\n  <p>Một số thẻ bị thiếu: các nội dung tải lên đó vẫn chưa được công khai hoặc cổng đã từ chối trích xuất dữ liệu chưa đầy đủ. Hãy chạy lại URL theo dõi đơn lẻ. Bảo mật các liên kết đã dán:<a href=\"https://www.11tik.com/privacy\">Sự riêng tư</a>.</p>\n  <p>Công cụ trích xuất so với công cụ thiết kế: 11tik không tạo ra ảnh bìa.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Máy trích xuất so với máy tạo</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Trích xuất hình ảnh tĩnh của kênh công cộng trên 11tik →</a></p>\n  <p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/about\">Về</a>·<a href=\"https://www.11tik.com/contact\">Liên hệ</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/p/about.html\">Về</a>·<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik.<a href=\"https://www.11tik.com/about\">Về</a>·<a href=\"https://www.11tik.com/contact\">Liên hệ</a>.</p>"
 }

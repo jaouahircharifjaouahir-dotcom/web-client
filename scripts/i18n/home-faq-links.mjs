@@ -11,9 +11,9 @@ export const FAQ_GUIDE_CONTENT_IDS = Object.freeze({
 });
 
 const EN_PATHS = Object.freeze({
-  url: "/2026/08/youtube-thumbnail-url.html",
-  shorts: "/2026/08/youtube-shorts-thumbnail-download.html",
-  maxres: "/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
+  url: "/youtube-thumbnail-url",
+  shorts: "/youtube-shorts-thumbnail-download",
+  maxres: "/what-is-maxresdefaultjpg-when-youtube",
 });
 
 export function faqGuideUrl(locale, contentId, inventory = buildContentInventory()) {

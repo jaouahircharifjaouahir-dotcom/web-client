@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "ja",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "オリジナルのYouTubeサムネイル画像を取得する方法 | 11tik",
   "description": "YouTubeが既にホストしているオリジナルの公開サムネイルを取得します。これはCDNの静止画であり、動画から抜き出したフレームではありません。",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "オリジナルのYouTubeサムネイルは何ですか？",
-      "html": "<p>これは、YouTubeが画像ホスティングサービスに既に保存しているプレビュー画像です。検索結果やおすすめ棚に表示されるファイルであり、Print Screenキーでキャプチャした画像ではありません。</p>"
+      "html": "<p>これは、YouTubeが動画ID用に公開画像ホストに既に保存しているプレビュー画像であり、検索やおすすめ棚で使用されるファイルと同じクラスです。11tikの用語では、「オリジナル」とは、<strong>パブリックCDN派生</strong>以下のいずれにも該当しない：</p>\n  <ul>\n    <li>YouTube Studio からアップロードされた元のソースファイル</li>\n    <li>生のプロジェクトファイル（PSD、AIなど）</li>\n    <li>ビデオストリームからキャプチャされたフレーム</li>\n    <li>保証されたソース解像度アセットまたは4Kマスター</li>\n  </ul>\n  <p>のために<strong>最大の検証済み公開ファイル</strong>maxres が欠落している可能性がある場合は、<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">最高品質のガイド</a>ピクセル階層とファイル名については、以下を参照してください。<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サイズガイド</a>。</p>"
     },
     {
       "heading": "それはスクリーンショットとどう違うのですか？",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "YouTubeのサムネイルURLはどのように機能するのですか？",
-      "html": "<p>動画IDとサイズ名（例：maxresdefault.jpgまたはhqdefault.jpg）をi.ytimg.comに組み合わせて使用​​します。公開されていないサイズを推測すると、エラーまたはプレースホルダーが返されます。</p>"
+      "html": "<p>動画IDに加えて、maxresdefault.jpgやhqdefault.jpgなどのサイズ名をi.ytimg.comに付加して使用します。公開されていないサイズを推測すると、エラーまたはプレースホルダーが返されます。</p>"
     },
     {
       "heading": "maxresdefault.jpgとは何ですか？",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "オリジナルファイルを入手したことを本当に確認するにはどうすればよいですか？",
-      "html": "<p>ファイル検証後に11tikが表示するサイズと寸法を使用してください。画像がプレーヤーのスクリーンショットのように見える場合は、ホストされているサムネイルをダウンロードしていません。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品質</a></p>"
+      "html": "<p>ファイル検証後に11tikが表示するサイズと寸法を使用してください。画像がプレーヤーのスクリーンショットのように見える場合は、ホストされているサムネイルをダウンロードしていません。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/about\">について</a>または<a href=\"https://www.11tik.com/contact\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">最高品質</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/about\">について</a>または<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

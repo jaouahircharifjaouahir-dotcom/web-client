@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "sr",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Како преузети сличице са YouTube Shorts-а у HD резолуцији | 11tik",
   "description": "Преузмите сличицу YouTube Shorts-а у прегледачу. Shorts-ови користе исте јавне фотографије као и URL-ови за гледање. Датотека је често у хоризонталном положају.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Да ли су Shorts датотеке исте као датотеке странице гледања?",
-      "html": "<p>Користе исте јавне називе величина повезане ИД-ом видеа. Слика може изгледати испрекидано ако је YouTube сачувао дериват широког екрана.</p>"
+      "html": "<p>Користе иста јавна имена величина кључена ИД-ом видеа на<code>i.ytimg.com</code>Слика може изгледати усправно ако је YouTube сачувао дериват широког екрана. Анатомија URL-ова за Shorts, линкове за гледање и youtu.be линкове је обрађена у<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Водич за URL-ове сличица</a>.</p>"
+    },
+    {
+      "heading": "Да ли Shorts увек објављују максималне резолуције?",
+      "html": "<p>Не. У нашем<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Узорак од 300 видео снимака</a>, maxresdefault је валидиран за<strong>286 од 300</strong>ИД-ови (<strong>95,33%</strong>); та/то/то/то<strong>14 од 300</strong>без максималних вредности и даље је имао валидну нижу јавну вредност. То је доказ на нивоу узорка за резервно понашање, а не универзално правило за Shorts.</p>"
     },
     {
       "heading": "Шта ако се слика не појави?",
-      "html": "<p>Кратки видео може бити приватан, обрисан или без јавних кадрова. Екстрактор не може заобићи та ограничења.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Како преузети</a></p>"
+      "html": "<p>Кратки видео може бити приватан, обрисан или без јавних кадрова. Екстрактор не може заобићи та ограничења.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/about\">О нама</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Како преузети</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/about\">О нама</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>"
 }

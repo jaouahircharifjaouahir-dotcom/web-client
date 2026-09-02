@@ -2,13 +2,13 @@
   "contentId": "what-is-maxresdefaultjpg-when-youtube",
   "articleId": "what-is-maxresdefaultjpg-when-youtube",
   "locale": "ko",
-  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "sourceHash": "10ac7f566273ce8942402962c706a3f29c14fedde02af64e3b85e4531197a834",
   "status": "ready",
   "title": "maxresdefault.jpg이란 무엇인가요? 404 오류가 발생하는 이유와 대신 다운로드해야 할 항목은 무엇인가요? | 11tik",
-  "description": "maxresdefault.jpg은 YouTube에 게시될 때 일반적으로 1280×720입니다. 404 오류는 정상입니다. 추측한 파일 이름이 아닌 다음으로 공개된 실제 스틸컷을 사용하세요.",
+  "description": "maxresdefault.jpg은 일반적으로 YouTube에 게시될 때 1280×720 크기입니다. 404 오류는 정상입니다. 추측한 파일 이름이 아닌 다음으로 공개된 실제 스틸컷을 사용하세요.",
   "h1": "maxresdefault.jpg이란 무엇인가요? 404 오류가 발생하는 이유는 무엇이며, 대신 무엇을 다운로드해야 할까요?",
   "ogTitle": "maxresdefault.jpg이란 무엇인가요? 404 오류가 발생하는 이유는 무엇이며, 대신 무엇을 다운로드해야 할까요?",
-  "ogDescription": "maxresdefault.jpg은 YouTube에 게시될 때 일반적으로 1280×720입니다. 404 오류는 정상입니다. 추측한 파일 이름이 아닌 다음으로 공개된 실제 스틸컷을 사용하세요.",
+  "ogDescription": "maxresdefault.jpg은 일반적으로 YouTube에 게시될 때 1280×720 크기입니다. 404 오류는 정상입니다. 추측한 파일 이름이 아닌 다음으로 공개된 실제 스틸컷을 사용하세요.",
   "imageAlt": "추측된 maxresdefault URL에서 404 오류가 발생하는 경우부터 다음으로 유효한 YouTube 썸네일 크기까지의 문제 해결 흐름",
   "faqHeading": "자주 묻는 질문",
   "images": [
@@ -19,22 +19,26 @@
     },
     {
       "src": "https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png",
-      "alt": "YouTube 썸네일 파일 이름의 최대 해상도 기본값부터 기본값까지 단계별로 나열한 그림으로, 누락된 단계는 건너뛴다는 것을 보여줍니다.",
+      "alt": "maxresdefault부터 default까지 YouTube 썸네일 파일 이름의 사다리꼴 형태로, 누락된 단계는 건너뛴다는 것을 보여줍니다.",
       "captionHtml": ""
     }
   ],
   "sections": [
     {
       "heading": "빠른 답변",
-      "html": "<p><code>maxresdefault.jpg</code>썸네일 파일은 YouTube 이미지 CDN에 있는 공개 이미지 파일 이름입니다. 파일이 존재하는 경우 일반적으로 다음과 같습니다.<strong>1280×720</strong>. 그것은<strong>~ 아니다</strong>모든 동영상에 대해 보장됩니다. 404 오류(또는 작은 회색 자리 표시자)는 해당 동영상 ID에 대한 파생 콘텐츠가 게시되지 않았음을 의미합니다. 시청 URL을 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>그리고 나열된 첫 번째 크기를 다운로드하세요. 이 도구는 이미 누락된 이름을 건너뛰고 생존자 순위를 매겼습니다.<code>hq720</code>,<code>sddefault</code>, 또는<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">maxres 파일이 누락된 것은 임시 해결책일 뿐, 동영상에 썸네일이 없다는 증거는 아닙니다.</p>"
+      "html": "<p><code>maxresdefault.jpg</code>썸네일 파일은 YouTube 이미지 CDN에 있는 공개 이미지 파일 이름입니다. 파일이 존재하는 경우 일반적으로 다음과 같습니다.<strong>1280×720</strong>. 그것은<strong>~ 아니다</strong>모든 동영상에 대해 보장됩니다. 404 오류(또는 작은 회색 자리 표시자)는 해당 동영상 ID에 대한 파생 콘텐츠가 게시되지 않았음을 의미합니다. 시청 URL을 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>그리고 나열된 첫 번째 크기를 다운로드하세요. 이 도구는 이미 누락된 이름을 건너뛰고 생존자 순위를 매겼습니다.<code>hq720</code>,<code>sddefault</code>, 또는<code>hqdefault</code>.</p>\n\n  <img alt=\"추측된 maxresdefault URL에서 404 오류가 발생하는 경우부터 다음으로 유효한 YouTube 썸네일 크기까지의 문제 해결 흐름\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">maxres 파일이 누락된 것은 임시 해결책일 뿐, 동영상에 썸네일이 없다는 증거는 아닙니다.</p>"
     },
     {
       "heading": "maxresdefault.jpg는 무엇입니까?",
-      "html": "<p>파일 이름일 뿐, 품질을 마법처럼 보장하는 것은 아닙니다. 일반적인 JPEG 주소는 다음과 같습니다.</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>YouTube에서도 WebP 트윈을 게시했을 때, 11tik는 다음과 같이 확인합니다.</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>둘 다 앉아<code>i.ytimg.com</code>이것들은 정지 이미지입니다. 비디오 스트림도 아니고, 스튜디오에서 개인적으로 내보낸 파일도 아니고, 4K 마스터 파일도 아닙니다. 픽셀 기대치 및 기타 크기는 해당 항목에서 다룹니다.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">썸네일 크기 및 해상도 가이드</a>URL 구성은 다음에서 다룹니다.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">썸네일 URL 가이드</a>.</p>"
+      "html": "<p>파일 이름일 뿐, 품질을 마법처럼 보장하는 것은 아닙니다. 일반적인 JPEG 주소는 다음과 같습니다.</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>YouTube에서도 WebP 트윈을 게시했을 때, 11tik는 다음과 같이 확인합니다.</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>둘 다 앉아<code>i.ytimg.com</code>이것들은 정지 이미지입니다. 비디오 스트림도 아니고, 스튜디오에서 개인적으로 내보낸 파일도 아니고, 4K 마스터 파일도 아닙니다. 픽셀 기대치 및 기타 크기는 해당 항목에서 다룹니다.<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">썸네일 크기 및 해상도 가이드</a>URL 구성은 다음에서 다룹니다.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">썸네일 URL 가이드</a>.</p>"
+    },
+    {
+      "heading": "300개의 동영상 샘플에서 나타난 결과 (보편적인 규칙은 아님)",
+      "html": "<p>우리<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300개 동영상 썸네일 크기 연구</a>우리는 ID당 8개의 파일 이름에 대한 공개 변이 가용성을 측정했습니다. 해당 샘플에서만,<code>maxresdefault</code>검증됨<strong>300개 중 286개</strong>비디오 ID(<strong>95.33%</strong>). 다른 하나는<strong>300개 중 14개</strong>사용 가능한 maxres 파일이 없었지만, 그 14개 모두 여전히 유효한 값을 반환했습니다.<code>hqdefault</code>여전히 공개되어 있습니다. 해당 패턴은 대체 동작에 대한 샘플 범위의 증거일 뿐, 모든 YouTube 업로드에 대해 보장되는 것은 아닙니다.</p>\n  <p>자신의 체크에서 maxres가 누락된 경우, 이를 다음과 같이 처리하십시오.<strong>썸네일 변형</strong>문제: 동영상에 썸네일이 전혀 없다고 가정하는 대신, 다음으로 유효한 공개 파일 이름으로 단계적으로 이동해야 합니다. 동영상 수준의 오류(비공개, 삭제됨, 접근 제한됨)는 별도의 진단입니다. 자세한 내용은 해당 부분을 참조하십시오.<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">썸네일이 표시되지 않는 문제 해결 가이드</a>.</p>"
     },
     {
       "heading": "왜 실제 유튜브 영상에서 최대 해상도(maxres)를 입력하면 여전히 404 오류가 발생하는 걸까요?",
-      "html": "<ul>\n    <li>이전에 업로드된 파일들은 최대 해상도 파생 파일을 받지 못했습니다.</li>\n    <li>사용자 지정 썸네일 이미지 소스의 크기가 1280×720보다 작습니다.</li>\n    <li>스튜디오에서 새로운 사용자 지정 업로드를 처리 중입니다.</li>\n    <li>일부 단편 영상과 자동 생성된 스틸 이미지는 중간 크기에서 멈춥니다.</li>\n    <li>해당 영상은 시청이 제한되어 있으며, 공개적으로 볼 수 있는 장면은 전혀 포함되어 있지 않습니다.</li>\n  </ul>\n  <p>정상적으로 작동하는 시청 페이지는 동영상 ID가 유효하다는 것만 증명할 뿐입니다. 모든 파일 이름이 유효하다는 것을 증명하는 것은 아닙니다.<code>/vi/</code>존재한다.</p>"
+      "html": "<ul>\n    <li>이전 업로드 파일들은 최대 해상도 파생 파일을 받지 못했습니다.</li>\n    <li>사용자 지정 썸네일 이미지 소스의 크기가 1280×720보다 작습니다.</li>\n    <li>스튜디오에서 새로운 사용자 지정 업로드를 처리 중입니다.</li>\n    <li>일부 단편 영상과 자동 생성된 스틸 이미지는 중간 크기에서 멈춥니다.</li>\n    <li>해당 영상은 시청이 제한되어 있으며, 공개적으로 볼 수 있는 장면은 전혀 포함되어 있지 않습니다.</li>\n  </ul>\n  <p>정상적으로 작동하는 시청 페이지는 동영상 ID가 유효하다는 것만 증명할 뿐입니다. 모든 파일 이름이 유효하다는 것을 증명하는 것은 아닙니다.<code>/vi/</code>존재한다.</p>"
     },
     {
       "heading": "사용 불가능한 변형을 식별하는 방법",
@@ -42,23 +46,23 @@
     },
     {
       "heading": "대체 변형 11tik은 실제로 확인합니다.",
-      "html": "<p>공개 후보자 검색 순서(높은 순서부터):</p>\n  <table>\n    <thead>\n      <tr><th>파일 이름</th><th>경로 패턴</th><th>존재할 경우 일반적인 크기</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 클래스</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>누락된 행은 건너뜁니다. 첫 번째로 나열된 다운로드는 가장 오래 살아남은 파일이며, 입력한 이름 중 가장 긴 파일이 아닙니다. WebP와 JPEG 형식 선택에 대한 내용은 해당 항목에서 다룹니다.<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP와 JPEG 유튜브 썸네일 비교</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">파일 이름은 선택적인 계단과 같다고 생각하세요. 실제 이미지가 나타날 때까지 단계적으로 내려가세요.</p>"
+      "html": "<p>공개 후보자 검색 순서(높은 순서부터):</p>\n  <table>\n    <thead>\n      <tr><th>파일 이름</th><th>경로 패턴</th><th>존재할 경우 일반적인 크기</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 클래스</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>누락된 행은 건너뜁니다. 첫 번째로 나열된 다운로드는 가장 오래 살아남은 파일이며, 입력한 이름 중 가장 긴 파일이 아닙니다. WebP와 JPEG 형식 선택에 대한 내용은 해당 항목에서 다룹니다.<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP와 JPEG 유튜브 썸네일 비교</a>.</p>\n\n  <img alt=\"maxresdefault부터 default까지 YouTube 썸네일 파일 이름의 사다리꼴 형태로, 누락된 단계는 건너뛴다는 것을 보여줍니다.\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">파일 이름은 선택적인 계단과 같다고 생각하세요. 실제 이미지가 나타날 때까지 단계적으로 내려가세요.</p>"
     },
     {
       "heading": "11tik는 가용성을 어떻게 확인합니까?",
-      "html": "<ol>\n    <li>공개 시청, 쇼츠, 라이브, 임베드 또는 youtu.be URL에서 11자리 ID를 파싱합니다.</li>\n    <li>위의 사전 설정 목록에서 후보 URL을 생성합니다.</li>\n    <li>각 후보자를 이미지로 브라우저에 로드합니다.</li>\n    <li>플레이스홀더가 아닌 성공 사례만 남기고, 티어, 픽셀, 그리고 약간의 WebP 점수 조정을 통해 순위를 매깁니다.</li>\n    <li>순위 목록을 표시하여 작동하는 URL을 다운로드하거나 복사할 수 있도록 하세요.</li>\n  </ol>\n  <p>이것이 바로 추측된 최대 해상도 링크가 실패할 경우 UI에서 사라지는 이유입니다. 추출기가 1280×720 크기의 파일을 생성하는 것을 거부하기 때문입니다.</p>"
+      "html": "<ol>\n    <li>공개 시청, 쇼츠, 라이브, 임베드 또는 youtu.be URL에서 11자리 ID를 파싱합니다.</li>\n    <li>위의 사전 설정 목록에서 후보 URL을 생성합니다.</li>\n    <li>각 후보 이미지를 브라우저에 로드합니다.</li>\n    <li>플레이스홀더가 아닌 성공 사례만 남기고, 티어, 픽셀, 그리고 약간의 WebP 점수 조정을 통해 순위를 매깁니다.</li>\n    <li>순위 목록을 표시하여 작동하는 URL을 다운로드하거나 복사할 수 있도록 하세요.</li>\n  </ol>\n  <p>이것이 바로 추측된 최대 해상도 링크가 실패할 경우 UI에서 사라지는 이유입니다. 추출기가 1280×720 크기의 파일을 생성하는 것을 거부하기 때문입니다.</p>"
     },
     {
       "heading": "실용적인 문제 해결 체크리스트",
-      "html": "<ol>\n    <li>영상이 공개되어 있는지, 그리고 ID가 올바른지 확인하세요.</li>\n    <li>시험<code>maxresdefault.jpg</code>한 번만 해보세요. 만약 실패하면, 추측은 그만두세요.</li>\n    <li>동일한 링크를 붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>첫 번째 스틸컷을 다운로드하거나 이미지 URL을 복사하세요.</li>\n    <li>아무것도 표시되지 않으면 동영상이 비공개이거나 삭제되었거나 연령 제한이 걸려 있거나 공개된 스틸컷이 없는 것일 수 있습니다.</li>\n    <li>CMS 사용 시에는 CDN 링크 경로보다는 유효성 검사를 거친 스틸 이미지의 호스팅된 복사본을 사용하는 것이 좋습니다. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">블로그 / 오픈그래프 가이드</a>.</li>\n  </ol>"
+      "html": "<ol>\n    <li>영상이 공개되어 있는지, 그리고 ID가 올바른지 확인하세요.</li>\n    <li>시험<code>maxresdefault.jpg</code>한 번만 해보세요. 만약 실패하면, 추측은 그만두세요.</li>\n    <li>동일한 링크를 붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>첫 번째 스틸컷을 다운로드하거나 이미지 URL을 복사하세요.</li>\n    <li>아무것도 표시되지 않으면 동영상이 비공개이거나 삭제되었거나 연령 제한이 걸려 있거나 공개된 스틸컷이 없는 것일 수 있습니다.</li>\n    <li>CMS 사용 시에는 CDN 링크 경로보다는 유효성 검사를 거친 스틸 이미지의 호스팅된 복사본을 사용하는 것이 좋습니다. 자세한 내용은 다음을 참조하세요.<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">블로그 / 오픈그래프 가이드</a>.</li>\n  </ol>"
     },
     {
       "heading": "흔히 저지르는 실수",
-      "html": "<ul>\n    <li>인기 동영상 하나가 최대 해상도를 지원하므로 모든 동영상이 최대 해상도를 지원한다고 가정합니다.</li>\n    <li>하드코딩<code>maxresdefault.jpg</code>검증 없이 프로덕션 HTML에 삽입했습니다.</li>\n    <li>늘어난 것을 부르다<code>hqdefault</code>“최대.”</li>\n    <li>플레이어 스크린샷을 CDN 정지 화면과 혼동함 —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 썸네일</a>.</li>\n    <li>4K 해상도를 기대합니다. 일반적으로 공개된 최대 해상도는 1280×720입니다.<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">최고 품질 가이드</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>인기 동영상 하나가 최대 해상도를 지원하므로 모든 동영상이 최대 해상도를 지원한다고 가정합니다.</li>\n    <li>하드코딩<code>maxresdefault.jpg</code>검증 없이 프로덕션 HTML에 삽입했습니다.</li>\n    <li>늘어난 것을 부르다<code>hqdefault</code>“최대값.”</li>\n    <li>플레이어 스크린샷을 CDN 정지 화면과 혼동함 —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">스크린샷 vs 실제 썸네일</a>.</li>\n    <li>4K 해상도를 기대합니다. 일반적으로 공개된 최대 해상도는 1280×720입니다.<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">최고 품질 가이드</a>.</li>\n  </ul>"
     },
     {
       "heading": "다음 단계",
-      "html": "<p>공개 YouTube URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">추출기</a>최대 해상도(maxres) 파일이 없는 경우, 다음으로 정확한 스틸컷을 남겨두세요. 그것이 해당 비디오의 진정한 HD 파일입니다.</p>\n  <p class=\"yte-bio\">11tik 작성. 공개 스틸 이미지만 제공되며, 동영상 다운로드는 불가합니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+      "html": "<p>공개 YouTube URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">추출기</a>최대 해상도(maxres) 파일이 없는 경우, 다음으로 정확한 스틸컷을 남겨두세요. 그것이 해당 비디오의 진정한 HD 파일입니다.</p>\n  <p class=\"yte-bio\">11tik 작성. 공개 스틸 이미지만 제공되며, 동영상 다운로드는 불가합니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/privacy\">은둔</a>·<a href=\"https://www.11tik.com/terms-of-use\">자귀</a>.</p>"
     }
   ],
   "faq": [
@@ -90,9 +94,9 @@
     {
       "question": "대체 파일을 빠르게 다운로드하려면 어떻게 해야 하나요?",
       "answer": "다운로드 가이드를 따르세요: 나열된 첫 번째 파일을 붙여넣고, 압축을 풀고, 저장하세요.",
-      "answerHtml": "<p>사용하세요<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">다운로드 가이드</a>: 나열된 첫 번째 파일을 붙여넣고, 압축을 풀고, 저장하세요.</p>"
+      "answerHtml": "<p>사용하세요<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">다운로드 가이드</a>: 나열된 첫 번째 파일을 붙여넣고, 압축을 풀고, 저장하세요.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik 작성. 공개 스틸 이미지만 제공되며, 동영상 다운로드는 불가합니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik 작성. 공개 스틸 이미지만 제공되며, 동영상 다운로드는 불가합니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/privacy\">은둔</a>·<a href=\"https://www.11tik.com/terms-of-use\">자귀</a>.</p>"
 }

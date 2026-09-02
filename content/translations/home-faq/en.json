@@ -13,7 +13,7 @@
     {
       "question": "Which YouTube URLs does 11tik support?",
       "answer": "Paste a public watch link, Shorts URL, live or premiere page, or youtu.be short link. The tool reads the video ID from the path and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the thumbnail URL guide.",
-      "answerHtml": "Paste a public watch link, Shorts URL, live or premiere page, or youtu.be short link. The tool reads the video ID from the path and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the <a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">thumbnail URL guide</a>."
+      "answerHtml": "Paste a public watch link, Shorts URL, live or premiere page, or youtu.be short link. The tool reads the video ID from the path and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the <a href=\"https://www.11tik.com/youtube-thumbnail-url\">thumbnail URL guide</a>."
     },
     {
       "question": "Does 11tik upload my thumbnail or video?",
@@ -23,12 +23,12 @@
     {
       "question": "Can I download thumbnails from YouTube Shorts?",
       "answer": "Yes. Shorts links use the same public image hosts as regular videos, so you can paste a /shorts/ URL and download the best still that exists. The preview may look wider than the vertical clip you watched because YouTube stores a landscape still. Private or age-gated Shorts without a public thumb will not return a file. See the Shorts thumbnail guide for step-by-step help.",
-      "answerHtml": "Yes. Shorts links use the same public image hosts as regular videos, so you can paste a /shorts/ URL and download the best still that exists. The preview may look wider than the vertical clip you watched because YouTube stores a landscape still. Private or age-gated Shorts without a public thumb will not return a file. See the <a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts thumbnail guide</a> for step-by-step help."
+      "answerHtml": "Yes. Shorts links use the same public image hosts as regular videos, so you can paste a /shorts/ URL and download the best still that exists. The preview may look wider than the vertical clip you watched because YouTube stores a landscape still. Private or age-gated Shorts without a public thumb will not return a file. See the <a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Shorts thumbnail guide</a> for step-by-step help."
     },
     {
       "question": "What happens when the highest thumbnail quality is unavailable?",
       "answer": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. For why maxres 404s and how fallbacks work, read the maxresdefault guide.",
-      "answerHtml": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. For why maxres 404s and how fallbacks work, read the <a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault guide</a>."
+      "answerHtml": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. For why maxres 404s and how fallbacks work, read the <a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault guide</a>."
     }
   ]
 }

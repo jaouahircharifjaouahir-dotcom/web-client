@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "it",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Come estrarre le miniature da un URL di un canale YouTube | 11tik",
   "description": "Incolla l'URL di un canale YouTube pubblico in 11tik Bulk per espandere i caricamenti pubblici recenti, quindi scarica ogni immagine migliore. Questo serve per la ricerca sul packaging, non per clonare la grafica personalizzata di un altro canale.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "ambito di scoperta RSS",
+      "html": "<p>L'espansione del canale utilizza il feed pubblico del canale di YouTube (in stile RSS) per elencare i caricamenti recenti con un ID video risolvibile. Tale feed riflette<strong>YouTube espone contenuti pubblici</strong>—non tutti i video mai caricati, non i post riservati ai membri e non è garantito un archivio completo.</p>"
+    },
+    {
+      "heading": "Solo articoli pubblici",
+      "html": "<p>I caricamenti privati, non elencati senza immagini pubbliche e quelli con restrizioni di età in genere non compaiono mai nell'elenco espanso. Un'espansione vuota di solito significa che l'handle non è stato risolto, il canale è terminato o non sono stati restituiti ID pubblici, non un errore di scraping 11tik.</p>"
+    },
+    {
+      "heading": "URL del canale vs URL di visualizzazione espliciti",
+      "html": "<p>Una linea di canale si espande in più URL di visualizzazione prima dell'estrazione, ancora soggetta a<strong>Limite massimo di 25 URL</strong>Incollando i singoli link di watch si evita il rilevamento RSS ma si ottiene un controllo preciso. Confronta con l'inserimento in blocco riga per riga:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guida al download in batch</a>.</p>"
+    },
+    {
+      "heading": "Articoli mancanti o rimossi",
+      "html": "<p>I video eliminati vengono rimossi dai feed nel tempo. Una scheda che non riesce a essere estratta potrebbe essere in fase di elaborazione, limitata o rimossa: esegui nuovamente un singolo URL di visualizzazione o consulta<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatura non visualizzata</a>.</p>"
+    },
+    {
+      "heading": "Uso etico",
+      "html": "<p>L'utilizzo previsto è lo studio del packaging pubblico a scopo di ricerca. Ricaricare l'immagine personalizzata di un concorrente come miniatura viola il copyright e le norme della piattaforma. Citare le fonti nei commenti pubblicati; inserire i link alle loro pagine di monitoraggio. Regole del sito:<a href=\"https://www.11tik.com/copyright\">Copyright e utilizzo</a>.</p>"
+    },
+    {
+      "heading": "Relazione con l'estrazione in batch",
+      "html": "<p>L'estrazione dei canali avviene in modalità Bulk con precompilazione RSS. Stessa convalida lato client, stesso limite di 25 URL, stesse esportazioni CSV/zip: niente scraping illimitato dei canali e nessuna API privata lato server.</p>"
+    },
+    {
       "heading": "Posso ottenere le miniature di un intero canale YouTube?",
-      "html": "<p>Puoi ottenere immagini fisse per le ultime<em>pubblico</em>caricamenti che espongono un ID video. 11tik non esegue lo scraping di ogni video mai pubblicato da un canale e non aggira gli abbonamenti. Nella homepage, attiva Bulk, incolla un URL del canale come<code>youtube.com/@handle</code>O<code>/channel/UC…</code>e lascia che lo strumento espanda l'elenco pubblico in stile RSS. Quindi estrai come faresti con un elenco digitato. Il limite rimane di 25 URL per esecuzione in modo che il browser rimanga utilizzabile.</p>\n  <p>Questo è diverso dal salvare un singolo link di monitoraggio. Il flusso URL singolo è in<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">come scaricare una miniatura di YouTube</a>. La trasmissione in blocco riga per riga senza canale è in<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">download in batch</a>.</p>"
+      "html": "<p>Puoi ottenere immagini fisse per le ultime<em>pubblico</em>caricamenti che espongono un ID video. 11tik non esegue lo scraping di ogni video mai pubblicato da un canale e non aggira gli abbonamenti. Nella homepage, attiva Bulk, incolla un URL del canale come<code>youtube.com/@handle</code>O<code>/channel/UC…</code>e lascia che lo strumento espanda l'elenco pubblico in stile RSS. Quindi estrai come faresti con un elenco digitato. Il limite rimane di 25 URL per esecuzione in modo che il browser rimanga utilizzabile.</p>\n  <p>Questo è diverso dal salvare un singolo link di monitoraggio. Il flusso a URL singolo è in<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">come scaricare una miniatura di YouTube</a>. La trasmissione in blocco riga per riga senza canale è in<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">download in batch</a>.</p>"
     },
     {
       "heading": "Quali URL di canale funzionano?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Ciò che 11tik non farà",
-      "html": "<ul>\n    <li>Scarica i video o l'audio. Solo immagini fisse.</li>\n    <li>Elenca i caricamenti non in elenco o privati.</li>\n    <li>Garantiamo la risoluzione massima predefinita per ogni video recente. Le fonti più vecchie o di bassa qualità si fermano a HQ o SD.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Concedere i diritti di riutilizzo dell'opera. Lo studio di una griglia di imballaggi pubblici è l'uso di ricerca previsto. Ricaricare l'immagine di un concorrente come miniatura personalizzata costituisce un problema di copyright e di norme.<a href=\"https://www.11tik.com/copyright\">Copyright e utilizzo</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Scarica i video o l'audio. Solo immagini fisse.</li>\n    <li>Elenca i caricamenti non in elenco o privati.</li>\n    <li>Garantiamo la risoluzione massima predefinita per ogni video recente. Le fonti più vecchie o di bassa qualità si fermano a HQ o SD.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Concedere i diritti di riutilizzo dell'opera. Lo studio di una griglia di imballaggi pubblici è l'uso di ricerca previsto. Ricaricare l'immagine di un concorrente come miniatura personalizzata costituisce un problema di copyright e di norme.<a href=\"https://www.11tik.com/copyright\">Copyright e utilizzo</a>.</li>\n  </ul>"
     },
     {
       "heading": "Come questo aiuta la ricerca senza pagine di porta",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Risoluzione dei problemi",
-      "html": "<p>Elenco vuoto: il feed del canale non ha restituito ID pubblici (canale terminato o un handle che il resolver non è riuscito a mappare). Prova l'URL del canale UC dalla versione desktop di YouTube.</p>\n  <p>Alcune schede mancanti: questi caricamenti non sono ancora pubblici oppure il sistema ha rifiutato un estratto incompleto. Esegui nuovamente un singolo URL di monitoraggio. Privacy dei link incollati:<a href=\"https://www.11tik.com/p/privacy.html\">Privacy</a>.</p>\n  <p>Strumento di estrazione vs strumento di progettazione: 11tik non crea la copertina.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Estrattore vs produttore</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrai le immagini fisse del canale pubblico su 11tik →</a></p>\n  <p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>"
+      "html": "<p>Elenco vuoto: il feed del canale non ha restituito ID pubblici (canale terminato o un handle che il resolver non è riuscito a mappare). Prova l'URL del canale UC dalla versione desktop di YouTube.</p>\n  <p>Alcune schede mancanti: questi caricamenti non sono ancora pubblici oppure il sistema ha rifiutato un estratto incompleto. Esegui nuovamente un singolo URL di monitoraggio. Privacy dei link incollati:<a href=\"https://www.11tik.com/privacy\">Privacy</a>.</p>\n  <p>Strumento di estrazione vs strumento di progettazione: 11tik non crea la copertina.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Estrattore vs produttore</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrai le immagini fisse del canale pubblico su 11tik →</a></p>\n  <p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/about\">Di</a>·<a href=\"https://www.11tik.com/contact\">Contatto</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/p/about.html\">Di</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik.<a href=\"https://www.11tik.com/about\">Di</a>·<a href=\"https://www.11tik.com/contact\">Contatto</a>.</p>"
 }

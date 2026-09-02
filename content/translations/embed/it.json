@@ -23,7 +23,7 @@
     },
     {
       "heading": "Collegamenti profondi",
-      "html": "<p>Condividi un'estrazione pronta con<code>https://www.11tik.com/?v=VIDEO_ID</code>. L'incorporamento utilizza la stessa estrazione ID lato client dello strumento principale per watch, Shorts, live, youtu.be e URL di incorporamento, quindi analizza le immagini fisse pubbliche su<code>i.ytimg.com</code>(mai un'API privata di YouTube). Anatomia dell'URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guida URL miniatura</a>. Disponibilità di varianti misurata nel nostro<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">Esempio di 300 video</a>(limitato al campione, non universale).</p>"
+      "html": "<p>Condividi un'estrazione pronta con<code>https://www.11tik.com/?v=VIDEO_ID</code>. L'incorporamento utilizza la stessa estrazione ID lato client dello strumento principale per watch, Shorts, live, youtu.be e URL di incorporamento, quindi analizza le immagini fisse pubbliche su<code>i.ytimg.com</code>(mai un'API privata di YouTube). Anatomia dell'URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Guida URL miniatura</a>. Disponibilità di varianti misurata nel nostro<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Esempio di 300 video</a>(limitato al campione, non universale).</p>"
     },
     {
       "heading": "Limitazioni del browser e dell'host",

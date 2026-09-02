@@ -2,13 +2,13 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "nl",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Hoe krijg je de beste kwaliteit YouTube-thumbnail? | 11tik",
-  "description": "De hoogste kwaliteit betekent het grootste openbare JPEG- of WebP-bestand dat YouTube daadwerkelijk retourneert, en niet een willekeurig gekozen 4K-bestandsnaam.",
+  "description": "Hoogste kwaliteit betekent het grootste openbare JPEG- of WebP-bestand dat YouTube daadwerkelijk retourneert, niet een willekeurig gekozen 4K-bestandsnaam.",
   "h1": "Hoe krijg je de beste kwaliteit YouTube-thumbnail?",
   "ogTitle": "Hoe krijg je de beste kwaliteit YouTube-thumbnail?",
-  "ogDescription": "De hoogste kwaliteit betekent het grootste openbare JPEG- of WebP-bestand dat YouTube daadwerkelijk retourneert, en niet een willekeurig gekozen 4K-bestandsnaam.",
+  "ogDescription": "Hoogste kwaliteit betekent het grootste openbare JPEG- of WebP-bestand dat YouTube daadwerkelijk retourneert, niet een willekeurig gekozen 4K-bestandsnaam.",
   "imageAlt": "Hoogst beschikbare openbare YouTube-thumbnail geselecteerd in 11tik",
   "faqHeading": "Veelgestelde vragen",
   "images": [
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Wat is de maximale resolutie die het publiek kan accepteren?",
-      "html": "<p>Wanneer YouTube maxresdefault publiceert, is dat meestal 1280×720. Als dat bestand ontbreekt, is de hoogste kwaliteit de eerstvolgende geldige resolutie, zoals sd of hq.</p>"
+      "html": "<p>Wanneer YouTube maxresdefault publiceert, is dat meestal 1280×720. Als dat bestand ontbreekt, is de hoogste kwaliteit de eerstvolgende geldige resolutie, zoals sd of hq. \"Hoogste kwaliteit\" betekent de<strong>grootste gevalideerde openbaar toegankelijke afbeelding</strong>Voor die video-ID geldt: geen 4K-master, geen opgeschaald bestand van gemiddelde grootte en geen screenshot van de speler.</p>"
+    },
+    {
+      "heading": "Miniatuurafbeelding van de hoogste kwaliteit versus de \"originele\" miniatuur",
+      "html": "<p><strong>Hoogste kwaliteit</strong>(deze handleiding): de beste openbare CDN-afgeleide 11tik valideert—vaak maxres of hq720 indien aanwezig.<strong>Origineel</strong>(andere bedoeling): het is nog steeds een openbaar CDN, maar het woord wekt de indruk dat de uploader het bronbestand levert. Het is niet de onbewerkte Photoshop/PNG van Studio, geen rip van een videobeeld en geen gegarandeerde weergave van de originele resolutie. Zie<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">oorspronkelijke miniatuurafbeelding betekenis en beperkingen</a>En<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">maatreferentie</a>In onze<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Voorbeeld van 300 video's</a>Maxres is gevalideerd voor 286/300 ID's - beschikbaarheid op steekproefniveau, geen garantie voor elke upload.</p>"
     },
     {
       "heading": "Is WebP belangrijk?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Waarom ziet 'HD' er soms onscherp uit?",
-      "html": "<p>De resolutie kan nog steeds 1280×720 zijn met compressie, of je kijkt mogelijk naar hqdefault. Controleer de pixelgrootte 11tik-rapporten voordat je ervan uitgaat dat de download is mislukt.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Maattabel</a></p>"
+      "html": "<p>De resolutie kan nog steeds 1280×720 zijn met compressie, of je kijkt mogelijk naar hqdefault. Controleer de pixelgrootte 11tik-rapporten voordat je ervan uitgaat dat de download is mislukt.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/about\">Over</a>of<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Maattabel</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/about\">Over</a>of<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "sv",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "WebP vs JPEG YouTube-miniatyrer: Vilket format ska du använda? | 11tik",
   "description": "YouTube kan komma att publicera JPEG- och WebP-miniatyrfiler. Föredra formatet som 11tik validerar för ditt användningsfall – WebP är inte alltid tillgängligt.",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "Snabbt svar",
-      "html": "<p>För de flesta nedladdningar och CMS-uppladdningar, behåll<strong>validerad fil 11tik listas först</strong>JPEG är fortfarande allmänt tillgängligt<code>i.ytimg.com/vi/…</code>WebP visas för vissa videor som<code>maxresdefault.webp</code>under<code>/vi_webp/</code>WebP är ofta mindre med liknande visuell kvalitet, men det publiceras inte för varje ID. 11tik gör det.<strong>inte</strong>konvertera WebP till JPEG vid nedladdning – det sparar de byte som YouTube redan är värd för (JPEG-nedladdningar får bara en liten kommentarstämpel för metadata).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Samma video-ID, olika behållare och sökvägar – bara när YouTube publicerade båda.</p>"
+      "html": "<p>För de flesta nedladdningar och CMS-uppladdningar, behåll<strong>validerad fil 11tik listas först</strong>JPEG är fortfarande allmänt tillgängligt<code>i.ytimg.com/vi/…</code>WebP visas för vissa videor som<code>maxresdefault.webp</code>under<code>/vi_webp/</code>WebP är ofta mindre med liknande visuell kvalitet, men det publiceras inte för varje ID. 11tik gör det.<strong>inte</strong>konvertera WebP till JPEG vid nedladdning – det sparar de byte som YouTube redan är värd för (JPEG-nedladdningar får bara en liten kommentarstämpel för metadata).</p>\n\n  <img alt=\"Jämförelse av sökvägar för YouTube-miniatyrbilder i JPEG och WebP på i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Samma video-ID, olika behållare och sökvägar – bara när YouTube publicerade båda.</p>"
     },
     {
       "heading": "Hur YouTube-miniatyrformat visas i 11tik",
-      "html": "<p>11tiks kvalitetsförinställningar inkluderar:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mima<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ under<code>/vi/</code>(mima<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Kandidater laddas i webbläsaren. Misslyckanden och platsmarkörer tas bort. Rankningen använder nivå, pixelarea, matchning av förväntad storlek och en liten<strong>−8 poängstraff för<code>.webp</code>URL:er</strong>Så att JPEG och WebP på samma nivå inte oförutsägbart konkurrerar – JPEG kan vinna oavgjort när båda validerar. Detaljer om storlekar:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guide för miniatyrstorlek</a>Beteende vid saknat maxres:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404-guide</a>.</p>"
+      "html": "<p>11tiks kvalitetsförinställningar inkluderar:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mima<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ under<code>/vi/</code>(mima<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Kandidater laddas i webbläsaren. Misslyckanden och platsmarkörer tas bort. Rankningen använder nivå, pixelarea, matchning av förväntad storlek och en liten<strong>−8 poängstraff för<code>.webp</code>URL:er</strong>Så att JPEG och WebP på samma nivå inte oförutsägbart konkurrerar – JPEG kan vinna oavgjort när båda validerar. Detaljer om storlekar:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">guide för miniatyrstorlek</a>Beteende vid saknat maxres:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404-guide</a>.</p>"
     },
     {
       "heading": "JPEG vs WebP i klartext",
       "html": "<table>\n    <thead>\n      <tr><th>Formatera</th><th>Bäst för</th><th>Styrka</th><th>Begränsning</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Nedladdningar, WordPress-uppladdningar, bredast möjliga kompatibilitet</td><td>Nästan universellt stöd; de flesta CDN-stillbilder</td><td>Större filer med liknande kvalitet</td></tr>\n      <tr><td>WebP</td><td>Moderna webbplatser som redan använder WebP</td><td>Ofta mindre för samma upplösningsnivå</td><td>Inte publicerad för varje video; vissa äldre verktyg vägrar</td></tr>\n    </tbody>\n  </table>\n  <p>Ingetdera formatet uppfinner upplösningen. En 480×360 WebP är fortfarande 480×360.</p>"
+    },
+    {
+      "heading": "Jämförelse av uppmätt bytestorlek (endast 300-videoprov)",
+      "html": "<p>I samma<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-videoprov</a>, medianmaximum WebP-observationen var<strong>60 345 byte</strong>kontra-<strong>141 111 byte</strong>för JPEG-maxres – vilket gör WebP-medianen ungefär<strong>57,2 % mindre i bytestorlek</strong>i den datamängden. Detta är en<strong>exempelomfattad bytejämförelse</strong>, inte en universell komprimeringsgaranti: din video kan publicera endast JPEG, endast WebP, båda, eller ingetdera på maxnivån. Pixeldimensioner för varje nivå täcks av<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">guide för storlek och upplösning</a>URL-sökvägar skiljer sig åt under<code>/vi/</code>kontra-<code>/vi_webp/</code>som förklaras i<a href=\"https://www.11tik.com/youtube-thumbnail-url\">miniatyr-URL-guide</a>.</p>"
     },
     {
       "heading": "Vad händer när du laddar ner",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "När WebP passar",
-      "html": "<ul>\n    <li>11tik listade ett validerat WebP-maxvärde och din webbplats använder redan WebP.</li>\n    <li>Du vill ha en mindre fil för samma nivå på ~1280×720.</li>\n    <li>Du kontrollerar stacken och kan återgå till JPEG om det behövs.</li>\n  </ul>\n  <p>Om ditt tema inte kan använda WebP, ladda ner JPEG istället – eller konvertera lokalt efter nedladdningen. 11tik kommer inte att konvertera åt dig.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Välj det validerade format som matchar din pipeline – inte ett gissat tillägg.</p>"
+      "html": "<ul>\n    <li>11tik listade ett validerat WebP-maxvärde och din webbplats använder redan WebP.</li>\n    <li>Du vill ha en mindre fil för samma nivå på ~1280×720.</li>\n    <li>Du kontrollerar stacken och kan återgå till JPEG om det behövs.</li>\n  </ul>\n  <p>Om ditt tema inte kan använda WebP, ladda ner JPEG istället – eller konvertera lokalt efter nedladdningen. 11tik kommer inte att konvertera åt dig.</p>\n\n  <img alt=\"Användningsfallsdiagram som jämför webbplatsens CMS, direkta CDN-länkar och arkivnedladdningar för\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Välj det validerade format som matchar din pipeline – inte ett gissat tillägg.</p>"
     },
     {
       "heading": "Direktlänkar och webbplatser",
-      "html": "<p>Kopiera bild-URL returnerar HTTPS CDN-adressen för den validerade kandidaten. Hotlinking WebP eller JPEG har samma sårbarhet som diskuteras i<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blogg / Open Graph-guide</a>: föredrar att ha din egen text lagd för bestående inlägg. URL-mönster:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>.</p>"
+      "html": "<p>Kopiera bild-URL returnerar HTTPS CDN-adressen för den validerade kandidaten. Hotlinking WebP eller JPEG har samma sårbarhet som diskuteras i<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">blogg / Open Graph-guide</a>: föredrar att ha din egen text lagd för bestående inlägg. URL-mönster:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">miniatyr-URL-guide</a>.</p>"
     },
     {
       "heading": "Anmärkningar om kompatibilitet mellan webbläsare och CMS",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "Praktiskt beslutsträd",
-      "html": "<ol>\n    <li>Extrahera på<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Om du behöver en CMS-utvald bild och ser båda formaten, välj JPEG om inte din stack är WebP-first.</li>\n    <li>Om endast WebP-max validerades på den översta nivån, använd den – eller ta nästa JPEG-storlek om du måste hålla dig till JPG.</li>\n    <li>För arkiv, behåll originaltillägget från nedladdningen.</li>\n  </ol>\n  <p>Ladda ner genomgång:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ladda ner en YouTube-miniatyr</a>.</p>"
+      "html": "<ol>\n    <li>Extrahera på<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Om du behöver en CMS-utvald bild och ser båda formaten, välj JPEG om inte din stack är WebP-first.</li>\n    <li>Om endast WebP-max validerades på den översta nivån, använd den – eller ta nästa JPEG-storlek om du måste hålla dig till JPG.</li>\n    <li>För arkiv, behåll originaltillägget från nedladdningen.</li>\n  </ol>\n  <p>Ladda ner genomgång:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ladda ner en YouTube-miniatyr</a>.</p>"
     },
     {
       "heading": "Nästa steg",
-      "html": "<p>Klistra in en offentlig URL i<a href=\"https://www.11tik.com/\">YouTube-miniatyrutdragare</a>, notera om det översta resultatet är<code>.jpg</code>eller<code>.webp</code>och välj baserat på ditt CMS – inte baserat på det längre filnamnet.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik baserat på webbläsarens nuvarande beteende för extrahering.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+      "html": "<p>Klistra in en offentlig URL i<a href=\"https://www.11tik.com/\">YouTube-miniatyrutdragare</a>, notera om det översta resultatet är<code>.jpg</code>eller<code>.webp</code>och välj baserat på ditt CMS – inte baserat på det längre filnamnet.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik baserat på webbläsarens nuvarande beteende för extrahering.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/privacy\">Privatliv</a>·<a href=\"https://www.11tik.com/terms-of-use\">Villkor</a>.</p>"
     }
   ],
   "faq": [
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik baserat på webbläsarens nuvarande beteende för extrahering.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Villkor</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik baserat på webbläsarens nuvarande beteende för extrahering.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/privacy\">Privatliv</a>·<a href=\"https://www.11tik.com/terms-of-use\">Villkor</a>.</p>"
 }

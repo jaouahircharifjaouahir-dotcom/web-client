@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "hu",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "YouTube indexképek kötegelt letöltése (legfeljebb 25 nyilvános URL) | 11tik",
   "description": "Tömeges YouTube-bélyegképek kinyerése a böngészőben. Soronként egy URL-t illessz be, töltsd le a legjobb állóképeket, vagy tömörítsd be a legmagasabb minőségű készletet. Nincs szükség fiókra és videofájlokra.",
@@ -24,8 +24,48 @@
       "html": "<p>Nyitott<a href=\"https://www.11tik.com/\">11tik</a>, kapcsold be a Tömeges letöltést, illessz be soronként egy nyilvános URL-t, kattints az Összes kibontása gombra, majd töltsd le a legjobb állóképeket vagy a legmagasabb minőségű zip fájlt. Futtatásonként legfeljebb 25 URL küldhető el, így a böngésző reszponzív marad.</p>"
     },
     {
+      "heading": "Mit dolgoz fel az eszköz?",
+      "html": "<p>A tömeges mód ugyanazt a kliensoldali nyilvános állókép-ellenőrzést futtatja, mint az egyetlen URL kinyerése: elemzi az egyes videoazonosítókat, létrehozza a jelölt indexkép-URL-eket, betölti azokat képként a böngészőben, elhagyja a sikerteleneket és a helyőrzőket, rangsorolja a túlélőket, és a legjobb állóképet jeleníti meg elsőként. Nem tölt le videót vagy hanganyagot, nem hív meg privát YouTube API-t, és nem tárolja a beillesztett linkeket a 11tik szervereken.</p>"
+    },
+    {
+      "heading": "25 URL-címre korlátozva",
+      "html": "<p>Minden egyes tömeges futtatás akár<strong>25 sor</strong>Ez a korlát lehetővé teszi a képellenőrzés folyamatosságát a böngészőben. Több azonosítóhoz futtasson több köteget, vagy exportáljon CSV-fájlt minden futtatásból, és egyesítse azokat offline. Nincs 500 vagy 1000 URL-ből álló szerverköteg.</p>"
+    },
+    {
+      "heading": "Kliensoldali feldolgozás",
+      "html": "<p>Minden kinyerés a munkamenetedben történik. A hálózati kérések a böngésződtől a nyilvános kiszolgálókra jutnak.<code>i.ytimg.com</code>(és kapcsolódó) hosztok. A beillesztett URL-eket nem tölti fel a 11tik oldalra szerveroldali adatgyűjtés céljából.</p>"
+    },
+    {
+      "heading": "CSV és JSON exportálás",
+      "html": "<p>Sikeres futtatás után az opcionális export soronként tartalmazza a videó azonosítóját, címét, megosztási URL-jét és az érvényesített kép URL-jét – hasznos a kutatási naplókhoz. Az export az adott munkamenetben érvényesített adatokat tükrözi, nem pedig egy garantált maxres oszlopot minden azonosítóhoz.</p>"
+    },
+    {
+      "heading": "Hiba taxonómia",
+      "html": "<ul>\n    <li><strong>Elemzési hiba:</strong>A(z) „[P2]]” sor nem támogatott megtekintési, rövid videós, élő, beágyazott, youtu.be vagy csatornakibontású URL-cím.</li>\n    <li><strong>Videó nem elérhető:</strong>privát, eltávolított, korlátozott vagy feldolgozás alatt – a nyilvános továbbra sem érvényesíthető. Lásd:<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miért nem jelenik meg a miniatűrkép</a>.</li>\n    <li><strong>Hiányzó változat:</strong>a videó nyilvános, de a Maxres (vagy más magas szintű) 404-es hibakódok; az alacsonyabb méret továbbra is működik. Lásd:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres tartalék</a>.</li>\n    <li><strong>Helyőrző elutasítva:</strong>Az URL válaszolt, de úgy nézett ki, mint egy apró, szürke, hiányzó fájlt ábrázoló csempe.</li>\n  </ul>"
+    },
+    {
+      "heading": "Érvénytelen, privát és nem elérhető videók",
+      "html": "<p>A 11tik csak nyilvános CDN-felvételeket jelenít meg. A nyilvános csomagolás nélküli, nem listázott videók, a csak tagoknak feltöltött tartalmak, a korhatáros tartalmak és a törölt videók jellemzően üres kártyákat hoznak létre – nem egy kisebb „titkos” fájlt. Ne számíts arra, hogy a Bulk megkerüli a hozzáférés-vezérlést.</p>"
+    },
+    {
+      "heading": "Csatorna URL-ek vs. manuálisan megadott megtekintési linkek",
+      "html": "<p>Másolj be egy nyilvános csatorna URL-címét egy sorba, és a Bulk kibontja a legutóbbi nyilvános feltöltéseket RSS-stílusú felderítéssel, majd kinyeri az egyes azonosítókat – a kibontás után is ugyanazzal a 25 URL-korláttal. A manuálisan beillesztett megtekintési linkek kihagyják a csatorna felderítését. Teljes csatorna munkafolyamat:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">csatornakivonási útmutató</a>.</p>"
+    },
+    {
+      "heading": "Magánélet",
+      "html": "<p>A beillesztett URL-eket a böngésződ helyben dolgozza fel a kinyeréshez. Olvasd el.<a href=\"https://www.11tik.com/privacy\">Magánélet</a>webhelyelemzéshez; a Bulk nem ad hozzá külön szerveroldali privát API-t.</p>"
+    },
+    {
+      "heading": "Újrapróbálkozási útmutató",
+      "html": "<p>Új egyéni Studio-bélyegkép vagy friss feltöltés után várj a feldolgozásra, majd futtasd újra ugyanazt a megtekintési URL-t. Az átmeneti CDN-késés néha második próbálkozásra megszűnik; a tartósan üres eredmények általában azt jelentik, hogy az adott azonosítóhoz már nem létezik nyilvános elem.</p>"
+    },
+    {
+      "heading": "Reális elvárások",
+      "html": "<p>Nem minden nyilvános videó tesz közzé maximális értékeket. A miénkben<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videós minta</a>, max. értékek validálva 286/300 azonosítóra (minta hatókörű). A Bulk a soronként legmagasabb validált nyilvános fájlt adja vissza – nem garantált 1280×720 felbontást minden sorhoz. URL anatómia:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">indexkép URL útmutató</a>.</p>"
+    },
+    {
       "heading": "Mi tartozik a listába?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= Azonosítók</li>\n    <li>youtu.be rövid linkek</li>\n    <li>youtube.com/shorts/ Azonosítók</li>\n    </ul>\n  <p>A privát, a nyilvános indexkép nélküli, nem listázott vagy a korhatáros videók nem adnak vissza állóképet. Ez várható. Lásd még:<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek indexképei</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= Azonosítók</li>\n    <li>youtu.be rövid linkek</li>\n    <li>youtube.com/shorts/ Azonosítók</li>\n    </ul>\n  <p>A privát, a nyilvános indexkép nélküli, nem listázott vagy a korhatáros videók nem adnak vissza állóképet. Ez várható. Lásd még:<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Rövidfilmek indexképei</a>.</p>"
     },
     {
       "heading": "Hogyan kell tömeges kinyerést futtatni",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Felhasználhatom ezt versenytársak kutatására?",
-      "html": "<p>Igen, a nyilvános csomagolás tanulmányozásához. Ne tegye közzé újra más alkotó bélyegképét saját feltöltésként. A szerzői jog a jogtulajdonosnál marad. A 11tik csak azokat a fájlokat tölti le, amelyeket a YouTube már nyilvánosan tárol.</p>\n  <p><a href=\"https://www.11tik.com/\">Tömeges kivonatolás megnyitása a 11tik oldalon →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+      "html": "<p>Igen, a nyilvános csomagolás tanulmányozásához. Ne tegye közzé újra más alkotó bélyegképét saját feltöltésként. A szerzői jog a jogtulajdonosnál marad. A 11tik csak azokat a fájlokat tölti le, amelyeket a YouTube már nyilvánosan tárol.</p>\n  <p><a href=\"https://www.11tik.com/\">Tömeges kivonatolás megnyitása a 11tik oldalon →</a></p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>.</p>"
     }
   ],
   "faq": [
@@ -44,10 +84,10 @@
     },
     {
       "question": "Felhasználhatom ezt versenytársak kutatására?",
-      "answer": "Igen, a nyilvános csomagolás tanulmányozására. Ne tegye közzé más alkotó bélyegképét sajátjaként. A szerzői jog a jogtulajdonosnál marad.",
-      "answerHtml": "Igen, a nyilvános csomagolás tanulmányozására. Ne tegye közzé más alkotó bélyegképét sajátjaként. A szerzői jog a jogtulajdonosnál marad."
+      "answer": "Igen, a nyilvános csomagolás tanulmányozására. Ne tegye közzé más alkotó bélyegképét sajátjaként. A szerzői jog a jogtulajdonost illeti.",
+      "answerHtml": "Igen, a nyilvános csomagolás tanulmányozására. Ne tegye közzé más alkotó bélyegképét sajátjaként. A szerzői jog a jogtulajdonost illeti."
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>.</p>"
 }

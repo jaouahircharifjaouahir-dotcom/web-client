@@ -25,7 +25,7 @@
     },
     {
       "heading": "Miksi kuvakaappaukset eivät näy Google-kuvissa ja sosiaalisen median esikatseluissa?",
-      "html": "<p>Niiden kuvasuhde on usein väärä, ne sisältävät käyttöliittymän ja ne pakkaa kahdesti. Open Graph ja monet CMS-kentät haluavat 16:9-kuvan, joka on noin 1280×720. Tämä vastaa maxresdefault-arvoa, kun se on olemassa – katso<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">pikkukuvien koko-opas</a>.</p>"
+      "html": "<p>Niiden kuvasuhde on usein väärä, ne sisältävät käyttöliittymän ja ne pakkaa kahdesti. Open Graph ja monet CMS-kentät haluavat 16:9-kuvan, joka on noin 1280×720. Tämä vastaa maxresdefault-arvoa, kun se on olemassa – katso<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">pikkukuvien koko-opas</a>.</p>"
     },
     {
       "heading": "Miten tallennan oikean pikkukuvan?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Milloin kuvakaappauksesta on vielä hyötyä?",
-      "html": "<p>Käytä kuvakaappausta vain käyttöliittymävirheen tai videon sisältämän hetken dokumentointiin. Älä käytä sitä virallisena pikkukuvana, blogin sankarikuvana tai jaettavana kuvana, jos julkinen osa on edelleen olemassa.</p>\n  <p><a href=\"https://www.11tik.com/\">Hanki oikea julkinen pikkukuva →</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+      "html": "<p>Käytä kuvakaappausta vain käyttöliittymävirheen tai videon sisältämän hetken dokumentointiin. Älä käytä sitä virallisena pikkukuvana, blogin sankarikuvana tai jaettavana kuvana, jos julkinen osa on edelleen olemassa.</p>\n  <p><a href=\"https://www.11tik.com/\">Hanki oikea julkinen pikkukuva →</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>.</p>"
 }

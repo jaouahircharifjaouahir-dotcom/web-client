@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "de",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "So erhalten Sie das originale YouTube-Vorschaubild | 11tik",
   "description": "Verwenden Sie das originale, öffentliche YouTube-Thumbnail, das YouTube bereits hostet. Es handelt sich um ein Standbild des CDN, nicht um ein aus dem Video extrahiertes Einzelbild.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Was ist das originale YouTube-Vorschaubild?",
-      "html": "<p>Es handelt sich um das Vorschaubild, das YouTube bereits auf seinen Bildservern speichert. Es ist die Datei, die für die Suche und die vorgeschlagenen Regale verwendet wird, nicht ein mit der Druck-Taste aufgenommenes Bild.</p>"
+      "html": "<p>Es handelt sich um das Vorschaubild, das YouTube bereits auf seinen öffentlichen Bildservern für eine Video-ID speichert – dieselbe Dateiklasse, die auch in der Suche und in den Empfehlungen verwendet wird. Im Vokabular von 11tik bedeutet „original“, dass<strong>öffentliches CDN-Derivat</strong>, keines der folgenden:</p>\n  <ul>\n    <li>Die ursprüngliche Quelldatei, die der Uploader in YouTube Studio hochgeladen hat.</li>\n    <li>Eine unformatierte Projektdatei (PSD, AI usw.).</li>\n    <li>Ein aus dem Videostream aufgenommenes Einzelbild.</li>\n    <li>Ein Asset mit garantierter Quellauflösung oder ein 4K-Master</li>\n  </ul>\n  <p>Für die<strong>größte validierte öffentliche Datei</strong>Wenn maxres fehlt, lesen Sie die<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Reiseführer von höchster Qualität</a>Informationen zu Pixelebenen und Dateinamen finden Sie unter<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Größenratgeber</a>Die</p>"
     },
     {
       "heading": "Worin besteht der Unterschied zu einem Screenshot?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Wie kann ich überprüfen, ob ich tatsächlich die Originaldatei erhalten habe?",
-      "html": "<p>Verwenden Sie die Listen für Größe und Abmessungen 11tik, nachdem die Datei validiert wurde. Wenn das Bild wie ein Screenshot eines Spielers aussieht, haben Sie nicht das gehostete Vorschaubild heruntergeladen.</p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Höchste Qualität</a></p>"
+      "html": "<p>Verwenden Sie die Listen für Größe und Abmessungen 11tik, nachdem die Datei validiert wurde. Wenn das Bild wie ein Screenshot eines Spielers aussieht, haben Sie nicht das gehostete Vorschaubild heruntergeladen.</p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/about\">Um</a>oder<a href=\"https://www.11tik.com/contact\">Kontakt</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Höchste Qualität</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/about\">Um</a>oder<a href=\"https://www.11tik.com/contact\">Kontakt</a>Die</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "ms",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Cara Muat Turun Gambar Kecil YouTube Shorts dalam HD | 11tik",
   "description": "Muat turun lakaran kecil YouTube Shorts dalam pelayar. Shorts menggunakan gambar pegun awam yang sama seperti URL tontonan. Fail tersebut selalunya dalam bentuk landskap.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Adakah fail Shorts sama dengan fail halaman tontonan?",
-      "html": "<p>Mereka menggunakan nama saiz awam yang sama yang ditandakan dengan ID video. Gambar pegun mungkin kelihatan seperti kotak huruf jika YouTube menyimpan terbitan skrin lebar.</p>"
+      "html": "<p>Mereka menggunakan nama saiz awam yang sama yang dikunci oleh ID video pada<code>i.ytimg.com</code>. Gambar pegun mungkin kelihatan seperti kotak surat jika YouTube menyimpan terbitan skrin lebar. Anatomi URL untuk pautan Pendek, tontonan dan youtu.be dibincangkan dalam<a href=\"https://www.11tik.com/youtube-thumbnail-url\">panduan URL lakaran kecil</a>.</p>"
+    },
+    {
+      "heading": "Adakah Shorts sentiasa menerbitkan maxres?",
+      "html": "<p>Tidak. Dalam kami<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Sampel 300 video</a>, maxresdefault disahkan untuk<strong>286 daripada 300</strong>ID (<strong>95.33%</strong>); yang<strong>14 daripada 300</strong>tanpa maxres masih mempunyai kadar awam yang lebih rendah yang sah. Itu adalah bukti skop sampel untuk tingkah laku sandaran, bukan peraturan Shorts universal.</p>"
     },
     {
       "heading": "Bagaimana jika tiada imej muncul?",
-      "html": "<p>Gambar pendek mungkin peribadi, dipadam atau tanpa gambar awam. Pengekstrak tidak boleh memintas had tersebut.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Pengekstrak</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cara memuat turun</a></p>"
+      "html": "<p>Gambar pendek mungkin peribadi, dipadam atau tanpa gambar awam. Pengekstrak tidak boleh memintas had tersebut.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/about\">Mengenai</a>atau<a href=\"https://www.11tik.com/contact\">Hubungi</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Pengekstrak</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Cara memuat turun</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Hubungi</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Pengekstrak Thumbnail YouTube dalam pelayar. Lihat<a href=\"https://www.11tik.com/about\">Mengenai</a>atau<a href=\"https://www.11tik.com/contact\">Hubungi</a>.</p>"
 }

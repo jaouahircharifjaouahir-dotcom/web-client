@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "hr",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Minijatura YouTube Studija 2026. | 11tik",
   "description": "U 2026. godini, YouTube kanali koji ispunjavaju uvjete i dalje prenose prilagođenu minijaturu iz Studija na stranicu s pojedinostima videozapisa. Oznake izbornika se premještaju, ali rezultat je isti: YouTube hostira novu javnu sliku. 11tik ne prenosi tu datoteku. Čita samo javne URL-ove slika nakon što postoje.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Otvorite YouTube Studio i odaberite videozapis.</li>\n    <li>U odjeljku Detalji prenesite sliku u omjeru 16:9 (uobičajeni cilj YouTubea je 1280 × 720).</li>\n    <li>Spremi i pričekaj dok se obrada ne završi.</li>\n  </ol>\n  <p>Točni nazivi gumba mogu se promijeniti. Ako vaš račun ne ispunjava uvjete za prilagođene minijature, Studio neće ponuditi prijenos. 11tik to ne može zaobići.</p>"
     },
     {
+      "heading": "Dijagnostičko stablo: Promjena u studiju u odnosu na javnu fotografiju",
+      "html": "<ol>\n    <li>Nakon što prenesete prilagođenu umjetnost u Studio, pričekajte da se obrada završi.</li>\n    <li>Zalijepite javni URL za praćenje u<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Prikazuju se neke veličine, nedostaju maksimalne vrijednosti?</strong>→ problem s varijantom/rezervnim rješenjem, a ne neuspjeli prijenos u Studio. Pogledajte<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Objašnjenje maxresdefault-a</a>.</li>\n    <li><strong>Nema nikakvih veličina?</strong>→ video se možda još uvijek obrađuje, privatan je ili je ograničen za javne CDN fotografije. Vidi<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">sličica se ne prikazuje</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Kako mogu provjeriti minijaturu nakon što je promijenim u Studiju?",
-      "html": "<p>Zalijepite URL za praćenje u<a href=\"https://www.11tik.com/\">11tik</a>Preuzmite ili kopirajte prvu navedenu veličinu. Ako nedostaje maxresdefault, sljedeća javna datoteka je iskreni maksimum. To je YouTubeov katalog, a ne neuspjeli izvadak. Vidi također<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Objašnjenje maxresdefault-a</a>.</p>"
+      "html": "<p>Zalijepite URL za praćenje u<a href=\"https://www.11tik.com/\">11tik</a>Preuzmite ili kopirajte prvu navedenu veličinu. Ako nedostaje maxresdefault, sljedeća javna datoteka je iskreni maksimum. To je YouTubeov katalog, a ne neuspjeli izvadak. Vidi također<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Objašnjenje maxresdefault-a</a>.</p>"
     },
     {
       "heading": "Zamjenjuje li 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Što trebam učiniti kada slika izgleda staro?",
-      "html": "<p>CDN-ovi slika mogu kasniti. Ponovno provjerite kasnije, osvježite stranicu ili kopirajte URL 11tik potvrđuje. Nemojte pretpostavljati da se radi o 4K masteru; javna maksimalna rezolucija je obično 1280 × 720. Snimka zaslona Studija nije javna datoteka sličice.</p>\n  <p>Povezano:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">ekstraktor vs. proizvođač</a>.</p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otvorite ekstraktor</a></p>"
+      "html": "<p>CDN-ovi slika mogu kasniti. Ponovno provjerite kasnije, osvježite stranicu ili kopirajte URL 11tik potvrđuje. Nemojte pretpostavljati da se radi o 4K masteru; javna maksimalna rezolucija je obično 1280 × 720. Snimka zaslona Studija nije javna datoteka sličice.</p>\n  <p>Povezano:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">ekstraktor vs. proizvođač</a>.</p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otvorite ekstraktor</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>.</p>"
 }

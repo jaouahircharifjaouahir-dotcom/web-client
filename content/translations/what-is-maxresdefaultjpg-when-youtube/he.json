@@ -2,7 +2,7 @@
   "contentId": "what-is-maxresdefaultjpg-when-youtube",
   "articleId": "what-is-maxresdefaultjpg-when-youtube",
   "locale": "he",
-  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "sourceHash": "10ac7f566273ce8942402962c706a3f29c14fedde02af64e3b85e4531197a834",
   "status": "ready",
   "title": "מה זה maxresdefault.jpg? למה זה 404 ומה להוריד במקום | 11tik",
   "description": "maxresdefault.jpg הוא בדרך כלל 1280×720 כאשר יוטיוב מפרסמת אותו. 404 הוא נורמלי - השתמש בשם התמונות הציבורי הבא, לא בשם קובץ מנחש.",
@@ -26,11 +26,15 @@
   "sections": [
     {
       "heading": "תשובה מהירה",
-      "html": "<p><code>maxresdefault.jpg</code>הוא שם קובץ תמונות ממוזערות ציבורי ב-CDN התמונות של YouTube. כאשר הקובץ קיים, הוא בדרך כלל<strong>1280×720</strong>זה<strong>לֹא</strong>מובטח לכל סרטון. 404 (או placeholder אפור קטן) פירושו שהנגזרת הזו מעולם לא פורסמה עבור מזהה הסרטון הזה. הדבק את כתובת ה-URL לצפייה ב<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>ולהוריד את הגודל הראשון המופיע ברשימה - הכלי כבר דילג על שמות חסרים ודירג ניצולים כגון<code>hq720</code>,<code>sddefault</code>, או<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">קובץ maxres חסר הוא בעיית חלופה, לא הוכחה לכך שאין לסרטון תמונה ממוזערת.</p>"
+      "html": "<p><code>maxresdefault.jpg</code>הוא שם קובץ תמונות ממוזערות ציבורי ב-CDN התמונות של YouTube. כאשר הקובץ קיים, הוא בדרך כלל<strong>1280×720</strong>זה<strong>לֹא</strong>מובטח לכל סרטון. 404 (או placeholder אפור קטן) פירושו שהנגזרת הזו מעולם לא פורסמה עבור מזהה הסרטון הזה. הדבק את כתובת ה-URL לצפייה ב<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>ולהוריד את הגודל הראשון המופיע ברשימה - הכלי כבר דילג על שמות חסרים ודירג ניצולים כגון<code>hq720</code>,<code>sddefault</code>, או<code>hqdefault</code>.</p>\n\n  <img alt=\"פתרון בעיות בזרימה מ-URL maxresdefault מנחש שמקבל 404s לגודל התמונה הממוזערת הבאה של YouTube שאושרה\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">קובץ maxres חסר הוא בעיית חלופה, לא הוכחה לכך שאין לסרטון תמונה ממוזערת.</p>"
     },
     {
       "heading": "מה זה maxresdefault.jpg?",
-      "html": "<p>זהו שם קובץ, לא ערובה לאיכות קסומה. כתובת ה-JPEG הרגילה נראית כך:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>כאשר יוטיוב פרסמה גם גרסה תאומה של WebP, 11tik בודקת:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>שניהם יושבים על<code>i.ytimg.com</code>אלו תמונות סטילס - לא זרם הווידאו, לא ייצוא פרטי של Studio, ולא קובץ מאסטר של 4K. ציפיות הפיקסלים וגדלים אחרים מכוסים ב...<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך לגודל ורזולוציה של תמונות ממוזערות</a>בניית כתובות URL מכוסה ב<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">מדריך כתובות URL של תמונות ממוזערות</a>.</p>"
+      "html": "<p>זהו שם קובץ, לא ערובה לאיכות קסומה. כתובת ה-JPEG הרגילה נראית כך:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>כאשר יוטיוב פרסמה גם גרסה תאומה של WebP, 11tik בודקת:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>שניהם יושבים על<code>i.ytimg.com</code>אלו תמונות סטילס - לא זרם הווידאו, לא ייצוא פרטי של Studio, ולא קובץ מאסטר של 4K. ציפיות הפיקסלים וגדלים אחרים מכוסים ב...<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">מדריך לגודל ורזולוציה של תמונות ממוזערות</a>בניית כתובות URL מכוסה ב<a href=\"https://www.11tik.com/youtube-thumbnail-url\">מדריך כתובות URL של תמונות ממוזערות</a>.</p>"
+    },
+    {
+      "heading": "מה הראה מדגם 300 הסרטונים שלנו (לא כלל אוניברסלי)",
+      "html": "<p>אצלנו<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">מחקר בגודל תמונות ממוזערות של 300 סרטונים</a>, מדדנו את זמינות הגרסה הציבורית עבור שמונה שמות קבצים לכל מזהה. במדגם זה בלבד,<code>maxresdefault</code>מאומת עבור<strong>286 מתוך 300</strong>מזהי וידאו (<strong>95.33%</strong>השני<strong>14 מתוך 300</strong>לא היה קובץ maxres שמיש - אבל כל אחד מאותם 14 עדיין החזיר קובץ תקין<code>hqdefault</code>סטילס ציבורי. דפוס זה הוא ראיה מדגמית להתנהגות גיבוי, לא ערובה לכל העלאה ביוטיוב.</p>\n  <p>כאשר חסר maxres בבדיקה שלך, התייחס אליו כאל<strong>גרסת תמונה ממוזערת</strong>בעיה: רד לשם הקובץ הציבורי המאומת הבא במקום להניח שלסרטון אין תמונה ממוזערת כלל. כשלים ברמת הסרטון (פרטי, נמחק, מוגבל) הם אבחנה נפרדת - ראה את<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">מדריך לתמונות ממוזערות שלא מופיעות</a>.</p>"
     },
     {
       "heading": "למה סרטון יוטיוב אמיתי עדיין יכול להחזיר 404 עבור תוצאות מקסימליות?",
@@ -42,7 +46,7 @@
     },
     {
       "heading": "גרסאות גיבוי 11tik בודקות בפועל",
-      "html": "<p>סדר גילוי מועמדים מהציבור (הגבוה ביותר תחילה):</p>\n  <table>\n    <thead>\n      <tr><th>שם הקובץ</th><th>תבנית נתיב</th><th>גודל אופייני כאשר קיים</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 מחלקה</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>שורות חסרות מדלגות. ההורדה הראשונה ברשימה היא השורדת בעלת המספר הגבוה ביותר - לא השם הארוך ביותר שהקלדת. בחירת הפורמט בין WebP ל-JPEG מכוסה ב<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">תמונות ממוזערות של WebP לעומת JPEG ביוטיוב</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">התייחסו לשמות קבצים כשלבים אופציונליים. רדו למטה עד שתמונה אמיתית תגיב.</p>"
+      "html": "<p>סדר גילוי מועמדים מהציבור (הגבוה ביותר תחילה):</p>\n  <table>\n    <thead>\n      <tr><th>שם הקובץ</th><th>תבנית נתיב</th><th>גודל אופייני כאשר קיים</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 מחלקה</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>שורות חסרות מדלגות. ההורדה הראשונה ברשימה היא השורדת בעלת המספר הגבוה ביותר - לא השם הארוך ביותר שהקלדת. בחירת הפורמט בין WebP ל-JPEG מכוסה ב<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">תמונות ממוזערות של WebP לעומת JPEG ביוטיוב</a>.</p>\n\n  <img alt=\"סולם של שמות קבצי תמונות ממוזערות ביוטיוב מ-maxresdefault עד ברירת המחדל, המציג דילוג על שלבים חסרים\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">התייחסו לשמות קבצים כשלבים אופציונליים. רדו למטה עד שתמונה אמיתית תגיב.</p>"
     },
     {
       "heading": "כיצד 11tik בודק זמינות",
@@ -50,15 +54,15 @@
     },
     {
       "heading": "רשימת בדיקה מעשית לפתרון בעיות",
-      "html": "<ol>\n    <li>ודא שהסרטון ציבורי ושהזיהוי נכון.</li>\n    <li>מִבְחָן<code>maxresdefault.jpg</code>פעם אחת. אם זה נכשל, תפסיק לנחש.</li>\n    <li>הדבק את אותו קישור לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>.</li>\n    <li>הורד את תמונת הסטילס הראשונה המופיעה, או העתק את כתובת האתר של התמונה שלה.</li>\n    <li>אם לא מופיע דבר, ייתכן שהסרטון פרטי, נמחק, עם הגבלת גיל או ללא תמונות סטילס ציבוריות.</li>\n    <li>לשימוש במערכת ניהול תוכן (CMS), יש להעדיף עותק מתארח של תמונה מאומתת על פני נתיב CDN מקושר. ראה את<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">בלוג / מדריך גרף פתוח</a>.</li>\n  </ol>"
+      "html": "<ol>\n    <li>ודא שהסרטון ציבורי ושהזיהוי נכון.</li>\n    <li>מִבְחָן<code>maxresdefault.jpg</code>פעם אחת. אם זה נכשל, תפסיק לנחש.</li>\n    <li>הדבק את אותו קישור לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>.</li>\n    <li>הורד את תמונת הסטילס הראשונה המופיעה, או העתק את כתובת האתר של התמונה שלה.</li>\n    <li>אם לא מופיע דבר, ייתכן שהסרטון פרטי, נמחק, עם הגבלת גיל או ללא תמונות סטילס ציבוריות.</li>\n    <li>לשימוש במערכת ניהול תוכן (CMS), יש להעדיף עותק מתארח של תמונה מאומתת על פני נתיב CDN מקושר. ראה את<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">בלוג / מדריך גרף פתוח</a>.</li>\n  </ol>"
     },
     {
       "heading": "טעויות נפוצות",
-      "html": "<ul>\n    <li>בהנחה שלכל סרטון יש רזולוציה מקסימלית, כי סרטון פופולרי אחד כזה.</li>\n    <li>קידוד קשיח<code>maxresdefault.jpg</code>ב-HTML ייצור ללא בדיקה.</li>\n    <li>קריאה למתוח<code>hqdefault</code>\"מקסימום\".</li>\n    <li>בלבול בין צילום מסך של השחקן לבין צילום ה-CDN -<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">צילום מסך לעומת תמונה ממוזערת אמיתית</a>.</li>\n    <li>מצפה ל-4K. רזולוציה מקסימלית לציבור היא בדרך כלל 1280×720 כאשר היא קיימת —<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">מדריך באיכות הגבוהה ביותר</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>בהנחה שלכל סרטון יש רזולוציה מקסימלית, כי סרטון פופולרי אחד כזה.</li>\n    <li>קידוד קשיח<code>maxresdefault.jpg</code>ב-HTML של ייצור ללא בדיקה.</li>\n    <li>קריאה למתוח<code>hqdefault</code>\"מקסימום\".</li>\n    <li>בלבול בין צילום מסך של השחקן לבין צילום ה-CDN -<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">צילום מסך לעומת תמונה ממוזערת אמיתית</a>.</li>\n    <li>מצפה ל-4K. רזולוציה מקסימלית לציבור היא בדרך כלל 1280×720 כאשר היא קיימת —<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">מדריך באיכות הגבוהה ביותר</a>.</li>\n  </ul>"
     },
     {
       "heading": "השלב הבא",
-      "html": "<p>הדבק כתובת URL ציבורית של YouTube לתוך<a href=\"https://www.11tik.com/\">חוֹלֵץ</a>אם חסר רזולוציית מקסימום, שמור את התמונה הסטולה הבאה - זהו קובץ ה-HD האמיתי עבור סרטון זה.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik. תמונות סטילס לציבור בלבד; אין להוריד סרטונים.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+      "html": "<p>הדבק כתובת URL ציבורית של YouTube לתוך<a href=\"https://www.11tik.com/\">חוֹלֵץ</a>אם חסר רזולוציית מקסימום, שמור את התמונה הסטולה הבאה - זהו קובץ ה-HD האמיתי עבור סרטון זה.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik. תמונות סטילס לציבור בלבד; אין להוריד סרטונים.<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/privacy\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/terms-of-use\">תנאים</a>.</p>"
     }
   ],
   "faq": [
@@ -90,9 +94,9 @@
     {
       "question": "איך אני מוריד את הגיבוי במהירות?",
       "answer": "השתמש במדריך ההורדה: הדבק, חלץ, שמור את הקובץ הראשון המופיע.",
-      "answerHtml": "<p>השתמש ב<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">מדריך להורדה</a>הדבק, חילוץ, שמירה של הקובץ הראשון ברשימה.</p>"
+      "answerHtml": "<p>השתמש ב<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">מדריך להורדה</a>הדבק, חילוץ, שמירה של הקובץ הראשון ברשימה.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik. תמונות סטילס לציבור בלבד; אין להוריד סרטונים.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/p/privacy.html\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">תנאים</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik. תמונות סטילס לציבור בלבד; אין להוריד סרטונים.<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>·<a href=\"https://www.11tik.com/privacy\">פְּרָטִיוּת</a>·<a href=\"https://www.11tik.com/terms-of-use\">תנאים</a>.</p>"
 }

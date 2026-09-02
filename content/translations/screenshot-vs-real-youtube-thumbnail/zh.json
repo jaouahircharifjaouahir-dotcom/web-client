@@ -25,7 +25,7 @@
     },
     {
       "heading": "为什么屏幕截图在谷歌图片和社交媒体预览中无法显示？",
-      "html": "<p>它们通常宽高比错误，包含用户界面，并且压缩两次。Open Graph 和许多 CMS 字段需要 16:9 的分辨率，大约为 1280×720。这与 maxresdefault 匹配（如果存在）——参见<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">缩略图尺寸指南</a>。</p>"
+      "html": "<p>它们通常宽高比错误，包含用户界面，并且压缩两次。Open Graph 和许多 CMS 字段需要 16:9 的分辨率，大约为 1280×720。这与 maxresdefault 匹配（如果存在）——参见<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">缩略图尺寸指南</a>。</p>"
     },
     {
       "heading": "如何保存真实的缩略图？",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "截图在什么情况下仍然有用？",
-      "html": "<p>截图仅用于记录用户界面错误或视频中的某个瞬间。如果已有公开的截图，请勿将其用作官方缩略图、博客文章首页图片或分享图片。</p>\n  <p><a href=\"https://www.11tik.com/\">获取真实的公开缩略图 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+      "html": "<p>截图仅用于记录用户界面错误或视频中的某个瞬间。如果已有公开的截图，请勿将其用作官方缩略图、博客文章首页图片或分享图片。</p>\n  <p><a href=\"https://www.11tik.com/\">获取真实的公开缩略图 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>。</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>。</p>"
 }

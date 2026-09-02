@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "hu",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "YouTube-bélyegkép használata blog kiemelt képként vagy nyílt grafikon előnézetként | 11tik",
   "description": "Győződj meg róla, hogy még létezik egy nyilvános YouTube, majd tárolj egy másolatot a WordPress, Blogger vagy az og:image számára. Ne használj hotlinket egy kitalált maxresdefault URL-re.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "Gyors válasz",
-      "html": "<p>Illesszen be egy nyilvános YouTube URL-t ide<a href=\"https://www.11tik.com/\">11tik</a>, várjon az érvényesített méretekre, majd<strong>letöltés</strong>az első állóképet, és töltsd fel a CMS-edbe, vagy<strong>másolja a kép URL-jét</strong>csak betöltés után. Tartós bejegyzésekhez használj saját példányt.<code>i.ytimg.com</code>Kényelmes a vázlatokhoz, de törékeny a közösségi kártyák éles használatához.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Megerősítés → másolás vagy letöltés → tárhely → hivatkozás HTML-ben / kiemelt képben / Open Graph-ban.</p>"
+      "html": "<p>Illesszen be egy nyilvános YouTube URL-t ide<a href=\"https://www.11tik.com/\">11tik</a>, várjon az érvényesített méretekre, majd<strong>letöltés</strong>az első állóképet, és töltsd fel a CMS-edbe, vagy<strong>másolja a kép URL-jét</strong>csak betöltés után. Tartós bejegyzésekhez használj saját példányt.<code>i.ytimg.com</code>Kényelmes a vázlatokhoz, de törékeny a közösségi kártyák éles használatához.</p>\n\n  <img alt=\"Munkafolyamat a YouTube-bélyegkép megerősítésétől a 11tik-on a WordPress-ben való feltöltéséig vagy\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Megerősítés → másolás vagy letöltés → tárhely → hivatkozás HTML-ben / kiemelt képben / Open Graph-ban.</p>"
     },
     {
       "heading": "Mi az a közvetlen indexkép URL?",
-      "html": "<p>Egy közvetlen indexkép URL például egy JPEG vagy WebP fájlra mutat a YouTube kép CDN-jén.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Ez nem a megtekintési oldal. Hogyan épülnek fel ezek a címek:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube indexkép URL-jének beszerzése</a>A méretek közötti különbségek:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">méret- és felbontási útmutató</a>.</p>"
+      "html": "<p>Egy közvetlen indexkép URL például egy JPEG vagy WebP fájlra mutat a YouTube kép CDN-jén.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Ez nem a megtekintési oldal. Hogyan épülnek fel ezek a címek:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">YouTube indexkép URL-jének beszerzése</a>A méretek közötti különbségek:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">méret- és felbontási útmutató</a>.</p>"
     },
     {
       "heading": "HTML példa",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "WordPress munkafolyamat",
-      "html": "<ol>\n    <li>Vágd ki a videót a 11tik-ről, és töltsd le az első listázott állóképet.</li>\n    <li>WordPressben: Média → Új hozzáadása → töltsd fel a fájlt.</li>\n    <li>Beállítás kiemelt képként.</li>\n    <li>A Yoastban, Rank Mathban vagy hasonlóban ellenőrizd, hogy a közösségi előnézet használja-e az adott mellékletet (vagy tölts fel egy dedikált eredeti kivágást).</li>\n    <li>Írj alt szöveget, amely elnevezi a videót, és amely kiemeli, hogy a fájl egy nyilvános YouTube-állókép – ne pedig egy telezsúfolt kulcsszólistát.</li>\n  </ol>\n  <p>Kerülje a nyers kép beillesztését<code>maxresdefault.jpg</code>elérési utat a média mezőbe, amíg a fájl hitelességét nem bizonyítják. A hiányzó maxres gyakori —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 útmutató</a>.</p>"
+      "html": "<ol>\n    <li>Vágd ki a videót a 11tik-ről, és töltsd le az első listázott állóképet.</li>\n    <li>WordPressben: Média → Új hozzáadása → töltsd fel a fájlt.</li>\n    <li>Beállítás kiemelt képként.</li>\n    <li>A Yoastban, Rank Mathban vagy hasonlóban ellenőrizd, hogy a közösségi előnézet használja-e az adott mellékletet (vagy tölts fel egy dedikált eredeti kivágást).</li>\n    <li>Írj alt szöveget, amely elnevezi a videót, és amely kiemeli, hogy a fájl egy nyilvános YouTube-állókép – ne pedig egy telezsúfolt kulcsszólistát.</li>\n  </ol>\n  <p>Kerülje a nyers kép beillesztését<code>maxresdefault.jpg</code>elérési utat a média mezőbe, amíg a fájl hitelességét nem bizonyítják. A hiányzó maxres gyakori —<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404 útmutató</a>.</p>"
     },
     {
       "heading": "Blogger és statikus webhelyek",
-      "html": "<p><strong>Blogger:</strong>Töltsd fel az állóképet a bejegyzésszerkesztőbe, majd használd újra a Blogger-kép URL-jét az általad kezelt téma-/közösségi kódrészlet mezőkhöz. Ne hagyatkozz egy kitalált YouTube CDN-útvonalra egy számodra fontos közzétett bejegyzés esetében.</p>\n  <p><strong>Statikus generátorok:</strong>Kötsd be a fájlt a repódba vagy a CDN-be, majd állíts be front-matter/meta tageket az adott HTTPS-forráshoz. Ha szükséges, tartsd a vázlatokat egy ideiglenes i.ytimg.com URL-en, de a saját tárhelyszolgáltatódról szállítsd.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">A Kiemelt kép és az og:image megoszthat egy fájlt, de mindkettőhöz egy ténylegesen létező URL-címre van szükség.</p>"
+      "html": "<p><strong>Blogger:</strong>Töltsd fel az állóképet a bejegyzésszerkesztőbe, majd használd újra a Blogger-kép URL-jét az általad kezelt téma/közösségi kódrészlet mezőkhöz. Ne hagyatkozz egy kitalált YouTube CDN-útvonalra egy számodra fontos közzétett bejegyzés esetében.</p>\n  <p><strong>Statikus generátorok:</strong>Kötsd be a fájlt a repódba vagy a CDN-be, majd állíts be front-matter/meta tageket az adott HTTPS-forráshoz. Ha szükséges, tartsd a vázlatokat egy ideiglenes i.ytimg.com URL-en, de a saját tárhelyszolgáltatódról szállítsd.</p>\n\n  <img alt=\"WordPress kiemelt képfeltöltésének összehasonlítása egy Open Graph közösségi kártyával valós\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">A Kiemelt kép és az og:image megoszthat egy fájlt, de mindkettőhöz egy ténylegesen létező URL-címre van szükség.</p>"
+    },
+    {
+      "heading": "Gyakorlati példák platformonként",
+      "html": "<h3>Kép másolása (először a megerősített URL)</h3>\n  <p>A 11tik oldalon használja<strong>Kép URL-címének másolása</strong>csak miután a böngésződben érvényesült a méret. Illeszd be a HTTPS-címet egy piszkozatba – vagy még jobb, ha letöltöd a fájlt és feltöltöd. Találgatás<code>maxresdefault.jpg</code>Az Open Graph működése megszakad, ha a fájlt soha nem tették közzé. URL-felépítés:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">indexkép URL útmutató</a>.</p>\n  <h3>Helyi tárhely (éles környezetben ajánlott)</h3>\n  <p>Töltsd le az érvényesített állóképet, töltsd fel a médiatáradba vagy a statikus CDN-edre, és hivatkozz a domainedre benne.<code>&lt;img&gt;</code>és<code>og:image</code>Kerülje a törékeny, hosszú távú gyorskapcsolatokat<code>i.ytimg.com</code>azokon a bejegyzéseken, amelyek érdekelnek.</p>\n  <h3>WordPress kiemelt kép + og:image</h3>\n  <p>Média → Új hozzáadása → töltsd fel a letöltött JPEG vagy WebP fájlt → állítsd be a kiemelt képet → ellenőrizd, hogy a Yoast/Rank Math közösségi előnézete használja-e a mellékletet. Újraolvasd a Facebook/Twitter/LinkedIn hibakeresőket az URL módosítása után.</p>\n  <h3>Blogger</h3>\n  <p>Szúrd be a képet a bejegyzésszerkesztőbe, hogy a Blogger tárolja a fájlt, majd használd újra a Blogger CDN URL-t a téma metaadataiban, ha a sablonod közösségi mezőket is tartalmaz. Ne hagyatkozz külső YouTube-kép URL-re egy állandó bejegyzéshez.</p>\n  <h3>Statikus oldalak (Hugo, Eleventy, stb.)</h3>\n  <p>Kép véglegesítése alatta<code>/assets</code>vagy a CDN-ed, hivatkozz rá az elején, és emittáld<code>og:image</code>valós szélességgel/magassággal. Példa metablokkra:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>Mikor elfogadható a gyorslinkelés</h3>\n  <p>Belső jegyzetek, gyors vázlatok vagy ideiglenes kutatási oldalak kapcsolhatnak egy validált<code>i.ytimg.com</code>URL. A gyártási cikkeknek, termékoldalaknak és e-mail kampányoknak tartalmazniuk kell egy szövegrészt. Beágyazott widget az oldalon belüli tartalomkivonatoláshoz:<a href=\"https://www.11tik.com/embed\">beágyazási útmutató</a>.</p>"
     },
     {
       "heading": "Megfontolandó kérdések a nyílt grafikonon",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "Hotlink vs. letöltés",
-      "html": "<table>\n    <thead>\n      <tr><th>Megközelítés</th><th>Legjobb</th><th>Kockázat</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Forróhida i.ytimg.com</td><td>Gyors vázlatok, kutatási jegyzetek</td><td>404-es hibakódok, CDN-változások, nincs termésszabályozás</td></tr>\n      <tr><td>Letöltés + tárhely</td><td>Rangsorolt ​​bejegyzések, termékoldalak</td><td>A fájlt tárolni kell</td></tr>\n      <tr><td>Játékos képernyőképe</td><td>Szinte soha</td><td>UI króm, rossz képarány —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">képernyőkép vs. valóság</a></td></tr>\n    </tbody>\n  </table>\n  <p>Letöltési lépések:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hogyan lehet letölteni egy YouTube indexképet</a>Formátumválasztás, ha WebP és JPEG is létezik:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP vs. JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>Megközelítés</th><th>Legjobb</th><th>Kockázat</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Forróhida i.ytimg.com</td><td>Gyors vázlatok, kutatási jegyzetek</td><td>404-es hibakódok, CDN-változások, nincs termésszabályozás</td></tr>\n      <tr><td>Letöltés + tárhely</td><td>Rangsorolt ​​bejegyzések, termékoldalak</td><td>A fájlt tárolni kell</td></tr>\n      <tr><td>Játékos képernyőképe</td><td>Szinte soha</td><td>UI króm, rossz képarány —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">képernyőkép vs. valóság</a></td></tr>\n    </tbody>\n  </table>\n  <p>Letöltési lépések:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Hogyan lehet letölteni egy YouTube indexképet</a>Formátumválasztás, ha WebP és JPEG is létezik:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP vs. JPEG</a>.</p>"
     },
     {
       "heading": "Képkeresőoptimalizálás alapjai ezekhez az állóképekhez",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "Újrafelhasználás és szerzői jog (nem jogi tanácsadás)",
-      "html": "<p>A nyilvános CDN URL nem licenc. A YouTube-lejátszó beágyazása különbözik az állókép másolától a fő videódba. A fair use tényfüggő. Biztonságosabb szerkesztői minta: illusztráld a videóhoz fűzött kommentárt, tüntesd fel a csatorna nevét, linkeld a videóoldalt, és ne áruld a képet, illetve ne használd saját csatornaképként. Hivatalos egyéni indexkép segítség:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Egyéni videóbélyegképek feltöltése</a>Az oldal szabályai:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+      "html": "<p>A nyilvános CDN URL nem licenc. A YouTube-lejátszó beágyazása különbözik az állókép másolától a fő videódba. A fair use tényfüggő. Biztonságosabb szerkesztői minta: illusztráld a videóhoz fűzött kommentárt, tüntesd fel a csatorna nevét, linkeld a videóoldalt, és ne áruld a képet, illetve ne használd saját csatornaképként. Hivatalos egyéni indexkép segítség:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Egyéni videóbélyegképek feltöltése</a>Az oldal szabályai:<a href=\"https://www.11tik.com/terms-of-use\">Feltételek</a>.</p>"
     },
     {
       "heading": "Hibaelhárítás",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "Következő lépés",
-      "html": "<p>Erősítse meg a még mindig lévő képet<a href=\"https://www.11tik.com/\">11tik extraktor</a>, töltsd le, töltsd fel az oldaladra, és irányítsd a kiemelt képet / og:image címszó alatt található HTTPS fájlodra.</p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+      "html": "<p>Erősítse meg a még mindig lévő képet<a href=\"https://www.11tik.com/\">11tik extraktor</a>, töltsd le, töltsd fel az oldaladra, és irányítsd a kiemelt képet / og:image címszó alatt található HTTPS fájlodra.</p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>·<a href=\"https://www.11tik.com/privacy\">Magánélet</a>·<a href=\"https://www.11tik.com/terms-of-use\">Feltételek</a>.</p>"
     }
   ],
   "faq": [
@@ -98,9 +102,9 @@
     {
       "question": "Mi van, ha a Studio csak megváltoztatta az egyéni bélyegképet?",
       "answer": "Várd meg a feldolgozást, majd ellenőrizd újra a 11tik oldalt a CMS-példányod frissítése előtt. Kapcsolódó: YouTube Studio indexképek.",
-      "answerHtml": "<p>Várd meg a feldolgozást, majd ellenőrizd újra a 11tik oldalt a CMS-példányod frissítése előtt. Kapcsolódó:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio indexképek</a>.</p>"
+      "answerHtml": "<p>Várd meg a feldolgozást, majd ellenőrizd újra a 11tik oldalt a CMS-példányod frissítése előtt. Kapcsolódó:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">YouTube Studio indexképek</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>·<a href=\"https://www.11tik.com/privacy\">Magánélet</a>·<a href=\"https://www.11tik.com/terms-of-use\">Feltételek</a>.</p>"
 }

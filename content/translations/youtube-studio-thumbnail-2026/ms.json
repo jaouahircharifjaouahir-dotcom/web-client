@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "ms",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Gambar kecil YouTube Studio 2026 | 11tik",
   "description": "Pada tahun 2026, saluran YouTube yang layak masih memuat naik lakaran kecil tersuai daripada Studio pada halaman Butiran video. Label menu akan berubah, tetapi hasilnya sama: YouTube mengehoskan fail awam baharu. 11tik tidak memuat naik fail tersebut. Ia hanya membaca URL imej awam selepas ia wujud.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Buka YouTube Studio dan pilih video tersebut.</li>\n    <li>Pada Butiran, muat naik imej 16:9 (sasaran biasa YouTube ialah 1280×720).</li>\n    <li>Simpan dan tunggu sehingga pemprosesan selesai.</li>\n  </ol>\n  <p>Nama butang yang tepat boleh berubah. Jika akaun anda tidak layak untuk lakaran kecil tersuai, Studio tidak akan menawarkan muat naik. 11tik tidak boleh memintas perkara itu.</p>"
     },
     {
+      "heading": "Pokok diagnostik: Perubahan studio vs pegun awam",
+      "html": "<ol>\n    <li>Selepas memuat naik seni tersuai di Studio, tunggu sehingga pemprosesan selesai.</li>\n    <li>Tampal URL tontonan awam ke dalam<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Beberapa saiz muncul, saiz maksimum tiada?</strong>→ isu varian/cadangan, bukan muat naik Studio yang gagal. Lihat<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">penjelasan maxresdefault</a>.</li>\n    <li><strong>Tiada saiz langsung?</strong>→ video mungkin masih diproses, peribadi atau dihadkan untuk pegun CDN awam. Lihat<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">lakaran kecil tidak muncul</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Bagaimanakah saya boleh menyemak lakaran kecil selepas saya menukarnya di Studio?",
-      "html": "<p>Tampal URL tontonan ke dalam<a href=\"https://www.11tik.com/\">11tik</a>Muat turun atau salin saiz pertama yang disenaraikan. Jika maxresdefault tiada, fail awam seterusnya ialah maksimum yang jujur. Itu adalah katalog YouTube, bukan petikan yang gagal. Lihat juga<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">penjelasan maxresdefault</a>.</p>"
+      "html": "<p>Tampal URL tontonan ke dalam<a href=\"https://www.11tik.com/\">11tik</a>Muat turun atau salin saiz pertama yang disenaraikan. Jika maxresdefault tiada, fail awam seterusnya ialah maksimum yang jujur. Itu adalah katalog YouTube, bukan petikan yang gagal. Lihat juga<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">penjelasan maxresdefault</a>.</p>"
     },
     {
       "heading": "Adakah 11tik menggantikan YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Apa yang perlu saya lakukan apabila imej itu kelihatan lama?",
-      "html": "<p>CDN imej boleh ketinggalan. Semak semula kemudian, muat semula dengan pantas atau salin URL 11tik untuk mengesahkannya. Jangan anggap master 4K; resolusi maksimum awam biasanya 1280×720. Tangkapan skrin Studio bukanlah fail lakaran kecil awam.</p>\n  <p>Berkaitan:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">pengekstrak vs pembuat</a>.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Buka pengekstrak</a></p>"
+      "html": "<p>CDN imej boleh ketinggalan. Semak semula kemudian, muat semula dengan pantas atau salin URL 11tik untuk mengesahkannya. Jangan anggap master 4K; resolusi maksimum awam biasanya 1280×720. Tangkapan skrin Studio bukanlah fail lakaran kecil awam.</p>\n  <p>Berkaitan:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">pengekstrak vs pembuat</a>.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Mengenai</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Buka pengekstrak</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Mengenai</a>.</p>"
 }

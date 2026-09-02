@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "de",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "So laden Sie YouTube-Thumbnails im Stapelverfahren herunter (bis zu 25 öffentliche URLs) | 11tik",
   "description": "Öffentliche YouTube-Thumbnails im Browser massenhaft extrahieren. Fügen Sie eine URL pro Zeile ein, laden Sie die besten Bilder herunter oder zippen Sie die hochwertigsten Thumbnails als ZIP-Datei. Kein Konto und keine Videodateien erforderlich.",
@@ -24,16 +24,56 @@
       "html": "<p>Offen<a href=\"https://www.11tik.com/\">11tik</a>Aktivieren Sie die Massenverarbeitung, fügen Sie pro Zeile eine öffentliche URL ein, klicken Sie auf „Alle extrahieren“ und laden Sie anschließend die besten Bilder oder die ZIP-Datei mit der höchsten Qualität herunter. Die maximale Anzahl an URLs pro Durchlauf beträgt 25, damit der Browser reaktionsschnell bleibt.</p>"
     },
     {
+      "heading": "Was das Tool verarbeitet",
+      "html": "<p>Der Massenmodus führt dieselbe clientseitige Prüfung öffentlicher Standbilder durch wie die Einzel-URL-Extraktion: Jede Video-ID wird analysiert, Kandidaten-Thumbnail-URLs werden erstellt, diese werden als Bilder im Browser geladen, fehlerhafte und Platzhalter werden verworfen, die verbleibenden Standbilder werden nach ihrer Qualität sortiert und das beste Standbild zuerst angezeigt. Es werden weder Video noch Audio heruntergeladen, keine private YouTube-API aufgerufen und eingefügte Links nicht auf 11tik-Servern gespeichert.</p>"
+    },
+    {
+      "heading": "25-URL-Obergrenze",
+      "html": "<p>Jeder Bulk-Lauf akzeptiert bis zu<strong>25 Zeilen</strong>Diese Beschränkung sorgt für eine reaktionsschnelle Bildvalidierung im Browser. Für mehr IDs führen Sie mehrere Durchläufe durch oder exportieren Sie die Ergebnisse jedes Durchlaufs als CSV-Datei und führen Sie diese offline zusammen. Es gibt keine Server-Batch-Funktion für 500 oder 1000 URLs.</p>"
+    },
+    {
+      "heading": "Clientseitige Verarbeitung",
+      "html": "<p>Jeder Datenextrakt findet in Ihrer Sitzung statt. Netzwerkanfragen werden von Ihrem Browser an das öffentliche Netzwerk gesendet.<code>i.ytimg.com</code>(und verwandte) Hosts. Eingefügte URLs werden nicht zu 11tik für serverseitiges Scraping hochgeladen.</p>"
+    },
+    {
+      "heading": "CSV- und JSON-Export",
+      "html": "<p>Nach erfolgreichem Durchlauf enthält der optionale Export pro Zeile die Video-ID, den Titel, die Freigabe-URL und die validierte Bild-URL – nützlich für Forschungsprotokolle. Der Export spiegelt die in dieser Sitzung validierten Daten wider und garantiert keine maximale Auflösung für jede ID.</p>"
+    },
+    {
+      "heading": "Fehlerklassifizierung",
+      "html": "<ul>\n    <li><strong>Analysefehler:</strong>Die Zeile ist keine unterstützte Watch-, Shorts-, Live-, Embed-, youtu.be- oder Channel-Expandable-URL.</li>\n    <li><strong>Video nicht verfügbar:</strong>privat, entfernt, eingeschränkt oder in Bearbeitung – keine öffentliche Gültigkeit. Siehe<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Warum wird kein Vorschaubild angezeigt?</a>Die</li>\n    <li><strong>Variante fehlt:</strong>Das Video ist öffentlich, aber bei maximaler Auflösung (oder einer anderen hohen Auflösung) erscheint ein 404-Fehler; eine niedrigere Auflösung funktioniert weiterhin. Siehe<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres Fallback</a>Die</li>\n    <li><strong>Platzhalter abgelehnt:</strong>Die URL reagierte, sah aber aus wie ein winziges graues Symbol für eine fehlende Datei.</li>\n  </ul>"
+    },
+    {
+      "heading": "Ungültige, private und nicht verfügbare Videos",
+      "html": "<p>11tik zeigt nur öffentliche CDN-Standbilder an. Nicht gelistete Videos ohne öffentliches Paket, Uploads nur für Mitglieder, Inhalte mit Altersbeschränkung und gelöschte Videos erzeugen in der Regel leere Speicherkarten – keine kleinere „geheime“ Datei. Erwarten Sie nicht, dass Bulk Zugriffskontrollen umgeht.</p>"
+    },
+    {
+      "heading": "Kanal-URLs vs. manuell bereitgestellte Wiedergabelinks",
+      "html": "<p>Fügen Sie eine öffentliche Kanal-URL in eine Zeile ein. Die Funktion „Massenbasierte Suche“ erweitert die neuesten öffentlichen Uploads per RSS-Feed und extrahiert anschließend jede ID – nach der Erweiterung weiterhin auf 25 URLs beschränkt. Manuell eingefügte Watch-Links überspringen die Kanalsuche. Vollständiger Kanal-Workflow:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">Kanal-Extraktionsanleitung</a>Die</p>"
+    },
+    {
+      "heading": "Datenschutz",
+      "html": "<p>Eingefügte URLs werden lokal in Ihrem Browser verarbeitet, um sie zu extrahieren. Lesen Sie weiter.<a href=\"https://www.11tik.com/privacy\">Datenschutz</a>für Website-Analysen; Bulk fügt keine separate serverseitige private API hinzu.</p>"
+    },
+    {
+      "heading": "Anleitung zum Wiederholen",
+      "html": "<p>Nach dem Erstellen eines neuen benutzerdefinierten Studio-Thumbnails oder dem erneuten Hochladen warten Sie bitte die Verarbeitung ab und rufen Sie die gleiche Watch-URL erneut auf. Vorübergehende CDN-Verzögerungen lassen sich manchmal beim zweiten Versuch beheben; dauerhaft leere Ergebnisse bedeuten in der Regel, dass für diese ID noch keine öffentliche Veröffentlichung existiert.</p>"
+    },
+    {
+      "heading": "Realistische Erwartungen",
+      "html": "<p>Nicht jedes öffentliche Video veröffentlicht in maximaler Auflösung. In unserem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-Video-Beispiel</a>Die maximale Auflösung wurde für 286/300 IDs (stichprobenbezogen) validiert. Bulk gibt die höchste validierte öffentliche Datei pro Zeile zurück – keine garantierte Auflösung von 1280×720 für jede Zeile. URL-Struktur:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Die</p>"
+    },
+    {
       "heading": "Was gehört in die Liste?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= IDs</li>\n    <li>youtu.be Kurzlinks</li>\n    <li>youtube.com/shorts/ IDs</li>\n    </ul>\n  <p>Private, nicht gelistete Videos ohne öffentliche Vorschaubilder oder Videos mit Altersbeschränkung liefern kein Standbild. Das ist zu erwarten. Siehe auch<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Kurze Vorschaubilder</a>Die</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= IDs</li>\n    <li>youtu.be Kurzlinks</li>\n    <li>youtube.com/shorts/ IDs</li>\n    </ul>\n  <p>Private, nicht gelistete Videos ohne öffentliche Vorschaubilder oder Videos mit Altersbeschränkung liefern kein Standbild. Das ist zu erwarten. Siehe auch<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Kurze Vorschaubilder</a>Die</p>"
     },
     {
       "heading": "Wie man eine Massenextraktion durchführt",
-      "html": "<ol>\n    <li>Klicken Sie auf der Startseite auf Bulk.</li>\n    <li>Fügen Sie bis zu 25 öffentliche Links ein, einen pro Zeile.</li>\n    <li>Klicken Sie auf „Alle extrahieren“ und warten Sie, bis für jede Karte eine Vorschau angezeigt wird.</li>\n    <li>Laden Sie für jedes beste Standbild ein Vorschaubild-Video (N) herunter oder laden Sie alle Bilder in höchster Qualität als ZIP-Datei herunter.</li>\n    <li>Optional: Exportieren Sie eine CSV-Datei mit den Forschungsprotokollen (Video-ID, Titel, Freigabe-URL, Bild-URL).</li>\n  </ol>"
+      "html": "<ol>\n    <li>Klicken Sie auf der Startseite auf Bulk.</li>\n    <li>Fügen Sie bis zu 25 öffentliche Links ein, einen pro Zeile.</li>\n    <li>Klicken Sie auf „Alle extrahieren“ und warten Sie, bis für jede Karte eine Vorschau angezeigt wird.</li>\n    <li>Laden Sie für jedes beste Standbild ein Vorschaubild-Video (N) herunter oder laden Sie alle Videos in höchster Qualität als ZIP-Datei herunter.</li>\n    <li>Optional: Exportieren Sie eine CSV-Datei mit den Forschungsprotokollen (Video-ID, Titel, Freigabe-URL, Bild-URL).</li>\n  </ol>"
     },
     {
       "heading": "Kann ich das für die Wettbewerbsanalyse verwenden?",
-      "html": "<p>Ja, zum Studium öffentlicher Verpackungen. Veröffentlichen Sie nicht das Vorschaubild eines anderen Erstellers als Ihr eigenes. Das Urheberrecht verbleibt beim Rechteinhaber. 11tik ruft nur Dateien ab, die YouTube bereits öffentlich hostet.</p>\n  <p><a href=\"https://www.11tik.com/\">Öffnen Sie den Massenextrakt auf 11tik →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+      "html": "<p>Ja, zum Studium öffentlicher Verpackungen. Veröffentlichen Sie nicht das Vorschaubild eines anderen Erstellers als Ihr eigenes. Das Urheberrecht verbleibt beim Rechteinhaber. 11tik ruft nur Dateien ab, die YouTube bereits öffentlich hostet.</p>\n  <p><a href=\"https://www.11tik.com/\">Öffnen Sie den Massenextrakt auf 11tik →</a></p>\n  <p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>Die</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/p/about.html\">Um</a>Die</p>"
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik.<a href=\"https://www.11tik.com/about\">Um</a>Die</p>"
 }

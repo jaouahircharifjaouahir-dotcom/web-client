@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "tl",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "Paano Gamitin ang Thumbnail sa YouTube bilang Tampok na Larawan ng Blog o Preview ng Open Graph | 11tik",
   "description": "Kumpirmahing mayroon pa ring pampublikong YouTube, pagkatapos ay mag-host ng kopya para sa WordPress, Blogger, o og:image. Huwag mag-hotlink ng nahulaang maxresdefault URL.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "Mabilis na sagot",
-      "html": "<p>I-paste ang pampublikong URL ng YouTube sa<a href=\"https://www.11tik.com/\">11tik</a>, maghintay para sa mga napatunayang laki, pagkatapos ay alinman sa<strong>i-download</strong>ang unang litrato at i-upload ito sa iyong CMS, o<strong>kopyahin ang URL ng larawan</strong>pagkatapos lamang itong mag-load. Para sa mga pangmatagalang post, i-host ang sarili mong kopya. Hotlinking<code>i.ytimg.com</code>ay maginhawa para sa mga draft at marupok para sa produksyon ng mga social card.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kumpirmahin → kopyahin o i-download → host → sanggunian sa HTML / itinatampok na larawan / Buksan ang Graph.</p>"
+      "html": "<p>I-paste ang pampublikong URL ng YouTube sa<a href=\"https://www.11tik.com/\">11tik</a>, maghintay para sa mga napatunayang laki, pagkatapos ay alinman sa<strong>i-download</strong>ang unang litrato at i-upload ito sa iyong CMS, o<strong>kopyahin ang URL ng larawan</strong>pagkatapos lamang itong mag-load. Para sa mga pangmatagalang post, i-host ang sarili mong kopya. Hotlinking<code>i.ytimg.com</code>ay maginhawa para sa mga draft at marupok para sa produksyon ng mga social card.</p>\n\n  <img alt=\"Daloy ng trabaho mula sa pagkumpirma ng thumbnail sa YouTube sa 11tik hanggang sa pag-upload nito\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Kumpirmahin → kopyahin o i-download → host → sanggunian sa HTML / itinatampok na larawan / Buksan ang Graph.</p>"
     },
     {
       "heading": "Ano ang isang direktang thumbnail URL",
-      "html": "<p>Halimbawa, ang direktang thumbnail URL ay nakaturo sa isang JPEG o WebP file sa image CDN ng YouTube<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>. Hindi ito ang pahina ng panonood. Paano binubuo ang mga address na iyon:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">kumuha ng URL ng thumbnail sa YouTube</a>Paano nagkakaiba ang mga sukat:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">gabay sa laki at resolusyon</a>.</p>"
+      "html": "<p>Halimbawa, ang direktang thumbnail URL ay nakaturo sa isang JPEG o WebP file sa image CDN ng YouTube<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>. Hindi ito ang pahina ng panonood. Paano binubuo ang mga address na iyon:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">kumuha ng URL ng thumbnail sa YouTube</a>Paano nagkakaiba ang mga sukat:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">gabay sa laki at resolusyon</a>.</p>"
     },
     {
       "heading": "Halimbawa ng HTML",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "Daloy ng trabaho sa WordPress",
-      "html": "<ol>\n    <li>I-extract ang video sa 11tik at i-download ang unang nakalistang still.</li>\n    <li>Sa WordPress: Media → Magdagdag ng Bago → i-upload ang file.</li>\n    <li>Itakda ito bilang Itinatampok na larawan sa post.</li>\n    <li>Sa Yoast, Rank Math, o katulad nito, kumpirmahin na ginagamit ng social preview ang attachment na iyon (o mag-upload ng nakalaang OG crop).</li>\n    <li>Sumulat ng alt text na siyang babanggit sa video at nagsasabing ang file ay isang pampublikong YouTube pa rin—hindi isang listahan ng mga keyword na puno.</li>\n  </ol>\n  <p>Iwasan ang pagdikit ng hilaw na<code>maxresdefault.jpg</code>path papunta sa media field hanggang sa mapatunayan ang file. Karaniwan ang nawawalang maxres —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">gabay sa maxresdefault 404</a>.</p>"
+      "html": "<ol>\n    <li>I-extract ang video sa 11tik at i-download ang unang nakalistang still.</li>\n    <li>Sa WordPress: Media → Magdagdag ng Bago → i-upload ang file.</li>\n    <li>Itakda ito bilang Itinatampok na larawan sa post.</li>\n    <li>Sa Yoast, Rank Math, o katulad nito, kumpirmahin na ginagamit ng social preview ang attachment na iyon (o mag-upload ng nakalaang OG crop).</li>\n    <li>Sumulat ng alt text na siyang babanggit sa video at nagsasabing ang file ay isang pampublikong YouTube pa rin—hindi isang listahan ng mga keyword na puno.</li>\n  </ol>\n  <p>Iwasan ang pagdikit ng hilaw na<code>maxresdefault.jpg</code>path papunta sa media field hanggang sa mapatunayan ang file. Karaniwan ang nawawalang maxres —<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">gabay sa maxresdefault 404</a>.</p>"
     },
     {
       "heading": "Blogger at mga static na site",
-      "html": "<p><strong>Blogger:</strong>I-upload ang still sa post editor, pagkatapos ay gamitin muli ang naka-host na Blogger image URL para sa anumang field ng theme/social snippet na kontrolado mo. Huwag umasa sa nahulaang YouTube CDN path para sa isang nai-publish na post na mahalaga sa iyo.</p>\n  <p><strong>Mga static generator:</strong>I-commit ang file sa iyong repo o CDN, pagkatapos ay itakda ang mga front-matter / meta tag sa HTTPS asset na iyon. Panatilihin ang mga draft sa isang pansamantalang i.ytimg.com URL kung kinakailangan, ngunit ipadala kasama ng iyong sariling host.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Maaaring magbahagi ng file ang featured image at og:image, ngunit pareho silang nangangailangan ng URL na talagang umiiral.</p>"
+      "html": "<p><strong>Blogger:</strong>I-upload ang still sa post editor, pagkatapos ay gamitin muli ang naka-host na Blogger image URL para sa anumang field ng theme/social snippet na kontrolado mo. Huwag umasa sa nahulaang YouTube CDN path para sa isang nai-publish na post na mahalaga sa iyo.</p>\n  <p><strong>Mga static generator:</strong>I-commit ang file sa iyong repo o CDN, pagkatapos ay itakda ang mga front-matter / meta tag sa HTTPS asset na iyon. Panatilihin ang mga draft sa isang pansamantalang i.ytimg.com URL kung kinakailangan, ngunit ipadala kasama ng iyong sariling host.</p>\n\n  <img alt=\"Magkatabi ng pag-upload ng itinatampok na larawan sa WordPress kumpara sa isang Open Graph social\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Maaaring magbahagi ng file ang featured image at og:image, ngunit pareho silang nangangailangan ng URL na talagang umiiral.</p>"
+    },
+    {
+      "heading": "Mga praktikal na halimbawa ayon sa plataporma",
+      "html": "<h3>Kinokopya ang larawan (kinumpirmang URL muna)</h3>\n  <p>Sa 11tik, gamitin<strong>Kopyahin ang URL ng larawan</strong>pagkatapos lamang mapatunayan ang laki sa iyong browser. I-paste ang HTTPS address na iyon sa isang draft—o mas mabuti pa, i-download ang file at i-upload ito. Hula<code>maxresdefault.jpg</code>sinisira ang Open Graph kahit hindi pa nailathala ang file. Pagbuo ng URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">gabay sa URL ng thumbnail</a>.</p>\n  <h3>Pagho-host nang lokal (inirerekomenda para sa produksyon)</h3>\n  <p>I-download ang validated still, i-upload sa iyong media library o static CDN, at i-reference ang iyong domain sa<code>&lt;img&gt;</code>at<code>og:image</code>Iwasan ang mga marupok at pangmatagalang hotlink sa<code>i.ytimg.com</code>sa mga post na mahalaga sa iyo.</p>\n  <h3>Itinatampok na larawan ng WordPress + og:image</h3>\n  <p>Media → Magdagdag ng Bago → i-upload ang na-download na JPEG o WebP → itakda ang Itinatampok na Larawan → kumpirmahin kung ginagamit ng Yoast/Rank Math social preview ang attachment na iyon. I-scrape muli ang mga debugger ng Facebook/Twitter/LinkedIn pagkatapos ng mga pagbabago sa URL.</p>\n  <h3>Blogger</h3>\n  <p>Ilagay ang larawan sa post composer para i-host ng Blogger ang file, pagkatapos ay gamitin muli ang Blogger CDN URL na iyon sa theme meta kung ang iyong template ay nagpapakita ng mga social field. Huwag umasa sa isang external na YouTube image URL para sa isang permanenteng post.</p>\n  <h3>Mga static na site (Hugo, Eleventy, atbp.)</h3>\n  <p>I-commit ang larawan sa ilalim<code>/assets</code>o ang iyong CDN, i-reference ito sa front matter, at i-emit<code>og:image</code>na may totoong lapad/taas. Halimbawa ng meta block:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>Kapag katanggap-tanggap ang hotlinking</h3>\n  <p>Ang mga panloob na tala, mabilisang draft, o pansamantalang pahina ng pananaliksik ay maaaring mag-hotlink ng isang napatunayang<code>i.ytimg.com</code>URL. Ang mga artikulo sa produksyon, mga pahina ng produkto, at mga kampanya sa email ay dapat maglaman ng isang kopya. Widget ng pag-embed para sa pagkuha sa pahina:<a href=\"https://www.11tik.com/embed\">gabay sa pag-embed</a>.</p>"
     },
     {
       "heading": "Mga pagsasaalang-alang sa Open Graph",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "Hotlinking vs. pag-download",
-      "html": "<table>\n    <thead>\n      <tr><th>Paglapit</th><th>Pinakamahusay para sa</th><th>Panganib</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hotlink i.ytimg.com</td><td>Mabilisang mga draft, mga tala sa pananaliksik</td><td>404s, mga pagbabago sa CDN, walang kontrol sa pag-crop</td></tr>\n      <tr><td>I-download + host</td><td>Mga niraranggo na post, mga pahina ng produkto</td><td>Dapat mong iimbak ang file</td></tr>\n      <tr><td>Screenshot ng manlalaro</td><td>Halos hindi kailanman</td><td>UI chrome, maling ratio —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">screenshot laban sa totoong</a></td></tr>\n    </tbody>\n  </table>\n  <p>Mga hakbang sa pag-download:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">paano mag-download ng thumbnail sa YouTube</a>Pagpili ng format kapag parehong umiiral ang WebP at JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP laban sa JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>Paglapit</th><th>Pinakamahusay para sa</th><th>Panganib</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hotlink i.ytimg.com</td><td>Mabilisang mga draft, mga tala sa pananaliksik</td><td>404s, mga pagbabago sa CDN, walang kontrol sa pag-crop</td></tr>\n      <tr><td>I-download + host</td><td>Mga niraranggo na post, mga pahina ng produkto</td><td>Dapat mong iimbak ang file</td></tr>\n      <tr><td>Screenshot ng manlalaro</td><td>Halos hindi kailanman</td><td>UI chrome, maling ratio —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">screenshot laban sa totoong</a></td></tr>\n    </tbody>\n  </table>\n  <p>Mga hakbang sa pag-download:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">paano mag-download ng thumbnail sa YouTube</a>Pagpili ng format kapag parehong umiiral ang WebP at JPEG:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP laban sa JPEG</a>.</p>"
     },
     {
       "heading": "Mga pangunahing kaalaman sa SEO ng imahe para sa mga still na ito",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "Muling paggamit at karapatang-ari (hindi legal na payo)",
-      "html": "<p>Ang pampublikong CDN URL ay hindi isang lisensya. Ang pag-embed ng YouTube player ay iba sa pagkopya ng still sa iyong hero. Ang patas na paggamit ay partikular sa katotohanan. Mas ligtas na pattern ng editoryal: ilarawan ang komentaryo tungkol sa video na iyon, i-credit ang channel, i-link ang watch page, at huwag ibenta ang larawan o gamitin ito bilang sarili mong channel art. Opisyal na tulong sa custom-thumbnail:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Mag-upload ng mga custom na thumbnail ng video</a>Mga patakaran sa site:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+      "html": "<p>Ang pampublikong CDN URL ay hindi isang lisensya. Ang pag-embed ng YouTube player ay iba sa pagkopya ng still sa iyong hero. Ang patas na paggamit ay partikular sa katotohanan. Mas ligtas na pattern ng editoryal: ilarawan ang komentaryo tungkol sa video na iyon, i-credit ang channel, i-link ang watch page, at huwag ibenta ang larawan o gamitin ito bilang sarili mong channel art. Opisyal na tulong sa custom-thumbnail:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Mag-upload ng mga custom na thumbnail ng video</a>Mga patakaran sa site:<a href=\"https://www.11tik.com/terms-of-use\">Mga Tuntunin</a>.</p>"
     },
     {
       "heading": "Pag-troubleshoot",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "Susunod na hakbang",
-      "html": "<p>Kumpirmahin ang isang still sa<a href=\"https://www.11tik.com/\">11tik tagabunot</a>, i-download ito, i-upload sa iyong site, at ituro ang featured image / og:image sa iyong HTTPS file.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+      "html": "<p>Kumpirmahin ang isang still sa<a href=\"https://www.11tik.com/\">11tik tagabunot</a>, i-download ito, i-upload sa iyong site, at ituro ang featured image / og:image sa iyong HTTPS file.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/about\">Tungkol sa</a>·<a href=\"https://www.11tik.com/privacy\">Pagkapribado</a>·<a href=\"https://www.11tik.com/terms-of-use\">Mga Tuntunin</a>.</p>"
     }
   ],
   "faq": [
@@ -81,7 +85,7 @@
       "answerHtml": "<p>Hindi. Kailangan mo pa rin ang pinakamalaking validated public. Normal lang na mawala ang maxres.</p>"
     },
     {
-      "question": "Dapat bang banggitin sa alt text ang YouTube?",
+      "question": "Dapat bang banggitin ang YouTube sa alt text?",
       "answer": "Oo kapag nakakatulong itong ilarawan ang asset (“Pampublikong thumbnail sa YouTube para sa…”). Huwag gumamit ng mga keyword.",
       "answerHtml": "<p>Oo kapag nakakatulong itong ilarawan ang asset (“Pampublikong thumbnail sa YouTube para sa…”). Huwag gumamit ng mga keyword.</p>"
     },
@@ -98,9 +102,9 @@
     {
       "question": "Paano kung binago lang ng Studio ang custom thumbnail?",
       "answer": "Maghintay para sa pagproseso, pagkatapos ay suriin muli ang 11tik bago i-update ang iyong kopya ng CMS. Kaugnay: Mga thumbnail ng YouTube Studio.",
-      "answerHtml": "<p>Maghintay para sa pagproseso, pagkatapos ay suriin muli ang 11tik bago i-update ang iyong kopya ng CMS. Kaugnay:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Mga thumbnail ng YouTube Studio</a>.</p>"
+      "answerHtml": "<p>Maghintay para sa pagproseso, pagkatapos ay suriin muli ang 11tik bago i-update ang iyong kopya ng CMS. Kaugnay:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">Mga thumbnail ng YouTube Studio</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Mga Tuntunin</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/about\">Tungkol sa</a>·<a href=\"https://www.11tik.com/privacy\">Pagkapribado</a>·<a href=\"https://www.11tik.com/terms-of-use\">Mga Tuntunin</a>.</p>"
 }

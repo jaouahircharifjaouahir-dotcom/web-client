@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "ko",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "YouTube 채널 URL에서 썸네일을 추출하는 방법 | 11tik",
   "description": "공개 YouTube 채널 URL을 11tik 일괄 처리에 붙여넣어 최근 공개 업로드 목록을 확장한 다음, 각 최고의 스틸컷을 다운로드하세요. 이는 패키징 연구를 위한 것이며, 다른 채널의 맞춤 아트워크를 복제하기 위한 것이 아닙니다.",
@@ -20,12 +20,36 @@
   ],
   "sections": [
     {
+      "heading": "RSS 발견 범위",
+      "html": "<p>채널 확장 기능은 YouTube의 공개 채널 피드(RSS 방식)를 사용하여 확인 가능한 동영상 ID와 함께 최근 업로드된 동영상 목록을 표시합니다. 해당 피드는 다음을 반영합니다.<strong>유튜브가 공개한 항목들</strong>—모든 업로드된 영상이나 회원 전용 게시물이 포함되어 있는 것은 아니며, 완벽한 아카이브를 보장하는 것도 아닙니다.</p>"
+    },
+    {
+      "heading": "공개 품목만 해당",
+      "html": "<p>비공개, 공개 스틸이 없는 미등록, 연령 제한 업로드는 일반적으로 확장 목록에 나타나지 않습니다. 확장이 비어 있는 것은 일반적으로 핸들이 확인되지 않았거나 채널이 종료되었거나 공개 ID가 반환되지 않았음을 의미하며 11tik 스크래핑 실패가 아닙니다.</p>"
+    },
+    {
+      "heading": "채널 URL과 명시적 시청 URL의 차이점",
+      "html": "<p>하나의 채널 라인이 추출 전에 여러 시청 URL로 확장되지만, 여전히 다음 사항의 적용을 받습니다.<strong>25-URL 벌크캡</strong>개별 시계 링크를 붙여넣으면 RSS 검색은 건너뛰지만 정확한 제어가 가능합니다. 한 줄씩 일괄 처리하는 방식과 비교해 보세요.<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">일괄 다운로드 가이드</a>.</p>"
+    },
+    {
+      "heading": "누락되거나 삭제된 항목",
+      "html": "<p>삭제된 동영상은 시간이 지나면 피드에서 사라집니다. 추출에 실패한 카드는 처리 중이거나, 제한되었거나, 제거되었을 수 있습니다. 단일 시청 URL을 다시 실행하거나 다음 내용을 확인하세요.<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">썸네일이 표시되지 않음</a>.</p>"
+    },
+    {
+      "heading": "윤리적 사용",
+      "html": "<p>공개된 패키징을 연구 목적으로 살펴보는 것이 본 사이트의 본래 용도입니다. 경쟁업체의 맞춤 이미지를 자신의 썸네일로 재업로드하는 것은 저작권 및 플랫폼 정책을 위반하는 행위입니다. 게시된 댓글에는 출처를 명시하고 해당 채널의 시청 페이지 링크를 포함하세요. 사이트 규칙을 준수해 주세요.<a href=\"https://www.11tik.com/copyright\">저작권 및 이용 약관</a>.</p>"
+    },
+    {
+      "heading": "배치 추출과의 관계",
+      "html": "<p>채널 추출은 RSS 사전 입력 기능을 갖춘 대량 모드입니다. 클라이언트 측 유효성 검사, URL 25개 제한, CSV/zip 내보내기 기능은 동일하지만, 무제한 채널 스크래핑이나 서버 측 비공개 API는 제공되지 않습니다.</p>"
+    },
+    {
       "heading": "유튜브 채널 전체의 썸네일을 가져올 수 있나요?",
-      "html": "<p>최신 영상의 스틸컷을 얻을 수 있습니다.<em>공공의</em>동영상 ID가 노출되는 업로드. 11tik는 채널이 게시한 모든 동영상을 스크랩하지 않으며 멤버십을 우회하지 않습니다. 홈페이지에서 대량 작업을 켜고 채널 URL(예: 11tik)을 붙여넣으세요.<code>youtube.com/@handle</code>또는<code>/channel/UC…</code>그러면 도구가 공개 RSS 스타일 목록을 확장합니다. 그런 다음 직접 입력한 목록을 추출하는 것처럼 추출하세요. 실행당 최대 URL 수는 25개로 제한되어 브라우저를 계속 사용할 수 있습니다.</p>\n  <p>이는 하나의 시계 링크를 저장하는 것과는 다릅니다. 단일 URL 흐름은 다음과 같습니다.<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">유튜브 썸네일 다운로드 방법</a>채널 없이 한 줄씩 대량으로 처리하는 방식입니다.<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">일괄 다운로드</a>.</p>"
+      "html": "<p>최신 영상의 스틸컷을 얻을 수 있습니다.<em>공공의</em>동영상 ID가 노출되는 업로드. 11tik는 채널이 게시한 모든 동영상을 스크랩하지 않으며 멤버십을 우회하지 않습니다. 홈페이지에서 대량 작업을 켜고 채널 URL(예: 11tik)을 붙여넣으세요.<code>youtube.com/@handle</code>또는<code>/channel/UC…</code>그러면 도구가 공개 RSS 스타일 목록을 확장합니다. 그런 다음 직접 입력한 목록을 추출하는 것처럼 추출하세요. 실행당 최대 URL 수는 25개로 제한되어 브라우저를 계속 사용할 수 있습니다.</p>\n  <p>이는 하나의 시계 링크를 저장하는 것과는 다릅니다. 단일 URL 흐름은 다음과 같습니다.<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">유튜브 썸네일 다운로드 방법</a>채널 없이 한 줄씩 대량으로 처리하는 방식입니다.<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">일괄 다운로드</a>.</p>"
     },
     {
       "heading": "어떤 채널 URL이 작동하나요?",
-      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>공개 페이지에서 채널 ID를 노출할 때</li>\n    <li>유산<code>/user/name</code>여전히 해결되는 경로</li>\n  </ul>\n  <p>'/playlist' URL은 채널이 아닙니다. 대신 재생 목록의 개별 시청 링크를 붙여넣으세요. UC ID로 확인되지 않는 핸들은 동영상을 표시하지 않습니다. 일반 브라우저에서 채널을 열고 주소 표시줄에서 채널의 정식 URL을 복사하세요.</p>"
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>공개 페이지에서 채널 ID를 노출할 때</li>\n    <li>유산<code>/user/name</code>여전히 해결되는 경로</li>\n  </ul>\n  <p>'/playlist' URL은 채널이 아닙니다. 대신 재생목록의 개별 시청 링크를 붙여넣으세요. UC ID로 확인되지 않는 핸들은 동영상을 표시하지 않습니다. 일반 브라우저에서 채널을 열고 주소 표시줄에서 채널의 정식 URL을 복사하세요.</p>"
     },
     {
       "heading": "11tik에서 채널 썸네일을 추출하는 방법",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "11tik가 하지 않을 일",
-      "html": "<ul>\n    <li>동영상이나 오디오 파일만 다운로드 가능합니다. (사진만 다운로드 가능)</li>\n    <li>비공개 또는 등록되지 않은 업로드 목록을 표시합니다.</li>\n    <li>최근 영상은 모두 최대 해상도(maxresdefault)를 보장합니다. 오래된 영상이나 용량이 작은 영상은 고화질(hq) 또는 SD 화질로 제한됩니다.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>해당 이미지의 재사용 권한을 부여하십시오. 공공 포장재의 격자 구조를 연구하는 것이 본래의 연구 목적입니다. 경쟁업체의 이미지를 재사용하여 맞춤 썸네일로 사용하는 것은 저작권 및 정책 위반입니다.<a href=\"https://www.11tik.com/copyright\">저작권 및 이용 약관</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>동영상이나 오디오 파일만 다운로드 가능합니다. (사진만 다운로드 가능)</li>\n    <li>비공개 또는 등록되지 않은 업로드 목록을 표시합니다.</li>\n    <li>최근 영상은 모두 최대 해상도(maxresdefault)를 보장합니다. 오래된 영상이나 용량이 작은 영상은 고화질(hq) 또는 SD 화질로 제한됩니다.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>해당 이미지의 재사용 권한을 부여하십시오. 공공 포장재의 격자 구조를 연구하는 것이 본래의 연구 목적입니다. 경쟁업체의 이미지를 재사용하여 맞춤 썸네일로 사용하는 것은 저작권 및 정책 위반입니다.<a href=\"https://www.11tik.com/copyright\">저작권 및 이용 약관</a>.</li>\n  </ul>"
     },
     {
       "heading": "이것이 도어웨이 페이지 없이 연구를 지원하는 방법",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "문제 해결",
-      "html": "<p>빈 목록: 채널 피드에서 공개 ID를 반환하지 않았습니다(채널이 종료되었거나, 리졸버가 매핑할 수 없는 핸들). YouTube 데스크톱 레이아웃에서 UC 채널 URL을 시도해 보세요.</p>\n  <p>일부 카드가 누락되었습니다. 해당 업로드 파일은 아직 공개되지 않았거나, 불완전한 추출 파일이 게이트에서 거부되었습니다. 단일 시청 URL을 다시 실행해 보세요. 붙여넣은 링크의 개인 정보 보호:<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>.</p>\n  <p>추출기 vs 디자인 도구: 11tik는 표지 이미지를 생성하지 않습니다.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">추출기 vs 제조기</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik에서 공개 채널 스틸 이미지를 추출하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+      "html": "<p>빈 목록: 채널 피드에서 공개 ID를 반환하지 않았습니다(채널이 종료되었거나, 리졸버가 매핑할 수 없는 핸들). YouTube 데스크톱 레이아웃에서 UC 채널 URL을 시도해 보세요.</p>\n  <p>일부 카드가 누락되었습니다. 해당 업로드 파일은 아직 공개되지 않았거나, 불완전한 추출 파일이 게이트에서 거부되었습니다. 단일 시청 URL을 다시 실행해 보세요. 붙여넣은 링크의 개인 정보 보호:<a href=\"https://www.11tik.com/privacy\">은둔</a>.</p>\n  <p>추출기 vs 디자인 도구: 11tik는 표지 이미지를 생성하지 않습니다.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">추출기 vs 제조기</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik에서 공개 채널 스틸 이미지를 추출하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
     }
   ],
   "faq": [
@@ -52,8 +76,8 @@
     },
     {
       "question": "어떤 채널 URL이 작동하나요?",
-      "answer": "공개된 /channel/UC… URL, 많은 @handle URL, 그리고 일부 기존 /user/ 경로가 포함됩니다. 재생 목록은 채널이 아닙니다.",
-      "answerHtml": "공개된 /channel/UC… URL, 많은 @handle URL, 그리고 일부 기존 /user/ 경로가 포함됩니다. 재생 목록은 채널이 아닙니다."
+      "answer": "공개된 /channel/UC… URL, 많은 @handle URL, 그리고 일부 기존 /user/ 경로가 있습니다. 재생 목록은 채널이 아닙니다.",
+      "answerHtml": "공개된 /channel/UC… URL, 많은 @handle URL, 그리고 일부 기존 /user/ 경로가 있습니다. 재생 목록은 채널이 아닙니다."
     },
     {
       "question": "이게 동영상을 다운로드하는 건가요?",
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "sk",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Ako získať pôvodný miniatúrny obrázok z YouTube | 11tik",
   "description": "Získajte pôvodnú verejnú miniatúru YouTube, ktorú YouTube už hostí. Toto je záber z CDN, nie záber vytrhnutý z videa.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Čo je pôvodná miniatúra na YouTube?",
-      "html": "<p>Je to ukážkový obrázok, ktorý YouTube už ukladá na svojich hostiteľských serveroch obrázkov. Je to súbor používaný vo vyhľadávaní a navrhovaných poličkach, nie snímka, ktorú zachytíte pomocou funkcie Print Screen.</p>"
+      "html": "<p>Je to ukážkový obrázok, ktorý YouTube už ukladá na svojich verejných hostiteľoch obrázkov pre ID videa – rovnaká trieda súborov, aká sa používa vo vyhľadávaní a navrhovaných poličkach. V slovníku 11tik znamená „originálny“ to, že<strong>verejný derivát CDN</strong>, nie žiaden z nasledujúcich:</p>\n  <ul>\n    <li>Pôvodný zdrojový súbor nahraný používateľom zo Štúdia YouTube</li>\n    <li>Nespracovaný súbor projektu (PSD, AI atď.)</li>\n    <li>Snímka zachytená z videostreamu</li>\n    <li>Datový materiál s garantovaným zdrojovým rozlíšením alebo 4K master</li>\n  </ul>\n  <p>Pre<strong>najväčší overený verejný súbor</strong>ak môžu chýbať maxres, prečítajte si<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">sprievodca najvyššej kvality</a>Informácie o úrovniach pixelov a názvoch súborov nájdete v<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">sprievodca veľkosťami</a>.</p>"
     },
     {
       "heading": "V čom sa to líši od snímky obrazovky?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Ako overím, či som naozaj dostal pôvodný súbor?",
-      "html": "<p>Po overení súboru použite zoznamy veľkostí a rozmerov 11tik. Ak obrázok vyzerá ako snímka obrazovky prehrávača, nestiahli ste si hostovanú miniatúru.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Najvyššia kvalita</a></p>"
+      "html": "<p>Po overení súboru použite zoznamy veľkostí a rozmerov 11tik. Ak obrázok vyzerá ako snímka obrazovky prehrávača, nestiahli ste si hostovanú miniatúru.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/about\">O nás</a>alebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Najvyššia kvalita</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/about\">O nás</a>alebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

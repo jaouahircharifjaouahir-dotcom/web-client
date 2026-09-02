@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "ko",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "유튜브 원본 썸네일 이미지를 얻는 방법 | 11tik",
   "description": "YouTube에서 이미 호스팅하고 있는 원본 공개 썸네일을 가져옵니다. 이는 CDN에서 제공하는 스틸 이미지이며, 동영상에서 추출한 프레임이 아닙니다.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "원래 유튜브 썸네일은 무엇인가요?",
-      "html": "<p>이는 YouTube가 이미지 호스팅 사이트에 이미 저장해 둔 미리보기 이미지입니다. 검색 및 추천 콘텐츠에 사용되는 파일이지, Print Screen으로 캡처한 화면이 아닙니다.</p>"
+      "html": "<p>이는 YouTube가 동영상 ID에 대해 공개 이미지 호스트에 이미 저장해 둔 미리보기 이미지이며, 검색 및 추천 콘텐츠에 사용되는 것과 동일한 파일 형식입니다. 11tik의 용어에서 \"원본\"이란 다음을 의미합니다.<strong>공개 CDN 파생 상품</strong>다음 중 어느 것도 아닙니다.</p>\n  <ul>\n    <li>업로더가 YouTube 스튜디오에서 업로드한 원본 소스 파일</li>\n    <li>원본 프로젝트 파일(PSD, AI 등)</li>\n    <li>비디오 스트림에서 캡처된 프레임</li>\n    <li>원본 해상도를 보장하는 에셋 또는 4K 마스터</li>\n  </ul>\n  <p>~을 위해<strong>가장 큰 검증된 공개 파일</strong>maxres가 없을 경우, 다음을 읽어보세요.<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">최고 품질 가이드</a>픽셀 티어 및 파일 이름에 대한 자세한 내용은 다음을 참조하십시오.<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">사이즈 가이드</a>.</p>"
     },
     {
       "heading": "스크린샷과 어떻게 다른가요?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "내가 정말로 원본 파일을 받았는지 어떻게 확인할 수 있나요?",
-      "html": "<p>파일 유효성 검사 후 11tik에 나열된 크기 및 치수를 사용하십시오. 이미지가 플레이어 스크린샷처럼 보이면 호스팅된 썸네일을 다운로드하지 않은 것입니다.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">최고 품질</a></p>"
+      "html": "<p>파일 유효성 검사 후 11tik에 나열된 크기 및 치수를 사용하십시오. 이미지가 플레이어 스크린샷처럼 보이면 호스팅된 썸네일을 다운로드하지 않은 것입니다.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/about\">에 대한</a>또는<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">최고 품질</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/about\">에 대한</a>또는<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
 }

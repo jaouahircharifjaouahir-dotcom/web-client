@@ -2,7 +2,7 @@
   "contentId": "youtube-thumbnail-not-appearing-private",
   "articleId": "youtube-thumbnail-not-appearing-private",
   "locale": "ja",
-  "sourceHash": "40539861720a71a0fa32638629f8a42f6ddc82cfd090e13c3152cae23250c390",
+  "sourceHash": "49e1499b6f3aa74a750c70d675d27a9d378e2b76f2dca55ccd442a062b3682bb",
   "status": "ready",
   "title": "YouTubeのサムネイルが表示されない理由：非公開、年齢制限付き、または処理中の動画 | 11tik",
   "description": "YouTubeの公開動画が読み込まれない場合、動画が非公開、制限付き、処理中、または削除されている可能性があり、単にmaxresファイル名が見つからないというだけではない。",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "簡単な回答",
-      "html": "<p>有効なYouTube URLは、動画IDを持っていることを証明します。<strong>ない</strong>YouTube が使用可能な公開サムネイルファイルを画像 CDN に公開したことを証明します。<a href=\"https://www.11tik.com/\">11tik</a>公開されている静止画のみをチェックします。これらの画像候補が読み込まれない場合、ツールは公開されているサムネイルが見つからなかったと報告します。この結果は、多くの場合、単一の欠落したサイズ名ではなく、ビデオのアクセスまたは状態（プライベート、年齢制限、その他の制限、処理中、削除済み、またはその他の理由で利用不可）を追跡します。<code>maxresdefault.jpg</code>。</p>\n  <p>重要な誠実性チェック: 11tikは<strong>ない</strong>正確な原因を非公開、年齢制限、または処理中として分類します。これらのラベルは一般的な説明であり、ユーザーはYouTube自体で確認する必要があります。この抽出ツールは、公開されている動画が検証可能かどうかのみを示します。</p>\n\n  <img alt=\"Flow from a YouTube URL through video ID and public still check to available or unavailable outcomes\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">診断手順：URL → 動画ID → 公開静止画チェック → 利用可能か利用不可か → 次に確認すべき事項。</p>"
+      "html": "<p>有効なYouTube URLは、動画IDを持っていることを証明します。<strong>ない</strong>YouTube が使用可能な公開サムネイルファイルを画像 CDN に公開したことを証明します。<a href=\"https://www.11tik.com/\">11tik</a>公開されている静止画のみをチェックします。これらの画像候補が読み込まれない場合、ツールは公開されているサムネイルが見つからなかったと報告します。この結果は、多くの場合、単一の欠落したサイズ名ではなく、ビデオのアクセスまたは状態（プライベート、年齢制限、その他の制限、処理中、削除済み、またはその他の理由で利用不可）を追跡します。<code>maxresdefault.jpg</code>。</p>\n  <p>重要な誠実性チェック: 11tikは<strong>ない</strong>正確な原因を非公開、年齢制限、または処理中として分類します。これらのラベルは一般的な説明であり、ユーザーはYouTube自体で確認する必要があります。この抽出ツールは、公開されている動画が検証可能かどうかのみを示します。</p>\n\n  <img alt=\"YouTube URLから動画IDと公開静止画チェックを経て、利用可能か利用不可かの結果に至るフロー\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-unavailable-diagnostic-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">診断手順：URL → 動画ID → 公開静止画チェック → 利用可能か利用不可か → 次に確認すべき事項。</p>"
+    },
+    {
+      "heading": "診断決定木",
+      "html": "<p>ファイル名一つだけを非難する前に、このツリー構造を確認してください。</p>\n  <ol>\n    <li><strong>URLを11tikに貼り付けてください。</strong>公開されているサムネイルのバリアントは検証されましたか？</li>\n    <li><strong>はいの場合 → 動画が利用可能です。</strong>希望する高ティア（例：maxres）が表示されないのに、hq/sdはロードされるのですか？→<strong>バリアントは入手できません</strong>→<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresフォールバックガイド</a>。</li>\n    <li><strong>いいえの場合 → 公開用の静止画には動画が利用できません。</strong>ログアウトした状態でウォッチページを開きます。非公開／削除済み／制限付き／処理中？→<strong>使用可能なパブリックサムネイルがありません</strong>→ YouTube で確認; Studio 処理後に再試行<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">スタジオガイド</a>。</li>\n  </ol>\n  <p>「maxres 404」と「動画にサムネイルがありません」を統合しないでください。前者はフォールバックの問題であり、後者はアクセスまたは状態の問題です。</p>"
     },
     {
       "heading": "「サムネイルが利用できません」とはどういう意味か",
-      "html": "<p>実際には、「利用不可」とは、次の2つの異なる問題のいずれかを意味します。</p>\n  <ol>\n    <li><strong>動画レベルは利用できません:</strong>公開用の静止画候補はどれも不合格です。現時点では、そのIDに対応するダウンロード可能な公開画像は入手できません。</li>\n    <li><strong>バリアントは利用できません:</strong>高解像度のファイル名（多くの場合maxres）が1つ欠落していますが、より低解像度のパブリックサイズは正常に読み込まれます。これはサイズ/フォールバックの問題であり、動画全体のサムネイルが欠落しているわけではありません。</li>\n  </ol>\n  <p>この記事では最初のケースを取り上げます。2番目のケース、特に<code>maxresdefault.jpg</code>404エラー—専用の<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault トラブルシューティングガイド</a>。</p>\n\n  <img alt=\"Side-by-side comparison of a missing thumbnail size versus no usable public thumbnail for the video\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">左：1つのバリエーションが欠落しているが、他の公開サイズは引き続き使用可能。右：ビデオIDに使用できる公開静止画がない。</p>"
+      "html": "<p>実際には、「利用不可」とは、次の2つの異なる問題のいずれかを意味します。</p>\n  <ol>\n    <li><strong>動画レベルは利用できません:</strong>公開用の静止画候補はどれも不合格です。現時点では、そのIDに対応するダウンロード可能な公開画像は入手できません。</li>\n    <li><strong>バリアントは利用できません:</strong>高解像度のファイル名（多くの場合maxres）が1つ欠落していますが、より低解像度のパブリックサイズは正常に読み込まれます。これはサイズ/フォールバックの問題であり、動画全体のサムネイルが欠落しているわけではありません。</li>\n  </ol>\n  <p>この記事では最初のケースを取り上げます。2番目のケース、特に<code>maxresdefault.jpg</code>404エラー—専用の<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault トラブルシューティングガイド</a>。</p>\n\n  <img alt=\"サムネイルサイズが欠落している場合と、動画に使用可能なパブリックサムネイルがない場合の比較\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-variant-vs-video-unavailable.png\" width=\"1200\">\n  <p class=\"yte-caption\">左：1つのバリエーションが欠落しているが、他の公開サイズは引き続き使用可能。右：ビデオIDに使用できる公開静止画がない。</p>"
     },
     {
       "heading": "公開静止画と動画へのアクセス状況",
-      "html": "<p>YouTube は、視聴ページと画像派生コンテンツを別々にホストしています。公開サムネイルファイルは通常、次のようなホストにあります。<code>i.ytimg.com</code>そして、それらは11文字のビデオIDによって識別されます。アカウントにログインせずにサムネイルを抽出するツールは、これらの公開ファイルのみを要求できます。</p>\n  <p>動画がパブリックパッケージで公開されていない場合、または派生作品がまだ準備できていない場合、貼り付けられた文字列が通常のウォッチ、ショート、ライブ、または埋め込みリンクのように見えても、画像チェックは失敗します。これらの URL の形状が ID にどのようにマッピングされるかは、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTubeサムネイルURLガイド</a>. 静止画が存在する場合の保存方法については、<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>。</p>"
+      "html": "<p>YouTube は、視聴ページと画像派生コンテンツを別々にホストしています。公開サムネイルファイルは通常、次のようなホストにあります。<code>i.ytimg.com</code>そして、それらは11文字のビデオIDによって識別されます。アカウントにログインせずにサムネイルを抽出するツールは、これらの公開ファイルのみを要求できます。</p>\n  <p>動画がパブリックパッケージで公開されていない場合、または派生作品がまだ準備できていない場合、貼り付けられた文字列が通常のウォッチ、ショート、ライブ、または埋め込みリンクのように見えても、画像チェックは失敗します。これらの URL の形状が ID にどのようにマッピングされるかは、<a href=\"https://www.11tik.com/youtube-thumbnail-url\">YouTubeサムネイルURLガイド</a>. 静止画が存在する場合の保存方法については、<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ダウンロードガイド</a>。</p>"
     },
     {
       "heading": "プライベートビデオ",
@@ -42,15 +46,15 @@
     },
     {
       "heading": "年齢制限およびその他のアクセス制限",
-      "html": "<p>年齢制限、会員限定、または同様の制限がかけられた動画は、公開画像検索においてプライベートコンテンツのように振る舞うことがあります。IDは正しく解析されるかもしれませんが、公開されている静止画は検証されません。地域制限やアカウント制限も、公開ツールで同様の結果をもたらす可能性があります。</p>\n  <p>繰り返しますが、11tikは制限の種類をラベル付けしません。YouTubeでアクセス状態を確認してください。抽出ツールは、公開がまだロードされているかどうかのみを報告します。</p>"
+      "html": "<p>年齢制限、会員限定、または同様の制限がかけられた動画は、公開画像検索においてはプライベートコンテンツのように扱われることがあります。IDは正しく解析されるものの、公開されている静止画は検証されない場合があるためです。地域制限やアカウント制限も、公開ツールでは同様に空の結果を生み出す可能性があります。</p>\n  <p>繰り返しますが、11tikは制限の種類をラベル付けしません。YouTubeでアクセス状態を確認してください。抽出ツールは、公開がまだロードされているかどうかのみを報告します。</p>"
     },
     {
       "heading": "動画処理中",
-      "html": "<p>「処理」は、関連する2つの方法で現れます。</p>\n  <ul>\n    <li><strong>最新のアップロード：</strong>公開画像派生作品がすべて準備できるまでは、ウォッチページが表示される場合があります。同じURLで後ほど再度お試しください。</li>\n    <li><strong>Studioでのカスタムサムネイル更新：</strong>アートワークを差し替えた後、公開CDNファイルの表示に遅延が生じる場合があります。サイズの小さいファイルがサイズの大きいファイルより先に表示されたり、一時的に画像セットが不完全になったりすることがあります。</li>\n  </ul>\n  <p>もし<em>いくつかの</em>公開サイズは既に機能しており、最高名のみが欠けています。<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault の記事</a>。 もし<em>いいえ</em>公開検証はまだ完了していません。処理が完了するまでお待ちください。その後、再度確認してください。<a href=\"https://www.11tik.com/\">11tik</a>。</p>"
+      "html": "<p>「処理」は、関連する2つの方法で現れます。</p>\n  <ul>\n    <li><strong>最新のアップロード：</strong>公開画像派生作品がすべて準備できるまでは、ウォッチページが表示される場合があります。同じURLで後ほど再度お試しください。</li>\n    <li><strong>Studioでのカスタムサムネイル更新：</strong>アートワークを差し替えた後、公開CDNファイルの表示に遅延が生じる場合があります。サイズの小さいファイルがサイズの大きいファイルより先に表示されたり、一時的に画像セットが不完全になったりすることがあります。</li>\n  </ul>\n  <p>もし<em>いくつかの</em>パブリックサイズは既に機能しており、最高名のみが欠けています。<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault の記事</a>。 もし<em>いいえ</em>公開検証はまだ完了していません。処理が完了するまでお待ちください。その後、再度確認してください。<a href=\"https://www.11tik.com/\">11tik</a>。</p>"
     },
     {
       "heading": "削除されたコンテンツ、またはその他の理由で利用できないコンテンツ",
-      "html": "<p>削除された動画、破損したID、および一部のアップロードの中止により、信頼できる公開パッケージが残らない場合があります。ブックマークされた視聴URLは構文的には問題ないように見えても、すべての画像候補が失敗する可能性があります。削除済み/利用不可は、他の動画レベルの障害と同様に扱います。YouTubeの視聴ページの状態を確認し、CDNからの配信を期待しないようにしてください。</p>"
+      "html": "<p>削除された動画、破損したID、および一部のアップロードの中止により、信頼できる公開パッケージが残らない場合があります。ブックマークされた視聴URLは構文的には問題ないように見えても、画像候補はすべて失敗する可能性があります。削除済み/利用不可は、他の動画レベルの障害と同様に扱います。YouTubeの視聴ページの状態を確認し、CDNからの配信を期待しないようにしてください。</p>"
     },
     {
       "heading": "有効なURLだけでは不十分な理由",
@@ -62,7 +66,7 @@
     },
     {
       "heading": "診断表",
-      "html": "<table>\n    <thead>\n      <tr><th>あなたが見るもの</th><th>可能性の高いクラス</th><th>次のステップ</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tikは1つ以上のサイズをリストします</td><td>公開されている静止画が存在する</td><td><a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>サイズ選択</td></tr>\n      <tr><td>maxresのみ失敗。hq/sdは動作する。</td><td>バリアントは利用できません</td><td><a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresのトラブルシューティング</a></td></tr>\n      <tr><td>サイズ展開なし。YouTubeはログイン/年齢制限を要求する。</td><td>アクセス制限</td><td>公開されている動画を使用するか、公開抽出が実行できないことを受け入れるかのいずれかを選択してください。</td></tr>\n      <tr><td>サイズ指定なし。オーナーがアートをアップロード/差し替えたばかりです。</td><td>処理遅延</td><td>しばらく待ってから、同じURLを再度確認してください。</td></tr>\n      <tr><td>サイズ指定なし。YouTubeでは非公開/利用不可と表示されます。</td><td>非公開または削除済み状態</td><td>公開はまだされていません</td></tr>\n      <tr><td>URLは解析されません</td><td>不良またはサポートされていないリンク</td><td><a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">URL / 動画IDガイド</a></td></tr>\n    </tbody>\n  </table>"
+      "html": "<table>\n    <thead>\n      <tr><th>あなたが見るもの</th><th>可能性の高いクラス</th><th>次のステップ</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>11tikは1つ以上のサイズをリストします</td><td>公開されている静止画が存在する</td><td><a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ダウンロードガイド</a>サイズ選択</td></tr>\n      <tr><td>maxresのみ失敗。hq/sdは動作する。</td><td>バリアントは入手できません</td><td><a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresのトラブルシューティング</a></td></tr>\n      <tr><td>サイズ展開なし。YouTubeはログイン/年齢制限を要求する。</td><td>アクセス制限</td><td>公開されている動画を使用するか、公開抽出が実行できないことを受け入れるかのいずれかを選択してください。</td></tr>\n      <tr><td>サイズ指定なし。オーナーがアートをアップロード/差し替えたばかりです。</td><td>処理遅延</td><td>しばらく待ってから、同じURLを再度確認してください。</td></tr>\n      <tr><td>サイズ指定なし。YouTubeでは非公開/利用不可と表示されます。</td><td>非公開または削除済み状態</td><td>公開はまだされていません</td></tr>\n      <tr><td>URLは解析されません</td><td>不良またはサポートされていないリンク</td><td><a href=\"https://www.11tik.com/youtube-thumbnail-url\">URL / 動画IDガイド</a></td></tr>\n    </tbody>\n  </table>"
     },
     {
       "heading": "バリアントが見つからないか、使用可能な公開サムネイルがありません",
@@ -86,8 +90,8 @@
     },
     {
       "question": "カスタムサムネイルをアップロードしたのですが、なぜ抽出結果が空なのでしょうか？",
-      "answer": "スタジオ処理に時間がかかる場合があります。しばらく待ってから、同じ公開URLを再度貼り付けてください。一部のサイズは表示されるもののmaxresが表示されない場合は、動画にサムネイルがないと決めつけるのではなく、maxresガイドをお読みください。",
-      "answerHtml": "<p>スタジオ処理に時間がかかる場合があります。しばらく待ってから、同じ公開URLを再度貼り付けてください。一部のサイズは表示されるもののmaxresが表示されない場合は、動画にサムネイルがないと決めつけるのではなく、maxresガイドをお読みください。</p>"
+      "answer": "スタジオ処理に時間がかかる場合があります。しばらく待ってから、同じ公開URLを再度貼り付けてください。一部のサイズは表示されるものの、maxresが表示されない場合は、動画にサムネイルがないと決めつけるのではなく、maxresガイドをお読みください。",
+      "answerHtml": "<p>スタジオ処理に時間がかかる場合があります。しばらく待ってから、同じ公開URLを再度貼り付けてください。一部のサイズは表示されるものの、maxresが表示されない場合は、動画にサムネイルがないと決めつけるのではなく、maxresガイドをお読みください。</p>"
     },
     {
       "question": "これはmaxresdefault 404と同じ問題ですか？",
@@ -101,8 +105,8 @@
     },
     {
       "question": "URLが正しいように見える場合、何を試せば良いでしょうか？",
-      "answer": "動画がログアウト状態で開くことを確認し、スタジオアートを変更した場合はしばらく待ってから、11tikで抽出を再実行してください。結果が常に空の場合は、そのIDに対応する公開静止画が現在利用できないことを意味します。",
-      "answerHtml": "<p>動画がログアウト状態で開くことを確認し、スタジオアートを変更した場合はしばらく待ってから、11tikで抽出を再実行してください。結果が常に空の場合は、そのIDに対応する公開静止画が現在利用できないことを意味します。</p>"
+      "answer": "動画がログアウト状態で開くことを確認し、スタジオアートを変更した場合はしばらく待ってから、11tikで抽出を再実行してください。結果が常に空の場合は、そのIDに対応する公開静止画が現在存在しないことを意味します。",
+      "answerHtml": "<p>動画がログアウト状態で開くことを確認し、スタジオアートを変更した場合はしばらく待ってから、11tikで抽出を再実行してください。結果が常に空の場合は、そのIDに対応する公開静止画が現在存在しないことを意味します。</p>"
     },
     {
       "question": "「公開サムネイルなし」とは、動画ファイルが削除されたという意味ですか？",
@@ -111,5 +115,5 @@
     }
   ],
   "conclusionHtml": "<h2>結論</h2>\n<p>サムネイルが表示されない場合、次の2つの質問を分けて考えてください。公開検証はまだ行われていましたか？それとも、上位のファイル名のうち1つだけが失敗しましたか？ビデオレベルの失敗は通常、非公開、制限付き、処理中、削除済み、またはその他の非公開パッケージングに起因しており、魔法が欠けているわけではありません。<code>maxresdefault</code>文字列。11tik を使用して公開されているかどうかを正直にテストし、対応する次のステップについては maxres、URL、またはダウンロード ガイドに従ってください。</p>\n  <p><a href=\"https://www.11tik.com/\">11tikに公開されているYouTubeサムネイルが存在するかどうかを確認します →</a></p>",
-  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>カスタムサムネイルに関する公式クリエイターヘルプ：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/about\">について</a>・<a href=\"https://www.11tik.com/privacy\">プライバシー</a>・<a href=\"https://www.11tik.com/terms-of-use\">条項</a>カスタムサムネイルに関する公式クリエイターヘルプ：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>。</p>"
 }

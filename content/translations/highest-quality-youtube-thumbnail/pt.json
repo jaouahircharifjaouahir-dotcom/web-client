@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "pt",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Como obter miniaturas do YouTube da mais alta qualidade | 11tik",
   "description": "A mais alta qualidade significa o maior arquivo JPEG ou WebP público que o YouTube realmente retorna, e não um nome de arquivo 4K estimado.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Qual é a resolução pública máxima?",
-      "html": "<p>Quando o YouTube publica o arquivo maxresdefault, geralmente é 1280×720. Se esse arquivo não estiver disponível, a qualidade mais alta possível é o próximo tamanho válido, como sd ou hq.</p>"
+      "html": "<p>Quando o YouTube publica o maxresdefault, geralmente é 1280×720. Se esse arquivo estiver faltando, a qualidade mais alta disponível é o próximo tamanho válido, como sd ou hq. \"Qualidade mais alta\" significa a<strong>maior imagem validada e publicamente recuperável</strong>para esse ID de vídeo — não é um master 4K, não é um arquivo de tamanho médio ampliado e não é uma captura de tela do player.</p>"
+    },
+    {
+      "heading": "Qualidade máxima versus miniatura \"original\"",
+      "html": "<p><strong>Qualidade superior</strong>(este guia): o principal derivado de CDN público 11tik valida—geralmente maxres ou hq720 quando presente.<strong>Original</strong>(Intenção diferente): ainda é uma CDN pública, mas a palavra leva as pessoas a esperarem o arquivo original do uploader. Não é o Photoshop/PNG bruto do Studio, não é uma extração de quadro de vídeo e não há garantia de que seja uma arte com a resolução original. Veja<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">Significado e limites da miniatura original</a>e<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">referência de tamanho</a>Em nosso<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Amostra de 300 vídeos</a>, resolução máxima validada para IDs 286/300 — disponibilidade limitada à amostra, não garantida para todos os uploads.</p>"
     },
     {
       "heading": "O WebP faz diferença?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Por que a alta definição (HD) às vezes parece desfocada?",
-      "html": "<p>A resolução pública ainda pode ser 1280×720 com compressão, ou você pode estar visualizando a resolução padrão de alta qualidade. Verifique os relatórios de tamanho de pixel 11tik antes de presumir que o download falhou.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrator</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guia de tamanhos</a></p>"
+      "html": "<p>A resolução pública ainda pode ser 1280×720 com compressão, ou você pode estar visualizando a resolução padrão de alta qualidade. Verifique os relatórios de tamanho de pixel 11tik antes de presumir que o download falhou.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/about\">Sobre</a>ou<a href=\"https://www.11tik.com/contact\">Contato</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrator</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Guia de tamanhos</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/about\">Sobre</a>ou<a href=\"https://www.11tik.com/contact\">Contato</a>.</p>"
 }

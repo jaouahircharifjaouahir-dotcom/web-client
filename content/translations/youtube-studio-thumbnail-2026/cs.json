@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "cs",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Náhled YouTube Studia 2026 | 11tik",
   "description": "V roce 2026 budou oprávněné kanály YouTube stále nahrávat vlastní miniaturu ze Studia na stránku s podrobnostmi o videu. Popisky nabídek se přesunou, ale výsledek je stejný: YouTube hostuje nový veřejný statický snímek. 11tik tento soubor nenahraje. Čte pouze URL adresy veřejných obrázků poté, co existují.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Otevřete YouTube Studio a vyberte video.</li>\n    <li>V sekci Podrobnosti nahrajte obrázek s poměrem stran 16:9 (běžný cíl YouTube je 1280×720).</li>\n    <li>Uložte a počkejte na dokončení zpracování.</li>\n  </ol>\n  <p>Přesné názvy tlačítek se mohou změnit. Pokud váš účet nemá nárok na vlastní miniatury, Studio nahrávání nenabídne. 11tik tuto možnost obejít nemůže.</p>"
     },
     {
+      "heading": "Diagnostický strom: Změna studia vs. veřejná fotografie",
+      "html": "<ol>\n    <li>Po nahrání vlastní grafiky do Studia počkejte na dokončení zpracování.</li>\n    <li>Vložte veřejnou URL adresu pro sledování do<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Zobrazují se některé velikosti, chybí maximální rozlišení?</strong>→ problém s variantou/záložní verzí, nikoli neúspěšné nahrání do Studia. Viz<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Vysvětlení maxresdefault</a>.</li>\n    <li><strong>Žádné velikosti vůbec?</strong>→ video se může stále zpracovávat, být soukromé nebo omezené pro veřejné snímky z CDN. Viz<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatura se nezobrazuje</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Jak zkontroluji miniaturu po její změně ve Studiu?",
-      "html": "<p>Vložte URL adresu pro sledování do<a href=\"https://www.11tik.com/\">11tik</a>Stáhněte nebo zkopírujte první uvedenou velikost. Pokud chybí maxresdefault, další veřejný soubor je poctivá maximální velikost. Jedná se o katalog YouTube, nikoli o neúspěšný výňatek. Viz také<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Vysvětlení maxresdefault</a>.</p>"
+      "html": "<p>Vložte URL adresu pro sledování do<a href=\"https://www.11tik.com/\">11tik</a>Stáhněte nebo zkopírujte první uvedenou velikost. Pokud chybí maxresdefault, další veřejný soubor je poctivá maximální velikost. Jedná se o katalog YouTube, nikoli o neúspěšný výňatek. Viz také<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Vysvětlení maxresdefault</a>.</p>"
     },
     {
       "heading": "Nahrazuje 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Co mám dělat, když obrázek vypadá starý?",
-      "html": "<p>Sítě CDN obrázků se mohou zpožďovat. Zkontrolujte to později, obnovte stránku na místě nebo zkopírujte URL 11tik, což potvrzuje. Nepředpokládejte 4K hlavní formát; maximální veřejné rozlišení je obvykle 1280×720. Snímek obrazovky ze Studia není veřejný soubor s miniaturou.</p>\n  <p>Související:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extraktor vs. výrobce</a>.</p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otevřete extraktor</a></p>"
+      "html": "<p>Sítě CDN obrázků se mohou zpožďovat. Zkontrolujte to později, obnovte stránku na místě nebo zkopírujte URL 11tik, což potvrzuje. Nepředpokládejte 4K hlavní formát; maximální veřejné rozlišení je obvykle 1280×720. Snímek obrazovky ze Studia není veřejný soubor s miniaturou.</p>\n  <p>Související:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extraktor vs. výrobce</a>.</p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otevřete extraktor</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
 }

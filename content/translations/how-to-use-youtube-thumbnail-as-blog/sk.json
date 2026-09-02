@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "sk",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "Ako použiť miniatúru YouTube ako vybraný obrázok blogu alebo ukážku Open Graph | 11tik",
   "description": "Overte, či verejný YouTube stále existuje, a potom hosťujte kópiu pre WordPress, Blogger alebo og:image. Nevytvárajte odkazy na uhádnutú URL adresu maxresdefault.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "Rýchla odpoveď",
-      "html": "<p>Vložte verejnú URL adresu YouTube do<a href=\"https://www.11tik.com/\">11tik</a>, počkajte na overené veľkosti a potom buď<strong>stiahnuť</strong>prvú statickú fotografiu a nahrajte ju do svojho CMS, alebo<strong>skopírujte URL adresu obrázka</strong>až po načítaní. Pre trvalé príspevky si vytvorte vlastnú kópiu.<code>i.ytimg.com</code>je vhodný na návrhy a krehký na výrobu spoločenských kariet.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Potvrdiť → kopírovať alebo stiahnuť → hostiť → odkaz v HTML / vybraný obrázok / Otvoriť Graph.</p>"
+      "html": "<p>Vložte verejnú URL adresu YouTube do<a href=\"https://www.11tik.com/\">11tik</a>, počkajte na overené veľkosti a potom buď<strong>stiahnuť</strong>prvú statickú fotografiu a nahrajte ju do svojho CMS, alebo<strong>skopírujte URL adresu obrázka</strong>až po načítaní. Pre trvalé príspevky si vytvorte vlastnú kópiu.<code>i.ytimg.com</code>je vhodný na návrhy a krehký na výrobu spoločenských kariet.</p>\n\n  <img alt=\"Pracovný postup od potvrdenia miniatúry YouTube na 11tik až po jej nahranie do WordPressu alebo\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Potvrdiť → kopírovať alebo stiahnuť → hostiť → odkaz v HTML / vybraný obrázok / Otvoriť Graph.</p>"
     },
     {
       "heading": "Čo je to priama URL adresa miniatúry",
-      "html": "<p>Priama adresa URL miniatúry odkazuje napríklad na súbor JPEG alebo WebP na sieti CDN obrázkov YouTube.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Nie je to stránka sledovania. Ako sú tieto adresy zostavené:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">získať URL adresu miniatúry YouTube</a>. Ako sa veľkosti líšia:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">sprievodca veľkosťou a rozlíšením</a>.</p>"
+      "html": "<p>Priama adresa URL miniatúry odkazuje napríklad na súbor JPEG alebo WebP na sieti CDN obrázkov YouTube.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Nie je to stránka sledovania. Ako sú tieto adresy zostavené:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">získať URL adresu miniatúry YouTube</a>. Ako sa veľkosti líšia:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">sprievodca veľkosťou a rozlíšením</a>.</p>"
     },
     {
       "heading": "Príklad HTML",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "Pracovný postup WordPressu",
-      "html": "<ol>\n    <li>Rozbaľte video na 11tik a stiahnite si prvú zobrazenú snímku.</li>\n    <li>Vo WordPresse: Médiá → Pridať nové → nahrajte súbor.</li>\n    <li>Nastavte ho ako odporúčaný obrázok príspevku.</li>\n    <li>V nástroji Yoast, Rank Math alebo podobnom overte, či sociálny náhľad používa danú prílohu (alebo nahrajte vyhradený originálny výrez).</li>\n    <li>Napíšte alternatívny text s názvom videa a informáciou, že súbor je verejná snímka z YouTube – nie preplnený zoznam kľúčových slov.</li>\n  </ol>\n  <p>Vyhnite sa lepeniu surového<code>maxresdefault.jpg</code>cesta do poľa médií, kým sa súbor nepreukáže. Chýbajúce maximálne rozlíšenie je bežné –<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Sprievodca maxresdefault 404</a>.</p>"
+      "html": "<ol>\n    <li>Rozbaľte video na 11tik a stiahnite si prvú zobrazenú snímku.</li>\n    <li>Vo WordPresse: Médiá → Pridať nové → nahrajte súbor.</li>\n    <li>Nastavte ho ako odporúčaný obrázok príspevku.</li>\n    <li>V nástroji Yoast, Rank Math alebo podobnom overte, či sociálny náhľad používa danú prílohu (alebo nahrajte vyhradený originálny výrez).</li>\n    <li>Napíšte alternatívny text s názvom videa a informáciou, že súbor je verejná snímka z YouTube – nie preplnený zoznam kľúčových slov.</li>\n  </ol>\n  <p>Vyhnite sa lepeniu surového<code>maxresdefault.jpg</code>cesta do poľa médií, kým sa súbor nepreukáže. Chýbajúce maximálne rozlíšenie je bežné –<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Sprievodca maxresdefault 404</a>.</p>"
     },
     {
       "heading": "Blogger a statické stránky",
-      "html": "<p><strong>Bloger:</strong>Nahrajte statický obrázok do editora príspevkov a potom znova použite URL adresu obrázka hostovaného v službe Blogger pre všetky polia témy/úryvkov sociálnych sietí, ktoré ovládate. Nespoliehajte sa na uhádnutú cestu k sieti YouTube CDN pre publikovaný príspevok, na ktorom vám záleží.</p>\n  <p><strong>Statické generátory:</strong>Uložte súbor do svojho repozitára alebo CDN a potom nastavte značky front-matter / meta pre daný HTTPS assets. V prípade potreby uchovávajte koncepty na dočasnej URL adrese i.ytimg.com, ale odosielajte ich s vlastným hostingom.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Odporúčaný obrázok a og:image môžu zdieľať súbor, ale oba potrebujú URL adresu, ktorá skutočne existuje.</p>"
+      "html": "<p><strong>Bloger:</strong>Nahrajte statický obrázok do editora príspevkov a potom znova použite URL adresu obrázka hostovaného v službe Blogger pre všetky polia témy/úryvkov sociálnych sietí, ktoré ovládate. Nespoliehajte sa na uhádnutú cestu k sieti YouTube CDN pre publikovaný príspevok, na ktorom vám záleží.</p>\n  <p><strong>Statické generátory:</strong>Uložte súbor do svojho repozitára alebo CDN a potom nastavte značky front-matter / meta pre daný HTTPS assets. V prípade potreby uchovávajte koncepty na dočasnej URL adrese i.ytimg.com, ale odosielajte ich s vlastným hostingom.</p>\n\n  <img alt=\"Porovnanie nahrávania obrázkov z WordPressu a sociálnej karty Open Graph s použitím skutočných\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Odporúčaný obrázok a og:image môžu zdieľať súbor, ale oba potrebujú URL adresu, ktorá skutočne existuje.</p>"
+    },
+    {
+      "heading": "Praktické príklady podľa platformy",
+      "html": "<h3>Kopírovanie obrázka (najprv potvrdená URL adresa)</h3>\n  <p>Na 11tik použite<strong>Kopírovať URL adresu obrázka</strong>až po overení veľkosti vo vašom prehliadači. Vložte túto HTTPS adresu do konceptu – alebo ešte lepšie, stiahnite súbor a nahrajte ho. Hádanie<code>maxresdefault.jpg</code>Preruší Open Graph, keď súbor nebol nikdy publikovaný. Konštrukcia URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Sprievodca URL adresami miniatúr</a>.</p>\n  <h3>Lokálne hosťovanie (odporúčané pre produkciu)</h3>\n  <p>Stiahnite si overený statický obrázok, nahrajte ho do svojej mediálnej knižnice alebo statickej CDN a uveďte svoju doménu v<code>&lt;img&gt;</code>a<code>og:image</code>Vyhnite sa krehkým dlhodobým prepojeniam<code>i.ytimg.com</code>na príspevky, na ktorých vám záleží.</p>\n  <h3>Odporúčaný obrázok WordPressu + og:obrázok</h3>\n  <p>Médiá → Pridať nové → nahrajte stiahnutý súbor JPEG alebo WebP → nastavte odporúčaný obrázok → potvrďte, že náhľad sociálnych médií Yoast/Rank Math používa danú prílohu. Po zmene URL znova scrapeujte ladiace programy Facebooku/Twitteru/LinkedInu.</p>\n  <h3>Bloger</h3>\n  <p>Vložte obrázok do editora príspevkov, aby Blogger hostoval súbor, a potom znova použite túto URL adresu Blogger CDN v meta dátach témy, ak vaša šablóna zobrazuje polia pre sociálne siete. Nespoliehajte sa na externú URL adresu obrázka z YouTube pre trvalý príspevok.</p>\n  <h3>Statické stránky (Hugo, Eleventy atď.)</h3>\n  <p>Vložte obrázok pod<code>/assets</code>alebo vašu CDN, odkazujte na ňu v prednej časti matter a vygenerujte<code>og:image</code>so skutočnou šírkou/výškou. Príklad meta bloku:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>Kedy je hotlinking prijateľný</h3>\n  <p>Interné poznámky, rýchle návrhy alebo dočasné výskumné stránky môžu odkazovať na overený<code>i.ytimg.com</code>URL. Produkčné články, stránky produktov a e-mailové kampane by mali obsahovať kópiu. Vložte widget na extrakciu na stránke:<a href=\"https://www.11tik.com/embed\">sprievodca vložením</a>.</p>"
     },
     {
       "heading": "Úvahy o otvorenom grafe",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "Hotlinking verzus sťahovanie",
-      "html": "<table>\n    <thead>\n      <tr><th>Prístup</th><th>Najlepšie pre</th><th>Riziko</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Horúci odkaz i.ytimg.com</td><td>Rýchle návrhy, výskumné poznámky</td><td>404, zmeny CDN, žiadna kontrola plodín</td></tr>\n      <tr><td>Stiahnuť + hostiť</td><td>Hodnotené príspevky, stránky produktov</td><td>Musíte uložiť súbor</td></tr>\n      <tr><td>Snímka obrazovky prehrávača</td><td>Takmer nikdy</td><td>Používateľské rozhranie Chrome, nesprávny pomer strán —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">snímka obrazovky verzus skutočná snímka obrazovky</a></td></tr>\n    </tbody>\n  </table>\n  <p>Kroky sťahovania:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ako stiahnuť miniatúru z YouTube</a>Výber formátu, keď existujú súbory WebP aj JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP verzus JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>Prístup</th><th>Najlepšie pre</th><th>Riziko</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Horúci odkaz i.ytimg.com</td><td>Rýchle návrhy, výskumné poznámky</td><td>404, zmeny CDN, žiadna kontrola plodín</td></tr>\n      <tr><td>Stiahnuť + hostiť</td><td>Hodnotené príspevky, stránky produktov</td><td>Musíte uložiť súbor</td></tr>\n      <tr><td>Snímka obrazovky prehrávača</td><td>Takmer nikdy</td><td>Používateľské rozhranie Chrome, nesprávny pomer strán —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">snímka obrazovky verzus skutočná snímka obrazovky</a></td></tr>\n    </tbody>\n  </table>\n  <p>Kroky sťahovania:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ako stiahnuť miniatúru z YouTube</a>Výber formátu, keď existujú súbory WebP aj JPEG:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP verzus JPEG</a>.</p>"
     },
     {
       "heading": "Základy SEO optimalizácie pre obrázky pre tieto fotografie",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "Opätovné použitie a autorské práva (nie právne poradenstvo)",
-      "html": "<p>Verejná URL adresa CDN nie je licencia. Vloženie prehrávača YouTube sa líši od kopírovania fotografie do vášho hlavného prvku. Dodržiavanie pravidiel dodržiavania pravidiel sa vzťahuje na konkrétne fakty. Bezpečnejší redakčný vzorec: ilustrujte komentár k danému videu, uveďte kanál, prepojte stránku sledovania a nepredávajte obrázok ani ho nepoužívajte ako vlastnú grafiku kanála. Oficiálna pomoc s vlastnými miniatúrami:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Nahrať vlastné miniatúry videí</a>Pravidlá stránky:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+      "html": "<p>Verejná URL adresa CDN nie je licencia. Vloženie prehrávača YouTube sa líši od kopírovania fotografie do vášho hlavného prvku. Dodržiavanie pravidiel dodržiavania pravidiel sa vzťahuje na konkrétne fakty. Bezpečnejší redakčný vzorec: ilustrujte komentár k danému videu, uveďte kanál, prepojte stránku sledovania a nepredávajte obrázok ani ho nepoužívajte ako vlastnú grafiku kanála. Oficiálna pomoc s vlastnými miniatúrami:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Nahrať vlastné miniatúry videí</a>Pravidlá stránky:<a href=\"https://www.11tik.com/terms-of-use\">Podmienky</a>.</p>"
     },
     {
       "heading": "Riešenie problémov",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "Ďalší krok",
-      "html": "<p>Potvrďte statický záber na<a href=\"https://www.11tik.com/\">extraktor 11tik</a>, stiahnite si ho, nahrajte ho na svoju stránku a nasmerujte featured image / og:image na váš HTTPS súbor.</p>\n  <p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+      "html": "<p>Potvrďte statický záber na<a href=\"https://www.11tik.com/\">extraktor 11tik</a>, stiahnite si ho, nahrajte ho na svoju stránku a nasmerujte featured image / og:image na váš HTTPS súbor.</p>\n  <p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/about\">O nás</a>·<a href=\"https://www.11tik.com/privacy\">Súkromie</a>·<a href=\"https://www.11tik.com/terms-of-use\">Podmienky</a>.</p>"
     }
   ],
   "faq": [
@@ -98,9 +102,9 @@
     {
       "question": "Čo ak by Studio len zmenilo vlastnú miniatúru?",
       "answer": "Počkajte na spracovanie a potom znova skontrolujte 11tik pred aktualizáciou kópie CMS. Súvisiace: Miniatúry v Štúdiu YouTube.",
-      "answerHtml": "<p>Počkajte na spracovanie a potom pred aktualizáciou kópie CMS znova skontrolujte 11tik. Súvisiace:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatúry zo Štúdia YouTube</a>.</p>"
+      "answerHtml": "<p>Počkajte na spracovanie a potom pred aktualizáciou kópie CMS znova skontrolujte 11tik. Súvisiace:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">Miniatúry zo Štúdia YouTube</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Súkromie</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmienky</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/about\">O nás</a>·<a href=\"https://www.11tik.com/privacy\">Súkromie</a>·<a href=\"https://www.11tik.com/terms-of-use\">Podmienky</a>.</p>"
 }

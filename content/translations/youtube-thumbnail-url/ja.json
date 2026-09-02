@@ -2,7 +2,7 @@
   "contentId": "youtube-thumbnail-url",
   "articleId": "youtube-thumbnail-url",
   "locale": "ja",
-  "sourceHash": "e3411189d6963d4af308d4f718b042dbef779d1aafe9b2a400e760fdead7cb8c",
+  "sourceHash": "42f3b9f8233f786d1d6b7b271d53378c0d99b383784a758ce77027b45e56032d",
   "status": "ready",
   "title": "動画から直接YouTubeサムネイルURLを取得する方法 | 11tik",
   "description": "i.ytimg.comの動画IDから、動作するYouTubeサムネイルURLを作成またはコピーしてください。ホットリンクする前に、サイズが存在することを確認してください。",
@@ -26,15 +26,15 @@
   "sections": [
     {
       "heading": "簡単な回答",
-      "html": "<p>YouTube サムネイル URL を取得するには、11 文字のビデオ ID を見つけて、確認済みの公開画像アドレスを開きます。<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>視聴ページのURLは画像ではありません。ビデオリンクを貼り付けてください<a href=\"https://www.11tik.com/\">11tik</a>実際に読み込まれるサイズを待ってから、<strong>画像のURLをコピー</strong>つまり、404エラーになるような推測ファイル名ではなく、正常に機能するHTTPSリンクを維持するということです。</p>\n\n  <img alt=\"Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">抽出ツールが使用するフロー：公開されている視聴URL → 動画ID → YouTubeの画像ホスト上の公開されているサムネイルURL。</p>"
+      "html": "<p>YouTube サムネイル URL を取得するには、11 文字のビデオ ID を見つけて、確認済みの公開画像アドレスを開きます。<code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>視聴ページのURLは画像ではありません。ビデオリンクを貼り付けてください<a href=\"https://www.11tik.com/\">11tik</a>実際に読み込まれるサイズを待ってから、<strong>画像のURLをコピー</strong>つまり、404エラーになるような推測ファイル名ではなく、正常に機能するHTTPSリンクを維持するということです。</p>\n\n  <img alt=\"YouTubeの視聴URLが動画IDに変換され、さらにサムネイル画像のURLに変換される様子を示す図。\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png\" width=\"1200\">\n  <p class=\"yte-caption\">抽出ツールが使用するフロー：公開されている視聴URL → 動画ID → YouTubeの画像ホスト上の公開されているサムネイルURL。</p>"
     },
     {
       "heading": "YouTubeサムネイルURLとは何か",
-      "html": "<p>YouTube のサムネイル URL は、動画プレーヤーではなく静止画像ファイルを指しています。これは YouTube の公開画像 CDN (一般的には<code>i.ytimg.com</code>アドレスが機能する場合、ブラウザはJPEGまたはWebPファイルをダウンロードします。機能しない場合は、ファイルが見つからないか、灰色のプレースホルダーが表示されます。「HD」はどこからともなく作られたものではありません。</p>\n  <p>これはブログ、Open Graphプレビュー、デザインモックアップ、CMSのアイキャッチ画像フィールドにとって重要です。これらのシステムには画像URLが必要であり、<code>youtube.com/watch?v=…</code>ディスク上のファイルだけが必要な場合は、<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>このURL中心のページではなく、</p>"
+      "html": "<p>YouTube のサムネイル URL は、動画プレーヤーではなく静止画像ファイルを指しています。これは YouTube の公開画像 CDN (一般的には<code>i.ytimg.com</code>アドレスが機能する場合、ブラウザはJPEGまたはWebPファイルをダウンロードします。機能しない場合は、ファイルが見つからないか、灰色のプレースホルダーが表示されます。「HD」はどこからともなく作られたものではありません。</p>\n  <p>これはブログ、Open Graphプレビュー、デザインモックアップ、CMSのアイキャッチ画像フィールドにとって重要です。これらのシステムには画像URLが必要であり、<code>youtube.com/watch?v=…</code>ディスク上のファイルだけが必要な場合は、<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ダウンロードガイド</a>このURL中心のページではなく、</p>"
     },
     {
       "heading": "URLと動画IDの関係",
-      "html": "<p>YouTubeは動画IDに基づいて公開静止画をキーイングします。一般的なJPEGパターンは次のとおりです。</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>一部の動画では、WebP の双子も公開されています。<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>セットからちょうど11文字です<code>A–Z a–z 0–9 _ -</code>IDを変更すれば、別の動画の静止画を指すことになります。ファイル名を変更すれば、同じ動画の別の公開派生版を要求することになります。</p>\n\n  <img alt=\"Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">公開サムネイルURLの構成要素：ホスト、パス、ビデオID、サイズファイル名。</p>"
+      "html": "<p>YouTubeは動画IDに基づいて公開静止画をキーイングします。一般的なJPEGパターンは次のとおりです。</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/FILENAME.jpg</pre>\n  <p>一部の動画では、WebP の双子も公開されています。<code>/vi_webp/</code>:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>\n  <p><code>VIDEO_ID</code>セットからちょうど11文字です<code>A–Z a–z 0–9 _ -</code>IDを変更すれば、別の動画の静止画を指すことになります。ファイル名を変更すれば、同じ動画の別の公開派生版を要求することになります。</p>\n\n  <img alt=\"YouTubeサムネイルURLの構成要素（ホスト、パス、動画ID、ファイル名）をラベル付けした図\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png\" width=\"1200\">\n  <p class=\"yte-caption\">公開サムネイルURLの構成要素：ホスト、パス、ビデオID、サイズファイル名。</p>"
     },
     {
       "heading": "YouTube動画IDの見つけ方",
@@ -42,7 +42,7 @@
     },
     {
       "heading": "一般的な公開サムネイルファイル名",
-      "html": "<p>ファイル名は、YouTubeが特定のアップロードに対して公開する可能性のあるサイズ区分を表しています。ファイル名は、ファイルが存在することを保証するものではありません。</p>\n  <table>\n    <thead>\n      <tr><th>ファイル名</th><th>存在する場合の典型的なピクセル</th><th>注記</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>公開時の最高一般大衆</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720クラス</td><td>別の高位の動画が暴露</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>maxres が欠落している場合によく利用可能です</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>非常に一般的な中型サイズ</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>小さなプレビュー</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>最小基準は依然として</td></tr>\n    </tbody>\n  </table>\n  <p>ピクセルレベルの詳細と、どちらのサイズを優先すべきかについては、以下を参照してください。<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サムネイルのサイズと解像度ガイド</a>なぜ<code>maxresdefault.jpg</code>欠落していることが多いので、参照<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefaultとは何ですか？</a>。</p>"
+      "html": "<p>ファイル名は、YouTubeが特定のアップロードに対して公開する可能性のあるサイズ区分を表しています。ファイル名は、ファイルが存在することを保証するものではありません。</p>\n  <table>\n    <thead>\n      <tr><th>ファイル名</th><th>存在する場合の典型的なピクセル</th><th>注記</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.jpg</code>/<code>.webp</code></td><td>1280×720</td><td>公開時の最高一般大衆</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td>1280×720クラス</td><td>別の高位の動画が暴露</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td>640×480</td><td>maxres が欠落している場合によく利用可能です</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td>480×360</td><td>非常に一般的な中型サイズ</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td>320×180</td><td>小さなプレビュー</td></tr>\n      <tr><td><code>default.jpg</code></td><td>120×90</td><td>最小基準は依然として</td></tr>\n    </tbody>\n  </table>\n  <p>ピクセルレベルの詳細と、どちらのサイズを優先すべきかについては、以下を参照してください。<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サムネイルのサイズと解像度ガイド</a>なぜ<code>maxresdefault.jpg</code>欠落していることが多いので、参照<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefaultとは何ですか？</a>。</p>"
     },
     {
       "heading": "公開動画IDを使用した実例",
@@ -53,12 +53,16 @@
       "html": "<h3>1. 最速: 11tikからコピー</h3>\n  <ol>\n    <li>公開されているウォッチ、ショート、ライブ、埋め込み、またはyoutu.beのURLをコピーします。</li>\n    <li>開ける<a href=\"https://www.11tik.com/\">https://www.11tik.com/</a>。</li>\n    <li>URLを貼り付けて、プレビューが表示されるまでお待ちください。</li>\n    <li>選ぶ<strong>画像のURLをコピー</strong>必要なサイズに合わせて。</li>\n  </ol>\n  <p>11tikはブラウザの応答をチェックし、実際の画像を返すサイズのみを表示します。これが、使用可能なCMSリンクと壊れたリンクの違いです。<code>maxresdefault</code>推測。</p>\n\n  <h3>2. ブラウザ方式</h3>\n  <p>候補者が決まったら<code>i.ytimg.com</code>アドレスバーを新しいタブで開きます。ページが表示されたら、アドレスバーをコピーしてください。エラーや空白/プレースホルダーのタイルが表示される場合は、そのサイズは該当IDで公開されていないため、ホットリンクしないでください。</p>\n\n  <h3>3. URLを手動で構築する</h3>\n  <p>ホスト + を連結できます<code>/vi/</code>+ ID + ファイル名を自分で入力してください。手動で作成した URL はテストには問題ありませんが、応答を確認するまでは本番環境の HTML に貼り付けるのは安全ではありません。利用可能かどうかは、アップロードからの経過時間、ソースアートワーク、および YouTube Studio での処理状態によって異なります。</p>"
     },
     {
+      "heading": "開発者向けリファレンス：URLの構造と検証",
+      "html": "<h3>A) ビデオIDの抽出</h3>\n  <p>ウォッチから11文字のIDを解析します（<code>v=</code>) ショーツ (<code>/shorts/</code>）、 ライブ （<code>/live/</code>), 埋め込み (<code>/embed/</code>）、またはyoutu.beパスセグメント。トラッキングクエリパラメータを削除します。これらはサムネイルホストパスを変更しません。チャンネルおよびプレイリストのURLには、ビデオごとに視聴リンクが必要です。</p>\n  <h3>B) CDNのホストとパスの構造</h3>\n  <p>JPEG静止画：<code>https://i.ytimg.com/vi/{VIDEO_ID}/{FILENAME}.jpg</code>公開時のWebP最大解像度：<code>https://i.ytimg.com/vi_webp/{VIDEO_ID}/maxresdefault.webp</code>ホストは画像CDNであり、視聴ページやビデオストリームではありません。</p>\n  <h3>C) ファイル名のバリアントロジック</h3>\n  <p>ファイル名（<code>maxresdefault</code>、<code>hq720</code>、<code>sddefault</code>、<code>hqdefault</code>、<code>mqdefault</code>、<code>default</code>オプションの公開派生物を記述します。長い名前はピクセルを作成しません。完全なティアノート：<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サイズガイド</a>。</p>\n  <h3>D) フォールバックシーケンス</h3>\n  <p>最上位層を最初にプローブし、イメージが読み込まれるまで順に下へ進めます。<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300本の動画サンプル</a>maxresは300個のIDのうち286個で検証されました。maxresのない14個は依然としてhqdefaultでした（サンプルスコープであり、普遍的なルールではありません）。maxresの動作が欠落しています。<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresガイド</a>。</p>\n  <h3>E) 表示またはダウンロード前の検証</h3>\n  <p>候補となる URL を画像として読み込む（または 11tik のブラウザ内チェックを使用する）。高ティアを期待していた場合、HTTP エラー、空白のタイル、小さな灰色のプレースホルダーは拒否する。チェックなしで本番環境の HTML に maxres をハードコーディングしない。</p>\n  <h3>F) WebP変異体の関係</h3>\n  <p>WebP maxres は以下で<code>/vi_webp/</code>ファイル名拡張子は別々です。同じ階層のJPEGとWebPは共存できますが、どちらか一方のみを公開することもできます。フォーマットの選択:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebPとJPEGの比較</a>。</p>\n  <h3>G) ブラウザおよびクライアント側の制限</h3>\n  <p>公開されている抽出ツールは、訪問者のブラウザに画像を読み込むことで検証します。プライベートな YouTube API は使用しません。JS でピクセルを処理する場合は CORS と canvas 読み取りルールが適用されます。ホットリンク<code>i.ytimg.com</code>CMS または Open Graph では、ファイル名が 404 エラーの場合に失敗する可能性があります。埋め込み統合については、以下を参照してください。<a href=\"https://www.11tik.com/embed\">抽出器を埋め込む</a>。</p>"
+    },
+    {
       "heading": "最適なURLを選択する",
-      "html": "<p>「最適」とは、実際に存在する最大の公開ファイルを意味し、入力できる最長のファイル名を意味するものではありません。検証済みのmaxresまたはhq720リンクが存在する場合は、そちらを優先してください。それらが失敗した場合は、sd、hq、mq、またはdefaultに切り替えてください。エディターで480×360の静止画を1280×720にアップスケールしても、真のmaxres URLは生成されません。</p>\n  <p>カスタムアートをアップロードするクリエイターは、その後、公開されている派生作品が実際に反映されているか確認する必要があります。Studioの処理には時間がかかる場合があります。関連情報：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026年のYouTube Studioのサムネイル</a>。</p>"
+      "html": "<p>「最適」とは、実際に存在する最大の公開ファイルを意味し、入力できる最長のファイル名を意味するものではありません。検証済みのmaxresまたはhq720リンクが存在する場合は、そちらを優先してください。それらが失敗した場合は、sd、hq、mq、またはdefaultに切り替えてください。エディターで480×360の静止画を1280×720にアップスケールしても、真のmaxres URLは生成されません。</p>\n  <p>カスタムアートをアップロードするクリエイターは、その後、公開されている派生作品が実際に反映されているか確認する必要があります。Studioの処理には時間がかかる場合があります。関連情報：<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">2026年のYouTube Studioのサムネイル</a>。</p>"
     },
     {
       "heading": "別のウェブサイトでURLを使用する",
-      "html": "<p>作業中のものを貼り付けることができます<code>i.ytimg.com</code>多くのCMSフィールドにURLを挿入できますが、ホットリンクにはリスクがあります。YouTubeはCDNパスを変更する可能性があり、一部のネットワークはサードパーティのホストをブロックします。ブログのアイキャッチ画像やOpen Graphタグを永続的に使用するには、確認済みの静止画をダウンロードして、独自のドメインにコピーをホストしてください。手順：<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">YouTubeサムネイルをブログ画像として表示 / Open Graph画像</a>。</p>\n  <p>著作権はアップロード者に帰属します。公開URLは、アートを自分のカバーとして再公開するライセンスではありません。YouTubeのヘルプを参照してください。<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイル</a>そして11tik<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+      "html": "<p>作業中のものを貼り付けることができます<code>i.ytimg.com</code>多くのCMSフィールドにURLを挿入できますが、ホットリンクにはリスクがあります。YouTubeはCDNパスを変更する可能性があり、一部のネットワークはサードパーティのホストをブロックします。ブログのアイキャッチ画像やOpen Graphタグを永続的に使用するには、確認済みの静止画をダウンロードして、独自のドメインにコピーをホストしてください。手順：<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">YouTubeサムネイルをブログ画像として表示 / Open Graph画像</a>。</p>\n  <p>著作権はアップロード者に帰属します。公開URLは、アートを自分のカバーとして再公開するライセンスではありません。YouTubeのヘルプを参照してください。<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイル</a>そして11tik<a href=\"https://www.11tik.com/terms-of-use\">条項</a>。</p>"
     },
     {
       "heading": "サムネイルURLの不具合のトラブルシューティング",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "次のステップ",
-      "html": "<p>公開されている YouTube URL を貼り付けます<a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>検証済みの画像リンクをコピーするか、<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">静止画をダウンロード</a>ローカルファイルが必要な場合は、解像度オプションを開いてください。<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズと品質ガイド</a>。</p>\n\n  <p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって作成されました。公開されているのは静止画のみで、動画や音声のダウンロードはできません。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+      "html": "<p>公開されている YouTube URL を貼り付けます<a href=\"https://www.11tik.com/\">YouTubeサムネイル抽出ツール</a>検証済みの画像リンクをコピーするか、<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">静止画をダウンロード</a>ローカルファイルが必要な場合は、解像度オプションを開いてください。<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サイズと品質ガイド</a>。</p>\n\n  <p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって作成されました。公開されているのは静止画のみで、動画や音声のダウンロードはできません。<a href=\"https://www.11tik.com/about\">について</a>・<a href=\"https://www.11tik.com/privacy\">プライバシー</a>・<a href=\"https://www.11tik.com/terms-of-use\">条項</a>。</p>"
     }
   ],
   "faq": [
@@ -78,7 +82,7 @@
     {
       "question": "YouTubeショート動画のサムネイルURLを取得できますか？",
       "answer": "はい、ショート動画が公開され、YouTube がその ID の静止画を公開した場合です。視聴 URL を貼り付けるのと同じように /shorts/ リンクを貼り付けてください。ショート動画のサムネイルも参照してください。",
-      "answerHtml": "<p>はい、ショート動画が公開され、YouTube がその ID の静止画を公開した場合。<code>/shorts/</code>リンクは、ウォッチURLを貼り付けるのと同じ方法で貼り付けます。参照<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">ショート動画のサムネイル</a>。</p>"
+      "answerHtml": "<p>はい、ショート動画が公開され、YouTube がその ID の静止画を公開した場合。<code>/shorts/</code>リンクは、ウォッチURLを貼り付けるのと同じ方法で貼り付けます。参照<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">ショート動画のサムネイル</a>。</p>"
     },
     {
       "question": "なぜあるサムネイルURLは正常に動作するのに、別のURLはエラーを返すのでしょうか？",
@@ -102,5 +106,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって作成されました。公開されているのは静止画のみで、動画や音声のダウンロードはできません。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内抽出ツールの発行元である11tikによって作成されました。公開されているのは静止画のみで、動画や音声のダウンロードはできません。<a href=\"https://www.11tik.com/about\">について</a>・<a href=\"https://www.11tik.com/privacy\">プライバシー</a>・<a href=\"https://www.11tik.com/terms-of-use\">条項</a>。</p>"
 }

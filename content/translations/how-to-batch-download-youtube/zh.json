@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "zh",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "如何批量下载 YouTube 视频缩略图（最多 25 个公开 URL） | 11tik",
   "description": "在浏览器中批量提取公开的 YouTube 缩略图。每行粘贴一个 URL，即可下载每张最佳图片，或下载最高质量的图片合集。无需注册账号，也不会生成视频文件。",
@@ -24,8 +24,48 @@
       "html": "<p>打开<a href=\"https://www.11tik.com/\">11tik</a>启用批量下载，每行粘贴一个公开URL，点击“全部提取”，然后下载最佳图片或最高质量的压缩包。每次最多只能下载25个URL，以确保浏览器响应迅速。</p>"
     },
     {
+      "heading": "该工具的处理流程",
+      "html": "<p>批量模式运行与单URL提取相同的客户端公共静态图像检查：解析每个视频ID，构建候选缩略图URL，将它们作为图像加载到浏览器中，丢弃不合格的和占位符，对合格的静态图像进行排名，并首先显示最佳静态图像。它不会下载视频或音频，不会调用私有YouTube API，也不会将粘贴的链接存储在11tik服务器上。</p>"
+    },
+    {
+      "heading": "25个URL上限",
+      "html": "<p>每次批量运行最多可接受<strong>25行</strong>此限制可确保图像验证在浏览器中保持响应速度。对于更多 ID，请运行多个批次或将每次运行结果导出为 CSV 文件，然后离线合并。没有 500 或 1000 个 URL 的服务器批次。</p>"
+    },
+    {
+      "heading": "客户端处理",
+      "html": "<p>所有数据提取都发生在您的会话中。网络请求从您的浏览器发送到公共服务器。<code>i.ytimg.com</code>（及相关）主机。粘贴的 URL 不会上传到 11tik 进行服务器端抓取。</p>"
+    },
+    {
+      "heading": "CSV 和 JSON 导出",
+      "html": "<p>运行成功后，可选择导出每行视频 ID、标题、分享 URL 和已验证图像 URL 的信息——这对于研究日志非常有用。导出内容反映的是该会话中验证过的信息，并非每个 ID 都包含一个保证的最高分辨率列。</p>"
+    },
+    {
+      "heading": "失败分类",
+      "html": "<ul>\n    <li><strong>解析失败：</strong>line 不是受支持的 watch、Shorts、live、embed、youtu.be 或频道可展开 URL。</li>\n    <li><strong>视频无法播放：</strong>私有、已移除、已限制或正在处理——没有公开信息仍然有效。参见<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">为什么缩略图不显示</a>。</li>\n    <li><strong>缺少变体：</strong>视频是公开的，但最大分辨率（或其他高分辨率）会显示 404 错误；较低分辨率仍然可以播放。参见<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">最大分辨率回退</a>。</li>\n    <li><strong>占位符被拒绝：</strong>URL响应了，但看起来像一个很小的灰色缺失文件图标。</li>\n  </ul>"
+    },
+    {
+      "heading": "无效、私密和不可用的视频",
+      "html": "<p>11tik 仅显示公开的 CDN 静态文件。未公开打包的视频、仅限会员上传的内容、受年龄限制的内容以及已删除的视频通常会生成空白卡片，而不是较小的“秘密”文件。请勿指望批量处理能够绕过访问控制。</p>"
+    },
+    {
+      "heading": "频道网址与手动提供的观看链接",
+      "html": "<p>将公共频道 URL 粘贴到一行，批量功能会通过 RSS 式发现方式展开最近的公开上传内容，然后提取每个 ID——展开后 URL 数量上限仍为 25 个。手动粘贴的观看链接将跳过频道发现。完整的频道工作流程：<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">频道摘录指南</a>。</p>"
+    },
+    {
+      "heading": "隐私",
+      "html": "<p>粘贴的 URL 会在您的浏览器中进行本地处理以提取信息。<a href=\"https://www.11tik.com/privacy\">隐私</a>用于网站分析；批量处理不会添加单独的服务器端私有 API。</p>"
+    },
+    {
+      "heading": "重试指南",
+      "html": "<p>创建新的 Studio 自定义缩略图或上传新文件后，请等待处理完成，然后重新运行相同的观看 URL。临时 CDN 延迟有时会在第二次尝试时消失；如果持续出现空结果，通常表示该 ID 下尚无公开观看记录。</p>"
+    },
+    {
+      "heading": "合理的期望",
+      "html": "<p>并非所有公开视频都发布最大分辨率版本。在我们的<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300个视频样本</a>已验证 286/300 个 ID 的最大分辨率（样本范围）。批量处理返回每行最高分辨率的已验证公共文件，并非保证每行都是 1280×720 分辨率。URL 结构：<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>。</p>"
+    },
+    {
       "heading": "哪些内容应该列入清单？",
-      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be 短链接</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>私密视频、未公开且无公开缩略图的视频或设有年龄限制的视频不会返回静帧。这是正常现象。另请参阅<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">短片缩略图</a>。</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be 短链接</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>私密视频、未公开且无公开缩略图的视频或设有年龄限制的视频不会返回静帧。这是正常现象。另请参阅<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">短片缩略图</a>。</p>"
     },
     {
       "heading": "如何运行批量提取",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "我可以用它来做竞品研究吗？",
-      "html": "<p>是的，用于研究公开的打包方式。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。11tik 仅获取 YouTube 已公开托管的文件。</p>\n  <p><a href=\"https://www.11tik.com/\">在 11tik 上打开批量提取 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+      "html": "<p>是的，用于研究公开的打包方式。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。11tik 仅获取 YouTube 已公开托管的文件。</p>\n  <p><a href=\"https://www.11tik.com/\">在 11tik 上打开批量提取 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>。</p>"
     }
   ],
   "faq": [
@@ -44,10 +84,10 @@
     },
     {
       "question": "我可以用它来做竞品研究吗？",
-      "answer": "是的，可以用于研究公开包装。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。",
-      "answerHtml": "是的，可以用于研究公开包装。请勿将其他创作者的缩略图重新发布为自己的作品。版权归版权所有者所有。"
+      "answer": "是的，可以用于研究公开包装。请勿将其他创作者的缩略图冒充为自己的作品重新发布。版权归版权所有者所有。",
+      "answerHtml": "是的，可以用于研究公开包装。请勿将其他创作者的缩略图冒充为自己的作品重新发布。版权归版权所有者所有。"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>。</p>"
 }

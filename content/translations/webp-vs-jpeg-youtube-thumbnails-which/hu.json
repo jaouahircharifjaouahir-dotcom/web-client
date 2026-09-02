@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "hu",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "WebP vs. JPEG YouTube indexképek: Melyik formátumot érdemes használni? | 11tik",
   "description": "A YouTube közzétehet JPEG és WebP indexképfájlokat. A 11tik formátumot részesítsd előnyben, amelyet az esetedben ellenőrizhetsz – a WebP nem mindig érhető el.",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "Gyors válasz",
-      "html": "<p>A legtöbb letöltés és CMS feltöltés esetén tartsa meg a<strong>validált fájl 11tik listázza először</strong>A JPEG továbbra is nyilvánosan elérhető marad.<code>i.ytimg.com/vi/…</code>A WebP egyes videóknál a következőképpen jelenik meg:<code>maxresdefault.webp</code>alatt<code>/vi_webp/</code>A WebP gyakran kisebb, hasonló vizuális minőség mellett, de nem minden ID-hez publikálják. A 11tik igen.<strong>nem</strong>A WebP-t letöltéskor JPEG formátumba konvertálod – ez elmenti a YouTube által már tárolt bájtokat (a JPEG letöltések csak egy kis metaadat-megjegyzést kapnak).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ugyanaz a videoazonosító, különböző tárolók és elérési utak – csak akkor, ha a YouTube mindkettőt közzétette.</p>"
+      "html": "<p>A legtöbb letöltés és CMS feltöltés esetén tartsa meg a<strong>validált fájl 11tik listázza először</strong>A JPEG továbbra is nyilvánosan elérhető marad.<code>i.ytimg.com/vi/…</code>A WebP egyes videóknál a következőképpen jelenik meg:<code>maxresdefault.webp</code>alatt<code>/vi_webp/</code>A WebP gyakran kisebb, hasonló vizuális minőség mellett, de nem minden ID-hez publikálják. A 11tik igen.<strong>nem</strong>A WebP-t letöltéskor JPEG formátumba konvertálod – ez elmenti a YouTube által már tárolt bájtokat (a JPEG letöltések csak egy kis metaadat-megjegyzést kapnak).</p>\n\n  <img alt=\"A JPEG és WebP YouTube indexképek URL-útvonalainak egymás melletti összehasonlítása a i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Ugyanaz a videoazonosító, különböző tárolók és elérési utak – csak akkor, ha a YouTube mindkettőt közzétette.</p>"
     },
     {
       "heading": "Hogyan jelennek meg a YouTube bélyegkép-formátumai a 11tik-ban",
-      "html": "<p>A 11tik minőségi előbeállításai a következők:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(pantomim<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ alatt<code>/vi/</code>(pantomim<code>image/jpeg</code>)</li>\n  </ul>\n  <p>A jelöltek betöltődnek a böngészőbe. A hibás és helyőrzők elvesznek. A rangsorolás réteget, pixelterületet, várható méretbeli egyezést és egy kis...<strong>−8 pont büntetés<code>.webp</code>URL-ek</strong>így az azonos szintű JPEG és WebP nem verődik össze kiszámíthatatlanul – a JPEG döntetlen esetén is nyerhet, ha mindkettő érvényes. Részletek a méretekről:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">bélyegkép méretének útmutatója</a>Hiányzó maxres viselkedés:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 útmutató</a>.</p>"
+      "html": "<p>A 11tik minőségi előbeállításai a következők:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(pantomim<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ alatt<code>/vi/</code>(pantomim<code>image/jpeg</code>)</li>\n  </ul>\n  <p>A jelöltek betöltődnek a böngészőbe. A hibás és helyőrzők elvesznek. A rangsorolás réteget, pixelterületet, várható méretbeli egyezést és egy kis...<strong>−8 pont büntetés<code>.webp</code>URL-ek</strong>így az azonos szintű JPEG és WebP nem verődik össze kiszámíthatatlanul – a JPEG döntetlen esetén is nyerhet, ha mindkettő érvényes. Részletek a méretekről:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">bélyegkép méretének útmutatója</a>Hiányzó maxres viselkedés:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404 útmutató</a>.</p>"
     },
     {
       "heading": "JPEG vs. WebP közérthetően",
       "html": "<table>\n    <thead>\n      <tr><th>Formátum</th><th>Legjobb</th><th>Erő</th><th>Korlátozás</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Letöltések, WordPress feltöltések, a legszélesebb körű kompatibilitás</td><td>Szinte univerzális támogatás; a legtöbb CDN-kép</td><td>Nagyobb fájlok hasonló minőségben</td></tr>\n      <tr><td>WebP</td><td>Modern webhelyek, amelyek már WebP-t használnak</td><td>Gyakran kisebb ugyanahhoz a felbontási szinthez</td><td>Nem minden videóhoz publikálják; néhány régebbi eszköz nem működik.</td></tr>\n    </tbody>\n  </table>\n  <p>Egyik formátum sem találja fel a felbontást. Egy 480×360-as WebP továbbra is 480×360.</p>"
+    },
+    {
+      "heading": "Mért bájtméret-összehasonlítás (csak 300 videós minta)",
+      "html": "<p>Ugyanebben<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videós minta</a>a medián maxres WebP megfigyelés a következő volt:<strong>60 345 bájt</strong>kontra<strong>141 111 bájt</strong>JPEG maxres esetén – így a WebP medián körülbelül<strong>57,2%-kal kisebb bájtméret</strong>abban az adathalmazban. Ez egy<strong>minta hatókörű bájt-összehasonlítás</strong>, nem univerzális tömörítési garancia: a videód a maximális tömörítési szinten csak JPEG, csak WebP, mindkettő, vagy egyik sem formátumban publikálható. Az egyes szintek pixelméreteit a<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">méret- és felbontási útmutató</a>; az URL-útvonalak eltérőek lehetnek a következők szerint:<code>/vi/</code>kontra<code>/vi_webp/</code>ahogy azt a<a href=\"https://www.11tik.com/youtube-thumbnail-url\">indexkép URL útmutató</a>.</p>"
     },
     {
       "heading": "Mi történik letöltéskor",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "Amikor a WebP kényelmes",
-      "html": "<ul>\n    <li>A 11tik listázott egy validált WebP maxres-t, és az oldalad már támogatja a WebP-t.</li>\n    <li>Kisebb fájlt szeretnél ugyanahhoz a ~1280×720-as szinthez.</li>\n    <li>Te irányítod a veremfájlokat, és szükség esetén visszatérhetsz a JPEG-hez.</li>\n  </ul>\n  <p>Ha a témád nem támogatja a WebP-t, töltsd le inkább a JPEG fájlokat – vagy konvertáld őket helyben a letöltés után. A 11tik nem fogja konvertálni.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Válassza ki a folyamatának megfelelő validált formátumot – ne egy kitalált kiterjesztést.</p>"
+      "html": "<ul>\n    <li>A 11tik listázott egy validált WebP maxres-t, és az oldalad már támogatja a WebP-t.</li>\n    <li>Kisebb fájlt szeretnél ugyanahhoz a ~1280×720-as szinthez.</li>\n    <li>Te irányítod a veremfájlokat, és szükség esetén visszatérhetsz a JPEG-hez.</li>\n  </ul>\n  <p>Ha a témád nem támogatja a WebP-t, töltsd le inkább a JPEG fájlokat – vagy konvertáld őket helyben a letöltés után. A 11tik nem fogja konvertálni.</p>\n\n  <img alt=\"Használati eset táblázat, amely összehasonlítja a weboldal CMS-ét, a közvetlen CDN-linkeket és az\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Válassza ki a folyamatának megfelelő validált formátumot – ne egy kitalált kiterjesztést.</p>"
     },
     {
       "heading": "Közvetlen linkek és weboldalak",
-      "html": "<p>A kép URL-címének másolása visszaadja a validált jelölt HTTPS CDN-címét. A WebP vagy JPEG hotlinkelés ugyanazzal a sérülékenységgel rendelkezik, mint amit a ... részben tárgyalunk.<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Nyílt gráf útmutató</a>: a tartós bejegyzésekhez inkább saját példányt használj. URL-minták:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>.</p>"
+      "html": "<p>A kép URL-címének másolása visszaadja a validált jelölt HTTPS CDN-címét. A WebP vagy JPEG hotlinkelés ugyanazzal a sérülékenységgel rendelkezik, mint amit a ... részben tárgyalunk.<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">blog / Nyílt gráf útmutató</a>: a tartós bejegyzésekhez inkább saját példányt használj. URL-minták:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">indexkép URL útmutató</a>.</p>"
     },
     {
       "heading": "Böngésző- és tartalomkezelő rendszer kompatibilitási megjegyzések",
@@ -58,16 +62,16 @@
     },
     {
       "heading": "Gyakorlati döntési fa",
-      "html": "<ol>\n    <li>Kivonat innen:<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Ha CMS kiemelt képre van szükséged, és mindkét formátumot látod, válaszd a JPEG-et, kivéve, ha a stacked WebP-first.</li>\n    <li>Ha csak a WebP maximális méretet validálták a legfelső szinten, akkor használd azt – vagy válaszd a következő JPEG méretet, ha JPG-nél kell maradnod.</li>\n    <li>Archívumok esetén őrizze meg az eredeti, letöltött fájlból származó kiterjesztést.</li>\n  </ol>\n  <p>Útmutató letöltése:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube indexkép letöltése</a>.</p>"
+      "html": "<ol>\n    <li>Kivonat innen:<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Ha CMS kiemelt képre van szükséged, és mindkét formátumot látod, válaszd a JPEG-et, kivéve, ha a stacked WebP-first.</li>\n    <li>Ha csak a WebP maximális méretet validálták a legfelső szinten, akkor használd azt – vagy válaszd a következő JPEG méretet, ha JPG-nél kell maradnod.</li>\n    <li>Archívumok esetén őrizze meg az eredeti, letöltött fájlból származó kiterjesztést.</li>\n  </ol>\n  <p>Útmutató letöltése:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">YouTube indexkép letöltése</a>.</p>"
     },
     {
       "heading": "Következő lépés",
-      "html": "<p>Illesszen be egy nyilvános URL-t a<a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>, figyeld meg, hogy a legfelső találat a következő-e:<code>.jpg</code>vagy<code>.webp</code>, és a CMS-ed alapján válassz – ne a hosszabb fájlnév alapján.</p>\n  <p class=\"yte-bio\">Írta: 11tik a böngészőn belüli kinyerő jelenlegi viselkedése alapján.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+      "html": "<p>Illesszen be egy nyilvános URL-t a<a href=\"https://www.11tik.com/\">YouTube indexkép-kivonó</a>, figyeld meg, hogy a legfelső találat a következő-e:<code>.jpg</code>vagy<code>.webp</code>, és a CMS-ed alapján válassz – ne a hosszabb fájlnév alapján.</p>\n  <p class=\"yte-bio\">Írta: 11tik a böngészőn belüli kinyerő jelenlegi viselkedése alapján.<a href=\"https://www.11tik.com/about\">Körülbelül</a>·<a href=\"https://www.11tik.com/privacy\">Magánélet</a>·<a href=\"https://www.11tik.com/terms-of-use\">Feltételek</a>.</p>"
     }
   ],
   "faq": [
     {
-      "question": "Minden YouTube-videónak van WebP indexképe?",
+      "question": "Minden YouTube-videónak van WebP-indexképe?",
       "answer": "Nem. A WebP maximáliája opcionális. Sok videó csak JPEG méretben jelenik meg.",
       "answerHtml": "<p>Nem. A WebP maximáliája opcionális. Sok videó csak JPEG méretben jelenik meg.</p>"
     },
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik a böngészőn belüli kinyerő jelenlegi viselkedése alapján.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Magánélet</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Feltételek</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik a böngészőn belüli kinyerő jelenlegi viselkedése alapján.<a href=\"https://www.11tik.com/about\">Körülbelül</a>·<a href=\"https://www.11tik.com/privacy\">Magánélet</a>·<a href=\"https://www.11tik.com/terms-of-use\">Feltételek</a>.</p>"
 }

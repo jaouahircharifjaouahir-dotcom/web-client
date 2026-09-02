@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "fa",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "تصاویر بندانگشتی یوتیوب WebP در مقابل JPEG: از کدام فرمت باید استفاده کنید؟ | 11tik",
   "description": "یوتیوب ممکن است فایل‌های تصویر بندانگشتی JPEG و WebP را منتشر کند. فرمت 11tik را برای مورد استفاده خود ترجیح دهید - WebP همیشه در دسترس نیست.",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "پاسخ سریع",
-      "html": "<p>برای اکثر دانلودها و آپلودهای CMS، موارد زیر را نگه دارید<strong>فایل معتبر 11tik ابتدا فهرست می‌شود</strong>JPEG هنوز هم برای عموم مردم قابل استفاده است.<code>i.ytimg.com/vi/…</code>فرمت WebP برای برخی از ویدیوها به صورت زیر نمایش داده می‌شود:<code>maxresdefault.webp</code>تحت<code>/vi_webp/</code>WebP اغلب با کیفیت بصری مشابه، حجم کمتری دارد، اما برای هر شناسه‌ای منتشر نمی‌شود. 11tik این کار را نمی‌کند.<strong>نه</strong>تبدیل WebP به JPEG هنگام دانلود - این کار بایت‌هایی را که یوتیوب از قبل میزبانی می‌کند، ذخیره می‌کند (دانلودهای JPEG فقط یک مهر نظر ابرداده کوچک دریافت می‌کنند).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">شناسه ویدیوی یکسان، کانتینرها و مسیرهای متفاوت—فقط زمانی که یوتیوب هر دو را منتشر کرده باشد.</p>"
+      "html": "<p>برای اکثر دانلودها و آپلودهای CMS، موارد زیر را نگه دارید<strong>فایل معتبر 11tik ابتدا فهرست می‌شود</strong>JPEG هنوز هم برای عموم مردم قابل استفاده است.<code>i.ytimg.com/vi/…</code>فرمت WebP برای برخی از ویدیوها به صورت زیر نمایش داده می‌شود:<code>maxresdefault.webp</code>تحت<code>/vi_webp/</code>WebP اغلب با کیفیت بصری مشابه، حجم کمتری دارد، اما برای هر شناسه‌ای منتشر نمی‌شود. 11tik این کار را نمی‌کند.<strong>نه</strong>تبدیل WebP به JPEG هنگام دانلود - این کار بایت‌هایی را که یوتیوب از قبل میزبانی می‌کند، ذخیره می‌کند (دانلودهای JPEG فقط یک مهر نظر ابرداده کوچک دریافت می‌کنند).</p>\n\n  <img alt=\"مقایسه‌ی پهلو به پهلو مسیرهای URL تصاویر بندانگشتی یوتیوب JPEG و WebP در i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">شناسه ویدیوی یکسان، کانتینرها و مسیرهای متفاوت—فقط زمانی که یوتیوب هر دو را منتشر کرده باشد.</p>"
     },
     {
       "heading": "نحوه نمایش قالب‌های تصویر بندانگشتی یوتیوب در 11tik",
-      "html": "<p>تنظیمات از پیش تعیین‌شده‌ی کیفیت 11tik عبارتند از:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(میمه)<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>،<code>hq720.jpg</code>،<code>sddefault.jpg</code>،<code>hqdefault.jpg</code>،<code>mqdefault.jpg</code>،<code>default.jpg</code>→ زیر<code>/vi/</code>(میمه)<code>image/jpeg</code>)</li>\n  </ul>\n  <p>کاندیداها در مرورگر بارگذاری می‌شوند. موارد ناموفق و متغیرهای جایگزین حذف می‌شوند. رتبه‌بندی از ردیف، مساحت پیکسل، تطابق اندازه مورد انتظار و یک مقدار کوچک استفاده می‌کند.<strong>۸- امتیاز منفی برای<code>.webp</code>آدرس‌های اینترنتی (URL)</strong>بنابراین JPEG و WebP که در یک سطح هستند، به طور غیرقابل پیش‌بینی شکست نمی‌خورند - JPEG می‌تواند در صورت اعتبارسنجی هر دو، رقابت را ببرد. جزئیات مربوط به اندازه‌ها:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">راهنمای اندازه تصویر بندانگشتی</a>رفتار maxres از قلم افتاده است:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">راهنمای خطای ۴۰۴ با حداکثر مقدار پیش‌فرض</a>.</p>"
+      "html": "<p>تنظیمات از پیش تعیین‌شده‌ی کیفیت 11tik عبارتند از:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(میمه)<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>،<code>hq720.jpg</code>،<code>sddefault.jpg</code>،<code>hqdefault.jpg</code>،<code>mqdefault.jpg</code>،<code>default.jpg</code>→ زیر<code>/vi/</code>(میمه)<code>image/jpeg</code>)</li>\n  </ul>\n  <p>کاندیداها در مرورگر بارگذاری می‌شوند. موارد ناموفق و متغیرهای جایگزین حذف می‌شوند. رتبه‌بندی از ردیف، مساحت پیکسل، تطابق اندازه مورد انتظار و یک مقدار کوچک استفاده می‌کند.<strong>۸- امتیاز منفی برای<code>.webp</code>آدرس‌های اینترنتی (URL)</strong>بنابراین JPEG و WebP که در یک سطح هستند، به طور غیرقابل پیش‌بینی شکست نمی‌خورند - JPEG می‌تواند در صورت اعتبارسنجی هر دو، رقابت را ببرد. جزئیات مربوط به اندازه‌ها:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">راهنمای اندازه تصویر بندانگشتی</a>رفتار maxres از قلم افتاده است:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">راهنمای خطای ۴۰۴ با حداکثر مقدار پیش‌فرض</a>.</p>"
     },
     {
       "heading": "JPEG در مقابل WebP به زبان ساده",
       "html": "<table>\n    <thead>\n      <tr><th>قالب</th><th>بهترین برای</th><th>قدرت</th><th>محدودیت</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>دانلودها، آپلودهای وردپرس، وسیع‌ترین سازگاری</td><td>پشتیبانی تقریباً جهانی؛ اکثر CDN ها هنوز فعال هستند</td><td>فایل‌های بزرگتر با کیفیت مشابه</td></tr>\n      <tr><td>وب پی</td><td>سایت‌های مدرنی که از قبل WebP را ارائه می‌دهند</td><td>اغلب برای همان سطح وضوح تصویر، کوچکتر است</td><td>برای هر ویدیویی منتشر نمی‌شود؛ برخی از ابزارهای قدیمی‌تر از این کار امتناع می‌کنند</td></tr>\n    </tbody>\n  </table>\n  <p>هیچ‌کدام از این دو فرمت، رزولوشن را اختراع نمی‌کنند. یک WebP با وضوح ۴۸۰×۳۶۰ همچنان ۴۸۰×۳۶۰ است.</p>"
+    },
+    {
+      "heading": "مقایسه اندازه بایت اندازه‌گیری شده (فقط نمونه ۳۰۰ ویدیویی)",
+      "html": "<p>در همان<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">نمونه ۳۰۰ ویدیویی</a>، میانگین حداکثر مشاهده WebP بود<strong>۶۰۳۴۵ بایت</strong>در مقابل<strong>۱۴۱,۱۱۱ بایت</strong>برای JPEG maxres - میانگین WebP را حدود<strong>۵۷.۲٪ از نظر اندازه بایت کوچکتر است</strong>در آن مجموعه داده. این یک<strong>مقایسه بایت در محدوده نمونه</strong>، تضمین فشرده‌سازی جهانی نیست: ویدیوی شما ممکن است فقط JPEG، فقط WebP، هر دو یا هیچ‌کدام را در سطح maxres منتشر کند. ابعاد پیکسل برای هر سطح در [متن] پوشش داده شده است.<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">راهنمای اندازه و وضوح تصویر</a>مسیرهای URL در موارد زیر متفاوت هستند<code>/vi/</code>در مقابل<code>/vi_webp/</code>همانطور که در توضیح داده شده است<a href=\"https://www.11tik.com/youtube-thumbnail-url\">راهنمای URL تصویر بندانگشتی</a>.</p>"
     },
     {
       "heading": "وقتی دانلود میکنی چی میشه",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "وقتی WebP مناسب است",
-      "html": "<ul>\n    <li>11tik یک حداکثر اعتبار WebP را فهرست کرده است و سایت شما از قبل WebP را ارائه می‌دهد.</li>\n    <li>شما به یک فایل کوچک‌تر برای همان رزولوشن ۱۲۸۰×۷۲۰ پیکسل نیاز دارید.</li>\n    <li>شما می‌توانید این مجموعه را کنترل کنید و در صورت نیاز می‌توانید به JPEG برگردید.</li>\n  </ul>\n  <p>اگر قالب شما نمی‌تواند از WebP استفاده کند، به جای آن JPEG را دانلود کنید—یا بعد از دانلود، آن را به صورت محلی تبدیل کنید. 11tik برای شما تبدیل نخواهد شد.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">قالب معتبری را انتخاب کنید که با خط تولید شما مطابقت داشته باشد - نه یک افزونه حدسی.</p>"
+      "html": "<ul>\n    <li>11tik یک حداکثر اعتبار WebP را فهرست کرده است و سایت شما از قبل WebP را ارائه می‌دهد.</li>\n    <li>شما به یک فایل کوچک‌تر برای همان رزولوشن ۱۲۸۰×۷۲۰ پیکسل نیاز دارید.</li>\n    <li>شما می‌توانید این مجموعه را کنترل کنید و در صورت نیاز می‌توانید به JPEG برگردید.</li>\n  </ul>\n  <p>اگر قالب شما نمی‌تواند از WebP استفاده کند، به جای آن JPEG را دانلود کنید—یا بعد از دانلود، آن را به صورت محلی تبدیل کنید. 11tik برای شما تبدیل نخواهد شد.</p>\n\n  <img alt=\"نمودار موارد استفاده، مقایسه CMS وب‌سایت، لینک‌های مستقیم CDN و دانلودهای آرشیو برای تصاویر\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">قالب معتبری را انتخاب کنید که با خط تولید شما مطابقت داشته باشد - نه یک افزونه حدسی.</p>"
     },
     {
       "heading": "لینک‌های مستقیم و وب‌سایت‌ها",
-      "html": "<p>کپی کردن URL تصویر، آدرس HTTPS CDN مربوط به کاندید اعتبارسنجی شده را برمی‌گرداند. هات‌لینک کردن WebP یا JPEG همان شکنندگی مورد بحث در<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">وبلاگ / راهنمای Open Graph</a>: برای پست‌های ماندگار، ترجیح می‌دهید نسخه خودتان را میزبانی کنید. الگوهای URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">راهنمای URL تصویر بندانگشتی</a>.</p>"
+      "html": "<p>کپی کردن URL تصویر، آدرس HTTPS CDN مربوط به کاندید اعتبارسنجی شده را برمی‌گرداند. هات‌لینک کردن WebP یا JPEG همان شکنندگی مورد بحث در<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">وبلاگ / راهنمای Open Graph</a>: برای پست‌های ماندگار، ترجیح می‌دهید نسخه خودتان را میزبانی کنید. الگوهای URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">راهنمای URL تصویر بندانگشتی</a>.</p>"
     },
     {
       "heading": "یادداشت‌های سازگاری مرورگر و CMS",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "درخت تصمیم کاربردی",
-      "html": "<ol>\n    <li>استخراج روی<a href=\"https://www.11tik.com/\">[[صفحه ۲]]</a>.</li>\n    <li>اگر به تصویر شاخص CMS نیاز دارید و هر دو فرمت را می‌بینید، JPEG را انتخاب کنید، مگر اینکه فرمت شما WebP باشد.</li>\n    <li>اگر فقط حداکثر وضوح WebP در سطح بالا تأیید شده است، از آن استفاده کنید—یا اگر باید روی JPG بمانید، اندازه JPEG بعدی را انتخاب کنید.</li>\n    <li>برای بایگانی‌ها، پسوند اصلی را از دانلود نگه دارید.</li>\n  </ol>\n  <p>دانلود راهنمای گام به گام:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">دانلود تصویر بندانگشتی یوتیوب</a>.</p>"
+      "html": "<ol>\n    <li>استخراج روی<a href=\"https://www.11tik.com/\">[[صفحه ۲]]</a>.</li>\n    <li>اگر به تصویر شاخص CMS نیاز دارید و هر دو فرمت را می‌بینید، JPEG را انتخاب کنید، مگر اینکه فرمت شما WebP باشد.</li>\n    <li>اگر فقط حداکثر وضوح WebP در سطح بالا تأیید شده است، از آن استفاده کنید—یا اگر باید روی JPG بمانید، اندازه JPEG بعدی را انتخاب کنید.</li>\n    <li>برای بایگانی‌ها، افزونه‌ی اصلی را از زمان دانلود نگه دارید.</li>\n  </ol>\n  <p>دانلود راهنمای گام به گام:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">دانلود تصویر بندانگشتی یوتیوب</a>.</p>"
     },
     {
       "heading": "مرحله بعدی",
-      "html": "<p>یک URL عمومی را در آن قرار دهید<a href=\"https://www.11tik.com/\">استخراج کننده تصاویر بند انگشتی یوتیوب</a>توجه داشته باشید که آیا نتیجه برتر است یا خیر<code>.jpg</code>یا<code>.webp</code>و بر اساس CMS خود انتخاب کنید - نه بر اساس نام فایل طولانی‌تر.</p>\n  <p class=\"yte-bio\">نوشته شده توسط 11tik بر اساس رفتار فعلی استخراج‌کننده‌ی درون مرورگر.<a href=\"https://www.11tik.com/p/about.html\">درباره ما</a>·<a href=\"https://www.11tik.com/p/privacy.html\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرایط</a>.</p>"
+      "html": "<p>یک URL عمومی را در آن قرار دهید<a href=\"https://www.11tik.com/\">استخراج کننده تصاویر بند انگشتی یوتیوب</a>توجه داشته باشید که آیا نتیجه برتر است یا خیر<code>.jpg</code>یا<code>.webp</code>و بر اساس CMS خود انتخاب کنید - نه بر اساس نام فایل طولانی‌تر.</p>\n  <p class=\"yte-bio\">نوشته شده توسط 11tik بر اساس رفتار فعلی استخراج‌کننده‌ی درون مرورگر.<a href=\"https://www.11tik.com/about\">درباره ما</a>·<a href=\"https://www.11tik.com/privacy\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/terms-of-use\">شرایط</a>.</p>"
     }
   ],
   "faq": [
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">نوشته شده توسط 11tik بر اساس رفتار فعلی استخراج‌کننده‌ی درون مرورگر.<a href=\"https://www.11tik.com/p/about.html\">درباره ما</a>·<a href=\"https://www.11tik.com/p/privacy.html\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شرایط</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">نوشته شده توسط 11tik بر اساس رفتار فعلی استخراج‌کننده‌ی درون مرورگر.<a href=\"https://www.11tik.com/about\">درباره ما</a>·<a href=\"https://www.11tik.com/privacy\">حریم خصوصی</a>·<a href=\"https://www.11tik.com/terms-of-use\">شرایط</a>.</p>"
 }

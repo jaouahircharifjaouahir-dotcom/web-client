@@ -10,11 +10,15 @@ import {
 import {
   LEGAL_SHORTCUT_REDIRECTS,
   RULE_PREFIX_LEGAL,
+  RULE_PREFIX_LSLASH,
   buildLegalShortcutRules,
+  buildLocalizedTrailingSlashRules,
   buildQueryCanonicalizeRules,
   isLegalOwnedRule,
+  isLslashOwnedRule,
   isQueryOwnedRule,
 } from "../../scripts/cf-p-edge-rules.mjs";
+import { resolveLegacyCleanRedirect } from "../../workers/clean-url-legacy-redirects.js";
 import worker from "../../workers/11tik-edge.js";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 import { matchesRunWorkerFirst, readWranglerConfig } from "./test-helpers/run-worker-first.ts";
@@ -224,5 +228,32 @@ describe("Phase 53 — legal shortcut regression guards", () => {
 
   it("Cloudflare legal rules must be absent after Phase 53 deploy prep", () => {
     expect(buildLegalShortcutRules()).toHaveLength(0);
+  });
+});
+
+describe("Phase 54 — localized trailing-slash CF rules vs Worker atomic redirects", () => {
+  const lslashRules = buildLocalizedTrailingSlashRules();
+
+  it("CF lslash rules strip .html/ on legacy localized paths only", () => {
+    expect(lslashRules).toHaveLength(2);
+    expect(lslashRules.every((r) => r.description.startsWith(RULE_PREFIX_LSLASH))).toBe(true);
+    expect(lslashRules[0].expression).toContain("/l/[a-z]{2}/p/");
+    expect(lslashRules[1].expression).toContain("/l/[a-z]{2}/2026/");
+    expect(lslashRules[0].action_parameters.from_value.status_code).toBe(301);
+  });
+
+  it("Worker atomic redirect resolves legacy .html/ paths to clean URLs in one hop", () => {
+    const rule = resolveLegacyCleanRedirect("/l/fr/p/about.html/");
+    expect(rule?.to).toBe("/l/fr/about");
+    const article = resolveLegacyCleanRedirect("/l/fr/2026/08/how-to-download-youtube-thumbnail.html/");
+    expect(article?.to).toBe("/l/fr/how-to-download-youtube-thumbnail");
+  });
+
+  it("CF lslash apply/remove is idempotent and isolated by prefix", () => {
+    const unrelated = unrelatedRule("customer: keep");
+    let rules = [...lslashRules, unrelated];
+    rules = mergeRulesByDescription(rules, [], RULE_PREFIX_LSLASH);
+    expect(rules.filter(isLslashOwnedRule)).toHaveLength(0);
+    expect(rules).toContain(unrelated);
   });
 });

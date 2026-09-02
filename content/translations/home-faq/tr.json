@@ -13,7 +13,7 @@
     {
       "question": "11tik hangi YouTube URL'lerini destekliyor?",
       "answer": "Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası veya youtu.be kısa bağlantısı yapıştırın. Araç, video kimliğini yoldan okur ve i.ytimg.com'deki herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için küçük resim URL kılavuzuna bakın.",
-      "answerHtml": "Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası veya youtu.be kısa bağlantısı yapıştırın. Araç, video kimliğini yoldan okur ve i.ytimg.com üzerindeki herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için bkz.<a href=\"https://tr.11tik.com/l/tr/2026/08/youtube-thumbnail-url.html\">küçük resim URL kılavuzu</a>."
+      "answerHtml": "Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası veya youtu.be kısa bağlantısı yapıştırın. Araç, video kimliğini yoldan okur ve i.ytimg.com üzerindeki herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için bkz.<a href=\"https://tr.11tik.com/l/tr/youtube-thumbnail-url\">küçük resim URL kılavuzu</a>."
     },
     {
       "question": "11tik benim küçük resmimi veya videomu yüklüyor mu?",
@@ -23,12 +23,12 @@
     {
       "question": "YouTube Shorts'tan küçük resimleri indirebilir miyim?",
       "answer": "Evet. Shorts bağlantıları, normal videolarla aynı herkese açık resim barındırma sitelerini kullanır, bu nedenle bir /shorts/ URL'si yapıştırarak mevcut en iyi görüntüyü indirebilirsiniz. Önizleme, izlediğiniz dikey klibe göre daha geniş görünebilir çünkü YouTube yatay bir görüntü saklar. Herkese açık küçük resmi olmayan özel veya yaş kısıtlamalı Shorts videoları dosya döndürmez. Adım adım yardım için Shorts küçük resim kılavuzuna bakın.",
-      "answerHtml": "Evet. Shorts bağlantıları, normal videolarla aynı herkese açık resim barındırma sitelerini kullanır, bu nedenle bir /shorts/ URL'si yapıştırıp mevcut en iyi görüntüyü indirebilirsiniz. Önizleme, izlediğiniz dikey klibe göre daha geniş görünebilir çünkü YouTube yatay bir görüntü saklar. Herkese açık küçük resmi olmayan özel veya yaş kısıtlamalı Shorts videoları dosya döndürmez. Bkz.<a href=\"https://tr.11tik.com/l/tr/2026/08/youtube-shorts-thumbnail-download.html\">Kısa film önizleme kılavuzu</a>Adım adım yardım için."
+      "answerHtml": "Evet. Shorts bağlantıları, normal videolarla aynı herkese açık resim barındırma sitelerini kullanır, bu nedenle bir /shorts/ URL'si yapıştırıp mevcut en iyi görüntüyü indirebilirsiniz. Önizleme, izlediğiniz dikey klibe göre daha geniş görünebilir çünkü YouTube yatay bir görüntü saklar. Herkese açık küçük resmi olmayan özel veya yaş kısıtlamalı Shorts videoları dosya döndürmez. Bkz.<a href=\"https://tr.11tik.com/l/tr/youtube-shorts-thumbnail-download\">Kısa film önizleme kılavuzu</a>Adım adım yardım için."
     },
     {
       "question": "En yüksek kalitede küçük resim mevcut olmadığında ne olur?",
       "answer": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'lerini içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum boyuttur. maxres 404 hatalarının nedenleri ve geri dönüşlerin nasıl çalıştığı hakkında bilgi için maxresdefault kılavuzunu okuyun.",
-      "answerHtml": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'leri içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum boyuttur. maxres 404 hatalarının nedenleri ve geri dönüşlerin nasıl çalıştığı hakkında bilgi için okuyun.<a href=\"https://tr.11tik.com/l/tr/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault kılavuzu</a>."
+      "answerHtml": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'leri içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum boyuttur. maxres 404 hatalarının nedenleri ve geri dönüşlerin nasıl çalıştığı hakkında bilgi için okuyun.<a href=\"https://tr.11tik.com/l/tr/what-is-maxresdefaultjpg-when-youtube\">maxresdefault kılavuzu</a>."
     }
   ],
   "articleId": "home-faq"

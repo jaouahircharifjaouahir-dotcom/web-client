@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "zh",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "如何下载高清 YouTube Shorts 缩略图 | 11tik",
   "description": "在浏览器中下载 YouTube Shorts 缩略图。Shorts 使用与观看链接相同的公开静态图像。该文件通常为横向图像。",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Shorts 文件和 watch-page 文件是一样的吗？",
-      "html": "<p>它们使用相同的公开尺寸名称，并以视频 ID 为键。如果 YouTube 存储的是宽屏衍生版本，则静帧图像可能会出现黑边。</p>"
+      "html": "<p>它们使用与视频 ID 相同的公共尺寸名称<code>i.ytimg.com</code>如果 YouTube 存储的是宽屏衍生版本，则静止画面可能会出现黑边。Shorts、watch 和 youtu.be 链接的 URL 结构已在相关章节中介绍。<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>。</p>"
+    },
+    {
+      "heading": "Shorts 是否总是发布最高分辨率版本？",
+      "html": "<p>不。在我们<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300个视频样本</a>已验证 maxresdefault<strong>300人中的第286人</strong>ID（<strong>95.33%</strong>）; 这<strong>300人中的14人</strong>即使不使用最大分辨率，仍然存在有效的较低公开价格。这只是针对回退行为的样本范围证据，并非普遍适用的卖空规则。</p>"
     },
     {
       "heading": "如果没有图像显示怎么办？",
-      "html": "<p>该短片可能设置为私有、已删除或没有公开剧照。提取器无法绕过这些限制。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">如何下载</a></p>"
+      "html": "<p>该短片可能设置为私有、已删除或没有公开剧照。提取器无法绕过这些限制。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/about\">关于</a>或者<a href=\"https://www.11tik.com/contact\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">如何下载</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/about\">关于</a>或者<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

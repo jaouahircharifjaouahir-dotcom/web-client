@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "da",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Sådan får du det originale YouTube-miniaturebillede | 11tik",
   "description": "Hent det originale offentlige YouTube-miniaturebillede, som YouTube allerede hoster. Dette er CDN-billedet, ikke et billede, der er kopieret fra videoen.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Hvad er det originale YouTube-miniaturebillede?",
-      "html": "<p>Det er det forhåndsvisningsbillede, som YouTube allerede gemmer på sine billedhosts. Det er den fil, der bruges i søgninger og foreslåede hylder, ikke et billede, du optager med Print Screen.</p>"
+      "html": "<p>Det er det forhåndsvisningsbillede, som YouTube allerede gemmer på sine offentlige billedværter som video-ID – den samme filklasse, der bruges i søgninger og foreslåede hylder. I 11tiks ordforråd betyder \"original\" det.<strong>offentlig CDN-derivat</strong>, ikke nogen af ​​følgende:</p>\n  <ul>\n    <li>Uploaderens originale uploadede kildefil fra YouTube Studio</li>\n    <li>En rå projektfil (PSD, AI osv.)</li>\n    <li>Et billede optaget fra videostreamen</li>\n    <li>Et aktiv med garanteret kildeopløsning eller en 4K-master</li>\n  </ul>\n  <p>For den<strong>største validerede offentlige fil</strong>Når der mangler maks. værdier, skal du aflæse<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">guide af højeste kvalitet</a>For pixelniveauer og filnavne, se<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">størrelsesguide</a>.</p>"
     },
     {
       "heading": "Hvordan er det anderledes end et skærmbillede?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Hvordan kan jeg tjekke, om jeg virkelig har fået den originale fil?",
-      "html": "<p>Brug størrelses- og dimensionslisterne 11tik, når filen er blevet valideret. Hvis billedet ligner et skærmbillede fra afspilleren, har du ikke downloadet det hostede miniaturebillede.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udsugningsapparat</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Højeste kvalitet</a></p>"
+      "html": "<p>Brug størrelses- og dimensionslisterne 11tik, når filen er blevet valideret. Hvis billedet ligner et skærmbillede fra afspilleren, har du ikke downloadet det hostede miniaturebillede.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakte</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udsugningsapparat</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Højeste kvalitet</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik, udgiver af YouTube Thumbnail Extractor i browseren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakte</a>.</p>"
 }

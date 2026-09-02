@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "he",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "איך להשיג תמונה ממוזערת ביוטיוב באיכות הגבוהה ביותר | 11tik",
   "description": "האיכות הגבוהה ביותר פירושה שקובץ ה-JPEG או ה-WebP הציבורי הגדול ביותר ש-YouTube מחזיר בפועל, ולא שם קובץ 4K מנחש.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "מהי הרזולוציה הציבורית המקסימלית?",
-      "html": "<p>כאשר יוטיוב מפרסם את הרזולוציה maxresdefault, היא בדרך כלל 1280×720. אם קובץ זה חסר, האיכות הגבוהה ביותר היא הגודל התקין הבא, כגון sd או hq.</p>"
+      "html": "<p>כאשר יוטיוב מפרסם maxresdefault, הוא בדרך כלל 1280×720. אם קובץ זה חסר, האיכות הגבוהה ביותר היא הגודל התקין הבא, כגון sd או hq. \"האיכות הגבוהה ביותר\" פירושה ה-<strong>התמונה הגדולה ביותר שאושרה וניתנת לאחזור לציבור</strong>עבור מזהה הווידאו הזה - לא קובץ מאסטר ב-4K, לא קובץ בגודל בינוני משודרג, ולא צילום מסך של הנגן.</p>"
+    },
+    {
+      "heading": "תמונה ממוזערת באיכות הגבוהה ביותר לעומת תמונה ממוזערת \"מקורית\"",
+      "html": "<p><strong>האיכות הגבוהה ביותר</strong>(מדריך זה): נגזרת ה-CDN הציבורית המובילה 11tik מאמתת - לעתים קרובות maxres או hq720 כאשר היא קיימת.<strong>מְקוֹרִי</strong>(כוונה שונה): גם הוא עדיין CDN ציבורי, אבל המילה מפתה אנשים לצפות לקובץ המקור של מעלה הקובץ. זה לא קובץ הפוטושופ/PNG הגולמי מסטודיו, לא העתקה של פריים וידאו, ולא גרפיקה ברזולוציית מקור מובטחת. ראה<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">משמעות ומגבלות של התמונה הממוזערת המקורית</a>ו<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">גודל ייחוס</a>אצלנו<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">דגימה של 300 סרטונים</a>, ערכי מקסימום אומתו עבור 286/300 מזהים - זמינות בטווח מדגם, לא הבטחה לכל העלאה.</p>"
     },
     {
       "heading": "האם WebP משנה?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "למה לפעמים \"HD\" נראה רך?",
-      "html": "<p>ייתכן שהרזולוציה הציבורית עדיין היא 1280×720 עם דחיסה, או שאתה מסתכל על hqdefault. בדוק את דוחות גודל הפיקסלים 11tik לפני שאתה מניח שההורדה נכשלה.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/p/contact.html\">מַגָע</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">חוֹלֵץ</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">מדריך מידות</a></p>"
+      "html": "<p>ייתכן שהרזולוציה הציבורית עדיין היא 1280×720 עם דחיסה, או שאתה מסתכל על hqdefault. בדוק את דוחות גודל הפיקסלים 11tik לפני שאתה מניח שההורדה נכשלה.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/contact\">מַגָע</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">חוֹלֵץ</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">מדריך מידות</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/p/contact.html\">מַגָע</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/contact\">מַגָע</a>.</p>"
 }

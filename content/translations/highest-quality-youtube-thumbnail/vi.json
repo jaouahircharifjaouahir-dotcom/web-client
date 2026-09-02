@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "vi",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Cách để có được hình thu nhỏ YouTube chất lượng cao nhất | 11tik",
   "description": "Chất lượng cao nhất có nghĩa là ảnh JPEG hoặc WebP công khai lớn nhất mà YouTube thực sự trả về, chứ không phải là tên tệp 4K được đoán mò.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Độ phân giải công cộng tối đa là bao nhiêu?",
-      "html": "<p>Khi YouTube đăng tải video với độ phân giải mặc định tối đa (maxresdefault), thường là 1280×720. Nếu thiếu file có độ phân giải đó, chất lượng cao nhất sẽ là kích thước hợp lệ tiếp theo như SD hoặc HQ.</p>"
+      "html": "<p>Khi YouTube đăng tải video với độ phân giải mặc định tối đa (maxresdefault), thường là 1280×720. Nếu tệp tin đó bị thiếu, chất lượng cao nhất sẽ là kích thước hợp lệ tiếp theo như SD hoặc HQ. \"Chất lượng cao nhất\" có nghĩa là...<strong>hình ảnh có thể truy xuất công khai được xác thực lớn nhất</strong>Đối với ID video đó—không phải bản gốc 4K, không phải tệp có kích thước trung bình được nâng cấp, và cũng không phải ảnh chụp màn hình trình phát.</p>"
+    },
+    {
+      "heading": "Hình thu nhỏ chất lượng cao nhất so với hình thu nhỏ \"gốc\".",
+      "html": "<p><strong>Chất lượng cao nhất</strong>(hướng dẫn này): CDN phái sinh công khai hàng đầu 11tik xác thực—thường là maxres hoặc hq720 nếu có.<strong>Nguyên bản</strong>(Mục đích khác): Đây vẫn là một CDN công cộng, nhưng từ ngữ này khiến mọi người mong đợi đó là tệp nguồn của người tải lên. Nó không phải là ảnh Photoshop/PNG thô từ Studio, không phải là bản sao khung hình video, và không đảm bảo chất lượng hình ảnh gốc. Xem thêm<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">Ý nghĩa và giới hạn của hình thu nhỏ gốc</a>Và<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">tham khảo kích thước</a>Trong chúng tôi<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Mẫu 300 video</a>, maxres đã được xác thực cho 286/300 ID — tính khả dụng chỉ áp dụng cho một số mẫu nhất định, chứ không phải là cam kết cho mọi lần tải lên.</p>"
     },
     {
       "heading": "WebP có quan trọng không?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Tại sao HD đôi khi lại trông mờ?",
-      "html": "<p>Hình ảnh hiển thị công khai có thể vẫn là 1280×720 với độ phân giải nén, hoặc bạn có thể đang xem ở chất lượng mặc định (hqdefault). Hãy kiểm tra báo cáo kích thước pixel 11tik trước khi cho rằng quá trình tải xuống đã thất bại.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/p/about.html\">Về</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Máy chiết xuất</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Hướng dẫn chọn kích cỡ</a></p>"
+      "html": "<p>Hình ảnh hiển thị công khai có thể vẫn là 1280×720 với độ phân giải nén, hoặc bạn có thể đang xem ở chất lượng mặc định (hqdefault). Hãy kiểm tra báo cáo kích thước pixel 11tik trước khi cho rằng quá trình tải xuống đã thất bại.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/about\">Về</a>hoặc<a href=\"https://www.11tik.com/contact\">Liên hệ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Máy chiết xuất</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Hướng dẫn chọn kích cỡ</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/p/about.html\">Về</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/about\">Về</a>hoặc<a href=\"https://www.11tik.com/contact\">Liên hệ</a>.</p>"
 }

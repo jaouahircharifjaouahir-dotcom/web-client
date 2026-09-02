@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "pl",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Jak pobrać miniaturę krótkiego filmu z YouTube w jakości HD | 11tik",
   "description": "Pobierz miniaturę YouTube Shorts w przeglądarce. Shorts korzystają z tych samych publicznych zdjęć, co adresy URL do oglądania. Plik jest często wyświetlany w orientacji poziomej.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Czy pliki Shorts są tym samym co pliki stron do oglądania?",
-      "html": "<p>Używają tych samych publicznych nazw rozmiarów, kluczowanych identyfikatorem wideo. Zdjęcie może wyglądać na czarne, jeśli YouTube zapisał wersję panoramiczną.</p>"
+      "html": "<p>Używają tych samych publicznych nazw rozmiarów, które są wprowadzane za pomocą identyfikatora wideo<code>i.ytimg.com</code>. Zdjęcie może wyglądać na poszarpane, jeśli YouTube zapisał pochodną w formacie panoramicznym. Anatomia adresów URL dla linków Shorts, Watch i youtu.be jest omówiona w<a href=\"https://www.11tik.com/youtube-thumbnail-url\">przewodnik po adresach URL miniatur</a>.</p>"
+    },
+    {
+      "heading": "Czy Shorts zawsze publikują filmy o maksymalnej rozdzielczości?",
+      "html": "<p>Nie. W naszym<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Próbka 300 filmów</a>, maxresdefault sprawdzony dla<strong>286 z 300</strong>Identyfikatory (<strong>95,33%</strong>); ten<strong>14 z 300</strong>Bez maxresów nadal istniała ważna, niższa publiczna wartość. To są dowody oparte na próbie, wskazujące na zachowanie awaryjne, a nie uniwersalna reguła dla Shortów.</p>"
     },
     {
       "heading": "A co jeśli obraz się nie pojawi?",
-      "html": "<p>Film Short może być prywatny, usunięty lub bez publicznych zdjęć. Ekstraktor nie może ominąć tych ograniczeń.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Jak pobrać</a></p>"
+      "html": "<p>Film Short może być prywatny, usunięty lub bez publicznych zdjęć. Ekstraktor nie może ominąć tych ograniczeń.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/about\">O</a>Lub<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Jak pobrać</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/about\">O</a>Lub<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

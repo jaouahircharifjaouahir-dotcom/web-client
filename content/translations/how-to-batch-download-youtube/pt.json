@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "pt",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Como baixar miniaturas do YouTube em lote (até 25 URLs públicas) | 11tik",
   "description": "Extraia miniaturas públicas do YouTube em lote no navegador. Cole um URL por linha, baixe cada imagem de melhor qualidade ou compacte o conjunto de maior qualidade em um arquivo ZIP. Sem necessidade de conta ou arquivos de vídeo.",
@@ -24,8 +24,48 @@
       "html": "<p>Abrir<a href=\"https://www.11tik.com/\">11tik</a>Ative a opção \"Em lote\", cole um URL público por linha, clique em \"Extrair tudo\" e, em seguida, baixe cada imagem de melhor qualidade ou o arquivo ZIP com a maior qualidade. O limite é de 25 URLs por execução para que o navegador permaneça responsivo.</p>"
     },
     {
+      "heading": "O que a ferramenta processa",
+      "html": "<p>O modo em lote executa a mesma verificação de imagens estáticas públicas no lado do cliente que a extração de URL única: analisa cada ID de vídeo, cria URLs de miniaturas candidatas, carrega-as como imagens no seu navegador, descarta falhas e espaços reservados, classifica as imagens que sobreviveram e exibe a melhor imagem estática primeiro. Ele não baixa vídeo ou áudio, não chama uma API privada do YouTube e não armazena links colados em servidores 11tik.</p>"
+    },
+    {
+      "heading": "limite de 25 URLs",
+      "html": "<p>Cada lote aceita até<strong>25 linhas</strong>Esse limite mantém a validação de imagens responsiva no navegador. Para obter mais IDs, execute vários lotes ou exporte o CSV de cada execução e mescle-os offline. Não há um lote de servidor com 500 ou 1000 URLs.</p>"
+    },
+    {
+      "heading": "Processamento do lado do cliente",
+      "html": "<p>Cada extração ocorre na sua sessão. As solicitações de rede vão do seu navegador para a rede pública.<code>i.ytimg.com</code>(e hosts relacionados). URLs coladas não são enviadas para 11tik para raspagem do lado do servidor.</p>"
+    },
+    {
+      "heading": "Exportação em CSV e JSON",
+      "html": "<p>Após uma execução bem-sucedida, a exportação opcional inclui o ID do vídeo, o título, o URL de compartilhamento e o URL da imagem validada por linha — útil para registros de pesquisa. A exportação reflete o que foi validado naquela sessão, e não uma coluna de resolução máxima garantida para cada ID.</p>"
+    },
+    {
+      "heading": "Taxonomia de falhas",
+      "html": "<ul>\n    <li><strong>Falha na análise sintática:</strong>A linha não é um recurso compatível com assistir a vídeos curtos, transmissões ao vivo, incorporação, youtu.be ou URL expansível do canal.</li>\n    <li><strong>Vídeo indisponível:</strong>privado, removido, restrito ou em processamento — nenhum conteúdo público ainda é válido. Veja<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Por que uma miniatura não aparece?</a>.</li>\n    <li><strong>Variante ausente:</strong>O vídeo é público, mas em resolução máxima (ou outro nível superior) retorna erro 404; um tamanho menor ainda funciona. Veja<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">fallback maxres</a>.</li>\n    <li><strong>Espaço reservado rejeitado:</strong>A URL respondeu, mas parecia um pequeno bloco cinza indicando um arquivo ausente.</li>\n  </ul>"
+    },
+    {
+      "heading": "Vídeos inválidos, privados e indisponíveis",
+      "html": "<p>11tik exibe apenas imagens estáticas de CDN públicas. Vídeos não listados sem empacotamento público, uploads exclusivos para membros, conteúdo com restrição de idade e vídeos excluídos geralmente produzem cartões vazios — não um arquivo “secreto” menor. Não espere que o Bulk ignore os controles de acesso.</p>"
+    },
+    {
+      "heading": "URLs de canais versus links de visualização fornecidos manualmente",
+      "html": "<p>Cole o URL de um canal público em uma linha e o Bulk expandirá os uploads públicos recentes por meio de descoberta no estilo RSS, extraindo cada ID em seguida — sujeito ao mesmo limite de 25 URLs após a expansão. Links de monitoramento colados manualmente ignoram a descoberta de canais. Fluxo de trabalho completo do canal:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">guia de extração de canal</a>.</p>"
+    },
+    {
+      "heading": "Privacidade",
+      "html": "<p>Os URLs colados são processados ​​localmente no seu navegador para extração. Leia<a href=\"https://www.11tik.com/privacy\">Privacidade</a>Para análises do site; o Bulk não adiciona uma API privada separada no servidor.</p>"
+    },
+    {
+      "heading": "Orientações para novas tentativas",
+      "html": "<p>Após criar uma nova miniatura personalizada no Studio ou fazer um novo upload, aguarde o processamento e execute novamente a mesma URL de monitoramento. A latência temporária da CDN às vezes desaparece na segunda tentativa; resultados vazios persistentes geralmente significam que ainda não existe um registro público para esse ID.</p>"
+    },
+    {
+      "heading": "expectativas realistas",
+      "html": "<p>Nem todos os vídeos públicos são publicados em resolução máxima. Em nosso<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Amostra de 300 vídeos</a>, resolução máxima validada para IDs de 286/300 (escopo de amostra). A função em lote retorna o arquivo público validado de maior resolução por linha — não há garantia de 1280×720 para todas as linhas. Anatomia da URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">guia de URLs de miniaturas</a>.</p>"
+    },
+    {
       "heading": "O que deve constar na lista?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= IDs</li>\n    <li>youtu.be links curtos</li>\n    <li>youtube.com/shorts/ IDs</li>\n    </ul>\n  <p>Vídeos privados, não listados sem miniaturas públicas ou com restrição de idade não retornarão uma imagem estática. Isso é esperado. Veja também<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniaturas curtas</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= IDs</li>\n    <li>youtu.be links curtos</li>\n    <li>youtube.com/shorts/ IDs</li>\n    </ul>\n  <p>Vídeos privados, não listados sem miniaturas públicas ou com restrição de idade não retornarão uma imagem estática. Isso é esperado. Veja também<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Miniaturas curtas</a>.</p>"
     },
     {
       "heading": "Como executar uma extração em massa",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Posso usar isso para pesquisa de concorrentes?",
-      "html": "<p>Sim, para estudar o empacotamento público. Não republique a miniatura de outro criador como se fosse seu próprio upload. Os direitos autorais permanecem com o detentor dos direitos. 11tik apenas busca arquivos que o YouTube já hospeda publicamente.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrato em massa aberto em 11tik →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+      "html": "<p>Sim, para estudar o empacotamento público. Não republique a miniatura de outro criador como se fosse seu próprio upload. Os direitos autorais permanecem com o detentor dos direitos. 11tik apenas busca arquivos que o YouTube já hospeda publicamente.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrato em massa aberto em 11tik →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Sobre</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Sobre</a>.</p>"
 }

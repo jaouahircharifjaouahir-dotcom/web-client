@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "hu",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Hogyan tölts le egy YouTube rövidfilm indexképét HD minőségben | 11tik",
   "description": "Tölts le egy YouTube Shorts indexképet a böngészőbe. A rövid videók ugyanazokat a nyilvános állóképeket használják, mint a megtekintési URL-eket. A fájl gyakran fekvő formátumú.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Ugyanazok a rövid videófájlok, mint a videóoldal-fájlok?",
-      "html": "<p>Ugyanazokat a nyilvános méretneveket használják, amelyeket a videoazonosító határoz meg. Az állókép „postaláda alakúnak” tűnhet, ha a YouTube szélesvásznú származékot tárol.</p>"
+      "html": "<p>Ugyanazokat a nyilvános méretneveket használják, amelyeket a videoazonosító határoz meg a következőn:<code>i.ytimg.com</code>Az állókép keskenynek tűnhet, ha a YouTube egy szélesvásznú származékot tárolt. A rövid videók, videómegtekintések és a youtu.be linkek URL-felépítését a [link] tárgyalja.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">indexkép URL útmutató</a>.</p>"
+    },
+    {
+      "heading": "A Shorts mindig maximális értékeket tesz közzé?",
+      "html": "<p>Nem. A miénkben<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videós minta</a>, a maxresdefault érvényesítve a következőre:<strong>286 a 300-ból</strong>Azonosítók (<strong>95,33%</strong>); a<strong>300-ból 14</strong>maxres nélkül is érvényes alsó közönséggel rendelkezett. Ez egy mintavételezett bizonyíték a tartalék viselkedésre, nem pedig egy univerzális Shorts szabály.</p>"
     },
     {
       "heading": "Mi van, ha nem jelenik meg a kép?",
-      "html": "<p>A rövid videó lehet privát, törölt vagy nyilvános állóképek nélküli. A kivonatoló program nem tudja megkerülni ezeket a korlátozásokat.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hogyan lehet letölteni</a></p>"
+      "html": "<p>A rövid videó lehet privát, törölt vagy nyilvános állóképek nélküli. A kivonatoló program nem tudja megkerülni ezeket a korlátozásokat.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/about\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Hogyan lehet letölteni</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/about\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>"
 }

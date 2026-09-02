@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "tl",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Paano Mag-download ng Thumbnail ng YouTube Shorts sa HD | 11tik",
   "description": "Mag-download ng thumbnail ng YouTube Shorts sa browser. Gumagamit ang mga shorts ng parehong pampublikong stills gaya ng mga URL ng panonood. Kadalasang naka-landscape ang file.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Pareho ba ang mga file ng Shorts at mga file ng watch-page?",
-      "html": "<p>Gumagamit sila ng parehong pangalan ng pampublikong laki na naka-key sa pamamagitan ng video ID. Maaaring magmukhang naka-letterbox ang still kung nag-imbak ang YouTube ng hinango sa widescreen.</p>"
+      "html": "<p>Ginagamit nila ang parehong mga pangalan ng pampublikong laki na naka-key sa pamamagitan ng video ID sa<code>i.ytimg.com</code>Maaaring magmukhang naka-letterbox ang still kung nag-imbak ang YouTube ng widescreen derivative. Ang anatomiya ng URL para sa mga Short, relo, at mga link na youtu.be ay tinatalakay sa<a href=\"https://www.11tik.com/youtube-thumbnail-url\">gabay sa URL ng thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Palaging ba naglalathala ang Shorts ng mga maxres?",
+      "html": "<p>Hindi. Sa ating<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-video na sample</a>, napatunayan ang maxresdefault para sa<strong>286 ng 300</strong>Mga ID (<strong>95.33%</strong>); ang<strong>14 sa 300</strong>Kung wala si Maxres, mayroon pa ring balidong mas mababang pampublikong rating. Iyan ay ebidensyang naka-sample para sa fallback na pag-uugali, hindi isang pangkalahatang tuntunin sa Shorts.</p>"
     },
     {
       "heading": "Paano kung walang lumabas na imahe?",
-      "html": "<p>Ang Maikling Larawan ay maaaring pribado, nabura, o walang pampublikong mga still. Hindi maaaring malampasan ng extractor ang mga limitasyong iyon.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>o<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Tagabunot</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Paano mag-download</a></p>"
+      "html": "<p>Ang Maikling Larawan ay maaaring pribado, nabura, o walang pampublikong mga still. Hindi maaaring malampasan ng extractor ang mga limitasyong iyon.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/about\">Tungkol sa</a>o<a href=\"https://www.11tik.com/contact\">Makipag-ugnayan</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Tagabunot</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Paano mag-download</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>o<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/about\">Tungkol sa</a>o<a href=\"https://www.11tik.com/contact\">Makipag-ugnayan</a>.</p>"
 }

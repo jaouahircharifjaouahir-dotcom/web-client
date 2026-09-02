@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "ko",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "최고 품질의 유튜브 썸네일을 만드는 방법 | 11tik",
   "description": "최고 화질이란 YouTube가 실제로 반환하는 가장 큰 공개 JPEG 또는 WebP 파일 형식을 의미하며, 추측에 의한 4K 파일 이름이 아닙니다.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "최대 공개 해상도는 얼마입니까?",
-      "html": "<p>YouTube에서 최대 해상도(maxresdefault)를 설정할 때, 일반적으로 1280x720 해상도를 사용합니다. 해당 파일이 없는 경우, SD 또는 HQ와 같이 그다음으로 유효한 해상도가 최고 화질로 사용됩니다.</p>"
+      "html": "<p>YouTube에서 maxresdefault를 게시할 때 일반적으로 1280x720 해상도를 사용합니다. 해당 파일이 없는 경우, SD 또는 HQ와 같은 다음으로 유효한 해상도가 최고 화질로 사용됩니다. \"최고 화질\"이란<strong>공개적으로 검색 가능한 가장 큰 검증된 이미지</strong>해당 비디오 ID에 대한 원본 파일입니다. 4K 마스터 파일도 아니고, 업스케일링된 중간 크기 파일도 아니고, 플레이어 스크린샷도 아닙니다.</p>"
+    },
+    {
+      "heading": "최고 품질 썸네일 vs \"원본\" 썸네일",
+      "html": "<p><strong>최고 품질</strong>(이 가이드): 최상위 공개 CDN 파생물 11tik는 검증합니다. 존재하는 경우 maxres 또는 hq720이 자주 사용됩니다.<strong>원래의</strong>(의도가 다름): 이것도 여전히 공개 CDN이지만, '공개 CDN'이라는 단어는 업로더의 원본 파일을 기대하게 만들 수 있습니다. 스튜디오에서 추출한 원본 포토샵/PNG 파일도 아니고, 비디오 프레임을 추출한 것도 아니며, 원본 해상도의 아트워크를 보장하는 것도 아닙니다. 참조.<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">원본 썸네일의 의미와 한계</a>그리고<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">크기 참조</a>우리 안에서<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300개 비디오 샘플</a>maxres는 286/300개의 ID에 대해 유효성 검사를 완료했습니다. 이는 샘플 범위의 가용성을 나타내는 것이며, 모든 업로드에 대해 보장하는 것은 아닙니다.</p>"
     },
     {
       "heading": "WebP가 중요한가요?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "'HD' 화질이 때때로 흐릿하게 보이는 이유는 무엇일까요?",
-      "html": "<p>공개된 이미지는 여전히 압축된 1280×720 해상도일 수도 있고, hqdefault를 보고 있을 수도 있습니다. 다운로드가 실패했다고 판단하기 전에 픽셀 크기 11tik를 확인하세요.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">사이즈 가이드</a></p>"
+      "html": "<p>공개된 이미지는 여전히 압축된 1280×720 해상도일 수도 있고, hqdefault를 보고 있을 수도 있습니다. 다운로드가 실패했다고 판단하기 전에 픽셀 크기 11tik를 확인하세요.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/about\">에 대한</a>또는<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">사이즈 가이드</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/about\">에 대한</a>또는<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "sv",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Hur man extraherar miniatyrbilder från en YouTube-kanals URL | 11tik",
   "description": "Klistra in en URL till en offentlig YouTube-kanal i 11tik Bulk för att utöka de senaste offentliga uppladdningarna och ladda sedan ner varje bästa bild. Detta är för forskning om paketering, inte för att klona en annan kanals anpassade grafik.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS-upptäcktsomfång",
+      "html": "<p>Kanalutökning använder YouTubes offentliga kanalflöde (i RSS-stil) för att lista de senaste uppladdningarna med ett matchbart video-ID. Det flödet återspeglar<strong>offentliga objekt som YouTube exponerar</strong>—inte alla videor som någonsin laddats upp, inte inlägg endast för medlemmar och inte ett garanterat komplett arkiv.</p>"
+    },
+    {
+      "heading": "Endast offentliga objekt",
+      "html": "<p>Privata, olistad-utan-offentliga-stillbilder och åldersbestämda uppladdningar visas vanligtvis aldrig i den expanderade listan. Tom expansion betyder vanligtvis att referensen inte kunde lösas, att kanalen avslutas eller att inga offentliga id:n returnerades – inte ett 11tik-skrapningsfel.</p>"
+    },
+    {
+      "heading": "Kanal-URL kontra explicita visnings-URL:er",
+      "html": "<p>En kanalrad expanderar till flera tittar-URL:er före extrahering, fortfarande med förbehåll för<strong>Masstak på 25 URL:er</strong>Om du klistrar in enskilda bevakningslänkar hoppas RSS-upptäckt över men det ger exakt kontroll. Jämför med massutskick rad för rad:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guide för batchnedladdning</a>.</p>"
+    },
+    {
+      "heading": "Saknade eller borttagna objekt",
+      "html": "<p>Borttagna videor försvinner från flöden med tiden. Ett kort som inte extraheras kan bearbetas, begränsas eller tas bort – kör en enskild visnings-URL igen eller se<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatyrbilden visas inte</a>.</p>"
+    },
+    {
+      "heading": "Etisk användning",
+      "html": "<p>Att studera offentliga förpackningar för forskning är den avsedda användningen. Att ladda upp en konkurrents anpassade konst igen eftersom din miniatyrbild bryter mot upphovsrätt och plattformens policy. Ange kanalernas namn i publicerade kommentarer; länka deras visningssidor. Webbplatsregler:<a href=\"https://www.11tik.com/copyright\">Upphovsrätt och användning</a>.</p>"
+    },
+    {
+      "heading": "Samband med batchextraktion",
+      "html": "<p>Kanalutdragning är i bulkläge med RSS-förifyllning. Samma validering på klientsidan, samma gräns på 25 URL:er, samma CSV/zip-export – ingen obegränsad kanalskrapning och inget privat API på serversidan.</p>"
+    },
+    {
       "heading": "Kan jag få miniatyrbilder från en hel YouTube-kanal?",
-      "html": "<p>Du kan ta stillbilder för det senaste<em>offentlig</em>uppladdningar som exponerar ett video-ID. 11tik skrapar inte alla videor som en kanal någonsin publicerat och kringgår inte medlemskap. På startsidan, aktivera Massutskick, klistra in en kanal-URL som t.ex.<code>youtube.com/@handle</code>eller<code>/channel/UC…</code>och låt verktyget expandera den offentliga RSS-liknande listan. Extrahera sedan som du skulle göra med en typskriven lista. Gränsen är fortfarande 25 URL:er per körning så att webbläsaren förblir användbar.</p>\n  <p>Detta skiljer sig från att spara en enda bevakningslänk. Flödet med en enda URL är i<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hur man laddar ner en YouTube-miniatyrbild</a>Rad-för-rad-bulk utan kanal är igång<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batchnedladdning</a>.</p>"
+      "html": "<p>Du kan ta stillbilder för det senaste<em>offentlig</em>uppladdningar som exponerar ett video-ID. 11tik skrapar inte alla videor som en kanal någonsin publicerat och kringgår inte medlemskap. På startsidan, aktivera Massutskick, klistra in en kanal-URL som t.ex.<code>youtube.com/@handle</code>eller<code>/channel/UC…</code>och låt verktyget expandera den offentliga RSS-liknande listan. Extrahera sedan som du skulle göra med en typskriven lista. Gränsen är fortfarande 25 URL:er per körning så att webbläsaren förblir användbar.</p>\n  <p>Detta skiljer sig från att spara en enda bevakningslänk. Flödet med en enda URL är i<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">hur man laddar ner en YouTube-miniatyrbild</a>Rad-för-rad-bulk utan kanal är igång<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batchnedladdning</a>.</p>"
     },
     {
       "heading": "Vilka kanal-URL:er fungerar?",
@@ -29,11 +53,11 @@
     },
     {
       "heading": "Hur man extraherar kanalminiatyrer på 11tik",
-      "html": "<ol>\n    <li>Öppna<a href=\"https://www.11tik.com/\">11tik</a>och klicka på Massvisning.</li>\n    <li>Klistra in en offentlig kanal-URL. Du kan lägga till fler tittlänkar på följande rader.</li>\n    <li>Starta extraheringen. Vänta tills verktyget ersätter kanalraden med de senaste offentliga visnings-URL:erna och hämtar sedan stillbilder.</li>\n    <li>Ladda ner varje bästa stillbild, eller ladda ner zip-filen av högsta kvalitet, eller exportera CSV (id, titel, delnings-URL, bild-URL) för en forskningslogg.</li>\n  </ol>\n  <p>Dela länkar efter lyckat extraheringsanvändning<code>/thumb/VIDEO_ID</code>när kvalitetsgrinden har en titel, taggar och en aktiv miniatyrbild. Dessa sidor är till för den unika stillbilden, inte en andra hemsida.</p>"
+      "html": "<ol>\n    <li>Öppna<a href=\"https://www.11tik.com/\">11tik</a>och klicka på Massproduktion.</li>\n    <li>Klistra in en URL till en offentlig kanal. Du kan lägga till fler tittlänkar på följande rader.</li>\n    <li>Starta extraheringen. Vänta tills verktyget ersätter kanalraden med de senaste offentliga visnings-URL:erna och hämtar sedan stillbilder.</li>\n    <li>Ladda ner varje bästa stillbild, eller ladda ner zip-filen av högsta kvalitet, eller exportera CSV (id, titel, delnings-URL, bild-URL) för en forskningslogg.</li>\n  </ol>\n  <p>Dela länkar efter lyckat extraheringsanvändning<code>/thumb/VIDEO_ID</code>när kvalitetsgrinden har en titel, taggar och en aktiv miniatyrbild. Dessa sidor är till för den unika stillbilden, inte en andra hemsida.</p>"
     },
     {
       "heading": "Vad 11tik inte kommer att göra",
-      "html": "<ul>\n    <li>Ladda ner videorna eller ljudet. Endast stillbilder.</li>\n    <li>Lista olistade eller privata uppladdningar.</li>\n    <li>Garantera maxresdefault för alla nya videor. Äldre eller små källor stannar vid hq eller sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Bevilja rättigheter att återanvända konsten. Att studera ett rutnät av offentliga förpackningar är den avsedda forskningsanvändningen. Att ladda upp en konkurrents stillbild igen som din anpassade miniatyrbild är ett upphovsrätts- och policyproblem.<a href=\"https://www.11tik.com/copyright\">Upphovsrätt och användning</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Ladda ner videorna eller ljudet. Endast stillbilder.</li>\n    <li>Lista olistade eller privata uppladdningar.</li>\n    <li>Garantera maxresdefault för alla nya videor. Äldre eller små källor stannar vid hq eller sd.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Bevilja rättigheter att återanvända konsten. Att studera ett rutnät av offentliga förpackningar är den avsedda forskningsanvändningen. Att ladda upp en konkurrents stillbild igen som din anpassade miniatyrbild är ett upphovsrätts- och policyproblem.<a href=\"https://www.11tik.com/copyright\">Upphovsrätt och användning</a>.</li>\n  </ul>"
     },
     {
       "heading": "Hur detta hjälper forskning utan dörröppningssidor",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Felsökning",
-      "html": "<p>Tom lista: kanalflödet returnerade inga offentliga id:n (avslutad kanal, eller ett referensnummer som resolvern inte kunde mappa). Testa UC-kanalens URL från YouTubes skrivbordslayout.</p>\n  <p>Några kort saknas: dessa uppladdningar har ännu ingen offentlig status, eller så avvisade grinden ett ofullständigt utdrag. Kör en enda bevaknings-URL igen. Sekretess för inklistrade länkar:<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>.</p>\n  <p>Extractor kontra designverktyg: 11tik skapar inte omslagsbilder.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extraktor vs. tillverkare</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrahera stillbilder från den offentliga kanalen på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>.</p>"
+      "html": "<p>Tom lista: kanalflödet returnerade inga offentliga id:n (avslutad kanal, eller ett referensnummer som resolvern inte kunde mappa). Testa UC-kanalens URL från YouTubes skrivbordslayout.</p>\n  <p>Några kort saknas: dessa uppladdningar har ännu ingen offentlig status, eller så avvisade grinden ett ofullständigt utdrag. Kör en enda bevaknings-URL igen. Sekretess för inklistrade länkar:<a href=\"https://www.11tik.com/privacy\">Privatliv</a>.</p>\n  <p>Extractor kontra designverktyg: 11tik skapar inte omslagsbilder.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Extraktor vs. tillverkare</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrahera stillbilder från den offentliga kanalen på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/contact\">Kontakta</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/contact\">Kontakta</a>.</p>"
 }

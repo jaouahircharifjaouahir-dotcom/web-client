@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "sv",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Studio-miniatyrbild 2026 | 11tik",
   "description": "År 2026 laddar berättigade YouTube-kanaler fortfarande upp en anpassad miniatyrbild från Studio på en videos detaljsida. Menyetiketterna flyttas, men resultatet är detsamma: YouTube är värd för en ny offentlig stillbild. 11tik laddar inte upp den filen. Den läser bara offentliga bild-URL:er efter att de finns.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Öppna YouTube Studio och välj videon.</li>\n    <li>Under Detaljer laddar du upp en bild i 16:9-format (YouTubes vanliga mål är 1280×720).</li>\n    <li>Spara och vänta tills bearbetningen är klar.</li>\n  </ol>\n  <p>De exakta knappnamnen kan ändras. Om ditt konto inte är berättigat till anpassade miniatyrbilder kommer Studio inte att erbjuda uppladdningen. 11tik kan inte kringgå det.</p>"
     },
     {
+      "heading": "Diagnostiskt träd: Studiobyte kontra offentlig stillbild",
+      "html": "<ol>\n    <li>Efter att du har laddat upp anpassad konst i Studio, vänta tills bearbetningen är klar.</li>\n    <li>Klistra in den offentliga visnings-URL:en i<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Vissa storlekar visas, maxstorlekar saknas?</strong>→ variant-/reservproblem, inte en misslyckad Studio-uppladdning. Se<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault förklarad</a>.</li>\n    <li><strong>Inga storlekar alls?</strong>→ videon kan fortfarande bearbetas, vara privat eller begränsad för offentliga CDN-stillbilder. Se<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatyrbilden visas inte</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Hur kontrollerar jag en miniatyrbild efter att jag ändrat den i Studio?",
-      "html": "<p>Klistra in klockans URL i<a href=\"https://www.11tik.com/\">11tik</a>Ladda ner eller kopiera den första listade storleken. Om maxresdefault saknas är nästa offentliga fil den ärliga maximumstorleken. Det är YouTubes katalog, inte ett misslyckat extrakt. Se även<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault förklarad</a>.</p>"
+      "html": "<p>Klistra in klockans URL i<a href=\"https://www.11tik.com/\">11tik</a>Ladda ner eller kopiera den första listade storleken. Om maxresdefault saknas är nästa offentliga fil den ärliga maximumstorleken. Det är YouTubes katalog, inte ett misslyckat extrakt. Se även<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault förklarad</a>.</p>"
     },
     {
       "heading": "Ersätter 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Vad ska jag göra när bilden ser gammal ut?",
-      "html": "<p>Bild-CDN:er kan lagga. Kontrollera senare, uppdatera fullständigt eller kopiera URL:en 11tik för att bekräfta. Anta inte en 4K-master; den offentliga maxupplösningen är vanligtvis 1280×720. En skärmdump av Studio är inte den offentliga miniatyrbildsfilen.</p>\n  <p>Släkt:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extraktor vs tillverkare</a>.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Öppna extraktorn</a></p>"
+      "html": "<p>Bild-CDN:er kan lagga. Kontrollera senare, uppdatera fullständigt eller kopiera URL:en 11tik för att bekräfta. Anta inte en 4K-master; den offentliga maxupplösningen är vanligtvis 1280×720. En skärmdump av Studio är inte den offentliga miniatyrbildsfilen.</p>\n  <p>Släkt:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extraktor vs tillverkare</a>.</p>\n  <p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Öppna extraktorn</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrivet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>"
 }

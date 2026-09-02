@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "he",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "תמונה ממוזערת של סטודיו יוטיוב 2026 | 11tik",
   "description": "בשנת 2026, ערוצי YouTube זכאים עדיין מעלים תמונה ממוזערת מותאמת אישית מ-Studio בדף הפרטים של הסרטון. תוויות התפריט זזות, אך התוצאה זהה: YouTube מארח תמונה ממוזערת ציבורית חדשה. 11tik לא מעלה קובץ זה. הוא קורא כתובות URL של תמונות ציבוריות רק לאחר שהן קיימות.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>פתחו את YouTube Studio ובחרו את הסרטון.</li>\n    <li>בקטע \"פרטים\", העלו תמונה ביחס גובה-רוחב של 16:9 (הרזולוציה הנפוצה ביותר ביוטיוב היא 1280×720).</li>\n    <li>שמור והמתן עד לסיום העיבוד.</li>\n  </ol>\n  <p>שמות הכפתורים המדויקים עשויים להשתנות. אם חשבונך אינו זכאי לתמונות ממוזערות מותאמות אישית, Studio לא יציע את ההעלאה. 11tik לא יכול לעקוף זאת.</p>"
     },
     {
+      "heading": "עץ אבחון: שינוי בסטודיו לעומת סטילס ציבורי",
+      "html": "<ol>\n    <li>לאחר העלאת גרפיקה מותאמת אישית ב-Studio, המתן לסיום העיבוד.</li>\n    <li>הדבק את כתובת ה-URL הציבורית לצפייה ב<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>.</li>\n    <li><strong>מופיעים חלק מהגדלים, חסרים מידות מקסימליות?</strong>→ בעיית גרסה/גיבוי, לא העלאה כושלת של Studio. ראה<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault מוסבר</a>.</li>\n    <li><strong>אין מידות בכלל?</strong>ייתכן שסרטון עדיין נמצא בעיבוד, פרטי או מוגבל לתמונות סטילס ציבוריות של CDN. ראה<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">תמונה ממוזערת לא מופיעה</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "איך אני בודק תמונה ממוזערת אחרי שאני משנה אותה ב-Studio?",
-      "html": "<p>הדבק את כתובת ה-URL של הצפייה לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>הורד או העתק את הגודל הראשון המופיע. אם maxresdefault חסר, הקובץ הציבורי הבא הוא הגודל המקסימלי האמיתי. זהו הקטלוג של יוטיוב, לא חילוץ כושל. ראה גם<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault מוסבר</a>.</p>"
+      "html": "<p>הדבק את כתובת ה-URL של הצפייה לתוך<a href=\"https://www.11tik.com/\">[[עמוד 2]]</a>הורד או העתק את הגודל הראשון המופיע. אם maxresdefault חסר, הקובץ הציבורי הבא הוא הגודל המקסימלי האמיתי. זהו הקטלוג של יוטיוב, לא חילוץ כושל. ראה גם<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault מוסבר</a>.</p>"
     },
     {
       "heading": "האם 11tik מחליף את YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "מה עליי לעשות כשהתמונה נראית ישנה?",
-      "html": "<p>רשתות CDN של תמונות יכולות לפגר. יש לבדוק שוב מאוחר יותר, לרענן באופן מלא, או להעתיק את כתובת האתר 11tik כדי לאשר. אין להניח שמדובר בקובץ מאסטר של 4K; רזולוציה מקסימלית ציבורית היא בדרך כלל 1280×720. צילום מסך של Studio אינו קובץ הממוזערות הציבורי.</p>\n  <p>קָשׁוּר:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">מחלץ לעומת יצרן</a>.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">פתח את המחלץ</a></p>"
+      "html": "<p>רשתות CDN של תמונות יכולות לפגר. יש לבדוק שוב מאוחר יותר, לרענן באופן מלא, או להעתיק את כתובת האתר 11tik כדי לאשר. אין להניח שמדובר בקובץ מאסטר של 4K; רזולוציה מקסימלית ציבורית היא בדרך כלל 1280×720. צילום מסך של Studio אינו קובץ הממוזערות הציבורי.</p>\n  <p>קָשׁוּר:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">מחלץ לעומת יצרן</a>.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik.<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">פתח את המחלץ</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik.<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik.<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>.</p>"
 }

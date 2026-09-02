@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "it",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Come ottenere l'immagine miniatura originale di YouTube | 11tik",
   "description": "Ottieni l'immagine di anteprima pubblica originale di YouTube, già presente su YouTube. Si tratta di un'immagine fissa proveniente dalla CDN, non di un fotogramma estratto dal video.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Qual è l'immagine di anteprima originale di YouTube?",
-      "html": "<p>Si tratta dell'immagine di anteprima che YouTube già memorizza sui suoi server di immagini. È il file utilizzato nei risultati di ricerca e nei suggerimenti, non un fotogramma catturato con il tasto Stamp.</p>"
+      "html": "<p>Si tratta dell'immagine di anteprima che YouTube già memorizza sui suoi host di immagini pubblici per un ID video, la stessa classe di file utilizzata nella ricerca e negli scaffali suggeriti. Nel vocabolario di 11tik, \"originale\" significa che<strong>derivato CDN pubblico</strong>, non nessuno dei seguenti:</p>\n  <ul>\n    <li>Il file sorgente originale caricato dall'utente su YouTube Studio</li>\n    <li>Un file di progetto grezzo (PSD, AI, ecc.)</li>\n    <li>Un fotogramma catturato dal flusso video</li>\n    <li>Un asset con risoluzione di origine garantita o un master 4K</li>\n  </ul>\n  <p>Per il<strong>file pubblico convalidato più grande</strong>quando maxres potrebbe mancare, leggere il<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">opportunità di altissima qualità</a>. Per i livelli di pixel e i nomi dei file, vedere il<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Guida alle taglie</a>.</p>"
     },
     {
       "heading": "In che cosa si differenzia da uno screenshot?",
@@ -40,7 +40,7 @@
       "html": "<p>Si tratta del nome file pubblico più comune, solitamente 1280×720 quando YouTube lo ha creato. Non è un master 4K e non è il file video.</p>"
     },
     {
-      "heading": "Il termine \"originale\" si riferisce sempre a 1280-720?",
+      "heading": "Il termine \"originale\" significa sempre 1280-720?",
       "html": "<p>No. Se la risoluzione massima non è mai stata pubblicata, l'immagine pubblica originale è in alta qualità, a bassa risoluzione o in un altro file ancora esistente. 11tik mostra la dimensione reale dei pixel invece di inventare i pixel.</p>"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Come faccio a verificare di aver effettivamente ricevuto il file originale?",
-      "html": "<p>Utilizza le dimensioni e le misure 11tik elencate dopo la convalida del file. Se l'immagine sembra uno screenshot del lettore, non hai scaricato la miniatura ospitata.</p>\n  <p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrattore</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Massima qualità</a></p>"
+      "html": "<p>Utilizza le dimensioni e le misure 11tik elencate dopo la convalida del file. Se l'immagine sembra uno screenshot del lettore, non hai scaricato la miniatura ospitata.</p>\n  <p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/about\">Di</a>O<a href=\"https://www.11tik.com/contact\">Contatto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Estrattore</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Massima qualità</a></p>"
     }
   ],
   "faq": [
@@ -59,11 +59,11 @@
       "answerHtml": "Si tratta del file immagine pubblico che YouTube ospita per l'ID del video, come ad esempio maxresdefault se presente. Non è uno screenshot della pagina di visualizzazione."
     },
     {
-      "question": "Il termine \"originale\" si riferisce sempre a 1280-720?",
-      "answer": "No. La risoluzione massima è solitamente 1280x720 quando viene pubblicata. Se quel file non è presente, la versione pubblica originale è comunque quella con la risoluzione più vicina memorizzata da YouTube.",
-      "answerHtml": "No. La risoluzione massima è solitamente 1280×720 quando viene pubblicata. Se quel file non è presente, la versione originale pubblica è comunque quella immediatamente superiore a quella memorizzata da YouTube."
+      "question": "Il termine \"originale\" significa sempre 1280-720?",
+      "answer": "No. La risoluzione massima è solitamente 1280x720 quando viene pubblicata. Se quel file non è presente, la versione pubblica originale è comunque quella immediatamente superiore a quella memorizzata da YouTube.",
+      "answerHtml": "No. La risoluzione massima è solitamente 1280×720 quando viene pubblicata. Se quel file non è presente, la risoluzione pubblica originale è comunque quella immediatamente superiore a quella memorizzata da YouTube."
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/p/about.html\">Di</a>O<a href=\"https://www.11tik.com/p/contact.html\">Contatto</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scritto da 11tik, editore di YouTube Thumbnail Extractor per browser. Vedi<a href=\"https://www.11tik.com/about\">Di</a>O<a href=\"https://www.11tik.com/contact\">Contatto</a>.</p>"
 }

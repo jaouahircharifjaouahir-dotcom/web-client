@@ -7,14 +7,14 @@ import { buildContentInventory } from "./content-inventory.mjs";
 import { buildLocaleCatalogDoc } from "./write-locale-catalogs.mjs";
 import { scanPublishability } from "./publish.mjs";
 
-const SKIP_UTILITY_PATHS = new Set(["/p/keyword-tools.html"]);
+const SKIP_UTILITY_PATHS = new Set(["/keyword-tools"]);
 
 const UTILITY_LABELS = Object.freeze({
-  "/p/about.html": "About",
-  "/p/contact.html": "Contact",
-  "/p/embed.html": "Embed",
-  "/p/privacy.html": "Privacy",
-  "/p/terms-of-use.html": "Terms",
+  "/about": "About",
+  "/contact": "Contact",
+  "/embed": "Embed",
+  "/privacy": "Privacy",
+  "/terms-of-use": "Terms",
 });
 
 function xmlEscape(value) {
@@ -63,7 +63,7 @@ export function crawlNavLinksForLocale(locale, options = {}) {
     if (!path || SKIP_UTILITY_PATHS.has(path)) continue;
     const row = entry.locales?.[code];
     if (row?.status === "ready" && row.url) {
-      push(row.url, UTILITY_LABELS[path] || path.replace(/^\/p\//, "").replace(/\.html$/, ""));
+      push(row.url, UTILITY_LABELS[path] || path.replace(/^\//, ""));
     } else if (code === "en") {
       push(entry.canonicalUrl, UTILITY_LABELS[path] || "Page");
     }

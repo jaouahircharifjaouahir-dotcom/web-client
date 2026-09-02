@@ -2,13 +2,13 @@
   "contentId": "what-is-maxresdefaultjpg-when-youtube",
   "articleId": "what-is-maxresdefaultjpg-when-youtube",
   "locale": "zh",
-  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "sourceHash": "10ac7f566273ce8942402962c706a3f29c14fedde02af64e3b85e4531197a834",
   "status": "ready",
   "title": "什么是 maxresdefault.jpg？为什么它会显示 404 错误以及应该下载什么？ | 11tik",
-  "description": "maxresdefault.jpg 在 YouTube 发布时通常是 1280×720 分辨率。出现 404 错误是正常的——请使用下一个真正公开的静态图像，而不是猜测的文件名。",
+  "description": "maxresdefault.jpg 在 YouTube 发布时通常是 1280×720 分辨率。出现 404 错误是正常的——请使用下一个真正的公开图片，而不是猜测的文件名。",
   "h1": "什么是 maxresdefault.jpg？为什么它会返回 404 错误？应该下载什么来代替？",
   "ogTitle": "什么是 maxresdefault.jpg？为什么它会返回 404 错误？应该下载什么来代替？",
-  "ogDescription": "maxresdefault.jpg 在 YouTube 发布时通常是 1280×720 分辨率。出现 404 错误是正常的——请使用下一个真正公开的静态图像，而不是猜测的文件名。",
+  "ogDescription": "maxresdefault.jpg 在 YouTube 发布时通常是 1280×720 分辨率。出现 404 错误是正常的——请使用下一个真正的公开图片，而不是猜测的文件名。",
   "imageAlt": "从猜测的 maxresdefault URL（返回 404 错误）到下一个已验证的 YouTube 缩略图尺寸的故障排除流程",
   "faqHeading": "常问问题",
   "images": [
@@ -26,11 +26,15 @@
   "sections": [
     {
       "heading": "快速回答",
-      "html": "<p><code>maxresdefault.jpg</code>是 YouTube 图片 CDN 上的公开缩略图文件名。当文件存在时，它通常是<strong>1280×720</strong>。 这是<strong>不是</strong>保证每个视频都有衍生作品。如果显示 404 错误（或一个很小的灰色占位符），则表示该视频 ID 对应的衍生作品从未发布过。请将观看链接粘贴到此处。<a href=\"https://www.11tik.com/\">11tik</a>并下载列表中第一个列出的尺寸——该工具已经跳过了缺失的姓名，并对幸存者进行了排名，例如<code>hq720</code>，<code>sddefault</code>， 或者<code>hqdefault</code>。</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">缺少最大分辨率文件是一个备用问题，并不证明视频没有缩略图。</p>"
+      "html": "<p><code>maxresdefault.jpg</code>是 YouTube 图片 CDN 上的公开缩略图文件名。当文件存在时，它通常是<strong>1280×720</strong>。 这是<strong>不是</strong>保证每个视频都有衍生作品。如果显示 404 错误（或一个很小的灰色占位符），则表示该视频 ID 对应的衍生作品从未发布过。请将观看链接粘贴到此处。<a href=\"https://www.11tik.com/\">11tik</a>并下载列表中第一个列出的尺寸——该工具已经跳过了缺失的姓名，并对幸存者进行了排名，例如<code>hq720</code>，<code>sddefault</code>， 或者<code>hqdefault</code>。</p>\n\n  <img alt=\"从猜测的 maxresdefault URL（返回 404 错误）到下一个已验证的 YouTube 缩略图尺寸的故障排除流程\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">缺少最大分辨率文件是一个备用问题，并不证明视频没有缩略图。</p>"
     },
     {
       "heading": "maxresdefault.jpg是什么？",
-      "html": "<p>这只是文件名，并非质量保证。常见的 JPEG 地址格式如下：</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>当 YouTube 也发布了 WebP 版本时，11tik 检查：</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>两人都坐在<code>i.ytimg.com</code>它们是静态图像——不是视频流，不是工作室私有导出文件，也不是 4K 母版。像素预期和其他尺寸将在后续章节中介绍。<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">缩略图尺寸和分辨率指南</a>URL 构造在以下部分有详细介绍：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>。</p>"
+      "html": "<p>这只是文件名，并非质量保证。常见的 JPEG 地址格式如下：</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>当 YouTube 也发布了 WebP 版本时，11tik 检查：</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>两人都坐在<code>i.ytimg.com</code>它们是静态图像——不是视频流，不是工作室私有导出文件，也不是 4K 母版。像素预期和其他尺寸将在后续章节中介绍。<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">缩略图尺寸和分辨率指南</a>URL 构造在以下部分有详细介绍：<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>。</p>"
+    },
+    {
+      "heading": "我们的300个视频样本显示了以下情况（并非普遍规律）：",
+      "html": "<p>在我们的<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300个视频缩略图尺寸研究</a>我们测量了每个ID的八个文件名对应的公开变体可用性。仅在该样本中，<code>maxresdefault</code>已验证<strong>300人中的第286人</strong>视频 ID（<strong>95.33%</strong>）。另一个<strong>300人中的14人</strong>没有可用的最大分辨率文件——但这14个文件中的每一个仍然返回了有效的结果。<code>hqdefault</code>仍然公开。这种模式只是针对备用行为的样本范围证据，并不能保证每次 YouTube 上传都适用。</p>\n  <p>当你的检查中缺少 maxres 时，将其视为<strong>缩略图变体</strong>问题：应该尝试下一个已验证的公共文件名，而不是假设视频根本没有缩略图。视频级别的故障（私有、已删除、受限）是单独的诊断问题——请参阅……<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">缩略图不显示指南</a>。</p>"
     },
     {
       "heading": "为什么即使是真实的 YouTube 视频，在选择最大分辨率时仍然会返回 404 错误？",
@@ -42,7 +46,7 @@
     },
     {
       "heading": "回退变体 11tik 实际上会进行检查",
-      "html": "<p>公开候选人的发现顺序（从高到低）：</p>\n  <table>\n    <thead>\n      <tr><th>文件名</th><th>路径模式</th><th>存在时的典型尺寸</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 级</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>缺失的行将被跳过。列表中第一个下载项是存活时间最长的下载项，而不是您输入的最长名称。WebP 和 JPEG 格式的选择在[此处](链接)中有所说明。<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP 与 JPEG 格式的 YouTube 缩略图</a>。</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">将文件名视为可选步骤。逐级向下查找，直到找到实际的图像为止。</p>"
+      "html": "<p>公开候选人的发现顺序（从高到低）：</p>\n  <table>\n    <thead>\n      <tr><th>文件名</th><th>路径模式</th><th>存在时的典型尺寸</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280×720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280×720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720 级</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640×480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480×360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320×180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120×90</td></tr>\n    </tbody>\n  </table>\n  <p>缺失的行将被跳过。列表中第一个下载项是存活时间最长的下载项，而不是您输入的最长名称。WebP 和 JPEG 格式的选择在[此处](链接)中有所说明。<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP 与 JPEG 格式的 YouTube 缩略图</a>。</p>\n\n  <img alt=\"YouTube缩略图文件名从最高分辨率（maxresdefault）到最低分辨率（default）的阶梯图，显示缺失的层级已被跳过。\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">将文件名视为可选步骤。逐级向下查找，直到找到实际的图像为止。</p>"
     },
     {
       "heading": "11tik 如何检查可用性",
@@ -50,15 +54,15 @@
     },
     {
       "heading": "实用故障排除清单",
-      "html": "<ol>\n    <li>请确认视频是否公开，以及ID是否正确。</li>\n    <li>测试<code>maxresdefault.jpg</code>一次就够了。如果失败了，就别再瞎猜了。</li>\n    <li>将相同的链接粘贴到<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>下载列表中第一张静态图片，或复制其图片网址。</li>\n    <li>如果没有任何显示，则视频可能是私密的、已删除的、有年龄限制的，或者没有公开的剧照。</li>\n    <li>对于内容管理系统 (CMS) 使用，建议使用托管的已验证静态图像副本，而不是直接链接 CDN 路径。请参阅……<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">博客/Open Graph指南</a>。</li>\n  </ol>"
+      "html": "<ol>\n    <li>请确认视频是否公开，以及ID是否正确。</li>\n    <li>测试<code>maxresdefault.jpg</code>一次就够了。如果失败了，就别再瞎猜了。</li>\n    <li>将相同的链接粘贴到<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>下载列表中第一张静态图片，或复制其图片网址。</li>\n    <li>如果没有任何显示，则视频可能是私密的、已删除的、有年龄限制的，或者没有公开的剧照。</li>\n    <li>对于内容管理系统 (CMS) 使用，建议使用托管的已验证静态图像副本，而不是直接链接 CDN 路径。请参阅……<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">博客/Open Graph指南</a>。</li>\n  </ol>"
     },
     {
       "heading": "常见错误",
-      "html": "<ul>\n    <li>假设所有视频都使用最高分辨率，因为某个热门视频使用了最高分辨率。</li>\n    <li>硬编码<code>maxresdefault.jpg</code>生产环境中的 HTML 没有进行检查。</li>\n    <li>拉长<code>hqdefault</code>“maxres。”</li>\n    <li>把玩家截图和 CDN 静帧混淆了——<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">截图与实际缩略图</a>。</li>\n    <li>预期分辨率为 4K。公共最大分辨率通常为 1280×720（如有）。<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高质量的指南</a>。</li>\n  </ul>"
+      "html": "<ul>\n    <li>假设所有视频都使用最高分辨率，因为某个热门视频使用了最高分辨率。</li>\n    <li>硬编码<code>maxresdefault.jpg</code>生产环境中的 HTML 没有进行检查。</li>\n    <li>拉长<code>hqdefault</code>“maxres。”</li>\n    <li>把玩家截图和 CDN 静帧混淆了——<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">截图与实际缩略图</a>。</li>\n    <li>预期分辨率为 4K。公共最大分辨率通常为 1280×720（如有）。<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">最高质量的指南</a>。</li>\n  </ul>"
     },
     {
       "heading": "下一步",
-      "html": "<p>将公开的 YouTube 网址粘贴到<a href=\"https://www.11tik.com/\">萃取器</a>如果 maxres 文件缺失，请保留下一张静止图像——那就是该视频的真实高清文件。</p>\n  <p class=\"yte-bio\">作者：11tik。仅提供公开图片；不提供视频下载。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+      "html": "<p>将公开的 YouTube 网址粘贴到<a href=\"https://www.11tik.com/\">萃取器</a>如果 maxres 文件缺失，请保留下一张静止图像——那就是该视频的真实高清文件。</p>\n  <p class=\"yte-bio\">作者：11tik。仅提供公开图片；不提供视频下载。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>。</p>"
     }
   ],
   "faq": [
@@ -68,7 +72,7 @@
       "answerHtml": "<p>不，这通常意味着缺少一个文件名。中等大小的文件通常仍然存在。</p>"
     },
     {
-      "question": "hq720 可以替代 maxresdefault 吗？",
+      "question": "hq720 能替代 maxresdefault 吗？",
       "answer": "如果验证通过，是的——它属于同一高分辨率级别（~1280×720）。但这也不能保证一定如此。",
       "answerHtml": "<p>如果验证通过，是的——它属于同一高分辨率级别（~1280×720）。但这也不能保证一定如此。</p>"
     },
@@ -80,7 +84,7 @@
     {
       "question": "最大分辨率可以以 WebP 格式存在，但不能以 JPEG 格式存在吗？",
       "answer": "是的。11tik 会单独检查 /vi_webp/ 目录下的 WebP 最大分辨率。这两个目录可能存在，也可能都不存在。",
-      "answerHtml": "<p>是的。11tik 会单独检查 WebP 最大分辨率。<code>/vi_webp/</code>两者之一、两者兼有或两者都不存在。</p>"
+      "answerHtml": "<p>是的。11tik 单独检查 WebP 最大分辨率<code>/vi_webp/</code>两者之一、两者兼有或两者都不存在。</p>"
     },
     {
       "question": "为什么有些工具仍然会显示一张分辨率极高但显示不正常的显卡？",
@@ -90,9 +94,9 @@
     {
       "question": "如何快速下载备用方案？",
       "answer": "请按照下载指南操作：粘贴、解压、保存第一个列出的文件。",
-      "answerHtml": "<p>使用<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载指南</a>粘贴、提取、保存第一个列出的文件。</p>"
+      "answerHtml": "<p>使用<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">下载指南</a>粘贴、提取、保存第一个列出的文件。</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">作者：11tik。仅提供公开图片；不提供视频下载。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。仅提供公开图片；不提供视频下载。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>。</p>"
 }

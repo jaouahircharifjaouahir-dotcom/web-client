@@ -2,13 +2,13 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "nl",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Hoe download je een miniatuurafbeelding van een YouTube Shorts in HD? | 11tik",
-  "description": "Download een miniatuurafbeelding van een YouTube Shorts in je browser. Shorts gebruiken dezelfde openbare afbeeldingen als de URL's voor video's. Het bestand heeft vaak een liggend formaat.",
+  "description": "Download een miniatuurafbeelding van een YouTube Shorts in je browser. Shorts gebruiken dezelfde openbare afbeeldingen als de URL's voor video's die je kunt bekijken. Het bestand heeft vaak een liggend formaat.",
   "h1": "Hoe download je een miniatuurafbeelding van een YouTube Shorts in HD?",
   "ogTitle": "Hoe download je een miniatuurafbeelding van een YouTube Shorts in HD?",
-  "ogDescription": "Download een miniatuurafbeelding van een YouTube Shorts in je browser. Shorts gebruiken dezelfde openbare afbeeldingen als de URL's voor video's. Het bestand heeft vaak een liggend formaat.",
+  "ogDescription": "Download een miniatuurafbeelding van een YouTube Shorts in je browser. Shorts gebruiken dezelfde openbare afbeeldingen als de URL's voor video's die je kunt bekijken. Het bestand heeft vaak een liggend formaat.",
   "imageAlt": "Een openbare miniatuurafbeelding van YouTube Shorts downloaden in 11tik",
   "faqHeading": "Veelgestelde vragen",
   "images": [
@@ -21,15 +21,19 @@
   "sections": [
     {
       "heading": "Hoe download ik een miniatuurafbeelding van YouTube Shorts?",
-      "html": "<p>Kopieer een URL die /shorts/ plus een video-ID bevat en plak deze in<a href=\"https://www.11tik.com/\">11tik</a>en download een opgegeven grootte. Het uitpakken begint zodra de ID geldig is.</p>"
+      "html": "<p>Kopieer een URL die /shorts/ plus een video-ID bevat en plak deze in<a href=\"https://www.11tik.com/\">11tik</a>en download een opgegeven grootte. Het uitpakken begint wanneer de ID geldig is.</p>"
     },
     {
       "heading": "Zijn Shorts-bestanden hetzelfde als watch-page-bestanden?",
-      "html": "<p>Ze gebruiken dezelfde openbare formatnamen, gekoppeld aan de video-ID. Het beeld kan letterboxed lijken als YouTube een breedbeeldversie heeft opgeslagen.</p>"
+      "html": "<p>Ze gebruiken dezelfde openbare bestandsnamen, gekoppeld aan de video-ID.<code>i.ytimg.com</code>Het beeld kan er letterboxed uitzien als YouTube een breedbeeldversie heeft opgeslagen. De URL-structuur voor Shorts-, watch- en youtu.be-links wordt behandeld in de<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Handleiding voor miniatuur-URL's</a>.</p>"
+    },
+    {
+      "heading": "Publiceert Shorts altijd op maximale resolutie?",
+      "html": "<p>Nee. In onze<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Voorbeeld van 300 video's</a>maxresdefault gevalideerd voor<strong>286 van de 300</strong>ID's (<strong>95,33%</strong>); de<strong>14 van de 300</strong>Zelfs zonder maxres was er nog steeds een geldige lagere publieke waarde. Dat is steekproefsgewijs bewijs voor terugvalgedrag, geen universele regel voor Shorts.</p>"
     },
     {
       "heading": "Wat als er geen afbeelding verschijnt?",
-      "html": "<p>De korte video kan privé zijn, verwijderd of geen openbare afbeeldingen bevatten. De extractor kan deze beperkingen niet omzeilen.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Hoe te downloaden</a></p>"
+      "html": "<p>De korte video kan privé zijn, verwijderd of geen openbare afbeeldingen bevatten. De extractor kan deze beperkingen niet omzeilen.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/about\">Over</a>of<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Hoe te downloaden</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/about\">Over</a>of<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

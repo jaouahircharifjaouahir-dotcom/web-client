@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "ja",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "YouTubeショート動画のサムネイルをHD画質でダウンロードする方法 | 11tik",
   "description": "YouTube Shortsのサムネイルをブラウザにダウンロードします。Shortsでは、視聴URLと同じ公開静止画が使用されます。ファイルは通常、横向きです。",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Shortsファイルは、ウォッチページファイルと同じですか？",
-      "html": "<p>これらは、動画IDをキーとした同じ公開サイズ名を使用します。YouTubeがワイドスクリーン版を保存している場合、静止画はレターボックス表示になることがあります。</p>"
+      "html": "<p>ビデオIDでキー付けされた同じ公開サイズ名を使用します<code>i.ytimg.com</code>YouTube がワイドスクリーン派生版を保存した場合、静止画はレターボックス表示になることがあります。Shorts、watch、および youtu.be リンクの URL 構造については、<a href=\"https://www.11tik.com/youtube-thumbnail-url\">サムネイルURLガイド</a>。</p>"
+    },
+    {
+      "heading": "Shortsは常に最大解像度を公開するのですか？",
+      "html": "<p>いいえ。<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300本の動画サンプル</a>maxresdefault が検証されました<strong>300件中286件目</strong>ID（<strong>95.33%</strong>);<strong>300件中14件目</strong>maxresがなくても、依然として有効な下位公開値が存在します。これはフォールバック動作に関するサンプル範囲の証拠であり、普遍的なショートルールではありません。</p>"
     },
     {
       "heading": "画像が表示されない場合はどうすればよいですか？",
-      "html": "<p>ショート動画は非公開、削除済み、または公開静止画がない場合があります。抽出ツールはこれらの制限を回避することはできません。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロード方法</a></p>"
+      "html": "<p>ショート動画は非公開、削除済み、または公開静止画がない場合があります。抽出ツールはこれらの制限を回避することはできません。</p>\n  <p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/about\">について</a>または<a href=\"https://www.11tik.com/contact\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">抽出器</a>・<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ダウンロード方法</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/p/about.html\">について</a>または<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">ブラウザ内YouTubeサムネイル抽出ツールの発行元である11tikによって執筆されました。参照<a href=\"https://www.11tik.com/about\">について</a>または<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

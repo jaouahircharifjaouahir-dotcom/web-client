@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "es",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Cómo extraer miniaturas de la URL de un canal de YouTube | 11tik",
   "description": "Pega la URL de un canal público de YouTube en 11tik Bulk para expandir las subidas públicas recientes y luego descarga la mejor imagen de cada una. Esto es para investigar el empaquetado, no para clonar el diseño personalizado de otro canal.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "Alcance de descubrimiento RSS",
+      "html": "<p>La expansión del canal utiliza el feed público del canal de YouTube (estilo RSS) para mostrar las cargas recientes con un ID de vídeo resoluble. Ese feed refleja<strong>Los elementos públicos que YouTube expone</strong>—No se trata de todos los vídeos que se han subido, ni de publicaciones exclusivas para miembros, ni de un archivo completo garantizado.</p>"
+    },
+    {
+      "heading": "Solo artículos públicos",
+      "html": "<p>Las subidas privadas, las que no aparecen en la lista sin imágenes públicas y las que tienen restricción de edad normalmente nunca aparecen en la lista expandida. Una expansión vacía suele significar que el identificador no se resolvió, que el canal se cerró o que no se devolvieron identificadores públicos; no se trata de un fallo de extracción 11tik.</p>"
+    },
+    {
+      "heading": "URL del canal frente a URL de visualización explícitas",
+      "html": "<p>Una línea de canal se expande en múltiples URL de visualización antes de la extracción, todavía sujeta a la<strong>Límite de 25 URL</strong>Al pegar enlaces de relojes individuales se omite la detección RSS, pero se obtiene un control preciso. Compárese con el procesamiento masivo línea por línea:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guía de descarga por lotes</a>.</p>"
+    },
+    {
+      "heading": "Artículos faltantes o retirados",
+      "html": "<p>Los videos eliminados desaparecen de los feeds con el tiempo. Una tarjeta que falla al extraerse puede estar en procesamiento, restringida o eliminada; vuelva a ejecutar una URL de visualización única o vea<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">La miniatura no aparece</a>.</p>"
+    },
+    {
+      "heading": "Uso ético",
+      "html": "<p>El uso previsto es el estudio del empaquetado público con fines de investigación. Volver a subir el arte personalizado de un competidor como miniatura infringe los derechos de autor y las políticas de la plataforma. Acredite los canales en los comentarios publicados; enlace a sus páginas de seguimiento. Reglas del sitio:<a href=\"https://www.11tik.com/copyright\">Derechos de autor y uso</a>.</p>"
+    },
+    {
+      "heading": "Relación con la extracción por lotes",
+      "html": "<p>La extracción de canales se realiza en modo masivo con precarga RSS. Se mantiene la misma validación del lado del cliente, el mismo límite de 25 URL y las mismas exportaciones en CSV/zip; no hay extracción ilimitada de canales ni API privada del lado del servidor.</p>"
+    },
+    {
       "heading": "¿Puedo obtener miniaturas de todo un canal de YouTube?",
-      "html": "<p>Puedes obtener imágenes fijas de lo último<em>público</em>cargas que exponen un ID de video. 11tik no extrae todos los videos que un canal haya publicado y no omite las membresías. En la página de inicio, active la opción Masivo, pegue una URL de canal como<code>youtube.com/@handle</code>o<code>/channel/UC…</code>y deja que la herramienta expanda la lista pública estilo RSS. Luego, extrae los datos como si fuera una lista escrita. El límite sigue siendo de 25 URL por ejecución para que el navegador siga siendo utilizable.</p>\n  <p>Esto es diferente de guardar un enlace de reloj. El flujo de URL única está en<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cómo descargar una miniatura de YouTube</a>. El procesamiento a granel línea por línea sin canal está en<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">descarga por lotes</a>.</p>"
+      "html": "<p>Puedes obtener imágenes fijas de lo último<em>público</em>cargas que exponen un ID de video. 11tik no extrae todos los videos que un canal haya publicado y no omite las membresías. En la página de inicio, active la opción Masivo, pegue una URL de canal como<code>youtube.com/@handle</code>o<code>/channel/UC…</code>y deja que la herramienta expanda la lista pública estilo RSS. Luego, extrae los datos como si fuera una lista escrita. El límite sigue siendo de 25 URL por ejecución para que el navegador siga siendo utilizable.</p>\n  <p>Esto es diferente de guardar un enlace de reloj. El flujo de URL única está en<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Cómo descargar una miniatura de YouTube</a>. El procesamiento a granel línea por línea sin canal está en<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">descarga por lotes</a>.</p>"
     },
     {
       "heading": "¿Qué URL de canal funcionan?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Lo que 11tik no hará",
-      "html": "<ul>\n    <li>Descarga los vídeos o el audio. Solo imágenes fijas.</li>\n    <li>Lista las cargas no listadas o privadas.</li>\n    <li>Garantizamos la máxima resolución predeterminada para todos los vídeos recientes. Las fuentes más antiguas o pequeñas se quedan en alta calidad o definición estándar.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Otorgar derechos para reutilizar la obra. El uso previsto para la investigación es el estudio de una cuadrícula de envases públicos. Volver a subir la imagen fija de un competidor como miniatura personalizada constituye un problema de derechos de autor y políticas.<a href=\"https://www.11tik.com/copyright\">Derechos de autor y uso</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Descarga los vídeos o el audio. Solo imágenes fijas.</li>\n    <li>Lista las cargas no listadas o privadas.</li>\n    <li>Garantizamos la máxima resolución predeterminada para todos los vídeos recientes. Las fuentes más antiguas o pequeñas se quedan en alta calidad o definición estándar.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Otorgar derechos para reutilizar la obra. El uso previsto para la investigación es el estudio de una cuadrícula de envases públicos. Volver a subir la imagen fija de un competidor como miniatura personalizada constituye un problema de derechos de autor y políticas.<a href=\"https://www.11tik.com/copyright\">Derechos de autor y uso</a>.</li>\n  </ul>"
     },
     {
       "heading": "Cómo esto ayuda a la investigación sin páginas introductorias",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Solución de problemas",
-      "html": "<p>Lista vacía: la fuente del canal no devolvió identificadores públicos (canal terminado o identificador que el resolvedor no pudo asignar). Pruebe con la URL del canal UC desde la versión de escritorio de YouTube.</p>\n  <p>Faltan algunas tarjetas: esas cargas aún no tienen público, o la puerta rechazó un extracto incompleto. Vuelva a ejecutar una sola URL de vigilancia. Privacidad de los enlaces pegados:<a href=\"https://www.11tik.com/p/privacy.html\">Privacidad</a>.</p>\n  <p>Extractor vs herramienta de diseño: 11tik no crea carátulas.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Extractor vs fabricante</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraer imágenes fijas del canal público en 11tik →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>.</p>"
+      "html": "<p>Lista vacía: la fuente del canal no devolvió identificadores públicos (canal terminado o identificador que el resolvedor no pudo asignar). Pruebe con la URL del canal UC desde la versión de escritorio de YouTube.</p>\n  <p>Faltan algunas tarjetas: esas cargas aún no tienen público, o la puerta rechazó un extracto incompleto. Vuelva a ejecutar una sola URL de vigilancia. Privacidad de los enlaces pegados:<a href=\"https://www.11tik.com/privacy\">Privacidad</a>.</p>\n  <p>Extractor vs herramienta de diseño: 11tik no crea carátulas.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Extractor vs fabricante</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraer imágenes fijas del canal público en 11tik →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Acerca de</a>·<a href=\"https://www.11tik.com/contact\">Contacto</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>·<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Acerca de</a>·<a href=\"https://www.11tik.com/contact\">Contacto</a>.</p>"
 }

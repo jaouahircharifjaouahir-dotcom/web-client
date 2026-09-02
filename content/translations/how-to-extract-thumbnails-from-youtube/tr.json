@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "tr",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "YouTube kanal URL'sinden küçük resimler nasıl çıkarılır | 11tik",
   "description": "Herkese açık bir YouTube kanalının URL'sini 11tik Bulk'a yapıştırarak son herkese açık yüklemeleri genişletebilir ve ardından en iyi görselleri indirebilirsiniz. Bu, ambalajlama üzerine araştırma yapmak içindir, başka bir kanalın özel sanat eserini kopyalamak için değildir.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS keşif kapsamı",
+      "html": "<p>Kanal genişletme, çözümlenebilir bir video kimliğiyle son yüklenen videoları listelemek için YouTube'un herkese açık kanal akışını (RSS tarzı) kullanır. Bu akış şunları yansıtır:<strong>YouTube'un herkese açık içeriklerini ifşa etmesi</strong>—Yüklenen tüm videoları, sadece üyelere özel içerikleri ve eksiksiz bir arşivi kapsamaz.</p>"
+    },
+    {
+      "heading": "Sadece herkese açık öğeler",
+      "html": "<p>Özel, herkese açık görselleri olmayan ve yaş sınırlamalı yüklemeler genellikle genişletilmiş listede görünmez. Boş genişletme genellikle tanıtıcının çözümlenmediği, kanalın sonlandırıldığı veya herkese açık kimliklerin döndürülmediği anlamına gelir; bu bir 11tik kazıma hatası değildir.</p>"
+    },
+    {
+      "heading": "Kanal URL'si ile açık izleme URL'leri arasındaki fark",
+      "html": "<p>Bir kanal satırı, ayıklama işleminden önce birden fazla izleme URL'sine genişler, yine de bu durum geçerlidir.<strong>25 URL'lik Toplu Kapak</strong>Tek tek saat bağlantılarını yapıştırmak RSS keşfini atlar ancak hassas kontrol sağlar. Satır satır toplu yapıştırmayla karşılaştırın:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">toplu indirme kılavuzu</a>.</p>"
+    },
+    {
+      "heading": "Eksik veya çıkarılmış öğeler",
+      "html": "<p>Silinen videolar zamanla akışlardan kaybolur. Çıkarma işlemi başarısız olan bir kart işleniyor, kısıtlanmış veya kaldırılmış olabilir; tek bir izleme URL'sini yeniden çalıştırın veya bakın.<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Küçük resim görünmüyor</a>.</p>"
+    },
+    {
+      "heading": "Etik kullanım",
+      "html": "<p>Araştırma amacıyla halka açık ambalajları incelemek amaçlanan kullanım şeklidir. Rakip bir firmanın özel tasarımını küçük resim olarak yeniden yüklemek telif hakkını ve platform politikasını ihlal eder. Yayınlanan yorumlarda kanallara atıfta bulunun; izleme sayfalarına bağlantı verin. Site kuralları:<a href=\"https://www.11tik.com/copyright\">Telif Hakkı ve Kullanım</a>.</p>"
+    },
+    {
+      "heading": "Parti ekstraksiyonu ile ilişki",
+      "html": "<p>Kanal çıkarma işlemi, RSS ön doldurmalı Toplu modda gerçekleştirilir. Aynı istemci tarafı doğrulama, aynı 25 URL sınırı, aynı CSV/zip dışa aktarımları; sınırsız kanal kazıma ve sunucu tarafında özel API bulunmamaktadır.</p>"
+    },
+    {
       "heading": "Bir YouTube kanalının tamamından küçük resimler alabilir miyim?",
-      "html": "<p>En son filme ait fotoğraf karelerine ulaşabilirsiniz.<em>halk</em>Video kimliğini ortaya çıkaran yüklemeler. 11tik bir kanalın şimdiye kadar yayınladığı her videoyu taramaz ve üyelikleri atlamaz. Ana sayfada Toplu İşlem'i açın, aşağıdaki gibi bir kanal URL'si yapıştırın:<code>youtube.com/@handle</code>veya<code>/channel/UC…</code>Ardından, aracın herkese açık RSS tarzı listeyi genişletmesine izin verin. Daha sonra, tıpkı yazılı bir liste gibi verileri çıkarın. Tarayıcının kullanılabilirliğini korumak için her çalıştırmada 25 URL sınırı korunmuştur.</p>\n  <p>Bu, tek bir izleme bağlantısını kaydetmekten farklıdır. Tek URL akışı şu şekildedir:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube küçük resmini nasıl indirebilirim?</a>Kanalsız, satır satır toplu işlem şu şekildedir:<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">toplu indirme</a>.</p>"
+      "html": "<p>En son filme ait fotoğraf karelerine ulaşabilirsiniz.<em>halk</em>Video kimliğini ortaya çıkaran yüklemeler. 11tik bir kanalın şimdiye kadar yayınladığı her videoyu taramaz ve üyelikleri atlamaz. Ana sayfada Toplu İşlem'i açın, aşağıdaki gibi bir kanal URL'si yapıştırın:<code>youtube.com/@handle</code>veya<code>/channel/UC…</code>Ardından, aracın herkese açık RSS tarzı listeyi genişletmesine izin verin. Daha sonra, tıpkı yazılı bir liste gibi verileri çıkarın. Tarayıcının kullanılabilirliğini korumak için her çalıştırmada 25 URL sınırı korunmuştur.</p>\n  <p>Bu, tek bir izleme bağlantısını kaydetmekten farklıdır. Tek URL akışı şu şekildedir:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">YouTube küçük resmini nasıl indirebilirim?</a>Kanalsız, satır satır toplu işlem şu şekildedir:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">toplu indirme</a>.</p>"
     },
     {
       "heading": "Hangi kanal URL'leri çalışıyor?",
@@ -33,15 +57,15 @@
     },
     {
       "heading": "11tik'nin yapmayacağı şey",
-      "html": "<ul>\n    <li>Videoları veya ses dosyalarını indirin. Sadece fotoğraflar.</li>\n    <li>Listelenmemiş veya özel yüklemeleri listele.</li>\n    <li>Son videoların tümü için maxresdefault garantisi verilir. Daha eski veya küçük boyutlu kaynaklar hq veya sd kalitesinde durdurulur.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Sanat eserinin yeniden kullanım haklarını verin. Amaçlanan araştırma kullanımı, halka açık ambalajların bir ızgarasını incelemektir. Rakip bir firmanın fotoğrafını özel küçük resminiz olarak yeniden yüklemek telif hakkı ve politika sorunudur.<a href=\"https://www.11tik.com/copyright\">Telif Hakkı ve Kullanım</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Videoları veya ses dosyalarını indirin. Sadece fotoğraflar.</li>\n    <li>Listelenmemiş veya özel yüklemeleri listele.</li>\n    <li>Son videoların tümü için maxresdefault garantisi verilir. Daha eski veya küçük boyutlu kaynaklar hq veya sd kalitesinde durdurulur.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Sanat eserinin yeniden kullanım haklarını verin. Amaçlanan araştırma kullanımı, halka açık ambalajların bir ızgarasını incelemektir. Rakip bir firmanın fotoğrafını özel küçük resminiz olarak yeniden yüklemek telif hakkı ve politika sorunudur.<a href=\"https://www.11tik.com/copyright\">Telif Hakkı ve Kullanım</a>.</li>\n  </ul>"
     },
     {
       "heading": "Bu, giriş sayfaları olmadan araştırmaya nasıl yardımcı olur?",
-      "html": "<p>Kanal özeti tek bir işlemdir: tek seferde son zamanlarda yayınlanan herkese açık görsellerin toplanması. Rakip markalar için ayrı ayrı oluşturulmuş bir sayfa değildir. Araçta kalırsınız, zip veya CSV dosyası oluşturursunuz ve kendi notlarınızı yazarsınız. Yorum yayınlıyorsanız, kanalları kaynak gösterin ve izleme sayfalarına bağlantı verin. YouTube'un küçük resim yükleme kuralları...<em>senin</em>kanal içindedir<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">özel video küçük resimleri</a>.</p>"
+      "html": "<p>Kanal özeti tek bir işlemdir: tek seferde son zamanlarda yayınlanan herkese açık görsellerin derlenmesi. Rakip markalar için ayrı ayrı oluşturulmuş bir sayfa değildir. Araçta kalırsınız, zip veya CSV dosyası oluşturursunuz ve kendi notlarınızı yazarsınız. Yorum yayınlıyorsanız, kanalları kaynak gösterin ve izleme sayfalarına bağlantı verin. YouTube'un küçük resim yükleme kuralları...<em>senin</em>kanal içindedir<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">özel video küçük resimleri</a>.</p>"
     },
     {
       "heading": "Sorun giderme",
-      "html": "<p>Boş liste: Kanal akışı genel kimlikleri döndürmedi (sonlandırılmış kanal veya çözümleyicinin eşleştiremediği bir tanıtıcı). YouTube'un masaüstü düzeninden UC kanal URL'sini deneyin.</p>\n  <p>Bazı kartlar eksik: Bu yüklemelerin henüz herkese açık bir sürümü yok veya sistem eksik bir çıkarmayı reddetti. Tek bir izleme URL'sini yeniden çalıştırın. Yapıştırılan bağlantıların gizliliği:<a href=\"https://www.11tik.com/p/privacy.html\">Mahremiyet</a>.</p>\n  <p>Çıkarma aracı ile tasarım aracı arasındaki fark: 11tik kapak resmi oluşturmaz.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Çıkarıcıya karşı üretici</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik'deki herkese açık kanal görüntülerini çıkarın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+      "html": "<p>Boş liste: Kanal akışı genel kimlikleri döndürmedi (sonlandırılmış kanal veya çözümleyicinin eşleştiremediği bir tanıtıcı). YouTube'un masaüstü düzeninden UC kanal URL'sini deneyin.</p>\n  <p>Bazı kartlar eksik: Bu yüklemelerin henüz herkese açık bir sürümü yok veya sistem eksik bir çıkarmayı reddetti. Tek bir izleme URL'sini yeniden çalıştırın. Yapıştırılan bağlantıların gizliliği:<a href=\"https://www.11tik.com/privacy\">Mahremiyet</a>.</p>\n  <p>Çıkarma aracı ile tasarım aracı arasındaki fark: 11tik kapak resmi oluşturmaz.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Çıkarıcıya karşı üretici</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">11tik'deki herkese açık kanal görüntülerini çıkarın →</a></p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/about\">Hakkında</a>·<a href=\"https://www.11tik.com/contact\">Temas etmek</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>·<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/about\">Hakkında</a>·<a href=\"https://www.11tik.com/contact\">Temas etmek</a>.</p>"
 }

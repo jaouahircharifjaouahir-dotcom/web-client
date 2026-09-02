@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "hr",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Kako dobiti originalnu minijaturu s YouTubea | 11tik",
   "description": "Preuzmite originalnu javnu YouTube minijaturu koju YouTube već hostira. Ovo je CDN slika, a ne kadar izrezan iz videa.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Što je originalna YouTube minijatura?",
-      "html": "<p>To je slika pregleda koju YouTube već pohranjuje na svojim hostovima slika. To je datoteka koja se koristi u pretraživanju i predloženim policama, a ne okvir koji snimate pomoću Print Screena.</p>"
+      "html": "<p>To je slika pregleda koju YouTube već pohranjuje na svojim javnim hostovima slika za ID videozapisa - ista klasa datoteke koja se koristi u pretraživanju i predloženim policama. U rječniku 11tik-a, \"originalno\" znači da<strong>javni CDN derivat</strong>, a ne ništa od sljedećeg:</p>\n  <ul>\n    <li>Izvorna datoteka koju je učitavatelj prenio iz YouTube Studija</li>\n    <li>Neobrađena datoteka projekta (PSD, AI, itd.)</li>\n    <li>Sličica snimljena iz video streama</li>\n    <li>Zajamčena izvorna rezolucija ili 4K master datoteka</li>\n  </ul>\n  <p>Za<strong>najveća potvrđena javna datoteka</strong>kada nedostaju maksimalne vrijednosti, pročitajte<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">vodič najviše kvalitete</a>Za razine piksela i nazive datoteka pogledajte<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">vodič za veličine</a>.</p>"
     },
     {
       "heading": "Po čemu se to razlikuje od snimke zaslona?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Kako mogu provjeriti jesam li stvarno dobio originalnu datoteku?",
-      "html": "<p>Koristite popise veličina i dimenzija 11tik nakon što se datoteka validira. Ako slika izgleda kao snimka zaslona igrača, niste preuzeli hostanu minijaturu.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Najviša kvaliteta</a></p>"
+      "html": "<p>Koristite popise veličina i dimenzija 11tik nakon što se datoteka validira. Ako slika izgleda kao snimka zaslona igrača, niste preuzeli hostanu minijaturu.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/about\">Oko</a>ili<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Najviša kvaliteta</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/about\">Oko</a>ili<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

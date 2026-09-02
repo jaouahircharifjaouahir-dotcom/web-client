@@ -26,7 +26,7 @@
   "sections": [
     {
       "heading": "快速回答",
-      "html": "<p>三个不同的网址可以共享同一个 YouTube 视频 ID。其中只有一个是图像文件。</p>\n  <ol>\n    <li><strong>YouTube 观看链接</strong>— 打开 YouTube 视频。</li>\n    <li><strong>11tik 分享网址</strong>— 打开该 ID 的 11tik 提取器结果页面（<code>/thumb/{VIDEO_ID}</code>这是一个网页，不是 JPEG/WebP 文件。</li>\n    <li><strong>直接缩略图 CDN URL</strong>— 指向 YouTube 图片托管平台上的一张公开图片（例如）<code>i.ytimg.com</code>）。</li>\n  </ol>\n  <p>使用公开演示 ID<code>dQw4w9WgXcQ</code>：</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>第三个地址是直接图像 URL 模式的示例。并非所有视频都保证提供该特定最大分辨率文件——请使用以下命令确认实际尺寸。<a href=\"https://www.11tik.com/\">11tik</a>或者<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 指南</a>。</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">同一个视频 ID，三个任务：观看视频、打开 11tik 结果页面或请求 CDN 静态图像。</p>"
+      "html": "<p>三个不同的网址可以共享同一个 YouTube 视频 ID。其中只有一个是图像文件。</p>\n  <ol>\n    <li><strong>YouTube 观看链接</strong>— 打开 YouTube 视频。</li>\n    <li><strong>11tik 分享网址</strong>— 打开该 ID 的 11tik 提取器结果页面（<code>/thumb/{VIDEO_ID}</code>这是一个网页，不是 JPEG/WebP 文件。</li>\n    <li><strong>直接缩略图 CDN URL</strong>— 指向 YouTube 图片托管平台上的一张公开图片（例如）<code>i.ytimg.com</code>）。</li>\n  </ol>\n  <p>使用公开演示 ID<code>dQw4w9WgXcQ</code>：</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>第三个地址是直接图像 URL 模式的示例。并非所有视频都保证提供该特定最大分辨率文件——请使用以下命令确认实际尺寸。<a href=\"https://www.11tik.com/\">11tik</a>或者<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 指南</a>。</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">同一个视频 ID，三个任务：观看视频、打开 11tik 结果页面或请求 CDN 静态图像。</p>"
     },
     {
       "heading": "/thumb/{VIDEO_ID} 是什么",
@@ -50,11 +50,11 @@
     },
     {
       "heading": "这三个URL在实践中有何不同",
-      "html": "<h3>观看网址 vs 11tik 分享网址</h3>\n  <p>如果目的是在 YouTube 上观看或讨论视频，请分享观看链接。如果目的是重新打开缩略图提取结果（预览、下载和已验证的公开尺寸），而无需他人先找到提取器，请分享 11tik 链接。</p>\n  <h3>11tik 分享 URL 与直接图片 URL</h3>\n  <p>您需要粘贴的图片直接URL地址<code>&lt;img src&gt;</code>在确认文件存在后，即可将其导入 CMS 媒体库或设计工具。如何根据 ID 构建这些 CDN URL 是 CDN 的工作。<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>11tik 共享 URL 永远不会替换该图像地址：当接收者需要文件本身时，他们仍然会在工具中使用“下载”或“复制图像 URL”。</p>\n  <h3>观看链接与直接图片链接</h3>\n  <p>观看链接指向视频。图片链接指向一个公开的衍生图片。它们不能互换，所以猜测是行不通的。<code>maxresdefault.jpg</code>即使观看页面可以正常显示，也经常会出现问题。</p>"
+      "html": "<h3>观看网址 vs 11tik 分享网址</h3>\n  <p>如果目的是在 YouTube 上观看或讨论视频，请分享观看链接。如果目的是重新打开缩略图提取结果（预览、下载和已验证的公开尺寸），而无需他人先找到提取器，请分享 11tik 链接。</p>\n  <h3>11tik 分享 URL 与直接图片 URL</h3>\n  <p>您需要粘贴的图片直接URL地址<code>&lt;img src&gt;</code>在确认文件存在后，即可将其导入 CMS 媒体库或设计工具。如何根据 ID 构建这些 CDN URL 是 CDN 的工作。<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>11tik 共享 URL 永远不会替换该图像地址：当接收者需要文件本身时，他们仍然会在工具中使用“下载”或“复制图像 URL”。</p>\n  <h3>观看链接与直接图片链接</h3>\n  <p>观看链接指向视频。图片链接指向一个公开的衍生图片。它们不能互换，所以猜测是行不通的。<code>maxresdefault.jpg</code>即使观看页面可以正常显示，也经常会出现问题。</p>"
     },
     {
       "heading": "何时分享哪个链接",
-      "html": "<ul>\n    <li><strong>分享 YouTube 观看链接</strong>用于观看、评论或引用视频。</li>\n    <li><strong>分享 11tik<code>/thumb/</code>URL</strong>对于需要提取结果、质量列表或快速重新下载公共静止图像的合作者。</li>\n    <li><strong>分享或托管直接图片 URL / 下载的文件</strong>博客特色图片、Open Graph 和设计稿——经确认后方可使用。请参阅<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载指南</a>和<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">尺寸和分辨率指南</a>。</li>\n  </ul>"
+      "html": "<ul>\n    <li><strong>分享 YouTube 观看链接</strong>用于观看、评论或引用视频。</li>\n    <li><strong>分享 11tik<code>/thumb/</code>URL</strong>对于需要提取结果、质量列表或快速重新下载公共静止图像的合作者。</li>\n    <li><strong>分享或托管直接图片 URL / 下载的文件</strong>博客特色图片、Open Graph 和设计稿——经确认后方可使用。请参阅<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">下载指南</a>和<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">尺寸和分辨率指南</a>。</li>\n  </ul>"
     },
     {
       "heading": "视频 ID 如何将这三者联系起来",
@@ -99,9 +99,9 @@
     {
       "question": "哪里可以更详细地解释视频链接和图片链接？",
       "answer": "使用缩略图 URL 文章进行 ID → CDN 构建，使用下载文章保存文件。",
-      "answerHtml": "<p>使用<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 文章</a>用于 ID → CDN 构建，以及用于保存文件的下载文章。</p>"
+      "answerHtml": "<p>使用<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 文章</a>用于 ID → CDN 构建，以及用于保存文件的下载文章。</p>"
     }
   ],
   "conclusionHtml": "<h2>结论</h2>\n<p>对待<code>/thumb/{VIDEO_ID}</code>作为 11tik 的分享/结果地址：可用于重新打开和发送提取内容，但绝不能替代 YouTube 观看链接或直接访问。<code>i.ytimg.com</code>不过，请务必区分这三种URL类型，以确保您的下载链接、嵌入链接和协作链接准确无误。</p>\n  <p><a href=\"https://www.11tik.com/\">提取公开缩略图并复制其 11tik 分享链接 →</a></p>",
-  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>创作者参考：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">上传自定义视频缩略图</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>创作者参考：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">上传自定义视频缩略图</a>。</p>"
 }

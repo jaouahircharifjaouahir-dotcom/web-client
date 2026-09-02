@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "ru",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Как скачать миниатюру для YouTube Shorts в HD качестве | 11tik",
   "description": "Скачайте миниатюру для YouTube Shorts в браузере. В Shorts используются те же общедоступные статичные изображения, что и в URL-адресах для просмотра. Файл часто имеет альбомную ориентацию.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Файлы Shorts — это то же самое, что и файлы watch-page?",
-      "html": "<p>Они используют одни и те же общедоступные названия размеров, сгруппированные по идентификатору видео. Изображение может выглядеть с черными полосами по бокам, если YouTube сохранил широкоэкранную версию.</p>"
+      "html": "<p>Они используют одни и те же общедоступные имена размеров, индексированные по идентификатору видео.<code>i.ytimg.com</code>Изображение может выглядеть с черными полосами по бокам, если YouTube сохранил широкоэкранную версию. Структура URL-адресов для коротких видеороликов, ссылок на просмотр и ссылок youtu.be рассматривается в разделе<a href=\"https://www.11tik.com/youtube-thumbnail-url\">руководство по URL-адресам миниатюр</a>.</p>"
+    },
+    {
+      "heading": "Всегда ли Shorts публикует максимальное разрешение?",
+      "html": "<p>Нет. В нашем<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Образец из 300 видеороликов</a>, maxresdefault проверено для<strong>286 из 300</strong>Идентификаторы (<strong>95,33%</strong>);<strong>14 из 300</strong>Даже без maxres наблюдалась действительная более низкая публичная активность. Это данные, полученные на основе выборки, свидетельствующие о резервном поведении, а не универсальное правило для коротких позиций.</p>"
     },
     {
       "heading": "Что если изображение не появится?",
-      "html": "<p>Короткометражный фильм может быть приватным, удалённым или не содержать общедоступных кадров. Программа для извлечения данных не может обойти эти ограничения.</p>\n  <p class=\"yte-bio\">Автор: 11tik, издатель встроенного в браузер инструмента для извлечения миниатюр YouTube. См.<a href=\"https://www.11tik.com/p/about.html\">О</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Экстрактор</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Как скачать</a></p>"
+      "html": "<p>Короткометражный фильм может быть приватным, удалённым или не содержать общедоступных кадров. Программа для извлечения данных не может обойти эти ограничения.</p>\n  <p class=\"yte-bio\">Автор: 11tik, издатель встроенного в браузер инструмента для извлечения миниатюр YouTube. См.<a href=\"https://www.11tik.com/about\">О</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Экстрактор</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Как скачать</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Автор: 11tik, издатель встроенного в браузер инструмента для извлечения миниатюр YouTube. См.<a href=\"https://www.11tik.com/p/about.html\">О</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Автор: 11tik, издатель встроенного в браузер инструмента для извлечения миниатюр YouTube. См.<a href=\"https://www.11tik.com/about\">О</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>"
 }

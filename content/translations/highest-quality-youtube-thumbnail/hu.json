@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "hu",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Hogyan szerezd meg a legjobb minőségű YouTube indexképet | 11tik",
   "description": "A legmagasabb minőség azt jelenti, hogy a legnagyobb nyilvános JPEG vagy WebP YouTube-fájlt adja vissza, nem egy találgatásos 4K-s fájlnevet.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Mi a maximális nyilvános felbontás?",
-      "html": "<p>Amikor a YouTube közzétette a maxresdefault értéket, az általában 1280×720 volt. Ha ez a fájl hiányzik, a legmagasabb minőség a következő érvényes méret, például sd vagy hq.</p>"
+      "html": "<p>Amikor a YouTube közzétette a maxresdefault értéket, az általában 1280×720 volt. Ha ez a fájl hiányzik, a legmagasabb minőség a következő érvényes méret, például sd vagy hq. A „legmagasabb minőség” azt jelenti, hogy a<strong>legnagyobb, nyilvánosan elérhető, validált kép</strong>az adott videoazonosítóhoz – nem egy 4K-s master fájl, nem egy felskálázott közepes méretű fájl és nem egy lejátszó képernyőképe.</p>"
+    },
+    {
+      "heading": "Legmagasabb minőség az „eredeti” indexképhez képest",
+      "html": "<p><strong>Legmagasabb minőség</strong>(ez az útmutató): a legfelső szintű nyilvános CDN-származék 11tik validálja a `maxres` vagy a `hq720` értéket, ha jelen van.<strong>Eredeti</strong>(eltérő szándék): szintén egy nyilvános CDN, de a szó használata arra készteti az embereket, hogy a feltöltő forrásfájlját várják. Ez nem a Studio nyers Photoshop/PNG-je, nem videokocka-rippelés, és nem garantált forrásfelbontású grafika. Lásd<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">eredeti bélyegkép jelentése és korlátai</a>és<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">méretreferencia</a>A miénkben<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videós minta</a>, maximális értékek validálva 286/300 azonosítóra – minta hatókörű elérhetőség, nem minden feltöltés ígérete.</p>"
     },
     {
       "heading": "Számít-e a WebP?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Miért tűnik néha a „HD” lágynak?",
-      "html": "<p>A nyilvános felbontás továbbra is 1280×720 lehet tömörítéssel, vagy a hqdefault értéket nézheted. Mielőtt feltételeznéd, hogy a letöltés sikertelen volt, ellenőrizd a pixelméretről szóló 11tik jelentéseket.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Mérettáblázat</a></p>"
+      "html": "<p>A nyilvános felbontás továbbra is 1280×720 lehet tömörítéssel, vagy a hqdefault értéket nézheted. Mielőtt feltételeznéd, hogy a letöltés sikertelen volt, ellenőrizd a pixelméretről szóló 11tik jelentéseket.</p>\n  <p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/about\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Kivonó</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Mérettáblázat</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/p/contact.html\">Érintkezés</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik, a böngészőbe integrálható YouTube Thumbnail Extractor kiadója. Lásd:<a href=\"https://www.11tik.com/about\">Körülbelül</a>vagy<a href=\"https://www.11tik.com/contact\">Érintkezés</a>.</p>"
 }

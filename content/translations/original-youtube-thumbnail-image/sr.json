@@ -2,12 +2,12 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "sr",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Како добити оригиналну сличицу са YouTube-а | 11tik",
   "description": "Преузмите оригиналну јавну YouTube сличицу коју YouTube већ хостује. Ово је CDN слика, а не кадар исечен из видеа.",
-  "h1": "Како добити оригиналну сличицу са YouTube-а",
-  "ogTitle": "Како добити оригиналну сличицу са YouTube-а",
+  "h1": "Како добити оригиналну слику сличице са YouTube-а",
+  "ogTitle": "Како добити оригиналну слику сличице са YouTube-а",
   "ogDescription": "Преузмите оригиналну јавну YouTube сличицу коју YouTube већ хостује. Ово је CDN слика, а не кадар исечен из видеа.",
   "imageAlt": "Оригинална јавна YouTube датотека са сличицама приказана у програму за извлачење 11tik",
   "faqHeading": "Честа питања",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Шта је оригинална сличица на Јутјубу?",
-      "html": "<p>То је слика прегледа коју YouTube већ чува на својим хостовима слика. То је датотека која се користи у претрази и предложеним полицама, а не кадар који снимате помоћу Print Screen-а.</p>"
+      "html": "<p>То је слика прегледа коју YouTube већ чува на својим јавним хостовима слика за ИД видеа – иста класа датотека која се користи у претрази и предложеним полицама. У речнику 11tik-а, „оригинал“ значи да<strong>јавни CDN дериват</strong>, а не ништа од следећег:</p>\n  <ul>\n    <li>Оригинална отпремљена изворна датотека отпремаоца из YouTube студија</li>\n    <li>Сирова датотека пројекта (PSD, AI, итд.)</li>\n    <li>Кадар снимљен из видео стрима</li>\n    <li>Гарантована изворна резолуција или 4K мастер</li>\n  </ul>\n  <p>За<strong>највећа валидирана јавна датотека</strong>када максималне вредности можда недостају, прочитајте<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">водич највишег квалитета</a>За нивое пиксела и називе датотека, погледајте<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">водич за величине</a>.</p>"
     },
     {
       "heading": "По чему се то разликује од снимка екрана?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Како да проверим да ли сам заиста добио оригиналну датотеку?",
-      "html": "<p>Користите листе величине и димензија 11tik након што се потврди датотека. Ако слика изгледа као снимак екрана играча, нисте преузели хостовану сличицу.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Највиши квалитет</a></p>"
+      "html": "<p>Користите листе величине и димензија 11tik након што се потврди датотека. Ако слика изгледа као снимак екрана играча, нисте преузели хостовану сличицу.</p>\n  <p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/about\">О нама</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Екстрактор</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Највиши квалитет</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/p/about.html\">О нама</a>или<a href=\"https://www.11tik.com/p/contact.html\">Контакт</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Написао 11tik, издавач алатке за извлачење сличица из YouTube-а у прегледачу. Види<a href=\"https://www.11tik.com/about\">О нама</a>или<a href=\"https://www.11tik.com/contact\">Контакт</a>.</p>"
 }

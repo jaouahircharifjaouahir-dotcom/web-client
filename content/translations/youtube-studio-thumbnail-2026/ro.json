@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "ro",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Miniatură YouTube Studio 2026 | 11tik",
   "description": "În 2026, canalele YouTube eligibile încă încarcă o miniatură personalizată din Studio pe pagina Detalii a unui videoclip. Etichetele meniului se mută, dar rezultatul este același: YouTube găzduiește o nouă imagine statică publică. 11tik nu încarcă acel fișier. Citește adresele URL ale imaginilor publice doar după ce acestea există.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Deschide YouTube Studio și selectează videoclipul.</li>\n    <li>În secțiunea Detalii, încărcați o imagine cu raportul de format 16:9 (rezoluția obișnuită pe YouTube este de 1280×720).</li>\n    <li>Salvați și așteptați până la finalizarea procesării.</li>\n  </ol>\n  <p>Numele exacte ale butoanelor se pot schimba. Dacă contul dvs. nu este eligibil pentru miniaturi personalizate, Studio nu va oferi încărcarea. 11tik nu poate ocoli această opțiune.</p>"
     },
     {
+      "heading": "Arbore de diagnosticare: Schimbare în studio vs. imagine statică publică",
+      "html": "<ol>\n    <li>După ce încărcați grafica personalizată în Studio, așteptați finalizarea procesării.</li>\n    <li>Lipiți adresa URL publică de vizionare în<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Apar unele dimensiuni, lipsesc valorile maxime?</strong>→ problemă cu varianta/soluția de rezervă, nu o încărcare eșuată în Studio. Consultați.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault explicat</a>.</li>\n    <li><strong>Nicio mărime deloc?</strong>→ videoclipul poate fi încă în procesare, privat sau restricționat pentru imagini statice publice CDN. Consultați<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatura nu apare</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Cum verific o miniatură după ce o modific în Studio?",
-      "html": "<p>Lipiți adresa URL a ceasului în<a href=\"https://www.11tik.com/\">11tik</a>Descărcați sau copiați prima dimensiune listată. Dacă lipsește maxresdefault, următorul fișier public este dimensiunea maximă corectă. Acesta este catalogul YouTube, nu un extras eșuat. Vedeți și<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault explicat</a>.</p>"
+      "html": "<p>Lipiți adresa URL a ceasului în<a href=\"https://www.11tik.com/\">11tik</a>Descărcați sau copiați prima dimensiune listată. Dacă lipsește maxresdefault, următorul fișier public este dimensiunea maximă corectă. Acesta este catalogul YouTube, nu un extras eșuat. Vedeți și<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault explicat</a>.</p>"
     },
     {
       "heading": "Înlocuiește 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Ce ar trebui să fac când imaginea pare veche?",
-      "html": "<p>Rețelele CDN de imagini pot avea întârzieri. Verificați din nou mai târziu, actualizați complet sau copiați adresa URL 11tik confirmă. Nu presupuneți o imagine master 4K; rezoluția maximă publică este de obicei 1280×720. O captură de ecran a Studio nu este fișierul public de miniatură.</p>\n  <p>Înrudite:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor vs. producător</a>.</p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extractorul</a></p>"
+      "html": "<p>Rețelele CDN de imagini pot avea întârzieri. Verificați din nou mai târziu, actualizați complet sau copiați adresa URL 11tik confirmă. Nu presupuneți o imagine master 4K; rezoluția maximă publică este de obicei 1280×720. O captură de ecran a Studio nu este fișierul public de miniatură.</p>\n  <p>Înrudite:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extractor vs. producător</a>.</p>\n  <p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/about\">Despre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Deschideți extractorul</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/p/about.html\">Despre</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik.<a href=\"https://www.11tik.com/about\">Despre</a>.</p>"
 }

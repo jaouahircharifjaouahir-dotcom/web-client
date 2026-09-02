@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "pt",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Miniatura do YouTube Studio 2026 | 11tik",
   "description": "Em 2026, os canais elegíveis do YouTube ainda poderão enviar uma miniatura personalizada do Studio para a página de detalhes do vídeo. Os rótulos do menu mudam, mas o resultado é o mesmo: o YouTube hospeda uma nova imagem pública. O 11tik não envia esse arquivo. Ele apenas lê os URLs das imagens públicas depois que elas já existem.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Abra o YouTube Studio e selecione o vídeo.</li>\n    <li>Na seção Detalhes, faça o upload de uma imagem no formato 16:9 (o formato padrão do YouTube é 1280×720).</li>\n    <li>Salve o arquivo e aguarde até que o processamento seja concluído.</li>\n  </ol>\n  <p>Os nomes exatos dos botões podem mudar. Se sua conta não for elegível para miniaturas personalizadas, o Studio não oferecerá a opção de upload. 11tik não pode contornar isso.</p>"
     },
     {
+      "heading": "Árvore de diagnóstico: Mudança de estúdio versus imagem pública",
+      "html": "<ol>\n    <li>Após enviar a arte personalizada para o Studio, aguarde a conclusão do processamento.</li>\n    <li>Cole o URL público de monitoramento em<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Alguns tamanhos aparecem, mas o maxres está faltando?</strong>→ Problema com variante/plano alternativo, não uma falha no upload para o Studio. Veja<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault explicado</a>.</li>\n    <li><strong>Sem nenhuma indicação de tamanho?</strong>→ O vídeo pode ainda estar em processamento, ser privado ou ter restrições para imagens CDN públicas. Consulte<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">A miniatura não está aparecendo.</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Como faço para verificar uma miniatura depois de alterá-la no Studio?",
-      "html": "<p>Cole o URL do relógio em<a href=\"https://www.11tik.com/\">11tik</a>Baixe ou copie o primeiro arquivo listado. Se o arquivo maxresdefault estiver faltando, o próximo arquivo público é o tamanho máximo correto. Esse é o catálogo do YouTube, não uma extração malsucedida. Veja também<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault explicado</a>.</p>"
+      "html": "<p>Cole o URL do relógio em<a href=\"https://www.11tik.com/\">11tik</a>Baixe ou copie o primeiro arquivo listado. Se o arquivo maxresdefault estiver faltando, o próximo arquivo público é o tamanho máximo correto. Esse é o catálogo do YouTube, não uma extração malsucedida. Veja também<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault explicado</a>.</p>"
     },
     {
       "heading": "O 11tik substitui o YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "O que devo fazer quando a imagem parecer antiga?",
-      "html": "<p>As CDNs de imagens podem apresentar lentidão. Verifique novamente mais tarde, atualize a página completamente ou copie o URL. 11tik confirma. Não assuma que a imagem master seja em 4K; a resolução máxima pública geralmente é 1280×720. Uma captura de tela do Studio não é o arquivo de miniatura público.</p>\n  <p>Relacionado:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extrator vs fabricante</a>.</p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Abra o extrator</a></p>"
+      "html": "<p>As CDNs de imagens podem apresentar lentidão. Verifique novamente mais tarde, atualize a página completamente ou copie o URL. 11tik confirma. Não assuma que a imagem master seja em 4K; a resolução máxima pública geralmente é 1280×720. Uma captura de tela do Studio não é o arquivo de miniatura público.</p>\n  <p>Relacionado:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extrator vs fabricante</a>.</p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Sobre</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Abra o extrator</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Sobre</a>.</p>"
 }

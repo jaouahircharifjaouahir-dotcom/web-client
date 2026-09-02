@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "hr",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Kako skupno preuzeti minijature s YouTubea (do 25 javnih URL-ova) | 11tik",
   "description": "Skupno izdvajanje javnih YouTube minijatura u pregledniku. Zalijepite jedan URL po retku, preuzmite svaku najbolju sliku ili zipirajte skup najviše kvalitete. Nema računa i nema video datoteka.",
@@ -24,8 +24,48 @@
       "html": "<p>Otvoriti<a href=\"https://www.11tik.com/\">11tik</a>, uključite Skupno, zalijepite jedan javni URL po retku, kliknite Izdvoji sve, a zatim preuzmite svaku najbolju fotografiju ili zip datoteku najviše kvalitete. Ograničenje je 25 URL-ova po pokretanju kako bi preglednik ostao responzivan.</p>"
     },
     {
+      "heading": "Što alat obrađuje",
+      "html": "<p>Skupni način rada izvodi istu provjeru javnih fotografija na strani klijenta kao i izdvajanje pojedinačnih URL-ova: analizira svaki ID videozapisa, izrađuje URL-ove kandidata za minijature, učitava ih kao slike u preglednik, uklanja neuspjele i rezervirana mjesta, rangira preživjele i prikazuje najbolje fotografije prve. Ne preuzima videozapise ili zvuk, ne poziva privatni YouTube API i ne pohranjuje zalijepljene poveznice na 11tik poslužitelje.</p>"
+    },
+    {
+      "heading": "Ograničenje od 25 URL-ova",
+      "html": "<p>Svako skupno pokretanje prihvaća do<strong>25 redaka</strong>To ograničenje osigurava responzivnost validacije slika u pregledniku. Za više ID-ova pokrenite više serija ili izvezite CSV iz svake serije i spojite ih izvan mreže. Ne postoji serija poslužitelja od 500 ili 1000 URL-ova.</p>"
+    },
+    {
+      "heading": "Obrada na strani klijenta",
+      "html": "<p>Svako izdvajanje događa se u vašoj sesiji. Mrežni zahtjevi idu iz vašeg preglednika prema javnosti<code>i.ytimg.com</code>(i povezani) hostovi. Zalijepljeni URL-ovi se ne prenose na 11tik za scraping na strani poslužitelja.</p>"
+    },
+    {
+      "heading": "Izvoz u CSV i JSON formatu",
+      "html": "<p>Nakon uspješnog pokretanja, opcionalni izvoz uključuje ID videozapisa, naslov, URL za dijeljenje i validirani URL slike po retku - korisno za istraživačke zapise. Izvoz odražava ono što je validirano u toj sesiji, a ne zajamčeni stupac maksimalne vrijednosti za svaki ID.</p>"
+    },
+    {
+      "heading": "Taksonomija neuspjeha",
+      "html": "<ul>\n    <li><strong>Neuspjeh parsiranja:</strong>redak nije podržani URL za gledanje, Shorts, uživo, ugrađivanje, youtu.be ili proširivanje kanala.</li>\n    <li><strong>Videozapis nije dostupan:</strong>privatno, uklonjeno, ograničeno ili u obradi - nijedna javna ne potvrđuje. Vidi<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">zašto se minijatura ne pojavljuje</a>.</li>\n    <li><strong>Nedostaje varijanta:</strong>Videozapis je javan, ali ima greške 404 u maxresu (ili nekom drugom visokom sloju); manja veličina i dalje funkcionira. Vidi<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">rezervni maxres</a>.</li>\n    <li><strong>Rezervirano mjesto odbijeno:</strong>URL je odgovorio, ali je izgledao kao mala siva pločica s nedostajućom datotekom.</li>\n  </ul>"
+    },
+    {
+      "heading": "Nevažeći, privatni i nedostupni videozapisi",
+      "html": "<p>11tik prikazuje samo javne CDN fotografije. Neobjavljeni videozapisi bez javnog pakiranja, prijenosi samo za članove, sadržaj s dobnim ograničenjima i izbrisani videozapisi obično stvaraju prazne kartice, a ne manju „tajnu“ datoteku. Nemojte očekivati ​​da će Bulk zaobići kontrole pristupa.</p>"
+    },
+    {
+      "heading": "URL-ovi kanala u odnosu na ručno unesene poveznice za gledanje",
+      "html": "<p>Zalijepite URL javnog kanala u jedan redak i Bulk će proširiti nedavne javne prijenose putem otkrivanja u RSS stilu, a zatim izdvojiti svaki ID - podložno istom ograničenju od 25 URL-ova nakon proširenja. Ručno zalijepljene poveznice za gledanje preskaču otkrivanje kanala. Potpuni tijek rada kanala:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">vodič za izdvajanje kanala</a>.</p>"
+    },
+    {
+      "heading": "Privatnost",
+      "html": "<p>Zalijepljeni URL-ovi se obrađuju lokalno u vašem pregledniku radi izdvajanja. Pročitajte<a href=\"https://www.11tik.com/privacy\">Privatnost</a>za analitiku web-mjesta; Bulk ne dodaje zaseban privatni API na strani poslužitelja.</p>"
+    },
+    {
+      "heading": "Upute za ponovni pokušaj",
+      "html": "<p>Nakon nove prilagođene minijature u Studiju ili svježeg prijenosa, pričekajte obradu i ponovno pokrenite isti URL za gledanje. Privremeno kašnjenje CDN-a ponekad nestane pri drugom pokušaju; trajno prazni rezultati obično znače da za taj ID više ne postoji javni oglas.</p>"
+    },
+    {
+      "heading": "Realna očekivanja",
+      "html": "<p>Ne objavljuje svaki javni video maksimalne rezolucije. U našem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Uzorak od 300 videozapisa</a>, maxres validirano za 286/300 ID-ova (uzorak opsega). Skupno vraća najveću validiranu javnu datoteku po retku - nije zajamčenih 1280 × 720 za svaki redak. Anatomija URL-a:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Vodič za URL-ove minijatura</a>.</p>"
+    },
+    {
       "heading": "Što spada na popis?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= ID-ovi</li>\n    <li>youtu.be kratke poveznice</li>\n    <li>youtube.com/shorts/ ID-ovi</li>\n    </ul>\n  <p>Privatni, nenavedeni bez javnih minijatura ili videozapisi s dobnim ograničenjem neće vratiti fotografiju. To se očekuje. Vidi također<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Minijature kratkih videozapisa</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID-ovi</li>\n    <li>youtu.be kratke poveznice</li>\n    <li>youtube.com/shorts/ ID-ovi</li>\n    </ul>\n  <p>Privatni, nenavedeni bez javnih minijatura ili videozapisi s dobnim ograničenjem neće vratiti fotografiju. To se očekuje. Vidi također<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Minijature kratkih videozapisa</a>.</p>"
     },
     {
       "heading": "Kako pokrenuti skupno izdvajanje",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Mogu li ovo koristiti za istraživanje konkurencije?",
-      "html": "<p>Da, za proučavanje javnog pakiranja. Nemojte ponovno objavljivati ​​minijaturu drugog autora kao vlastiti prijenos. Autorska prava ostaju kod nositelja prava. 11tik dohvaća samo datoteke koje YouTube već javno hostira.</p>\n  <p><a href=\"https://www.11tik.com/\">Otvori skupni ekstrakt na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+      "html": "<p>Da, za proučavanje javnog pakiranja. Nemojte ponovno objavljivati ​​minijaturu drugog autora kao vlastiti prijenos. Autorska prava ostaju kod nositelja prava. 11tik dohvaća samo datoteke koje YouTube već javno hostira.</p>\n  <p><a href=\"https://www.11tik.com/\">Otvori skupni ekstrakt na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>.</p>"
 }

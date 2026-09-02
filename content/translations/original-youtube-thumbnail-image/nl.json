@@ -2,26 +2,26 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "nl",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Hoe krijg je de originele YouTube-thumbnailafbeelding? | 11tik",
   "description": "Download de originele, openbare YouTube-thumbnail die YouTube al host. Dit is nog steeds de CDN-versie, geen frame dat uit de video is gehaald.",
   "h1": "Hoe krijg je de originele YouTube-thumbnailafbeelding?",
   "ogTitle": "Hoe krijg je de originele YouTube-thumbnailafbeelding?",
   "ogDescription": "Download de originele, openbare YouTube-thumbnail die YouTube al host. Dit is nog steeds de CDN-versie, geen frame dat uit de video is gehaald.",
-  "imageAlt": "Het originele openbare YouTube-thumbnailbestand dat wordt weergegeven in de 11tik-extractor.",
+  "imageAlt": "Het originele openbare YouTube-thumbnailbestand wordt weergegeven in de 11tik-extractor.",
   "faqHeading": "Veelgestelde vragen",
   "images": [
     {
       "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
-      "alt": "Het originele openbare YouTube-thumbnailbestand dat wordt weergegeven in de 11tik-extractor.",
+      "alt": "Het originele openbare YouTube-thumbnailbestand wordt weergegeven in de 11tik-extractor.",
       "captionHtml": ""
     }
   ],
   "sections": [
     {
-      "heading": "Wat is de originele miniatuurafbeelding van YouTube?",
-      "html": "<p>Dit is de voorbeeldafbeelding die YouTube al opslaat op zijn afbeeldingshostingplatforms. Het is het bestand dat wordt gebruikt in de zoekfunctie en voor voorgestelde programma's, niet een frame dat je vastlegt met Print Screen.</p>"
+      "heading": "Wat is de originele thumbnail van YouTube?",
+      "html": "<p>Het is de voorbeeldafbeelding die YouTube al opslaat op zijn openbare afbeeldingshosts voor een video-ID – hetzelfde type bestand dat wordt gebruikt in zoekresultaten en suggesties voor video's. In de terminologie van 11tik betekent \"origineel\" dat<strong>openbare CDN-afgeleide</strong>, en niet een van de volgende:</p>\n  <ul>\n    <li>Het originele bronbestand dat de uploader via YouTube Studio heeft geüpload.</li>\n    <li>Een onbewerkt projectbestand (PSD, AI, enz.)</li>\n    <li>Een frame uit de videostream.</li>\n    <li>Een gegarandeerd origineel bestand met de juiste resolutie of een 4K-master.</li>\n  </ul>\n  <p>Voor de<strong>grootste gevalideerde openbare bestand</strong>Als maxres mogelijk ontbreekt, lees dan de<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">gids van de hoogste kwaliteit</a>Voor informatie over pixelniveaus en bestandsnamen, zie de<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">maattabel</a>.</p>"
     },
     {
       "heading": "Wat is het verschil met een schermafbeelding?",
@@ -49,21 +49,21 @@
     },
     {
       "heading": "Hoe kan ik controleren of ik echt het originele bestand heb ontvangen?",
-      "html": "<p>Gebruik de lijst met grootte en afmetingen 11tik nadat het bestand is gevalideerd. Als de afbeelding eruitziet als een screenshot van een speler, heb je de gehoste miniatuur niet gedownload.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Hoogste kwaliteit</a></p>"
+      "html": "<p>Gebruik de lijst met grootte en afmetingen 11tik nadat het bestand is gevalideerd. Als de afbeelding eruitziet als een screenshot van een speler, dan heb je de gehoste miniatuur niet gedownload.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/about\">Over</a>of<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Afzuiger</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Hoogste kwaliteit</a></p>"
     }
   ],
   "faq": [
     {
-      "question": "Wat is de originele miniatuurafbeelding van YouTube?",
+      "question": "Wat is de originele thumbnail van YouTube?",
       "answer": "Het openbare afbeeldingsbestand dat YouTube host voor de video-ID, zoals maxresdefault indien aanwezig. Het is geen schermafbeelding van de kijkpagina.",
       "answerHtml": "Het openbare afbeeldingsbestand dat YouTube host voor de video-ID, zoals maxresdefault indien aanwezig. Het is geen schermafbeelding van de kijkpagina."
     },
     {
       "question": "Betekent 'origineel' altijd 1280 720?",
-      "answer": "Nee. De maximale resolutie is normaal gesproken 1280x720 wanneer het bestand wordt gepubliceerd. Als dat bestand ontbreekt, is de oorspronkelijke resolutie nog steeds de eerstvolgende resolutie die YouTube heeft opgeslagen.",
+      "answer": "Nee. De maximale resolutie is meestal 1280x720 wanneer het bestand wordt gepubliceerd. Als dat bestand ontbreekt, is de oorspronkelijke publicatie nog steeds de resolutie die YouTube als volgende heeft opgeslagen.",
       "answerHtml": "Nee. De maximale resolutie is meestal 1280×720 wanneer het bestand wordt gepubliceerd. Als dat bestand ontbreekt, is de oorspronkelijke publicatieversie nog steeds de eerstvolgende resolutie die YouTube heeft opgeslagen."
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/p/about.html\">Over</a>of<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik, uitgever van de in-browser YouTube Thumbnail Extractor. Zie<a href=\"https://www.11tik.com/about\">Over</a>of<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

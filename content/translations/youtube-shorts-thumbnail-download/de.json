@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "de",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "So laden Sie ein YouTube Shorts-Thumbnail in HD herunter | 11tik",
   "description": "Laden Sie ein YouTube Shorts-Thumbnail im Browser herunter. Shorts verwenden dieselben öffentlichen Standbilder wie die Wiedergabe-URLs. Die Datei hat oft das Querformat.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Sind Shorts-Dateien dasselbe wie Watchpage-Dateien?",
-      "html": "<p>Sie verwenden dieselben öffentlichen Größennamen, die anhand der Video-ID identifiziert werden. Das Standbild kann mit schwarzen Balken an den Seiten erscheinen, wenn YouTube eine Breitbildversion gespeichert hat.</p>"
+      "html": "<p>Sie verwenden dieselben öffentlichen Größennamen, die anhand der Video-ID identifiziert werden.<code>i.ytimg.com</code>Das Bild kann im Letterbox-Stil erscheinen, wenn YouTube eine Breitbildversion gespeichert hat. Die URL-Struktur für Shorts-, Watch- und youtu.be-Links wird im Abschnitt [Link einfügen] erläutert.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Die</p>"
+    },
+    {
+      "heading": "Veröffentlicht Shorts immer die maximale Auflösung?",
+      "html": "<p>Nein. In unserem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-Video-Beispiel</a>, maxresdefault validiert für<strong>286 von 300</strong>IDs (<strong>95,33 %</strong>); Die<strong>14 von 300</strong>Auch ohne maxres blieb die untere Grenze des öffentlichen Bereichs gültig. Dies ist ein auf Stichproben beschränkter Beleg für das Ausweichverhalten, keine universelle Regel für Shorts.</p>"
     },
     {
       "heading": "Was passiert, wenn kein Bild erscheint?",
-      "html": "<p>Das Short kann privat, gelöscht oder ohne öffentliche Standbilder sein. Der Extraktor kann diese Einschränkungen nicht umgehen.</p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">So laden Sie es herunter</a></p>"
+      "html": "<p>Das Short kann privat, gelöscht oder ohne öffentliche Standbilder sein. Der Extraktor kann diese Einschränkungen nicht umgehen.</p>\n  <p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/about\">Um</a>oder<a href=\"https://www.11tik.com/contact\">Kontakt</a>Die</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">So laden Sie es herunter</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/p/about.html\">Um</a>oder<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>Die</p>"
+  "bioHtml": "<p class=\"yte-bio\">Verfasst von 11tik, dem Herausgeber des browserbasierten YouTube-Thumbnail-Extraktors. Siehe<a href=\"https://www.11tik.com/about\">Um</a>oder<a href=\"https://www.11tik.com/contact\">Kontakt</a>Die</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "id",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Cara mengunduh thumbnail YouTube secara massal (hingga 25 URL publik) | 11tik",
   "description": "Ekstrak banyak thumbnail YouTube publik langsung di browser. Tempel satu URL per baris, unduh setiap gambar terbaik, atau kompres kumpulan gambar berkualitas tertinggi. Tanpa akun dan tanpa file video.",
@@ -24,8 +24,48 @@
       "html": "<p>Membuka<a href=\"https://www.11tik.com/\">11tik</a>Aktifkan mode Massal, tempel satu URL publik per baris, klik Ekstrak semua, lalu unduh setiap gambar terbaik atau file zip dengan kualitas tertinggi. Batasnya adalah 25 URL per proses agar browser tetap responsif.</p>"
     },
     {
+      "heading": "Apa yang diproses oleh alat tersebut?",
+      "html": "<p>Mode massal menjalankan pemeriksaan gambar diam publik sisi klien yang sama seperti ekstraksi URL tunggal: mengurai setiap ID video, membuat URL thumbnail kandidat, memuatnya sebagai gambar di browser Anda, membuang yang gagal dan placeholder, memberi peringkat yang lolos, dan menampilkan gambar diam terbaik terlebih dahulu. Mode ini tidak mengunduh video atau audio, tidak memanggil API YouTube pribadi, dan tidak menyimpan tautan yang disalin di server 11tik.</p>"
+    },
+    {
+      "heading": "Batasan 25 URL",
+      "html": "<p>Setiap proses pengiriman massal dapat menerima hingga<strong>25 baris</strong>Batasan tersebut menjaga agar validasi gambar tetap responsif di browser. Untuk ID yang lebih banyak, jalankan beberapa batch atau ekspor CSV dari setiap proses dan gabungkan secara offline. Tidak ada batch server 500 atau 1000 URL.</p>"
+    },
+    {
+      "heading": "Pemrosesan sisi klien",
+      "html": "<p>Setiap pengambilan data terjadi dalam sesi Anda. Permintaan jaringan dikirim dari browser Anda ke jaringan publik.<code>i.ytimg.com</code>(dan host terkait). URL yang disalin tidak diunggah ke 11tik untuk pengambilan data dari sisi server.</p>"
+    },
+    {
+      "heading": "Ekspor CSV dan JSON",
+      "html": "<p>Setelah proses berjalan sukses, ekspor opsional mencakup ID video, judul, URL berbagi, dan URL gambar yang telah divalidasi per baris—berguna untuk catatan penelitian. Ekspor mencerminkan apa yang telah divalidasi dalam sesi tersebut, bukan kolom maxres yang dijamin untuk setiap ID.</p>"
+    },
+    {
+      "heading": "Taksonomi kegagalan",
+      "html": "<ul>\n    <li><strong>Kegagalan penguraian:</strong>baris ini bukan URL yang didukung untuk menonton, Shorts, siaran langsung, penyematan, youtu.be, atau perluasan saluran.</li>\n    <li><strong>Video tidak tersedia:</strong>bersifat pribadi, dihapus, dibatasi, atau sedang diproses—tidak ada validasi publik. Lihat<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Mengapa thumbnail tidak muncul?</a>.</li>\n    <li><strong>Varian hilang:</strong>Video tersebut bersifat publik tetapi resolusi maksimal (atau tingkatan tinggi lainnya) menghasilkan kesalahan 404; ukuran yang lebih kecil masih berfungsi. Lihat<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres fallback</a>.</li>\n    <li><strong>Placeholder ditolak:</strong>URL tersebut merespons, tetapi tampilannya seperti ubin kecil berwarna abu-abu yang menandakan file hilang.</li>\n  </ul>"
+    },
+    {
+      "heading": "Video tidak valid, pribadi, dan tidak tersedia.",
+      "html": "<p>11tik hanya menampilkan gambar diam CDN publik. Video yang tidak terdaftar tanpa kemasan publik, unggahan khusus anggota, konten yang dibatasi usia, dan video yang dihapus biasanya menghasilkan kartu kosong—bukan file “rahasia” yang lebih kecil. Jangan berharap Bulk dapat melewati kontrol akses.</p>"
+    },
+    {
+      "heading": "URL saluran vs tautan tontonan yang diberikan secara manual",
+      "html": "<p>Tempel URL saluran publik pada satu baris dan Bulk akan memperluas unggahan publik terbaru melalui penemuan bergaya RSS, lalu mengekstrak setiap ID—dengan batasan 25 URL yang sama setelah perluasan. Tautan tontonan yang ditempel secara manual akan melewati proses penemuan saluran. Alur kerja saluran lengkap:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">panduan ekstrak saluran</a>.</p>"
+    },
+    {
+      "heading": "Pribadi",
+      "html": "<p>URL yang disalin diproses secara lokal di browser Anda untuk diekstraksi. Baca<a href=\"https://www.11tik.com/privacy\">Pribadi</a>untuk analitik situs; Bulk tidak menambahkan API privat sisi server terpisah.</p>"
+    },
+    {
+      "heading": "Panduan percobaan ulang",
+      "html": "<p>Setelah membuat thumbnail kustom Studio baru atau mengunggah konten baru, tunggu prosesnya dan jalankan kembali URL pemantauan yang sama. Keterlambatan CDN sementara terkadang hilang pada percobaan kedua; hasil kosong yang terus-menerus biasanya berarti tidak ada publik yang masih ada untuk ID tersebut.</p>"
+    },
+    {
+      "heading": "Ekspektasi realistis",
+      "html": "<p>Tidak semua video publik dipublikasikan dengan resolusi maksimal. Dalam kasus kami,<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Contoh 300 video</a>, maxres divalidasi untuk 286/300 ID (cakupan sampel). Bulk mengembalikan file publik tervalidasi tertinggi per baris—bukan jaminan 1280×720 untuk setiap baris. Anatomi URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Panduan URL thumbnail</a>.</p>"
+    },
+    {
       "heading": "Apa saja yang termasuk dalam daftar tersebut?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be tautan pendek</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>Video pribadi, video yang tidak terdaftar tanpa thumbnail publik, atau video yang dibatasi usia tidak akan menampilkan gambar diam. Itu sudah diperkirakan. Lihat juga<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Gambar mini celana pendek</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID</li>\n    <li>youtu.be tautan pendek</li>\n    <li>youtube.com/shorts/ ID</li>\n    </ul>\n  <p>Video pribadi, video yang tidak terdaftar tanpa thumbnail publik, atau video yang dibatasi usia tidak akan menampilkan gambar diam. Itu sudah diperkirakan. Lihat juga<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Gambar mini celana pendek</a>.</p>"
     },
     {
       "heading": "Cara menjalankan ekstraksi massal",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Bisakah saya menggunakan ini untuk riset pesaing?",
-      "html": "<p>Ya, untuk mempelajari kemasan publik. Jangan menerbitkan ulang thumbnail kreator lain sebagai unggahan Anda sendiri. Hak cipta tetap berada pada pemegang hak. 11tik hanya mengambil file yang sudah dihosting YouTube secara publik.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstrak massal terbuka pada 11tik →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>.</p>"
+      "html": "<p>Ya, untuk mempelajari kemasan publik. Jangan menerbitkan ulang thumbnail kreator lain sebagai unggahan Anda sendiri. Hak cipta tetap berada pada pemegang hak. 11tik hanya mengambil file yang sudah dihosting YouTube secara publik.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstrak massal terbuka pada 11tik →</a></p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Tentang</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Tentang</a>.</p>"
 }

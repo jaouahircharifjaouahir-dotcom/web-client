@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "cs",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Jak získat miniaturu YouTube v nejvyšší kvalitě | 11tik",
   "description": "Nejvyšší kvalita znamená, že se zobrazí největší veřejný soubor JPEG nebo WebP, který YouTube skutečně vrátí, nikoli uhádnutý název souboru v rozlišení 4K.",
@@ -25,15 +25,19 @@
     },
     {
       "heading": "Jaké je maximální veřejné rozlišení?",
-      "html": "<p>Když YouTube zveřejní maxresdefault, obvykle je to 1280×720. Pokud tento soubor chybí, nejvyšší kvalita je další platná velikost, například sd nebo hq.</p>"
+      "html": "<p>Když YouTube zveřejní maxresdefault, obvykle je to 1280×720. Pokud tento soubor chybí, nejvyšší kvalita je nejbližší platná velikost, například sd nebo hq. „Nejvyšší kvalita“ znamená<strong>největší ověřený veřejně dostupný obrázek</strong>pro dané ID videa – ne 4K master, ne zvětšený soubor střední velikosti a ne snímek obrazovky z přehrávače.</p>"
+    },
+    {
+      "heading": "Náhled v nejvyšší kvalitě vs. „originální“",
+      "html": "<p><strong>Nejvyšší kvalita</strong>(tato příručka): validace probíhá pomocí nejvyššího veřejného derivátu CDN 11tik – často maxres nebo hq720, pokud jsou přítomny.<strong>Originál</strong>(jiný záměr): stále veřejná CDN, ale slovo svádí lidi k očekávání zdrojového souboru od uživatele, který video nahrál. Není to nezpracovaný Photoshop/PNG ze Studia, ani rip z videa, ani grafika s garantovaným zdrojovým rozlišením. Viz<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">původní význam a omezení miniatury</a>a<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">referenční velikost</a>V našem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Ukázka 300 videí</a>, maxres ověřeno pro ID 286/300 – dostupnost v rámci vzorku, nikoli záruka pro každé nahrání.</p>"
     },
     {
       "heading": "Záleží na WebP?",
       "html": "<p>Některá videa mají také varianty WebP se stejnými názvy velikosti. 11tik je dokáže zobrazit, pokud existují. Vyberte soubor, který nástroj ověřil, ne uhodnutou URL adresu.</p>"
     },
     {
-      "heading": "Proč „HD“ někdy vypadá měkce?",
-      "html": "<p>Veřejné zobrazení může být stále 1280×720 s kompresí, nebo se možná díváte na hqdefault. Než se rozhodnete stahování selhat, zkontrolujte hlášení o velikosti pixelů 11tik.</p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Průvodce velikostmi</a></p>"
+      "heading": "Proč se „HD“ někdy jeví jako měkký?",
+      "html": "<p>Veřejné zobrazení může být stále 1280×720 s kompresí, nebo se možná díváte na hqdefault. Než se rozhodnete stahování selhat, zkontrolujte hlášení o velikosti pixelů 11tik.</p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/about\">O</a>nebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Průvodce velikostmi</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/about\">O</a>nebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

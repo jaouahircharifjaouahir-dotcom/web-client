@@ -25,7 +25,7 @@
     },
     {
       "heading": "Prečo sa snímky obrazovky nezobrazujú v Obrázkoch Google a v ukážkach zo sociálnych sietí?",
-      "html": "<p>Často majú nesprávny pomer strán, zahŕňajú používateľské rozhranie a dvakrát sa komprimujú. Open Graph a mnoho polí CMS vyžaduje snímku s pomerom strán 16:9 s rozlíšením približne 1280 × 720. To zodpovedá maxresdefault, ak existuje – pozri<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">sprievodca veľkosťami miniatúr</a>.</p>"
+      "html": "<p>Často majú nesprávny pomer strán, zahŕňajú používateľské rozhranie a dvakrát sa komprimujú. Open Graph a mnoho polí CMS vyžaduje snímku s pomerom strán 16:9 s rozlíšením približne 1280 × 720. To zodpovedá maxresdefault, ak existuje – pozri<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">sprievodca veľkosťami miniatúr</a>.</p>"
     },
     {
       "heading": "Ako si namiesto toho uložím skutočnú miniatúru?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Kedy je snímka obrazovky stále užitočná?",
-      "html": "<p>Snímku obrazovky použite iba na zdokumentovanie chyby v používateľskom rozhraní alebo momentu vo videu. Nepoužívajte ju ako oficiálnu miniatúru, hrdinu blogu ani obrázok na zdieľanie, ak stále existuje verejná prípojka.</p>\n  <p><a href=\"https://www.11tik.com/\">Získajte skutočnú verejnú miniatúru →</a></p>\n  <p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>.</p>"
+      "html": "<p>Snímku obrazovky použite iba na zdokumentovanie chyby v používateľskom rozhraní alebo momentu vo videu. Nepoužívajte ju ako oficiálnu miniatúru, hrdinu blogu ani obrázok na zdieľanie, ak stále existuje verejná prípojka.</p>\n  <p><a href=\"https://www.11tik.com/\">Získajte skutočnú verejnú miniatúru →</a></p>\n  <p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/about\">O nás</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/p/about.html\">O nás</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napísal/a 11tik.<a href=\"https://www.11tik.com/about\">O nás</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "fi",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Studion pikkukuva 2026 | 11tik",
   "description": "Vuonna 2026 kelvolliset YouTube-kanavat lataavat edelleen mukautetun pikkukuvan Studiosta videon tietosivulle. Valikkootsikot siirtyvät, mutta tulos on sama: YouTube isännöi uutta julkista still-kuvaa. 11tik ei lataa kyseistä tiedostoa. Se lukee julkisten kuvien URL-osoitteet vasta niiden luomisen jälkeen.",
@@ -24,16 +24,20 @@
       "html": "<ol>\n    <li>Avaa YouTube Studio ja valitse video.</li>\n    <li>Lataa Tiedot-osiossa 16:9-kuva (YouTuben yleinen tavoitekoko on 1280 × 720).</li>\n    <li>Tallenna ja odota, kunnes käsittely on valmis.</li>\n  </ol>\n  <p>Painikkeiden tarkat nimet voivat muuttua. Jos tililläsi ei ole oikeutta mukautettuihin pikkukuviin, Studio ei tarjoa latausta. 11tik ei voi ohittaa tätä.</p>"
     },
     {
+      "heading": "Diagnostiikkapuu: Studion vaihto vs. julkinen still-kuva",
+      "html": "<ol>\n    <li>Kun olet ladannut mukautetun taideteoksen Studioon, odota käsittelyn valmistumista.</li>\n    <li>Liitä julkisen katselun URL-osoite<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Jotkin koot näkyvät, puuttuvatko maksimikoot?</strong>→ variantti-/varaongelma, ei epäonnistunut Studio-lataus. Katso<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault selitettynä</a>.</li>\n    <li><strong>Ei kokoja ollenkaan?</strong>→ video voi olla vielä käsittelyssä, yksityinen tai julkisten CDN-still-videoiden näyttäminen on rajoitettua. Katso<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">pikkukuva ei näy</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Miten tarkistan pikkukuvan sen jälkeen, kun olen muuttanut sitä Studiossa?",
-      "html": "<p>Liitä kellon URL-osoite<a href=\"https://www.11tik.com/\">11tik</a>Lataa tai kopioi ensimmäinen lueteltu koko. Jos maxresdefault puuttuu, seuraava julkinen tiedosto on rehellinen maksimikoko. Se on YouTuben luettelo, ei epäonnistunut poiminta. Katso myös<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault selitettynä</a>.</p>"
+      "html": "<p>Liitä kellon URL-osoite<a href=\"https://www.11tik.com/\">11tik</a>Lataa tai kopioi ensimmäinen lueteltu koko. Jos maxresdefault puuttuu, seuraava julkinen tiedosto on rehellinen maksimikoko. Se on YouTuben luettelo, ei epäonnistunut poiminta. Katso myös<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault selitettynä</a>.</p>"
     },
     {
       "heading": "Korvaako 11tik YouTube Studion?",
-      "html": "<p>Ei. Studiossa ladataan, ajetaan ja käytetään testejä, kun YouTube niitä tarjoaa. 11tik on tarkoitettu jo olemassa olevien julkisten still-kuvien esikatseluun ja tallentamiseen, myös Studioon tehtyjen muutosten jälkeen.</p>"
+      "html": "<p>Ei. Studiossa voit ladata, ajella ja käyttää testejä, kun YouTube niitä tarjoaa. 11tik on tarkoitettu jo olemassa olevien julkisten still-kuvien esikatseluun ja tallentamiseen, myös Studioon tehtyjen muutosten jälkeen.</p>"
     },
     {
       "heading": "Mitä minun pitäisi tehdä, kun kuva näyttää vanhalta?",
-      "html": "<p>Kuvien CDN-tiedostot voivat viiveellä. Tarkista myöhemmin uudelleen, päivitä sivusto kokonaan tai kopioi URL-osoite 11tik vahvistaa. Älä oleta 4K-masteria; julkinen maksimikoko on yleensä 1280×720. Studion kuvakaappaus ei ole julkinen pikkukuvatiedosto.</p>\n  <p>Aiheeseen liittyvää:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">linko vs. valmistaja</a>.</p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avaa liesituuletin</a></p>"
+      "html": "<p>Kuvien CDN-tiedostot voivat viiveellä. Tarkista myöhemmin uudelleen, päivitä sivusto kokonaan tai kopioi URL-osoite 11tik vahvistaa. Älä oleta 4K-masteria; julkinen maksimikoko on yleensä 1280×720. Studion kuvakaappaus ei ole julkinen pikkukuvatiedosto.</p>\n  <p>Aiheeseen liittyvää:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">linko vs. valmistaja</a>.</p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avaa liesituuletin</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>.</p>"
 }

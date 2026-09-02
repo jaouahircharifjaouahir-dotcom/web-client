@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "hr",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Kako preuzeti minijaturu YouTube Shortsa u HD-u | 11tik",
   "description": "Preuzmite minijaturu YouTube Shorts videozapisa u pregledniku. Shorts videozapisi koriste iste javne fotografije kao i URL-ovi za gledanje. Datoteka je često u vodoravnom položaju.",
@@ -21,15 +21,19 @@
   "sections": [
     {
       "heading": "Kako mogu preuzeti minijaturu YouTube Shortsa?",
-      "html": "<p>Kopirajte URL koji sadrži /shorts/ plus ID videozapisa i zalijepite ga u<a href=\"https://www.11tik.com/\">11tik</a>i preuzmite navedenu veličinu. Ekstrakcija počinje kada je ID valjan.</p>"
+      "html": "<p>Kopirajte URL koji sadrži /shorts/ i ID videozapisa, zalijepite ga u<a href=\"https://www.11tik.com/\">11tik</a>i preuzmite navedenu veličinu. Ekstrakcija počinje kada je ID valjan.</p>"
     },
     {
       "heading": "Jesu li Shorts datoteke iste kao i datoteke stranice za gledanje?",
-      "html": "<p>Koriste iste javne nazive veličina označene ID-om videozapisa. Slika može izgledati uokvireno ako je YouTube pohranio derivat širokog zaslona.</p>"
+      "html": "<p>Koriste iste javne nazive veličina s ključem prema ID-u videa na<code>i.ytimg.com</code>Slika može izgledati u letterboxu ako je YouTube pohranio derivat širokog zaslona. Anatomija URL-ova za Shorts, poveznice za gledanje i youtu.be obrađena je u<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Vodič za URL-ove minijatura</a>.</p>"
+    },
+    {
+      "heading": "Objavljuju li Shorts uvijek maksimalne rezolucije?",
+      "html": "<p>Ne. U našem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Uzorak od 300 videozapisa</a>, maxresdefault validirano za<strong>286 od 300</strong>ID-ovi (<strong>95,33%</strong>); u<strong>14 od 300</strong>bez maxresa je i dalje imao valjanu nižu javnu vrijednost. To je dokaz na razini uzorka za ponašanje u slučaju nužde, a ne univerzalno pravilo Shortsa.</p>"
     },
     {
       "heading": "Što ako se slika ne pojavi?",
-      "html": "<p>Kratki video može biti privatan, izbrisan ili bez javnih fotografija. Alat za izdvajanje ne može zaobići ta ograničenja.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Kako preuzeti</a></p>"
+      "html": "<p>Kratki video može biti privatan, izbrisan ili bez javnih fotografija. Alat za izdvajanje ne može zaobići ta ograničenja.</p>\n  <p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/about\">Oko</a>ili<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Kako preuzeti</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/p/about.html\">Oko</a>ili<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisao 11tik, izdavač alata za izvlačenje minijatura YouTubea u pregledniku. Vidi<a href=\"https://www.11tik.com/about\">Oko</a>ili<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

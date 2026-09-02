@@ -2,13 +2,13 @@
   "contentId": "youtube-thumbnail-size-resolution",
   "articleId": "youtube-thumbnail-size-resolution",
   "locale": "zh",
-  "sourceHash": "c0bb417e2de63d58dd36b3b87e4d9e505ff2882d1f663387f95f30c7db4e07eb",
+  "sourceHash": "b0f7423445f2151b92946cb146be22154a87008b5271e4072101b60f15665f96",
   "status": "ready",
   "title": "YouTube 缩略图尺寸和分辨率：完整指南 | 11tik",
-  "description": "比较 YouTube 缩略图尺寸，从 120×90 到 1280×720。Maxres 和 hq720 是可选的——使用可加载的最大公开文件。",
+  "description": "比较 YouTube 缩略图尺寸，从 120×90 到 1280×720。Maxres 和 hq720 是可选的——使用可以加载的最大公开文件。",
   "h1": "YouTube 缩略图尺寸和分辨率：完整指南",
   "ogTitle": "YouTube 缩略图尺寸和分辨率：完整指南",
-  "ogDescription": "比较 YouTube 缩略图尺寸，从 120×90 到 1280×720。Maxres 和 hq720 是可选的——使用可加载的最大公开文件。",
+  "ogDescription": "比较 YouTube 缩略图尺寸，从 120×90 到 1280×720。Maxres 和 hq720 是可选的——使用可以加载的最大公开文件。",
   "imageAlt": "YouTube 公开缩略图尺寸对比图，从最高分辨率 1280x720 到默认分辨率 120x90",
   "faqHeading": "常问问题",
   "images": [
@@ -26,11 +26,15 @@
   "sections": [
     {
       "heading": "快速回答",
-      "html": "<p>对于自定义上传，YouTube 的帮助中心仍然侧重于……<strong>16:9</strong>图片——通常<strong>1280×720</strong>对于可以从现有视频下载的文件，公共 CDN 衍生版本各不相同。如果存在，<code>maxresdefault</code>/<code>hq720</code>通常为 1280×720 分辨率。许多视频的分辨率止步于此。<code>sddefault</code>（640×480）或<code>hqdefault</code>（480×360）。更高的文件名并不会凭空捏造像素。将观看链接粘贴到此处<a href=\"https://www.11tik.com/\">11tik</a>仅列出能够返回真实图像的尺寸。</p>\n\n  <img alt=\"Comparison chart of public YouTube thumbnail sizes from maxresdefault 1280 by 720 down to default 120 by 90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">相对公开规模。并非每个视频都会发布这个阶梯上的所有层级。</p>"
+      "html": "<p>对于自定义上传，YouTube 的帮助中心仍然侧重于……<strong>16:9</strong>图片——通常<strong>1280×720</strong>对于可以从现有视频下载的文件，公共 CDN 衍生版本各不相同。如果存在，<code>maxresdefault</code>/<code>hq720</code>通常为 1280×720 分辨率。许多视频的分辨率止步于此。<code>sddefault</code>（640×480）或<code>hqdefault</code>（480×360）。更高的文件名并不会凭空捏造像素。将观看链接粘贴到此处<a href=\"https://www.11tik.com/\">11tik</a>仅列出能够返回真实图像的尺寸。</p>\n\n  <img alt=\"YouTube 公开缩略图尺寸对比图，从最高分辨率 1280x720 到默认分辨率 120x90\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-resolution-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">相对公开规模。并非每个视频都会发布这个阶梯上的所有层级。</p>"
+    },
+    {
+      "heading": "本指南与我们的测量研究有何关联",
+      "html": "<p>本页面常青。<strong>概念参考</strong>公开缩略图尺寸。有关实际可用性和字节大小的观察结果，请参阅单独的文档。<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300个视频样本研究</a>（仅限英文；样本范围，不代表总体情况）。在包含 300 个视频的样本中，已验证的公共维度包括<strong>1280×720</strong>，<strong>640×480</strong>，<strong>480×360</strong>，<strong>320×180</strong>， 和<strong>120×90</strong>——以上内容来自 CDN，并非 YouTube 官方规范表。YouTube 帮助中心仍然将创作者上传的视频以 16:9 的目标分辨率（通常为 1280×720）居中显示；每个视频 ID 对应的公开衍生视频的分辨率可以低于此标准。</p>"
     },
     {
       "heading": "推荐给创作者的尺寸",
-      "html": "<p>如果您正在 YouTube Studio 中设计自定义缩略图，请遵循当前的 YouTube 帮助：目标是<strong>16:9</strong>仍然。常用的工作尺寸是<strong>1280×720</strong>像素。这与播放器的宽屏框架相匹配，并且与已发布的像素类别相同。<code>maxresdefault</code>当 YouTube 创建时。</p>\n  <p>官方参考资料：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">上传自定义视频缩略图</a>Studio 处理完成后，请使用 11tik 确认已发布的公开文件，而不是假设所有衍生文件都会立即出现。Studio 相关注意事项：<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">2026 年 YouTube 工作室缩略图</a>。</p>"
+      "html": "<p>如果您正在 YouTube Studio 中设计自定义缩略图，请遵循当前的 YouTube 帮助：目标是<strong>16:9</strong>仍然。常用的工作尺寸是<strong>1280×720</strong>像素。这与播放器的宽屏框架相匹配，并且与已发布的像素类别相同。<code>maxresdefault</code>当 YouTube 创建时。</p>\n  <p>官方参考资料：<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">上传自定义视频缩略图</a>Studio 处理完成后，请使用 11tik 确认已发布的公开文件，而不是假设所有衍生文件都会立即出现。Studio 相关注意事项：<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">2026 年 YouTube 工作室缩略图</a>。</p>"
     },
     {
       "heading": "公共 CDN 大小查看器实际可以获取",
@@ -38,11 +42,11 @@
     },
     {
       "heading": "即使文件不同，16:9 的比例也很重要",
-      "html": "<p>手表播放器采用宽屏设计。以 16:9 比例设计的自定义艺术作品在搜索结果、推荐书架和嵌入内容中仍然清晰可读。一些公共文件（特别是<code>hqdefault</code>/<code>sddefault</code>这些图片并非严格的 16:9 比例，而是较旧的 CDN 图片尺寸。如果您需要一张清晰的 16:9 图片用于 Open Graph 或博客标题，建议使用真正的 1280×720 公共图片。</p>\n  <p>短片播放时为竖屏格式，但存储的公共资源通常为横屏格式。这是主机行为，并非下载失败。详情：<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">短片缩略图下载</a>。</p>"
+      "html": "<p>手表播放器采用宽屏设计。以 16:9 比例设计的自定义艺术作品在搜索结果、推荐书架和嵌入内容中仍然清晰可读。一些公共文件（特别是<code>hqdefault</code>/<code>sddefault</code>这些图片并非严格的 16:9 比例，而是较旧的 CDN 图片尺寸。如果您需要一张清晰的 16:9 图片用于 Open Graph 或博客标题，建议使用真正的 1280×720 公共图片。</p>\n  <p>短片播放时为竖屏格式，但存储的公共资源通常为横屏格式。这是主机行为，并非下载失败。详情：<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">短片缩略图下载</a>。</p>"
     },
     {
       "heading": "maxresdefault vs hq720 vs “HD”",
-      "html": "<p><code>maxresdefault</code>这是熟悉的 HD 文件名。<code>i.ytimg.com</code>如果文件存在，则其分辨率通常为 1280×720，而不是 4K。<code>hq720</code>另一个顶级名称是某些视频以相同分辨率级别展示的文件。但这两个名称都不能保证文件质量。未经检查就打印最大分辨率 URL 的工具会生成损坏的图像。</p>\n  <p>更详细的文件名说明：<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault.jpg是什么</a>和<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高质量的公共缩略图</a>。</p>\n\n  <img alt=\"Side-by-side comparison showing a video with maxresdefault available versus a video where only a smaller hqdefault file exists\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">相同的请求模式，不同的结果：文件名过高并不会因为文件缺失而凭空产生像素。</p>"
+      "html": "<p><code>maxresdefault</code>这是熟悉的 HD 文件名。<code>i.ytimg.com</code>如果文件存在，则其分辨率通常为 1280×720，而不是 4K。<code>hq720</code>另一个顶级名称是某些视频以相同分辨率级别展示的文件。但这两个名称都不能保证文件质量。未经检查就打印最大分辨率 URL 的工具会生成损坏的图像。</p>\n  <p>更详细的文件名说明：<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault.jpg是什么</a>和<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">最高质量的公共缩略图</a>。</p>\n\n  <img alt=\"并排比较，展示了一个包含 maxresdefault 文件的视频和一个仅包含较小的 hqdefault 文件的视频。\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-quality-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">相同的请求模式，不同的结果：文件名过高并不会因为文件缺失而凭空产生像素。</p>"
     },
     {
       "heading": "为什么一个视频的尺寸比另一个视频多？",
@@ -50,15 +54,15 @@
     },
     {
       "heading": "11tik 如何选择“最佳”尺寸",
-      "html": "<p>11tik 会按固定的质量顺序（WebP 最大分辨率 → JPEG 最大分辨率 → 720p 高清 → 标清 → 高清 → 超高清 → 默认）搜索公开的候选文件。它会保留符合图像验证的文件，并将质量最高的文件排在第一位。它不会进行图像放大。如果缺少最大分辨率选项，则第一个候选文件可能是 720p 高清或标清——这是该 ID 对应的最高分辨率。</p>\n  <p>要复制指定大小的地址，请使用<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>要保存文件，请使用<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载指南</a>。</p>"
+      "html": "<p>11tik 会按固定的质量顺序（WebP 最大分辨率 → JPEG 最大分辨率 → 720p 高清 → 标清 → 高清 → 超高清 → 默认）搜索公开的候选文件。它会保留符合图像验证的文件，并将质量最高的文件排在第一位。它不会进行图像放大。如果缺少最大分辨率选项，则第一个候选文件可能是 720p 高清或标清——这是该 ID 对应的最高分辨率。</p>\n  <p>要复制指定大小的地址，请使用<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>要保存文件，请使用<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">下载指南</a>。</p>"
     },
     {
       "heading": "应该使用哪个尺寸？",
-      "html": "<table>\n    <thead>\n      <tr><th>用例</th><th>更喜欢</th><th>为什么</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>博客特色图片 / Open Graph</td><td>最大验证尺寸约为 1280×720</td><td>与常见的社交作物相匹配；托管您自己的副本</td></tr>\n      <tr><td>设计模型/缩略图研究</td><td>最佳可用公共场所</td><td>真正的包装，不是玩家截图</td></tr>\n      <tr><td>快速聊天预览</td><td>总部或总部</td><td>小文件加载速度更快</td></tr>\n      <tr><td>Studio 中的自定义上传</td><td>您的 16:9 1280×720（或更高分辨率）原图</td><td>你创作艺术；CDN衍生品随后而来。</td></tr>\n    </tbody>\n  </table>\n  <p>不要将 hqdefault 拉伸到 1280×720 并将其命名为 maxres。有关 CMS 托管技巧：<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">特色图片 / Open Graph 工作流程</a>玩家的屏幕截图则是一种不同的（更糟糕的）资源：<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">截图与实际缩略图</a>。</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>用例</th><th>更喜欢</th><th>为什么</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>博客特色图片 / Open Graph</td><td>最大验证尺寸约为 1280×720</td><td>与常见的社交作物相匹配；托管您自己的副本</td></tr>\n      <tr><td>设计模型/缩略图研究</td><td>最佳可用公共场所</td><td>真正的包装，不是玩家截图</td></tr>\n      <tr><td>快速聊天预览</td><td>总部或总部</td><td>小文件加载速度更快</td></tr>\n      <tr><td>Studio 中的自定义上传</td><td>您的 16:9 1280×720（或更高分辨率）原图</td><td>你创作艺术；CDN衍生品随后而来。</td></tr>\n    </tbody>\n  </table>\n  <p>不要将 hqdefault 拉伸到 1280×720 并将其命名为 maxres。有关 CMS 托管技巧：<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">特色图片 / Open Graph 工作流程</a>玩家的屏幕截图则是一种不同的（更糟糕的）资源：<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">截图与实际缩略图</a>。</p>"
     },
     {
       "heading": "下一步",
-      "html": "<p>查看实时视频<a href=\"https://www.11tik.com/\">11tik 提取器</a>然后要么<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">复制图片网址</a>或者<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载目前最好的版本</a>。</p>\n\n  <p class=\"yte-bio\">由 11tik 编写。仅限公共 CDN 大小；不进行放大，不提供视频下载。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+      "html": "<p>查看实时视频<a href=\"https://www.11tik.com/\">11tik 提取器</a>然后要么<a href=\"https://www.11tik.com/youtube-thumbnail-url\">复制图片网址</a>或者<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">下载目前最好的版本</a>。</p>\n\n  <p class=\"yte-bio\">由 11tik 编写。仅限公共 CDN 大小；不进行放大，不提供视频下载。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>。</p>"
     }
   ],
   "faq": [
@@ -94,5 +98,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">由 11tik 编写。仅限公共 CDN 大小；不进行放大，不提供视频下载。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">由 11tik 编写。仅限公共 CDN 大小；不进行放大，不提供视频下载。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>。</p>"
 }

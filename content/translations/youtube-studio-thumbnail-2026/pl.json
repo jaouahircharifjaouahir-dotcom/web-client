@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "pl",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "Miniatura YouTube Studio 2026 | 11tik",
   "description": "W 2026 roku kwalifikujące się kanały YouTube nadal przesyłają niestandardową miniaturę ze Studio na stronie szczegółów filmu. Etykiety menu zostaną przeniesione, ale efekt będzie ten sam: YouTube hostuje nowy publiczny obraz. 11tik nie przesyła tego pliku. Odczytuje adresy URL publicznych obrazów dopiero po ich utworzeniu.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Otwórz YouTube Studio i wybierz wideo.</li>\n    <li>W sekcji Szczegóły prześlij obraz w formacie 16:9 (typowa rozdzielczość docelowa YouTube’a to 1280×720).</li>\n    <li>Zapisz i poczekaj na zakończenie przetwarzania.</li>\n  </ol>\n  <p>Dokładne nazwy przycisków mogą ulec zmianie. Jeśli Twoje konto nie kwalifikuje się do niestandardowych miniatur, Studio nie zaoferuje możliwości przesłania. 11tik nie może tego ominąć.</p>"
     },
     {
+      "heading": "Drzewo diagnostyczne: zmiana studia a stan publiczny",
+      "html": "<ol>\n    <li>Po przesłaniu niestandardowej grafiki do Studio należy zaczekać na zakończenie przetwarzania.</li>\n    <li>Wklej adres URL publicznego oglądania<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Pojawiają się niektóre rozmiary, brakuje wartości maksymalnych?</strong>→ problem z wariantem/zapasowym, a nie nieudane przesłanie do Studio. Zobacz<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault wyjaśniony</a>.</li>\n    <li><strong>Brak rozmiarów?</strong>→ wideo może być nadal przetwarzane, prywatne lub ograniczone do publicznych zdjęć CDN. Zobacz<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatura nie jest wyświetlana</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Jak sprawdzić miniaturę po jej zmianie w Studio?",
-      "html": "<p>Wklej adres URL zegarka<a href=\"https://www.11tik.com/\">11tik</a>Pobierz lub skopiuj pierwszy z wymienionych rozmiarów. Jeśli brakuje maxresdefault, następny publiczny plik to uczciwy maksymalny rozmiar. To katalog YouTube, a nie nieudany ekstrakt. Zobacz też<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault wyjaśniony</a>.</p>"
+      "html": "<p>Wklej adres URL zegarka<a href=\"https://www.11tik.com/\">11tik</a>Pobierz lub skopiuj pierwszy z wymienionych rozmiarów. Jeśli brakuje maxresdefault, następny publiczny plik to uczciwy maksymalny rozmiar. To katalog YouTube, a nie nieudany ekstrakt. Zobacz też<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault wyjaśniony</a>.</p>"
     },
     {
       "heading": "Czy 11tik zastępuje YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Co zrobić, gdy obraz wygląda na stary?",
-      "html": "<p>Sieci CDN z obrazami mogą się opóźniać. Sprawdź ponownie później, odśwież lub skopiuj adres URL. 11tik Potwierdza. Nie zakładaj rozdzielczości master 4K; publiczna rozdzielczość maksymalna to zazwyczaj 1280×720. Zrzut ekranu ze Studio nie jest publicznym plikiem miniatur.</p>\n  <p>Powiązany:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">ekstraktor kontra producent</a>.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstraktor</a></p>"
+      "html": "<p>Sieci CDN z obrazami mogą się opóźniać. Sprawdź ponownie później, odśwież lub skopiuj adres URL. 11tik Potwierdza. Nie zakładaj rozdzielczości master 4K; publiczna rozdzielczość maksymalna to zazwyczaj 1280×720. Zrzut ekranu ze Studio nie jest publicznym plikiem miniatur.</p>\n  <p>Powiązany:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">ekstraktor kontra producent</a>.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Otwórz ekstraktor</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
 }

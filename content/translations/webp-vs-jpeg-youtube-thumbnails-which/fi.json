@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "fi",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "WebP vs. JPEG YouTube -pikkukuvat: kumpaa muotoa kannattaa käyttää? | 11tik",
   "description": "YouTube voi julkaista JPEG- ja WebP-pikkukuvatiedostoja. Käytä mieluiten 11tik-muotoa, joka sopii käyttötarkoitukseesi – WebP ei ole aina saatavilla.",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "Nopea vastaus",
-      "html": "<p>Useimpien latausten ja sisällönhallintajärjestelmien lähetysten kohdalla pidä<strong>validoitu tiedosto 11tik listaa ensimmäisenä</strong>JPEG on edelleen yleisesti saatavilla oleva tiedostomuoto.<code>i.ytimg.com/vi/…</code>WebP näkyy joissakin videoissa muodossa<code>maxresdefault.webp</code>alla<code>/vi_webp/</code>WebP on usein pienempi samalla visuaalisella laadulla, mutta sitä ei julkaista jokaiselle ID:lle. 11tik tekee niin.<strong>ei</strong>muuntaa WebP JPEG-muotoon latauksen yhteydessä – se tallentaa YouTuben jo tallentamat tavut (JPEG-lataukset saavat vain pienen metatietokommenttileiman).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sama videotunnus, eri säilöt ja polut – vain silloin, kun YouTube julkaisi molemmat.</p>"
+      "html": "<p>Useimpien latausten ja sisällönhallintajärjestelmien lähetysten kohdalla pidä<strong>validoitu tiedosto 11tik listaa ensimmäisenä</strong>JPEG on edelleen yleisesti saatavilla oleva tiedostomuoto.<code>i.ytimg.com/vi/…</code>WebP näkyy joissakin videoissa muodossa<code>maxresdefault.webp</code>alla<code>/vi_webp/</code>WebP on usein pienempi samalla visuaalisella laadulla, mutta sitä ei julkaista jokaiselle ID:lle. 11tik tekee niin.<strong>ei</strong>muuntaa WebP JPEG-muotoon latauksen yhteydessä – se tallentaa YouTuben jo tallentamat tavut (JPEG-lataukset saavat vain pienen metatietokommenttileiman).</p>\n\n  <img alt=\"JPEG- ja WebP YouTube -pikkukuvien URL-polkujen rinnakkainen vertailu i.ytimg.com-sivustolla\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sama videotunnus, eri säilöt ja polut – vain silloin, kun YouTube julkaisi molemmat.</p>"
     },
     {
       "heading": "Näin YouTuben pikkukuvien muodot näkyvät 11tik-sovelluksessa",
-      "html": "<p>11tik:n laatupresettejä ovat:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(miimi<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ alle<code>/vi/</code>(miimi<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Ehdokkaat ladataan selaimeen. Hylätyt ja paikkamerkit jätetään pois. Sijoitus perustuu tasoon, pikselipinta-alaan, odotettuun kokoon ja pieneen…<strong>−8 pisteen rangaistusta<code>.webp</code>URL-osoitteet</strong>jotta saman tason JPEG ja WebP eivät sotkeudu arvaamattomasti – JPEG voi voittaa tasapelit, kun molemmat validoidaan. Tietoja koosta:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">pikkukuvien koko-opas</a>Puuttuva maxres-käyttäytyminen:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 -opas</a>.</p>"
+      "html": "<p>11tik:n laatupresettejä ovat:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(miimi<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ alle<code>/vi/</code>(miimi<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Ehdokkaat ladataan selaimeen. Hylätyt ja paikkamerkit jätetään pois. Sijoitus perustuu tasoon, pikselipinta-alaan, odotettuun kokoon ja pieneen…<strong>−8 pisteen rangaistusta<code>.webp</code>URL-osoitteet</strong>jotta saman tason JPEG ja WebP eivät sotkeudu arvaamattomasti – JPEG voi voittaa tasapelit, kun molemmat validoidaan. Tietoja koosta:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">pikkukuvien koko-opas</a>Puuttuva maxres-käyttäytyminen:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404 -opas</a>.</p>"
     },
     {
       "heading": "JPEG vs. WebP selkokielellä",
       "html": "<table>\n    <thead>\n      <tr><th>Muoto</th><th>Paras</th><th>Vahvuus</th><th>Rajoitus</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Lataukset, WordPress-lataukset, laaja yhteensopivuus</td><td>Lähes universaali tuki; useimmat CDN-still-kuvat</td><td>Suurempia tiedostoja samalla laadulla</td></tr>\n      <tr><td>WebP</td><td>Nykyaikaiset sivustot, jotka jo tukevat WebP:tä</td><td>Usein pienempi samalla resoluutiotasolla</td><td>Ei julkaistu jokaiselle videolle; jotkin vanhemmat työkalut eivät onnistu</td></tr>\n    </tbody>\n  </table>\n  <p>Kumpikaan formaatti ei keksi resoluutiota. 480×360 WebP on silti 480×360.</p>"
+    },
+    {
+      "heading": "Mitattujen tavujen koon vertailu (vain 300 videon näyte)",
+      "html": "<p>Samassa<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon näyte</a>, mediaani maxres WebP-havainnon oli<strong>60 345 tavua</strong>vastaan<strong>141 111 tavua</strong>JPEG maxres -formaatissa – WebP-mediaanin tekeminen noin<strong>57,2 % pienempi tavukoon mukaan</strong>kyseisessä tietojoukossa. Tämä on<strong>näytelaajuinen tavuvertailu</strong>, ei universaalia pakkaustakuuta: videosi voidaan julkaista vain JPEG-muodossa, vain WebP-muodossa, molemmissa tai ei kummassakaan maksimipakkaustasolla. Kunkin tason pikselimitat on käsitelty kohdassa<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">koko- ja resoluutioopas</a>URL-polut eroavat toisistaan<code>/vi/</code>vastaan<code>/vi_webp/</code>kuten selitetään<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>.</p>"
     },
     {
       "heading": "Mitä tapahtuu, kun lataat",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "Kun WebP on kätevä",
-      "html": "<ul>\n    <li>11tik listasi validoidun WebP-maxiarvon ja sivustosi tukee jo WebP:tä.</li>\n    <li>Haluat pienemmän tiedoston samalle ~1280×720-tasolle.</li>\n    <li>Sinä hallitset pinoa ja voit tarvittaessa palata JPEG-muotoon.</li>\n  </ul>\n  <p>Jos teemasi ei tue WebP:tä, lataa sen sijaan JPEG-tiedosto – tai muunna se paikallisesti latauksen jälkeen. 11tik ei muunna tiedostoa puolestasi.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Valitse validoitu muoto, joka vastaa myyntiputkeasi – älä arvattua tiedostopäätettä.</p>"
+      "html": "<ul>\n    <li>11tik listasi validoidun WebP-maxiarvon ja sivustosi tukee jo WebP:tä.</li>\n    <li>Haluat pienemmän tiedoston samalle ~1280×720-tasolle.</li>\n    <li>Sinä hallitset pinoa ja voit tarvittaessa palata JPEG-muotoon.</li>\n  </ul>\n  <p>Jos teemasi ei tue WebP:tä, lataa sen sijaan JPEG-tiedosto – tai muunna se paikallisesti latauksen jälkeen. 11tik ei muunna tiedostoa puolestasi.</p>\n\n  <img alt=\"Käyttötapauskaavio, jossa vertaillaan verkkosivustojen sisällönhallintajärjestelmiä, suoria\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Valitse validoitu muoto, joka vastaa myyntiputkeasi – älä arvattua tiedostopäätettä.</p>"
     },
     {
       "heading": "Suorat linkit ja verkkosivustot",
-      "html": "<p>Kopioi kuvan URL-osoite palauttaa validoidun ehdokkaan HTTPS CDN-osoitteen. WebP- tai JPEG-pikalinkkien haavoittuvuus on sama kuin kohdassa<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blogi / Open Graph -opas</a>: mieluummin isännöi omaa kopiotasi pysyviä julkaisuja varten. URL-mallit:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">pikkukuvan URL-opas</a>.</p>"
+      "html": "<p>Kopioi kuvan URL-osoite palauttaa validoidun ehdokkaan HTTPS CDN-osoitteen. WebP- tai JPEG-pikalinkkien haavoittuvuus on sama kuin kohdassa<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">blogi / Open Graph -opas</a>: mieluummin isännöi omaa kopiotasi pysyviä julkaisuja varten. URL-mallit:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>.</p>"
     },
     {
       "heading": "Selainten ja sisällönhallintajärjestelmien yhteensopivuushuomautuksia",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "Käytännön päätöksentekopuu",
-      "html": "<ol>\n    <li>Ote päällä<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Jos tarvitset sisällönhallintajärjestelmän esittelykuvan ja näet molemmat muodot, valitse JPEG, ellei pinosi ole WebP-first-tyyppinen.</li>\n    <li>Jos vain WebP max -koot on validoitu ylimmällä tasolla, käytä sitä – tai valitse seuraava JPEG-koko, jos sinun on pysyttävä JPG-muodossa.</li>\n    <li>Säilytä arkistojen osalta alkuperäinen latauksen laajennus.</li>\n  </ol>\n  <p>Lataa ohje:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">lataa YouTube-pikkukuva</a>.</p>"
+      "html": "<ol>\n    <li>Ote päällä<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Jos tarvitset sisällönhallintajärjestelmän esittelykuvan ja näet molemmat muodot, valitse JPEG, ellei pinosi ole WebP-first-tyyppinen.</li>\n    <li>Jos vain WebP max -koot on validoitu ylimmällä tasolla, käytä sitä – tai valitse seuraava JPEG-koko, jos sinun on pysyttävä JPG-muodossa.</li>\n    <li>Säilytä arkistojen osalta alkuperäinen latauksen laajennus.</li>\n  </ol>\n  <p>Lataa ohje:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">lataa YouTube-pikkukuva</a>.</p>"
     },
     {
       "heading": "Seuraava vaihe",
-      "html": "<p>Liitä julkinen URL-osoite<a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>, huomioi, onko ylin tulos<code>.jpg</code>tai<code>.webp</code>ja valitse sisällönhallintajärjestelmäsi perusteella – älä pidemmän tiedostonimen perusteella.</p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik nykyisen selaimen sisäisen poimijan toiminnan perusteella.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+      "html": "<p>Liitä julkinen URL-osoite<a href=\"https://www.11tik.com/\">YouTube-pikkukuvien poimija</a>, huomioi, onko ylin tulos<code>.jpg</code>tai<code>.webp</code>ja valitse sisällönhallintajärjestelmäsi perusteella – älä pidemmän tiedostonimen perusteella.</p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik nykyisen selaimen sisäisen poimijan toiminnan perusteella.<a href=\"https://www.11tik.com/about\">Noin</a>·<a href=\"https://www.11tik.com/privacy\">Tietosuoja</a>·<a href=\"https://www.11tik.com/terms-of-use\">Ehdot</a>.</p>"
     }
   ],
   "faq": [
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik nykyisen selaimen sisäisen poimijan toiminnan perusteella.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik nykyisen selaimen sisäisen poimijan toiminnan perusteella.<a href=\"https://www.11tik.com/about\">Noin</a>·<a href=\"https://www.11tik.com/privacy\">Tietosuoja</a>·<a href=\"https://www.11tik.com/terms-of-use\">Ehdot</a>.</p>"
 }

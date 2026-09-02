@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "fi",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "YouTube-pikkukuvien erälataus (enintään 25 julkista URL-osoitetta) | 11tik",
   "description": "Pura julkisia YouTube-pikkukuvia joukkona selaimessa. Liitä yksi URL-osoite riviä kohden, lataa jokainen paras still-kuva tai pakkaa paras laatuinen pakkaus. Ei tiliä eikä videotiedostoja.",
@@ -24,8 +24,48 @@
       "html": "<p>Avata<a href=\"https://www.11tik.com/\">11tik</a>, ota käyttöön joukkolataus, liitä yksi julkinen URL-osoite riviä kohden, napsauta Pura kaikki ja lataa sitten parhaat still-tiedostot tai korkealaatuisimmat zip-tiedostot. URL-osoitteiden enimmäismäärä on 25 latauskertaa kohden, jotta selain pysyy responsiivisena.</p>"
     },
     {
+      "heading": "Mitä työkalu käsittelee",
+      "html": "<p>Joukkotarkistustila suorittaa saman asiakaspuolen julkisen still-kuvan tarkistuksen kuin yksittäisten URL-osoitteiden poiminta: jäsentää jokaisen videon tunnuksen, luo ehdokkaiden pikkukuvien URL-osoitteet, lataa ne kuvina selaimeesi, poistaa epäonnistuneet ja paikkamerkit, järjestää selviytyjät ja näyttää parhaan still-kuvan ensin. Se ei lataa videota tai ääntä, ei kutsu yksityistä YouTube-rajapintaa eikä tallenna liitettyjä linkkejä 11tik-palvelimille.</p>"
+    },
+    {
+      "heading": "25 URL-osoitteen rajoitus",
+      "html": "<p>Jokainen irtomääräinen ajo hyväksyy jopa<strong>25 riviä</strong>Tämä rajoitus pitää kuvien validoinnin reagoivana selaimessa. Jos haluat enemmän tunnuksia, suorita useita eriä tai vie CSV-tiedosto jokaisesta suorituskerrasta ja yhdistä ne offline-tilassa. Ei ole olemassa 500 tai 1000 URL-osoitteen palvelinerää.</p>"
+    },
+    {
+      "heading": "Asiakaspuolen käsittely",
+      "html": "<p>Jokainen poiminta tapahtuu istunnossasi. Verkkopyynnöt menevät selaimestasi julkisiin palveluihin.<code>i.ytimg.com</code>(ja niihin liittyvät) isännät. Liitettyjä URL-osoitteita ei ladata 11tik-sivustolle palvelinpuolen kaappausta varten.</p>"
+    },
+    {
+      "heading": "CSV- ja JSON-vienti",
+      "html": "<p>Onnistuneen suorituksen jälkeen valinnainen vienti sisältää videon tunnuksen, otsikon, jako-URL-osoitteen ja validoidun kuvan URL-osoitteen riviä kohden – hyödyllinen tutkimuslokeille. Vienti heijastaa kyseisessä istunnossa validoituja tietoja, ei taattua maksimiarvosaraketta jokaiselle tunnukselle.</p>"
+    },
+    {
+      "heading": "Epäonnistumisten taksonomia",
+      "html": "<ul>\n    <li><strong>Jäsennysvirhe:</strong>rivi ei ole tuettu katselu-, lyhytvideo-, live-, upotus-, youtu.be- tai kanavalle laajennettava URL-osoite.</li>\n    <li><strong>Video ei ole saatavilla:</strong>yksityinen, poistettu, rajoitettu tai käsittelyssä – julkinen ei vieläkään vahvista. Katso<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miksi pikkukuvaa ei näy</a>.</li>\n    <li><strong>Muunnos puuttuu:</strong>video on julkinen, mutta maxres (tai muu korkean tason) 404-virheet; pienempi koko toimii edelleen. Katso<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres-varatoiminto</a>.</li>\n    <li><strong>Paikkamerkki hylätty:</strong>URL-osoite vastasi, mutta näytti pieneltä harmaalta puuttuvan tiedoston ruudulta.</li>\n  </ul>"
+    },
+    {
+      "heading": "Virheelliset, yksityiset ja ei-saatavilla olevat videot",
+      "html": "<p>11tik näyttää vain julkisia CDN-still-kuvia. Listaamattomat videot ilman julkista pakkausta, vain jäsenille tarkoitetut lataukset, ikärajoitettu sisältö ja poistetut videot tuottavat tyypillisesti tyhjiä kortteja – eivät pienempää \"salaista\" tiedostoa. Älä odota Bulkin ohittavan käyttöoikeuksia.</p>"
+    },
+    {
+      "heading": "Kanavien URL-osoitteet vs. manuaalisesti syötetyt katselulinkit",
+      "html": "<p>Liitä julkinen kanavan URL-osoite yhdelle riville, niin Bulk laajentaa viimeisimmät julkiset lataukset RSS-tyylisen etsinnän kautta ja poimii sitten jokaisen tunnuksen – samalla 25 URL-osoitteen rajoituksella laajennuksen jälkeen. Manuaalisesti liitetyt katselulinkit ohittavat kanavan etsinnän. Koko kanavan työnkulku:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">kanavan poimintaopas</a>.</p>"
+    },
+    {
+      "heading": "Tietosuoja",
+      "html": "<p>Liitetyt URL-osoitteet käsitellään paikallisesti selaimessasi poimintaa varten. Lue<a href=\"https://www.11tik.com/privacy\">Tietosuoja</a>sivuston analytiikkaa varten; Bulk ei lisää erillistä palvelinpuolen yksityistä API:a.</p>"
+    },
+    {
+      "heading": "Uudelleenyritysohjeet",
+      "html": "<p>Uuden Studio-mukautetun pikkukuvan tai tuoreen latauksen jälkeen odota käsittelyä ja suorita sama katseluosoite uudelleen. Ohimenevä CDN-viive häviää joskus toisella yrityksellä; jatkuvasti tyhjät tulokset tarkoittavat yleensä, että kyseiselle tunnukselle ei ole enää julkista sisältöä.</p>"
+    },
+    {
+      "heading": "Realistiset odotukset",
+      "html": "<p>Kaikki julkiset videot eivät julkaise maksimiarvoja. Meidän tapauksessamme<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon näyte</a>, maksimiarvot validoitu 286/300 tunnukselle (otoslaajuinen). Bulk palauttaa suurimman validoidun julkisen tiedoston riviä kohden – ei taattua 1280 × 720 -tarkkuutta jokaiselle riville. URL-osoitteen rakenne:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>.</p>"
+    },
+    {
       "heading": "Mikä listaan ​​kuuluu?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= Tunnukset</li>\n    <li>youtu.be lyhyet linkit</li>\n    <li>youtube.com/shorts/ Tunnukset</li>\n    </ul>\n  <p>Yksityiset, listaamattomat ilman julkisia pikkukuvia tai ikärajoitetut videot eivät palauta pysäytyskuvaa. Tämä on odotettavissa. Katso myös<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Lyhytvideoiden pikkukuvat</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= Tunnukset</li>\n    <li>youtu.be lyhyet linkit</li>\n    <li>youtube.com/shorts/ Tunnukset</li>\n    </ul>\n  <p>Yksityiset, listaamattomat ilman julkisia pikkukuvia tai ikärajoitetut videot eivät palauta pysäytyskuvaa. Tämä on odotettavissa. Katso myös<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Lyhytvideoiden pikkukuvat</a>.</p>"
     },
     {
       "heading": "Kuinka suorittaa joukkouutos",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Voinko käyttää tätä kilpailijatutkimukseen?",
-      "html": "<p>Kyllä, julkisten pakkausten tutkimiseen. Älä julkaise toisen sisällöntuottajan pikkukuvaa omana lataamanasi videona. Tekijänoikeudet pysyvät oikeudenhaltijalla. 11tik hakee vain tiedostoja, jotka YouTube jo ylläpitää julkisesti.</p>\n  <p><a href=\"https://www.11tik.com/\">Avaa joukkouutos 11tik →</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+      "html": "<p>Kyllä, julkisten pakkausten tutkimiseen. Älä julkaise toisen sisällöntuottajan pikkukuvaa omana lataamanasi videona. Tekijänoikeudet pysyvät oikeudenhaltijalla. 11tik hakee vain tiedostoja, jotka YouTube jo ylläpitää julkisesti.</p>\n  <p><a href=\"https://www.11tik.com/\">Avaa joukkouutos 11tik →</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>.</p>"
 }

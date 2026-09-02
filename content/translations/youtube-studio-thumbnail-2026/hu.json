@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "hu",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Stúdió indexképe 2026 | 11tik",
   "description": "2026-ban a jogosult YouTube-csatornák továbbra is feltöltenek egyéni indexképet a Studio-ból a videók Részletek oldalára. A menücímkék áthelyeződnek, de az eredmény ugyanaz: a YouTube egy új nyilvános állóképet tárol. A 11tik nem tölti fel ezt a fájlt. Csak a nyilvános képek URL-jeit olvassa be, miután azok már léteznek.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Nyisd meg a YouTube Studiót, és válaszd ki a videót.</li>\n    <li>A Részletek részben tölts fel egy 16:9-es képet (a YouTube általános célfelbontása 1280×720).</li>\n    <li>Mentse el és várja meg, amíg a feldolgozás befejeződik.</li>\n  </ol>\n  <p>A gombok pontos nevei változhatnak. Ha a fiókod nem jogosult egyéni bélyegképekre, a Studio nem fogja felajánlani a feltöltést. A 11tik ezt nem tudja megkerülni.</p>"
     },
     {
+      "heading": "Diagnosztikai fa: Stúdióváltás vs. nyilvános állókép",
+      "html": "<ol>\n    <li>Miután feltöltöttél egyéni grafikát a Studioba, várj a feldolgozás befejezéséig.</li>\n    <li>Illeszd be a nyilvános megfigyelési URL-t ide<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Néhány méret megjelenik, hiányoznak a maximális méretek?</strong>→ variáns/tartalék probléma, nem sikertelen Studio feltöltés. Lásd:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault magyarázata</a>.</li>\n    <li><strong>Méretek egyáltalán nincsenek?</strong>→ a videó még feldolgozás alatt állhat, privát lehet, vagy nyilvános CDN-állapotok megjelenítésére korlátozott lehet. Lásd:<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">bélyegkép nem jelenik meg</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Hogyan ellenőrizhetem egy bélyegképet, miután módosítottam a Studioban?",
-      "html": "<p>Illeszd be az óra URL-jét ide<a href=\"https://www.11tik.com/\">11tik</a>Töltsd le vagy másold le az elsőként felsorolt ​​méretet. Ha a maxresdefault hiányzik, a következő nyilvános fájl a valódi maximum. Ez a YouTube katalógusa, nem egy sikertelen kivonat. Lásd még:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault magyarázata</a>.</p>"
+      "html": "<p>Illeszd be az óra URL-jét ide<a href=\"https://www.11tik.com/\">11tik</a>Töltsd le vagy másold le az elsőként felsorolt ​​méretet. Ha a maxresdefault hiányzik, a következő nyilvános fájl a valódi maximum. Ez a YouTube katalógusa, nem egy sikertelen kivonat. Lásd még:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault magyarázata</a>.</p>"
     },
     {
       "heading": "A 11tik felváltja a YouTube Studiót?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Mit tegyek, ha a kép réginek tűnik?",
-      "html": "<p>A képfájlok CDN-jei akadozhatnak. Ellenőrizd később, frissítsd keményen, vagy másold ki az URL-t 11tik a megerősítéshez. Ne feltételezz egy 4K-s master fájlt; a nyilvános maximális felbontás általában 1280×720. A Studio képernyőképe nem a nyilvános bélyegképfájl.</p>\n  <p>Összefüggő:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extraktor vs. készítő</a>.</p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Nyissa ki az elszívót</a></p>"
+      "html": "<p>A képfájlok CDN-jei akadozhatnak. Ellenőrizd később, frissítsd keményen, vagy másold ki az URL-t 11tik a megerősítéshez. Ne feltételezz egy 4K-s master fájlt; a nyilvános maximális felbontás általában 1280×720. A Studio képernyőképe nem a nyilvános bélyegképfájl.</p>\n  <p>Összefüggő:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extraktor vs. készítő</a>.</p>\n  <p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Nyissa ki az elszívót</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/p/about.html\">Körülbelül</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Írta: 11tik.<a href=\"https://www.11tik.com/about\">Körülbelül</a>.</p>"
 }

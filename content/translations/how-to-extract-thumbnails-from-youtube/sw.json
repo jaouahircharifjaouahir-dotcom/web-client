@@ -2,10 +2,10 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "sw",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Jinsi ya kutoa vijipicha kutoka kwa URL ya kituo cha YouTube | 11tik",
-  "description": "Bandika URL ya kituo cha umma cha YouTube kwenye 11tik Bulk ili kupanua upakiaji wa hivi karibuni wa umma, kisha pakua kila moja bora zaidi. Hii ni kwa ajili ya utafiti kuhusu vifungashio, si kwa ajili ya kunakili sanaa maalum ya kituo kingine.",
+  "description": "Bandika URL ya kituo cha umma cha YouTube kwenye 11tik Bulk ili kupanua upakiaji wa hivi karibuni wa umma, kisha upakue kila moja bora zaidi. Hii ni kwa ajili ya utafiti kuhusu vifungashio, si kwa ajili ya kunakili sanaa maalum ya kituo kingine.",
   "h1": "Jinsi ya kutoa vijipicha kutoka kwa URL ya kituo cha YouTube",
   "ogTitle": "Jinsi ya kutoa vijipicha kutoka kwa URL ya kituo cha YouTube",
   "ogDescription": "Bandika URL ya kituo cha umma cha YouTube kwenye 11tik Bulk ili kupanua upakiaji wa hivi karibuni wa umma, kisha upakue kila moja bora zaidi. Hii ni kwa ajili ya utafiti kuhusu vifungashio, si kwa ajili ya kunakili sanaa maalum ya kituo kingine.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "Wigo wa ugunduzi wa RSS",
+      "html": "<p>Upanuzi wa kituo hutumia mlisho wa chaneli ya umma ya YouTube (mtindo wa RSS) kuorodhesha vipakiwa vya hivi karibuni vyenye Kitambulisho cha video kinachoweza kutatuliwa. Mlisho huo unaonyesha<strong>vitu vya umma ambavyo YouTube hufichua</strong>—si kila video iliyowahi kupakiwa, si machapisho ya wanachama pekee, na si kumbukumbu kamili iliyohakikishwa.</p>"
+    },
+    {
+      "heading": "Bidhaa za umma pekee",
+      "html": "<p>Picha za faragha, zisizoorodheshwa bila umma, na upakiaji wenye umri kwa kawaida hazionekani kamwe kwenye orodha iliyopanuliwa. Upanuzi mtupu kwa kawaida humaanisha kuwa mpini haukutatuliwa, kituo kimezimwa, au hakuna vitambulisho vya umma vilivyorejeshwa—sio hitilafu ya kukwangua ya 11tik.</p>"
+    },
+    {
+      "heading": "URL ya kituo dhidi ya URL za saa dhahiri",
+      "html": "<p>Mstari mmoja wa chaneli hupanuka hadi URL nyingi za saa kabla ya kutoa, bado ziko chini ya<strong>Kifuniko kikubwa cha URL 25</strong>Kubandika viungo vya saa moja moja huacha ugunduzi wa RSS lakini hutoa udhibiti sahihi. Linganisha na wingi wa mstari kwa mstari:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">mwongozo wa kupakua wa kundi</a>.</p>"
+    },
+    {
+      "heading": "Vipengee vilivyopotea au vilivyoondolewa",
+      "html": "<p>Video zilizofutwa hutoka kwenye milisho baada ya muda. Kadi ambayo dondoo lake halijapatikana inaweza kusindika, kuzuiwa, au kuondolewa—endesha tena URL moja ya kutazama au tazama<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">kijipicha kidogo hakionekani</a>.</p>"
+    },
+    {
+      "heading": "Matumizi ya kimaadili",
+      "html": "<p>Kusoma vifungashio vya umma kwa ajili ya utafiti ndio matumizi yaliyokusudiwa. Kupakia tena sanaa maalum ya mshindani kwani kijipicha chako kinakiuka hakimiliki na sera ya mfumo. Mikopo ya njia katika maoni yaliyochapishwa; unganisha kurasa zao za kutazama. Sheria za tovuti:<a href=\"https://www.11tik.com/copyright\">Hakimiliki na Matumizi</a>.</p>"
+    },
+    {
+      "heading": "Uhusiano na uchimbaji wa kundi",
+      "html": "<p>Dondoo la kituo ni hali ya Bulk yenye ujazo wa awali wa RSS. Uthibitisho sawa wa upande wa mteja, kikomo sawa cha URL 25, usafirishaji sawa wa CSV/zip—hakuna chakavu cha kituo kisicho na kikomo na hakuna API ya faragha ya upande wa seva.</p>"
+    },
+    {
       "heading": "Je, ninaweza kupata vijipicha kutoka kwa kituo kizima cha YouTube?",
-      "html": "<p>Unaweza kupata picha za hivi punde<em>umma</em>vipakiaji vinavyofichua kitambulisho cha video. 11tik haichapi kila video ambayo kituo kimewahi kuchapisha na haiepuki uanachama. Kwenye ukurasa wa nyumbani, washa Bulk, bandika URL ya kituo kama vile<code>youtube.com/@handle</code>au<code>/channel/UC…</code>, na acha kifaa kipanue orodha ya umma ya mtindo wa RSS. Kisha toa kama ungefanya orodha iliyoandikwa. Kifuniko kinabaki na URL 25 kwa kila jaribio ili kivinjari kiendelee kutumika.</p>\n  <p>Hii ni tofauti na kuhifadhi kiungo kimoja cha saa. Mtiririko wa URL moja uko ndani<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">jinsi ya kupakua kijipicha cha YouTube</a>. Wingi wa mstari kwa mstari bila mfereji uko ndani<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">upakuaji wa kundi</a>.</p>"
+      "html": "<p>Unaweza kupata picha za hivi punde<em>umma</em>vipakiaji vinavyofichua kitambulisho cha video. 11tik haichapi kila video ambayo kituo kimewahi kuchapisha na haiepuki uanachama. Kwenye ukurasa wa nyumbani, washa Bulk, bandika URL ya kituo kama vile<code>youtube.com/@handle</code>au<code>/channel/UC…</code>, na uache kifaa kipanue orodha ya umma ya mtindo wa RSS. Kisha toa kama ungefanya orodha iliyoandikwa. Kikomo kinabaki na URL 25 kwa kila jaribio ili kivinjari kiendelee kutumika.</p>\n  <p>Hii ni tofauti na kuhifadhi kiungo kimoja cha saa. Mtiririko wa URL moja uko ndani<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">jinsi ya kupakua kijipicha cha YouTube</a>. Wingi wa mstari kwa mstari bila mfereji uko ndani<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">upakuaji wa kundi</a>.</p>"
     },
     {
       "heading": "Ni URL gani za chaneli zinazofanya kazi?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Kile ambacho 11tik hakitafanya",
-      "html": "<ul>\n    <li>Pakua video au sauti. Picha tu.</li>\n    <li>Orodhesha vipakiaji visivyoorodheshwa au vya faragha.</li>\n    <li>Hakikisha maxresdefault kwa kila video ya hivi karibuni. Vyanzo vya zamani au vidogo huishia kwenye hq au sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">chaguo-msingi la maxres</a>.</li>\n    <li>Toa haki za kutumia tena sanaa hiyo. Kusoma gridi ya vifungashio vya umma ndio matumizi ya utafiti yaliyokusudiwa. Kupakia tena picha ya mshindani kama kijipicha chako maalum ni tatizo la hakimiliki na sera.<a href=\"https://www.11tik.com/copyright\">Hakimiliki na Matumizi</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Pakua video au sauti. Picha tu.</li>\n    <li>Orodhesha vipakiaji visivyoorodheshwa au vya faragha.</li>\n    <li>Hakikisha maxresdefault kwa kila video ya hivi karibuni. Vyanzo vya zamani au vidogo huishia kwenye hq au sd.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">chaguo-msingi la maxres</a>.</li>\n    <li>Toa haki za kutumia tena sanaa hiyo. Kusoma gridi ya vifungashio vya umma ndio matumizi ya utafiti yaliyokusudiwa. Kupakia tena picha ya mshindani kama kijipicha chako maalum ni tatizo la hakimiliki na sera.<a href=\"https://www.11tik.com/copyright\">Hakimiliki na Matumizi</a>.</li>\n  </ul>"
     },
     {
       "heading": "Jinsi hii inavyosaidia utafiti bila kurasa za mlango",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Utatuzi wa matatizo",
-      "html": "<p>Orodha tupu: mlisho wa chaneli haukurudisha vitambulisho vya umma (chaneli iliyokatishwa, au kidhibiti ambacho kitatuzi hakikuweza kuorodhesha). Jaribu URL ya chaneli ya UC kutoka kwa mpangilio wa eneo-kazi la YouTube.</p>\n  <p>Baadhi ya kadi hazipo: upakiaji huo bado hauna umma, au lango limekataa dondoo lisilokamilika. Endesha tena URL moja ya saa. Faragha ya viungo vilivyobandikwa:<a href=\"https://www.11tik.com/p/privacy.html\">Faragha</a>.</p>\n  <p>Kitoaji dhidi ya kifaa cha usanifu: 11tik haitoi sanaa ya jalada.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Kitoaji dhidi ya mtengenezaji</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Dondoo picha za chaneli za umma kwenye 11tik →</a></p>\n  <p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/contact.html\">Mawasiliano</a>.</p>"
+      "html": "<p>Orodha tupu: mlisho wa chaneli haukurudisha vitambulisho vya umma (chaneli iliyokatishwa, au kidhibiti ambacho kitatuzi hakikuweza kuorodhesha). Jaribu URL ya chaneli ya UC kutoka kwa mpangilio wa eneo-kazi la YouTube.</p>\n  <p>Baadhi ya kadi hazipo: upakiaji huo bado hauna umma, au lango limekataa dondoo lisilokamilika. Endesha tena URL moja ya saa. Faragha ya viungo vilivyobandikwa:<a href=\"https://www.11tik.com/privacy\">Faragha</a>.</p>\n  <p>Kitoaji dhidi ya kifaa cha usanifu: 11tik haitoi sanaa ya jalada.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Kitoaji dhidi ya mtengenezaji</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Dondoo picha za chaneli za umma kwenye 11tik →</a></p>\n  <p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/about\">Kuhusu</a>·<a href=\"https://www.11tik.com/contact\">Mawasiliano</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>·<a href=\"https://www.11tik.com/p/contact.html\">Mawasiliano</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/about\">Kuhusu</a>·<a href=\"https://www.11tik.com/contact\">Mawasiliano</a>.</p>"
 }

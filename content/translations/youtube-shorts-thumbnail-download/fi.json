@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "fi",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Kuinka ladata YouTube-lyhytvideoiden pikkukuva HD-laadulla | 11tik",
   "description": "Lataa YouTube Shorts -videoiden pikkukuva selaimeen. Shorts-videoissa käytetään samoja julkisia still-kuvia kuin katselun URL-osoitteissa. Tiedosto on usein vaakasuuntainen.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Ovatko Shorts-tiedostot samoja kuin katselusivun tiedostot?",
-      "html": "<p>Ne käyttävät samoja julkisia kokonimiä, jotka on avattu videon tunnuksella. Still-kuva saattaa näyttää postilaatikkomaiselta, jos YouTube on tallentanut laajakuvaversion.</p>"
+      "html": "<p>Ne käyttävät samoja julkisia kokonimiä, jotka on avattu videon tunnuksella<code>i.ytimg.com</code>Still-kuva saattaa näyttää postilaatikkomaiselta, jos YouTube on tallentanut laajakuvamuunnelman. Lyhytvideoiden, katseluvideoiden ja youtu.be-linkkien URL-osoitteiden rakennetta käsitellään kohdassa<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>.</p>"
+    },
+    {
+      "heading": "Julkaisevatko Shorts aina maksimipisteitä?",
+      "html": "<p>Ei. Meidän<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon näyte</a>, maxresdefault validoitu kohteelle<strong>286/300</strong>Tunnukset (<strong>95,33 %</strong>);<strong>14/300</strong>Ilman maksimiarvoja olisi silti pätevä alempi yleisöarvo. Tämä on otospohjainen todiste varamenetelmän toiminnasta, ei universaali Shorts-sääntö.</p>"
     },
     {
       "heading": "Mitä jos kuvaa ei näy?",
-      "html": "<p>Lyhytvideo voi olla yksityinen, poistettu tai siinä voi olla julkisia still-kuvia. Poimija ei voi ohittaa näitä rajoituksia.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Lataaminen</a></p>"
+      "html": "<p>Lyhytvideo voi olla yksityinen, poistettu tai siinä voi olla julkisia still-kuvia. Poimija ei voi ohittaa näitä rajoituksia.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/about\">Noin</a>tai<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Lataaminen</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/about\">Noin</a>tai<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>"
 }

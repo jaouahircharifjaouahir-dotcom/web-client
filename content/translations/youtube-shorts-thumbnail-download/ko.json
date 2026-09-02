@@ -2,13 +2,13 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "ko",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "YouTube Shorts 썸네일을 HD 화질로 다운로드하는 방법 | 11tik",
-  "description": "YouTube Shorts의 미리보기 이미지를 브라우저에서 다운로드하세요. Shorts는 시청 URL과 동일한 공개 이미지를 사용합니다. 다운로드 파일은 일반적으로 가로 방향입니다.",
+  "description": "YouTube Shorts의 미리보기 이미지를 브라우저에서 다운로드하세요. Shorts는 시청 URL과 동일한 공개 이미지를 사용합니다. 다운로드 파일은 일반적으로 가로형입니다.",
   "h1": "고화질 유튜브 쇼츠 썸네일 다운로드 방법",
   "ogTitle": "고화질 유튜브 쇼츠 썸네일 다운로드 방법",
-  "ogDescription": "YouTube Shorts의 미리보기 이미지를 브라우저에서 다운로드하세요. Shorts는 시청 URL과 동일한 공개 이미지를 사용합니다. 다운로드 파일은 일반적으로 가로 방향입니다.",
+  "ogDescription": "YouTube Shorts의 미리보기 이미지를 브라우저에서 다운로드하세요. Shorts는 시청 URL과 동일한 공개 이미지를 사용합니다. 다운로드 파일은 일반적으로 가로형입니다.",
   "imageAlt": "11tik에서 공개 YouTube Shorts 썸네일을 다운로드합니다.",
   "faqHeading": "자주 묻는 질문",
   "images": [
@@ -24,12 +24,16 @@
       "html": "<p>/shorts/와 동영상 ID가 포함된 URL을 복사하여 붙여넣으세요.<a href=\"https://www.11tik.com/\">11tik</a>지정된 크기를 다운로드하세요. ID가 유효하면 압축 해제가 시작됩니다.</p>"
     },
     {
-      "heading": "Shorts 파일은 watch-page 파일과 같은 건가요?",
-      "html": "<p>이들은 동영상 ID를 기준으로 동일한 공개 크기 이름을 사용합니다. YouTube가 와이드스크린 버전을 저장한 경우 스틸 이미지가 레터박스 형태로 보일 수 있습니다.</p>"
+      "heading": "Shorts 파일은 watch-page 파일과 동일한가요?",
+      "html": "<p>그들은 비디오 ID를 키로 사용하는 동일한 공개 크기 이름을 사용합니다.<code>i.ytimg.com</code>YouTube에서 와이드스크린 버전을 저장한 경우 스틸 이미지가 레터박스 형태로 보일 수 있습니다. Shorts, watch 및 youtu.be 링크의 URL 구조는 youtu.be에서 다룹니다.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">썸네일 URL 가이드</a>.</p>"
+    },
+    {
+      "heading": "Shorts는 항상 최대 해상도를 게시하나요?",
+      "html": "<p>아니요. 저희 회사에서는요.<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300개 비디오 샘플</a>maxresdefault가 유효성 검사를 통과했습니다.<strong>300개 중 286개</strong>ID(<strong>95.33%</strong>); 그<strong>300개 중 14개</strong>maxres가 없더라도 여전히 유효한 더 낮은 공개 가격이 존재했습니다. 이는 샘플 범위의 증거일 뿐, 보편적인 공매도 규칙은 아닙니다.</p>"
     },
     {
       "heading": "이미지가 나타나지 않으면 어떻게 해야 하나요?",
-      "html": "<p>해당 단편 영상은 비공개이거나 삭제되었거나 공개된 스틸컷이 없을 수 있습니다. 추출기는 이러한 제한을 우회할 수 없습니다.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">다운로드 방법</a></p>"
+      "html": "<p>해당 단편 영상은 비공개이거나 삭제되었거나 공개된 스틸컷이 없을 수 있습니다. 추출기는 이러한 제한을 우회할 수 없습니다.</p>\n  <p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/about\">에 대한</a>또는<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">추출기</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">다운로드 방법</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>또는<a href=\"https://www.11tik.com/p/contact.html\">연락하다</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik(브라우저용 YouTube 썸네일 추출기 개발자)가 작성했습니다. 참조.<a href=\"https://www.11tik.com/about\">에 대한</a>또는<a href=\"https://www.11tik.com/contact\">연락하다</a>.</p>"
 }

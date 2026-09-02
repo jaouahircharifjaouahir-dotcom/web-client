@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "tl",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Paano kumuha ng mga thumbnail mula sa URL ng isang YouTube channel | 11tik",
   "description": "I-paste ang isang pampublikong URL ng YouTube channel sa 11tik Bulk para mapalawak ang mga kamakailang pampublikong upload, pagkatapos ay i-download ang bawat pinakamahusay na still. Ito ay para sa pananaliksik sa packaging, hindi para sa pag-clone ng custom art ng ibang channel.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "Saklaw ng pagtuklas ng RSS",
+      "html": "<p>Ginagamit ng pagpapalawak ng channel ang pampublikong feed ng channel ng YouTube (istilong RSS) para ilista ang mga kamakailang upload na may resolvable video ID. Ang feed na iyon ay sumasalamin sa<strong>mga pampublikong bagay na inilalantad ng YouTube</strong>—hindi lahat ng video ay na-upload, hindi rin ang mga post na para sa mga miyembro lamang, at hindi rin garantisadong kumpletong archive.</p>"
+    },
+    {
+      "heading": "Mga pampublikong bagay lamang",
+      "html": "<p>Ang mga pribado, hindi nakalistang-walang-pampublikong-mga-still, at mga upload na may age-gated ay karaniwang hindi lumalabas sa pinalawak na listahan. Ang walang laman na expansion ay karaniwang nangangahulugan na ang handle ay hindi nalutas, ang channel ay tinapos, o walang pampublikong ID ang ibinalik—hindi isang pagkabigo sa pag-scrape na 11tik.</p>"
+    },
+    {
+      "heading": "URL ng Channel vs. Mga tahasang URL ng panonood",
+      "html": "<p>Lumalawak ang isang linya ng channel sa maraming URL ng panonood bago kunin, napapailalim pa rin sa<strong>25-URL Bulk cap</strong>Ang pag-paste ng mga indibidwal na link sa panonood ay lumalaktaw sa pagtuklas ng RSS ngunit nagbibigay ng tumpak na kontrol. Ihambing sa line-by-line bulk:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">gabay sa pag-download nang maramihan</a>.</p>"
+    },
+    {
+      "heading": "Mga nawawala o inalis na item",
+      "html": "<p>Ang mga natanggal na video ay nawawala sa mga feed sa paglipas ng panahon. Ang card na hindi na-extract ay maaaring pinoproseso, pinaghihigpitan, o inalis—muling patakbuhin ang isang URL ng panonood o tingnan<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">hindi lumalabas ang thumbnail</a>.</p>"
+    },
+    {
+      "heading": "Etikal na paggamit",
+      "html": "<p>Ang layunin ay ang pag-aaral ng pampublikong packaging para sa pananaliksik. Ang muling pag-upload ng custom art ng isang kakumpitensya bilang iyong thumbnail ay lumalabag sa patakaran ng copyright at platform. I-credit ang mga channel sa nailathalang komentaryo; i-link ang kanilang mga pahina sa panonood. Mga panuntunan ng site:<a href=\"https://www.11tik.com/copyright\">Karapatang-ari at Paggamit</a>.</p>"
+    },
+    {
+      "heading": "Relasyon sa pagkuha ng batch",
+      "html": "<p>Ang channel extract ay Bulk mode na may RSS pre-fill. Parehong client-side validation, parehong 25-URL cap, parehong CSV/zip exports—walang unlimited channel scrape at walang server-side private API.</p>"
+    },
+    {
       "heading": "Makakakuha ba ako ng mga thumbnail mula sa isang buong channel sa YouTube?",
-      "html": "<p>Makakakuha ka ng mga still para sa pinakabago<em>publiko</em>mga upload na naglalantad ng video id. Hindi kinukunan ng 11tik ang bawat video na na-post ng isang channel at hindi nilalampasan ang mga membership. Sa homepage, i-on ang Bulk, i-paste ang URL ng channel tulad ng<code>youtube.com/@handle</code>o<code>/channel/UC…</code>, at hayaang palawakin ng tool ang pampublikong listahan na istilong RSS. Pagkatapos, i-extract gaya ng gagawin mo sa isang naka-type na listahan. Ang limitasyon ay nananatiling 25 URL bawat pagpapatakbo para manatiling magagamit ang browser.</p>\n  <p>Iba ito sa pag-save ng isang watch link. Ang single-URL flow ay nasa<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">paano mag-download ng thumbnail sa YouTube</a>. Ang line-by-line na bulk na walang channel ay nasa<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">pag-download nang maramihan</a>.</p>"
+      "html": "<p>Makakakuha ka ng mga still para sa pinakabago<em>publiko</em>mga upload na naglalantad ng video id. Hindi kinukunan ng 11tik ang bawat video na na-post ng isang channel at hindi nilalampasan ang mga membership. Sa homepage, i-on ang Bulk, i-paste ang URL ng channel tulad ng<code>youtube.com/@handle</code>o<code>/channel/UC…</code>, at hayaang palawakin ng tool ang pampublikong listahan na istilong RSS. Pagkatapos, i-extract gaya ng gagawin mo sa isang naka-type na listahan. Ang limitasyon ay nananatiling 25 URL bawat pagpapatakbo para manatiling magagamit ang browser.</p>\n  <p>Iba ito sa pag-save ng isang watch link. Ang single-URL flow ay nasa<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">paano mag-download ng thumbnail sa YouTube</a>. Ang line-by-line na bulk na walang channel ay nasa<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">pag-download nang maramihan</a>.</p>"
     },
     {
       "heading": "Aling mga URL ng channel ang gumagana?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Ano ang hindi gagawin ni 11tik",
-      "html": "<ul>\n    <li>I-download ang mga video o audio. Mga still lamang.</li>\n    <li>Ilista ang mga hindi nakalista o pribadong upload.</li>\n    <li>Garantiyadong maxresdefault para sa bawat kamakailang video. Ang mga luma o maliliit na source ay natatapos sa hq o sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Magbigay ng mga karapatan na muling gamitin ang sining. Ang pag-aaral ng isang grid ng pampublikong packaging ang nilalayong gamit sa pananaliksik. Ang muling pag-upload ng still ng isang kakumpitensya bilang iyong custom na thumbnail ay isang problema sa copyright at patakaran.<a href=\"https://www.11tik.com/copyright\">Karapatang-ari at Paggamit</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>I-download ang mga video o audio. Mga still lamang.</li>\n    <li>Ilista ang mga hindi nakalista o pribadong upload.</li>\n    <li>Garantiyadong maxresdefault para sa bawat kamakailang video. Ang mga luma o maliliit na source ay natatapos sa hq o sd.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Magbigay ng mga karapatan na muling gamitin ang sining. Ang pag-aaral ng isang grid ng pampublikong packaging ang nilalayong gamit sa pananaliksik. Ang muling pag-upload ng still ng isang kakumpitensya bilang iyong custom na thumbnail ay isang problema sa copyright at patakaran.<a href=\"https://www.11tik.com/copyright\">Karapatang-ari at Paggamit</a>.</li>\n  </ul>"
     },
     {
       "heading": "Paano ito nakakatulong sa pananaliksik nang walang mga doorway page",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Pag-troubleshoot",
-      "html": "<p>Walang laman na listahan: ang channel feed ay hindi nagbalik ng mga pampublikong ID (tinapos na channel, o isang handle na hindi ma-map ng resolver). Subukan ang URL ng UC channel mula sa desktop layout ng YouTube.</p>\n  <p>Nawawala ang ilang card: wala pang naka-public sa mga upload na iyon, o tinanggihan ng gate ang isang hindi kumpletong extract. Patakbuhin muli ang isang watch URL. Privacy ng mga na-paste na link:<a href=\"https://www.11tik.com/p/privacy.html\">Pagkapribado</a>.</p>\n  <p>Kagamitang pang-extractor vs. tool sa disenyo: Hindi lumilikha ng cover art ang 11tik.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Tagabunot vs tagagawa</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">I-extract ang mga pampublikong channel still sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+      "html": "<p>Walang laman na listahan: ang channel feed ay hindi nagbalik ng mga pampublikong ID (tinapos na channel, o isang handle na hindi ma-map ng resolver). Subukan ang URL ng UC channel mula sa desktop layout ng YouTube.</p>\n  <p>May ilang nawawalang card: wala pang naka-public sa mga upload na iyon, o tinanggihan ng gate ang isang hindi kumpletong extract. Patakbuhin muli ang isang watch URL. Privacy ng mga na-paste na link:<a href=\"https://www.11tik.com/privacy\">Pagkapribado</a>.</p>\n  <p>Kagamitang pang-extractor vs. tool sa disenyo: Hindi lumilikha ng cover art ang 11tik.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Tagabunot vs tagagawa</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">I-extract ang mga pampublikong channel still sa 11tik →</a></p>\n  <p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/about\">Tungkol sa</a>·<a href=\"https://www.11tik.com/contact\">Makipag-ugnayan</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>·<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik.<a href=\"https://www.11tik.com/about\">Tungkol sa</a>·<a href=\"https://www.11tik.com/contact\">Makipag-ugnayan</a>.</p>"
 }

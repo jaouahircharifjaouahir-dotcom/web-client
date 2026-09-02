@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "fi",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Pikkukuvien poimiminen YouTube-kanavan URL-osoitteesta | 11tik",
   "description": "Liitä julkinen YouTube-kanavan URL-osoite 11tik Bulk-tiedostoon laajentaaksesi viimeisimmät julkiset lataukset ja lataa sitten kukin paras still-kuva. Tämä on tarkoitettu pakkausten tutkimukseen, ei toisen kanavan mukautetun taiteen kloonaamiseen.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS-löytöjen laajuus",
+      "html": "<p>Kanavan laajennus käyttää YouTuben julkista kanavasyötettä (RSS-tyyliin) listatakseen viimeisimmät lataukset ja niiden videotunnuksen, joka on erotettavissa. Syöte heijastaa<strong>YouTuben paljastamat julkiset kohteet</strong>—ei jokaista koskaan ladattua videota, ei jäsenille tarkoitettuja julkaisuja eikä taattua arkiston täydellisyyttä.</p>"
+    },
+    {
+      "heading": "Vain julkiset kohteet",
+      "html": "<p>Yksityiset, listaamattomat-ilman-julkisia-still-kuvia ja ikärajoitettuja latauksia ei yleensä näy laajennetussa luettelossa. Tyhjä laajennus tarkoittaa yleensä sitä, että kahvaa ei ratkaistu, kanava on suljettu tai julkisia tunnuksia ei palautettu – ei 11tik-kaavausvirhettä.</p>"
+    },
+    {
+      "heading": "Kanavan URL-osoite vs. eksplisiittiset katselu-URL-osoitteet",
+      "html": "<p>Yksi kanavarivi laajenee useiksi katselu-URL-osoitteiksi ennen poimintaa, edelleen ehtojen mukaisesti<strong>25 URL-osoitteen joukkorajoitus</strong>Yksittäisten katselulinkkien liittäminen ohittaa RSS-syötteen löytämisen, mutta antaa tarkan hallinnan. Vertaa rivi riviltä joukkolataukseen:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">erälatausopas</a>.</p>"
+    },
+    {
+      "heading": "Puuttuvat tai poistetut kohteet",
+      "html": "<p>Poistetut videot poistuvat syötteistä ajan myötä. Kortti, jonka poiminta epäonnistuu, saattaa olla käsittelyssä, rajoitettu tai poistettu – suorita yksi katseluosoite uudelleen tai katso<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">pikkukuva ei näy</a>.</p>"
+    },
+    {
+      "heading": "Eettinen käyttö",
+      "html": "<p>Julkisten pakkausten tutkiminen tutkimustarkoituksiin on aiottu käyttötarkoitus. Kilpailijan mukautetun taiteen uudelleenlataaminen pikkukuvana rikkoo tekijänoikeus- ja alustakäytäntöjä. Mainitse kanavat julkaistuissa kommenteissa; linkitä heidän katselusivunsa. Sivuston säännöt:<a href=\"https://www.11tik.com/copyright\">Tekijänoikeudet ja käyttö</a>.</p>"
+    },
+    {
+      "heading": "Suhde erän poimimiseen",
+      "html": "<p>Kanavien poiminta tapahtuu joukkotilassa RSS-esitäytteellä. Sama asiakaspuolen validointi, sama 25 URL-osoitteen rajoitus, samat CSV/zip-viennit – ei rajatonta kanavien poimintaa eikä palvelinpuolen yksityistä API:a.</p>"
+    },
+    {
       "heading": "Voinko saada pikkukuvia koko YouTube-kanavalta?",
-      "html": "<p>Voit saada still-kuvia uusimmista<em>julkinen</em>lataukset, jotka paljastavat videotunnuksen. 11tik ei kaavi kaikkia kanavan koskaan julkaisemia videoita eikä ohita jäsenyyksiä. Ota etusivulla käyttöön joukkolataus ja liitä kanavan URL-osoite, kuten<code>youtube.com/@handle</code>tai<code>/channel/UC…</code>ja anna työkalun laajentaa julkinen RSS-tyylinen lista. Pura se sitten samalla tavalla kuin kirjoitettu lista. Enimmäismäärä URL-osoitteita on 25 per suorituskerta, jotta selain pysyy käyttökelpoisena.</p>\n  <p>Tämä eroaa yhden katselulinkin tallentamisesta. Yhden URL-osoitteen työnkulku on<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Kuinka ladata YouTube-pikkukuva</a>Rivi kerrallaan tapahtuva joukkolaskenta ilman kanavaa on<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">erälataus</a>.</p>"
+      "html": "<p>Voit saada still-kuvia uusimmista<em>julkinen</em>lataukset, jotka paljastavat videotunnuksen. 11tik ei kaavi kaikkia kanavan koskaan julkaisemia videoita eikä ohita jäsenyyksiä. Ota etusivulla käyttöön joukkolataus ja liitä kanavan URL-osoite, kuten<code>youtube.com/@handle</code>tai<code>/channel/UC…</code>ja anna työkalun laajentaa julkinen RSS-tyylinen lista. Pura se sitten samalla tavalla kuin kirjoitettu lista. Enimmäismäärä URL-osoitteita on 25 per suorituskerta, jotta selain pysyy käyttökelpoisena.</p>\n  <p>Tämä eroaa yhden katselulinkin tallentamisesta. Yhden URL-osoitteen työnkulku on<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Kuinka ladata YouTube-pikkukuva</a>Rivi kerrallaan tapahtuva joukkolaskenta ilman kanavaa on<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">erälataus</a>.</p>"
     },
     {
       "heading": "Mitkä kanavien URL-osoitteet toimivat?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Mitä 11tik ei tee",
-      "html": "<ul>\n    <li>Lataa videoita tai äänitiedostoja. Vain still-kuvia.</li>\n    <li>Listaa listaamattomat tai yksityiset lataukset.</li>\n    <li>Taattu maxresdefault-arvo jokaiselle uusimmalle videolle. Vanhemmat tai pienemmät lähteet pysähtyvät HQ- tai SD-laatuun.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maksimioletusarvo</a>.</li>\n    <li>Myönnä oikeudet taideteoksen uudelleenkäyttöön. Tutkimustarkoituksena on tutkia julkisten pakkausten ruudukkoa. Kilpailijan still-kuvan uudelleenlataaminen omana pienoiskuvana on tekijänoikeus- ja käytäntöongelma.<a href=\"https://www.11tik.com/copyright\">Tekijänoikeudet ja käyttö</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Lataa videoita tai äänitiedostoja. Vain still-kuvia.</li>\n    <li>Listaa listaamattomat tai yksityiset lataukset.</li>\n    <li>Taattu maxresdefault jokaiselle uusimmalle videolle. Vanhemmat tai pienemmät lähteet pysähtyvät HQ- tai SD-laatuun.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maksimioletusarvo</a>.</li>\n    <li>Myönnä oikeudet taideteoksen uudelleenkäyttöön. Tutkimustarkoituksena on tutkia julkisten pakkausten ruudukkoa. Kilpailijan still-kuvan uudelleenlataaminen omana pienoiskuvana on tekijänoikeus- ja käytäntöongelma.<a href=\"https://www.11tik.com/copyright\">Tekijänoikeudet ja käyttö</a>.</li>\n  </ul>"
     },
     {
       "heading": "Näin tämä auttaa tutkimusta ilman porttisivuja",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Vianmääritys",
-      "html": "<p>Tyhjä lista: kanavasyöte ei palauttanut julkisia tunnuksia (katkaistu kanava tai tunniste, jota ratkaisija ei pystynyt yhdistämään). Kokeile UC-kanavan URL-osoitetta YouTuben työpöytäasettelussa.</p>\n  <p>Joitakin kortteja puuttuu: näillä latauksilla ei ole vielä julkista kuvaa tai portti hylkäsi epätäydellisen otteen. Suorita yksittäinen katseluosoite uudelleen. Liitettyjen linkkien tietosuoja:<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>.</p>\n  <p>Extractor vs. suunnittelutyökalu: 11tik ei luo kansikuvia.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Uutin vs. valmistaja</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ota julkisen kanavan still-kuvia 11tik → -palvelusta</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+      "html": "<p>Tyhjä lista: kanavasyöte ei palauttanut julkisia tunnuksia (katkaistu kanava tai tunniste, jota ratkaisija ei pystynyt yhdistämään). Kokeile UC-kanavan URL-osoitetta YouTuben työpöytäasettelussa.</p>\n  <p>Joitakin kortteja puuttuu: näillä latauksilla ei ole vielä julkista kuvaa tai portti hylkäsi epätäydellisen otteen. Suorita yksittäinen katseluosoite uudelleen. Liitettyjen linkkien tietosuoja:<a href=\"https://www.11tik.com/privacy\">Tietosuoja</a>.</p>\n  <p>Extractor vs. suunnittelutyökalu: 11tik ei luo kansikuvia.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Uutin vs. valmistaja</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ota julkisen kanavan still-kuvia 11tik → -palvelusta</a></p>\n  <p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>·<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Kirjoittanut 11tik.<a href=\"https://www.11tik.com/about\">Noin</a>·<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>"
 }

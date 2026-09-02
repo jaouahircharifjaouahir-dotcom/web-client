@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "ro",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Cum să descarci o miniatură a unui videoclip YouTube Shorts în HD | 11tik",
   "description": "Descarcă o miniatură YouTube Shorts în browser. Shorts folosesc aceleași imagini publice ca și adresele URL de vizionare. Fișierul este adesea în modul peisaj.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Fișierele Shorts sunt aceleași cu fișierele paginilor de vizionare?",
-      "html": "<p>Folosesc aceleași nume de dimensiuni publice, codificate prin ID-ul videoclipului. Imaginea statică ar putea părea în format letterbox dacă YouTube a stocat o versiune derivată pentru ecran lat.</p>"
+      "html": "<p>Folosesc aceleași nume de dimensiuni publice, introduse prin ID-ul video pe<code>i.ytimg.com</code>Imaginea statică ar putea părea în format letterbox dacă YouTube a stocat o versiune derivată pentru ecran lat. Anatomia URL-urilor pentru Shorts, Watch și link-uri youtu.be este prezentată în<a href=\"https://www.11tik.com/youtube-thumbnail-url\">ghid pentru URL-uri miniatură</a>.</p>"
+    },
+    {
+      "heading": "Publică Shorts întotdeauna rezoluții maxime?",
+      "html": "<p>Nu. În al nostru<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">eșantion de 300 de videoclipuri</a>, maxresdefault validat pentru<strong>286 din 300</strong>ID-uri (<strong>95,33%</strong>); cel/cea/cei/cele<strong>14 din 300</strong>fără maxres, tot ar fi avut un public inferior valid. Aceasta este o dovadă cu eșantionare pentru comportamentul de rezervă, nu o regulă universală Shorts.</p>"
     },
     {
       "heading": "Ce se întâmplă dacă nu apare nicio imagine?",
-      "html": "<p>Scurtmetrajul poate fi privat, șters sau fără imagini publice. Extractorul nu poate ocoli aceste limite.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Cum se descarcă</a></p>"
+      "html": "<p>Scurtmetrajul poate fi privat, șters sau fără imagini publice. Extractorul nu poate ocoli aceste limite.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/about\">Despre</a>sau<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Cum se descarcă</a></p>"
     }
   ],
   "faq": [
@@ -39,11 +43,11 @@
       "answerHtml": "Da, când YouTube a publicat imagini statice publice pentru ID-ul videoclipului Shorts respectiv."
     },
     {
-      "question": "De ce arată imaginea în stare statică ca într-o cutie poștală?",
+      "question": "De ce arată imaginea în continuare ca într-o cutie poștală?",
       "answer": "YouTube poate stoca o variantă derivată 16:9 chiar și pentru un scurtmetraj vertical. 11tik afișează fișierul găzduit în loc să inventeze o decupare.",
       "answerHtml": "YouTube poate stoca o variantă derivată 16:9 chiar și pentru un scurtmetraj vertical. 11tik afișează fișierul găzduit în loc să inventeze o decupare."
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/about\">Despre</a>sau<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

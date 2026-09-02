@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "fa",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "چگونه یک تصویر کوچک از ویدیوهای کوتاه یوتیوب را با کیفیت HD دانلود کنیم | 11tik",
   "description": "یک تصویر کوچک از ویدیوهای کوتاه یوتیوب را در مرورگر دانلود کنید. ویدیوهای کوتاه از همان تصاویر عمومی URLهای تماشا استفاده می‌کنند. این فایل اغلب افقی است.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "آیا فایل‌های Shorts همان فایل‌های watch-page هستند؟",
-      "html": "<p>آنها از همان نام‌های با اندازه عمومی استفاده می‌کنند که با شناسه ویدیو کلیدگذاری شده‌اند. اگر یوتیوب یک نسخه مشتق شده از آن را به صورت عریض ذخیره کند، ممکن است تصویر ثابت با حروف بزرگ نمایش داده شود.</p>"
+      "html": "<p>آنها از همان نام‌های اندازه عمومی استفاده می‌کنند که با شناسه ویدیویی مشخص شده‌اند<code>i.ytimg.com</code>اگر یوتیوب یک مشتق صفحه عریض را ذخیره کند، ممکن است تصویر ثابت با کادر حروف بزرگ به نظر برسد. آناتومی URL برای لینک‌های Shorts، watch و youtu.be در [بخش] توضیح داده شده است.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">راهنمای URL تصویر بندانگشتی</a>.</p>"
+    },
+    {
+      "heading": "آیا Shorts همیشه maxres منتشر می‌کند؟",
+      "html": "<p>نه. در ما<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">نمونه ۳۰۰ ویدیویی</a>، maxresdefault برای آن اعتبارسنجی شده است<strong>۲۸۶ از ۳۰۰</strong>شناسه‌ها (<strong>۹۵.۳۳٪</strong>)؛<strong>۱۴ از ۳۰۰</strong>بدون maxres هنوز هم یک مقدار عمومی پایین‌تر معتبر داشت. این یک مدرک نمونه-محدود برای رفتار جایگزین است، نه یک قانون جهانی Shorts.</p>"
     },
     {
       "heading": "اگر تصویری ظاهر نشود چه؟",
-      "html": "<p>این شورت می‌تواند خصوصی، حذف شده یا بدون تصاویر ثابت عمومی باشد. استخراج‌کننده نمی‌تواند از این محدودیت‌ها عبور کند.</p>\n  <p class=\"yte-bio\">نوشته شده توسط 11tik، ناشر ابزار استخراج تصاویر بندانگشتی یوتیوب در مرورگر. ببینید<a href=\"https://www.11tik.com/p/about.html\">درباره</a>یا<a href=\"https://www.11tik.com/p/contact.html\">تماس</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">استخراج کننده</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">چگونه دانلود کنیم</a></p>"
+      "html": "<p>این شورت می‌تواند خصوصی، حذف شده یا بدون تصاویر ثابت عمومی باشد. استخراج‌کننده نمی‌تواند از این محدودیت‌ها عبور کند.</p>\n  <p class=\"yte-bio\">نوشته شده توسط 11tik، ناشر ابزار استخراج تصاویر بندانگشتی یوتیوب در مرورگر. ببینید<a href=\"https://www.11tik.com/about\">درباره</a>یا<a href=\"https://www.11tik.com/contact\">تماس</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">استخراج کننده</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">چگونه دانلود کنیم</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">نوشته شده توسط 11tik، ناشر ابزار استخراج تصاویر بندانگشتی یوتیوب در مرورگر. ببینید<a href=\"https://www.11tik.com/p/about.html\">درباره</a>یا<a href=\"https://www.11tik.com/p/contact.html\">تماس</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">نوشته شده توسط 11tik، ناشر ابزار استخراج تصاویر بندانگشتی یوتیوب در مرورگر. ببینید<a href=\"https://www.11tik.com/about\">درباره</a>یا<a href=\"https://www.11tik.com/contact\">تماس</a>.</p>"
 }

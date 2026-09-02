@@ -99,21 +99,21 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
   it("normalizes locale article and utility locs; rejects homes and foreign hosts", () => {
     expect(
       normalizeTrustedLocaleSitemapLoc(
-        "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html",
+        "https://fr.11tik.com/l/fr/11tik-share-links-thumb-vs-youtube",
       ),
-    ).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
-    expect(normalizeTrustedLocaleSitemapLoc("https://fr.11tik.com/l/fr/p/about.html")).toBe(
-      "https://fr.11tik.com/l/fr/p/about.html",
+    ).toBe("https://fr.11tik.com/l/fr/11tik-share-links-thumb-vs-youtube");
+    expect(normalizeTrustedLocaleSitemapLoc("https://fr.11tik.com/l/fr/about")).toBe(
+      "https://fr.11tik.com/l/fr/about",
     );
     expect(normalizeTrustedLocaleSitemapLoc("https://fr.11tik.com/l/fr/")).toBeNull();
-    expect(normalizeTrustedLocaleSitemapLoc("https://evil.com/l/fr/2026/08/x.html")).toBeNull();
+    expect(normalizeTrustedLocaleSitemapLoc("https://evil.com/l/fr/how-to-download-youtube-thumbnail")).toBeNull();
   });
 
   it("generates ready localized pages for all target languages", () => {
     const dir = getStagedStaticSite();
     const manifest = scanPublishability();
-      const frRel = "l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html";
-      const arRel = "l/ar/2026/08/how-to-download-youtube-thumbnail.html";
+      const frRel = "l/fr/11tik-share-links-thumb-vs-youtube.html";
+      const arRel = "l/ar/how-to-download-youtube-thumbnail.html";
       expect(existsSync(join(dir, frRel))).toBe(true);
       expect(existsSync(join(dir, arRel))).toBe(true);
       const pub = JSON.parse(readFileSync(join(dir, "web-client/i18n/publishability.json"), "utf8"));
@@ -122,10 +122,10 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
       );
       const locs = parseSitemapLocs(readFileSync(join(dir, "sitemap.xml"), "utf8"));
       const localeArticleLocs = locs.filter((loc) =>
-        /https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/.+\.html$/.test(loc),
+        /https:\/\/[a-z]{2}\.11tik\.com\/l\/[a-z]{2}\/[a-z0-9-]+(?:-[a-z0-9]+)*$/.test(loc),
       );
       expect(localeArticleLocs).toHaveLength(manifest.counts.ready);
-      // Non-target ISO homes (e.g. aa) may appear as /l/aa/ shells, never as .html articles.
+      // Non-target ISO homes (e.g. aa) may appear as /l/aa/ shells, never as localized articles.
       expect(localeArticleLocs.some((loc) => loc.includes("/l/aa/"))).toBe(false);
       expect(locs).toContain("https://aa.11tik.com/l/aa/");
       expect(readFileSync(join(dir, "robots.txt"), "utf8")).toContain("Allow: /");
@@ -133,19 +133,19 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
 
   it("redirect helper prefers ready browser locale and preserves explicit choice", () => {
     const ready = {
-      fr: "https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html",
-      es: "https://es.11tik.com/l/es/2026/08/11tik-share-links-thumb-vs-youtube.html",
+      fr: "https://fr.11tik.com/l/fr/11tik-share-links-thumb-vs-youtube",
+      es: "https://es.11tik.com/l/es/11tik-share-links-thumb-vs-youtube",
     };
     expect(
       shouldRedirectToLocale({
-        pathname: "/2026/08/11tik-share-links-thumb-vs-youtube.html",
+        pathname: "/11tik-share-links-thumb-vs-youtube",
         browserLanguages: ["fr-FR", "en"],
         readyLocales: ready,
       }),
     ).toBe(ready.fr);
     expect(
       shouldRedirectToLocale({
-        pathname: "/2026/08/11tik-share-links-thumb-vs-youtube.html",
+        pathname: "/11tik-share-links-thumb-vs-youtube",
         savedLang: "de",
         browserLanguages: ["fr"],
         readyLocales: ready,
@@ -153,7 +153,7 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
     ).toBeNull();
     expect(
       shouldRedirectToLocale({
-        pathname: "/2026/08/11tik-share-links-thumb-vs-youtube.html",
+        pathname: "/11tik-share-links-thumb-vs-youtube",
         browserLanguages: ["aa", "fr"],
         readyLocales: ready,
       }),
@@ -168,13 +168,13 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
       "fr",
       index,
     );
-    expect(href).toBe("https://fr.11tik.com/l/fr/2026/08/11tik-share-links-thumb-vs-youtube.html");
+    expect(href).toBe("https://fr.11tik.com/l/fr/11tik-share-links-thumb-vs-youtube");
     const withHash = rewriteInternalHref(
-      "https://www.11tik.com/2026/08/11tik-share-links-thumb-vs-youtube.html#faq",
+      "https://www.11tik.com/p/about.html#faq",
       "ar",
       index,
     );
-    expect(withHash).toBe("https://ar.11tik.com/l/ar/2026/08/11tik-share-links-thumb-vs-youtube.html#faq");
+    expect(withHash).toBe("https://ar.11tik.com/l/ar/about#faq");
   });
 
   it("localizes internal body links in generated HTML", () => {
@@ -182,7 +182,7 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
     const manifest = scanPublishability();
       const pathIndex = buildPathLinkIndex(manifest.contents);
       const arHtml = readFileSync(
-        join(dir, "l/ar/2026/08/how-to-download-youtube-thumbnail.html"),
+        join(dir, "l/ar/how-to-download-youtube-thumbnail.html"),
         "utf8",
       );
       const audit = classifyInternalLinksInHtml(arHtml, "ar", pathIndex);
@@ -190,20 +190,15 @@ describe("generalized multilingual i18n system (TARGET_LANGUAGES)", () => {
       expect(audit.localized).toBeGreaterThan(0);
       expect(audit.broken).toBe(0);
       expect(audit.incorrect).toBe(0);
-      expect(arHtml).toContain("https://ar.11tik.com/l/ar/2026/08/youtube-thumbnail-url.html");
+      expect(arHtml).toContain("https://ar.11tik.com/l/ar/youtube-thumbnail-url");
       expect(arHtml).not.toMatch(
         /<article[\s\S]*https:\/\/www\.11tik\.com\/2026\/08\/youtube-thumbnail-url\.html/,
       );
   });
 
-  it("run_worker_first includes /l/* for locale homes, not article subpaths", () => {
+  it("run_worker_first uses Phase 53 catch-all with exclusions", () => {
     const raw = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
-    // Phase 6D: English /2026/* Worker-first for hard 404 on miss.
-    expect(raw).toContain('"/2026/*"');
-    // Phase 2B: /p/* Worker-first with six utility .html exclusions.
-    expect(raw).toContain('"/p/*"');
-    expect(raw).toContain('"!/p/about.html"');
-    expect(raw).toContain('"/l/*"');
-    expect(raw).not.toMatch(/"\/l\/\*\/2026\/\*\.html"/);
+    expect(raw).toContain('"/*"');
+    expect(raw).toContain('"!/web-client/*"');
   });
 });

@@ -13,7 +13,7 @@
     {
       "question": "Mitä YouTube-URL-osoitteita 11tik tukee?",
       "answer": "Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu tai youtu.be-lyhytlinkki. Työkalu lukee videotunnuksen polusta ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo mallien oppaasta.",
-      "answerHtml": "Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu tai youtu.be-lyhytvideolinkki. Työkalu lukee videotunnuksen polusta ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo malleista.<a href=\"https://fi.11tik.com/l/fi/2026/08/youtube-thumbnail-url.html\">pikkukuvan URL-opas</a>."
+      "answerHtml": "Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu tai youtu.be-lyhytvideolinkki. Työkalu lukee videotunnuksen polusta ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo malleista.<a href=\"https://fi.11tik.com/l/fi/youtube-thumbnail-url\">pikkukuvan URL-opas</a>."
     },
     {
       "question": "Lataako 11tik pikkukuvani tai videoni?",
@@ -23,12 +23,12 @@
     {
       "question": "Voinko ladata pikkukuvia YouTube Shortsista?",
       "answer": "Kyllä. Lyhytvideolinkit käyttävät samoja julkisia kuvapalveluita kuin tavalliset videot, joten voit liittää /shorts/-URL-osoitteen ja ladata parhaan mahdollisen still-kuvan. Esikatselu saattaa näyttää leveämmältä kuin katsomasi pystysuora klippi, koska YouTube tallentaa maisemakuvan. Yksityiset tai ikärajoitetut lyhytvideot, joilla ei ole julkista pikkukuvaa, eivät palauta tiedostoa. Katso vaiheittaiset ohjeet lyhytvideoiden pikkukuvien oppaasta.",
-      "answerHtml": "Kyllä. Lyhytvideolinkit käyttävät samoja julkisia kuvapalvelimia kuin tavalliset videot, joten voit liittää /shorts/-URL-osoitteen ja ladata parhaan mahdollisen still-kuvan. Esikatselu saattaa näyttää leveämmältä kuin katsomasi pystysuora klippi, koska YouTube tallentaa maisemakuvan. Yksityiset tai ikärajoitetut lyhytvideot, joilla ei ole julkista pikkukuvaa, eivät palauta tiedostoa. Katso<a href=\"https://fi.11tik.com/l/fi/2026/08/youtube-shorts-thumbnail-download.html\">Lyhytkuvien pikkukuvien opas</a>vaiheittaista apua varten."
+      "answerHtml": "Kyllä. Lyhytvideolinkit käyttävät samoja julkisia kuvapalvelimia kuin tavalliset videot, joten voit liittää /shorts/-URL-osoitteen ja ladata parhaan mahdollisen still-kuvan. Esikatselu saattaa näyttää leveämmältä kuin katsomasi pystysuora klippi, koska YouTube tallentaa maisemakuvan. Yksityiset tai ikärajoitetut lyhytvideot, joilla ei ole julkista pikkukuvaa, eivät palauta tiedostoa. Katso<a href=\"https://fi.11tik.com/l/fi/youtube-shorts-thumbnail-download\">Lyhytkuvien pikkukuvien opas</a>vaiheittaista apua varten."
     },
     {
       "question": "Mitä tapahtuu, kun parasta pikkukuvan laatua ei ole saatavilla?",
       "answer": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Lisätietoja maxres 404 -virheistä ja varamenetelmistä on maxresdefault-oppaassa.",
-      "answerHtml": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Lisätietoja maxres 404 -virheiden syistä ja varamenetelmien toiminnasta on kohdassa<a href=\"https://fi.11tik.com/l/fi/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-opas</a>."
+      "answerHtml": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Lisätietoja maxres 404 -virheiden syistä ja varamenetelmien toiminnasta on kohdassa<a href=\"https://fi.11tik.com/l/fi/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-opas</a>."
     }
   ],
   "articleId": "home-faq"

@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "nl",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Studio miniatuur 2026 | 11tik",
   "description": "In 2026 uploaden in aanmerking komende YouTube-kanalen nog steeds een aangepaste miniatuurafbeelding vanuit Studio op de detailpagina van een video. Menulabels verschuiven, maar het resultaat blijft hetzelfde: YouTube host een nieuwe openbare afbeelding. 11tik uploadt dat bestand niet. Het leest alleen openbare afbeeldings-URL's nadat ze bestaan.",
@@ -21,11 +21,15 @@
   "sections": [
     {
       "heading": "Hoe upload ik een aangepaste miniatuurafbeelding in YouTube Studio?",
-      "html": "<ol>\n    <li>Open YouTube Studio en selecteer de video.</li>\n    <li>Upload bij Details een afbeelding met een beeldverhouding van 16:9 (de gebruikelijke resolutie voor YouTube is 1280×720).</li>\n    <li>Sla het bestand op en wacht tot de verwerking is voltooid.</li>\n  </ol>\n  <p>De exacte namen van de knoppen kunnen veranderen. Als uw account niet in aanmerking komt voor aangepaste miniaturen, biedt Studio de upload niet aan. 11tik kan dat niet omzeilen.</p>"
+      "html": "<ol>\n    <li>Open YouTube Studio en selecteer de video.</li>\n    <li>Upload bij Details een afbeelding met een beeldverhouding van 16:9 (YouTube gebruikt doorgaans een resolutie van 1280×720).</li>\n    <li>Sla het bestand op en wacht tot de verwerking is voltooid.</li>\n  </ol>\n  <p>De exacte namen van de knoppen kunnen veranderen. Als uw account niet in aanmerking komt voor aangepaste miniaturen, biedt Studio de upload niet aan. 11tik kan dat niet omzeilen.</p>"
+    },
+    {
+      "heading": "Diagnostische boom: Studiowijziging versus openbare versie",
+      "html": "<ol>\n    <li>Nadat je je eigen artwork in Studio hebt geüpload, wacht je tot de verwerking is voltooid.</li>\n    <li>Plak de URL van de openbare watch in<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Sommige formaten worden weergegeven, maar de maximale resolutie ontbreekt?</strong>→ variant-/terugvalprobleem, geen mislukte Studio-upload. Zie<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault uitgelegd</a>.</li>\n    <li><strong>Helemaal geen maten?</strong>→ De video wordt mogelijk nog verwerkt, is privé of beperkt voor openbare CDN-afbeeldingen. Zie<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniatuurafbeelding wordt niet weergegeven</a>.</li>\n  </ol>"
     },
     {
       "heading": "Hoe kan ik een miniatuurafbeelding controleren nadat ik deze in Studio heb gewijzigd?",
-      "html": "<p>Plak de URL van het horloge in het volgende veld:<a href=\"https://www.11tik.com/\">11tik</a>Download of kopieer de eerstgenoemde grootte. Als maxresdefault ontbreekt, is het volgende openbare bestand de werkelijke maximale grootte. Dit is de catalogus van YouTube, geen mislukte extractie. Zie ook<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault uitgelegd</a>.</p>"
+      "html": "<p>Plak de URL van het horloge in het volgende veld:<a href=\"https://www.11tik.com/\">11tik</a>Download of kopieer de eerstgenoemde grootte. Als maxresdefault ontbreekt, is het volgende openbare bestand de werkelijke maximale grootte. Dit is de catalogus van YouTube, geen mislukte extractie. Zie ook<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault uitgelegd</a>.</p>"
     },
     {
       "heading": "Vervangt 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Wat moet ik doen als de afbeelding er verouderd uitziet?",
-      "html": "<p>Afbeelding-CDN's kunnen vertraging oplopen. Controleer later opnieuw, vernieuw de pagina of kopieer de URL 11tik bevestigt. Ga er niet vanuit dat het een 4K-master is; de maximale resolutie voor publieke afbeeldingen is meestal 1280×720. Een screenshot van Studio is niet het publieke miniatuurbestand.</p>\n  <p>Verwant:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">extractor versus maker</a>.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Open de afzuiger.</a></p>"
+      "html": "<p>Afbeelding-CDN's kunnen vertraging oplopen. Controleer later opnieuw, vernieuw de pagina of kopieer de URL 11tik bevestigt. Ga er niet vanuit dat het een 4K-master is; de maximale resolutie voor publieke afbeeldingen is meestal 1280×720. Een screenshot van Studio is niet het publieke miniatuurbestand.</p>\n  <p>Verwant:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">extractor versus maker</a>.</p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/about\">Over</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Open de afzuiger.</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/about\">Over</a>.</p>"
 }

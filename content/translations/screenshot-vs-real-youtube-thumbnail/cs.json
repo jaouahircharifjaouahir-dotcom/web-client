@@ -25,7 +25,7 @@
     },
     {
       "heading": "Proč selhávají snímky obrazovky v Google Images a náhledech na sociálních sítích?",
-      "html": "<p>Často mají špatný poměr stran, zahrnují uživatelské rozhraní a dvakrát se komprimují. Open Graph a mnoho polí CMS vyžaduje statický záběr 16:9 s rozlišením přibližně 1280×720. To odpovídá maxresdefault, pokud existuje – viz<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">průvodce velikostmi miniatur</a>.</p>"
+      "html": "<p>Často mají špatný poměr stran, zahrnují uživatelské rozhraní a dvakrát se komprimují. Open Graph a mnoho polí CMS vyžaduje statický záběr 16:9 s rozlišením přibližně 1280×720. To odpovídá maxresdefault, pokud existuje – viz<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">průvodce velikostmi miniatur</a>.</p>"
     },
     {
       "heading": "Jak si uložím skutečnou miniaturu?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Kdy je snímek obrazovky stále užitečný?",
-      "html": "<p>Snímek obrazovky používejte pouze k zdokumentování chyby v uživatelském rozhraní nebo momentu ve videu. Nepoužívejte jej jako oficiální miniaturu, obrázek blogu ani obrázek pro sdílení, pokud stále existuje veřejný obrázek.</p>\n  <p><a href=\"https://www.11tik.com/\">Získejte skutečnou veřejnou miniaturu →</a></p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+      "html": "<p>Snímek obrazovky používejte pouze k zdokumentování chyby v uživatelském rozhraní nebo momentu ve videu. Nepoužívejte jej jako oficiální miniaturu, obrázek blogu ani obrázek pro sdílení, pokud stále existuje veřejný obrázek.</p>\n  <p><a href=\"https://www.11tik.com/\">Získejte skutečnou veřejnou miniaturu →</a></p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik.<a href=\"https://www.11tik.com/about\">O</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "sw",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Jinsi ya kupakua vijipicha vya YouTube kwa kundi (hadi URL 25 za umma) | 11tik",
   "description": "Toa vijipicha vya YouTube vya umma kwa wingi kwenye kivinjari. Bandika URL moja kwa kila mstari, pakua kila picha bora zaidi, au zip seti ya ubora wa juu zaidi. Hakuna akaunti na hakuna faili za video.",
@@ -24,8 +24,48 @@
       "html": "<p>Fungua<a href=\"https://www.11tik.com/\">11tik</a>, washa Bulk, bandika URL moja ya umma kwa kila mstari, bofya Dondoo zote, kisha pakua kila picha bora au zip ya ubora wa juu zaidi. Kikomo ni URL 25 kwa kila jaribio ili kivinjari kiendelee kuitikia.</p>"
     },
     {
+      "heading": "Kinachoshughulikiwa na chombo",
+      "html": "<p>Hali ya wingi huendesha ukaguzi uleule wa umma wa upande wa mteja kama dondoo la URL moja: kuchanganua kila kitambulisho cha video, kujenga URL za vijipicha zinazohitajika, kuzipakia kama picha kwenye kivinjari chako, kuacha hitilafu na vishikilia nafasi, kupanga walionusurika, na kuonyesha picha bora zaidi kwanza. Haipakui video au sauti, haiiti API ya YouTube ya kibinafsi, na haihifadhi viungo vilivyobandikwa kwenye seva za 11tik.</p>"
+    },
+    {
+      "heading": "Kifuniko cha URL 25",
+      "html": "<p>Kila mbio ya Wingi inakubali hadi<strong>Mistari 25</strong>Kikomo hicho huweka uthibitishaji wa picha katika kivinjari. Kwa vitambulisho zaidi, endesha makundi mengi au tuma CSV kutoka kwa kila uendeshaji na uunganishe nje ya mtandao. Hakuna kundi la seva la 500- au 1000-URL.</p>"
+    },
+    {
+      "heading": "Usindikaji wa upande wa mteja",
+      "html": "<p>Kila dondoo hutokea katika kipindi chako. Maombi ya mtandao hubadilika kutoka kivinjari chako hadi cha umma<code>i.ytimg.com</code>(na zinazohusiana) seva hosti. URL zilizobandikwa hazipakiwi kwenye 11tik kwa ajili ya kukwangua upande wa seva.</p>"
+    },
+    {
+      "heading": "Uhamishaji wa CSV na JSON",
+      "html": "<p>Baada ya utekelezaji uliofanikiwa, uhamishaji wa hiari unajumuisha kitambulisho cha video, kichwa, URL ya kushiriki, na URL ya picha iliyothibitishwa kwa kila safu—muhimu kwa kumbukumbu za utafiti. Uhamishaji huakisi kile kilichothibitishwa katika kipindi hicho, si safu wima ya maxres iliyohakikishwa kwa kila kitambulisho.</p>"
+    },
+    {
+      "heading": "Uainishaji wa kushindwa",
+      "html": "<ul>\n    <li><strong>Kushindwa kuchanganua:</strong>mstari si saa inayoungwa mkono, Fupi, moja kwa moja, iliyopachikwa, youtu.be, au URL inayoweza kupanuliwa na chaneli.</li>\n    <li><strong>Video haipatikani:</strong>faragha, imeondolewa, imezuiwa, au inachakatwa—hakuna umma unaothibitisha bado. Tazama<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">kwa nini kijipicha kidogo hakitaonekana</a>.</li>\n    <li><strong>Tofauti haipo:</strong>Video ni ya umma lakini maxres (au kiwango kingine cha juu) 404s; ukubwa wa chini bado unafanya kazi. Tazama<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">marejeleo ya maxres</a>.</li>\n    <li><strong>Kishikilia nafasi kimekataliwa:</strong>URL ilijibu lakini ilionekana kama vigae vidogo vya kijivu vilivyokosekana.</li>\n  </ul>"
+    },
+    {
+      "heading": "Video batili, za faragha, na zisizopatikana",
+      "html": "<p>11tik huonekana tu kwenye picha za CDN za umma. Video ambazo hazijaorodheshwa bila vifungashio vya umma, vipakiaji vya wanachama pekee, maudhui yaliyowekwa kizuizi cha umri, na video zilizofutwa kwa kawaida hutoa kadi tupu—si faili ndogo ya \"siri\". Usitarajie Bulk kupita vidhibiti vya ufikiaji.</p>"
+    },
+    {
+      "heading": "URL za kituo dhidi ya viungo vya saa vinavyotolewa kwa mikono",
+      "html": "<p>Bandika URL ya kituo cha umma kwenye mstari mmoja na Bulk hupanua vipakiaji vya hivi karibuni vya umma kupitia ugunduzi wa mtindo wa RSS, kisha huondoa kila kitambulisho—kulingana na kikomo sawa cha URL 25 baada ya upanuzi. Viungo vya kutazama vilivyobandikwa mwenyewe ruka ugunduzi wa kituo. Mtiririko kamili wa kazi wa kituo:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">mwongozo wa dondoo la chaneli</a>.</p>"
+    },
+    {
+      "heading": "Faragha",
+      "html": "<p>URL zilizobandikwa huchakatwa ndani ya kivinjari chako kwa ajili ya kutolewa. Soma.<a href=\"https://www.11tik.com/privacy\">Faragha</a>kwa uchanganuzi wa tovuti; Bulk haiongezi API ya faragha tofauti upande wa seva.</p>"
+    },
+    {
+      "heading": "Jaribu tena mwongozo",
+      "html": "<p>Baada ya kijipicha kipya maalum cha Studio au upakiaji mpya, subiri kuchakatwa na utumie tena URL ile ile ya saa. Wakati mwingine kuchelewa kwa muda kwa CDN hupungua kwa jaribio la pili; matokeo yasiyo na maana yanayoendelea kwa kawaida humaanisha kuwa hakuna umma bado upo kwa kitambulisho hicho.</p>"
+    },
+    {
+      "heading": "Matarajio halisi",
+      "html": "<p>Sio kila video ya umma huchapisha maxres. Katika yetu<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Sampuli ya video 300</a>, maxres imethibitishwa kwa vitambulisho 286/300 (sampuli-scoped). Bulk hurejesha faili ya umma iliyothibitishwa zaidi kwa kila mstari—sio 1280×720 iliyohakikishwa kwa kila safu mlalo. Anatomia ya URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Mwongozo wa URL ndogo</a>.</p>"
+    },
+    {
       "heading": "Ni nini kinachofaa katika orodha?",
-      "html": "<ul>\n    <li>Vitambulisho youtube.com/watch?v=</li>\n    <li>youtu.be viungo vifupi</li>\n    <li>youtube.com/shorts/ Vitambulisho</li>\n    </ul>\n  <p>Video za faragha, zisizoorodheshwa bila vidole gumba vya umma, au zilizo na kizuizi cha umri hazitarudisha picha ya kupigwa picha. Hilo linatarajiwa. Tazama pia<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Vijipicha vifupi vya picha fupi</a>.</p>"
+      "html": "<ul>\n    <li>Vitambulisho youtube.com/watch?v=</li>\n    <li>youtu.be viungo vifupi</li>\n    <li>youtube.com/shorts/ Vitambulisho</li>\n    </ul>\n  <p>Video za faragha, zisizoorodheshwa bila vidole gumba vya umma, au zilizo na kizuizi cha umri hazitarudisha picha ya kupigwa picha. Hilo linatarajiwa. Tazama pia<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Vijipicha vifupi vya picha fupi</a>.</p>"
     },
     {
       "heading": "Jinsi ya kuendesha dondoo la wingi",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Je, ninaweza kutumia hii kwa utafiti wa mshindani?",
-      "html": "<p>Ndiyo, kwa ajili ya kusoma vifungashio vya umma. Usichapishe tena kijipicha cha muundaji mwingine kama kipakiaji chako mwenyewe. Hakimiliki inabaki na mwenye hakimiliki. 11tik huleta faili ambazo tayari zimehifadhiwa na YouTube hadharani pekee.</p>\n  <p><a href=\"https://www.11tik.com/\">Fungua dondoo la wingi kwenye 11tik →</a></p>\n  <p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>.</p>"
+      "html": "<p>Ndiyo, kwa ajili ya kusoma vifungashio vya umma. Usichapishe tena kijipicha cha muundaji mwingine kama kipakiaji chako mwenyewe. Hakimiliki inabaki na mwenye hakimiliki. 11tik huleta faili ambazo tayari zimehifadhiwa na YouTube hadharani pekee.</p>\n  <p><a href=\"https://www.11tik.com/\">Fungua dondoo la wingi kwenye 11tik →</a></p>\n  <p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/about\">Kuhusu</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/p/about.html\">Kuhusu</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Imeandikwa na 11tik.<a href=\"https://www.11tik.com/about\">Kuhusu</a>.</p>"
 }

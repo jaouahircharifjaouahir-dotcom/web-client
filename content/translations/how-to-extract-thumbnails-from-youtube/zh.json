@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "zh",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "如何从 YouTube 频道 URL 中提取缩略图 | 11tik",
   "description": "将公开的 YouTube 频道 URL 粘贴到 11tik 批量搜索框中，即可展开最近公开上传的内容，然后下载每张最佳图片。此操作仅用于包装设计研究，不可用于克隆其他频道的自定义图片。",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS发现范围",
+      "html": "<p>频道扩展功能使用 YouTube 的公共频道订阅源（RSS 式）列出最近上传的视频，并附带可解析的视频 ID。该订阅源反映了<strong>YouTube曝光的公共物品</strong>—并非所有上传过的视频，不包含会员专享内容，也不保证是完整的存档。</p>"
+    },
+    {
+      "heading": "公共物品",
+      "html": "<p>私有、未公开且无公开图片的未公开列表以及年龄限制上传的内容通常不会出现在展开列表中。展开列表为空通常意味着句柄未解析、频道已终止或未返回任何公开 ID，而不是 11tik 抓取失败。</p>"
+    },
+    {
+      "heading": "频道 URL 与显式观看 URL",
+      "html": "<p>一条频道线路在提取之前会展开成多个观看链接，仍然受以下条款约束：<strong>25-URL 散装瓶盖</strong>粘贴单个关注链接会跳过 RSS 源发现，但可以提供更精确的控制。与逐行批量粘贴相比：<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">批量下载指南</a>。</p>"
+    },
+    {
+      "heading": "缺失或移除的物品",
+      "html": "<p>已删除的视频会随着时间推移从视频流中消失。提取失败的存储卡可能正在处理、受到限制或已被移除——请重新运行单个观看链接或查看<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">缩略图未显示。</a>。</p>"
+    },
+    {
+      "heading": "合乎道德的使用",
+      "html": "<p>本作品旨在用于研究公共包装。未经许可，请勿将竞争对手的定制图片重新上传为缩略图，否则将违反版权和平台政策。请在已发表的评论中注明来源频道，并链接其关注页面。网站规则：<a href=\"https://www.11tik.com/copyright\">版权与使用</a>。</p>"
+    },
+    {
+      "heading": "与批次萃取的关系",
+      "html": "<p>频道提取采用批量模式，并预填充 RSS 信息。客户端验证、URL 数量上限仍为 25 个、导出格式仍为 CSV/zip——不支持无限频道抓取，也不提供服务器端私有 API。</p>"
+    },
+    {
       "heading": "我可以获取整个 YouTube 频道的缩略图吗？",
-      "html": "<p>你可以获取最新剧照<em>民众</em>上传的视频会暴露视频 ID。11tik 不会抓取频道发布过的所有视频，也不会绕过会员制度。在首页启用批量上传功能，粘贴频道 URL，例如：<code>youtube.com/@handle</code>或者<code>/channel/UC…</code>然后让工具展开公开的 RSS 格式列表。之后，您可以像提取手动输入的列表一样提取它们。每次运行最多只能提取 25 个 URL，以确保浏览器的流畅运行。</p>\n  <p>这与保存单个观看链接不同。单URL流程是这样的。<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">如何下载 YouTube 缩略图</a>逐行批量传输，无需通道。<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">批量下载</a>。</p>"
+      "html": "<p>你可以获取最新剧照<em>民众</em>上传的视频会暴露视频 ID。11tik 不会抓取频道发布过的所有视频，也不会绕过会员制度。在首页启用批量上传功能，粘贴频道 URL，例如：<code>youtube.com/@handle</code>或者<code>/channel/UC…</code>然后让工具展开公开的 RSS 格式列表。之后，您可以像提取手动输入的列表一样提取它们。每次运行最多只能提取 25 个 URL，以确保浏览器的流畅运行。</p>\n  <p>这与保存单个观看链接不同。单URL流程是这样的。<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">如何下载 YouTube 缩略图</a>逐行批量传输，无需通道。<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">批量下载</a>。</p>"
     },
     {
       "heading": "哪些频道网址可以使用？",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "11tik 不会做什么",
-      "html": "<ul>\n    <li>下载视频或音频。仅限静态图片。</li>\n    <li>列出未公开或私密的上传内容。</li>\n    <li>保证所有近期视频均使用最高分辨率（maxresdefault）。较旧或文件较小的视频源最高仅支持高清（hq）或标清（sd）。<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">最大分辨率默认值</a>。</li>\n    <li>授予艺术作品的再利用权。研究公共包装网格是预期的研究用​​途。将竞争对手的图片重新上传作为​​自定义缩略图，违反了版权和政策规定。<a href=\"https://www.11tik.com/copyright\">版权与使用</a>。</li>\n  </ul>"
+      "html": "<ul>\n    <li>下载视频或音频。仅限静态图片。</li>\n    <li>列出未公开或私密的上传内容。</li>\n    <li>保证所有近期视频均使用最高分辨率（maxresdefault）。较旧或文件较小的视频源最高仅支持高清（hq）或标清（sd）。<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">最大分辨率默认值</a>。</li>\n    <li>授予艺术作品的再利用权。研究公共包装网格是预期的研究用​​途。将竞争对手的图片重新上传作为​​自定义缩略图，违反了版权和政策规定。<a href=\"https://www.11tik.com/copyright\">版权与使用</a>。</li>\n  </ul>"
     },
     {
       "heading": "这如何帮助进行没有入口页面的研究",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "故障排除",
-      "html": "<p>列表为空：频道源未返回公开 ID（频道已终止，或解析器无法映射该句柄）。请尝试从 YouTube 桌面版界面访问 UC 频道 URL。</p>\n  <p>部分卡片缺失：这些上传内容尚未公开，或者网关拒绝了不完整的提取。请重新运行单个监控 URL。粘贴链接的隐私保护：<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>。</p>\n  <p>提取器与设计工具：11tik 不创建封面图。<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">提取器 vs 制造商</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">从 11tik 提取公共频道静态图像 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+      "html": "<p>列表为空：频道源未返回公开 ID（频道已终止，或解析器无法映射该句柄）。请尝试从 YouTube 桌面版界面访问 UC 频道 URL。</p>\n  <p>部分卡片缺失：这些上传内容尚未公开，或者网关拒绝了不完整的提取。请重新运行单个监控 URL。粘贴链接的隐私保护：<a href=\"https://www.11tik.com/privacy\">隐私</a>。</p>\n  <p>提取器与设计工具：11tik 不创建封面图。<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">提取器 vs 制造商</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">从 11tik 提取公共频道静态图像 →</a></p>\n  <p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">作者：11tik。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "ko",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "YouTube 썸네일을 블로그 추천 이미지 또는 오픈 그래프 미리보기로 사용하는 방법 | 11tik",
   "description": "공개 YouTube 채널이 여전히 존재하는지 확인한 후, WordPress, Blogger 또는 og:image에 사본을 호스팅하세요. 추측으로 생성한 maxresdefault URL을 직접 링크하지 마세요.",
@@ -26,23 +26,27 @@
   "sections": [
     {
       "heading": "빠른 답변",
-      "html": "<p>공개 YouTube URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>검증된 크기를 기다린 다음,<strong>다운로드</strong>첫 번째 스틸컷을 선택하고 CMS에 업로드하거나,<strong>이미지 URL을 복사하세요</strong>로딩이 완료된 후에만 가능합니다. 게시물이 오래 유지되도록 하려면 자체적으로 사본을 호스팅하세요. 핫링크<code>i.ytimg.com</code>초안 작성에는 편리하지만, 제작용 소셜 카드에는 적합하지 않습니다.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">확인 → 복사 또는 다운로드 → 호스팅 → HTML/추천 이미지/Open Graph에서 참조.</p>"
+      "html": "<p>공개 YouTube URL을 붙여넣으세요<a href=\"https://www.11tik.com/\">11tik</a>검증된 크기를 기다린 다음,<strong>다운로드</strong>첫 번째 스틸컷을 선택하고 CMS에 업로드하거나,<strong>이미지 URL을 복사하세요</strong>로딩이 완료된 후에만 가능합니다. 게시물이 오래 지속되도록 하려면 자체적으로 사본을 호스팅하세요. 핫링크<code>i.ytimg.com</code>초안 작성에는 편리하지만, 제작용 소셜 카드에는 적합하지 않습니다.</p>\n\n  <img alt=\"11tik에서 YouTube 썸네일을 확인하는 것부터 WordPress에 업로드하거나 og:image를 설정하는 워크플로\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">확인 → 복사 또는 다운로드 → 호스팅 → HTML/추천 이미지/Open Graph에서 참조.</p>"
     },
     {
       "heading": "직접 썸네일 URL이란 무엇인가",
-      "html": "<p>예를 들어, 직접 썸네일 URL은 YouTube의 이미지 CDN에 있는 JPEG 또는 WebP 파일을 가리킵니다.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>이것은 시청 페이지가 아닙니다. 해당 주소가 구성되는 방식은 다음과 같습니다.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">YouTube 썸네일 URL 가져오기</a>사이즈별 차이점:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">크기 및 해상도 가이드</a>.</p>"
+      "html": "<p>예를 들어, 직접 썸네일 URL은 YouTube의 이미지 CDN에 있는 JPEG 또는 WebP 파일을 가리킵니다.<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>이것은 시청 페이지가 아닙니다. 해당 주소가 구성되는 방식은 다음과 같습니다.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">YouTube 썸네일 URL 가져오기</a>사이즈별 차이점:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">크기 및 해상도 가이드</a>.</p>"
     },
     {
       "heading": "HTML 예제",
-      "html": "<p>11tik가 파일을 확인한 후, 최소한의 마크업 패턴은 다음과 같습니다(URL, 너비, 높이 및 alt 값을 실제 값으로 대체하십시오).</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>운영 환경에서는 자체 호스팅 URL을 사용하는 것이 좋습니다.</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>실제 너비와 높이를 사용하세요. 11tik 보고서에 나와 있는 내용을 사용하세요. 480×360만 존재하는 경우 1280×720을 임의로 만들지 마세요.</p>"
+      "html": "<p>11tik가 파일을 확인한 후, 최소한의 마크업 패턴은 다음과 같습니다(URL, 너비, 높이 및 alt 값을 실제 값으로 대체하십시오).</p>\n  <pre>&lt;img\n  src=\"https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg\"\n  width=\"480\"\n  height=\"360\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n  loading=\"lazy\"\n  decoding=\"async\"\n/&gt;</pre>\n  <p>운영 환경에서는 자체 호스팅 URL을 사용하는 것이 좋습니다.</p>\n  <pre>&lt;img\n  src=\"https://www.example.com/media/youtube-thumb-VIDEO_ID.jpg\"\n  width=\"1280\"\n  height=\"720\"\n  alt=\"Public YouTube thumbnail for [video title]\"\n/&gt;</pre>\n  <p>실제 너비와 높이를 사용하세요. 11tik 보고서에 나와 있는 대로 하세요. 480×360만 존재하는 경우 1280×720을 임의로 만들지 마세요.</p>"
     },
     {
       "heading": "WordPress 워크플로",
-      "html": "<ol>\n    <li>11tik에서 비디오를 추출하고 목록에 있는 첫 번째 스틸 이미지를 다운로드하세요.</li>\n    <li>워드프레스에서: 미디어 → 새 미디어 추가 → 파일 업로드.</li>\n    <li>해당 이미지를 게시물 대표 이미지로 설정하세요.</li>\n    <li>Yoast, Rank Math 또는 유사한 도구에서 소셜 미리보기가 해당 첨부 파일을 사용하는지 확인하거나 (또는 ​​별도의 원본 이미지를 업로드하세요).</li>\n    <li>대체 텍스트에는 동영상 이름과 해당 파일이 공개 YouTube 스틸 이미지임을 명시해야 하며, 키워드를 덕지덕지 붙인 목록을 사용해서는 안 됩니다.</li>\n  </ol>\n  <p>날것 그대로 붙여넣지 마세요<code>maxresdefault.jpg</code>파일이 검증될 때까지 미디어 필드로의 경로가 유지됩니다. maxres가 누락되는 것은 흔한 일입니다.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 가이드</a>.</p>"
+      "html": "<ol>\n    <li>11tik에서 비디오를 추출하고 목록에 있는 첫 번째 스틸 이미지를 다운로드하세요.</li>\n    <li>워드프레스에서: 미디어 → 새 미디어 추가 → 파일 업로드.</li>\n    <li>해당 이미지를 게시물 대표 이미지로 설정하세요.</li>\n    <li>Yoast, Rank Math 또는 유사한 도구에서 소셜 미리보기가 해당 첨부 파일을 사용하는지 확인하거나 (또는 ​​별도의 원본 이미지를 업로드하세요).</li>\n    <li>대체 텍스트에는 동영상 이름과 해당 파일이 공개 YouTube 스틸 이미지임을 명시해야 하며, 키워드를 덕지덕지 붙인 목록을 사용해서는 안 됩니다.</li>\n  </ol>\n  <p>날것 그대로 붙여넣지 마세요<code>maxresdefault.jpg</code>파일이 검증될 때까지 미디어 필드로의 경로가 유지됩니다. maxres가 누락되는 것은 흔한 일입니다.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404 가이드</a>.</p>"
     },
     {
       "heading": "블로거 및 정적 사이트",
-      "html": "<p><strong>블로거:</strong>이미지를 게시물 편집기에 업로드한 다음, 호스팅된 Blogger 이미지 URL을 직접 관리하는 테마/소셜 스니펫 필드에 재사용하세요. 중요한 게시물의 경우 추측에 의존하여 YouTube CDN 경로를 사용하지 마세요.</p>\n  <p><strong>정적 생성기:</strong>파일을 저장소 또는 CDN에 커밋한 다음, 프런트매터/메타 태그를 해당 HTTPS 자산으로 설정하세요. 필요한 경우 임시 i.ytimg.com URL에 초안을 보관하되, 배포 시에는 자체 호스팅을 사용하세요.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">추천 이미지와 og:image는 파일을 공유할 수 있지만, 둘 다 실제로 존재하는 URL이 필요합니다.</p>"
+      "html": "<p><strong>블로거:</strong>이미지를 게시물 편집기에 업로드한 다음, 호스팅된 Blogger 이미지 URL을 직접 관리하는 테마/소셜 스니펫 필드에 재사용하세요. 중요한 게시물을 게시할 때 추측한 YouTube CDN 경로에 의존하지 마세요.</p>\n  <p><strong>정적 생성기:</strong>파일을 저장소 또는 CDN에 커밋한 다음, 프런트매터/메타 태그를 해당 HTTPS 자산으로 설정하세요. 필요한 경우 임시 i.ytimg.com URL에 초안을 보관하되, 배포 시에는 자체 호스팅을 사용하세요.</p>\n\n  <img alt=\"워드프레스 추천 이미지 업로드와 오픈그래프 소셜 카드의 실제 픽셀 크기 비교\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">추천 이미지와 og:image는 파일을 공유할 수 있지만, 둘 다 실제로 존재하는 URL이 필요합니다.</p>"
+    },
+    {
+      "heading": "플랫폼별 실제 사례",
+      "html": "<h3>이미지 복사 (URL 확인 후)</h3>\n  <p>11tik에서 사용하세요<strong>이미지 URL 복사</strong>브라우저에서 파일 크기가 유효한지 확인한 후에만 그렇게 하세요. 해당 HTTPS 주소를 초안에 붙여넣거나, 더 좋은 방법은 파일을 다운로드한 후 업로드하는 것입니다. (추측)<code>maxresdefault.jpg</code>파일이 게시되지 않은 경우 Open Graph가 제대로 작동하지 않습니다. URL 구성:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">썸네일 URL 가이드</a>.</p>\n  <h3>로컬 호스팅 (프로덕션 환경에 권장)</h3>\n  <p>검증된 스틸 이미지를 다운로드하고, 미디어 라이브러리 또는 정적 CDN에 업로드한 다음, 도메인을 참조하세요.<code>&lt;img&gt;</code>그리고<code>og:image</code>취약한 장기 핫링크를 피하세요.<code>i.ytimg.com</code>관심 있는 게시물에 댓글을 남겨주세요.</p>\n  <h3>WordPress 추천 이미지 + og:image</h3>\n  <p>미디어 → 새 항목 추가 → 다운로드한 JPEG 또는 WebP 파일 업로드 → 추천 이미지 설정 → Yoast/Rank Math 소셜 미리보기에서 해당 첨부 파일을 사용하는지 확인합니다. URL 변경 후 Facebook/Twitter/LinkedIn 디버거를 사용하여 데이터를 다시 스크래핑합니다.</p>\n  <h3>블로거</h3>\n  <p>게시물 작성기에 이미지를 삽입하여 Blogger에서 파일을 호스팅하도록 한 다음, 템플릿에서 소셜 미디어 필드를 노출하는 경우 테마 메타 데이터에서 해당 Blogger CDN URL을 재사용하세요. 영구 게시물에는 외부 YouTube 이미지 URL에 의존하지 마세요.</p>\n  <h3>정적 사이트(Hugo, Eleventy 등)</h3>\n  <p>이미지를 아래에 커밋하세요<code>/assets</code>또는 CDN을 사용하는 경우, 프런트 매터에서 참조하고 내보낼 수 있습니다.<code>og:image</code>실제 너비/높이를 사용합니다. 메타 블록 예시:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>핫링크가 허용되는 경우</h3>\n  <p>내부 메모, 초안 또는 임시 연구 페이지는 유효성이 검증된 링크에 직접 연결할 수 있습니다.<code>i.ytimg.com</code>URL. 제작 관련 문서, 제품 페이지 및 이메일 캠페인에 사본을 포함해야 합니다. 페이지 내 추출을 위한 임베드 위젯:<a href=\"https://www.11tik.com/embed\">임베드 가이드</a>.</p>"
     },
     {
       "heading": "오픈 그래프 고려 사항",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "핫링크 vs 다운로드",
-      "html": "<table>\n    <thead>\n      <tr><th>접근하다</th><th>~에 가장 적합함</th><th>위험</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>핫링크 i.ytimg.com</td><td>빠른 초안, 연구 노트</td><td>404 오류, CDN 변경, 작물 제어 없음</td></tr>\n      <tr><td>다운로드 + 호스팅</td><td>순위가 높은 게시물, 제품 페이지</td><td>파일을 저장해야 합니다.</td></tr>\n      <tr><td>플레이어 스크린샷</td><td>거의 절대</td><td>UI 크롬, 비율 오류 —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">스크린샷 vs 실제 사진</a></td></tr>\n    </tbody>\n  </table>\n  <p>다운로드 단계:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">유튜브 썸네일 다운로드 방법</a>WebP와 JPEG 형식이 모두 있는 경우 형식 선택:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP vs JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>접근하다</th><th>~에 가장 적합함</th><th>위험</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>핫링크 i.ytimg.com</td><td>빠른 초안, 연구 노트</td><td>404 오류, CDN 변경, 작물 제어 없음</td></tr>\n      <tr><td>다운로드 + 호스팅</td><td>순위가 높은 게시물, 제품 페이지</td><td>파일을 저장해야 합니다.</td></tr>\n      <tr><td>플레이어 스크린샷</td><td>거의 절대</td><td>UI 크롬, 비율 오류 —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">스크린샷 vs 실제 사진</a></td></tr>\n    </tbody>\n  </table>\n  <p>다운로드 단계:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">유튜브 썸네일 다운로드 방법</a>WebP와 JPEG 형식이 모두 있는 경우 형식 선택:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP vs JPEG</a>.</p>"
     },
     {
       "heading": "이 스틸컷에 대한 이미지 SEO 기본 사항",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "재사용 및 저작권 (법률 자문이 아님)",
-      "html": "<p>공개 CDN URL은 라이선스가 아닙니다. YouTube 플레이어를 삽입하는 것과 스틸 이미지를 히어로 이미지로 복사하는 것은 다릅니다. 공정 사용은 구체적인 사실 관계에 따라 결정됩니다. 더 안전한 편집 방식은 해당 영상에 대한 논평을 그림으로 표현하고, 채널명을 명시하고, 시청 페이지 링크를 제공하며, 이미지를 판매하거나 자신의 채널 아트로 사용하지 않는 것입니다. 공식 맞춤 썸네일 도움말은 다음과 같습니다.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">사용자 지정 동영상 썸네일을 업로드하세요</a>사이트 규칙:<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+      "html": "<p>공개 CDN URL은 라이선스가 아닙니다. YouTube 플레이어를 삽입하는 것과 스틸 이미지를 히어로 이미지로 복사하는 것은 다릅니다. 공정 사용은 구체적인 사실 관계에 따라 결정됩니다. 더 안전한 편집 방식은 해당 영상에 대한 논평을 그림으로 표현하고, 채널명을 명시하고, 시청 페이지 링크를 제공하며, 이미지를 판매하거나 자신의 채널 아트로 사용하지 않는 것입니다. 공식 맞춤 썸네일 도움말은 다음과 같습니다.<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">사용자 지정 동영상 썸네일을 업로드하세요</a>사이트 규칙:<a href=\"https://www.11tik.com/terms-of-use\">자귀</a>.</p>"
     },
     {
       "heading": "문제 해결",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "다음 단계",
-      "html": "<p>정지 화면을 확인하세요<a href=\"https://www.11tik.com/\">11tik 추출기</a>해당 파일을 다운로드하고, 사이트에 업로드한 다음, featured image / og:image에서 HTTPS 파일을 가리키도록 설정하세요.</p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+      "html": "<p>정지 화면을 확인하세요<a href=\"https://www.11tik.com/\">11tik 추출기</a>해당 파일을 다운로드하고, 사이트에 업로드한 다음, featured image / og:image에서 HTTPS 파일을 가리키도록 설정하세요.</p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/privacy\">은둔</a>·<a href=\"https://www.11tik.com/terms-of-use\">자귀</a>.</p>"
     }
   ],
   "faq": [
@@ -98,9 +102,9 @@
     {
       "question": "Studio에서 사용자 지정 썸네일을 변경하면 어떻게 될까요?",
       "answer": "처리가 완료될 때까지 기다린 후 CMS 사본을 업데이트하기 전에 11tik을 다시 확인하세요. 관련 항목: YouTube Studio 썸네일.",
-      "answerHtml": "<p>처리가 완료될 때까지 기다린 후 11tik를 다시 확인하고 CMS 사본을 업데이트하세요. 관련 항목:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube 스튜디오 썸네일</a>.</p>"
+      "answerHtml": "<p>처리가 완료될 때까지 기다린 후 11tik를 다시 확인하고 CMS 사본을 업데이트하세요. 관련 항목:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">YouTube 스튜디오 썸네일</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>·<a href=\"https://www.11tik.com/p/privacy.html\">은둔</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">자귀</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/about\">에 대한</a>·<a href=\"https://www.11tik.com/privacy\">은둔</a>·<a href=\"https://www.11tik.com/terms-of-use\">자귀</a>.</p>"
 }

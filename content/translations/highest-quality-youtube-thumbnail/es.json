@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "es",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Cómo obtener la miniatura de YouTube de mayor calidad | 11tik",
   "description": "La máxima calidad significa el archivo JPEG o WebP público de mayor tamaño que YouTube realmente devuelve, no un nombre de archivo 4K estimado.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "¿Cuál es la resolución pública máxima?",
-      "html": "<p>Cuando YouTube publica maxresdefault, suele ser 1280×720. Si ese archivo no está disponible, la calidad más alta es el siguiente tamaño válido, como sd o hq.</p>"
+      "html": "<p>Cuando YouTube publica maxresdefault, suele ser 1280×720. Si ese archivo no está disponible, la calidad más alta es el siguiente tamaño válido, como sd o hq. \"Máxima calidad\" significa la<strong>la imagen más grande validada y recuperable públicamente</strong>para ese ID de vídeo, no es un máster 4K, ni un archivo de tamaño medio escalado, ni una captura de pantalla del reproductor.</p>"
+    },
+    {
+      "heading": "Miniatura de máxima calidad frente a miniatura “original”.",
+      "html": "<p><strong>Máxima calidad</strong>(esta guía): la principal CDN pública derivada 11tik valida, a menudo maxres o hq720 cuando está presente.<strong>Original</strong>(Intención diferente): también es una CDN pública, pero la palabra tienta a la gente a esperar el archivo fuente del usuario que lo subió. No es el archivo Photoshop/PNG sin procesar de Studio, no es una extracción de fotogramas de video, y no se garantiza la resolución original del arte. Ver<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">Significado y límites de la miniatura original</a>y<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">referencia de tamaño</a>En nuestro<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Muestra de 300 vídeos</a>, maxres validado para 286/300 ID: disponibilidad limitada a muestras, no una promesa para cada carga.</p>"
     },
     {
       "heading": "¿Importa el formato WebP?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "¿Por qué a veces la imagen \"HD\" se ve borrosa?",
-      "html": "<p>Es posible que la resolución pública siga siendo de 1280×720 con compresión, o que estés viendo la resolución predeterminada de alta calidad (hqdefault). Comprueba los informes de tamaño de píxel 11tik antes de asumir que la descarga ha fallado.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor del extractor de miniaturas de YouTube para navegador. Ver<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>o<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guía de tallas</a></p>"
+      "html": "<p>Es posible que la resolución pública siga siendo de 1280×720 con compresión, o que estés viendo la resolución predeterminada de alta calidad (hqdefault). Comprueba los informes de tamaño de píxel 11tik antes de asumir que la descarga ha fallado.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor del extractor de miniaturas de YouTube para navegador. Ver<a href=\"https://www.11tik.com/about\">Acerca de</a>o<a href=\"https://www.11tik.com/contact\">Contacto</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Guía de tallas</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor del extractor de miniaturas de YouTube para navegador. Ver<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>o<a href=\"https://www.11tik.com/p/contact.html\">Contacto</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor del extractor de miniaturas de YouTube para navegador. Ver<a href=\"https://www.11tik.com/about\">Acerca de</a>o<a href=\"https://www.11tik.com/contact\">Contacto</a>.</p>"
 }

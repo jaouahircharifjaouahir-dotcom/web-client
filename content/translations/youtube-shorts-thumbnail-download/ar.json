@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "ar",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "كيفية تنزيل صورة مصغرة من فيديوهات يوتيوب القصيرة بجودة عالية | 11tik",
   "description": "قم بتنزيل صورة مصغرة من فيديوهات يوتيوب القصيرة عبر المتصفح. تستخدم الفيديوهات القصيرة نفس الصور الثابتة العامة المستخدمة في روابط المشاهدة. غالبًا ما يكون الملف بتنسيق أفقي.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "هل ملفات Shorts هي نفسها ملفات صفحة المراقبة؟",
-      "html": "<p>يستخدمون نفس أسماء الأحجام العامة المرتبطة بمعرف الفيديو. قد تظهر الصورة ثابتةً مع وجود أشرطة سوداء في أعلى وأسفل الشاشة إذا خزّن يوتيوب نسخةً مشتقةً عريضة الشاشة.</p>"
+      "html": "<p>يستخدمون نفس أسماء الأحجام العامة المفهرسة بواسطة معرف الفيديو على<code>i.ytimg.com</code>قد تظهر الصورة ثابتةً بنسبة عرض إلى ارتفاع 4:3 إذا خزّن يوتيوب نسخةً عريضة الشاشة. يُغطّى تركيب عناوين URL لروابط Shorts وwatch وyoutu.be في<a href=\"https://www.11tik.com/youtube-thumbnail-url\">دليل عناوين URL للصور المصغرة</a>.</p>"
+    },
+    {
+      "heading": "هل تنشر المقاطع القصيرة دائمًا بأعلى دقة؟",
+      "html": "<p>لا. في<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">عينة من 300 فيديو</a>تم التحقق من صحة maxresdefault لـ<strong>286 من 300</strong>المعرفات (<strong>95.33%</strong>)؛ ال<strong>14 من 300</strong>حتى بدون استخدام الحد الأقصى للدقة، لا يزال هناك حد أدنى صالح للقيمة العامة. هذا دليل محدود النطاق لسلوك التراجع، وليس قاعدة عامة للبيع على المكشوف.</p>"
     },
     {
       "heading": "ماذا لو لم تظهر أي صورة؟",
-      "html": "<p>قد يكون الفيلم القصير خاصاً، أو محذوفاً، أو بدون صور ثابتة عامة. ولا يمكن لبرنامج الاستخراج تجاوز هذه القيود.</p>\n  <p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/p/about.html\">عن</a>أو<a href=\"https://www.11tik.com/p/contact.html\">اتصال</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">مستخرج</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">كيفية التنزيل</a></p>"
+      "html": "<p>قد يكون الفيلم القصير خاصاً، أو محذوفاً، أو بدون صور ثابتة عامة. ولا يمكن لبرنامج الاستخراج تجاوز هذه القيود.</p>\n  <p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/about\">عن</a>أو<a href=\"https://www.11tik.com/contact\">اتصال</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">مستخرج</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">كيفية التنزيل</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/p/about.html\">عن</a>أو<a href=\"https://www.11tik.com/p/contact.html\">اتصال</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/about\">عن</a>أو<a href=\"https://www.11tik.com/contact\">اتصال</a>.</p>"
 }

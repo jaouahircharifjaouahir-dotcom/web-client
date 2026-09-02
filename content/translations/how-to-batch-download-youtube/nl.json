@@ -2,19 +2,19 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "nl",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Hoe je YouTube-thumbnails in batch kunt downloaden (tot 25 openbare URL's) | 11tik",
   "description": "Extraheer in bulk openbare YouTube-thumbnails in uw browser. Plak één URL per regel, download de beste afbeelding of comprimeer de set met de hoogste kwaliteit. Geen account en geen videobestanden nodig.",
   "h1": "Hoe download je in één keer YouTube-thumbnails (tot 25 openbare URL's)?",
   "ogTitle": "Hoe download je in één keer YouTube-thumbnails (tot 25 openbare URL's)?",
   "ogDescription": "Extraheer in bulk openbare YouTube-thumbnails in uw browser. Plak één URL per regel, download de beste afbeelding of comprimeer de set met de hoogste kwaliteit. Geen account en geen videobestanden nodig.",
-  "imageAlt": "11tik Bulk thumbnail extractor met meerdere YouTube-URL's die klaar zijn om te downloaden",
+  "imageAlt": "11tik bulk thumbnail extractor met meerdere YouTube-URL's die klaar zijn om te downloaden",
   "faqHeading": "Veelgestelde vragen",
   "images": [
     {
       "src": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
-      "alt": "11tik Bulk thumbnail extractor met meerdere YouTube-URL's die klaar zijn om te downloaden",
+      "alt": "11tik bulk thumbnail extractor met meerdere YouTube-URL's die klaar zijn om te downloaden",
       "captionHtml": ""
     }
   ],
@@ -24,8 +24,48 @@
       "html": "<p>Open<a href=\"https://www.11tik.com/\">11tik</a>Schakel 'Bulk' in, plak één openbare URL per regel, klik op 'Alles uitpakken' en download vervolgens de beste screenshots of het zipbestand met de hoogste kwaliteit. De limiet is 25 URL's per keer, zodat de browser snel blijft laden.</p>"
     },
     {
+      "heading": "Wat de tool verwerkt",
+      "html": "<p>De bulkmodus voert dezelfde client-side controle uit op openbare stilstaande beelden als de extractie van afzonderlijke URL's: elke video-ID wordt geanalyseerd, er worden kandidaat-thumbnail-URL's gegenereerd, deze worden als afbeeldingen in uw browser geladen, mislukte en placeholder-afbeeldingen worden verwijderd, de overgebleven afbeeldingen worden gerangschikt en de beste stilstaande beelden worden als eerste weergegeven. Er wordt geen video of audio gedownload, er wordt geen privé YouTube API aangeroepen en geplakte links worden niet op 11tik-servers opgeslagen.</p>"
+    },
+    {
+      "heading": "Limiet van 25 URL's",
+      "html": "<p>Elke bulkrun accepteert maximaal<strong>25 regels</strong>Die limiet zorgt ervoor dat de beeldvalidatie in de browser snel blijft werken. Voor meer ID's kunt u meerdere batches uitvoeren of van elke run een CSV-bestand exporteren en offline samenvoegen. Er bestaat geen serverbatch voor 500 of 1000 URL's.</p>"
+    },
+    {
+      "heading": "Client-side verwerking",
+      "html": "<p>Elke extractie vindt plaats binnen uw sessie. Netwerkverzoeken gaan van uw browser naar het openbare netwerk.<code>i.ytimg.com</code>(en gerelateerde) hosts. Geplakte URL's worden niet geüpload naar 11tik voor server-side scraping.</p>"
+    },
+    {
+      "heading": "CSV- en JSON-export",
+      "html": "<p>Na een succesvolle run bevat de optionele export de video-ID, titel, deel-URL en gevalideerde afbeeldings-URL per rij – handig voor onderzoekslogboeken. De export weerspiegelt wat in die sessie is gevalideerd, niet een gegarandeerde maximale resolutiekolom voor elke ID.</p>"
+    },
+    {
+      "heading": "Taxonomie van mislukkingen",
+      "html": "<ul>\n    <li><strong>Parseerfout:</strong>line is geen ondersteunde watch-, Shorts-, live-, embed-, youtu.be- of channel-expandable URL.</li>\n    <li><strong>Video niet beschikbaar:</strong>Privé, verwijderd, beperkt of in behandeling — geen openbare validatie meer. Zie<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Waarom er geen miniatuurafbeelding wordt weergegeven</a>.</li>\n    <li><strong>Variant ontbreekt:</strong>De video is openbaar, maar bij maximale resolutie (of een andere hoge resolutie) treedt een 404-fout op; een lagere resolutie werkt wel. Zie<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxres fallback</a>.</li>\n    <li><strong>Plaatsaanduiding afgewezen:</strong>De URL reageerde wel, maar het resultaat was een klein grijs tegeltje dat aangaf dat er een bestand ontbrak.</li>\n  </ul>"
+    },
+    {
+      "heading": "Ongeldige, privé- en niet-beschikbare video's",
+      "html": "<p>11tik toont alleen openbare CDN-stilstaande beelden. Niet-openbare video's zonder openbare verpakking, uploads die alleen voor leden toegankelijk zijn, content met leeftijdsbeperking en verwijderde video's produceren doorgaans lege kaarten – geen kleiner 'geheim' bestand. Verwacht niet dat Bulk de toegangscontroles omzeilt.</p>"
+    },
+    {
+      "heading": "Kanaal-URL's versus handmatig ingevoerde kijklinks",
+      "html": "<p>Plak een URL van een openbaar kanaal op één regel en Bulk breidt recente openbare uploads uit via een RSS-achtige ontdekkingsmethode, waarna elke ID wordt geëxtraheerd – met dezelfde limiet van 25 URL's na uitbreiding. Handmatig geplakte links naar video's worden niet meegenomen in de kanaalontdekking. Volledige workflow voor kanalen:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">kanaal extract handleiding</a>.</p>"
+    },
+    {
+      "heading": "Privacy",
+      "html": "<p>Geplakte URL's worden lokaal in uw browser verwerkt voor extractie. Lees verder<a href=\"https://www.11tik.com/privacy\">Privacy</a>Voor websiteanalyses voegt Bulk geen aparte server-side privé-API toe.</p>"
+    },
+    {
+      "heading": "Opnieuw proberen instructies",
+      "html": "<p>Na het aanmaken van een nieuwe aangepaste miniatuur in Studio of na een nieuwe upload, wacht u tot de verwerking is voltooid en voert u dezelfde watch-URL opnieuw uit. Tijdelijke vertraging van de CDN verdwijnt soms bij een tweede poging; aanhoudende lege resultaten betekenen meestal dat er nog geen publiek account bestaat voor die ID.</p>"
+    },
+    {
+      "heading": "Realistische verwachtingen",
+      "html": "<p>Niet elke openbare video publiceert in maximale resolutie. In onze<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Voorbeeld van 300 video's</a>, maxres gevalideerd voor 286/300 ID's (voorbeeld-scoped). Bulk retourneert het hoogst gevalideerde openbare bestand per regel – niet gegarandeerd 1280×720 voor elke regel. URL-structuur:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Handleiding voor miniatuur-URL's</a>.</p>"
+    },
+    {
       "heading": "Wat hoort er op de lijst?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= ID's</li>\n    <li>youtu.be korte links</li>\n    <li>youtube.com/shorts/ ID's</li>\n    </ul>\n  <p>Privévideo's, video's die niet openbaar zijn zonder thumbnails, of video's met een leeftijdsbeperking, leveren geen stilstaand beeld op. Dat is te verwachten. Zie ook<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Miniatuurafbeeldingen van korte filmpjes</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID's</li>\n    <li>youtu.be korte links</li>\n    <li>youtube.com/shorts/ ID's</li>\n    </ul>\n  <p>Privévideo's, video's die niet openbaar zijn en geen thumbnails bevatten, of video's met een leeftijdsbeperking, zullen geen stilstaand beeld opleveren. Dat is te verwachten. Zie ook<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Miniatuurafbeeldingen van korte filmpjes</a>.</p>"
     },
     {
       "heading": "Hoe voer je een bulkextractie uit?",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Kan ik dit gebruiken voor concurrentieonderzoek?",
-      "html": "<p>Ja, voor het bestuderen van openbare verpakkingen. Publiceer de thumbnail van een andere maker niet opnieuw als je eigen upload. Het auteursrecht blijft bij de rechthebbende. 11tik haalt alleen bestanden op die YouTube al openbaar host.</p>\n  <p><a href=\"https://www.11tik.com/\">Open bulk extract op 11tik →</a></p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>.</p>"
+      "html": "<p>Ja, voor het bestuderen van openbare verpakkingen. Publiceer de thumbnail van een andere maker niet opnieuw als je eigen upload. Het auteursrecht blijft bij de rechthebbende. 11tik haalt alleen bestanden op die YouTube al openbaar host.</p>\n  <p><a href=\"https://www.11tik.com/\">Open bulk extract op 11tik →</a></p>\n  <p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/about\">Over</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/p/about.html\">Over</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Geschreven door 11tik.<a href=\"https://www.11tik.com/about\">Over</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "pl",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Jak uzyskać najwyższą jakość miniatur YouTube | 11tik",
   "description": "Najwyższa jakość oznacza największy publiczny plik JPEG lub WebP, jaki YouTube faktycznie zwraca, a nie zgadywaną nazwę pliku 4K.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Jaka jest maksymalna rozdzielczość publiczna?",
-      "html": "<p>YouTube opublikował plik maxresdefault, zazwyczaj o rozdzielczości 1280×720. Jeśli brakuje tego pliku, najwyższa jakość to następny prawidłowy rozmiar, taki jak sd lub hq.</p>"
+      "html": "<p>Gdy YouTube opublikował maxresdefault, zazwyczaj jest to 1280×720. Jeśli brakuje tego pliku, najwyższa jakość to następny prawidłowy rozmiar, taki jak sd lub hq. „Najwyższa jakość” oznacza<strong>największy zweryfikowany publicznie możliwy do pobrania obraz</strong>dla tego identyfikatora wideo — nie jest to rozdzielczość 4K, nie jest to plik średniej wielkości w powiększeniu ani zrzut ekranu odtwarzacza.</p>"
+    },
+    {
+      "heading": "Najwyższa jakość kontra „oryginalna” miniatura",
+      "html": "<p><strong>Najwyższa jakość</strong>(ten przewodnik): najlepsza publiczna pochodna CDN 11tik jest walidowana — często maxres lub hq720, jeśli jest obecna.<strong>Oryginalny</strong>(inna intencja): to wciąż publiczna sieć CDN, ale to słowo kusi użytkowników, by oczekiwali pliku źródłowego od osoby przesyłającej. Nie jest to surowy plik Photoshop/PNG ze Studio, nie jest to rip klatki z wideo ani grafika o gwarantowanej rozdzielczości źródłowej. Zobacz<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">oryginalne znaczenie i ograniczenia miniatury</a>I<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">odniesienie do rozmiaru</a>. W naszym<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Próbka 300 filmów</a>, maxres sprawdzony dla 286/300 identyfikatorów — dostępność ograniczona do próbki, a nie obietnica dla każdego przesłania.</p>"
     },
     {
       "heading": "Czy WebP ma znaczenie?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Dlaczego „HD” czasami wygląda na miękkie?",
-      "html": "<p>Publiczność może nadal mieć rozdzielczość 1280×720 z kompresją lub możesz używać hqdefault. Sprawdź raporty dotyczące rozmiaru pikseli 11tik, zanim założysz, że pobieranie się nie powiodło.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Przewodnik po rozmiarach</a></p>"
+      "html": "<p>Publiczność może nadal mieć rozdzielczość 1280×720 z kompresją lub możesz używać hqdefault. Sprawdź raporty dotyczące rozmiaru pikseli 11tik, zanim założysz, że pobieranie się nie powiodło.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/about\">O</a>Lub<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktor</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Przewodnik po rozmiarach</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/p/about.html\">O</a>Lub<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik, wydawcę przeglądarki YouTube Thumbnail Extractor. Zobacz<a href=\"https://www.11tik.com/about\">O</a>Lub<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "da",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Sådan udtrækker du miniaturebilleder fra en YouTube-kanals URL | 11tik",
   "description": "Indsæt en offentlig YouTube-kanals URL i 11tik Bulk for at udvide de seneste offentlige uploads, og download derefter hver enkelt bedste still. Dette er til research om emballage, ikke til kloning af en anden kanals brugerdefinerede grafik.",
@@ -20,12 +20,36 @@
   ],
   "sections": [
     {
+      "heading": "RSS-opdagelsesomfang",
+      "html": "<p>Kanaludvidelse bruger YouTubes offentlige kanalfeed (i RSS-stil) til at vise de seneste uploads med et video-ID, der kan opløses. Dette feed afspejler<strong>offentlige elementer, som YouTube eksponerer</strong>—ikke alle videoer, der nogensinde er uploadet, ikke opslag kun for medlemmer, og ikke et garanteret komplet arkiv.</p>"
+    },
+    {
+      "heading": "Kun offentlige elementer",
+      "html": "<p>Private, ikke-listede-uden-offentlige-stillbilleder og aldersbegrænsede uploads vises typisk aldrig på den udvidede liste. Tom udvidelse betyder normalt, at handle-funktionen ikke blev fortolket, at kanalen er afsluttet, eller at der ikke blev returneret offentlige id'er – ikke en 11tik scraping-fejl.</p>"
+    },
+    {
+      "heading": "Kanal-URL vs. eksplicitte visnings-URL'er",
+      "html": "<p>Én kanallinje udvides til flere visnings-URL'er før udtrækning, stadig underlagt<strong>Massegrænse på 25 URL'er</strong>Indsættelse af individuelle links til overvågning springer RSS-opdagelse over, men giver præcis kontrol. Sammenlign med linje-for-linje bulk:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Guide til batch-download</a>.</p>"
+    },
+    {
+      "heading": "Manglende eller fjernede elementer",
+      "html": "<p>Slettede videoer forsvinder fra feeds med tiden. Et kort, der ikke kan udtrækkes, kan være under behandling, begrænset eller fjernet – kør en enkelt visnings-URL igen, eller se<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniaturebilledet vises ikke</a>.</p>"
+    },
+    {
+      "heading": "Etisk brug",
+      "html": "<p>Det tilsigtede formål er at studere offentlig emballage til forskning. Genupload af en konkurrents brugerdefinerede kunst, da dit miniaturebillede overtræder ophavsret og platformens politik. Kreditér kanaler i offentliggjorte kommentarer; link til deres visningssider. Webstedsregler:<a href=\"https://www.11tik.com/copyright\">Ophavsret og brug</a>.</p>"
+    },
+    {
+      "heading": "Forholdet til batchekstraktion",
+      "html": "<p>Kanaludtræk er i massetilstand med RSS-forudfyldning. Samme validering på klientsiden, samme grænse på 25 URL'er, samme CSV/zip-eksport – ingen ubegrænset kanalskrabning og ingen privat API på serversiden.</p>"
+    },
+    {
       "heading": "Kan jeg få miniaturebilleder fra en hel YouTube-kanal?",
-      "html": "<p>Du kan få stillbilleder af det seneste<em>offentlig</em>uploads, der eksponerer et video-id. 11tik scraper ikke alle videoer, som en kanal nogensinde har lagt ud, og omgår ikke medlemskaber. Slå masseudsendelser til på startsiden, indsæt en kanal-URL, f.eks.<code>youtube.com/@handle</code>eller<code>/channel/UC…</code>, og lad værktøjet udvide den offentlige RSS-lignende liste. Udtræk derefter, som du ville gøre med en indtastet liste. Loftet er fortsat 25 URL'er pr. kørsel, så browseren forbliver brugbar.</p>\n  <p>Dette er forskelligt fra at gemme ét overvågningslink. Flow med én URL er i<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hvordan man downloader et YouTube-miniaturebillede</a>Linje-for-linje bulk uden en kanal er i<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch-download</a>.</p>"
+      "html": "<p>Du kan få stillbilleder af det seneste<em>offentlig</em>uploads, der eksponerer et video-id. 11tik scraper ikke alle videoer, som en kanal nogensinde har lagt ud, og omgår ikke medlemskaber. Slå masseudsendelser til på startsiden, indsæt en kanal-URL, f.eks.<code>youtube.com/@handle</code>eller<code>/channel/UC…</code>, og lad værktøjet udvide den offentlige RSS-lignende liste. Udtræk derefter, som du ville gøre med en indtastet liste. Loftet er fortsat 25 URL'er pr. kørsel, så browseren forbliver brugbar.</p>\n  <p>Dette er forskelligt fra at gemme ét overvågningslink. Flow med én URL er i<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">hvordan man downloader et YouTube-miniaturebillede</a>Linje-for-linje bulk uden en kanal er i<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch-download</a>.</p>"
     },
     {
       "heading": "Hvilke kanal-URL'er fungerer?",
-      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>når den offentlige side viser et kanal-id</li>\n    <li>Arv<code>/user/name</code>stier, der stadig løser sig</li>\n  </ul>\n  <p>En /playlist-URL er ikke en kanal. Indsæt i stedet playlistens individuelle visningslinks. Et handle, der aldrig omdannes til et UC-id, returnerer ingen videoer. Åbn kanalen i en normal browser, og kopier den kanoniske kanal-URL fra adresselinjen.</p>"
+      "html": "<ul>\n    <li><code>https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx</code></li>\n    <li><code>https://www.youtube.com/@handle</code>når den offentlige side viser et kanal-id</li>\n    <li>Arv<code>/user/name</code>stier, der stadig løser sig</li>\n  </ul>\n  <p>En /playlist-URL er ikke en kanal. Indsæt i stedet playlistens individuelle links til visning. Et handle, der aldrig omdannes til et UC-id, returnerer ingen videoer. Åbn kanalen i en normal browser, og kopier den kanoniske kanal-URL fra adresselinjen.</p>"
     },
     {
       "heading": "Sådan udtrækker du miniaturebilleder af kanaler på 11tik",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Hvad 11tik ikke vil gøre",
-      "html": "<ul>\n    <li>Download videoer eller lyd. Kun stillbilleder.</li>\n    <li>Angiv ikke-listede eller private uploads.</li>\n    <li>Garanter maxresdefault for alle nyere videoer. Ældre eller små kilder stopper ved hq eller sd.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>.</li>\n    <li>Giv rettigheder til at genbruge kunsten. Det tilsigtede forskningsformål er at studere et gitter af offentlig emballage. Genupload af et konkurrents stillbillede som dit brugerdefinerede miniaturebillede er et problem med hensyn til ophavsret og politikker.<a href=\"https://www.11tik.com/copyright\">Ophavsret og brug</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Download videoer eller lyd. Kun stillbilleder.</li>\n    <li>Angiv ikke-listede eller private uploads.</li>\n    <li>Garanter maxresdefault for alle nyere videoer. Ældre eller små kilder stopper ved hq eller sd.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>.</li>\n    <li>Giv rettigheder til at genbruge kunsten. Det tilsigtede forskningsformål er at studere et gitter af offentlig emballage. Genupload af et konkurrents stillbillede som dit brugerdefinerede miniaturebillede er et problem med hensyn til ophavsret og politikker.<a href=\"https://www.11tik.com/copyright\">Ophavsret og brug</a>.</li>\n  </ul>"
     },
     {
       "heading": "Hvordan dette hjælper forskning uden døråbningssider",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Fejlfinding",
-      "html": "<p>Tom liste: Kanalfeedet returnerede ikke offentlige id'er (afsluttet kanal eller et handle, som resolveren ikke kunne tilknytte). Prøv UC-kanalens URL fra YouTubes desktoplayout.</p>\n  <p>Nogle kort mangler: Disse uploads er endnu ikke offentliggjorte, eller også afviste gaten et ufuldstændigt uddrag. Kør en enkelt overvågnings-URL igen. Privatliv for indsatte links:<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>.</p>\n  <p>Udtrækker vs. designværktøj: 11tik opretter ikke omslagsbilleder.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Udtrækker vs. producent</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udtræk stillbilleder fra den offentlige kanal på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+      "html": "<p>Tom liste: Kanalfeedet returnerede ikke offentlige id'er (afsluttet kanal eller et handle, som resolveren ikke kunne tilknytte). Prøv UC-kanalens URL fra YouTubes desktoplayout.</p>\n  <p>Nogle kort mangler: Disse uploads er endnu ikke offentliggjorte, eller også afviste gaten et ufuldstændigt uddrag. Kør en enkelt overvågnings-URL igen. Privatliv for indsatte links:<a href=\"https://www.11tik.com/privacy\">Privatliv</a>.</p>\n  <p>Udtrækker vs. designværktøj: 11tik opretter ikke omslagsbilleder.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Udtrækker vs. producent</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Udtræk stillbilleder fra den offentlige kanal på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/contact\">Kontakte</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakte</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/contact\">Kontakte</a>.</p>"
 }

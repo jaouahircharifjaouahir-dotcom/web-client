@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "no",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Slik laster du ned et miniatyrbilde av YouTube Shorts i HD | 11tik",
   "description": "Last ned et miniatyrbilde av YouTube Shorts i nettleseren. Shorts bruker de samme offentlige stillbildene som URL-er for visning. Filen er ofte liggende.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Er Shorts-filer det samme som visningssidefiler?",
-      "html": "<p>De bruker de samme offentlige størrelsesnavnene som er tastet inn av video-ID-en. Stillbildet kan se ut som om det er en bokstavboks hvis YouTube har lagret et widescreen-avledningsbilde.</p>"
+      "html": "<p>De bruker de samme offentlige størrelsesnavnene som er tastet inn av video-ID-en på<code>i.ytimg.com</code>Stillbildet kan se ut som om det er en bokstavboks dersom YouTube har lagret et widescreen-derivat. URL-anatomi for Shorts-, se- og youtu.be-lenker er dekket i<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Veiledning for miniatyr-URL-er</a>.</p>"
+    },
+    {
+      "heading": "Publiserer Shorts alltid maksverdier?",
+      "html": "<p>Nei. I vår<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-videoeksempel</a>, maxresdefault validert for<strong>286 av 300</strong>ID-er (<strong>95,33 %</strong>); den<strong>14 av 300</strong>uten maksverdier hadde fortsatt en gyldig lavere offentlig stillverdi. Det er bevis for reserveatferd basert på utvalget, ikke en universell Shorts-regel.</p>"
     },
     {
       "heading": "Hva om det ikke vises noe bilde?",
-      "html": "<p>Kortfilmen kan være privat, slettet eller uten offentlige stillbilder. Uttrekkeren kan ikke omgå disse grensene.</p>\n  <p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avtrekker</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Slik laster du ned</a></p>"
+      "html": "<p>Kortfilmen kan være privat, slettet eller uten offentlige stillbilder. Uttrekkeren kan ikke omgå disse grensene.</p>\n  <p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Avtrekker</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Slik laster du ned</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik, utgiver av YouTube Thumbnail Extractor i nettleseren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

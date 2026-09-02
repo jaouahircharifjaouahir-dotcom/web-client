@@ -2,9 +2,9 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "vi",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
-  "title": "Cách lấy ảnh thumbnail YouTube gốc | 11tik",
+  "title": "Cách lấy ảnh thumbnail gốc của YouTube | 11tik",
   "description": "Lấy ảnh thumbnail gốc mà YouTube đang lưu trữ. Đây vẫn là ảnh thumbnail từ CDN, không phải là một khung hình được trích xuất từ ​​video.",
   "h1": "Cách lấy ảnh thumbnail gốc của YouTube",
   "ogTitle": "Cách lấy ảnh thumbnail gốc của YouTube",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Ảnh thumbnail gốc của YouTube là gì?",
-      "html": "<p>Đây là ảnh xem trước mà YouTube đã lưu trữ trên máy chủ lưu trữ hình ảnh của mình. Đây là tệp được sử dụng trong tìm kiếm và đề xuất nội dung, chứ không phải là khung hình bạn chụp bằng phím Print Screen.</p>"
+      "html": "<p>Đó là hình ảnh xem trước mà YouTube đã lưu trữ trên các máy chủ hình ảnh công khai của mình cho một ID video—cùng loại tệp được sử dụng trong tìm kiếm và các kệ đề xuất. Trong từ vựng của 11tik, “bản gốc” có nghĩa là<strong>phái sinh CDN công cộng</strong>Không phải bất kỳ điều nào sau đây:</p>\n  <ul>\n    <li>Tệp nguồn gốc do người dùng tải lên từ YouTube Studio.</li>\n    <li>Tệp dự án thô (PSD, AI, v.v.)</li>\n    <li>Một khung hình được chụp từ luồng video.</li>\n    <li>Bản gốc có độ phân giải nguồn được đảm bảo hoặc bản master 4K.</li>\n  </ul>\n  <p>Đối với<strong>tệp công khai được xác thực lớn nhất</strong>Nếu maxres bị thiếu, hãy đọc phần hướng dẫn.<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">hướng dẫn chất lượng cao nhất</a>Để biết thông tin về các cấp độ pixel và tên tệp, vui lòng xem phần [liên kết đến tài liệu hướng dẫn].<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">hướng dẫn kích thước</a>.</p>"
     },
     {
       "heading": "Điều đó khác gì so với ảnh chụp màn hình?",
@@ -37,7 +37,7 @@
     },
     {
       "heading": "maxresdefault.jpg là gì?",
-      "html": "<p>Đây là tên tệp công khai có độ phân giải cao nhất phổ biến, thường là 1280×720 khi YouTube tạo ra nó. Nó không phải là bản gốc 4K và cũng không phải là tệp video thực sự.</p>"
+      "html": "<p>Đây là tên tệp công khai có độ phân giải cao nhất phổ biến, thường là 1280×720 khi YouTube tạo ra nó. Nó không phải là bản gốc 4K và cũng không phải là tệp video.</p>"
     },
     {
       "heading": "\"Original\" luôn có nghĩa là 1280×720 phải không?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Làm sao tôi có thể kiểm tra xem mình đã thực sự nhận được tập tin gốc chưa?",
-      "html": "<p>Sử dụng danh sách kích thước và chiều 11tik sau khi xác thực tệp. Nếu hình ảnh trông giống như ảnh chụp màn hình trình phát, nghĩa là bạn chưa tải xuống hình thu nhỏ được lưu trữ.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/p/about.html\">Về</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Máy chiết xuất</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Chất lượng cao nhất</a></p>"
+      "html": "<p>Sử dụng danh sách kích thước và chiều 11tik sau khi xác thực tệp. Nếu hình ảnh trông giống như ảnh chụp màn hình trình phát, nghĩa là bạn chưa tải xuống hình thu nhỏ được lưu trữ.</p>\n  <p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/about\">Về</a>hoặc<a href=\"https://www.11tik.com/contact\">Liên hệ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Máy chiết xuất</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Chất lượng cao nhất</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/p/about.html\">Về</a>hoặc<a href=\"https://www.11tik.com/p/contact.html\">Liên hệ</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Được viết bởi 11tik, nhà xuất bản của công cụ trích xuất hình thu nhỏ YouTube trên trình duyệt. Xem<a href=\"https://www.11tik.com/about\">Về</a>hoặc<a href=\"https://www.11tik.com/contact\">Liên hệ</a>.</p>"
 }

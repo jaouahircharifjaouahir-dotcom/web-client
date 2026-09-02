@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "sv",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Hur man får YouTube-miniatyrer av högsta kvalitet | 11tik",
   "description": "Högsta kvalitet innebär att den största publika JPEG- eller WebP-filen som YouTube faktiskt returnerar, inte ett gissat 4K-filnamn.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Vad är den maximala offentliga upplösningen?",
-      "html": "<p>När YouTube publicerar maxresdefault är den vanligtvis 1280×720. Om den filen saknas är den högsta kvaliteten nästa giltiga storlek, till exempel sd eller hq.</p>"
+      "html": "<p>När YouTube publicerar maxresdefault är den vanligtvis 1280×720. Om den filen saknas är den högsta kvaliteten nästa giltiga storlek, till exempel sd eller hq. ”Högsta kvalitet” betyder<strong>största validerade offentligt återhämtningsbara bild</strong>för det video-ID:t – inte en 4K-master, inte en uppskalad medelstor fil och inte en skärmdump av spelaren.</p>"
+    },
+    {
+      "heading": "Miniatyrbild av högsta kvalitet jämfört med \"original\"",
+      "html": "<p><strong>Högsta kvalitet</strong>(denna guide): den främsta publika CDN-derivatan 11tik validerar – ofta maxres eller hq720 när den finns.<strong>Original</strong>(annan avsikt): även fortfarande ett offentligt CDN, men ordet frestar folk att förvänta sig uppladdarens källfil. Det är inte den råa Photoshop/PNG-filen från Studio, inte en rippning av videobildrutor och inte garanterad källupplösning. Se<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">ursprunglig miniatyrbilds betydelse och begränsningar</a>och<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">storleksreferens</a>I vår<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-videoprov</a>, maxvärden validerade för 286/300 ID:n – tillgänglighet baserat på exempelomfattning, inte ett löfte för varje uppladdning.</p>"
     },
     {
       "heading": "Spelar WebP någon roll?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Varför ser \"HD\" ibland mjuk ut?",
-      "html": "<p>Den offentliga upplösningen kan fortfarande vara 1280×720 med komprimering, eller så kanske du tittar på hqdefault. Kontrollera pixelstorleksrapporterna 11tik innan du antar att nedladdningen misslyckades.</p>\n  <p class=\"yte-bio\">Skriven av 11tik, utgivare av YouTube Thumbnail Extractor i webbläsaren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Storleksguide</a></p>"
+      "html": "<p>Den offentliga upplösningen kan fortfarande vara 1280×720 med komprimering, eller så kanske du tittar på hqdefault. Kontrollera pixelstorleksrapporterna 11tik innan du antar att nedladdningen misslyckades.</p>\n  <p class=\"yte-bio\">Skriven av 11tik, utgivare av YouTube Thumbnail Extractor i webbläsaren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakta</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Storleksguide</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skriven av 11tik, utgivare av YouTube Thumbnail Extractor i webbläsaren. Se<a href=\"https://www.11tik.com/p/about.html\">Om</a>eller<a href=\"https://www.11tik.com/p/contact.html\">Kontakta</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skriven av 11tik, utgivare av YouTube Thumbnail Extractor i webbläsaren. Se<a href=\"https://www.11tik.com/about\">Om</a>eller<a href=\"https://www.11tik.com/contact\">Kontakta</a>.</p>"
 }

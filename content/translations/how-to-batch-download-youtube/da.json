@@ -2,7 +2,7 @@
   "contentId": "how-to-batch-download-youtube",
   "articleId": "how-to-batch-download-youtube",
   "locale": "da",
-  "sourceHash": "9e84f9daa19aa1903ba3acace9c1c694603ef3db52e01069ffe93a1dcb3f1efd",
+  "sourceHash": "e7d6a48f07b96818de326e92bf4ecc7386b8b4a3dd52edbb80c33c31dd55b35e",
   "status": "ready",
   "title": "Sådan downloader du YouTube-miniaturebilleder i batch (op til 25 offentlige URL'er) | 11tik",
   "description": "Masseudpak offentlige YouTube-miniaturebilleder i browseren. Indsæt én URL pr. linje, download hvert bedste stillbillede, eller zip det sæt af højeste kvalitet. Ingen konto og ingen videofiler.",
@@ -24,8 +24,48 @@
       "html": "<p>Åben<a href=\"https://www.11tik.com/\">11tik</a>, slå Bulk til, indsæt én offentlig URL pr. linje, klik på Udpak alle, og download derefter hvert bedste stillbillede eller zip-filen af ​​højeste kvalitet. Grænsen er 25 URL'er pr. kørsel, så browseren forbliver responsiv.</p>"
     },
     {
+      "heading": "Hvad værktøjet behandler",
+      "html": "<p>Massetilstand kører den samme offentlige still-kontrol på klientsiden som enkelt-URL-udtræk: analyser hvert video-ID, opbyg kandidatminiature-URL'er, indlæs dem som billeder i din browser, fjern fejl og pladsholdere, ranger overlevende og vis det bedste still først. Den downloader ikke video eller lyd, kalder ikke en privat YouTube API og gemmer ikke indsatte links på 11tik-servere.</p>"
+    },
+    {
+      "heading": "Maksimum 25 URL'er",
+      "html": "<p>Hver bulkkørsel accepterer op til<strong>25 linjer</strong>Denne grænse sikrer, at billedvalideringen er responsiv i browseren. For flere ID'er, kør flere batches eller eksporter CSV fra hver kørsel og flet offline. Der er ingen serverbatch med 500 eller 1000 URL'er.</p>"
+    },
+    {
+      "heading": "Klientsidebehandling",
+      "html": "<p>Hvert udtræk sker i din session. Netværksanmodninger går fra din browser til offentligheden<code>i.ytimg.com</code>(og relaterede) værter. Indsatte URL'er uploades ikke til 11tik til serverside scraping.</p>"
+    },
+    {
+      "heading": "CSV- og JSON-eksport",
+      "html": "<p>Efter en vellykket kørsel inkluderer valgfri eksport video-id, titel, delings-URL og valideret billed-URL pr. række – nyttigt til forskningslogfiler. Eksporten afspejler, hvad der blev valideret i den pågældende session, ikke en garanteret maksimal res-kolonne for hvert ID.</p>"
+    },
+    {
+      "heading": "Fejltaksonomi",
+      "html": "<ul>\n    <li><strong>Parse-fejl:</strong>Linjen er ikke en understøttet URL til visning, Shorts, live, indlejring, youtu.be eller kanaludvidelse.</li>\n    <li><strong>Video ikke tilgængelig:</strong>privat, fjernet, begrænset eller behandlet – ingen offentlig validerer stadig. Se<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">hvorfor et miniaturebillede ikke vises</a>.</li>\n    <li><strong>Variant mangler:</strong>Videoen er offentlig, men maxres (eller et andet højt niveau) 404'ere; en lavere størrelse fungerer stadig. Se<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maks. resumé-fallback</a>.</li>\n    <li><strong>Pladsholder afvist:</strong>URL'en svarede, men lignede en lille grå flise med manglende filer.</li>\n  </ul>"
+    },
+    {
+      "heading": "Ugyldige, private og utilgængelige videoer",
+      "html": "<p>11tik viser kun offentlige CDN-stillbilleder. Ikke-listede videoer uden offentlig emballage, uploads kun for medlemmer, aldersbegrænset indhold og slettede videoer producerer typisk tomme kort – ikke en mindre \"hemmelig\" fil. Forvent ikke, at massevisning omgår adgangskontroller.</p>"
+    },
+    {
+      "heading": "Kanal-URL'er vs. manuelt leverede visningslinks",
+      "html": "<p>Indsæt en offentlig kanal-URL på én linje, og masseudvider de seneste offentlige uploads via RSS-lignende opdagelse, og udtrækker derefter hvert ID – underlagt den samme grænse på 25 URL'er efter udvidelse. Manuelt indsatte links til overvågning springer kanalopdagelse over. Fuld kanalworkflow:<a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">kanaludtræksguide</a>.</p>"
+    },
+    {
+      "heading": "Privatliv",
+      "html": "<p>Indsatte URL'er behandles lokalt i din browser til udtrækning. Læs<a href=\"https://www.11tik.com/privacy\">Privatliv</a>til webstedsanalyse; Bulk tilføjer ikke en separat privat API på serversiden.</p>"
+    },
+    {
+      "heading": "Vejledning til gentagelse",
+      "html": "<p>Efter et nyt brugerdefineret Studio-miniaturebillede eller en frisk upload skal du vente på behandling og derefter køre den samme overvågnings-URL igen. Midlertidig CDN-forsinkelse forsvinder nogle gange ved et andet forsøg; vedvarende tomme resultater betyder normalt, at der ikke stadig findes nogen offentlig adresse for det pågældende ID.</p>"
+    },
+    {
+      "heading": "Realistiske forventninger",
+      "html": "<p>Ikke alle offentlige videoer offentliggør maks. I vores<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-videoeksempel</a>, maks. antal validerede for 286/300 ID'er (prøveomfattet). Massereturnering af den højeste validerede offentlige fil pr. linje – ikke garanterede 1280×720 for hver række. URL-anatomi:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Vejledning til miniature-URL'er</a>.</p>"
+    },
+    {
       "heading": "Hvad hører til på listen?",
-      "html": "<ul>\n    <li>youtube.com/watch?v= ID'er</li>\n    <li>youtu.be korte links</li>\n    <li>youtube.com/shorts/ ID'er</li>\n    </ul>\n  <p>Private videoer, videoer uden offentlige thumbnails eller videoer med aldersgrænser vil ikke returnere et stillbillede. Det er forventeligt. Se også<a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts-miniaturebilleder</a>.</p>"
+      "html": "<ul>\n    <li>youtube.com/watch?v= ID'er</li>\n    <li>youtu.be korte links</li>\n    <li>youtube.com/shorts/ ID'er</li>\n    </ul>\n  <p>Private videoer, videoer uden offentlige thumbnails eller videoer med aldersgrænser vil ikke returnere et stillbillede. Det er forventeligt. Se også<a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Shorts-miniaturebilleder</a>.</p>"
     },
     {
       "heading": "Sådan kører du et bulk-udtræk",
@@ -33,7 +73,7 @@
     },
     {
       "heading": "Kan jeg bruge dette til konkurrentundersøgelser?",
-      "html": "<p>Ja, til at studere offentlig emballage. Genudgiv ikke en anden skabers miniaturebillede som din egen upload. Ophavsretten forbliver hos rettighedshaveren. 11tik henter kun filer, som YouTube allerede hoster offentligt.</p>\n  <p><a href=\"https://www.11tik.com/\">Åbn masseudtræk på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+      "html": "<p>Ja, til at studere offentlig emballage. Genudgiv ikke en anden skabers miniaturebillede som din egen upload. Ophavsretten forbliver hos rettighedshaveren. 11tik henter kun filer, som YouTube allerede hoster offentligt.</p>\n  <p><a href=\"https://www.11tik.com/\">Åbn masseudtræk på 11tik →</a></p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +89,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>"
 }

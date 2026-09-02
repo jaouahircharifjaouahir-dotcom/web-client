@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "el",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Πώς να κατεβάσετε μια μικρογραφία YouTube Shorts σε HD | 11tik",
   "description": "Κατεβάστε μια μικρογραφία YouTube Shorts στο πρόγραμμα περιήγησης. Τα Shorts χρησιμοποιούν τις ίδιες δημόσιες φωτογραφίες με τις διευθύνσεις URL παρακολούθησης. Το αρχείο είναι συχνά οριζόντιο.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Είναι τα αρχεία Shorts τα ίδια με τα αρχεία σελίδας παρακολούθησης;",
-      "html": "<p>Χρησιμοποιούν τα ίδια δημόσια ονόματα μεγέθους που κωδικοποιούνται από το αναγνωριστικό βίντεο. Η φωτογραφία μπορεί να φαίνεται περιορισμένη εάν το YouTube έχει αποθηκεύσει ένα παράγωγο βίντεο ευρείας οθόνης.</p>"
+      "html": "<p>Χρησιμοποιούν τα ίδια δημόσια ονόματα μεγέθους που κλειδώνονται από το αναγνωριστικό βίντεο στο<code>i.ytimg.com</code>Η φωτογραφία μπορεί να φαίνεται περιορισμένη αν το YouTube έχει αποθηκεύσει ένα παράγωγο βίντεο ευρείας οθόνης. Η ανατομία των URL για Shorts, watch και συνδέσμους youtu.be καλύπτεται στο<a href=\"https://www.11tik.com/youtube-thumbnail-url\">οδηγός URL μικρογραφίας</a>.</p>"
+    },
+    {
+      "heading": "Τα Shorts δημοσιεύουν πάντα maxres;",
+      "html": "<p>Όχι. Στο δικό μας<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Δείγμα 300 βίντεο</a>, το maxresdefault επικυρώθηκε για<strong>286 από 300</strong>Ταυτότητες (<strong>95,33%</strong>); το<strong>14 από 300</strong>χωρίς maxres είχε ακόμα ένα έγκυρο χαμηλότερο κοινό. Αυτά είναι στοιχεία με βάση το δείγμα για την εφεδρική συμπεριφορά, όχι ένας καθολικός κανόνας Shorts.</p>"
     },
     {
       "heading": "Τι γίνεται αν δεν εμφανιστεί εικόνα;",
-      "html": "<p>Το Short μπορεί να είναι ιδιωτικό, διαγραμμένο ή χωρίς δημόσιες φωτογραφίες. Το εργαλείο εξαγωγής δεν μπορεί να παρακάμψει αυτά τα όρια.</p>\n  <p class=\"yte-bio\">Γράφτηκε από τον 11tik, εκδότη του εργαλείου εξαγωγής μικρογραφιών YouTube εντός προγράμματος περιήγησης. Βλ.<a href=\"https://www.11tik.com/p/about.html\">Για</a>ή<a href=\"https://www.11tik.com/p/contact.html\">Επαφή</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Αποσπών</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Πώς να κατεβάσετε</a></p>"
+      "html": "<p>Το Short μπορεί να είναι ιδιωτικό, διαγραμμένο ή χωρίς δημόσιες φωτογραφίες. Το εργαλείο εξαγωγής δεν μπορεί να παρακάμψει αυτά τα όρια.</p>\n  <p class=\"yte-bio\">Γράφτηκε από τον 11tik, εκδότη του εργαλείου εξαγωγής μικρογραφιών YouTube εντός προγράμματος περιήγησης. Βλ.<a href=\"https://www.11tik.com/about\">Για</a>ή<a href=\"https://www.11tik.com/contact\">Επαφή</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Αποσπών</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Πώς να κατεβάσετε</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Γράφτηκε από τον 11tik, εκδότη του εργαλείου εξαγωγής μικρογραφιών YouTube εντός προγράμματος περιήγησης. Βλ.<a href=\"https://www.11tik.com/p/about.html\">Για</a>ή<a href=\"https://www.11tik.com/p/contact.html\">Επαφή</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Γράφτηκε από τον 11tik, εκδότη του εργαλείου εξαγωγής μικρογραφιών YouTube εντός προγράμματος περιήγησης. Βλ.<a href=\"https://www.11tik.com/about\">Για</a>ή<a href=\"https://www.11tik.com/contact\">Επαφή</a>.</p>"
 }

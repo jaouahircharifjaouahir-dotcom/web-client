@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "zh",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "WebP 与 JPEG YouTube 缩略图：您应该使用哪种格式？ | 11tik",
   "description": "YouTube 可能会发布 JPEG 和 WebP 格式的缩略图文件。建议您优先选择 11tik 验证过的格式，因为 WebP 格式并非始终可用。",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "快速回答",
-      "html": "<p>对于大多数下载和CMS上传，请保留<strong>已验证的文件 11tik 列出第一个</strong>JPEG 仍然是目前公众普遍使用的格式。<code>i.ytimg.com/vi/…</code>. WebP 格式在某些视频中显示为<code>maxresdefault.webp</code>在下面<code>/vi_webp/</code>WebP 通常在相似的视觉质量下体积更小，但并非所有 ID 都支持 WebP 格式。11tik 则支持。<strong>不是</strong>下载时将 WebP 转换为 JPEG——这样可以节省 YouTube 已经托管的字节（JPEG 下载只会带有一个小的元数据注释戳）。</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">视频 ID 相同，但容器和路径不同——仅当 YouTube 同时发布了这两个视频时才会出现这种情况。</p>"
+      "html": "<p>对于大多数下载和CMS上传，请保留<strong>已验证的文件 11tik 列出第一个</strong>JPEG 仍然是目前公众普遍使用的格式。<code>i.ytimg.com/vi/…</code>. WebP 格式在某些视频中显示为<code>maxresdefault.webp</code>在下面<code>/vi_webp/</code>WebP 通常在相似的视觉质量下体积更小，但并非所有 ID 都支持 WebP 格式。11tik 则支持。<strong>不是</strong>下载时将 WebP 转换为 JPEG——这样可以节省 YouTube 已经托管的字节（JPEG 下载只会带有一个小的元数据注释戳）。</p>\n\n  <img alt=\"i.ytimg.com 上 JPEG 和 WebP YouTube 缩略图 URL 路径的并排比较\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">视频 ID 相同，但容器和路径不同——仅当 YouTube 同时发布了这两个视频时才会出现这种情况。</p>"
     },
     {
       "heading": "YouTube 缩略图格式在 11tik 中的显示方式",
-      "html": "<p>11tik 的优质预设包括：</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>（哑剧<code>image/webp</code>）</li>\n    <li><code>maxresdefault.jpg</code>，<code>hq720.jpg</code>，<code>sddefault.jpg</code>，<code>hqdefault.jpg</code>，<code>mqdefault.jpg</code>，<code>default.jpg</code>→ 在<code>/vi/</code>（哑剧<code>image/jpeg</code>）</li>\n  </ul>\n  <p>候选图像已加载到浏览器中。失败的候选图像和占位符图像将被丢弃。排名依据层级、像素面积、预期尺寸匹配以及一个小的……<strong>-8 分罚分<code>.webp</code>网址</strong>因此，同一级别的 JPEG 和 WebP 格式不会出现不可预测的冲突——当两者都通过验证时，JPEG 可能胜出。尺寸详情：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">缩略图尺寸指南</a>缺少最大分辨率行为：<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 指南</a>。</p>"
+      "html": "<p>11tik 的优质预设包括：</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>（哑剧<code>image/webp</code>）</li>\n    <li><code>maxresdefault.jpg</code>，<code>hq720.jpg</code>，<code>sddefault.jpg</code>，<code>hqdefault.jpg</code>，<code>mqdefault.jpg</code>，<code>default.jpg</code>→ 在<code>/vi/</code>（哑剧<code>image/jpeg</code>）</li>\n  </ul>\n  <p>候选图像已加载到浏览器中。失败的候选图像和占位符图像将被丢弃。排名依据层级、像素面积、预期尺寸匹配以及一个小的……<strong>-8 分罚分<code>.webp</code>网址</strong>因此，同一级别的 JPEG 和 WebP 格式不会出现不可预测的冲突——当两者都通过验证时，JPEG 可能胜出。尺寸详情：<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">缩略图尺寸指南</a>缺少最大分辨率行为：<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404 指南</a>。</p>"
     },
     {
       "heading": "JPEG 与 WebP 简述",
-      "html": "<table>\n    <thead>\n      <tr><th>格式</th><th>最适合</th><th>力量</th><th>局限性</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>下载、WordPress 上传、最广泛的兼容性</td><td>几乎普遍支持；大多数CDN仍然</td><td>文件更大，质量却相近。</td></tr>\n      <tr><td>WebP</td><td>已提供 WebP 服务的现代网站</td><td>通常情况下，相同分辨率级别的产品尺寸会更小。</td><td>并非所有视频都会发布；一些老旧工具可能无法正常工作。</td></tr>\n    </tbody>\n  </table>\n  <p>这两种格式本身并不创造分辨率。480×360 的 WebP 格式仍然是 480×360。</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>格式</th><th>最适合</th><th>力量</th><th>局限性</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>下载、WordPress 上传、最广泛的兼容性</td><td>几乎普遍支持；大多数CDN仍然</td><td>文件更大，质量却相近。</td></tr>\n      <tr><td>WebP</td><td>已提供 WebP 服务的现代网站</td><td>通常情况下，相同分辨率级别的产品尺寸更小。</td><td>并非所有视频都会发布；一些老旧工具可能无法正常工作。</td></tr>\n    </tbody>\n  </table>\n  <p>两种格式都不能改变分辨率。480×360 的 WebP 格式仍然是 480×360。</p>"
+    },
+    {
+      "heading": "测量字节大小比较（仅限 300 个视频样本）",
+      "html": "<p>在同一<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300个视频样本</a>中位数最大分辨率 WebP 观测值为<strong>60,345 字节</strong>相对<strong>141,111 字节</strong>对于 JPEG 最大分辨率——使得 WebP 的中位数约为<strong>按字节计算，大小减少了 57.2%。</strong>在该数据集中。这是一个<strong>采样范围的字节比较</strong>但这并非统一的压缩保证：您的视频在最高分辨率级别可能仅发布 JPEG 格式、仅发布 WebP 格式、同时发布两种格式或都不发布。各级别的像素尺寸详见下文。<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">尺寸和分辨率指南</a>; URL 路径因情况而异<code>/vi/</code>相对<code>/vi_webp/</code>如前所述<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>。</p>"
     },
     {
       "heading": "下载时会发生什么",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "WebP 方便的时候",
-      "html": "<ul>\n    <li>11tik 列出了经过验证的 WebP 最大分辨率，而您的网站已经提供 WebP 服务。</li>\n    <li>你想要一个分辨率为 ~1280×720 的更小文件。</li>\n    <li>您可以控制堆栈，并在需要时回退到 JPEG。</li>\n  </ul>\n  <p>如果您的主题不支持 WebP 格式，请下载 JPEG 格式，或者下载后在本地进行转换。11tik 不会自动转换。</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">选择与您的流程相匹配的已验证格式，而不是猜测的扩展名。</p>"
+      "html": "<ul>\n    <li>11tik 列出了经过验证的 WebP 最大分辨率，而您的网站已经提供 WebP 服务。</li>\n    <li>你想要一个分辨率为 ~1280×720 的更小文件。</li>\n    <li>您可以控制堆栈，并在需要时回退到 JPEG。</li>\n  </ul>\n  <p>如果您的主题不支持 WebP 格式，请下载 JPEG 格式，或者下载后在本地进行转换。11tik 不会自动转换。</p>\n\n  <img alt=\"使用案例图表比较了网站内容管理系统 (CMS)、直接 CDN 链接和存档下载对 YouTube JPEG 和 WebP 缩略图的影响\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">选择与您的流程相匹配的已验证格式，而不是猜测的扩展名。</p>"
     },
     {
       "heading": "直接链接和网站",
-      "html": "<p>复制图像 URL 会返回已验证候选图像的 HTTPS CDN 地址。直接链接 WebP 或 JPEG 图像存在与之前讨论过的相同的脆弱性。<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">博客/Open Graph指南</a>为了确保文章长期有效，建议您自行托管文章副本。URL 格式：<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">缩略图 URL 指南</a>。</p>"
+      "html": "<p>复制图像 URL 会返回已验证候选图像的 HTTPS CDN 地址。直接链接 WebP 或 JPEG 图像存在与之前讨论过的相同的脆弱性。<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">博客/Open Graph指南</a>建议自行托管文章副本，以便长期保存。URL 格式：<a href=\"https://www.11tik.com/youtube-thumbnail-url\">缩略图 URL 指南</a>。</p>"
     },
     {
       "heading": "浏览器和内容管理系统兼容性说明",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "实用决策树",
-      "html": "<ol>\n    <li>摘录<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>如果您需要 CMS 特色图片并且看到两种格式，请选择 JPEG，除非您的技术栈以 WebP 为主导。</li>\n    <li>如果只有 WebP 最大分辨率在最高级别得到验证，那就使用它——或者，如果必须使用 JPG，则选择下一个 JPEG 尺寸。</li>\n    <li>对于压缩文件，请保留下载时的原始文件扩展名。</li>\n  </ol>\n  <p>下载攻略：<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">下载 YouTube 缩略图</a>。</p>"
+      "html": "<ol>\n    <li>摘录<a href=\"https://www.11tik.com/\">11tik</a>。</li>\n    <li>如果您需要 CMS 特色图片并且看到两种格式，请选择 JPEG，除非您的技术栈以 WebP 为主导。</li>\n    <li>如果只有 WebP 最大分辨率在最高级别得到验证，那就使用它——或者，如果必须使用 JPG，则选择下一个 JPEG 尺寸。</li>\n    <li>对于压缩文件，请保留下载时的原始文件扩展名。</li>\n  </ol>\n  <p>下载攻略：<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">下载 YouTube 缩略图</a>。</p>"
     },
     {
       "heading": "下一步",
-      "html": "<p>将公共 URL 粘贴到<a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>注意第一个结果是否是<code>.jpg</code>或者<code>.webp</code>选择时应根据您的内容管理系统 (CMS) 进行，而不是根据文件名长短进行选择。</p>\n  <p class=\"yte-bio\">由 11tik 根据当前浏览器内提取器行为编写。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+      "html": "<p>将公共 URL 粘贴到<a href=\"https://www.11tik.com/\">YouTube缩略图提取器</a>注意第一个结果是否是<code>.jpg</code>或者<code>.webp</code>选择时应根据您的内容管理系统 (CMS) 进行，而不是根据文件名长短进行选择。</p>\n  <p class=\"yte-bio\">由 11tik 根据当前浏览器内提取器行为编写。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>。</p>"
     }
   ],
   "faq": [
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">由 11tik 根据当前浏览器内提取器行为编写。<a href=\"https://www.11tik.com/p/about.html\">关于</a>·<a href=\"https://www.11tik.com/p/privacy.html\">隐私</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">条款</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">由 11tik 根据当前浏览器内提取器行为编写。<a href=\"https://www.11tik.com/about\">关于</a>·<a href=\"https://www.11tik.com/privacy\">隐私</a>·<a href=\"https://www.11tik.com/terms-of-use\">条款</a>。</p>"
 }

@@ -33,15 +33,15 @@ function writeHtml(root: string, rel: string, body: string) {
 describe("IndexNow URL mapping + diff", () => {
   it("maps staged HTML paths to final HTTPS public URLs", () => {
     expect(stagedHtmlRelToPublicUrl("index.html")).toBe("https://www.11tik.com/");
-    expect(stagedHtmlRelToPublicUrl("2026/08/youtube-thumbnail-url.html")).toBe(
-      "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
+    expect(stagedHtmlRelToPublicUrl("how-to-download-youtube-thumbnail.html")).toBe(
+      "https://www.11tik.com/how-to-download-youtube-thumbnail",
     );
-    expect(stagedHtmlRelToPublicUrl("p/about.html")).toBe("https://www.11tik.com/p/about.html");
+    expect(stagedHtmlRelToPublicUrl("about.html")).toBe("https://www.11tik.com/about");
     expect(stagedHtmlRelToPublicUrl("l/ar/index.html")).toBe("https://ar.11tik.com/l/ar/");
-    expect(stagedHtmlRelToPublicUrl("l/fr/2026/08/youtube-thumbnail-url.html")).toBe(
-      "https://fr.11tik.com/l/fr/2026/08/youtube-thumbnail-url.html",
+    expect(stagedHtmlRelToPublicUrl("l/fr/youtube-thumbnail-url.html")).toBe(
+      "https://fr.11tik.com/l/fr/youtube-thumbnail-url",
     );
-    expect(stagedHtmlRelToPublicUrl("l/de/p/about.html")).toBe("https://de.11tik.com/l/de/p/about.html");
+    expect(stagedHtmlRelToPublicUrl("l/de/about.html")).toBe("https://de.11tik.com/l/de/about");
     expect(stagedHtmlRelToPublicUrl("web-client/index.html")).toBeNull();
   });
 
@@ -98,12 +98,12 @@ describe("IndexNow URL mapping + diff", () => {
     const dir = mkdtempSync(join(tmpdir(), "11tik-in-stale-"));
     try {
       writeHtml(dir, "index.html", "<html>home</html>");
-      writeHtml(dir, "l/ar/2026/08/ghost.html", "<html>stale should be excluded via allowlist</html>");
+      writeHtml(dir, "l/ar/how-to-download-youtube-thumbnail.html", "<html>stale should be excluded via allowlist</html>");
       const snap = buildIndexNowSnapshot(dir, {
         allowedUrls: new Set(["https://www.11tik.com/"]),
       });
       expect(Object.keys(snap.urls)).toEqual(["https://www.11tik.com/"]);
-      expect(snap.urls["https://ar.11tik.com/l/ar/2026/08/ghost.html"]).toBeUndefined();
+      expect(snap.urls["https://ar.11tik.com/l/ar/how-to-download-youtube-thumbnail"]).toBeUndefined();
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
@@ -224,8 +224,8 @@ describe("IndexNow after static generation", () => {
     const checkpointPath = join(dir, "checkpoint.json");
     try {
       writeHtml(dir, "index.html", "<html>home-v1</html>");
-      writeHtml(dir, "p/about.html", "<html>about-v1</html>");
-      const allowed = new Set(["https://www.11tik.com/", "https://www.11tik.com/p/about.html"]);
+      writeHtml(dir, "about.html", "<html>about-v1</html>");
+      const allowed = new Set(["https://www.11tik.com/", "https://www.11tik.com/about"]);
 
       // Seed checkpoint as baseline matching current content
       const first = buildIndexNowSnapshot(dir, { allowedUrls: allowed });
@@ -262,20 +262,20 @@ describe("IndexNow after static generation", () => {
     const checkpointPath = join(dir, "checkpoint.json");
     try {
       writeHtml(dir, "index.html", "<html>home</html>");
-      writeHtml(dir, "2026/08/a.html", "<html>en-a-v1</html>");
-      writeHtml(dir, "l/ar/2026/08/a.html", "<html>ar-a-v1</html>");
+      writeHtml(dir, "how-to-download-youtube-thumbnail.html", "<html>en-a-v1</html>");
+      writeHtml(dir, "l/ar/how-to-download-youtube-thumbnail.html", "<html>ar-a-v1</html>");
       const allowed = new Set([
         "https://www.11tik.com/",
-        "https://www.11tik.com/2026/08/a.html",
-        "https://ar.11tik.com/l/ar/2026/08/a.html",
+        "https://www.11tik.com/how-to-download-youtube-thumbnail",
+        "https://ar.11tik.com/l/ar/how-to-download-youtube-thumbnail",
       ]);
       const baseline = buildIndexNowSnapshot(dir, { allowedUrls: allowed });
       writeCheckpoint({ snapshot: baseline, pending: [] }, checkpointPath);
 
-      writeHtml(dir, "2026/08/a.html", "<html>en-a-v2</html>");
-      writeHtml(dir, "2026/08/b.html", "<html>en-b-new</html>");
-      writeHtml(dir, "l/ar/2026/08/a.html", "<html>ar-a-v1</html>");
-      allowed.add("https://www.11tik.com/2026/08/b.html");
+      writeHtml(dir, "how-to-download-youtube-thumbnail.html", "<html>en-a-v2</html>");
+      writeHtml(dir, "youtube-thumbnail-url.html", "<html>en-b-new</html>");
+      writeHtml(dir, "l/ar/how-to-download-youtube-thumbnail.html", "<html>ar-a-v1</html>");
+      allowed.add("https://www.11tik.com/youtube-thumbnail-url");
 
       const bodies: Array<{ host: string; urlList: string[] }> = [];
       const fetchImpl = vi.fn(async (_url: string, init?: RequestInit) => {
@@ -293,9 +293,12 @@ describe("IndexNow after static generation", () => {
       });
 
       expect(result.notify.sort()).toEqual(
-        ["https://www.11tik.com/2026/08/a.html", "https://www.11tik.com/2026/08/b.html"].sort(),
+        [
+          "https://www.11tik.com/how-to-download-youtube-thumbnail",
+          "https://www.11tik.com/youtube-thumbnail-url",
+        ].sort(),
       );
-      expect(result.notify).not.toContain("https://ar.11tik.com/l/ar/2026/08/a.html");
+      expect(result.notify).not.toContain("https://ar.11tik.com/l/ar/how-to-download-youtube-thumbnail");
       expect(bodies.length).toBeGreaterThanOrEqual(1);
       const allSubmitted = bodies.flatMap((b) => b.urlList);
       expect(allSubmitted.sort()).toEqual(result.notify.sort());
@@ -331,8 +334,8 @@ describe("IndexNow after static generation", () => {
     const checkpointPath = join(dir, "checkpoint.json");
     try {
       writeHtml(dir, "index.html", "<html>home</html>");
-      writeHtml(dir, "p/about.html", "<html>about</html>");
-      const allowed = new Set(["https://www.11tik.com/", "https://www.11tik.com/p/about.html"]);
+      writeHtml(dir, "about.html", "<html>about</html>");
+      const allowed = new Set(["https://www.11tik.com/", "https://www.11tik.com/about"]);
       const snap = buildIndexNowSnapshot(dir, { allowedUrls: allowed });
       writeCheckpoint(
         {
@@ -340,7 +343,7 @@ describe("IndexNow after static generation", () => {
           pending: [
             {
               host: "www.11tik.com",
-              urls: ["https://www.11tik.com/p/about.html"],
+              urls: ["https://www.11tik.com/about"],
               status: 503,
             },
           ],
@@ -357,7 +360,7 @@ describe("IndexNow after static generation", () => {
         env: { INDEXNOW_SUBMIT: "1" },
         sleepFn: async () => {},
       });
-      expect(result.notify).toContain("https://www.11tik.com/p/about.html");
+      expect(result.notify).toContain("https://www.11tik.com/about");
       expect(fetchImpl).toHaveBeenCalled();
     } finally {
       rmSync(dir, { recursive: true, force: true });

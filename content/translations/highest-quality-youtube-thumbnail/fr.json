@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "fr",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Comment obtenir une miniature YouTube de la plus haute qualité | 11tik",
   "description": "La qualité maximale correspond au format JPEG ou WebP public le plus volumineux que YouTube renvoie réellement, et non à un nom de fichier 4K deviné.",
@@ -25,15 +25,19 @@
     },
     {
       "heading": "Quelle est la résolution publique maximale ?",
-      "html": "<p>Lorsque YouTube publie la résolution maxresdefault, celle-ci est généralement de 1280×720. Si ce fichier est manquant, la meilleure qualité disponible est la prochaine taille valide, telle que sd ou hq.</p>"
+      "html": "<p>Lorsque YouTube publie la résolution maximale par défaut (maxresdefault), celle-ci est généralement de 1280×720. Si ce fichier est manquant, la meilleure qualité disponible est la prochaine taille valide, comme SD ou HQ. «&nbsp;Qualité maximale&nbsp;» signifie…<strong>la plus grande image validée et accessible au public</strong>pour cet identifiant vidéo — pas un master 4K, pas un fichier de taille moyenne mis à l'échelle, et pas une capture d'écran du lecteur.</p>"
+    },
+    {
+      "heading": "Miniature de qualité maximale par rapport à la miniature « originale »",
+      "html": "<p><strong>Qualité supérieure</strong>(ce guide) : le principal dérivé CDN public 11tik valide — souvent maxres ou hq720 lorsqu'il est présent.<strong>Original</strong>(Intention différente)&nbsp;: Il s’agit également d’un CDN public, mais le terme peut laisser penser que le fichier source est celui de l’auteur. Ce n’est pas le fichier Photoshop/PNG brut de Studio, ni une extraction d’image vidéo, et la résolution de l’œuvre originale n’est pas garantie. Voir<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">Signification et limites de la vignette originale</a>et<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">référence de taille</a>Dans notre<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 échantillons vidéo</a>, maxres validé pour 286/300 ID—disponibilité limitée à un échantillon, pas une promesse pour chaque téléchargement.</p>"
     },
     {
       "heading": "WebP a-t-il une importance ?",
-      "html": "<p>Certaines vidéos existent également en WebP, avec des noms et une taille identiques. 11tik peut les afficher lorsqu'elles sont présentes. Choisissez le fichier validé par l'outil, et non une URL devinée.</p>"
+      "html": "<p>Certaines vidéos existent également en WebP, avec des noms et une taille identiques. 11tik peut les afficher lorsqu'elles sont présentes. Sélectionnez le fichier validé par l'outil, et non une URL devinée.</p>"
     },
     {
       "heading": "Pourquoi la HD a-t-elle parfois un aspect flou ?",
-      "html": "<p>L'image publique peut encore être en 1280×720 avec compression, ou vous pouvez consulter la qualité par défaut. Vérifiez la taille des pixels 11tik avant de conclure à un échec du téléchargement.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Guide des tailles</a></p>"
+      "html": "<p>L'image publique peut encore être en 1280×720 avec compression, ou vous pouvez consulter la qualité par défaut. Vérifiez la taille des pixels 11tik avant de conclure à un échec du téléchargement.</p>\n  <p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/about\">À propos</a>ou<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extracteur</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Guide des tailles</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/p/about.html\">À propos</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Écrit par 11tik, éditeur de l'extracteur de miniatures YouTube intégré au navigateur. Voir<a href=\"https://www.11tik.com/about\">À propos</a>ou<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

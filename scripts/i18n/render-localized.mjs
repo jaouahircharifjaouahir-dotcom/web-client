@@ -245,7 +245,7 @@ export function renderLocalizedHtml(item, artifact, { alternates = [], pathLinkI
         description: artifact.description,
         inLanguage: locale,
         mainEntityOfPage: toHttpsUrl(canonical),
-        author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/p/about.html" },
+        author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/about" },
         publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
         image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
       },

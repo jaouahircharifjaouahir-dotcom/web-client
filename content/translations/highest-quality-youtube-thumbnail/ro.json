@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "ro",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Cum să obții o miniatură YouTube de cea mai înaltă calitate | 11tik",
   "description": "Calitatea cea mai înaltă înseamnă cea mai mare versiune publică de JPEG sau WebP pe care YouTube o returnează efectiv, nu un nume de fișier 4K ghicit.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Care este rezoluția publică maximă?",
-      "html": "<p>Când YouTube publică maxresdefault, aceasta este de obicei 1280×720. Dacă fișierul respectiv lipsește, cea mai înaltă calitate este următoarea dimensiune validă, cum ar fi SD sau HQ.</p>"
+      "html": "<p>Când YouTube publică maxresdefault, aceasta este de obicei 1280×720. Dacă fișierul respectiv lipsește, cea mai înaltă calitate este următoarea dimensiune validă, cum ar fi sd sau hq. „Calitate maximă” înseamnă<strong>cea mai mare imagine validată și accesibilă publicului</strong>pentru ID-ul videoclipului respectiv — nu o înregistrare master 4K, nu un fișier de dimensiuni medii extins și nu o captură de ecran a playerului.</p>"
+    },
+    {
+      "heading": "Miniatură de cea mai înaltă calitate față de miniatura „originală”",
+      "html": "<p><strong>Cea mai înaltă calitate</strong>(acest ghid): derivatul principal al rețelei CDN publice 11tik validează - adesea maxres sau hq720 atunci când este prezent.<strong>Original</strong>(intenție diferită): tot o rețea CDN publică, dar cuvântul îi tentează pe oameni să aștepte fișierul sursă al celui care a încărcat fișierul. Nu este fișierul brut Photoshop/PNG din Studio, nu este o copiere a cadrelor video și nu este garantată rezoluția sursă a imaginii. Vezi<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">semnificația și limitele miniaturii originale</a>şi<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">referință de dimensiune</a>În al nostru<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">eșantion de 300 de videoclipuri</a>, maxres validate pentru 286/300 ID-uri - disponibilitate limitată la eșantion, nu o promisiune pentru fiecare încărcare.</p>"
     },
     {
       "heading": "Contează WebP?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "De ce pare uneori „HD” slab?",
-      "html": "<p>Rezoluția publică ar putea fi încă de 1280×720 cu compresie sau s-ar putea să vă uitați la hqdefault. Verificați rapoartele privind dimensiunea pixelilor 11tik înainte de a presupune că descărcarea a eșuat.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Ghid de mărimi</a></p>"
+      "html": "<p>Rezoluția publică ar putea fi încă de 1280×720 cu compresie sau s-ar putea să vă uitați la hqdefault. Verificați rapoartele privind dimensiunea pixelilor 11tik înainte de a presupune că descărcarea a eșuat.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/about\">Despre</a>sau<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Ghid de mărimi</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/about\">Despre</a>sau<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

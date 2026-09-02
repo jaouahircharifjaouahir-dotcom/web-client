@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "th",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "วิธีดาวน์โหลดภาพขนาดย่อของ YouTube Shorts ในคุณภาพระดับ HD | 11tik",
   "description": "ดาวน์โหลดภาพขนาดย่อของ YouTube Shorts ในเบราว์เซอร์ Shorts ใช้ภาพนิ่งสาธารณะเดียวกันกับ URL สำหรับรับชม ไฟล์มักจะเป็นแนวนอน",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "ไฟล์ Shorts กับไฟล์ watch-page เหมือนกันหรือไม่?",
-      "html": "<p>พวกเขาใช้ชื่อขนาดสาธารณะเดียวกันโดยใช้รหัสวิดีโอเป็นตัวกำหนด ภาพนิ่งอาจดูมีแถบดำด้านบนและด้านล่างหาก YouTube จัดเก็บไฟล์เวอร์ชันไวด์สกรีนไว้</p>"
+      "html": "<p>พวกเขาใช้ชื่อขนาดสาธารณะเดียวกัน โดยกำหนดคีย์ตามรหัสวิดีโอ<code>i.ytimg.com</code>ภาพนิ่งอาจแสดงผลแบบมีแถบดำด้านบนและด้านล่าง หาก YouTube จัดเก็บไฟล์เวอร์ชันไวด์สกรีนไว้ โครงสร้าง URL สำหรับลิงก์ Shorts, watch และ youtu.be ได้รับการอธิบายไว้ใน<a href=\"https://www.11tik.com/youtube-thumbnail-url\">คู่มือ URL สำหรับภาพขนาดย่อ</a>.</p>"
+    },
+    {
+      "heading": "Shorts เผยแพร่ภาพที่มีความละเอียดสูงสุดเสมอหรือไม่?",
+      "html": "<p>ไม่ ในระบบของเรา<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">ตัวอย่างวิดีโอ 300 รายการ</a>ค่า maxresdefault ได้รับการตรวจสอบแล้วสำหรับ<strong>286 จาก 300</strong>รหัสประจำตัว (<strong>95.33%</strong>);<strong>14 จาก 300</strong>ถึงแม้จะไม่มี maxres ก็ยังคงมี public ที่ต่ำกว่าที่ถูกต้องอยู่ดี นี่เป็นหลักฐานที่จำกัดขอบเขตสำหรับพฤติกรรมสำรอง ไม่ใช่กฎ Shorts สากล</p>"
     },
     {
       "heading": "จะทำอย่างไรหากไม่มีภาพปรากฏขึ้น?",
-      "html": "<p>ไฟล์วิดีโอสั้นอาจเป็นส่วนตัว ถูกลบ หรือไม่มีภาพนิ่งสาธารณะ โปรแกรมดึงข้อมูลไม่สามารถข้ามข้อจำกัดเหล่านั้นได้</p>\n  <p class=\"yte-bio\">เขียนโดย 11tik ผู้เผยแพร่โปรแกรมแยกภาพขนาดย่อ YouTube ในเบราว์เซอร์ ดูที่นี่<a href=\"https://www.11tik.com/p/about.html\">เกี่ยวกับ</a>หรือ<a href=\"https://www.11tik.com/p/contact.html\">ติดต่อ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">เครื่องสกัด</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">วิธีการดาวน์โหลด</a></p>"
+      "html": "<p>ไฟล์วิดีโอสั้นอาจเป็นส่วนตัว ถูกลบ หรือไม่มีภาพนิ่งสาธารณะ โปรแกรมดึงข้อมูลไม่สามารถข้ามข้อจำกัดเหล่านั้นได้</p>\n  <p class=\"yte-bio\">เขียนโดย 11tik ผู้เผยแพร่โปรแกรมแยกภาพขนาดย่อ YouTube ในเบราว์เซอร์ ดูที่นี่<a href=\"https://www.11tik.com/about\">เกี่ยวกับ</a>หรือ<a href=\"https://www.11tik.com/contact\">ติดต่อ</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">เครื่องสกัด</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">วิธีการดาวน์โหลด</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">เขียนโดย 11tik ผู้เผยแพร่โปรแกรมแยกภาพขนาดย่อ YouTube ในเบราว์เซอร์ ดูที่นี่<a href=\"https://www.11tik.com/p/about.html\">เกี่ยวกับ</a>หรือ<a href=\"https://www.11tik.com/p/contact.html\">ติดต่อ</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">เขียนโดย 11tik ผู้เผยแพร่โปรแกรมแยกภาพขนาดย่อ YouTube ในเบราว์เซอร์ ดูที่นี่<a href=\"https://www.11tik.com/about\">เกี่ยวกับ</a>หรือ<a href=\"https://www.11tik.com/contact\">ติดต่อ</a>.</p>"
 }

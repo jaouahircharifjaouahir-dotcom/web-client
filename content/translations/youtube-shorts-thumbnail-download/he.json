@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "he",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "איך להוריד תמונה ממוזערת של סרטון קצר מיוטיוב באיכות HD | 11tik",
   "description": "הורד תמונה ממוזערת של סרטון YouTube Shorts בדפדפן. סרטונים קצרים משתמשים באותן תמונות סטילס ציבוריות כמו כתובות URL לצפייה. הקובץ הוא לרוב בפורמט אופקי.",
@@ -25,16 +25,20 @@
     },
     {
       "heading": "האם קבצי Shorts זהים לקבצי דף צפייה?",
-      "html": "<p>הם משתמשים באותם שמות גודל ציבוריים המותאמים למזהה הסרטון. התמונה עשויה להיראות בתיבה אותיות אם YouTube אחסנה גרסה נגזרת של מסך רחב.</p>"
+      "html": "<p>הם משתמשים באותם שמות גודל ציבוריים שמקורם במזהה וידאו ב<code>i.ytimg.com</code>ייתכן שהתמונות נראות כמו תיבות אותיות אם יוטיוב אחסנה גרסה נגזרת של מסך רחב. מבנה כתובות URL עבור קישורים קצרים, צפייה וקישורים youtu.be מכוסה ב<a href=\"https://www.11tik.com/youtube-thumbnail-url\">מדריך כתובות URL של תמונות ממוזערות</a>.</p>"
+    },
+    {
+      "heading": "האם Shorts תמיד מפרסמים תוצאות מקסימליות?",
+      "html": "<p>לא. אצלנו<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">דגימה של 300 סרטונים</a>, maxresdefault אומת עבור<strong>286 מתוך 300</strong>תעודות זהות (<strong>95.33%</strong>); ה-<strong>14 מתוך 300</strong>ללא מקסימום, עדיין היה ערך סטילס ציבורי נמוך יותר תקף. זוהי ראיה מדגמית להתנהגות גיבוי, לא כלל Shorts אוניברסלי.</p>"
     },
     {
       "heading": "מה קורה אם לא מופיעה תמונה?",
-      "html": "<p>ייתכן שהסרטון הקצר יהיה פרטי, נמחק או ללא תמונות סטילס ציבוריות. מחלץ התמונות אינו יכול לעקוף את המגבלות הללו.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/p/contact.html\">מַגָע</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">חוֹלֵץ</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">איך להוריד</a></p>"
+      "html": "<p>ייתכן שהסרטון הקצר יהיה פרטי, נמחק או ללא תמונות סטילס ציבוריות. מחלץ התמונות אינו יכול לעקוף את המגבלות הללו.</p>\n  <p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/contact\">מַגָע</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">חוֹלֵץ</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">איך להוריד</a></p>"
     }
   ],
   "faq": [
     {
-      "question": "האם ניתן להוריד תמונה ממוזערת של YouTube Shorts?",
+      "question": "האם ניתן להוריד סרטון ממוזער של YouTube Shorts?",
       "answer": "כן, כאשר YouTube פרסם תמונות סטילס ציבוריות עבור מזהה הסרטון Shorts הזה.",
       "answerHtml": "כן, כאשר YouTube פרסם תמונות סטילס ציבוריות עבור מזהה הסרטון Shorts הזה."
     },
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/p/about.html\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/p/contact.html\">מַגָע</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">נכתב על ידי 11tik, המוציא לאור של תוכנת חילוץ התמונות הממוזערות של YouTube הנמצאת בדפדפן. ראה<a href=\"https://www.11tik.com/about\">אוֹדוֹת</a>אוֹ<a href=\"https://www.11tik.com/contact\">מַגָע</a>.</p>"
 }

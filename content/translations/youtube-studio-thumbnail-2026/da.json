@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "da",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Studio-miniaturebillede 2026 | 11tik",
   "description": "I 2026 uploader berettigede YouTube-kanaler stadig et brugerdefineret miniaturebillede fra Studio på en videos detaljeside. Menuetiketter flyttes, men resultatet er det samme: YouTube er vært for et nyt offentligt stillbillede. 11tik uploader ikke den fil. Den læser kun offentlige billed-URL'er, når de findes.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>Åbn YouTube Studio, og vælg videoen.</li>\n    <li>Under Detaljer skal du uploade et 16:9-billede (YouTubes almindelige mål er 1280×720).</li>\n    <li>Gem og vent, indtil behandlingen er færdig.</li>\n  </ol>\n  <p>De præcise knapnavne kan ændres. Hvis din konto ikke er berettiget til brugerdefinerede miniaturebilleder, tilbyder Studio ikke upload. 11tik kan ikke omgå det.</p>"
     },
     {
+      "heading": "Diagnostisk træ: Studioændring vs. offentligt stillbillede",
+      "html": "<ol>\n    <li>Når du har uploadet brugerdefineret kunst i Studio, skal du vente på, at behandlingen er færdig.</li>\n    <li>Indsæt den offentlige visnings-URL i<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Nogle størrelser vises, mangler maks. størrelser?</strong>→ variant-/fallback-problem, ikke en mislykket Studio-upload. Se<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault forklaret</a>.</li>\n    <li><strong>Ingen størrelser overhovedet?</strong>→ videoen er muligvis stadig under behandling, privat eller begrænset til offentlige CDN-stillbilleder. Se<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">miniaturebilledet vises ikke</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Hvordan tjekker jeg et miniaturebillede, efter jeg har ændret det i Studio?",
-      "html": "<p>Indsæt URL'en til uret i<a href=\"https://www.11tik.com/\">11tik</a>Download eller kopier den første anførte størrelse. Hvis maxresdefault mangler, er den næste offentlige fil det ærlige maksimum. Det er YouTubes katalog, ikke et mislykket udtræk. Se også<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault forklaret</a>.</p>"
+      "html": "<p>Indsæt URL'en til uret i<a href=\"https://www.11tik.com/\">11tik</a>Download eller kopier den første anførte størrelse. Hvis maxresdefault mangler, er den næste offentlige fil det ærlige maksimum. Det er YouTubes katalog, ikke et mislykket udtræk. Se også<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault forklaret</a>.</p>"
     },
     {
       "heading": "Erstatter 11tik YouTube Studio?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Hvad skal jeg gøre, når billedet ser gammelt ud?",
-      "html": "<p>Billed-CDN'er kan være langsomme. Tjek igen senere, genindlæs, eller kopier URL'en 11tik for at bekræfte. Antag ikke en 4K-master; den offentlige maks. opløsning er normalt 1280×720. Et skærmbillede af Studio er ikke den offentlige miniaturefil.</p>\n  <p>Relateret:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">udtrækker vs. producent</a>.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Åbn emhætten</a></p>"
+      "html": "<p>Billed-CDN'er kan være langsomme. Tjek igen senere, genindlæs, eller kopier URL'en 11tik for at bekræfte. Antag ikke en 4K-master; den offentlige maks. opløsning er normalt 1280×720. Et skærmbillede af Studio er ikke den offentlige miniaturefil.</p>\n  <p>Relateret:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">udtrækker vs. producent</a>.</p>\n  <p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Åbn emhætten</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet af 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>"
 }

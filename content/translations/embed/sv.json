@@ -23,7 +23,7 @@
     },
     {
       "heading": "Djuplänkar",
-      "html": "<p>Dela en färdig extraktion med<code>https://www.11tik.com/?v=VIDEO_ID</code>Inbäddningen använder samma ID-extraktion på klientsidan som huvudverktyget för att titta på, Shorts, live, youtu.be och inbäddnings-URL:er – och undersöker sedan offentliga stillbilder på<code>i.ytimg.com</code>(aldrig ett privat YouTube API). URL-anatomi:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">miniatyr-URL-guide</a>Uppmätt varianttillgänglighet i vår<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300-videoprov</a>(urvalsbaserat, inte universellt).</p>"
+      "html": "<p>Dela en färdig extraktion med<code>https://www.11tik.com/?v=VIDEO_ID</code>Inbäddningen använder samma ID-extraktion på klientsidan som huvudverktyget för att titta på, Shorts, live, youtu.be och inbäddnings-URL:er – och undersöker sedan offentliga stillbilder på<code>i.ytimg.com</code>(aldrig ett privat YouTube API). URL-anatomi:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">miniatyr-URL-guide</a>Uppmätt varianttillgänglighet i vår<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-videoprov</a>(urvalsbaserat, inte universellt).</p>"
     },
     {
       "heading": "Begränsningar för webbläsare och värd",

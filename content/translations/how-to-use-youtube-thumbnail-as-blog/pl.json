@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "pl",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "Jak używać miniatury YouTube jako wyróżnionego obrazu bloga lub podglądu Open Graph | 11tik",
   "description": "Sprawdź, czy publiczny kanał YouTube nadal istnieje, a następnie udostępnij jego kopię dla WordPressa, Bloggera lub og:image. Nie dodawaj linku do adresu URL o nazwie maxresdefault.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "Szybka odpowiedź",
-      "html": "<p>Wklej publiczny adres URL YouTube do<a href=\"https://www.11tik.com/\">11tik</a>, poczekaj na sprawdzenie rozmiarów, a następnie<strong>pobierać</strong>pierwszy kadr i prześlij go do swojego CMS-a lub<strong>skopiuj adres URL obrazu</strong>Dopiero po załadowaniu. Aby posty były trwałe, hostuj własną kopię. Hotlinking<code>i.ytimg.com</code>jest wygodny do projektów i delikatny do produkcji kartek socjalnych.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Potwierdź → skopiuj lub pobierz → hostuj → odniesienie w formacie HTML / obraz wyróżniony / Open Graph.</p>"
+      "html": "<p>Wklej publiczny adres URL YouTube do<a href=\"https://www.11tik.com/\">11tik</a>, poczekaj na sprawdzenie rozmiarów, a następnie<strong>pobierać</strong>pierwszy kadr i prześlij go do swojego CMS-a lub<strong>skopiuj adres URL obrazu</strong>Dopiero po załadowaniu. Aby posty były trwałe, hostuj własną kopię. Hotlinking<code>i.ytimg.com</code>jest wygodny do projektów i delikatny do produkcji kartek socjalnych.</p>\n\n  <img alt=\"Przepływ pracy od potwierdzenia miniaturki YouTube na 11tik do przesłania jej do WordPressa lub\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Potwierdź → skopiuj lub pobierz → hostuj → odniesienie w formacie HTML / obraz wyróżniony / Open Graph.</p>"
     },
     {
       "heading": "Czym jest bezpośredni adres URL miniatury",
-      "html": "<p>Na przykład bezpośredni adres URL miniatury wskazuje na plik JPEG lub WebP w sieci CDN obrazów YouTube<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>To nie jest strona do oglądania. Jak zbudowane są te adresy:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">pobierz adres URL miniatury YouTube</a>Czym różnią się rozmiary:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">przewodnik po rozmiarach i rozdzielczościach</a>.</p>"
+      "html": "<p>Na przykład bezpośredni adres URL miniatury wskazuje na plik JPEG lub WebP w sieci CDN obrazów YouTube<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>To nie jest strona do oglądania. Jak zbudowane są te adresy:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pobierz adres URL miniatury YouTube</a>Czym różnią się rozmiary:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">przewodnik po rozmiarach i rozdzielczościach</a>.</p>"
     },
     {
       "heading": "Przykład HTML",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "Przepływ pracy WordPress",
-      "html": "<ol>\n    <li>Wypakuj wideo na 11tik i pobierz pierwszy z wymienionych klatek.</li>\n    <li>W WordPressie: Media → Dodaj nowy → prześlij plik.</li>\n    <li>Ustaw jako wyróżniony obraz posta.</li>\n    <li>W aplikacji Yoast, Rank Math lub podobnej sprawdź, czy podgląd społecznościowy używa tego załącznika (lub prześlij dedykowany plik OG).</li>\n    <li>Napisz tekst alternatywny, który będzie zawierał nazwę filmu i informację, że plik jest publicznym zdjęciem z serwisu YouTube, a nie wypełnioną listą słów kluczowych.</li>\n  </ol>\n  <p>Unikaj wklejania surowego<code>maxresdefault.jpg</code>ścieżka do pola multimediów, dopóki plik nie zostanie potwierdzony. Brak wartości maxres jest częsty —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">przewodnik maxresdefault 404</a>.</p>"
+      "html": "<ol>\n    <li>Wypakuj wideo na 11tik i pobierz pierwszy z wymienionych klatek.</li>\n    <li>W WordPressie: Media → Dodaj nowy → prześlij plik.</li>\n    <li>Ustaw jako wyróżniony obraz posta.</li>\n    <li>W aplikacji Yoast, Rank Math lub podobnej sprawdź, czy podgląd społecznościowy używa tego załącznika (lub prześlij dedykowany plik OG).</li>\n    <li>Napisz tekst alternatywny, który będzie zawierał nazwę filmu i informację, że plik jest publicznym zdjęciem z serwisu YouTube, a nie wypełnioną listą słów kluczowych.</li>\n  </ol>\n  <p>Unikaj wklejania surowego<code>maxresdefault.jpg</code>ścieżka do pola multimediów, dopóki plik nie zostanie potwierdzony. Brak wartości maxres jest częsty —<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">przewodnik maxresdefault 404</a>.</p>"
     },
     {
       "heading": "Blogger i witryny statyczne",
-      "html": "<p><strong>Bloger:</strong>Prześlij zdjęcie do edytora postów, a następnie ponownie wykorzystaj ten hostowany adres URL obrazu Bloggera w dowolnych kontrolowanych przez Ciebie polach motywu/fragmentu społecznościowego. Nie polegaj na zgadywanej ścieżce CDN YouTube dla opublikowanego posta, który Cię interesuje.</p>\n  <p><strong>Generatory statyczne:</strong>Zatwierdź plik w repozytorium lub CDN, a następnie ustaw tagi front-matter/meta dla tego zasobu HTTPS. Jeśli musisz, przechowuj wersje robocze na tymczasowym adresie URL i.ytimg.com, ale wysyłaj je za pośrednictwem własnego hosta.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Obraz wyróżniony i og:image mogą współdzielić plik, ale oba wymagają istniejącego adresu URL.</p>"
+      "html": "<p><strong>Bloger:</strong>Prześlij zdjęcie do edytora postów, a następnie ponownie wykorzystaj ten hostowany adres URL obrazu Bloggera w dowolnych kontrolowanych przez Ciebie polach motywu/fragmentu społecznościowego. Nie polegaj na zgadywanej ścieżce CDN YouTube dla opublikowanego posta, który Cię interesuje.</p>\n  <p><strong>Generatory statyczne:</strong>Zatwierdź plik w repozytorium lub CDN, a następnie ustaw tagi front-matter/meta dla tego zasobu HTTPS. Jeśli musisz, przechowuj wersje robocze na tymczasowym adresie URL i.ytimg.com, ale wysyłaj je za pośrednictwem własnego hosta.</p>\n\n  <img alt=\"Porównanie przesyłania wyróżnionego obrazu w WordPressie i karty społecznościowej Open Graph przy\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Obraz wyróżniony i og:image mogą współdzielić plik, ale oba wymagają istniejącego adresu URL.</p>"
+    },
+    {
+      "heading": "Praktyczne przykłady według platformy",
+      "html": "<h3>Kopiowanie obrazu (najpierw potwierdź adres URL)</h3>\n  <p>Na 11tik użyj<strong>Kopiuj adres URL obrazu</strong>Dopiero po sprawdzeniu rozmiaru w przeglądarce. Wklej ten adres HTTPS do wersji roboczej — albo jeszcze lepiej, pobierz plik i prześlij go. Zgadywanie<code>maxresdefault.jpg</code>psuje Open Graph, gdy plik nigdy nie został opublikowany. Konstrukcja adresu URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">przewodnik po adresach URL miniatur</a>.</p>\n  <h3>Hosting lokalny (zalecane w przypadku produkcji)</h3>\n  <p>Pobierz zweryfikowany obraz, prześlij go do swojej biblioteki multimediów lub statycznej sieci CDN i podaj nazwę swojej domeny w<code>&lt;img&gt;</code>I<code>og:image</code>. Unikaj kruchych, długoterminowych linków do<code>i.ytimg.com</code>w postach, które Cię interesują.</p>\n  <h3>Wyróżniony obraz WordPress + og:image</h3>\n  <p>Media → Dodaj nowy → prześlij pobrany plik JPEG lub WebP → ustaw obraz wyróżniony → sprawdź, czy podgląd społecznościowy Yoast/Rank Math używa tego załącznika. Ponowne skanowanie debugerów Facebooka/Twittera/LinkedIn po zmianach adresu URL.</p>\n  <h3>Bloger</h3>\n  <p>Wstaw obraz w edytorze postów, aby Blogger hostował plik, a następnie ponownie użyj tego adresu URL CDN Bloggera w metadanych motywu, jeśli Twój szablon udostępnia pola społecznościowe. Nie polegaj na zewnętrznym adresie URL obrazu YouTube w przypadku stałego posta.</p>\n  <h3>Strony statyczne (Hugo, Eleventy itp.)</h3>\n  <p>Zatwierdź obraz pod<code>/assets</code>lub w swoim CDN, podaj odnośnik do niego w tekście źródłowym i wyemituj<code>og:image</code>z rzeczywistą szerokością/wysokością. Przykładowy blok meta:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>Kiedy hotlinkowanie jest dopuszczalne</h3>\n  <p>Notatki wewnętrzne, szybkie wersje robocze lub tymczasowe strony badawcze mogą zawierać linki do zweryfikowanych stron.<code>i.ytimg.com</code>Adres URL. Artykuły produkcyjne, strony produktów i kampanie e-mailowe powinny zawierać kopię. Osadź widżet, aby wyodrębnić dane ze strony:<a href=\"https://www.11tik.com/embed\">osadź przewodnik</a>.</p>"
     },
     {
       "heading": "Rozważania dotyczące Open Graph",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "Hotlinkowanie a pobieranie",
-      "html": "<table>\n    <thead>\n      <tr><th>Zbliżać się</th><th>Najlepszy dla</th><th>Ryzyko</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Łącze aktywne i.ytimg.com</td><td>Szybkie szkice, notatki badawcze</td><td>404, zmiany w CDN, brak kontroli upraw</td></tr>\n      <tr><td>Pobierz + hostuj</td><td>Posty rankingowe, strony produktów</td><td>Musisz zapisać plik</td></tr>\n      <tr><td>Zrzut ekranu gracza</td><td>Prawie nigdy</td><td>Chrom interfejsu użytkownika, zły współczynnik —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">zrzut ekranu kontra rzeczywistość</a></td></tr>\n    </tbody>\n  </table>\n  <p>Kroki pobierania:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">jak pobrać miniaturę z YouTube</a>Wybór formatu, gdy dostępne są zarówno WebP, jak i JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP kontra JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>Zbliżać się</th><th>Najlepszy dla</th><th>Ryzyko</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Łącze aktywne i.ytimg.com</td><td>Szybkie szkice, notatki badawcze</td><td>404, zmiany w CDN, brak kontroli upraw</td></tr>\n      <tr><td>Pobierz + hostuj</td><td>Posty rankingowe, strony produktów</td><td>Musisz zapisać plik</td></tr>\n      <tr><td>Zrzut ekranu gracza</td><td>Prawie nigdy</td><td>Chrom interfejsu użytkownika, zły współczynnik —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">zrzut ekranu kontra rzeczywistość</a></td></tr>\n    </tbody>\n  </table>\n  <p>Kroki pobierania:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">jak pobrać miniaturę z YouTube</a>Wybór formatu, gdy dostępne są zarówno WebP, jak i JPEG:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP kontra JPEG</a>.</p>"
     },
     {
       "heading": "Podstawy SEO dla tych zdjęć",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "Ponowne wykorzystanie i prawa autorskie (nie jest to porada prawna)",
-      "html": "<p>Publiczny adres URL CDN nie jest licencją. Osadzanie odtwarzacza YouTube różni się od kopiowania klatki do bohatera. Dozwolony użytek dotyczy konkretnych faktów. Bezpieczniejszy wzór redakcyjny: zilustruj komentarz do danego filmu, podaj źródło kanału, podaj link do strony odtwarzania i nie sprzedawaj obrazu ani nie używaj go jako grafiki własnego kanału. Oficjalna pomoc dotycząca niestandardowych miniatur:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prześlij niestandardowe miniatury wideo</a>. Zasady witryny:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>.</p>"
+      "html": "<p>Publiczny adres URL CDN nie jest licencją. Osadzenie odtwarzacza YouTube różni się od skopiowania klatki do bohatera. Dozwolony użytek dotyczy konkretnych faktów. Bezpieczniejszy wzór redakcyjny: zilustruj komentarz do danego filmu, podaj źródło kanału, podaj link do strony odtwarzania i nie sprzedawaj obrazu ani nie używaj go jako grafiki własnego kanału. Oficjalna pomoc dotycząca niestandardowych miniatur:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Prześlij niestandardowe miniatury wideo</a>. Zasady witryny:<a href=\"https://www.11tik.com/terms-of-use\">Warunki</a>.</p>"
     },
     {
       "heading": "Rozwiązywanie problemów",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "Następny krok",
-      "html": "<p>Potwierdź nieruchomy obraz<a href=\"https://www.11tik.com/\">ekstraktor 11tik</a>, pobierz go, prześlij na swoją stronę i wskaż wyróżniony obraz / og:image na swój plik HTTPS.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Prywatność</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>.</p>"
+      "html": "<p>Potwierdź nieruchomy obraz<a href=\"https://www.11tik.com/\">ekstraktor 11tik</a>, pobierz go, prześlij na swoją stronę i wskaż wyróżniony obraz / og:image na swój plik HTTPS.</p>\n  <p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>·<a href=\"https://www.11tik.com/privacy\">Prywatność</a>·<a href=\"https://www.11tik.com/terms-of-use\">Warunki</a>.</p>"
     }
   ],
   "faq": [
@@ -98,9 +102,9 @@
     {
       "question": "A co jeśli Studio po prostu zmieni niestandardową miniaturę?",
       "answer": "Poczekaj na przetworzenie, a następnie sprawdź ponownie 11tik przed aktualizacją kopii CMS. Powiązane: Miniatury w YouTube Studio.",
-      "answerHtml": "<p>Poczekaj na przetworzenie, a następnie sprawdź ponownie 11tik przed aktualizacją kopii CMS. Powiązane:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Miniatury YouTube Studio</a>.</p>"
+      "answerHtml": "<p>Poczekaj na przetworzenie, a następnie sprawdź ponownie 11tik przed aktualizacją kopii CMS. Powiązane:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">Miniatury YouTube Studio</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Prywatność</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Warunki</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisane przez 11tik.<a href=\"https://www.11tik.com/about\">O</a>·<a href=\"https://www.11tik.com/privacy\">Prywatność</a>·<a href=\"https://www.11tik.com/terms-of-use\">Warunki</a>.</p>"
 }

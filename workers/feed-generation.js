@@ -23,7 +23,7 @@ export const FEED_POSTS_RSS_ASSET_PATH = "/feeds/posts/default.rss";
 export const FEED_SITE_TITLE = "11tik";
 export const FEED_SITE_HOME = `${SITE_ORIGIN}/`;
 export const FEED_AUTHOR_NAME = "11tik";
-export const FEED_AUTHOR_URI = `${SITE_ORIGIN}/p/about.html`;
+export const FEED_AUTHOR_URI = `${SITE_ORIGIN}/about`;
 
 function xmlEscape(value) {
   return String(value || "")

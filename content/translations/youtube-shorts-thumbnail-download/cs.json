@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "cs",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Jak stáhnout miniaturu krátkých videí z YouTube v HD rozlišení | 11tik",
   "description": "Stáhněte si miniaturu YouTube Shorts v prohlížeči. Shorts používají stejné veřejné statické snímky jako URL adresy pro sledování. Soubor je často orientován na šířku.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Jsou soubory Shorts stejné jako soubory stránek pro sledování?",
-      "html": "<p>Používají stejné veřejné názvy velikostí s klíčem podle ID videa. Statický obrázek může vypadat jako letterbox, pokud YouTube ukládá širokoúhlou verzi.</p>"
+      "html": "<p>Používají stejné veřejné názvy velikostí s klíčem podle ID videa na<code>i.ytimg.com</code>Pokud YouTube uložil širokoúhlou verzi, může statický záběr vypadat jako letterbox. Anatomie URL adres pro krátká videa, videa ke zhlédnutí a odkazy youtu.be je popsána v<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Průvodce URL miniatur</a>.</p>"
+    },
+    {
+      "heading": "Publikují Shorts vždy maximální rozlišení?",
+      "html": "<p>Ne. V našem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Ukázka 300 videí</a>, maxresdefault ověřeno pro<strong>286 z 300</strong>ID (<strong>95,33 %</strong>); ten/ta/to<strong>14 z 300</strong>bez maxres stále mělo platnou nižší public still. To je důkaz pro záložní chování na úrovni vzorku, nikoli univerzální pravidlo pro Shorts.</p>"
     },
     {
       "heading": "Co když se žádný obrázek nezobrazí?",
-      "html": "<p>Krátký videoklip může být soukromý, smazaný nebo bez veřejných statických snímků. Extraktor tato omezení nemůže obejít.</p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Jak stáhnout</a></p>"
+      "html": "<p>Krátký videoklip může být soukromý, smazaný nebo bez veřejných statických snímků. Extraktor tato omezení nemůže obejít.</p>\n  <p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/about\">O</a>nebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Jak stáhnout</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/p/about.html\">O</a>nebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napsáno 11tik, vydavatelem nástroje pro extrakci miniatur YouTube v prohlížeči. Viz<a href=\"https://www.11tik.com/about\">O</a>nebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

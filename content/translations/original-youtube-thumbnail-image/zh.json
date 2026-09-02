@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "zh",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "如何获取 YouTube 视频的原始缩略图 | 11tik",
   "description": "获取 YouTube 官方提供的原始公开缩略图。这是 CDN 的静态图片，并非从视频中提取的帧。",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "YouTube 原图缩略图是什么？",
-      "html": "<p>这是 YouTube 已经存储在其图片服务器上的预览图。它是用于搜索和推荐内容的图片文件，而不是您使用 Print Screen 键截取的画面。</p>"
+      "html": "<p>这是 YouTube 已存储在其公共图像托管平台上的视频 ID 预览图像——与搜索和推荐列表中使用的文件类型相同。在 11tik 的词汇表中，“原始”意味着<strong>公共CDN衍生品</strong>不包含以下任何一项：</p>\n  <ul>\n    <li>上传者从 YouTube Studio 上传的原始源文件</li>\n    <li>原始项目文件（PSD、AI 等）</li>\n    <li>从视频流中截取的一帧</li>\n    <li>保证源分辨率的素材或 4K 母带</li>\n  </ul>\n  <p>对于<strong>最大的已验证公共文件</strong>当 maxres 缺失时，请阅读以下内容<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">最高质量的指南</a>有关像素层级和文件名，请参阅<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">尺码指南</a>。</p>"
     },
     {
       "heading": "这和屏幕截图有什么区别？",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "如何确认我确实获得了原始文件？",
-      "html": "<p>文件验证完成后，请使用 11tik 列表中列出的尺寸和规格。如果图像看起来像玩家截图，则说明您没有下载托管的缩略图。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">最高品质</a></p>"
+      "html": "<p>文件验证完成后，请使用 11tik 列表中列出的尺寸和规格。如果图像看起来像玩家截图，则说明您没有下载托管的缩略图。</p>\n  <p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/about\">关于</a>或者<a href=\"https://www.11tik.com/contact\">接触</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">提取器</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">最高品质</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/p/about.html\">关于</a>或者<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">本文由 11tik 撰写，该公司是浏览器内 YouTube 缩略图提取器的发布者。参见<a href=\"https://www.11tik.com/about\">关于</a>或者<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

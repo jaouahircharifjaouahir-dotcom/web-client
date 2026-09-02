@@ -2,7 +2,7 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "hr",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "Kako izdvojiti minijature iz URL-a YouTube kanala | 11tik",
   "description": "Zalijepite URL javnog YouTube kanala u 11tik Bulk kako biste proširili nedavne javne prijenose, a zatim preuzmite svaku najbolju sliku. Ovo služi za istraživanje pakiranja, a ne za kloniranje prilagođene umjetnosti drugog kanala.",
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "Opseg otkrivanja RSS-a",
+      "html": "<p>Proširenje kanala koristi javni feed kanala YouTubea (RSS stil) za popis nedavnih prijenosa s razlučivim ID-om videozapisa. Taj feed odražava<strong>javne stavke koje YouTube otkriva</strong>—ne svaki videozapis ikad prenesen,ne objave samo za članove ine zajamčeno potpuna arhiva.</p>"
+    },
+    {
+      "heading": "Samo javne stavke",
+      "html": "<p>Privatne, nenavedene fotografije bez javnih fotografija i prijenosi s ograničenjem dobi obično se nikada ne pojavljuju na proširenom popisu. Prazno proširenje obično znači da se identifikator nije razriješio, da je kanal prekinut ili da nisu vraćeni javni ID-ovi - a ne greška struganja 11tik.</p>"
+    },
+    {
+      "heading": "URL kanala u odnosu na eksplicitne URL-ove za gledanje",
+      "html": "<p>Jedan kanal se proširuje u više URL-ova za praćenje prije izdvajanja, i dalje podložno<strong>Ograničenje od 25 URL-ova</strong>Lijepljenje pojedinačnih poveznica za praćenje preskače otkrivanje RSS-a, ali daje preciznu kontrolu. Usporedite s lijepljenjem redak po redak:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">vodič za preuzimanje u serijama</a>.</p>"
+    },
+    {
+      "heading": "Nedostaju ili su uklonjene stavke",
+      "html": "<p>Izbrisani videozapisi s vremenom nestaju iz feedova. Kartica koja se ne uspije izdvojiti može se obrađivati, biti ograničena ili uklonjena - ponovno pokrenite jedan URL za gledanje ili pogledajte<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">sličica se ne prikazuje</a>.</p>"
+    },
+    {
+      "heading": "Etička upotreba",
+      "html": "<p>Namjera je proučavanje javne ambalaže u istraživačke svrhe. Ponovni prijenos prilagođene umjetnosti konkurenta kao vaše minijature krši autorska prava i pravila platforme. Navedite kanale u objavljenim komentarima; povežite njihove stranice za gledanje. Pravila stranice:<a href=\"https://www.11tik.com/copyright\">Autorska prava i korištenje</a>.</p>"
+    },
+    {
+      "heading": "Odnos s ekstrakcijom u serijama",
+      "html": "<p>Izdvajanje kanala je u skupnom načinu rada s RSS prethodnim ispunjavanjem. Ista validacija na strani klijenta, isto ograničenje od 25 URL-ova, isti CSV/zip izvozi - bez neograničenog skidanja podataka s kanala i bez privatnog API-ja na strani poslužitelja.</p>"
+    },
+    {
       "heading": "Mogu li dobiti minijature s cijelog YouTube kanala?",
-      "html": "<p>Možete dobiti fotografije za najnovije<em>javnost</em>prijenosi koji otkrivaju ID videozapisa. 11tik ne prikuplja podatke sa svakog videozapisa koji je kanal ikada objavio i ne zaobilazi članstva. Na početnoj stranici uključite Skupno, zalijepite URL kanala kao što je<code>youtube.com/@handle</code>ili<code>/channel/UC…</code>i pustite alat da proširi javni popis u stilu RSS-a. Zatim izdvojite kao što biste izdvojili tipkani popis. Ograničenje ostaje 25 URL-ova po pokretanju kako bi preglednik ostao upotrebljiv.</p>\n  <p>Ovo se razlikuje od spremanja jedne poveznice za praćenje. Tijek jednog URL-a je u<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">kako preuzeti minijaturu s YouTubea</a>Skupni rad redak po redak bez kanala je u<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">preuzimanje u seriji</a>.</p>"
+      "html": "<p>Možete dobiti fotografije za najnovije<em>javnost</em>prijenosi koji otkrivaju ID videozapisa. 11tik ne prikuplja podatke sa svakog videozapisa koji je kanal ikada objavio i ne zaobilazi članstva. Na početnoj stranici uključite Skupno, zalijepite URL kanala kao što je<code>youtube.com/@handle</code>ili<code>/channel/UC…</code>i pustite alat da proširi javni popis u stilu RSS-a. Zatim izdvojite kao što biste izdvojili tipkani popis. Ograničenje ostaje 25 URL-ova po pokretanju kako bi preglednik ostao upotrebljiv.</p>\n  <p>Ovo se razlikuje od spremanja jedne poveznice za praćenje. Tijek jednog URL-a je u<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">kako preuzeti minijaturu s YouTubea</a>Skupni rad redak po redak bez kanala je u<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">preuzimanje u seriji</a>.</p>"
     },
     {
       "heading": "Koji URL-ovi kanala funkcioniraju?",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "Što 11tik neće učiniti",
-      "html": "<ul>\n    <li>Preuzmite videozapise ili audiozapise. Samo fotografije.</li>\n    <li>Navedite nenavedene ili privatne prijenose.</li>\n    <li>Zajamčena maxresdefault vrijednost za svaki noviji videozapis. Stariji ili mali izvori zaustavljaju se na visokoj ili standardnoj rezoluciji.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maksimalna_zadana_vrijednost</a>.</li>\n    <li>Dodijelite prava za ponovnu upotrebu umjetničkog djela. Proučavanje mreže javne ambalaže je namjeravana istraživačka upotreba. Ponovno učitavanje fotografije konkurenta kao vaše prilagođene minijature predstavlja problem s autorskim pravima i pravilima.<a href=\"https://www.11tik.com/copyright\">Autorska prava i korištenje</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Preuzmite videozapise ili audiozapise. Samo fotografije.</li>\n    <li>Navedite nenavedene ili privatne prijenose.</li>\n    <li>Zajamčena maxresdefault vrijednost za svaki noviji videozapis. Stariji ili mali izvori zaustavljaju se na visokoj ili standardnoj rezoluciji.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maksimalna_zadana_vrijednost</a>.</li>\n    <li>Dodijelite prava za ponovnu upotrebu umjetničkog djela. Proučavanje mreže javne ambalaže je namjeravana istraživačka upotreba. Ponovno učitavanje fotografije konkurenta kao vaše prilagođene minijature predstavlja problem s autorskim pravima i pravilima.<a href=\"https://www.11tik.com/copyright\">Autorska prava i korištenje</a>.</li>\n  </ul>"
     },
     {
       "heading": "Kako ovo pomaže u istraživanju bez ulaznih stranica",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "Rješavanje problema",
-      "html": "<p>Prazan popis: feed kanala nije vratio javne ID-ove (kanal je prekinut ili identifikator koji resolver nije mogao mapirati). Pokušajte s URL-om UC kanala iz YouTubeovog rasporeda za stolna računala.</p>\n  <p>Neke kartice nedostaju: ti prijenosi još nisu javno dostupni ili je vrata odbacila nepotpuni izvadak. Ponovno pokrenite jedan URL za praćenje. Privatnost zalijepljenih poveznica:<a href=\"https://www.11tik.com/p/privacy.html\">Privatnost</a>.</p>\n  <p>Alat za izdvajanje u odnosu na alat za dizajn: 11tik ne stvara naslovnicu albuma.<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">Ekstraktor vs. proizvođač</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Izdvoji fotografije javnog kanala na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+      "html": "<p>Prazan popis: feed kanala nije vratio javne ID-ove (kanal je prekinut ili identifikator koji resolver nije mogao mapirati). Pokušajte s URL-om UC kanala iz YouTubeovog rasporeda za stolna računala.</p>\n  <p>Neke kartice nedostaju: ti prijenosi još nisu javno dostupni ili je vrata odbacila nepotpuni izvadak. Ponovno pokrenite jedan URL za praćenje. Privatnost zalijepljenih poveznica:<a href=\"https://www.11tik.com/privacy\">Privatnost</a>.</p>\n  <p>Alat za izdvajanje u odnosu na alat za dizajn: 11tik ne stvara naslovnicu albuma.<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">Ekstraktor vs. proizvođač</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Izdvoji fotografije javnog kanala na 11tik →</a></p>\n  <p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>·<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/p/about.html\">Oko</a>·<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napisao/la 11tik.<a href=\"https://www.11tik.com/about\">Oko</a>·<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

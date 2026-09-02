@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "id",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Cara Mendapatkan Gambar Thumbnail YouTube Asli | 11tik",
   "description": "Dapatkan thumbnail YouTube publik asli yang sudah dihosting oleh YouTube. Ini masih dari CDN, bukan frame yang diambil langsung dari video.",
@@ -20,8 +20,8 @@
   ],
   "sections": [
     {
-      "heading": "Apa gambar thumbnail YouTube aslinya?",
-      "html": "<p>Ini adalah gambar pratinjau yang sudah disimpan YouTube di layanan hosting gambarnya. Ini adalah file yang digunakan dalam pencarian dan saran rak, bukan tangkapan layar yang Anda tangkap dengan Print Screen.</p>"
+      "heading": "Apa itu thumbnail YouTube asli?",
+      "html": "<p>Ini adalah gambar pratinjau yang sudah disimpan YouTube di host gambar publiknya untuk ID video—kelas file yang sama yang digunakan dalam pencarian dan rak saran. Dalam kosakata 11tik, “asli” berarti bahwa<strong>turunan CDN publik</strong>, bukan salah satu dari berikut ini:</p>\n  <ul>\n    <li>File sumber asli yang diunggah oleh pengunggah dari YouTube Studio.</li>\n    <li>File proyek mentah (PSD, AI, dll.)</li>\n    <li>Sebuah bingkai yang diambil dari aliran video.</li>\n    <li>Aset dengan resolusi sumber terjamin atau master 4K.</li>\n  </ul>\n  <p>Untuk<strong>berkas publik tervalidasi terbesar</strong>Jika maxres mungkin hilang, bacalah<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">panduan kualitas tertinggi</a>Untuk tingkatan piksel dan nama file, lihat<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">panduan ukuran</a>.</p>"
     },
     {
       "heading": "Apa bedanya dengan tangkapan layar?",
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Bagaimana cara menemukan thumbnail aslinya?",
-      "html": "<p>Tempel URL tontonan, Shorts, siaran langsung, atau youtu.be ke dalam<a href=\"https://www.11tik.com/\">11tik</a>Alat ini membaca ID video, memeriksa file publik, dan memberi peringkat pada yang tertinggi yang ada.</p>"
+      "html": "<p>Tempel URL tontonan, Shorts, siaran langsung, atau youtu.be ke dalam<a href=\"https://www.11tik.com/\">11tik</a>Alat ini membaca ID video, memeriksa file publik, dan memberi peringkat pada video dengan kualitas tertinggi yang ada.</p>"
     },
     {
       "heading": "Bagaimana cara kerja URL thumbnail YouTube?",
@@ -49,12 +49,12 @@
     },
     {
       "heading": "Bagaimana cara saya memastikan bahwa saya benar-benar mendapatkan file aslinya?",
-      "html": "<p>Gunakan daftar ukuran dan dimensi 11tik setelah memvalidasi file. Jika gambar terlihat seperti tangkapan layar pemain, Anda tidak mengunduh thumbnail yang dihosting.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Alat pengambilan sari</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Kualitas tertinggi</a></p>"
+      "html": "<p>Gunakan daftar ukuran dan dimensi 11tik setelah memvalidasi file. Jika gambar terlihat seperti tangkapan layar pemain, Anda tidak mengunduh thumbnail yang dihosting.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/about\">Tentang</a>atau<a href=\"https://www.11tik.com/contact\">Kontak</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Alat pengambilan sari</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Kualitas tertinggi</a></p>"
     }
   ],
   "faq": [
     {
-      "question": "Apa gambar thumbnail YouTube aslinya?",
+      "question": "Apa itu thumbnail YouTube asli?",
       "answer": "File gambar publik yang dihosting YouTube untuk ID video, seperti maxresdefault jika ada. Ini bukan tangkapan layar halaman tontonan.",
       "answerHtml": "File gambar publik yang dihosting YouTube untuk ID video, seperti maxresdefault jika ada. Ini bukan tangkapan layar halaman tontonan."
     },
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/about\">Tentang</a>atau<a href=\"https://www.11tik.com/contact\">Kontak</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "ar",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "كيفية الحصول على صورة مصغرة أصلية من يوتيوب | 11tik",
   "description": "احصل على الصورة المصغرة الأصلية العامة من يوتيوب، والتي يستضيفها يوتيوب بالفعل. هذه صورة ثابتة من شبكة توصيل المحتوى (CDN)، وليست إطارًا مقتطعًا من الفيديو.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "ما هي الصورة المصغرة الأصلية على يوتيوب؟",
-      "html": "<p>إنها صورة المعاينة التي يخزنها يوتيوب بالفعل على خوادم الصور الخاصة به. وهي الملف المستخدم في البحث والرفوف المقترحة، وليست إطارًا تلتقطه باستخدام زر Print Screen.</p>"
+      "html": "<p>إنها صورة المعاينة التي يخزنها يوتيوب بالفعل على مواقع استضافة الصور العامة الخاصة به لمعرف الفيديو - وهو نفس نوع الملف المستخدم في البحث والرفوف المقترحة. في مصطلحات 11tik، تعني كلمة \"أصلي\" أن<strong>مشتق من شبكة توصيل المحتوى العامة</strong>، وليس أيًا مما يلي:</p>\n  <ul>\n    <li>ملف المصدر الأصلي الذي رفعه المستخدم من استوديو يوتيوب</li>\n    <li>ملف مشروع خام (PSD، AI، إلخ)</li>\n    <li>إطار تم التقاطه من بث الفيديو</li>\n    <li>أصل مضمون بدقة المصدر أو نسخة رئيسية بدقة 4K</li>\n  </ul>\n  <p>لـ<strong>أكبر ملف عام تم التحقق منه</strong>عندما يكون الحد الأقصى للدقة (maxres) مفقودًا، اقرأ<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">دليل عالي الجودة</a>للاطلاع على مستويات البكسل وأسماء الملفات، انظر إلى<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">دليل المقاسات</a>.</p>"
     },
     {
       "heading": "ما الفرق بين ذلك وبين لقطة الشاشة؟",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "كيف أتأكد من أنني حصلت بالفعل على الملف الأصلي؟",
-      "html": "<p>استخدم قوائم الحجم والأبعاد 11tik بعد التحقق من صحة الملف. إذا بدت الصورة كلقطة شاشة من مشغل ألعاب، فهذا يعني أنك لم تقم بتنزيل الصورة المصغرة المستضافة.</p>\n  <p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/p/about.html\">عن</a>أو<a href=\"https://www.11tik.com/p/contact.html\">اتصال</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">مستخرج</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">أعلى جودة</a></p>"
+      "html": "<p>استخدم قوائم الحجم والأبعاد 11tik بعد التحقق من صحة الملف. إذا بدت الصورة كلقطة شاشة من مشغل ألعاب، فهذا يعني أنك لم تقم بتنزيل الصورة المصغرة المستضافة.</p>\n  <p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/about\">عن</a>أو<a href=\"https://www.11tik.com/contact\">اتصال</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">مستخرج</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">أعلى جودة</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/p/about.html\">عن</a>أو<a href=\"https://www.11tik.com/p/contact.html\">اتصال</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">كتبه 11tik، ناشر برنامج استخراج الصور المصغرة من يوتيوب داخل المتصفح. انظر<a href=\"https://www.11tik.com/about\">عن</a>أو<a href=\"https://www.11tik.com/contact\">اتصال</a>.</p>"
 }

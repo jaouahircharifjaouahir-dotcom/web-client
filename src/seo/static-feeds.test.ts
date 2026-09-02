@@ -7,6 +7,7 @@ import {
   FEED_POSTS_PATH,
   FEED_POSTS_RSS_ASSET_PATH,
   FEED_POSTS_RSS_URL,
+  FEED_AUTHOR_URI,
   FEED_SITE_TITLE,
   buildPostsAtomFeed,
   buildPostsRssFeed,
@@ -36,9 +37,8 @@ function extractRssItemLinks(xml: string) {
 
 function blogPostLocsFromSitemap() {
   const xml = readFileSync(join(getStagedStaticSite(), "sitemap.xml"), "utf8");
-  return parseSitemapLocs(xml).filter(
-    (loc) => loc.startsWith(`${SITE_ORIGIN}/2026/08/`) && loc.endsWith(".html"),
-  );
+  const guideHrefs = new Set(loadGuidePostHrefsFromFile(POSTS_TS));
+  return parseSitemapLocs(xml).filter((loc) => guideHrefs.has(loc));
 }
 
 describe("Phase 6A — static posts feeds", () => {
@@ -53,7 +53,7 @@ describe("Phase 6A — static posts feeds", () => {
     const entries = loadFeedPostEntries({ postsTsContents: POSTS_TS });
     expect(entries).toHaveLength(GUIDE_POSTS.length);
     for (const entry of entries) {
-      expect(entry.link).toMatch(/^https:\/\/www\.11tik\.com\/2026\/08\/[^/?#]+\.html$/);
+      expect(entry.link).toMatch(/^https:\/\/www\.11tik\.com\/[a-z0-9-]+$/);
       expect(entry.link).not.toContain("/index.html");
       expect(entry.published).toMatch(/^\d{4}-\d{2}-\d{2}T/);
       expect(entry.updated).toMatch(/^\d{4}-\d{2}-\d{2}T/);
@@ -69,6 +69,7 @@ describe("Phase 6A — static posts feeds", () => {
     expect(xml).toContain(`<id>${FEED_POSTS_ATOM_URL}</id>`);
     expect(xml).toContain(`<title type="text">${FEED_SITE_TITLE}</title>`);
     expect(xml).toContain(`<link rel="self" type="application/atom+xml" href="${FEED_POSTS_ATOM_URL}"/>`);
+    expect(xml).toContain(`<uri>${FEED_AUTHOR_URI}</uri>`);
     for (const marker of BLOGGER_MARKERS) {
       expect(xml).not.toMatch(marker);
     }

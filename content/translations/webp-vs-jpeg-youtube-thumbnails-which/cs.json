@@ -2,13 +2,13 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "cs",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "WebP vs. JPEG miniatury YouTube: Který formát byste měli použít? | 11tik",
-  "description": "YouTube může publikovat soubory miniatur JPEG a WebP. Preferujte formát 11tik, který je validován pro váš případ použití – WebP není vždy k dispozici.",
+  "description": "YouTube může publikovat soubory miniatur JPEG a WebP. Preferujte formát 11tik, který ověří váš případ použití – WebP není vždy k dispozici.",
   "h1": "WebP vs. JPEG miniatury YouTube: Který formát byste měli použít?",
   "ogTitle": "WebP vs. JPEG miniatury YouTube: Který formát byste měli použít?",
-  "ogDescription": "YouTube může publikovat soubory miniatur JPEG a WebP. Preferujte formát 11tik, který je validován pro váš případ použití – WebP není vždy k dispozici.",
+  "ogDescription": "YouTube může publikovat soubory miniatur JPEG a WebP. Preferujte formát 11tik, který ověří váš případ použití – WebP není vždy k dispozici.",
   "imageAlt": "Porovnání URL adres miniatur YouTube ve formátu JPEG a WebP na i.ytimg.com",
   "faqHeading": "Často kladené otázky",
   "images": [
@@ -26,19 +26,23 @@
   "sections": [
     {
       "heading": "Rychlá odpověď",
-      "html": "<p>Pro většinu stahování a nahrávání do CMS ponechte<strong>ověřený soubor 11tik se uvádí jako první</strong>JPEG zůstává veřejně dostupný i nadále.<code>i.ytimg.com/vi/…</code>WebP se u některých videí zobrazuje jako<code>maxresdefault.webp</code>pod<code>/vi_webp/</code>WebP je často menší při podobné vizuální kvalitě, ale není publikován pro každé ID. 11tik ano.<strong>ne</strong>při stahování převést WebP do JPEGu – ušetří se tím bajty, které YouTube již hostuje (stahované soubory JPEGu dostanou pouze malé razítko s komentářem k metadatům).</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Stejné ID videa, různé kontejnery a cesty – pouze když YouTube publikoval obojí.</p>"
+      "html": "<p>Pro většinu stahování a nahrávání do CMS ponechte<strong>ověřený soubor 11tik se uvádí jako první</strong>JPEG zůstává veřejně dostupný i nadále.<code>i.ytimg.com/vi/…</code>WebP se u některých videí zobrazuje jako<code>maxresdefault.webp</code>pod<code>/vi_webp/</code>WebP je často menší při podobné vizuální kvalitě, ale není publikován pro každé ID. 11tik ano.<strong>ne</strong>při stahování převést WebP do JPEGu – ušetří se tím bajty, které YouTube již hostuje (stahované soubory JPEGu dostanou pouze malé razítko s komentářem k metadatům).</p>\n\n  <img alt=\"Porovnání URL adres miniatur YouTube ve formátu JPEG a WebP na i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">Stejné ID videa, různé kontejnery a cesty – pouze když YouTube publikoval obojí.</p>"
     },
     {
       "heading": "Jak se formáty miniatur YouTube zobrazují v 11tik",
-      "html": "<p>Mezi přednastavení kvality v 11tik patří:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mim<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ pod<code>/vi/</code>(mim<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Kandidáti se načtou do prohlížeče. Neúspěšné položky a zástupné symboly se vynechají. Hodnocení se provádí na základě úrovně, plochy pixelu, očekávané velikosti shody a malého…<strong>−8 bodů trestu za<code>.webp</code>URL adresy</strong>takže JPEG a WebP stejné úrovně se nebudou nepředvídatelně měnit – JPEG může vyhrát remízy, pokud se oba validují. Podrobnosti o velikostech:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">průvodce velikostmi miniatur</a>Chybějící chování maxres:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Průvodce chybou 404 od maxresdefault</a>.</p>"
+      "html": "<p>Mezi přednastavení kvality v 11tik patří:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(mim<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ pod<code>/vi/</code>(mim<code>image/jpeg</code>)</li>\n  </ul>\n  <p>Kandidáti se načtou do prohlížeče. Neúspěšné položky a zástupné symboly se vynechají. Hodnocení se provádí na základě úrovně, plochy pixelu, očekávané velikosti shody a malého…<strong>−8 bodů trestu za<code>.webp</code>URL adresy</strong>takže JPEG a WebP stejné úrovně se nebudou nepředvídatelně měnit – JPEG může vyhrát remízy, pokud se oba validují. Podrobnosti o velikostech:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">průvodce velikostmi miniatur</a>Chybí chování maxres:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">Průvodce chybou 404 od maxresdefault</a>.</p>"
     },
     {
       "heading": "JPEG vs. WebP v jednoduchém jazyce",
       "html": "<table>\n    <thead>\n      <tr><th>Formát</th><th>Nejlepší pro</th><th>Pevnost</th><th>Omezení</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>JPEG</td><td>Stahování, nahrávání na WordPress, nejširší kompatibilita</td><td>Téměř univerzální podpora; většina fotografií z CDN</td><td>Větší soubory v podobné kvalitě</td></tr>\n      <tr><td>WebP</td><td>Moderní weby, které již podporují WebP</td><td>Často menší pro stejnou úroveň rozlišení</td><td>Není publikováno pro každé video; některé starší nástroje se brání</td></tr>\n    </tbody>\n  </table>\n  <p>Ani jeden z formátů nevynalézá rozlišení. WebP s rozlišením 480×360 je stále 480×360.</p>"
     },
     {
+      "heading": "Porovnání naměřené velikosti v bajtech (pouze vzorek 300 videí)",
+      "html": "<p>Ve stejném<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Ukázka 300 videí</a>, medián maximálního pozorování WebP byl<strong>60 345 bajtů</strong>versus<strong>141 111 bajtů</strong>pro maximální rozlišení JPEGu – čímž se medián WebP blíží<strong>O 57,2 % menší v bajtech</strong>v dané datové sadě. Toto je<strong>porovnání bajtů s rozsahem vzorku</strong>, nejedná se o univerzální záruku komprese: vaše video může být na úrovni maximálního rozlišení publikováno pouze ve formátu JPEG, pouze WebP, obojím formátu nebo ani jedním. Rozměry v pixelech pro každou úroveň jsou uvedeny v<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">průvodce velikostmi a rozlišením</a>URL cesty se liší v rámci<code>/vi/</code>versus<code>/vi_webp/</code>jak je vysvětleno v<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Průvodce URL miniatur</a>.</p>"
+    },
+    {
       "heading": "Co se stane při stažení",
-      "html": "<p>Název staženého souboru si zachová skutečnou příponu (<code>.jpg</code>nebo<code>.webp</code>) z typu MIME / URL. Pro objekty JPEG blob může 11tik vložit krátký komentář JPEG, například<code>11tik VIDEO_ID quality youtube thumbnail</code>Bloby ve formátu WebP a jiném formátu než JPEG se ukládají bez kroku překódování. Nedochází k žádnému „upgrade“ kvality ani k vynucené konverzi mezi formáty.</p>"
+      "html": "<p>Název staženého souboru si zachová skutečnou příponu (<code>.jpg</code>nebo<code>.webp</code>) z typu MIME / URL. Pro objekty JPEG blob může 11tik vložit krátký komentář JPEG, například<code>11tik VIDEO_ID quality youtube thumbnail</code>Bloby ve formátu WebP a jiném formátu než JPEG se ukládají bez kroku překódování. Nedochází k žádnému „upgradování“ kvality ani k vynucené konverzi mezi formáty.</p>"
     },
     {
       "heading": "Kdy dát přednost JPEGu",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "Když je WebP výhodné",
-      "html": "<ul>\n    <li>11tik uvedl ověřené maximální rozlišení WebP a váš web již WebP podporuje.</li>\n    <li>Chcete menší soubor pro stejnou úroveň ~1280×720.</li>\n    <li>Zásobník ovládáte vy a v případě potřeby se můžete vrátit k formátu JPEG.</li>\n  </ul>\n  <p>Pokud vaše téma nepodporuje WebP, stáhněte si místo toho JPEG – nebo po stažení převeďte lokálně. 11tik vám to nepřevede.</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Vyberte ověřený formát, který odpovídá vašemu kanálu – nikoli uhádnuté rozšíření.</p>"
+      "html": "<ul>\n    <li>11tik uvedl ověřené maximální rozlišení WebP a váš web již WebP podporuje.</li>\n    <li>Chcete menší soubor pro stejnou úroveň ~1280×720.</li>\n    <li>Zásobník ovládáte vy a v případě potřeby se můžete vrátit k formátu JPEG.</li>\n  </ul>\n  <p>Pokud vaše téma nepodporuje WebP, stáhněte si místo toho JPEG – nebo po stažení převeďte lokálně. 11tik vám to nepřevede.</p>\n\n  <img alt=\"Tabulka případů užití porovnávající webové stránky s CMS, přímé odkazy na CDN a stahování archivů\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">Vyberte ověřený formát, který odpovídá vašemu kanálu – nikoli uhádnuté rozšíření.</p>"
     },
     {
       "heading": "Přímé odkazy a webové stránky",
-      "html": "<p>URL kopie obrázku vrací adresu HTTPS CDN ověřeného kandidáta. Hotlinking WebP nebo JPEG má stejnou křehkost, která byla popsána v<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blog / Průvodce Open Graphem</a>Pro trvalejší příspěvky raději hostujte vlastní kopii. Vzory URL:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Průvodce URL miniatur</a>.</p>"
+      "html": "<p>URL kopie obrázku vrací adresu HTTPS CDN ověřeného kandidáta. Hotlinking WebP nebo JPEG má stejnou křehkost, která byla popsána v<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">blog / Průvodce Open Graphem</a>Pro trvalejší příspěvky raději hostujte vlastní kopii. Vzory URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Průvodce URL miniatur</a>.</p>"
     },
     {
       "heading": "Poznámky k kompatibilitě prohlížečů a CMS",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "Praktický rozhodovací strom",
-      "html": "<ol>\n    <li>Výňatek na<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Pokud potřebujete obrázek z CMS a vidíte oba formáty, zvolte JPEG, pokud váš stack není WebP-first.</li>\n    <li>Pokud jsou na nejvyšší úrovni ověřena pouze maximální rozlišení WebP, použijte ho – nebo zvolte další velikost JPEG, pokud musíte zůstat u JPG.</li>\n    <li>Pro archivy si ponechte původní rozšíření ze staženého souboru.</li>\n  </ol>\n  <p>Stáhnout návod:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">stáhnout miniaturu z YouTube</a>.</p>"
+      "html": "<ol>\n    <li>Výňatek na<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Pokud potřebujete obrázek z CMS a vidíte oba formáty, zvolte JPEG, pokud váš stack není WebP-first.</li>\n    <li>Pokud jsou na nejvyšší úrovni ověřena pouze maximální rozlišení WebP, použijte ho – nebo zvolte další velikost JPEG, pokud musíte zůstat u JPG.</li>\n    <li>Pro archivy si ponechte původní rozšíření ze staženého souboru.</li>\n  </ol>\n  <p>Stáhnout návod:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">stáhnout miniaturu z YouTube</a>.</p>"
     },
     {
       "heading": "Další krok",
-      "html": "<p>Vložte veřejnou URL adresu do<a href=\"https://www.11tik.com/\">Extraktor miniatur YouTube</a>, všimněte si, zda je nejvyšší výsledek<code>.jpg</code>nebo<code>.webp</code>a vyberte na základě vašeho CMS – nikoli na základě delšího názvu souboru.</p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik na základě aktuálního chování extraktoru v prohlížeči.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Soukromí</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmínky</a>.</p>"
+      "html": "<p>Vložte veřejnou URL adresu do<a href=\"https://www.11tik.com/\">Extraktor miniatur YouTube</a>, všimněte si, zda je nejvyšší výsledek<code>.jpg</code>nebo<code>.webp</code>a vyberte na základě vašeho CMS – nikoli na základě delšího názvu souboru.</p>\n  <p class=\"yte-bio\">Napsáno uživatelem 11tik na základě aktuálního chování extraktoru v prohlížeči.<a href=\"https://www.11tik.com/about\">O</a>·<a href=\"https://www.11tik.com/privacy\">Soukromí</a>·<a href=\"https://www.11tik.com/terms-of-use\">Podmínky</a>.</p>"
     }
   ],
   "faq": [
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik na základě aktuálního chování extraktoru v prohlížeči.<a href=\"https://www.11tik.com/p/about.html\">O</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Soukromí</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Podmínky</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napsáno uživatelem 11tik na základě aktuálního chování extraktoru v prohlížeči.<a href=\"https://www.11tik.com/about\">O</a>·<a href=\"https://www.11tik.com/privacy\">Soukromí</a>·<a href=\"https://www.11tik.com/terms-of-use\">Podmínky</a>.</p>"
 }

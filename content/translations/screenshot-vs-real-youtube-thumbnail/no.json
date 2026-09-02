@@ -25,7 +25,7 @@
     },
     {
       "heading": "Hvorfor feiler skjermbilder i Google-bilder og forhåndsvisninger på sosiale medier?",
-      "html": "<p>De har ofte feil sideforhold, inkluderer brukergrensesnitt og komprimeres to ganger. Open Graph og mange CMS-felt ønsker et 16:9-stillbilde rundt 1280×720. Det samsvarer med maxresdefault når det finnes – se<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">størrelsesguide for miniatyrbilder</a>.</p>"
+      "html": "<p>De har ofte feil sideforhold, inkluderer brukergrensesnitt og komprimeres to ganger. Open Graph og mange CMS-felt ønsker et 16:9-stillbilde rundt 1280×720. Det samsvarer med maxresdefault når det finnes – se<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">størrelsesguide for miniatyrbilder</a>.</p>"
     },
     {
       "heading": "Hvordan lagrer jeg det virkelige miniatyrbildet i stedet?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Når er et skjermbilde fortsatt nyttig?",
-      "html": "<p>Bruk kun et skjermbilde for å dokumentere en feil i brukergrensesnittet eller et øyeblikk i videoen. Ikke bruk det som et offisielt miniatyrbilde, en blogghelt eller et delingsbilde hvis det fortsatt finnes et offentlig bilde.</p>\n  <p><a href=\"https://www.11tik.com/\">Få det virkelige offentlige miniatyrbildet →</a></p>\n  <p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+      "html": "<p>Bruk kun et skjermbilde for å dokumentere en feil i brukergrensesnittet eller et øyeblikk i videoen. Ikke bruk det som et offisielt miniatyrbilde, en blogghelt eller et delingsbilde hvis det fortsatt finnes et offentlig bilde.</p>\n  <p><a href=\"https://www.11tik.com/\">Få det virkelige offentlige miniatyrbildet →</a></p>\n  <p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>.</p>"
 }

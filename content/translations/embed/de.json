@@ -23,7 +23,7 @@
     },
     {
       "heading": "Deep Links",
-      "html": "<p>Teilen Sie eine fertige Extraktion mit<code>https://www.11tik.com/?v=VIDEO_ID</code>Die Einbettung verwendet dieselbe clientseitige ID-Extraktion wie das Haupttool für Watch-, Shorts-, Live-, youtu.be- und Einbettungs-URLs – und prüft dann öffentliche Standbilder auf<code>i.ytimg.com</code>(niemals eine private YouTube-API). URL-Anatomie:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Gemessene Variantenverfügbarkeit in unserem<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300-Video-Beispiel</a>(bezogen auf eine Stichprobe, nicht universell).</p>"
+      "html": "<p>Teilen Sie eine fertige Extraktion mit<code>https://www.11tik.com/?v=VIDEO_ID</code>Die Einbettung verwendet dieselbe clientseitige ID-Extraktion wie das Haupttool für Watch-, Shorts-, Live-, youtu.be- und Einbettungs-URLs – und prüft dann öffentliche Standbilder auf<code>i.ytimg.com</code>(niemals eine private YouTube-API). URL-Anatomie:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Gemessene Variantenverfügbarkeit in unserem<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-Video-Beispiel</a>(bezogen auf eine Stichprobe, nicht universell).</p>"
     },
     {
       "heading": "Browser- und Hostbeschränkungen",

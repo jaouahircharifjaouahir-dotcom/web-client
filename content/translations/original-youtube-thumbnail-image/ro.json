@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "ro",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Cum să obții imaginea miniaturală originală de pe YouTube | 11tik",
   "description": "Obțineți miniatura publică originală de pe YouTube pe care YouTube o găzduiește deja. Aceasta este o imagine statică din CDN, nu un cadru extras din videoclip.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Care este miniatura originală de pe YouTube?",
-      "html": "<p>Este imaginea de previzualizare pe care YouTube o stochează deja pe gazdele sale de imagini. Este fișierul folosit în căutare și pe rafturile sugerate, nu un cadru pe care îl capturați cu Print Screen.</p>"
+      "html": "<p>Este imaginea de previzualizare pe care YouTube o stochează deja pe gazdele sale publice de imagini pentru un ID video - aceeași clasă de fișiere utilizată în căutare și pe rafturile sugerate. În vocabularul 11tik, „original” înseamnă că<strong>derivat CDN public</strong>, niciunul dintre următoarele:</p>\n  <ul>\n    <li>Fișierul sursă original încărcat de persoana care a încărcat conținutul din YouTube Studio</li>\n    <li>Un fișier de proiect brut (PSD, AI etc.)</li>\n    <li>Un cadru capturat din fluxul video</li>\n    <li>Un element cu rezoluție sursă garantată sau un master 4K</li>\n  </ul>\n  <p>Pentru<strong>cel mai mare fișier public validat</strong>când pot lipsi valorile maxres, citiți<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">ghid de cea mai înaltă calitate</a>Pentru niveluri de pixeli și nume de fișiere, consultați<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">ghid de mărimi</a>.</p>"
     },
     {
       "heading": "Cum diferă asta de o captură de ecran?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Cum verific dacă am primit într-adevăr fișierul original?",
-      "html": "<p>Folosește listele de dimensiuni și dimensiuni 11tik după ce fișierul este validat. Dacă imaginea arată ca o captură de ecran a playerului, nu ai descărcat miniatura găzduită.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Cea mai înaltă calitate</a></p>"
+      "html": "<p>Folosește listele de dimensiuni și dimensiuni 11tik după ce fișierul este validat. Dacă imaginea arată ca o captură de ecran a playerului, nu ai descărcat miniatura găzduită.</p>\n  <p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/about\">Despre</a>sau<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extractor</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Cea mai înaltă calitate</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/p/about.html\">Despre</a>sau<a href=\"https://www.11tik.com/p/contact.html\">Contact</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Scris de 11tik, editorul programului de extragere a miniaturilor YouTube în browser. Vezi<a href=\"https://www.11tik.com/about\">Despre</a>sau<a href=\"https://www.11tik.com/contact\">Contact</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "what-is-maxresdefaultjpg-when-youtube",
   "articleId": "what-is-maxresdefaultjpg-when-youtube",
   "locale": "fi",
-  "sourceHash": "0b3b0eed2c7ad65d164da0b1c4b5d7107680cec45d52bb7d7636de8bcfc4c242",
+  "sourceHash": "10ac7f566273ce8942402962c706a3f29c14fedde02af64e3b85e4531197a834",
   "status": "ready",
   "title": "Mikä on maxresdefault.jpg? Miksi se antaa 404-virheen ja mitä ladata sen sijaan | 11tik",
   "description": "maxresdefault.jpg on yleensä 1280×720, kun YouTube sen julkaisi. 404-virhe on normaalia – käytä seuraavaa oikeaa julkista tiedostonimeä, älä arvattua tiedostonimeä.",
@@ -26,11 +26,15 @@
   "sections": [
     {
       "heading": "Nopea vastaus",
-      "html": "<p><code>maxresdefault.jpg</code>on julkinen pikkukuvan tiedostonimi YouTuben kuva-CDN:ssä. Kun tiedosto on olemassa, se on yleensä<strong>1280 × 720</strong>Se on<strong>ei</strong>taattu jokaiselle videolle. 404-virhe (tai pieni harmaa paikkamerkki) tarkoittaa, että kyseiselle videotunnukselle ei ole koskaan julkaistu johdannaista. Liitä katselun URL-osoite<a href=\"https://www.11tik.com/\">11tik</a>ja lataa ensimmäinen lueteltu koko – työkalu on jo ohittanut puuttuvat nimet ja luokitellut selviytyjät, kuten<code>hq720</code>,<code>sddefault</code>, tai<code>hqdefault</code>.</p>\n\n  <img alt=\"Troubleshooting flow from a guessed maxresdefault URL that 404s to the next validated YouTube thumbnail size\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Puuttuva maxres-tiedosto on varaongelma, ei todiste siitä, että videolla ei ole pikkukuvaa.</p>"
+      "html": "<p><code>maxresdefault.jpg</code>on julkinen pikkukuvan tiedostonimi YouTuben kuva-CDN:ssä. Kun tiedosto on olemassa, se on yleensä<strong>1280 × 720</strong>Se on<strong>ei</strong>taattu jokaiselle videolle. 404-virhe (tai pieni harmaa paikkamerkki) tarkoittaa, että kyseiselle videotunnukselle ei ole koskaan julkaistu johdannaista. Liitä katselun URL-osoite<a href=\"https://www.11tik.com/\">11tik</a>ja lataa ensimmäinen lueteltu koko – työkalu on jo ohittanut puuttuvat nimet ja luokitellut selviytyjät, kuten<code>hq720</code>,<code>sddefault</code>, tai<code>hqdefault</code>.</p>\n\n  <img alt=\"Vianmääritysprosessi arvatusta maxresdefault-URL-osoitteesta, joka aiheuttaa 404-virheen,\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-404-troubleshooting-flow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Puuttuva maxres-tiedosto on varaongelma, ei todiste siitä, että videolla ei ole pikkukuvaa.</p>"
     },
     {
       "heading": "Mikä on maxresdefault.jpg?",
-      "html": "<p>Se on tiedostonimi, ei taianomainen laatutakuu. Tavallinen JPEG-osoite näyttää tältä:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Kun YouTube julkaisi myös WebP-kaksosen, 11tik tarkistaa:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Molemmat istuvat päällä<code>i.ytimg.com</code>Ne ovat still-kuvia – eivät videostreamia, eivät Studion yksityistä vientiä eivätkä 4K-master-tiedostoa. Pikselimääräodotukset ja muut koot on käsitelty<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">pikkukuvien koko- ja resoluutio-opas</a>URL-osoitteiden rakennetta käsitellään kohdassa<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">pikkukuvan URL-opas</a>.</p>"
+      "html": "<p>Se on tiedostonimi, ei taianomainen laatutakuu. Tavallinen JPEG-osoite näyttää tältä:</p>\n  <pre>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</pre>\n  <p>Kun YouTube julkaisi myös WebP-kaksosen, 11tik tarkistaa:</p>\n  <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</pre>\n  <p>Molemmat istuvat päällä<code>i.ytimg.com</code>Ne ovat still-kuvia – eivät videostreamia, eivät Studion yksityistä vientiä eivätkä 4K-master-tiedostoa. Pikselimääräodotukset ja muut koot on käsitelty<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">pikkukuvien koko- ja resoluutio-opas</a>URL-osoitteiden rakennetta käsitellään kohdassa<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>.</p>"
+    },
+    {
+      "heading": "Mitä 300 videon otos osoitti (ei yleispätevä sääntö)",
+      "html": "<p>Meidän<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon pikkukuvien kokoa käsittelevä tutkimus</a>mittasimme julkisten varianttien saatavuutta kahdeksalle tiedostonimelle ID:tä kohden. Vain tuossa otoksessa<code>maxresdefault</code>validoitu<strong>286/300</strong>videoiden tunnukset (<strong>95,33 %</strong>). Toinen<strong>14/300</strong>ei ollut käyttökelpoista maxres-tiedostoa, mutta jokainen noista 14 palautti silti kelvollisen<code>hqdefault</code>edelleen julkinen. Tuo kaava on otospohjainen todiste varatoiminnasta, ei takuu jokaiselle YouTube-lataukselle.</p>\n  <p>Kun omasta shekistäsi puuttuu maxres, käsittele sitä kuin<strong>pikkukuvan variantti</strong>ongelma: siirry seuraavaan validoituun julkiseen tiedostonimeen sen sijaan, että olettaisit videolla olevan pikkukuvan puuttuvan. Videotason virheet (yksityinen, poistettu, rajoitettu) ovat erillinen diagnoosi – katso<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">pikkukuva ei näy -opas</a>.</p>"
     },
     {
       "heading": "Miksi oikea YouTube-video voi silti palauttaa 404-virheen maxres-arvoille?",
@@ -42,7 +46,7 @@
     },
     {
       "heading": "Varamuunnelmat 11tik itse asiassa tarkistavat",
-      "html": "<p>Julkisten ehdokkaiden hakujärjestys (korkein ensin):</p>\n  <table>\n    <thead>\n      <tr><th>Tiedostonimi</th><th>Polkukuvio</th><th>Tyypillinen koko, jos sellainen on</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280 × 720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280 × 720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720-luokka</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640 × 480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480 × 360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320 × 180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120 × 90</td></tr>\n    </tbody>\n  </table>\n  <p>Puuttuvat rivit ohitetaan. Ensimmäinen listattu lataus on korkein jäljellä oleva lataus – ei pisin kirjoittamasi nimi. Muotovaihtoehtoja WebP:n ja JPEG:n välillä käsitellään kohdassa<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP vs. JPEG YouTube -pikkukuvat</a>.</p>\n\n  <img alt=\"Ladder of YouTube thumbnail filenames from maxresdefault down to default showing missing rungs are skipped\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Käsittele tiedostonimiä valinnaisina askelmina. Kiipeä alaspäin, kunnes oikea kuva vastaa.</p>"
+      "html": "<p>Julkisten ehdokkaiden hakujärjestys (korkein ensin):</p>\n  <table>\n    <thead>\n      <tr><th>Tiedostonimi</th><th>Polkukuvio</th><th>Tyypillinen koko, jos sellainen on</th></tr>\n    </thead>\n    <tbody>\n      <tr><td><code>maxresdefault.webp</code></td><td><code>/vi_webp/</code></td><td>1280 × 720</td></tr>\n      <tr><td><code>maxresdefault.jpg</code></td><td><code>/vi/</code></td><td>1280 × 720</td></tr>\n      <tr><td><code>hq720.jpg</code></td><td><code>/vi/</code></td><td>1280×720-luokka</td></tr>\n      <tr><td><code>sddefault.jpg</code></td><td><code>/vi/</code></td><td>640 × 480</td></tr>\n      <tr><td><code>hqdefault.jpg</code></td><td><code>/vi/</code></td><td>480 × 360</td></tr>\n      <tr><td><code>mqdefault.jpg</code></td><td><code>/vi/</code></td><td>320 × 180</td></tr>\n      <tr><td><code>default.jpg</code></td><td><code>/vi/</code></td><td>120 × 90</td></tr>\n    </tbody>\n  </table>\n  <p>Puuttuvat rivit ohitetaan. Ensimmäinen listattu lataus on korkein jäljellä oleva lataus – ei pisin kirjoittamasi nimi. Muotovaihtoehtoja WebP:n ja JPEG:n välillä käsitellään kohdassa<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP vs. JPEG YouTube -pikkukuvat</a>.</p>\n\n  <img alt=\"YouTube-pikkukuvien tiedostonimien tikkaat maxresdefault-arvosta alas oletusarvoon, jossa puuttuvat\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/maxresdefault-variant-fallback-ladder.png\" width=\"1200\">\n  <p class=\"yte-caption\">Käsittele tiedostonimiä valinnaisina askelmina. Kiipeä alaspäin, kunnes oikea kuva vastaa.</p>"
     },
     {
       "heading": "Miten 11tik tarkistaa saatavuuden",
@@ -50,15 +54,15 @@
     },
     {
       "heading": "Käytännön vianmääritystarkistuslista",
-      "html": "<ol>\n    <li>Varmista, että video on julkinen ja että henkilöllisyystodistus on oikein.</li>\n    <li>Testata<code>maxresdefault.jpg</code>kerran. Jos se epäonnistuu, lopeta arvailu.</li>\n    <li>Liitä sama linkki sisään<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Lataa ensimmäinen listattu still-kuva tai kopioi sen kuvan URL-osoite.</li>\n    <li>Jos mitään ei näy, video voi olla yksityinen, poistettu, ikärajoitettu tai siinä ei ole julkisia still-kuvia.</li>\n    <li>CMS-käytössä suosi validoidun still-tiedoston isännöityä kopiota pikalinkitetyn CDN-polun sijaan. Katso<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">blogi / Open Graph -opas</a>.</li>\n  </ol>"
+      "html": "<ol>\n    <li>Varmista, että video on julkinen ja että henkilöllisyystodistus on oikein.</li>\n    <li>Testata<code>maxresdefault.jpg</code>kerran. Jos se epäonnistuu, lopeta arvailu.</li>\n    <li>Liitä sama linkki sisään<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li>Lataa ensimmäinen listattu still-kuva tai kopioi sen kuvan URL-osoite.</li>\n    <li>Jos mitään ei näy, video voi olla yksityinen, poistettu, ikärajoitettu tai siinä ei ole julkisia still-kuvia.</li>\n    <li>CMS-käytössä suosi validoidun still-tiedoston isännöityä kopiota pikalinkitetyn CDN-polun sijaan. Katso<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">blogi / Open Graph -opas</a>.</li>\n  </ol>"
     },
     {
       "heading": "Yleisiä virheitä",
-      "html": "<ul>\n    <li>Olettaen, että jokaisella videolla on maksimiarvot, koska yhdellä suositulla videolla on.</li>\n    <li>Kovakoodaus<code>maxresdefault.jpg</code>tuotanto-HTML:ssä ilman tarkistusta.</li>\n    <li>Venytetyn soittaminen<code>hqdefault</code>\"maxres.\"</li>\n    <li>Pelaajan kuvakaappauksen ja CDN:n sekoittaminen edelleen —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">kuvakaappaus vs. todellinen pikkukuva</a>.</li>\n    <li>Odotusarvo on 4K. Julkinen maksimiresoluutio on tyypillisesti 1280×720, jos sellainen on.<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">korkealaatuisin opas</a>.</li>\n  </ul>"
+      "html": "<ul>\n    <li>Olettaen, että jokaisella videolla on maksimiarvot, koska yhdellä suositulla videolla on.</li>\n    <li>Kovakoodaus<code>maxresdefault.jpg</code>tuotanto-HTML:ssä ilman tarkistusta.</li>\n    <li>Venytetyn soittaminen<code>hqdefault</code>\"maxres.\"</li>\n    <li>Pelaajan kuvakaappauksen ja CDN:n sekoittaminen edelleen —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">kuvakaappaus vs. todellinen pikkukuva</a>.</li>\n    <li>Odotusarvo on 4K. Julkinen maksimiresoluutio on tyypillisesti 1280×720, jos sellainen on.<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">korkealaatuisin opas</a>.</li>\n  </ul>"
     },
     {
       "heading": "Seuraava vaihe",
-      "html": "<p>Liitä julkinen YouTube-URL-osoite<a href=\"https://www.11tik.com/\">linko</a>Jos maxres-arvo puuttuu, säilytä seuraava oikea still-kuva – eli videon oikea HD-tiedosto.</p>\n  <p class=\"yte-bio\">Tekijä 11tik. Vain julkisia still-kuvia; ei videoiden latausta.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+      "html": "<p>Liitä julkinen YouTube-URL-osoite<a href=\"https://www.11tik.com/\">linko</a>Jos maxres-arvo puuttuu, säilytä seuraava oikea still-kuva – eli videon oikea HD-tiedosto.</p>\n  <p class=\"yte-bio\">Tekijä 11tik. Vain julkisia still-kuvia; ei videoiden latausta.<a href=\"https://www.11tik.com/about\">Noin</a>·<a href=\"https://www.11tik.com/privacy\">Tietosuoja</a>·<a href=\"https://www.11tik.com/terms-of-use\">Ehdot</a>.</p>"
     }
   ],
   "faq": [
@@ -73,7 +77,7 @@
       "answerHtml": "<p>Kun se validoituu, kyllä ​​– se on samalla korkealla tasolla (~1280×720). Sitä ei myöskään voida taata.</p>"
     },
     {
-      "question": "Pitäisikö minun yrittää maxresdefault-komentoa myöhemmin uudelleen?",
+      "question": "Pitäisikö minun kokeilla maxresdefault-komentoa myöhemmin uudelleen?",
       "answer": "Kyllä, kun uusi mukautettu lataus on käsitelty Studiossa. Muussa tapauksessa säilytä validoitu varavaihtoehto.",
       "answerHtml": "<p>Kyllä, kun uusi mukautettu lataus on käsitelty Studiossa. Muussa tapauksessa säilytä validoitu varavaihtoehto.</p>"
     },
@@ -90,9 +94,9 @@
     {
       "question": "Miten lataan varasovelluksen nopeasti?",
       "answer": "Käytä latausopasta: liitä, pura ja tallenna ensimmäinen listattu tiedosto.",
-      "answerHtml": "<p>Käytä<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">latausopas</a>: liitä, pura, tallenna ensimmäinen listattu tiedosto.</p>"
+      "answerHtml": "<p>Käytä<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">latausopas</a>: liitä, pura, tallenna ensimmäinen listattu tiedosto.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik. Vain julkisia still-kuvia; ei videoiden latausta.<a href=\"https://www.11tik.com/p/about.html\">Noin</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Tietosuoja</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Ehdot</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik. Vain julkisia still-kuvia; ei videoiden latausta.<a href=\"https://www.11tik.com/about\">Noin</a>·<a href=\"https://www.11tik.com/privacy\">Tietosuoja</a>·<a href=\"https://www.11tik.com/terms-of-use\">Ehdot</a>.</p>"
 }

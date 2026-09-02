@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "fi",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Kuinka saada korkealaatuisin YouTube-pikkukuva | 11tik",
   "description": "Korkein laatu tarkoittaa, että suurin julkinen JPEG- tai WebP-tiedosto, jonka YouTube itse palauttaa, ei arvattua 4K-tiedostonimeä.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Mikä on suurin julkinen päätöslauselma?",
-      "html": "<p>Kun YouTube julkaisee maxresdefault-arvon, se on yleensä 1280 × 720. Jos tiedosto puuttuu, korkein laatu on seuraava kelvollinen koko, kuten sd tai hq.</p>"
+      "html": "<p>Kun YouTube julkaisee maxresdefault-arvon, se on yleensä 1280 × 720. Jos tiedosto puuttuu, korkein laatu on seuraava kelvollinen koko, kuten sd tai hq. ”Korkein laatu” tarkoittaa<strong>suurin validoitu julkisesti noudettavissa oleva kuva</strong>kyseiselle videotunnukselle – ei 4K-master-tiedostoa, ei skaalattua keskikokoista tiedostoa eikä soittimen kuvakaappausta.</p>"
+    },
+    {
+      "heading": "Korkein laatu verrattuna \"alkuperäiseen\" pikkukuvaan",
+      "html": "<p><strong>Korkein laatu</strong>(tämä opas): julkisen CDN-johdannaisen 11tik validoi – usein maxres tai hq720, jos sellainen on.<strong>Alkuperäinen</strong>(eri tarkoitus): myös julkinen CDN-tiedosto, mutta sana saa ihmiset odottamaan lataajan lähdetiedostoa. Se ei ole Studion raaka Photoshop/PNG-kuva, ei videoruudun rippaus eikä taattu lähdekoodin resoluutio. Katso<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">alkuperäisen pikkukuvan merkitys ja rajoitukset</a>ja<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">kokoviite</a>Meidän<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon näyte</a>, maksimiarvot validoitu 286/300 ID:lle – saatavuus otoskohtaisesti, ei takuu jokaisesta latauksesta.</p>"
     },
     {
       "heading": "Onko WebP:llä väliä?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Miksi \"HD\" näyttää joskus pehmeältä?",
-      "html": "<p>Julkinen tiedosto voi edelleen olla 1280×720 pakkauksella, tai saatat tarkastella hqdefault-arvoa. Tarkista pikselikoko 11tik -raportit ennen kuin oletat latauksen epäonnistuneen.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Koko-opas</a></p>"
+      "html": "<p>Julkinen tiedosto voi edelleen olla 1280×720 pakkauksella, tai saatat tarkastella hqdefault-arvoa. Tarkista pikselikoko 11tik -raportit ennen kuin oletat latauksen epäonnistuneen.</p>\n  <p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/about\">Noin</a>tai<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Linko</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Koko-opas</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/p/about.html\">Noin</a>tai<a href=\"https://www.11tik.com/p/contact.html\">Yhteystiedot</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Tekijä 11tik, selaimessa toimivan YouTube Thumbnail Extractor -työkalun julkaisija. Katso<a href=\"https://www.11tik.com/about\">Noin</a>tai<a href=\"https://www.11tik.com/contact\">Yhteystiedot</a>.</p>"
 }

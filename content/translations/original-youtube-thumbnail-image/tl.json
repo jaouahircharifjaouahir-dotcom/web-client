@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "tl",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Paano Kunin ang Orihinal na Larawan ng Thumbnail sa YouTube | 11tik",
   "description": "Kunin ang orihinal na pampublikong thumbnail sa YouTube na hino-host na ng YouTube. Ito pa rin ang CDN, hindi isang frame na kinuha mula sa video.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Ano ang orihinal na thumbnail ng YouTube?",
-      "html": "<p>Ito ang preview image na iniimbak na ng YouTube sa mga image host nito. Ito ang file na ginagamit sa paghahanap at mga iminungkahing shelf, hindi isang frame na kinukuha mo gamit ang Print Screen.</p>"
+      "html": "<p>Ito ang preview image na iniimbak na ng YouTube sa mga pampublikong image host nito para sa isang video ID—ang parehong klase ng file na ginagamit sa paghahanap at mga iminungkahing shelf. Sa bokabularyo ni 11tik, ang ibig sabihin ng \"orihinal\" ay<strong>pampublikong hinango ng CDN</strong>, hindi alinman sa mga sumusunod:</p>\n  <ul>\n    <li>Ang orihinal na na-upload na source file ng nag-upload mula sa YouTube Studio</li>\n    <li>Isang hilaw na file ng proyekto (PSD, AI, atbp.)</li>\n    <li>Isang frame na nakuha mula sa video stream</li>\n    <li>Isang garantisadong asset na may resolusyon sa pinagmulan o 4K master</li>\n  </ul>\n  <p>Para sa<strong>pinakamalaking napatunayang pampublikong file</strong>kapag maaaring nawawala ang maxres, basahin ang<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">gabay na may pinakamataas na kalidad</a>Para sa mga antas ng pixel at mga pangalan ng file, tingnan ang<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">gabay sa sukat</a>.</p>"
     },
     {
       "heading": "Paano naiiba iyon sa isang screenshot?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Paano gumagana ang mga URL ng thumbnail sa YouTube?",
-      "html": "<p>Ginagamit nila ang video ID kasama ang pangalan ng laki tulad ng maxresdefault.jpg o hqdefault.jpg sa i.ytimg.com. Ang paghula ng laki na hindi kailanman na-publish ay magbabalik ng error o placeholder.</p>"
+      "html": "<p>Ginagamit nila ang video ID kasama ang pangalan ng laki tulad ng maxresdefault.jpg o hqdefault.jpg sa i.ytimg.com. Ang paghula ng laki na hindi kailanman nai-publish ay magbabalik ng error o placeholder.</p>"
     },
     {
       "heading": "Ano ang maxresdefault.jpg?",
@@ -49,14 +49,14 @@
     },
     {
       "heading": "Paano ko masusuri kung nakuha ko talaga ang orihinal na file?",
-      "html": "<p>Gamitin ang mga listahan ng laki at dimensyon na 11tik pagkatapos nitong mapatunayan ang file. Kung ang imahe ay mukhang screenshot ng player, hindi mo na-download ang naka-host na thumbnail.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>o<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Tagabunot</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">Pinakamataas na kalidad</a></p>"
+      "html": "<p>Gamitin ang mga listahan ng laki at dimensyon na 11tik pagkatapos nitong mapatunayan ang file. Kung ang imahe ay mukhang screenshot ng player, hindi mo na-download ang naka-host na thumbnail.</p>\n  <p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/about\">Tungkol sa</a>o<a href=\"https://www.11tik.com/contact\">Makipag-ugnayan</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Tagabunot</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">Pinakamataas na kalidad</a></p>"
     }
   ],
   "faq": [
     {
       "question": "Ano ang orihinal na thumbnail ng YouTube?",
-      "answer": "Ang pampublikong image file na hino-host ng YouTube para sa video ID, tulad ng maxresdefault kapag umiiral ito. Hindi ito screenshot ng watch page.",
-      "answerHtml": "Ang pampublikong image file na hino-host ng YouTube para sa video ID, tulad ng maxresdefault kapag umiiral ito. Hindi ito screenshot ng watch page."
+      "answer": "Ang pampublikong image file na hino-host ng YouTube para sa video ID, tulad ng maxresdefault kapag umiiral ito. Hindi ito isang screenshot ng watch page.",
+      "answerHtml": "Ang pampublikong image file na hino-host ng YouTube para sa video ID, tulad ng maxresdefault kapag umiiral ito. Hindi ito isang screenshot ng watch page."
     },
     {
       "question": "Ang orihinal ba ay palaging nangangahulugang 1280&#215;720?",
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/p/about.html\">Tungkol sa</a>o<a href=\"https://www.11tik.com/p/contact.html\">Makipag-ugnayan</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Isinulat ni 11tik, tagapaglathala ng in-browser na YouTube Thumbnail Extractor. Tingnan<a href=\"https://www.11tik.com/about\">Tungkol sa</a>o<a href=\"https://www.11tik.com/contact\">Makipag-ugnayan</a>.</p>"
 }

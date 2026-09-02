@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "no",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "Slik bruker du et YouTube-miniatyrbilde som et fremhevet bloggbilde eller en forhåndsvisning av åpen graf | 11tik",
   "description": "Bekreft at en offentlig YouTube-fil fortsatt eksisterer, og lag deretter en kopi for WordPress, Blogger eller og:image. Ikke bruk en hotlink til en gjettet maxresdefault-URL.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "Raskt svar",
-      "html": "<p>Lim inn en offentlig YouTube-URL i<a href=\"https://www.11tik.com/\">11tik</a>, vent på validerte størrelser, og deretter enten<strong>nedlasting</strong>det første stillbildet og last det opp til CMS-et ditt, eller<strong>kopier bilde-URL-en</strong>bare etter at den er lastet inn. For varige innlegg, lag din egen kopi. Hotlinking<code>i.ytimg.com</code>er praktisk for utkast og skjør for sosiale kort i produksjon.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Bekreft → kopier eller last ned → vert → referanse i HTML / fremhevet bilde / Open Graph.</p>"
+      "html": "<p>Lim inn en offentlig YouTube-URL i<a href=\"https://www.11tik.com/\">11tik</a>, vent på validerte størrelser, og deretter enten<strong>nedlasting</strong>det første stillbildet og last det opp til CMS-et ditt, eller<strong>kopier bilde-URL-en</strong>bare etter at den er lastet inn. For varige innlegg, lag din egen kopi. Hotlinking<code>i.ytimg.com</code>er praktisk for utkast og skjør for sosiale kort i produksjon.</p>\n\n  <img alt=\"Arbeidsflyt fra å bekrefte et YouTube-miniatyrbilde på 11tik til å laste det opp i WordPress eller\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Bekreft → kopier eller last ned → vert → referanse i HTML / fremhevet bilde / Open Graph.</p>"
     },
     {
       "heading": "Hva en direkte miniatyr-URL er",
-      "html": "<p>En direkte miniatyr-URL peker for eksempel på en JPEG- eller WebP-fil på YouTubes bilde-CDN<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Det er ikke visningssiden. Slik er disse adressene bygget opp:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">få en URL til et YouTube-miniatyrbilde</a>Hvordan størrelsene varierer:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">størrelses- og oppløsningsguide</a>.</p>"
+      "html": "<p>En direkte miniatyr-URL peker for eksempel på en JPEG- eller WebP-fil på YouTubes bilde-CDN<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Det er ikke visningssiden. Slik er disse adressene bygget opp:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">få en URL til et YouTube-miniatyrbilde</a>Hvordan størrelsene varierer:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">størrelses- og oppløsningsguide</a>.</p>"
     },
     {
       "heading": "HTML-eksempel",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "WordPress-arbeidsflyt",
-      "html": "<ol>\n    <li>Pakk ut videoen på 11tik og last ned det første stillbildet som er oppført.</li>\n    <li>I WordPress: Media → Legg til ny → last opp filen.</li>\n    <li>Sett det som fremhevet bilde i innlegget.</li>\n    <li>I Yoast, Rank Math eller lignende, bekreft at den sosiale forhåndsvisningen bruker det vedlegget (eller last opp en dedikert OG-beskjæring).</li>\n    <li>Skriv en alternativ tekst som navngir videoen og sier at filen er et offentlig YouTube-stillbilde – ikke en utfylt liste med søkeord.</li>\n  </ol>\n  <p>Unngå å lime inn en rå<code>maxresdefault.jpg</code>banen inn i mediefeltet til filen er bekreftet. Manglende maksres er vanlig —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404-guide</a>.</p>"
+      "html": "<ol>\n    <li>Pakk ut videoen på 11tik og last ned det første stillbildet som er oppført.</li>\n    <li>I WordPress: Media → Legg til ny → last opp filen.</li>\n    <li>Sett det som fremhevet bilde i innlegget.</li>\n    <li>I Yoast, Rank Math eller lignende, bekreft at den sosiale forhåndsvisningen bruker det vedlegget (eller last opp en dedikert OG-beskjæring).</li>\n    <li>Skriv en alternativ tekst som navngir videoen og sier at filen er et offentlig YouTube-stillbilde – ikke en utfylt liste med søkeord.</li>\n  </ol>\n  <p>Unngå å lime inn en rå<code>maxresdefault.jpg</code>banen inn i mediefeltet til filen er bekreftet. Manglende maksres er vanlig —<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404-guide</a>.</p>"
     },
     {
       "heading": "Blogger og statiske nettsteder",
-      "html": "<p><strong>Blogger:</strong>Last opp stillbildet til innleggsredigereren, og bruk deretter den hostede Blogger-bilde-URL-en på nytt for eventuelle tema-/sosiale snippettfelt du kontrollerer. Ikke stol på en gjettet YouTube CDN-bane for et publisert innlegg du bryr deg om.</p>\n  <p><strong>Statiske generatorer:</strong>Lagre filen til repoet eller CDN-et ditt, og angi deretter front-matter / metakoder til HTTPS-ressursen. Behold utkast på en midlertidig i.ytimg.com URL hvis du må, men send med din egen host.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">«Utvalgt bilde» og «og:image» kan dele en fil, men begge trenger en URL som faktisk finnes.</p>"
+      "html": "<p><strong>Blogger:</strong>Last opp stillbildet til innleggsredigereren, og bruk deretter den hostede Blogger-bilde-URL-en på nytt for eventuelle tema-/sosiale snippettfelt du kontrollerer. Ikke stol på en gjettet YouTube CDN-bane for et publisert innlegg du bryr deg om.</p>\n  <p><strong>Statiske generatorer:</strong>Lagre filen til repoet eller CDN-et ditt, og angi deretter front-matter / metakoder til HTTPS-ressursen. Behold utkast på en midlertidig i.ytimg.com URL hvis du må, men send med din egen host.</p>\n\n  <img alt=\"Side om side av WordPress-opplasting av utvalgte bilder kontra et Open Graph-sosialt kort ved bruk\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">«Utvalgt bilde» og «og:image» kan dele en fil, men begge trenger en URL som faktisk finnes.</p>"
+    },
+    {
+      "heading": "Praktiske eksempler etter plattform",
+      "html": "<h3>Kopierer bildet (bekreft URL først)</h3>\n  <p>På 11tik, bruk<strong>Kopier bilde-URL</strong>bare etter at størrelsen er validert i nettleseren din. Lim inn HTTPS-adressen i et utkast – eller enda bedre, last ned filen og last den opp. Gjetter<code>maxresdefault.jpg</code>bryter Open Graph når filen aldri ble publisert. URL-konstruksjon:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Veiledning for miniatyr-URL-er</a>.</p>\n  <h3>Lokal hosting (anbefales for produksjon)</h3>\n  <p>Last ned det validerte stillbildet, last det opp til mediebiblioteket eller det statiske CDN-et ditt, og referer til domenet ditt i<code>&lt;img&gt;</code>og<code>og:image</code>Unngå skjøre, langsiktige hurtiglenker til<code>i.ytimg.com</code>på innlegg du bryr deg om.</p>\n  <h3>WordPress-utvalgt bilde + og:image</h3>\n  <p>Media → Legg til ny → last opp den nedlastede JPEG- eller WebP-filen → angi fremhevet bilde → bekreft at Yoast/Rank Maths sosiale forhåndsvisning bruker vedlegget. Skrap ut feilsøkingsprogrammene for Facebook/Twitter/LinkedIn på nytt etter at URL-endringene er endret.</p>\n  <h3>Blogger</h3>\n  <p>Sett inn bildet i innleggskomponisten slik at Blogger er vert for filen, og bruk deretter Blogger CDN-URL-en på nytt i temametaen hvis malen din eksponerer sosiale felt. Ikke stol på en ekstern YouTube-bilde-URL for et permanent innlegg.</p>\n  <h3>Statiske nettsteder (Hugo, Eleventy, osv.)</h3>\n  <p>Lagre bildet under<code>/assets</code>eller CDN-en din, referer til den i frontmaterie, og send ut<code>og:image</code>med ekte bredde/høyde. Eksempel på metablokk:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>Når hotlinking er akseptabelt</h3>\n  <p>Interne notater, hurtigutkast eller midlertidige forskningssider kan koble til en validert<code>i.ytimg.com</code>URL. Produksjonsartikler, produktsider og e-postkampanjer bør være vert for en kopi. Bygg inn widget for uttrekk på siden:<a href=\"https://www.11tik.com/embed\">innebyggingsveiledning</a>.</p>"
     },
     {
       "heading": "Hensyn til åpen graf",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "Hotlinking kontra nedlasting",
-      "html": "<table>\n    <thead>\n      <tr><th>Nærme</th><th>Best for</th><th>Fare</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hurtiglenke i.ytimg.com</td><td>Hurtigutkast, forskningsnotater</td><td>404-er, CDN-endringer, ingen avlingskontroll</td></tr>\n      <tr><td>Nedlasting + vert</td><td>Rangerte innlegg, produktsider</td><td>Du må lagre filen</td></tr>\n      <tr><td>Skjermbilde av spilleren</td><td>Nesten aldri</td><td>UI Chrome, feil forhold —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">skjermbilde kontra ekte</a></td></tr>\n    </tbody>\n  </table>\n  <p>Nedlastingstrinn:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">hvordan laste ned et YouTube-miniatyrbilde</a>Formatvalg når både WebP og JPEG finnes:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP vs. JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>Nærme</th><th>Best for</th><th>Fare</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Hurtiglenke i.ytimg.com</td><td>Hurtigutkast, forskningsnotater</td><td>404-er, CDN-endringer, ingen avlingskontroll</td></tr>\n      <tr><td>Nedlasting + vert</td><td>Rangerte innlegg, produktsider</td><td>Du må lagre filen</td></tr>\n      <tr><td>Skjermbilde av spiller</td><td>Nesten aldri</td><td>UI Chrome, feil forhold —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">skjermbilde kontra ekte</a></td></tr>\n    </tbody>\n  </table>\n  <p>Nedlastingstrinn:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">hvordan laste ned et YouTube-miniatyrbilde</a>Formatvalg når både WebP og JPEG finnes:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP vs. JPEG</a>.</p>"
     },
     {
       "heading": "Grunnleggende om bilde-SEO for disse stillbildene",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "Gjenbruk og opphavsrett (ikke juridisk rådgivning)",
-      "html": "<p>En offentlig CDN-URL er ikke en lisens. Å bygge inn YouTube-spilleren er forskjellig fra å kopiere stillbildet til hero-videoen din. Lovlig bruk er faktaspesifikk. Sikrere redaksjonelt mønster: illustrer kommentarer om videoen, krediter kanalen, lenke til visningssiden, og ikke selg bildet eller bruk det som din egen kanalgrafikk. Offisiell hjelp med tilpassede miniatyrbilder:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Last opp egendefinerte videominiatyrbilder</a>Nettstedsregler:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+      "html": "<p>En offentlig CDN-URL er ikke en lisens. Å bygge inn YouTube-spilleren er forskjellig fra å kopiere stillbildet til hero-videoen din. Lovlig bruk er faktaspesifikk. Sikrere redaksjonelt mønster: illustrer kommentarer om videoen, krediter kanalen, lenke til visningssiden, og ikke selg bildet eller bruk det som din egen kanalgrafikk. Offisiell hjelp med tilpassede miniatyrbilder:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Last opp egendefinerte videominiatyrbilder</a>Nettstedsregler:<a href=\"https://www.11tik.com/terms-of-use\">Vilkår</a>.</p>"
     },
     {
       "heading": "Feilsøking",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "Neste steg",
-      "html": "<p>Bekreft et stillbilde på<a href=\"https://www.11tik.com/\">11tik ekstraktor</a>, last den ned, last den opp til nettstedet ditt, og pek `featured image / og:image` på HTTPS-filen din.</p>\n  <p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+      "html": "<p>Bekreft et stillbilde på<a href=\"https://www.11tik.com/\">11tik ekstraktor</a>, last den ned, last den opp til nettstedet ditt, og pek `featured image / og:image` på HTTPS-filen din.</p>\n  <p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/privacy\">Privatliv</a>·<a href=\"https://www.11tik.com/terms-of-use\">Vilkår</a>.</p>"
     }
   ],
   "faq": [
@@ -98,9 +102,9 @@
     {
       "question": "Hva om Studio bare endret det egendefinerte miniatyrbildet?",
       "answer": "Vent på behandlingen, og sjekk deretter 11tik på nytt før du oppdaterer CMS-kopien din. Relatert: YouTube Studio-miniatyrbilder.",
-      "answerHtml": "<p>Vent på behandling, og sjekk deretter 11tik på nytt før du oppdaterer CMS-kopien din. Relatert:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">YouTube Studio-miniatyrbilder</a>.</p>"
+      "answerHtml": "<p>Vent på behandling, og sjekk deretter 11tik på nytt før du oppdaterer CMS-kopien din. Relatert:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">YouTube Studio-miniatyrbilder</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/p/about.html\">Om</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privatliv</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Vilkår</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Skrevet av 11tik.<a href=\"https://www.11tik.com/about\">Om</a>·<a href=\"https://www.11tik.com/privacy\">Privatliv</a>·<a href=\"https://www.11tik.com/terms-of-use\">Vilkår</a>.</p>"
 }

@@ -2,7 +2,7 @@
   "contentId": "webp-vs-jpeg-youtube-thumbnails-which",
   "articleId": "webp-vs-jpeg-youtube-thumbnails-which",
   "locale": "hi",
-  "sourceHash": "8f6516335f4189255d915481b47c57079e6e41a0592d62979aa4da3f16872a2e",
+  "sourceHash": "ddccd84d1aaeebc357bf65f17dc06e610d8f9c3b054a65c091139c9959e4336b",
   "status": "ready",
   "title": "वेबपी बनाम जेपीईजी यूट्यूब थंबनेल: आपको कौन सा फॉर्मेट इस्तेमाल करना चाहिए? | 11tik",
   "description": "YouTube JPEG और WebP थंबनेल फ़ाइलें प्रकाशित कर सकता है। कृपया वह फ़ॉर्मेट चुनें जिसे 11tik आपके उपयोग के लिए मान्य करता है—WebP हमेशा उपलब्ध नहीं होता है।",
@@ -26,15 +26,19 @@
   "sections": [
     {
       "heading": "त्वरित जवाब",
-      "html": "<p>अधिकांश डाउनलोड और सीएमएस अपलोड के लिए, इसे रखें<strong>मान्य फ़ाइल 11tik पहली सूची</strong>जेपीईजी अभी भी आम जनता के लिए उपलब्ध है।<code>i.ytimg.com/vi/…</code>कुछ वीडियो के लिए WebP इस प्रकार दिखाई देता है।<code>maxresdefault.webp</code>अंतर्गत<code>/vi_webp/</code>वेबपी अक्सर समान दृश्य गुणवत्ता पर छोटा होता है, लेकिन यह हर आईडी के लिए प्रकाशित नहीं होता है। [[पी2]] करता है<strong>नहीं</strong>डाउनलोड करते समय WebP को JPEG में परिवर्तित करें—इससे YouTube द्वारा पहले से होस्ट किए गए बाइट्स की बचत होती है (JPEG डाउनलोड में केवल एक छोटा मेटाडेटा टिप्पणी स्टैम्प मिलता है)।</p>\n\n  <img alt=\"Side-by-side comparison of JPEG and WebP YouTube thumbnail URL paths on i.ytimg.com\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">एक ही वीडियो आईडी, अलग-अलग कंटेनर और पाथ—ऐसा तभी संभव है जब YouTube ने दोनों को प्रकाशित किया हो।</p>"
+      "html": "<p>अधिकांश डाउनलोड और सीएमएस अपलोड के लिए, इसे रखें<strong>मान्य फ़ाइल 11tik पहली सूची</strong>जेपीईजी अभी भी आम जनता के लिए उपलब्ध है।<code>i.ytimg.com/vi/…</code>कुछ वीडियो के लिए WebP इस प्रकार दिखाई देता है।<code>maxresdefault.webp</code>अंतर्गत<code>/vi_webp/</code>वेबपी अक्सर समान दृश्य गुणवत्ता पर छोटा होता है, लेकिन यह हर आईडी के लिए प्रकाशित नहीं होता है। [[पी2]] करता है<strong>नहीं</strong>डाउनलोड करते समय WebP को JPEG में परिवर्तित करें—इससे YouTube द्वारा पहले से होस्ट किए गए बाइट्स की बचत होती है (JPEG डाउनलोड में केवल एक छोटा मेटाडेटा टिप्पणी स्टैम्प मिलता है)।</p>\n\n  <img alt=\"i.ytimg.com पर JPEG और WebP YouTube थंबनेल URL पथों की साथ-साथ तुलना\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-webp-vs-jpeg-compare.png\" width=\"1200\">\n  <p class=\"yte-caption\">एक ही वीडियो आईडी, अलग-अलग कंटेनर और पाथ—ऐसा तभी संभव है जब YouTube ने दोनों को प्रकाशित किया हो।</p>"
     },
     {
       "heading": "11tik में YouTube थंबनेल प्रारूप कैसे दिखाई देते हैं",
-      "html": "<p>11tik के गुणवत्ता प्रीसेट में शामिल हैं:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(मिम<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ के अंतर्गत<code>/vi/</code>(मिम<code>image/jpeg</code>)</li>\n  </ul>\n  <p>उम्मीदवारों को ब्राउज़र में लोड किया जाता है। विफलताओं और प्लेसहोल्डरों को हटा दिया जाता है। रैंकिंग में टियर, पिक्सेल क्षेत्र, अपेक्षित आकार मिलान और एक छोटे आकार के मापदंड का उपयोग किया जाता है।<strong>-8 स्कोर पेनल्टी के लिए<code>.webp</code>यूआरएल</strong>इसलिए एक ही स्तर के JPEG और WebP फ़ाइलें अप्रत्याशित रूप से एक-दूसरे से अलग नहीं होतीं—दोनों फ़ाइलों के मान्य होने पर JPEG जीत सकता है। आकार संबंधी विवरण:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">थंबनेल आकार मार्गदर्शिका</a>. अधिकतम प्रतिरोध व्यवहार का अभाव:<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault 404 गाइड</a>.</p>"
+      "html": "<p>11tik के गुणवत्ता प्रीसेट में शामिल हैं:</p>\n  <ul>\n    <li><code>maxresdefault.webp</code>→<code>https://i.ytimg.com/vi_webp/VIDEO_ID/maxresdefault.webp</code>(मिम<code>image/webp</code>)</li>\n    <li><code>maxresdefault.jpg</code>,<code>hq720.jpg</code>,<code>sddefault.jpg</code>,<code>hqdefault.jpg</code>,<code>mqdefault.jpg</code>,<code>default.jpg</code>→ के अंतर्गत<code>/vi/</code>(मिम<code>image/jpeg</code>)</li>\n  </ul>\n  <p>उम्मीदवारों को ब्राउज़र में लोड किया जाता है। विफलताओं और प्लेसहोल्डरों को हटा दिया जाता है। रैंकिंग में टियर, पिक्सेल क्षेत्र, अपेक्षित आकार मिलान और एक छोटे से मापदंड का उपयोग किया जाता है।<strong>-8 स्कोर पेनल्टी के लिए<code>.webp</code>यूआरएल</strong>इसलिए एक ही स्तर के JPEG और WebP फ़ाइलें अप्रत्याशित रूप से एक-दूसरे से अलग नहीं होतीं—दोनों फ़ाइलों के मान्य होने पर JPEG जीत सकता है। आकार संबंधी विवरण:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">थंबनेल आकार मार्गदर्शिका</a>. अधिकतम प्रतिरोध व्यवहार का अभाव:<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault 404 गाइड</a>.</p>"
     },
     {
       "heading": "सरल भाषा में JPEG बनाम WebP",
-      "html": "<table>\n    <thead>\n      <tr><th>प्रारूप</th><th>के लिए सर्वश्रेष्ठ</th><th>ताकत</th><th>परिसीमन</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>जेपीईजी</td><td>डाउनलोड, वर्डप्रेस अपलोड, व्यापक अनुकूलता</td><td>लगभग सर्वव्यापी समर्थन; अधिकांश सीडीएन अभी भी</td><td>समान गुणवत्ता वाली बड़ी फ़ाइलें</td></tr>\n      <tr><td>वेबपी</td><td>आधुनिक साइटें जो पहले से ही WebP सेवा प्रदान करती हैं</td><td>अक्सर समान रिज़ॉल्यूशन स्तर के लिए छोटा होता है</td><td>हर वीडियो के लिए प्रकाशित नहीं; कुछ पुराने टूल ठीक से काम नहीं करते।</td></tr>\n    </tbody>\n  </table>\n  <p>दोनों में से कोई भी फॉर्मेट रेज़ोल्यूशन का आविष्कार नहीं करता। 480×360 WebP अभी भी 480×360 ही है।</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>प्रारूप</th><th>के लिए सर्वश्रेष्ठ</th><th>ताकत</th><th>परिसीमन</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>जेपीईजी</td><td>डाउनलोड, वर्डप्रेस अपलोड, व्यापक अनुकूलता</td><td>लगभग सर्वव्यापी समर्थन; अधिकांश सीडीएन अभी भी</td><td>समान गुणवत्ता वाली बड़ी फ़ाइलें</td></tr>\n      <tr><td>वेबपी</td><td>आधुनिक साइटें जो पहले से ही WebP सेवा प्रदान करती हैं</td><td>समान रिज़ॉल्यूशन स्तर के लिए अक्सर छोटा होता है</td><td>हर वीडियो के लिए प्रकाशित नहीं; कुछ पुराने टूल ठीक से काम नहीं करते।</td></tr>\n    </tbody>\n  </table>\n  <p>दोनों में से कोई भी फॉर्मेट रेज़ोल्यूशन का आविष्कार नहीं करता। 480×360 WebP अभी भी 480×360 ही है।</p>"
+    },
+    {
+      "heading": "मापित बाइट-आकार तुलना (केवल 300 वीडियो का नमूना)",
+      "html": "<p>ठीक उसी प्रकार<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 वीडियो का नमूना</a>, माध्यिका मैक्सरेस वेबपी अवलोकन था<strong>60,345 बाइट्स</strong>बनाम<strong>141,111 बाइट्स</strong>जेपीईजी मैक्सरेस के लिए—वेबपी मीडियन लगभग<strong>बाइट आकार में 57.2% छोटा</strong>उस डेटासेट में। यह एक<strong>सैंपल-स्कोप बाइट तुलना</strong>यह सार्वभौमिक संपीड़न की गारंटी नहीं है: आपका वीडियो अधिकतम रिज़ॉल्यूशन स्तर पर केवल JPEG, केवल WebP, दोनों या इनमें से कोई भी प्रारूप में प्रकाशित नहीं हो सकता है। प्रत्येक स्तर के लिए पिक्सेल आयामों का विवरण दिया गया है।<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">आकार और रिज़ॉल्यूशन गाइड</a>यूआरएल पथ निम्नलिखित के अंतर्गत भिन्न होते हैं<code>/vi/</code>बनाम<code>/vi_webp/</code>जैसा कि इसमें बताया गया है<a href=\"https://www.11tik.com/youtube-thumbnail-url\">थंबनेल यूआरएल गाइड</a>.</p>"
     },
     {
       "heading": "डाउनलोड करने पर क्या होता है?",
@@ -46,11 +50,11 @@
     },
     {
       "heading": "जब WebP सुविधाजनक हो",
-      "html": "<ul>\n    <li>11tik ने मान्य वेबपी मैक्सरेस सूचीबद्ध किया है और आपकी साइट पहले से ही वेबपी सेवा प्रदान करती है।</li>\n    <li>आपको उसी ~1280×720 टियर के लिए एक छोटी फ़ाइल चाहिए।</li>\n    <li>आप स्टैक को नियंत्रित करते हैं और आवश्यकता पड़ने पर जेपीईजी पर वापस जा सकते हैं।</li>\n  </ul>\n  <p>यदि आपका थीम WebP का उपयोग नहीं कर सकता है, तो इसके बजाय JPEG डाउनलोड करें—या डाउनलोड करने के बाद इसे स्थानीय रूप से परिवर्तित करें। 11tik आपके लिए रूपांतरण नहीं करेगा।</p>\n\n  <img alt=\"Use-case chart comparing website CMS, direct CDN links, and archive downloads for JPEG versus WebP YouTube thumbnails\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">अपनी पाइपलाइन से मेल खाने वाले मान्य प्रारूप का चयन करें—अनुमानित एक्सटेंशन का नहीं।</p>"
+      "html": "<ul>\n    <li>11tik ने मान्य वेबपी मैक्सरेस सूचीबद्ध किया है और आपकी साइट पहले से ही वेबपी सेवा प्रदान करती है।</li>\n    <li>आपको उसी ~1280×720 टियर के लिए एक छोटी फ़ाइल चाहिए।</li>\n    <li>आप स्टैक को नियंत्रित करते हैं और आवश्यकता पड़ने पर जेपीईजी पर वापस जा सकते हैं।</li>\n  </ul>\n  <p>यदि आपका थीम WebP का उपयोग नहीं कर सकता है, तो इसके बजाय JPEG डाउनलोड करें—या डाउनलोड करने के बाद इसे स्थानीय रूप से परिवर्तित करें। 11tik आपके लिए रूपांतरण नहीं करेगा।</p>\n\n  <img alt=\"वेबसाइट CMS, डायरेक्ट CDN लिंक और JPEG बनाम WebP YouTube थंबनेल के लिए आर्काइव डाउनलोड की तुलना\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-format-use-cases.png\" width=\"1200\">\n  <p class=\"yte-caption\">अपनी पाइपलाइन से मेल खाने वाले मान्य प्रारूप का चयन करें—अनुमानित एक्सटेंशन का नहीं।</p>"
     },
     {
       "heading": "सीधे लिंक और वेबसाइटें",
-      "html": "<p>कॉपी इमेज यूआरएल मान्य उम्मीदवार का HTTPS CDN पता लौटाता है। वेबपी या जेपीईजी को हॉटलिंक करने में वही खामियां हैं जिनकी चर्चा पहले की जा चुकी है।<a href=\"https://www.11tik.com/2026/08/how-to-use-youtube-thumbnail-as-blog.html\">ब्लॉग / ओपन ग्राफ़ गाइड</a>स्थायी पोस्ट के लिए अपनी स्वयं की सामग्री होस्ट करना बेहतर है। यूआरएल पैटर्न:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">थंबनेल यूआरएल गाइड</a>.</p>"
+      "html": "<p>छवि URL कॉपी करने पर मान्य उम्मीदवार का HTTPS CDN पता प्राप्त होता है। WebP या JPEG को हॉटलिंक करने में वही खामियां हैं जिनकी चर्चा पहले की जा चुकी है।<a href=\"https://www.11tik.com/how-to-use-youtube-thumbnail-as-blog\">ब्लॉग / ओपन ग्राफ़ गाइड</a>स्थायी पोस्ट के लिए अपनी स्वयं की सामग्री होस्ट करना बेहतर है। यूआरएल पैटर्न:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">थंबनेल यूआरएल गाइड</a>.</p>"
     },
     {
       "heading": "ब्राउज़र और सीएमएस संगतता संबंधी नोट्स",
@@ -58,11 +62,11 @@
     },
     {
       "heading": "व्यावहारिक निर्णय वृक्ष",
-      "html": "<ol>\n    <li>पर निकालें<a href=\"https://www.11tik.com/\">[[पी2]]</a>.</li>\n    <li>यदि आपको CMS के लिए एक फीचर्ड इमेज की आवश्यकता है और आपको दोनों फॉर्मेट दिखाई देते हैं, तो JPEG चुनें, जब तक कि आपका स्टैक WebP-फर्स्ट न हो।</li>\n    <li>यदि केवल WebP मैक्सरेस ही शीर्ष स्तर पर मान्य है, तो इसका उपयोग करें—या यदि आपको JPG पर ही रहना है तो अगला JPEG आकार चुनें।</li>\n    <li>आर्काइव फ़ाइलों के लिए, डाउनलोड से प्राप्त मूल एक्सटेंशन को ही रखें।</li>\n  </ol>\n  <p>डाउनलोड वॉकथ्रू:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTube थंबनेल डाउनलोड करें</a>.</p>"
+      "html": "<ol>\n    <li>पर निकालें<a href=\"https://www.11tik.com/\">[[पी2]]</a>.</li>\n    <li>यदि आपको CMS के लिए एक फीचर्ड इमेज की आवश्यकता है और आपको दोनों फॉर्मेट दिखाई देते हैं, तो JPEG चुनें, जब तक कि आपका स्टैक WebP-फर्स्ट न हो।</li>\n    <li>यदि केवल WebP मैक्सरेस ही शीर्ष स्तर पर मान्य है, तो इसका उपयोग करें—या यदि आपको JPG पर ही रहना है तो अगला JPEG आकार चुनें।</li>\n    <li>आर्काइव फ़ाइलों के लिए, डाउनलोड से प्राप्त मूल एक्सटेंशन को ही रखें।</li>\n  </ol>\n  <p>डाउनलोड वॉकथ्रू:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">YouTube थंबनेल डाउनलोड करें</a>.</p>"
     },
     {
       "heading": "अगला कदम",
-      "html": "<p>सार्वजनिक यूआरएल को पेस्ट करें<a href=\"https://www.11tik.com/\">यूट्यूब थंबनेल एक्सट्रैक्टर</a>ध्यान दें कि शीर्ष परिणाम क्या है<code>.jpg</code>या<code>.webp</code>और अपने सीएमएस के आधार पर चयन करें—न कि लंबी फ़ाइल के नाम के आधार पर।</p>\n  <p class=\"yte-bio\">वर्तमान इन-ब्राउज़र एक्सट्रैक्टर व्यवहार के आधार पर 11tik द्वारा लिखा गया।<a href=\"https://www.11tik.com/p/about.html\">के बारे में</a>·<a href=\"https://www.11tik.com/p/privacy.html\">गोपनीयता</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">शर्तें</a>.</p>"
+      "html": "<p>सार्वजनिक यूआरएल को पेस्ट करें<a href=\"https://www.11tik.com/\">यूट्यूब थंबनेल एक्सट्रैक्टर</a>ध्यान दें कि शीर्ष परिणाम क्या है<code>.jpg</code>या<code>.webp</code>और अपने सीएमएस के आधार पर चयन करें—न कि लंबी फ़ाइल के नाम के आधार पर।</p>\n  <p class=\"yte-bio\">वर्तमान इन-ब्राउज़र एक्सट्रैक्टर व्यवहार के आधार पर 11tik द्वारा लिखा गया।<a href=\"https://www.11tik.com/about\">के बारे में</a>·<a href=\"https://www.11tik.com/privacy\">गोपनीयता</a>·<a href=\"https://www.11tik.com/terms-of-use\">शर्तें</a>.</p>"
     }
   ],
   "faq": [
@@ -88,7 +92,7 @@
     },
     {
       "question": "मुझे हॉटलिंक के लिए कौन सा फॉर्मेट इस्तेमाल करना चाहिए?",
-      "answer": "उत्पादन पृष्ठों के लिए, आप किसी भी प्रकार का उपयोग नहीं करते। एक प्रति होस्ट करें। यदि आपको अस्थायी रूप से हॉटलिंक करना है, तो पहले से मान्य URL 11tik का उपयोग करें।",
+      "answer": "उत्पादन पृष्ठों के लिए, जिनकी आपको परवाह है, न ही। एक प्रति होस्ट करें। यदि आपको अस्थायी रूप से हॉटलिंक करना है, तो पहले से मान्य URL 11tik का उपयोग करें।",
       "answerHtml": "<p>उत्पादन पृष्ठों के लिए, जिनकी आपको परवाह है, न ही। एक प्रति होस्ट करें। यदि आपको अस्थायी रूप से हॉटलिंक करना है, तो पहले से मान्य URL 11tik का उपयोग करें।</p>"
     },
     {
@@ -98,5 +102,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">वर्तमान इन-ब्राउज़र एक्सट्रैक्टर व्यवहार के आधार पर 11tik द्वारा लिखा गया।<a href=\"https://www.11tik.com/p/about.html\">के बारे में</a>·<a href=\"https://www.11tik.com/p/privacy.html\">गोपनीयता</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">शर्तें</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">वर्तमान इन-ब्राउज़र एक्सट्रैक्टर व्यवहार के आधार पर 11tik द्वारा लिखा गया।<a href=\"https://www.11tik.com/about\">के बारे में</a>·<a href=\"https://www.11tik.com/privacy\">गोपनीयता</a>·<a href=\"https://www.11tik.com/terms-of-use\">शर्तें</a>.</p>"
 }

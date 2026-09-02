@@ -13,7 +13,7 @@
     {
       "question": "URL YouTube mana yang didukung oleh 11tik?",
       "answer": "Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, atau tautan pendek youtu.be. Alat ini membaca ID video dari jalur dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat panduan URL thumbnail.",
-      "answerHtml": "Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, atau tautan pendek youtu.be. Alat ini membaca ID video dari jalur dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat<a href=\"https://id.11tik.com/l/id/2026/08/youtube-thumbnail-url.html\">Panduan URL thumbnail</a>."
+      "answerHtml": "Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, atau tautan pendek youtu.be. Alat ini membaca ID video dari jalur dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat<a href=\"https://id.11tik.com/l/id/youtube-thumbnail-url\">Panduan URL thumbnail</a>."
     },
     {
       "question": "Apakah 11tik mengunggah thumbnail atau video saya?",
@@ -23,12 +23,12 @@
     {
       "question": "Bisakah saya mengunduh thumbnail dari YouTube Shorts?",
       "answer": "Ya. Tautan Shorts menggunakan host gambar publik yang sama dengan video biasa, jadi Anda dapat menempelkan URL /shorts/ dan mengunduh gambar diam terbaik yang ada. Pratinjau mungkin terlihat lebih lebar daripada klip vertikal yang Anda tonton karena YouTube menyimpan gambar diam dalam format lanskap. Shorts pribadi atau yang dibatasi usia tanpa thumbnail publik tidak akan mengembalikan file. Lihat panduan thumbnail Shorts untuk bantuan langkah demi langkah.",
-      "answerHtml": "Ya. Tautan Shorts menggunakan host gambar publik yang sama dengan video biasa, jadi Anda dapat menempelkan URL /shorts/ dan mengunduh gambar diam terbaik yang ada. Pratinjau mungkin terlihat lebih lebar daripada klip vertikal yang Anda tonton karena YouTube menyimpan gambar diam dalam format lanskap. Shorts pribadi atau yang dibatasi usia tanpa thumbnail publik tidak akan mengembalikan file. Lihat<a href=\"https://id.11tik.com/l/id/2026/08/youtube-shorts-thumbnail-download.html\">Panduan thumbnail celana pendek</a>untuk bantuan langkah demi langkah."
+      "answerHtml": "Ya. Tautan Shorts menggunakan host gambar publik yang sama dengan video biasa, jadi Anda dapat menempelkan URL /shorts/ dan mengunduh gambar diam terbaik yang ada. Pratinjau mungkin terlihat lebih lebar daripada klip vertikal yang Anda tonton karena YouTube menyimpan gambar diam dalam format lanskap. Shorts pribadi atau yang dibatasi usia tanpa thumbnail publik tidak akan mengembalikan file. Lihat<a href=\"https://id.11tik.com/l/id/youtube-shorts-thumbnail-download\">Panduan thumbnail celana pendek</a>untuk bantuan langkah demi langkah."
     },
     {
       "question": "Apa yang terjadi jika kualitas thumbnail tertinggi tidak tersedia?",
       "answer": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Untuk mengetahui mengapa maxres menghasilkan error 404 dan bagaimana fallback bekerja, baca panduan maxresdefault.",
-      "answerHtml": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Untuk mengetahui mengapa maxres menghasilkan error 404 dan bagaimana fallback bekerja, baca<a href=\"https://id.11tik.com/l/id/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">panduan maxresdefault</a>."
+      "answerHtml": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Untuk mengetahui mengapa maxres menghasilkan error 404 dan bagaimana fallback bekerja, baca<a href=\"https://id.11tik.com/l/id/what-is-maxresdefaultjpg-when-youtube\">panduan maxresdefault</a>."
     }
   ],
   "articleId": "home-faq"

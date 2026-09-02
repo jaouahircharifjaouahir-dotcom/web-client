@@ -25,7 +25,7 @@
     },
     {
       "heading": "Por que as capturas de tela falham nas pré-visualizações do Google Imagens e das redes sociais?",
-      "html": "<p>Muitas vezes, as imagens têm a proporção errada, incluem a interface do usuário e são comprimidas duas vezes. O Open Graph e muitos campos de CMS exigem uma resolução 16:9, que ainda fica em torno de 1280×720. Isso corresponde ao maxresdefault quando ele existe — veja<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guia de tamanho de miniaturas</a>.</p>"
+      "html": "<p>Muitas vezes, as imagens têm a proporção errada, incluem a interface do usuário e são comprimidas duas vezes. O Open Graph e muitos campos de CMS exigem uma resolução 16:9, que ainda fica em torno de 1280×720. Isso corresponde ao maxresdefault quando ele existe — veja<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">guia de tamanho de miniaturas</a>.</p>"
     },
     {
       "heading": "Como faço para salvar a miniatura real?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "Quando é que uma captura de tela ainda é útil?",
-      "html": "<p>Use uma captura de tela apenas para documentar um bug da interface do usuário ou um momento específico do vídeo. Não a utilize como miniatura oficial, imagem principal do blog ou imagem de compartilhamento se o vídeo ainda for público.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtenha a miniatura pública real →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+      "html": "<p>Use uma captura de tela apenas para documentar um bug da interface do usuário ou um momento específico do vídeo. Não a utilize como miniatura oficial, imagem principal do blog ou imagem de compartilhamento se o vídeo ainda for público.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtenha a miniatura pública real →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Sobre</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Sobre</a>.</p>"
 }

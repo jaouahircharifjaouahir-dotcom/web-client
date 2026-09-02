@@ -25,7 +25,7 @@
     },
     {
       "heading": "¿Por qué fallan las capturas de pantalla en Google Imágenes y en las vistas previas de redes sociales?",
-      "html": "<p>A menudo tienen una relación de aspecto incorrecta, incluyen la interfaz de usuario y se comprimen dos veces. Open Graph y muchos campos de CMS requieren una relación de aspecto de 16:9, que sigue estando alrededor de 1280 × 720. Esto coincide con maxresdefault cuando existe; consulte<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">guía de tamaño de miniatura</a>.</p>"
+      "html": "<p>A menudo tienen una relación de aspecto incorrecta, incluyen la interfaz de usuario y se comprimen dos veces. Open Graph y muchos campos de CMS requieren una relación de aspecto de 16:9, que sigue estando alrededor de 1280 × 720. Esto coincide con maxresdefault cuando existe; consulte<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">guía de tamaño de miniatura</a>.</p>"
     },
     {
       "heading": "¿Cómo puedo guardar la miniatura real?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "¿Cuándo sigue siendo útil una captura de pantalla?",
-      "html": "<p>Utiliza una captura de pantalla únicamente para documentar un error de la interfaz de usuario o un momento específico del vídeo. No la uses como miniatura oficial, imagen principal de un blog ni imagen para compartir si aún existe una cuenta pública.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtén la miniatura pública real →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+      "html": "<p>Utiliza una captura de pantalla únicamente para documentar un error de la interfaz de usuario o un momento específico del vídeo. No la uses como miniatura oficial, imagen principal de un blog ni imagen para compartir si aún existe una cuenta pública.</p>\n  <p><a href=\"https://www.11tik.com/\">Obtén la miniatura pública real →</a></p>\n  <p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Acerca de</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/p/about.html\">Acerca de</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik.<a href=\"https://www.11tik.com/about\">Acerca de</a>.</p>"
 }

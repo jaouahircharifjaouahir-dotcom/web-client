@@ -25,7 +25,7 @@
     },
     {
       "heading": "Google画像検索やソーシャルメディアのプレビューでスクリーンショットがうまく表示されないのはなぜですか？",
-      "html": "<p>これらは多くの場合、アスペクト比が間違っており、UI を含み、2 回圧縮されます。Open Graph や多くの CMS フィールドは、1280×720 程度の 16:9 を必要とします。これは、maxresdefault が存在する場合に一致します。参照<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サムネイルサイズガイド</a>。</p>"
+      "html": "<p>これらは多くの場合、アスペクト比が間違っており、UI を含み、2 回圧縮されます。Open Graph や多くの CMS フィールドは、1280×720 程度の 16:9 を必要とします。これは、maxresdefault が存在する場合に一致します。参照<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サムネイルサイズガイド</a>。</p>"
     },
     {
       "heading": "実際のサムネイルを保存するにはどうすればよいですか？",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "スクリーンショットはどのような場合にまだ役立つのか？",
-      "html": "<p>スクリーンショットは、UIのバグや動画内の特定の場面を記録する場合にのみ使用してください。公式サムネイル、ブログのメイン画像、または公開設定が残っている共有画像として使用しないでください。</p>\n  <p><a href=\"https://www.11tik.com/\">実際の公開サムネイルを取得する →</a></p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+      "html": "<p>スクリーンショットは、UIのバグや動画内の特定の場面を記録する場合にのみ使用してください。公式サムネイル、ブログのメイン画像、または公開設定が残っている共有画像として使用しないでください。</p>\n  <p><a href=\"https://www.11tik.com/\">実際の公開サムネイルを取得する →</a></p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/about\">について</a>。</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/about\">について</a>。</p>"
 }

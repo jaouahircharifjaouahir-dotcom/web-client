@@ -26,7 +26,7 @@
   "sections": [
     {
       "heading": "簡単な回答",
-      "html": "<p>3つの異なるURLが同じYouTube動画IDを共有できます。そのうち画像ファイルは1つだけです。</p>\n  <ol>\n    <li><strong>YouTube視聴URL</strong>— YouTubeで動画を開きます。</li>\n    <li><strong>11tik共有URL</strong>— そのIDの11tik抽出結果ページを開きます（<code>/thumb/{VIDEO_ID}</code>これはウェブページであり、JPEG/WebPファイルではありません。</li>\n    <li><strong>サムネイルの直接CDN URL</strong>— YouTube の画像ホスト上の公開静止画を指し示す (例:<code>i.ytimg.com</code>)</li>\n  </ol>\n  <p>公開デモIDを使用する<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>3 番目のアドレスは、直接画像 URL パターンの例です。その特定の maxres ファイルはすべてのビデオで保証されているわけではありません。実際のサイズについては、<a href=\"https://www.11tik.com/\">11tik</a>または<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault ガイド</a>。</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">同じビデオ ID で、3 つのジョブを実行します: ビデオを視聴する、11tik 結果ページを開く、または CDN の静止画をリクエストします。</p>"
+      "html": "<p>3つの異なるURLが同じYouTube動画IDを共有できます。そのうち画像ファイルは1つだけです。</p>\n  <ol>\n    <li><strong>YouTube視聴URL</strong>— YouTubeで動画を開きます。</li>\n    <li><strong>11tik共有URL</strong>— そのIDの11tik抽出結果ページを開きます（<code>/thumb/{VIDEO_ID}</code>これはウェブページであり、JPEG/WebPファイルではありません。</li>\n    <li><strong>サムネイルの直接CDN URL</strong>— YouTube の画像ホスト上の公開静止画を指し示す (例:<code>i.ytimg.com</code>)</li>\n  </ol>\n  <p>公開デモIDを使用する<code>dQw4w9WgXcQ</code>:</p>\n  <pre>https://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://www.11tik.com/thumb/dQw4w9WgXcQ\nhttps://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg</pre>\n  <p>3 番目のアドレスは、直接画像 URL パターンの例です。その特定の maxres ファイルはすべてのビデオで保証されているわけではありません。実際のサイズについては、<a href=\"https://www.11tik.com/\">11tik</a>または<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault ガイド</a>。</p>\n\n  <img alt=\"Diagram comparing a YouTube watch URL, an 11tik thumbnail share URL, and a direct YouTube thumbnail image URL\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/11tik-share-link-three-url-comparison.png\" width=\"1200\">\n  <p class=\"yte-caption\">同じビデオ ID で、3 つのジョブを実行します: ビデオを視聴する、11tik 結果ページを開く、または CDN の静止画をリクエストします。</p>"
     },
     {
       "heading": "/thumb/{VIDEO_ID} とは",
@@ -50,11 +50,11 @@
     },
     {
       "heading": "3つのURLの実際の違い",
-      "html": "<h3>視聴URLと11tik共有URLの比較</h3>\n  <p>YouTubeで動画を視聴したり議論したりすることが目的の場合は、視聴用URLを共有してください。サムネイル抽出結果（プレビュー、ダウンロード、検証済みの公開サイズなど）を、抽出ツールを探す手間をかけずに再度開きたい場合は、11tik URLを共有してください。</p>\n  <h3>11tik 共有URLと直接画像URLの比較</h3>\n  <p>直接画像のURLは、貼り付けるものです。<code>&lt;img src&gt;</code>ファイルが存在することを確認した後、CMS メディアライブラリまたはデザインツールを使用します。これらの CDN URL が ID からどのように構築されるかは、<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURLガイド</a>11tik共有URLは画像アドレスを置き換えるものではありません。受信者は、ファイル自体が必要な場合は、ツール内の「画像URLをダウンロード」または「画像URLをコピー」を引き続き使用します。</p>\n  <h3>視聴URLと直接画像URLの比較</h3>\n  <p>ウォッチ URL は動画を識別します。イメージ URL は公開されている派生作品を識別します。これらは互換性がないため、推測することはできません。<code>maxresdefault.jpg</code>ウォッチページが正常に動作している場合でも、しばしば失敗する。</p>"
+      "html": "<h3>視聴URLと11tik共有URLの比較</h3>\n  <p>YouTubeで動画を視聴したり議論したりすることが目的の場合は、視聴用URLを共有してください。サムネイル抽出結果（プレビュー、ダウンロード、検証済みの公開サイズなど）を、抽出ツールを探す手間をかけずに再度開きたい場合は、11tik URLを共有してください。</p>\n  <h3>11tik 共有URLと直接画像URLの比較</h3>\n  <p>直接画像のURLは、貼り付けるものです。<code>&lt;img src&gt;</code>ファイルが存在することを確認した後、CMS メディアライブラリまたはデザインツールを使用します。これらの CDN URL が ID からどのように構築されるかは、<a href=\"https://www.11tik.com/youtube-thumbnail-url\">サムネイルURLガイド</a>11tik共有URLは画像アドレスを置き換えるものではありません。受信者は、ファイル自体が必要な場合は、ツール内の「画像URLをダウンロード」または「画像URLをコピー」を引き続き使用します。</p>\n  <h3>視聴URLと直接画像URLの比較</h3>\n  <p>ウォッチ URL は動画を識別します。イメージ URL は公開されている派生作品を識別します。これらは互換性がないため、推測することはできません。<code>maxresdefault.jpg</code>ウォッチページが正常に動作している場合でも、しばしば失敗する。</p>"
     },
     {
       "heading": "どのリンクをいつ共有するか",
-      "html": "<ul>\n    <li><strong>YouTubeの視聴URLを共有する</strong>動画の視聴、コメント、引用のために。</li>\n    <li><strong>11tikを共有する<code>/thumb/</code>URL</strong>抽出結果、品質リスト、または公開静止画の迅速な再ダウンロードが必要な共同作業者向け。</li>\n    <li><strong>画像の直接URLまたはダウンロードしたファイルを共有またはホストする</strong>ブログの注目画像、Open Graph、デザイン案については、確認後。<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">ダウンロードガイド</a>そして<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">サイズと解像度ガイド</a>。</li>\n  </ul>"
+      "html": "<ul>\n    <li><strong>YouTubeの視聴URLを共有する</strong>動画の視聴、コメント、引用のために。</li>\n    <li><strong>11tikを共有する<code>/thumb/</code>URL</strong>抽出結果、品質リスト、または公開静止画の迅速な再ダウンロードが必要な共同作業者向け。</li>\n    <li><strong>画像の直接URLまたはダウンロードしたファイルを共有またはホストする</strong>ブログの注目画像、Open Graph、デザイン案については、確認後。<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">ダウンロードガイド</a>そして<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">サイズと解像度ガイド</a>。</li>\n  </ul>"
     },
     {
       "heading": "ビデオIDが3つすべてを繋ぐ方法",
@@ -99,9 +99,9 @@
     {
       "question": "ウォッチURLと画像URLについて、より詳しい説明はどこで入手できますか？",
       "answer": "ID→CDN構築にはサムネイルURLの記事を、ファイルの保存にはダウンロードの記事を使用してください。",
-      "answerHtml": "<p>使用する<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">サムネイルURL記事</a>ID → CDN構築については、およびファイルの保存に関するダウンロード記事を参照してください。</p>"
+      "answerHtml": "<p>使用する<a href=\"https://www.11tik.com/youtube-thumbnail-url\">サムネイルURL記事</a>ID → CDN構築については、およびファイルの保存に関するダウンロード記事を参照してください。</p>"
     }
   ],
   "conclusionHtml": "<h2>結論</h2>\n<p>扱う<code>/thumb/{VIDEO_ID}</code>11tikの共有/結果アドレスとして：抽出を再開して送信するのに役立ちますが、YouTubeの視聴リンクや直接の代替としては決して使用しないでください。<code>i.ytimg.com</code>それでも、3種類のURLを正しく使い分ければ、ダウンロード、埋め込み、共同作業者リンクの精度を維持できます。</p>\n  <p><a href=\"https://www.11tik.com/\">公開されているサムネイルを抽出して、11tik共有リンクをコピーします →</a></p>",
-  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>・<a href=\"https://www.11tik.com/p/terms-of-use.html\">条項</a>作成者参照:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/about\">について</a>・<a href=\"https://www.11tik.com/privacy\">プライバシー</a>・<a href=\"https://www.11tik.com/terms-of-use\">条項</a>作成者参照:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">カスタムビデオサムネイルをアップロード</a>。</p>"
 }

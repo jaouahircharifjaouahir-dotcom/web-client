@@ -2,7 +2,7 @@
   "contentId": "youtube-shorts-thumbnail-download",
   "articleId": "youtube-shorts-thumbnail-download",
   "locale": "pt",
-  "sourceHash": "87efc3a20d849830cacf1e82fd83ad1f97b2e3445b6e405211f03490dfb1fc33",
+  "sourceHash": "a5b536f382722d6dbcb3a4812de0c28be2701aea73108b990f33588fd3a9e906",
   "status": "ready",
   "title": "Como baixar uma miniatura do YouTube Shorts em HD | 11tik",
   "description": "Faça o download da miniatura de um vídeo do YouTube Shorts no navegador. Os vídeos Shorts usam as mesmas imagens públicas que os URLs de visualização. O arquivo geralmente está no formato paisagem.",
@@ -25,11 +25,15 @@
     },
     {
       "heading": "Os arquivos Shorts são iguais aos arquivos de página de observação?",
-      "html": "<p>Eles usam os mesmos nomes de tamanho públicos, indexados pelo ID do vídeo. A imagem pode parecer com barras pretas nas laterais se o YouTube armazenou uma versão widescreen.</p>"
+      "html": "<p>Eles usam os mesmos nomes de tamanho público indexados pelo ID do vídeo em<code>i.ytimg.com</code>A imagem pode parecer em formato letterbox se o YouTube armazenou uma versão widescreen. A anatomia da URL para links Shorts, watch e youtu.be é abordada no<a href=\"https://www.11tik.com/youtube-thumbnail-url\">guia de URLs de miniaturas</a>.</p>"
+    },
+    {
+      "heading": "O Shorts sempre publica em resolução máxima?",
+      "html": "<p>Não. Em nosso<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Amostra de 300 vídeos</a>, maxresdefault validado para<strong>286 de 300</strong>IDs (<strong>95,33%</strong>); o<strong>14 de 300</strong>Mesmo sem maxres, ainda havia um valor público inferior válido. Isso é uma evidência, dentro do escopo da amostra, de comportamento alternativo, e não uma regra universal para Shorts.</p>"
     },
     {
       "heading": "E se nenhuma imagem aparecer?",
-      "html": "<p>O curta pode ser privado, excluído ou não conter imagens públicas. O extrator não pode contornar essas limitações.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrator</a>·<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">Como baixar</a></p>"
+      "html": "<p>O curta pode ser privado, excluído ou não conter imagens públicas. O extrator não pode contornar essas limitações.</p>\n  <p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/about\">Sobre</a>ou<a href=\"https://www.11tik.com/contact\">Contato</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extrator</a>·<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Como baixar</a></p>"
     }
   ],
   "faq": [
@@ -45,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/p/about.html\">Sobre</a>ou<a href=\"https://www.11tik.com/p/contact.html\">Contato</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Escrito por 11tik, editor do extrator de miniaturas do YouTube para navegador. Veja<a href=\"https://www.11tik.com/about\">Sobre</a>ou<a href=\"https://www.11tik.com/contact\">Contato</a>.</p>"
 }

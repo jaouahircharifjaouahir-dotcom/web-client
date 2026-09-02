@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "ms",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "Cara Menggunakan Gambar Kecil YouTube sebagai Imej Pilihan Blog atau Pratonton Graf Terbuka | 11tik",
   "description": "Sahkan YouTube awam masih wujud, kemudian hoskan salinan untuk WordPress, Blogger atau og:image. Jangan hotlink URL maxresdefault yang telah diteka.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "Jawapan pantas",
-      "html": "<p>Tampal URL YouTube awam ke dalam<a href=\"https://www.11tik.com/\">11tik</a>, tunggu saiz yang disahkan, kemudian sama ada<strong>muat turun</strong>gambar pertama dan muat naik ke CMS anda, atau<strong>salin URL imej</strong>hanya selepas ia dimuatkan. Untuk catatan yang berkekalan, hoskan salinan anda sendiri. Pautan panas<code>i.ytimg.com</code>mudah untuk draf dan rapuh untuk pengeluaran kad sosial.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sahkan → salin atau muat turun → hos → rujukan dalam HTML / imej pilihan / Graf Terbuka.</p>"
+      "html": "<p>Tampal URL YouTube awam ke dalam<a href=\"https://www.11tik.com/\">11tik</a>, tunggu saiz yang disahkan, kemudian sama ada<strong>muat turun</strong>gambar pertama dan muat naik ke CMS anda, atau<strong>salin URL imej</strong>hanya selepas ia dimuatkan. Untuk catatan yang berkekalan, hoskan salinan anda sendiri. Pautan panas<code>i.ytimg.com</code>mudah untuk draf dan rapuh untuk pengeluaran kad sosial.</p>\n\n  <img alt=\"Aliran kerja daripada mengesahkan lakaran kecil YouTube pada 11tik kepada memuat naiknya dalam\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Sahkan → salin atau muat turun → hos → rujukan dalam HTML / imej pilihan / Graf Terbuka.</p>"
     },
     {
       "heading": "Apakah URL lakaran kecil langsung",
-      "html": "<p>URL lakaran kecil langsung menghala ke fail JPEG atau WebP pada CDN imej YouTube, contohnya<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Ia bukan halaman tontonan. Cara alamat tersebut dibina:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">dapatkan URL lakaran kecil YouTube</a>Perbezaan saiz:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">panduan saiz dan resolusi</a>.</p>"
+      "html": "<p>URL lakaran kecil langsung menghala ke fail JPEG atau WebP pada CDN imej YouTube, contohnya<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>Ia bukan halaman tontonan. Cara alamat tersebut dibina:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">dapatkan URL lakaran kecil YouTube</a>Perbezaan saiz:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">panduan saiz dan resolusi</a>.</p>"
     },
     {
       "heading": "Contoh HTML",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "Aliran kerja WordPress",
-      "html": "<ol>\n    <li>Ekstrak video pada 11tik dan muat turun gambar pegun pertama yang disenaraikan.</li>\n    <li>Dalam WordPress: Media → Tambah Baharu → muat naik fail.</li>\n    <li>Tetapkannya sebagai imej pilihan siaran.</li>\n    <li>Dalam Yoast, Rank Math, atau yang serupa, sahkan pratonton sosial menggunakan lampiran tersebut (atau muat naik tanaman OG khusus).</li>\n    <li>Tulis teks alt yang menamakan video tersebut dan fail tersebut masih merupakan YouTube awam—bukan senarai kata kunci yang diisi.</li>\n  </ol>\n  <p>Elakkan menampal bahan mentah<code>maxresdefault.jpg</code>laluan ke dalam medan media sehingga fail telah dibuktikan. Kehilangan maks adalah perkara biasa —<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">panduan maxresdefault 404</a>.</p>"
+      "html": "<ol>\n    <li>Ekstrak video pada 11tik dan muat turun gambar pegun pertama yang disenaraikan.</li>\n    <li>Dalam WordPress: Media → Tambah Baharu → muat naik fail.</li>\n    <li>Tetapkannya sebagai imej pilihan siaran.</li>\n    <li>Dalam Yoast, Rank Math, atau yang serupa, sahkan pratonton sosial menggunakan lampiran tersebut (atau muat naik tanaman OG khusus).</li>\n    <li>Tulis teks alt yang menamakan video tersebut dan fail tersebut masih merupakan YouTube awam—bukan senarai kata kunci yang diisi.</li>\n  </ol>\n  <p>Elakkan menampal bahan mentah<code>maxresdefault.jpg</code>laluan ke dalam medan media sehingga fail telah dibuktikan. Kehilangan maks adalah perkara biasa —<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">panduan maxresdefault 404</a>.</p>"
     },
     {
       "heading": "Blogger dan laman statik",
-      "html": "<p><strong>Blogger:</strong>Muat naik gambar pegun ke dalam editor siaran, kemudian gunakan semula URL imej Blogger yang dihoskan untuk sebarang medan tema/coretan sosial yang anda kawal. Jangan bergantung pada laluan CDN YouTube yang diteka untuk siaran yang diterbitkan yang anda minati.</p>\n  <p><strong>Penjana statik:</strong>Komit fail tersebut ke repo atau CDN anda, kemudian tetapkan tag bahagian hadapan/meta pada aset HTTPS tersebut. Simpan draf pada URL i.ytimg.com sementara jika perlu, tetapi hantar dengan hos anda sendiri.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Imej pilihan dan og:image boleh berkongsi fail, tetapi kedua-duanya memerlukan URL yang benar-benar wujud.</p>"
+      "html": "<p><strong>Blogger:</strong>Muat naik gambar pegun ke dalam editor siaran, kemudian gunakan semula URL imej Blogger yang dihoskan untuk sebarang medan tema/coretan sosial yang anda kawal. Jangan bergantung pada laluan CDN YouTube yang diteka untuk siaran yang diterbitkan yang anda minati.</p>\n  <p><strong>Penjana statik:</strong>Komit fail tersebut ke repo atau CDN anda, kemudian tetapkan tag bahagian hadapan/meta pada aset HTTPS tersebut. Simpan draf pada URL i.ytimg.com sementara jika perlu, tetapi hantar dengan hos anda sendiri.</p>\n\n  <img alt=\"Muat naik imej pilihan WordPress secara bersebelahan berbanding kad sosial Open Graph menggunakan\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">Imej pilihan dan og:image boleh berkongsi fail, tetapi kedua-duanya memerlukan URL yang benar-benar wujud.</p>"
+    },
+    {
+      "heading": "Contoh praktikal mengikut platform",
+      "html": "<h3>Menyalin imej (URL yang disahkan dahulu)</h3>\n  <p>Pada 11tik, gunakan<strong>Salin URL imej</strong>hanya selepas saiz disahkan dalam pelayar anda. Tampal alamat HTTPS tersebut ke dalam draf—atau lebih baik, muat turun fail dan muat naiknya. Meneka<code>maxresdefault.jpg</code>memecahkan Open Graph apabila fail tersebut tidak pernah diterbitkan. Pembinaan URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">panduan URL lakaran kecil</a>.</p>\n  <h3>Pengehosan secara tempatan (disyorkan untuk pengeluaran)</h3>\n  <p>Muat turun pegun yang telah disahkan, muat naik ke pustaka media atau CDN statik anda dan rujuk domain anda dalam<code>&lt;img&gt;</code>dan<code>og:image</code>Elakkan pautan panas jangka panjang yang rapuh kepada<code>i.ytimg.com</code>pada siaran yang anda minati.</p>\n  <h3>Imej pilihan WordPress + og:image</h3>\n  <p>Media → Tambah Baharu → muat naik JPEG atau WebP yang dimuat turun → tetapkan Imej Pilihan → sahkan pratonton sosial Yoast/Rank Math menggunakan lampiran tersebut. Kikis semula penyahpepijat Facebook/Twitter/LinkedIn selepas perubahan URL.</p>\n  <h3>Blogger</h3>\n  <p>Masukkan imej dalam komposer siaran supaya Blogger mengehos fail tersebut, kemudian gunakan semula URL CDN Blogger tersebut dalam meta tema jika templat anda mendedahkan medan sosial. Jangan bergantung pada URL imej YouTube luaran untuk siaran kekal.</p>\n  <h3>Tapak statik (Hugo, Eleventy, dll.)</h3>\n  <p>Letakkan imej di bawah<code>/assets</code>atau CDN anda, rujukkannya di hadapan jirim, dan pancarkan<code>og:image</code>dengan lebar/tinggi sebenar. Contoh blok meta:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>Apabila pautan panas boleh diterima</h3>\n  <p>Nota dalaman, draf pantas atau halaman penyelidikan sementara mungkin memautkan pautan pantas yang telah disahkan<code>i.ytimg.com</code>URL. Artikel produksi, halaman produk dan kempen e-mel harus menyimpan salinan. Widget benam untuk pengekstrakan pada halaman:<a href=\"https://www.11tik.com/embed\">panduan benam</a>.</p>"
     },
     {
       "heading": "Pertimbangan Graf Terbuka",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "Pautan panas vs muat turun",
-      "html": "<table>\n    <thead>\n      <tr><th>Pendekatan</th><th>Terbaik untuk</th><th>Risiko</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Pautan Panas i.ytimg.com</td><td>Draf ringkas, nota penyelidikan</td><td>404, perubahan CDN, tiada kawalan tanaman</td></tr>\n      <tr><td>Muat turun + hos</td><td>Siaran yang dinilai, halaman produk</td><td>Anda mesti menyimpan fail tersebut</td></tr>\n      <tr><td>Tangkapan skrin pemain</td><td>Hampir tidak pernah</td><td>Krom UI, nisbah salah —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">tangkapan skrin vs sebenar</a></td></tr>\n    </tbody>\n  </table>\n  <p>Langkah-langkah muat turun:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">cara memuat turun lakaran kecil YouTube</a>Pilihan format apabila kedua-dua WebP dan JPEG wujud:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP lawan JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>Pendekatan</th><th>Terbaik untuk</th><th>Risiko</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>Pautan Panas i.ytimg.com</td><td>Draf ringkas, nota penyelidikan</td><td>404, perubahan CDN, tiada kawalan tanaman</td></tr>\n      <tr><td>Muat turun + hos</td><td>Siaran yang dinilai, halaman produk</td><td>Anda mesti menyimpan fail tersebut</td></tr>\n      <tr><td>Tangkapan skrin pemain</td><td>Hampir tidak pernah</td><td>Krom UI, nisbah salah —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">tangkapan skrin vs sebenar</a></td></tr>\n    </tbody>\n  </table>\n  <p>Langkah-langkah muat turun:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">cara memuat turun lakaran kecil YouTube</a>Pilihan format apabila kedua-dua WebP dan JPEG wujud:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP lawan JPEG</a>.</p>"
     },
     {
       "heading": "Asas SEO imej untuk gambar pegun ini",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "Penggunaan semula dan hak cipta (bukan nasihat undang-undang)",
-      "html": "<p>URL CDN awam bukanlah lesen. Menyematkan pemain YouTube adalah berbeza daripada menyalin gambar pegun ke dalam wira anda. Penggunaan adil adalah khusus untuk fakta. Corak editorial yang lebih selamat: ilustrasikan ulasan tentang video tersebut, kreditkan saluran tersebut, pautkan halaman tontonan dan jangan jual imej atau gunakannya sebagai seni saluran anda sendiri. Bantuan lakaran kecil tersuai rasmi:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Muat naik lakaran kecil video tersuai</a>Peraturan tapak:<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+      "html": "<p>URL CDN awam bukanlah lesen. Menyematkan pemain YouTube adalah berbeza daripada menyalin gambar pegun ke dalam wira anda. Penggunaan adil adalah khusus untuk fakta. Corak editorial yang lebih selamat: ilustrasikan ulasan tentang video tersebut, kreditkan saluran tersebut, pautkan halaman tontonan dan jangan jual imej tersebut atau gunakannya sebagai seni saluran anda sendiri. Bantuan lakaran kecil tersuai rasmi:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">Muat naik lakaran kecil video tersuai</a>Peraturan tapak:<a href=\"https://www.11tik.com/terms-of-use\">Terma</a>.</p>"
     },
     {
       "heading": "Penyelesaian masalah",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "Langkah seterusnya",
-      "html": "<p>Sahkan pegun pada<a href=\"https://www.11tik.com/\">Pengekstrak 11tik</a>, muat turunnya, muat naik ke tapak anda dan halakan featured image / og:image pada fail HTTPS anda.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+      "html": "<p>Sahkan pegun pada<a href=\"https://www.11tik.com/\">Pengekstrak 11tik</a>, muat turunnya, muat naik ke tapak anda dan halakan featured image / og:image pada fail HTTPS anda.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Mengenai</a>·<a href=\"https://www.11tik.com/privacy\">Privasi</a>·<a href=\"https://www.11tik.com/terms-of-use\">Terma</a>.</p>"
     }
   ],
   "faq": [
@@ -98,9 +102,9 @@
     {
       "question": "Bagaimana jika Studio baru sahaja menukar lakaran kecil tersuai?",
       "answer": "Tunggu untuk diproses, kemudian semak semula pada 11tik sebelum mengemas kini salinan CMS anda. Berkaitan: Lakaran kecil YouTube Studio.",
-      "answerHtml": "<p>Tunggu untuk diproses, kemudian semak semula pada 11tik sebelum mengemas kini salinan CMS anda. Berkaitan:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">Gambar kecil YouTube Studio</a>.</p>"
+      "answerHtml": "<p>Tunggu untuk diproses, kemudian semak semula pada 11tik sebelum mengemas kini salinan CMS anda. Berkaitan:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">Gambar kecil YouTube Studio</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/p/about.html\">Mengenai</a>·<a href=\"https://www.11tik.com/p/privacy.html\">Privasi</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">Terma</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik.<a href=\"https://www.11tik.com/about\">Mengenai</a>·<a href=\"https://www.11tik.com/privacy\">Privasi</a>·<a href=\"https://www.11tik.com/terms-of-use\">Terma</a>.</p>"
 }

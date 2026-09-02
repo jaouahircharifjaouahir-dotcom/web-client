@@ -23,7 +23,7 @@
     },
     {
       "heading": "Liens profonds",
-      "html": "<p>Partager une extraction prête à l'emploi avec<code>https://www.11tik.com/?v=VIDEO_ID</code>L'intégration utilise la même extraction d'identifiant côté client que l'outil principal pour les URL de visionnage, Shorts, en direct, youtu.be et d'intégration, puis analyse les images fixes publiques sur<code>i.ytimg.com</code>(Jamais une API YouTube privée). Structure de l'URL&nbsp;:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">Guide des URL des vignettes</a>Disponibilité des variantes mesurée dans notre<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html\">300 échantillons vidéo</a>(limité à un échantillon, non universel).</p>"
+      "html": "<p>Partager une extraction prête à l'emploi avec<code>https://www.11tik.com/?v=VIDEO_ID</code>L'intégration utilise la même extraction d'identifiant côté client que l'outil principal pour les URL de visionnage, Shorts, en direct, youtu.be et d'intégration, puis analyse les images fixes publiques sur<code>i.ytimg.com</code>(Jamais une API YouTube privée). Structure de l'URL&nbsp;:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Guide des URL des vignettes</a>Disponibilité des variantes mesurée dans notre<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 échantillons vidéo</a>(limité à un échantillon, non universel).</p>"
     },
     {
       "heading": "Limitations du navigateur et de l'hôte",

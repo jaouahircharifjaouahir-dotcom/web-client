@@ -2,13 +2,13 @@
   "contentId": "how-to-extract-thumbnails-from-youtube",
   "articleId": "how-to-extract-thumbnails-from-youtube",
   "locale": "ja",
-  "sourceHash": "6e43e313a5f89f29d5915b665fcb3f8d2332ce20270a023d5f07f90150cf710b",
+  "sourceHash": "78ca680c276e331ba8f95f45c3fcb7fa47d6e486e9b1bfc732b02a696e0b259d",
   "status": "ready",
   "title": "YouTubeチャンネルURLからサムネイルを抽出する方法 | 11tik",
-  "description": "公開されているYouTubeチャンネルのURLを11tik Bulkに貼り付けて、最近公開された動画を展開し、それぞれのベスト画像をダウンロードしてください。これはパッケージデザインの研究用であり、他のチャンネルのオリジナルアートを複製するためのものではありません。",
+  "description": "公開されているYouTubeチャンネルのURLを11tik Bulkに貼り付けて、最近公開された動画を展開し、それぞれのベストショットをダウンロードしてください。これはパッケージデザインの研究用であり、他のチャンネルのオリジナルアートを複製するためのものではありません。",
   "h1": "YouTubeチャンネルのURLからサムネイルを抽出する方法",
   "ogTitle": "YouTubeチャンネルのURLからサムネイルを抽出する方法",
-  "ogDescription": "公開されているYouTubeチャンネルのURLを11tik Bulkに貼り付けて、最近公開された動画を展開し、それぞれのベスト画像をダウンロードしてください。これはパッケージデザインの研究用であり、他のチャンネルのオリジナルアートを複製するためのものではありません。",
+  "ogDescription": "公開されているYouTubeチャンネルのURLを11tik Bulkに貼り付けて、最近公開された動画を展開し、それぞれのベストショットをダウンロードしてください。これはパッケージデザインの研究用であり、他のチャンネルのオリジナルアートを複製するためのものではありません。",
   "imageAlt": "YouTubeチャンネルのURLからサムネイルを抽出します — 11tikの最新の公開アップロード",
   "faqHeading": "よくある質問",
   "images": [
@@ -20,8 +20,32 @@
   ],
   "sections": [
     {
+      "heading": "RSS検出範囲",
+      "html": "<p>チャンネル拡張では、YouTube の公開チャンネルフィード (RSS 形式) を使用して、解決可能なビデオ ID を持つ最近のアップロードを一覧表示します。このフィードは、<strong>YouTubeが暴露する公開アイテム</strong>アップロードされたすべての動画、会員限定の投稿、完全なアーカイブを保証するものではありません。</p>"
+    },
+    {
+      "heading": "公共の物品のみ",
+      "html": "<p>非公開、公開静止画なしの非公開アップロード、および年齢制限付きアップロードは、通常、展開されたリストには表示されません。展開が空になるのは、通常、ハンドルが解決されなかった、チャンネルが終了した、または公開IDが返されなかったことを意味し、11tikのスクレイピングの失敗ではありません。</p>"
+    },
+    {
+      "heading": "チャンネルURLと明示的な視聴URLの比較",
+      "html": "<p>抽出前に 1 つのチャネル ラインが複数のウォッチ URL に展開されますが、<strong>25-URL一括上限</strong>個々のウォッチリンクを貼り付けると、RSSフィードの検出はスキップされますが、より正確な制御が可能になります。1行ずつ一括貼り付ける方法と比較してください。<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">バッチダウンロードガイド</a>。</p>"
+    },
+    {
+      "heading": "紛失または削除されたアイテム",
+      "html": "<p>削除された動画は、時間の経過とともにフィードから削除されます。抽出に失敗したカードは、処理中、制限中、または削除されている可能性があります。単一の視聴 URL を再実行するか、<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">サムネイルが表示されない</a>。</p>"
+    },
+    {
+      "heading": "倫理的な使用",
+      "html": "<p>研究目的での公共パッケージの調査が想定される用途です。競合他社のカスタムアートをサムネイルとして再アップロードすることは、著作権およびプラットフォームポリシーに違反します。公開されたコメントではチャンネルをクレジットし、ウォッチページへのリンクを貼ってください。サイトルール：<a href=\"https://www.11tik.com/copyright\">著作権と使用許諾</a>。</p>"
+    },
+    {
+      "heading": "バッチ抽出との関係",
+      "html": "<p>チャンネル抽出は、RSSフィードを事前入力した一括抽出モードです。クライアント側の検証、URL数の上限25件、CSV/zip形式でのエクスポートなど、すべて同じ仕様です。無制限のチャンネルスクレイピングやサーバー側のプライベートAPIは利用できません。</p>"
+    },
+    {
       "heading": "YouTubeチャンネル全体のサムネイルを取得することはできますか？",
-      "html": "<p>最新の静止画を入手できます<em>公共</em>動画 ID を公開するアップロード。11tik は、チャンネルが投稿したすべての動画をスクレイピングしたり、メンバーシップをバイパスしたりしません。ホームページで一括処理をオンにし、次のようなチャンネル URL を貼り付けます。<code>youtube.com/@handle</code>または<code>/channel/UC…</code>そして、ツールが公開されているRSS形式のリストを展開するまで待ちます。その後、入力したリストと同様に抽出します。ブラウザの動作を妨げないよう、1回の実行あたりのURL数は25個に制限されています。</p>\n  <p>これは、1 つのウォッチ リンクを保存するのとは異なります。シングル URL フローは<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">YouTubeサムネイルをダウンロードする方法</a>チャネルなしのラインごとのバルクは<a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">バッチダウンロード</a>。</p>"
+      "html": "<p>最新の静止画を入手できます<em>公共</em>動画 ID を公開するアップロード。11tik は、チャンネルが投稿したすべての動画をスクレイピングしたり、メンバーシップをバイパスしたりしません。ホームページで一括処理をオンにし、次のようなチャンネル URL を貼り付けます。<code>youtube.com/@handle</code>または<code>/channel/UC…</code>そして、ツールが公開されているRSS形式のリストを展開するまで待ちます。その後、入力したリストと同様に抽出します。ブラウザの動作を妨げないよう、1回の実行あたりのURL数は25個に制限されています。</p>\n  <p>これは、1 つのウォッチ リンクを保存するのとは異なります。シングル URL フローは<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">YouTubeサムネイルをダウンロードする方法</a>チャネルなしのラインごとのバルクは<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">バッチダウンロード</a>。</p>"
     },
     {
       "heading": "どのチャンネルURLが有効ですか？",
@@ -33,7 +57,7 @@
     },
     {
       "heading": "11tikがしないこと",
-      "html": "<ul>\n    <li>動画または音声をダウンロードしてください。静止画のみ。</li>\n    <li>非公開または非公開のアップロードを一覧表示します。</li>\n    <li>最新の動画はすべてmaxresdefaultで保証します。古い動画や小規模な動画はhqまたはsdで止まります。<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault</a>。</li>\n    <li>作品の再利用権を付与します。公共のパッケージのグリッドを研究することが、意図された研究用途です。競合他社の静止画を独自のサムネイルとして再アップロードすることは、著作権およびポリシー上の問題となります。<a href=\"https://www.11tik.com/copyright\">著作権と使用許諾</a>。</li>\n  </ul>"
+      "html": "<ul>\n    <li>動画または音声をダウンロードできます。静止画のみ。</li>\n    <li>非公開または非公開のアップロードを一覧表示します。</li>\n    <li>最新の動画はすべてmaxresdefaultで保証します。古い動画や小規模な動画はhqまたはsdで止まります。<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault</a>。</li>\n    <li>作品の再利用権を付与します。公共のパッケージのグリッドを研究することが、意図された研究用途です。競合他社の静止画を独自のサムネイルとして再アップロードすることは、著作権およびポリシー上の問題となります。<a href=\"https://www.11tik.com/copyright\">著作権と使用許諾</a>。</li>\n  </ul>"
     },
     {
       "heading": "ドアウェイページなしで研究を行うのにこれがどのように役立つか",
@@ -41,7 +65,7 @@
     },
     {
       "heading": "トラブルシューティング",
-      "html": "<p>空のリスト：チャンネルフィードから公開IDが返されませんでした（チャンネルが終了したか、リゾルバがマッピングできないハンドルでした）。YouTubeのデスクトップレイアウトからUCチャンネルのURLを試してください。</p>\n  <p>カードがいくつか見つかりません: これらのアップロードにはまだ公開されていないか、ゲートが不完全な抽出を拒否しました。単一のウォッチ URL を再実行してください。貼り付けたリンクのプライバシー:<a href=\"https://www.11tik.com/p/privacy.html\">プライバシー</a>。</p>\n  <p>抽出ツールとデザインツール：11tikはカバーアートを作成しません。<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">抽出器 vs メーカー</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">11tik のパブリックチャンネルの静止画を抽出します →</a></p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+      "html": "<p>空のリスト：チャンネルフィードから公開IDが返されませんでした（チャンネルが終了したか、リゾルバがマッピングできないハンドルでした）。YouTubeのデスクトップレイアウトからUCチャンネルのURLを試してください。</p>\n  <p>一部のカードが欠落しています。これらのアップロードにはまだ公開されていないか、ゲートが不完全な抽出を拒否しました。単一のウォッチ URL を再実行してください。貼り付けたリンクのプライバシー:<a href=\"https://www.11tik.com/privacy\">プライバシー</a>。</p>\n  <p>抽出ツールとデザインツール：11tikはカバーアートを作成しません。<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">抽出器 vs メーカー</a>。</p>\n  <p><a href=\"https://www.11tik.com/\">11tik のパブリックチャンネルの静止画を抽出します →</a></p>\n  <p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/about\">について</a>・<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
     }
   ],
   "faq": [
@@ -62,5 +86,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/p/about.html\">について</a>・<a href=\"https://www.11tik.com/p/contact.html\">接触</a>。</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tikによって書かれました。<a href=\"https://www.11tik.com/about\">について</a>・<a href=\"https://www.11tik.com/contact\">接触</a>。</p>"
 }

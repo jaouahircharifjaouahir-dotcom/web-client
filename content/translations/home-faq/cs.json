@@ -13,7 +13,7 @@
     {
       "question": "Které URL adresy YouTube 11tik podporuje?",
       "answer": "Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry nebo krátký odkaz youtu.be. Nástroj přečte ID videa z cesty a vyhledá veřejné soubory na i.ytimg.com. URL adresy pouze kanálů a playlistů nejsou podporovány. Anatomii URL adres a úplný seznam vzorů naleznete v průvodci URL miniatur.",
-      "answerHtml": "Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry nebo krátký odkaz youtu.be. Nástroj přečte ID videa z cesty a vyhledá veřejné soubory na i.ytimg.com. URL adresy pouze kanálů a playlistů nejsou podporovány. Anatomii URL a úplný seznam vzorů naleznete v<a href=\"https://cs.11tik.com/l/cs/2026/08/youtube-thumbnail-url.html\">Průvodce URL miniatur</a>."
+      "answerHtml": "Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry nebo krátký odkaz youtu.be. Nástroj přečte ID videa z cesty a vyhledá veřejné soubory na i.ytimg.com. URL adresy pouze kanálů a playlistů nejsou podporovány. Anatomii URL a úplný seznam vzorů naleznete v<a href=\"https://cs.11tik.com/l/cs/youtube-thumbnail-url\">Průvodce URL miniatur</a>."
     },
     {
       "question": "Nahraje 11tik mou miniaturu nebo video?",
@@ -23,12 +23,12 @@
     {
       "question": "Mohu si stáhnout miniatury z YouTube Shorts?",
       "answer": "Ano. Odkazy na krátká videa používají stejné veřejné hostitele obrázků jako běžná videa, takže můžete vložit URL adresu /shorts/ a stáhnout si nejlepší existující statický záběr. Náhled může vypadat širší než vertikální klip, který jste sledovali, protože YouTube ukládá statický záběr na šířku. Soukromá nebo věkově omezená krátká videa bez veřejné miniatury soubor nevrátí. Podrobnou nápovědu naleznete v průvodci miniaturami krátkých videí.",
-      "answerHtml": "Ano. Odkazy na krátká videa používají stejné veřejné hostitele obrázků jako běžná videa, takže můžete vložit URL adresu /shorts/ a stáhnout si nejlepší existující statický záběr. Náhled může vypadat širší než vertikální klip, který jste sledovali, protože YouTube ukládá statický záběr na šířku. Soukromá nebo věkově omezená krátká videa bez veřejné miniatury nevrátí soubor. Viz<a href=\"https://cs.11tik.com/l/cs/2026/08/youtube-shorts-thumbnail-download.html\">Průvodce miniaturami krátkých filmů</a>pro podrobný návod."
+      "answerHtml": "Ano. Odkazy na krátká videa používají stejné veřejné hostitele obrázků jako běžná videa, takže můžete vložit URL adresu /shorts/ a stáhnout si nejlepší existující statický záběr. Náhled může vypadat širší než vertikální klip, který jste sledovali, protože YouTube ukládá statický záběr na šířku. Soukromá nebo věkově omezená krátká videa bez veřejné miniatury nevrátí soubor. Viz<a href=\"https://cs.11tik.com/l/cs/youtube-shorts-thumbnail-download\">Průvodce miniaturami krátkých filmů</a>pro podrobný návod."
     },
     {
       "question": "Co se stane, když není k dispozici nejvyšší kvalita miniatur?",
       "answer": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté adresy URL maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je skutečné maximum pro dané video. Informace o tom, proč se používají chyby 404 pro maxres a jak fungují záložní metody, naleznete v průvodci maxresdefault.",
-      "answerHtml": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté adresy URL maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je skutečné maximum pro dané video. Informace o tom, proč maxres 404 a jak fungují záložní verze, naleznete v<a href=\"https://cs.11tik.com/l/cs/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">Průvodce maxresdefault</a>."
+      "answerHtml": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté adresy URL maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je skutečné maximum pro dané video. Informace o tom, proč maxres 404 a jak fungují záložní verze, naleznete v<a href=\"https://cs.11tik.com/l/cs/what-is-maxresdefaultjpg-when-youtube\">Průvodce maxresdefault</a>."
     }
   ],
   "articleId": "home-faq"

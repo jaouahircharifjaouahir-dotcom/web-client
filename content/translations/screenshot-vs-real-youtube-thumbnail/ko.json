@@ -25,7 +25,7 @@
     },
     {
       "heading": "왜 스크린샷이 구글 이미지 검색과 소셜 미디어 미리보기에서 제대로 표시되지 않나요?",
-      "html": "<p>이러한 이미지는 종종 화면 비율이 맞지 않고, UI를 포함하며, 두 번 압축됩니다. Open Graph와 많은 CMS 필드는 여전히 약 1280x720 크기의 16:9 비율을 요구합니다. 이는 maxresdefault가 존재하는 경우 해당 해상도와 일치합니다. 자세한 내용은 다음을 참조하십시오.<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">썸네일 크기 가이드</a>.</p>"
+      "html": "<p>이러한 이미지는 종종 화면 비율이 맞지 않고, UI를 포함하며, 두 번 압축됩니다. Open Graph와 많은 CMS 필드는 여전히 약 1280x720 크기의 16:9 비율을 요구합니다. 이는 maxresdefault가 존재하는 경우 해당 해상도와 일치합니다. 자세한 내용은 다음을 참조하십시오.<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">썸네일 크기 가이드</a>.</p>"
     },
     {
       "heading": "실제 썸네일 이미지를 저장하려면 어떻게 해야 하나요?",
@@ -33,7 +33,7 @@
     },
     {
       "heading": "스크린샷은 언제 유용할까요?",
-      "html": "<p>스크린샷은 UI 버그를 기록하거나 영상 속 특정 순간을 보여주는 용도로만 사용하세요. 공식 썸네일, 블로그 메인 이미지 또는 공유 이미지(공개 계정이 있는 경우)로는 사용하지 마세요.</p>\n  <p><a href=\"https://www.11tik.com/\">실제 공개 썸네일을 확인하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+      "html": "<p>스크린샷은 UI 버그를 기록하거나 영상 속 특정 순간을 보여주는 용도로만 사용하세요. 공식 썸네일, 블로그 메인 이미지 또는 공유 이미지(공개 계정이 있는 경우)로는 사용하지 마세요.</p>\n  <p><a href=\"https://www.11tik.com/\">실제 공개 썸네일을 확인하세요 →</a></p>\n  <p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/about\">에 대한</a>.</p>"
     }
   ],
   "faq": [
@@ -49,5 +49,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/p/about.html\">에 대한</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik가 작성했습니다.<a href=\"https://www.11tik.com/about\">에 대한</a>.</p>"
 }

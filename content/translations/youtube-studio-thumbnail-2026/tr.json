@@ -2,7 +2,7 @@
   "contentId": "youtube-studio-thumbnail-2026",
   "articleId": "youtube-studio-thumbnail-2026",
   "locale": "tr",
-  "sourceHash": "cfc6737d562c608d1c2c7dc4bbef08d19405e5425232c380facb2010020100df",
+  "sourceHash": "e5332bd485bcb7cdeb73af1d1cf459edf345fe5f312b58be0242de3775251784",
   "status": "ready",
   "title": "YouTube Stüdyo küçük resmi 2026 | 11tik",
   "description": "2026 yılında, uygun YouTube kanalları hala bir videonun Ayrıntılar sayfasında Studio'dan özel bir küçük resim yüklüyor. Menü etiketleri yer değiştiriyor, ancak sonuç aynı: YouTube yeni bir herkese açık fotoğraf barındırıyor. 11tik bu dosyayı yüklemiyor. Yalnızca var olduktan sonra herkese açık resim URL'lerini okuyor.",
@@ -24,8 +24,12 @@
       "html": "<ol>\n    <li>YouTube Studio'yu açın ve videoyu seçin.</li>\n    <li>Ayrıntılar bölümüne 16:9 oranında bir görsel yükleyin (YouTube'un genel hedefi 1280×720'dir).</li>\n    <li>Kaydedin ve işlem tamamlanana kadar bekleyin.</li>\n  </ol>\n  <p>Düğme adları değişebilir. Hesabınız özel küçük resimler için uygun değilse, Studio yükleme seçeneğini sunmayacaktır. 11tik bunu atlayamaz.</p>"
     },
     {
+      "heading": "Tanı ağacı: Stüdyo değişikliği vs halka açık fotoğraf çekimi",
+      "html": "<ol>\n    <li>Studio'ya özel görselleri yükledikten sonra, işlemin tamamlanmasını bekleyin.</li>\n    <li>Herkese açık izleme URL'sini yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>.</li>\n    <li><strong>Bazı boyutlar görünüyor, maxres eksik mi?</strong>→ Varyant/yedekleme sorunu, başarısız bir Studio yüklemesi değil. Bakınız<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault açıklandı</a>.</li>\n    <li><strong>Hiç beden seçeneği yok mu?</strong>→ Video hala işleniyor olabilir, özel olabilir veya herkese açık CDN görselleri için kısıtlanmış olabilir. Bkz.<a href=\"https://www.11tik.com/youtube-thumbnail-not-appearing-private\">Küçük resim görünmüyor</a>.</li>\n  </ol>"
+    },
+    {
       "heading": "Studio'da değiştirdiğim küçük resmi nasıl kontrol edebilirim?",
-      "html": "<p>İzleme URL'sini yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Listelenen ilk boyutu indirin veya kopyalayın. Eğer maxresdefault yoksa, bir sonraki genel dosya gerçek maksimum boyuttur. Bu, YouTube'un kataloğudur, başarısız bir çıkarma işlemi değildir. Ayrıca bakınız<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault açıklandı</a>.</p>"
+      "html": "<p>İzleme URL'sini yapıştırın.<a href=\"https://www.11tik.com/\">11tik</a>Listelenen ilk boyutu indirin veya kopyalayın. Eğer maxresdefault yoksa, bir sonraki genel dosya gerçek maksimum boyuttur. Bu, YouTube'un kataloğudur, başarısız bir çıkarma işlemi değildir. Ayrıca bakınız<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault açıklandı</a>.</p>"
     },
     {
       "heading": "11tik, YouTube Studio'nun yerini mi alıyor?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Fotoğraf eski görünüyorsa ne yapmalıyım?",
-      "html": "<p>Görüntü CDN'lerinde gecikmeler yaşanabilir. Daha sonra tekrar kontrol edin, sayfayı yeniden yükleyin veya URL'yi kopyalayın 11tik onaylıyor. 4K ana dosya olduğunu varsaymayın; genel maksimum çözünürlük genellikle 1280×720'dir. Studio'nun ekran görüntüsü, genel küçük resim dosyası değildir.</p>\n  <p>İlgili:<a href=\"https://www.11tik.com/2026/08/thumbnail-extractor-vs-maker.html\">çıkarıcı vs üretici</a>.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Çıkarma cihazını açın.</a></p>"
+      "html": "<p>Görüntü CDN'lerinde gecikmeler yaşanabilir. Daha sonra tekrar kontrol edin, sayfayı yeniden yükleyin veya URL'yi kopyalayın 11tik onaylıyor. 4K ana dosya olduğunu varsaymayın; genel maksimum çözünürlük genellikle 1280×720'dir. Studio'nun ekran görüntüsü, genel küçük resim dosyası değildir.</p>\n  <p>İlgili:<a href=\"https://www.11tik.com/thumbnail-extractor-vs-maker\">çıkarıcı vs üretici</a>.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/about\">Hakkında</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Çıkarma cihazını açın.</a></p>"
     }
   ],
   "faq": [
@@ -44,5 +48,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır.<a href=\"https://www.11tik.com/about\">Hakkında</a>.</p>"
 }

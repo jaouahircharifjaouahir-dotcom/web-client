@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "sk",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Ako získať miniatúru YouTube v najvyššej kvalite | 11tik",
   "description": "Najvyššia kvalita znamená, že YouTube skutočne vráti najväčší verejne dostupný súbor JPEG alebo WebP, nie uhádnutý názov súboru v rozlíšení 4K.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Aké je maximálne verejné rozlíšenie?",
-      "html": "<p>Keď YouTube zverejní maxresdefault, zvyčajne je to 1280 × 720. Ak tento súbor chýba, najvyššia kvalita je najbližšia platná veľkosť, napríklad sd alebo hq.</p>"
+      "html": "<p>Keď YouTube zverejní maxresdefault, zvyčajne je to 1280 × 720. Ak tento súbor chýba, najvyššia kvalita je najbližšia platná veľkosť, napríklad sd alebo hq. „Najvyššia kvalita“ znamená<strong>najväčší overený verejne dostupný obrázok</strong>pre dané ID videa – nie 4K master, nie zväčšený súbor strednej veľkosti a nie snímku obrazovky prehrávača.</p>"
+    },
+    {
+      "heading": "Najvyššia kvalita vs. „originálna“ miniatúra",
+      "html": "<p><strong>Najvyššia kvalita</strong>(táto príručka): overuje sa najvyššia verejná derivácia CDN 11tik – často maxres alebo hq720, ak sú prítomné.<strong>Originál</strong>(iný zámer): stále ide o verejnú CDN, ale toto slovo láka ľudí očakávať zdrojový súbor od používateľa, ktorý ho nahral. Nie je to surový Photoshop/PNG zo Studia, nie je to ripovaný videozáznam a nie je to grafika s garantovaným zdrojovým rozlíšením. Pozri<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">pôvodný význam a obmedzenia miniatúry</a>a<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">referenčná veľkosť</a>V našom<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Ukážka 300 videí</a>, maxres overené pre ID 286/300 – dostupnosť v rámci vzorky, nie sľub pre každé nahranie.</p>"
     },
     {
       "heading": "Záleží na WebP?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Prečo „HD“ niekedy vyzerá mäkko?",
-      "html": "<p>Verejné rozlíšenie môže byť stále 1280×720 s kompresiou alebo sa môžete pozerať na hqdefault. Predtým, ako budete predpokladať, že sťahovanie zlyhalo, skontrolujte hlásenia o veľkosti pixelov 11tik.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Sprievodca veľkosťami</a></p>"
+      "html": "<p>Verejné rozlíšenie môže byť stále 1280×720 s kompresiou alebo sa môžete pozerať na hqdefault. Predtým, ako budete predpokladať, že sťahovanie zlyhalo, skontrolujte hlásenia o veľkosti pixelov 11tik.</p>\n  <p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/about\">O nás</a>alebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Extraktor</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Sprievodca veľkosťami</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/p/about.html\">O nás</a>alebo<a href=\"https://www.11tik.com/p/contact.html\">Kontakt</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Napísal 11tik, vydavateľ nástroja na extrahovanie miniatúr YouTube v prehliadači. Pozri<a href=\"https://www.11tik.com/about\">O nás</a>alebo<a href=\"https://www.11tik.com/contact\">Kontakt</a>.</p>"
 }

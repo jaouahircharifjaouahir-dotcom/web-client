@@ -2,7 +2,7 @@
   "contentId": "highest-quality-youtube-thumbnail",
   "articleId": "highest-quality-youtube-thumbnail",
   "locale": "id",
-  "sourceHash": "8761f12c35a16e1d25a1efc0753cdaa861b068aa40401cf3919de67c5bd89639",
+  "sourceHash": "fc950b9dd8c1bf8042994b73c6aa2612fed2b73e9ec80d3c9e338285da7f3c16",
   "status": "ready",
   "title": "Cara Mendapatkan Thumbnail YouTube Berkualitas Tertinggi | 11tik",
   "description": "Kualitas tertinggi berarti file JPEG atau WebP publik terbesar yang sebenarnya dikembalikan oleh YouTube, bukan nama file 4K yang ditebak.",
@@ -25,7 +25,11 @@
     },
     {
       "heading": "Berapakah resolusi publik maksimum?",
-      "html": "<p>Saat YouTube menerbitkan maxresdefault, biasanya ukurannya adalah 1280×720. Jika file tersebut tidak ada, kualitas tertinggi adalah ukuran valid berikutnya seperti sd atau hq.</p>"
+      "html": "<p>Saat YouTube menerbitkan maxresdefault, biasanya resolusinya adalah 1280×720. Jika file tersebut hilang, kualitas tertinggi adalah ukuran valid berikutnya seperti sd atau hq. \"Kualitas tertinggi\" berarti...<strong>gambar terbesar yang tervalidasi dan dapat diakses publik</strong>untuk ID video tersebut—bukan master 4K, bukan file berukuran sedang yang ditingkatkan resolusinya, dan bukan tangkapan layar pemutar.</p>"
+    },
+    {
+      "heading": "Gambar mini berkualitas tertinggi vs gambar mini \"asli\"",
+      "html": "<p><strong>Kualitas tertinggi</strong>(panduan ini): turunan CDN publik teratas 11tik memvalidasi—seringkali maxres atau hq720 jika ada.<strong>Asli</strong>(Tujuan berbeda): masih merupakan CDN publik, tetapi kata tersebut menggoda orang untuk mengharapkan file sumber pengunggah. Ini bukan Photoshop/PNG mentah dari Studio, bukan hasil rip bingkai video, dan bukan karya seni dengan resolusi sumber yang dijamin. Lihat<a href=\"https://www.11tik.com/original-youtube-thumbnail-image\">Arti dan batasan thumbnail asli</a>Dan<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">referensi ukuran</a>. Dalam diri kita<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Contoh 300 video</a>, maxres divalidasi untuk 286/300 ID—ketersediaan terbatas pada sampel, bukan janji untuk setiap unggahan.</p>"
     },
     {
       "heading": "Apakah WebP penting?",
@@ -33,7 +37,7 @@
     },
     {
       "heading": "Mengapa 'HD' terkadang terlihat buram?",
-      "html": "<p>Resolusi publik mungkin masih 1280×720 dengan kompresi, atau Anda mungkin melihat hqdefault. Periksa ukuran piksel yang dilaporkan 11tik sebelum Anda berasumsi unduhan gagal.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Alat pengambilan sari</a>·<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">Panduan ukuran</a></p>"
+      "html": "<p>Resolusi publik mungkin masih 1280×720 dengan kompresi, atau Anda mungkin melihat hqdefault. Periksa ukuran piksel yang dilaporkan 11tik sebelum Anda berasumsi unduhan gagal.</p>\n  <p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/about\">Tentang</a>atau<a href=\"https://www.11tik.com/contact\">Kontak</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Alat pengambilan sari</a>·<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">Panduan ukuran</a></p>"
     }
   ],
   "faq": [
@@ -49,5 +53,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/p/about.html\">Tentang</a>atau<a href=\"https://www.11tik.com/p/contact.html\">Kontak</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">Ditulis oleh 11tik, penerbit Ekstraktor Thumbnail YouTube dalam browser. Lihat<a href=\"https://www.11tik.com/about\">Tentang</a>atau<a href=\"https://www.11tik.com/contact\">Kontak</a>.</p>"
 }

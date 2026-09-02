@@ -2,7 +2,7 @@
   "contentId": "how-to-use-youtube-thumbnail-as-blog",
   "articleId": "how-to-use-youtube-thumbnail-as-blog",
   "locale": "ar",
-  "sourceHash": "05e23342a323f9ebb8f554726c2ed59509254a335eed62455e4c8d0cc9ae0603",
+  "sourceHash": "132cc422289b331d8b4fedb6ddaf7684ec88e005e110b21b9a74cd42bd6d070d",
   "status": "ready",
   "title": "كيفية استخدام صورة مصغرة من يوتيوب كصورة مميزة للمدونة أو كمعاينة لـ Open Graph | 11tik",
   "description": "تأكد من وجود قناة يوتيوب عامة، ثم قم بإنشاء نسخة منها على ووردبريس أو بلوجر أو og:image. لا تقم بربط رابط URL افتراضي بدقة maxresdefault.",
@@ -26,11 +26,11 @@
   "sections": [
     {
       "heading": "إجابة سريعة",
-      "html": "<p>ألصق رابط يوتيوب عام في<a href=\"https://www.11tik.com/\">11tik</a>انتظر حتى يتم التحقق من صحة الأحجام، ثم إما<strong>تحميل</strong>التقط الصورة الأولى وقم بتحميلها إلى نظام إدارة المحتوى الخاص بك، أو<strong>انسخ رابط الصورة</strong>فقط بعد تحميل الصفحة. وللحصول على منشورات دائمة، استضف نسختك الخاصة. الربط المباشر<code>i.ytimg.com</code>مناسب للمسودات وهشّ لإنتاج بطاقات التواصل الاجتماعي.</p>\n\n  <img alt=\"Workflow from confirming a YouTube thumbnail on 11tik to uploading it in WordPress or setting og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تأكيد ← نسخ أو تنزيل ← استضافة ← مرجع في HTML / صورة مميزة / Open Graph.</p>"
+      "html": "<p>ألصق رابط يوتيوب عام في<a href=\"https://www.11tik.com/\">11tik</a>انتظر حتى يتم التحقق من صحة الأحجام، ثم إما<strong>تحميل</strong>التقط الصورة الأولى وقم بتحميلها إلى نظام إدارة المحتوى الخاص بك، أو<strong>انسخ رابط الصورة</strong>فقط بعد تحميل الصفحة. وللحصول على منشورات دائمة، استضف نسختك الخاصة. الربط المباشر<code>i.ytimg.com</code>مناسب للمسودات وهشّ لإنتاج بطاقات التواصل الاجتماعي.</p>\n\n  <img alt=\"سير العمل بدءًا من تأكيد صورة مصغرة على يوتيوب في 11tik وحتى تحميلها في ووردبريس أو تعيين og:image\" class=\"yte-hero\" height=\"630\" itemprop=\"image\" loading=\"eager\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-website-wordpress-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">تأكيد ← نسخ أو تنزيل ← استضافة ← مرجع في HTML / صورة مميزة / Open Graph.</p>"
     },
     {
       "heading": "ما هو رابط الصورة المصغرة المباشر؟",
-      "html": "<p>يشير رابط الصورة المصغرة المباشر إلى ملف JPEG أو WebP على شبكة توصيل المحتوى (CDN) الخاصة بصور يوتيوب، على سبيل المثال<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>ليست هذه صفحة المراقبة. كيف تُبنى هذه العناوين؟<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">احصل على رابط صورة مصغرة على يوتيوب</a>كيف تختلف الأحجام:<a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html\">دليل الحجم والدقة</a>.</p>"
+      "html": "<p>يشير رابط الصورة المصغرة المباشر إلى ملف JPEG أو WebP على شبكة توصيل المحتوى (CDN) الخاصة بصور يوتيوب، على سبيل المثال<code>https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg</code>ليست هذه صفحة المراقبة. كيف تُبنى هذه العناوين؟<a href=\"https://www.11tik.com/youtube-thumbnail-url\">احصل على رابط صورة مصغرة على يوتيوب</a>كيف تختلف الأحجام:<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">دليل الحجم والدقة</a>.</p>"
     },
     {
       "heading": "مثال HTML",
@@ -38,11 +38,15 @@
     },
     {
       "heading": "سير عمل ووردبريس",
-      "html": "<ol>\n    <li>استخرج الفيديو الموجود في 11tik وقم بتنزيل الصورة الثابتة الأولى المدرجة.</li>\n    <li>في ووردبريس: الوسائط → إضافة جديد → تحميل الملف.</li>\n    <li>اجعلها الصورة المميزة للمنشور.</li>\n    <li>في Yoast أو Rank Math أو ما شابه، تأكد من أن المعاينة الاجتماعية تستخدم هذا المرفق (أو قم بتحميل صورة OG مخصصة).</li>\n    <li>اكتب نصًا بديلًا يُشير إلى اسم الفيديو وأن الملف عبارة عن صورة ثابتة عامة من يوتيوب - وليس قائمة كلمات مفتاحية محشوة.</li>\n  </ol>\n  <p>تجنب لصق نص خام<code>maxresdefault.jpg</code>أدخل المسار في حقل الوسائط حتى يتم التحقق من الملف. يُعدّ فقدان قيمة maxres أمرًا شائعًا.<a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">دليل maxresdefault 404</a>.</p>"
+      "html": "<ol>\n    <li>استخرج الفيديو الموجود في 11tik وقم بتنزيل الصورة الثابتة الأولى المدرجة.</li>\n    <li>في ووردبريس: الوسائط → إضافة جديد → تحميل الملف.</li>\n    <li>اجعلها الصورة المميزة للمنشور.</li>\n    <li>في Yoast أو Rank Math أو ما شابه، تأكد من أن المعاينة الاجتماعية تستخدم هذا المرفق (أو قم بتحميل صورة OG مخصصة).</li>\n    <li>اكتب نصًا بديلًا يُشير إلى اسم الفيديو وأن الملف عبارة عن صورة ثابتة عامة من يوتيوب - وليس قائمة كلمات مفتاحية محشوة.</li>\n  </ol>\n  <p>تجنب لصق نص خام<code>maxresdefault.jpg</code>أدخل المسار في حقل الوسائط حتى يتم التحقق من الملف. يُعدّ فقدان قيمة maxres أمرًا شائعًا.<a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">دليل maxresdefault 404</a>.</p>"
     },
     {
       "heading": "المدونات والمواقع الثابتة",
-      "html": "<p><strong>مدَّوِن:</strong>ارفع الصورة الثابتة إلى محرر المنشور، ثم أعد استخدام رابط الصورة المستضافة على Blogger لأي حقول مقتطفات خاصة بالثيم أو وسائل التواصل الاجتماعي تتحكم بها. لا تعتمد على مسار شبكة توصيل المحتوى (CDN) الخاص بـ YouTube لمنشور مهم.</p>\n  <p><strong>مولدات ثابتة:</strong>قم برفع الملف إلى مستودعك أو شبكة توصيل المحتوى (CDN)، ثم قم بتعيين بيانات التعريف/البيانات الوصفية لهذا الملف المُشفّر عبر HTTPS. احتفظ بالمسودات على عنوان URL مؤقت i.ytimg.com إذا لزم الأمر، ولكن قم بنشره باستخدام استضافتك الخاصة.</p>\n\n  <img alt=\"Side-by-side of WordPress featured image upload versus an Open Graph social card using real pixel dimensions\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">يمكن للصورة المميزة و og:image مشاركة ملف، لكن كلاهما يحتاج إلى عنوان URL موجود بالفعل.</p>"
+      "html": "<p><strong>مدَّوِن:</strong>ارفع الصورة الثابتة إلى محرر المنشور، ثم أعد استخدام رابط الصورة المستضافة على Blogger لأي حقول مقتطفات خاصة بالثيم أو وسائل التواصل الاجتماعي تتحكم بها. لا تعتمد على مسار شبكة توصيل المحتوى (CDN) الخاص بـ YouTube لمنشور مهم.</p>\n  <p><strong>مولدات ثابتة:</strong>قم برفع الملف إلى مستودعك أو شبكة توصيل المحتوى (CDN)، ثم قم بتعيين بيانات التعريف/البيانات الوصفية لهذا الملف المُشفّر عبر HTTPS. احتفظ بالمسودات على عنوان URL مؤقت i.ytimg.com إذا لزم الأمر، ولكن انشر الملف باستخدام استضافتك الخاصة.</p>\n\n  <img alt=\"مقارنة جنبًا إلى جنب بين تحميل الصورة المميزة في ووردبريس وبطاقة التواصل الاجتماعي في Open Graph\" class=\"yte-hero\" height=\"630\" loading=\"lazy\" src=\"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-featured-og-workflow.png\" width=\"1200\">\n  <p class=\"yte-caption\">يمكن للصورة المميزة و og:image مشاركة ملف، لكن كلاهما يحتاج إلى عنوان URL موجود بالفعل.</p>"
+    },
+    {
+      "heading": "أمثلة عملية حسب المنصة",
+      "html": "<h3>نسخ الصورة (تأكد من صحة عنوان URL أولاً)</h3>\n  <p>في 11tik، استخدم<strong>انسخ رابط الصورة</strong>بعد التأكد من حجم الملف في متصفحك، انسخ عنوان HTTPS والصقه في مسودة، أو الأفضل من ذلك، نزّل الملف ثم ارفعه. (تخمين)<code>maxresdefault.jpg</code>يتعطل Open Graph عندما لا يتم نشر الملف مطلقًا. إنشاء عنوان URL:<a href=\"https://www.11tik.com/youtube-thumbnail-url\">دليل عناوين URL للصور المصغرة</a>.</p>\n  <h3>الاستضافة المحلية (موصى بها للإنتاج)</h3>\n  <p>قم بتنزيل الصورة الثابتة المعتمدة، وارفعها إلى مكتبة الوسائط الخاصة بك أو شبكة توصيل المحتوى الثابتة، وأشر إلى نطاقك في<code>&lt;img&gt;</code>و<code>og:image</code>تجنب الروابط السريعة الهشة طويلة الأمد إلى<code>i.ytimg.com</code>في المنشورات التي تهمك.</p>\n  <h3>صورة مميزة في ووردبريس + og:image</h3>\n  <p>الوسائط ← إضافة جديد ← تحميل ملف JPEG أو WebP الذي تم تنزيله ← تعيين الصورة المميزة ← تأكيد استخدام Yoast/Rank Math لمعاينة الوسائط الاجتماعية لهذا المرفق. إعادة استخراج البيانات من أدوات تصحيح أخطاء فيسبوك/تويتر/لينكدإن بعد تغييرات عنوان URL.</p>\n  <h3>مدَّوِن</h3>\n  <p>أدرج الصورة في مُنشئ المنشور ليستضيفها Blogger، ثم أعد استخدام رابط CDN الخاص بـ Blogger في بيانات تعريف القالب إذا كان قالبك يعرض حقولًا خاصة بالشبكات الاجتماعية. لا تعتمد على رابط صورة من YouTube خارجي لمنشور دائم.</p>\n  <h3>المواقع الثابتة (هوغو، إليفينتي، إلخ)</h3>\n  <p>قم بتثبيت الصورة أدناه<code>/assets</code>أو شبكة توصيل المحتوى الخاصة بك، قم بالإشارة إليها في البيانات الوصفية، ثم أرسلها.<code>og:image</code>بعرض/ارتفاع حقيقيين. مثال على كتلة بيانات تعريفية:</p>\n  <pre>&lt;meta property=\"og:image\" content=\"https://www.example.com/media/thumb.jpg\" /&gt;\n&lt;meta property=\"og:image:width\" content=\"1280\" /&gt;\n&lt;meta property=\"og:image:height\" content=\"720\" /&gt;</pre>\n  <h3>متى يكون الربط المباشر مقبولاً؟</h3>\n  <p>قد تحتوي الملاحظات الداخلية أو المسودات السريعة أو صفحات البحث المؤقتة على روابط مباشرة لملف تم التحقق منه<code>i.ytimg.com</code>يجب أن تحتوي مقالات الإنتاج وصفحات المنتجات وحملات البريد الإلكتروني على نسخة من الرابط. تضمين أداة لاستخراج الرابط من الصفحة:<a href=\"https://www.11tik.com/embed\">دليل التضمين</a>.</p>"
     },
     {
       "heading": "اعتبارات الرسم البياني المفتوح",
@@ -50,7 +54,7 @@
     },
     {
       "heading": "الربط المباشر مقابل التنزيل",
-      "html": "<table>\n    <thead>\n      <tr><th>يقترب</th><th>الأفضل لـ</th><th>مخاطرة</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>رابط ساخن i.ytimg.com</td><td>مسودات سريعة، ملاحظات بحثية</td><td>أخطاء 404، تغييرات في شبكة توصيل المحتوى، لا يوجد تحكم في المحاصيل</td></tr>\n      <tr><td>تنزيل + استضافة</td><td>المنشورات المصنفة، صفحات المنتجات</td><td>يجب عليك تخزين الملف</td></tr>\n      <tr><td>لقطة شاشة للاعب</td><td>نادرا</td><td>واجهة المستخدم، نسبة عرض إلى ارتفاع غير صحيحة —<a href=\"https://www.11tik.com/2026/08/screenshot-vs-real-youtube-thumbnail.html\">لقطة الشاشة مقابل الواقع</a></td></tr>\n    </tbody>\n  </table>\n  <p>خطوات التنزيل:<a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">كيفية تنزيل صورة مصغرة من يوتيوب</a>. اختيار التنسيق عند وجود كل من WebP و JPEG:<a href=\"https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html\">WebP مقابل JPEG</a>.</p>"
+      "html": "<table>\n    <thead>\n      <tr><th>يقترب</th><th>الأفضل لـ</th><th>مخاطرة</th></tr>\n    </thead>\n    <tbody>\n      <tr><td>رابط ساخن i.ytimg.com</td><td>مسودات سريعة، ملاحظات بحثية</td><td>أخطاء 404، تغييرات في شبكة توصيل المحتوى، لا يوجد تحكم في المحاصيل</td></tr>\n      <tr><td>تنزيل + استضافة</td><td>المنشورات المصنفة، صفحات المنتجات</td><td>يجب عليك تخزين الملف</td></tr>\n      <tr><td>لقطة شاشة للاعب</td><td>نادرا</td><td>واجهة المستخدم، نسبة عرض إلى ارتفاع غير صحيحة —<a href=\"https://www.11tik.com/screenshot-vs-real-youtube-thumbnail\">لقطة الشاشة مقابل الواقع</a></td></tr>\n    </tbody>\n  </table>\n  <p>خطوات التنزيل:<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">كيفية تنزيل صورة مصغرة من يوتيوب</a>. اختيار التنسيق عند وجود كل من WebP و JPEG:<a href=\"https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which\">WebP مقابل JPEG</a>.</p>"
     },
     {
       "heading": "أساسيات تحسين محركات البحث للصور الثابتة",
@@ -58,7 +62,7 @@
     },
     {
       "heading": "إعادة الاستخدام وحقوق النشر (ليست استشارة قانونية)",
-      "html": "<p>رابط CDN عام ليس ترخيصًا. تضمين مشغل يوتيوب يختلف عن نسخ الصورة الثابتة إلى مقدمة الفيديو. الاستخدام العادل يعتمد على تفاصيل كل حالة. للحصول على نمط تحريري أكثر أمانًا: أضف تعليقًا توضيحيًا حول الفيديو، واذكر اسم القناة، وأضف رابط صفحة المشاهدة، ولا تبيع الصورة أو تستخدمها كصورة غلاف لقناتك. للحصول على مساعدة رسمية حول الصور المصغرة المخصصة:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">قم بتحميل صور مصغرة مخصصة للفيديو</a>قواعد الموقع:<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+      "html": "<p>رابط CDN عام ليس ترخيصًا. تضمين مشغل يوتيوب يختلف عن نسخ الصورة الثابتة إلى مقدمة الفيديو. الاستخدام العادل يعتمد على تفاصيل كل حالة. للحصول على نمط تحريري أكثر أمانًا: أضف تعليقًا توضيحيًا حول الفيديو، واذكر اسم القناة، وأضف رابط صفحة المشاهدة، ولا تبيع الصورة أو تستخدمها كصورة غلاف لقناتك. للحصول على مساعدة رسمية حول الصور المصغرة المخصصة:<a href=\"https://support.google.com/youtube/answer/72431\" rel=\"noopener noreferrer\">قم بتحميل صور مصغرة مخصصة للفيديو</a>قواعد الموقع:<a href=\"https://www.11tik.com/terms-of-use\">شروط</a>.</p>"
     },
     {
       "heading": "استكشاف الأخطاء وإصلاحها",
@@ -66,7 +70,7 @@
     },
     {
       "heading": "الخطوة التالية",
-      "html": "<p>تأكيد وجود صورة ثابتة على<a href=\"https://www.11tik.com/\">مستخرج 11tik</a>قم بتنزيله، وقم بتحميله إلى موقعك، وقم بتوجيه الصورة المميزة / og:image إلى ملف HTTPS الخاص بك.</p>\n  <p class=\"yte-bio\">كتب بواسطة 11tik.<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">خصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+      "html": "<p>تأكيد وجود صورة ثابتة على<a href=\"https://www.11tik.com/\">مستخرج 11tik</a>قم بتنزيله، وقم بتحميله إلى موقعك، وقم بتوجيه الصورة المميزة / og:image إلى ملف HTTPS الخاص بك.</p>\n  <p class=\"yte-bio\">كتب بواسطة 11tik.<a href=\"https://www.11tik.com/about\">عن</a>·<a href=\"https://www.11tik.com/privacy\">خصوصية</a>·<a href=\"https://www.11tik.com/terms-of-use\">شروط</a>.</p>"
     }
   ],
   "faq": [
@@ -86,7 +90,7 @@
       "answerHtml": "<p>نعم، استخدم الكلمات المفتاحية عندما تساعد في وصف المحتوى (\"صورة مصغرة عامة على يوتيوب لـ...\"). تجنب حشو الكلمات المفتاحية.</p>"
     },
     {
-      "question": "هل يُعدّ استخدام الروابط المباشرة مقبولاً في أي حال من الأحوال؟",
+      "question": "هل يُعدّ الربط المباشر بالروابط المباشرة مقبولاً في أي حال من الأحوال؟",
       "answer": "نعم، بالنسبة للمسودات المؤقتة أو الملاحظات الداخلية. أما بالنسبة للمنشورات العامة الدائمة، فقم بنشر نسخة منها.",
       "answerHtml": "<p>نعم، بالنسبة للمسودات المؤقتة أو الملاحظات الداخلية. أما بالنسبة للمنشورات العامة الدائمة، فقم بنشر نسخة منها.</p>"
     },
@@ -96,11 +100,11 @@
       "answerHtml": "<p>ليس بدون حقوق. هذا عمل فني لشخص آخر.</p>"
     },
     {
-      "question": "ماذا لو قام الاستوديو بتغيير الصورة المصغرة المخصصة فقط؟",
+      "question": "ماذا لو قام الاستوديو بتغيير الصورة المصغرة المخصصة؟",
       "answer": "انتظر حتى تتم المعالجة، ثم أعد التحقق من 11tik قبل تحديث نسخة نظام إدارة المحتوى الخاص بك. ذو صلة: صور مصغرة في استوديو يوتيوب.",
-      "answerHtml": "<p>انتظر حتى تتم المعالجة، ثم أعد التحقق من 11tik قبل تحديث نسخة نظام إدارة المحتوى (CMS). ذات صلة:<a href=\"https://www.11tik.com/2026/08/youtube-studio-thumbnail-2026.html\">صور مصغرة من استوديو يوتيوب</a>.</p>"
+      "answerHtml": "<p>انتظر حتى تتم المعالجة، ثم أعد التحقق من 11tik قبل تحديث نسخة نظام إدارة المحتوى (CMS). ذات صلة:<a href=\"https://www.11tik.com/youtube-studio-thumbnail-2026\">صور مصغرة من استوديو يوتيوب</a>.</p>"
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">كتب بواسطة 11tik.<a href=\"https://www.11tik.com/p/about.html\">عن</a>·<a href=\"https://www.11tik.com/p/privacy.html\">خصوصية</a>·<a href=\"https://www.11tik.com/p/terms-of-use.html\">شروط</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">كتب بواسطة 11tik.<a href=\"https://www.11tik.com/about\">عن</a>·<a href=\"https://www.11tik.com/privacy\">خصوصية</a>·<a href=\"https://www.11tik.com/terms-of-use\">شروط</a>.</p>"
 }

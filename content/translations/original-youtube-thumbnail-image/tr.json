@@ -2,7 +2,7 @@
   "contentId": "original-youtube-thumbnail-image",
   "articleId": "original-youtube-thumbnail-image",
   "locale": "tr",
-  "sourceHash": "6e65304adabd57a74dda0173b5de446daaeb182fdd2ca294e573ad430ac5fa63",
+  "sourceHash": "f23163bc2463b4a972a28cac0d2ebdb02a261ed584e4878bc009617e69459ae0",
   "status": "ready",
   "title": "Orijinal YouTube Küçük Resim Görüntüsünü Nasıl Alabilirsiniz? | 11tik",
   "description": "YouTube'un zaten barındırdığı orijinal herkese açık YouTube küçük resmini alın. Bu, CDN'den alınmış bir kare değil, hala mevcut olan bir görseldir.",
@@ -21,7 +21,7 @@
   "sections": [
     {
       "heading": "Orijinal YouTube küçük resmi nedir?",
-      "html": "<p>Bu, YouTube'un resim barındırma sunucularında zaten sakladığı önizleme görüntüsüdür. Arama ve önerilen raflarda kullanılan dosya budur, Print Screen ile yakaladığınız bir kare değildir.</p>"
+      "html": "<p>Bu, YouTube'un bir video kimliği için genel resim sunucularında zaten sakladığı önizleme görüntüsüdür; arama ve önerilen raflarda kullanılan dosya sınıfıyla aynıdır. 11tik'nin terminolojisinde \"orijinal\" şu anlama gelir:<strong>halka açık CDN türevi</strong>Aşağıdakilerden hiçbiri değil:</p>\n  <ul>\n    <li>Yükleyicinin YouTube Studio'dan yüklediği orijinal kaynak dosya.</li>\n    <li>Ham proje dosyası (PSD, AI, vb.)</li>\n    <li>Video akışından yakalanan bir kare</li>\n    <li>Garantili kaynak çözünürlüğünde dosya veya 4K ana dosya</li>\n  </ul>\n  <p>İçin<strong>en büyük onaylanmış kamu dosyası</strong>Maxres eksik olduğunda, okuyun.<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">en yüksek kalitede rehber</a>Piksel katmanları ve dosya adları için bkz.<a href=\"https://www.11tik.com/youtube-thumbnail-size-resolution\">beden rehberi</a>.</p>"
     },
     {
       "heading": "Bu, ekran görüntüsünden ne farkı var?",
@@ -37,7 +37,7 @@
     },
     {
       "heading": "maxresdefault.jpg nedir?",
-      "html": "<p>Bu, genellikle YouTube tarafından oluşturulduğunda kullanılan 1280×720 çözünürlüğündeki, en yaygın ve herkese açık dosya adıdır. 4K ana dosya değildir ve video dosyasının kendisi de değildir.</p>"
+      "html": "<p>Bu, genellikle YouTube tarafından oluşturulduğunda kullanılan 1280×720 çözünürlüğündeki, en yaygın ve herkese açık dosya adıdır. 4K master dosyası değildir ve video dosyasının kendisi de değildir.</p>"
     },
     {
       "heading": "Orijinal her zaman 1280 ve 720 anlamına mı gelir?",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "Dosyanın gerçekten orijinal olduğunu nasıl kontrol edebilirim?",
-      "html": "<p>Dosya doğrulandıktan sonra 11tik listesindeki boyut ve ölçüleri kullanın. Görüntü bir oyuncu ekran görüntüsüne benziyorsa, barındırılan küçük resmi indirmemişsiniz demektir.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>veya<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktör</a>·<a href=\"https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html\">En yüksek kalite</a></p>"
+      "html": "<p>Dosya doğrulandıktan sonra 11tik listesindeki boyut ve ölçüleri kullanın. Görüntü bir oyuncu ekran görüntüsüne benziyorsa, barındırılan küçük resmi indirmemişsiniz demektir.</p>\n  <p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarma aracının yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/about\">Hakkında</a>veya<a href=\"https://www.11tik.com/contact\">Temas etmek</a>.</p>\n  <p><a href=\"https://www.11tik.com/\">Ekstraktör</a>·<a href=\"https://www.11tik.com/highest-quality-youtube-thumbnail\">En yüksek kalite</a></p>"
     }
   ],
   "faq": [
@@ -65,5 +65,5 @@
     }
   ],
   "conclusionHtml": "",
-  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarıcı'nın yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/p/about.html\">Hakkında</a>veya<a href=\"https://www.11tik.com/p/contact.html\">Temas etmek</a>.</p>"
+  "bioHtml": "<p class=\"yte-bio\">11tik tarafından yazılmıştır, kendisi tarayıcı içi YouTube Küçük Resim Çıkarma aracının yayıncısıdır. Bkz.<a href=\"https://www.11tik.com/about\">Hakkında</a>veya<a href=\"https://www.11tik.com/contact\">Temas etmek</a>.</p>"
 }

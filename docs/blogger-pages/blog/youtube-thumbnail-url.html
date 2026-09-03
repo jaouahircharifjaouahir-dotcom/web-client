@@ -23,7 +23,10 @@
   <h2>Quick answer</h2>
   <p>To get a YouTube thumbnail URL: find the 11-character video ID, then open a confirmed public image address such as <code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code>. The watch page URL is not the image. Paste the video link into <a href="https://www.11tik.com/">11tik</a>, wait for sizes that actually load, then use <strong>Copy image URL</strong> so you keep a working HTTPS link instead of a guessed filename that 404s.</p>
 
-  <img alt="Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL" class="yte-hero" height="630" itemprop="image" loading="eager" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png" width="1200"/>
+  <picture>
+    <source type="image/webp" srcset="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.webp"/>
+    <img alt="Diagram showing a YouTube watch URL converted into a video ID and then a thumbnail image URL" class="yte-hero" height="630" itemprop="image" loading="eager" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-flow-diagram.png" width="1200"/>
+  </picture>
   <p class="yte-caption">Flow used by extractors: public watch URL → video ID → public thumbnail URL on YouTube’s image host.</p>
 
   <h2>What a YouTube thumbnail URL is</h2>
@@ -37,7 +40,10 @@
   <pre>https://i.ytimg.com/vi_webp/VIDEO_ID/FILENAME.webp</pre>
   <p><code>VIDEO_ID</code> is exactly 11 characters from the set <code>A–Z a–z 0–9 _ -</code>. Change the ID and you point at a different video’s stills. Change the filename and you request a different public derivative of the same video.</p>
 
-  <img alt="Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png" width="1200"/>
+  <picture>
+    <source type="image/webp" srcset="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.webp"/>
+    <img alt="Labeled anatomy of a YouTube thumbnail URL showing host, path, video ID, and filename" class="yte-hero" height="630" loading="lazy" src="https://www.11tik.com/web-client/images/blog/youtube-thumbnail-url-anatomy.png" width="1200"/>
+  </picture>
   <p class="yte-caption">Anatomy of a public thumbnail URL: host, path, video ID, and size filename.</p>
 
   <h2>How to find the YouTube video ID</h2>
@@ -167,3 +173,4 @@
 ]}
   </script>
 </article>
+

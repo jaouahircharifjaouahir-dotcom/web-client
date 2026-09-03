@@ -3,13 +3,13 @@ export const GUIDE_POSTS = [
     title: "How to Download a YouTube Thumbnail in HD",
     href: "https://www.11tik.com/how-to-download-youtube-thumbnail",
     summary:
-      "Practical download guide for public YouTube thumbnails. Paste watch, Shorts, youtu.be, embed, or live URLs into 11tik, then save the largest still that exists. Covers direct i.ytimg.com URLs, quality choice, troubleshooting, and what the tool will not do: no video or audio download.",
+      "How to download or save a public YouTube thumbnail from a URL. Paste watch, Shorts, youtu.be, embed, or live links into the homepage extractor, then save the largest still that exists. Covers thumbnail URLs, Shorts, mobile save, quality honesty, and what the tool will not do: no video or audio download.",
   },
   {
     title: "YouTube Thumbnail Sizes & Resolutions: 300-Video Study",
     href: "https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study",
     summary:
-      "Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.",
+      "300-video study of YouTube thumbnail sizes and resolutions: variant availability, dimensions, and maxres rates. Sample-only evidence—not universal YouTube rates.",
   },
   {
     title: "How to Get a YouTube Thumbnail URL Directly From a Video",
@@ -51,7 +51,7 @@ export const GUIDE_POSTS = [
     title: "How to batch download YouTube thumbnails (up to 50 public URLs)",
     href: "https://www.11tik.com/how-to-batch-download-youtube",
     summary:
-      "Bulk mode on 11tik accepts one public YouTube URL per line, extracts each best still in the browser, and can zip the highest-quality set. Cap is 50 URLs per run.",
+      "How to bulk download multiple YouTube thumbnails: paste up to 50 public URLs into 11tik Bulk mode, review best stills, then ZIP highest quality or export CSV. Same homepage Extractor—not a separate bulk product.",
   },
   {
     title: "Screenshot vs real YouTube thumbnail: which file should you save?",

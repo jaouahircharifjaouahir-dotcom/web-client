@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { buildContentInventory } from "../../scripts/i18n/content-inventory.mjs";
 import {
@@ -11,7 +11,7 @@ import {
 import { renderEnglishStaticHtml } from "../../scripts/i18n/render-english-static.mjs";
 import { getStagedStaticSite } from "./test-helpers/staged-static-site.ts";
 
-const STUDY_URL = "https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html";
+const STUDY_URL = "https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study";
 const STUDY_OG =
   "https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png";
 const DEFAULT_OG = "https://www.11tik.com/web-client/images/social/og-image-1200x630.png";
@@ -23,6 +23,8 @@ const STUDY_INBOUND_SOURCES = [
   "highest-quality-youtube-thumbnail",
   "webp-vs-jpeg-youtube-thumbnails-which",
   "how-to-download-youtube-thumbnail",
+  "original-youtube-thumbnail-image",
+  "youtube-shorts-thumbnail-download",
 ] as const;
 
 describe("Phase 19C — study authority acceleration", () => {
@@ -66,7 +68,7 @@ describe("Phase 19C — study authority acceleration", () => {
   it("study receives inbound links from priority cluster", () => {
     const report = generateInternalLinkReport(inventory);
     const inbound = report.filter((r) => r.target === STUDY_URL);
-    expect(inbound.length).toBeGreaterThanOrEqual(6);
+    expect(inbound.length).toBeGreaterThanOrEqual(8);
     for (const id of STUDY_INBOUND_SOURCES) {
       expect(inbound.some((r) => r.sourceContentId === id), id).toBe(true);
     }
@@ -104,10 +106,10 @@ describe("Phase 19C — study authority acceleration", () => {
 
   it("staged study HTML has study OG after build", () => {
     const staged = getStagedStaticSite();
-    const html = readFileSync(
-      join(staged, "2026/08/youtube-thumbnail-sizes-resolutions-study.html"),
-      "utf8",
-    );
+    const clean = join(staged, "youtube-thumbnail-sizes-resolutions-study.html");
+    const legacy = join(staged, "2026/08/youtube-thumbnail-sizes-resolutions-study.html");
+    const path = existsSync(clean) ? clean : legacy;
+    const html = readFileSync(path, "utf8");
     expect(html).toContain(STUDY_OG);
     expect(html).toContain('class="yte-related"');
   });

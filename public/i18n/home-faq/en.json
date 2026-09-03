@@ -2,12 +2,12 @@
   "heading": "Frequently asked questions",
   "items": [
     {
-      "question": "What is a YouTube thumbnail extractor?",
-      "answerHtml": "A thumbnail extractor is a browser tool that fetches the public still images YouTube already hosts on its CDN—not the video file. You paste a link, the tool checks which sizes exist, and you preview or save the largest real file. 11tik is an extractor only; it does not rip frames from playback or promise sizes YouTube never published."
+      "question": "What is a YouTube thumbnail extractor, downloader, or grabber?",
+      "answerHtml": "Those names describe the same kind of browser tool: one that fetches public still images YouTube already hosts on its CDN—not the video file. You paste a link, the tool checks which sizes exist, and you preview or save the largest real file. 11tik is that YouTube Thumbnail Extractor only; downloader and grabber wording are aliases for this product, not separate apps."
     },
     {
-      "question": "Which YouTube URLs does 11tik support?",
-      "answerHtml": "Paste a public watch link, Shorts URL, live or premiere page, or youtu.be short link. The tool reads the video ID from the path and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the <a href=\"https://www.11tik.com/2026/08/youtube-thumbnail-url.html\">thumbnail URL guide</a>."
+      "question": "Can I download a YouTube thumbnail from a URL?",
+      "answerHtml": "Yes. Paste a public watch link, Shorts URL, live or premiere page, embed, youtu.be short link, or a bare 11-character video ID. The tool reads the video ID and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the <a href=\"https://www.11tik.com/youtube-thumbnail-url\">thumbnail URL guide</a>."
     },
     {
       "question": "Does 11tik upload my thumbnail or video?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Can I download thumbnails from YouTube Shorts?",
-      "answerHtml": "Yes. Shorts links use the same public image hosts as regular videos, so you can paste a /shorts/ URL and download the best still that exists. The preview may look wider than the vertical clip you watched because YouTube stores a landscape still. Private or age-gated Shorts without a public thumb will not return a file. See the <a href=\"https://www.11tik.com/2026/08/youtube-shorts-thumbnail-download.html\">Shorts thumbnail guide</a> for step-by-step help."
+      "answerHtml": "Yes. Shorts links use the same public image hosts as regular videos, so you can paste a /shorts/ URL and download the best still that exists. The preview may look wider than the vertical clip you watched because YouTube stores a landscape still. Private or age-gated Shorts without a public thumb will not return a file. See the <a href=\"https://www.11tik.com/youtube-shorts-thumbnail-download\">Shorts thumbnail guide</a> for step-by-step help."
     },
     {
       "question": "What happens when the highest thumbnail quality is unavailable?",
-      "answerHtml": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. For why maxres 404s and how fallbacks work, read the <a href=\"https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault guide</a>."
+      "answerHtml": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. Sample measurements are in the <a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-video size study</a>. For why maxres 404s, read the <a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault guide</a>."
+    },
+    {
+      "question": "Can I process multiple YouTube thumbnail URLs?",
+      "answerHtml": "Yes. The same YouTube Thumbnail Extractor includes Bulk mode: paste up to 50 public URLs (one per line), then download each best still, ZIP the highest-quality set, or export CSV. Bulk is a workflow of this product, not a separate bulk-downloader tool. Details: <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download guide</a>."
+    },
+    {
+      "question": "Does 11tik download YouTube videos or audio?",
+      "answerHtml": "No. 11tik only works with public thumbnail stills that YouTube already hosts. It does not download video or audio files, rip frames from playback, or unlock streams. It also cannot bypass private or age-restricted packaging when no public thumbnail file is available."
+    },
+    {
+      "question": "Is there an official 11tik Firefox Add-on?",
+      "answerHtml": "Yes. <a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik for Firefox</a> can extract the best available public thumbnail from the current YouTube tab. It is the same product as the website tool; the official site remains <a href=\"https://www.11tik.com/\">www.11tik.com</a>. The listing does not change what the extractor can or cannot fetch."
     }
   ]
 }

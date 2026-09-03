@@ -295,6 +295,14 @@ a.yte-brand:focus-visible {
 .yte-home-faq h3 { margin: 16px 0 6px; font-size: 1rem; }
 .yte-home-faq p { margin: 0 0 8px; color: var(--yte-muted); font-size: 14px; line-height: 1.55; }
 .yte-home-faq a { color: #c2410c; font-weight: 600; }
+.yte-home-hubs ul,
+.yte-home-caps ul { margin: 0; padding-left: 1.25rem; color: var(--yte-muted); }
+.yte-home-hubs li,
+.yte-home-caps li { margin: 0 0 8px; line-height: 1.55; font-size: 14px; }
+.yte-home-hubs h2,
+.yte-home-caps h2 { margin: 0 0 12px; font-size: 1.15rem; }
+.yte-home-hubs a,
+.yte-home-caps a { color: #c2410c; font-weight: 600; }
 .yte-pulse { animation: ytePulse 1s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) {
   .yte-pulse { animation: none; }

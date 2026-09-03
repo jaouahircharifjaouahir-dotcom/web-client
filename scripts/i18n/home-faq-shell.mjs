@@ -82,11 +82,11 @@ export function homeFaqPageLdNode(locale, pageUrl) {
 export function renderHomeHubLinksHtml(locale) {
   if (String(locale || "").toLowerCase() !== "en") return "";
   return `<section class="yte-home-hubs" aria-labelledby="yte-home-hubs-heading">
-    <h2 id="yte-home-hubs-heading">Start with these guides</h2>
+    <h2 id="yte-home-hubs-heading">Guides that support this tool</h2>
     <ul>
-      <li><a href="https://www.11tik.com/how-to-download-youtube-thumbnail">How to download a public YouTube thumbnail</a> — Learn the single-URL steps, then use the tool above.</li>
-      <li><a href="https://www.11tik.com/how-to-batch-download-youtube">Batch workflow for multiple thumbnail URLs</a> — Process up to 50 public links with ZIP and CSV export in Bulk mode.</li>
-      <li><a href="https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study">300-video thumbnail size study</a> — Sample-based evidence on dimensions and maxres availability.</li>
+      <li><a href="https://www.11tik.com/how-to-download-youtube-thumbnail">Save a public YouTube thumbnail step by step</a> — Single-URL walkthrough, then return here to extract.</li>
+      <li><a href="https://www.11tik.com/how-to-batch-download-youtube">Work through multiple thumbnail URLs</a> — Up to 50 public links with ZIP and CSV export in Bulk mode.</li>
+      <li><a href="https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study">Measured sizes across 300 videos</a> — Sample-based evidence on dimensions and maxres availability.</li>
     </ul>
   </section>`;
 }
@@ -95,11 +95,11 @@ export function renderHomeHubLinksHtml(locale) {
 export function renderHomeCapabilityBulletsHtml(locale) {
   if (String(locale || "").toLowerCase() !== "en") return "";
   return `<section class="yte-home-caps" aria-labelledby="yte-home-caps-heading">
-    <h2 id="yte-home-caps-heading">Capabilities of this extractor</h2>
+    <h2 id="yte-home-caps-heading">What this extractor covers</h2>
     <ul>
-      <li>Download or grab public YouTube thumbnail stills from supported video URLs (one product—not separate downloader/grabber tools).</li>
+      <li>Download or grab public YouTube thumbnail stills from a supported video URL (one product—not separate downloader or grabber tools).</li>
       <li>Bulk mode for up to <strong>50</strong> URLs per run, with ZIP of highest-quality stills and CSV export — see the <a href="https://www.11tik.com/how-to-batch-download-youtube">batch download guide</a>.</li>
-      <li>Validates which public sizes actually load (including Shorts) instead of guessing maxres filenames.</li>
+      <li>Validates which public sizes actually load for watch links and Shorts, including honest maxres when YouTube publishes it.</li>
       <li>Optional <a href="https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/">11tik for Firefox</a> for the current YouTube tab; the website tool stays at <a href="https://www.11tik.com/">www.11tik.com</a>.</li>
     </ul>
   </section>`;

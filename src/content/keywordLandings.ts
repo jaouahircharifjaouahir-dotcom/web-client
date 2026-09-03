@@ -8,7 +8,7 @@ export type KeywordLanding = {
 export const DEFAULT_HERO = {
   title: "YouTube Thumbnail Extractor",
   intro:
-    "Extract and download public YouTube thumbnail images in your browser. Paste a public watch, Shorts, live, or youtu.be link. Processing is client-side. 11tik does not download YouTube videos or audio.",
+    "11tik is a free YouTube Thumbnail Extractor you can use to download or grab public YouTube thumbnail images from a URL in your browser. Paste a public watch, Shorts, live, youtu.be, or embed link. Processing is client-side. 11tik does not download YouTube videos or audio.",
 } as const;
 
 export const KEYWORD_LANDINGS: KeywordLanding[] = [

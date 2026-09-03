@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "en",
   "status": "ready",
-  "sourceHash": "phase2c-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Frequently asked questions",
   "faq": [
     {
-      "question": "What is a YouTube thumbnail extractor?",
-      "answer": "A YouTube thumbnail extractor (also called a thumbnail downloader or grabber) is a browser tool that fetches the public still images YouTube already hosts on its CDN—not the video file. You paste a link, the tool checks which sizes exist, and you preview or save the largest real file. 11tik is that extractor only; it does not rip frames from playback or promise sizes YouTube never published.",
-      "answerHtml": "A YouTube thumbnail extractor (also called a thumbnail downloader or grabber) is a browser tool that fetches the public still images YouTube already hosts on its CDN—not the video file. You paste a link, the tool checks which sizes exist, and you preview or save the largest real file. 11tik is that extractor only; it does not rip frames from playback or promise sizes YouTube never published."
+      "question": "What is a YouTube thumbnail extractor, downloader, or grabber?",
+      "answer": "Those names describe the same kind of browser tool: one that fetches public still images YouTube already hosts on its CDN—not the video file. You paste a link, the tool checks which sizes exist, and you preview or save the largest real file. 11tik is that YouTube Thumbnail Extractor only; downloader and grabber wording are aliases for this product, not separate apps.",
+      "answerHtml": "Those names describe the same kind of browser tool: one that fetches public still images YouTube already hosts on its CDN—not the video file. You paste a link, the tool checks which sizes exist, and you preview or save the largest real file. 11tik is that YouTube Thumbnail Extractor only; downloader and grabber wording are aliases for this product, not separate apps."
     },
     {
-      "question": "Which YouTube URLs does 11tik support?",
-      "answer": "Paste a public watch link, Shorts URL, live or premiere page, embed, youtu.be short link, or a bare 11-character video ID. The tool reads the video ID and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the thumbnail URL guide.",
-      "answerHtml": "Paste a public watch link, Shorts URL, live or premiere page, embed, youtu.be short link, or a bare 11-character video ID. The tool reads the video ID and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the <a href=\"https://www.11tik.com/youtube-thumbnail-url\">thumbnail URL guide</a>."
+      "question": "Can I download a YouTube thumbnail from a URL?",
+      "answer": "Yes. Paste a public watch link, Shorts URL, live or premiere page, embed, youtu.be short link, or a bare 11-character video ID. The tool reads the video ID and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the thumbnail URL guide.",
+      "answerHtml": "Yes. Paste a public watch link, Shorts URL, live or premiere page, embed, youtu.be short link, or a bare 11-character video ID. The tool reads the video ID and looks up public files on i.ytimg.com. Channel and playlist-only URLs are not supported. For URL anatomy and the full list of patterns, see the <a href=\"https://www.11tik.com/youtube-thumbnail-url\">thumbnail URL guide</a>."
     },
     {
       "question": "Does 11tik upload my thumbnail or video?",

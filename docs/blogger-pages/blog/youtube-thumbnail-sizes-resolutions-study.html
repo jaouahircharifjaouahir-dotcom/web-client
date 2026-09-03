@@ -18,11 +18,14 @@
   <h1 itemprop="headline">YouTube Thumbnail Sizes &amp; Resolutions: A 300-Video Study</h1>
   <p class="yte-byline">By <a href="https://www.11tik.com/about" itemprop="author">11tik</a></p>
   <p class="yte-updated"><time datetime="2026-08-31" itemprop="datePublished">Published 31 August 2026</time> · <time datetime="2026-09-03" itemprop="dateModified">Updated 3 September 2026</time></p>
-  <p itemprop="description">Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.</p>
+  <p itemprop="description">300-video study of YouTube thumbnail sizes and resolutions: availability, dimensions, and maxres rates. Sample-only—not all of YouTube.</p>
+
+  <h2>What this study is</h2>
+  <p>This page is <strong>sample-based evidence</strong> about public YouTube thumbnail dimensions, size availability, and maxres behavior. It is not a tool landing page, not a second downloader, and not a promise about every YouTube video. Findings below are labeled as <strong>observed in this sample</strong>—supported by measurement, not universally guaranteed.</p>
 
   <h2>Quick answer</h2>
   <p>In this <strong>300-video sample</strong> (fetched 31 August 2026), lower public variants (<code>default</code>, <code>mqdefault</code>, <code>hqdefault</code>) always returned valid images (300/300). Higher filenames were common but not universal: <code>maxresdefault</code> and <code>hq720</code> each validated for <strong>286/300 (95.33%)</strong>, and <code>maxresdefault-webp</code> for <strong>284/300 (94.67%)</strong>. The most frequent decoded size among valid observations was <strong>1280×720</strong>. A missing maxres file in this sample did <strong>not</strong> mean the video was unavailable—lower variants still worked for those IDs. These are sample-scoped findings, not rates for all of YouTube.</p>
-  <p>11tik’s extractor probes the same public CDN filenames in the browser and keeps only sizes that actually load—matching the study’s “validate before trusting a filename” conclusion. This study does not download video or audio.</p>
+  <p>11tik’s extractor probes the same public CDN filenames in the browser and keeps only sizes that actually load—matching this study’s “validate before trusting a filename” conclusion. This study does not download video or audio. To extract a public still for one video, use the <a href="https://www.11tik.com/">homepage tool</a>; for steps, see the <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">how-to guide</a>.</p>
 
   <h2>Introduction</h2>
   <p>Public videos expose thumbnail stills on <code>i.ytimg.com</code> under predictable filenames such as <code>default.jpg</code>, <code>mqdefault.jpg</code>, and <code>maxresdefault.jpg</code>. Filename patterns are widely documented, but <strong>how often each variant returns a valid image</strong> is harder to infer from a single video.</p>
@@ -39,8 +42,9 @@
   <p>This page complements our conceptual <a href="https://www.11tik.com/youtube-thumbnail-size-resolution">thumbnail size and resolution guide</a> with <strong>empirical availability data</strong> from a fixed sample. The guide explains sizes in plain language; this study reports what we observed when we probed eight variants per ID.</p>
 
   <h2>Methodology</h2>
-  <p>We requested eight public variants per video ID on <code>i.ytimg.com</code> (JPEG) and <code>vi_webp/</code> (WebP) with User-Agent <code>11tik-research-study/1.0</code>. Concurrency stayed at four or fewer parallel requests, with a 250&nbsp;ms delay, 10&nbsp;s timeout, and two retries.</p>
-  <p>Each URL received HEAD/GET checks. Classifications required decodable image bytes and consistent MIME types. High-res filenames that decoded to 120×90 preview tiles would be classified as placeholders; none appeared in this sample.</p>
+  <p><strong>What we measured:</strong> eight public thumbnail variants per video ID on <code>i.ytimg.com</code> (JPEG) and <code>vi_webp/</code> (WebP)—availability of a decodable image, decoded dimensions, and payload bytes.</p>
+  <p><strong>What we did not measure:</strong> private or age-gated packaging, Studio upload timelines, video/audio streams, or YouTube’s internal transcoding rules.</p>
+  <p>We requested those variants with User-Agent <code>11tik-research-study/1.0</code>. Concurrency stayed at four or fewer parallel requests, with a 250&nbsp;ms delay, 10&nbsp;s timeout, and two retries. Each URL received HEAD/GET checks. Classifications required decodable image bytes and consistent MIME types. High-res filenames that decoded to 120×90 preview tiles would be classified as placeholders; none appeared in this sample.</p>
 
   <h2>Sample composition</h2>
   <p>The sample contains <strong>300</strong> unique public video IDs drawn from a curated seed catalog, explicit verified supplements, and public YouTube channel RSS feeds. It is <strong>not a random sample</strong> of all YouTube uploads.</p>
@@ -162,11 +166,15 @@
 
   <h2>Study FAQ</h2>
   <h3>Does every YouTube video have maxresdefault?</h3>
-  <p>Not in this sample. <code>maxresdefault</code> validated for 286 of 300 IDs (95.33%). Fourteen IDs lacked a valid maxres image while lower variants still returned valid images.</p>
+  <p>Not in this sample. <code>maxresdefault</code> validated for 286 of 300 IDs (95.33%). Fourteen IDs lacked a valid maxres image while lower variants still returned valid images. That is observed in sample—not a universal YouTube rule.</p>
   <h3>What size showed up most often?</h3>
-  <p>Among 2,341 valid-image observations, <strong>1280×720</strong> was the most frequent decoded dimension (853 observations), consistent with maxres/hq720-class files when those variants validate.</p>
+  <p>Among 2,341 valid-image observations, <strong>1280×720</strong> was the most frequent decoded dimension (853 observations), consistent with maxres/hq720-class files when those variants validate. We do not claim every thumbnail is 1280×720.</p>
+  <h3>Are these rates true for all of YouTube?</h3>
+  <p>No. Rates describe this 300-ID curated sample only (fetched 31 August 2026). They are not a census of all uploads and should not be treated as guaranteed platform-wide percentages.</p>
+  <h3>What did this study measure?</h3>
+  <p>Public CDN thumbnail variants: whether each filename returned a decodable image, the decoded pixel dimensions, and byte sizes. It did not measure video/audio download, private content, or Studio processing delays.</p>
   <h3>Is this study a download tool?</h3>
-  <p>No. It reports measured public CDN availability for a fixed sample. To download a public still for one video, use the <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a> or the <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download guide</a>.</p>
+  <p>No. It reports measured public CDN availability for a fixed sample. To download a public still for one video, use the <a href="https://www.11tik.com/">YouTube Thumbnail Extractor</a> or the <a href="https://www.11tik.com/how-to-download-youtube-thumbnail">download guide</a>. For many URLs, see the <a href="https://www.11tik.com/how-to-batch-download-youtube">batch guide</a>.</p>
 
   <h2>Related guides</h2>
   <ul>
@@ -189,11 +197,17 @@
 
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"YouTube Thumbnail Sizes & Resolutions: A 300-Video Study","description":"Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.","datePublished":"2026-08-31","dateModified":"2026-09-03","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"YouTube Thumbnail Sizes & Resolutions: A 300-Video Study","description":"300-video study of YouTube thumbnail sizes and resolutions: availability, dimensions, and maxres rates. Sample-only—not all of YouTube.","datePublished":"2026-08-31","dateModified":"2026-09-03","inLanguage":"en","mainEntityOfPage":"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"publisher":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/blog/youtube-thumbnail-sizes-resolutions-study-og.png","width":1200,"height":630}},
   {"@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.11tik.com/"},
-    {"@type":"ListItem","position":2,"name":"Guides","item":"https://www.11tik.com/"},
-    {"@type":"ListItem","position":3,"name":"YouTube Thumbnail Sizes & Resolutions Study","item":"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study"}
+    {"@type":"ListItem","position":2,"name":"YouTube Thumbnail Sizes & Resolutions Study","item":"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study"}
+  ]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does every YouTube video have maxresdefault?","acceptedAnswer":{"@type":"Answer","text":"Not in this sample. maxresdefault validated for 286 of 300 IDs (95.33%). Fourteen IDs lacked a valid maxres image while lower variants still returned valid images. That is observed in sample—not a universal YouTube rule."}},
+    {"@type":"Question","name":"What size showed up most often?","acceptedAnswer":{"@type":"Answer","text":"Among 2,341 valid-image observations, 1280×720 was the most frequent decoded dimension (853 observations), consistent with maxres/hq720-class files when those variants validate. We do not claim every thumbnail is 1280×720."}},
+    {"@type":"Question","name":"Are these rates true for all of YouTube?","acceptedAnswer":{"@type":"Answer","text":"No. Rates describe this 300-ID curated sample only (fetched 31 August 2026). They are not a census of all uploads and should not be treated as guaranteed platform-wide percentages."}},
+    {"@type":"Question","name":"What did this study measure?","acceptedAnswer":{"@type":"Answer","text":"Public CDN thumbnail variants: whether each filename returned a decodable image, the decoded pixel dimensions, and byte sizes. It did not measure video/audio download, private content, or Studio processing delays."}},
+    {"@type":"Question","name":"Is this study a download tool?","acceptedAnswer":{"@type":"Answer","text":"No. It reports measured public CDN availability for a fixed sample. To download a public still for one video, use the YouTube Thumbnail Extractor on www.11tik.com or the download guide."}}
   ]}
 ]}
   </script>

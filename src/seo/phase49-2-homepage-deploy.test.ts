@@ -49,7 +49,7 @@ describe("Phase 49.2 commit scope", () => {
   it("expanded files ~165", () => expect(expandApprovedPaths().length).toBeGreaterThan(150));
   it("content lock title", () => expect(auditCommitScope().contentLock.titleMatches).toBe(true));
   it("content lock description", () => expect(auditCommitScope().contentLock.descriptionMatches).toBe(true));
-  it("faq count 5", () => expect(auditCommitScope().contentLock.faqCount).toBe(5));
+  it("faq count 8", () => expect(auditCommitScope().contentLock.faqCount).toBe(8));
   it("commit scope audit exists", () => expect(existsSync(join(OUT, "COMMIT_SCOPE_AUDIT.json"))).toBe(true));
   it("HEAD matches deploy commit", () => expect(git("git rev-parse HEAD")).toBe(deployIdentity.commit));
   it("origin synced", () => expect(deployIdentity.pushed).toBe(true));
@@ -59,10 +59,11 @@ describe("Phase 49.2 commit scope", () => {
 
 describe("Phase 49.2 metadata lock", () => {
   it("EN title master", () => {
-    expect(HOME_META_EN.title).toBe("YouTube Thumbnail Extractor — Free | 11tik");
+    expect(HOME_META_EN.title).toBe("YouTube Thumbnail Extractor — Free Downloader | 11tik");
   });
   it("EN description master", () => {
-    expect(HOME_META_EN.description).toMatch(/including Shorts/);
+    expect(HOME_META_EN.description).toMatch(/Shorts/);
+    expect(HOME_META_EN.description).toMatch(/download or grab/i);
   });
   it("locale-meta en title", () => expect(localeMeta.en.title).toBe(HOME_META_EN.title));
   it("locale-meta fr localized", () => expect(localeMeta.fr.title).toMatch(/11tik/));

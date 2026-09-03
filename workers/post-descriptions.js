@@ -15,7 +15,7 @@ export const POST_DESCRIPTIONS = {
   "/p/keyword-tools.html":
     "Open the 11tik extractor with a ready intro for common YouTube thumbnail search topics, then paste a public URL to download the best available still.",
   "/p/how-to-download-youtube-thumbnail.html":
-    "Paste a public YouTube URL into 11tik and download the highest public still that exists. No app install and no video file download.",
+    "How to download a YouTube thumbnail from a URL: paste a public watch or Shorts link, then save the largest public still that exists.",
   "/p/youtube-thumbnail-url.html":
     "Copy a working YouTube thumbnail URL from i.ytimg.com after 11tik confirms the file exists. Guessed maxres links often 404.",
   "/p/youtube-thumbnail-size.html":
@@ -23,13 +23,13 @@ export const POST_DESCRIPTIONS = {
   "/p/youtube-shorts-thumbnail.html":
     "Download a public YouTube Shorts thumbnail in the browser. Same image hosts as watch URLs — stills only, no video download.",
   "/2026/08/how-to-download-youtube-thumbnail.html":
-    "Save a public YouTube thumbnail still: paste watch, Shorts, youtu.be, or embed URLs into 11tik and download the largest file that exists.",
+    "How to download a YouTube thumbnail from a URL: paste a public watch or Shorts link, then save the largest public still that exists.",
   "/2026/08/youtube-thumbnail-url.html":
     "Build or copy a working YouTube thumbnail URL from the video ID on i.ytimg.com. Confirm the size exists before you hotlink it.",
   "/2026/08/youtube-thumbnail-size-resolution.html":
     "Compare YouTube thumbnail sizes from 120×90 to 1280×720. Maxres and hq720 are optional—use the largest public file that loads.",
   "/2026/08/youtube-thumbnail-sizes-resolutions-study.html":
-    "Measured eight public YouTube thumbnail variants across 300 video IDs: availability, dimensions, and median bytes. Sample-only—not all of YouTube.",
+    "300-video study of YouTube thumbnail sizes and resolutions: availability, dimensions, and maxres rates. Sample-only—not all of YouTube.",
   "/2026/08/youtube-shorts-thumbnail-download.html":
     "Download a YouTube Shorts thumbnail in the browser. Shorts use the same public stills as watch URLs. The file is often landscape.",
   "/2026/08/highest-quality-youtube-thumbnail.html":
@@ -39,7 +39,7 @@ export const POST_DESCRIPTIONS = {
   "/2026/08/what-is-maxresdefaultjpg-when-youtube.html":
     "maxresdefault.jpg is usually 1280×720 when published. A 404 is normal — use the next real public still 11tik validates.",
   "/2026/08/how-to-batch-download-youtube.html":
-    "Batch download public YouTube thumbnails: up to 25 URLs per run on 11tik Bulk, then zip or save each best available still.",
+    "Download multiple YouTube thumbnails in one run: up to 50 public URLs on 11tik Bulk, with ZIP and CSV export. Stills only—not video.",
   "/2026/08/screenshot-vs-real-youtube-thumbnail.html":
     "A player screenshot is not the YouTube thumbnail. Save the public still on i.ytimg.com instead of a phone or desktop capture.",
   "/2026/08/thumbnail-extractor-vs-maker.html":
@@ -51,7 +51,7 @@ export const POST_DESCRIPTIONS = {
   "/2026/08/how-to-use-youtube-thumbnail-as-blog.html":
     "Confirm a YouTube still, then host it for WordPress, Blogger, or og:image. Avoid hotlinking a guessed maxres URL.",
   "/2026/08/how-to-extract-thumbnails-from-youtube.html":
-    "Paste a public YouTube channel URL into 11tik Bulk to extract recent public thumbnails. Research only; do not clone art.",
+    "Channel URLs are not expanded automatically. Collect public video URLs, paste them into Bulk, and download each public still. Research only; do not clone art.",
   "/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html":
     "Choose JPEG or WebP for YouTube thumbnails based on what 11tik validates. WebP is optional; downloads keep the source format.",
   "/2026/08/youtube-thumbnail-not-appearing-private.html":

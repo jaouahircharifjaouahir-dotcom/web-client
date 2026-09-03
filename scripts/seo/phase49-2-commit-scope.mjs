@@ -102,10 +102,10 @@ export function auditCommitScope() {
       faqCount: homeFaqEn.items.length,
       titleMatches:
         HOME_META_EN.title ===
-        "YouTube Thumbnail Extractor — Free HD & High-Quality Thumbnails | 11tik",
+        "YouTube Thumbnail Extractor — Free Downloader | 11tik",
       descriptionMatches:
         HOME_META_EN.description ===
-        "Download YouTube thumbnails for free in the highest available quality. Extract and save thumbnail images from any public YouTube video, including Shorts.",
+        "Free YouTube Thumbnail Extractor: download or grab public stills from a URL (watch or Shorts). Client-side; bulk up to 50. Not a video downloader.",
     },
     excludedPatterns: PHASE492_EXCLUDED_PATTERNS.map((r) => String(r)),
   };

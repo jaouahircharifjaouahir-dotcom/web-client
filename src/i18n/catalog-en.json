@@ -32,13 +32,13 @@
     "noId": "No supported video ID found in that text.",
     "foot": "Public YouTube thumbnail images only. Client-side. No accounts, no video or audio download, no tracking of pasted URLs.",
     "heroTitle": "YouTube Thumbnail Extractor",
-    "heroIntro": "11tik is a YouTube Thumbnail Extractor you can use to download or grab public YouTube thumbnail images in your browser. Paste a public watch, Shorts, live, or youtu.be link. Processing is client-side. 11tik does not download YouTube videos or audio.",
+    "heroIntro": "11tik is a free YouTube Thumbnail Extractor you can use to download or grab public YouTube thumbnail images from a URL in your browser. Paste a public watch, Shorts, live, youtu.be, or embed link. Processing is client-side. 11tik does not download YouTube videos or audio.",
     "entityHeading": "What 11tik is",
     "entityIntro": "11tik is the brand behind the YouTube Thumbnail Extractor—a free browser tool for public YouTube thumbnail images. Extractor, downloader, and grabber wording all refer to this same product, not separate tools.",
     "entityDoesHeading": "What 11tik does",
-    "entityDoes1": "Extracts public YouTube thumbnail images from supported video URLs and IDs",
-    "entityDoes2": "Validates which public thumbnail sizes actually exist, then lets you download or copy them",
-    "entityDoes3": "Runs entirely in your browser (client-side), with no account required",
+    "entityDoes1": "Extracts public YouTube thumbnail images from supported video URLs and IDs—including watch, Shorts, live, youtu.be, and embed links",
+    "entityDoes2": "Validates which public thumbnail sizes actually load (including maxres when YouTube publishes it), then lets you download or copy the image URL",
+    "entityDoes3": "Runs entirely in your browser (client-side), with Bulk mode for up to 50 public URLs plus ZIP and CSV export",
     "entityDoesNotHeading": "What 11tik does not do",
     "entityDoesNot1": "Download YouTube video or audio",
     "entityDoesNot2": "Bypass private or age-gated content",
@@ -71,7 +71,7 @@
   "posts": [
     {
       "title": "How to Download a YouTube Thumbnail in HD – Free & Fast",
-      "summary": "This guide walks through the full path from a public YouTube watch link, Shorts URL, or youtu.be short link to an HD still you can save on any device."
+      "summary": "How to download or save a public YouTube thumbnail from a URL—watch, Shorts, youtu.be, or embed—using the homepage extractor, with honest maxres and no video download."
     },
     {
       "title": "How to Get a YouTube Thumbnail URL – Easy, Fast & Free",
@@ -99,7 +99,7 @@
     },
     {
       "title": "How to batch download YouTube thumbnails (up to 50 public URLs)",
-      "summary": "Bulk mode accepts one public URL per line, cap 50."
+      "summary": "Bulk/batch workflow: paste up to 50 public URLs, ZIP highest-quality stills or export CSV—same homepage Extractor."
     },
     {
       "title": "Screenshot vs real YouTube thumbnail: which file should you save?",

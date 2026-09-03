@@ -47,11 +47,11 @@ beforeAll(
 
 describe("Phase 49.1 English metadata master", () => {
   it("title matches approved EN master", () => {
-    expect(EN_TITLE).toBe("YouTube Thumbnail Extractor — Free | 11tik");
+    expect(EN_TITLE).toBe("YouTube Thumbnail Extractor — Free Downloader | 11tik");
   });
   it("description matches approved EN master", () => {
-    expect(EN_DESC).toMatch(/Extract and download public YouTube thumbnail images/);
-    expect(EN_DESC).toMatch(/including Shorts/);
+    expect(EN_DESC).toMatch(/download or grab public stills from a URL/i);
+    expect(EN_DESC).toMatch(/Shorts/);
   });
   it("locale-meta en title updated", () => {
     expect(localeMeta.en.title).toBe(EN_TITLE);
@@ -67,6 +67,8 @@ describe("Phase 49.1 English metadata master", () => {
   it("description includes free", () => expect(EN_DESC).toMatch(/free/i));
   it("description includes client-side processing", () => expect(EN_DESC).toMatch(/Client-side/i));
   it("description includes Shorts", () => expect(EN_DESC).toMatch(/Shorts/));
+  it("description includes bulk 50", () => expect(EN_DESC).toMatch(/bulk up to 50/i));
+  it("title secondary Downloader phrase", () => expect(EN_TITLE).toMatch(/Downloader/i));
   it("no unsupported 4K claim in title", () => expect(EN_TITLE).not.toMatch(/\b4K\b/));
   it("no #1 claim in description", () => expect(EN_DESC).not.toMatch(/#1/));
 });

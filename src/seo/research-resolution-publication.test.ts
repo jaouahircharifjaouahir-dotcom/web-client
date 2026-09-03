@@ -8,14 +8,24 @@ const PKG = join(ROOT, "docs/seo/research-resolution-publication-package.json");
 const STATS = join(ROOT, "reports/research-resolution-2026-v1/article-statistics.json");
 import { CONTEXTUAL_LINK_PLAN } from "../../scripts/i18n/contextual-internal-links.mjs";
 
-const CANONICAL_LINKS = [
-  "https://www.11tik.com/2026/08/youtube-thumbnail-size-resolution.html",
-  "https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html",
-  "https://www.11tik.com/2026/08/youtube-thumbnail-url.html",
-  "https://www.11tik.com/2026/08/webp-vs-jpeg-youtube-thumbnails-which.html",
-  "https://www.11tik.com/2026/08/highest-quality-youtube-thumbnail.html",
-  "https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html",
-  "https://www.11tik.com/p/embed.html",
+const CLEAN_CANONICAL = "https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study";
+
+const ALLOWED_INTERNAL = [
+  "https://www.11tik.com/",
+  "https://www.11tik.com/about",
+  "https://www.11tik.com/privacy",
+  "https://www.11tik.com/terms-of-use",
+  "https://www.11tik.com/youtube-thumbnail-size-resolution",
+  "https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube",
+  "https://www.11tik.com/youtube-thumbnail-url",
+  "https://www.11tik.com/webp-vs-jpeg-youtube-thumbnails-which",
+  "https://www.11tik.com/highest-quality-youtube-thumbnail",
+  "https://www.11tik.com/how-to-download-youtube-thumbnail",
+  "https://www.11tik.com/how-to-batch-download-youtube",
+  "https://www.11tik.com/original-youtube-thumbnail-image",
+  "https://www.11tik.com/youtube-shorts-thumbnail-download",
+  "https://www.11tik.com/embed",
+  CLEAN_CANONICAL,
 ];
 
 describe("Phase 18C publication package", () => {
@@ -28,12 +38,14 @@ describe("Phase 18C publication package", () => {
     expect(existsSync(PKG)).toBe(true);
   });
 
-  it("title, H1, slug, and canonical align", () => {
+  it("title, H1, slug, and clean canonical align", () => {
     expect(html).toContain("YouTube Thumbnail Sizes &amp; Resolutions: A 300-Video Study");
     expect(pkg.title).toBe("YouTube Thumbnail Sizes & Resolutions: 300-Video Study");
     expect(pkg.slug).toBe("youtube-thumbnail-sizes-resolutions-study.html");
-    expect(pkg.canonical).toBe("https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html");
-    expect(html).toContain(pkg.canonical);
+    expect(pkg.canonical).toBe(CLEAN_CANONICAL);
+    expect(html).toContain(CLEAN_CANONICAL);
+    expect(html).not.toMatch(/href="https:\/\/www\.11tik\.com\/blog\/youtube-thumbnail-sizes-resolutions-study/);
+    expect(html).not.toMatch(/mainEntityOfPage":"https:\/\/www\.11tik\.com\/blog\/youtube-thumbnail-sizes-resolutions-study/);
   });
 
   it("meta description is unique and sample-scoped", () => {
@@ -68,12 +80,17 @@ describe("Phase 18C publication package", () => {
     expect(html).toMatch(/Table E/i);
   });
 
-  it("Article and BreadcrumbList schema only — no FAQ or Dataset", () => {
+  it("Article, BreadcrumbList, and FAQPage schema — FAQ matches visible questions", () => {
     expect(html).toContain('"@type":"Article"');
     expect(html).toContain('"@type":"BreadcrumbList"');
-    expect(html).not.toContain('"@type":"FAQPage"');
+    expect(html).toContain('"@type":"FAQPage"');
     expect(html).not.toContain('"@type":"Dataset"');
     expect(html).not.toContain('"@type":"AggregateRating"');
+    const visibleFaqs = [...html.matchAll(/<h3>([^<]+)<\/h3>/g)].map((m) => m[1]);
+    expect(visibleFaqs.length).toBeGreaterThanOrEqual(3);
+    for (const q of visibleFaqs) {
+      expect(html).toContain(`"name":"${q.replace(/"/g, '\\"')}"`);
+    }
   });
 
   it("has exactly one H1", () => {
@@ -88,13 +105,22 @@ describe("Phase 18C publication package", () => {
     expect(html).not.toMatch(/article-citation-map/);
   });
 
-  it("internal links are valid canonical targets", () => {
-    const links = [...html.matchAll(/href="(https:\/\/www\.11tik\.com[^"]+)"/g)].map((m) => m[1]);
-    const unique = [...new Set(links.filter((u) => u.includes("/2026/08/") || u.includes("/p/embed")))];
-    for (const href of unique) {
-      expect(CANONICAL_LINKS.includes(href), href).toBe(true);
+  it("internal links are clean www targets", () => {
+    const links = [...html.matchAll(/href="(https:\/\/www\.11tik\.com[^"]*)"/g)].map((m) => m[1]);
+    for (const href of links) {
+      expect(
+        /\/blog\/youtube-thumbnail-sizes-resolutions-study(?:\/|"|\?|#|$)/.test(href) &&
+          !href.includes("/images/blog/"),
+        href,
+      ).toBe(false);
+      expect(ALLOWED_INTERNAL.includes(href) || href.startsWith("https://www.11tik.com/web-client/"), href).toBe(
+        true,
+      );
     }
-    expect(unique.some((u) => u.includes("youtube-thumbnail-size-resolution"))).toBe(true);
+    expect(links.some((u) => u.includes("youtube-thumbnail-size-resolution"))).toBe(true);
+    expect(links.some((u) => u === "https://www.11tik.com/")).toBe(true);
+    expect(links.some((u) => u.includes("how-to-download-youtube-thumbnail"))).toBe(true);
+    expect(links.some((u) => u.includes("how-to-batch-download-youtube"))).toBe(true);
   });
 
   it("no junk or retired routes", () => {
@@ -131,5 +157,11 @@ describe("Phase 18C publication package", () => {
     expect(html).toContain("<picture>");
     expect(html).toContain('type="image/webp"');
     expect(html).toContain('loading="eager"');
+  });
+
+  it("authority positioning language present", () => {
+    expect(html).toMatch(/sample-based evidence/i);
+    expect(html).toMatch(/not a tool landing page/i);
+    expect(html).toMatch(/What this study is/i);
   });
 });

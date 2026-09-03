@@ -41,7 +41,12 @@ import {
   renderLocaleCrawlNavHtml,
   renderShellGuideListHtml,
 } from "./i18n/locale-crawl-nav.mjs";
-import { renderHomeFaqShellHtml } from "./i18n/home-faq-shell.mjs";
+import {
+  homeFaqPageLdNode,
+  renderHomeCapabilityBulletsHtml,
+  renderHomeFaqShellHtml,
+  renderHomeHubLinksHtml,
+} from "./i18n/home-faq-shell.mjs";
 import { scanPublishability } from "./i18n/publish.mjs";
 import { buildContentInventory } from "./i18n/content-inventory.mjs";
 import { buildRouteManifest, writeRouteManifest } from "./i18n/build-route-manifest.mjs";
@@ -118,6 +123,8 @@ function spaShellBodyHtml(code, buildContext) {
     .map((s) => `<p>${xmlEscape(s)}</p>`)
     .join("");
   const catalogDoc = buildContext?.catalogByLocale?.[code];
+  const homeCaps = renderHomeCapabilityBulletsHtml(code);
+  const homeHubs = renderHomeHubLinksHtml(code);
   const homeFaq = renderHomeFaqShellHtml(code);
   const entityClarity =
     code === "en" && ui.entityHeading
@@ -141,7 +148,7 @@ function spaShellBodyHtml(code, buildContext) {
       enBridge = `<p lang="en">${xmlEscape(enUi.heroIntro)}</p><p lang="en">${xmlEscape(enUi.foot || "")}</p>`;
     }
   }
-  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}${homeFaq}${entityClarity}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
+  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}${homeCaps}${homeHubs}${homeFaq}${entityClarity}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
 }
 
 function canonicalFor(code) {
@@ -156,34 +163,44 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   const css = `/web-client/blogger-app.css?v=${APP_ASSET_V}`;
   const js = `/web-client/blogger-app.js?v=${APP_ASSET_V}`;
   const organizationRef = { "@id": productIdentity.organizationId };
+  const pageUrl = toHttpsUrl(canonical);
+  const organizationNode = {
+    "@type": "Organization",
+    "@id": productIdentity.organizationId,
+    name: productIdentity.brand,
+    url: productIdentity.brandUrl,
+  };
+  if (code === "en") {
+    organizationNode.sameAs = [
+      "https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/",
+    ];
+  }
+  const graph = [
+    organizationNode,
+    {
+      "@type": "WebApplication",
+      "@id": productIdentity.applicationId,
+      name: productIdentity.productName,
+      alternateName: [
+        "YouTube Thumbnail Downloader",
+        "YouTube Thumbnail Grabber",
+      ],
+      applicationCategory: "MultimediaApplication",
+      operatingSystem: "Any",
+      url: pageUrl,
+      image: OG_IMAGE,
+      description: fitDescription(copy.description),
+      isAccessibleForFree: true,
+      brand: organizationRef,
+      publisher: organizationRef,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    },
+  ];
+  const faqLd = homeFaqPageLdNode(code, pageUrl);
+  if (faqLd) graph.push(faqLd);
   const schema = JSON.stringify({
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": productIdentity.organizationId,
-        name: productIdentity.brand,
-        url: productIdentity.brandUrl,
-      },
-      {
-        "@type": "WebApplication",
-        "@id": productIdentity.applicationId,
-        name: productIdentity.productName,
-        alternateName: [
-          "YouTube Thumbnail Downloader",
-          "YouTube Thumbnail Grabber",
-        ],
-        applicationCategory: "MultimediaApplication",
-        operatingSystem: "Any",
-        url: toHttpsUrl(canonical),
-        image: OG_IMAGE,
-        description: fitDescription(copy.description),
-        isAccessibleForFree: true,
-        brand: organizationRef,
-        publisher: organizationRef,
-        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-      },
-    ],
+    "@graph": graph,
   });
   return `<!DOCTYPE html>
 <html lang="${copy.code}" dir="${copy.dir}">
@@ -216,7 +233,7 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   ${siteHeaderThemeBootScript()}
   ${siteHeaderStyleTag()}
-  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}#yte-root:not([data-yte-mounted]){visibility:hidden}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a,.yte-home-faq a{color:#c2410c;font-weight:600}.yte-home-faq{margin:20px 0}.yte-home-faq h2{font-size:1.15rem;margin:0 0 12px}.yte-home-faq h3{font-size:1rem;margin:16px 0 6px}.yte-home-faq p{margin:0 0 8px;line-height:1.55}</style>
+  <style>html,body{margin:0;background:var(--yte-bg,#f4efe6)}#yte-root{display:block;min-height:100vh}#yte-root:not([data-yte-mounted]){visibility:hidden}.yte-app>.yte-shell>header.yte-top{display:none!important}.yte-shell-guides ul,.yte-crawl-nav ul,.yte-home-hubs ul,.yte-home-caps ul{padding-left:1.25rem;margin:16px 0 0}.yte-shell-guides a,.yte-crawl-nav a,.yte-home-faq a,.yte-home-hubs a,.yte-home-caps a{color:#c2410c;font-weight:600}.yte-home-faq,.yte-home-hubs,.yte-home-caps{margin:20px 0}.yte-home-faq h2,.yte-home-hubs h2,.yte-home-caps h2{font-size:1.15rem;margin:0 0 12px}.yte-home-faq h3{font-size:1rem;margin:16px 0 6px}.yte-home-faq p,.yte-home-hubs li,.yte-home-caps li{margin:0 0 8px;line-height:1.55}</style>
   <link rel="preload" href="${css}" as="style"/>
   <script type="application/ld+json">${schema}</script>
 </head>

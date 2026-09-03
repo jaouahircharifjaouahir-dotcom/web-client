@@ -6,7 +6,6 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "no
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 import { buildSeoContext, REPORTS, ROOT } from "./lib/seo-context.mjs";
-import { runSeoRegressionGate } from "./seo-regression-gate.mjs";
 import { extractMeta } from "./lib/html-extract.mjs";
 import { loadHomeHtml } from "./phase47-homepage-audit.mjs";
 import { getTargetLocales } from "../i18n/target-languages.mjs";
@@ -140,11 +139,13 @@ export function auditFaqLocales() {
   return ALL_HOME_LOCALES.map((locale) => {
     const doc = homeFaqDocForLocale(locale);
     const artifact = loadHomeFaqArtifact(locale);
+    const count = doc?.items?.length ?? 0;
+    const expected = locale === "en" ? 8 : 5;
     return {
       locale,
-      faq_count: doc?.items?.length ?? 0,
+      faq_count: count,
       heading: doc?.heading ?? "",
-      status: (doc?.items?.length ?? 0) === 5 ? "ready" : "missing",
+      status: count >= expected ? "ready" : "missing",
       source: artifact?.status ?? "missing",
     };
   });
@@ -231,10 +232,10 @@ export function auditHomeOnlyPolicy() {
 
 export function faqSchemaDecision() {
   return {
-    policy: "VISIBLE_FAQ_ONLY",
-    faqPageAdded: false,
+    policy: "VISIBLE_FAQ_MATCHED_SCHEMA",
+    faqPageAdded: true,
     rationale:
-      "Visible FAQ on homepage; WebApplication schema retained; no FAQPage to avoid duplicate/conflicting structured data per existing policy.",
+      "Phase 2C: FAQPage JSON-LD mirrors the visible homepage FAQ only; Organization + WebApplication graph retained; no schema-only questions.",
     visibleFaqLocales: ALL_HOME_LOCALES.length,
     status: "approved",
   };
@@ -360,6 +361,7 @@ export async function runPhase491HomepageGlobalSeo() {
 
   let gate = { BLOCK: 0, criticalMissing: 0 };
   try {
+    const { runSeoRegressionGate } = await import("./seo-regression-gate.mjs");
     gate = runSeoRegressionGate();
   } catch {
     gate = { BLOCK: -1, criticalMissing: -1, note: "run after build" };

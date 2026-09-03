@@ -6,7 +6,6 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "no
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 import { buildSeoContext, REPORTS, ROOT } from "./lib/seo-context.mjs";
-import { runSeoRegressionGate } from "./seo-regression-gate.mjs";
 import { extractMeta } from "./lib/html-extract.mjs";
 import { loadHomeHtml } from "./phase47-homepage-audit.mjs";
 import homeFaqEn from "../../src/i18n/home-faq.en.json" with { type: "json" };
@@ -84,9 +83,9 @@ export function auditFaqCannibalization() {
     { guide: "original", risk: "SAFE", note: "not covered in FAQ" },
     { guide: "WebP", risk: "SAFE", note: "not covered in FAQ" },
     { guide: "Shorts", risk: "SAFE", note: "tool answer + link to guide" },
-    { guide: "batch", risk: "SAFE", note: "not covered in FAQ" },
+    { guide: "batch", risk: "SAFE", note: "Bulk FAQ defers detail to batch guide" },
     { guide: "embed", risk: "SAFE", note: "not covered in FAQ" },
-    { guide: "study", risk: "SAFE", note: "not covered in FAQ" },
+    { guide: "study", risk: "SAFE", note: "one sample citation + link; study owns evidence" },
   ];
   for (const item of homeFaqEn.items) {
     rows.push({
@@ -102,12 +101,12 @@ export function faqSchemaDecision(homeHtml) {
   const hasVisible = /<section class="yte-home-faq"/i.test(homeHtml);
   const hasFaqSchema = /"@type"\s*:\s*"FAQPage"/i.test(homeHtml);
   return {
-    policy: "homepage WebApplication only — guides own FAQPage",
+    policy: "homepage Organization + WebApplication retained; FAQPage mirrors visible FAQ when present",
     visibleFaq: hasVisible,
     faqPageSchema: hasFaqSchema,
-    decision: hasVisible && !hasFaqSchema ? "VISIBLE_FAQ_ONLY" : hasFaqSchema ? "FAQPage_ADDED" : "NO_FAQ",
+    decision: hasVisible && hasFaqSchema ? "FAQPage_ADDED" : hasVisible ? "VISIBLE_FAQ_ONLY" : "NO_FAQ",
     rationale:
-      "Visible FAQ improves comprehension; FAQPage schema reserved for article guides per existing structured-data policy.",
+      "Phase 2C: FAQPage may coexist with the Organization/WebApplication graph when it matches the visible homepage FAQ exactly.",
   };
 }
 
@@ -141,6 +140,7 @@ export function measurePerformanceDelta() {
 export async function runPhase48HomepageFaq() {
   mkdirSync(PHASE48, { recursive: true });
   const ctx = buildSeoContext();
+  const { runSeoRegressionGate } = await import("./seo-regression-gate.mjs");
   const gate = runSeoRegressionGate(ctx);
   const enFile = loadHomeHtml("en");
   const enHtml = enFile?.html ?? "";

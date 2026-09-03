@@ -59,7 +59,7 @@ describe("Phase 49.2 commit scope", () => {
 
 describe("Phase 49.2 metadata lock", () => {
   it("EN title master", () => {
-    expect(HOME_META_EN.title).toBe("YouTube Thumbnail Extractor — Free HD & High-Quality Thumbnails | 11tik");
+    expect(HOME_META_EN.title).toBe("YouTube Thumbnail Extractor — Free | 11tik");
   });
   it("EN description master", () => {
     expect(HOME_META_EN.description).toMatch(/including Shorts/);
@@ -157,7 +157,7 @@ describe("Phase 49.2 protected architecture", () => {
 });
 
 describe("Phase 49.2 FAQ data", () => {
-  it("EN 5 questions", () => expect(homeFaqEn.items.length).toBe(5));
+  it("EN 8 questions", () => expect(homeFaqEn.items.length).toBe(8));
   it("public en faq json", () => expect(existsSync("public/i18n/home-faq/en.json")).toBe(true));
   it("public fr faq json", () => expect(existsSync("public/i18n/home-faq/fr.json")).toBe(true));
   it("38 public faq files", () => {

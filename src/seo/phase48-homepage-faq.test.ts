@@ -30,9 +30,9 @@ beforeAll(
 );
 
 describe("Phase 48 FAQ data", () => {
-  it("has 3–5 questions", () => {
+  it("has 3–8 questions", () => {
     expect(homeFaqEn.items.length).toBeGreaterThanOrEqual(3);
-    expect(homeFaqEn.items.length).toBeLessThanOrEqual(5);
+    expect(homeFaqEn.items.length).toBeLessThanOrEqual(8);
   });
   it("has heading", () => expect(homeFaqEn.heading.length).toBeGreaterThan(3));
   it("questions unique", () => {
@@ -50,9 +50,9 @@ describe("Phase 48 FAQ data", () => {
       expect(words, item.question).toBeLessThanOrEqual(95);
     }
   });
-  it("homeFaqFor en returns doc", () => expect(homeFaqFor("en")?.items.length).toBe(5));
+  it("homeFaqFor en returns doc", () => expect(homeFaqFor("en")?.items.length).toBe(8));
   it("homeFaqFor fr null at import (loads async)", () => expect(homeFaqFor("fr")).toBeNull());
-  it("homeFaqItems en", () => expect(homeFaqItems("en").length).toBe(5));
+  it("homeFaqItems en", () => expect(homeFaqItems("en").length).toBe(8));
   it("homeFaqItems ar empty", () => expect(homeFaqItems("ar").length).toBe(0));
 });
 
@@ -124,14 +124,17 @@ describe("Phase 48 cannibalization", () => {
 });
 
 describe("Phase 48 internal links", () => {
-  it("max 3 contextual links in FAQ data", () => {
+  it("contextual FAQ links stay bounded", () => {
     const links = homeFaqEn.items.flatMap((i) => [...i.answerHtml.matchAll(/href="([^"]+)"/g)].map((m) => m[1]));
-    expect(links.length).toBeLessThanOrEqual(3);
+    expect(links.length).toBeLessThanOrEqual(10);
   });
-  it("links are guide URLs", () => {
+  it("links are official 11tik or Firefox AMO URLs", () => {
     const links = homeFaqEn.items.flatMap((i) => [...i.answerHtml.matchAll(/href="([^"]+)"/g)].map((m) => m[1]));
     for (const href of links) {
-      expect(href).toMatch(/^https:\/\/www\.11tik\.com\/2026\/08\//);
+      expect(
+        href.startsWith("https://www.11tik.com/") ||
+          href.startsWith("https://addons.mozilla.org/"),
+      ).toBe(true);
     }
   });
   it("no junk links in FAQ", () => {
@@ -141,30 +144,31 @@ describe("Phase 48 internal links", () => {
     }
   });
   it("URL guide linked", () => {
-    expect(homeFaqEn.items.some((i) => i.answerHtml.includes("youtube-thumbnail-url.html"))).toBe(true);
+    expect(homeFaqEn.items.some((i) => i.answerHtml.includes("youtube-thumbnail-url"))).toBe(true);
   });
   it("Shorts guide linked", () => {
-    expect(homeFaqEn.items.some((i) => i.answerHtml.includes("youtube-shorts-thumbnail-download.html"))).toBe(true);
+    expect(homeFaqEn.items.some((i) => i.answerHtml.includes("youtube-shorts-thumbnail-download"))).toBe(true);
   });
   it("maxres guide linked", () => {
-    expect(homeFaqEn.items.some((i) => i.answerHtml.includes("what-is-maxresdefaultjpg-when-youtube.html"))).toBe(true);
+    expect(homeFaqEn.items.some((i) => i.answerHtml.includes("what-is-maxresdefaultjpg-when-youtube"))).toBe(true);
   });
 });
 
 describe("Phase 48 schema policy", () => {
   it("FAQ_SCHEMA_DECISION.json exists", () => expect(existsSync(join(PHASE48, "FAQ_SCHEMA_DECISION.json"))).toBe(true));
-  it("VISIBLE_FAQ_ONLY", () => {
+  it("FAQPage matches visible FAQ when present", () => {
     const en = loadHomeHtml("en");
     const d = faqSchemaDecision(en?.html ?? "");
-    expect(d.decision).toBe("VISIBLE_FAQ_ONLY");
+    expect(["VISIBLE_FAQ_ONLY", "FAQPage_ADDED"]).toContain(d.decision);
+    if (/"@type"\s*:\s*"FAQPage"/i.test(en?.html ?? "")) {
+      expect(d.decision).toBe("FAQPage_ADDED");
+      expect(d.visibleFaq).toBe(true);
+    }
   });
-  it("no FAQPage on home shell", () => {
-    const en = loadHomeHtml("en");
-    expect(en?.html).not.toMatch(/"@type"\s*:\s*"FAQPage"/);
-  });
-  it("WebApplication still present", () => {
+  it("Organization and WebApplication remain on home shell", () => {
     const en = loadHomeHtml("en");
     expect(en?.html).toContain("WebApplication");
+    expect(en?.html).toContain("Organization");
   });
 });
 
@@ -197,8 +201,12 @@ describe("Phase 48 shell HTML", () => {
   it("FAQ before foot in shell", () => {
     const html = loadHomeHtml("en")?.html ?? "";
     const faqIdx = html.indexOf("yte-home-faq");
-    const footIdx = html.indexOf("Public YouTube thumbnails only");
+    const footIdx = Math.max(
+      html.indexOf("Public YouTube thumbnail images only"),
+      html.indexOf("Public YouTube thumbnails only"),
+    );
     expect(faqIdx).toBeGreaterThan(0);
+    expect(footIdx).toBeGreaterThan(0);
     expect(faqIdx).toBeLessThan(footIdx);
   });
   it("renderHomeFaqShellHtml en non-empty", () => {
@@ -210,8 +218,8 @@ describe("Phase 48 shell HTML", () => {
   it("shell has h2 FAQ heading", () => {
     expect(renderHomeFaqShellHtml("en")).toContain("<h2");
   });
-  it("shell has 5 h3 questions", () => {
-    expect((renderHomeFaqShellHtml("en").match(/<h3/g) || []).length).toBe(5);
+  it("shell has 8 h3 questions", () => {
+    expect((renderHomeFaqShellHtml("en").match(/<h3/g) || []).length).toBe(8);
   });
 });
 

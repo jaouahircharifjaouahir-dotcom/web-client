@@ -19,7 +19,19 @@
     },
     {
       "question": "What happens when the highest thumbnail quality is unavailable?",
-      "answerHtml": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. For why maxres 404s and how fallbacks work, read the <a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault guide</a>."
+      "answerHtml": "11tik requests each public filename and keeps only responses that return a real image—no guessed maxres URLs. If maxresdefault is missing, the tool shows the next largest size that actually loads, such as hq720 or sddefault. That is the honest maximum for that video. Sample measurements are in the <a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300-video size study</a>. For why maxres 404s, read the <a href=\"https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube\">maxresdefault guide</a>."
+    },
+    {
+      "question": "Can I process multiple YouTube thumbnail URLs?",
+      "answerHtml": "Yes. The same YouTube Thumbnail Extractor includes Bulk mode: paste up to 50 public URLs (one per line), then download each best still, ZIP the highest-quality set, or export CSV. Bulk is a workflow of this product, not a separate bulk-downloader tool. Details: <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download guide</a>."
+    },
+    {
+      "question": "Does 11tik download YouTube videos or audio?",
+      "answerHtml": "No. 11tik only works with public thumbnail stills that YouTube already hosts. It does not download video or audio files, rip frames from playback, or unlock streams. It also cannot bypass private or age-restricted packaging when no public thumbnail file is available."
+    },
+    {
+      "question": "Is there an official 11tik Firefox Add-on?",
+      "answerHtml": "Yes. <a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik for Firefox</a> can extract the best available public thumbnail from the current YouTube tab. It is the same product as the website tool; the official site remains <a href=\"https://www.11tik.com/\">www.11tik.com</a>. The listing does not change what the extractor can or cannot fetch."
     }
   ]
 }

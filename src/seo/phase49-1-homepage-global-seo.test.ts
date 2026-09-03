@@ -47,10 +47,10 @@ beforeAll(
 
 describe("Phase 49.1 English metadata master", () => {
   it("title matches approved EN master", () => {
-    expect(EN_TITLE).toBe("YouTube Thumbnail Extractor — Free HD & High-Quality Thumbnails | 11tik");
+    expect(EN_TITLE).toBe("YouTube Thumbnail Extractor — Free | 11tik");
   });
   it("description matches approved EN master", () => {
-    expect(EN_DESC).toMatch(/Download YouTube thumbnails for free/);
+    expect(EN_DESC).toMatch(/Extract and download public YouTube thumbnail images/);
     expect(EN_DESC).toMatch(/including Shorts/);
   });
   it("locale-meta en title updated", () => {
@@ -62,9 +62,10 @@ describe("Phase 49.1 English metadata master", () => {
   it("title includes 11tik brand", () => expect(EN_TITLE).toMatch(/11tik/));
   it("title includes extractor", () => expect(EN_TITLE).toMatch(/Extractor/i));
   it("title includes free intent", () => expect(EN_TITLE).toMatch(/Free/i));
-  it("title includes HD intent", () => expect(EN_TITLE).toMatch(/HD|High-Quality/i));
+  it("title names the product without stuffing extra quality claims", () =>
+    expect(EN_TITLE).toMatch(/YouTube Thumbnail Extractor/i));
   it("description includes free", () => expect(EN_DESC).toMatch(/free/i));
-  it("description includes highest quality", () => expect(EN_DESC).toMatch(/highest available quality/i));
+  it("description includes client-side processing", () => expect(EN_DESC).toMatch(/Client-side/i));
   it("description includes Shorts", () => expect(EN_DESC).toMatch(/Shorts/));
   it("no unsupported 4K claim in title", () => expect(EN_TITLE).not.toMatch(/\b4K\b/));
   it("no #1 claim in description", () => expect(EN_DESC).not.toMatch(/#1/));
@@ -114,13 +115,15 @@ describe.each(PRIORITY_QA_LOCALES)("Phase 49.1 priority QA %s", (locale) => {
 });
 
 describe("Phase 49.1 FAQ coverage", () => {
-  it("EN FAQ has 5 items", () => expect(homeFaqEn.items.length).toBe(5));
-  it("all 38 locales have FAQ artifacts", () => {
+  it("EN FAQ has 8 items", () => expect(homeFaqEn.items.length).toBe(8));
+  it("all locales have FAQ artifacts (EN 8; others may remain at prior count)", () => {
     for (const locale of ALL_HOME_LOCALES) {
-      expect(loadHomeFaqArtifact(locale)?.faq?.length).toBe(5);
+      const n = loadHomeFaqArtifact(locale)?.faq?.length || 0;
+      if (locale === "en") expect(n).toBe(8);
+      else expect(n).toBeGreaterThanOrEqual(5);
     }
   });
-  it("homeFaqDocForLocale en", () => expect(homeFaqDocForLocale("en")?.items.length).toBe(5));
+  it("homeFaqDocForLocale en", () => expect(homeFaqDocForLocale("en")?.items.length).toBe(8));
   it("homeFaqDocForLocale fr", () => expect(homeFaqDocForLocale("fr")?.items.length).toBe(5));
   it("homeFaqDocForLocale ar", () => expect(homeFaqDocForLocale("ar")?.items.length).toBe(5));
   it("homeFaqDocForLocale ja", () => expect(homeFaqDocForLocale("ja")?.items.length).toBe(5));
@@ -239,13 +242,22 @@ describe("Phase 49.1 home-only protection", () => {
 });
 
 describe("Phase 49.1 schema policy", () => {
-  it("VISIBLE_FAQ_ONLY", () => expect(faqSchemaDecision().policy).toBe("VISIBLE_FAQ_ONLY"));
-  it("no FAQPage added", () => expect(faqSchemaDecision().faqPageAdded).toBe(false));
+  it("VISIBLE_FAQ_MATCHED_SCHEMA", () =>
+    expect(faqSchemaDecision().policy).toBe("VISIBLE_FAQ_MATCHED_SCHEMA"));
+  it("FAQPage added to match visible FAQ", () => expect(faqSchemaDecision().faqPageAdded).toBe(true));
   it("WebApplication on EN build", () => {
     expect(loadHomeHtml("en")?.html).toMatch(/WebApplication/);
   });
-  it("no FAQPage schema on EN build", () => {
-    expect(loadHomeHtml("en")?.html).not.toMatch(/FAQPage/);
+  it("FAQPage schema on EN build matches visible FAQ", () => {
+    const html = loadHomeHtml("en")?.html || "";
+    expect(html).toMatch(/FAQPage/);
+    expect(html).toMatch(/Organization/);
+    const faqSection = html.match(/<section class="yte-home-faq"[\s\S]*?<\/section>/)?.[0] || "";
+    const visibleQs = [...faqSection.matchAll(/<h3>([^<]+)<\/h3>/g)].map((m) => m[1]);
+    expect(visibleQs.length).toBe(8);
+    for (const q of visibleQs) {
+      expect(html).toContain(JSON.stringify(q).slice(1, -1));
+    }
   });
 });
 
@@ -307,7 +319,7 @@ describe("Phase 49.1 public FAQ assets", () => {
 
 describe("Phase 49.1 architecture protection", () => {
   it("target locale count 37", () => expect(getTargetLocales().length).toBe(37));
-  it("homeFaqFor en sync", () => expect(homeFaqFor("en")?.items.length).toBe(5));
+  it("homeFaqFor en sync", () => expect(homeFaqFor("en")?.items.length).toBe(8));
   it("no new routes in App", () => {
     const app = readFileSync(join(process.cwd(), "src/App.tsx"), "utf8");
     expect(app).toMatch(/HomeFaq/);

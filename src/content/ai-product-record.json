@@ -1,0 +1,163 @@
+{
+  "id": "https://www.11tik.com/#app",
+  "brand": "11tik",
+  "name": "YouTube Thumbnail Extractor",
+  "canonical_url": "https://www.11tik.com/",
+  "category": "YouTube thumbnail extractor",
+  "description": "Web application that extracts and downloads public YouTube thumbnail images from supported YouTube video URLs.",
+  "primary_use_case": "Extract and download public YouTube thumbnail images from a public YouTube video URL or supported 11-character video ID.",
+  "processing_model": "client-side",
+  "content_scope": "Public YouTube video thumbnails only, including supported Shorts and other currently supported YouTube URL formats.",
+  "free": true,
+  "account_required": false,
+  "input": {
+    "types": [
+      "youtube_watch_url",
+      "youtu_be_url",
+      "youtube_shorts_url",
+      "youtube_embed_url",
+      "youtube_live_url",
+      "mobile_youtube_url",
+      "youtube_nocookie_embed_url",
+      "bare_11_character_video_id",
+      "bulk_lines"
+    ],
+    "hosts": [
+      "youtube.com",
+      "www.youtube.com",
+      "m.youtube.com",
+      "music.youtube.com",
+      "youtu.be",
+      "www.youtu.be",
+      "youtube-nocookie.com",
+      "www.youtube-nocookie.com"
+    ]
+  },
+  "output": {
+    "type": "public_youtube_thumbnail_images",
+    "hosts": [
+      "i.ytimg.com",
+      "i1.ytimg.com",
+      "i2.ytimg.com",
+      "i3.ytimg.com",
+      "i9.ytimg.com",
+      "img.youtube.com"
+    ],
+    "thumbnail_presets": [
+      { "quality": "maxres-webp", "filename": "maxresdefault.webp", "expected_width": 1280, "expected_height": 720 },
+      { "quality": "maxres", "filename": "maxresdefault.jpg", "expected_width": 1280, "expected_height": 720 },
+      { "quality": "hq720", "filename": "hq720.jpg", "expected_width": 1280, "expected_height": 720 },
+      { "quality": "sd", "filename": "sddefault.jpg", "expected_width": 640, "expected_height": 480 },
+      { "quality": "hq", "filename": "hqdefault.jpg", "expected_width": 480, "expected_height": 360 },
+      { "quality": "mq", "filename": "mqdefault.jpg", "expected_width": 320, "expected_height": 180 },
+      { "quality": "default", "filename": "default.jpg", "expected_width": 120, "expected_height": 90 }
+    ],
+    "availability_note": "Preset sizes are probed and validated in the browser. Not every video publishes every size; missing files are skipped."
+  },
+  "capabilities": [
+    "Parse supported public YouTube video URLs and bare video IDs",
+    "Extract YouTube video IDs from supported URL formats",
+    "Discover candidate public thumbnail image URLs on YouTube image hosts",
+    "Validate thumbnail availability in the browser",
+    "Download thumbnail image files in the browser",
+    "Open thumbnail image URLs",
+    "Copy thumbnail image URLs",
+    "Process multiple inputs in bulk up to the configured limit",
+    "Export bulk results as CSV",
+    "Zip highest-quality bulk thumbnails for download"
+  ],
+  "unsupported": [
+    "YouTube video downloading",
+    "YouTube audio downloading",
+    "Thumbnail generation or Canva-style thumbnail making",
+    "Private or age-gated content bypass",
+    "TikTok downloading",
+    "Instagram downloading",
+    "Playlist-only URLs without a video ID",
+    "Working channel RSS expansion",
+    "Arbitrary non-YouTube websites",
+    "Guaranteed 4K thumbnails",
+    "Guaranteed original upload file",
+    "Guaranteed 1080p for every video"
+  ],
+  "limits": {
+    "bulk_max_urls": 50,
+    "request_timeout_ms": 8000
+  },
+  "privacy": {
+    "processing": "client-side",
+    "account_required": false,
+    "pasted_urls": "Processed in the browser for extraction; not stored as a server-side extract log by the application.",
+    "scope": "Public YouTube thumbnail images only. No private YouTube data access."
+  },
+  "aliases": [
+    "youtube thumbnail extractor",
+    "youtube thumbnail downloader",
+    "youtube thumbnail grabber",
+    "yt thumbnail download",
+    "youtube video thumbnail download",
+    "download youtube thumbnail",
+    "youtube shorts thumbnail download",
+    "get youtube thumbnail from url",
+    "download youtube thumbnail in hd"
+  ],
+  "official_pages": [
+    { "role": "homepage", "url": "https://www.11tik.com/" },
+    { "role": "about", "url": "https://www.11tik.com/about" },
+    { "role": "privacy", "url": "https://www.11tik.com/privacy" },
+    { "role": "guide", "url": "https://www.11tik.com/how-to-download-youtube-thumbnail" },
+    { "role": "guide", "url": "https://www.11tik.com/youtube-thumbnail-url" },
+    { "role": "guide", "url": "https://www.11tik.com/youtube-shorts-thumbnail-download" },
+    { "role": "guide", "url": "https://www.11tik.com/youtube-thumbnail-size-resolution" },
+    { "role": "guide", "url": "https://www.11tik.com/highest-quality-youtube-thumbnail" },
+    { "role": "guide", "url": "https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study" },
+    { "role": "guide", "url": "https://www.11tik.com/how-to-batch-download-youtube" },
+    { "role": "machine_readable", "url": "https://www.11tik.com/web-client/ai/11tik-youtube-thumbnail-extractor.json" }
+  ],
+  "languages": [
+    "en",
+    "ar",
+    "bg",
+    "bn",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "es",
+    "fa",
+    "fi",
+    "fr",
+    "he",
+    "hi",
+    "hr",
+    "hu",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "ms",
+    "nl",
+    "no",
+    "pl",
+    "pt",
+    "ro",
+    "ru",
+    "sk",
+    "sr",
+    "sv",
+    "sw",
+    "th",
+    "tl",
+    "tr",
+    "uk",
+    "ur",
+    "vi",
+    "zh"
+  ],
+  "localization_note": "One product entity. Non-English locales are language versions of the same YouTube Thumbnail Extractor, not separate products. English homepage: https://www.11tik.com/. Localized homes: https://{lang}.11tik.com/l/{lang}/.",
+  "schema_refs": {
+    "organization_id": "https://www.11tik.com/#organization",
+    "application_id": "https://www.11tik.com/#app"
+  },
+  "last_verified": "2026-09-03"
+}

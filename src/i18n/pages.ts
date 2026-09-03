@@ -76,7 +76,7 @@ const EN: Record<PageKey, string> = {
     "These counts grow only from real extractions and capped trending seeds that pass the quality gate: a complete title, tags, and a live public thumbnail.",
   guideTitle: "The complete YouTube thumbnails guide",
   guideBody:
-    "A YouTube thumbnail is the public still viewers see before they press play. 11tik only reads files YouTube already hosts on i.ytimg.com. Start with a public watch, Shorts, live, or youtu.be link. The tool keeps files that are real images and ranks the highest published size. Bulk mode accepts one URL per line or a channel URL for the latest public uploads.",
+    "A YouTube thumbnail is the public still viewers see before they press play. 11tik only reads files YouTube already hosts on i.ytimg.com. Start with a public watch, Shorts, live, or youtu.be link. The tool keeps files that are real images and ranks the highest published size. Bulk mode accepts one public video URL per line (up to 50).",
   trendingIntro: "Tags collected from public extractions that passed the quality gate.",
   embedTitle: "Embed the 11tik Thumbnail Extractor",
   embedBody:

@@ -909,6 +909,26 @@ export default function App() {
 
         <HomeFaq />
 
+        {locale === "en" && t("entityHeading") ? (
+          <section className="yte-panel yte-entity" aria-labelledby="yte-entity-heading">
+            <h2 id="yte-entity-heading">{t("entityHeading")}</h2>
+            <p>{t("entityIntro")}</p>
+            <h3>{t("entityDoesHeading")}</h3>
+            <ul>
+              <li>{t("entityDoes1")}</li>
+              <li>{t("entityDoes2")}</li>
+              <li>{t("entityDoes3")}</li>
+            </ul>
+            <h3>{t("entityDoesNotHeading")}</h3>
+            <ul>
+              <li>{t("entityDoesNot1")}</li>
+              <li>{t("entityDoesNot2")}</li>
+              <li>{t("entityDoesNot3")}</li>
+              <li>{t("entityDoesNot4")}</li>
+            </ul>
+          </section>
+        ) : null}
+
         <p className="yte-foot">
           {t("foot")}
         </p>
@@ -929,9 +949,22 @@ export default function App() {
           <a href={legalHrefs(locale).embed}>{pageString(locale, "embedTitle")}</a>
           <a href={legalHrefs(locale).keywords}>{pageString(locale, "keywordsTitle")}</a>
           <a href={legalHrefs(locale).copyright}>{tx(locale, "legalTitle")}</a>
-          {localizedGuides.slice(0, 6).map((post) => (
-            <a href={post.href} key={post.href}>
-              {post.title}
+          {(locale === "en"
+            ? [
+                "https://www.11tik.com/how-to-download-youtube-thumbnail",
+                "https://www.11tik.com/youtube-thumbnail-url",
+                "https://www.11tik.com/youtube-shorts-thumbnail-download",
+                "https://www.11tik.com/youtube-thumbnail-size-resolution",
+                "https://www.11tik.com/highest-quality-youtube-thumbnail",
+                "https://www.11tik.com/how-to-batch-download-youtube",
+                "https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study",
+              ]
+                .map((href) => localizedGuides.find((post) => post.href === href))
+                .filter(Boolean)
+            : localizedGuides.slice(0, 6)
+          ).map((post) => (
+            <a href={post!.href} key={post!.href}>
+              {post!.title}
             </a>
           ))}
         </nav>

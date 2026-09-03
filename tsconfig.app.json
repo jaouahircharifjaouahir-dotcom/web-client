@@ -21,5 +21,9 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src", "workers/iso6391.js", "config/target-languages.json"],
-  "exclude": ["src/**/*.test.ts", "src/seo/test-helpers/**"]
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/seo/test-helpers/**",
+    "src/recommendation/measurement/**"
+  ]
 }

@@ -3825,7 +3825,7 @@
       "themeDark": "dark",
       "themeSystem": "system",
       "kicker": "POSTS",
-      "pasteOne": "Paste a YouTube URL (Shorts, live, youtu.be).",
+      "pasteOne": "Paste a public YouTube URL (watch, Shorts, live, youtu.be, or embed).",
       "pasteBulk": "Paste one YouTube URL per line.",
       "pasteBulkPh": "Paste one YouTube URL per line",
       "pasteOnePh": "Paste YouTube URL",
@@ -3847,9 +3847,20 @@
       "noIds": "No video IDs found yet.",
       "validId": "Valid",
       "noId": "No supported video ID found in that text.",
-      "foot": "Public YouTube thumbnails only. No accounts, no video download, no tracking of pasted URLs.",
+      "foot": "Public YouTube thumbnail images only. Client-side. No accounts, no video or audio download, no tracking of pasted URLs.",
       "heroTitle": "YouTube Thumbnail Extractor",
-      "heroIntro": "Download YouTube thumbnails for free in the highest available quality. Extract and save thumbnail images from any public YouTube video, including Shorts.",
+      "heroIntro": "Extract and download public YouTube thumbnail images in your browser. Paste a public watch, Shorts, live, or youtu.be link. Processing is client-side. 11tik does not download YouTube videos or audio.",
+      "entityHeading": "What 11tik is",
+      "entityIntro": "11tik is the brand behind the YouTube Thumbnail Extractor—a free browser tool for public YouTube thumbnail images. Extractor, downloader, and grabber wording all refer to this same product.",
+      "entityDoesHeading": "What 11tik does",
+      "entityDoes1": "Extracts public YouTube thumbnail images from supported video URLs and IDs",
+      "entityDoes2": "Validates which public thumbnail sizes actually exist, then lets you download or copy them",
+      "entityDoes3": "Runs entirely in your browser (client-side), with no account required",
+      "entityDoesNotHeading": "What 11tik does not do",
+      "entityDoesNot1": "Download YouTube video or audio",
+      "entityDoesNot2": "Bypass private or age-gated content",
+      "entityDoesNot3": "Generate or design thumbnails",
+      "entityDoesNot4": "Extract from TikTok, Instagram, channel-only or playlist-only URLs, or other unsupported platforms",
       "INVALID_URL": "Paste a public YouTube URL (TikTok/Instagram thumbnails are not supported yet).",
       "UNSUPPORTED_HOST": "Only YouTube public URLs are supported right now.",
       "INVALID_VIDEO_ID": "Could not find a valid video ID in that link.",
@@ -3904,8 +3915,8 @@
         "summary": "maxresdefault.jpg is YouTube’s common 1280×720 public still, not guaranteed for every video."
       },
       {
-        "title": "How to batch download YouTube thumbnails (up to 25 public URLs)",
-        "summary": "Bulk mode accepts one public URL per line, cap 25."
+        "title": "How to batch download YouTube thumbnails (up to 50 public URLs)",
+        "summary": "Bulk mode accepts one public URL per line, cap 50."
       },
       {
         "title": "Screenshot vs real YouTube thumbnail: which file should you save?",

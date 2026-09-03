@@ -93,9 +93,9 @@ const ENGLISH_ORPHAN_INLINK_PATCHES = {
   "how-to-download-youtube-thumbnail": [
     {
       before:
-        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For many video links at once, use Bulk (up to 50) — see <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download</a>. Working from a channel page with individual watch URLs: <a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">channel thumbnail guide</a>.",
       after:
-        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For live streams and premieres — saving the cover before go-live, during the broadcast, or after replay — see the <a href=\"https://www.11tik.com/youtube-live-premiere-thumbnail-download\">live and premiere thumbnail guide</a>. For many links at once, use Bulk (up to 25) — see <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download</a>.",
+        "Channel or playlist URLs without a video ID will not yield a single thumbnail. For live streams and premieres — saving the cover before go-live, during the broadcast, or after replay — see the <a href=\"https://www.11tik.com/youtube-live-premiere-thumbnail-download\">live and premiere thumbnail guide</a>. For many video links at once, use Bulk (up to 50) — see <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download</a>. Working from a channel page with individual watch URLs: <a href=\"https://www.11tik.com/how-to-extract-thumbnails-from-youtube\">channel thumbnail guide</a>.",
     },
     {
       before:
@@ -107,9 +107,9 @@ const ENGLISH_ORPHAN_INLINK_PATCHES = {
   "how-to-extract-thumbnails-from-youtube": [
     {
       before:
-        "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/2026/08/how-to-download-youtube-thumbnail.html\">how to download a YouTube thumbnail</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/2026/08/how-to-batch-download-youtube.html\">batch download</a>.",
+        "Line-by-line bulk details: <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download guide</a>. Single-URL flow: <a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">how to download a YouTube thumbnail</a>.",
       after:
-        "This is different from saving one watch link. The single-URL flow is in <a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">how to download a YouTube thumbnail</a>. On a phone, see <a href=\"https://www.11tik.com/how-to-save-youtube-thumbnail-on-iphone\">save on iPhone and Android</a>. Line-by-line bulk without a channel is in <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download</a>.",
+        "Line-by-line bulk details: <a href=\"https://www.11tik.com/how-to-batch-download-youtube\">batch download guide</a>. On a phone, see <a href=\"https://www.11tik.com/how-to-save-youtube-thumbnail-on-iphone\">save on iPhone and Android</a>. Single-URL flow: <a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">how to download a YouTube thumbnail</a>.",
     },
   ],
 };

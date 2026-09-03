@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube Thumbnail Extractor – Download HD YouTube Thumbnails</title>
-    <meta name="description" content="Download YouTube thumbnails instantly in the highest available quality, free. Extract HD images from any YouTube video or Shorts URL." />
+    <title>YouTube Thumbnail Extractor — Free | 11tik</title>
+    <meta name="description" content="Extract and download public YouTube thumbnail images in your browser. Free, including Shorts. Client-side; not a video downloader. Public videos only." />
     <link rel="canonical" href="https://www.11tik.com/" />
     <link rel="alternate" hreflang="en" href="https://www.11tik.com/" />
     <link rel="alternate" hreflang="x-default" href="https://www.11tik.com/" />
-    <meta name="robots" content="noindex,follow" />
+    <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#c2410c" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="11tik" />
-    <meta property="og:title" content="YouTube Thumbnail Extractor – Download HD YouTube Thumbnails" />
-    <meta property="og:description" content="Download YouTube thumbnails instantly in the highest available quality, free. Extract HD images from any YouTube video or Shorts URL." />
+    <meta property="og:title" content="YouTube Thumbnail Extractor — Free | 11tik" />
+    <meta property="og:description" content="Extract and download public YouTube thumbnail images in your browser. Free, including Shorts. Client-side; not a video downloader. Public videos only." />
     <meta property="og:url" content="https://www.11tik.com/" />
     <script src="./rights-boot.js"></script>
     <meta property="og:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="11tik YouTube Thumbnail Extractor – paste a URL to get an HD thumbnail" />
+    <meta property="og:image:alt" content="11tik YouTube Thumbnail Extractor – paste a public YouTube URL to extract a thumbnail image" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="YouTube Thumbnail Extractor – Download HD YouTube Thumbnails" />
-    <meta name="twitter:description" content="Download YouTube thumbnails instantly in the highest available quality, free. Extract HD images from any YouTube video or Shorts URL." />
+    <meta name="twitter:title" content="YouTube Thumbnail Extractor — Free | 11tik" />
+    <meta name="twitter:description" content="Extract and download public YouTube thumbnail images in your browser. Free, including Shorts. Client-side; not a video downloader. Public videos only." />
     <meta name="twitter:image" content="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" />
-    <meta name="twitter:image:alt" content="11tik YouTube Thumbnail Extractor – paste a URL to get an HD thumbnail" />
+    <meta name="twitter:image:alt" content="11tik YouTube Thumbnail Extractor – paste a public YouTube URL to extract a thumbnail image" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.11tik.com/web-client/icons/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.11tik.com/web-client/icons/favicon-16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.11tik.com/web-client/icons/apple-touch-icon-180.png" />
@@ -48,20 +48,28 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "YouTube Thumbnail Extractor",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Any",
-        "url": "https://www.11tik.com/",
-        "image": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
-        "description": "Browser tool that finds and downloads publicly available YouTube thumbnails.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "11tik",
-          "url": "https://www.11tik.com/",
-          "logo": "https://www.11tik.com/web-client/icons/apple-touch-icon-180.png"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.11tik.com/#organization",
+            "name": "11tik",
+            "url": "https://www.11tik.com/"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://www.11tik.com/#app",
+            "name": "YouTube Thumbnail Extractor",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "url": "https://www.11tik.com/",
+            "image": "https://www.11tik.com/web-client/images/social/og-image-1200x630.png",
+            "description": "Web application that extracts and downloads public YouTube thumbnail images from supported YouTube video URLs.",
+            "isAccessibleForFree": true,
+            "brand": { "@id": "https://www.11tik.com/#organization" },
+            "publisher": { "@id": "https://www.11tik.com/#organization" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
       }
     </script>
   </head>

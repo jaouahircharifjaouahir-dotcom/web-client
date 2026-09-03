@@ -1,6 +1,8 @@
+import productIdentity from "./content/product-identity.json" with { type: "json" };
+
 export const config = {
-  productName: "YouTube Thumbnail Extractor",
-  siteName: "11tik",
+  productName: productIdentity.productName,
+  siteName: productIdentity.brand,
   publicSiteUrl: "https://www.11tik.com",
   appPath: "/",
   get publicAppUrl() {
@@ -16,8 +18,10 @@ export const config = {
   ],
   gaMeasurementId: "G-FW7B8NDZZ5",
   requestTimeoutMs: 8000,
-  maxBulkUrls: 50,
+  maxBulkUrls: productIdentity.bulkLimit,
 } as const;
+
+export { productIdentity };
 
 export function isEmbedMode(): boolean {
   return new URLSearchParams(window.location.search).get("embed") === "1";

@@ -48,10 +48,10 @@ export const GUIDE_POSTS = [
       "maxresdefault.jpg is usually 1280×720 when YouTube published it. A 404 is normal. This guide explains fallbacks (hq720, sd, hq), how 11tik validates real files, and how to stop hard-coding guessed URLs.",
   },
   {
-    title: "How to batch download YouTube thumbnails (up to 25 public URLs)",
+    title: "How to batch download YouTube thumbnails (up to 50 public URLs)",
     href: "https://www.11tik.com/how-to-batch-download-youtube",
     summary:
-      "Bulk mode on 11tik accepts one public YouTube URL per line, extracts each best still in the browser, and can zip the highest-quality set. Cap is 25 URLs per run.",
+      "Bulk mode on 11tik accepts one public YouTube URL per line, extracts each best still in the browser, and can zip the highest-quality set. Cap is 50 URLs per run.",
   },
   {
     title: "Screenshot vs real YouTube thumbnail: which file should you save?",
@@ -87,7 +87,7 @@ export const GUIDE_POSTS = [
     title: "How to extract thumbnails from a YouTube channel URL",
     href: "https://www.11tik.com/how-to-extract-thumbnails-from-youtube",
     summary:
-      "Paste a public channel URL into 11tik Bulk to expand recent public uploads and download each best still. Research only; do not clone another channel’s art.",
+      "Channel URLs are not expanded automatically. Collect public video URLs from a channel page, paste them into Bulk, and download each best still. Research only; do not clone another channel’s art.",
   },
   {
     title: "WebP vs JPEG YouTube Thumbnails: Which Format Should You Use?",

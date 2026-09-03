@@ -9,20 +9,20 @@
 .yte-bio{margin-top:36px;padding-top:16px;border-top:1px solid #d9d3dc;font-size:14px;color:#5c5666}
 </style>
 <article class="yte-page" itemscope itemtype="https://schema.org/Article">
-  <h1 itemprop="headline">How to batch download YouTube thumbnails (up to 25 public URLs)</h1>
+  <h1 itemprop="headline">How to batch download YouTube thumbnails (up to 50 public URLs)</h1>
   <p class="yte-byline">By <a href="https://www.11tik.com/about">11tik</a></p>
-  <p class="yte-updated">Last updated: 21 August 2026</p>
+  <p class="yte-updated">Last updated: 3 September 2026</p>
   <p itemprop="description">Bulk extract public YouTube thumbnails in the browser. Paste one URL per line, download each best still, or zip the highest-quality set. No account and no video files.</p>
   <img alt="11tik bulk thumbnail extractor with several YouTube URLs ready to download" class="yte-hero" height="630" itemprop="image" src="https://www.11tik.com/web-client/images/social/og-image-1200x630.png" width="1200"/>
   <p class="yte-caption">Bulk mode on 11tik lists each video’s best public still first, then lower sizes that exist.</p>
   <h2>How do I batch download YouTube thumbnails?</h2>
-  <p>Open <a href="https://www.11tik.com/">11tik</a>, turn on Bulk, paste one public URL per line, click Extract all, then download each best still or the zip of highest quality. The cap is 25 URLs per run so the browser stays responsive.</p>
+  <p>Open <a href="https://www.11tik.com/">11tik</a>, turn on Bulk, paste one public URL per line, click Extract all, then download each best still or the zip of highest quality. The cap is 50 URLs per run so the browser stays responsive.</p>
 
   <h2>What the tool processes</h2>
   <p>Bulk mode runs the same client-side public-still check as single-URL extract: parse each video ID, build candidate thumbnail URLs, load them as images in your browser, drop failures and placeholders, rank survivors, and show the best still first. It does not download video or audio, does not call a private YouTube API, and does not store pasted links on 11tik servers.</p>
 
-  <h2>25-URL cap</h2>
-  <p>Each Bulk run accepts up to <strong>25 lines</strong>. That limit keeps image validation responsive in the browser. For more IDs, run multiple batches or export CSV from each run and merge offline. There is no 500- or 1000-URL server batch.</p>
+  <h2>50-URL cap</h2>
+  <p>Each Bulk run accepts up to <strong>50 lines</strong>. That limit keeps image validation responsive in the browser. For more IDs, run multiple batches or export CSV from each run and merge offline. There is no 500- or 1000-URL server batch.</p>
 
   <h2>Client-side processing</h2>
   <p>Every extract happens in your session. Network requests go from your browser to public <code>i.ytimg.com</code> (and related) hosts. Pasted URLs are not uploaded to 11tik for server-side scraping.</p>
@@ -32,7 +32,7 @@
 
   <h2>Failure taxonomy</h2>
   <ul>
-    <li><strong>Parse failure:</strong> line is not a supported watch, Shorts, live, embed, youtu.be, or channel-expandable URL.</li>
+    <li><strong>Parse failure:</strong> line is not a supported watch, Shorts, live, embed, youtu.be, or bare video ID (channel-only and playlist-only URLs are not expanded).</li>
     <li><strong>Video unavailable:</strong> private, removed, restricted, or processing—no public still validates. See <a href="https://www.11tik.com/youtube-thumbnail-not-appearing-private">why a thumbnail won’t appear</a>.</li>
     <li><strong>Variant missing:</strong> video is public but maxres (or another high tier) 404s; a lower size still works. See <a href="https://www.11tik.com/what-is-maxresdefaultjpg-when-youtube">maxres fallback</a>.</li>
     <li><strong>Placeholder rejected:</strong> URL responded but looked like a tiny grey missing-file tile.</li>
@@ -42,7 +42,7 @@
   <p>11tik only surfaces public CDN stills. Unlisted videos without public packaging, members-only uploads, age-gated content, and deleted videos typically produce empty cards—not a smaller “secret” file. Do not expect Bulk to bypass access controls.</p>
 
   <h2>Channel URLs vs manually supplied watch links</h2>
-  <p>Paste a public channel URL on one line and Bulk expands recent public uploads via RSS-style discovery, then extracts each ID—subject to the same 25-URL cap after expansion. Manually pasted watch links skip channel discovery. Full channel workflow: <a href="https://www.11tik.com/how-to-extract-thumbnails-from-youtube">channel extract guide</a>.</p>
+  <p>Paste supported public video URLs or IDs only—one per line. Channel-only and playlist-only URLs are not expanded. For notes on working from a channel page with individual watch links, see the <a href="https://www.11tik.com/how-to-extract-thumbnails-from-youtube">channel thumbnail guide</a>.</p>
 
   <h2>Privacy</h2>
   <p>Pasted URLs are processed locally in your browser for extraction. Read <a href="https://www.11tik.com/privacy">Privacy</a> for site analytics; Bulk does not add a separate server-side private API.</p>
@@ -63,7 +63,7 @@
   <h2>How to run a bulk extract</h2>
   <ol>
     <li>On the homepage, click Bulk.</li>
-    <li>Paste up to 25 public links, one per line.</li>
+    <li>Paste up to 50 public links, one per line.</li>
     <li>Click Extract all and wait until each card shows a preview.</li>
     <li>Download thumbnail video N for each best still, or Download all highest quality as a zip.</li>
     <li>Optional: Export CSV for research logs (video id, title, share URL, image URL).</li>
@@ -74,14 +74,14 @@
   <p class="yte-bio">Written by 11tik. <a href="https://www.11tik.com/about">About</a>.</p>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"How to batch download YouTube thumbnails (up to 25 public URLs)","datePublished":"2026-08-21","dateModified":"2026-08-21","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
+  {"@type":"Article","headline":"How to batch download YouTube thumbnails (up to 50 public URLs)","datePublished":"2026-08-21","dateModified":"2026-09-03","inLanguage":"en","author":{"@type":"Organization","name":"11tik","url":"https://www.11tik.com/about"},"image":{"@type":"ImageObject","url":"https://www.11tik.com/web-client/images/social/og-image-1200x630.png","width":1200,"height":630}},
   {"@type":"HowTo","name":"Batch download public YouTube thumbnails","totalTime":"PT2M","step":[
     {"@type":"HowToStep","position":1,"name":"Enable Bulk","text":"Open https://www.11tik.com/ and click Bulk."},
-    {"@type":"HowToStep","position":2,"name":"Paste URLs","text":"Paste one public YouTube URL per line, up to 25."},
+    {"@type":"HowToStep","position":2,"name":"Paste URLs","text":"Paste one public YouTube URL per line, up to 50."},
     {"@type":"HowToStep","position":3,"name":"Extract and save","text":"Click Extract all, then download each best still or the highest-quality zip."}
   ]},
   {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"How do I batch download YouTube thumbnails?","acceptedAnswer":{"@type":"Answer","text":"Use Bulk on 11tik, paste one public URL per line, extract, then download stills or a zip of the highest public quality. Maximum 25 URLs per run."}},
+    {"@type":"Question","name":"How do I batch download YouTube thumbnails?","acceptedAnswer":{"@type":"Answer","text":"Open 11tik, turn on Bulk, paste one public URL per line, click Extract all, then download each best still or the zip of highest quality. The cap is 50 URLs per run so the browser stays responsive."}},
     {"@type":"Question","name":"Can I use this for competitor research?","acceptedAnswer":{"@type":"Answer","text":"Yes for studying public packaging. Do not republish another creator’s thumbnail as your own. Copyright stays with the rights holder."}}
   ]}
 ]}

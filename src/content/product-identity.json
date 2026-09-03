@@ -1,0 +1,53 @@
+{
+  "brand": "11tik",
+  "productName": "YouTube Thumbnail Extractor",
+  "organizationId": "https://www.11tik.com/#organization",
+  "applicationId": "https://www.11tik.com/#app",
+  "brandUrl": "https://www.11tik.com/",
+  "applicationUrl": "https://www.11tik.com/",
+  "shortDescription": "Web application that extracts and downloads public YouTube thumbnail images from supported YouTube video URLs.",
+  "primaryUseCase": "Extract and download public YouTube thumbnail images from a public YouTube video URL or supported 11-character video ID.",
+  "supportedContent": "Public YouTube video thumbnails, including supported Shorts and other currently supported YouTube URL formats.",
+  "processingModel": "client-side",
+  "bulkLimit": 50,
+  "supportedUrlTypes": [
+    "watch",
+    "youtu.be",
+    "shorts",
+    "embed",
+    "live",
+    "mobile",
+    "youtube-nocookie",
+    "bare-video-id",
+    "bulk-lines"
+  ],
+  "supportedHosts": [
+    "youtube.com",
+    "www.youtube.com",
+    "m.youtube.com",
+    "music.youtube.com",
+    "youtu.be",
+    "www.youtu.be",
+    "youtube-nocookie.com",
+    "www.youtube-nocookie.com"
+  ],
+  "thumbnailPresets": [
+    "maxres-webp",
+    "maxres",
+    "hq720",
+    "sd",
+    "hq",
+    "mq",
+    "default"
+  ],
+  "explicitExclusions": [
+    "YouTube video downloading",
+    "YouTube audio downloading",
+    "thumbnail generation or Canva-style thumbnail making",
+    "private or age-gated bypass",
+    "TikTok or Instagram downloading",
+    "playlist-only URLs",
+    "working channel RSS expansion",
+    "arbitrary websites"
+  ]
+}

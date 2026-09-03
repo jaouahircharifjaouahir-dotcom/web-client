@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "phase": "1D-B",
+  "description": "Small deterministic capability contract for AI knowledge consistency. Hierarchy: implementation > product-identity > ai-product-record > EN core > EN guides > localized. Localized content never overrides capability truth. To add a real future capability: update implementation first, then set the matching unsupported.*.supported flag to true here, then update AI record / identity / public copy.",
+  "hierarchy": [
+    "implementation",
+    "product-identity",
+    "ai-product-record",
+    "en-core-public",
+    "en-guides",
+    "localized"
+  ],
+  "brand": "11tik",
+  "productName": "YouTube Thumbnail Extractor",
+  "organizationId": "https://www.11tik.com/#organization",
+  "applicationId": "https://www.11tik.com/#app",
+  "canonicalUrl": "https://www.11tik.com/",
+  "processingModel": "client-side",
+  "bulkMaxUrls": 50,
+  "aiProductRecordPublicUrl": "https://www.11tik.com/web-client/ai/11tik-youtube-thumbnail-extractor.json",
+  "supportedUrlKinds": [
+    "watch",
+    "youtu.be",
+    "shorts",
+    "embed",
+    "live",
+    "mobile",
+    "youtube-nocookie",
+    "bare-video-id",
+    "bulk-lines"
+  ],
+  "supportedHosts": [
+    "youtube.com",
+    "www.youtube.com",
+    "m.youtube.com",
+    "music.youtube.com",
+    "youtu.be",
+    "www.youtu.be",
+    "youtube-nocookie.com",
+    "www.youtube-nocookie.com"
+  ],
+  "capabilities": [
+    "direct_supported_youtube_video_urls",
+    "supported_video_ids",
+    "supported_shorts_urls",
+    "supported_embed_urls",
+    "supported_live_urls",
+    "supported_mobile_urls",
+    "supported_youtube_nocookie_embeds",
+    "bulk_video_inputs",
+    "thumbnail_image_discovery",
+    "client_side_processing",
+    "thumbnail_image_download"
+  ],
+  "unsupported": {
+    "youtube_video_download": {
+      "supported": false,
+      "labels": ["YouTube video downloading", "video download"]
+    },
+    "youtube_audio_download": {
+      "supported": false,
+      "labels": ["YouTube audio downloading", "audio download"]
+    },
+    "thumbnail_generation": {
+      "supported": false,
+      "labels": ["thumbnail generation", "thumbnail maker", "Canva-style"]
+    },
+    "private_age_gated_bypass": {
+      "supported": false,
+      "labels": ["private or age-gated bypass", "age-gated"]
+    },
+    "tiktok": {
+      "supported": false,
+      "labels": ["TikTok"]
+    },
+    "instagram": {
+      "supported": false,
+      "labels": ["Instagram"]
+    },
+    "playlist_only_extraction": {
+      "supported": false,
+      "labels": ["playlist-only", "Playlist-only URLs"]
+    },
+    "channel_rss_expansion": {
+      "supported": false,
+      "labels": ["Working channel RSS expansion", "working channel RSS expansion", "channel RSS expansion"]
+    },
+    "arbitrary_website_extraction": {
+      "supported": false,
+      "labels": ["arbitrary websites", "Arbitrary non-YouTube"]
+    },
+    "guaranteed_4k": {
+      "supported": false,
+      "labels": ["Guaranteed 4K", "4K"]
+    },
+    "guaranteed_original_thumbnail": {
+      "supported": false,
+      "labels": ["Guaranteed original upload file", "original thumbnail guaranteed"]
+    },
+    "guaranteed_1080p": {
+      "supported": false,
+      "labels": ["Guaranteed 1080p"]
+    }
+  },
+  "enBulkClaimFiles": [
+    "docs/blogger-pages/blog/batch-download-youtube-thumbnails.html",
+    "docs/blogger-pages/about.html",
+    "src/i18n/catalog-en.json",
+    "src/content/trust.ts"
+  ]
+}

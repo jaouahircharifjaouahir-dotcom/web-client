@@ -8,7 +8,7 @@ export type KeywordLanding = {
 export const DEFAULT_HERO = {
   title: "YouTube Thumbnail Extractor",
   intro:
-    "Download YouTube thumbnails instantly in the highest available quality, completely free. Extract and save HD thumbnail images from any public YouTube video or Shorts URL with one click. Paste a link below, click Get Thumbnail Image, then download or share a ready link.",
+    "Extract and download public YouTube thumbnail images in your browser. Paste a public watch, Shorts, live, or youtu.be link. Processing is client-side. 11tik does not download YouTube videos or audio.",
 } as const;
 
 export const KEYWORD_LANDINGS: KeywordLanding[] = [
@@ -18,6 +18,13 @@ export const KEYWORD_LANDINGS: KeywordLanding[] = [
     title: "YouTube Thumbnail Downloader",
     intro:
       "Use this YouTube thumbnail downloader to save the public still YouTube already hosts for a video. Paste a watch, Shorts, live, or youtu.be link, then download the highest file that actually exists. The extractor below is the same tool as the homepage—this page is just the downloader wording.",
+  },
+  {
+    slug: "youtube-thumbnail-grabber",
+    keyword: "YouTube thumbnail grabber",
+    title: "YouTube Thumbnail Grabber",
+    intro:
+      "A YouTube thumbnail grabber is the same 11tik extractor: paste a public YouTube URL and save the public still YouTube already hosts. No separate grabber product—client-side thumbnail images only, not video or audio.",
   },
   {
     slug: "youtube-thumbnail-download",

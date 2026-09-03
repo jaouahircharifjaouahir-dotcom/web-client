@@ -7,6 +7,12 @@ export const KEYWORD_LANDINGS = [
       "Use this YouTube thumbnail downloader to save the public still YouTube already hosts for a video. Paste a watch, Shorts, live, or youtu.be link, then download the highest file that actually exists. The extractor below is the same tool as the homepage—this page is just the downloader wording.",
   },
   {
+    slug: "youtube-thumbnail-grabber",
+    title: "YouTube Thumbnail Grabber",
+    intro:
+      "A YouTube thumbnail grabber is the same 11tik extractor: paste a public YouTube URL and save the public still YouTube already hosts. No separate grabber product—client-side thumbnail images only, not video or audio.",
+  },
+  {
     slug: "youtube-thumbnail-download",
     title: "YouTube Thumbnail Download",
     intro:

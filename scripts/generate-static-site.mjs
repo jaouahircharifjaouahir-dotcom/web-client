@@ -6,6 +6,8 @@ import { ISO6391, RTL_CODES, hreflangLinks } from "../workers/iso6391.js";
 import { fitDescription, fitTitle, toHttpsUrl } from "../workers/html-meta.js";
 import localeMeta from "../workers/locale-meta.json" with { type: "json" };
 import uiCatalog from "../src/i18n/catalog.json" with { type: "json" };
+import productIdentity from "../src/content/product-identity.json" with { type: "json" };
+import { writeAiProductRecordArtifacts } from "./write-ai-product-record.mjs";
 import {
   buildSitemapXml,
   collectCanonicalSitemapLocs,
@@ -117,6 +119,10 @@ function spaShellBodyHtml(code, buildContext) {
     .join("");
   const catalogDoc = buildContext?.catalogByLocale?.[code];
   const homeFaq = renderHomeFaqShellHtml(code);
+  const entityClarity =
+    code === "en" && ui.entityHeading
+      ? `<section class="yte-entity" aria-labelledby="yte-entity-heading"><h2 id="yte-entity-heading">${xmlEscape(ui.entityHeading)}</h2><p>${xmlEscape(ui.entityIntro || "")}</p><h3>${xmlEscape(ui.entityDoesHeading || "")}</h3><ul><li>${xmlEscape(ui.entityDoes1 || "")}</li><li>${xmlEscape(ui.entityDoes2 || "")}</li><li>${xmlEscape(ui.entityDoes3 || "")}</li></ul><h3>${xmlEscape(ui.entityDoesNotHeading || "")}</h3><ul><li>${xmlEscape(ui.entityDoesNot1 || "")}</li><li>${xmlEscape(ui.entityDoesNot2 || "")}</li><li>${xmlEscape(ui.entityDoesNot3 || "")}</li><li>${xmlEscape(ui.entityDoesNot4 || "")}</li></ul></section>`
+      : "";
   const guides = renderShellGuideListHtml(code, { ...buildContext, catalogDoc });
   const crawlNav = renderLocaleCrawlNavHtml(code, { ...buildContext, catalogDoc });
   // Space-poor scripts (e.g. Japanese) yield low whitespace word counts; add English
@@ -135,7 +141,7 @@ function spaShellBodyHtml(code, buildContext) {
       enBridge = `<p lang="en">${xmlEscape(enUi.heroIntro)}</p><p lang="en">${xmlEscape(enUi.foot || "")}</p>`;
     }
   }
-  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}${homeFaq}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
+  return `<div id="yte-root"><h1>${title}</h1><p>${intro}</p><ol><li>${step1}</li><li>${step2}</li><li>${step3}</li></ol>${extraParas}${homeFaq}${entityClarity}<p>${foot}</p>${guides}${crawlNav}${enBridge}</div>`;
 }
 
 function canonicalFor(code) {
@@ -149,17 +155,35 @@ function appShellHtml({ code, canonical, title, description, robots = "index,fol
   const canon = xmlEscape(toHttpsUrl(canonical));
   const css = `/web-client/blogger-app.css?v=${APP_ASSET_V}`;
   const js = `/web-client/blogger-app.js?v=${APP_ASSET_V}`;
+  const organizationRef = { "@id": productIdentity.organizationId };
   const schema = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: fitTitle(copy.title),
-    applicationCategory: "MultimediaApplication",
-    operatingSystem: "Any",
-    url: toHttpsUrl(canonical),
-    image: OG_IMAGE,
-    description: fitDescription(copy.description),
-    isAccessibleForFree: true,
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": productIdentity.organizationId,
+        name: productIdentity.brand,
+        url: productIdentity.brandUrl,
+      },
+      {
+        "@type": "WebApplication",
+        "@id": productIdentity.applicationId,
+        name: productIdentity.productName,
+        alternateName: [
+          "YouTube Thumbnail Downloader",
+          "YouTube Thumbnail Grabber",
+        ],
+        applicationCategory: "MultimediaApplication",
+        operatingSystem: "Any",
+        url: toHttpsUrl(canonical),
+        image: OG_IMAGE,
+        description: fitDescription(copy.description),
+        isAccessibleForFree: true,
+        brand: organizationRef,
+        publisher: organizationRef,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      },
+    ],
   });
   return `<!DOCTYPE html>
 <html lang="${copy.code}" dir="${copy.dir}">
@@ -258,15 +282,29 @@ function llmsTxtBody() {
   return `# 11tik
 > Free in-browser YouTube Thumbnail Extractor — public stills only, no video download.
 
-## Product
-- [Homepage](https://www.11tik.com/): Paste a public YouTube URL and save the largest thumbnail still YouTube hosts.
-- [About](https://www.11tik.com/about): What 11tik is and is not.
+## Product identity
+- Brand: 11tik
+- Product: YouTube Thumbnail Extractor
+- Also referred to as: YouTube thumbnail downloader / grabber (same product, not separate tools)
+- Processing: client-side in the browser
+- Scope: public YouTube thumbnail images only
+- Not: YouTube video/audio download, thumbnail generator, private/age-gated bypass, TikTok/Instagram
+- Not: working channel RSS expansion or automatic discovery of videos from a channel URL
+
+## Canonical surfaces
+- [Homepage](https://www.11tik.com/): Primary product hub — paste a public YouTube URL and save the largest thumbnail still YouTube hosts.
+- [About](https://www.11tik.com/about): Who publishes 11tik and what the product is / is not.
+- [Machine-readable product record](https://www.11tik.com/web-client/ai/11tik-youtube-thumbnail-extractor.json): Canonical JSON for capabilities, limits, and exclusions.
 - [Copyright](https://www.11tik.com/copyright): Thumbnail reuse and copyright notes.
 
-## Guides
+## Authoritative guides
 - [How to download a YouTube thumbnail](https://www.11tik.com/how-to-download-youtube-thumbnail)
 - [YouTube thumbnail URL formats](https://www.11tik.com/youtube-thumbnail-url)
-- [Batch download up to 25 URLs](https://www.11tik.com/how-to-batch-download-youtube)
+- [YouTube Shorts thumbnail download](https://www.11tik.com/youtube-shorts-thumbnail-download)
+- [Thumbnail sizes & resolution](https://www.11tik.com/youtube-thumbnail-size-resolution)
+- [Highest quality thumbnail](https://www.11tik.com/highest-quality-youtube-thumbnail)
+- [Batch download up to 50 URLs](https://www.11tik.com/how-to-batch-download-youtube)
+- [300-video sizes & resolutions study](https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study)
 
 ## Policies
 - [Privacy](https://www.11tik.com/privacy)
@@ -335,6 +373,7 @@ export function generateStaticSite(staged) {
   writePocFrReadinessManifest(writeFile, staged, publishable.length > 0, null);
   writeFile(join(staged, "robots.txt"), robotsTxt());
   writeFile(join(staged, "llms.txt"), llmsTxtBody());
+  writeAiProductRecordArtifacts(staged);
   writeCopyrightStaticPage(writeFile, staged);
   writeFile(join(staged, "sitemap.xml"), sitemapXml(publishable));
   writePostsFeeds(writeFile, staged, { inventory });

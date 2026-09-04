@@ -2,22 +2,22 @@
   "contentId": "home-faq",
   "locale": "nl",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Veelgestelde vragen",
   "faq": [
     {
-      "question": "Wat is een tool om YouTube-thumbnails te extraheren?",
-      "answer": "Een thumbnail-extractor is een browsertool die de openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen een extractor; het haalt geen frames uit de weergave en belooft geen formaten die YouTube nooit heeft gepubliceerd.",
-      "answerHtml": "Een thumbnail-extractor is een browsertool die de openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen een extractor; het haalt geen frames uit de weergave en belooft geen formaten die YouTube nooit heeft gepubliceerd."
+      "question": "Wat is een YouTube thumbnail extractor, downloader of grabber?",
+      "answer": "Die namen beschrijven hetzelfde soort browsertool: een tool die openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen die YouTube Thumbnail Extractor; de termen 'downloader' en 'grabber' zijn synoniemen voor dit product, geen aparte apps.",
+      "answerHtml": "Die namen beschrijven hetzelfde soort browsertool: een tool die openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen die YouTube Thumbnail Extractor; de termen 'downloader' en 'grabber' zijn synoniemen voor dit product, geen aparte apps."
     },
     {
-      "question": "Welke YouTube-URL's ondersteunt 11tik?",
-      "answer": "Plak een link naar een openbare video, een Shorts-URL, een live- of premièrepagina of een youtu.be-shortlink. De tool leest de video-ID uit het pad en zoekt openbare bestanden op i.ytimg.com. URL's die alleen voor kanalen of afspeellijsten bedoeld zijn, worden niet ondersteund. Zie de handleiding voor thumbnail-URL's voor de structuur van URL's en een volledige lijst met patronen.",
-      "answerHtml": "Plak een link naar een openbare video, een Shorts-URL, een live- of premièrepagina of een youtu.be-shortlink. De tool leest de video-ID uit het pad en zoekt openbare bestanden op i.ytimg.com. URL's die alleen voor kanalen of afspeellijsten bedoeld zijn, worden niet ondersteund. Zie voor de URL-structuur en de volledige lijst met patronen de<a href=\"https://nl.11tik.com/l/nl/youtube-thumbnail-url\">Handleiding voor miniatuur-URL's</a>."
+      "question": "Kan ik een YouTube-thumbnail downloaden via een URL?",
+      "answer": "Ja. Plak een link naar een openbare video, een URL van een korte video, een live- of premièrepagina, een ingesloten video, een youtu.be-link of een video-ID van maximaal 11 tekens. De tool leest de video-ID en zoekt openbare bestanden op i.ytimg.com. URL's die alleen voor kanalen of afspeellijsten zijn bedoeld, worden niet ondersteund. Zie de handleiding voor miniatuur-URL's voor de structuur van URL's en de volledige lijst met patronen.",
+      "answerHtml": "Ja. Plak een openbare kijklink, een Shorts-URL, een live- of premièrepagina, een embed, een youtu.be-korte link of een kale video-ID van 11 tekens. De tool leest de video-ID en zoekt openbare bestanden op i.ytimg.com. URL's die alleen naar kanalen of afspeellijsten verwijzen, worden niet ondersteund. Zie voor de URL-structuur en de volledige lijst met patronen de<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Handleiding voor miniatuur-URL's</a>."
     },
     {
       "question": "Uploadt 11tik mijn miniatuurafbeelding of video?",
-      "answer": "Nee. Geplakte URL's worden in uw browser verwerkt. 11tik vereist geen account, slaat de originele miniatuurbestanden niet op zijn servers op en uploadt uw video niet. Afbeeldingen worden in dezelfde sessie opgehaald van het openbare CDN van YouTube. Optionele lokale geschiedenis blijft op uw apparaat staan ​​totdat u deze wist.",
+      "answer": "Nee. Geplakte URL's worden in uw browser verwerkt. 11tik vereist geen account, slaat de originele miniatuurbestanden niet op de servers op en uploadt uw video niet. Afbeeldingen worden in dezelfde sessie opgehaald van het openbare CDN van YouTube. Optionele lokale geschiedenis blijft op uw apparaat staan ​​totdat u deze wist.",
       "answerHtml": "Nee. Geplakte URL's worden in uw browser verwerkt. 11tik vereist geen account, slaat de originele miniatuurbestanden niet op zijn servers op en uploadt uw video niet. Afbeeldingen worden in dezelfde sessie opgehaald van het openbare CDN van YouTube. Optionele lokale geschiedenis blijft op uw apparaat staan ​​totdat u deze wist."
     },
     {
@@ -27,8 +27,23 @@
     },
     {
       "question": "Wat gebeurt er als de hoogste miniatuurkwaliteit niet beschikbaar is?",
-      "answer": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen URL's met een geschatte maximale resolutie. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is de werkelijke maximale resolutie voor die video. Lees de maxresdefault-handleiding voor meer informatie over de reden voor maxres 404-fouten en hoe fallback-mechanismen werken.",
-      "answerHtml": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen gegokte maxres-URL's. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is de werkelijke maximale resolutie voor die video. Lees meer over de reden waarom maxres 404-fouten optreden en hoe fallback-mechanismen werken.<a href=\"https://nl.11tik.com/l/nl/what-is-maxresdefaultjpg-when-youtube\">maxresdefault handleiding</a>."
+      "answer": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen URL's met geschatte maximale resolutie. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is de werkelijke maximale resolutie voor die video. Voorbeelden van metingen zijn te vinden in het onderzoek naar de resolutie van 300 video's. Lees de handleiding voor maxresdefault voor meer informatie over de reden voor 404-fouten bij maxres.",
+      "answerHtml": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen URL's met gegokte maximale resolutie. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is het werkelijke maximum voor die video. Voorbeelden van metingen zijn te vinden in de<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studie met 300 video's</a>Voor de reden waarom maxres 404s geeft, lees het volgende.<a href=\"https://nl.11tik.com/l/nl/what-is-maxresdefaultjpg-when-youtube\">maxresdefault handleiding</a>."
+    },
+    {
+      "question": "Kan ik meerdere YouTube-thumbnail-URL's verwerken?",
+      "answer": "Ja. Dezelfde YouTube Thumbnail Extractor bevat ook een bulkmodus: plak tot 50 openbare URL's (één per regel) en download vervolgens de beste versie, comprimeer de set met de hoogste kwaliteit tot een ZIP-bestand of exporteer naar een CSV-bestand. Bulk is een workflow van dit product, geen aparte tool voor bulkdownloads. Meer informatie: handleiding voor batchdownloads.",
+      "answerHtml": "Ja. Dezelfde YouTube Thumbnail Extractor bevat ook een bulkmodus: plak tot 50 openbare URL's (één per regel) en download vervolgens de beste versie, comprimeer de set met de hoogste kwaliteit of exporteer naar CSV. Bulk is een workflow van dit product, geen aparte tool voor bulkdownloads. Details:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Handleiding voor het批量 downloaden</a>."
+    },
+    {
+      "question": "Downloadt 11tik YouTube-video's of audio?",
+      "answer": "Nee. 11tik werkt alleen met openbare miniatuurafbeeldingen die YouTube al host. Het downloadt geen video- of audiobestanden, haalt geen frames uit de weergave en ontgrendelt geen streams. Het kan ook geen privé- of leeftijdsbeperkte verpakkingen omzeilen als er geen openbaar miniatuurbestand beschikbaar is.",
+      "answerHtml": "Nee. 11tik werkt alleen met openbare miniatuurafbeeldingen die YouTube al host. Het downloadt geen video- of audiobestanden, haalt geen frames uit de weergave en ontgrendelt geen streams. Het kan ook geen privé- of leeftijdsbeperkte verpakkingen omzeilen als er geen openbaar miniatuurbestand beschikbaar is."
+    },
+    {
+      "question": "Is er een officiële 11tik Firefox-add-on?",
+      "answer": "Ja. 11tik voor Firefox kan de best beschikbare openbare thumbnail uit het huidige YouTube-tabblad extraheren. Het is hetzelfde product als de websitetool; de officiële site blijft www.11tik.com. De lijst verandert niets aan wat de extractor wel of niet kan ophalen.",
+      "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik voor Firefox</a>Kan de best beschikbare openbare thumbnail uit het huidige YouTube-tabblad extraheren. Het is hetzelfde product als de websitetool; de officiële website blijft behouden.<a href=\"https://www.11tik.com/\">www.11tik.com</a>De lijst verandert niets aan wat de extractor wel of niet kan ophalen."
     }
   ],
   "articleId": "home-faq"

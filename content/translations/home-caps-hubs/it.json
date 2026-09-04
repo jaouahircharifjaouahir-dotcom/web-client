@@ -1,0 +1,34 @@
+{
+  "contentId": "home-caps-hubs",
+  "locale": "it",
+  "status": "ready",
+  "sourceHash": "phase-mhps-caps-hubs-v1",
+  "capsHeading": "Cosa copre questo estrattore",
+  "capsItems": [
+    {
+      "html": "Scarica o acquisisci immagini in miniatura pubbliche di YouTube da un URL video supportato (un unico prodotto, non strumenti di download o acquisizione separati)."
+    },
+    {
+      "html": "Modalità di massa per un massimo di<strong>50</strong>URL per esecuzione, con ZIP delle immagini fisse di altissima qualità ed esportazione CSV — vedi il<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guida al download in batch</a>."
+    },
+    {
+      "html": "Verifica quali dimensioni pubbliche vengono effettivamente caricate per i link di visualizzazione e i video brevi, inclusa la risoluzione massima corretta quando YouTube pubblica il contenuto."
+    },
+    {
+      "html": "Opzionale<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik per Firefox</a>per la scheda YouTube corrente; lo strumento del sito web rimane a<a href=\"https://www.11tik.com/\">www.11tik.com</a>."
+    }
+  ],
+  "hubsHeading": "Guide a supporto di questo strumento",
+  "hubsItems": [
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Come salvare una miniatura pubblica di YouTube passo dopo passo</a>— Procedura guidata con un singolo URL, quindi torna qui per estrarre i dati."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Gestisci più URL di miniature</a>— Fino a 50 link pubblici con esportazione in formato ZIP e CSV in modalità batch."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Misure rilevate su 300 video</a>— Prove basate su campioni relative alle dimensioni e alla disponibilità di risoluzione massima."
+    }
+  ],
+  "articleId": "home-caps-hubs"
+}

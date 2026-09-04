@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "ms",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Soalan lazim",
   "faq": [
     {
-      "question": "Apakah pengekstrak lakaran kecil YouTube?",
-      "answer": "Pengekstrak lakaran kecil ialah alat pelayar yang mengambil imej pegun awam yang telah dihoskan oleh YouTube pada CDNnya—bukan fail video. Anda menampal pautan, alat tersebut menyemak saiz yang wujud dan anda pratonton atau menyimpan fail sebenar yang terbesar. 11tik hanyalah pengekstrak; ia tidak mengoyak bingkai daripada main balik atau menjanjikan saiz yang tidak pernah diterbitkan oleh YouTube.",
-      "answerHtml": "Pengekstrak lakaran kecil ialah alat pelayar yang mengambil imej pegun awam yang telah dihoskan oleh YouTube pada CDNnya—bukan fail video. Anda menampal pautan, alat tersebut menyemak saiz yang wujud dan anda pratonton atau menyimpan fail sebenar yang terbesar. 11tik hanyalah pengekstrak; ia tidak mengoyak bingkai daripada main balik atau menjanjikan saiz yang tidak pernah diterbitkan oleh YouTube."
+      "question": "Apakah itu pengekstrak, pemuat turun atau perebut lakaran kecil YouTube?",
+      "answer": "Nama-nama tersebut menggambarkan jenis alat pelayar yang sama: alat yang mengambil imej pegun awam yang telah dihoskan oleh YouTube pada CDNnya—bukan fail video. Anda menampal pautan, alat tersebut menyemak saiz yang wujud dan anda pratonton atau menyimpan fail sebenar yang terbesar. 11tik ialah Pengekstrak Thumbnail YouTube sahaja; perkataan downloader dan grabber adalah alias untuk produk ini, bukan aplikasi berasingan.",
+      "answerHtml": "Nama-nama tersebut menggambarkan jenis alat pelayar yang sama: alat yang mengambil imej pegun awam yang telah dihoskan oleh YouTube pada CDNnya—bukan fail video. Anda menampal pautan, alat tersebut menyemak saiz yang wujud dan anda pratonton atau menyimpan fail sebenar yang terbesar. 11tik ialah Pengekstrak Thumbnail YouTube sahaja; perkataan downloader dan grabber adalah alias untuk produk ini, bukan aplikasi berasingan."
     },
     {
-      "question": "URL YouTube manakah yang disokong oleh 11tik?",
-      "answer": "Tampal pautan tontonan awam, URL Siaran Pendek, halaman siaran langsung atau tayangan perdana atau pautan pendek youtu.be. Alat ini membaca ID video daripada laluan dan mencari fail awam pada i.ytimg.com. URL saluran dan senarai main sahaja tidak disokong. Untuk anatomi URL dan senarai penuh corak, lihat panduan URL lakaran kecil.",
-      "answerHtml": "Tampal pautan tontonan awam, URL Siaran Pendek, halaman siaran langsung atau tayangan perdana atau pautan pendek youtu.be. Alat ini membaca ID video daripada laluan dan mencari fail awam pada i.ytimg.com. URL saluran dan senarai main sahaja tidak disokong. Untuk anatomi URL dan senarai penuh corak, lihat<a href=\"https://ms.11tik.com/l/ms/youtube-thumbnail-url\">panduan URL lakaran kecil</a>."
+      "question": "Bolehkah saya memuat turun lakaran kecil YouTube daripada URL?",
+      "answer": "Ya. Tampal pautan tontonan awam, URL Siaran Pendek, halaman siaran langsung atau tayangan perdana, benamkan, pautan pendek youtu.be atau ID video 11 aksara kosong. Alat ini membaca ID video dan mencari fail awam pada i.ytimg.com. URL saluran dan senarai main sahaja tidak disokong. Untuk anatomi URL dan senarai penuh corak, lihat panduan URL lakaran kecil.",
+      "answerHtml": "Ya. Tampal pautan tontonan awam, URL Siaran Pendek, halaman siaran langsung atau tayangan perdana, benamkan, pautan pendek youtu.be atau ID video 11 aksara kosong. Alat ini membaca ID video dan mencari fail awam pada i.ytimg.com. URL saluran dan senarai main sahaja tidak disokong. Untuk anatomi URL dan senarai penuh corak, lihat<a href=\"https://www.11tik.com/youtube-thumbnail-url\">panduan URL lakaran kecil</a>."
     },
     {
       "question": "Adakah 11tik memuat naik lakaran kecil atau video saya?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Apa yang berlaku apabila kualiti lakaran kecil tertinggi tidak tersedia?",
-      "answer": "11tik meminta setiap nama fail awam dan hanya menyimpan respons yang mengembalikan imej sebenar—tiada URL maxres yang diteka. Jika maxresdefault tiada, alat tersebut akan menunjukkan saiz terbesar seterusnya yang sebenarnya dimuatkan, seperti hq720 atau sddefault. Itulah maksimum yang jujur ​​untuk video tersebut. Untuk mengetahui sebab maxres 404s dan cara sandaran berfungsi, baca panduan maxresdefault.",
-      "answerHtml": "11tik meminta setiap nama fail awam dan hanya menyimpan respons yang mengembalikan imej sebenar—tiada URL maxres yang diteka. Jika maxresdefault tiada, alat tersebut akan menunjukkan saiz terbesar seterusnya yang sebenarnya dimuatkan, seperti hq720 atau sddefault. Itulah maksimum yang jujur ​​untuk video tersebut. Untuk mengetahui sebab maxres 404s dan cara sandaran berfungsi, baca<a href=\"https://ms.11tik.com/l/ms/what-is-maxresdefaultjpg-when-youtube\">panduan lalai maksres</a>."
+      "answer": "11tik meminta setiap nama fail awam dan hanya menyimpan respons yang mengembalikan imej sebenar—tiada URL maxres yang diteka. Jika maxresdefault tiada, alat tersebut akan menunjukkan saiz terbesar seterusnya yang sebenarnya dimuatkan, seperti hq720 atau sddefault. Itulah maksimum yang jujur ​​untuk video tersebut. Ukuran sampel adalah dalam kajian saiz 300 video. Untuk sebab maxres 404s, baca panduan maxresdefault.",
+      "answerHtml": "11tik meminta setiap nama fail awam dan hanya menyimpan respons yang mengembalikan imej sebenar—tiada URL maxres yang diteka. Jika maxresdefault tiada, alat tersebut akan menunjukkan saiz terbesar seterusnya yang sebenarnya dimuatkan, seperti hq720 atau sddefault. Itulah maksimum yang jujur ​​untuk video tersebut. Ukuran sampel adalah dalam<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Kajian saiz 300 video</a>Untuk sebab maxres 404s, bacalah<a href=\"https://ms.11tik.com/l/ms/what-is-maxresdefaultjpg-when-youtube\">panduan lalai maksres</a>."
+    },
+    {
+      "question": "Bolehkah saya memproses berbilang URL lakaran kecil YouTube?",
+      "answer": "Ya. Pengekstrak Imej Kecil YouTube yang sama merangkumi mod Pukal: tampal sehingga 50 URL awam (satu setiap baris), kemudian muat turun setiap URL terbaik, ZIP set berkualiti tinggi atau eksport CSV. Pukal ialah aliran kerja produk ini, bukan alat muat turun pukal yang berasingan. Butiran: panduan muat turun kelompok.",
+      "answerHtml": "Ya. Pengekstrak Imej Kecil YouTube yang sama merangkumi mod Pukal: tampal sehingga 50 URL awam (satu setiap baris), kemudian muat turun setiap URL terbaik, ZIP set berkualiti tinggi atau eksport CSV. Pukal ialah aliran kerja produk ini, bukan alat pemuat turun pukal yang berasingan. Butiran:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">panduan muat turun kelompok</a>."
+    },
+    {
+      "question": "Adakah 11tik memuat turun video atau audio YouTube?",
+      "answer": "Tidak. 11tik hanya berfungsi dengan imej kecil awam yang telah dihoskan oleh YouTube. Ia tidak memuat turun fail video atau audio, menyalin bingkai daripada main balik atau membuka kunci strim. Ia juga tidak boleh memintas pembungkusan peribadi atau terhad umur apabila tiada fail imej kecil awam tersedia.",
+      "answerHtml": "Tidak. 11tik hanya berfungsi dengan imej kecil awam yang telah dihoskan oleh YouTube. Ia tidak memuat turun fail video atau audio, menyalin bingkai daripada main balik atau membuka kunci strim. Ia juga tidak boleh memintas pembungkusan peribadi atau terhad umur apabila tiada fail imej kecil awam tersedia."
+    },
+    {
+      "question": "Adakah terdapat Alat Tambahan Firefox 11tik rasmi?",
+      "answer": "Ya. 11tik untuk Firefox boleh mengekstrak lakaran kecil awam terbaik yang tersedia daripada tab YouTube semasa. Ia adalah produk yang sama seperti alat laman web; laman rasmi kekal www.11tik.com. Penyenaraian tidak mengubah apa yang boleh atau tidak boleh diambil oleh pengekstrak.",
+      "answerHtml": "Ya.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik untuk Firefox</a>boleh mengekstrak lakaran kecil awam terbaik yang tersedia daripada tab YouTube semasa. Ia adalah produk yang sama seperti alat laman web; laman rasmi kekal<a href=\"https://www.11tik.com/\">www.11tik.com</a>Penyenaraian itu tidak mengubah apa yang boleh atau tidak boleh diambil oleh pengekstrak."
     }
   ],
   "articleId": "home-faq"

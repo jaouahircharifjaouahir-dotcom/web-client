@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "fi",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "Mikä on 11tik",
+  "entityIntro": "11tik on YouTube Thumbnail Extractorin takana oleva tuotemerkki. Se on ilmainen selaintyökalu julkisten YouTube-pikkukuvien lataamiseen. Sanat \"extractor\", \"downloader\" ja \"grabber\" viittaavat kaikki samaan tuotteeseen, eivät erillisiin työkaluihin.",
+  "entityDoesHeading": "Mitä 11tik tekee",
+  "entityDoes1": "Poimii julkiset YouTube-pikkukuvat tuettujen videoiden URL-osoitteista ja tunnuksista – mukaan lukien katselu-, lyhytvideo-, live-, youtu.be- ja upotuslinkit",
+  "entityDoes2": "Tarkistaa, mitkä julkiset pikkukuvien koot todellisuudessa latautuvat (mukaan lukien YouTuben julkaisemien pikkukuvien enimmäiskoot), ja antaa sitten sinun ladata tai kopioida kuvan URL-osoitteen.",
+  "entityDoes3": "Toimii kokonaan selaimessasi (asiakaspuolella), ja siinä on joukkotila jopa 50 julkiselle URL-osoitteelle sekä ZIP- ja CSV-vienti.",
+  "entityDoesNotHeading": "Mitä 11tik ei tee",
+  "entityDoesNot1": "Lataa YouTube-video tai -ääni",
+  "entityDoesNot2": "Ohita yksityinen tai ikärajoitettu sisältö",
+  "entityDoesNot3": "Luo tai suunnittele pikkukuvia",
+  "entityDoesNot4": "Poimi TikTokista, Instagramista, pelkkien kanavien tai soittolistojen URL-osoitteista tai muista ei-tuetuista alustoista",
+  "articleId": "home-entity"
+}

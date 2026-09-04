@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "nl",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "Wat 11tik is",
+  "entityIntro": "11tik is het merk achter de YouTube Thumbnail Extractor, een gratis browsertool voor openbare YouTube-thumbnailafbeeldingen. De termen Extractor, Downloader en Grabber verwijzen allemaal naar hetzelfde product, niet naar afzonderlijke tools.",
+  "entityDoesHeading": "Wat 11tik doet",
+  "entityDoes1": "Extraheert openbare YouTube-thumbnailafbeeldingen van ondersteunde video-URL's en -ID's, waaronder links naar video's die bekeken worden, Shorts, livevideo's, youtu.be en ingesloten video's.",
+  "entityDoes2": "Controleert welke openbare miniatuurformaten daadwerkelijk worden geladen (inclusief de maximale resolutie wanneer YouTube deze publiceert), waarna je de afbeeldings-URL kunt downloaden of kopiëren.",
+  "entityDoes3": "Werkt volledig in uw browser (client-side), met bulkmodus voor maximaal 50 openbare URL's plus ZIP- en CSV-export.",
+  "entityDoesNotHeading": "Wat 11tik niet doet",
+  "entityDoesNot1": "Download een YouTube-video of -audio.",
+  "entityDoesNot2": "Omzeil privé- of leeftijdsbeperkte inhoud.",
+  "entityDoesNot3": "Miniatuurafbeeldingen genereren of ontwerpen",
+  "entityDoesNot4": "Extraheer content van TikTok, Instagram, kanaal- of afspeellijst-URL's, of andere niet-ondersteunde platforms.",
+  "articleId": "home-entity"
+}

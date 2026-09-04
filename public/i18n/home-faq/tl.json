@@ -2,24 +2,36 @@
   "heading": "Mga Madalas Itanong",
   "items": [
     {
-      "question": "Ano ang isang pang-extract ng thumbnail ng YouTube?",
-      "answerHtml": "Ang thumbnail extractor ay isang browser tool na kumukuha ng mga pampublikong still image na hino-host na ng YouTube sa CDN nito—hindi ang video file. Magpe-paste ka ng link, susuriin ng tool kung aling mga laki ang umiiral, at ipi-preview o ise-save mo ang pinakamalaking totoong file. Ang 11tik ay isang extractor lamang; hindi nito niri-rip ang mga frame mula sa playback o nangangako ng mga laki na hindi kailanman nai-publish ng YouTube."
+      "question": "Ano ang YouTube thumbnail extractor, downloader, o grabber?",
+      "answerHtml": "Inilalarawan ng mga pangalang iyon ang parehong uri ng tool sa browser: isa na kumukuha ng mga pampublikong larawan na naka-host na sa YouTube sa CDN nito—hindi ang video file. Magpe-paste ka ng link, susuriin ng tool kung aling mga laki ang umiiral, at ipi-preview o ise-save mo ang pinakamalaking totoong file. Ang 11tik ay ang YouTube Thumbnail Extractor lamang; ang mga salita para sa downloader at grabber ay mga alias para sa produktong ito, hindi magkakahiwalay na app."
     },
     {
-      "question": "Aling mga URL sa YouTube ang sinusuportahan ng 11tik?",
-      "answerHtml": "Mag-paste ng pampublikong link sa panonood, URL ng Shorts, live o premiere page, o maikling link na youtu.be. Binabasa ng tool ang video ID mula sa path at hinahanap ang mga pampublikong file sa i.ytimg.com. Hindi sinusuportahan ang mga URL para sa channel at playlist lamang. Para sa anatomiya ng URL at ang kumpletong listahan ng mga pattern, tingnan ang<a href=\"https://tl.11tik.com/l/tl/2026/08/youtube-thumbnail-url.html\">gabay sa URL ng thumbnail</a>."
+      "question": "Maaari ba akong mag-download ng thumbnail ng YouTube mula sa isang URL?",
+      "answerHtml": "Oo. Mag-paste ng pampublikong link sa panonood, URL ng Shorts, live o premiere page, embed, maikling link na youtu.be, o isang simpleng 11-character na video ID. Binabasa ng tool ang video ID at hinahanap ang mga pampublikong file sa i.ytimg.com. Hindi sinusuportahan ang mga URL para sa channel at playlist lamang. Para sa anatomiya ng URL at ang kumpletong listahan ng mga pattern, tingnan ang<a href=\"https://www.11tik.com/youtube-thumbnail-url\">gabay sa URL ng thumbnail</a>."
     },
     {
-      "question": "Ina-upload ba ng 11tik ang aking thumbnail o video?",
+      "question": "Ina-upload ba ni 11tik ang aking thumbnail o video?",
       "answerHtml": "Hindi. Ang mga naka-paste na URL ay pinoproseso sa iyong browser. Ang 11tik ay hindi nangangailangan ng account, hindi nag-iimbak ng mga orihinal na thumbnail file sa mga server nito, at hindi ina-upload ang iyong video. Ang mga imahe ay kinukuha mula sa pampublikong CDN ng YouTube sa parehong session. Ang opsyonal na lokal na kasaysayan ay mananatili sa iyong device hanggang sa i-clear mo ito."
     },
     {
       "question": "Maaari ba akong mag-download ng mga thumbnail mula sa YouTube Shorts?",
-      "answerHtml": "Oo. Gumagamit ang mga link ng Shorts ng parehong pampublikong image host gaya ng mga regular na video, kaya maaari kang mag-paste ng URL na /shorts/ at i-download ang pinakamahusay na still na umiiral. Maaaring magmukhang mas malapad ang preview kaysa sa patayong clip na iyong pinanood dahil nag-iimbak ang YouTube ng still na landscape. Ang mga pribado o naka-gated na Shorts na walang pampublikong thumb ay hindi magbabalik ng file. Tingnan ang<a href=\"https://tl.11tik.com/l/tl/2026/08/youtube-shorts-thumbnail-download.html\">Gabay sa thumbnail ng shorts</a>para sa sunud-sunod na tulong."
+      "answerHtml": "Oo. Gumagamit ang mga link ng Shorts ng parehong pampublikong host ng larawan gaya ng mga regular na video, kaya maaari kang mag-paste ng URL na /shorts/ at i-download ang pinakamahusay na mga litrato na umiiral. Maaaring magmukhang mas malapad ang preview kaysa sa patayong clip na iyong pinanood dahil nag-iimbak ang YouTube ng mga litrato ng landscape. Ang mga pribado o naka-gated na Shorts na walang pampublikong thumb ay hindi magbabalik ng file. Tingnan ang<a href=\"https://tl.11tik.com/l/tl/youtube-shorts-thumbnail-download\">Gabay sa thumbnail ng shorts</a>para sa sunud-sunod na tulong."
     },
     {
       "question": "Ano ang mangyayari kapag hindi magagamit ang pinakamataas na kalidad ng thumbnail?",
-      "answerHtml": "Hinihiling ng 11tik ang bawat pampublikong pangalan ng file at pinapanatili lamang ang mga tugon na nagbabalik ng isang totoong imahe—walang nahulaang mga URL ng maxres. Kung nawawala ang maxresdefault, ipapakita ng tool ang susunod na pinakamalaking laki na aktwal na naglo-load, tulad ng hq720 o sddefault. Iyan ang tapat na maximum para sa video na iyon. Para sa kung bakit gumagana ang maxres 404s at kung paano gumagana ang mga fallback, basahin ang<a href=\"https://tl.11tik.com/l/tl/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">gabay sa default na maxres</a>."
+      "answerHtml": "Hinihiling ng 11tik ang bawat pampublikong pangalan ng file at pinapanatili lamang ang mga tugon na nagbabalik ng isang totoong imahe—walang nahulaang mga URL ng maxres. Kung nawawala ang maxresdefault, ipapakita ng tool ang susunod na pinakamalaking laki na aktwal na naglo-load, tulad ng hq720 o sddefault. Iyon ang tapat na maximum para sa video na iyon. Ang mga sukat ng sample ay nasa<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Pag-aaral na may sukat na 300 video</a>Para sa mga dahilan kung bakit ginagamit ang maxres 404s, basahin ang<a href=\"https://tl.11tik.com/l/tl/what-is-maxresdefaultjpg-when-youtube\">gabay sa default na maxres</a>."
+    },
+    {
+      "question": "Maaari ba akong magproseso ng maraming URL ng thumbnail sa YouTube?",
+      "answerHtml": "Oo. Kasama sa parehong YouTube Thumbnail Extractor ang Bulk mode: mag-paste ng hanggang 50 pampublikong URL (isa bawat linya), pagkatapos ay i-download ang bawat isa sa mga pinakamahusay na URL, i-ZIP ang pinakamataas na kalidad na set, o i-export ang CSV. Ang bulk ay isang daloy ng trabaho ng produktong ito, hindi isang hiwalay na tool sa bulk-downloader. Mga Detalye:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">gabay sa pag-download nang maramihan</a>."
+    },
+    {
+      "question": "Nagda-download ba ng mga video o audio sa YouTube si 11tik?",
+      "answerHtml": "Hindi. Gumagana lamang ang 11tik sa mga pampublikong thumbnail still na hino-host na ng YouTube. Hindi ito nagda-download ng mga video o audio file, nagri-rip ng mga frame mula sa playback, o nag-a-unlock ng mga stream. Hindi rin nito maaaring i-bypass ang pribado o age-restricted packaging kapag walang available na pampublikong thumbnail file."
+    },
+    {
+      "question": "Mayroon bang opisyal na 11tik Firefox Add-on?",
+      "answerHtml": "Oo.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik para sa Firefox</a>maaaring kunin ang pinakamahusay na pampublikong thumbnail na magagamit mula sa kasalukuyang tab ng YouTube. Ito ay ang parehong produkto ng tool ng website; ang opisyal na site ay nananatili<a href=\"https://www.11tik.com/\">www.11tik.com</a>Hindi binabago ng listahan kung ano ang kaya o hindi kayang makuha ng extractor."
     }
   ]
 }

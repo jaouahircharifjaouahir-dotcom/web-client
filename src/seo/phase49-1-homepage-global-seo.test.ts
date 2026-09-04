@@ -126,9 +126,9 @@ describe("Phase 49.1 FAQ coverage", () => {
     }
   });
   it("homeFaqDocForLocale en", () => expect(homeFaqDocForLocale("en")?.items.length).toBe(8));
-  it("homeFaqDocForLocale fr", () => expect(homeFaqDocForLocale("fr")?.items.length).toBe(5));
-  it("homeFaqDocForLocale ar", () => expect(homeFaqDocForLocale("ar")?.items.length).toBe(5));
-  it("homeFaqDocForLocale ja", () => expect(homeFaqDocForLocale("ja")?.items.length).toBe(5));
+  it("homeFaqDocForLocale fr", () => expect(homeFaqDocForLocale("fr")?.items.length).toBe(8));
+  it("homeFaqDocForLocale ar", () => expect(homeFaqDocForLocale("ar")?.items.length).toBe(8));
+  it("homeFaqDocForLocale ja", () => expect(homeFaqDocForLocale("ja")?.items.length).toBe(8));
   it("auditFaqLocales all ready", () => {
     expect(auditFaqLocales().every((r) => r.status === "ready")).toBe(true);
   });
@@ -186,8 +186,8 @@ describe("Phase 49.1 static shell FAQ", () => {
   it("renderHomeFaqShellHtml ar non-empty", () => {
     expect(renderHomeFaqShellHtml("ar").length).toBeGreaterThan(200);
   });
-  it("shell has 5 h3 per locale sample", () => {
-    expect((renderHomeFaqShellHtml("de").match(/<h3/g) || []).length).toBe(5);
+  it("shell has 8 h3 per locale sample", () => {
+    expect((renderHomeFaqShellHtml("de").match(/<h3/g) || []).length).toBe(8);
   });
   it("built EN home has FAQ section", () => {
     expect(loadHomeHtml("en")?.html).toMatch(/<section class="yte-home-faq"/);

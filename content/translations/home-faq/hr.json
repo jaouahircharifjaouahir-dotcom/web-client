@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "hr",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Često postavljana pitanja",
   "faq": [
     {
-      "question": "Što je alat za izdvajanje sličica za YouTube?",
-      "answer": "Alat za izdvajanje sličica je alat preglednika koji dohvaća javne fotografije koje YouTube već hostira na svojoj CDN mreži, a ne video datoteku. Zalijepite poveznicu, alat provjerava koje veličine postoje i pregledavate ili spremate najveću stvarnu datoteku. 11tik je samo alat za izdvajanje; ne izdvaja kadrove iz reprodukcije niti obećava veličine koje YouTube nikada nije objavio.",
-      "answerHtml": "Alat za izdvajanje sličica je alat preglednika koji dohvaća javne fotografije koje YouTube već hostira na svojoj CDN mreži, a ne video datoteku. Zalijepite poveznicu, alat provjerava koje veličine postoje i pregledavate ili spremate najveću stvarnu datoteku. 11tik je samo alat za izdvajanje; ne izdvaja kadrove iz reprodukcije niti obećava veličine koje YouTube nikada nije objavio."
+      "question": "Što je program za ekstrakciju, preuzimanje ili grabber sličica za YouTube?",
+      "answer": "Ta imena opisuju istu vrstu alata za preglednik: onaj koji dohvaća javne fotografije koje YouTube već hostira na svojoj CDN mreži, a ne video datoteku. Zalijepite poveznicu, alat provjerava koje veličine postoje i pregledavate ili spremate najveću stvarnu datoteku. 11tik je samo alat za izvlačenje sličica s YouTubea; termini downloader i grabber su pseudonimi za ovaj proizvod, a ne zasebne aplikacije.",
+      "answerHtml": "Ta imena opisuju istu vrstu alata za preglednik: onaj koji dohvaća javne fotografije koje YouTube već hostira na svojoj CDN mreži, a ne video datoteku. Zalijepite poveznicu, alat provjerava koje veličine postoje i pregledavate ili spremate najveću stvarnu datoteku. 11tik je samo alat za izvlačenje sličica s YouTubea; termini downloader i grabber su pseudonimi za ovaj proizvod, a ne zasebne aplikacije."
     },
     {
-      "question": "Koje YouTube URL-ove podržava 11tik?",
-      "answer": "Zalijepite javnu poveznicu za gledanje, URL kratkih videozapisa, stranicu uživo ili premijere ili kratku poveznicu youtu.be. Alat čita ID videozapisa s puta i pretražuje javne datoteke na i.ytimg.com. URL-ovi kanala i popisa za reprodukciju nisu podržani. Za anatomiju URL-ova i potpuni popis uzoraka pogledajte vodič za URL-ove minijatura.",
-      "answerHtml": "Zalijepite javnu poveznicu za gledanje, URL kratkih videozapisa, stranicu uživo ili premijere ili kratku poveznicu youtu.be. Alat čita ID videozapisa s puta i pretražuje javne datoteke na i.ytimg.com. URL-ovi kanala i popisa za reprodukciju nisu podržani. Za anatomiju URL-ova i potpuni popis uzoraka pogledajte<a href=\"https://hr.11tik.com/l/hr/youtube-thumbnail-url\">Vodič za URL-ove minijatura</a>."
+      "question": "Mogu li preuzeti YouTube minijaturu s URL-a?",
+      "answer": "Da. Zalijepite javnu poveznicu za gledanje, URL kratkih videozapisa, stranicu uživo ili premijere, ugrađenu poveznicu, kratku poveznicu youtu.be ili goli ID videozapisa od 11 znakova. Alat čita ID videozapisa i pretražuje javne datoteke na i.ytimg.com. URL-ovi kanala i popisa za reprodukciju nisu podržani. Za anatomiju URL-ova i potpuni popis uzoraka pogledajte vodič za URL-ove minijatura.",
+      "answerHtml": "Da. Zalijepite javnu poveznicu za gledanje, URL kratkih videozapisa, stranicu uživo ili premijere, ugrađeni sadržaj, kratku poveznicu youtu.be ili samo 11-znakovni ID videozapisa. Alat čita ID videozapisa i pretražuje javne datoteke na i.ytimg.com. URL-ovi kanala i popisa za reprodukciju nisu podržani. Za anatomiju URL-ova i potpuni popis uzoraka pogledajte<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Vodič za URL-ove minijatura</a>."
     },
     {
       "question": "Prenosi li 11tik moju sličicu ili videozapis?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Što se događa kada najviša kvaliteta sličica nije dostupna?",
-      "answer": "11tik zahtijeva svako javno ime datoteke i zadržava samo odgovore koji vraćaju stvarnu sliku - bez nagađanja maxres URL-ova. Ako maxresdefault nedostaje, alat prikazuje sljedeću najveću veličinu koja se zapravo učitava, kao što je hq720 ili sddefault. To je iskreni maksimum za taj videozapis. Za razloge maxres 404 i kako funkcioniraju rezervne opcije, pročitajte vodič maxresdefault.",
-      "answerHtml": "11tik zahtijeva svako javno ime datoteke i zadržava samo odgovore koji vraćaju stvarnu sliku - bez nagađanja maxres URL-ova. Ako maxresdefault nedostaje, alat prikazuje sljedeću najveću veličinu koja se zapravo učitava, kao što je hq720 ili sddefault. To je iskreni maksimum za taj videozapis. Za razloge maxres 404 i kako funkcioniraju rezervne opcije, pročitajte<a href=\"https://hr.11tik.com/l/hr/what-is-maxresdefaultjpg-when-youtube\">vodič za maxresdefault</a>."
+      "answer": "11tik zahtijeva svako javno ime datoteke i zadržava samo odgovore koji vraćaju stvarnu sliku - bez nagađanja maxres URL-ova. Ako maxresdefault nedostaje, alat prikazuje sljedeću najveću veličinu koja se zapravo učitava, kao što je hq720 ili sddefault. To je iskreni maksimum za taj videozapis. Primjeri mjerenja nalaze se u studiji veličine 300 videozapisa. Zašto maxres 404, pročitajte vodič maxresdefault.",
+      "answerHtml": "11tik zahtijeva svako javno ime datoteke i zadržava samo odgovore koji vraćaju stvarnu sliku - bez nagađanja URL-ova maxres. Ako maxresdefault nedostaje, alat prikazuje sljedeću najveću veličinu koja se zapravo učitava, kao što je hq720 ili sddefault. To je iskreni maksimum za taj videozapis. Primjeri mjerenja nalaze se u<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studija veličine 300 videozapisa</a>Za razloge korištenja Maxres 404, pročitajte<a href=\"https://hr.11tik.com/l/hr/what-is-maxresdefaultjpg-when-youtube\">vodič za maxresdefault</a>."
+    },
+    {
+      "question": "Mogu li obraditi više URL-ova minijatura za YouTube?",
+      "answer": "Da. Isti alat za izdvajanje sličica s YouTubea uključuje skupni način rada: zalijepite do 50 javnih URL-ova (jedan po retku), a zatim preuzmite svaku najbolju sliku, ZIP datoteku najviše kvalitete ili izvezite CSV. Skupni način rada je tijek rada ovog proizvoda, a ne zaseban alat za skupno preuzimanje. Detalji: vodič za skupno preuzimanje.",
+      "answerHtml": "Da. Isti alat za izdvajanje sličica s YouTubea uključuje i skupni način rada: zalijepite do 50 javnih URL-ova (jedan po retku), a zatim preuzmite svaku najbolju sliku, ZIP datoteku najviše kvalitete ili izvezite CSV. Skupni način rada je tijek rada ovog proizvoda, a ne zaseban alat za skupno preuzimanje. Detalji:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">vodič za preuzimanje u serijama</a>."
+    },
+    {
+      "question": "Preuzima li 11tik YouTube videozapise ili audiozapise?",
+      "answer": "Ne. 11tik radi samo s javnim minijaturama koje YouTube već hostira. Ne preuzima video ili audio datoteke, ne ripa kadrove iz reprodukcije niti otključava streamove. Također ne može zaobići privatno ili dobno ograničeno pakiranje kada nije dostupna javna datoteka minijature.",
+      "answerHtml": "Ne. 11tik radi samo s javnim minijaturama koje YouTube već hostira. Ne preuzima video ili audio datoteke, ne ripa kadrove iz reprodukcije niti otključava streamove. Također ne može zaobići privatno ili dobno ograničeno pakiranje kada nije dostupna javna datoteka minijature."
+    },
+    {
+      "question": "Postoji li službeni 11tik dodatak za Firefox?",
+      "answer": "Da. 11tik za Firefox može izdvojiti najbolju dostupnu javnu sličicu s trenutne YouTube kartice. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje www.11tik.com. Popis ne mijenja što alat za izdvajanje može ili ne može dohvatiti.",
+      "answerHtml": "Da.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik za Firefox</a>može izdvojiti najbolju dostupnu javnu minijaturu s trenutne YouTube kartice. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje<a href=\"https://www.11tik.com/\">www.11tik.com</a>Popis ne mijenja što ekstraktor može ili ne može dohvatiti."
     }
   ],
   "articleId": "home-faq"

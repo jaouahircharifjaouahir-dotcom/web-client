@@ -1,0 +1,34 @@
+{
+  "contentId": "home-caps-hubs",
+  "locale": "no",
+  "status": "ready",
+  "sourceHash": "phase-mhps-caps-hubs-v1",
+  "capsHeading": "Hva denne ekstraktoren dekker",
+  "capsItems": [
+    {
+      "html": "Last ned eller hent offentlige YouTube-miniatyrbilder fra en støttet video-URL (ett produkt – ikke separate nedlastings- eller hentingsverktøy)."
+    },
+    {
+      "html": "Massemodus for opptil<strong>50</strong>URL-er per kjøring, med ZIP-fil av stillbilder av høyeste kvalitet og CSV-eksport – se<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guide til batchnedlasting</a>."
+    },
+    {
+      "html": "Validerer hvilke offentlige størrelser som faktisk lastes inn for lenker til visning og Shorts, inkludert ærlige maksverdier når YouTube publiserer det."
+    },
+    {
+      "html": "Valgfri<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik for Firefox</a>for den nåværende YouTube-fanen; nettstedverktøyet forblir på<a href=\"https://www.11tik.com/\">www.11tik.com</a>."
+    }
+  ],
+  "hubsHeading": "Veiledninger som støtter dette verktøyet",
+  "hubsItems": [
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Lagre et offentlig YouTube-miniatyrbilde trinn for trinn</a>— Gjennomgang av én URL, og gå deretter tilbake hit for å pakke ut."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Arbeid gjennom flere miniatyr-URL-er</a>– Opptil 50 offentlige lenker med ZIP- og CSV-eksport i massemodus."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Målte størrelser på tvers av 300 videoer</a>— Utvalgsbasert bevis på dimensjoner og tilgjengelighet av maksimale verdier."
+    }
+  ],
+  "articleId": "home-caps-hubs"
+}

@@ -2,12 +2,12 @@
   "heading": "Häufig gestellte Fragen",
   "items": [
     {
-      "question": "Was ist ein YouTube-Thumbnail-Extraktor?",
-      "answerHtml": "Ein Thumbnail-Extraktor ist ein Browser-Tool, das die öffentlich zugänglichen Standbilder abruft, die YouTube bereits auf seinem CDN hostet – nicht die Videodatei. Sie fügen einen Link ein, das Tool prüft die verfügbaren Größen, und Sie können die größte verfügbare Datei in der Vorschau anzeigen oder speichern. 11tik ist lediglich ein Extraktor; er extrahiert keine Einzelbilder aus der Wiedergabe und verspricht keine Größen, die YouTube nie veröffentlicht hat."
+      "question": "Was ist ein YouTube-Thumbnail-Extraktor, -Downloader oder -Grabber?",
+      "answerHtml": "Diese Bezeichnungen beschreiben ein und dasselbe Browser-Tool: Es lädt öffentliche Standbilder herunter, die YouTube bereits auf seinem CDN hostet – nicht die Videodatei. Sie fügen einen Link ein, das Tool prüft die verfügbaren Größen und Sie können die größte Datei in der Vorschau anzeigen oder speichern. 11tik ist ausschließlich der YouTube Thumbnail Extractor; die Bezeichnungen „Downloader“ und „Grabber“ sind Synonyme für dieses Produkt und keine separaten Apps."
     },
     {
-      "question": "Welche YouTube-URLs unterstützt 11tik?",
-      "answerHtml": "Fügen Sie einen öffentlichen Wiedergabelink, eine Shorts-URL, eine Live- oder Premiere-Seite oder einen youtu.be-Shortlink ein. Das Tool liest die Video-ID aus dem Pfad und sucht nach öffentlichen Dateien auf i.ytimg.com. Kanal- und Playlist-URLs werden nicht unterstützt. Informationen zum URL-Aufbau und eine vollständige Liste der Muster finden Sie unter [Link einfügen].<a href=\"https://de.11tik.com/l/de/2026/08/youtube-thumbnail-url.html\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Die"
+      "question": "Kann ich ein YouTube-Thumbnail von einer URL herunterladen?",
+      "answerHtml": "Ja. Fügen Sie einen öffentlichen Wiedergabelink, eine Shorts-URL, eine Live- oder Premiere-Seite, einen eingebetteten Link, einen youtu.be-Kurzlink oder eine 11-stellige Video-ID ein. Das Tool liest die Video-ID und sucht nach öffentlichen Dateien auf i.ytimg.com. Kanal- und Playlist-URLs werden nicht unterstützt. Informationen zum URL-Aufbau und eine vollständige Liste der Muster finden Sie unter [Link einfügen].<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Anleitung zur URL-Übersicht für Miniaturansichten</a>Die"
     },
     {
       "question": "Lädt 11tik mein Vorschaubild oder mein Video hoch?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Kann ich Vorschaubilder von YouTube Shorts herunterladen?",
-      "answerHtml": "Ja. Shorts-Links verwenden dieselben öffentlichen Bildhosts wie reguläre Videos. Sie können also eine /shorts/-URL einfügen und das beste verfügbare Standbild herunterladen. Die Vorschau kann breiter erscheinen als der vertikale Clip, den Sie angesehen haben, da YouTube ein Standbild im Querformat speichert. Private oder altersbeschränkte Shorts ohne öffentliches Vorschaubild liefern keine Datei. Siehe die<a href=\"https://de.11tik.com/l/de/2026/08/youtube-shorts-thumbnail-download.html\">Kurz-Thumbnail-Leitfaden</a>für eine schrittweise Anleitung."
+      "answerHtml": "Ja. Shorts-Links verwenden dieselben öffentlichen Bildhosts wie reguläre Videos. Sie können also eine /shorts/-URL einfügen und das beste verfügbare Standbild herunterladen. Die Vorschau kann breiter erscheinen als der vertikale Clip, den Sie angesehen haben, da YouTube ein Standbild im Querformat speichert. Private oder altersbeschränkte Shorts ohne öffentliches Vorschaubild liefern keine Datei. Siehe die<a href=\"https://de.11tik.com/l/de/youtube-shorts-thumbnail-download\">Kurz-Thumbnail-Leitfaden</a>für eine schrittweise Anleitung."
     },
     {
       "question": "Was passiert, wenn die höchste Vorschaubildqualität nicht verfügbar ist?",
-      "answerHtml": "11tik fragt jeden öffentlichen Dateinamen ab und speichert nur Antworten, die ein tatsächliches Bild zurückgeben – keine URLs mit geschätzter maximaler Auflösung. Falls maxresdefault fehlt, zeigt das Tool die nächstgrößere Auflösung an, die tatsächlich geladen wird, z. B. hq720 oder sddefault. Dies ist die tatsächliche maximale Auflösung für dieses Video. Informationen zu den Ursachen von 404-Fehlern bei maxres und zur Funktionsweise von Fallback-Lösungen finden Sie in der Dokumentation.<a href=\"https://de.11tik.com/l/de/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-Leitfaden</a>Die"
+      "answerHtml": "11tik fordert jeden öffentlichen Dateinamen an und speichert nur Antworten, die ein tatsächliches Bild liefern – keine URLs mit geschätzter maximaler Auflösung. Falls maxresdefault fehlt, zeigt das Tool die nächstgrößere Auflösung an, die tatsächlich geladen werden kann, z. B. hq720 oder sddefault. Dies ist die tatsächliche Maximalauflösung für dieses Video. Beispielmessungen finden Sie in der Datei.<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studie mit 300 Videos</a>Warum maxres 404s anzeigt, erfahren Sie im folgenden Abschnitt:<a href=\"https://de.11tik.com/l/de/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-Leitfaden</a>Die"
+    },
+    {
+      "question": "Kann ich mehrere YouTube-Thumbnail-URLs verarbeiten?",
+      "answerHtml": "Ja. Der YouTube Thumbnail Extractor bietet auch einen Massenmodus: Fügen Sie bis zu 50 öffentliche URLs ein (eine pro Zeile), laden Sie dann die jeweils besten Bilder herunter, komprimieren Sie die qualitativ hochwertigsten Bilder als ZIP-Datei oder exportieren Sie sie als CSV-Datei. Der Massenmodus ist ein Bestandteil dieses Produkts und kein separates Tool zum Herunterladen von Massenbildern. Details:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Anleitung zum Batch-Download</a>Die"
+    },
+    {
+      "question": "Lädt 11tik YouTube-Videos oder -Audios herunter?",
+      "answerHtml": "Nein. 11tik funktioniert nur mit öffentlichen Vorschaubildern, die YouTube bereits hostet. Es lädt keine Video- oder Audiodateien herunter, extrahiert keine Einzelbilder aus der Wiedergabe und entsperrt keine Streams. Auch kann es private oder altersbeschränkte Inhalte nicht umgehen, wenn kein öffentliches Vorschaubild verfügbar ist."
+    },
+    {
+      "question": "Gibt es ein offizielles Firefox-Add-on für 11tik?",
+      "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik für Firefox</a>Es kann das beste verfügbare öffentliche Vorschaubild aus dem aktuellen YouTube-Tab extrahieren. Es handelt sich um dasselbe Produkt wie das Website-Tool; die offizielle Website bleibt bestehen.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Die Auflistung ändert nichts daran, was der Extraktor abrufen kann oder nicht."
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "hu",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "Mi a 11tik?",
+  "entityIntro": "A 11tik a YouTube Thumbnail Extractor mögött álló márka – egy ingyenes böngészőeszköz nyilvános YouTube-bélyegképekhez. A „kinyerő”, „letöltő” és „grabber” kifejezések mind ugyanarra a termékre vonatkoznak, nem különálló eszközökre.",
+  "entityDoesHeading": "Mit csinál a 11tik?",
+  "entityDoes1": "Nyilvános YouTube-bélyegképeket nyer ki a támogatott videók URL-jeiből és azonosítóiból – beleértve a megtekintési, rövid videók, élő videók, youtu.be és beágyazási linkeket.",
+  "entityDoes2": "Ellenőrzi, hogy mely nyilvános bélyegkép-méretek töltődnek be valójában (beleértve a maximális méreteket is, amikor a YouTube közzéteszi), majd lehetővé teszi a kép URL-jének letöltését vagy másolását.",
+  "entityDoes3": "Teljesen a böngészőben fut (kliensoldalon), tömeges módban akár 50 nyilvános URL-címet is képes exportálni, valamint ZIP és CSV formátumban exportálható.",
+  "entityDoesNotHeading": "Amit a 11tik nem tesz",
+  "entityDoesNot1": "YouTube videó vagy hanganyag letöltése",
+  "entityDoesNot2": "Kerülje a privát vagy korhatáros tartalmakat",
+  "entityDoesNot3": "Miniatűrök létrehozása vagy tervezése",
+  "entityDoesNot4": "Kivonat TikTokról, Instagramról, csak csatorna- vagy lejátszási lista URL-ekről, illetve más nem támogatott platformokról",
+  "articleId": "home-entity"
+}

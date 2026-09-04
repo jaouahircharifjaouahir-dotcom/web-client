@@ -2,12 +2,12 @@
   "heading": "Veelgestelde vragen",
   "items": [
     {
-      "question": "Wat is een tool om YouTube-thumbnails te extraheren?",
-      "answerHtml": "Een thumbnail-extractor is een browsertool die de openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen een extractor; het haalt geen frames uit de weergave en belooft geen formaten die YouTube nooit heeft gepubliceerd."
+      "question": "Wat is een YouTube thumbnail extractor, downloader of grabber?",
+      "answerHtml": "Die namen beschrijven hetzelfde soort browsertool: een tool die openbare stilstaande beelden ophaalt die YouTube al op zijn CDN host – niet het videobestand zelf. Je plakt een link, de tool controleert welke formaten beschikbaar zijn en je kunt het grootste daadwerkelijke bestand bekijken of opslaan. 11tik is alleen die YouTube Thumbnail Extractor; de termen 'downloader' en 'grabber' zijn synoniemen voor dit product, geen aparte apps."
     },
     {
-      "question": "Welke YouTube-URL's ondersteunt 11tik?",
-      "answerHtml": "Plak een link naar een openbare video, een Shorts-URL, een live- of premièrepagina of een youtu.be-shortlink. De tool leest de video-ID uit het pad en zoekt openbare bestanden op i.ytimg.com. URL's die alleen voor kanalen of afspeellijsten bedoeld zijn, worden niet ondersteund. Zie voor de URL-structuur en de volledige lijst met patronen de<a href=\"https://nl.11tik.com/l/nl/2026/08/youtube-thumbnail-url.html\">Handleiding voor miniatuur-URL's</a>."
+      "question": "Kan ik een YouTube-thumbnail downloaden via een URL?",
+      "answerHtml": "Ja. Plak een openbare kijklink, een Shorts-URL, een live- of premièrepagina, een embed, een youtu.be-korte link of een kale video-ID van 11 tekens. De tool leest de video-ID en zoekt openbare bestanden op i.ytimg.com. URL's die alleen naar kanalen of afspeellijsten verwijzen, worden niet ondersteund. Zie voor de URL-structuur en de volledige lijst met patronen de<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Handleiding voor miniatuur-URL's</a>."
     },
     {
       "question": "Uploadt 11tik mijn miniatuurafbeelding of video?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Kan ik miniaturen van YouTube Shorts downloaden?",
-      "answerHtml": "Ja. Shorts-links gebruiken dezelfde openbare afbeeldingshosts als gewone video's, dus je kunt een /shorts/-URL plakken en de beste beschikbare afbeelding downloaden. De preview kan breder lijken dan de verticale clip die je hebt bekeken, omdat YouTube een afbeelding in liggend formaat opslaat. Privé- of leeftijdsbeperkte Shorts zonder openbare thumbnail leveren geen bestand op. Zie de<a href=\"https://nl.11tik.com/l/nl/2026/08/youtube-shorts-thumbnail-download.html\">Miniatuurgids voor korte filmpjes</a>voor stapsgewijze hulp."
+      "answerHtml": "Ja. Shorts-links gebruiken dezelfde openbare afbeeldingshosts als gewone video's, dus je kunt een /shorts/-URL plakken en de beste beschikbare afbeelding downloaden. De preview kan breder lijken dan de verticale clip die je hebt bekeken, omdat YouTube een afbeelding in liggend formaat opslaat. Privé- of leeftijdsbeperkte Shorts zonder openbare thumbnail leveren geen bestand op. Zie de<a href=\"https://nl.11tik.com/l/nl/youtube-shorts-thumbnail-download\">Miniatuurgids voor korte filmpjes</a>voor stapsgewijze hulp."
     },
     {
       "question": "Wat gebeurt er als de hoogste miniatuurkwaliteit niet beschikbaar is?",
-      "answerHtml": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen gegokte maxres-URL's. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is de werkelijke maximale resolutie voor die video. Lees meer over de reden waarom maxres 404-fouten optreden en hoe fallback-mechanismen werken.<a href=\"https://nl.11tik.com/l/nl/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault handleiding</a>."
+      "answerHtml": "11tik vraagt ​​om elke openbare bestandsnaam en bewaart alleen reacties die een echte afbeelding retourneren – geen URL's met gegokte maximale resolutie. Als maxresdefault ontbreekt, toont de tool de eerstvolgende grotere resolutie die daadwerkelijk laadt, zoals hq720 of sddefault. Dat is het werkelijke maximum voor die video. Voorbeelden van metingen zijn te vinden in de<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studie met 300 video's</a>Voor de reden waarom maxres 404s geeft, lees het volgende.<a href=\"https://nl.11tik.com/l/nl/what-is-maxresdefaultjpg-when-youtube\">maxresdefault handleiding</a>."
+    },
+    {
+      "question": "Kan ik meerdere YouTube-thumbnail-URL's verwerken?",
+      "answerHtml": "Ja. Dezelfde YouTube Thumbnail Extractor bevat ook een bulkmodus: plak tot 50 openbare URL's (één per regel) en download vervolgens de beste versie, comprimeer de set met de hoogste kwaliteit of exporteer naar CSV. Bulk is een workflow van dit product, geen aparte tool voor bulkdownloads. Details:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Handleiding voor het批量 downloaden</a>."
+    },
+    {
+      "question": "Downloadt 11tik YouTube-video's of audio?",
+      "answerHtml": "Nee. 11tik werkt alleen met openbare miniatuurafbeeldingen die YouTube al host. Het downloadt geen video- of audiobestanden, haalt geen frames uit de weergave en ontgrendelt geen streams. Het kan ook geen privé- of leeftijdsbeperkte verpakkingen omzeilen als er geen openbaar miniatuurbestand beschikbaar is."
+    },
+    {
+      "question": "Is er een officiële 11tik Firefox-add-on?",
+      "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik voor Firefox</a>Kan de best beschikbare openbare thumbnail uit het huidige YouTube-tabblad extraheren. Het is hetzelfde product als de websitetool; de officiële website blijft behouden.<a href=\"https://www.11tik.com/\">www.11tik.com</a>De lijst verandert niets aan wat de extractor wel of niet kan ophalen."
     }
   ]
 }

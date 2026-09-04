@@ -2,24 +2,36 @@
   "heading": "Câu hỏi thường gặp",
   "items": [
     {
-      "question": "Trình trích xuất hình thu nhỏ YouTube là gì?",
-      "answerHtml": "Trình trích xuất hình thu nhỏ là một công cụ trình duyệt lấy các hình ảnh tĩnh công khai mà YouTube đã lưu trữ trên CDN của mình—chứ không phải tệp video. Bạn dán liên kết, công cụ sẽ kiểm tra kích thước nào tồn tại, và bạn xem trước hoặc lưu tệp thực có kích thước lớn nhất. 11tik chỉ là một trình trích xuất; nó không trích xuất khung hình từ quá trình phát lại hoặc đảm bảo kích thước mà YouTube chưa từng công bố."
+      "question": "Trình trích xuất, tải xuống hoặc lấy ảnh thu nhỏ YouTube là gì?",
+      "answerHtml": "Những cái tên đó mô tả cùng một loại công cụ trình duyệt: một công cụ tìm nạp các hình ảnh tĩnh công khai mà YouTube đã lưu trữ trên CDN của mình—chứ không phải tệp video. Bạn dán liên kết, công cụ kiểm tra xem có kích thước nào tồn tại hay không, và bạn xem trước hoặc lưu tệp thực có kích thước lớn nhất. 11tik chỉ là Trình trích xuất hình thu nhỏ YouTube; từ ngữ trình tải xuống và trình lấy là bí danh cho sản phẩm này, không phải là các ứng dụng riêng biệt."
     },
     {
-      "question": "11tik hỗ trợ những URL YouTube nào?",
-      "answerHtml": "Dán liên kết xem công khai, URL video ngắn, trang phát trực tiếp hoặc trang công chiếu, hoặc liên kết rút gọn youtu.be. Công cụ sẽ đọc ID video từ đường dẫn và tìm kiếm các tệp công khai trên i.ytimg.com. URL chỉ dành cho kênh và danh sách phát không được hỗ trợ. Để biết cấu trúc URL và danh sách đầy đủ các mẫu, hãy xem [tham khảo].<a href=\"https://vi.11tik.com/l/vi/2026/08/youtube-thumbnail-url.html\">hướng dẫn URL hình thu nhỏ</a>."
+      "question": "Tôi có thể tải xuống hình thu nhỏ của video YouTube từ một URL không?",
+      "answerHtml": "Có. Dán liên kết xem công khai, URL Shorts, trang phát trực tiếp hoặc ra mắt, mã nhúng, liên kết rút gọn youtu.be hoặc ID video gồm 11 ký tự. Công cụ sẽ đọc ID video và tìm kiếm các tệp công khai trên i.ytimg.com. URL chỉ dành cho kênh và danh sách phát không được hỗ trợ. Để biết cấu trúc URL và danh sách đầy đủ các mẫu, hãy xem [tham khảo].<a href=\"https://www.11tik.com/youtube-thumbnail-url\">hướng dẫn URL hình thu nhỏ</a>."
     },
     {
-      "question": "11tik có tải ảnh thu nhỏ hoặc video của tôi lên không?",
+      "question": "11tik có tải hình thu nhỏ hoặc video của tôi lên không?",
       "answerHtml": "Không. Các URL được dán sẽ được xử lý trong trình duyệt của bạn. 11tik không yêu cầu tài khoản, không lưu trữ các tệp hình thu nhỏ gốc trên máy chủ của mình và không tải video của bạn lên. Hình ảnh được lấy từ CDN công cộng của YouTube trong cùng một phiên. Lịch sử cục bộ tùy chọn sẽ được lưu trên thiết bị của bạn cho đến khi bạn xóa nó."
     },
     {
       "question": "Tôi có thể tải xuống hình thu nhỏ từ YouTube Shorts không?",
-      "answerHtml": "Đúng vậy. Các liên kết Shorts sử dụng cùng một máy chủ lưu trữ hình ảnh công khai như video thông thường, vì vậy bạn có thể dán URL /shorts/ và tải xuống hình ảnh tĩnh tốt nhất hiện có. Bản xem trước có thể trông rộng hơn so với video dọc mà bạn đã xem vì YouTube lưu trữ hình ảnh tĩnh theo chiều ngang. Các Shorts riêng tư hoặc bị giới hạn độ tuổi mà không có hình thu nhỏ công khai sẽ không trả về tệp. Xem thêm<a href=\"https://vi.11tik.com/l/vi/2026/08/youtube-shorts-thumbnail-download.html\">Hướng dẫn thu nhỏ cho quần short</a>Để được hướng dẫn từng bước."
+      "answerHtml": "Đúng vậy. Các liên kết Shorts sử dụng cùng một máy chủ lưu trữ hình ảnh công khai như video thông thường, vì vậy bạn có thể dán URL /shorts/ và tải xuống hình ảnh tĩnh tốt nhất hiện có. Bản xem trước có thể trông rộng hơn so với video dọc mà bạn đã xem vì YouTube lưu trữ hình ảnh tĩnh theo chiều ngang. Các Shorts riêng tư hoặc bị giới hạn độ tuổi mà không có hình thu nhỏ công khai sẽ không trả về tệp. Xem thêm<a href=\"https://vi.11tik.com/l/vi/youtube-shorts-thumbnail-download\">Hướng dẫn thu nhỏ cho quần short</a>Để được hướng dẫn từng bước."
     },
     {
       "question": "Điều gì xảy ra khi chất lượng hình thu nhỏ cao nhất không khả dụng?",
-      "answerHtml": "11tik yêu cầu từng tên tệp công khai và chỉ giữ lại các phản hồi trả về hình ảnh thực sự—không có URL maxres được đoán. Nếu maxresdefault bị thiếu, công cụ sẽ hiển thị kích thước lớn nhất tiếp theo thực sự được tải, chẳng hạn như hq720 hoặc sddefault. Đó là kích thước tối đa thực sự cho video đó. Để biết lý do tại sao lại xảy ra lỗi 404 maxres và cách hoạt động của các phương án dự phòng, hãy đọc [tham khảo].<a href=\"https://vi.11tik.com/l/vi/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">hướng dẫn maxresdefault</a>."
+      "answerHtml": "11tik yêu cầu từng tên tệp công khai và chỉ giữ lại các phản hồi trả về hình ảnh thực sự—không có URL maxres được đoán. Nếu maxresdefault bị thiếu, công cụ sẽ hiển thị kích thước lớn nhất tiếp theo thực sự được tải, chẳng hạn như hq720 hoặc sddefault. Đó là kích thước tối đa thực sự cho video đó. Các phép đo mẫu nằm trong<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Nghiên cứu quy mô 300 video</a>Để hiểu lý do tại sao lại là maxres 404, hãy đọc bài viết...<a href=\"https://vi.11tik.com/l/vi/what-is-maxresdefaultjpg-when-youtube\">hướng dẫn maxresdefault</a>."
+    },
+    {
+      "question": "Tôi có thể xử lý nhiều URL hình thu nhỏ YouTube cùng lúc không?",
+      "answerHtml": "Đúng vậy. Công cụ trích xuất hình thu nhỏ YouTube này cũng bao gồm chế độ tải hàng loạt: dán tối đa 50 URL công khai (mỗi dòng một URL), sau đó tải xuống từng hình ảnh có chất lượng tốt nhất, nén bộ hình ảnh chất lượng cao nhất thành file ZIP hoặc xuất ra file CSV. Chế độ tải hàng loạt là một quy trình làm việc của sản phẩm này, chứ không phải là một công cụ tải xuống hàng loạt riêng biệt. Chi tiết:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">hướng dẫn tải xuống hàng loạt</a>."
+    },
+    {
+      "question": "11tik có tải xuống video hoặc âm thanh YouTube không?",
+      "answerHtml": "Không. 11tik chỉ hoạt động với các hình ảnh thu nhỏ công khai mà YouTube đã lưu trữ. Nó không tải xuống các tệp video hoặc âm thanh, trích xuất khung hình từ quá trình phát lại hoặc mở khóa luồng. Nó cũng không thể vượt qua các gói riêng tư hoặc bị giới hạn độ tuổi khi không có tệp hình ảnh thu nhỏ công khai nào."
+    },
+    {
+      "question": "Có tiện ích bổ sung 11tik Firefox chính thức nào không?",
+      "answerHtml": "Đúng.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik cho Firefox</a>Có thể trích xuất hình thu nhỏ công khai tốt nhất hiện có từ tab YouTube hiện tại. Đây là cùng một sản phẩm với công cụ trên trang web; trang web chính thức vẫn giữ nguyên.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Việc liệt kê này không làm thay đổi những gì trình trích xuất có thể hoặc không thể lấy được."
     }
   ]
 }

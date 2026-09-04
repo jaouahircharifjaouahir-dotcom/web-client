@@ -2,12 +2,12 @@
   "heading": "Gyakran ismételt kérdések",
   "items": [
     {
-      "question": "Mi az a YouTube bélyegkép-kivonó?",
-      "answerHtml": "A bélyegkép-kicsomagoló egy böngészőeszköz, amely a YouTube által a CDN-en tárolt nyilvános állóképeket kéri le – nem magát a videofájlt. Beilleszt egy linket, az eszköz ellenőrzi a létező méreteket, majd megtekintheti vagy elmentheti a legnagyobb valódi fájlt. A 11tik csak egy kivonatoló eszköz; nem másol képkockákat a lejátszásból, és nem ígér olyan méreteket, amelyeket a YouTube soha nem tett közzé."
+      "question": "Mi az a YouTube bélyegkép-kivonó, letöltő vagy grabber?",
+      "answerHtml": "Ezek a nevek ugyanolyan böngészőeszközt írnak le: olyat, amely a YouTube CDN-jén már tárolt nyilvános állóképeket kéri le – nem magát a videofájlt. Beilleszt egy linket, az eszköz ellenőrzi, hogy milyen méretek léteznek, és megtekintheti vagy mentheti a legnagyobb valódi fájlt. A 11tik csak a YouTube Thumbnail Extractort használja; a letöltő és a grabber elnevezések ehhez a termékhez tartozó álnevek, nem különálló alkalmazások."
     },
     {
-      "question": "Milyen YouTube URL-eket támogat a 11tik?",
-      "answerHtml": "Illessz be egy nyilvános megtekintési linket, rövid videók URL-jét, élő vagy premier oldalát, vagy a youtu.be rövid linket. Az eszköz a videó azonosítóját az elérési útból olvassa ki, és nyilvános fájlokat keres a i.ytimg.com oldalon. A csatorna- és lejátszási lista URL-jei nem támogatottak. Az URL-ek felépítését és a minták teljes listáját lásd a<a href=\"https://hu.11tik.com/l/hu/2026/08/youtube-thumbnail-url.html\">indexkép URL útmutató</a>."
+      "question": "Letölthetek egy YouTube-bélyegképet egy URL-ről?",
+      "answerHtml": "Igen. Illesszen be egy nyilvános megtekintési linket, rövid videók URL-jét, élő vagy premier oldalát, beágyazását, youtu.be rövid linket vagy egy egyszerű 11 karakteres videoazonosítót. Az eszköz beolvassa a videoazonosítót, és nyilvános fájlokat keres a i.ytimg.com oldalon. A csatorna- és lejátszási listákhoz tartozó URL-ek nem támogatottak. Az URL-ek felépítését és a minták teljes listáját lásd a<a href=\"https://www.11tik.com/youtube-thumbnail-url\">indexkép URL útmutató</a>."
     },
     {
       "question": "Feltölti a 11tik az indexképemet vagy a videómat?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Letölthetek indexképeket a YouTube Shorts-ból?",
-      "answerHtml": "Igen. A rövid videók linkjei ugyanazokat a nyilvános képtárhelyeket használják, mint a normál videók, így beilleszthetsz egy /shorts/ URL-t, és letöltheted a legjobb létező állóképet. Az előnézet szélesebbnek tűnhet, mint a megtekintett függőleges klip, mivel a YouTube egy fekvő állóképet tárol. A nyilvános indexkép nélküli privát vagy korhatáros rövid videók nem adnak vissza fájlt. Lásd a<a href=\"https://hu.11tik.com/l/hu/2026/08/youtube-shorts-thumbnail-download.html\">Rövidfilmek indexképeinek útmutatója</a>lépésről lépésre szóló segítségért."
+      "answerHtml": "Igen. A rövid videók linkjei ugyanazokat a nyilvános képtárhelyeket használják, mint a normál videók, így beilleszthetsz egy /shorts/ URL-t, és letöltheted a legjobb létező állóképet. Az előnézet szélesebbnek tűnhet, mint a megtekintett függőleges klip, mivel a YouTube egy fekvő állóképet tárol. A nyilvános indexkép nélküli privát vagy korhatáros rövid videók nem adnak vissza fájlt. Lásd a<a href=\"https://hu.11tik.com/l/hu/youtube-shorts-thumbnail-download\">Rövidfilmek indexképeinek útmutatója</a>lépésről lépésre szóló segítségért."
     },
     {
       "question": "Mi történik, ha a legmagasabb indexképminőség nem érhető el?",
-      "answerHtml": "A 11tik lekérdezi az összes nyilvános fájlnevet, és csak azokat a válaszokat tartja meg, amelyek valódi képet adnak vissza – kitalált maxres URL-ek nélkül. Ha a maxresdefault hiányzik, az eszköz a következő legnagyobb ténylegesen betöltött méretet mutatja, például a hq720-at vagy az sddefault-ot. Ez a videó valós maximuma. A maxres 404-es hiba okairól és a tartalékok működéséről a következőben olvashat:<a href=\"https://hu.11tik.com/l/hu/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault útmutató</a>."
+      "answerHtml": "A 11tik lekérdezi az összes nyilvános fájlnevet, és csak azokat a válaszokat tartja meg, amelyek valódi képet adnak vissza – kitalált maxres URL-ek nélkül. Ha a maxresdefault hiányzik, az eszköz a következő legnagyobb ténylegesen betöltött méretet mutatja, például a hq720-at vagy az sddefault-ot. Ez a videó valós maximuma. A minta mérések a<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videó méretű tanulmány</a>A maxres 404-es hibaüzenetek okáról a következő cikkben olvashat:<a href=\"https://hu.11tik.com/l/hu/what-is-maxresdefaultjpg-when-youtube\">maxresdefault útmutató</a>."
+    },
+    {
+      "question": "Feldolgozhatok több YouTube indexkép URL-t?",
+      "answerHtml": "Igen. Ugyanez a YouTube indexkép-kicsomagoló program tartalmazza a tömeges letöltő módot is: illesszen be akár 50 nyilvános URL-t (soronként egyet), majd töltse le az egyes legjobb képeket, tömörítse a legmagasabb minőségű készletet ZIP formátumba, vagy exportálja CSV formátumba. A tömeges letöltő mód a termék munkafolyamata, nem pedig különálló tömeges letöltő eszköz. Részletek:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">kötegelt letöltési útmutató</a>."
+    },
+    {
+      "question": "Letölt a 11tik YouTube-videókat vagy -hanganyagokat?",
+      "answerHtml": "Nem. A 11tik csak olyan nyilvános indexképekkel működik, amelyeket a YouTube már tárol. Nem tölt le video- vagy hangfájlokat, nem másol ki képkockákat a lejátszásból, és nem oldja fel a streameket. A privát vagy korhatáros csomagolást sem tudja megkerülni, ha nem áll rendelkezésre nyilvános indexképfájl."
+    },
+    {
+      "question": "Létezik hivatalos 11tik Firefox kiegészítő?",
+      "answerHtml": "Igen.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik Firefoxhoz</a>kinyerheti a legjobb elérhető nyilvános bélyegképet az aktuális YouTube-fülről. Ugyanaz a termék, mint a weboldal eszköz; a hivatalos webhely továbbra is a<a href=\"https://www.11tik.com/\">www.11tik.com</a>A lista nem változtatja meg, hogy a kinyerő mit tud vagy mit nem tud lekérni."
     }
   ]
 }

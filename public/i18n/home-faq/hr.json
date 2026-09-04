@@ -2,12 +2,12 @@
   "heading": "Često postavljana pitanja",
   "items": [
     {
-      "question": "Što je alat za izdvajanje sličica za YouTube?",
-      "answerHtml": "Alat za izdvajanje sličica je alat preglednika koji dohvaća javne fotografije koje YouTube već hostira na svojoj CDN mreži, a ne video datoteku. Zalijepite poveznicu, alat provjerava koje veličine postoje i pregledavate ili spremate najveću stvarnu datoteku. 11tik je samo alat za izdvajanje; ne izdvaja kadrove iz reprodukcije niti obećava veličine koje YouTube nikada nije objavio."
+      "question": "Što je program za ekstrakciju, preuzimanje ili grabber sličica za YouTube?",
+      "answerHtml": "Ta imena opisuju istu vrstu alata za preglednik: onaj koji dohvaća javne fotografije koje YouTube već hostira na svojoj CDN mreži, a ne video datoteku. Zalijepite poveznicu, alat provjerava koje veličine postoje i pregledavate ili spremate najveću stvarnu datoteku. 11tik je samo alat za izvlačenje sličica s YouTubea; termini downloader i grabber su pseudonimi za ovaj proizvod, a ne zasebne aplikacije."
     },
     {
-      "question": "Koje YouTube URL-ove podržava 11tik?",
-      "answerHtml": "Zalijepite javnu poveznicu za gledanje, URL kratkih videozapisa, stranicu uživo ili premijere ili kratku poveznicu youtu.be. Alat čita ID videozapisa s puta i pretražuje javne datoteke na i.ytimg.com. URL-ovi kanala i popisa za reprodukciju nisu podržani. Za anatomiju URL-ova i potpuni popis uzoraka pogledajte<a href=\"https://hr.11tik.com/l/hr/2026/08/youtube-thumbnail-url.html\">Vodič za URL-ove minijatura</a>."
+      "question": "Mogu li preuzeti YouTube minijaturu s URL-a?",
+      "answerHtml": "Da. Zalijepite javnu poveznicu za gledanje, URL kratkih videozapisa, stranicu uživo ili premijere, ugrađeni sadržaj, kratku poveznicu youtu.be ili samo 11-znakovni ID videozapisa. Alat čita ID videozapisa i pretražuje javne datoteke na i.ytimg.com. URL-ovi kanala i popisa za reprodukciju nisu podržani. Za anatomiju URL-ova i potpuni popis uzoraka pogledajte<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Vodič za URL-ove minijatura</a>."
     },
     {
       "question": "Prenosi li 11tik moju sličicu ili videozapis?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Mogu li preuzeti minijature s YouTube Shortsa?",
-      "answerHtml": "Da. Linkovi na Shorts videozapise koriste iste javne hostove za slike kao i obični videozapisi, tako da možete zalijepiti URL /shorts/ i preuzeti najbolju postojeću sliku. Pregled može izgledati šire od okomitog isječka koji ste gledali jer YouTube pohranjuje pejzažnu sliku. Privatni ili dobno ograničeni Shorts videozapisi bez javne minijature neće vratiti datoteku. Pogledajte<a href=\"https://hr.11tik.com/l/hr/2026/08/youtube-shorts-thumbnail-download.html\">Vodič za minijature kratkih videozapisa</a>za detaljnu pomoć."
+      "answerHtml": "Da. Linkovi na Shorts videozapise koriste iste javne hostove za slike kao i obični videozapisi, tako da možete zalijepiti URL /shorts/ i preuzeti najbolju postojeću sliku. Pregled može izgledati šire od okomitog isječka koji ste gledali jer YouTube pohranjuje pejzažnu sliku. Privatni ili dobno ograničeni Shorts videozapisi bez javne minijature neće vratiti datoteku. Pogledajte<a href=\"https://hr.11tik.com/l/hr/youtube-shorts-thumbnail-download\">Vodič za minijature kratkih videozapisa</a>za detaljnu pomoć."
     },
     {
       "question": "Što se događa kada najviša kvaliteta sličica nije dostupna?",
-      "answerHtml": "11tik zahtijeva svako javno ime datoteke i zadržava samo odgovore koji vraćaju stvarnu sliku - bez nagađanja maxres URL-ova. Ako maxresdefault nedostaje, alat prikazuje sljedeću najveću veličinu koja se zapravo učitava, kao što je hq720 ili sddefault. To je iskreni maksimum za taj videozapis. Za razloge maxres 404 i kako funkcioniraju rezervne opcije, pročitajte<a href=\"https://hr.11tik.com/l/hr/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">vodič za maxresdefault</a>."
+      "answerHtml": "11tik zahtijeva svako javno ime datoteke i zadržava samo odgovore koji vraćaju stvarnu sliku - bez nagađanja URL-ova maxres. Ako maxresdefault nedostaje, alat prikazuje sljedeću najveću veličinu koja se zapravo učitava, kao što je hq720 ili sddefault. To je iskreni maksimum za taj videozapis. Primjeri mjerenja nalaze se u<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studija veličine 300 videozapisa</a>Za razloge korištenja Maxres 404, pročitajte<a href=\"https://hr.11tik.com/l/hr/what-is-maxresdefaultjpg-when-youtube\">vodič za maxresdefault</a>."
+    },
+    {
+      "question": "Mogu li obraditi više URL-ova minijatura za YouTube?",
+      "answerHtml": "Da. Isti alat za izdvajanje sličica s YouTubea uključuje i skupni način rada: zalijepite do 50 javnih URL-ova (jedan po retku), a zatim preuzmite svaku najbolju sliku, ZIP datoteku najviše kvalitete ili izvezite CSV. Skupni način rada je tijek rada ovog proizvoda, a ne zaseban alat za skupno preuzimanje. Detalji:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">vodič za preuzimanje u serijama</a>."
+    },
+    {
+      "question": "Preuzima li 11tik YouTube videozapise ili audiozapise?",
+      "answerHtml": "Ne. 11tik radi samo s javnim minijaturama koje YouTube već hostira. Ne preuzima video ili audio datoteke, ne ripa kadrove iz reprodukcije niti otključava streamove. Također ne može zaobići privatno ili dobno ograničeno pakiranje kada nije dostupna javna datoteka minijature."
+    },
+    {
+      "question": "Postoji li službeni 11tik dodatak za Firefox?",
+      "answerHtml": "Da.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik za Firefox</a>može izdvojiti najbolju dostupnu javnu minijaturu s trenutne YouTube kartice. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje<a href=\"https://www.11tik.com/\">www.11tik.com</a>Popis ne mijenja što ekstraktor može ili ne može dohvatiti."
     }
   ]
 }

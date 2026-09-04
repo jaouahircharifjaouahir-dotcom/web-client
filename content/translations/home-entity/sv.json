@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "sv",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "Vad 11tik är",
+  "entityIntro": "11tik är varumärket bakom YouTube Thumbnail Extractor – ett gratis webbläsarverktyg för offentliga YouTube-miniatyrbilder. Formuleringarna extraherare, nedladdare och grabber hänvisar alla till samma produkt, inte separata verktyg.",
+  "entityDoesHeading": "Vad 11tik gör",
+  "entityDoes1": "Extraherar offentliga YouTube-miniatyrbilder från stödda video-URL:er och ID:n – inklusive titta, Shorts, live, youtu.be och inbäddade länkar",
+  "entityDoes2": "Validerar vilka offentliga miniatyrstorlekar som faktiskt laddas (inklusive maxstorlekar när YouTube publicerar dem), och låter dig sedan ladda ner eller kopiera bildens URL",
+  "entityDoes3": "Körs helt i din webbläsare (klientsidan), med bulkläge för upp till 50 offentliga URL:er plus export av ZIP- och CSV-filer.",
+  "entityDoesNotHeading": "Vad 11tik inte gör",
+  "entityDoesNot1": "Ladda ner YouTube-video eller ljud",
+  "entityDoesNot2": "Kringgå privat eller åldersbegränsat innehåll",
+  "entityDoesNot3": "Generera eller designa miniatyrbilder",
+  "entityDoesNot4": "Utdrag från TikTok, Instagram, webbadresser endast för kanaler eller spellistor, eller andra plattformar som inte stöds",
+  "articleId": "home-entity"
+}

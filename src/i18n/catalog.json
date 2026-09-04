@@ -798,7 +798,18 @@
       "videoLabel": "فيديو {n}",
       "adSpace": "مساحة إعلانية",
       "localHistoryKicker": "السجل المحلي",
-      "clearHistory": "مسح السجل"
+      "clearHistory": "مسح السجل",
+      "entityHeading": "ما هو 11tik",
+      "entityIntro": "11tik هي العلامة التجارية التي تقف وراء برنامج استخراج الصور المصغرة من يوتيوب، وهو أداة مجانية لتصفح الإنترنت لاستخراج الصور المصغرة من فيديوهات يوتيوب العامة. تشير مصطلحات \"الاستخراج\" و\"التنزيل\" و\"التحميل\" إلى نفس المنتج، وليس إلى أدوات منفصلة.",
+      "entityDoesHeading": "ما يفعله 11tik",
+      "entityDoes1": "يستخرج صورًا مصغرة عامة من فيديوهات يوتيوب من عناوين URL ومعرفات الفيديو المدعومة، بما في ذلك روابط المشاهدة، والمقاطع القصيرة، والبث المباشر، وyoutu.be، وروابط التضمين.",
+      "entityDoes2": "يتحقق من أحجام الصور المصغرة العامة التي يتم تحميلها فعليًا (بما في ذلك أقصى دقة عند نشرها على يوتيوب)، ثم يسمح لك بتنزيل أو نسخ رابط الصورة.",
+      "entityDoes3": "يعمل البرنامج بالكامل في متصفحك (من جانب العميل)، مع وضع المعالجة المجمعة لما يصل إلى 50 عنوان URL عامًا بالإضافة إلى تصدير ZIP وCSV",
+      "entityDoesNotHeading": "ما لا يفعله 11tik",
+      "entityDoesNot1": "قم بتنزيل فيديو أو صوت من يوتيوب",
+      "entityDoesNot2": "تجاوز المحتوى الخاص أو المقيد بالعمر",
+      "entityDoesNot3": "إنشاء أو تصميم الصور المصغرة",
+      "entityDoesNot4": "استخراج من TikTok أو Instagram أو عناوين URL الخاصة بالقنوات فقط أو قوائم التشغيل فقط، أو منصات أخرى غير مدعومة"
     },
     "posts": [
       {
@@ -1540,7 +1551,18 @@
       "videoLabel": "Видео {n}",
       "adSpace": "Рекламно място",
       "localHistoryKicker": "ЛОКАЛНА ИСТОРИЯ",
-      "clearHistory": "Изчисти историята"
+      "clearHistory": "Изчисти историята",
+      "entityHeading": "Какво е 11tik",
+      "entityIntro": "11tik е марката, която стои зад YouTube Thumbnail Extractor – безплатен инструмент в браузъра за публични миниатюрни изображения в YouTube. Термините „extractor“, „downloader“ и „grabber“ се отнасят до един и същ продукт, а не до отделни инструменти.",
+      "entityDoesHeading": "Какво прави 11tik",
+      "entityDoes1": "Извлича публични миниатюрни изображения в YouTube от поддържани URL адреси и идентификатори на видеоклипове – включително връзки за гледане, кратки видеоклипове, на живо, youtu.be и вграждане",
+      "entityDoes2": "Проверява кои размери на публичните миниатюри действително се зареждат (включително максималните резолюции, когато YouTube ги публикува), след което ви позволява да изтеглите или копирате URL адреса на изображението",
+      "entityDoes3": "Работи изцяло във вашия браузър (от страна на клиента), с групов режим за до 50 публични URL адреса плюс експортиране в ZIP и CSV файлове",
+      "entityDoesNotHeading": "Какво 11tik не прави",
+      "entityDoesNot1": "Изтегляне на видео или аудио от YouTube",
+      "entityDoesNot2": "Заобикаляне на частно или възрастово ограничено съдържание",
+      "entityDoesNot3": "Генериране или проектиране на миниатюри",
+      "entityDoesNot4": "Извличане от TikTok, Instagram, URL адреси само за канали или само за плейлисти или други неподдържани платформи"
     },
     "posts": [
       {
@@ -1858,7 +1880,18 @@
       "videoLabel": "ভিডিও {n}",
       "adSpace": "বিজ্ঞাপন স্থান",
       "localHistoryKicker": "স্থানীয় ইতিহাস",
-      "clearHistory": "ইতিহাস মুছুন"
+      "clearHistory": "ইতিহাস মুছুন",
+      "entityHeading": "11tik কী",
+      "entityIntro": "11tik হলো ইউটিউব থাম্বনেইল এক্সট্র্যাক্টরের পেছনের ব্র্যান্ড—যা পাবলিক ইউটিউব থাম্বনেইল ইমেজগুলোর জন্য একটি ফ্রি ব্রাউজার টুল। এক্সট্র্যাক্টর, ডাউনলোডার এবং গ্র্যাবার—এই সব শব্দ একই পণ্যকে বোঝায়, আলাদা কোনো টুলকে নয়।",
+      "entityDoesHeading": "11tik যা করে",
+      "entityDoes1": "ওয়াচ, শর্টস, লাইভ, youtu.be, এবং এমবেড লিঙ্ক সহ সমর্থিত ভিডিও ইউআরএল এবং আইডি থেকে পাবলিক ইউটিউব থাম্বনেইল ছবি সংগ্রহ করে।",
+      "entityDoes2": "কোন কোন পাবলিক থাম্বনেইল সাইজ আসলে লোড হয় তা যাচাই করে (ইউটিউব প্রকাশ করলে সর্বোচ্চ রেজোলিউশন সহ), তারপর আপনাকে ছবির URL ডাউনলোড বা কপি করার সুযোগ দেয়।",
+      "entityDoes3": "এটি সম্পূর্ণরূপে আপনার ব্রাউজারে (ক্লায়েন্ট-সাইডে) চলে, সাথে বাল্ক মোডে ৫০টি পর্যন্ত পাবলিক ইউআরএল এবং জিপ ও সিএসভি এক্সপোর্টের সুবিধা রয়েছে।",
+      "entityDoesNotHeading": "11tik যা করে না",
+      "entityDoesNot1": "ইউটিউব ভিডিও বা অডিও ডাউনলোড করুন",
+      "entityDoesNot2": "ব্যক্তিগত বা বয়স-সীমাবদ্ধ বিষয়বস্তু বাইপাস করুন",
+      "entityDoesNot3": "থাম্বনেইল তৈরি বা ডিজাইন করুন",
+      "entityDoesNot4": "TikTok, Instagram, শুধুমাত্র চ্যানেল বা প্লেলিস্টের URL, অথবা অন্যান্য অসমর্থিত প্ল্যাটফর্ম থেকে এক্সট্র্যাক্ট করুন।"
     },
     "posts": [
       {
@@ -2812,7 +2845,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Reklamní prostor",
       "localHistoryKicker": "MÍSTNÍ HISTORIE",
-      "clearHistory": "Vymazat historii"
+      "clearHistory": "Vymazat historii",
+      "entityHeading": "Co je 11tik",
+      "entityIntro": "11tik je značka stojící za nástrojem YouTube Thumbnail Extractor – bezplatným nástrojem pro prohlížeč s veřejnými miniaturami obrázků z YouTube. Termíny „extractor“, „downloader“ a „grabber“ označují stejný produkt, nikoli samostatné nástroje.",
+      "entityDoesHeading": "Co dělá 11tik",
+      "entityDoes1": "Extrahuje veřejné miniatury YouTube z podporovaných URL a ID videí – včetně odkazů pro sledování, krátkých videí, živých přenosů, youtu.be a vkládání",
+      "entityDoes2": "Ověřuje, jaké velikosti veřejných miniatur se skutečně načítají (včetně maximálního rozlišení, když je YouTube zveřejní), a poté umožňuje stáhnout nebo zkopírovat URL adresu obrázku.",
+      "entityDoes3": "Běží výhradně ve vašem prohlížeči (na straně klienta) s hromadným režimem až pro 50 veřejných URL a exportem do formátů ZIP a CSV.",
+      "entityDoesNotHeading": "Co 11tik nedělá",
+      "entityDoesNot1": "Stáhněte si video nebo audio z YouTube",
+      "entityDoesNot2": "Obejít soukromý obsah nebo obsah s věkovým omezením",
+      "entityDoesNot3": "Generování nebo navrhování miniatur",
+      "entityDoesNot4": "Extrakt z TikToku, Instagramu, URL adres pouze pro kanály nebo playlisty nebo jiných nepodporovaných platforem"
     },
     "posts": [
       {
@@ -3236,7 +3280,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Annonceplads",
       "localHistoryKicker": "LOKAL HISTORIK",
-      "clearHistory": "Ryd historik"
+      "clearHistory": "Ryd historik",
+      "entityHeading": "Hvad 11tik er",
+      "entityIntro": "11tik er brandet bag YouTube Thumbnail Extractor – et gratis browserværktøj til offentlige YouTube-miniaturebilleder. Ordlyden \"Extractor\", \"downloader\" og \"grabber\" refererer alle til det samme produkt, ikke separate værktøjer.",
+      "entityDoesHeading": "Hvad 11tik gør",
+      "entityDoes1": "Udtrækker offentlige YouTube-miniaturebilleder fra understøttede video-URL'er og ID'er – inklusive se, Shorts, live, youtu.be og integrerede links",
+      "entityDoes2": "Validerer hvilke offentlige miniaturebilleder, der rent faktisk indlæses (inklusive maks. størrelser, når YouTube udgiver dem), og lader dig derefter downloade eller kopiere billedets URL",
+      "entityDoes3": "Kører udelukkende i din browser (klientside) med massevisningstilstand for op til 50 offentlige URL'er plus ZIP- og CSV-eksport",
+      "entityDoesNotHeading": "Hvad 11tik ikke gør",
+      "entityDoesNot1": "Download YouTube-video eller -lyd",
+      "entityDoesNot2": "Omgå privat eller aldersbegrænset indhold",
+      "entityDoesNot3": "Generer eller design miniaturebilleder",
+      "entityDoesNot4": "Uddrag fra TikTok, Instagram, URL'er kun til kanaler eller playlister eller andre ikke-understøttede platforme"
     },
     "posts": [
       {
@@ -3342,7 +3397,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Werbefläche",
       "localHistoryKicker": "LOKALER VERLAUF",
-      "clearHistory": "Verlauf löschen"
+      "clearHistory": "Verlauf löschen",
+      "entityHeading": "Was 11tik ist",
+      "entityIntro": "11tik ist die Marke hinter dem YouTube Thumbnail Extractor – einem kostenlosen Browser-Tool für öffentliche YouTube-Miniaturansichten. Die Bezeichnungen Extractor, Downloader und Grabber beziehen sich alle auf dasselbe Produkt und nicht auf separate Tools.",
+      "entityDoesHeading": "Was 11tik tut",
+      "entityDoes1": "Extrahiert öffentliche YouTube-Miniaturansichten aus unterstützten Video-URLs und -IDs – einschließlich Watch-, Shorts-, Live-, youtu.be- und Einbettungslinks.",
+      "entityDoes2": "Prüft, welche öffentlichen Thumbnail-Größen tatsächlich geladen werden (einschließlich der maximalen Auflösung, wenn YouTube sie veröffentlicht), und ermöglicht anschließend das Herunterladen oder Kopieren der Bild-URL.",
+      "entityDoes3": "Läuft vollständig im Browser (clientseitig) und bietet einen Massenverarbeitungsmodus für bis zu 50 öffentliche URLs sowie Exportmöglichkeiten im ZIP- und CSV-Format.",
+      "entityDoesNotHeading": "Was 11tik nicht tut",
+      "entityDoesNot1": "YouTube-Video oder Audio herunterladen",
+      "entityDoesNot2": "Private oder altersbeschränkte Inhalte umgehen",
+      "entityDoesNot3": "Thumbnails erstellen oder gestalten",
+      "entityDoesNot4": "Aus TikTok-, Instagram-, Kanal- oder Playlist-URLs oder anderen nicht unterstützten Plattformen extrahieren"
     },
     "posts": [
       {
@@ -3766,7 +3832,18 @@
       "videoLabel": "Βίντεο {n}",
       "adSpace": "Χώρος διαφήμισης",
       "localHistoryKicker": "ΤΟΠΙΚΟ ΙΣΤΟΡΙΚΟ",
-      "clearHistory": "Εκκαθάριση ιστορικού"
+      "clearHistory": "Εκκαθάριση ιστορικού",
+      "entityHeading": "Τι είναι το 11tik",
+      "entityIntro": "Η 11tik είναι η επωνυμία πίσω από το YouTube Thumbnail Extractor—ένα δωρεάν εργαλείο περιήγησης για δημόσιες μικρογραφίες εικόνων YouTube. Οι όροι Extractor, downloader και grabber αναφέρονται στο ίδιο προϊόν και όχι σε ξεχωριστά εργαλεία.",
+      "entityDoesHeading": "Τι κάνει το 11tik",
+      "entityDoes1": "Εξάγει δημόσιες μικρογραφίες YouTube από υποστηριζόμενες διευθύνσεις URL και αναγνωριστικά βίντεο—συμπεριλαμβανομένων συνδέσμων παρακολούθησης, Shorts, ζωντανών μεταδόσεων, youtu.be και ενσωμάτωσης",
+      "entityDoes2": "Επικυρώνει ποια δημόσια μεγέθη μικρογραφιών φορτώνονται στην πραγματικότητα (συμπεριλαμβανομένων των μέγιστων τιμών όταν το YouTube δημοσιεύει) και, στη συνέχεια, σας επιτρέπει να κατεβάσετε ή να αντιγράψετε τη διεύθυνση URL της εικόνας.",
+      "entityDoes3": "Εκτελείται εξ ολοκλήρου στο πρόγραμμα περιήγησής σας (από την πλευρά του πελάτη), με μαζική λειτουργία για έως και 50 δημόσιες διευθύνσεις URL καθώς και εξαγωγή σε ZIP και CSV",
+      "entityDoesNotHeading": "Τι δεν κάνει το 11tik",
+      "entityDoesNot1": "Λήψη βίντεο ή ήχου από το YouTube",
+      "entityDoesNot2": "Παράκαμψη ιδιωτικού ή ηλικιακά περιορισμένου περιεχομένου",
+      "entityDoesNot3": "Δημιουργία ή σχεδιασμός μικρογραφιών",
+      "entityDoesNot4": "Εξαγωγή από TikTok, Instagram, URL μόνο για κανάλια ή playlist ή άλλες μη υποστηριζόμενες πλατφόρμες"
     },
     "posts": [
       {
@@ -4095,7 +4172,18 @@
       "videoLabel": "Vídeo {n}",
       "adSpace": "Espacio publicitario",
       "localHistoryKicker": "HISTORIAL LOCAL",
-      "clearHistory": "Borrar historial"
+      "clearHistory": "Borrar historial",
+      "entityHeading": "¿Qué es 11tik?",
+      "entityIntro": "11tik es la marca detrás de YouTube Thumbnail Extractor, una herramienta gratuita para navegadores que permite extraer imágenes de miniaturas públicas de YouTube. Los términos «extractor», «descargador» y «capturador» se refieren al mismo producto, no a herramientas independientes.",
+      "entityDoesHeading": "¿Qué hace 11tik?",
+      "entityDoes1": "Extrae imágenes de miniaturas públicas de YouTube de URL e ID de video compatibles, incluyendo videos de visualización, cortos, en vivo, youtu.be y enlaces de inserción.",
+      "entityDoes2": "Valida qué tamaños de miniaturas públicas se cargan realmente (incluida la resolución máxima cuando YouTube la publica) y luego te permite descargar o copiar la URL de la imagen.",
+      "entityDoes3": "Se ejecuta completamente en su navegador (del lado del cliente), con modo masivo para hasta 50 URL públicas, además de exportación a ZIP y CSV.",
+      "entityDoesNotHeading": "Lo que 11tik no hace",
+      "entityDoesNot1": "Descargar vídeo o audio de YouTube",
+      "entityDoesNot2": "Evita el contenido privado o restringido por edad.",
+      "entityDoesNot3": "Generar o diseñar miniaturas",
+      "entityDoesNot4": "Extraer desde TikTok, Instagram, URL solo de canales o solo de listas de reproducción, u otras plataformas no compatibles."
     },
     "posts": [
       {
@@ -4413,7 +4501,18 @@
       "videoLabel": "ویدیو {n}",
       "adSpace": "فضای تبلیغات",
       "localHistoryKicker": "تاریخچه محلی",
-      "clearHistory": "پاک کردن تاریخچه"
+      "clearHistory": "پاک کردن تاریخچه",
+      "entityHeading": "11tik چیست؟",
+      "entityIntro": "11tik برند پشت YouTube Thumbnail Extractor است—یک ابزار مرورگر رایگان برای تصاویر بندانگشتی عمومی یوتیوب. عبارات استخراج‌کننده، دانلودکننده و grabber همگی به یک محصول مشابه اشاره دارند، نه ابزارهای جداگانه.",
+      "entityDoesHeading": "کاری که 11tik انجام می‌دهد",
+      "entityDoes1": "تصاویر کوچک عمومی یوتیوب را از URLها و شناسه‌های ویدیویی پشتیبانی‌شده - از جمله لینک‌های تماشا، ویدیوهای کوتاه، ویدیوهای زنده، youtu.be و لینک‌های جاسازی‌شده - استخراج می‌کند.",
+      "entityDoes2": "تأیید می‌کند که کدام اندازه‌های تصویر بندانگشتی عمومی واقعاً بارگذاری می‌شوند (از جمله حداکثر اندازه‌ها هنگام انتشار یوتیوب)، سپس به شما امکان می‌دهد URL تصویر را دانلود یا کپی کنید",
+      "entityDoes3": "کاملاً در مرورگر شما (سمت کلاینت) اجرا می‌شود، با حالت Bulk برای حداکثر ۵۰ آدرس اینترنتی عمومی به همراه خروجی ZIP و CSV",
+      "entityDoesNotHeading": "کاری که 11tik انجام نمی‌دهد",
+      "entityDoesNot1": "دانلود ویدیو یا فایل صوتی یوتیوب",
+      "entityDoesNot2": "دور زدن محتوای خصوصی یا محدود به سن",
+      "entityDoesNot3": "تولید یا طراحی تصاویر بندانگشتی",
+      "entityDoesNot4": "استخراج از تیک تاک، اینستاگرام، آدرس‌های اینترنتی مخصوص کانال یا لیست پخش یا سایر پلتفرم‌های پشتیبانی نشده"
     },
     "posts": [
       {
@@ -4625,7 +4724,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Mainostila",
       "localHistoryKicker": "PAIKALLINEN HISTORIA",
-      "clearHistory": "Tyhjennä historia"
+      "clearHistory": "Tyhjennä historia",
+      "entityHeading": "Mikä on 11tik",
+      "entityIntro": "11tik on YouTube Thumbnail Extractorin takana oleva tuotemerkki. Se on ilmainen selaintyökalu julkisten YouTube-pikkukuvien lataamiseen. Sanat \"extractor\", \"downloader\" ja \"grabber\" viittaavat kaikki samaan tuotteeseen, eivät erillisiin työkaluihin.",
+      "entityDoesHeading": "Mitä 11tik tekee",
+      "entityDoes1": "Poimii julkiset YouTube-pikkukuvat tuettujen videoiden URL-osoitteista ja tunnuksista – mukaan lukien katselu-, lyhytvideo-, live-, youtu.be- ja upotuslinkit",
+      "entityDoes2": "Tarkistaa, mitkä julkiset pikkukuvien koot todellisuudessa latautuvat (mukaan lukien YouTuben julkaisemien pikkukuvien enimmäiskoot), ja antaa sitten sinun ladata tai kopioida kuvan URL-osoitteen.",
+      "entityDoes3": "Toimii kokonaan selaimessasi (asiakaspuolella), ja siinä on joukkotila jopa 50 julkiselle URL-osoitteelle sekä ZIP- ja CSV-vienti.",
+      "entityDoesNotHeading": "Mitä 11tik ei tee",
+      "entityDoesNot1": "Lataa YouTube-video tai -ääni",
+      "entityDoesNot2": "Ohita yksityinen tai ikärajoitettu sisältö",
+      "entityDoesNot3": "Luo tai suunnittele pikkukuvia",
+      "entityDoesNot4": "Poimi TikTokista, Instagramista, pelkkien kanavien tai soittolistojen URL-osoitteista tai muista ei-tuetuista alustoista"
     },
     "posts": [
       {
@@ -4943,7 +5053,18 @@
       "videoLabel": "Vidéo {n}",
       "adSpace": "Espace publicitaire",
       "localHistoryKicker": "HISTORIQUE LOCAL",
-      "clearHistory": "Effacer l’historique"
+      "clearHistory": "Effacer l’historique",
+      "entityHeading": "Qu'est-ce que 11tik ?",
+      "entityIntro": "11tik est la marque à l'origine de YouTube Thumbnail Extractor, un outil gratuit pour navigateur permettant d'extraire les miniatures publiques de YouTube. Les termes « extracteur », « téléchargeur » et « outil de récupération » désignent tous le même produit et non des outils distincts.",
+      "entityDoesHeading": "Que fait 11tik",
+      "entityDoes1": "Extrait les images miniatures publiques de YouTube à partir des URL et identifiants vidéo pris en charge, notamment les liens « Regarder », « Shorts », « En direct », « youtu.be » et « Intégrer ».",
+      "entityDoes2": "Vérifie quelles tailles de vignettes publiques sont effectivement chargées (y compris la résolution maximale lors de sa publication par YouTube), puis vous permet de télécharger ou de copier l'URL de l'image.",
+      "entityDoes3": "Fonctionne entièrement dans votre navigateur (côté client), avec un mode batch pour un maximum de 50 URL publiques et exportation ZIP et CSV.",
+      "entityDoesNotHeading": "Ce que 11tik ne fait pas",
+      "entityDoesNot1": "Télécharger une vidéo ou un son YouTube",
+      "entityDoesNot2": "Contourner le contenu privé ou soumis à une restriction d'âge",
+      "entityDoesNot3": "Générer ou concevoir des vignettes",
+      "entityDoesNot4": "Extraire des URL de TikTok, Instagram, de chaînes ou de playlists uniquement, ou d'autres plateformes non prises en charge"
     },
     "posts": [
       {
@@ -5897,7 +6018,18 @@
       "videoLabel": "סרטון {n}",
       "adSpace": "מקום פרסום",
       "localHistoryKicker": "היסטוריה מקומית",
-      "clearHistory": "נקה היסטוריה"
+      "clearHistory": "נקה היסטוריה",
+      "entityHeading": "מהו 11tik",
+      "entityIntro": "11tik הוא המותג שעומד מאחורי YouTube Thumbnail Extractor - כלי דפדפן חינמי לתמונות ממוזערות ציבוריות ביוטיוב. המילים Extractor, Downloader ו-Grabber מתייחסות לאותו מוצר, ולא לכלים נפרדים.",
+      "entityDoesHeading": "מה 11tik עושה",
+      "entityDoes1": "מחלץ תמונות ממוזערות ציבוריות ביוטיוב מכתובות URL ומזהים של סרטונים נתמכים - כולל קישורים לצפייה, Shorts, שידור חי, youtu.be וקישורים להטמעה",
+      "entityDoes2": "מאמת אילו גדלי תמונות ממוזערות ציבוריות נטענים בפועל (כולל גודל מקסימלי כאשר YouTube מפרסם אותן), ואז מאפשר לך להוריד או להעתיק את כתובת האתר של התמונה",
+      "entityDoes3": "פועל כולו בדפדפן שלך (צד הלקוח), עם מצב כמות גדולה עבור עד 50 כתובות URL ציבוריות בתוספת ייצוא ZIP ו-CSV",
+      "entityDoesNotHeading": "מה ש11tik לא עושה",
+      "entityDoesNot1": "הורד סרטון או אודיו מיוטיוב",
+      "entityDoesNot2": "עקיפת תוכן פרטי או תוכן עם הגבלת גיל",
+      "entityDoesNot3": "צור או עיצוב תמונות ממוזערות",
+      "entityDoesNot4": "קטע מכתובות URL של טיקטוק, אינסטגרם, ערוצי תוכן בלבד או פלייליסטים בלבד, או פלטפורמות אחרות שאינן נתמכות"
     },
     "posts": [
       {
@@ -6003,7 +6135,18 @@
       "videoLabel": "वीडियो {n}",
       "adSpace": "विज्ञापन स्थान",
       "localHistoryKicker": "स्थानीय इतिहास",
-      "clearHistory": "इतिहास साफ़ करें"
+      "clearHistory": "इतिहास साफ़ करें",
+      "entityHeading": "11tik क्या है",
+      "entityIntro": "11tik यूट्यूब थंबनेल एक्सट्रैक्टर का ब्रांड है—जो सार्वजनिक यूट्यूब थंबनेल छवियों के लिए एक निःशुल्क ब्राउज़र टूल है। एक्सट्रैक्टर, डाउनलोडर और ग्रैबर शब्द सभी एक ही उत्पाद को संदर्भित करते हैं, न कि अलग-अलग टूल को।",
+      "entityDoesHeading": "11tik क्या करता है",
+      "entityDoes1": "यह समर्थित वीडियो URL और ID से सार्वजनिक YouTube थंबनेल छवियों को निकालता है—जिसमें वॉच, शॉर्ट्स, लाइव, youtu.be और एम्बेड लिंक शामिल हैं।",
+      "entityDoes2": "यह जांच करता है कि कौन से सार्वजनिक थंबनेल आकार वास्तव में लोड होते हैं (YouTube द्वारा प्रकाशित किए जाने पर अधिकतम रिज़ॉल्यूशन सहित), फिर आपको छवि URL डाउनलोड करने या कॉपी करने की अनुमति देता है।",
+      "entityDoes3": "यह पूरी तरह से आपके ब्राउज़र (क्लाइंट-साइड) में चलता है, जिसमें 50 सार्वजनिक URL तक के लिए बल्क मोड और ZIP और CSV एक्सपोर्ट की सुविधा है।",
+      "entityDoesNotHeading": "11tik क्या नहीं करता है",
+      "entityDoesNot1": "YouTube वीडियो या ऑडियो डाउनलोड करें",
+      "entityDoesNot2": "निजी या आयु-प्रतिबंधित सामग्री को अनदेखा करें",
+      "entityDoesNot3": "थंबनेल बनाएं या डिज़ाइन करें",
+      "entityDoesNot4": "TikTok, Instagram, केवल चैनल या केवल प्लेलिस्ट वाले URL, या अन्य असमर्थित प्लेटफॉर्म से डेटा निकालें"
     },
     "posts": [
       {
@@ -6215,7 +6358,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Oglasni prostor",
       "localHistoryKicker": "LOKALNA POVIJEST",
-      "clearHistory": "Očisti povijest"
+      "clearHistory": "Očisti povijest",
+      "entityHeading": "Što je 11tik",
+      "entityIntro": "11tik je robna marka koja stoji iza YouTube Thumbnail Extractora - besplatnog alata za preglednik za javne minijature s YouTubea. Izrazi Extractor, Downloader i Grabber odnose se na isti proizvod, a ne na zasebne alate.",
+      "entityDoesHeading": "Što 11tik radi",
+      "entityDoes1": "Izdvaja javne minijature za YouTube iz podržanih URL-ova i ID-ova videozapisa - uključujući poveznice za gledanje, Shorts, uživo, youtu.be i ugrađivanje",
+      "entityDoes2": "Potvrđuje koje se veličine javnih minijatura zapravo učitavaju (uključujući maksimalne rezolucije kada ih YouTube objavi), a zatim vam omogućuje preuzimanje ili kopiranje URL-a slike",
+      "entityDoes3": "Radi u potpunosti u vašem pregledniku (na strani klijenta), s načinom rada za skupno kopiranje do 50 javnih URL-ova plus izvozom u ZIP i CSV formatu",
+      "entityDoesNotHeading": "Što 11tik ne radi",
+      "entityDoesNot1": "Preuzmite YouTube video ili audio",
+      "entityDoesNot2": "Zaobiđite privatni ili dobno ograničen sadržaj",
+      "entityDoesNot3": "Generiranje ili dizajniranje minijatura",
+      "entityDoesNot4": "Izvadak s TikToka, Instagrama, URL-ova samo za kanale ili samo za popise za reprodukciju ili drugih nepodržanih platformi"
     },
     "posts": [
       {
@@ -6427,7 +6581,18 @@
       "videoLabel": "Videó {n}",
       "adSpace": "Hirdetési hely",
       "localHistoryKicker": "HELYI ELŐZMÉNYEK",
-      "clearHistory": "Előzmények törlése"
+      "clearHistory": "Előzmények törlése",
+      "entityHeading": "Mi a 11tik?",
+      "entityIntro": "A 11tik a YouTube Thumbnail Extractor mögött álló márka – egy ingyenes böngészőeszköz nyilvános YouTube-bélyegképekhez. A „kinyerő”, „letöltő” és „grabber” kifejezések mind ugyanarra a termékre vonatkoznak, nem különálló eszközökre.",
+      "entityDoesHeading": "Mit csinál a 11tik?",
+      "entityDoes1": "Nyilvános YouTube-bélyegképeket nyer ki a támogatott videók URL-jeiből és azonosítóiból – beleértve a megtekintési, rövid videók, élő videók, youtu.be és beágyazási linkeket.",
+      "entityDoes2": "Ellenőrzi, hogy mely nyilvános bélyegkép-méretek töltődnek be valójában (beleértve a maximális méreteket is, amikor a YouTube közzéteszi), majd lehetővé teszi a kép URL-jének letöltését vagy másolását.",
+      "entityDoes3": "Teljesen a böngészőben fut (kliensoldalon), tömeges módban akár 50 nyilvános URL-címet is képes exportálni, valamint ZIP és CSV formátumban exportálható.",
+      "entityDoesNotHeading": "Amit a 11tik nem tesz",
+      "entityDoesNot1": "YouTube videó vagy hanganyag letöltése",
+      "entityDoesNot2": "Kerülje a privát vagy korhatáros tartalmakat",
+      "entityDoesNot3": "Miniatűrök létrehozása vagy tervezése",
+      "entityDoesNot4": "Kivonat TikTokról, Instagramról, csak csatorna- vagy lejátszási lista URL-ekről, illetve más nem támogatott platformokról"
     },
     "posts": [
       {
@@ -6851,7 +7016,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Ruang iklan",
       "localHistoryKicker": "RIWAYAT LOKAL",
-      "clearHistory": "Hapus riwayat"
+      "clearHistory": "Hapus riwayat",
+      "entityHeading": "Apa itu 11tik",
+      "entityIntro": "11tik adalah merek di balik YouTube Thumbnail Extractor—alat browser gratis untuk gambar thumbnail YouTube publik. Istilah extractor, downloader, dan grabber semuanya merujuk pada produk yang sama, bukan alat yang terpisah.",
+      "entityDoesHeading": "Apa yang dilakukan 11tik",
+      "entityDoes1": "Mengekstrak gambar thumbnail YouTube publik dari URL dan ID video yang didukung—termasuk tautan tonton, Shorts, siaran langsung, youtu.be, dan tautan sematan",
+      "entityDoes2": "Memvalidasi ukuran thumbnail publik mana yang benar-benar dimuat (termasuk maxres saat YouTube menerbitkannya), lalu memungkinkan Anda mengunduh atau menyalin URL gambar.",
+      "entityDoes3": "Berjalan sepenuhnya di browser Anda (sisi klien), dengan mode Massal untuk hingga 50 URL publik plus ekspor ZIP dan CSV.",
+      "entityDoesNotHeading": "Apa yang tidak dilakukan oleh 11tik",
+      "entityDoesNot1": "Unduh video atau audio YouTube",
+      "entityDoesNot2": "Lewati konten pribadi atau yang dibatasi usia.",
+      "entityDoesNot3": "Buat atau desain gambar mini",
+      "entityDoesNot4": "Ekstrak dari TikTok, Instagram, URL khusus saluran atau khusus daftar putar, atau platform lain yang tidak didukung."
     },
     "posts": [
       {
@@ -7593,7 +7769,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Spazio pubblicitario",
       "localHistoryKicker": "CRONOLOGIA LOCALE",
-      "clearHistory": "Cancella cronologia"
+      "clearHistory": "Cancella cronologia",
+      "entityHeading": "Che cos'è 11tik",
+      "entityIntro": "11tik è il marchio dietro YouTube Thumbnail Extractor, uno strumento gratuito per browser che estrae le miniature pubbliche di YouTube. I termini \"estrattore\", \"downloader\" e \"grabber\" si riferiscono tutti allo stesso prodotto, non a strumenti separati.",
+      "entityDoesHeading": "Cosa fa 11tik",
+      "entityDoes1": "Estrae le immagini in miniatura pubbliche di YouTube dagli URL e dagli ID video supportati, inclusi watch, Shorts, live, youtu.be e link incorporati.",
+      "entityDoes2": "Verifica quali dimensioni di miniatura pubbliche vengono effettivamente caricate (inclusa la risoluzione massima quando YouTube la pubblica), quindi consente di scaricare o copiare l'URL dell'immagine.",
+      "entityDoes3": "Funziona interamente nel tuo browser (lato client), con modalità Bulk per un massimo di 50 URL pubblici e esportazione in formato ZIP e CSV.",
+      "entityDoesNotHeading": "Ciò che 11tik non fa",
+      "entityDoesNot1": "Scarica video o audio da YouTube",
+      "entityDoesNot2": "Aggira i contenuti privati ​​o con restrizioni di età",
+      "entityDoesNot3": "Genera o progetta miniature",
+      "entityDoesNot4": "Estratto da TikTok, Instagram, URL di soli canali o solo playlist o altre piattaforme non supportate"
     },
     "posts": [
       {
@@ -7805,7 +7992,18 @@
       "videoLabel": "動画 {n}",
       "adSpace": "広告スペース",
       "localHistoryKicker": "ローカル履歴",
-      "clearHistory": "履歴を消去"
+      "clearHistory": "履歴を消去",
+      "entityHeading": "11tikとは",
+      "entityIntro": "11tikは、YouTubeサムネイル抽出ツール（公開されているYouTubeサムネイル画像を取得するための無料ブラウザツール）を提供するブランドです。抽出ツール、ダウンローダー、グラバーといった用語はすべて同じ製品を指しており、別々のツールではありません。",
+      "entityDoesHeading": "11tikは何をするのか",
+      "entityDoes1": "サポートされている動画の URL と ID (watch、Shorts、live、youtu.be、埋め込みリンクなど) から、公開されている YouTube サムネイル画像を抽出します。",
+      "entityDoes2": "実際に読み込まれる公開サムネイルサイズ（YouTubeが公開する際のmaxresを含む）を検証し、画像URLをダウンロードまたはコピーできるようにします。",
+      "entityDoes3": "ブラウザ（クライアント側）で完全に動作し、最大50個の公開URLを一括処理できるモードに加え、ZIPおよびCSV形式でのエクスポートも可能です。",
+      "entityDoesNotHeading": "11tikがしないこと",
+      "entityDoesNot1": "YouTubeの動画または音声をダウンロードする",
+      "entityDoesNot2": "非公開コンテンツや年齢制限コンテンツを回避する",
+      "entityDoesNot3": "サムネイルを生成またはデザインする",
+      "entityDoesNot4": "TikTok、Instagram、チャンネル専用またはプレイリスト専用のURL、あるいはその他のサポートされていないプラットフォームからの抽出"
     },
     "posts": [
       {
@@ -8865,7 +9063,18 @@
       "videoLabel": "동영상 {n}",
       "adSpace": "광고 공간",
       "localHistoryKicker": "로컬 기록",
-      "clearHistory": "기록 지우기"
+      "clearHistory": "기록 지우기",
+      "entityHeading": "11tik는 무엇입니까?",
+      "entityIntro": "11tik는 공개 YouTube 썸네일 이미지를 추출하는 무료 브라우저 도구인 YouTube Thumbnail Extractor의 브랜드입니다. Extractor, downloader, grabber라는 용어는 모두 별개의 도구가 아닌 동일한 제품을 지칭합니다.",
+      "entityDoesHeading": "11tik는 무엇을 하는가",
+      "entityDoes1": "시청, 쇼츠, 라이브, youtu.be 및 임베드 링크를 포함하여 지원되는 동영상 URL 및 ID에서 공개 YouTube 썸네일 이미지를 추출합니다.",
+      "entityDoes2": "실제로 로드되는 공개 썸네일 크기(YouTube에서 게시할 때 최대 해상도 포함)를 검증한 다음 이미지 URL을 다운로드하거나 복사할 수 있도록 합니다.",
+      "entityDoes3": "이 프로그램은 브라우저(클라이언트 측)에서 완전히 실행되며, 최대 50개의 공개 URL을 일괄 처리할 수 있을 뿐 아니라 ZIP 및 CSV 파일로 내보내기 기능도 제공합니다.",
+      "entityDoesNotHeading": "11tik이 하지 않는 것",
+      "entityDoesNot1": "YouTube 동영상 또는 오디오 다운로드",
+      "entityDoesNot2": "비공개 또는 연령 제한 콘텐츠 우회",
+      "entityDoesNot3": "썸네일을 생성하거나 디자인하세요.",
+      "entityDoesNot4": "TikTok, Instagram, 채널 전용 또는 재생 목록 전용 URL, 또는 기타 지원되지 않는 플랫폼에서 추출"
     },
     "posts": [
       {
@@ -11303,7 +11512,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Ruang iklan",
       "localHistoryKicker": "SEJARAH TEMPATAN",
-      "clearHistory": "Kosongkan sejarah"
+      "clearHistory": "Kosongkan sejarah",
+      "entityHeading": "Apakah 11tik itu",
+      "entityIntro": "11tik ialah jenama di sebalik YouTube Thumbnail Extractor—alat pelayar percuma untuk imej kecil YouTube awam. Perkataan pengekstrak, pemuat turun dan perebut semuanya merujuk kepada produk yang sama, bukan alat yang berasingan.",
+      "entityDoesHeading": "Apa yang dilakukan oleh 11tik",
+      "entityDoes1": "Mengekstrak imej kecil YouTube awam daripada URL dan ID video yang disokong—termasuk pautan tontonan, Siaran Pendek, siaran langsung, youtu.be dan pautan benam",
+      "entityDoes2": "Mengesahkan saiz lakaran kecil awam yang sebenarnya dimuatkan (termasuk saiz maksimum apabila YouTube menerbitkannya), kemudian membolehkan anda memuat turun atau menyalin URL imej",
+      "entityDoes3": "Berjalan sepenuhnya dalam pelayar anda (sebelah klien), dengan mod Pukal untuk sehingga 50 URL awam serta eksport ZIP dan CSV",
+      "entityDoesNotHeading": "Apa yang tidak dilakukan oleh 11tik",
+      "entityDoesNot1": "Muat turun video atau audio YouTube",
+      "entityDoesNot2": "Abaikan kandungan peribadi atau kandungan yang dikawal selia oleh umur",
+      "entityDoesNot3": "Jana atau reka bentuk lakaran kecil",
+      "entityDoesNot4": "Ekstrak daripada TikTok, Instagram, URL saluran sahaja atau senarai main sahaja atau platform lain yang tidak disokong"
     },
     "posts": [
       {
@@ -12151,7 +12371,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Advertentieruimte",
       "localHistoryKicker": "LOKALE GESCHIEDENIS",
-      "clearHistory": "Geschiedenis wissen"
+      "clearHistory": "Geschiedenis wissen",
+      "entityHeading": "Wat 11tik is",
+      "entityIntro": "11tik is het merk achter de YouTube Thumbnail Extractor, een gratis browsertool voor openbare YouTube-thumbnailafbeeldingen. De termen Extractor, Downloader en Grabber verwijzen allemaal naar hetzelfde product, niet naar afzonderlijke tools.",
+      "entityDoesHeading": "Wat 11tik doet",
+      "entityDoes1": "Extraheert openbare YouTube-thumbnailafbeeldingen van ondersteunde video-URL's en -ID's, waaronder links naar video's die bekeken worden, Shorts, livevideo's, youtu.be en ingesloten video's.",
+      "entityDoes2": "Controleert welke openbare miniatuurformaten daadwerkelijk worden geladen (inclusief de maximale resolutie wanneer YouTube deze publiceert), waarna je de afbeeldings-URL kunt downloaden of kopiëren.",
+      "entityDoes3": "Werkt volledig in uw browser (client-side), met bulkmodus voor maximaal 50 openbare URL's plus ZIP- en CSV-export.",
+      "entityDoesNotHeading": "Wat 11tik niet doet",
+      "entityDoesNot1": "Download een YouTube-video of -audio.",
+      "entityDoesNot2": "Omzeil privé- of leeftijdsbeperkte inhoud.",
+      "entityDoesNot3": "Miniatuurafbeeldingen genereren of ontwerpen",
+      "entityDoesNot4": "Extraheer content van TikTok, Instagram, kanaal- of afspeellijst-URL's, of andere niet-ondersteunde platforms."
     },
     "posts": [
       {
@@ -12363,7 +12594,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Annonseplass",
       "localHistoryKicker": "LOKAL HISTORIKK",
-      "clearHistory": "Tøm historikk"
+      "clearHistory": "Tøm historikk",
+      "entityHeading": "Hva 11tik er",
+      "entityIntro": "11tik er merket bak YouTube Thumbnail Extractor – et gratis nettleserverktøy for offentlige YouTube-miniatyrbilder. Ordlyden «extractor», «downloader» og «grabber» refererer alle til det samme produktet, ikke separate verktøy.",
+      "entityDoesHeading": "Hva 11tik gjør",
+      "entityDoes1": "Henter ut offentlige YouTube-miniatyrbilder fra støttede video-URL-er og ID-er – inkludert visning, Shorts, direktesendinger, youtu.be og innebygde lenker",
+      "entityDoes2": "Validerer hvilke offentlige miniatyrbildestørrelser som faktisk lastes inn (inkludert maksstørrelser når YouTube publiserer dem), og lar deg deretter laste ned eller kopiere bilde-URL-en",
+      "entityDoes3": "Kjører utelukkende i nettleseren din (klientsiden), med massemodus for opptil 50 offentlige URL-er pluss ZIP- og CSV-eksport",
+      "entityDoesNotHeading": "Hva 11tik ikke gjør",
+      "entityDoesNot1": "Last ned YouTube-video eller -lyd",
+      "entityDoesNot2": "Omgå privat eller aldersbegrenset innhold",
+      "entityDoesNot3": "Generer eller design miniatyrbilder",
+      "entityDoesNot4": "Utdrag fra TikTok, Instagram, URL-er kun for kanaler eller spillelister, eller andre plattformer som ikke støttes"
     },
     "posts": [
       {
@@ -13529,7 +13771,18 @@
       "videoLabel": "Wideo {n}",
       "adSpace": "Miejsce na reklamę",
       "localHistoryKicker": "HISTORIA LOKALNA",
-      "clearHistory": "Wyczyść historię"
+      "clearHistory": "Wyczyść historię",
+      "entityHeading": "Czym jest 11tik",
+      "entityIntro": "11tik to marka stojąca za YouTube Thumbnail Extractor – darmowym narzędziem przeglądarkowym do pobierania publicznych miniaturek z YouTube. Terminy „ekstraktor”, „pobieracz” i „grabber” odnoszą się do tego samego produktu, a nie do oddzielnych narzędzi.",
+      "entityDoesHeading": "Co robi 11tik",
+      "entityDoes1": "Wyodrębnia publiczne miniatury YouTube z obsługiwanych adresów URL i identyfikatorów filmów, w tym linków do oglądania, krótkich filmów, transmisji na żywo, youtu.be i osadzania",
+      "entityDoes2": "Sprawdza, jakie rozmiary publicznych miniatur są faktycznie ładowane (w tym maksymalne rozmiary, gdy YouTube je publikuje), a następnie umożliwia pobranie lub skopiowanie adresu URL obrazu",
+      "entityDoes3": "Działa całkowicie w przeglądarce (po stronie klienta) z trybem zbiorczym dla maksymalnie 50 publicznych adresów URL oraz możliwością eksportu do plików ZIP i CSV",
+      "entityDoesNotHeading": "Czego 11tik nie robi",
+      "entityDoesNot1": "Pobierz wideo lub audio z YouTube",
+      "entityDoesNot2": "Omiń treści prywatne lub objęte ograniczeniami wiekowymi",
+      "entityDoesNot3": "Generuj lub projektuj miniatury",
+      "entityDoesNot4": "Wyciąg z TikToka, Instagrama, adresów URL wyłącznie kanału lub playlisty lub innych nieobsługiwanych platform"
     },
     "posts": [
       {
@@ -13741,7 +13994,18 @@
       "videoLabel": "Vídeo {n}",
       "adSpace": "Espaço publicitário",
       "localHistoryKicker": "HISTÓRICO LOCAL",
-      "clearHistory": "Limpar histórico"
+      "clearHistory": "Limpar histórico",
+      "entityHeading": "O que é 11tik",
+      "entityIntro": "11tik é a marca por trás do YouTube Thumbnail Extractor — uma ferramenta gratuita para navegadores que extrai miniaturas públicas do YouTube. Os termos \"extrator\", \"downloader\" e \"grabber\" referem-se ao mesmo produto, e não a ferramentas separadas.",
+      "entityDoesHeading": "O que 11tik faz",
+      "entityDoes1": "Extrai miniaturas públicas do YouTube a partir de URLs e IDs de vídeos compatíveis — incluindo links de assistir, Shorts, ao vivo, youtu.be e incorporados.",
+      "entityDoes2": "Valida quais tamanhos de miniaturas públicas são realmente carregados (incluindo maxres quando o YouTube as publica) e permite baixar ou copiar o URL da imagem.",
+      "entityDoes3": "Executa inteiramente no seu navegador (lado do cliente), com modo em lote para até 50 URLs públicas, além de exportação em ZIP e CSV.",
+      "entityDoesNotHeading": "O que 11tik não faz",
+      "entityDoesNot1": "Baixe vídeos ou áudios do YouTube.",
+      "entityDoesNot2": "Contornar conteúdo privado ou restrito por idade",
+      "entityDoesNot3": "Gere ou crie miniaturas.",
+      "entityDoesNot4": "Extraia conteúdo do TikTok, Instagram, URLs exclusivas de canais ou playlists, ou de outras plataformas não suportadas."
     },
     "posts": [
       {
@@ -14165,7 +14429,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Spațiu publicitar",
       "localHistoryKicker": "ISTORIC LOCAL",
-      "clearHistory": "Șterge istoricul"
+      "clearHistory": "Șterge istoricul",
+      "entityHeading": "Ce este 11tik",
+      "entityIntro": "11tik este marca din spatele YouTube Thumbnail Extractor - un instrument gratuit de browser pentru imagini miniatură publice de pe YouTube. Termenii „extractor”, „downloader” și „grabber” se referă la același produs, nu la instrumente separate.",
+      "entityDoesHeading": "Ce face 11tik",
+      "entityDoes1": "Extrage imagini miniatură publice de pe YouTube din adresele URL și ID-urile videoclipurilor acceptate, inclusiv linkuri de vizionare, videoclipuri scurte, live, youtu.be și linkuri de încorporare",
+      "entityDoes2": "Validează ce dimensiuni publice ale miniaturilor se încarcă efectiv (inclusiv rezoluțiile maxime atunci când YouTube le publică), apoi vă permite să descărcați sau să copiați adresa URL a imaginii",
+      "entityDoes3": "Rulează în întregime în browser (pe partea de client), cu mod Bulk pentru până la 50 de adrese URL publice plus export ZIP și CSV",
+      "entityDoesNotHeading": "Ceea ce 11tik nu face",
+      "entityDoesNot1": "Descărcați videoclipuri sau fișiere audio de pe YouTube",
+      "entityDoesNot2": "Evită conținutul privat sau restricționat în funcție de vârstă",
+      "entityDoesNot3": "Generați sau proiectați miniaturi",
+      "entityDoesNot4": "Extragere de pe TikTok, Instagram, adrese URL exclusive pentru canale sau liste de redare sau alte platforme neacceptate"
     },
     "posts": [
       {
@@ -14271,7 +14546,18 @@
       "videoLabel": "Видео {n}",
       "adSpace": "Рекламное место",
       "localHistoryKicker": "ЛОКАЛЬНАЯ ИСТОРИЯ",
-      "clearHistory": "Очистить историю"
+      "clearHistory": "Очистить историю",
+      "entityHeading": "Что такое 11tik",
+      "entityIntro": "11tik — это бренд, стоящий за YouTube Thumbnail Extractor — бесплатным браузерным инструментом для извлечения общедоступных миниатюр видео с YouTube. Слова «экстрактор», «загрузчик» и «граббер» относятся к одному и тому же продукту, а не к отдельным инструментам.",
+      "entityDoesHeading": "Что делает 11tik",
+      "entityDoes1": "Извлекает общедоступные миниатюры видео с YouTube из поддерживаемых URL-адресов и идентификаторов видео, включая watch, Shorts, live, youtu.be и ссылки для встраивания.",
+      "entityDoes2": "Проверяет, какие размеры загружаемых публичных миниатюр действительно существуют (включая максимальное разрешение, когда YouTube их публикует), а затем позволяет загрузить или скопировать URL-адрес изображения.",
+      "entityDoes3": "Работает полностью в вашем браузере (на стороне клиента), с режимом пакетной обработки до 50 общедоступных URL-адресов, а также экспортом в ZIP и CSV-архивы.",
+      "entityDoesNotHeading": "Что 11tik не делает",
+      "entityDoesNot1": "Скачать видео или аудио с YouTube",
+      "entityDoesNot2": "Обходите закрытый контент или контент с возрастными ограничениями.",
+      "entityDoesNot3": "Создание или разработка эскизов",
+      "entityDoesNot4": "Извлечение контента из TikTok, Instagram, URL-адресов каналов или плейлистов, а также других неподдерживаемых платформ."
     },
     "posts": [
       {
@@ -15119,7 +15405,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Reklamný priestor",
       "localHistoryKicker": "MIESTNA HISTÓRIA",
-      "clearHistory": "Vymazať históriu"
+      "clearHistory": "Vymazať históriu",
+      "entityHeading": "Čo je 11tik",
+      "entityIntro": "11tik je značka, ktorá stojí za nástrojom YouTube Thumbnail Extractor – bezplatným nástrojom prehliadača na zobrazenie verejných miniatúr obrázkov z YouTube. Slovné spojenia extraktor, sťahovač a grabber označujú ten istý produkt, nie samostatné nástroje.",
+      "entityDoesHeading": "Čo robí 11tik",
+      "entityDoes1": "Extrahuje verejné miniatúry YouTube z podporovaných URL adries a ID videí – vrátane odkazov na pozeranie, krátke videá, živé vysielanie, youtu.be a vloženie",
+      "entityDoes2": "Overí, ktoré veľkosti verejných miniatúr sa skutočne načítajú (vrátane maximálnych rozlíšení, keď ich YouTube zverejní), a potom vám umožní stiahnuť alebo skopírovať URL adresu obrázka",
+      "entityDoes3": "Beží výlučne vo vašom prehliadači (na strane klienta) s hromadným režimom až pre 50 verejných URL adries plus export ZIP a CSV",
+      "entityDoesNotHeading": "Čo 11tik nerobí",
+      "entityDoesNot1": "Stiahnite si video alebo audio z YouTube",
+      "entityDoesNot2": "Obísť súkromný alebo vekovo obmedzený obsah",
+      "entityDoesNot3": "Generovanie alebo navrhovanie miniatúr",
+      "entityDoesNot4": "Výňatok z TikToku, Instagramu, URL adries iba pre kanály alebo zoznamy skladieb alebo iných nepodporovaných platforiem"
     },
     "posts": [
       {
@@ -15755,7 +16052,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Reklamni prostor",
       "localHistoryKicker": "LOKALNA ISTORIJA",
-      "clearHistory": "Obriši istoriju"
+      "clearHistory": "Obriši istoriju",
+      "entityHeading": "Шта је 11tik",
+      "entityIntro": "11tik је бренд који стоји иза YouTube Thumbnail Extractor-а — бесплатног алата за прегледач за јавне YouTube сличице. Термини „extractor“, „downloader“ и „grabber“ односе се на исти производ, а не на одвојене алате.",
+      "entityDoesHeading": "Шта 11tik ради",
+      "entityDoes1": "Издваја јавне YouTube сличице из подржаних URL-ова и ИД-ова видео снимака — укључујући линкове за гледање, Shorts, уживо, youtu.be и уграђивање",
+      "entityDoes2": "Проверава које величине јавних сличица се заправо учитавају (укључујући максималне резолуције када их објави YouTube), а затим вам омогућава да преузмете или копирате URL адресу слике",
+      "entityDoes3": "Ради у потпуности у вашем прегледачу (на страни клијента), са групним режимом за до 50 јавних URL-ова плус извоз у ZIP и CSV формате",
+      "entityDoesNotHeading": "Шта 11tik не ради",
+      "entityDoesNot1": "Преузмите видео или аудио са Јутјуба",
+      "entityDoesNot2": "Заобиђите приватни или садржај ограничен за узраст",
+      "entityDoesNot3": "Генеришите или дизајнирајте сличице",
+      "entityDoesNot4": "Извод са ТикТок-а, Инстаграма, URL-ова само за канале или само за плејлисте или других неподржаних платформи"
     },
     "posts": [
       {
@@ -16179,7 +16487,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Annonsyta",
       "localHistoryKicker": "LOKAL HISTORIK",
-      "clearHistory": "Rensa historik"
+      "clearHistory": "Rensa historik",
+      "entityHeading": "Vad 11tik är",
+      "entityIntro": "11tik är varumärket bakom YouTube Thumbnail Extractor – ett gratis webbläsarverktyg för offentliga YouTube-miniatyrbilder. Formuleringarna extraherare, nedladdare och grabber hänvisar alla till samma produkt, inte separata verktyg.",
+      "entityDoesHeading": "Vad 11tik gör",
+      "entityDoes1": "Extraherar offentliga YouTube-miniatyrbilder från stödda video-URL:er och ID:n – inklusive titta, Shorts, live, youtu.be och inbäddade länkar",
+      "entityDoes2": "Validerar vilka offentliga miniatyrstorlekar som faktiskt laddas (inklusive maxstorlekar när YouTube publicerar dem), och låter dig sedan ladda ner eller kopiera bildens URL",
+      "entityDoes3": "Körs helt i din webbläsare (klientsidan), med bulkläge för upp till 50 offentliga URL:er plus export av ZIP- och CSV-filer.",
+      "entityDoesNotHeading": "Vad 11tik inte gör",
+      "entityDoesNot1": "Ladda ner YouTube-video eller ljud",
+      "entityDoesNot2": "Kringgå privat eller åldersbegränsat innehåll",
+      "entityDoesNot3": "Generera eller designa miniatyrbilder",
+      "entityDoesNot4": "Utdrag från TikTok, Instagram, webbadresser endast för kanaler eller spellistor, eller andra plattformar som inte stöds"
     },
     "posts": [
       {
@@ -16285,7 +16604,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Nafasi ya tangazo",
       "localHistoryKicker": "HISTORIA YA NDANI",
-      "clearHistory": "Futa historia"
+      "clearHistory": "Futa historia",
+      "entityHeading": "11tik ni nini",
+      "entityIntro": "11tik ni chapa iliyo nyuma ya Kichunguzi cha Picha Ndogo cha YouTube—zana ya kivinjari bila malipo kwa picha ndogo za YouTube za umma. Kichunguzi, kipakuzi, na maneno ya kukamata yote yanarejelea bidhaa hii hiyo, si zana tofauti.",
+      "entityDoesHeading": "11tik hufanya nini",
+      "entityDoes1": "Hutoa picha za vijipicha vya YouTube vya umma kutoka kwa URL na vitambulisho vya video vinavyoungwa mkono—ikiwa ni pamoja na kutazama, Fupi, moja kwa moja, youtu.be, na viungo vya kupachika",
+      "entityDoes2": "Huthibitisha ni ukubwa gani wa vijipicha vya umma hupakia (ikiwa ni pamoja na maxres wakati YouTube inachapisha), kisha hukuruhusu kupakua au kunakili URL ya picha",
+      "entityDoes3": "Hufanya kazi kikamilifu katika kivinjari chako (upande wa mteja), ikiwa na hali ya Bulk kwa hadi URL 50 za umma pamoja na uhamishaji wa ZIP na CSV",
+      "entityDoesNotHeading": "Kile ambacho 11tik haifanyi",
+      "entityDoesNot1": "Pakua video au sauti ya YouTube",
+      "entityDoesNot2": "Pinga maudhui ya faragha au yaliyotengwa kwa umri",
+      "entityDoesNot3": "Tengeneza au ubuni vijipicha vidogo",
+      "entityDoesNot4": "Dondoo kutoka kwa TikTok, Instagram, URL za chaneli pekee au orodha ya kucheza pekee, au mifumo mingine isiyoungwa mkono"
     },
     "posts": [
       {
@@ -16709,7 +17039,18 @@
       "videoLabel": "วิดีโอ {n}",
       "adSpace": "พื้นที่โฆษณา",
       "localHistoryKicker": "ประวัติในเครื่อง",
-      "clearHistory": "ล้างประวัติ"
+      "clearHistory": "ล้างประวัติ",
+      "entityHeading": "11tik คืออะไร",
+      "entityIntro": "11tik คือแบรนด์ที่อยู่เบื้องหลัง YouTube Thumbnail Extractor ซึ่งเป็นเครื่องมือฟรีสำหรับเบราว์เซอร์เพื่อดึงภาพขนาดย่อของวิดีโอ YouTube สาธารณะ คำว่า Extractor, Downloader และ Grabber ล้วนหมายถึงผลิตภัณฑ์เดียวกัน ไม่ใช่เครื่องมือแยกต่างหาก",
+      "entityDoesHeading": "11tik ทำอะไร",
+      "entityDoes1": "ดึงภาพขนาดย่อสาธารณะจาก YouTube จาก URL และ ID วิดีโอที่รองรับ รวมถึงลิงก์รับชม วิดีโอสั้น วิดีโอถ่ายทอดสด youtu.be และลิงก์ฝัง",
+      "entityDoes2": "ตรวจสอบว่าขนาดภาพขนาดย่อสาธารณะใดบ้างที่โหลดได้จริง (รวมถึงขนาด maxres เมื่อ YouTube เผยแพร่) จากนั้นจึงให้คุณดาวน์โหลดหรือคัดลอก URL ของภาพได้",
+      "entityDoes3": "ทำงานได้ทั้งหมดในเบราว์เซอร์ของคุณ (ฝั่งไคลเอ็นต์) พร้อมโหมด Bulk สำหรับ URL สาธารณะสูงสุด 50 รายการ รวมถึงการส่งออกเป็นไฟล์ ZIP และ CSV",
+      "entityDoesNotHeading": "สิ่งที่ 11tik ไม่ได้ทำ",
+      "entityDoesNot1": "ดาวน์โหลดวิดีโอหรือไฟล์เสียงจาก YouTube",
+      "entityDoesNot2": "ข้ามเนื้อหาที่เป็นส่วนตัวหรือจำกัดอายุ",
+      "entityDoesNot3": "สร้างหรือออกแบบภาพขนาดย่อ",
+      "entityDoesNot4": "ดึงข้อมูลจาก TikTok, Instagram, URL เฉพาะช่อง หรือ URL เฉพาะเพลย์ลิสต์ หรือแพลตฟอร์มอื่นๆ ที่ไม่รองรับ"
     },
     "posts": [
       {
@@ -17027,7 +17368,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Espasyo ng ad",
       "localHistoryKicker": "LOKAL NA KASAYSAYAN",
-      "clearHistory": "Burahin ang kasaysayan"
+      "clearHistory": "Burahin ang kasaysayan",
+      "entityHeading": "Ano ang 11tik",
+      "entityIntro": "Ang 11tik ay ang tatak sa likod ng YouTube Thumbnail Extractor—isang libreng tool sa browser para sa mga pampublikong thumbnail na larawan sa YouTube. Ang mga salitang \"extractor\", \"downloader\", at \"grabber\" ay pawang tumutukoy sa iisang produktong ito, hindi sa magkakahiwalay na tool.",
+      "entityDoesHeading": "Ano ang ginagawa ni 11tik",
+      "entityDoes1": "Kinukuha ang mga pampublikong thumbnail na larawan sa YouTube mula sa mga sinusuportahang URL at ID ng video—kabilang ang mga link para sa panonood, Shorts, live, youtu.be, at pag-embed",
+      "entityDoes2": "Pinapatunayan kung aling mga pampublikong laki ng thumbnail ang aktwal na naglo-load (kabilang ang mga maxres kapag inilathala ito ng YouTube), pagkatapos ay hinahayaan kang i-download o kopyahin ang URL ng larawan",
+      "entityDoes3": "Tumatakbo nang buo sa iyong browser (client-side), na may Bulk mode para sa hanggang 50 pampublikong URL kasama ang ZIP at CSV export",
+      "entityDoesNotHeading": "Ang hindi nagagawa ng 11tik",
+      "entityDoesNot1": "Mag-download ng video o audio sa YouTube",
+      "entityDoesNot2": "Laktawan ang pribado o nakatakdang nilalaman na may limitasyon sa edad",
+      "entityDoesNot3": "Bumuo o magdisenyo ng mga thumbnail",
+      "entityDoesNot4": "Kinuha mula sa TikTok, Instagram, mga URL na para lang sa channel o playlist, o iba pang hindi sinusuportahang platform"
     },
     "posts": [
       {
@@ -17345,7 +17697,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Reklam alanı",
       "localHistoryKicker": "YEREL GEÇMİŞ",
-      "clearHistory": "Geçmişi temizle"
+      "clearHistory": "Geçmişi temizle",
+      "entityHeading": "11tik nedir?",
+      "entityIntro": "11tik, herkese açık YouTube küçük resimlerini çıkarmak için ücretsiz bir tarayıcı aracı olan YouTube Thumbnail Extractor'ın arkasındaki markadır. Çıkarıcı, indirici ve yakalayıcı ifadelerinin tümü, ayrı araçlar değil, aynı ürünü ifade eder.",
+      "entityDoesHeading": "11tik ne yapar?",
+      "entityDoes1": "Desteklenen video URL'lerinden ve kimliklerinden (izleme, kısa videolar, canlı yayın, youtu.be ve yerleştirme bağlantıları dahil) herkese açık YouTube küçük resimlerini çıkarır.",
+      "entityDoes2": "YouTube'un yayınladığı durumlarda maksimum çözünürlük de dahil olmak üzere, hangi genel küçük resim boyutlarının gerçekten yüklendiğini doğrular ve ardından resmin URL'sini indirmenize veya kopyalamanıza olanak tanır.",
+      "entityDoes3": "Tamamen tarayıcınızda (istemci tarafında) çalışır, 50 adede kadar genel URL için Toplu mod ve ZIP ve CSV dışa aktarma özelliği mevcuttur.",
+      "entityDoesNotHeading": "11tik'ün yapmadığı şey",
+      "entityDoesNot1": "YouTube videosunu veya sesini indirin",
+      "entityDoesNot2": "Özel veya yaş sınırlamalı içeriği atlayın",
+      "entityDoesNot3": "Küçük resimler oluşturun veya tasarlayın",
+      "entityDoesNot4": "TikTok, Instagram, yalnızca kanal veya yalnızca oynatma listesi URL'leri veya desteklenmeyen diğer platformlardan alınan veriler."
     },
     "posts": [
       {
@@ -17981,7 +18344,18 @@
       "videoLabel": "Відео {n}",
       "adSpace": "Рекламне місце",
       "localHistoryKicker": "ЛОКАЛЬНА ІСТОРІЯ",
-      "clearHistory": "Очистити історію"
+      "clearHistory": "Очистити історію",
+      "entityHeading": "Що таке 11tik",
+      "entityIntro": "11tik – це бренд, що стоїть за YouTube Thumbnail Extractor – безкоштовним інструментом для браузера, щоб отримувати загальнодоступні мініатюри зображень YouTube. Терміни «екстрактор», «завантажувач» та «граббер» стосуються одного й того ж продукту, а не окремих інструментів.",
+      "entityDoesHeading": "Що робить 11tik",
+      "entityDoes1": "Витягує загальнодоступні зображення мініатюр YouTube з підтримуваних URL-адрес та ідентифікаторів відео, включаючи посилання на перегляд, короткі відео, прямі трансляції, youtu.be та вбудовування",
+      "entityDoes2": "Перевіряє, які розміри загальнодоступних мініатюр фактично завантажуються (включно з максимальними розмірами, коли YouTube їх публікує), а потім дозволяє завантажити або скопіювати URL-адресу зображення",
+      "entityDoes3": "Працює повністю у вашому браузері (на стороні клієнта), з режимом масового копіювання до 50 публічних URL-адрес, а також експортом у ZIP та CSV",
+      "entityDoesNotHeading": "Чого 11tik не робить",
+      "entityDoesNot1": "Завантажити відео або аудіо з YouTube",
+      "entityDoesNot2": "Обхід приватного контенту або контенту з віковими обмеженнями",
+      "entityDoesNot3": "Створення або розробка мініатюр",
+      "entityDoesNot4": "Витяг з TikTok, Instagram, URL-адрес лише для каналів або плейлистів чи інших непідтримуваних платформ"
     },
     "posts": [
       {
@@ -18087,7 +18461,18 @@
       "videoLabel": "ویڈیو {n}",
       "adSpace": "اشتہاری جگہ",
       "localHistoryKicker": "مقامی تاریخ",
-      "clearHistory": "تاریخ صاف کریں"
+      "clearHistory": "تاریخ صاف کریں",
+      "entityHeading": "11tik کیا ہے۔",
+      "entityIntro": "11tik یوٹیوب تھمب نیل ایکسٹریکٹر کے پیچھے برانڈ ہے—جو عوامی YouTube تھمب نیل امیجز کے لیے ایک مفت براؤزر ٹول ہے۔ ایکسٹریکٹر، ڈاؤنلوڈر، اور گرابر الفاظ سبھی اسی پروڈکٹ کا حوالہ دیتے ہیں، الگ الگ ٹولز نہیں۔",
+      "entityDoesHeading": "11tik کیا کرتا ہے۔",
+      "entityDoes1": "معاون ویڈیو یو آر ایل اور آئی ڈی سے عوامی یوٹیوب تھمب نیل امیجز نکالتا ہے — بشمول واچ، شارٹس، لائیو، youtu.be، اور ایمبیڈ لنکس",
+      "entityDoes2": "اس بات کی توثیق کرتا ہے کہ کون سے عوامی تھمب نیل سائز اصل میں لوڈ ہوتے ہیں (بشمول maxres جب YouTube اسے شائع کرتا ہے)، پھر آپ کو تصویر کا URL ڈاؤن لوڈ یا کاپی کرنے دیتا ہے۔",
+      "entityDoes3": "مکمل طور پر آپ کے براؤزر (کلائنٹ سائڈ) میں چلتا ہے، بلک موڈ کے ساتھ 50 عوامی URLs کے علاوہ ZIP اور CSV ایکسپورٹ",
+      "entityDoesNotHeading": "جو 11tik نہیں کرتا",
+      "entityDoesNot1": "یوٹیوب ویڈیو یا آڈیو ڈاؤن لوڈ کریں۔",
+      "entityDoesNot2": "نجی یا عمر کے لحاظ سے مواد کو نظرانداز کریں۔",
+      "entityDoesNot3": "تھمب نیلز بنائیں یا ڈیزائن کریں۔",
+      "entityDoesNot4": "TikTok، Instagram، صرف چینل یا صرف پلے لسٹ URLs، یا دیگر غیر تعاون یافتہ پلیٹ فارمز سے اقتباس"
     },
     "posts": [
       {
@@ -18405,7 +18790,18 @@
       "videoLabel": "Video {n}",
       "adSpace": "Không gian quảng cáo",
       "localHistoryKicker": "LỊCH SỬ CỤC BỘ",
-      "clearHistory": "Xóa lịch sử"
+      "clearHistory": "Xóa lịch sử",
+      "entityHeading": "11tik là gì",
+      "entityIntro": "11tik là thương hiệu đứng sau YouTube Thumbnail Extractor—một công cụ trình duyệt miễn phí dành cho hình ảnh thu nhỏ công khai trên YouTube. Các từ ngữ \"trích xuất\", \"tải xuống\" và \"lấy\" đều đề cập đến cùng một sản phẩm này, chứ không phải các công cụ riêng biệt.",
+      "entityDoesHeading": "11tik làm gì",
+      "entityDoes1": "Trích xuất hình ảnh thu nhỏ công khai của YouTube từ các URL và ID video được hỗ trợ—bao gồm watch, Shorts, live, youtu.be và liên kết nhúng.",
+      "entityDoes2": "Công cụ này xác thực kích thước hình thu nhỏ công khai nào thực sự được tải (bao gồm cả kích thước tối đa khi YouTube đăng tải), sau đó cho phép bạn tải xuống hoặc sao chép URL hình ảnh.",
+      "entityDoes3": "Ứng dụng chạy hoàn toàn trên trình duyệt của bạn (phía máy khách), với chế độ xử lý hàng loạt cho tối đa 50 URL công khai, cùng với khả năng xuất file ZIP và CSV.",
+      "entityDoesNotHeading": "Điều mà 11tik không làm",
+      "entityDoesNot1": "Tải xuống video hoặc âm thanh YouTube",
+      "entityDoesNot2": "Vượt qua nội dung riêng tư hoặc bị giới hạn độ tuổi",
+      "entityDoesNot3": "Tạo hoặc thiết kế hình thu nhỏ",
+      "entityDoesNot4": "Trích xuất từ ​​TikTok, Instagram, URL chỉ dành cho kênh hoặc danh sách phát, hoặc các nền tảng không được hỗ trợ khác."
     },
     "posts": [
       {
@@ -19253,7 +19649,18 @@
       "videoLabel": "视频 {n}",
       "adSpace": "广告位",
       "localHistoryKicker": "本地历史",
-      "clearHistory": "清除历史"
+      "clearHistory": "清除历史",
+      "entityHeading": "11tik是什么？",
+      "entityIntro": "11tik 是 YouTube 缩略图提取器背后的品牌，这是一款免费的浏览器工具，用于提取公开的 YouTube 缩略图。提取器、下载器和抓取器这些词语都指的是同一款产品，而不是不同的工具。",
+      "entityDoesHeading": "11tik 的作用",
+      "entityDoes1": "从支持的视频 URL 和 ID（包括 watch、Shorts、live、youtu.be 和嵌入链接）中提取公开的 YouTube 缩略图。",
+      "entityDoes2": "验证哪些公开的缩略图尺寸实际可以加载（包括 YouTube 发布时的最大分辨率），然后允许您下载或复制图像 URL。",
+      "entityDoes3": "完全在浏览器（客户端）中运行，批量模式最多可处理 50 个公共 URL，并支持导出 ZIP 和 CSV 文件。",
+      "entityDoesNotHeading": "11tik 不做什么",
+      "entityDoesNot1": "下载 YouTube 视频或音频",
+      "entityDoesNot2": "绕过私人或年龄限制内容",
+      "entityDoesNot3": "生成或设计缩略图",
+      "entityDoesNot4": "从 TikTok、Instagram、仅限频道或仅限播放列表的 URL 或其他不受支持的平台提取内容"
     },
     "posts": [
       {

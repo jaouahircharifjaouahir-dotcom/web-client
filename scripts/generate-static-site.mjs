@@ -127,7 +127,7 @@ function spaShellBodyHtml(code, buildContext) {
   const homeHubs = renderHomeHubLinksHtml(code);
   const homeFaq = renderHomeFaqShellHtml(code);
   const entityClarity =
-    code === "en" && ui.entityHeading
+    ui.entityHeading
       ? `<section class="yte-entity" aria-labelledby="yte-entity-heading"><h2 id="yte-entity-heading">${xmlEscape(ui.entityHeading)}</h2><p>${xmlEscape(ui.entityIntro || "")}</p><h3>${xmlEscape(ui.entityDoesHeading || "")}</h3><ul><li>${xmlEscape(ui.entityDoes1 || "")}</li><li>${xmlEscape(ui.entityDoes2 || "")}</li><li>${xmlEscape(ui.entityDoes3 || "")}</li></ul><h3>${xmlEscape(ui.entityDoesNotHeading || "")}</h3><ul><li>${xmlEscape(ui.entityDoesNot1 || "")}</li><li>${xmlEscape(ui.entityDoesNot2 || "")}</li><li>${xmlEscape(ui.entityDoesNot3 || "")}</li><li>${xmlEscape(ui.entityDoesNot4 || "")}</li></ul></section>`
       : "";
   const guides = renderShellGuideListHtml(code, { ...buildContext, catalogDoc });

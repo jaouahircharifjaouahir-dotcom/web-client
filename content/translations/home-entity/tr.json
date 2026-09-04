@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "tr",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "11tik nedir?",
+  "entityIntro": "11tik, herkese açık YouTube küçük resimlerini çıkarmak için ücretsiz bir tarayıcı aracı olan YouTube Thumbnail Extractor'ın arkasındaki markadır. Çıkarıcı, indirici ve yakalayıcı ifadelerinin tümü, ayrı araçlar değil, aynı ürünü ifade eder.",
+  "entityDoesHeading": "11tik ne yapar?",
+  "entityDoes1": "Desteklenen video URL'lerinden ve kimliklerinden (izleme, kısa videolar, canlı yayın, youtu.be ve yerleştirme bağlantıları dahil) herkese açık YouTube küçük resimlerini çıkarır.",
+  "entityDoes2": "YouTube'un yayınladığı durumlarda maksimum çözünürlük de dahil olmak üzere, hangi genel küçük resim boyutlarının gerçekten yüklendiğini doğrular ve ardından resmin URL'sini indirmenize veya kopyalamanıza olanak tanır.",
+  "entityDoes3": "Tamamen tarayıcınızda (istemci tarafında) çalışır, 50 adede kadar genel URL için Toplu mod ve ZIP ve CSV dışa aktarma özelliği mevcuttur.",
+  "entityDoesNotHeading": "11tik'ün yapmadığı şey",
+  "entityDoesNot1": "YouTube videosunu veya sesini indirin",
+  "entityDoesNot2": "Özel veya yaş sınırlamalı içeriği atlayın",
+  "entityDoesNot3": "Küçük resimler oluşturun veya tasarlayın",
+  "entityDoesNot4": "TikTok, Instagram, yalnızca kanal veya yalnızca oynatma listesi URL'leri veya desteklenmeyen diğer platformlardan alınan veriler.",
+  "articleId": "home-entity"
+}

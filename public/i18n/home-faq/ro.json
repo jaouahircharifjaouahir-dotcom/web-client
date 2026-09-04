@@ -2,12 +2,12 @@
   "heading": "Întrebări frecvente",
   "items": [
     {
-      "question": "Ce este un extractor de miniaturi YouTube?",
-      "answerHtml": "Un extractor de miniaturi este un instrument de browser care preia imaginile statice publice pe care YouTube le găzduiește deja pe CDN-ul său - nu fișierul video. Lipiți un link, instrumentul verifică ce dimensiuni există și previzualizați sau salvați cel mai mare fișier real. 11tik este doar un extractor; nu extrage cadre din redare și nu promite dimensiuni pe care YouTube nu le-a publicat niciodată."
+      "question": "Ce este un extractor, un program de descărcare sau un instrument de captare a miniaturilor YouTube?",
+      "answerHtml": "Aceste nume descriu același tip de instrument de browser: unul care preia imagini publice pe care YouTube le găzduiește deja pe CDN-ul său - nu fișierul video. Lipiți un link, instrumentul verifică ce dimensiuni există și previzualizați sau salvați cel mai mare fișier real. 11tik este doar acel instrument de extragere a miniaturilor YouTube; termenii „downloader” și „grabber” sunt aliasuri pentru acest produs, nu aplicații separate."
     },
     {
-      "question": "Ce adrese URL YouTube sunt acceptate de 11tik?",
-      "answerHtml": "Inserează un link public de vizionare, o adresă URL Shorts, o pagină live sau de premieră sau un link scurt youtu.be. Instrumentul citește ID-ul videoclipului din cale și caută fișiere publice pe i.ytimg.com. Adresele URL exclusive pentru canale și playlisturi nu sunt acceptate. Pentru anatomia adreselor URL și lista completă de modele, consultă<a href=\"https://ro.11tik.com/l/ro/2026/08/youtube-thumbnail-url.html\">ghid pentru URL-uri miniatură</a>."
+      "question": "Pot descărca o miniatură YouTube de la o adresă URL?",
+      "answerHtml": "Da. Inserați un link public de vizionare, o adresă URL Shorts, o pagină live sau de premieră, un videoclip încorporat, un link scurt youtu.be sau un ID video simplu de 11 caractere. Instrumentul citește ID-ul videoclipului și caută fișiere publice pe i.ytimg.com. Adresele URL exclusive pentru canale și playlisturi nu sunt acceptate. Pentru anatomia URL-urilor și lista completă de modele, consultați<a href=\"https://www.11tik.com/youtube-thumbnail-url\">ghid pentru URL-uri miniatură</a>."
     },
     {
       "question": "Încarcă 11tik miniatura sau videoclipul meu?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Pot descărca miniaturi din YouTube Shorts?",
-      "answerHtml": "Da. Linkurile pentru videoclipurile scurte folosesc aceleași gazde de imagini publice ca și videoclipurile obișnuite, așa că poți lipi o adresă URL /shorts/ și descărca cea mai bună imagine statică existentă. Previzualizarea poate părea mai lată decât clipul vertical pe care l-ai vizionat, deoarece YouTube stochează o imagine statică peisaj. Videoclipurile scurte private sau restricționate în funcție de vârstă, fără o imagine publică, nu vor returna un fișier. Vezi<a href=\"https://ro.11tik.com/l/ro/2026/08/youtube-shorts-thumbnail-download.html\">Ghid de miniaturi pentru scurtmetraje</a>pentru ajutor pas cu pas."
+      "answerHtml": "Da. Linkurile pentru videoclipurile scurte folosesc aceleași gazde de imagini publice ca și videoclipurile obișnuite, așa că poți lipi o adresă URL /shorts/ și descărca cea mai bună imagine statică existentă. Previzualizarea poate părea mai lată decât clipul vertical pe care l-ai vizionat, deoarece YouTube stochează o imagine statică peisaj. Videoclipurile scurte private sau restricționate în funcție de vârstă, fără o imagine publică, nu vor returna un fișier. Vezi<a href=\"https://ro.11tik.com/l/ro/youtube-shorts-thumbnail-download\">Ghid de miniaturi pentru scurtmetraje</a>pentru ajutor pas cu pas."
     },
     {
       "question": "Ce se întâmplă când cea mai înaltă calitate a miniaturilor nu este disponibilă?",
-      "answerHtml": "11tik solicită fiecare nume de fișier public și păstrează doar răspunsurile care returnează o imagine reală - fără adrese URL maxres ghicite. Dacă maxresdefault lipsește, instrumentul afișează următoarea dimensiune cea mai mare care se încarcă efectiv, cum ar fi hq720 sau sddefault. Aceasta este dimensiunea maximă corectă pentru videoclipul respectiv. Pentru a afla de ce funcționează maxres 404 și cum funcționează opțiunile de rezervă, citiți...<a href=\"https://ro.11tik.com/l/ro/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">ghid maxresdefault</a>."
+      "answerHtml": "11tik solicită fiecare nume de fișier public și păstrează doar răspunsurile care returnează o imagine reală - fără adrese URL maxres ghicite. Dacă maxresdefault lipsește, instrumentul afișează următoarea dimensiune cea mai mare care se încarcă efectiv, cum ar fi hq720 sau sddefault. Aceasta este dimensiunea maximă corectă pentru videoclipul respectiv. Măsurătorile eșantion sunt în<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studiu de 300 de videoclipuri</a>Pentru a afla de ce sunt maxres 404, citiți<a href=\"https://ro.11tik.com/l/ro/what-is-maxresdefaultjpg-when-youtube\">ghid maxresdefault</a>."
+    },
+    {
+      "question": "Pot procesa mai multe adrese URL de miniaturi YouTube?",
+      "answerHtml": "Da. Același program de extragere a miniaturilor YouTube include modul Bulk: lipiți până la 50 de adrese URL publice (una pe linie), apoi descărcați fiecare dintre cele mai bune imagini, comprimați ZIP setul de cea mai înaltă calitate sau exportați CSV. Modul Bulk este un flux de lucru al acestui produs, nu un instrument separat de descărcare în bloc. Detalii:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">ghid de descărcare în serie</a>."
+    },
+    {
+      "question": "11tik descarcă videoclipuri sau fișiere audio de pe YouTube?",
+      "answerHtml": "Nu. 11tik funcționează doar cu imagini statice publice în miniatură pe care YouTube le găzduiește deja. Nu descarcă fișiere video sau audio, nu extrage cadre din redare și nu deblochează fluxuri. De asemenea, nu poate ocoli ambalajele private sau restricționate în funcție de vârstă atunci când nu este disponibil niciun fișier public în miniatură."
+    },
+    {
+      "question": "Există un add-on oficial 11tik pentru Firefox?",
+      "answerHtml": "Da.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik pentru Firefox</a>poate extrage cea mai bună miniatură publică disponibilă din fila YouTube curentă. Este același produs ca instrumentul pentru site-uri web; site-ul oficial rămâne<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listarea nu modifică ceea ce extractorul poate sau nu poate prelua."
     }
   ]
 }

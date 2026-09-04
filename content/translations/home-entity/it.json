@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "it",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "Che cos'è 11tik",
+  "entityIntro": "11tik è il marchio dietro YouTube Thumbnail Extractor, uno strumento gratuito per browser che estrae le miniature pubbliche di YouTube. I termini \"estrattore\", \"downloader\" e \"grabber\" si riferiscono tutti allo stesso prodotto, non a strumenti separati.",
+  "entityDoesHeading": "Cosa fa 11tik",
+  "entityDoes1": "Estrae le immagini in miniatura pubbliche di YouTube dagli URL e dagli ID video supportati, inclusi watch, Shorts, live, youtu.be e link incorporati.",
+  "entityDoes2": "Verifica quali dimensioni di miniatura pubbliche vengono effettivamente caricate (inclusa la risoluzione massima quando YouTube la pubblica), quindi consente di scaricare o copiare l'URL dell'immagine.",
+  "entityDoes3": "Funziona interamente nel tuo browser (lato client), con modalità Bulk per un massimo di 50 URL pubblici e esportazione in formato ZIP e CSV.",
+  "entityDoesNotHeading": "Ciò che 11tik non fa",
+  "entityDoesNot1": "Scarica video o audio da YouTube",
+  "entityDoesNot2": "Aggira i contenuti privati ​​o con restrizioni di età",
+  "entityDoesNot3": "Genera o progetta miniature",
+  "entityDoesNot4": "Estratto da TikTok, Instagram, URL di soli canali o solo playlist o altre piattaforme non supportate",
+  "articleId": "home-entity"
+}

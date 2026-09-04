@@ -1,0 +1,34 @@
+{
+  "contentId": "home-caps-hubs",
+  "locale": "sk",
+  "status": "ready",
+  "sourceHash": "phase-mhps-caps-hubs-v1",
+  "capsHeading": "Čo tento extraktor pokrýva",
+  "capsItems": [
+    {
+      "html": "Stiahnite si alebo získajte verejné miniatúry statických obrázkov z YouTube z podporovanej adresy URL videa (jeden produkt – nie samostatné nástroje na sťahovanie alebo získavanie)."
+    },
+    {
+      "html": "Hromadný režim pre až<strong>50</strong>URL adresy na skenovanie, so súborom ZIP statických obrázkov najvyššej kvality a exportom CSV – pozri<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">návod na dávkové sťahovanie</a>."
+    },
+    {
+      "html": "Overuje, ktoré verejné veľkosti sa skutočne načítajú pre odkazy na pozeranie a krátke videá, vrátane skutočných maximálnych rozlíšenie, keď ich YouTube zverejní."
+    },
+    {
+      "html": "Voliteľné<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik pre Firefox</a>pre aktuálnu kartu YouTube; nástroj webovej stránky zostáva na<a href=\"https://www.11tik.com/\">www.11tik.com</a>."
+    }
+  ],
+  "hubsHeading": "Sprievodcovia, ktorí podporujú tento nástroj",
+  "hubsItems": [
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Uloženie verejnej miniatúry YouTube krok za krokom</a>— Návod na použitie jednej URL adresy, potom sa sem vráťte pre extrahovanie."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Prechádzajte viacerými URL adresami miniatúr</a>— Až 50 verejných odkazov s exportom do ZIP a CSV súborov v hromadnom režime."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Namerané veľkosti v 300 videách</a>— Dôkazy o dostupnosti rozmerov a maximálnych hodnôt založené na vzorkách."
+    }
+  ],
+  "articleId": "home-caps-hubs"
+}

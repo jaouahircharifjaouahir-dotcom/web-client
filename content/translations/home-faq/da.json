@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "da",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Ofte stillede spørgsmål",
   "faq": [
     {
-      "question": "Hvad er en YouTube-miniatureudtrækker?",
-      "answer": "En miniatureudtrækker er et browserværktøj, der henter de offentlige stillbilleder, som YouTube allerede hoster på sit CDN – ikke videofilen. Du indsætter et link, værktøjet kontrollerer, hvilke størrelser der findes, og du forhåndsviser eller gemmer den største virkelige fil. 11tik er kun en udtrækker; den ripper ikke billeder fra afspilning eller lover størrelser, som YouTube aldrig har offentliggjort.",
-      "answerHtml": "En miniatureudtrækker er et browserværktøj, der henter de offentlige stillbilleder, som YouTube allerede hoster på sit CDN – ikke videofilen. Du indsætter et link, værktøjet kontrollerer, hvilke størrelser der findes, og du forhåndsviser eller gemmer den største virkelige fil. 11tik er kun en udtrækker; den ripper ikke billeder fra afspilning eller lover størrelser, som YouTube aldrig har offentliggjort."
+      "question": "Hvad er en YouTube-miniatureudtrækker, -downloader eller -grabber?",
+      "answer": "Disse navne beskriver den samme slags browserværktøj: et der henter offentlige stillbilleder, som YouTube allerede hoster på sit CDN – ikke videofilen. Du indsætter et link, værktøjet tjekker, hvilke størrelser der findes, og du forhåndsviser eller gemmer den største virkelige fil. 11tik er kun YouTube Thumbnail Extractor; ordlyden i downloader og grabber er aliasser for dette produkt, ikke separate apps.",
+      "answerHtml": "Disse navne beskriver den samme slags browserværktøj: et der henter offentlige stillbilleder, som YouTube allerede hoster på sit CDN – ikke videofilen. Du indsætter et link, værktøjet tjekker, hvilke størrelser der findes, og du forhåndsviser eller gemmer den største virkelige fil. 11tik er kun YouTube Thumbnail Extractor; ordlyden i downloader og grabber er aliasser for dette produkt, ikke separate apps."
     },
     {
-      "question": "Hvilke YouTube-URL'er understøtter 11tik?",
-      "answer": "Indsæt et offentligt link til visning, en URL til korte videoer, en live- eller premiereside eller et kort link til youtu.be. Værktøjet læser video-ID'et fra stien og slår offentlige filer op på i.ytimg.com. URL'er, der kun er til kanaler og playlister, understøttes ikke. Se vejledningen til miniature-URL'er for URL-anatomi og den fulde liste over mønstre.",
-      "answerHtml": "Indsæt et offentligt link til visning, en URL til korte videoer, en live- eller premiereside eller et kort link til youtu.be. Værktøjet læser video-ID'et fra stien og slår offentlige filer op på i.ytimg.com. URL'er kun til kanaler og playlister understøttes ikke. Se URL-anatomi og den fulde liste over mønstre på<a href=\"https://da.11tik.com/l/da/youtube-thumbnail-url\">Vejledning til miniature-URL'er</a>."
+      "question": "Kan jeg downloade et YouTube-miniaturebillede fra en URL?",
+      "answer": "Ja. Indsæt et offentligt link til visning, en URL til korte videoer, en live- eller premiereside, en indlejring, et kort link til youtu.be eller et almindeligt video-ID på 11 tegn. Værktøjet læser video-ID'et og slår offentlige filer op på i.ytimg.com. URL'er, der kun er til kanaler og playlister, understøttes ikke. Se vejledningen til miniature-URL'er for URL-anatomi og den fulde liste over mønstre.",
+      "answerHtml": "Ja. Indsæt et offentligt link til visning, en URL til korte videoer, en live- eller premiereside, en indlejring, et kort link til youtu.be eller et rent video-ID på 11 tegn. Værktøjet læser video-ID'et og slår offentlige filer op på i.ytimg.com. URL'er kun til kanaler og playlister understøttes ikke. Se URL-anatomi og den fulde liste over mønstre på<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Vejledning til miniature-URL'er</a>."
     },
     {
       "question": "Uploader 11tik mit miniaturebillede eller min video?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Hvad sker der, når den højeste miniaturekvalitet ikke er tilgængelig?",
-      "answer": "11tik anmoder om hvert offentligt filnavn og gemmer kun svar, der returnerer et rigtigt billede – ingen gættede maxres-URL'er. Hvis maxresdefault mangler, viser værktøjet den næststørste størrelse, der rent faktisk indlæses, f.eks. hq720 eller sddefault. Det er det ærlige maksimum for den video. For at få oplysninger om, hvorfor maxres 404'er og hvordan fallbacks fungerer, kan du læse maxresdefault-vejledningen.",
-      "answerHtml": "11tik anmoder om hvert offentligt filnavn og gemmer kun svar, der returnerer et rigtigt billede – ingen gættede maxres-URL'er. Hvis maxresdefault mangler, viser værktøjet den næststørste størrelse, der rent faktisk indlæses, f.eks. hq720 eller sddefault. Det er det ærlige maksimum for den video. For at få oplysninger om, hvorfor maxres 404'er og hvordan fallbacks fungerer, læs<a href=\"https://da.11tik.com/l/da/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-guide</a>."
+      "answer": "11tik anmoder om hvert offentligt filnavn og gemmer kun svar, der returnerer et rigtigt billede – ingen gættede maxres-URL'er. Hvis maxresdefault mangler, viser værktøjet den næststørste størrelse, der rent faktisk indlæses, f.eks. hq720 eller sddefault. Det er det ærlige maksimum for den video. Eksempelmålinger er i undersøgelsen af ​​300 videoer. For at få oplysninger om, hvorfor maxres 404'er er nødvendig, læs maxresdefault-vejledningen.",
+      "answerHtml": "11tik anmoder om hvert offentligt filnavn og gemmer kun svar, der returnerer et rigtigt billede – ingen gættede maxres-URL'er. Hvis maxresdefault mangler, viser værktøjet den næststørste størrelse, der rent faktisk indlæses, f.eks. hq720 eller sddefault. Det er det ærlige maksimum for den video. Eksempelmålinger er i<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Undersøgelse på 300 videoer</a>For hvorfor maxres 404s, læs<a href=\"https://da.11tik.com/l/da/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-guide</a>."
+    },
+    {
+      "question": "Kan jeg behandle flere YouTube-miniature-URL'er?",
+      "answer": "Ja. Den samme YouTube Thumbnail Extractor inkluderer massedownload-tilstand: indsæt op til 50 offentlige URL'er (én pr. linje), download derefter hvert bedste stillbillede, zip-filen af ​​højeste kvalitet, eller eksporter CSV. Massedownload er en arbejdsgang i dette produkt, ikke et separat massedownloadværktøj. Detaljer: guide til batchdownload.",
+      "answerHtml": "Ja. Den samme YouTube Thumbnail Extractor inkluderer massedownload-tilstand: Indsæt op til 50 offentlige URL'er (én pr. linje), download derefter hvert bedste stillbillede, zip-filen af ​​sættet i højeste kvalitet, eller eksporter CSV. Massedownload er en arbejdsgang i dette produkt, ikke et separat massedownloadværktøj. Detaljer:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Guide til batch-download</a>."
+    },
+    {
+      "question": "Downloader 11tik YouTube-videoer eller -lyd?",
+      "answer": "Nej. 11tik fungerer kun med offentlige miniaturebilleder, som YouTube allerede hoster. Den downloader ikke video- eller lydfiler, ripper ikke billeder fra afspilning eller låser op for streams. Den kan heller ikke omgå privat eller aldersbegrænset emballage, når der ikke er nogen offentlig miniaturefil tilgængelig.",
+      "answerHtml": "Nej. 11tik fungerer kun med offentlige miniaturebilleder, som YouTube allerede hoster. Den downloader ikke video- eller lydfiler, ripper ikke billeder fra afspilning eller låser op for streams. Den kan heller ikke omgå privat eller aldersbegrænset emballage, når der ikke er nogen offentlig miniaturefil tilgængelig."
+    },
+    {
+      "question": "Findes der en officiel 11tik Firefox-tilføjelse?",
+      "answer": "Ja. 11tik til Firefox kan udtrække det bedste tilgængelige offentlige miniaturebillede fra den aktuelle YouTube-fane. Det er det samme produkt som hjemmesideværktøjet; det officielle websted forbliver www.11tik.com. Listen ændrer ikke, hvad udtrækkeren kan eller ikke kan hente.",
+      "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik til Firefox</a>kan udtrække det bedste tilgængelige offentlige miniaturebillede fra den aktuelle YouTube-fane. Det er det samme produkt som hjemmesideværktøjet; det officielle websted forbliver<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listen ændrer ikke, hvad udtrækkeren kan eller ikke kan hente."
     }
   ],
   "articleId": "home-faq"

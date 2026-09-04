@@ -2,21 +2,21 @@
   "contentId": "home-faq",
   "locale": "sw",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Maswali yanayoulizwa mara kwa mara",
   "faq": [
     {
-      "question": "Kitoa vijipicha cha YouTube ni nini?",
-      "answer": "Kitoa picha ndogo ni kifaa cha kivinjari kinachochukua picha za umma ambazo tayari YouTube inahifadhi kwenye CDN yake—sio faili ya video. Unabandika kiungo, kifaa huangalia ni ukubwa gani uliopo, na unahakiki au kuhifadhi faili halisi kubwa zaidi. 11tik ni kitoa picha pekee; haichani fremu kutoka kwa uchezaji au ahadi ya ukubwa ambao YouTube haijawahi kuchapisha.",
-      "answerHtml": "Kitoa picha ndogo ni kifaa cha kivinjari kinachochukua picha za umma ambazo tayari YouTube inahifadhi kwenye CDN yake—sio faili ya video. Unabandika kiungo, kifaa huangalia ni ukubwa gani uliopo, na unahakiki au kuhifadhi faili halisi kubwa zaidi. 11tik ni kitoa picha pekee; haichani fremu kutoka kwa uchezaji au ahadi ya ukubwa ambao YouTube haijawahi kuchapisha."
+      "question": "Kitoaji, kipakuzi, au kinyakuzi cha YouTube ni nini?",
+      "answer": "Majina hayo yanaelezea aina moja ya zana ya kivinjari: ile inayochukua picha za umma ambazo tayari YouTube inahifadhi kwenye CDN yake—sio faili ya video. Unabandika kiungo, kifaa huangalia ni ukubwa gani uliopo, na unahakiki au kuhifadhi faili halisi kubwa zaidi. 11tik ni Kitoa Picha Ndogo cha YouTube pekee; maneno ya kipakuaji na kinyakuzi ni majina bandia ya bidhaa hii, si programu tofauti.",
+      "answerHtml": "Majina hayo yanaelezea aina moja ya zana ya kivinjari: ile inayochukua picha za umma ambazo tayari YouTube inahifadhi kwenye CDN yake—sio faili ya video. Unabandika kiungo, kifaa huangalia ni ukubwa gani uliopo, na unahakiki au kuhifadhi faili halisi kubwa zaidi. 11tik ni Kitoa Picha Kidogo cha YouTube pekee; maneno ya kipakuaji na kinyakuzi ni majina bandia ya bidhaa hii, si programu tofauti."
     },
     {
-      "question": "Ni URL zipi za YouTube zinazoungwa mkono na [[P4]?",
-      "answer": "Bandika kiungo cha kutazama hadharani, URL ya Fupi, ukurasa wa moja kwa moja au wa kwanza, au kiungo kifupi cha youtu.be. Kifaa hiki husoma kitambulisho cha video kutoka kwenye njia na kutafuta faili za umma kwenye i.ytimg.com. URL za chaneli na orodha ya nyimbo pekee hazitumiki. Kwa anatomia ya URL na orodha kamili ya ruwaza, tazama mwongozo wa URL ya kijipicha.",
-      "answerHtml": "Bandika kiungo cha kutazama hadharani, URL ya Fupi, ukurasa wa moja kwa moja au wa kwanza, au kiungo kifupi cha youtu.be. Kifaa hiki husoma kitambulisho cha video kutoka kwenye njia na kutafuta faili za umma kwenye i.ytimg.com. URL za chaneli na orodha ya nyimbo pekee hazitumiki. Kwa anatomia ya URL na orodha kamili ya ruwaza, tazama<a href=\"https://sw.11tik.com/l/sw/youtube-thumbnail-url\">Mwongozo wa URL ndogo</a>."
+      "question": "Je, ninaweza kupakua kijipicha cha YouTube kutoka kwa URL?",
+      "answer": "Ndiyo. Bandika kiungo cha kutazama hadharani, URL ya Fupi, ukurasa wa moja kwa moja au wa kuonyesha mara ya kwanza, pachika, kiungo kifupi cha youtu.be, au kitambulisho cha video chenye herufi 11. Kifaa hiki husoma kitambulisho cha video na kutafuta faili za umma kwenye i.ytimg.com. URL za kituo na orodha ya nyimbo pekee hazitumiki. Kwa anatomia ya URL na orodha kamili ya ruwaza, tazama mwongozo wa URL ya kijipicha.",
+      "answerHtml": "Ndiyo. Bandika kiungo cha kutazama hadharani, URL ya Fupi, ukurasa wa moja kwa moja au wa kuonyesha mara ya kwanza, pachika, kiungo kifupi cha youtu.be, au kitambulisho cha video chenye herufi 11. Kifaa hiki husoma kitambulisho cha video na kutafuta faili za umma kwenye i.ytimg.com. URL za kituo na orodha ya nyimbo pekee hazitumiki. Kwa anatomia ya URL na orodha kamili ya ruwaza, tazama<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Mwongozo wa URL ndogo</a>."
     },
     {
-      "question": "Je, 11tik inapakia kijipicha changu au video?",
+      "question": "Je, 11tik hupakia kijipicha changu au video?",
       "answer": "Hapana. URL zilizobandikwa huchakatwa kwenye kivinjari chako. 11tik haihitaji akaunti, haihifadhi faili za vijipicha asili kwenye seva zake, na haipakii video yako. Picha huchukuliwa kutoka kwa CDN ya umma ya YouTube katika kipindi hicho hicho. Historia ya hiari ya eneo lako hubaki kwenye kifaa chako hadi utakapokiondoa.",
       "answerHtml": "Hapana. URL zilizobandikwa huchakatwa kwenye kivinjari chako. 11tik haihitaji akaunti, haihifadhi faili za vijipicha asili kwenye seva zake, na haipakii video yako. Picha huchukuliwa kutoka kwa CDN ya umma ya YouTube katika kipindi hicho hicho. Historia ya hiari ya eneo lako hubaki kwenye kifaa chako hadi utakapokiondoa."
     },
@@ -27,8 +27,23 @@
     },
     {
       "question": "Nini hutokea wakati ubora wa juu zaidi wa kijipicha haupatikani?",
-      "answer": "11tik huomba kila jina la faili la umma na huhifadhi majibu tu yanayorudisha picha halisi—hakuna URL za maxres zilizokadiriwa. Ikiwa maxresdefault haipo, kifaa huonyesha ukubwa unaofuata mkubwa zaidi ambao hupakia, kama vile hq720 au sddefault. Hiyo ndiyo kiwango cha juu cha uaminifu kwa video hiyo. Kwa nini maxres 404s na jinsi fallbacks zinavyofanya kazi, soma mwongozo wa maxresdefault.",
-      "answerHtml": "11tik huomba kila jina la faili la umma na huhifadhi majibu tu yanayorudisha picha halisi—hakuna URL za maxres zilizokadiriwa. Ikiwa maxresdefault haipo, kifaa huonyesha ukubwa unaofuata mkubwa zaidi ambao hupakia, kama vile hq720 au sddefault. Hiyo ndiyo kiwango cha juu cha uaminifu kwa video hiyo. Kwa nini maxres 404s na jinsi marudio yanavyofanya kazi, soma<a href=\"https://sw.11tik.com/l/sw/what-is-maxresdefaultjpg-when-youtube\">mwongozo wa maxresdefault</a>."
+      "answer": "11tik huomba kila jina la faili la umma na huhifadhi majibu tu yanayorudisha picha halisi—hakuna URL za maxres zilizokadiriwa. Ikiwa maxresdefault haipo, kifaa huonyesha ukubwa unaofuata mkubwa zaidi ambao hupakia, kama vile hq720 au sddefault. Hiyo ndiyo kiwango cha juu cha uaminifu kwa video hiyo. Vipimo vya sampuli viko katika utafiti wa ukubwa wa video 300. Kwa nini maxres 404s, soma mwongozo wa maxresdefault.",
+      "answerHtml": "11tik huomba kila jina la faili la umma na huhifadhi majibu yanayorudisha picha halisi pekee—hakuna URL za maxres zilizokadiriwa. Ikiwa maxresdefault haipo, kifaa huonyesha ukubwa unaofuata mkubwa zaidi unaopakia, kama vile hq720 au sddefault. Hiyo ndiyo kiwango cha juu cha uaminifu kwa video hiyo. Vipimo vya sampuli viko katika<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Utafiti wa ukubwa wa video 300</a>Kwa nini maxres 404s, soma<a href=\"https://sw.11tik.com/l/sw/what-is-maxresdefaultjpg-when-youtube\">mwongozo wa maxresdefault</a>."
+    },
+    {
+      "question": "Je, ninaweza kuchakata URL nyingi za vijipicha vya YouTube?",
+      "answer": "Ndiyo. Kitoa Picha Kidogo cha YouTube kinajumuisha hali ya Bulk: bandika hadi URL 50 za umma (moja kwa kila mstari), kisha pakua kila moja ya picha bora zaidi, ongeza seti ya ubora wa juu zaidi, au tuma CSV. Bulk ni mtiririko wa kazi wa bidhaa hii, si zana tofauti ya kupakua Bulk. Maelezo: mwongozo wa kupakua kwa kundi.",
+      "answerHtml": "Ndiyo. Kitoa Picha Kidogo cha YouTube kinajumuisha hali ya Bulk: bandika hadi URL 50 za umma (moja kwa kila mstari), kisha pakua kila moja ya picha bora zaidi, ongeza seti ya ubora wa juu zaidi, au tuma CSV. Bulk ni mtiririko wa kazi wa bidhaa hii, si zana tofauti ya kupakua Bulk. Maelezo:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">mwongozo wa kupakua wa kundi</a>."
+    },
+    {
+      "question": "Je, 11tik hupakua video au sauti za YouTube?",
+      "answer": "Hapana. 11tik inafanya kazi tu na picha za vijipicha za umma ambazo tayari YouTube inahifadhi. Haipakui faili za video au sauti, haichani fremu kutoka kwa uchezaji, au kufungua mitiririko. Pia haiwezi kukwepa vifungashio vya faragha au vilivyowekewa vikwazo vya umri wakati hakuna faili ya vijipicha vya umma inayopatikana.",
+      "answerHtml": "Hapana. 11tik inafanya kazi tu na picha za vijipicha za umma ambazo tayari YouTube inahifadhi. Haipakui faili za video au sauti, haichani fremu kutoka kwa uchezaji, au kufungua mitiririko. Pia haiwezi kukwepa vifungashio vya faragha au vilivyowekewa vikwazo vya umri wakati hakuna faili ya vijipicha vya umma inayopatikana."
+    },
+    {
+      "question": "Je, kuna programu-jalizi rasmi ya 11tik ya Firefox?",
+      "answer": "Ndiyo. 11tik kwa Firefox inaweza kutoa kijipicha cha umma kinachopatikana bora zaidi kutoka kwa kichupo cha sasa cha YouTube. Ni bidhaa sawa na zana ya tovuti; tovuti rasmi inabaki kuwa www.11tik.com. Orodha haibadilishi kile ambacho kichochezi kinaweza au hakiwezi kuleta.",
+      "answerHtml": "Ndiyo.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik kwa Firefox</a>inaweza kutoa kijipicha cha umma kinachopatikana vyema zaidi kutoka kwenye kichupo cha sasa cha YouTube. Ni bidhaa sawa na zana ya tovuti; tovuti rasmi inabaki<a href=\"https://www.11tik.com/\">www.11tik.com</a>Orodha haibadilishi kile ambacho mtambo wa kutoa madini unaweza au hauwezi kuleta."
     }
   ],
   "articleId": "home-faq"

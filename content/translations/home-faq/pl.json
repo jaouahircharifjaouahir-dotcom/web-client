@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "pl",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Często zadawane pytania",
   "faq": [
     {
-      "question": "Czym jest narzędzie do wyodrębniania miniaturek z YouTube?",
-      "answer": "Ekstraktor miniatur to narzędzie przeglądarki, które pobiera publiczne statyczne obrazy, które YouTube już hostuje w swojej sieci CDN, a nie plik wideo. Wklejasz link, narzędzie sprawdza, jakie rozmiary istnieją, a następnie wyświetla podgląd lub zapisuje największy rzeczywisty plik. 11tik to tylko ekstraktor; nie wyrywa klatek z odtwarzania ani nie obiecuje rozmiarów, których YouTube nigdy nie opublikował.",
-      "answerHtml": "Ekstraktor miniatur to narzędzie przeglądarki, które pobiera publiczne statyczne obrazy, które YouTube już hostuje w swojej sieci CDN, a nie plik wideo. Wklejasz link, narzędzie sprawdza, jakie rozmiary istnieją, a następnie wyświetla podgląd lub zapisuje największy rzeczywisty plik. 11tik to tylko ekstraktor; nie wyrywa klatek z odtwarzania ani nie obiecuje rozmiarów, których YouTube nigdy nie opublikował."
+      "question": "Czym jest program do pobierania, wyodrębniania i przechwytywania miniaturek z YouTube?",
+      "answer": "Te nazwy opisują ten sam rodzaj narzędzia przeglądarki: takie, które pobiera publiczne statyczne obrazy, które YouTube już hostuje w swojej sieci CDN, a nie plik wideo. Wklejasz link, narzędzie sprawdza dostępne rozmiary i wyświetla podgląd lub zapisuje największy rzeczywisty plik. 11tik to tylko YouTube Thumbnail Extractor; słowa „downloader” i „grabber” to aliasy tego produktu, a nie oddzielne aplikacje.",
+      "answerHtml": "Te nazwy opisują ten sam rodzaj narzędzia przeglądarki: takie, które pobiera publiczne statyczne obrazy, które YouTube już hostuje w swojej sieci CDN, a nie plik wideo. Wklejasz link, narzędzie sprawdza dostępne rozmiary i wyświetla podgląd lub zapisuje największy rzeczywisty plik. 11tik to tylko YouTube Thumbnail Extractor; słowa „downloader” i „grabber” to aliasy tego produktu, a nie oddzielne aplikacje."
     },
     {
-      "question": "Które adresy URL YouTube obsługuje 11tik?",
-      "answer": "Wklej publiczny link do obejrzenia, adres URL filmu Short, stronę transmisji na żywo lub premiery albo krótki link youtu.be. Narzędzie odczyta identyfikator filmu ze ścieżki i wyszuka pliki publiczne w i.ytimg.com. Adresy URL wyłącznie dla kanałów i playlist nie są obsługiwane. Anatomię adresu URL i pełną listę wzorców znajdziesz w przewodniku po adresach URL miniatur.",
-      "answerHtml": "Wklej publiczny link do oglądania, adres URL Shorts, stronę transmisji na żywo lub premiery albo krótki link youtu.be. Narzędzie odczyta identyfikator filmu ze ścieżki i wyszuka pliki publiczne w i.ytimg.com. Adresy URL tylko dla kanałów i playlist nie są obsługiwane. Anatomię adresów URL i pełną listę wzorców znajdziesz w<a href=\"https://pl.11tik.com/l/pl/youtube-thumbnail-url\">przewodnik po adresach URL miniatur</a>."
+      "question": "Czy mogę pobrać miniaturę YouTube z adresu URL?",
+      "answer": "Tak. Wklej publiczny link do obejrzenia, adres URL filmu Short, stronę transmisji na żywo lub premiery, osadź, krótki link youtu.be lub 11-znakowy identyfikator filmu. Narzędzie odczyta identyfikator filmu i wyszuka publiczne pliki w i.ytimg.com. Adresy URL kanałów i playlist nie są obsługiwane. Anatomię adresu URL i pełną listę wzorców znajdziesz w przewodniku po adresach URL miniatur.",
+      "answerHtml": "Tak. Wklej publiczny link do obejrzenia, adres URL filmu Short, stronę transmisji na żywo lub premiery, osadź, krótki link youtu.be lub 11-znakowy identyfikator filmu. Narzędzie odczyta identyfikator filmu i wyszuka pliki publiczne w i.ytimg.com. Adresy URL wyłącznie dla kanałów i playlist nie są obsługiwane. Anatomię adresów URL i pełną listę wzorców znajdziesz w<a href=\"https://www.11tik.com/youtube-thumbnail-url\">przewodnik po adresach URL miniatur</a>."
     },
     {
       "question": "Czy 11tik przesyła moją miniaturkę lub wideo?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Co się stanie, gdy najwyższa jakość miniatury będzie niedostępna?",
-      "answer": "11tik żąda każdej publicznej nazwy pliku i zachowuje tylko odpowiedzi zwracające prawdziwy obraz – bez zgadywanych adresów URL maxres. Jeśli brakuje wartości maxresdefault, narzędzie wyświetla kolejny największy rozmiar, który faktycznie się ładuje, taki jak hq720 lub sddefault. To jest uczciwa wartość maksymalna dla tego filmu. Aby dowiedzieć się, dlaczego maxres 404 i jak działają rozwiązania awaryjne, przeczytaj przewodnik po maxresdefault.",
-      "answerHtml": "11tik żąda każdej publicznej nazwy pliku i zachowuje tylko odpowiedzi zwracające prawdziwy obraz — bez zgadywanych adresów URL maxres. Jeśli brakuje wartości maxresdefault, narzędzie wyświetla kolejny największy rozmiar, który faktycznie się ładuje, taki jak hq720 lub sddefault. To jest uczciwa wartość maksymalna dla tego filmu. Aby dowiedzieć się, dlaczego maxres 404 i jak działają rozwiązania awaryjne, przeczytaj<a href=\"https://pl.11tik.com/l/pl/what-is-maxresdefaultjpg-when-youtube\">przewodnik maxresdefault</a>."
+      "answer": "11tik żąda każdej publicznej nazwy pliku i zachowuje tylko odpowiedzi, które zwracają prawdziwy obraz – bez zgadywanych adresów URL maxresdefault. Jeśli brakuje wartości maxresdefault, narzędzie wyświetla kolejny największy rozmiar, który faktycznie się ładuje, taki jak hq720 lub sddefault. To jest uczciwa wartość maksymalna dla danego filmu. Przykładowe pomiary znajdują się w badaniu rozmiaru 300 filmów. Aby dowiedzieć się, dlaczego występuje błąd maxresdefault 404, przeczytaj przewodnik po maxresdefault.",
+      "answerHtml": "11tik żąda każdej publicznej nazwy pliku i zachowuje tylko odpowiedzi zwracające prawdziwy obraz — bez zgadywanych adresów URL maxres. Jeśli brakuje wartości maxresdefault, narzędzie wyświetla kolejny największy rozmiar, który faktycznie się ładuje, taki jak hq720 lub sddefault. To jest uczciwa wartość maksymalna dla tego filmu. Przykładowe pomiary znajdują się w<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Badanie obejmujące 300 filmów</a>. Aby dowiedzieć się, dlaczego występują błędy maxres 404, przeczytaj<a href=\"https://pl.11tik.com/l/pl/what-is-maxresdefaultjpg-when-youtube\">przewodnik maxresdefault</a>."
+    },
+    {
+      "question": "Czy mogę przetwarzać wiele adresów URL miniatur YouTube?",
+      "answer": "Tak. Ten sam program YouTube Thumbnail Extractor oferuje tryb zbiorczy: wklej do 50 publicznych adresów URL (po jednym w wierszu), a następnie pobierz każde najlepsze zdjęcie, skompresuj zestaw w najwyższej jakości za pomocą ZIP lub wyeksportuj plik CSV. Tryb zbiorczy to część procesu tego produktu, a nie osobne narzędzie do pobierania zbiorczego. Szczegóły: przewodnik po pobieraniu zbiorczym.",
+      "answerHtml": "Tak. Ten sam program YouTube Thumbnail Extractor oferuje tryb zbiorczy: wklej do 50 publicznych adresów URL (po jednym w wierszu), a następnie pobierz każde najlepsze zdjęcie, spakuj zestaw w najwyższej jakości do pliku ZIP lub wyeksportuj plik CSV. Tryb zbiorczy to część procesu tego produktu, a nie osobne narzędzie do pobierania zbiorczego. Szczegóły:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">przewodnik pobierania wsadowego</a>."
+    },
+    {
+      "question": "Czy 11tik pobiera filmy i pliki audio z YouTube?",
+      "answer": "Nie. 11tik działa tylko z publicznymi miniaturami, które są już hostowane w serwisie YouTube. Nie pobiera plików wideo ani audio, nie kopiuje klatek z odtwarzania ani nie odblokowuje strumieni. Nie może również ominąć pakietów prywatnych ani pakietów z ograniczeniami wiekowymi, gdy nie jest dostępny publiczny plik miniatury.",
+      "answerHtml": "Nie. 11tik działa tylko z publicznymi miniaturami, które są już hostowane w serwisie YouTube. Nie pobiera plików wideo ani audio, nie kopiuje klatek z odtwarzania ani nie odblokowuje strumieni. Nie może również ominąć pakietów prywatnych ani pakietów z ograniczeniami wiekowymi, gdy nie jest dostępny publiczny plik miniatury."
+    },
+    {
+      "question": "Czy istnieje oficjalny dodatek 11tik do przeglądarki Firefox?",
+      "answer": "Tak. 11tik dla Firefoksa może wyodrębnić najlepszą dostępną publiczną miniaturę z bieżącej karty YouTube. To ten sam produkt, co narzędzie do obsługi stron internetowych; oficjalna strona pozostaje www.11tik.com. Lista nie zmienia tego, co ekstraktor może lub czego nie może pobrać.",
+      "answerHtml": "Tak.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik dla przeglądarki Firefox</a>może wyodrębnić najlepszą dostępną publiczną miniaturę z bieżącej karty YouTube. To ten sam produkt, co narzędzie do obsługi stron internetowych; oficjalna strona pozostaje<a href=\"https://www.11tik.com/\">www.11tik.com</a>. Lista ta nie zmienia tego, co ekstraktor może lub czego nie może pobrać."
     }
   ],
   "articleId": "home-faq"

@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "id",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Pertanyaan yang sering diajukan",
   "faq": [
     {
-      "question": "Apa itu ekstraktor thumbnail YouTube?",
-      "answer": "Ekstraktor thumbnail adalah alat peramban yang mengambil gambar diam publik yang sudah dihosting YouTube di CDN-nya—bukan file video. Anda menempelkan tautan, alat tersebut memeriksa ukuran mana yang ada, dan Anda melihat pratinjau atau menyimpan file sebenarnya yang terbesar. 11tik hanya merupakan ekstraktor; ia tidak mengambil frame dari pemutaran atau menjanjikan ukuran yang tidak pernah dipublikasikan YouTube.",
-      "answerHtml": "Ekstraktor thumbnail adalah alat peramban yang mengambil gambar diam publik yang sudah dihosting YouTube di CDN-nya—bukan file video. Anda menempelkan tautan, alat tersebut memeriksa ukuran mana yang ada, dan Anda melihat pratinjau atau menyimpan file sebenarnya yang terbesar. 11tik hanya merupakan ekstraktor; ia tidak mengambil frame dari pemutaran atau menjanjikan ukuran yang tidak pernah dipublikasikan YouTube."
+      "question": "Apa itu ekstraktor, pengunduh, atau pengambil thumbnail YouTube?",
+      "answer": "Nama-nama tersebut menggambarkan jenis alat peramban yang sama: alat yang mengambil gambar diam publik yang sudah dihosting YouTube di CDN-nya—bukan file video. Anda menempelkan tautan, alat tersebut memeriksa ukuran mana yang ada, dan Anda melihat pratinjau atau menyimpan file asli terbesar. 11tik hanyalah YouTube Thumbnail Extractor; kata-kata downloader dan grabber adalah alias untuk produk ini, bukan aplikasi terpisah.",
+      "answerHtml": "Nama-nama tersebut menggambarkan jenis alat peramban yang sama: alat yang mengambil gambar diam publik yang sudah dihosting YouTube di CDN-nya—bukan file video. Anda menempelkan tautan, alat tersebut memeriksa ukuran mana yang ada, dan Anda melihat pratinjau atau menyimpan file sebenarnya yang terbesar. 11tik hanyalah YouTube Thumbnail Extractor; kata-kata downloader dan grabber adalah alias untuk produk ini, bukan aplikasi terpisah."
     },
     {
-      "question": "URL YouTube mana yang didukung oleh 11tik?",
-      "answer": "Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, atau tautan pendek youtu.be. Alat ini membaca ID video dari jalur dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat panduan URL thumbnail.",
-      "answerHtml": "Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, atau tautan pendek youtu.be. Alat ini membaca ID video dari jalur dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat<a href=\"https://id.11tik.com/l/id/youtube-thumbnail-url\">Panduan URL thumbnail</a>."
+      "question": "Bisakah saya mengunduh thumbnail YouTube dari URL?",
+      "answer": "Ya. Tempel tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, sematan, tautan pendek youtu.be, atau ID video 11 karakter saja. Alat ini membaca ID video dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat panduan URL thumbnail.",
+      "answerHtml": "Ya. Tempelkan tautan tontonan publik, URL Shorts, halaman siaran langsung atau pemutaran perdana, sematan, tautan pendek youtu.be, atau ID video 11 karakter saja. Alat ini membaca ID video dan mencari file publik di i.ytimg.com. URL khusus saluran dan daftar putar tidak didukung. Untuk anatomi URL dan daftar lengkap pola, lihat<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Panduan URL thumbnail</a>."
     },
     {
       "question": "Apakah 11tik mengunggah thumbnail atau video saya?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Apa yang terjadi jika kualitas thumbnail tertinggi tidak tersedia?",
-      "answer": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Untuk mengetahui mengapa maxres menghasilkan error 404 dan bagaimana fallback bekerja, baca panduan maxresdefault.",
-      "answerHtml": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Untuk mengetahui mengapa maxres menghasilkan error 404 dan bagaimana fallback bekerja, baca<a href=\"https://id.11tik.com/l/id/what-is-maxresdefaultjpg-when-youtube\">panduan maxresdefault</a>."
+      "answer": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Contoh pengukuran ada dalam studi ukuran 300 video. Untuk mengetahui mengapa maxres menghasilkan error 404, baca panduan maxresdefault.",
+      "answerHtml": "11tik meminta setiap nama file publik dan hanya menyimpan respons yang mengembalikan gambar asli—bukan URL maxres yang ditebak. Jika maxresdefault hilang, alat ini menampilkan ukuran terbesar berikutnya yang benar-benar dimuat, seperti hq720 atau sddefault. Itu adalah ukuran maksimum yang sebenarnya untuk video tersebut. Contoh pengukuran ada di<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studi ukuran 300 video</a>Untuk mengetahui mengapa maxres menampilkan error 404, baca selengkapnya di sini.<a href=\"https://id.11tik.com/l/id/what-is-maxresdefaultjpg-when-youtube\">panduan maxresdefault</a>."
+    },
+    {
+      "question": "Bisakah saya memproses beberapa URL thumbnail YouTube?",
+      "answer": "Ya. YouTube Thumbnail Extractor yang sama menyertakan mode Massal: tempel hingga 50 URL publik (satu per baris), lalu unduh setiap gambar terbaik, kompres set gambar berkualitas tertinggi ke dalam ZIP, atau ekspor ke CSV. Mode Massal adalah alur kerja produk ini, bukan alat pengunduh massal terpisah. Detail: panduan pengunduhan massal.",
+      "answerHtml": "Ya. YouTube Thumbnail Extractor yang sama menyertakan mode Massal: tempel hingga 50 URL publik (satu per baris), lalu unduh setiap gambar terbaik, kompres set gambar berkualitas tertinggi ke dalam format ZIP, atau ekspor ke CSV. Mode Massal adalah alur kerja produk ini, bukan alat pengunduh massal terpisah. Detail:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">panduan pengunduhan massal</a>."
+    },
+    {
+      "question": "Apakah 11tik mengunduh video atau audio YouTube?",
+      "answer": "Tidak. 11tik hanya berfungsi dengan gambar thumbnail publik yang sudah dihosting oleh YouTube. Ini tidak mengunduh file video atau audio, mengambil frame dari pemutaran, atau membuka kunci streaming. Ini juga tidak dapat melewati kemasan pribadi atau yang dibatasi usia ketika tidak ada file thumbnail publik yang tersedia.",
+      "answerHtml": "Tidak. 11tik hanya berfungsi dengan gambar thumbnail publik yang sudah dihosting oleh YouTube. Ini tidak mengunduh file video atau audio, mengambil frame dari pemutaran, atau membuka kunci streaming. Ini juga tidak dapat melewati kemasan pribadi atau yang dibatasi usia ketika tidak ada file thumbnail publik yang tersedia."
+    },
+    {
+      "question": "Apakah ada add-on Firefox 11tik resmi?",
+      "answer": "Ya. 11tik untuk Firefox dapat mengekstrak thumbnail publik terbaik yang tersedia dari tab YouTube saat ini. Ini adalah produk yang sama dengan alat di situs web; situs resminya tetap www.11tik.com. Daftar ini tidak mengubah apa yang dapat atau tidak dapat diambil oleh ekstraktor.",
+      "answerHtml": "Ya.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik untuk Firefox</a>Dapat mengekstrak thumbnail publik terbaik yang tersedia dari tab YouTube saat ini. Ini adalah produk yang sama dengan alat di situs web; situs resminya tetap sama.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Daftar tersebut tidak mengubah apa yang dapat atau tidak dapat diambil oleh ekstraktor."
     }
   ],
   "articleId": "home-faq"

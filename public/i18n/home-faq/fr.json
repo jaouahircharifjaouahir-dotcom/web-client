@@ -2,12 +2,12 @@
   "heading": "Foire aux questions",
   "items": [
     {
-      "question": "Qu'est-ce qu'un extracteur de miniatures YouTube ?",
-      "answerHtml": "Un extracteur de vignettes est un outil de navigateur qui récupère les images fixes publiques déjà hébergées par YouTube sur son CDN, et non le fichier vidéo. Il suffit de coller un lien&nbsp;: l’outil vérifie les tailles disponibles et vous permet de prévisualiser ou d’enregistrer le fichier le plus grand. 11tik est un simple extracteur&nbsp;; il n’extrait pas d’images de la lecture et ne propose pas de tailles non publiées par YouTube."
+      "question": "Qu'est-ce qu'un extracteur, téléchargeur ou récupérateur de miniatures YouTube ?",
+      "answerHtml": "Ces noms désignent le même type d'outil pour navigateur&nbsp;: il récupère les images fixes publiques hébergées par YouTube sur son CDN, et non le fichier vidéo. Vous collez un lien, l'outil vérifie les tailles disponibles, et vous pouvez prévisualiser ou enregistrer le fichier le plus volumineux. 11tik désigne uniquement l'extracteur de miniatures YouTube&nbsp;; les termes «&nbsp;téléchargeur&nbsp;» et «&nbsp;récupérateur&nbsp;» sont des alias pour ce produit, et non des applications distinctes."
     },
     {
-      "question": "Quelles URL YouTube sont prises en charge par 11tik ?",
-      "answerHtml": "Collez un lien de visionnage public, une URL de Shorts, une page de diffusion en direct ou de première, ou un lien court youtu.be. L'outil lit l'identifiant vidéo à partir du chemin et recherche les fichiers publics sur i.ytimg.com. Les URL de chaînes et de listes de lecture uniquement ne sont pas prises en charge. Pour plus d'informations sur la structure des URL et la liste complète des modèles, consultez la documentation.<a href=\"https://fr.11tik.com/l/fr/2026/08/youtube-thumbnail-url.html\">Guide des URL des vignettes</a>."
+      "question": "Est-il possible de télécharger une miniature YouTube à partir d'une URL ?",
+      "answerHtml": "Oui. Collez un lien de visionnage public, une URL Shorts, une page de diffusion en direct ou de première, un lien d'intégration, un lien court youtu.be ou un identifiant vidéo de 11 caractères. L'outil lit l'identifiant vidéo et recherche les fichiers publics sur i.ytimg.com. Les URL de chaînes et de listes de lecture uniquement ne sont pas prises en charge. Pour plus d'informations sur la structure des URL et la liste complète des modèles, consultez la documentation.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Guide des URL des vignettes</a>."
     },
     {
       "question": "Est-ce que 11tik télécharge ma miniature ou ma vidéo ?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Puis-je télécharger les miniatures de YouTube Shorts ?",
-      "answerHtml": "Oui. Les liens Shorts utilisent les mêmes hébergeurs d'images publics que les vidéos classiques. Vous pouvez donc coller une URL /shorts/ et télécharger la meilleure image fixe disponible. L'aperçu peut paraître plus large que la vidéo verticale que vous avez visionnée, car YouTube enregistre les images fixes au format paysage. Les Shorts privés ou soumis à une restriction d'âge sans vignette publique ne renverront pas de fichier. Voir la section<a href=\"https://fr.11tik.com/l/fr/2026/08/youtube-shorts-thumbnail-download.html\">Guide des vignettes des courts métrages</a>pour une aide étape par étape."
+      "answerHtml": "Oui. Les liens Shorts utilisent les mêmes hébergeurs d'images publics que les vidéos classiques. Vous pouvez donc coller une URL /shorts/ et télécharger la meilleure image fixe disponible. L'aperçu peut paraître plus large que la vidéo verticale que vous avez visionnée, car YouTube enregistre les images fixes au format paysage. Les Shorts privés ou soumis à une restriction d'âge sans vignette publique ne renverront pas de fichier. Voir la section<a href=\"https://fr.11tik.com/l/fr/youtube-shorts-thumbnail-download\">Guide des vignettes des courts métrages</a>pour une aide étape par étape."
     },
     {
       "question": "Que se passe-t-il lorsque la qualité maximale des vignettes n'est pas disponible ?",
-      "answerHtml": "11tik interroge chaque nom de fichier public et ne conserve que les réponses renvoyant une image réelle, sans utiliser d'URL maxres devinées. Si maxresdefault est absent, l'outil affiche la résolution maximale immédiatement supérieure qui se charge, par exemple hq720 ou sddefault. Il s'agit de la résolution maximale réelle pour cette vidéo. Pour comprendre les erreurs 404 liées à maxres et le fonctionnement des solutions de repli, consultez la documentation.<a href=\"https://fr.11tik.com/l/fr/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">guide maxresdefault</a>."
+      "answerHtml": "11tik interroge chaque nom de fichier public et ne conserve que les réponses renvoyant une image réelle, sans utiliser d'URL maxres devinées. Si maxresdefault est absent, l'outil affiche la résolution maximale immédiatement supérieure qui se charge, par exemple hq720 ou sddefault. Il s'agit de la résolution maximale réelle pour cette vidéo. Des exemples de mesures sont disponibles dans le<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">étude de la taille de 300 vidéos</a>Pour savoir pourquoi les erreurs 404 maxres se produisent, consultez la documentation.<a href=\"https://fr.11tik.com/l/fr/what-is-maxresdefaultjpg-when-youtube\">guide maxresdefault</a>."
+    },
+    {
+      "question": "Puis-je traiter plusieurs URL de miniatures YouTube ?",
+      "answerHtml": "Oui. Le même extracteur de miniatures YouTube inclut un mode de téléchargement groupé&nbsp;: collez jusqu’à 50 URL publiques (une par ligne), puis téléchargez la meilleure image, compressez l’ensemble en ZIP ou exportez au format CSV. Le téléchargement groupé est une fonctionnalité intégrée à ce produit, et non un outil de téléchargement groupé distinct. Détails&nbsp;:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guide de téléchargement par lots</a>."
+    },
+    {
+      "question": "11tik télécharge-t-il des vidéos ou de l'audio YouTube ?",
+      "answerHtml": "Non. 11tik fonctionne uniquement avec les vignettes publiques déjà hébergées par YouTube. Il ne télécharge pas de fichiers vidéo ou audio, n'extrait pas d'images de la lecture et ne débloque pas les flux. Il ne peut pas non plus contourner les restrictions d'âge ou de contenu privé lorsqu'aucune vignette publique n'est disponible."
+    },
+    {
+      "question": "Existe-t-il un module complémentaire officiel pour Firefox 11tik ?",
+      "answerHtml": "Oui.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik pour Firefox</a>permet d'extraire la meilleure miniature publique disponible depuis l'onglet YouTube actuel. Il s'agit du même produit que l'outil du site web&nbsp;; le site officiel reste inchangé.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Cette liste ne change rien à ce que l'extracteur peut ou ne peut pas récupérer."
     }
   ]
 }

@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "fi",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Usein kysytyt kysymykset",
   "faq": [
     {
-      "question": "Mikä on YouTube-pikkukuvien poimija?",
-      "answer": "Pienoiskuvien poimija on selaintyökalu, joka hakee YouTuben CDN-palvelussa jo isännöimät julkiset still-kuvat – ei itse videotiedostoa. Liität linkin, työkalu tarkistaa olemassa olevat koot ja esikatselet tai tallennat suurimman todellisen tiedoston. 11tik on vain poimija; se ei kopioi ruutuja toistosta eikä lupaa YouTuben koskaan julkaisemia kokoja.",
-      "answerHtml": "Pienoiskuvien poimija on selaintyökalu, joka hakee YouTuben CDN-palvelussa jo isännöimät julkiset still-kuvat – ei itse videotiedostoa. Liität linkin, työkalu tarkistaa olemassa olevat koot ja esikatselet tai tallennat suurimman todellisen tiedoston. 11tik on vain poimija; se ei kopioi ruutuja toistosta eikä lupaa YouTuben julkaisemia kokoja."
+      "question": "Mikä on YouTube-pikkukuvien poimija, latausohjelma tai sieppari?",
+      "answer": "Nuo nimet kuvaavat samanlaista selaintyökalua: sellaista, joka hakee YouTuben jo CDN-palvelimella olevia julkisia still-kuvia – ei videotiedostoa. Liität linkin, työkalu tarkistaa olemassa olevat koot ja esikatselet tai tallennat suurimman todellisen tiedoston. 11tik on vain YouTube Thumbnail Extractor; lataus- ja sieppausohjelman sanat ovat tämän tuotteen aliaksia, eivät erillisiä sovelluksia.",
+      "answerHtml": "Nuo nimet kuvaavat samanlaista selaintyökalua: sellaista, joka hakee YouTuben jo CDN-palvelimella olevia julkisia still-kuvia – ei videotiedostoa. Liität linkin, työkalu tarkistaa olemassa olevat koot ja esikatselet tai tallennat suurimman todellisen tiedoston. 11tik on vain YouTube Thumbnail Extractor; lataus- ja sieppausohjelman sanat ovat tämän tuotteen aliaksia, eivät erillisiä sovelluksia."
     },
     {
-      "question": "Mitä YouTube-URL-osoitteita 11tik tukee?",
-      "answer": "Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu tai youtu.be-lyhytlinkki. Työkalu lukee videotunnuksen polusta ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo mallien oppaasta.",
-      "answerHtml": "Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu tai youtu.be-lyhytvideolinkki. Työkalu lukee videotunnuksen polusta ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo malleista.<a href=\"https://fi.11tik.com/l/fi/youtube-thumbnail-url\">pikkukuvan URL-opas</a>."
+      "question": "Voinko ladata YouTube-pikkukuvan URL-osoitteesta?",
+      "answer": "Kyllä. Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu, upotus, youtu.be-lyhytlinkki tai pelkkä 11-merkkinen videotunnus. Työkalu lukee videotunnuksen ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo mallien oppaasta.",
+      "answerHtml": "Kyllä. Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu, upotus, youtu.be-lyhytvideolinkki tai pelkkä 11-merkkinen videotunnus. Työkalu lukee videotunnuksen ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo malleista.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>."
     },
     {
       "question": "Lataako 11tik pikkukuvani tai videoni?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Mitä tapahtuu, kun parasta pikkukuvan laatua ei ole saatavilla?",
-      "answer": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Lisätietoja maxres 404 -virheistä ja varamenetelmistä on maxresdefault-oppaassa.",
-      "answerHtml": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Lisätietoja maxres 404 -virheiden syistä ja varamenetelmien toiminnasta on kohdassa<a href=\"https://fi.11tik.com/l/fi/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-opas</a>."
+      "answer": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Esimerkkimittaukset ovat 300 videon kokotutkimuksessa. Lisätietoja maxres 404 -virheiden syistä on maxresdefault-oppaassa.",
+      "answerHtml": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimiarvo. Esimerkkimittaukset ovat<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon kokoinen tutkimus</a>. Lue lisää maxres 404 -virheiden syistä.<a href=\"https://fi.11tik.com/l/fi/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-opas</a>."
+    },
+    {
+      "question": "Voinko käsitellä useita YouTube-pikkukuvakkeiden URL-osoitteita?",
+      "answer": "Kyllä. Sama YouTube-pikkukuvien poimija sisältää joukkolataustilan: liitä jopa 50 julkista URL-osoitetta (yksi riviä kohden) ja lataa sitten jokainen paras still-kuva, pakkaa korkealaatuisin sarja ZIP-tiedostoon tai vie CSV-tiedostona. Joukkolataus on tämän tuotteen työnkulku, ei erillinen joukkolataustyökalu. Lisätietoja: erälatausopas.",
+      "answerHtml": "Kyllä. Sama YouTube-pikkukuvien poimija sisältää joukkolataustilan: liitä jopa 50 julkista URL-osoitetta (yksi riviä kohden) ja lataa sitten jokainen paras still-kuva, pakkaa korkealaatuisin sarja ZIP-tiedostoon tai vie CSV-tiedostona. Joukkolataus on tämän tuotteen työnkulku, ei erillinen joukkolataustyökalu. Tiedot:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">erälatausopas</a>."
+    },
+    {
+      "question": "Lataako 11tik YouTube-videoita tai -äänitiedostoja?",
+      "answer": "Ei. 11tik toimii vain YouTuben jo ylläpitämien julkisten pikkukuvien kanssa. Se ei lataa video- tai äänitiedostoja, kopioi toistosta keikkoja tai avaa striimien lukitusta. Se ei myöskään voi ohittaa yksityisiä tai ikärajoitettuja paketteja, jos julkista pikkukuvaa ei ole saatavilla.",
+      "answerHtml": "Ei. 11tik toimii vain YouTuben jo ylläpitämien julkisten pikkukuvien kanssa. Se ei lataa video- tai äänitiedostoja, kopioi toistosta keikkoja tai avaa striimien lukitusta. Se ei myöskään voi ohittaa yksityisiä tai ikärajoitettuja pakkauksia, jos julkista pikkukuvaa ei ole saatavilla."
+    },
+    {
+      "question": "Onko olemassa virallista 11tik Firefox-lisäosaa?",
+      "answer": "Kyllä. 11tik Firefoxille voi poimia parhaan saatavilla olevan julkisen pikkukuvan nykyisestä YouTube-välilehdestä. Se on sama tuote kuin verkkosivustotyökalu; virallinen sivusto pysyy www.11tik.com. Listaus ei muuta sitä, mitä poimija voi tai ei voi noutaa.",
+      "answerHtml": "Kyllä.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik Firefoxille</a>voi poimia parhaan saatavilla olevan julkisen pikkukuvan nykyisestä YouTube-välilehdestä. Se on sama tuote kuin verkkosivustotyökalu; virallinen sivusto pysyy<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listaus ei muuta sitä, mitä poimija voi tai ei voi hakea."
     }
   ],
   "articleId": "home-faq"

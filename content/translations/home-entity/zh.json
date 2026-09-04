@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "zh",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "11tik是什么？",
+  "entityIntro": "11tik 是 YouTube 缩略图提取器背后的品牌，这是一款免费的浏览器工具，用于提取公开的 YouTube 缩略图。提取器、下载器和抓取器这些词语都指的是同一款产品，而不是不同的工具。",
+  "entityDoesHeading": "11tik 的作用",
+  "entityDoes1": "从支持的视频 URL 和 ID（包括 watch、Shorts、live、youtu.be 和嵌入链接）中提取公开的 YouTube 缩略图。",
+  "entityDoes2": "验证哪些公开的缩略图尺寸实际可以加载（包括 YouTube 发布时的最大分辨率），然后允许您下载或复制图像 URL。",
+  "entityDoes3": "完全在浏览器（客户端）中运行，批量模式最多可处理 50 个公共 URL，并支持导出 ZIP 和 CSV 文件。",
+  "entityDoesNotHeading": "11tik 不做什么",
+  "entityDoesNot1": "下载 YouTube 视频或音频",
+  "entityDoesNot2": "绕过私人或年龄限制内容",
+  "entityDoesNot3": "生成或设计缩略图",
+  "entityDoesNot4": "从 TikTok、Instagram、仅限频道或仅限播放列表的 URL 或其他不受支持的平台提取内容",
+  "articleId": "home-entity"
+}

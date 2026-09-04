@@ -92,6 +92,28 @@ export function collectPayloadStrings(payload) {
   add("faqHeading", payload.faqHeading);
   add("conclusionHtml", payload.conclusionHtml);
   add("bioHtml", payload.bioHtml);
+  add("heroTitle", payload.heroTitle);
+  add("heroIntro", payload.heroIntro);
+  add("capsHeading", payload.capsHeading);
+  add("hubsHeading", payload.hubsHeading);
+  add("entityHeading", payload.entityHeading);
+  add("entityIntro", payload.entityIntro);
+  add("entityDoesHeading", payload.entityDoesHeading);
+  add("entityDoes1", payload.entityDoes1);
+  add("entityDoes2", payload.entityDoes2);
+  add("entityDoes3", payload.entityDoes3);
+  add("entityDoesNotHeading", payload.entityDoesNotHeading);
+  add("entityDoesNot1", payload.entityDoesNot1);
+  add("entityDoesNot2", payload.entityDoesNot2);
+  add("entityDoesNot3", payload.entityDoesNot3);
+  add("entityDoesNot4", payload.entityDoesNot4);
+
+  for (let i = 0; i < (payload.capsItems?.length || 0); i++) {
+    add(`capsItems.${i}.html`, payload.capsItems[i]?.html);
+  }
+  for (let i = 0; i < (payload.hubsItems?.length || 0); i++) {
+    add(`hubsItems.${i}.html`, payload.hubsItems[i]?.html);
+  }
 
   for (let i = 0; i < (payload.sections?.length || 0); i++) {
     const s = payload.sections[i];

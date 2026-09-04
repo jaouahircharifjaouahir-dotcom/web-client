@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "sv",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Vanliga frågor",
   "faq": [
     {
-      "question": "Vad är en YouTube-miniatyrutdragare?",
-      "answer": "En miniatyrextraktor är ett webbläsarverktyg som hämtar de offentliga stillbilder som YouTube redan lagrar på sitt CDN – inte videofilen. Du klistrar in en länk, verktyget kontrollerar vilka storlekar som finns och du förhandsgranskar eller sparar den största riktiga filen. 11tik är endast en extraktor; den ripper inte bildrutor från uppspelning eller lovar storlekar som YouTube aldrig publicerat.",
-      "answerHtml": "En miniatyrextraktor är ett webbläsarverktyg som hämtar de offentliga stillbilder som YouTube redan lagrar på sitt CDN – inte videofilen. Du klistrar in en länk, verktyget kontrollerar vilka storlekar som finns och förhandsgranskar eller sparar den största riktiga filen. 11tik är endast en extraktor; den ripper inte bildrutor från uppspelning eller lovar storlekar som YouTube aldrig publicerat."
+      "question": "Vad är en YouTube-miniatyrutdragare, nedladdare eller grabber?",
+      "answer": "De namnen beskriver samma typ av webbläsarverktyg: ett som hämtar offentliga stillbilder som YouTube redan lagrar på sitt CDN – inte videofilen. Du klistrar in en länk, verktyget kontrollerar vilka storlekar som finns och du förhandsgranskar eller sparar den största riktiga filen. 11tik är endast YouTube Thumbnail Extractor; ordalydelsen för nedladdare och gripare är alias för den här produkten, inte separata appar.",
+      "answerHtml": "De namnen beskriver samma typ av webbläsarverktyg: ett som hämtar offentliga stillbilder som YouTube redan lagrar på sitt CDN – inte videofilen. Du klistrar in en länk, verktyget kontrollerar vilka storlekar som finns och du förhandsgranskar eller sparar den största riktiga filen. 11tik är endast YouTube Thumbnail Extractor; ordalydelsen för nedladdare och gripare är alias för den här produkten, inte separata appar."
     },
     {
-      "question": "Vilka YouTube-URL:er stöder 11tik?",
-      "answer": "Klistra in en offentlig visningslänk, Shorts-URL, live- eller premiärsida eller en kort länk till youtu.be. Verktyget läser video-ID:t från sökvägen och söker upp offentliga filer på i.ytimg.com. URL:er som endast är för kanaler och spellistor stöds inte. För URL-anatomi och en fullständig lista över mönster, se guiden för miniatyr-URL:er.",
-      "answerHtml": "Klistra in en offentlig visningslänk, Shorts-URL, live- eller premiärsida eller en kort länk till youtu.be. Verktyget läser video-ID:t från sökvägen och söker upp offentliga filer på i.ytimg.com. URL:er som endast är till kanaler och spellistor stöds inte. För URL-anatomi och en fullständig lista över mönster, se<a href=\"https://sv.11tik.com/l/sv/youtube-thumbnail-url\">miniatyr-URL-guide</a>."
+      "question": "Kan jag ladda ner en YouTube-miniatyr från en URL?",
+      "answer": "Ja. Klistra in en offentlig visningslänk, Shorts-URL, live- eller premiärsida, inbäddning, youtu.be kort länk eller ett enkelt video-ID på 11 tecken. Verktyget läser video-ID:t och söker upp offentliga filer på i.ytimg.com. URL:er som endast är för kanaler och spellistor stöds inte. För URL-anatomi och en fullständig lista över mönster, se guiden för miniatyr-URL:er.",
+      "answerHtml": "Ja. Klistra in en offentlig visningslänk, Shorts-URL, live- eller premiärsida, inbäddning, youtu.be kort länk eller ett rent video-ID på 11 tecken. Verktyget läser video-ID:t och söker upp offentliga filer på i.ytimg.com. URL:er som endast är för kanaler och spellistor stöds inte. För URL-anatomi och en fullständig lista över mönster, se<a href=\"https://www.11tik.com/youtube-thumbnail-url\">miniatyr-URL-guide</a>."
     },
     {
       "question": "Laddar 11tik upp min miniatyrbild eller video?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Vad händer när den högsta miniatyrbildskvaliteten inte är tillgänglig?",
-      "answer": "11tik begär varje publikt filnamn och behåller endast svar som returnerar en riktig bild – inga gissade maxres-URL:er. Om maxresdefault saknas visar verktyget nästa största storlek som faktiskt laddas, till exempel hq720 eller sddefault. Det är det ärliga maximumet för den videon. För information om varför maxres 404:or och hur alternativ fungerar, läs maxresdefault-guiden.",
-      "answerHtml": "11tik begär varje publikt filnamn och behåller endast svar som returnerar en riktig bild – inga gissade maxres-URL:er. Om maxresdefault saknas visar verktyget nästa största storlek som faktiskt laddas, till exempel hq720 eller sddefault. Det är det ärliga maximumet för den videon. För varför maxres 404:or och hur alternativ fungerar, läs<a href=\"https://sv.11tik.com/l/sv/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-guide</a>."
+      "answer": "11tik begär varje publikt filnamn och behåller endast svar som returnerar en riktig bild – inga gissade maxres-URL:er. Om maxresdefault saknas visar verktyget nästa största storlek som faktiskt laddas, till exempel hq720 eller sddefault. Det är det ärliga maximumet för den videon. Exempelmått finns i studien med 300 videostorlekar. För information om varför maxres 404s används, läs maxresdefault-guiden.",
+      "answerHtml": "11tik begär varje publikt filnamn och behåller endast svar som returnerar en riktig bild – inga gissade maxres-URL:er. Om maxresdefault saknas visar verktyget nästa största storlek som faktiskt laddas, till exempel hq720 eller sddefault. Det är det ärliga maximumet för den videon. Exempelmått finns i<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studie på 300 videor</a>För varför maxres 404s, läs<a href=\"https://sv.11tik.com/l/sv/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-guide</a>."
+    },
+    {
+      "question": "Kan jag bearbeta flera webbadresser för miniatyrer på YouTube?",
+      "answer": "Ja. Samma YouTube Thumbnail Extractor har ett massläge: klistra in upp till 50 offentliga webbadresser (en per rad), ladda sedan ner varje bästa stillbild, zippa den högst kvalitativa uppsättningen eller exportera CSV. Massnedladdning är ett arbetsflöde för den här produkten, inte ett separat verktyg för massnedladdning. Detaljer: guide för batchnedladdning.",
+      "answerHtml": "Ja. Samma YouTube Thumbnail Extractor har ett massläge: klistra in upp till 50 offentliga webbadresser (en per rad), ladda sedan ner varje bästa stillbild, zippa den högst kvalitativa uppsättningen eller exportera CSV. Massnedladdning är ett arbetsflöde för den här produkten, inte ett separat verktyg för massnedladdning. Detaljer:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">guide för batchnedladdning</a>."
+    },
+    {
+      "question": "Laddar 11tik ner YouTube-videor eller ljud?",
+      "answer": "Nej. 11tik fungerar bara med offentliga miniatyrbilder som YouTube redan lagrar. Den laddar inte ner video- eller ljudfiler, ripper inte bildrutor från uppspelning eller låser upp strömmar. Den kan inte heller kringgå privat eller åldersbegränsad paketering när ingen offentlig miniatyrfil är tillgänglig.",
+      "answerHtml": "Nej. 11tik fungerar bara med offentliga miniatyrbilder som YouTube redan lagrar. Den laddar inte ner video- eller ljudfiler, ripper inte bildrutor från uppspelning eller låser upp strömmar. Den kan inte heller kringgå privat eller åldersbegränsad paketering när ingen offentlig miniatyrfil är tillgänglig."
+    },
+    {
+      "question": "Finns det ett officiellt 11tik Firefox-tillägg?",
+      "answer": "Ja. 11tik för Firefox kan extrahera den bästa tillgängliga offentliga miniatyrbilden från den aktuella YouTube-fliken. Det är samma produkt som webbplatsverktyget; den officiella webbplatsen förblir www.11tik.com. Listningen ändrar inte vad extraheraren kan eller inte kan hämta.",
+      "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik för Firefox</a>kan extrahera den bästa tillgängliga offentliga miniatyrbilden från den aktuella YouTube-fliken. Det är samma produkt som webbplatsverktyget; den officiella webbplatsen förblir<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listningen ändrar inte vad extraktorn kan eller inte kan hämta."
     }
   ],
   "articleId": "home-faq"

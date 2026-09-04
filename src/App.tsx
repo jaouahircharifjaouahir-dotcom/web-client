@@ -911,7 +911,7 @@ export default function App() {
         <HomeHubsCaps />
         <HomeFaq />
 
-        {locale === "en" && t("entityHeading") ? (
+        {t("entityHeading") ? (
           <section className="yte-panel yte-entity" aria-labelledby="yte-entity-heading">
             <h2 id="yte-entity-heading">{t("entityHeading")}</h2>
             <p>{t("entityIntro")}</p>

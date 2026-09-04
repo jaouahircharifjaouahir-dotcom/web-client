@@ -1,0 +1,17 @@
+{
+  "contentId": "home-entity",
+  "locale": "en",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "What 11tik is",
+  "entityIntro": "11tik is the brand behind the YouTube Thumbnail Extractor—a free browser tool for public YouTube thumbnail images. Extractor, downloader, and grabber wording all refer to this same product, not separate tools.",
+  "entityDoesHeading": "What 11tik does",
+  "entityDoes1": "Extracts public YouTube thumbnail images from supported video URLs and IDs—including watch, Shorts, live, youtu.be, and embed links",
+  "entityDoes2": "Validates which public thumbnail sizes actually load (including maxres when YouTube publishes it), then lets you download or copy the image URL",
+  "entityDoes3": "Runs entirely in your browser (client-side), with Bulk mode for up to 50 public URLs plus ZIP and CSV export",
+  "entityDoesNotHeading": "What 11tik does not do",
+  "entityDoesNot1": "Download YouTube video or audio",
+  "entityDoesNot2": "Bypass private or age-gated content",
+  "entityDoesNot3": "Generate or design thumbnails",
+  "entityDoesNot4": "Extract from TikTok, Instagram, channel-only or playlist-only URLs, or other unsupported platforms"
+}

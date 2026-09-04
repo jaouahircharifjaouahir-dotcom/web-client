@@ -2,12 +2,12 @@
   "heading": "Usein kysytyt kysymykset",
   "items": [
     {
-      "question": "Mikä on YouTube-pikkukuvien poimija?",
-      "answerHtml": "Pienoiskuvien poimija on selaintyökalu, joka hakee YouTuben CDN-palvelussa jo isännöimät julkiset still-kuvat – ei itse videotiedostoa. Liität linkin, työkalu tarkistaa olemassa olevat koot ja esikatselet tai tallennat suurimman todellisen tiedoston. 11tik on vain poimija; se ei kopioi ruutuja toistosta eikä lupaa YouTuben julkaisemia kokoja."
+      "question": "Mikä on YouTube-pikkukuvien poimija, latausohjelma tai sieppari?",
+      "answerHtml": "Nuo nimet kuvaavat samanlaista selaintyökalua: sellaista, joka hakee YouTuben jo CDN-palvelimella olevia julkisia still-kuvia – ei videotiedostoa. Liität linkin, työkalu tarkistaa olemassa olevat koot ja esikatselet tai tallennat suurimman todellisen tiedoston. 11tik on vain YouTube Thumbnail Extractor; lataus- ja sieppausohjelman sanat ovat tämän tuotteen aliaksia, eivät erillisiä sovelluksia."
     },
     {
-      "question": "Mitä YouTube-URL-osoitteita 11tik tukee?",
-      "answerHtml": "Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu tai youtu.be-lyhytvideolinkki. Työkalu lukee videotunnuksen polusta ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo malleista.<a href=\"https://fi.11tik.com/l/fi/2026/08/youtube-thumbnail-url.html\">pikkukuvan URL-opas</a>."
+      "question": "Voinko ladata YouTube-pikkukuvan URL-osoitteesta?",
+      "answerHtml": "Kyllä. Liitä julkinen katselulinkki, Shorts-videon URL-osoite, live- tai ensi-iltasivu, upotus, youtu.be-lyhytvideolinkki tai pelkkä 11-merkkinen videotunnus. Työkalu lukee videotunnuksen ja etsii julkisia tiedostoja i.ytimg.com-sivustolta. Kanavien ja soittolistojen URL-osoitteita ei tueta. Katso URL-osoitteiden rakenne ja täydellinen luettelo malleista.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">pikkukuvan URL-opas</a>."
     },
     {
       "question": "Lataako 11tik pikkukuvani tai videoni?",
@@ -15,11 +15,23 @@
     },
     {
       "question": "Voinko ladata pikkukuvia YouTube Shortsista?",
-      "answerHtml": "Kyllä. Lyhytvideolinkit käyttävät samoja julkisia kuvapalvelimia kuin tavalliset videot, joten voit liittää /shorts/-URL-osoitteen ja ladata parhaan mahdollisen still-kuvan. Esikatselu saattaa näyttää leveämmältä kuin katsomasi pystysuora klippi, koska YouTube tallentaa maisemakuvan. Yksityiset tai ikärajoitetut lyhytvideot, joilla ei ole julkista pikkukuvaa, eivät palauta tiedostoa. Katso<a href=\"https://fi.11tik.com/l/fi/2026/08/youtube-shorts-thumbnail-download.html\">Lyhytkuvien pikkukuvien opas</a>vaiheittaista apua varten."
+      "answerHtml": "Kyllä. Lyhytvideolinkit käyttävät samoja julkisia kuvapalvelimia kuin tavalliset videot, joten voit liittää /shorts/-URL-osoitteen ja ladata parhaan mahdollisen still-kuvan. Esikatselu saattaa näyttää leveämmältä kuin katsomasi pystysuora klippi, koska YouTube tallentaa maisemakuvan. Yksityiset tai ikärajoitetut lyhytvideot, joilla ei ole julkista pikkukuvaa, eivät palauta tiedostoa. Katso<a href=\"https://fi.11tik.com/l/fi/youtube-shorts-thumbnail-download\">Lyhytkuvien pikkukuvien opas</a>vaiheittaista apua varten."
     },
     {
       "question": "Mitä tapahtuu, kun parasta pikkukuvan laatua ei ole saatavilla?",
-      "answerHtml": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimikoko. Lisätietoja maxres 404 -virheiden syistä ja varamenetelmien toiminnasta on kohdassa<a href=\"https://fi.11tik.com/l/fi/2026/08/what-is-maxresdefaultjpg-when-youtube.html\">maxresdefault-opas</a>."
+      "answerHtml": "11tik pyytää jokaisen julkisen tiedostonimen ja säilyttää vain vastaukset, jotka palauttavat todellisen kuvan – ei arvattuja maxres-URL-osoitteita. Jos maxresdefault puuttuu, työkalu näyttää seuraavaksi suurimman latautuvan koon, kuten hq720 tai sddefault. Se on kyseisen videon rehellinen maksimiarvo. Esimerkkimittaukset ovat<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videon kokoinen tutkimus</a>. Lue lisää maxres 404 -virheiden syistä.<a href=\"https://fi.11tik.com/l/fi/what-is-maxresdefaultjpg-when-youtube\">maxresdefault-opas</a>."
+    },
+    {
+      "question": "Voinko käsitellä useita YouTube-pikkukuvakkeiden URL-osoitteita?",
+      "answerHtml": "Kyllä. Sama YouTube-pikkukuvien poimija sisältää joukkolataustilan: liitä jopa 50 julkista URL-osoitetta (yksi riviä kohden) ja lataa sitten jokainen paras still-kuva, pakkaa korkealaatuisin sarja ZIP-tiedostoon tai vie CSV-tiedostona. Joukkolataus on tämän tuotteen työnkulku, ei erillinen joukkolataustyökalu. Tiedot:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">erälatausopas</a>."
+    },
+    {
+      "question": "Lataako 11tik YouTube-videoita tai -äänitiedostoja?",
+      "answerHtml": "Ei. 11tik toimii vain YouTuben jo ylläpitämien julkisten pikkukuvien kanssa. Se ei lataa video- tai äänitiedostoja, kopioi toistosta keikkoja tai avaa striimien lukitusta. Se ei myöskään voi ohittaa yksityisiä tai ikärajoitettuja pakkauksia, jos julkista pikkukuvaa ei ole saatavilla."
+    },
+    {
+      "question": "Onko olemassa virallista 11tik Firefox-lisäosaa?",
+      "answerHtml": "Kyllä.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik Firefoxille</a>voi poimia parhaan saatavilla olevan julkisen pikkukuvan nykyisestä YouTube-välilehdestä. Se on sama tuote kuin verkkosivustotyökalu; virallinen sivusto pysyy<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listaus ei muuta sitä, mitä poimija voi tai ei voi hakea."
     }
   ]
 }

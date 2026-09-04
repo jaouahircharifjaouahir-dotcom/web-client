@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "tr",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Sıkça sorulan sorular",
   "faq": [
     {
-      "question": "YouTube küçük resim çıkarıcı nedir?",
-      "answer": "Küçük resim çıkarıcı, YouTube'un CDN'sinde zaten barındırdığı herkese açık hareketsiz görüntüleri (video dosyasını değil) getiren bir tarayıcı aracıdır. Bir bağlantı yapıştırırsınız, araç hangi boyutların mevcut olduğunu kontrol eder ve en büyük gerçek dosyayı önizler veya kaydedersiniz. 11tik yalnızca bir çıkarıcıdır; oynatmadan kareler çıkarmaz veya YouTube'un asla yayınlamadığı boyutları vaat etmez.",
-      "answerHtml": "Küçük resim çıkarıcı, YouTube'un CDN'sinde zaten barındırdığı herkese açık hareketsiz görüntüleri (video dosyasını değil) getiren bir tarayıcı aracıdır. Bir bağlantı yapıştırırsınız, araç hangi boyutların mevcut olduğunu kontrol eder ve en büyük gerçek dosyayı önizler veya kaydedersiniz. 11tik yalnızca bir çıkarıcıdır; oynatmadan kareler çıkarmaz veya YouTube'un asla yayınlamadığı boyutları vaat etmez."
+      "question": "YouTube küçük resim çıkarıcı, indirici veya yakalayıcı nedir?",
+      "answer": "Bu isimler aynı tür tarayıcı aracını tanımlar: YouTube'un CDN'sinde zaten barındırdığı herkese açık hareketsiz görüntüleri (video dosyasını değil) getiren bir araç. Bir bağlantı yapıştırırsınız, araç hangi boyutların mevcut olduğunu kontrol eder ve en büyük gerçek dosyayı önizler veya kaydedersiniz. 11tik yalnızca YouTube Küçük Resim Çıkarıcısıdır; indirici ve yakalayıcı ifadeleri bu ürün için kullanılan takma adlardır, ayrı uygulamalar değildir.",
+      "answerHtml": "Bu isimler aynı tür tarayıcı aracını tanımlar: YouTube'un CDN'sinde zaten barındırdığı herkese açık hareketsiz görüntüleri (video dosyasını değil) getiren bir araç. Bir bağlantı yapıştırırsınız, araç hangi boyutların mevcut olduğunu kontrol eder ve en büyük gerçek dosyayı önizler veya kaydedersiniz. 11tik yalnızca YouTube Küçük Resim Çıkarıcısıdır; indirici ve yakalayıcı ifadeleri bu ürün için kullanılan takma adlardır, ayrı uygulamalar değildir."
     },
     {
-      "question": "11tik hangi YouTube URL'lerini destekliyor?",
-      "answer": "Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası veya youtu.be kısa bağlantısı yapıştırın. Araç, video kimliğini yoldan okur ve i.ytimg.com'deki herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için küçük resim URL kılavuzuna bakın.",
-      "answerHtml": "Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası veya youtu.be kısa bağlantısı yapıştırın. Araç, video kimliğini yoldan okur ve i.ytimg.com üzerindeki herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için bkz.<a href=\"https://tr.11tik.com/l/tr/youtube-thumbnail-url\">küçük resim URL kılavuzu</a>."
+      "question": "Bir URL adresinden YouTube küçük resmini indirebilir miyim?",
+      "answer": "Evet. Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası, yerleştirme, youtu.be kısa bağlantısı veya 11 karakterlik yalın bir video kimliği yapıştırın. Araç, video kimliğini okur ve i.ytimg.com'de herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için küçük resim URL kılavuzuna bakın.",
+      "answerHtml": "Evet. Herkese açık bir izleme bağlantısı, Shorts URL'si, canlı veya prömiyer sayfası, yerleştirme, youtu.be kısa bağlantısı veya 11 karakterlik yalın bir video kimliği yapıştırın. Araç, video kimliğini okur ve i.ytimg.com'de herkese açık dosyaları arar. Kanal ve yalnızca oynatma listesi URL'leri desteklenmez. URL yapısı ve kalıpların tam listesi için bkz.<a href=\"https://www.11tik.com/youtube-thumbnail-url\">küçük resim URL kılavuzu</a>."
     },
     {
       "question": "11tik benim küçük resmimi veya videomu yüklüyor mu?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "En yüksek kalitede küçük resim mevcut olmadığında ne olur?",
-      "answer": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'lerini içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum boyuttur. maxres 404 hatalarının nedenleri ve geri dönüşlerin nasıl çalıştığı hakkında bilgi için maxresdefault kılavuzunu okuyun.",
-      "answerHtml": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'leri içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum boyuttur. maxres 404 hatalarının nedenleri ve geri dönüşlerin nasıl çalıştığı hakkında bilgi için okuyun.<a href=\"https://tr.11tik.com/l/tr/what-is-maxresdefaultjpg-when-youtube\">maxresdefault kılavuzu</a>."
+      "answer": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'leri içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum boyuttur. Örnek ölçümler 300 video boyutlu çalışmada yer almaktadır. maxres 404 hatalarının nedenini öğrenmek için maxresdefault kılavuzunu okuyun.",
+      "answerHtml": "11tik her bir genel dosya adını ister ve yalnızca gerçek bir görüntü döndüren yanıtları saklar; tahmini maxres URL'leri içermez. maxresdefault eksikse, araç gerçekten yüklenen bir sonraki en büyük boyutu gösterir, örneğin hq720 veya sddefault. Bu, o video için gerçek maksimum değerdir. Örnek ölçümler şurada yer almaktadır:<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">300 videoluk boyut çalışması</a>Maxres 404 hatalarının nedenini öğrenmek için okumaya devam edin.<a href=\"https://tr.11tik.com/l/tr/what-is-maxresdefaultjpg-when-youtube\">maxresdefault kılavuzu</a>."
+    },
+    {
+      "question": "Birden fazla YouTube küçük resim URL'sini işleyebilir miyim?",
+      "answer": "Evet. Aynı YouTube Küçük Resim Çıkarma Aracı, Toplu indirme modunu da içerir: 50 adede kadar herkese açık URL'yi (her satıra bir tane) yapıştırın, ardından en iyi kareyi indirin, en yüksek kalitedeki seti ZIP dosyasına dönüştürün veya CSV olarak dışa aktarın. Toplu indirme, bu ürünün bir iş akışıdır, ayrı bir toplu indirme aracı değildir. Ayrıntılar: toplu indirme kılavuzu.",
+      "answerHtml": "Evet. Aynı YouTube Küçük Resim Çıkarma Aracı, Toplu indirme modunu da içerir: 50 adede kadar herkese açık URL'yi (her satıra bir tane) yapıştırın, ardından en iyi kareleri indirin, en yüksek kalitedeki seti ZIP dosyasına dönüştürün veya CSV olarak dışa aktarın. Toplu indirme, bu ürünün bir iş akışıdır, ayrı bir toplu indirme aracı değildir. Ayrıntılar:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">toplu indirme kılavuzu</a>."
+    },
+    {
+      "question": "11tik YouTube videolarını veya ses dosyalarını indiriyor mu?",
+      "answer": "Hayır. 11tik yalnızca YouTube'un zaten barındırdığı herkese açık küçük resimlerle çalışır. Video veya ses dosyalarını indirmez, oynatmadan kareler çıkarmaz veya yayınların kilidini açmaz. Ayrıca, herkese açık küçük resim dosyası mevcut olmadığında özel veya yaş kısıtlamalı paketlemeyi atlayamaz.",
+      "answerHtml": "Hayır. 11tik yalnızca YouTube'un zaten barındırdığı herkese açık küçük resimlerle çalışır. Video veya ses dosyalarını indirmez, oynatmadan kareler çıkarmaz veya yayınların kilidini açmaz. Ayrıca, herkese açık küçük resim dosyası mevcut olmadığında özel veya yaş kısıtlamalı paketlemeyi atlayamaz."
+    },
+    {
+      "question": "11tik Firefox için resmi bir eklenti var mı?",
+      "answer": "Evet. Firefox için 11tik, mevcut YouTube sekmesinden en iyi genel küçük resmi çıkarabilir. Bu, web sitesindeki araçla aynı üründür; resmi site www.11tik.com olarak kalmaktadır. Listeleme, çıkarıcının neleri alıp alamayacağını değiştirmez.",
+      "answerHtml": "Evet.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik Firefox için</a>Mevcut YouTube sekmesinden en iyi herkese açık küçük resmi çıkarabilir. Bu, web sitesindeki araçla aynı üründür; resmi site aynı kalır.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listeleme, çıkarıcının neleri alıp alamayacağını değiştirmez."
     }
   ],
   "articleId": "home-faq"

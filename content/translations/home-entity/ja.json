@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "ja",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "11tikとは",
+  "entityIntro": "11tikは、YouTubeサムネイル抽出ツール（公開されているYouTubeサムネイル画像を取得するための無料ブラウザツール）を提供するブランドです。抽出ツール、ダウンローダー、グラバーといった用語はすべて同じ製品を指しており、別々のツールではありません。",
+  "entityDoesHeading": "11tikは何をするのか",
+  "entityDoes1": "サポートされている動画の URL と ID (watch、Shorts、live、youtu.be、埋め込みリンクなど) から、公開されている YouTube サムネイル画像を抽出します。",
+  "entityDoes2": "実際に読み込まれる公開サムネイルサイズ（YouTubeが公開する際のmaxresを含む）を検証し、画像URLをダウンロードまたはコピーできるようにします。",
+  "entityDoes3": "ブラウザ（クライアント側）で完全に動作し、最大50個の公開URLを一括処理できるモードに加え、ZIPおよびCSV形式でのエクスポートも可能です。",
+  "entityDoesNotHeading": "11tikがしないこと",
+  "entityDoesNot1": "YouTubeの動画または音声をダウンロードする",
+  "entityDoesNot2": "非公開コンテンツや年齢制限コンテンツを回避する",
+  "entityDoesNot3": "サムネイルを生成またはデザインする",
+  "entityDoesNot4": "TikTok、Instagram、チャンネル専用またはプレイリスト専用のURL、あるいはその他のサポートされていないプラットフォームからの抽出",
+  "articleId": "home-entity"
+}

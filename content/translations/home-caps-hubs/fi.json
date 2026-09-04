@@ -1,0 +1,34 @@
+{
+  "contentId": "home-caps-hubs",
+  "locale": "fi",
+  "status": "ready",
+  "sourceHash": "phase-mhps-caps-hubs-v1",
+  "capsHeading": "Mitä tämä liesituuletin kattaa",
+  "capsItems": [
+    {
+      "html": "Lataa tai kaappaa julkisia YouTube-pikkukuvia tuetusta video-URL-osoitteesta (yksi tuote – ei erillisiä lataus- tai kaappaajatyökaluja)."
+    },
+    {
+      "html": "Jopa massatila<strong>50</strong>URL-osoitteita ajoa kohden, korkealaatuisimpien still-tiedostojen zip-tiedostot ja CSV-vienti – katso<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">erälatausopas</a>."
+    },
+    {
+      "html": "Tarkistaa, mitkä julkiset koot todellisuudessa latautuvat katselulinkkien ja lyhytvideoiden kohdalla, mukaan lukien rehelliset maksimikoot, kun YouTube julkaisee ne."
+    },
+    {
+      "html": "Valinnainen<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik Firefoxille</a>nykyiselle YouTube-välilehdelle; verkkosivustotyökalu pysyy kohdassa<a href=\"https://www.11tik.com/\">www.11tik.com</a>."
+    }
+  ],
+  "hubsHeading": "Tätä työkalua tukevat oppaat",
+  "hubsItems": [
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">Julkisen YouTube-pikkukuvan tallentaminen vaihe vaiheelta</a>— Yhden URL-osoitteen läpikäynti ja palaa sitten tähän purkaaksesi sen."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">Useiden pikkukuvien URL-osoitteiden käsittely</a>— Jopa 50 julkista linkkiä ZIP- ja CSV-viennillä joukkomuodossa."
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Mitatut koot 300 videosta</a>— Otoksiin perustuva näyttö mitoista ja suurimmasta mahdollisesta saatavuudesta."
+    }
+  ],
+  "articleId": "home-caps-hubs"
+}

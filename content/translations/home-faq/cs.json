@@ -2,18 +2,18 @@
   "contentId": "home-faq",
   "locale": "cs",
   "status": "ready",
-  "sourceHash": "phase48-en-faq-v1",
+  "sourceHash": "phase2h1-en-faq-v1",
   "faqHeading": "Často kladené otázky",
   "faq": [
     {
-      "question": "Co je extraktor miniatur na YouTube?",
-      "answer": "Extraktor miniatur je nástroj prohlížeče, který načítá veřejné statické obrázky, které YouTube již hostuje na své síti CDN – nikoli video soubor. Vložíte odkaz, nástroj zkontroluje, jaké velikosti existují, a vy zobrazíte náhled nebo uložíte největší skutečný soubor. 11tik je pouze extraktor; neextrahuje snímky z přehrávání ani neslibuje velikosti, které YouTube nikdy nezveřejnil.",
-      "answerHtml": "Extraktor miniatur je nástroj prohlížeče, který načítá veřejné statické obrázky, které YouTube již hostuje na své síti CDN – nikoli video soubor. Vložíte odkaz, nástroj zkontroluje, jaké velikosti existují, a vy zobrazíte náhled nebo uložíte největší skutečný soubor. 11tik je pouze extraktor; neextrahuje snímky z přehrávání ani neslibuje velikosti, které YouTube nikdy nezveřejnil."
+      "question": "Co je extraktor, stahovač nebo grabber miniatur YouTube?",
+      "answer": "Tyto názvy popisují stejný druh nástroje prohlížeče: nástroj, který načítá veřejné statické obrázky, které YouTube již hostuje na své CDN – nikoli samotný video soubor. Vložíte odkaz, nástroj zkontroluje, jaké velikosti existují, a vy zobrazíte náhled nebo uložíte největší skutečný soubor. 11tik je pouze nástroj pro extrakci miniatur YouTube; slova downloader a grabber jsou aliasy pro tento produkt, nikoli samostatné aplikace.",
+      "answerHtml": "Tyto názvy popisují stejný druh nástroje prohlížeče: nástroj, který načítá veřejné statické obrázky, které YouTube již hostuje na své CDN – nikoli samotný video soubor. Vložíte odkaz, nástroj zkontroluje, jaké velikosti existují, a vy zobrazíte náhled nebo uložíte největší skutečný soubor. 11tik je pouze nástroj pro extrakci miniatur YouTube; slova downloader a grabber jsou aliasy pro tento produkt, nikoli samostatné aplikace."
     },
     {
-      "question": "Které URL adresy YouTube 11tik podporuje?",
-      "answer": "Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry nebo krátký odkaz youtu.be. Nástroj přečte ID videa z cesty a vyhledá veřejné soubory na i.ytimg.com. URL adresy pouze kanálů a playlistů nejsou podporovány. Anatomii URL adres a úplný seznam vzorů naleznete v průvodci URL miniatur.",
-      "answerHtml": "Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry nebo krátký odkaz youtu.be. Nástroj přečte ID videa z cesty a vyhledá veřejné soubory na i.ytimg.com. URL adresy pouze kanálů a playlistů nejsou podporovány. Anatomii URL a úplný seznam vzorů naleznete v<a href=\"https://cs.11tik.com/l/cs/youtube-thumbnail-url\">Průvodce URL miniatur</a>."
+      "question": "Mohu si stáhnout miniaturu z YouTube z URL adresy?",
+      "answer": "Ano. Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry, vložený odkaz, krátký odkaz youtu.be nebo holé 11místné ID videa. Nástroj přečte ID videa a vyhledá veřejné soubory na i.ytimg.com. URL adresy kanálů a playlistů nejsou podporovány. Anatomii URL adres a úplný seznam vzorů naleznete v průvodci URL miniatur.",
+      "answerHtml": "Ano. Vložte veřejný odkaz pro sledování, URL adresu krátkých videí, stránku živého vysílání nebo premiéry, vložený odkaz, krátký odkaz youtu.be nebo holé 11místné ID videa. Nástroj přečte ID videa a vyhledá veřejné soubory na i.ytimg.com. URL adresy pouze kanálů a playlistů nejsou podporovány. Anatomii URL a úplný seznam vzorů naleznete v<a href=\"https://www.11tik.com/youtube-thumbnail-url\">Průvodce URL miniatur</a>."
     },
     {
       "question": "Nahraje 11tik mou miniaturu nebo video?",
@@ -27,8 +27,23 @@
     },
     {
       "question": "Co se stane, když není k dispozici nejvyšší kvalita miniatur?",
-      "answer": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté adresy URL maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je skutečné maximum pro dané video. Informace o tom, proč se používají chyby 404 pro maxres a jak fungují záložní metody, naleznete v průvodci maxresdefault.",
-      "answerHtml": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté adresy URL maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je skutečné maximum pro dané video. Informace o tom, proč maxres 404 a jak fungují záložní verze, naleznete v<a href=\"https://cs.11tik.com/l/cs/what-is-maxresdefaultjpg-when-youtube\">Průvodce maxresdefault</a>."
+      "answer": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté adresy URL maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je poctivý maximum pro dané video. Ukázková měření jsou uvedena ve studii velikosti 300 videí. Proč používá maxres 404, přečtěte si průvodce maxresdefault.",
+      "answerHtml": "11tik požaduje každý veřejný název souboru a uchovává pouze odpovědi, které vracejí skutečný obrázek – žádné odhadnuté URL adresy maxres. Pokud maxresdefault chybí, nástroj zobrazí další největší velikost, která se skutečně načte, například hq720 nebo sddefault. To je skutečné maximum pro dané video. Ukázková měření jsou v<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">Studie o velikosti 300 videí</a>Proč maxres 404, si přečtěte...<a href=\"https://cs.11tik.com/l/cs/what-is-maxresdefaultjpg-when-youtube\">Průvodce maxresdefault</a>."
+    },
+    {
+      "question": "Mohu zpracovat více adres URL miniatur YouTube?",
+      "answer": "Ano. Stejný nástroj pro extrakci miniatur YouTube obsahuje hromadný režim: vložte až 50 veřejných URL adres (jednu na řádek), poté si stáhněte každou nejlepší fotografii, zazipujte sadu nejvyšší kvality nebo exportujte CSV. Hromadné stahování je pracovní postup tohoto produktu, nikoli samostatný nástroj pro hromadné stahování. Podrobnosti: průvodce hromadným stahováním.",
+      "answerHtml": "Ano. Stejný nástroj pro extrakci miniatur YouTube obsahuje hromadný režim: vložte až 50 veřejných URL adres (jednu na řádek), poté si stáhněte každou nejlepší fotografii, zazipujte sadu nejvyšší kvality nebo exportujte CSV. Hromadné stahování je pracovní postup tohoto produktu, nikoli samostatný nástroj pro hromadné stahování. Podrobnosti:<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">návod k hromadnému stahování</a>."
+    },
+    {
+      "question": "Stahuje 11tik videa nebo audio z YouTube?",
+      "answer": "Ne. 11tik funguje pouze s veřejnými náhledy fotografií, které YouTube již hostuje. Nestahuje video ani audio soubory, nevytrhává snímky z přehrávání ani neodemyká streamy. Také nemůže obejít soukromé nebo věkově omezené balíčky, pokud není k dispozici žádný veřejný soubor s náhledy.",
+      "answerHtml": "Ne. 11tik funguje pouze s veřejnými náhledy fotografií, které již YouTube hostuje. Nestahuje video ani audio soubory, nevytrhává snímky z přehrávání ani neodemyká streamy. Také nemůže obejít soukromé nebo věkově omezené balíčky, pokud není k dispozici žádný veřejný soubor s náhledy."
+    },
+    {
+      "question": "Existuje oficiální doplněk 11tik pro Firefox?",
+      "answer": "Ano. 11tik pro Firefox dokáže extrahovat nejlepší dostupnou veřejnou miniaturu z aktuální karty YouTube. Je to stejný produkt jako nástroj pro webové stránky; oficiální stránky zůstávají www.11tik.com. Seznam nemění, co extraktor může nebo nemůže načíst.",
+      "answerHtml": "Ano.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik pro Firefox</a>dokáže extrahovat nejlepší dostupnou veřejnou miniaturu z aktuální karty YouTube. Je to stejný produkt jako nástroj pro webové stránky; oficiální stránky zůstávají<a href=\"https://www.11tik.com/\">www.11tik.com</a>Výpis nemění, co extraktor může nebo nemůže načíst."
     }
   ],
   "articleId": "home-faq"

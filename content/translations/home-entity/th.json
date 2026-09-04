@@ -1,0 +1,18 @@
+{
+  "contentId": "home-entity",
+  "locale": "th",
+  "status": "ready",
+  "sourceHash": "phase-mhps-entity-v1",
+  "entityHeading": "11tik คืออะไร",
+  "entityIntro": "11tik คือแบรนด์ที่อยู่เบื้องหลัง YouTube Thumbnail Extractor ซึ่งเป็นเครื่องมือฟรีสำหรับเบราว์เซอร์เพื่อดึงภาพขนาดย่อของวิดีโอ YouTube สาธารณะ คำว่า Extractor, Downloader และ Grabber ล้วนหมายถึงผลิตภัณฑ์เดียวกัน ไม่ใช่เครื่องมือแยกต่างหาก",
+  "entityDoesHeading": "11tik ทำอะไร",
+  "entityDoes1": "ดึงภาพขนาดย่อสาธารณะจาก YouTube จาก URL และ ID วิดีโอที่รองรับ รวมถึงลิงก์รับชม วิดีโอสั้น วิดีโอถ่ายทอดสด youtu.be และลิงก์ฝัง",
+  "entityDoes2": "ตรวจสอบว่าขนาดภาพขนาดย่อสาธารณะใดบ้างที่โหลดได้จริง (รวมถึงขนาด maxres เมื่อ YouTube เผยแพร่) จากนั้นจึงให้คุณดาวน์โหลดหรือคัดลอก URL ของภาพได้",
+  "entityDoes3": "ทำงานได้ทั้งหมดในเบราว์เซอร์ของคุณ (ฝั่งไคลเอ็นต์) พร้อมโหมด Bulk สำหรับ URL สาธารณะสูงสุด 50 รายการ รวมถึงการส่งออกเป็นไฟล์ ZIP และ CSV",
+  "entityDoesNotHeading": "สิ่งที่ 11tik ไม่ได้ทำ",
+  "entityDoesNot1": "ดาวน์โหลดวิดีโอหรือไฟล์เสียงจาก YouTube",
+  "entityDoesNot2": "ข้ามเนื้อหาที่เป็นส่วนตัวหรือจำกัดอายุ",
+  "entityDoesNot3": "สร้างหรือออกแบบภาพขนาดย่อ",
+  "entityDoesNot4": "ดึงข้อมูลจาก TikTok, Instagram, URL เฉพาะช่อง หรือ URL เฉพาะเพลย์ลิสต์ หรือแพลตฟอร์มอื่นๆ ที่ไม่รองรับ",
+  "articleId": "home-entity"
+}

@@ -1,0 +1,34 @@
+{
+  "contentId": "home-caps-hubs",
+  "locale": "zh",
+  "status": "ready",
+  "sourceHash": "phase-mhps-caps-hubs-v1",
+  "capsHeading": "这款提取器涵盖哪些内容？",
+  "capsItems": [
+    {
+      "html": "从支持的视频 URL 下载或获取公开的 YouTube 缩略图静态图像（一个产品——不是单独的下载器或抓取工具）。"
+    },
+    {
+      "html": "批量模式最多可<strong>50</strong>每次运行生成的 URL，包含最高质量静态图像的 ZIP 文件和 CSV 导出文件——请参阅<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">批量下载指南</a>。"
+    },
+    {
+      "html": "验证哪些公开尺寸实际加载到观看链接和 Shorts 中，包括 YouTube 发布时的真实最大分辨率。"
+    },
+    {
+      "html": "选修的<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik 适用于 Firefox</a>当前 YouTube 标签页；网站工具保持开启状态<a href=\"https://www.11tik.com/\">www.11tik.com</a>。"
+    }
+  ],
+  "hubsHeading": "支持此工具的指南",
+  "hubsItems": [
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-download-youtube-thumbnail\">逐步保存公开的 YouTube 缩略图</a>— 按照单 URL 路径完成操作，然后返回此处提取文件。"
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/how-to-batch-download-youtube\">逐个浏览缩略图 URL</a>— 批量导出模式下，最多可导出 50 个公共链接，支持 ZIP 和 CSV 格式。"
+    },
+    {
+      "html": "<a href=\"https://www.11tik.com/youtube-thumbnail-sizes-resolutions-study\">对 300 个视频进行了尺寸测量</a>— 基于样本的尺寸和最大分辨率可用性证据。"
+    }
+  ],
+  "articleId": "home-caps-hubs"
+}

@@ -136,7 +136,16 @@ function extractImages(inner) {
     const src = /src=["']([^"']+)["']/i.exec(tag)?.[1] || "";
     const alt = /alt=["']([^"']*)["']/i.exec(tag)?.[1] || "";
     if (!src) continue;
-    images.push({ src, alt });
+    const widthRaw = /(?:^|\s)width=["']?(\d+)["']?/i.exec(tag)?.[1];
+    const heightRaw = /(?:^|\s)height=["']?(\d+)["']?/i.exec(tag)?.[1];
+    const width = widthRaw ? Number(widthRaw) : undefined;
+    const height = heightRaw ? Number(heightRaw) : undefined;
+    images.push({
+      src,
+      alt,
+      ...(Number.isFinite(width) && width > 0 ? { width } : {}),
+      ...(Number.isFinite(height) && height > 0 ? { height } : {}),
+    });
   }
   return images;
 }
@@ -249,6 +258,8 @@ export function extractStructuredSource(html, { contentType = "article" } = {}) 
       src: img.src,
       alt: img.alt,
       captionHtml: "",
+      ...(img.width ? { width: img.width } : {}),
+      ...(img.height ? { height: img.height } : {}),
     })),
     sections: sections.length
       ? sections

@@ -235,7 +235,12 @@ function buildSchema({ item, canonical, h1, description, hero, structured }) {
     mainEntityOfPage: canonical,
     author: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/about" },
     publisher: { "@type": "Organization", name: "11tik", url: "https://www.11tik.com/" },
-    image: { "@type": "ImageObject", url: hero.src, width: 1200, height: 630 },
+    image: {
+      "@type": "ImageObject",
+      url: hero.src,
+      width: Number(hero?.width) > 0 ? Number(hero.width) : 1200,
+      height: Number(hero?.height) > 0 ? Number(hero.height) : 630,
+    },
   };
   if (structured.datePublished) primary.datePublished = structured.datePublished;
   if (structured.dateModified || structured.datePublished) {
@@ -366,7 +371,7 @@ export function renderEnglishStaticHtml(item, options = {}) {
   const ogDescription = fitDescription(description);
   const images = Array.isArray(structured.images) ? structured.images : [];
   const bodyHero =
-    images.find((img) => String(img.src || "").includes("/images/blog/")) ||
+    images.find((img) => /\/images\/(blog|posts)\//.test(String(img.src || ""))) ||
     images[0] ||
     { src: DEFAULT_OG, alt: structured.imageAlt || "" };
   const ogImageSrc = resolveOgImage(raw, structured, item.contentId);
@@ -379,7 +384,12 @@ export function renderEnglishStaticHtml(item, options = {}) {
     canonical,
     h1,
     description,
-    hero: { src: schemaImageSrc, alt: bodyHero.alt || structured.imageAlt || "" },
+    hero: {
+      src: schemaImageSrc,
+      alt: bodyHero.alt || structured.imageAlt || "",
+      width: bodyHero.width,
+      height: bodyHero.height,
+    },
     structured,
   });
 

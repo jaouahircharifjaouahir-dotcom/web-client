@@ -107,12 +107,19 @@ export function collectPayloadStrings(payload) {
   add("entityDoesNot2", payload.entityDoesNot2);
   add("entityDoesNot3", payload.entityDoesNot3);
   add("entityDoesNot4", payload.entityDoesNot4);
+  add("summary", payload.summary);
 
   for (let i = 0; i < (payload.capsItems?.length || 0); i++) {
     add(`capsItems.${i}.html`, payload.capsItems[i]?.html);
   }
   for (let i = 0; i < (payload.hubsItems?.length || 0); i++) {
     add(`hubsItems.${i}.html`, payload.hubsItems[i]?.html);
+  }
+  for (let i = 0; i < (payload.items?.length || 0); i++) {
+    const row = payload.items[i];
+    add(`items.${i}.heading`, row?.heading);
+    add(`items.${i}.bodyHtml`, row?.bodyHtml);
+    add(`items.${i}.html`, row?.html);
   }
 
   for (let i = 0; i < (payload.sections?.length || 0); i++) {

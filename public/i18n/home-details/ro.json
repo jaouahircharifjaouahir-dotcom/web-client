@@ -1,0 +1,21 @@
+{
+  "blockId": "yte-home-details-legal",
+  "summary": "Drepturi de autor",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Este legal să descarci miniaturi de pe YouTube?",
+      "bodyHtml": "Puteți descărca miniaturi disponibile publicului pentru referințe personale, cercetare sau analiză educațională. Miniaturile rămân proprietatea protejată prin drepturi de autor a creatorilor lor originali. Obțineți permisiunea înainte de a reutiliza o miniatură comercial, a o publica în altă parte sau a o utiliza ca și copertă a propriului videoclip."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Există riscuri legate de drepturile de autor?",
+      "bodyHtml": "Da, dacă este reutilizată fără permisiune. Utilizarea unei miniaturi ca inspirație sau pentru studiu privat prezintă un risc minim. Republicarea acesteia ca atare (pe un alt canal, un blog sau produs promoțional) poate declanșa o reclamație privind drepturile de autor din partea creatorului original sau a YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "11tik stochează sau revendică dreptul de proprietate asupra miniaturilor?",
+      "bodyHtml": "Nu. 11tik nu stochează, nu găzduiește și nu revendică drepturi asupra niciunei miniaturi. Imaginile sunt preluate direct din CDN-ul public YouTube din browserul dvs. și nu sunt niciodată încărcate sau memorate în cache pe serverele 11tik ca fișiere media originale."
+    }
+  ]
+}

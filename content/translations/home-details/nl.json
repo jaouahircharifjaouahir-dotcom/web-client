@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "nl",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Auteursrecht en gebruik",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Is het legaal om YouTube-thumbnails te downloaden?",
+      "bodyHtml": "U kunt openbaar beschikbare miniaturen downloaden voor persoonlijk gebruik, onderzoek of educatieve analyses. De miniaturen blijven het auteursrechtelijk beschermde eigendom van de oorspronkelijke makers. Vraag toestemming voordat u een miniatuur commercieel hergebruikt, elders publiceert of als omslagafbeelding voor uw eigen video gebruikt."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Zijn er risico's op het gebied van auteursrecht?",
+      "bodyHtml": "Ja, als het zonder toestemming opnieuw wordt gebruikt. Het gebruik van een thumbnail als inspiratie of voor privéstudie brengt minimale risico's met zich mee. Het ongewijzigd opnieuw publiceren ervan (op een ander kanaal, een blog of merchandise) kan leiden tot een auteursrechtclaim van de oorspronkelijke maker of YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Bewaart 11tik miniaturen of claimt het er eigendom van?",
+      "bodyHtml": "Nee. 11tik slaat geen miniaturen op, host ze niet en claimt er geen rechten op. Afbeeldingen worden rechtstreeks van het openbare CDN van YouTube in uw browser opgehaald en worden nooit als originele mediabestanden geüpload naar of in de cache van 11tik-servers opgeslagen."
+    }
+  ],
+  "articleId": "home-details"
+}

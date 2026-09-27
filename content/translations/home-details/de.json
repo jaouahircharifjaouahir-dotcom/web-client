@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "de",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Urheberrecht und Nutzung",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Ist das Herunterladen von YouTube-Thumbnails legal?",
+      "bodyHtml": "Sie dürfen öffentlich verfügbare Vorschaubilder für den persönlichen Gebrauch, Forschungszwecke oder Bildungszwecke herunterladen. Die Urheberrechte an den Vorschaubildern bleiben Eigentum ihrer jeweiligen Urheber. Bitte holen Sie die Genehmigung ein, bevor Sie ein Vorschaubild kommerziell nutzen, anderweitig veröffentlichen oder als Coverbild für Ihr eigenes Video verwenden."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Bestehen Urheberrechtsrisiken?",
+      "bodyHtml": "Ja, wenn die Wiederverwendung ohne Genehmigung erfolgt. Die Verwendung eines Vorschaubildes als Inspiration oder für private Studienzwecke birgt nur ein geringes Risiko. Die unveränderte Veröffentlichung (auf einem anderen Kanal, einem Blog oder auf Merchandise-Artikeln) kann jedoch eine Urheberrechtsbeschwerde des ursprünglichen Urhebers oder von YouTube auslösen."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Speichert 11tik Thumbnails oder beansprucht es deren Eigentum?",
+      "bodyHtml": "Nein. 11tik speichert, hostet oder beansprucht keine Rechte an Vorschaubildern. Bilder werden direkt vom öffentlichen CDN von YouTube in Ihrem Browser abgerufen und niemals als Originalmediendateien auf 11tik-Server hochgeladen oder zwischengespeichert."
+    }
+  ],
+  "articleId": "home-details"
+}

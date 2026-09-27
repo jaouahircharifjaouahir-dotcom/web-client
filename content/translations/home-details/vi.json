@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "vi",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Bản quyền và sử dụng",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Việc tải xuống ảnh thu nhỏ của YouTube có hợp pháp không?",
+      "bodyHtml": "Bạn có thể tải xuống các hình thu nhỏ được công khai để tham khảo cá nhân, nghiên cứu hoặc phân tích giáo dục. Hình thu nhỏ vẫn thuộc bản quyền của người tạo ra chúng. Vui lòng xin phép trước khi sử dụng lại hình thu nhỏ cho mục đích thương mại, xuất bản ở nơi khác hoặc sử dụng làm ảnh bìa cho video của bạn."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Liệu có rủi ro về bản quyền không?",
+      "bodyHtml": "Có, nếu sử dụng lại mà không được phép. Sử dụng hình thu nhỏ làm nguồn cảm hứng hoặc để nghiên cứu cá nhân thì rủi ro rất thấp. Việc đăng lại nguyên trạng (trên kênh khác, blog hoặc sản phẩm thương mại) có thể dẫn đến khiếu nại bản quyền từ người tạo nội dung gốc hoặc YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Liệu 11tik có lưu trữ hoặc tuyên bố quyền sở hữu hình thu nhỏ không?",
+      "bodyHtml": "Không. 11tik không lưu trữ, lưu giữ hoặc tuyên bố quyền sở hữu đối với bất kỳ hình thu nhỏ nào. Hình ảnh được lấy trực tiếp từ CDN công cộng của YouTube trong trình duyệt của bạn và không bao giờ được tải lên hoặc lưu vào bộ nhớ đệm trên máy chủ của 11tik dưới dạng các tệp phương tiện gốc."
+    }
+  ],
+  "articleId": "home-details"
+}

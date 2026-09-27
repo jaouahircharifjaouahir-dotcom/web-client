@@ -22,6 +22,7 @@ import { downloadManager, openFullImage } from "./services/download";
 import { shareUrlFor, shareUrlForIds } from "./share/url";
 import { QUALITY_PRESETS } from "./engines/presets";
 import { HomeFaq } from "./components/HomeFaq";
+import { HomeDetails } from "./components/HomeDetails";
 import { HomeHubsCaps } from "./components/HomeHubsCaps";
 import { SiteHeader } from "./components/SiteHeader";
 import { hasStaticSiteHeader } from "./components/hasStaticSiteHeader";
@@ -934,15 +935,7 @@ export default function App() {
         <p className="yte-foot">
           {t("foot")}
         </p>
-        <details className="yte-panel">
-          <summary>{tx(locale, "legalTitle")}</summary>
-          <h3>{tx(locale, "legalQ1")}</h3>
-          <p>{tx(locale, "legalA1")}</p>
-          <h3>{tx(locale, "legalQ2")}</h3>
-          <p>{tx(locale, "legalA2")}</p>
-          <h3>{tx(locale, "legalQ3")}</h3>
-          <p>{tx(locale, "legalA3")}</p>
-        </details>
+        <HomeDetails />
         <nav className="yte-kw" aria-label={tx(locale, "relatedAlso")}>
           <a href={legalHrefs(locale).about}>{tx(locale, "trustAbout")}</a>
           <a href={legalHrefs(locale).privacy}>{tx(locale, "trustPrivacy")}</a>

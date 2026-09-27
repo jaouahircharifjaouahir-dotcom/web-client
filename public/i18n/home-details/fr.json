@@ -1,0 +1,21 @@
+{
+  "blockId": "yte-home-details-legal",
+  "summary": "Droits d’auteur et usage",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Est-il légal de télécharger des miniatures YouTube ?",
+      "bodyHtml": "Vous pouvez télécharger les vignettes disponibles publiquement pour votre usage personnel, vos recherches ou vos analyses pédagogiques. Les vignettes restent la propriété de leurs créateurs respectifs et sont protégées par le droit d'auteur. Veuillez obtenir leur autorisation avant de réutiliser une vignette à des fins commerciales, de la publier ailleurs ou de l'utiliser comme illustration de couverture pour votre propre vidéo."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Existe-t-il des risques liés au droit d'auteur ?",
+      "bodyHtml": "Oui, si elle est réutilisée sans autorisation. Utiliser une miniature comme source d'inspiration ou pour un usage personnel comporte un risque minime. La republier telle quelle (sur une autre chaîne, un blog ou des produits dérivés) peut entraîner une réclamation pour atteinte aux droits d'auteur de la part du créateur original ou de YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Est-ce que 11tik stocke ou revendique la propriété des vignettes ?",
+      "bodyHtml": "Non. 11tik ne stocke, n'héberge ni ne revendique aucun droit sur les vignettes. Les images sont récupérées directement depuis le CDN public de YouTube dans votre navigateur et ne sont jamais téléchargées ni mises en cache sur les serveurs de 11tik en tant que fichiers multimédias originaux."
+    }
+  ]
+}

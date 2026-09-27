@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "hu",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Szerzői jog",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Legális a YouTube-bélyegképek letöltése?",
+      "bodyHtml": "Letölthetsz nyilvánosan elérhető indexképeket személyes használatra, kutatásra vagy oktatási elemzésre. Az indexképek az eredeti alkotóik szerzői jogvédelem alatt álló tulajdonát képezik. Kérj engedélyt, mielőtt kereskedelmi célú újrafelhasználnál egy indexképet, máshol közzétennéd, vagy saját videód borítójaként használnád."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Vannak szerzői jogi kockázatok?",
+      "bodyHtml": "Igen, ha engedély nélkül újrafelhasználjuk. Az indexkép inspirációként vagy magáncélú tanulmányozásra való felhasználása minimális kockázattal jár. Az újbóli közzététele (másik csatornán, blogon vagy árucikkben) szerzői jogi követelést válthat ki az eredeti alkotótól vagy a YouTube-tól."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "A 11tik tárolja vagy igényli a tulajdonjogát az indexképeknek?",
+      "bodyHtml": "Nem. A 11tik nem tárol, nem hosztol és nem tart igényt semmilyen indexképre vonatkozó jogra. A képeket közvetlenül a YouTube nyilvános CDN-jéről tölti le a böngésződ, és soha nem töltik fel vagy gyorsítótárazzák a 11tik szerverein eredeti médiafájlként."
+    }
+  ],
+  "articleId": "home-details"
+}

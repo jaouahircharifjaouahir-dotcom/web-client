@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "pl",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Prawa autorskie",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Czy pobieranie miniaturek z YouTube jest legalne?",
+      "bodyHtml": "Możesz pobrać publicznie dostępne miniatury do celów osobistych, badawczych lub analizy edukacyjnej. Miniatury pozostają chronione prawami autorskimi ich oryginalnych twórców. Uzyskaj pozwolenie przed ponownym wykorzystaniem miniatury w celach komercyjnych, opublikowaniem jej gdzie indziej lub wykorzystaniem jej jako okładki własnego filmu."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Czy istnieją zagrożenia dla praw autorskich?",
+      "bodyHtml": "Tak, jeśli zostanie ponownie wykorzystana bez pozwolenia. Wykorzystanie miniatury jako inspiracji lub do prywatnych badań wiąże się z minimalnym ryzykiem. Ponowne opublikowanie jej w obecnej formie (na innym kanale, blogu lub w sklepie) może skutkować roszczeniem o prawa autorskie ze strony pierwotnego twórcy lub YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Czy 11tik przechowuje lub rości sobie prawo własności do miniatur?",
+      "bodyHtml": "Nie. 11tik nie przechowuje, nie hostuje ani nie rości sobie praw do żadnych miniatur. Obrazy są pobierane bezpośrednio z publicznej sieci CDN YouTube w Twojej przeglądarce i nigdy nie są przesyłane ani buforowane na serwerach 11tik jako oryginalne pliki multimedialne."
+    }
+  ],
+  "articleId": "home-details"
+}

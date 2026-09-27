@@ -1,4 +1,5 @@
 import { ISO6391 } from "../../workers/iso6391.js";
+import homeDetailsPack from "./home-details-pack.json";
 import { THUMB_LOCALE_PACKS } from "./thumb-locale-packs";
 import { uiFoot, uiHeroIntro } from "./uiCatalog";
 
@@ -569,7 +570,24 @@ function thumbPackString(locale: string, key: PageKey): string | undefined {
   return (pack as Partial<Record<PageKey, string>>)[key];
 }
 
+const DETAILS_LEGAL_KEYS = new Set<PageKey>([
+  "legalTitle",
+  "legalQ1",
+  "legalA1",
+  "legalQ2",
+  "legalA2",
+  "legalQ3",
+  "legalA3",
+]);
+
 export function pageString(locale: string, key: PageKey): string {
+  if (DETAILS_LEGAL_KEYS.has(key)) {
+    const code = String(locale || "en").toLowerCase();
+    const fromPack =
+      (homeDetailsPack as Record<string, Partial<Record<PageKey, string>>>)[code]?.[key] ||
+      (homeDetailsPack as Record<string, Partial<Record<PageKey, string>>>).en?.[key];
+    if (fromPack) return fromPack;
+  }
   const direct = PACKS[locale]?.[key] || NAV[locale]?.[key] || thumbPackString(locale, key);
   if (direct) return direct;
   if (key === "aboutBody" || key === "privacyBody" || key === "termsBody" || key === "guideBody" || key === "statsBody") {

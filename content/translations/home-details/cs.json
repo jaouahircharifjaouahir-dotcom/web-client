@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "cs",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Autorská práva",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Je legální stahovat miniatury z YouTube?",
+      "bodyHtml": "Veřejně dostupné miniatury si můžete stáhnout pro osobní potřebu, výzkum nebo vzdělávací analýzu. Miniatury zůstávají chráněným autorským právem jejich původních tvůrců. Před komerčním opětovným použitím miniatury, jejím zveřejněním jinde nebo jejím použitím jako obalu vlastního videa si vyžádejte povolení."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Existují rizika týkající se autorských práv?",
+      "bodyHtml": "Ano, pokud je znovu použita bez svolení. Použití miniatury jako inspirace nebo pro soukromé studium s sebou nese minimální riziko. Její opětovné zveřejnění v původní podobě (na jiném kanálu, blogu nebo v reklamním zboží) může vést k porušení autorských práv ze strany původního tvůrce nebo YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Ukládá 11tik miniatury nebo si nárokuje jejich vlastnictví?",
+      "bodyHtml": "Ne. 11tik neukládá, nehostuje ani si nenárokuje práva na žádné miniatury. Obrázky se načítají přímo z veřejné sítě CDN YouTube ve vašem prohlížeči a nikdy se nenahrávají ani neukládají do mezipaměti na serverech 11tik jako originální mediální soubory."
+    }
+  ],
+  "articleId": "home-details"
+}

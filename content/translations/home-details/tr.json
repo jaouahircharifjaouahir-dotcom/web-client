@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "tr",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Telif ve kullanım",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "YouTube küçük resimlerini indirmek yasal mı?",
+      "bodyHtml": "Herkese açık küçük resimleri kişisel referans, araştırma veya eğitim amaçlı analiz için indirebilirsiniz. Küçük resimler, orijinal yaratıcılarının telif hakkıyla korunan mülkiyetindedir. Küçük resmi ticari olarak yeniden kullanmadan, başka bir yerde yayınlamadan veya kendi videonuzun kapak resmi olarak kullanmadan önce izin alın."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Telif hakkı riskleri var mı?",
+      "bodyHtml": "Evet, izinsiz yeniden kullanılması durumunda. Küçük resmi ilham kaynağı olarak veya özel çalışma amacıyla kullanmak minimum risk taşır. Olduğu gibi yeniden yayınlamak (başka bir kanalda, blogda veya ürünlerde) orijinal yaratıcıdan veya YouTube'dan telif hakkı ihlali iddiasına yol açabilir."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "11tik küçük resimleri saklıyor mu veya sahipliğini iddia ediyor mu?",
+      "bodyHtml": "Hayır. 11tik hiçbir küçük resmi saklamaz, barındırmaz veya bunlara ilişkin hak iddia etmez. Görüntüler doğrudan tarayıcınızdaki YouTube'un herkese açık CDN'sinden alınır ve hiçbir zaman orijinal medya dosyaları olarak 11tik sunucularına yüklenmez veya önbelleğe alınmaz."
+    }
+  ],
+  "articleId": "home-details"
+}

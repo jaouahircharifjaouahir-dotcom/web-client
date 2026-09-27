@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "zh",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "版权与使用",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "下载 YouTube 缩略图合法吗？",
+      "bodyHtml": "您可以下载公开的缩略图用于个人参考、研究或教育分析。缩略图的版权仍归其原作者所有。未经许可，请勿将缩略图用于商业用途、发布到其他地方或用作您自己视频的封面图。"
+    },
+    {
+      "id": "legal-q2",
+      "heading": "是否存在版权风险？",
+      "bodyHtml": "是的，未经许可擅自使用。将缩略图用作灵感或个人学习用途风险很小。但如果原封不动地重新发布（例如在其他频道、博客或商品上），则可能引发原作者或 YouTube 的版权投诉。"
+    },
+    {
+      "id": "legal-q3",
+      "heading": "11tik 是否存储或声称拥有缩略图的所有权？",
+      "bodyHtml": "不。11tik 不存储、托管或声称拥有任何缩略图的版权。图片直接从 YouTube 的公共 CDN 获取到您的浏览器中，绝不会作为原始媒体文件上传到 11tik 服务器或缓存到该服务器上。"
+    }
+  ],
+  "articleId": "home-details"
+}

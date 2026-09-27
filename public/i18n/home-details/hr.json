@@ -1,0 +1,21 @@
+{
+  "blockId": "yte-home-details-legal",
+  "summary": "Autorska prava",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Je li legalno preuzeti minijature s YouTubea?",
+      "bodyHtml": "Javno dostupne minijature možete preuzeti za osobnu referencu, istraživanje ili obrazovnu analizu. Minijature ostaju zaštićeno autorskim pravima njihovih izvornih autora. Prije komercijalne ponovne upotrebe minijature, objavljivanja negdje drugdje ili korištenja kao naslovnice vlastitog videozapisa, zatražite dopuštenje."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Postoje li rizici vezani uz autorska prava?",
+      "bodyHtml": "Da, ako se ponovno koristi bez dopuštenja. Korištenje minijature kao inspiracije ili za privatno proučavanje nosi minimalan rizik. Ponovno objavljivanje takve kakva jest (na drugom kanalu, blogu ili robi) može pokrenuti zahtjev za autorska prava od strane izvornog autora ili YouTubea."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Pohranjuje li 11tik sličice ili polaže pravo na njih?",
+      "bodyHtml": "Ne. 11tik ne pohranjuje, ne hostira niti polaže prava na bilo koju minijaturu. Slike se preuzimaju izravno s YouTubeovog javnog CDN-a u vašem pregledniku i nikada se ne prenose na poslužitelje 11tik niti se pohranjuju u predmemoriju na njima kao originalne medijske datoteke."
+    }
+  ]
+}

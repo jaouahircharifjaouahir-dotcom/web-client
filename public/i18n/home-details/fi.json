@@ -1,0 +1,21 @@
+{
+  "blockId": "yte-home-details-legal",
+  "summary": "Tekijänoikeus",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Onko YouTube-pikkukuvien lataaminen laillista?",
+      "bodyHtml": "Voit ladata julkisesti saatavilla olevia pikkukuvia henkilökohtaiseen käyttöön, tutkimukseen tai opetukselliseen analyysiin. Pikkukuvat pysyvät alkuperäisten tekijöidensä tekijänoikeuksin suojattuna omaisuutena. Hanki lupa ennen kuin käytät pikkukuvaa kaupallisesti, julkaiset sen muualla tai käytät sitä oman videosi kansikuvana."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Onko tekijänoikeusriskejä?",
+      "bodyHtml": "Kyllä, jos sitä käytetään uudelleen ilman lupaa. Piennäiskuvan käyttäminen inspiraationa tai yksityiseen tutkimiseen on minimaalinen riski. Sen uudelleenjulkaiseminen sellaisenaan (toisella kanavalla, blogissa tai oheistuotteessa) voi aiheuttaa tekijänoikeusvaatimuksen alkuperäiseltä tekijältä tai YouTubelta."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Tallentaako 11tik pikkukuvia tai vaatiiko se niiden omistajuutta?",
+      "bodyHtml": "Ei. 11tik ei tallenna, isännöi tai vaadi oikeuksia mihinkään pikkukuvaan. Kuvat noudetaan suoraan YouTuben julkisesta CDN:stä selaimeesi, eikä niitä koskaan ladata tai tallenneta välimuistiin 11tik-palvelimille alkuperäisinä mediatiedostoina."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "contentId": "home-details",
+  "locale": "tl",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Karapatang-ari at Paggamit",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Legal ba ang pag-download ng mga thumbnail sa YouTube?",
+      "bodyHtml": "Maaari kang mag-download ng mga thumbnail na pampublikong makikita para sa personal na sanggunian, pananaliksik, o pagsusuring pang-edukasyon. Ang mga thumbnail ay nananatiling naka-copyright na pag-aari ng mga orihinal na tagalikha nito. Humingi ng pahintulot bago muling gamitin ang isang thumbnail sa komersyo, i-publish ito sa ibang lugar, o gamitin ito bilang cover art ng iyong sariling video."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Mayroon bang mga panganib sa copyright?",
+      "bodyHtml": "Oo, kung gagamitin muli nang walang pahintulot. Ang paggamit ng thumbnail bilang inspirasyon o para sa pribadong pag-aaral ay may kaunting panganib. Ang muling paglalathala nito nang walang pagbabago (sa ibang channel, blog, o merchandise) ay maaaring magdulot ng reklamo sa copyright mula sa orihinal na lumikha o sa YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Iniimbak o inaangkin ba ng 11tik ang pagmamay-ari ng mga thumbnail?",
+      "bodyHtml": "Hindi. Ang 11tik ay hindi nag-iimbak, nagho-host, o nag-aangkin ng mga karapatan sa anumang thumbnail. Ang mga imahe ay direktang kinukuha mula sa pampublikong CDN ng YouTube sa iyong browser at hindi kailanman ina-upload o ini-cache sa mga server ng 11tik bilang mga orihinal na media file."
+    }
+  ],
+  "articleId": "home-details"
+}

@@ -1,0 +1,26 @@
+{
+  "contentId": "home-details",
+  "locale": "en",
+  "status": "ready",
+  "sourceHash": "phase-home-details-legal-v1",
+  "blockId": "yte-home-details-legal",
+  "order": 1,
+  "summary": "Copyright & Usage",
+  "items": [
+    {
+      "id": "legal-q1",
+      "heading": "Is it legal to download YouTube thumbnails?",
+      "bodyHtml": "You may download publicly available thumbnails for personal reference, research, or educational analysis. Thumbnails remain the copyrighted property of their original creators. Obtain permission before reusing a thumbnail commercially, publishing it elsewhere, or using it as your own video's cover art."
+    },
+    {
+      "id": "legal-q2",
+      "heading": "Are there copyright risks?",
+      "bodyHtml": "Yes, if reused without permission. Using a thumbnail as inspiration or for private study carries minimal risk. Republishing it as-is (on another channel, a blog, or merchandise) can trigger a copyright claim from the original creator or YouTube."
+    },
+    {
+      "id": "legal-q3",
+      "heading": "Does 11tik store or claim ownership of thumbnails?",
+      "bodyHtml": "No. 11tik does not store, host, or claim rights to any thumbnail. Images are fetched directly from YouTube's public CDN in your browser and are never uploaded to or cached on 11tik servers as original media files."
+    }
+  ]
+}

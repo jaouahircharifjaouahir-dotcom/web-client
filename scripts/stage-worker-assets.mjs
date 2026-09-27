@@ -2,6 +2,7 @@ import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { generateStaticSite } from "./generate-static-site.mjs";
 import { writeHomeFaqPublicFiles } from "./i18n/write-home-faq-public.mjs";
+import { writeHomeDetailsPublicFiles } from "./i18n/translate-home-details.mjs";
 import {
   syncBloggerThemePoc,
   SHARE_LINKS_ARTICLE_ID,
@@ -25,6 +26,7 @@ rmSync(staged, { recursive: true, force: true });
 mkdirSync(webClient, { recursive: true });
 cpSync(dist, webClient, { recursive: true });
 writeHomeFaqPublicFiles();
+writeHomeDetailsPublicFiles();
 
 /** Dev/main Vite entry output — production HTML loads blogger-app.js only. */
 const assetsDir = join(webClient, "assets");

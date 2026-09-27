@@ -60,6 +60,12 @@ export function SiteHeader({
         >
           {t("bulk")}
         </a>
+        <a className="yte-chip" id="yte-chrome-ext" href="https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en">
+          {t("chromeExtension")}
+        </a>
+        <a className="yte-chip" id="yte-firefox-addon" href="https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/">
+          {t("firefoxAddon")}
+        </a>
         <button className="yte-chip" type="button" onClick={onCycleTheme} aria-label={t("theme")}>
           {t("theme")}: {themeLabel}
         </button>

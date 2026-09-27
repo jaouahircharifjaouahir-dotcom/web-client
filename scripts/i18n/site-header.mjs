@@ -27,6 +27,8 @@ function uiPack(locale) {
   return {
     posts: pack.posts || CATALOG.en.ui.posts,
     bulk: pack.bulk || CATALOG.en.ui.bulk,
+    chromeExtension: pack.chromeExtension || CATALOG.en.ui.chromeExtension,
+    firefoxAddon: pack.firefoxAddon || CATALOG.en.ui.firefoxAddon,
     theme: pack.theme || CATALOG.en.ui.theme,
     language: pack.language || CATALOG.en.ui.language,
     themeSystem: pack.themeSystem || CATALOG.en.ui.themeSystem,
@@ -134,6 +136,8 @@ export function renderSiteHeaderHtml(options = {}) {
   // Always real links (URL-addressable). Active aria state synced by App / site-header.js.
   const postsControl = `<a class="yte-chip" id="yte-posts-btn" data-yte-action="posts" href="${xmlEscape(postsHref)}" aria-pressed="false">${xmlEscape(labels.posts)}</a>`;
   const bulkControl = `<a class="yte-chip" id="yte-bulk-btn" data-yte-action="bulk" href="${xmlEscape(bulkHref)}" aria-pressed="false">${xmlEscape(labels.bulk)}</a>`;
+  const chromeControl = `<a class="yte-chip" id="yte-chrome-ext" href="https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en">${xmlEscape(labels.chromeExtension)}</a>`;
+  const firefoxControl = `<a class="yte-chip" id="yte-firefox-addon" href="https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/">${xmlEscape(labels.firefoxAddon)}</a>`;
 
   return `<div class="yte-static-chrome" data-yte-header-root>
 <header id="yte-site-header" class="yte-top" role="banner" data-yte-locale="${xmlEscape(locale)}" data-yte-home="${xmlEscape(brandHomeUrl)}" data-yte-content-path="${xmlEscape(contentPath)}" data-yte-variant="${variant}">
@@ -144,6 +148,8 @@ export function renderSiteHeaderHtml(options = {}) {
   <nav class="yte-actions" aria-label="Site">
     ${postsControl}
     ${bulkControl}
+    ${chromeControl}
+    ${firefoxControl}
     <button class="yte-chip" type="button" id="yte-theme-btn" data-yte-action="theme" aria-label="${xmlEscape(labels.theme)}" data-yte-theme-prefix="${xmlEscape(labels.theme)}" data-yte-label-system="${xmlEscape(labels.themeSystem)}" data-yte-label-light="${xmlEscape(labels.themeLight)}" data-yte-label-dark="${xmlEscape(labels.themeDark)}">
       <span data-yte-theme-label>${xmlEscape(labels.theme)}: ${xmlEscape(labels.themeSystem)}</span>
     </button>

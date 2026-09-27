@@ -809,7 +809,9 @@
       "entityDoesNot1": "قم بتنزيل فيديو أو صوت من يوتيوب",
       "entityDoesNot2": "تجاوز المحتوى الخاص أو المقيد بالعمر",
       "entityDoesNot3": "إنشاء أو تصميم الصور المصغرة",
-      "entityDoesNot4": "استخراج من TikTok أو Instagram أو عناوين URL الخاصة بالقنوات فقط أو قوائم التشغيل فقط، أو منصات أخرى غير مدعومة"
+      "entityDoesNot4": "استخراج من TikTok أو Instagram أو عناوين URL الخاصة بالقنوات فقط أو قوائم التشغيل فقط، أو منصات أخرى غير مدعومة",
+      "chromeExtension": "إضافة Chrome",
+      "firefoxAddon": "إضافة Firefox"
     },
     "posts": [
       {
@@ -1562,7 +1564,9 @@
       "entityDoesNot1": "Изтегляне на видео или аудио от YouTube",
       "entityDoesNot2": "Заобикаляне на частно или възрастово ограничено съдържание",
       "entityDoesNot3": "Генериране или проектиране на миниатюри",
-      "entityDoesNot4": "Извличане от TikTok, Instagram, URL адреси само за канали или само за плейлисти или други неподдържани платформи"
+      "entityDoesNot4": "Извличане от TikTok, Instagram, URL адреси само за канали или само за плейлисти или други неподдържани платформи",
+      "chromeExtension": "Разширение за Chrome",
+      "firefoxAddon": "Добавка за Firefox"
     },
     "posts": [
       {
@@ -1891,7 +1895,9 @@
       "entityDoesNot1": "ইউটিউব ভিডিও বা অডিও ডাউনলোড করুন",
       "entityDoesNot2": "ব্যক্তিগত বা বয়স-সীমাবদ্ধ বিষয়বস্তু বাইপাস করুন",
       "entityDoesNot3": "থাম্বনেইল তৈরি বা ডিজাইন করুন",
-      "entityDoesNot4": "TikTok, Instagram, শুধুমাত্র চ্যানেল বা প্লেলিস্টের URL, অথবা অন্যান্য অসমর্থিত প্ল্যাটফর্ম থেকে এক্সট্র্যাক্ট করুন।"
+      "entityDoesNot4": "TikTok, Instagram, শুধুমাত্র চ্যানেল বা প্লেলিস্টের URL, অথবা অন্যান্য অসমর্থিত প্ল্যাটফর্ম থেকে এক্সট্র্যাক্ট করুন।",
+      "chromeExtension": "Chrome এক্সটেনশন",
+      "firefoxAddon": "Firefox অ্যাডঅন"
     },
     "posts": [
       {
@@ -2856,7 +2862,9 @@
       "entityDoesNot1": "Stáhněte si video nebo audio z YouTube",
       "entityDoesNot2": "Obejít soukromý obsah nebo obsah s věkovým omezením",
       "entityDoesNot3": "Generování nebo navrhování miniatur",
-      "entityDoesNot4": "Extrakt z TikToku, Instagramu, URL adres pouze pro kanály nebo playlisty nebo jiných nepodporovaných platforem"
+      "entityDoesNot4": "Extrakt z TikToku, Instagramu, URL adres pouze pro kanály nebo playlisty nebo jiných nepodporovaných platforem",
+      "chromeExtension": "Rozšíření Chrome",
+      "firefoxAddon": "Doplněk Firefox"
     },
     "posts": [
       {
@@ -3291,7 +3299,9 @@
       "entityDoesNot1": "Download YouTube-video eller -lyd",
       "entityDoesNot2": "Omgå privat eller aldersbegrænset indhold",
       "entityDoesNot3": "Generer eller design miniaturebilleder",
-      "entityDoesNot4": "Uddrag fra TikTok, Instagram, URL'er kun til kanaler eller playlister eller andre ikke-understøttede platforme"
+      "entityDoesNot4": "Uddrag fra TikTok, Instagram, URL'er kun til kanaler eller playlister eller andre ikke-understøttede platforme",
+      "chromeExtension": "Chrome-udvidelse",
+      "firefoxAddon": "Firefox-tilføjelse"
     },
     "posts": [
       {
@@ -3408,7 +3418,9 @@
       "entityDoesNot1": "YouTube-Video oder Audio herunterladen",
       "entityDoesNot2": "Private oder altersbeschränkte Inhalte umgehen",
       "entityDoesNot3": "Thumbnails erstellen oder gestalten",
-      "entityDoesNot4": "Aus TikTok-, Instagram-, Kanal- oder Playlist-URLs oder anderen nicht unterstützten Plattformen extrahieren"
+      "entityDoesNot4": "Aus TikTok-, Instagram-, Kanal- oder Playlist-URLs oder anderen nicht unterstützten Plattformen extrahieren",
+      "chromeExtension": "Chrome-Erweiterung",
+      "firefoxAddon": "Firefox-Add-on"
     },
     "posts": [
       {
@@ -3843,7 +3855,9 @@
       "entityDoesNot1": "Λήψη βίντεο ή ήχου από το YouTube",
       "entityDoesNot2": "Παράκαμψη ιδιωτικού ή ηλικιακά περιορισμένου περιεχομένου",
       "entityDoesNot3": "Δημιουργία ή σχεδιασμός μικρογραφιών",
-      "entityDoesNot4": "Εξαγωγή από TikTok, Instagram, URL μόνο για κανάλια ή playlist ή άλλες μη υποστηριζόμενες πλατφόρμες"
+      "entityDoesNot4": "Εξαγωγή από TikTok, Instagram, URL μόνο για κανάλια ή playlist ή άλλες μη υποστηριζόμενες πλατφόρμες",
+      "chromeExtension": "Επέκταση Chrome",
+      "firefoxAddon": "Πρόσθετο Firefox"
     },
     "posts": [
       {
@@ -3960,7 +3974,9 @@
       "videoLabel": "Video {n}",
       "adSpace": "Ad space",
       "localHistoryKicker": "LOCAL HISTORY",
-      "clearHistory": "Clear history"
+      "clearHistory": "Clear history",
+      "chromeExtension": "Chrome Extension",
+      "firefoxAddon": "Firefox Addon"
     },
     "posts": [
       {
@@ -4183,7 +4199,9 @@
       "entityDoesNot1": "Descargar vídeo o audio de YouTube",
       "entityDoesNot2": "Evita el contenido privado o restringido por edad.",
       "entityDoesNot3": "Generar o diseñar miniaturas",
-      "entityDoesNot4": "Extraer desde TikTok, Instagram, URL solo de canales o solo de listas de reproducción, u otras plataformas no compatibles."
+      "entityDoesNot4": "Extraer desde TikTok, Instagram, URL solo de canales o solo de listas de reproducción, u otras plataformas no compatibles.",
+      "chromeExtension": "Extensión de Chrome",
+      "firefoxAddon": "Complemento de Firefox"
     },
     "posts": [
       {
@@ -4512,7 +4530,9 @@
       "entityDoesNot1": "دانلود ویدیو یا فایل صوتی یوتیوب",
       "entityDoesNot2": "دور زدن محتوای خصوصی یا محدود به سن",
       "entityDoesNot3": "تولید یا طراحی تصاویر بندانگشتی",
-      "entityDoesNot4": "استخراج از تیک تاک، اینستاگرام، آدرس‌های اینترنتی مخصوص کانال یا لیست پخش یا سایر پلتفرم‌های پشتیبانی نشده"
+      "entityDoesNot4": "استخراج از تیک تاک، اینستاگرام، آدرس‌های اینترنتی مخصوص کانال یا لیست پخش یا سایر پلتفرم‌های پشتیبانی نشده",
+      "chromeExtension": "افزونه Chrome",
+      "firefoxAddon": "افزونه Firefox"
     },
     "posts": [
       {
@@ -4735,7 +4755,9 @@
       "entityDoesNot1": "Lataa YouTube-video tai -ääni",
       "entityDoesNot2": "Ohita yksityinen tai ikärajoitettu sisältö",
       "entityDoesNot3": "Luo tai suunnittele pikkukuvia",
-      "entityDoesNot4": "Poimi TikTokista, Instagramista, pelkkien kanavien tai soittolistojen URL-osoitteista tai muista ei-tuetuista alustoista"
+      "entityDoesNot4": "Poimi TikTokista, Instagramista, pelkkien kanavien tai soittolistojen URL-osoitteista tai muista ei-tuetuista alustoista",
+      "chromeExtension": "Chrome-laajennus",
+      "firefoxAddon": "Firefox-lisäosa"
     },
     "posts": [
       {
@@ -5064,7 +5086,9 @@
       "entityDoesNot1": "Télécharger une vidéo ou un son YouTube",
       "entityDoesNot2": "Contourner le contenu privé ou soumis à une restriction d'âge",
       "entityDoesNot3": "Générer ou concevoir des vignettes",
-      "entityDoesNot4": "Extraire des URL de TikTok, Instagram, de chaînes ou de playlists uniquement, ou d'autres plateformes non prises en charge"
+      "entityDoesNot4": "Extraire des URL de TikTok, Instagram, de chaînes ou de playlists uniquement, ou d'autres plateformes non prises en charge",
+      "chromeExtension": "Extension Chrome",
+      "firefoxAddon": "Module Firefox"
     },
     "posts": [
       {
@@ -6029,7 +6053,9 @@
       "entityDoesNot1": "הורד סרטון או אודיו מיוטיוב",
       "entityDoesNot2": "עקיפת תוכן פרטי או תוכן עם הגבלת גיל",
       "entityDoesNot3": "צור או עיצוב תמונות ממוזערות",
-      "entityDoesNot4": "קטע מכתובות URL של טיקטוק, אינסטגרם, ערוצי תוכן בלבד או פלייליסטים בלבד, או פלטפורמות אחרות שאינן נתמכות"
+      "entityDoesNot4": "קטע מכתובות URL של טיקטוק, אינסטגרם, ערוצי תוכן בלבד או פלייליסטים בלבד, או פלטפורמות אחרות שאינן נתמכות",
+      "chromeExtension": "תוסף Chrome",
+      "firefoxAddon": "תוסף Firefox"
     },
     "posts": [
       {
@@ -6146,7 +6172,9 @@
       "entityDoesNot1": "YouTube वीडियो या ऑडियो डाउनलोड करें",
       "entityDoesNot2": "निजी या आयु-प्रतिबंधित सामग्री को अनदेखा करें",
       "entityDoesNot3": "थंबनेल बनाएं या डिज़ाइन करें",
-      "entityDoesNot4": "TikTok, Instagram, केवल चैनल या केवल प्लेलिस्ट वाले URL, या अन्य असमर्थित प्लेटफॉर्म से डेटा निकालें"
+      "entityDoesNot4": "TikTok, Instagram, केवल चैनल या केवल प्लेलिस्ट वाले URL, या अन्य असमर्थित प्लेटफॉर्म से डेटा निकालें",
+      "chromeExtension": "Chrome एक्सटेंशन",
+      "firefoxAddon": "Firefox ऐड-ऑन"
     },
     "posts": [
       {
@@ -6369,7 +6397,9 @@
       "entityDoesNot1": "Preuzmite YouTube video ili audio",
       "entityDoesNot2": "Zaobiđite privatni ili dobno ograničen sadržaj",
       "entityDoesNot3": "Generiranje ili dizajniranje minijatura",
-      "entityDoesNot4": "Izvadak s TikToka, Instagrama, URL-ova samo za kanale ili samo za popise za reprodukciju ili drugih nepodržanih platformi"
+      "entityDoesNot4": "Izvadak s TikToka, Instagrama, URL-ova samo za kanale ili samo za popise za reprodukciju ili drugih nepodržanih platformi",
+      "chromeExtension": "Proširenje za Chrome",
+      "firefoxAddon": "Dodatak za Firefox"
     },
     "posts": [
       {
@@ -6592,7 +6622,9 @@
       "entityDoesNot1": "YouTube videó vagy hanganyag letöltése",
       "entityDoesNot2": "Kerülje a privát vagy korhatáros tartalmakat",
       "entityDoesNot3": "Miniatűrök létrehozása vagy tervezése",
-      "entityDoesNot4": "Kivonat TikTokról, Instagramról, csak csatorna- vagy lejátszási lista URL-ekről, illetve más nem támogatott platformokról"
+      "entityDoesNot4": "Kivonat TikTokról, Instagramról, csak csatorna- vagy lejátszási lista URL-ekről, illetve más nem támogatott platformokról",
+      "chromeExtension": "Chrome-bővítmény",
+      "firefoxAddon": "Firefox-kiegészítő"
     },
     "posts": [
       {
@@ -7027,7 +7059,9 @@
       "entityDoesNot1": "Unduh video atau audio YouTube",
       "entityDoesNot2": "Lewati konten pribadi atau yang dibatasi usia.",
       "entityDoesNot3": "Buat atau desain gambar mini",
-      "entityDoesNot4": "Ekstrak dari TikTok, Instagram, URL khusus saluran atau khusus daftar putar, atau platform lain yang tidak didukung."
+      "entityDoesNot4": "Ekstrak dari TikTok, Instagram, URL khusus saluran atau khusus daftar putar, atau platform lain yang tidak didukung.",
+      "chromeExtension": "Ekstensi Chrome",
+      "firefoxAddon": "Pengaya Firefox"
     },
     "posts": [
       {
@@ -7780,7 +7814,9 @@
       "entityDoesNot1": "Scarica video o audio da YouTube",
       "entityDoesNot2": "Aggira i contenuti privati ​​o con restrizioni di età",
       "entityDoesNot3": "Genera o progetta miniature",
-      "entityDoesNot4": "Estratto da TikTok, Instagram, URL di soli canali o solo playlist o altre piattaforme non supportate"
+      "entityDoesNot4": "Estratto da TikTok, Instagram, URL di soli canali o solo playlist o altre piattaforme non supportate",
+      "chromeExtension": "Estensione Chrome",
+      "firefoxAddon": "Componente aggiuntivo Firefox"
     },
     "posts": [
       {
@@ -8003,7 +8039,9 @@
       "entityDoesNot1": "YouTubeの動画または音声をダウンロードする",
       "entityDoesNot2": "非公開コンテンツや年齢制限コンテンツを回避する",
       "entityDoesNot3": "サムネイルを生成またはデザインする",
-      "entityDoesNot4": "TikTok、Instagram、チャンネル専用またはプレイリスト専用のURL、あるいはその他のサポートされていないプラットフォームからの抽出"
+      "entityDoesNot4": "TikTok、Instagram、チャンネル専用またはプレイリスト専用のURL、あるいはその他のサポートされていないプラットフォームからの抽出",
+      "chromeExtension": "Chrome 拡張機能",
+      "firefoxAddon": "Firefox アドオン"
     },
     "posts": [
       {
@@ -9074,7 +9112,9 @@
       "entityDoesNot1": "YouTube 동영상 또는 오디오 다운로드",
       "entityDoesNot2": "비공개 또는 연령 제한 콘텐츠 우회",
       "entityDoesNot3": "썸네일을 생성하거나 디자인하세요.",
-      "entityDoesNot4": "TikTok, Instagram, 채널 전용 또는 재생 목록 전용 URL, 또는 기타 지원되지 않는 플랫폼에서 추출"
+      "entityDoesNot4": "TikTok, Instagram, 채널 전용 또는 재생 목록 전용 URL, 또는 기타 지원되지 않는 플랫폼에서 추출",
+      "chromeExtension": "Chrome 확장 프로그램",
+      "firefoxAddon": "Firefox 부가 기능"
     },
     "posts": [
       {
@@ -11523,7 +11563,9 @@
       "entityDoesNot1": "Muat turun video atau audio YouTube",
       "entityDoesNot2": "Abaikan kandungan peribadi atau kandungan yang dikawal selia oleh umur",
       "entityDoesNot3": "Jana atau reka bentuk lakaran kecil",
-      "entityDoesNot4": "Ekstrak daripada TikTok, Instagram, URL saluran sahaja atau senarai main sahaja atau platform lain yang tidak disokong"
+      "entityDoesNot4": "Ekstrak daripada TikTok, Instagram, URL saluran sahaja atau senarai main sahaja atau platform lain yang tidak disokong",
+      "chromeExtension": "Sambungan Chrome",
+      "firefoxAddon": "Tambahan Firefox"
     },
     "posts": [
       {
@@ -12382,7 +12424,9 @@
       "entityDoesNot1": "Download een YouTube-video of -audio.",
       "entityDoesNot2": "Omzeil privé- of leeftijdsbeperkte inhoud.",
       "entityDoesNot3": "Miniatuurafbeeldingen genereren of ontwerpen",
-      "entityDoesNot4": "Extraheer content van TikTok, Instagram, kanaal- of afspeellijst-URL's, of andere niet-ondersteunde platforms."
+      "entityDoesNot4": "Extraheer content van TikTok, Instagram, kanaal- of afspeellijst-URL's, of andere niet-ondersteunde platforms.",
+      "chromeExtension": "Chrome-extensie",
+      "firefoxAddon": "Firefox-add-on"
     },
     "posts": [
       {
@@ -12605,7 +12649,9 @@
       "entityDoesNot1": "Last ned YouTube-video eller -lyd",
       "entityDoesNot2": "Omgå privat eller aldersbegrenset innhold",
       "entityDoesNot3": "Generer eller design miniatyrbilder",
-      "entityDoesNot4": "Utdrag fra TikTok, Instagram, URL-er kun for kanaler eller spillelister, eller andre plattformer som ikke støttes"
+      "entityDoesNot4": "Utdrag fra TikTok, Instagram, URL-er kun for kanaler eller spillelister, eller andre plattformer som ikke støttes",
+      "chromeExtension": "Chrome-utvidelse",
+      "firefoxAddon": "Firefox-tillegg"
     },
     "posts": [
       {
@@ -13782,7 +13828,9 @@
       "entityDoesNot1": "Pobierz wideo lub audio z YouTube",
       "entityDoesNot2": "Omiń treści prywatne lub objęte ograniczeniami wiekowymi",
       "entityDoesNot3": "Generuj lub projektuj miniatury",
-      "entityDoesNot4": "Wyciąg z TikToka, Instagrama, adresów URL wyłącznie kanału lub playlisty lub innych nieobsługiwanych platform"
+      "entityDoesNot4": "Wyciąg z TikToka, Instagrama, adresów URL wyłącznie kanału lub playlisty lub innych nieobsługiwanych platform",
+      "chromeExtension": "Rozszerzenie Chrome",
+      "firefoxAddon": "Dodatek Firefox"
     },
     "posts": [
       {
@@ -14005,7 +14053,9 @@
       "entityDoesNot1": "Baixe vídeos ou áudios do YouTube.",
       "entityDoesNot2": "Contornar conteúdo privado ou restrito por idade",
       "entityDoesNot3": "Gere ou crie miniaturas.",
-      "entityDoesNot4": "Extraia conteúdo do TikTok, Instagram, URLs exclusivas de canais ou playlists, ou de outras plataformas não suportadas."
+      "entityDoesNot4": "Extraia conteúdo do TikTok, Instagram, URLs exclusivas de canais ou playlists, ou de outras plataformas não suportadas.",
+      "chromeExtension": "Extensão do Chrome",
+      "firefoxAddon": "Complemento do Firefox"
     },
     "posts": [
       {
@@ -14440,7 +14490,9 @@
       "entityDoesNot1": "Descărcați videoclipuri sau fișiere audio de pe YouTube",
       "entityDoesNot2": "Evită conținutul privat sau restricționat în funcție de vârstă",
       "entityDoesNot3": "Generați sau proiectați miniaturi",
-      "entityDoesNot4": "Extragere de pe TikTok, Instagram, adrese URL exclusive pentru canale sau liste de redare sau alte platforme neacceptate"
+      "entityDoesNot4": "Extragere de pe TikTok, Instagram, adrese URL exclusive pentru canale sau liste de redare sau alte platforme neacceptate",
+      "chromeExtension": "Extensie Chrome",
+      "firefoxAddon": "Supliment Firefox"
     },
     "posts": [
       {
@@ -14557,7 +14609,9 @@
       "entityDoesNot1": "Скачать видео или аудио с YouTube",
       "entityDoesNot2": "Обходите закрытый контент или контент с возрастными ограничениями.",
       "entityDoesNot3": "Создание или разработка эскизов",
-      "entityDoesNot4": "Извлечение контента из TikTok, Instagram, URL-адресов каналов или плейлистов, а также других неподдерживаемых платформ."
+      "entityDoesNot4": "Извлечение контента из TikTok, Instagram, URL-адресов каналов или плейлистов, а также других неподдерживаемых платформ.",
+      "chromeExtension": "Расширение Chrome",
+      "firefoxAddon": "Дополнение Firefox"
     },
     "posts": [
       {
@@ -15416,7 +15470,9 @@
       "entityDoesNot1": "Stiahnite si video alebo audio z YouTube",
       "entityDoesNot2": "Obísť súkromný alebo vekovo obmedzený obsah",
       "entityDoesNot3": "Generovanie alebo navrhovanie miniatúr",
-      "entityDoesNot4": "Výňatok z TikToku, Instagramu, URL adries iba pre kanály alebo zoznamy skladieb alebo iných nepodporovaných platforiem"
+      "entityDoesNot4": "Výňatok z TikToku, Instagramu, URL adries iba pre kanály alebo zoznamy skladieb alebo iných nepodporovaných platforiem",
+      "chromeExtension": "Rozšírenie Chrome",
+      "firefoxAddon": "Doplnok Firefox"
     },
     "posts": [
       {
@@ -16063,7 +16119,9 @@
       "entityDoesNot1": "Преузмите видео или аудио са Јутјуба",
       "entityDoesNot2": "Заобиђите приватни или садржај ограничен за узраст",
       "entityDoesNot3": "Генеришите или дизајнирајте сличице",
-      "entityDoesNot4": "Извод са ТикТок-а, Инстаграма, URL-ова само за канале или само за плејлисте или других неподржаних платформи"
+      "entityDoesNot4": "Извод са ТикТок-а, Инстаграма, URL-ова само за канале или само за плејлисте или других неподржаних платформи",
+      "chromeExtension": "Проширење за Chrome",
+      "firefoxAddon": "Додатак за Firefox"
     },
     "posts": [
       {
@@ -16498,7 +16556,9 @@
       "entityDoesNot1": "Ladda ner YouTube-video eller ljud",
       "entityDoesNot2": "Kringgå privat eller åldersbegränsat innehåll",
       "entityDoesNot3": "Generera eller designa miniatyrbilder",
-      "entityDoesNot4": "Utdrag från TikTok, Instagram, webbadresser endast för kanaler eller spellistor, eller andra plattformar som inte stöds"
+      "entityDoesNot4": "Utdrag från TikTok, Instagram, webbadresser endast för kanaler eller spellistor, eller andra plattformar som inte stöds",
+      "chromeExtension": "Chrome-tillägg",
+      "firefoxAddon": "Firefox-tillägg"
     },
     "posts": [
       {
@@ -16615,7 +16675,9 @@
       "entityDoesNot1": "Pakua video au sauti ya YouTube",
       "entityDoesNot2": "Pinga maudhui ya faragha au yaliyotengwa kwa umri",
       "entityDoesNot3": "Tengeneza au ubuni vijipicha vidogo",
-      "entityDoesNot4": "Dondoo kutoka kwa TikTok, Instagram, URL za chaneli pekee au orodha ya kucheza pekee, au mifumo mingine isiyoungwa mkono"
+      "entityDoesNot4": "Dondoo kutoka kwa TikTok, Instagram, URL za chaneli pekee au orodha ya kucheza pekee, au mifumo mingine isiyoungwa mkono",
+      "chromeExtension": "Kiendelezi cha Chrome",
+      "firefoxAddon": "Kiongezi cha Firefox"
     },
     "posts": [
       {
@@ -17050,7 +17112,9 @@
       "entityDoesNot1": "ดาวน์โหลดวิดีโอหรือไฟล์เสียงจาก YouTube",
       "entityDoesNot2": "ข้ามเนื้อหาที่เป็นส่วนตัวหรือจำกัดอายุ",
       "entityDoesNot3": "สร้างหรือออกแบบภาพขนาดย่อ",
-      "entityDoesNot4": "ดึงข้อมูลจาก TikTok, Instagram, URL เฉพาะช่อง หรือ URL เฉพาะเพลย์ลิสต์ หรือแพลตฟอร์มอื่นๆ ที่ไม่รองรับ"
+      "entityDoesNot4": "ดึงข้อมูลจาก TikTok, Instagram, URL เฉพาะช่อง หรือ URL เฉพาะเพลย์ลิสต์ หรือแพลตฟอร์มอื่นๆ ที่ไม่รองรับ",
+      "chromeExtension": "ส่วนขยาย Chrome",
+      "firefoxAddon": "ส่วนเสริม Firefox"
     },
     "posts": [
       {
@@ -17379,7 +17443,9 @@
       "entityDoesNot1": "Mag-download ng video o audio sa YouTube",
       "entityDoesNot2": "Laktawan ang pribado o nakatakdang nilalaman na may limitasyon sa edad",
       "entityDoesNot3": "Bumuo o magdisenyo ng mga thumbnail",
-      "entityDoesNot4": "Kinuha mula sa TikTok, Instagram, mga URL na para lang sa channel o playlist, o iba pang hindi sinusuportahang platform"
+      "entityDoesNot4": "Kinuha mula sa TikTok, Instagram, mga URL na para lang sa channel o playlist, o iba pang hindi sinusuportahang platform",
+      "chromeExtension": "Ekstensyon ng Chrome",
+      "firefoxAddon": "Karagdagang Firefox"
     },
     "posts": [
       {
@@ -17708,7 +17774,9 @@
       "entityDoesNot1": "YouTube videosunu veya sesini indirin",
       "entityDoesNot2": "Özel veya yaş sınırlamalı içeriği atlayın",
       "entityDoesNot3": "Küçük resimler oluşturun veya tasarlayın",
-      "entityDoesNot4": "TikTok, Instagram, yalnızca kanal veya yalnızca oynatma listesi URL'leri veya desteklenmeyen diğer platformlardan alınan veriler."
+      "entityDoesNot4": "TikTok, Instagram, yalnızca kanal veya yalnızca oynatma listesi URL'leri veya desteklenmeyen diğer platformlardan alınan veriler.",
+      "chromeExtension": "Chrome uzantısı",
+      "firefoxAddon": "Firefox eklentisi"
     },
     "posts": [
       {
@@ -18355,7 +18423,9 @@
       "entityDoesNot1": "Завантажити відео або аудіо з YouTube",
       "entityDoesNot2": "Обхід приватного контенту або контенту з віковими обмеженнями",
       "entityDoesNot3": "Створення або розробка мініатюр",
-      "entityDoesNot4": "Витяг з TikTok, Instagram, URL-адрес лише для каналів або плейлистів чи інших непідтримуваних платформ"
+      "entityDoesNot4": "Витяг з TikTok, Instagram, URL-адрес лише для каналів або плейлистів чи інших непідтримуваних платформ",
+      "chromeExtension": "Розширення Chrome",
+      "firefoxAddon": "Додаток Firefox"
     },
     "posts": [
       {
@@ -18472,7 +18542,9 @@
       "entityDoesNot1": "یوٹیوب ویڈیو یا آڈیو ڈاؤن لوڈ کریں۔",
       "entityDoesNot2": "نجی یا عمر کے لحاظ سے مواد کو نظرانداز کریں۔",
       "entityDoesNot3": "تھمب نیلز بنائیں یا ڈیزائن کریں۔",
-      "entityDoesNot4": "TikTok، Instagram، صرف چینل یا صرف پلے لسٹ URLs، یا دیگر غیر تعاون یافتہ پلیٹ فارمز سے اقتباس"
+      "entityDoesNot4": "TikTok، Instagram، صرف چینل یا صرف پلے لسٹ URLs، یا دیگر غیر تعاون یافتہ پلیٹ فارمز سے اقتباس",
+      "chromeExtension": "Chrome ایکسٹینشن",
+      "firefoxAddon": "Firefox ایڈون"
     },
     "posts": [
       {
@@ -18801,7 +18873,9 @@
       "entityDoesNot1": "Tải xuống video hoặc âm thanh YouTube",
       "entityDoesNot2": "Vượt qua nội dung riêng tư hoặc bị giới hạn độ tuổi",
       "entityDoesNot3": "Tạo hoặc thiết kế hình thu nhỏ",
-      "entityDoesNot4": "Trích xuất từ ​​TikTok, Instagram, URL chỉ dành cho kênh hoặc danh sách phát, hoặc các nền tảng không được hỗ trợ khác."
+      "entityDoesNot4": "Trích xuất từ ​​TikTok, Instagram, URL chỉ dành cho kênh hoặc danh sách phát, hoặc các nền tảng không được hỗ trợ khác.",
+      "chromeExtension": "Tiện ích Chrome",
+      "firefoxAddon": "Tiện ích Firefox"
     },
     "posts": [
       {
@@ -19660,7 +19734,9 @@
       "entityDoesNot1": "下载 YouTube 视频或音频",
       "entityDoesNot2": "绕过私人或年龄限制内容",
       "entityDoesNot3": "生成或设计缩略图",
-      "entityDoesNot4": "从 TikTok、Instagram、仅限频道或仅限播放列表的 URL 或其他不受支持的平台提取内容"
+      "entityDoesNot4": "从 TikTok、Instagram、仅限频道或仅限播放列表的 URL 或其他不受支持的平台提取内容",
+      "chromeExtension": "Chrome 扩展程序",
+      "firefoxAddon": "Firefox 附加组件"
     },
     "posts": [
       {

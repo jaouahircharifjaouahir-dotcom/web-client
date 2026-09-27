@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "de",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Häufig gestellte Fragen",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Gibt es ein offizielles Firefox-Add-on für 11tik?",
       "answer": "Ja. 11tik für Firefox kann das beste verfügbare öffentliche Vorschaubild aus dem aktuellen YouTube-Tab extrahieren. Es handelt sich um dasselbe Produkt wie das Website-Tool; die offizielle Website bleibt www.11tik.com. Die Auflistung ändert nichts daran, was der Extraktor abrufen kann oder nicht.",
       "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik für Firefox</a>Es kann das beste verfügbare öffentliche Vorschaubild aus dem aktuellen YouTube-Tab extrahieren. Es handelt sich um dasselbe Produkt wie das Website-Tool; die offizielle Website bleibt bestehen.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Die Auflistung ändert nichts daran, was der Extraktor abrufen kann oder nicht."
+    },
+    {
+      "question": "Gibt es eine offizielle Google Chrome-Erweiterung für 11tik?",
+      "answer": "Ja. 11tik für Google Chrome ist die offizielle Chrome-Erweiterung 11tik zum Extrahieren öffentlicher YouTube-Thumbnails. Es handelt sich um dasselbe Produkt wie das Website-Tool; die offizielle Website bleibt www.11tik.com. Die Erweiterung ändert nichts daran, welche Daten der Extraktor abrufen kann.",
+      "answerHtml": "Ja.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik für Google Chrome</a>ist die offizielle Chrome-Erweiterung 11tik zum Extrahieren öffentlicher YouTube-Thumbnails. Es handelt sich um dasselbe Produkt wie das Website-Tool; die offizielle Website bleibt bestehen.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Die Erweiterung ändert nichts daran, was der Extraktor abrufen kann oder nicht."
     }
   ],
   "articleId": "home-faq"

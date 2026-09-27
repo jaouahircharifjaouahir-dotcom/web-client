@@ -117,18 +117,18 @@ describe.each(PRIORITY_QA_LOCALES)("Phase 49.1 priority QA %s", (locale) => {
 });
 
 describe("Phase 49.1 FAQ coverage", () => {
-  it("EN FAQ has 8 items", () => expect(homeFaqEn.items.length).toBe(8));
+  it("EN FAQ has 9 items", () => expect(homeFaqEn.items.length).toBe(9));
   it("all locales have FAQ artifacts (EN 8; others may remain at prior count)", () => {
     for (const locale of ALL_HOME_LOCALES) {
       const n = loadHomeFaqArtifact(locale)?.faq?.length || 0;
-      if (locale === "en") expect(n).toBe(8);
+      if (locale === "en") expect(n).toBe(9);
       else expect(n).toBeGreaterThanOrEqual(5);
     }
   });
-  it("homeFaqDocForLocale en", () => expect(homeFaqDocForLocale("en")?.items.length).toBe(8));
-  it("homeFaqDocForLocale fr", () => expect(homeFaqDocForLocale("fr")?.items.length).toBe(8));
-  it("homeFaqDocForLocale ar", () => expect(homeFaqDocForLocale("ar")?.items.length).toBe(8));
-  it("homeFaqDocForLocale ja", () => expect(homeFaqDocForLocale("ja")?.items.length).toBe(8));
+  it("homeFaqDocForLocale en", () => expect(homeFaqDocForLocale("en")?.items.length).toBe(9));
+  it("homeFaqDocForLocale fr", () => expect(homeFaqDocForLocale("fr")?.items.length).toBe(9));
+  it("homeFaqDocForLocale ar", () => expect(homeFaqDocForLocale("ar")?.items.length).toBe(9));
+  it("homeFaqDocForLocale ja", () => expect(homeFaqDocForLocale("ja")?.items.length).toBe(9));
   it("auditFaqLocales all ready", () => {
     expect(auditFaqLocales().every((r) => r.status === "ready")).toBe(true);
   });
@@ -187,7 +187,7 @@ describe("Phase 49.1 static shell FAQ", () => {
     expect(renderHomeFaqShellHtml("ar").length).toBeGreaterThan(200);
   });
   it("shell has 8 h3 per locale sample", () => {
-    expect((renderHomeFaqShellHtml("de").match(/<h3/g) || []).length).toBe(8);
+    expect((renderHomeFaqShellHtml("de").match(/<h3/g) || []).length).toBe(9);
   });
   it("built EN home has FAQ section", () => {
     expect(loadHomeHtml("en")?.html).toMatch(/<section class="yte-home-faq"/);
@@ -256,7 +256,7 @@ describe("Phase 49.1 schema policy", () => {
     expect(html).toMatch(/Organization/);
     const faqSection = html.match(/<section class="yte-home-faq"[\s\S]*?<\/section>/)?.[0] || "";
     const visibleQs = [...faqSection.matchAll(/<h3>([^<]+)<\/h3>/g)].map((m) => m[1]);
-    expect(visibleQs.length).toBe(8);
+    expect(visibleQs.length).toBe(9);
     for (const q of visibleQs) {
       expect(html).toContain(JSON.stringify(q).slice(1, -1));
     }
@@ -321,7 +321,7 @@ describe("Phase 49.1 public FAQ assets", () => {
 
 describe("Phase 49.1 architecture protection", () => {
   it("target locale count 37", () => expect(getTargetLocales().length).toBe(37));
-  it("homeFaqFor en sync", () => expect(homeFaqFor("en")?.items.length).toBe(8));
+  it("homeFaqFor en sync", () => expect(homeFaqFor("en")?.items.length).toBe(9));
   it("no new routes in App", () => {
     const app = readFileSync(join(process.cwd(), "src/App.tsx"), "utf8");
     expect(app).toMatch(/HomeFaq/);

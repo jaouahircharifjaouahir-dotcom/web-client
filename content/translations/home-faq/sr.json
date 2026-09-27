@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "sr",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Често постављана питања",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Да ли постоји званични 11tik додатак за Фајерфокс?",
       "answer": "Да. 11tik за Firefox може да издвоји најбољу доступну јавну сличицу са тренутне YouTube картице. То је исти производ као и алат за веб локацију; званична веб локација остаје www.11tik.com. Листа не мења шта екстрактор може или не може да преузме.",
       "answerHtml": "Да.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik за Фајерфокс</a>може да издвоји најбољу доступну јавну сличицу са тренутне YouTube картице. То је исти производ као и алат за веб локацију; званична веб локација остаје<a href=\"https://www.11tik.com/\">[[П1]]</a>Листа не мења шта екстрактор може или не може да преузме."
+    },
+    {
+      "question": "Да ли постоји званично 11tik проширење за Google Chrome?",
+      "answer": "Да. 11tik за Google Chrome је званично 11tik Chrome проширење за издвајање јавних YouTube сличица. То је исти производ као и алат за веб локацију; званична локација остаје www.11tik.com. Проширење не мења шта програм за издвајање може или не може да преузме.",
+      "answerHtml": "Да.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik за Google Chrome</a>је званично 11tik Chrome проширење за издвајање јавних YouTube сличица. То је исти производ као и алат за веб локацију; званична локација остаје<a href=\"https://www.11tik.com/\">[[П1]]</a>Екстензија не мења шта екстрактор може или не може да преузме."
     }
   ],
   "articleId": "home-faq"

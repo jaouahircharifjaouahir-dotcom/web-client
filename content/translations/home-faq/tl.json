@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "tl",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Mga Madalas Itanong",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Mayroon bang opisyal na 11tik Firefox Add-on?",
       "answer": "Oo. Maaaring kunin ng 11tik para sa Firefox ang pinakamahusay na magagamit na pampublikong thumbnail mula sa kasalukuyang tab ng YouTube. Ito ay ang parehong produkto ng tool ng website; ang opisyal na site ay nananatiling www.11tik.com. Hindi binabago ng listahan kung ano ang maaari o hindi maaaring makuha ng extractor.",
       "answerHtml": "Oo.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik para sa Firefox</a>maaaring kunin ang pinakamahusay na pampublikong thumbnail na magagamit mula sa kasalukuyang tab ng YouTube. Ito ay ang parehong produkto ng tool ng website; ang opisyal na site ay nananatili<a href=\"https://www.11tik.com/\">www.11tik.com</a>Hindi binabago ng listahan kung ano ang kaya o hindi kayang makuha ng extractor."
+    },
+    {
+      "question": "Mayroon bang opisyal na 11tik na Google Chrome ekstensyon?",
+      "answer": "Oo. Ang 11tik para sa Google Chrome ay ang opisyal na 11tik Chrome extension para sa pagkuha ng mga pampublikong thumbnail sa YouTube. Ito ay ang parehong produkto ng tool ng website; ang opisyal na site ay nananatiling www.11tik.com. Hindi binabago ng extension kung ano ang kaya o hindi kayang makuha ng extractor.",
+      "answerHtml": "Oo.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik para sa Google Chrome</a>ay ang opisyal na 11tik Chrome extension para sa pagkuha ng mga pampublikong thumbnail sa YouTube. Ito ay ang parehong produkto ng tool ng website; nananatili ang opisyal na site<a href=\"https://www.11tik.com/\">www.11tik.com</a>Hindi binabago ng extension kung ano ang kaya o hindi kayang makuha ng extractor."
     }
   ],
   "articleId": "home-faq"

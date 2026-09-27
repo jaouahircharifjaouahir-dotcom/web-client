@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "he",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "שאלות נפוצות",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "האם יש תוסף רשמי לפיירפוקס 11tik?",
       "answer": "כן. 11tik עבור Firefox יכול לחלץ את התמונה הממוזערת הציבורית הטובה ביותר הזמינה מכרטיסיית YouTube הנוכחית. זהו אותו מוצר כמו כלי האתר; האתר הרשמי נשאר www.11tik.com. הרישום אינו משנה מה המחלץ יכול או לא יכול לשלוף.",
       "answerHtml": "כֵּן.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik עבור פיירפוקס</a>יכול לחלץ את התמונה הממוזערת הציבורית הטובה ביותר הזמינה מכרטיסיית YouTube הנוכחית. זהו אותו מוצר כמו כלי האתר; האתר הרשמי נשאר<a href=\"https://www.11tik.com/\">[[עמוד 1]]</a>הרישום אינו משנה את מה שהמחלץ יכול או לא יכול לאחזר."
+    },
+    {
+      "question": "האם יש תוסף רשמי 11tik לגוגל כרום?",
+      "answer": "כן. 11tik עבור גוגל כרום הוא התוסף הרשמי 11tik של כרום לחילוץ תמונות ממוזערות ציבוריות מיוטיוב. זהו אותו מוצר כמו כלי האתר; האתר הרשמי נשאר www.11tik.com. התוסף אינו משנה את מה שהמחלץ יכול או לא יכול לאחזר.",
+      "answerHtml": "כֵּן.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik עבור גוגל כרום</a>הוא התוסף הרשמי של Chrome 11tik לחילוץ תמונות ממוזערות ציבוריות של YouTube. זהו אותו מוצר כמו כלי האתר; האתר הרשמי נשאר<a href=\"https://www.11tik.com/\">[[עמוד 1]]</a>ההרחבה לא משנה מה המחלץ יכול או לא יכול לאחזר."
     }
   ],
   "articleId": "home-faq"

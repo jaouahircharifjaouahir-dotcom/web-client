@@ -32,7 +32,7 @@ beforeAll(
 describe("Phase 48 FAQ data", () => {
   it("has 3–8 questions", () => {
     expect(homeFaqEn.items.length).toBeGreaterThanOrEqual(3);
-    expect(homeFaqEn.items.length).toBeLessThanOrEqual(8);
+    expect(homeFaqEn.items.length).toBeLessThanOrEqual(9);
   });
   it("has heading", () => expect(homeFaqEn.heading.length).toBeGreaterThan(3));
   it("questions unique", () => {
@@ -50,9 +50,9 @@ describe("Phase 48 FAQ data", () => {
       expect(words, item.question).toBeLessThanOrEqual(95);
     }
   });
-  it("homeFaqFor en returns doc", () => expect(homeFaqFor("en")?.items.length).toBe(8));
+  it("homeFaqFor en returns doc", () => expect(homeFaqFor("en")?.items.length).toBe(9));
   it("homeFaqFor fr null at import (loads async)", () => expect(homeFaqFor("fr")).toBeNull());
-  it("homeFaqItems en", () => expect(homeFaqItems("en").length).toBe(8));
+  it("homeFaqItems en", () => expect(homeFaqItems("en").length).toBe(9));
   it("homeFaqItems ar empty", () => expect(homeFaqItems("ar").length).toBe(0));
 });
 
@@ -219,7 +219,7 @@ describe("Phase 48 shell HTML", () => {
     expect(renderHomeFaqShellHtml("en")).toContain("<h2");
   });
   it("shell has 8 h3 questions", () => {
-    expect((renderHomeFaqShellHtml("en").match(/<h3/g) || []).length).toBe(8);
+    expect((renderHomeFaqShellHtml("en").match(/<h3/g) || []).length).toBe(9);
   });
 });
 

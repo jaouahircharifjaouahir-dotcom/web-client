@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "cs",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Často kladené otázky",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Existuje oficiální doplněk 11tik pro Firefox?",
       "answer": "Ano. 11tik pro Firefox dokáže extrahovat nejlepší dostupnou veřejnou miniaturu z aktuální karty YouTube. Je to stejný produkt jako nástroj pro webové stránky; oficiální stránky zůstávají www.11tik.com. Seznam nemění, co extraktor může nebo nemůže načíst.",
       "answerHtml": "Ano.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik pro Firefox</a>dokáže extrahovat nejlepší dostupnou veřejnou miniaturu z aktuální karty YouTube. Je to stejný produkt jako nástroj pro webové stránky; oficiální stránky zůstávají<a href=\"https://www.11tik.com/\">www.11tik.com</a>Výpis nemění, co extraktor může nebo nemůže načíst."
+    },
+    {
+      "question": "Existuje oficiální rozšíření Google Chrome pro 11tik?",
+      "answer": "Ano. 11tik pro Google Chrome je oficiální rozšíření 11tik pro Chrome pro extrahování veřejných miniatur z YouTube. Je to stejný produkt jako nástroj pro webové stránky; oficiální stránky zůstávají www.11tik.com. Rozšíření nemění, co extraktor může nebo nemůže načíst.",
+      "answerHtml": "Ano.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik pro Google Chrome</a>je oficiální 11tik rozšíření pro Chrome pro extrahování veřejných miniatur YouTube. Je to stejný produkt jako nástroj pro webové stránky; oficiální stránky zůstávají<a href=\"https://www.11tik.com/\">www.11tik.com</a>Rozšíření nemění, co extraktor může nebo nemůže načíst."
     }
   ],
   "articleId": "home-faq"

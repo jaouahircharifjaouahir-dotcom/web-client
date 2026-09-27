@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "id",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Pertanyaan yang sering diajukan",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Apakah ada add-on Firefox 11tik resmi?",
       "answer": "Ya. 11tik untuk Firefox dapat mengekstrak thumbnail publik terbaik yang tersedia dari tab YouTube saat ini. Ini adalah produk yang sama dengan alat di situs web; situs resminya tetap www.11tik.com. Daftar ini tidak mengubah apa yang dapat atau tidak dapat diambil oleh ekstraktor.",
       "answerHtml": "Ya.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik untuk Firefox</a>Dapat mengekstrak thumbnail publik terbaik yang tersedia dari tab YouTube saat ini. Ini adalah produk yang sama dengan alat di situs web; situs resminya tetap sama.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Daftar tersebut tidak mengubah apa yang dapat atau tidak dapat diambil oleh ekstraktor."
+    },
+    {
+      "question": "Apakah ada ekstensi 11tik resmi untuk Google Chrome?",
+      "answer": "Ya. 11tik untuk Google Chrome adalah ekstensi Chrome resmi 11tik untuk mengekstrak thumbnail YouTube publik. Ini adalah produk yang sama dengan alat situs web; situs resminya tetap www.11tik.com. Ekstensi ini tidak mengubah apa yang dapat atau tidak dapat diambil oleh ekstraktor.",
+      "answerHtml": "Ya.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik untuk Google Chrome</a>adalah ekstensi Chrome resmi 11tik untuk mengekstrak thumbnail YouTube publik. Ini adalah produk yang sama dengan alat di situs web; situs resminya tetap sama.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Ekstensi tersebut tidak mengubah apa yang dapat atau tidak dapat diambil oleh ekstraktor."
     }
   ],
   "articleId": "home-faq"

@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "hr",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Često postavljana pitanja",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Postoji li službeni 11tik dodatak za Firefox?",
       "answer": "Da. 11tik za Firefox može izdvojiti najbolju dostupnu javnu sličicu s trenutne YouTube kartice. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje www.11tik.com. Popis ne mijenja što alat za izdvajanje može ili ne može dohvatiti.",
       "answerHtml": "Da.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik za Firefox</a>može izdvojiti najbolju dostupnu javnu minijaturu s trenutne YouTube kartice. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje<a href=\"https://www.11tik.com/\">www.11tik.com</a>Popis ne mijenja što ekstraktor može ili ne može dohvatiti."
+    },
+    {
+      "question": "Postoji li službeno 11tik proširenje za Google Chrome?",
+      "answer": "Da. 11tik za Google Chrome je službeno 11tik Chromeovo proširenje za izdvajanje javnih YouTube minijatura. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje www.11tik.com. Proširenje ne mijenja što alat za izdvajanje može ili ne može dohvatiti.",
+      "answerHtml": "Da.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik za Google Chrome</a>je službeno 11tik Chromeovo proširenje za izdvajanje javnih YouTube minijatura. To je isti proizvod kao i alat za web stranicu; službena stranica ostaje<a href=\"https://www.11tik.com/\">www.11tik.com</a>Proširenje ne mijenja što ekstraktor može ili ne može dohvatiti."
     }
   ],
   "articleId": "home-faq"

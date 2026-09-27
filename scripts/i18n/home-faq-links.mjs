@@ -92,13 +92,15 @@ export function assertFaqLinksSameLocale(html, locale) {
       (href) =>
         href.startsWith("/") ||
         href.includes("www.11tik.com") ||
-        href.includes("addons.mozilla.org"),
+        href.includes("addons.mozilla.org") ||
+        href.includes("chromewebstore.google.com"),
     );
   }
   const host = `${code}.11tik.com`;
   return links.every((href) => {
     if (href.startsWith("/")) return true;
     if (href.includes("addons.mozilla.org")) return true;
+    if (href.includes("chromewebstore.google.com")) return true;
     if (href.includes(host)) return true;
     // Allowed EN fallbacks for unpublished / EN-only guides
     if (href.includes("www.11tik.com")) return true;

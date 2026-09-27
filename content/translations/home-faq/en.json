@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "en",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Frequently asked questions",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Is there an official 11tik Firefox Add-on?",
       "answer": "Yes. 11tik for Firefox can extract the best available public thumbnail from the current YouTube tab. It is the same product as the website tool; the official site remains www.11tik.com. The listing does not change what the extractor can or cannot fetch.",
       "answerHtml": "Yes. <a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik for Firefox</a> can extract the best available public thumbnail from the current YouTube tab. It is the same product as the website tool; the official site remains <a href=\"https://www.11tik.com/\">www.11tik.com</a>. The listing does not change what the extractor can or cannot fetch."
+    },
+    {
+      "question": "Is there an official 11tik Google Chrome Extension?",
+      "answer": "Yes. 11tik for Google Chrome is the official 11tik Chrome extension for extracting public YouTube thumbnails. It is the same product as the website tool; the official site remains www.11tik.com. The extension does not change what the extractor can or cannot fetch.",
+      "answerHtml": "Yes. <a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik for Google Chrome</a> is the official 11tik Chrome extension for extracting public YouTube thumbnails. It is the same product as the website tool; the official site remains <a href=\"https://www.11tik.com/\">www.11tik.com</a>. The extension does not change what the extractor can or cannot fetch."
     }
   ]
 }

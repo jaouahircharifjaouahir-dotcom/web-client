@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "uk",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Часті запитання",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Чи існує офіційне доповнення 11tik для Firefox?",
       "answer": "Так. 11tik для Firefox може витягти найкращу доступну загальнодоступну мініатюру з поточної вкладки YouTube. Це той самий продукт, що й інструмент веб-сайту; офіційний сайт залишається www.11tik.com. Цей список не змінює те, що може або не може отримати засіб витягування.",
       "answerHtml": "Так.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik для Firefox</a>може отримати найкращу доступну загальнодоступну мініатюру з поточної вкладки YouTube. Це той самий продукт, що й інструмент веб-сайту; офіційний сайт залишається<a href=\"https://www.11tik.com/\">[[П1]]</a>Цей список не змінює те, що екстрактор може або не може отримати."
+    },
+    {
+      "question": "Чи існує офіційне розширення 11tik для Google Chrome?",
+      "answer": "Так. 11tik для Google Chrome – це офіційне розширення Chrome 11tik для вилучення загальнодоступних мініатюр YouTube. Це той самий продукт, що й інструмент веб-сайту; офіційний сайт залишається www.11tik.com. Розширення не змінює те, що може або не може отримати засіб вилучення.",
+      "answerHtml": "Так.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik для Google Chrome</a>— це офіційне розширення Chrome 11tik для вилучення мініатюр публічних відео з YouTube. Це той самий продукт, що й інструмент для веб-сайту; офіційний сайт залишається<a href=\"https://www.11tik.com/\">[[П1]]</a>Розширення не змінює те, що екстрактор може або не може отримати."
     }
   ],
   "articleId": "home-faq"

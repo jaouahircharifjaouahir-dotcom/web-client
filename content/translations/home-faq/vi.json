@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "vi",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Câu hỏi thường gặp",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Có tiện ích bổ sung 11tik Firefox chính thức nào không?",
       "answer": "Vâng. 11tik dành cho Firefox có thể trích xuất hình thu nhỏ công khai tốt nhất hiện có từ tab YouTube hiện tại. Đây là cùng một sản phẩm với công cụ trên trang web; trang web chính thức vẫn là www.11tik.com. Danh sách không thay đổi những gì trình trích xuất có thể hoặc không thể lấy.",
       "answerHtml": "Đúng.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik cho Firefox</a>Có thể trích xuất hình thu nhỏ công khai tốt nhất hiện có từ tab YouTube hiện tại. Đây là cùng một sản phẩm với công cụ trên trang web; trang web chính thức vẫn giữ nguyên.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Việc liệt kê này không làm thay đổi những gì trình trích xuất có thể hoặc không thể lấy được."
+    },
+    {
+      "question": "Có tiện ích mở rộng 11tik chính thức nào cho Google Chrome không?",
+      "answer": "Đúng vậy. 11tik dành cho Google Chrome là tiện ích mở rộng 11tik chính thức của Chrome để trích xuất hình thu nhỏ công khai của YouTube. Đây là cùng một sản phẩm với công cụ trên trang web; trang web chính thức vẫn là www.11tik.com. Tiện ích mở rộng không thay đổi những gì trình trích xuất có thể hoặc không thể lấy được.",
+      "answerHtml": "Đúng.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik cho Google Chrome</a>Đây là tiện ích mở rộng 11tik chính thức dành cho Chrome để trích xuất hình thu nhỏ công khai của YouTube. Nó là cùng một sản phẩm với công cụ trên trang web; trang web chính thức vẫn giữ nguyên.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Việc mở rộng này không làm thay đổi những gì trình trích xuất có thể hoặc không thể lấy được."
     }
   ],
   "articleId": "home-faq"

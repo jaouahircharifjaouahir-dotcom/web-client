@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "tr",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Sıkça sorulan sorular",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "11tik Firefox için resmi bir eklenti var mı?",
       "answer": "Evet. Firefox için 11tik, mevcut YouTube sekmesinden en iyi genel küçük resmi çıkarabilir. Bu, web sitesindeki araçla aynı üründür; resmi site www.11tik.com olarak kalmaktadır. Listeleme, çıkarıcının neleri alıp alamayacağını değiştirmez.",
       "answerHtml": "Evet.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik Firefox için</a>Mevcut YouTube sekmesinden en iyi herkese açık küçük resmi çıkarabilir. Bu, web sitesindeki araçla aynı üründür; resmi site aynı kalır.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listeleme, çıkarıcının neleri alıp alamayacağını değiştirmez."
+    },
+    {
+      "question": "Resmi bir 11tik Google Chrome uzantısı var mı?",
+      "answer": "Evet. Google Chrome için 11tik, herkese açık YouTube küçük resimlerini çıkarmak için kullanılan resmi 11tik Chrome uzantısıdır. Web sitesindeki araçla aynı üründür; resmi site www.11tik.com olarak kalmaktadır. Uzantı, çıkarıcının neleri alıp alamayacağını değiştirmez.",
+      "answerHtml": "Evet.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik Google Chrome için</a>11tik, herkese açık YouTube küçük resimlerini çıkarmak için kullanılan resmi Chrome uzantısıdır. Web sitesindeki araçla aynı üründür; resmi site aynı kalır.<a href=\"https://www.11tik.com/\">www.11tik.com</a>Bu eklenti, çıkarıcının neleri alıp alamayacağını değiştirmez."
     }
   ],
   "articleId": "home-faq"

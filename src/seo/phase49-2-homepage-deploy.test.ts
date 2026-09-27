@@ -49,7 +49,7 @@ describe("Phase 49.2 commit scope", () => {
   it("expanded files ~165", () => expect(expandApprovedPaths().length).toBeGreaterThan(150));
   it("content lock title", () => expect(auditCommitScope().contentLock.titleMatches).toBe(true));
   it("content lock description", () => expect(auditCommitScope().contentLock.descriptionMatches).toBe(true));
-  it("faq count 8", () => expect(auditCommitScope().contentLock.faqCount).toBe(8));
+  it("faq count 9", () => expect(auditCommitScope().contentLock.faqCount).toBe(9));
   it("commit scope audit exists", () => expect(existsSync(join(OUT, "COMMIT_SCOPE_AUDIT.json"))).toBe(true));
   it("HEAD matches deploy commit", () => expect(git("git rev-parse HEAD")).toBe(deployIdentity.commit));
   it("origin synced", () => expect(deployIdentity.pushed).toBe(true));
@@ -158,7 +158,7 @@ describe("Phase 49.2 protected architecture", () => {
 });
 
 describe("Phase 49.2 FAQ data", () => {
-  it("EN 8 questions", () => expect(homeFaqEn.items.length).toBe(8));
+  it("EN 9 questions", () => expect(homeFaqEn.items.length).toBe(9));
   it("public en faq json", () => expect(existsSync("public/i18n/home-faq/en.json")).toBe(true));
   it("public fr faq json", () => expect(existsSync("public/i18n/home-faq/fr.json")).toBe(true));
   it("38 public faq files", () => {

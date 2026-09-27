@@ -2,7 +2,7 @@
   "contentId": "home-faq",
   "locale": "da",
   "status": "ready",
-  "sourceHash": "phase2h1-en-faq-v1",
+  "sourceHash": "phase-chrome-ext-faq-v1",
   "faqHeading": "Ofte stillede spørgsmål",
   "faq": [
     {
@@ -44,6 +44,11 @@
       "question": "Findes der en officiel 11tik Firefox-tilføjelse?",
       "answer": "Ja. 11tik til Firefox kan udtrække det bedste tilgængelige offentlige miniaturebillede fra den aktuelle YouTube-fane. Det er det samme produkt som hjemmesideværktøjet; det officielle websted forbliver www.11tik.com. Listen ændrer ikke, hvad udtrækkeren kan eller ikke kan hente.",
       "answerHtml": "Ja.<a href=\"https://addons.mozilla.org/en-US/firefox/addon/11tik-youtube-thumbnails/\">11tik til Firefox</a>kan udtrække det bedste tilgængelige offentlige miniaturebillede fra den aktuelle YouTube-fane. Det er det samme produkt som hjemmesideværktøjet; det officielle websted forbliver<a href=\"https://www.11tik.com/\">www.11tik.com</a>Listen ændrer ikke, hvad udtrækkeren kan eller ikke kan hente."
+    },
+    {
+      "question": "Findes der en officiel 11tik Google Chrome-udvidelse?",
+      "answer": "Ja. 11tik til Google Chrome er den officielle 11tik Chrome-udvidelse til udtrækning af offentlige YouTube-miniaturebilleder. Det er det samme produkt som hjemmesideværktøjet; det officielle websted forbliver www.11tik.com. Udvidelsen ændrer ikke, hvad udtrækkeren kan eller ikke kan hente.",
+      "answerHtml": "Ja.<a href=\"https://chromewebstore.google.com/detail/11tik-%E2%80%94-youtube-thumbnail/pabdenjeanhdhmpnlbghfenbkdlaknjc?hl=en\">11tik til Google Chrome</a>er den officielle 11tik Chrome-udvidelse til udtrækning af offentlige YouTube-miniaturebilleder. Det er det samme produkt som hjemmesideværktøjet; det officielle websted forbliver<a href=\"https://www.11tik.com/\">www.11tik.com</a>Udvidelsen ændrer ikke, hvad ekstraktoren kan eller ikke kan hente."
     }
   ],
   "articleId": "home-faq"
